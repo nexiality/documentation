@@ -1,7 +1,7 @@
 **Test Automation Framework for _Everyone_!**
 ---------------------------------------------
 
-> _***nexial***_  - joining together.  It refers to the joining of knowledge from multiple perspectives 
+> _**nexial**_  - joining together.  It refers to the joining of knowledge from multiple perspectives 
 and practices to achieve a new understanding of ourselves and anture, and to fuel cultural 
 advancement. 
 
@@ -29,6 +29,6 @@ Here's some of the core concerns of this framework:
 * data management and data generation
 * support FREP (functional, regression, end-to-end, performance testing)
 
-For better understanding towards the objective and overview of Nexial, check out the 
-**[Introduction](quickstart/IntroductionAndFAQ)** page.
+For better understanding towards the objective and overview of Nexial, check out 
+the **[Introduction](quickstart/IntroductionAndFAQ)** page.
 

@@ -1,0 +1,24 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+body {
+    color: #4d4d4d;
+}
+
+.inner {
+    width:  auto !important;
+    margin: 0 50px;
+}
+
+#downloads {
+    display:    none;
+    visibility: hidden;
+}
+
+blockquote {
+    border-left: 10px solid #d9d9d3;
+    font-size:   1.3em;
+}
+
