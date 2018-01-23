@@ -2,7 +2,7 @@
 ---------------------------------------------
 
 > _**nexial**_  - joining together.  It refers to the joining of knowledge from multiple perspectives 
-and practices to achieve a new understanding of ourselves and anture, and to fuel cultural 
+and practices to achieve a new understanding of ourselves and nature, and to fuel cultural 
 advancement. 
 
 The name reflects our desire and intention to perfect the "art" and "science" of Software Testing 

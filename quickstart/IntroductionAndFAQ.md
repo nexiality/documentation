@@ -44,12 +44,12 @@ In a nutshell, one would need:
 2.  JDK 1.8+
 3.  Nexial distribution
 
-For more details and step-by-step instruction, check out the [Install Nexial](quickstart/InstallingNexial) page.
+For more details and step-by-step instruction, check out the [Install Nexial](InstallingNexial) page.
 
 **Where can I go for more help/support?**
 -----------------------------------------
 
-For online documentation, start [here](https://confluence.ep.com/display/QA/Sentry).  For additional questions, inquiries or help, send your request to [sentry-support@ep.com](mailto:sentry-support@ep.com).  Likewise, for any suggestion on new features for Nexial, email [sentry-support@ep.com](mailto:sentry-support@ep.com). 
+For online documentation, start [here](../).  For additional questions, inquiries or help, send your request to [sentry-support@ep.com](mailto:sentry-support@ep.com).  Likewise, for any suggestion on new features for Nexial, email [sentry-support@ep.com](mailto:sentry-support@ep.com). 
 
 **What can I expect from future release?**
 ------------------------------------------
@@ -59,4 +59,4 @@ Even before it’s 1.0 debut, Nexial has been in used by many teams already.  I
 1.  Daily DEV builds, as we do today.  For newer features and early access patches, this would be the method of distributing.
 2.  Monthly `MAJOR.MINOR` release.  Mostly likely we would keep to the `x.y` release schema where `x` starts from `1` and `y` is a number between 0 to 9.
 
-Ready to get started? Click [here](https://confluence.ep.com/display/QA/Quick+Start).
+Ready to get started? Click [here](QuickStart).
