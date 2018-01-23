@@ -6,10 +6,12 @@
         **MacOSX**: Open Spotlight or type `CMD-Space` | `terminal <ENTER>`
     1.  `java -version <ENTER>`
     1.  If you get something like the following, please following Step 2 (below):
+    
         ![no_java](../image/InstallingNexial_01.png)
     1.  If you are not getting the above message, check that the version of Java installed is 1.8 
         or above.  For example,  
         ![java_18](../image/InstallingNexial_02.png)
+        
         ![java_16](../image/InstallingNexial_02a.png)
     1.  If the version of Java installed is **1.8** or above, process to next section (Check 
         Excel Version).  if the version of Java installed is less than 1.8, proceed to Step 2 
@@ -33,14 +35,14 @@
         installer.  It is _**highly recommended**_ to install Java in a directory that does not 
         contain any spaces.  For example, `C:\tools\jdk1.8`.  
         
-        1.  By default, Java is installed to either `C:\Program Files\Java\jdk...` or 
-            `C:\Program Files (x86)\Java\jdk...`.   
-        1.  For more hep, visit [https://java.com/en/download/help/download_options.xml#windows](https://java.com/en/download/help/download_options.xml#windows)
+        - By default, Java is installed to either `C:\Program Files\Java\jdk...` or 
+          `C:\Program Files (x86)\Java\jdk...`.   
+        - For more hep, visit [https://java.com/en/download/help/download_options.xml#windows](https://java.com/en/download/help/download_options.xml#windows)
         
         **MacOSX**: double-click on the downloaded installer.  Follow the instructions of the 
         installer.  For more help, visit [https://java.com/en/download/help/mac_install.xml](https://java.com/en/download/help/mac_install.xml)
 
-1.  Check `PATH`, `JAVA\_HOME`, `JRE\_HOME`  
+1.  Check `PATH`, `JAVA_HOME`, `JRE_HOME`  
     Windows: 
     1.  Start | Run | `sysdm.cpl` `<ENTER>` | click `Advanced` tab | click 
         `Environment Variables...` button  
@@ -59,7 +61,7 @@ Currently Nexial supports Excel 2007 and 2010. Nexial requires the use of XLSX f
 format not supported).  Request ServiceDesk for assistance if you do not have Excel installed or 
 the installed version is too old.
 
-**Checking Browser Availability and Version**
+## Checking Browser Availability and Version
 1.  **Internet Explorer** \- Nexial at this time only supports Internet Explorer 9 or above.  In 
 				the future we might consider older versions of Internet Explorer.  Nexial however will support 
 				either 32 or 64 bit.
