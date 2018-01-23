@@ -36,12 +36,18 @@ the **[Introduction](quickstart/IntroductionAndFAQ)** page.
 
 ----------------
 
-<div class="quick-link"> [Quick Start](quickstart/QuickStart) </div>
-<div class="quick-link"> [Command Reference](commands/) </div>
-<div class="quick-link"> [System Variables](systemvars/) </div>
-<div class="quick-link"> [Expressions](expressions/) </div>
+<div class="quick_link"><a href="quickstart/QuickStart">Quick Start</a></div>
+<div class="quick_link"><a href="commands/">Command Reference</a></div>
+<div class="quick_link"><a href="systemvars/">System Variables</a></div>
+<div class="quick_link"><a href="flowcontrol/">Flow Controls</a></div>
 
 <div style="clear:both" />
 
-<div class="quick-link"> [Built-in Functions](functions/) </div>
+<div class="quick_link"><a href="functions/">Built-in Functions</a></div>
+<div class="quick_link"><a href="expressions/">Expressions</a></div>
+<div class="quick_link"><a href="jsonpath/">jsonpath</a></div>
+<div class="quick_link"><a href="tipsandtricks/">Tips and Tricks</a></div>
 
+<div style="clear:both" />
+
+----------------
