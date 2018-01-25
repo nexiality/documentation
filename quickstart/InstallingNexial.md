@@ -44,8 +44,8 @@
 
 1.  Check `PATH`, `JAVA_HOME`, `JRE_HOME`  
     Windows: 
-    1.  Start | Run | `sysdm.cpl` `<ENTER>` | click `Advanced` tab | click 
-        `Environment Variables...` button  
+    1.  Start | Run | sysdm.cpl <ENTER> | click "Advanced" tab | click  
+        "Environment Variables..." button  
         ![sysdm](image/InstallingNexial_05.png) 
     1.  Under System variable, search for a variable named `Path`.
     1.  Ensure that the `bin\` directory of the installed Java is part of the value of `PATH`.  
