@@ -7,12 +7,12 @@
     1.  `java -version <ENTER>`
     1.  If you get something like the following, please following Step 2 (below):
     
-        ![no_java](../image/InstallingNexial_01.png)
+        ![no_java](image/InstallingNexial_01.png)
     1.  If you are not getting the above message, check that the version of Java installed is 1.8 
         or above.  For example,  
-        ![java_18](../image/InstallingNexial_02.png)
+        ![java_18](image/InstallingNexial_02.png)
         
-        ![java_16](../image/InstallingNexial_02a.png)
+        ![java_16](image/InstallingNexial_02a.png)
     1.  If the version of Java installed is **1.8** or above, process to next section (Check 
         Excel Version).  if the version of Java installed is less than 1.8, proceed to Step 2 
         (below).
@@ -21,9 +21,9 @@
     1.  Java can be downloaded from Oracle website.
     1.  Open your browser and point to [http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
     1.  Click on the Download button just below JDK.  
-        ![download_jdk](../image/InstallingNexial_03.png)
+        ![download_jdk](image/InstallingNexial_03.png)
     1.  Click on Accept License Agreement.  
-        ![accept_license](../image/InstallingNexial_04.png)
+        ![accept_license](image/InstallingNexial_04.png)
     1.  Select the appropriate download file suitable for your workstation/VDI.  When possible, 
         select the 64bit version for better performance.
     1.  **ALWAYS SELECT 64bit version FOR BETTER PERFORMANCE**
@@ -46,11 +46,11 @@
     Windows: 
     1.  Start | Run | `sysdm.cpl` `<ENTER>` | click `Advanced` tab | click 
         `Environment Variables...` button  
-        ![sysdm](../image/InstallingNexial_05.png) 
+        ![sysdm](image/InstallingNexial_05.png) 
     1.  Under System variable, search for a variable named `Path`.
     1.  Ensure that the `bin\` directory of the installed Java is part of the value of `PATH`.  
         Preferably it should be the first entry of its value.  For example,  
-        ![sysdm_path](../image/InstallingNexial_06.png) 
+        ![sysdm_path](image/InstallingNexial_06.png) 
     1.  Similarly search for a variable named `JAVA_HOME`.  If not found, click `New...` button to 
         create one.  Its value should be that of the installed directory of Java.
     1.  Similarly search for a variable named `JRE_HOME`.  If not found, there is no need to 
@@ -88,12 +88,12 @@ the installed version is too old.
 ## Setting up Your First Project
 1.  create project structure
     1.  open console and point to `bin` directory under the Nexial installation directory.  
-        ![nexial_bin](../image/InstallingNexial_07.png) 
+        ![nexial_bin](image/InstallingNexial_07.png) 
     1.  invoke the project creator script - `nexial-project.cmd MyFirstProject`  
-        ![nexial-project](../image/InstallingNexial_08.png)
+        ![nexial-project](image/InstallingNexial_08.png)
     1.  If everything works, then you should see the message "`creating project home at ...`" and "`DONE"`
     1.  You should see the following directory create, along with various files in it:  
-        ![script_dir](../image/InstallingNexial_09.png)
+        ![script_dir](image/InstallingNexial_09.png)
     1.  To gain better understanding of the project structure, check out 
         [Understanding Nexial project structure](UnderstandingProjectStructure)
     1.  to gain better understanding of the Nexial automation script format and usage, check out 
@@ -103,12 +103,12 @@ the installed version is too old.
 ## Running your first test automation
 #### "Hello World" of Nexial automation
 1.  Open `C:\projects\MyFirstProject\artifact\script\MyFirstProject.xlsx` \- we refer to this Excel 
-				file as the _Sentry script_ or the _automation script_. By [convention](UnderstandingProjectStructure) 
+				file as the _test script_ or the _automation script_. By [convention](UnderstandingProjectStructure) 
 				all Excel files under the `artifact/script` directory are considered as automation scripts.
 1.  Start first test case by typing in the following:  
-    ![testcase](../image/InstallingNexial_10.png)
+    ![testcase](image/InstallingNexial_10.png)
 1.  Enter the next 3 columns with the `base|verbose(text) command`:  
-    ![verbose](../image/InstallingNexial_11.png)
+    ![verbose](image/InstallingNexial_11.png)
     
     Under `param 1` is the value to be used during runtime for the corresponding command.  In this 
     case it matches to the `text` of `base|verbose(text)` \- meaning, "printing to this row the 
@@ -134,14 +134,14 @@ the installed version is too old.
     1.  The third line is to invoke Nexial to run the test as scripted in the file specified via 
         `-script` argument.
 1.  If all's well, you should see something like the following on your console:  
-    ![nexial_output](../image/InstallingNexial_12.png) 
+    ![nexial_output](image/InstallingNexial_12.png) 
     
     For now, don't worry too much about these logs.  The most critical portion is near the end 
     where Nexial reports a summary of the test.  The above screenshot showed that 1 iteration ran, 
     with 1 step completed within 842ms.
 1.  If you have the `assistantMode` turned on, then the output file should have been opened as well.  
 				You see the first line (Row 4) looking something like this:  
-    ![output](../image/InstallingNexial_13.png)
+    ![output](image/InstallingNexial_13.png)
     
     1.  Cell E5 prints `Hello World`.  At this time it might not appear obvious since we just print 
         out a static string of text. Our next example will show more interesting tests.

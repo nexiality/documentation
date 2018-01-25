@@ -1,7 +1,5 @@
 ## Test Automation Framework for _Everyone_!
 
----------------------------------------------
-
 > _**nexial**_  - joining together.  It refers to the joining of knowledge from multiple perspectives 
 and practices to achieve a new understanding of ourselves and nature, and to fuel cultural 
 advancement. 
@@ -13,8 +11,6 @@ ideas/solutions.
 
 
 ## Introduction
-
-----------------
 
 The main motivation of Nexial is to provide a set of capability to automate software testing.  
 Here's some of the core concerns of this framework:
@@ -34,7 +30,7 @@ Here's some of the core concerns of this framework:
 For better understanding towards the objective and overview of Nexial, check out 
 the **[Introduction](quickstart/IntroductionAndFAQ)** page.
 
-----------------
+---------------------------------------------
 
 <div class="quick_link"><a href="quickstart/QuickStart">Quick Start</a></div>
 <div class="quick_link"><a href="commands/">Command Reference</a></div>
@@ -50,4 +46,4 @@ the **[Introduction](quickstart/IntroductionAndFAQ)** page.
 
 <div style="clear:both" />
 
-----------------
+---------------------------------------------
