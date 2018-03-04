@@ -1,5 +1,7 @@
 ## Test Automation Framework for _Everyone_!
 
+![logo](image/logo-x.png)
+
 > _**nexial**_  - joining together.  It refers to the joining of knowledge from multiple perspectives 
 and practices to achieve a new understanding of ourselves and nature, and to fuel cultural 
 advancement. 
