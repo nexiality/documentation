@@ -1,22 +1,11 @@
 ### Description
+This command can be used to screening recording an execution.  The recording will capture the entire primary desktop.  
+Usage is given in the example section. 
 
-This command can be used for video recording the script execution. It is available in the base package. Usage is given in the example section. Precondition is to perform a one-time installation of the decoder to record the video. Follow the below installation steps:
-
-**Installation Steps:**
-
-**Step 1:**  Visit the below link:
-
-[https://www.techsmith.com/codecs.html](https://www.techsmith.com/codecs.html)
-
-**Step 2: ** Click on the below link (**TSSC Codec**), only that is pointed out in the below image. **TSCC.msi** package will be downloaded. Install the decoder after download is completed.
-
-![](image/startRecording_01.png)
-
-**Note**: No need to download and install the other codec (TSC2 Codec).
 
 ### Example
-
-**Usage**: This command can be used at any step. Recording will be started from that point onward. It will be saved in **.avi format** under the **output **directory under **captures** folder. The recorded video can be opened with **Windows Media Player**.
+**Usage**: This command can be used at any step. Recording will be started from that point onward. 
+It will be saved in **.avi format** under the **output **directory under **captures** folder. The recorded video can be opened with **Windows Media Player**.
 
 Script:
 
