@@ -1,3 +1,31 @@
 theme: jekyll-theme-tactile
-title: nexial documentation
-description: test automation for everyone!
+title: nexial automation
+description: documentation for nexial, test automation toolkit for everyone!
+
+breadcrumbs: true
+breadcrumb_display: true
+breadcrumb_home_display: true
+
+read_more: enabled
+comments: disque
+favicon: favicon.ico
+use_logo: true
+logo: image/logo-small.png
+
+search_in_topnav: true
+search_in_sidebar: false
+toggle-sidebar-button: true
+navbar-toggle: true
+
+sidebars:
+  - generic
+  - jekyllhowto
+link_type: jurl
+
+# show feedback button in top nav bar?
+show_feedback: true
+feedback_email: mikeliucc@users.noreply.github.com
+
+github_button_location_top_navbar: false
+github_button_location_below_title: false
+github_button_location_page_bottom: false
