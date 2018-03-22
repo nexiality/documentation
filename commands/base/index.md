@@ -1,8 +1,6 @@
-<div class="breadcrumb">
-    <a class="breadcrumb" href="../../">home</a> &raquo;
-    <a class="breadcrumb" href="../">command reference</a> &raquo;
-    <span class="breadcrumb">base</span>
-</div>
+{% include_relative ../_breadcrumb.html current="base" %}
+
+The "base" command type represents a series of common automation commands:
 
 - [`appendText(var,appendWith)`](appendText(var,appendWith).html)
 - [`failImmediate(text)`](failImmediate(text).html)

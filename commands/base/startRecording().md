@@ -1,4 +1,4 @@
-{% include _breadcrumb.html current="startRecording" %}
+{% include_relative _breadcrumb.html current="startRecording" %}
 
 ### Description
 This command is used to screen record an execution.  The recording will capture the entire primary desktop (and thus 
