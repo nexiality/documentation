@@ -7,6 +7,19 @@ body {
     color: #2d2d2d;
 }
 
+h3 {
+    color:         #8da540;
+    margin-bottom: 2px;
+}
+
+ul {
+    padding-left: 0;
+}
+
+ul li {
+    padding-left: 5px;
+}
+
 .inner {
     width:  970px !important;
     margin: 0 50px;
@@ -32,7 +45,7 @@ blockquote {
 
 div.breadcrumb {
     padding:          5px;
-    margin-bottom:    5px;
+    margin-bottom:    10px;
     text-shadow:      none;
     font-weight:      normal;
     background-color: rgba(250, 253, 255, 0.2);
@@ -50,18 +63,16 @@ a.breadcrumb {
 }
 
 a.breadcrumb:hover {
-    color:            #8a5 !important;
+    color:            #9a4 !important;
     background-color: rgba(140, 200, 40, 0.25) !important;
-    text-shadow:      1px 1px 0px #eee;
+    text-shadow:      1px 1px 0 #eee;
 }
 
 span.breadcrumb {
-    color:            #8a5 !important;
+    color:            #9a4 !important;
     background-color: rgba(140, 200, 40, 0.25) !important;
-    text-shadow:      1px 1px 0px #eee;
-    /*color:            #8a5 !important;*/
-    /*background-color: transparent;*/
-    /*padding:          4px;*/
+    text-shadow:      1px 1px 0 #eee;
+    padding:          4px;
 }
 
 .quick_link {
