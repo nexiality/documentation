@@ -1,0 +1,24 @@
+{% include_relative _breadcrumb.html current="assertTextOrder(var,descending)" %}
+
+
+### Description
+This command checks that the array represented by `var` is in ascending or descending order.  Set `descending` to 
+`true` to force descending order check.  This command expects `var` to represent an array, and will fail if such is 
+not the case.
+
+
+### Parameter(s)
+- **var** \- the variable that represents the array in question
+- **descending** - `true` if Nexial should check that the array is in descending order.  Otherwise Nexial will check 
+in ascending order.
+
+
+### Example
+Here's an example:
+![script](image/assertTextOrder_01.png)
+
+And the output:
+![output](image/assertTextOrder_02.png)
+
+
+### See Also
