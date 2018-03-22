@@ -1,20 +1,20 @@
-### Description
-This command can be used to screening recording an execution.  The recording will capture the entire primary desktop.  
-Usage is given in the example section. 
+## <span class="command-type">base</span>&nbsp;<span class="command">startRecording()</span>
 
+#### Description
+This command is used to screening recording an execution.  The recording will capture the entire 
+primary desktop. 
 
-### Example
-**Usage**: This command can be used at any step. Recording will be started from that point onward. 
-It will be saved in **.avi format** under the **output **directory under **captures** folder. The recorded video can be opened with **Windows Media Player**.
+This command can be used at any step. Recording will be started from the point this command is 
+invoked until [`stopRecording()`](stopRecording().html) is invoked.  It is saved as a MP4 file 
+in the **output** directory under `captures` folder.
 
+#### Example
 Script:
+![script](image/startRecording_02.png)
 
-![](image/startRecording_02.png)
-
-This command is used in conjunction with **stopRecording()** command. Using this command will stop recording the script.
-
+This command is used in conjunction with [`stopRecording()`](stopRecording().html) command. Using 
+this command will stop all future:
 ![](image/startRecording_03.png)
 
-### See Also
-
-*   [stopRecording()](https://confluence.ep.com/pages/viewpage.action?pageId=9985416)
+#### See Also
+* [`stopRecording()`](stopRecording().html)
