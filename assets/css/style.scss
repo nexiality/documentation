@@ -22,6 +22,10 @@ blockquote {
     font-size:   1.3em;
 }
 
+#main-content img {
+    max-width: none !important;
+}
+
 .quick_link {
     margin:           auto 20px 20px auto;
     padding:          6px;
@@ -41,4 +45,23 @@ blockquote {
 
 .quick_link a {
     color: #808070;
+}
+
+span.command-type {
+    background-color: #80c0c5;
+    border:           2px #809095 solid;
+    padding:          2px 5px;
+    color:            #f0fff5;
+    font-weight:      normal;
+    text-shadow:      none;
+    font-size:        14pt;
+}
+
+span.command {
+    background-color: #d0eed0;
+    color:            #060;
+    border:           2px #b0d0b0 solid;
+    padding:          2px 5px;
+    text-shadow:      none;
+    font-size:        14pt;
 }

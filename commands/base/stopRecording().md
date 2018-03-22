@@ -1,4 +1,4 @@
-## base|startRecording()
+## <span class="command-type">base</span>&nbsp;<span class="command">stopRecording()</span>
 
 ### Description
 

@@ -1,4 +1,4 @@
-## base|failImmediate(text)
+## <span class="command-type">base</span> :: <span class="command">failImmediate(text)</span>
 
 #### Description
 This command simply stop the test execution with a FAIL.  One can use `text` to provide additional 

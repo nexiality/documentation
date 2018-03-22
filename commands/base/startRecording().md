@@ -1,4 +1,4 @@
-## <span class="command-type">base</span>&nbsp;<span class="command">startRecording()</span>
+## <span class="command-type">base</span> :: <span class="command">startRecording()</span>
 
 #### Description
 This command is used to screening recording an execution.  The recording will capture the entire 
