@@ -1,4 +1,4 @@
-{% include_relative _breadcrumb.html current="failImmediate(text)" %}
+include_relative _breadcrumb.html current="failImmediate(text)"
 
 
 ### Description

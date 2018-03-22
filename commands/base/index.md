@@ -1,4 +1,4 @@
-{% include_relative ../_breadcrumb.html current="base" %}
+{% include_relative _breadcrumb_index.html current="base" %}
 
 The "base" command type represents a series of common automation commands:
 
