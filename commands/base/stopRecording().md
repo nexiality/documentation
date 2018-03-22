@@ -1,8 +1,8 @@
 <div class="breadcrumb">
-	<a class="breadcrumb-level0" href="index.html">home</a> &raquo; 
-	<a class="breadcrumb-level1" href="index.html">command reference</a> &raquo; 
-	<a class="breadcrumb-level2" href="index.html">base</a> &raquo; 
-	<span class="breadcrumb-level3">stopRecording()</span>
+	<a class="breadcrumb" href="index.html">home</a> &raquo; 
+	<a class="breadcrumb" href="index.html">command reference</a> &raquo; 
+	<a class="breadcrumb" href="index.html">base</a> &raquo; 
+	<span class="breadcrumb">stopRecording()</span>
 </div>
 
 

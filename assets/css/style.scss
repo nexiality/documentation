@@ -4,7 +4,7 @@
 @import "{{ site.theme }}";
 
 body {
-    color: #4d4d4d;
+    color: #2d2d2d;
 }
 
 .inner {
@@ -28,6 +28,40 @@ blockquote {
 
 #container .inner img {
     max-width: none !important;
+}
+
+div.breadcrumb {
+    padding:          5px;
+    margin-bottom:    5px;
+    text-shadow:      none;
+    font-weight:      normal;
+    background-color: rgba(250, 253, 255, 0.2);
+    border-left:      10px rgba(120, 140, 161, 0.5) solid;
+    font-size:        14px;
+    color:            rgba(100, 110, 120, 0.8) !important;
+    margin-top:       -5px;
+    word-spacing:     0.15em;
+}
+
+a.breadcrumb {
+    color:            #cfa !important;
+    background-color: rgba(140, 200, 40, 0.75);
+    padding:          4px;
+}
+
+a.breadcrumb:hover {
+    color:            #8a5 !important;
+    background-color: rgba(140, 200, 40, 0.25) !important;
+    text-shadow:      1px 1px 0px #eee;
+}
+
+span.breadcrumb {
+    color:            #8a5 !important;
+    background-color: rgba(140, 200, 40, 0.25) !important;
+    text-shadow:      1px 1px 0px #eee;
+    /*color:            #8a5 !important;*/
+    /*background-color: transparent;*/
+    /*padding:          4px;*/
 }
 
 .quick_link {
