@@ -1,4 +1,4 @@
-include_relative _breadcrumb.html current="appendText(var,appendWith)"
+{% include_relative _breadcrumb.html current="appendText(var,appendWith)" %}
 
 ### Description
 This command append text denoted by `appendWith` to the end of the text represented by `var` and save it back to `var`.

@@ -1,4 +1,4 @@
-include_relative _breadcrumb.html current="prependText(var,prependWith)"
+{% include_relative _breadcrumb.html current="prependText(var,prependWith)" %}
 
 
 ### Description
