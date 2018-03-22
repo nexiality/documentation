@@ -1,9 +1,4 @@
-<div class="breadcrumb">
-	<a class="breadcrumb" href="index.html">home</a> &raquo; 
-	<a class="breadcrumb" href="index.html">command reference</a> &raquo; 
-	<a class="breadcrumb" href="index.html">base</a> &raquo; 
-	<span class="breadcrumb">stopRecording()</span>
-</div>
+{% include _breadcrumb.html current="stopRecording" %}
 
 
 ### Description
