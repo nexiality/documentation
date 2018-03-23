@@ -20,7 +20,7 @@ scripts when you are done with the entire thing.
  
 *Well, you can.*
  
-For desktop automation, Sentry provides a mechanism to *"attach"* to a running instance of the target AUT via the 
+For desktop automation, Nexial provides a mechanism to *"attach"* to a running instance of the target AUT via the 
 corresponding `application.json`, like this:
  
 **application.json**

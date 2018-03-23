@@ -36,7 +36,7 @@
 - *in progress* [How to get an Element's Xpath from Chrome]()
 - [Execute Scripts in Headless Browser](ExecuteScripts_HeadlessBrowser)
 - [BrowserStack Integration](BrowserStackIntegration)
-- *in progress* [Script passing on local machine but failing on browserstack]()
+- *in progress* [Script passing on local machine but failing on BrowserStack]()
 
 
 #### Web Service/API Automation
