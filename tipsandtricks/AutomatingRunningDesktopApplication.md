@@ -53,10 +53,10 @@ Observe at line 7, `**"terminatingExisting": false**.` This property instructs
 of the AUT (in this case, `MyApp.exe`) for automation instead of starting a new instance.  Of course if there isn't 
 any running instance, then Nexial will start one as expected.  But if any running instance of the AUT is found, then 
 **`"terminatingExisting":false`** flag would have Nexial utilize that running instance for automation.
- 
+
 As such, you can take advantage of that by executing the script or scenario that corresponds to the current state of 
 the application.
- 
+
 Before we look at an example, a few critical things to keep in mind:
 1. **While the application could an running instance, Nexial is not.**  
    When executing your script, Nexial is always running as a brand new instance.  As such, it needs to be aware of 
@@ -66,7 +66,7 @@ Before we look at an example, a few critical things to keep in mind:
    ![useapp](image/AutomatingRunningDesktopApplication_01.png)  
 
 2. **While you can selectively run a portion of your scripts, Nexial must start from the beginning of a 
-   Test Scenario (i.e. worksheet).**  
+   Test Scenario (i.e. worksheet).**
    Make sure that the Test Scenario you want to run matches with the current state of the application.  For example, 
    if the first command in your scenario is to click on a button of a dialog box but the application does not display 
    any dialog box.  Naturally such script will fail.  Generally speaking, your test scenario should match the 
