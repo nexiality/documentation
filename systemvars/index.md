@@ -11,8 +11,8 @@ variables which maybe incorporated as part of your test script.
 <style>
 table.sysvar { width:1450px; font-size:11pt; text-align:left; vertical-align:top; }
 table.sysvar td { text-align:left; vertical-align:top; }
-table.sysvar img:resize { width:960px; }
-table.sysvar code { background: transparent; }
+table.sysvar img.resize { width:960px; }
+table.sysvar td.varname code { background: transparent; border:none; }
 table.sysvar img { margin:8px 0; }
 
 .highlight-red { background-color: #ffe7e7; } 
@@ -26,14 +26,14 @@ table.sysvar img { margin:8px 0; }
 <table class="sysvar" cellspacing="0" cellpadding="3">
 <tbody>
 <tr>
-    <th> configuration </th>
-    <th> data type </th>
-    <th> default </th>
-    <th> read only? </th>
-    <th> description </th>
+    <th nowrap="nowrap">configuration</th>
+    <th nowrap="nowrap">data type</th>
+    <th nowrap="nowrap">default</th>
+    <th nowrap="nowrap">read only?</th>
+    <th nowrap="nowrap">description</th>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.runID"/><code>nexial.runID</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.runID"/><code>nexial.runID</code></td>
     <td>text</td>
     <td>&nbsp;</td>
     <td class="highlight-red">true </td>
@@ -43,7 +43,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.runID.prefix"/><code>nexial.runID.prefix</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.runID.prefix"/><code>nexial.runID.prefix</code></td>
     <td>text</td>
     <td>&nbsp; </td>
     <td class="highlight-red">true </td>
@@ -77,7 +77,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.lenientStringCompare"/><code>nexial.lenientStringCompare</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.lenientStringCompare"/><code>nexial.lenientStringCompare</code></td>
     <td>boolean</td>
     <td>true</td>
     <td>false</td>
@@ -88,7 +88,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.verbose"/><code>nexial.verbose</code></td> 
+    <td nowrap="nowrap" class="varname"><a name="nexial.verbose"/><code>nexial.verbose</code></td> 
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -98,7 +98,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.elapsedTimeSLA"/><code>nexial.elapsedTimeSLA</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.elapsedTimeSLA"/><code>nexial.elapsedTimeSLA</code></td>
     <td>millisecond</td>
     <td>&nbsp;</td>
     <td>false&nbsp;</td>
@@ -109,14 +109,14 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.delayBetweenStepsMs"/><code>nexial.delayBetweenStepsMs</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.delayBetweenStepsMs"/><code>nexial.delayBetweenStepsMs</code></td>
     <td>millisecond</td>
     <td>600</td>
     <td>false</td>
     <td>The wait time between test steps, in milliseconds.</td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.textDelim"/><code>nexial.textDelim</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.textDelim"/><code>nexial.textDelim</code></td>
     <td>text</td>
     <td><code>,</code></td>
     <td>false</td>
@@ -148,7 +148,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.outputToCloud"/><code>nexial.outputToCloud</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.outputToCloud"/><code>nexial.outputToCloud</code></td>
     <td>boolean</td>
     <td>true</td>
     <td>false</td>
@@ -159,7 +159,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.assistantMode"/><code>nexial.assistantMode</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.assistantMode"/><code>nexial.assistantMode</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -171,7 +171,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.spreadsheet.program"/><code>nexial.spreadsheet.program</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.spreadsheet.program"/><code>nexial.spreadsheet.program</code></td>
     <td>text</td>
     <td><code>excel</code></td>
     <td class="highlight-red">true</td>
@@ -186,11 +186,11 @@ table.sysvar img { margin:8px 0; }
     <br/>
     Alternatively, one can simply specify <code>wps</code>, which will enable Nexial to automatically resolve the 
     correct location of WPS (latest version preferred). For example,<br/>
-    <img src="image/systemvar_06.png" class="resize"/>
+    <img src="image/systemvar_06.png"/>
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.scriptRef"/><code>nexial.scriptRef.&ast;</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.scriptRef"/><code>nexial.scriptRef.&ast;</code></td>
     <td>text</td>
     <td>&nbsp;</td>
     <td>false</td>
@@ -202,7 +202,7 @@ table.sysvar img { margin:8px 0; }
     <br/>
     Adding these information - while one may reference them within script - do not necessarily change the execution 
     or behavior of related script(s). However, the output would look something like this:<br/>
-    <img src="image/systemvar_08.png" class="resize"/><br/>
+    <img src="image/systemvar_08.png"/><br/>
     <br/>
     As such, the output provides contextual information about the execution such as:
     <ul>
@@ -213,7 +213,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.scenarioRef"/><code>nexial.scenarioRef.&ast;</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.scenarioRef"/><code>nexial.scenarioRef.&ast;</code></td>
     <td>text</td>
     <td>&nbsp;</td>
     <td>false</td>
@@ -230,7 +230,7 @@ table.sysvar img { margin:8px 0; }
 				</td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.stepByStep"/><code>nexial.stepByStep</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.stepByStep"/><code>nexial.stepByStep</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -240,7 +240,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.failFast"/><code>nexial.failFast</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.failFast"/><code>nexial.failFast</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -252,7 +252,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.resetFailFast"/><code>nexial.resetFailFast</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.resetFailFast"/><code>nexial.resetFailFast</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -270,7 +270,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.failImmediate"/><code>nexial.failImmediate</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.failImmediate"/><code>nexial.failImmediate</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -314,7 +314,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.screenshotOnError"/><code>nexial.screenshotOnError</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.screenshotOnError"/><code>nexial.screenshotOnError</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -324,14 +324,14 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.lastScreenshot"/><code>nexial.lastScreenshot</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.lastScreenshot"/><code>nexial.lastScreenshot</code></td>
     <td>text</td>
     <td>&nbsp;</td>
     <td class="highlight-red">true</td>
     <td>The file name of the last screenshot taken.</td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.lastOutcome"/><code>nexial.lastOutcome</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.lastOutcome"/><code>nexial.lastOutcome</code></td>
     <td>boolean</td>
     <td>&nbsp;</td>
     <td class="highlight-red">true</td>
@@ -345,7 +345,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.manageMemory"/><code>nexial.manageMemory</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.manageMemory"/><code>nexial.manageMemory</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>true</td>
@@ -365,15 +365,15 @@ table.sysvar img { margin:8px 0; }
     (<code>nexial.manageMemory=true</code>), Nexial will conduct garbage collection (GC) to reclaim any unused heap 
     memory after the completion of each test script execution. You will see something similar as the following, 
     which show that GC was executed and the memory footprint changes between the GC.<br/>
-    <img src="image/systemvar_15.jpg"/><br/>
+    <img src="image/systemvar_15.jpg" class="resize"/><br/>
     <br/>
     At the end of the entire execution, Nexial also print out a summary of the memory usage between different test 
     scenarios:<br/>
-    <img src="image/systemvar_16.jpg"/>
+    <img src="image/systemvar_16.jpg" class="resize"/>
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.failAfter"/><code>nexial.failAfter</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.failAfter"/><code>nexial.failAfter</code></td>
     <td>integer</td>
     <td>&nbsp;</td>
     <td>false</td>
@@ -387,7 +387,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.minExecSuccessRate"/><code>nexial.minExecSuccessRate</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.minExecSuccessRate"/><code>nexial.minExecSuccessRate</code></td>
     <td>decimal</td>
     <td>100</td>
     <td class="highlight-red">true</td>
@@ -405,10 +405,10 @@ table.sysvar img { margin:8px 0; }
     <br/> 
     <strong>NOTE</strong>: this system variable is <strong>NOT</strong> read from data file, and 
     <strong><u>MUST</u> </strong>be specified via command line. For example,<br/>
-    <blockquote style="margin: 10px 0px 0px 19px; border-left-color: rgb(46, 61, 84); color: rgb(112, 112, 112); padding: 10px 20px;">
-    <pre style="margin-top: 0px; margin-bottom: 0px; padding: 0px; font-family: ConfluenceInstalledFont, monospace;">set JAVA_OPT=-Dnexial.minExecSuccessRate=97.55 -Dnexial.assistantMode=true</pre>
-    <pre style="margin-top: 10px; margin-bottom: 0px; padding: 0px; font-family: ConfluenceInstalledFont, monospace;">... ...</pre>
-    <pre style="margin-top: 10px; margin-bottom: 0px; padding: 0px; font-family: ConfluenceInstalledFont, monospace;">nexial.cmd -plan C:\projects\... ... ...</pre>
+    <blockquote style="margin: 10px 0px 0px 19px; border-left-color: rgb(46, 61, 84); padding: 10px 20px;">
+    <code>set JAVA_OPT=-Dnexial.minExecSuccessRate=97.55 -Dnexial.assistantMode=true</code>
+    <code>... ...</code>
+    <code>nexial.cmd -plan C:\projects\... ... ...</code>
 				</blockquote>
 				<br/> 
 				At the end of an execution, one may observe a printout of the SUCCESS evaluation due to this system variable. 
@@ -417,7 +417,7 @@ table.sysvar img { margin:8px 0; }
 				</td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.recordingEnabled"/><code>nexial.recordingEnabled</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.recordingEnabled"/><code>nexial.recordingEnabled</code></td>
     <td>boolean</td>
     <td>true</td>
     <td>&nbsp;</td>
@@ -431,7 +431,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.screenRecorder"/><code>nexial.screenRecorder</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.screenRecorder"/><code>nexial.screenRecorder</code></td>
     <td>String</td>
     <td>mp4</td>
     <td>&nbsp;</td>
@@ -454,7 +454,7 @@ table.sysvar img { margin:8px 0; }
     <td class="highlight-green" colspan="5"><span>For iteration-based testing only.</span></td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.scope.iteration"/><code>nexial.scope.iteration</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.scope.iteration"/><code>nexial.scope.iteration</code></td>
     <td>ranges</td>
     <td>1</td>
     <td>false</td>
@@ -504,7 +504,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.scope.fallbackToPrevious"/><code>nexial.scope.fallbackToPrevious</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.scope.fallbackToPrevious"/><code>nexial.scope.fallbackToPrevious</code></td>
     <td>boolean</td>
     <td>true</td>
     <td>false</td>
@@ -514,7 +514,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.scope.currentIteration"/><code>nexial.scope.currentIteration</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.scope.currentIteration"/><code>nexial.scope.currentIteration</code></td>
     <td>integer</td>
     <td>&nbsp;</td>
     <td class="highlight-red">true</td>
@@ -524,7 +524,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.scope.lastIteration"/><code>nexial.scope.lastIteration</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.scope.lastIteration"/><code>nexial.scope.lastIteration</code></td>
     <td>integer</td>
     <td>&nbsp;</td>
     <td class="highlight-red">true</td>
@@ -537,7 +537,7 @@ table.sysvar img { margin:8px 0; }
     <td class="highlight-green" colspan="5"><span>For <code>io</code> or <code>csv</code> content comparison only.</span></td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.compare.textReport"/><code>nexial.compare.textReport</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.compare.textReport"/><code>nexial.compare.textReport</code></td>
     <td>boolean</td>
     <td>true</td>
     <td>false</td>
@@ -545,7 +545,7 @@ table.sysvar img { margin:8px 0; }
     If true, content comparison will produce a text-based comparison report at the end. The report is stored in the 
     output directory (along with other test output) or in the cloud (if <code>nexial.outputToCloud</code> is true) and 
     will be downloadable via the test output:<br/>
-    <img src="image/systemvar_18.jpg"/>
+    <img src="image/systemvar_18.jpg" class="resize"/>
     <br/>
     By default, this system variable is <code>true</code>. See 
     <a href="../commands/io/compare(expected,actual,failFast)">io &raquo;<code>compare(expected,actual,failFast)</code></a> 
@@ -553,7 +553,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.compare.jsonReport"/><code>nexial.compare.jsonReport</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.compare.jsonReport"/><code>nexial.compare.jsonReport</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -561,7 +561,7 @@ table.sysvar img { margin:8px 0; }
     If true, content comparison will produce a JSON-based comparison report at the end. The report is stored in the 
     output directory (along with other test output) or in the cloud (if <code>nexial.outputToCloud</code> is true) and 
     will be downloadable ia the test output:<br/>
-    <img src="image/systemvar_19.jpg"/>
+    <img src="image/systemvar_19.jpg" class="resize"/>
     <br/>
     By default, this system variable is <code>false</code>. See 
     <a href="../commands/io/compare(expected,actual,failFast)">io &raquo;<code>compare(expected,actual,failFast)</code></a> 
@@ -569,7 +569,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.compare.reportMatch"/><code>nexial.compare.reportMatch</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.compare.reportMatch"/><code>nexial.compare.reportMatch</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -584,7 +584,7 @@ table.sysvar img { margin:8px 0; }
     <td class="highlight-green" colspan="5"><span>For browser-based testing only. </span></td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.browser"/><code>nexial.browser</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.browser"/><code>nexial.browser</code></td>
     <td>text</td>
     <td>firefox</td>
     <td>false</td>
@@ -602,7 +602,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.browser.windowSize"/><code>nexial.browser.windowSize</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.browser.windowSize"/><code>nexial.browser.windowSize</code></td>
     <td>text</td>
     <td>&nbsp;</td>
     <td>false</td>
@@ -628,7 +628,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.delayBrowser"/><code>nexial.delayBrowser</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.delayBrowser"/><code>nexial.delayBrowser</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -638,7 +638,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.browser.ie.requireWindowFocus"/><code>nexial.browser.ie.requireWindowFocus</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.browser.ie.requireWindowFocus"/><code>nexial.browser.ie.requireWindowFocus</code></td>
     <td><code>boolean</code></td>
     <td>false</td>
     <td>true</td>
@@ -653,7 +653,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.enforcePageSourceStability"/><code>nexial.enforcePageSourceStability</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.enforcePageSourceStability"/><code>nexial.enforcePageSourceStability</code></td>
     <td><code>boolean</code></td>
     <td><code>true</code></td>
     <td>false</td>
@@ -670,7 +670,7 @@ table.sysvar img { margin:8px 0; }
 				</td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.pollWaitMs"/><code>nexial.pollWaitMs</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.pollWaitMs"/><code>nexial.pollWaitMs</code></td>
     <td>milliseconds</td>
     <td>30000</td>
     <td>false</td>
@@ -684,7 +684,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.uiRenderWaitMs"/><code>nexial.uiRenderWaitMs</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.uiRenderWaitMs"/><code>nexial.uiRenderWaitMs</code></td>
     <td>milliseconds</td>
     <td>3000</td>
     <td>false</td>
@@ -694,7 +694,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.waitSpeed"/><code>nexial.waitSpeed</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.waitSpeed"/><code>nexial.waitSpeed</code></td>
     <td>integer</td>
     <td>3</td>
     <td>false</td>
@@ -704,7 +704,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.browser.postCloseWaitMs"/><code>nexial.browser.postCloseWaitMs</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.browser.postCloseWaitMs"/><code>nexial.browser.postCloseWaitMs</code></td>
     <td>integer</td>
     <td>3000</td>
     <td>false</td>
@@ -716,7 +716,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.web.alwaysWait"/><code>nexial.web.alwaysWait</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.web.alwaysWait"/><code>nexial.web.alwaysWait</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -726,7 +726,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.ignoreBrowserAlert"/><code>nexial.ignoreBrowserAlert</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.ignoreBrowserAlert"/><code>nexial.ignoreBrowserAlert</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -736,7 +736,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.lastAlertText"/><code>nexial.lastAlertText</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.lastAlertText"/><code>nexial.lastAlertText</code></td>
     <td>string</td>
     <td>&nbsp;</td>
     <td class="highlight-red">true</td>
@@ -747,7 +747,7 @@ table.sysvar img { margin:8px 0; }
 				</td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.highlight"/><code>nexial.highlight</code></span></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.highlight"/><code>nexial.highlight</code></span></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -762,7 +762,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.browser.incognito"/><code>nexial.browser.incognito</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.browser.incognito"/><code>nexial.browser.incognito</code></td>
     <td>boolean</td>
     <td>true</td>
     <td class="highlight-red">true</td>
@@ -778,7 +778,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.browserstack.username"/><code>nexial.browserstack.username</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.username"/><code>nexial.browserstack.username</code></td>
     <td>text</td>
     <td>&nbsp;</td>
     <td>false</td>
@@ -792,7 +792,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.browserstack.automatekey"/><code>nexial.browserstack.automatekey</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.automatekey"/><code>nexial.browserstack.automatekey</code></td>
     <td>text</td>
     <td>&nbsp;</td>
     <td>false</td>
@@ -806,7 +806,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.browserstack.browser"/><code>nexial.browserstack.browser</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.browser"/><code>nexial.browserstack.browser</code></td>
     <td>text</td>
     <td>chrome</td>
     <td>false</td>
@@ -820,7 +820,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.browserstack.browser.version"/><code>nexial.browserstack.browser.version</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.browser.version"/><code>nexial.browserstack.browser.version</code></td>
     <td>text</td>
     <td>latest stable</td>
     <td>false</td>
@@ -833,7 +833,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.browserstack.debug"/><code>nexial.browserstack.debug</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.debug"/><code>nexial.browserstack.debug</code></td>
     <td>boolean</td>
     <td>true</td>
     <td>false</td>
@@ -844,7 +844,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.browserstack.resolution"/><code>nexial.browserstack.resolution</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.resolution"/><code>nexial.browserstack.resolution</code></td>
     <td>text</td>
     <td>1024x768</td>
     <td>false</td>
@@ -861,7 +861,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.browserstack.app.buildnumber"/><code>nexial.browserstack.app.buildnumber</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.app.buildnumber"/><code>nexial.browserstack.app.buildnumber</code></td>
     <td>text</td>
     <td>&nbsp;</td>
     <td>false</td>
@@ -872,7 +872,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.browserstack.enablelocal"/><code>nexial.browserstack.enablelocal</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.enablelocal"/><code>nexial.browserstack.enablelocal</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -885,7 +885,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.browserstack.os"/><code>nexial.browserstack.os</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.os"/><code>nexial.browserstack.os</code></td>
     <td>text</td>
     <td>&nbsp;</td>
     <td>false</td>
@@ -896,7 +896,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.browserstack.os.version"/><code>nexial.browserstack.os.version</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.os.version"/><code>nexial.browserstack.os.version</code></td>
     <td>text</td>
     <td>&nbsp;
     </td>
@@ -909,7 +909,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.safari.cleanSession"/><code>nexial.browser.safari.cleanSession</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.safari.cleanSession"/><code>nexial.browser.safari.cleanSession</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>true</td>
@@ -923,7 +923,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.safari.useTechPreview"/><code>nexial.browser.safari.useTechPreview</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.safari.useTechPreview"/><code>nexial.browser.safari.useTechPreview</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>true</td>
@@ -937,7 +937,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.forceIE32"/><code>nexial.forceIE32</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.forceIE32"/><code>nexial.forceIE32</code></td>
     <td>boolean</td>
     <td>false</td>
     <td class="highlight-red">true</td>
@@ -968,7 +968,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="webdriver.ie.driver"/><code>webdriver.ie.driver</code></td>
+    <td nowrap="nowrap" class="varname"><a name="webdriver.ie.driver"/><code>webdriver.ie.driver</code></td>
     <td>string</td>
     <td>&nbsp;</td>
     <td class="highlight-red">true</td>
@@ -987,7 +987,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="webdriver.ie.driver.loglevel"/><code>webdriver.ie.driver.loglevel</code></td>
+    <td nowrap="nowrap" class="varname"><a name="webdriver.ie.driver.loglevel"/><code>webdriver.ie.driver.loglevel</code></td>
     <td>string</td>
     <td>FATAL</td>
     <td class="highlight-red">true</td>
@@ -1004,7 +1004,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="webdriver.ie.driver.logfile"/><code>webdriver.ie.driver.logfile</code></td>
+    <td nowrap="nowrap" class="varname"><a name="webdriver.ie.driver.logfile"/><code>webdriver.ie.driver.logfile</code></td>
     <td>string</td>
     <td>&nbsp;</td>
     <td class="highlight-red">true</td>
@@ -1020,7 +1020,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="webdriver.ie.driver.silent"/><code>webdriver.ie.driver.silent</code></td>
+    <td nowrap="nowrap" class="varname"><a name="webdriver.ie.driver.silent"/><code>webdriver.ie.driver.silent</code></td>
     <td>boolean</td>
     <td>false</td>
     <td class="highlight-red">false</td>
@@ -1040,7 +1040,7 @@ table.sysvar img { margin:8px 0; }
     <td class="highlight-green" colspan="5"><span>For image-based testing (<code>image</code> commands) only.</span></td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.imageTolerance"/><code>nexial.imageTolerance</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.imageTolerance"/><code>nexial.imageTolerance</code></td>
     <td>float</td>
     <td>0</td>
     <td>false</td>
@@ -1053,7 +1053,7 @@ table.sysvar img { margin:8px 0; }
     <td class="highlight-green" colspan="5"><span>for <code>ws</code> commands only.</span></td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.ws.connectionTimeout"/><code>nexial.ws.connectionTimeout</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.ws.connectionTimeout"/><code>nexial.ws.connectionTimeout</code></td>
     <td>milliseconds</td>
     <td><code>300000</code></td>
     <td>false</td>
@@ -1063,7 +1063,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.ws.readTimeout"/><code>nexial.ws.readTimeout</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.ws.readTimeout"/><code>nexial.ws.readTimeout</code></td>
     <td>milliseconds</td>
     <td><code>300000</code></td>
     <td>false</td>
@@ -1073,14 +1073,14 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.ws.enableRedirects"/><code>nexial.ws.enableRedirects</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.ws.enableRedirects"/><code>nexial.ws.enableRedirects</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
     <td>Determines whether redirects should be handled automatically.</td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.ws.enabledExpectContinue"/><code>nexial.ws.enabledExpectContinue</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.ws.enabledExpectContinue"/><code>nexial.ws.enabledExpectContinue</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -1099,7 +1099,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.ws.allowCircularRedirects"/><code>nexial.ws.allowCircularRedirects</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.ws.allowCircularRedirects"/><code>nexial.ws.allowCircularRedirects</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -1109,7 +1109,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.ws.allowRelativeRedirects"/><code>nexial.ws.allowRelativeRedirects</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.ws.allowRelativeRedirects"/><code>nexial.ws.allowRelativeRedirects</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -1122,7 +1122,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.ws.requestPayloadCompact"/><code>nexial.ws.requestPayloadCompact</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.ws.requestPayloadCompact"/><code>nexial.ws.requestPayloadCompact</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -1132,7 +1132,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.ws.header"/><code>nexial.ws.header.&ast;</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.ws.header"/><code>nexial.ws.header.&ast;</code></td>
     <td>text</td>
     <td>&nbsp;</td>
     <td>false</td>
@@ -1163,7 +1163,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.ws.digest.user"/><code>nexial.ws.digest.user</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.ws.digest.user"/><code>nexial.ws.digest.user</code></td>
     <td>text</td>
     <td>&nbsp;</td>
     <td>false</td>
@@ -1174,25 +1174,25 @@ table.sysvar img { margin:8px 0; }
     </td> 
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.ws.digest.password"/><code>nexial.ws.digest.password</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.ws.digest.password"/><code>nexial.ws.digest.password</code></td>
     <td>text</td>
     <td>&nbsp;</td>
     <td>false</td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.ws.digest.realm"/><code>nexial.ws.digest.realm</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.ws.digest.realm"/><code>nexial.ws.digest.realm</code></td>
     <td>text</td>
     <td>&nbsp;</td>
     <td>false</td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.ws.digest.nouce"/><code>nexial.ws.digest.nouce</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.ws.digest.nouce"/><code>nexial.ws.digest.nouce</code></td>
     <td>text</td>
     <td>&nbsp;</td>
     <td>false</td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.ws.basic.user"/><code>nexial.ws.basic.user</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.ws.basic.user"/><code>nexial.ws.basic.user</code></td>
     <td>text</td>
     <td>&nbsp;</td>
     <td>false</td>
@@ -1203,7 +1203,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.ws.basic.password"/><code>nexial.ws.basic.password</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.ws.basic.password"/><code>nexial.ws.basic.password</code></td>
     <td>text</td>
     <td>&nbsp;</td>
     <td>false</td>
@@ -1212,7 +1212,7 @@ table.sysvar img { margin:8px 0; }
     <td class="highlight-green" colspan="5"><span>For desktop-based (<code>desktop</code> commands) testing only.</span></td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.desktopNotifyWaitMs"/><code>nexial.desktopNotifyWaitMs</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.desktopNotifyWaitMs"/><code>nexial.desktopNotifyWaitMs</code></td>
     <td>millisecond</td>
     <td>3000</td>
     <td>false</td>
@@ -1223,14 +1223,14 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.lastModalDialogText"/><code>nexial.lastModalDialogText</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.lastModalDialogText"/><code>nexial.lastModalDialogText</code></td>
     <td>text</td>
     <td>&nbsp;</td>
     <td class="highlight-red">true</td>
     <td>Contains the textual element of the last modal dialog box of the AUT during test execution.</td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.desktop.fullScreenCapture"/><code>nexial.desktop.fullScreenCapture</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.desktop.fullScreenCapture"/><code>nexial.desktop.fullScreenCapture</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -1244,7 +1244,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.desktop.dialogLookup"/><code>nexial.desktop.dialogLookup</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.desktop.dialogLookup"/><code>nexial.desktop.dialogLookup</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>&nbsp;</td>
@@ -1254,7 +1254,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.winiumJoinExisting"/><code>nexial.winiumJoinExisting</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.winiumJoinExisting"/><code>nexial.winiumJoinExisting</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -1268,7 +1268,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.winiumPort"/><code>nexial.winiumPort</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.winiumPort"/><code>nexial.winiumPort</code></td>
     <td>number</td>
     <td>&nbsp;</td>
     <td>false</td>
@@ -1279,7 +1279,7 @@ table.sysvar img { margin:8px 0; }
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.winiumSoloMode"/><code>nexial.winiumSoloMode</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.winiumSoloMode"/><code>nexial.winiumSoloMode</code></td>
     <td>boolean</td>
     <td>true</td>
     <td>false</td>
@@ -1296,16 +1296,16 @@ table.sysvar img { margin:8px 0; }
     <a href="../commands/web/closeApplication()">desktop &raquo;<code>closeApplication()</code></a> command will 
     effectively be ignored. One would set this system variable to <code>false</code> in order to terminate the 
     running AUT instance. Example:<br/>
-    <img src="image/systemvar_28.png"/><br/>
+    <img src="image/systemvar_28.png" class="resize"/><br/>
     <br/>
-    <img src="image/systemvar_29.png"/><br/>
+    <img src="image/systemvar_29.png" class="resize"/>
     </td>
 </tr>
 <tr>
     <td class="highlight-green" colspan="5"><span>For database (<code>rdbms</code> commands) testing only.</span></td>
 </tr>
 <tr>
-    <td nowrap="nowrap"><a name="nexial.rdbms.packSingleRow"/><code>nexial.rdbms.packSingleRow</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.rdbms.packSingleRow"/><code>nexial.rdbms.packSingleRow</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
