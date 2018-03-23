@@ -34,7 +34,7 @@ the **[Introduction](quickstart/IntroductionAndFAQ)** page.
 
 ---------------------------------------------
 
-<div class="quick_link"><a href="quickstart/QuickStart">Quick Start</a></div>
+<div class="quick_link"><a href="quickstart/">Quick Start</a></div>
 <div class="quick_link"><a href="commands/">Command Reference</a></div>
 <div class="quick_link"><a href="systemvars/">System Variables</a></div>
 <div class="quick_link"><a href="flowcontrol/">Flow Controls</a></div>

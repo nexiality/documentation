@@ -2,15 +2,16 @@
 
 
 ### Description
-This command increments value of `var`, using one of the support strategy (more below).  This is useful when a non-
-numeric increment is needed during automation.  For example, suppose the following test steps:
+This command increments value of `var`, using one of the support strategy (more below).  This is useful when a 
+non-numeric increment is needed during automation.  For example, suppose the following test steps:
 
-1. open "page X"
-2. there should be 15 items listed, with each item labelled by an alphabet starting with 'A'.
-3. validate that the list contains the right sequence of letters (i.e. 'A', 'B', 'C', ...)
+  1. open "page X"
+  2. there should be 15 items listed, with each item labelled by an alphabet starting with 'A'.
+  3. validate that the list contains the right sequence of letters (i.e. 'A', 'B', 'C', ...)
 
 Since the number of items can be dynamic, we shouldn't hard code the list of alphabet to validate.  Instead we can use
 this command to increment from one letter to the next.
+
 
 ##### Increment Strategy
 Currently Nexial provides 3 approaches to increment:
@@ -27,12 +28,12 @@ Currently Nexial provides 3 approaches to increment:
 
 
 ### Example
-Script:
+Script:<br/>
 ![script](image/incrementChar_01.png)
 
-Output:
+Output:<br/>
 ![output](image/incrementChar_02.png)
 
 
 ### See Also
-- [increment(var,amount)](../number/increment(var,amount).html)
+- [`increment(var,amount)`](../number/increment(var,amount))

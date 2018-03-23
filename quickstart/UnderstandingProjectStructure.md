@@ -3,7 +3,7 @@
 
 Below is the general directory/file structure of a Nexial project:
 
-<img src="image/UnderstandingProjectStructure_01.png" style="height:250px"/>
+<img src="image/UnderstandingProjectStructure_01.png" style="height:360px"/>
 
 Things to note:
 1. The `artifact` directory contains 3 sub-directories: `data`, `plan`, `script`. These are the directories are used 
@@ -24,5 +24,7 @@ Things to note:
    `[TEST SCRIPT NAME].[START DATE/TIME].[ITERATION].xlsx`.
 
 3. For convenience, use the `sentry-project.cmd` or `sentry-project.sh` to generate the project structure for you.
+
 4. As a convention, it is recommended to use `C:\projects` as the top-level directory for all your Sentry projects.
+
 5. For more information, check out [Understanding Sentry Excel templates](UnderstandingExcelTemplates).

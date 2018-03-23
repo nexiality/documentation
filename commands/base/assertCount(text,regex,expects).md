@@ -11,19 +11,19 @@ target variable represents an array, a list, a map or a Java object.
 
 
 ### Parameter(s)
-- **text** \- the text (can be referenced via ${...} syntax) that will be evaluated. 
+- **text** \- the text (can be referenced via `${...}` syntax) that will be evaluated. 
 - **regex** \- the regular expression to evaluate `text.`
 - **expects** \- the expected number of matches when evaluating `text` against `regex`.
 
 
 ### Example
-Below is a test script that uses `assertCount(text,regex,expects)`
+Below is a test script that uses `assertCount(text,regex,expects)`<br/>
 ![script](image/assertCount_01.png)
 
-Here's the output:
+Here's the output:<br/>
 ![output](image/assertCount_02.png)
 
 
 ### See Also
-- [`saveReplace(text,regex,replace,resultVar)`](saveReplace(text,regex,replace,resultVar).html)
-- [`saveMatches(text,regex,saveVar)`](saveMatches(text,regex,saveVar).html)
+- [`saveReplace(text,regex,replace,resultVar)`](saveReplace(text,regex,replace,resultVar))
+- [`saveMatches(text,regex,saveVar)`](saveMatches(text,regex,saveVar))

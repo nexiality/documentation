@@ -12,10 +12,10 @@ same as `prefix`, similarly with both `text` and `prefix` are empty.
 
 
 ### Example
-Example:
+Script:<br/>
 ![script](image/assertStartsWith_01.png)
 
 
 ### See Also
-- [`assertContains(text,substring)`](assertContains(text,substring).html)
-- [`assertEndsWith(text,suffix)`](assertEndsWith(text,suffix).html)
+- [`assertContains(text,substring)`](assertContains(text,substring))
+- [`assertEndsWith(text,suffix)`](assertEndsWith(text,suffix))
