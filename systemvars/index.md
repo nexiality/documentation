@@ -208,7 +208,7 @@ table.sysvar img { margin:8px 0; }
     <ul>
     <li><i>"Against which build was the test executed"</i></li>
     <li><i>"On which environment was the test run"</i>, and</li>
-    <li><i>"What is the primary business data used for this execution"</i>.
+    <li><i>"What is the primary business data used for this execution"</i>.</li>
     </ul>
     </td>
 </tr>
@@ -597,7 +597,7 @@ table.sysvar img { margin:8px 0; }
     <li><code>chrome.headless</code></li>
     <li><code>safari</code></li>
     <li><code>ie</code></li>
-    <li><code>browserstack (see below for <code>nexial.browserstack.&ast;</code> system variables)</code></li>
+    <li><code>browserstack</code> (see below for <code>nexial.browserstack.&ast;</code> system variables)</li>
     </ul>
     </td>
 </tr>
