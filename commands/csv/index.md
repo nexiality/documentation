@@ -1,4 +1,8 @@
-[3 Child Pages](https://confluence.ep.com/display/QA/csv?showChildren=false#children)
--------------------------------------------------------------------------------------
+{% include_relative _breadcrumb_index.html current="csv" %}
 
-Page: [compare(expected,actual,failFast) - csv](https://confluence.ep.com/display/QA/compare%28expected%2Cactual%2CfailFast%29+-+csv)Page: [compareExtended(var,profile,expected,actual)](https://confluence.ep.com/pages/viewpage.action?pageId=16173284)Page: [convertExcel(excel,worksheet,csvFile)](https://confluence.ep.com/pages/viewpage.action?pageId=9985544)
+The "csv" command type represents a series of automation commands regarding CSV files and CSV content:
+
+- [`compare(expected,actual,failFast)`](compare(expected,actual,failFast).html)
+- [`compareExtended(var,profile,expected,actual)`](compareExtended(var,profile,expected,actual).html)
+- [`convertExcel(excel,worksheet,csvFile)`](convertExcel(excel,worksheet,csvFile).html)
+
