@@ -17,4 +17,6 @@ below to learn more about each type and the commands available under each of the
 - [`excel`](excel/index.html): commands regarding the Excel file type.
 - [`external`](external/index.html): commands to execute external programs or scripts.
 - [`image`](image/index.html): commands regarding image files.
+- [`io`](io/index.html): commands regarding IO operations.
+
 
