@@ -15,7 +15,9 @@ straightforward:
 1. Sign up for the appropriate BrowserStack account - be sure to select 
    [one of the Automate plans](https://www.browserstack.com/accounts/subscriptions) (ya, it's not free 
    ![(sad)](../image/sad.png)).
+
 2. Note the username and access key in the [Settings page](https://www.browserstack.com/accounts/settings).
+
 3. Define the following data value in your test data sheet:
 
    | data variable                     | value          |
@@ -26,10 +28,12 @@ straightforward:
     
 4. Note that the above data values are the minimum required for BrowserStack integration.  For more options, navigate 
    to the [System Variable](../systemvars/) page and search for `nexial.browserstack`
+
 5. If you are testing a website/webpage that can only be accessed within local network or intranet, be sure to 
    download and run the [BrowserStackLocal binary](https://www.browserstack.com/local-testing#command-line).  
    BrowserStackLocal must be active prior to automation.  Also `nexial.browserstack.enablelocal` must be `true`.
    1. **Note**: *we are working on automatically starting BrowserStackLocal during Nexial automation.  Stay tuned!*
+
 6. That's it!  Run your test as you normally would.  With BrowserStack, the automation is performed remotely.  Hence 
    you won't see any browser being launched locally.  However all the screenshots will be captured in the same way as 
    local browser testing.

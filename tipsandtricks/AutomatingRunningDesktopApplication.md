@@ -81,12 +81,12 @@ Before we look at an example, a few critical things to keep in mind:
 
 ### Example
 Suppose you have the following test plan:<br/>
-![plan](image/automatingRunningDesktopApplication_02.png)
+![plan](image/AutomatingRunningDesktopApplication_02.png)
 
 This test plan assumes that we will start the application and log into it (Login), then search for certain business 
 information (Search), and lastly add additional data via the application (Add).
  
 Now, with the target application already running and appropriately authenticated, we could remove the first script:<br/>
-![plan2](image/automatingRunningDesktopApplication_03.png)
+![plan2](image/AutomatingRunningDesktopApplication_03.png)
 
 Similarly one could do the same at the script (workbook) or scenario (worksheet) level.
