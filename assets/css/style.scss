@@ -131,3 +131,13 @@ span.command {
     text-shadow:      none;
     font-size:        14pt;
 }
+
+a.external-link {
+    padding:               2px 2px 2px 17px;
+    background:            rgba(100, 100, 100, 0.65) url(../../image/external_link.png) no-repeat;
+    color:                 #dda;
+    background-position-x: 1px;
+    background-position-y: 2px;
+    font-weight:           normal;
+}
+
