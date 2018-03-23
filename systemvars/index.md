@@ -9,18 +9,22 @@ Below are a list of configurable system variables.  During the test execution, N
 variables which maybe incorporated as part of your test script.
 
 <style>
-table.sysvar { width:1450px; font-size:11pt; text-align:left; vertical-align:top; }
-table.sysvar td { text-align:left; vertical-align:top; }
+table.sysvar { width:1250px; text-align:left; vertical-align:top; }
+table.sysvar th { padding:5px; border:1px #aaa solid; }
+table.sysvar td { padding:5px; border:1px #ddd solid; text-align:left; vertical-align:top; }
 table.sysvar img.resize { width:960px; }
-table.sysvar td.varname code { background: transparent; border:none; }
+table.sysvar td.varname code { background:transparent; border:none; color:#555; }
+table.sysvar td.varname a code { background:transparent; border:none; color:#555; }
 table.sysvar img { margin:8px 0; }
+table.sysvar blockquote { font-size:1em; }
+table.sysvar a code { color:#d5000d; background-color:transparent; border:none; font-weight:normal; }
 
-.highlight-red { background-color: #ffe7e7; } 
+.highlight-red { background-color:#ffe7e7; } 
 
-.highlight-green { border-color: rgb(221, 221, 221); padding: 7px 10px; background-color: rgb(221, 250, 222); }
-.highlight-green span { color: rgb(0, 128, 0); font-weight: bold; }
+.highlight-green { border-color:rgb(221, 221, 221); padding:7px 10px; background-color:rgb(221, 250, 222); }
+.highlight-green span { color:rgb(0, 128, 0); font-weight:bold; }
 
-.highlight-yellow { border-color: rgb(221, 221, 221); padding: 7px 10px; background-color: rgb(255, 255, 221); }
+.highlight-yellow { border-color:rgb(221, 221, 221); padding:7px 10px; background-color:rgb(255, 255, 221); }
 </style>
 
 <table class="sysvar" cellspacing="0" cellpadding="3">
@@ -183,7 +187,6 @@ table.sysvar img { margin:8px 0; }
     However, should you choose to use another program, such as WPS, specify this variable in your data sheet. For 
     example,<br/>
     <img src="image/systemvar_05.jpg" class="resize"/><br/>
-    <br/>
     Alternatively, one can simply specify <code>wps</code>, which will enable Nexial to automatically resolve the 
     correct location of WPS (latest version preferred). For example,<br/>
     <img src="image/systemvar_06.png"/>
@@ -199,11 +202,9 @@ table.sysvar img { margin:8px 0; }
     create reference information, which may change over iteration, to improve the readability of the execution output. 
     For example,<br/>
     <img src="image/systemvar_07.png"/><br/>
-    <br/>
     Adding these information - while one may reference them within script - do not necessarily change the execution 
     or behavior of related script(s). However, the output would look something like this:<br/>
     <img src="image/systemvar_08.png"/><br/>
-    <br/>
     As such, the output provides contextual information about the execution such as:
     <ul>
     <li><i>"Against which build was the test executed"</i></li>
@@ -277,7 +278,6 @@ table.sysvar img { margin:8px 0; }
     <td>
     Determine if Nexial should terminate execution at the next failure. This configuration can be useful to signify 
     the intent of "<em>after this point, failure will not be tolerated</em>". For example,<br/>
-    <br/>
     <table cellspacing="0" cellpadding="3">
     <thead>
     <tr>
@@ -359,14 +359,12 @@ table.sysvar img { margin:8px 0; }
     <br/>
     [on OSX]:<br/>
     <img src="image/systemvar_14.png" width="530"/><br/>
-    <br/>
     </p>
     The purpose of this environment variable is to instruct Nexial to enable aggressive memory management. When enabled 
     (<code>nexial.manageMemory=true</code>), Nexial will conduct garbage collection (GC) to reclaim any unused heap 
     memory after the completion of each test script execution. You will see something similar as the following, 
     which show that GC was executed and the memory footprint changes between the GC.<br/>
     <img src="image/systemvar_15.jpg" class="resize"/><br/>
-    <br/>
     At the end of the entire execution, Nexial also print out a summary of the memory usage between different test 
     scenarios:<br/>
     <img src="image/systemvar_16.jpg" class="resize"/>
@@ -548,7 +546,7 @@ table.sysvar img { margin:8px 0; }
     <img src="image/systemvar_18.jpg" class="resize"/>
     <br/>
     By default, this system variable is <code>true</code>. See 
-    <a href="../commands/io/compare(expected,actual,failFast)">io &raquo;<code>compare(expected,actual,failFast)</code></a> 
+    <a href="../commands/io/compare(expected,actual,failFast)">io &raquo; <code>compare(expected,actual,failFast)</code></a> 
     for details.
     </td>
 </tr>
@@ -564,7 +562,7 @@ table.sysvar img { margin:8px 0; }
     <img src="image/systemvar_19.jpg" class="resize"/>
     <br/>
     By default, this system variable is <code>false</code>. See 
-    <a href="../commands/io/compare(expected,actual,failFast)">io &raquo;<code>compare(expected,actual,failFast)</code></a> 
+    <a href="../commands/io/compare(expected,actual,failFast)">io &raquo; <code>compare(expected,actual,failFast)</code></a> 
     for details.
     </td>
 </tr>
@@ -576,7 +574,7 @@ table.sysvar img { margin:8px 0; }
     <td>
     If true, content comparison will report each matching lines, in addition to reporting all mismatched incidents. 
     This can make the comparison report too tedious when comparing large files. See 
-    <a href="../commands/io/compare(expected,actual,failFast)">io &raquo;<code>compare(expected,actual,failFast)</code></a> 
+    <a href="../commands/io/compare(expected,actual,failFast)">io &raquo; <code>compare(expected,actual,failFast)</code></a> 
     for details.
     </td>
 </tr>
@@ -612,7 +610,7 @@ table.sysvar img { margin:8px 0; }
     In order to have a consistency, it is recommmed to define browser height and width as desired initial browser 
     window size.<br/>
     <br/>
-    For headless [<code><strong>chrome.headless and firefox.headless</strong>]</code> this is a <strong>MUST</strong>. 
+    For headless (<code><strong>chrome.headless and firefox.headless</strong></code>) this is a <strong>MUST</strong>. 
     <u><strong>If no window size is provided, Nexial will default the window size for the headless browser to 
     1200x900</strong></u>.<br/>
     <br/>
@@ -633,7 +631,8 @@ table.sysvar img { margin:8px 0; }
     <td>false</td>
     <td>false</td>
     <td>
-    Delay the initialization of web browser until the first command of <code>web.open()</code> is invoked. 
+    Delay the initialization of web browser until the first command of 
+    <a href="../commands/web/open()">web &raquo; <code>open()</code></a> is invoked. 
     Generally one would not need to worry about this. Change this <strong>ONLY IF YOU KNOW WHAT YOU ARE DOING!</strong>
     </td>
 </tr>
@@ -647,7 +646,8 @@ table.sysvar img { margin:8px 0; }
 	   <ul>
     <li>Specify IE browser window focus before performing any user interaction operations (mouse or keyboard events).</li>
     <li>This capability is false by default, but delivers much more accurate native events interactions.</li>
-    <li>But for any user Interaction testing (mouse hovering etc), it is recommended to set this variable to <code>true</code> using working with IE Browser.</li>
+    <li>But for any user Interaction testing (mouse hovering etc), it is recommended to set this variable to 
+    <code>true</code> using working with IE Browser.</li>
 	   </ul>
     <img src="image/systemvar_22.png"/>
     </td>
@@ -711,7 +711,7 @@ table.sysvar img { margin:8px 0; }
     <td>
     Time allotted, in millisecond, to allow the system is settled down and process any <em>clean up</em> after a 
     browser instance is closed. The default for this is <code>3000</code>, which means the execution of 
-    <a href="../commands/web/close">web &raquo;<code>close()</code></a> will add 3 seconds by default to the overall 
+    <a href="../commands/web/close">web &raquo; <code>close()</code></a> will add 3 seconds by default to the overall 
     execution time.
     </td>
 </tr>
@@ -747,7 +747,7 @@ table.sysvar img { margin:8px 0; }
 				</td>
 </tr>
 <tr>
-    <td nowrap="nowrap" class="varname"><a name="nexial.highlight"/><code>nexial.highlight</code></span></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.highlight"/><code>nexial.highlight</code></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -1286,14 +1286,14 @@ table.sysvar img { margin:8px 0; }
     <td>
     Determine if Senry should run the current AUT exe in "Solo" mode (default) - which means to reuse
     existing instances if found. This means that one could forcefully configure the AUT to run as a single
-    instance, even when multiple <a href="../commands/desktop/useApp(appId)">desktop &raquo;<code>useApp(appId)</code></a> 
+    instance, even when multiple <a href="../commands/desktop/useApp(appId)">desktop &raquo; <code>useApp(appId)</code></a> 
     command was invoked. This is especially useful when dealing with an application that requires additional time
     and resources to "startup". When subsequent 
-    <a href="../commands/desktop/useApp(appId)">desktop &raquo;<code>useApp(appId)</code></a> command is invoked, 
+    <a href="../commands/desktop/useApp(appId)">desktop &raquo; <code>useApp(appId)</code></a> command is invoked, 
     Nexial will simply reuse the existing running instance and thus save time.<br/>
     <br/>
     However, it is important to note that 
-    <a href="../commands/web/closeApplication()">desktop &raquo;<code>closeApplication()</code></a> command will 
+    <a href="../commands/web/closeApplication()">desktop &raquo; <code>closeApplication()</code></a> command will 
     effectively be ignored. One would set this system variable to <code>false</code> in order to terminate the 
     running AUT instance. Example:<br/>
     <img src="image/systemvar_28.png" class="resize"/><br/>
