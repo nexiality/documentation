@@ -15,7 +15,7 @@ be irrelevant, unstable or contradictory to the intent of the test.
 
 ### Example
 Script:
-![scipt](image/failImmediate_01.png)
+![script](image/failImmediate_01.png)
 
 Output:
 ![output](image/failImmediate_02.png)

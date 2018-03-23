@@ -5,7 +5,7 @@
 This command is used to compare two CSV files. It compares the file size (in bytes) and the content of the files. 
 
 **NOTE THAT THIS COMMAND IS FUNCTIONALLY THE SAME AS 
-[io &raquo;`compare(expected,actual,failFast)`](../io/compare(expected,actual,failFast).html).   Check its 
+[io &raquo; `compare(expected,actual,failFast)`](../io/compare(expected,actual,failFast).html).   Check its 
 [documentation](../io/compare(expected,actual,failFast).html) for more details.**
 
 
@@ -17,10 +17,10 @@ This command is used to compare two CSV files. It compares the file size (in byt
 
 
 ### Example
-Test Data:
+Test Data:<br/>
 ![data](image/compare_01.png)
 
-Script:
+Script:<br/>
 ![script](image/compare_02.png)
 
 Output: failure on first line and fourth string

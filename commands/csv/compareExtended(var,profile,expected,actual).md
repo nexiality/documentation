@@ -3,7 +3,7 @@
 
 ### Description
 This command provides a more comprehensive way of comparing CSV content.  For simple comparison, check out 
-[`compare(expected,actual,failFast)`](compare(expected,actual,failFast).md).
+[`compare(expected,actual,failFast)`](compare(expected,actual,failFast).html).
 
 The main purpose of this command is to provide flexibility and insights into the comparison of 2 CSV content with the 
 following strategies:
@@ -31,17 +31,82 @@ configuration is as follows:
 <code><b>[profile]</b>.compareExt.<b>configuration_key</b> | value</code>
 
 Here are the list of possible configuration (assuming the `profile` is `MyFiles`):
-
-| configuration                                | value                                       | notes                   |
-|----------------------------------------------|---------------------------------------------|-------------------------|
-| `MyFiles.compareExt.expected.identity`       | "ID" column name(s) of the `expected` file. | The "ID" columns are used in 2 ways:<br/><br/><ol><li><u>Fast matching</u> - if the "ID" columns of an `expected` row is not matching that of the `actual` row, then the comparison for that row is considered as FAILED and Nexial will move to compare the next row.</li><li><u>Pre-Comparison Sort</u> - Nexial uses the content of the "ID" column(s) to sort the CSV content prior to comparison. That way 2 CSV files with disparate sort order can be compared.</li></ol> |
-| `MyFiles.compareExt.actual.identity`         | "ID" column name(s) of the `actual` file.   | see above.              |
-| `MyFiles.compareExt.identity.delim`          | Default: `^`                                | The delimiter to use when multiple identity columns are specified. Default is `^`. |
-| `MyFiles.compareExt.match.[EXPECTED COLUMN]` | The corresponding column name of the `actual` file. | Specifying the columns to match between the `expected` and `actual` file. For example:<br/>![example](image/compareExtended_09.png)<br/>One can specify all the columns to ensure proper matching. If the `MyFiles.compareExt.match.[FIELD]` configuration is used then those not specified will be omitted for comparison. If both files contains the exact same headers, such configuration can be omitted entirely. |
-| `MyFiles.compareExt.output.display`          | The column(s) - the `expected`file's perspective - to display as part of output. | Use this configuration to include or omit certain fields. Not all fields are used for matching. If the `MyFiles.compareExt.match.[FIELD]` configuration is used then those not specified will be omitted for comparison. However such omitted fields can still be used for output purpose - via this configuration. Furthermore, it is possible to alter the order of these columns in the output. |
-| `MyFiles.compareExt.output.MISMATCHED`       | Field name of the "mismatched" field.       | This command provides an additional field to specify where the mismatched is found. This configuration specify what such field should be called. By default it is `MISMATCHED FIELD`. |
-| `MyFiles.compareExt.output.EXPECTED`         | Field name of the "mismatched" value from the `expected` file. | The field name to use for displaying the value from the `expected` file for the "mismatched" field (see above). |
-| `MyFiles.compareExt.output.ACTUAL`           | Field name of the "mismatched" value from the `actual` file. | The field name to use for displaying the value from the `actual` file for the "mismatched" field (see above). |
+<table>
+<thead>
+<tr>
+	<th>configuration</th>
+	<th>value</th>
+	<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td><code>MyFiles.compareExt.expected.identity</code></td>
+	<td>"ID" column name(s) of the <code>expected</code> file.</td>
+	<td>
+		The "ID" columns are used in 2 ways:<br/><br/>
+		<ol>
+			<li><u>Fast matching</u> - if the "ID" columns of an <code>expected</code> row is not matching that of the <code>actual</code> row, then the comparison for that row is considered as FAILED and Nexial will move to compare the next row.</li>
+			<li><u>Pre-Comparison Sort</u> - Nexial uses the content of the "ID" column(s) to sort the CSV content prior to comparison. That way 2 CSV files with disparate sort order can be compared.</li>
+		</ol>
+	</td>
+</tr>
+<tr>
+	<td><code>MyFiles.compareExt.actual.identity</code></td>
+	<td>"ID" column name(s) of the <code>actual</code> file.</td>
+	<td>see above.</td>
+</tr>
+<tr>
+	<td><code>MyFiles.compareExt.identity.delim</code></td>
+	<td>Default: <code>^</code></td>
+	<td>The delimiter to use when multiple identity columns are specified. Default is <code>^</code>.</td>
+</tr>
+<tr>
+	<td><code>MyFiles.compareExt.match.[EXPECTED COLUMN]</code></td>
+	<td>The corresponding column name of the <code>actual</code> file.</td>
+	<td>
+		Specifying the columns to match between the <code>expected</code> and <code>actual</code> file. For example:<br/>
+		<img src="image/compareExtended_09.png"/><br/>
+		One can specify all the columns to ensure proper matching. If the <code>MyFiles.compareExt.match.[FIELD]</code> 
+		configuration is used then those not specified will be omitted for comparison. If both files contains the exact 
+		same headers, such configuration can be omitted entirely.
+		</td>
+</tr>
+<tr>
+	<td><code>MyFiles.compareExt.output.display</code></td>
+	<td>The column(s) - the <code>expected</code>file's perspective - to display as part of output.</td>
+	<td>Use this configuration to include or omit certain fields. Not all fields are used for matching. If the 
+	<code>MyFiles.compareExt.match.[FIELD]</code> configuration is used then those not specified will be omitted for 
+	comparison. However such omitted fields can still be used for output purpose - via this configuration. Furthermore, 
+	it is possible to alter the order of these columns in the output.
+	</td>
+</tr>
+<tr>
+	<td><code>MyFiles.compareExt.output.MISMATCHED</code></td>
+	<td>Field name of the "mismatched" field.</td>
+	<td>
+	This command provides an additional field to specify where the mismatched is found. This 
+	configuration specify what such field should be called. By default it is <code>MISMATCHED FIELD</code>.
+	</td>
+</tr>
+<tr>
+	<td><code>MyFiles.compareExt.output.EXPECTED</code></td>
+	<td>Field name of the "mismatched" value from the <code>expected</code> file.</td>
+	<td>
+	The field name to use for displaying the value from the <code>expected</code> file for the "mismatched" 
+	field (see above).
+	</td>
+</tr>
+<tr>
+	<td><code>MyFiles.compareExt.output.ACTUAL</code></td>
+	<td>Field name of the "mismatched" value from the <code>actual</code> file.</td>
+	<td>
+	The field name to use for displaying the value from the <code>actual</code> file for the "mismatched" field 
+	(see above).
+	</td>
+</tr>
+</tbody>
+</table>
 
 Here's an example of the comparison configuration (in this case, the `profile` is `AppOutput`):
 ![config](image/compareExtended_01.png)
@@ -52,8 +117,8 @@ the comparison result (referenced by the specified `var` variable):
 ![result](image/compareExtended_02.png)
 
 For example, assuming that the `var` is specified as `result`:
-- To retrieve the number of mismatched rows - <code>${result}.**failCount**</code>
-- To find the rate of matches - <code>[**NUMBER**(${result}.**successRate**) -> multiple(100) roundTo(00.00)]%</code>
+- To retrieve the number of mismatched rows - <code>${result}.<b>failCount</b></code>
+- To find the rate of matches - <code>[<b>NUMBER</b>(${result}.<b>successRate</b>) -> multiple(100) roundTo(00.00)]%</code>
   - Note that we are using [Nexial Expression](../../expressions/) in the example above to convert a rate of 0 to 1 to 
     a percentage value.
 - To list the identities of the mismatched records - <code>${result}.failIdentities</code>
