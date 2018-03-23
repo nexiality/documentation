@@ -9,7 +9,7 @@ here to [get Nexial set up in your local environment](InstallingNexial).
 If you have already installed Nexial, here are the steps to updating Nexial on your local 
 environment.
 
-1.  Open your browser to [Nexial Distro](https://github.com/nexiality/nexial-core/releases)
+1.  Open your browser to [Nexial Release](https://github.com/nexiality/nexial-core/releases)
 1.  Find the appropriate build or release to download. Nexial users are encouraged to use the 
 				latest version when possible.
 1.  Stop Nexial, if it's still running. Also ensure no webdriver or winium driver instance 

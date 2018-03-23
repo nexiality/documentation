@@ -14,5 +14,6 @@ below to learn more about each type and the commands available under each of the
 - [`aws.s3`](aws.s3/index.html): commands regarding AWS S3.
 - [`base`](base/index.html): general commands for data assertion and commonly used operations.
 - [`csv`](csv/index.html): commands regarding the CSV file type.
+- [`excel`](excel/index.html): commands regarding the Excel file type.
 - [`image`](image/index.html): commands regarding image files.
 
