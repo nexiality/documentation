@@ -1,5 +1,7 @@
-## Install Java
+{% include_relative _breadcrumb.html current="Installing Nexial" %}
 
+
+## Install Java
 1.  Check if Java is installed - **Java 1.8 or above required**
 	   1.  Open console via:  
         **Windows**:  Start | Run | `cmd <ENTER>`  
@@ -56,10 +58,12 @@
     1.  Similarly search for a variable named `JRE_HOME`.  If not found, there is no need to 
         create it. If found, check that it has the same value as `JAVA_HOME`.
 
+
 ## Check Excel Version
 Currently Nexial supports Excel 2007 and 2010. Nexial requires the use of XLSX format (old XLS 
 format not supported).  Request ServiceDesk for assistance if you do not have Excel installed or 
 the installed version is too old.
+
 
 ## Checking Browser Availability and Version
 1.  **Internet Explorer** \- Nexial at this time only supports Internet Explorer 9 or above.  In 
@@ -67,23 +71,24 @@ the installed version is too old.
 				either 32 or 64 bit.
 1.  **Firefox** \- as stated on Selenium's website: "..._Support for Firefox is the latest release, 
 				the previous release, the latest ESR release and the previous ESR release..._"  However there's 
-				is high likelihood that older versions of Firefo will work as well.  Support from Nexial team 
+				is high likelihood that older versions of Firefox will work as well.  Support from Nexial team 
 				is provided on a case-by-case basis.
 1.  **Chrome** \- latest and almost all recent versions are supported.  Older version can be 
 				supported via using the corresponding [older versions of chrome driver](https://sites.google.com/a/chromium.org/chromedriver/downloads).
 1.  **Safari** \- version 9 or above is supported, with the latest most likely to be most stable.
 
+
 ## Installing Nexial
 1.  Download Nexial
-    1.  Download Nexial distribution **[here](https://s3-us-west-2.amazonaws.com/ep.qm/sentry-distribution/index.html)**. 
-        Note that the instruction for updating to newer version of Nexial is the same as 
-        installing it anew.
+    1.  Download Nexial distribution **[here](https://github.com/nexiality/nexial-core/releases)**. 
+        Note that the instruction for updating to newer version of Nexial is the same as installing it anew.
 2.  Installing Nexial
     1.  Create a directory in your local workstation/VDI as `C:\projects\`
     1.  Unzip the downloaded Nexial package to `C:\projects\`.  For example, `C:\projects\nexial-core` 
         is the location where the content of the zip file is unzipped.
-    1.  The location where Nexial is unzipped to is referred to as NEXIAL_HOME.
+    1.  The location where Nexial is unzipped to is referred to as `NEXIAL_HOME`.
     1.  Done!
+
 
 ## Setting up Your First Project
 1.  create project structure
@@ -100,23 +105,27 @@ the installed version is too old.
         [Understanding Nexial Excel templates](UnderstandingExcelTemplates)
     1.  _Now it's time to run some automation_!
 
+
 ## Running your first test automation
 #### "Hello World" of Nexial automation
 1.  Open `C:\projects\MyFirstProject\artifact\script\MyFirstProject.xlsx` \- we refer to this Excel 
 				file as the _test script_ or the _automation script_. By [convention](UnderstandingProjectStructure) 
 				all Excel files under the `artifact/script` directory are considered as automation scripts.
+
 1.  Start first test case by typing in the following:  
     ![testcase](image/InstallingNexial_10.png)
+
 1.  Enter the next 3 columns with the `base|verbose(text) command`:  
     ![verbose](image/InstallingNexial_11.png)
     
     Under `param 1` is the value to be used during runtime for the corresponding command.  In this 
     case it matches to the `text` of `base|verbose(text)` \- meaning, "printing to this row the 
     words `Hello World`".
+
 1.  Save/close this automation script.
-1.  From console, do the following:  
-    
-    ```
+
+1.  From console, do the following:    
+    ```batch
     cd C:\projects\nexial-core\bin   
     set JAVA_OPT=-Dnexial.assistantMode=on   
     nexial.cmd -script c:\projects\MyFirstProject\artifact\script\MyFirstProject.xlsx
@@ -133,12 +142,14 @@ the installed version is too old.
         `set JAVA_OPT=-Dnexial.enableEmail=off` 
     1.  The third line is to invoke Nexial to run the test as scripted in the file specified via 
         `-script` argument.
+
 1.  If all's well, you should see something like the following on your console:  
     ![nexial_output](image/InstallingNexial_12.png) 
     
     For now, don't worry too much about these logs.  The most critical portion is near the end 
     where Nexial reports a summary of the test.  The above screenshot showed that 1 iteration ran, 
     with 1 step completed within 842ms.
+
 1.  If you have the `assistantMode` turned on, then the output file should have been opened as well.  
 				You see the first line (Row 4) looking something like this:  
     ![output](image/InstallingNexial_13.png)
@@ -158,6 +169,7 @@ dig deeper...
 ## a little bit more...
 1.  let's create a few more lines for this test case:  
     _MORE TO COME..._
+
 
 ## Diving Deeper
 1. install .NET Framework 4.6.2 for desktop automation

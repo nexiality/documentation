@@ -1,12 +1,18 @@
+{% include_relative _breadcrumb.html current="Introduction and FAQ" %}
+
+
+![logo](../image/logo-x.png)
+
+
 ## What is Nexial?
 Nexial is a test automation framework based on a hybrid test design approach.  At its core, its 
 design centers around the following goals:
 
 1.  **Lightweight Application Architecture**  
     Nexial requires very simple installation (_just unzip_) and low computing requirement to get 
-    started.  It is architected to run standalone, within a CI/CD pipeline, and within a cloud 
+    started.  It is designed to run standalone, within a CI/CD pipeline, and within a cloud 
     environment.  
-      
+
 2.  **No Coding Required**  
     Programming/Coding should not be an entrance requirement (_hindrance?_) to Test Automation.  
     Instead, automation engineers can focus on system-user interaction, acceptance criteria and 
@@ -15,7 +21,7 @@ design centers around the following goals:
     scripts with Nexial.  With Nexial, automation engineers can elaborate the test steps, scenarios 
     and data using spreadsheet.  Nexial also support the execution of external programs so any 
     pre-existing scripts can be launched as part of a test execution.  
-      
+
 3.  **Hybrid Test Design Approach**  
     For the most part, test automation is the combination of ‘Action’ and ‘Validation’:  action to 
     simulate interaction and workflow, and validation to assert an expectation.  Using a hybrid 
@@ -44,13 +50,14 @@ design centers around the following goals:
     manipulate format-specific file content (PDF, Excel, CSV, XML, JSON, etc.) and common data 
     manipulation capabilities.  All these capabilities are accessible via the same spreadsheet.
 
+
 ## What can I do with it?
 One can use Nexial to create test automation across a myriad of applications such as desktop 
 applications, web applications, service applications, etc.  Coding is not required. Via 
-[simple conventions](UnderstandingProjectStructure) and 
-[test design guidelines](UnderstandingExcelTemplates), one can create test automation that 
-maintain independence between the test (test steps) and data, and flexibility to mix-and-match 
-test scripts and test data at execution time.
+[simple conventions](UnderstandingProjectStructure) and [test design guidelines](UnderstandingExcelTemplates), 
+one can create test automation that maintain independence between the test (test steps) and data, 
+and flexibility to mix-and-match test scripts and test data at execution time.
+
 
 ## How does it work?
 Here is the basic workflow:
@@ -69,6 +76,7 @@ simplified.
 
 Step 3 through 7 can be a part of a larger CI/CD orchestration.
 
+
 ## What do I need to get started?
 In a nutshell, one would need:
 1.  A computer (PC, Mac, and *NIX most of the time).
@@ -77,16 +85,19 @@ In a nutshell, one would need:
 
 For more details and step-by-step instruction, check out the [Install Nexial](InstallingNexial) page.
 
+
 ## Where can I go for more help/support?
 For online documentation, start [here](../commands/).  For additional questions, inquiries or help, 
-send your request to [support](mailto:sentry-support@ep.com).  Likewise, for any suggestion on new 
-features for Nexial, email [support](mailto:sentry-support@ep.com). 
+submit your request to our [GitHub issue](https://github.com/nexiality/nexial-core/issues).  Likewise, 
+for any suggestion on new features for Nexial, submit an [issue](https://github.com/nexiality/nexial-core/issues) 
+as well. 
+
 
 ## What can I expect from future release?
-Even before it’s 1.0 debut, Nexial has been in used by multiple projects.  It took us nearly 10 
-months to get to '1.0'.  But in a way, this isn’t a ‘1.0’ release – at least not in the typical 
-sense.  Calling it ‘1.0’ is just a way to officially mark its progress, and to give us a way of 
-comparing against future releases.  The cadence we would like to keep would be two-fold:
+Even before it’s 1.0 debut, Nexial has been in used by multiple projects.  But in a way, this isn’t 
+a ‘1.0’ release – at least not in the typical sense.  Calling it ‘1.0’ is just a way to officially mark 
+its progress, and to give us a way of comparing against future releases.  The cadence we would like 
+to keep would be two-fold:
 
 1.  Daily DEV builds, as we do today.  For newer features and early access patches, this would be 
 			 the method of distributing.
@@ -94,4 +105,3 @@ comparing against future releases.  The cadence we would like to keep would be 
 				`x` starts from `1` and `y` is a number between 0 to 9.
 
 Ready to get started? Click [here](QuickStart).
-
