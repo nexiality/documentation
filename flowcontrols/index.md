@@ -29,9 +29,9 @@ flow control looks like this:
   to qualify the associated flow control.
 - **\[operator\]** \-  the operator to use when evaluating `[variable name]` against `[control value]`.  The 
   available operators are:
-  1. **`=`** \- is `a` the same as `b`?
-  2. **!=** \- is a **NOT** the same as `b`?
-  3. **is** \- is `a` one of the values represented by `b`?  The values of `b` must be enclosed within `[`... `]`.  
+  1. **=** \- is `a` the same as `b`?
+  2. **!=** \- is `a` **NOT** the same as `b`?
+  3. **is** \- is `a` one of the values represented by `b`?  The values of `b` must be enclosed within `[...]`.  
      For example, `["CA", "NY", "LV"]`
 - **\[control value\]** \- the value used to evaluate against `[variable name]`.  This must be surrounded by double 
   quotes.

@@ -8,3 +8,4 @@ Let's get started!
 - [Update Nexial](UpdateNexial.html)
 - [Understanding Excel Templates](UnderstandingExcelTemplates.html)
 - [Understanding Project Structure](UnderstandingProjectStructure.html)
+- [Automation Execution Flow](ExecutionFlow)
