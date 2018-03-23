@@ -1,3 +1,5 @@
+{% include_relative _breadcrumb.html current="command reference" %}
+
 
 Nexial commands are the _operative_ to carry out the smallest unit of automation.  In many ways it is synonymous
 to a "step". It is the contiguous collection of many "steps" that make up an automation script, or even automation 
