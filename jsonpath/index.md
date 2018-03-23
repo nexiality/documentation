@@ -40,9 +40,7 @@ common types of JSON fragments.  Consider the following JSON document:
         "state": "Solid",
         "zip": "54321"
     },
-    "data1": [
-        "abc", "efg", "hij"
-    ],
+    "data1": [ "abc", "efg", "hij" ],
     "data2": [
         { "klm": "nop" },
         { "qrs": 999.01 }
@@ -70,19 +68,20 @@ ones at this time (_we might in the future_).
 
 Let's see how Nexial's `jsonpath` can be used to answer the first set of queries:
 
-| Question                                                           | Nexial's `jsonpath` | What's the value of `name`? | 
-|--------------------------------------------------------------------|---------------------|------------------|
-| What's the value of `name`?                                        | **`name`**          | |
-| What's the age of `John Smith`? (or, what's the value of `age`?)   | **`age`**           | |
-| What's the value of `zip` under `address`?                         | **`address.zip`**<br/>If `address` does not exists, `null` will be returned. | |
-| How many items are in the `data1` array?                           | Use [json &raquo; `storeCount(json,jsonpath,var)`](../commands/json/storeCount(json,jsonpath,var)) with `jsonpath` set as **`data1`**. <br/>To assess specific items in `data1`, use **`data1.[<index>]`**, where `<index>` is the zero-based position of the target item. |
-| How many JSON objects under `data2` has a property named as `qrs`? | Use [json &raquo; `storeCount(json,jsonpath,var)`](../commands/json/storeCount(json,jsonpath,var)) where `jsonpath` set as **`data2[qrs]`** or **`data2.qrs`**. |
+| Question                                                           | Nexial's `jsonpath` |
+|--------------------------------------------------------------------|---------------------|
+| What's the value of `name`?                                        | **`name`**          |
+| What's the age of `John Smith`? (or, what's the value of `age`?)   | **`age`**           |
+| What's the value of `zip` under `address`?                         | **`address.zip`**<br/>If `address` does not exists, `null` will be returned.|
+| How many items are in the `data1` array?                           | Use [json &raquo; `storeCount(json,jsonpath,var)`](../commands/json/storeCount(json,jsonpath,var)) with `jsonpath` set as **`data1`**. <br/>To assess specific items in `data1`, use **`data1.[<index>]`**, where `<index>` is the zero-based position of the target item.|
+| How many JSON objects under `data2` has a property named as `qrs`? | Use [json &raquo; `storeCount(json,jsonpath,var)`](../commands/json/storeCount(json,jsonpath,var)) where `jsonpath` set as **`data2[qrs]`** or **`data2.qrs`**.|
+
 
 To generalize, Nexial's `jsonpath` follows these rules:
 1. **Use dot notation (`.`) to express hierarchy**.  For example, **`a.b.c.d`** means:
-   - Under a JSON node `"a"`, look for a node named "`b"`,
+   - Under a JSON node `"a"`, look for a node named `"b"`,
    - Under that node `"b"`, look for a node named `"c"`,
-   - Under that node `"c"`, look for a node named `"d",`
+   - Under that node `"c"`, look for a node named `"d"`,
    - Finally return the JSON fragment of that node `"d"`. 
 2. **Use `[ref]` to represent either a primitive item or a JSON fragment within a JSON array**.  `ref` can either be 
    a zero-based index or the name of a child item.
@@ -116,7 +115,7 @@ To generalize, Nexial's `jsonpath` follows these rules:
          - Find all the hours (denoted by `Hours` or `hours`) worked in the postal code (denoted by `zipcode` or `postal`) that starts with `900`.
          - Yes, regex is support on both node name and node value.  But careful not to abuse it for create hard-to-read `jsonpath`, as regex often do.
 4. During the traversal of the specified `jsonpath`, if the intended fragment cannot be reached, Nexial will 
-   return `null.`
+   return `null`.
 
 As shown above, Nexial's `jsonpath` is comparatively simplistic – it really only has 2 notations: dot (`.`)  and 
 angled brackets (`[ref]`).  But within the confines of these basic rules, we should be able to address the most 
