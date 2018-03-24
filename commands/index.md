@@ -11,12 +11,17 @@ check if a table contains the expected transaction, assert if a online form acce
 Since we have so many commands, we have categorized them into types (aka command types).  Click on one of the links 
 below to learn more about each type and the commands available under each of them.
 
-- [`aws.s3`](aws.s3/index.html): commands regarding AWS S3.
-- [`base`](base/index.html): general commands for data assertion and commonly used operations.
-- [`csv`](csv/index.html): commands regarding the CSV file type.
-- [`excel`](excel/index.html): commands regarding the Excel file type.
-- [`external`](external/index.html): commands to execute external programs or scripts.
-- [`image`](image/index.html): commands regarding image files.
-- [`io`](io/index.html): commands regarding IO operations.
-
+- [`aws.s3`](aws.s3/): commands regarding AWS S3.
+- [`base`](base/): general commands for data assertion and commonly used operations.
+- [`csv`](csv/): commands regarding the CSV file type.
+- [`excel`](excel/): commands regarding the Excel file type.
+- [`external`](external/): commands to execute external programs or scripts.
+- [`image`](image/): commands regarding image files.
+- [`io`](io/): commands regarding IO operations.
+- [`jms`](jms/): commands to automate messaging (JMS).
+- [`json`](json/): commands to automate JSON files and operations.
+- [`mail`](mail/): commands regarding email operations.
+- [`number`](number/): number-related operations.
+- [`rdbms`](rdbms/): commands regarding IO operations.
+- [`ssh`](ssh/): commands to automate SSH-based automation.
 
