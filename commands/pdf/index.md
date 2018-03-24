@@ -6,8 +6,11 @@ PDF document - but the extracting of information into a form of data structure. 
 the name-value pair, like:
 
 > `first name=Johnny`
+>
 > `middle initial=B.`
+>
 > `last name=Good`
+>
 > `hobby=Go places`
 
 The content of a PDF document is not necessarily laid out in a predictable, consistent manner.  Extract such content 
@@ -34,7 +37,7 @@ strategies.  One may use one of these strategies as is, or creating a new strat
 Here are the default extraction strategies:
 `KEY REGEX`: **`^([0-9A-Za-z\\\/\ \.\,\"\'\(\)\[\]\#\-]+)\:?\s*$`**
 
-| STRATEGY                   | KEY_REGEX | TRIM_KEY | VALUE_POSITION                | TRIM_VALUE | VALUE_MERGE_AS_1_LINE | Description | Example |
+| STRATEGY                   | KEY_REGEX | TRIM_KEY | VALUE_POSITION                | TRIM_VALUE | VALUE MERGE AS 1 LINE | Description | Example |
 | -------------------------- | --------- | -------- | ----------------------------- | ---------- | --------------------- | ----------- | ------- |
 | `ALTERNATING_ROW`          | default   | `true`   | alternate row                 | `true`     | `true` | The name and value are laid out in alternating row. In the example (right), `STREET ADDRESS`would be considered in a separate row than its corresponding value `2200 West Empire Ave.,` | ![](image/pdf_01.png) |
 | `ALTERNATING_CELL`         | default   | `true`   | alternate cell                | `true`     | `true` | The name and value are laid out in alternative cell. In the example (right), `Employee Gross` is presented in one cell, while its corresponding value `$1,334,694.40` is in another. | ![](image/pdf_02.png) |
@@ -45,6 +48,7 @@ Here are the default extraction strategies:
 <br/>
 
 ### PDF Form Parsing Strategy
+
 | Option | Possible Data | Default Value | Description | 
 | --- | --- | --- | --- | 
 |nexial.pdfFormStrategy.**[NAME]**.basedOn | ALTERNATING_ROW  ALTERNATING_CELL SHARE_CELL HEADER_ONLY SHARE_CELL_THEN_ALT_CELL | |  use one of the strategies as your starting point |

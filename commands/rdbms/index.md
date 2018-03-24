@@ -39,15 +39,15 @@ load the appropriate connection driver (a.k.a. JDBC driver).  The valid values 
 - `<connection name>` **.url** \- this specifies how to connect to the target database.  Some connection string may 
   contain username and password.  Hence the `.username` and `.password` are required.  For more details about 
   connection string, check the following links:
-  - [Microsoft SQL Server connection string](https://msdn.microsoft.com/en-us/library/ms378428(v=sql.110).aspx)
-  - [Oracle thin driver connection string](http://www.orafaq.com/wiki/JDBC#Thin_driver)
+  - <a href="https://msdn.microsoft.com/en-us/library/ms378428(v=sql.110).aspx" class="external-link">Microsoft SQL Server connection string</a>
+  - <a href="http://www.orafaq.com/wiki/JDBC#Thin_driver" class="external-link">Oracle thin driver connection string</a>
     - not distributed as part of Nexial due to vendor restriction.  Please visit vendor website to obtain appropriate 
       driver files.
-  - [IBM DB2 thin driver connection string](https://www.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.apdv.java.doc/src/tpc/imjcc_r0052342.html)
+  - <a href="https://www.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.apdv.java.doc/src/tpc/imjcc_r0052342.html" class="external-link">IBM DB2 thin driver connection string</a>
     - not distributed as part of Nexial due to vendor restriction.  Please visit vendor website to obtain appropriate 
       driver files.
-  - [PostgreSQL connection string](https://jdbc.postgresql.org/documentation/80/connect.html)
-  - [MySQL connection string](https://dev.mysql.com/doc/connector-j/5.1/en/connector-j-reference-configuration-properties.html)
+  - <a href="https://jdbc.postgresql.org/documentation/80/connect.html" class="external-link">PostgreSQL connection string</a>
+  - <a href="https://dev.mysql.com/doc/connector-j/5.1/en/connector-j-reference-configuration-properties.html" class="external-link">MySQL connection string</a>
 
 In addition to the above, there are other useful configurations:
 1. `<connection name>` **.user** \- the username to use to connect to the target database.

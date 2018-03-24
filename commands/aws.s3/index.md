@@ -12,9 +12,9 @@ case, below are the data variables that make up a "s3" profile:
 
 |data variable            |value                             | note                                                    |
 |-------------------------|----------------------------------|---------------------------------------------------------|
-|`<profile>.aws.accessKey`|The access key for a S3 connection| For more information, consult [AWS online documentation](https://aws.amazon.com/premiumsupport/knowledge-center/create-access-key/)|
-|`<profile>.aws.secretKey`|The secret key for a S3 connection| More information available on [AWS online documentation](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys)|
-|`<profile>.aws.region`   |The S3 region to connect to       | [Available AWS S3 regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region)|
+|`<profile>.aws.accessKey`|The access key for a S3 connection| For more information, consult <a href="https://aws.amazon.com/premiumsupport/knowledge-center/create-access-key/" class="external-link">AWS online documentation</a>|
+|`<profile>.aws.secretKey`|The secret key for a S3 connection| More information available on <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys" class="external-link">AWS online documentation</a>|
+|`<profile>.aws.region`   |The S3 region to connect to       | <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region" class="external-link">Available AWS S3 regions</a>|
 
 <br/>
 

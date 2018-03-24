@@ -3,8 +3,9 @@
 
 JMS standards Java Messaging Service.  It is an essential feature in the Java Enterprise Edition specification 
 (since v1.4).  You can get more introductory content about JMS 
-[here](https://dzone.com/articles/introduction-jms), [here](https://docs.oracle.com/javaee/6/tutorial/doc/bncdq.html)
-and [here](https://en.wikipedia.org/wiki/Java_Message_Service).
+<a href="https://dzone.com/articles/introduction-jms" class="external-link">here</a>, 
+<a href="https://docs.oracle.com/javaee/6/tutorial/doc/bncdq.html" class="external-link">here</a> and 
+<a href="https://en.wikipedia.org/wiki/Java_Message_Service" class="external-link">here</a>.
 
 With regards to JMS, Nexial's aim is not to implement every single JMS capability.  From test automation standpoint, 
 the bulk of the message interaction evolves around "send message" and "receive message".  These 2 operations are 
