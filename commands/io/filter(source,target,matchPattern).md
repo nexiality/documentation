@@ -19,7 +19,7 @@ only the _lines_ of interest.  For example,
 ![](image/filter_03.png)
 
 
-### Parameter(s)
+### Parameters
 - **source** \- the file to scan for matching pattern
 - **target** \- the file to save all matched lines
 - **matchPattern** \- the pattern to match.  This is regular expression, matched a line at a time

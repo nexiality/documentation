@@ -43,7 +43,7 @@ One can control the behavior of this command in the following ways:
 - Turn on or off (default) the reporting of matching lines - [`nexial.compare.reportMatch`](../../systemvars/index#nexial.compare.reportMatch).
 
 
-### Parameter(s)
+### Parameters
 - **expected** \- this parameter is the expected file or text.
 - **actual** \-this parameter is the actual file or text.
 - **failFast** \-this parameter is the boolean value true or false to determine if the script execution need to be 

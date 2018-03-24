@@ -7,7 +7,7 @@
 - If the unzip is successful command will pass or else fail otherwise.
 
 
-### Parameter(s)
+### Parameters
 - **zipFile** \- this parameter is the zip file with location.
 - **target** \- this parameter is target location of the file to be unzipped.
 

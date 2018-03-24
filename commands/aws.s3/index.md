@@ -16,6 +16,8 @@ case, below are the data variables that make up a "s3" profile:
 |`<profile>.aws.secretKey`|The secret key for a S3 connection| More information available on [AWS online documentation](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys)|
 |`<profile>.aws.region`   |The S3 region to connect to       | [Available AWS S3 regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region)|
 
+<br/>
+
 For example, suppose we have a "profile" named as `projectX`:<br/>
 ![profile](image/index_01.png)
 

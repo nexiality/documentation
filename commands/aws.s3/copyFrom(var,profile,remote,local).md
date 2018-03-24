@@ -16,7 +16,7 @@ in S3 can be confusing since it is possible for a S3 object to contain path char
 Check [here](index#s3profile) for more information regarding `profile`.
 
 
-### Parameter(s)
+### Parameters
 - **var** \- the variable name which contains the outcome of the command run.
 - **profile** \- the [profile](index#s3profile) added in the data file which contains AWS credentials and connectivity
 - **remotePath** \- the pattern which specifies the folder, file or a pattern of files.

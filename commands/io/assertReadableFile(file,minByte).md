@@ -6,7 +6,7 @@ This command asserts that `file` is readable, and, optionally, at least `minB
 checking, specified `(empty)`, `(blank)` or `-1` for `minByte`.
 
 
-### Parameter(s)
+### Parameters
 - **file** \- the full path of the target file to check: (a) does the file exist? (b) is the file readable by the 
   run-user of the execution?
 - **minByte** \- the minimum number of bytes `file` should has.  Use `(empty)`, `(blank)` or `-1` to omit checking 

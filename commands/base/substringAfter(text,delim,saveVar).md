@@ -8,7 +8,7 @@ specified via `saveVar`. For example,
 `substringAfter(text,delim,saveVar) | 714-811-0290 | - | variable1`     --\> variable1 = `811-0290`
 
 
-### Parameter(s)
+### Parameters
 - **text** \- the text to extract from.  Variable expansion is supported via the `${...}` syntax
 - **delim** \- the delimiter to consider, only the first occurrence will be in effect
 - **saveVar** \- the name of the variable to save the substring

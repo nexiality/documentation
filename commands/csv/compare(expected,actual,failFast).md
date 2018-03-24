@@ -2,14 +2,14 @@
 
 
 ### Description
-This command is used to compare two CSV files. It compares the file size (in bytes) and the content of the files. 
+This command compares two CSV files. It compares the file size (in bytes) and the content of the files. 
 
 **NOTE THAT THIS COMMAND IS FUNCTIONALLY THE SAME AS 
 [io &raquo; `compare(expected,actual,failFast)`](../io/compare(expected,actual,failFast).html).   Check its 
 [documentation](../io/compare(expected,actual,failFast).html) for more details.**
 
 
-### Parameter(s)
+### Parameters
 - **expected**\- is the expected csv file path.
 - **actual** \- is the actual csv file path
 - **failFast** \-  boolean value. If set as `true`, it will fail the test when it detects the first mismatch and stop 

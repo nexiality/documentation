@@ -5,7 +5,7 @@
 This command asserts that `text` does not contain `substring`.
 
 
-### Parameter(s)
+### Parameters
 - **text** \- this parameter is the actual text
 - **substring** - the text not expected to be part of `text`
 

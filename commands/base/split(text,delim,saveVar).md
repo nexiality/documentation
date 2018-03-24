@@ -8,7 +8,7 @@ using variable expansion (ie. `${..}`) if the underlying data is not text (such
 [HTTP response](../ws))
 
 
-### Parameter(s)
+### Parameters
 - **text** \- the text to split on
 - **delim** \- the delimiter to use when splitting `text` into an array/list
 - **saveVar** \- the variable to save the resulting array

@@ -6,7 +6,7 @@ This command checks that `text` ends with the specified `suffix`. Note that i
 equivalent (or empty), this command will consider as pass.
 
 
-### Parameter(s)
+### Parameters
 - **text** \- the text to test on.
 - **suffix** \- the specified string of characters to be either the same or found in the end of `text` 
 

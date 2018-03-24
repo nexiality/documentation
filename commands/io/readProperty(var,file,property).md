@@ -6,7 +6,7 @@ This command will read `file` and search for a name-value pair where the name is
 value in a data variable denoted as `var.
     
 
-### Parameter(s)
+### Parameters
 - **var** \- the variable name to store the property value found by the command
 - **file** \- the full path and name of the file from where the property value is to be retrieved
 - **property** \- the property name whose value is to be retrieved

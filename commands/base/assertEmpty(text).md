@@ -6,7 +6,7 @@ This command assert if `text` is empty.  It is considered FAIL if `text` is not 
 (no value).
 
 
-### Parameter(s)
+### Parameters
 - **text** \- this parameter is the text to be asserted.
 
 

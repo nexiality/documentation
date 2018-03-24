@@ -2,12 +2,12 @@
 
 
 ### Description
-This command is used to read the data from the excel worksheet with the given cell range and save the data into 
+This command reads the data from the excel worksheet with the given cell range and save the data into 
 variable.  The data is stored as a list, where its individual item can be retrieved via the corresponding index 
 (0-based), as shown in the example.
 
 
-### Parameter(s)
+### Parameters
 - **var** - this parameter is used to save the returned value
 - **file** -  this parameter is the source file path
 - **worksheet** \- this parameter is the name of the excel sheet

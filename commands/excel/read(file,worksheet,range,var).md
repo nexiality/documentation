@@ -2,11 +2,11 @@
 
 
 ### Description
-This command is used to read the data from the cells of the given worksheet from the excel file with the given range 
+This command reads the data from the cells of the given worksheet from the excel file with the given range 
 and will be saved in the given variable.
 
 
-### Parameter(s)
+### Parameters
 - **file** - is the path of the source excel file
 - **worksheet** \- name of the worksheet
 - **range** \- range of the cells separated by **:**

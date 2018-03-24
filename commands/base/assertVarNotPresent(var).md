@@ -6,7 +6,7 @@ This command asserts that the specified `var` does not exists in the current e
 of the variable, not its value (i.e. not `${...}`)
 
 
-### Parameter(s)
+### Parameters
 - **var** \- The name of the variable in question
 
 

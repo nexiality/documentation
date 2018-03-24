@@ -21,7 +21,7 @@ Currently Nexial provides 3 approaches to increment:
 - LOWER: This will convert, if necessary, the value of `var` to lowercase, and increment it to the appropriate alphabet.
 
 
-### Parameter(s)
+### Parameters
 - **var** \- the data variable whose value is to be incremented  
 - **amount** - the amount of increment to perform
 - **config** - the increment strategy (above) to apply: `ALPHANUM`, `UPPER` or `LOWER`

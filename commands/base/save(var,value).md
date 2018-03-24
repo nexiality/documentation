@@ -9,7 +9,7 @@ retrieval of such variable to the most appropriate data type. For example, savin
 or 1 during assertion or comparison.
 
 
-### Parameter(s)
+### Parameters
 - **var** \- the variable name to save the specified value
 - **value** \- the value to associate to the specified variable
 

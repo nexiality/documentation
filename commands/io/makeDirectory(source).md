@@ -5,7 +5,7 @@
 This command will create the directory on the path provided as `source`.
 
 
-### Parameter(s)
+### Parameters
 - **source:** \- this parameter is required to provide the location where directory needs to be created.
 
 

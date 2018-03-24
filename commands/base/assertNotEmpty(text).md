@@ -5,7 +5,7 @@
 This command asserts that `text` is not empty - in other word, `text` contains at least 1 character.
 
 
-### Parameter(s)
+### Parameters
 - **text** \- the text that is expected NOT to be empty.
 
 

@@ -6,7 +6,7 @@ This command will be useful to delete files from specified location.The recursiv
 recursive occurrence with the same file name.
 
 
-### Parameter(s)
+### Parameters
 - **location** \- the full path of the folder/directory from where files need to be deleted
 - **recursive** \- `true` means to delete all the files and subdirectories of `location`
 

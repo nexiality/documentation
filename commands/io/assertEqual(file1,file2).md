@@ -5,7 +5,7 @@
 This command will assert if the contents of the files are identical.
 
 
-### Parameter(s)
+### Parameters
 - **file1** \- This parameter is the full path along with file name.
 - **file2**  \- This parameter is the full path along with the file name.
 

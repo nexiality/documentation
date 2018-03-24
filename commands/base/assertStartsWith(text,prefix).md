@@ -6,7 +6,7 @@ This command checks that `text` starts with `prefix`. Note that this command 
 same as `prefix`, similarly with both `text` and `prefix` are empty.
 
 
-### Parameter(s)
+### Parameters
 - **text** \- the text to be checked
 - **prefix** \- the text that should be in the beginning of `text` or the same as `text`.
 

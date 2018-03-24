@@ -7,7 +7,7 @@ and saves it to another file denoted by `saveTo`.  Both `width`and `height`�
 greater than the original `image` (enlarge).
 
 
-### Parameter(s)
+### Parameters
 - **image** \- the full path of the image to resize
 - **width** \- the width to resize to
 - **height** \- the height to resize to

@@ -6,7 +6,7 @@ This command can be used to run the Junit Test. It will execute the unit test fo
 The the unit pass the result will be pass or else fail otherwise.
 
 
-### Parameter(s)
+### Parameters
 - **className** \- this parameter is the name of the unit test class name.
 
 

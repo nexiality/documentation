@@ -7,7 +7,7 @@ Nexial will also check that both arrays contain the same elements in the same or
 internally uses the `${nexial.textDelim}` system variable to parse text string into array.
 
 
-### Parameter(s)
+### Parameters
 - **array1** \- the list of elements to check
 - **array2** \- the other list of elements to check
 - **exactOrder** \- indicate whether order is important during array comparison 

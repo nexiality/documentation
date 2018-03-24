@@ -13,7 +13,7 @@ The general format of the _diff_ is:<br/>
 `line number | match result | \[ line content \] | additional details`
 
 
-### Parameter(s)
+### Parameters
 - **var** \- this parameter will stored the different values of the files.
 - **expected** \- this parameter is the expected file.
 - **actual**\- this parameter is the actual file.

@@ -10,7 +10,7 @@ user should not expect the wait time to be consistently precise. It is quite com
 milliseconds added to the total wait time, esp. during high load.
 
 
-### Parameter(s)
+### Parameters
 - **waitMs** \- the number of milliseconds to wait
 
 

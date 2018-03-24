@@ -10,7 +10,7 @@ toolset, or to update client application via silent installation.  The standard 
 script will be saved to the output directory, and made available on the output file.
 
 
-### Parameter(s)
+### Parameters
 - **programPathAndParms** \- this parameter is the path along with the name of the exe file to be launched.
 
 

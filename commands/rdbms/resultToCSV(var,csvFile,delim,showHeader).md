@@ -7,7 +7,7 @@
 - Those variable can be copied into external .csv file for further verification.
 
 
-### Parameter(s)
+### Parameters
 - **var** \- this parameter is the stored sql results into variable.
 - **csvFile** \- this parameter is the full path along with file name of the csv file where the results to be stored
 - **delim** \- this parameter is the delimiter to be used to separate the values  while copying to the csv file.

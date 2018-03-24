@@ -8,7 +8,7 @@
 - The command will update the property of the file and pass or else fail otherwise.
 
 
-### Parameter(s)
+### Parameters
 - **file** \- this parameter is the file with location to be updated.
 - **property** \- this parameter is the key of the property.
 - **value** \- this parameter is the value to be updated or replaced for the key.

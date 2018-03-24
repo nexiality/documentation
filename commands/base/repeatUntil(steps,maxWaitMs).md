@@ -45,7 +45,7 @@ certain time, check for specific text or state of a web page or application.
 			output produced by this command can be observed in the console log.
 
 
-### Parameter(s)
+### Parameters
 - **steps** \- this parameter specifies the number of subsequent (as in **immediately following**) commands to consider 
 		for the repeat-until execution.
 - **maxWaitMs** \- this parameter specifies the amount of time to wait before consider the repeat-until execution as 

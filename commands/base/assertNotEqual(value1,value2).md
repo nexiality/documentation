@@ -6,7 +6,7 @@ This command checks that `value1` is not the same as `value2` by comparing t
 representation, character by character.
 
 
-### Parameter(s)
+### Parameters
 - **value1** \- the first text to compare
 - **value2** \- the second text to compare
 

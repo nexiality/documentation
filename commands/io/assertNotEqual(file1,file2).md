@@ -6,7 +6,7 @@ This command asserts if the contents of the files are not identical.  This is us
 ensure no duplicate contents between files.
 
 
-### Parameter(s)
+### Parameters
 - **file1** \- This parameter is the full path along with file name.
 - **file2**  \- This parameter is the full path along with the file name.
 

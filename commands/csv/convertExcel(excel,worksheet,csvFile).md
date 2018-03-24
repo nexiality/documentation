@@ -2,10 +2,10 @@
 
 
 ### Description
-This command is used to convert any worksheet of an Excel file into a CSV file. 
+This command converts any worksheet of an Excel file into a CSV file. 
 
 
-### Parameter(s)
+### Parameters
 - **excel** \- is the path of source Excel File
 - **worksheet** \- name of the worksheet, to be converted
 - **csvFile** \- is the path of destination CSV File

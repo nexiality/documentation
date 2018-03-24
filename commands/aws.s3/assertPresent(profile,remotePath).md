@@ -8,7 +8,7 @@ S3 bucket/folder.
 Check [here](index#s3profile) for more information regarding `profile`.
 
 
-### Parameter(s)
+### Parameters
 - **profile** \- the [profile](index#s3profile) added in the data file which contains AWS credentials and connectivity
 - **remotePath** \- the pattern which specifies the folder, file or a pattern of files.
 

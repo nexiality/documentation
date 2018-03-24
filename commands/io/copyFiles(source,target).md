@@ -5,7 +5,7 @@
 This command copies files from one location to other.
 
 
-### Parameter(s)
+### Parameters
 - **source** : Full path of the files to be copied
 - **target** : Full path of the filed to be pasted
 

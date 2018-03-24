@@ -2,11 +2,11 @@
 
 
 ### Description
-This command is used to save a range of the cell data from an Excel worksheet.  The cell range is expected in the
+This command saves a range of the cell data from an Excel worksheet.  The cell range is expected in the
 common Excel address format of **`<Start Cell>:<End Cell>`**.
 
 
-### Parameter(s)
+### Parameters
 - **var** - this parameter is used to save the cell range value
 - **file** -  this parameter is the source file path
 - **worksheet** \- this parameter is the name of the excel sheet

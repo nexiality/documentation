@@ -2,8 +2,8 @@
 
 
 ### Description
-This command is used to screen record an execution.  The recording will capture the entire primary desktop (and thus 
-will not work in a headless mode). 
+This command performs screen recording during an execution.  The recording will capture the entire primary desktop
+(and thus will not work in a headless mode). 
 
 The screen recording can start within any part of a script file.  It will be start recording from the point this 
 command is invoked until [`stopRecording()`](stopRecording().html) is invoked _WITHIN THE SAME SCRIPT_.  The recording 

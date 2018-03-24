@@ -6,7 +6,7 @@ This command will move the files from one location to other. The user need to pr
 `destination`.
 
 
-### Parameter(s)
+### Parameters
 - **source** \- this parameter is the source location of the file to be picked.
 - **target** \- this parameter is the target location of the file to be moved
 

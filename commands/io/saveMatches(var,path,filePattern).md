@@ -9,7 +9,7 @@ Note that this command **DOES NOT** search for matches recursively - i.e. no s
 been given to MS Office documents so that the working documents (such as `~myFile.xlsx`) will be ignored.
 
 
-### Parameter(s)
+### Parameters
 - **var** \- the variable to store the matches
 - **path** \- the target path to be searched.  Note that this command does not search recursively
 - **filePattern** \- the file pattern to match.  To activate regular expression, prefix this parameter with 

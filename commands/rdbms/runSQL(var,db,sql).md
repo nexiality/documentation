@@ -15,13 +15,13 @@
   - **`data`** \- the selected resultset due to the execution of the specified SQL.
 
 
-### Parameter(s)
+### Parameters
 - **var** \- this parameter is to store result of the sql query as a variable.
 - **db** \- this parameter is name of the database defined in data file.
 - **sql** \- this parameter is the sql statement like select, insert update or delete statement.
 
 
-### Example:
+### Example
 Script:<br/>
 ![](image/runSQL_1.png)  
 

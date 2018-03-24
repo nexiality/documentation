@@ -14,7 +14,7 @@ Note the following:
    `saveVar` will removed.
 
 
-### Parameter(s)
+### Parameters
 - **text** \- the text where search and substring operations will be performed. Variable expansion is supported via 
   the `${...}` syntax.
 - **start** \- the character sequence that denote the start of the substring operation

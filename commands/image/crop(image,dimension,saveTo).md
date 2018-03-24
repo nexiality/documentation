@@ -8,7 +8,7 @@ These 4 values are separated by [`nexial.textDelim`](../../systemvars/index#nex
 integers and must be represent an area within the bounds of `image`.
 
 
-### Parameter(s)
+### Parameters
 - **image** \- the full path of the image to crop
 - **dimension** \- the x position, y position, width in pixel, and height in pixel of the intended crop area.  
   These values are separated by [`nexial.textDelim`](../../systemvars/index#nexial.textDelim)

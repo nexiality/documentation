@@ -5,7 +5,7 @@
 This command compares 2 text together, character by character.  It returns `true` if both text are equivalent.
 
 
-### Parameter(s)
+### Parameters
 - **expected** \- the first value in this comparison
 - **actual** \- the second value in this comparison
 

@@ -36,20 +36,20 @@ test data need not be so.  Indeed, the calling script and its corresponding data
 value for the same macro, and thus extend further flexibility.
 
 
-### Parameter(s)
+### Parameters
 - **file** - refers to the macro file name (ideally residing in the same location of the calling script)
 - **sheet** - refers to the worksheet that contains the target set of test steps
 - **name** - refers to the specific macro name, which in turn refers to a set of reusable test steps 
 
 
 ### Example
-macro file:
+macro file:<br/>
 ![macro](image/macro_01.png)
 
-Script calling macro script:
+Script calling macro script:<br/>
 ![script](image/macro_02.png)
 
-Output:
+Output:<br/>
 ![output](image/macro_03.png)
 
 

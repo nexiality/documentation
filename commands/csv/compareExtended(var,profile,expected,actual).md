@@ -163,7 +163,7 @@ For example, assuming that the `var` is specified as `result`:
   ![html-nice](image/compareExtended_05.png)
 
 
-### Parameter(s)
+### Parameters
 see above for parameter details
 
 

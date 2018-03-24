@@ -2,7 +2,7 @@
 
 
 ### Description
-This command is used to execute a series of SQL statements.  The difference between this command and 
+This command executes a series of SQL statements.  The difference between this command and 
 [`runSQLs(var,db,sqls)`](runSQLs(var,db,sqls)) is that this command uses an external file for all the SQL 
 statements to execute, while [`runSQLs(var,db,sqls)`](runSQLs(var,db,sqls)) expects all the SQL statements to be 
 specified as a parameter.  Other than that, both commands have the same capabilities, namely:
@@ -25,7 +25,7 @@ specified as a parameter.  Other than that, both commands have the same capabil
    enforce single transaction, [`<connection name>.autocommit`](index.html)` must be set to `false`.
 
 
-### Parameter(s)
+### Parameters
 - **var** \- this parameter  is to store result of the sql query into variable.
 - **db** \-  this parameter is name of the database defined in data file.
 - **file** \- this parameter is the location and the file name where are all sql statement are kept.  

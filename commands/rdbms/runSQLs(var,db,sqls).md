@@ -10,7 +10,7 @@
   `.elapsedTime`, `.columns`, `.data` for each query.  
 
 
-### Parameter(s)
+### Parameters
 - **var** \- this parameter  is to store result of the sql query into variable.
 - **db** \-this parameter is name of the database defined in data file.
 - **sqls** \- this parameter is the multiple sql statement like select, insert update or delete statement.

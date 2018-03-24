@@ -11,7 +11,7 @@ Note that:
 - Only the first occurrence of `delim` is considered.
 
 
-### Parameter(s)
+### Parameters
 - **text** \- the text where the substring operation is to be performed. Variable expansion is supported via the 
   `${...}` syntax.
 - **delim** \- the delimiter to use fore extract from `text`.  Only first occurrence is considered.

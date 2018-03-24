@@ -10,7 +10,7 @@ If `text` is specified via the `${...}` syntax, Nexial internally will hand
 target variable represents an array, a list, a map or a Java object.
 
 
-### Parameter(s)
+### Parameters
 - **text** \- the text (can be referenced via `${...}` syntax) that will be evaluated. 
 - **regex** \- the regular expression to evaluate `text.`
 - **expects** \- the expected number of matches when evaluating `text` against `regex`.

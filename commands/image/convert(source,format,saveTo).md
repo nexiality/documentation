@@ -17,7 +17,7 @@ following:
 Even though the target file ends with `.jpg`, this command should still carry out a "`png-to-bmp`" conversion.
 
 
-### Parameter(s)
+### Parameters
 - **source** \- full path of the image file to convert.  Consider using [`$(syspath)`](../../functions/syspath), 
   [`nexial.lastScreenshot`](../../systemvars/index#nexial.lastScreenshot), etc. to keep your script portable.
 - **format** \- one of the supported format (the target format to convert to): `png`, `bmp`, `jpg` or `gif`

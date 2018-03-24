@@ -7,7 +7,7 @@ This command checks that the array represented by `var` is in ascending or des
 not the case.
 
 
-### Parameter(s)
+### Parameters
 - **var** \- the variable that represents the array in question
 - **descending** - `true` if Nexial should check that the array is in descending order.  Otherwise Nexial will check 
 in ascending order.

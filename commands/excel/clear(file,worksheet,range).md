@@ -2,10 +2,10 @@
 
 
 ### Description
-This command is used to clear the text from the cells in the given worksheet from an excel file in the given range.
+This command clears the text from the cells in the given worksheet from an excel file in the given range.
 
 
-### Parameter(s)
+### Parameters
 - **file** \- is the path of the source Excel File
 - **worksheet** \- name of the worksheet
 - **range** \- range of the cells

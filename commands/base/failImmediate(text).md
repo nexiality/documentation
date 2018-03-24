@@ -9,7 +9,7 @@ One practical reason to use this command would be the need to terminate the test
 landing of certain unfavorable condition such that the continuation of such execution would either 
 be irrelevant, unstable or contradictory to the intent of the test.
 
-### Parameter(s)
+### Parameters
 - **text** \- information/reason for the immediate fail.
 
 

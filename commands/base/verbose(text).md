@@ -9,7 +9,7 @@ However, it is worth noting that Excel poses a limits on the number of character
 it is possible that the entire content of `text` might not be displayed as intended.
 
 
-### Parameter(s)
+### Parameters
 - **text** \- the text to print.  If any variable is specified, substitution will be performed prior to display.  
   Any unresolved variable will be rendered as is.
 

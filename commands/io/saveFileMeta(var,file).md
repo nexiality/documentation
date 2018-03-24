@@ -6,7 +6,7 @@ This command will save the meta data in the file.This will read the content of t
 The data can be stored into variable and can be used for further testing requirement.
 
 
-### Parameter(s)
+### Parameters
 - **var** \- this parameter is used to store the data of the file into this variable
 - **file** \- this parameter is location of the file and filename from where the data needs to be read
 
