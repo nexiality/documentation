@@ -1,0 +1,22 @@
+{% include_relative _breadcrumb.html current="assertEqual(file1,file2)" %}
+
+
+### Description
+This command will assert if the contents of the files are identical.
+
+
+### Parameter(s)
+- **file1** \- This parameter is the full path along with file name.
+- **file2**  \- This parameter is the full path along with the file name.
+
+
+### Example
+Script:
+![script](image/assertEqual_01.png)
+
+Output:
+![output](image/assertEqual_02.png)
+
+
+### See Also
+-  [`assertNotEqual(file1,file2)`](assertNotEqual(file1,file2))
