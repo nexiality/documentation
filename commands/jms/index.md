@@ -11,6 +11,7 @@ the bulk of the message interaction evolves around "send message" and "receive m
 currently supported in Nexial.  Based on needs and demand, we might possibly implement other JMS operations, such as 
 DELETE.
 
+
 ### Connection Configuration
 Similar to other commands that interact with remote system, the JMS commands require a "configuration" object to 
 specify the connectivity and security credential.  These set of configurations are "bundled" together under a name, 
@@ -19,7 +20,7 @@ such as `MyServer`.  Below is a table to outline such configurations:
 <table cellspacing="0" cellpadding="3" style="text-align:left; vertical-align:top">
 <thead>
 <tr>
-<th>configuration name</th>
+<th nowrap="nowrap">configuration name</th>
 <th>value</th>
 <th>explanation</th>
 </tr>
@@ -27,10 +28,10 @@ such as `MyServer`.  Below is a table to outline such configurations:
 
 <tbody>
 <tr>
-<td>
+<td nowrap="nowrap">
 <code>MyServer.provider</code>
 </td>
-<td>
+<td nowrap="nowrap">
 Possible values:<ul>
 <li><code>activemq</code></li>
 <li><code>webspheremq</code></li>
@@ -42,12 +43,17 @@ Possible values:<ul>
 <b>[REQUIRED]</b><br/>
 More options could be added on as-needed basis. Raise an 
 <a href="https://github.com/nexiality/nexial-core/issues" class="external-link">issue</a> if your JMS vendor is not 
-on this list.
+on this list.<br/>
+<br/>
+For <codewebspheremq</code> (WebSphere MQ), additional jar files are required to be added to the 
+<code>${NEXIAL_HOME}/lib</code> directory.  Visit 
+<a href="http://www-01.ibm.com/support/docview.wss?uid=swg21376217" class="external-link">here</a> to learn more about
+the required WebSphere MQ client jar files.
 </td>
 </tr>
 
 <tr>
-<td>
+<td nowrap="nowrap">
 <code>MyServer.url</code>
 </td>
 <td>
@@ -76,7 +82,7 @@ For JNDI-based JMS server, the <code>url</code> would be the standard JNDI url -
 </tr>
 
 <tr>
-<td>
+<td nowrap="nowrap">
 <code>MyServer.username</code>
 </td>
 <td>
@@ -89,7 +95,7 @@ Consider using <a href="../../tipsandtricks/nexialcrypt"><code>nexial-crypt</cod
 </tr>
 
 <tr>
-<td>
+<td nowrap="nowrap">
 <code>MyServer.password</code>
 </td>
 <td>
@@ -102,7 +108,7 @@ Consider using <a href="../../tipsandtricks/nexialcrypt"><code>nexial-crypt</cod
 </tr>
 
 <tr>
-<td>
+<td nowrap="nowrap">
 <code>MyServer.destination</code>
 </td>
 <td>
@@ -115,7 +121,7 @@ use<code>isTopic</code>to determine if this destination is a queue or a topic.
 </tr>
 
 <tr>
-<td>
+<td nowrap="nowrap">
 <code>MyServer.isTopic</code>
 </td>
 <td>
@@ -127,7 +133,7 @@ specify as <code>true</code> if your destination is a Topic. Default is <code>fa
 </tr>
 
 <tr>
-<td>
+<td nowrap="nowrap">
 <code>MyServer.initialContextFactory</code>
 </td>
 <td>
@@ -143,7 +149,7 @@ name of the factory class that will create an initial context. This would be syn
 </tr>
 
 <tr>
-<td>
+<td nowrap="nowrap">
 <code>MyServer.connectionFactory</code>
 </td>
 <td>
@@ -158,7 +164,7 @@ documentation or IT Support for details.
 </tr>
 
 <tr>
-<td>
+<td nowrap="nowrap">
 <code>MyServer.jndiUsername</code>
 </td>
 <td>
@@ -173,7 +179,7 @@ Specify the username to access the target JNDI server. This would be synonymous 
 </tr>
 
 <tr>
-<td>
+<td nowrap="nowrap">
 <code>MyServer.jndiPassword</code>
 </td>
 <td>
@@ -188,7 +194,7 @@ Specify the password to access the target JNDI server. This would be synonymous 
 </tr>
 
 <tr>
-<td>
+<td nowrap="nowrap">
 <code>MyServer.channel</code>
 </td>
 <td>
@@ -204,7 +210,7 @@ documentation or IT Support for details.
 </tr>
 
 <tr>
-<td>
+<td nowrap="nowrap">
 <code>MyServer.queueManager</code>
 </td>
 <td>

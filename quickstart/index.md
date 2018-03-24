@@ -3,9 +3,9 @@
 
 Let's get started!
 
-- [Introduction and FAQ](IntroductionAndFAQ.html)
-- [Installing Nexial](InstallingNexial.html)
-- [Update Nexial](UpdateNexial.html)
-- [Understanding Excel Templates](UnderstandingExcelTemplates.html)
-- [Understanding Project Structure](UnderstandingProjectStructure.html)
+- [Introduction and FAQ](IntroductionAndFAQ)
+- [Installing Nexial](InstallingNexial)
+- [Update Nexial](UpdateNexial)
+- [Understanding Excel Templates](UnderstandingExcelTemplates)
+- [Understanding Project Structure](UnderstandingProjectStructure)
 - [Automation Execution Flow](ExecutionFlow)

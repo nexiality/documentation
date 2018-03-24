@@ -19,6 +19,7 @@ This command saves the form values from the pdf document and store the data in t
 |ALTERNATING_CELL|This is to be applied when the PDF form has the headers in one cell and the values are followed in the next cell. And the headers are being repeated in the alternate cells.|
 |SHARED_CELL|This is to be applied when the PDF form has the headers and the values are shared in one cell.|
 
+<br/>
 
 ### Example
 **Script**:<br/>

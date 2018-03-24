@@ -6,11 +6,8 @@ PDF document - but the extracting of information into a form of data structure. 
 the name-value pair, like:
 
 > `first name=Johnny`
-> 
 > `middle initial=B.`
-> 
 > `last name=Good`
-> 
 > `hobby=Go places`
 
 The content of a PDF document is not necessarily laid out in a predictable, consistent manner.  Extract such content 
@@ -26,6 +23,7 @@ content, such as a form or a report, then we can use commands like 
 [**`saveFormValues(pdf,var,pageAndLineStartEnd,strategy)`**](saveFormValues(pdf,var,pageAndLineStartEnd,strategy).md), 
 [**`assertFormValue(var,name,expected)`**](assertFormValue(var,name,expected).md). 
 
+<br/>
 
 ### PDF Form Data Extraction
 To extract data structure out of a PDF document, one would need to consider the appropriate extraction strategy to 
@@ -36,7 +34,7 @@ strategies.  One may use one of these strategies as is, or creating a new strat
 Here are the default extraction strategies:
 `KEY REGEX`: **`^([0-9A-Za-z\\\/\ \.\,\"\'\(\)\[\]\#\-]+)\:?\s*$`**
 
-| STRATEGY                   | KEY REGEX | TRIM KEY | VALUE POSITION                | TRIM VALUE | VALUE MERGE AS 1 LINE | Description | Example |
+| STRATEGY                   | KEY_REGEX | TRIM_KEY | VALUE_POSITION                | TRIM_VALUE | VALUE_MERGE_AS_1_LINE | Description | Example |
 | -------------------------- | --------- | -------- | ----------------------------- | ---------- | --------------------- | ----------- | ------- |
 | `ALTERNATING_ROW`          | default   | `true`   | alternate row                 | `true`     | `true` | The name and value are laid out in alternating row. In the example (right), `STREET ADDRESS`would be considered in a separate row than its corresponding value `2200 West Empire Ave.,` | ![](image/pdf_01.png) |
 | `ALTERNATING_CELL`         | default   | `true`   | alternate cell                | `true`     | `true` | The name and value are laid out in alternative cell. In the example (right), `Employee Gross` is presented in one cell, while its corresponding value `$1,334,694.40` is in another. | ![](image/pdf_02.png) |
@@ -44,9 +42,9 @@ Here are the default extraction strategies:
 | `HEADER_ONLY`              | default   | `true`   | after first row               | `true`     | `true` | All the name of the target data structure are laid out horizontally across the same line (like table header), while the corresponding values are laid out in subsequent lines (like CSV). | ![](image/pdf_04.png)|
 | `SHARE_CELL_THEN_ALT_CELL` | default   | `true`   | same cell, could be next cell | `true`     | `true` | This is a combination of `SHARE_CELL` and `ALTERNATING_CELL`. The `SHARE_CELL`strategy is tried first, and in need be the `ALTERNATING_CELL`strategy is employed as backup. | 
 
+<br/>
 
-#### PDF Form Parsing Strategy
-
+### PDF Form Parsing Strategy
 | Option | Possible Data | Default Value | Description | 
 | --- | --- | --- | --- | 
 |nexial.pdfFormStrategy.**[NAME]**.basedOn | ALTERNATING_ROW  ALTERNATING_CELL SHARE_CELL HEADER_ONLY SHARE_CELL_THEN_ALT_CELL | |  use one of the strategies as your starting point |
@@ -61,18 +59,19 @@ Here are the default extraction strategies:
 |nexial.pdfFormStrategy.**[NAME]**.valueAsOneLine|true / false|determine if Nexial should remove newline or carriage return characters rom extracted form 'value'.|
 
 
-- [`assertContentEqual(actualPdf,expectedPdf)`](assertContentEqual(actualPdf,expectedPdf).html)
-- [`assertFormElementPresent(var,name)`](assertFormElementPresent(var,name).html)
-- [`assertFormValue(var,name,expected)`](assertFormValue(var,name,expected).html)
-- [`assertFormValues(var,name,expectedValues,exactOrder)`](assertFormValues(var,name,expectedValues,exactOrder).html)
-- [`assertPatternNotPresent(pdf,regex)`](assertPatternNotPresent(pdf,regex).html)
-- [`assertPatternPresent(pdf,regex)`](assertPatternPresent(pdf,regex).html)
-- [`assertTextArray(pdf,textArray,ordered)`](assertTextArray(pdf,textArray,ordered).html)
-- [`assertTextNotPresent(pdf,text)`](assertTextNotPresent(pdf,text).html)
-- [`assertTextPresent(pdf,text)`](assertTextPresent(pdf,text).html)
-- [`count(pdf,text,var)`](count(pdf,text,var).html)
-- [`saveAsPages(pdf,destination)`](saveAsPages(pdf,destination).html)
-- [`saveAsText(pdf,destination)`](saveAsText(pdf,destination).html)
-- [`saveFormValues(pdf,var,pageAndLineStartEnd,strategy)`](saveFormValues(pdf,var,pageAndLineStartEnd,strategy).html)
-- [`saveMetadata(pdf,var)`]( saveMetadata(pdf,var).html)
-- [`saveToVar(pdf,var)`](saveToVar(pdf,var).html)
+### Available Commands
+- [`assertContentEqual(actualPdf,expectedPdf)`](assertContentEqual(actualPdf,expectedPdf))
+- [`assertFormElementPresent(var,name)`](assertFormElementPresent(var,name))
+- [`assertFormValue(var,name,expected)`](assertFormValue(var,name,expected))
+- [`assertFormValues(var,name,expectedValues,exactOrder)`](assertFormValues(var,name,expectedValues,exactOrder))
+- [`assertPatternNotPresent(pdf,regex)`](assertPatternNotPresent(pdf,regex))
+- [`assertPatternPresent(pdf,regex)`](assertPatternPresent(pdf,regex))
+- [`assertTextArray(pdf,textArray,ordered)`](assertTextArray(pdf,textArray,ordered))
+- [`assertTextNotPresent(pdf,text)`](assertTextNotPresent(pdf,text))
+- [`assertTextPresent(pdf,text)`](assertTextPresent(pdf,text))
+- [`count(pdf,text,var)`](count(pdf,text,var))
+- [`saveAsPages(pdf,destination)`](saveAsPages(pdf,destination))
+- [`saveAsText(pdf,destination)`](saveAsText(pdf,destination))
+- [`saveFormValues(pdf,var,pageAndLineStartEnd,strategy)`](saveFormValues(pdf,var,pageAndLineStartEnd,strategy))
+- [`saveMetadata(pdf,var)`]( saveMetadata(pdf,var))
+- [`saveToVar(pdf,var)`](saveToVar(pdf,var))
