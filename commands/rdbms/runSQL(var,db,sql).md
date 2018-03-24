@@ -78,4 +78,4 @@ Output:<br/>
 
 
 ### See Also
-- [`runSQLs(var,db,sqls)`](runSQLs)
+- [`runSQLs(var,db,sqls)`](runSQLs(var,db,sqls))
