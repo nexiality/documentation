@@ -8,7 +8,7 @@ want to consider using `$(date|stdFormat|date|fromFormat)` or `$(date|format|
 derive the appropriate format first before invoking other date-operational functions.
 
 ##### Date Format
-{% include_relate _dateformat.md %}
+{% include_relative _dateformat.md %}
 
 
 ### Available Functions
