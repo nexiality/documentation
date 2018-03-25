@@ -1,0 +1,48 @@
+{% include_relative _breadcrumb.html current="$(syspath)" %}
+
+### Description
+This built-in function provides the resolution of the physical location of your project artifacts, ie. test scripts, 
+test data, etc.  By using this function, one can keep the test project more portable. Instead of specifying the fully 
+qualified path, such as `C:\projects\MyProject` or 
+`/Users/user123/projects/MyApplication/artifact/script/TEST-1234.xlsx`, one can specify `$(syspath|project|fullpath)` 
+or `$(syspath|script|fullpath)/TEST-1234.xlsx` instead.  During execution, Nexial will resolve the appropriate 
+physical path, thus your script is guarded against location or even OS changes.
+
+For each of the following options, one can add a second parameter as followed:
+- **name** \- the (directory) name of the target location
+- **fullpath** \- the fully qualified location of the target location
+- **base** \- the parent location of the target location
+
+
+### Available Functions
+- **project** \- the location of the target project.
+- **script** \- the standard location where Nexial scripts (Excel) are stored.  This is usually the `artifact/script` 
+  directory under the target project.
+- **data** \- the standard location where Nexial test data (Excel) are stored. This is usually the `artifact/data` 
+  directory under the target project, but can be overridden via the `-data` command line argument.
+- **out** \- the output directory for the current execution.  This would be a directory named `output` under the 
+  target project, or whatever specified via the `-output` command line argument.
+- **screenshot** \- the standard location where screen captures are stored.  This is usually a directory named 
+  `captures` under the output directory.
+- **log** \- the standard location where logs are being kept.  This is usually a directory named `logs` under the 
+  output directory.
+- **temp** \- the standard temporary storage location as defined via `java.io.tempdir` environment variable, which is 
+  often mapped to the `%TEMP%` or `$TMP` system variable.
+
+For each of these behaviors, one would add a secondary parameter as listed in the **Description** section.  For 
+example,
+- `$(syspath|project|name)` would render the directory name of the current project
+- `$(syspath|out|base)` would render the parent directory (full path) of the output directory
+- `$(syspath|temp|fullpath)` would render the full path of the temp. directory
+
+
+### Example
+Here are some examples of using this built-in function:<br/>
+![script](image/$(syspath)_01.png)
+
+... and the output:<br/>
+![output](image/$(syspath)_02.png)
+
+
+### See Also
+- [`$(projectfile)`]($(projectfile))

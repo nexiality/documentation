@@ -76,7 +76,7 @@ This flow control will end the current iteration if the specific condition is tr
 current step as a `SKIPPED`, not `FAIL`.  As such the activation of this flow control will not increment the failure 
 count of the corresponding test scenario.
 
-Example:
+Example:<br/>
 ![script3](image/flowcontrols_04.png)
 
 
@@ -84,7 +84,7 @@ Example:
 This flow control is different from `EndLoopIf()` in that the activation of this will end the entire test execution.  
 All remaining test steps, test cases and test scenarios will not be executed.
 
-Example:
+Example:<br/>
 ![script4](image/flowcontrols_05.png)
 
 
@@ -95,7 +95,7 @@ generally means deviation from the intent of the test case.  But for conditions
 externally controlled (such as external client) or unpredictable (such as temperature or air pressure), then this 
 flow control may be of some use.
 
-Example:
+Example:<br/>
 ![script5](image/flowcontrols_06.png) 
 
 The above example would read:

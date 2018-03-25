@@ -23,8 +23,8 @@ Things to note:
    directory stores all the log files, and the output is named similarly to the target test script - 
    `[TEST SCRIPT NAME].[START DATE/TIME].[ITERATION].xlsx`.
 
-3. For convenience, use the `sentry-project.cmd` or `sentry-project.sh` to generate the project structure for you.
+3. For convenience, use the `nexial-project.cmd` or `nexial-project.sh` to generate the project structure for you.
 
-4. As a convention, it is recommended to use `C:\projects` as the top-level directory for all your Sentry projects.
+4. As a convention, it is recommended to use `C:\projects` as the top-level directory for all your Nexial projects.
 
-5. For more information, check out [Understanding Sentry Excel templates](UnderstandingExcelTemplates).
+5. For more information, check out [Understanding Nexial Excel templates](UnderstandingExcelTemplates).

@@ -2,7 +2,7 @@
 
 
 ### Description
-- This command is to run the sql statement against the rdbms. In other words using this command the sql statement 
+- This command is to run the sql statement against the database. In other words using this command the sql statement 
   can be execute and retrieved data can be used for verification.
 - The command will connect to the database and execute sql statement as per connection strings and credential provided.
 - If command is successful the result will pass or will  fail otherwise.

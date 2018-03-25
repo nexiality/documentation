@@ -4,14 +4,14 @@ JSON (/dʒeɪsən/ JAY-sən), short for JavaScript Object Notation, is an open-
 human-readable text to transmit data objects consisting of name–value pairs and array data types. It is a very 
 common data format used for asynchronous browser/server communication, and is seen by many as a replacement for XML 
 for web-based and HTTP-based data exchange.  As with any data exchange, it is commonly necessary to manipulate the 
-data (in this case, JSON) between exchanges.  Like XPath (currently [in version 3.0](https://www.w3.org/TR/xpath-30/)) 
-is used to process XML documents, we need a descriptive and structure-aware specification to express the same for 
-JSON.  Enters JSONPath.
+data (in this case, JSON) between exchanges.  Like XPath (currently 
+<a href="https://www.w3.org/TR/xpath-30/" class="external-link">in version 3.0</a>) is used to process XML documents, 
+we need a descriptive and structure-aware specification to express the same for JSON.  Enters JSONPath.
 
 As you might have guessed, there is already a fairly 
-[well-defined standard out there for JSONPath](http://goessner.net/articles/JsonPath/).  Published since 2007, it 
-has picked up some following and subsequent success stories along the way.  But by and large it has not gained the 
-same momentum and ubiquity like XPath.  There are several reasons:
+<a href="http://goessner.net/articles/JsonPath/" class="external-link">well-defined standard out there for JSONPath</a>.  
+Published since 2007, it has picked up some following and subsequent success stories along the way.  But by and large 
+it has not gained the same momentum and ubiquity like XPath.  There are several reasons:
 1. There are competing declarative query languages for JSON (jpath, jacl, JSONiq, etc.) and none of these, 
    including JSONPath, is currently under official consideration by W3C, the standards body for open Web technology.
 2. JSON is native in JavaScript (**J** in `JSON`); requiring no additional language-level or API support to 
@@ -122,6 +122,6 @@ angled brackets (`[ref]`).  But within the confines of these basic rules, we sh
 common queries and still retain its readability. 
 
 In the future, we might consider adopting JSONPath, such as 
-[https://github.com/json-path/JsonPath](https://github.com/json-path/JsonPath), so that we can provide more 
-comprehensive JSON querying capability for more complex test scenarios. Stay tuned...
+<a href="https://github.com/json-path/JsonPath" class="external-link">https://github.com/json-path/JsonPath</a>, so 
+that we can provide more comprehensive JSON querying capability for more complex test scenarios. Stay tuned...
 

@@ -88,9 +88,10 @@ For more details and step-by-step instruction, check out the [Install Nexial](In
 
 ## Where can I go for more help/support?
 For online documentation, start [here](../commands/).  For additional questions, inquiries or help, 
-submit your request to our [GitHub issue](https://github.com/nexiality/nexial-core/issues).  Likewise, 
-for any suggestion on new features for Nexial, submit an [issue](https://github.com/nexiality/nexial-core/issues) 
-as well. 
+submit your request to our 
+<a href="https://github.com/nexiality/nexial-core/issues" class="external-link">GitHub issue</a>.  Likewise, for any 
+suggestion on new features for Nexial, submit an 
+<a href="https://github.com/nexiality/nexial-core/issues" class="external-link">issue</a> as well. 
 
 
 ## What can I expect from future release?

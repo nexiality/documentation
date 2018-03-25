@@ -904,7 +904,7 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     <td>
     <span style="color: rgb(0, 0, 0);"><strong>Applicable only when <code>nexial.browser</code> is set to 
     <code>browserstack</code>.</strong></span><br/> 
-    OS version you want to test. For example:<br>Windows: <code>XP, 7, 8, 8.1 and 10</code><br>OS X: 
+    OS version you want to test. For example:<br/>Windows: <code>XP, 7, 8, 8.1 and 10</code><br/>OS X: 
     <code>Snow Leopard, Lion, Mountain Lion, Mavericks, Yosemite, El Capitan, Sierra</code>
     </td>
 </tr>

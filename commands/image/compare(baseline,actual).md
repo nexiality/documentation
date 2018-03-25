@@ -21,5 +21,5 @@ See [`nexial.lastScreenshot`](../../systemvars/index#nexial.lastScreenshot) fo
 Output:<br/>
 ![output](image/compare_02.png)
 
-If there are errors, the result will reflect the violation against the defined tolerance:
+If there are errors, the result will reflect the violation against the defined tolerance:<br/>
 ![output2](image/compare_03.png)
