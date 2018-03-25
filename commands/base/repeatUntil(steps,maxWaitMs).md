@@ -41,7 +41,7 @@ certain time, check for specific text or state of a web page or application.
 4. If one wish to limit the timespan such repeat-until execution, the second parameter `maxWaitMs` can be used.  
    However, it must be a value greater than `1000` (i.e. 1 second).  Use `-1` if time should not be considered as a 
    constraint (ie. disable time tracking).  This is a great way to simulate a time-out condition.
-5. The use of [verbose(text)](verbose(text).html) will have no impact to the corresponding output file.  However the 
+5. The use of [verbose(text)](verbose(text)) will have no impact to the corresponding output file.  However the 
 			output produced by this command can be observed in the console log.
 
 
@@ -57,7 +57,7 @@ Here's an example of how this command can be used:<br/>
 ![script](image/repeatUntil_01.png)
 
 Here, we have _recruited_ 5 steps (Row 6 through Row 10) in the repeat-until execution.  As stated, the first step 
-MUST be an assertion - [`assertEqual()`](assertEqual(expected,actual).html).  The assertion is "make sure counter 
+MUST be an assertion - [`assertEqual()`](assertEqual(expected,actual)).  The assertion is "make sure counter 
 equal to 20?".  Upon the successful validation of this assertion, the loop-until execution will exit (as SUCCESS).  
 We use `-1` in the `repeatUntil(steps,maxWaitMs)` command, which is keep looping until the first assertion command is 
 successful.  

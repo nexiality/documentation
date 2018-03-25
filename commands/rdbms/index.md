@@ -141,7 +141,7 @@ Note that many database vendors (and the corresponding database drivers) adhere 
 
 
 ### See Also
-- [`resultToCSV(var,csvFile,delim,showHeader)`](resultToCSV(var,csvFile,delim,showHeader).html)
+- [`resultToCSV(var,csvFile,delim,showHeader)`](resultToCSV(var,csvFile,delim,showHeader))
 - [`runFile(var,db,file)`](runFile(var,db,file))
 - [`runSQL(var,db,sql)`](runSQL(var,db,sql))
 - [`runSQLs(var,db,sqls)`](runSQLs(var,db,sqls))

@@ -25,4 +25,4 @@ output - notice that the last `verbose(text)` command prints out the modified 
 
 
 ### See Also
-- [`appendText(var,appendWith)`](appendText(var,appendWith).html)
+- [`appendText(var,appendWith)`](appendText(var,appendWith))

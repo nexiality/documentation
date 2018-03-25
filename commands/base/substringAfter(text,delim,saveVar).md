@@ -21,10 +21,10 @@ specified via `saveVar`. For example,
 
 
 ### See Also
-- [`substringBetween(text,start,end,saveVar)`](substringBetween(text,start,end,saveVar).html)
-- [`substringBefore(text,delim,saveVar)`](substringBefore(text,delim,saveVar).html)
-- [`saveReplace(text,regex,replace,resultVar)`](saveReplace(text,regex,replace,resultVar).html)
-- [`saveMatches(text,regex,saveVar)`](saveMatches(text,regex,saveVar).html)
-- [`split(text,delim,saveVar)`](split(text,delim,saveVar).html)
-- [`prependText(var,prependWith)`](prependText(var,prependWith).html)
-- [`appendText(var,appendWith)`](appendText(var,appendWith).html)
+- [`substringBetween(text,start,end,saveVar)`](substringBetween(text,start,end,saveVar))
+- [`substringBefore(text,delim,saveVar)`](substringBefore(text,delim,saveVar))
+- [`saveReplace(text,regex,replace,resultVar)`](saveReplace(text,regex,replace,resultVar))
+- [`saveMatches(text,regex,saveVar)`](saveMatches(text,regex,saveVar))
+- [`split(text,delim,saveVar)`](split(text,delim,saveVar))
+- [`prependText(var,prependWith)`](prependText(var,prependWith))
+- [`appendText(var,appendWith)`](appendText(var,appendWith))

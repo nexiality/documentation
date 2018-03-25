@@ -26,5 +26,5 @@ The output shows what's being matched and stored:<br/>
 
 
 ### See Also
-- [assertCount(text,regex,expects)](assertCount(text,regex,expects).html)
-- [saveReplace(text,regex,replace,resultVar)](saveReplace(text,regex,replace,resultVar).html)
+- [assertCount(text,regex,expects)](assertCount(text,regex,expects))
+- [saveReplace(text,regex,replace,resultVar)](saveReplace(text,regex,replace,resultVar))

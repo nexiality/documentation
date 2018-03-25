@@ -30,5 +30,5 @@ function.
 
 
 ### See Also
-- [`$(sysdate)`](../../functions/sysdate.html)
-- [`save(var,value)`](save(var,value).html)
+- [`$(sysdate)`](../../functions/sysdate)
+- [`save(var,value)`](save(var,value))

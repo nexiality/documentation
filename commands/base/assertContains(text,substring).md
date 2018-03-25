@@ -20,5 +20,5 @@ and the output:
 
 
 ### See Also
-- [`assertStartsWith(text,prefix)`](assertStartsWith(text,prefix).html)
-- [`assertEndsWith(text,suffix)`](assertEndsWith(text,suffix).html)
+- [`assertStartsWith(text,prefix)`](assertStartsWith(text,prefix))
+- [`assertEndsWith(text,suffix)`](assertEndsWith(text,suffix))

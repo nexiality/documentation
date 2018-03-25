@@ -3,7 +3,7 @@
 
 ### Description
 This command provides a more comprehensive way of comparing CSV content.  For simple comparison, check out 
-[`compare(expected,actual,failFast)`](compare(expected,actual,failFast).html).
+[`compare(expected,actual,failFast)`](compare(expected,actual,failFast)).
 
 The main purpose of this command is to provide flexibility and insights into the comparison of 2 CSV content with the 
 following strategies:
@@ -179,4 +179,4 @@ Here's the output:
 
 
 ### See Also
-- [`compare(expected,actual,failFast)`](compare(expected,actual,failFast).html)
+- [`compare(expected,actual,failFast)`](compare(expected,actual,failFast))

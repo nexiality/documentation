@@ -29,5 +29,5 @@ Script:<br/>
 
 
 ### See Also
-- [moveFrom(var,profile,remote,local)](moveFrom(var,profile,remote,local).html)
-- [copyTo(var,profile,local,target)](copyTo(var,profile,local,target).md)
+- [moveFrom(var,profile,remote,local)](moveFrom(var,profile,remote,local))
+- [copyTo(var,profile,local,target)](copyTo(var,profile,local,target))

@@ -6,7 +6,7 @@ This command performs screen recording during an execution.  The recording will 
 (and thus will not work in a headless mode). 
 
 The screen recording can start within any part of a script file.  It will be start recording from the point this 
-command is invoked until [`stopRecording()`](stopRecording().html) is invoked _WITHIN THE SAME SCRIPT_.  The recording 
+command is invoked until [`stopRecording()`](stopRecording()) is invoked _WITHIN THE SAME SCRIPT_.  The recording 
 is saved as a MP4 in the **output** directory under `captures` folder.
 
 
@@ -14,10 +14,10 @@ is saved as a MP4 in the **output** directory under `captures` folder.
 Script:
 ![script](image/startRecording_02.png)
 
-This command is used in conjunction with [`stopRecording()`](stopRecording().html) command. Using 
+This command is used in conjunction with [`stopRecording()`](stopRecording()) command. Using 
 this command will stop all future:
 ![](image/startRecording_03.png)
 
 
 ### See Also
-- [`stopRecording()`](stopRecording().html)
+- [`stopRecording()`](stopRecording())

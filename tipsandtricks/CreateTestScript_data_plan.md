@@ -19,7 +19,7 @@ The `template` directory contains 4 files:
 
 Once you copy one of these template to your project directory, remember to (1) place it in the designated location 
 (`script/` for scripts, `data/` for data, etc.), and (2) rename according to 
-[convention](../quickstart/UnderstandingProjectStructure.md).
+[convention](../quickstart/UnderstandingProjectStructure).
 
 Lastly, the templates are shipped with each build.  They already contain the latest set of commands available as per 
 the associated build.

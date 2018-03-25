@@ -19,4 +19,4 @@ Example of this command:
 
 
 ### See Also
-- [`assertNotEqual(value1,value2)`](assertNotEqual(value1,value2).html)
+- [`assertNotEqual(value1,value2)`](assertNotEqual(value1,value2))

@@ -3,7 +3,7 @@ This assumes that the underlying pdf has a form, which is to be parsed via
 Consult the [PDF Form Data Extraction](index.html#pdf-form-data-extraction) for more details.
 
 This is the general approach:
-1. Make sure the target PDF exists via [io &raquo; `assertReadableFile(file,minByte)`](../io/assertReadableFile(file,minByte).md)
+1. Make sure the target PDF exists via [io &raquo; `assertReadableFile(file,minByte)`](../io/assertReadableFile(file,minByte))
    - not entirely necessary, but would be easier for root cause analysis.
 2. Make sure the target PDF contains key phrases, so as to affirm its validity.
 	  - again, not necessary but simplifies root cause analysis.

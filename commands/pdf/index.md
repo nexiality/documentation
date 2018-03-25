@@ -23,8 +23,8 @@ content, commands like [**`assertPatternPresent(pdf,regex)`**](assertPatternPre
 [**`saveAsText(pdf,destination)`**](saveAsText(pdf,destination)), 
 [**`saveAsPages(pdf,destination)`**](saveAsPages(pdf,destination)) are created to handle it.  For more structured 
 content, such as a form or a report, then we can use commands like 
-[**`saveFormValues(pdf,var,pageAndLineStartEnd,strategy)`**](saveFormValues(pdf,var,pageAndLineStartEnd,strategy).md), 
-[**`assertFormValue(var,name,expected)`**](assertFormValue(var,name,expected).md). 
+[**`saveFormValues(pdf,var,pageAndLineStartEnd,strategy)`**](saveFormValues(pdf,var,pageAndLineStartEnd,strategy)), 
+[**`assertFormValue(var,name,expected)`**](assertFormValue(var,name,expected)). 
 
 <br/>
 

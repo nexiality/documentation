@@ -16,5 +16,5 @@ equivalent (or empty), this command will consider as pass.
 
 
 ### See Also
-- [`assertContains(text,substring)`](assertContains(text,substring).html)
-- [`assertStartsWith(text,prefix)`](assertStartsWith(text,prefix).html)
+- [`assertContains(text,substring)`](assertContains(text,substring))
+- [`assertStartsWith(text,prefix)`](assertStartsWith(text,prefix))

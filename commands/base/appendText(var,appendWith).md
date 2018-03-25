@@ -19,4 +19,4 @@ The output shows the appended text (`var1`):
 
 
 ### See Also
-- [`prependText(var,prependWith)`](prependText(var,prependWith).html)
+- [`prependText(var,prependWith)`](prependText(var,prependWith))

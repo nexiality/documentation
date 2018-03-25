@@ -31,10 +31,10 @@ Here's an example script for `substringBetween(text,start,end.saveVar)`:<br/>
 
 
 ### See Also
-- [`substringBefore(text,delim,saveVar)`](substringBefore(text,delim,saveVar).html)
-- [`substringAfter(text,delim,saveVar)`](substringAfter(text,delim,saveVar).html)
-- [`saveReplace(text,regex,replace,resultVar)`](saveReplace(text,regex,replace,resultVar).html)
-- [`saveMatches(text,regex,saveVar)`](saveMatches(text,regex,saveVar).html)
-- [`split(text,delim,saveVar)`](split(text,delim,saveVar).html)
-- [`prependText(var,prependWith)`](prependText(var,prependWith).html)
-- [`appendText(var,appendWith)`](appendText(var,appendWith).html)
+- [`substringBefore(text,delim,saveVar)`](substringBefore(text,delim,saveVar))
+- [`substringAfter(text,delim,saveVar)`](substringAfter(text,delim,saveVar))
+- [`saveReplace(text,regex,replace,resultVar)`](saveReplace(text,regex,replace,resultVar))
+- [`saveMatches(text,regex,saveVar)`](saveMatches(text,regex,saveVar))
+- [`split(text,delim,saveVar)`](split(text,delim,saveVar))
+- [`prependText(var,prependWith)`](prependText(var,prependWith))
+- [`appendText(var,appendWith)`](appendText(var,appendWith))

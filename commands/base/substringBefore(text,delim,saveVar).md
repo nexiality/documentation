@@ -28,9 +28,9 @@ Script:<br/>
 
 
 ### See Also
-- [`substringAfter(text,delim,saveVar)`](substringAfter(text,delim,saveVar).html)
-- [`substringBetween(text,start,end,saveVar)`](substringBetween(text,start,end,saveVar).html)
-- [`saveMatches(text,regex,saveVar)`](saveMatches(text,regex,saveVar).html)
-- [`saveReplace(text,regex,replace,resultVar)`](saveReplace(text,regex,replace,resultVar).html)
-- [`appendText(var,appendWith)`](appendText(var,appendWith).html)
-- [`prependText(var,prependWith)`](prependText(var,prependWith).html)
+- [`substringAfter(text,delim,saveVar)`](substringAfter(text,delim,saveVar))
+- [`substringBetween(text,start,end,saveVar)`](substringBetween(text,start,end,saveVar))
+- [`saveMatches(text,regex,saveVar)`](saveMatches(text,regex,saveVar))
+- [`saveReplace(text,regex,replace,resultVar)`](saveReplace(text,regex,replace,resultVar))
+- [`appendText(var,appendWith)`](appendText(var,appendWith))
+- [`prependText(var,prependWith)`](prependText(var,prependWith))
