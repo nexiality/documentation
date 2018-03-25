@@ -21,7 +21,7 @@
 
 1.  Download Java  
     1.  Java can be downloaded from Oracle website.
-    1.  Open your browser and point to <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" class="external-link">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>
+    1.  Open your browser and point to <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" class="external-link" target="_nexial_external">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>
     1.  Click on the Download button just below JDK.  
         ![download_jdk](image/InstallingNexial_03.png)
     1.  Click on Accept License Agreement.  
@@ -39,11 +39,11 @@
         
         - By default, Java is installed to either `C:\Program Files\Java\jdk...` or 
           `C:\Program Files (x86)\Java\jdk...`.   
-        - For more hep, visit <a href="https://java.com/en/download/help/download_options.xml#windows" class="external-link">https://java.com/en/download/help/download_options.xml#windows</a>
+        - For more hep, visit <a href="https://java.com/en/download/help/download_options.xml#windows" class="external-link" target="_nexial_external">https://java.com/en/download/help/download_options.xml#windows</a>
         
         **MacOSX**: double-click on the downloaded installer.  Follow the instructions of the 
         installer.  For more help, visit 
-        <a href="https://java.com/en/download/help/mac_install.xml" class="external-link">https://java.com/en/download/help/mac_install.xml</a>
+        <a href="https://java.com/en/download/help/mac_install.xml" class="external-link" target="_nexial_external">https://java.com/en/download/help/mac_install.xml</a>
 
 1.  Check `PATH`, `JAVA_HOME`, `JRE_HOME`  
     Windows: 
@@ -76,13 +76,13 @@ the installed version is too old.
 				is provided on a case-by-case basis.
 1.  **Chrome** \- latest and almost all recent versions are supported.  Older version can be 
 				supported via using the corresponding 
-				<a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" class="external-link">older versions of chrome driver</a>.
+				<a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" class="external-link" target="_nexial_external">older versions of chrome driver</a>.
 1.  **Safari** \- version 9 or above is supported, with the latest most likely to be most stable.
 
 
 ## Installing Nexial
 1.  Download Nexial
-    1.  Download Nexial distribution from the <a href="https://github.com/nexiality/nexial-core/releases" class="external-link"><b>Release</b></a> page. 
+    1.  Download Nexial distribution from the <a href="https://github.com/nexiality/nexial-core/releases" class="external-link" target="_nexial_external"><b>Release</b></a> page. 
         Note that the instruction for updating to newer version of Nexial is the same as installing it anew.
 2.  Installing Nexial
     1.  Create a directory in your local workstation/VDI as `C:\projects\`

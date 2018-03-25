@@ -6,8 +6,8 @@ This command asserts the content of the actual pdf document as expected document
 
 
 ### Parameters
-- **actualPdf**\- is the actual pdf document
-- **expectedPdf** \- is the expected pdf document
+- **actualPdf** - the actual pdf document
+- **expectedPdf** - the expected pdf document
 
 
 ### Example

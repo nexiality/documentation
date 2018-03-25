@@ -4,15 +4,15 @@
 This command simulate the OAuth exchange in order to obtain an authority token for granting access to otherwise 
 protected resources.
 
-<a href="https://tools.ietf.org/html/rfc6749" class="external-link">OAuth</a> is an open standard for authorization 
+<a href="https://tools.ietf.org/html/rfc6749" class="external-link" target="_nexial_external">OAuth</a> is an open standard for authorization 
 that lets clients obtain access to protected server resources on behalf of a resource owner. The resource owner could 
 be a different client or the end user. OAuth also helps end users authorize third-party access to their server 
 resources without having to share their credentials, such as user names and passwords. This series of articles 
 adheres to the OAuth 2.0 authorization framework outlined in RFC6749. The complete OAuth 2.0 authorization framework 
-as outlined under <a href="https://tools.ietf.org/html/rfc6749" class="external-link">RFC 6749</a> can be found at 
+as outlined under <a href="https://tools.ietf.org/html/rfc6749" class="external-link" target="_nexial_external">RFC 6749</a> can be found at 
 the Internet Engineering Task Force website.
 
-Excerpt from <a href="https://www.ibm.com/developerworks/library/se-oauthjavapt3/" class="external-link">https://www.ibm.com/developerworks/library/se-oauthjavapt3/</a>:
+Excerpt from <a href="https://www.ibm.com/developerworks/library/se-oauthjavapt3/" class="external-link" target="_nexial_external">https://www.ibm.com/developerworks/library/se-oauthjavapt3/</a>:
 
 _This grant is optimized for confidential clients and is used to obtain both access and refresh tokens. This is a 
 redirection-based flow, and, as such, the client must be capable of interacting with the resource owner's user agent 

@@ -6,8 +6,8 @@ This command asserts the given text is present in `pdf`.
 
 
 ### Parameters
-- **pdf** \- is the pdf document file path
-- **text** \- is the expected text value to be asserted
+- **pdf** \- the PDF file to validate
+- **text** \- the text expected to be found in `pdf`
 
 
 ### Example

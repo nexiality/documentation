@@ -8,10 +8,11 @@ This command saves the form values from the pdf document and store the data in t
 
 
 ### Parameters
-- **pdf**\- is the pdf file path
-- **var** \- is the variable name to store the form data
-- **pageAndLineStartEnd** \- is the values to identify the page number, start line and end line. All the three values to be given with comma separated
-- **strategy** \- is the strategy to read the pdf form. Following strategies are supported to read the data. 
+- **pdf** \- the PDF file to validate
+- **var** \- variable name to store the form data
+- **pageAndLineStartEnd** \- identify the starting page number, start line and end line. All the three values to be 
+  given with comma separated
+- **strategy** \- the strategy to read the pdf form. Following strategies are supported to read the data. 
 
 |Strategy|Description|
 |---|---|
@@ -27,3 +28,9 @@ This command saves the form values from the pdf document and store the data in t
 
 **Result**:<br/>
 ![output](image/saveFormValues_02.png)
+
+
+### See Also
+- [`assertFormValue(var,name,expected)`](assertFormValue(var,name,expected))
+- [`assertFormValues(var,name,expectedValues,exactOrder)`](assertFormValues(var,name,expectedValues,exactOrder))
+- [`assertFormElementPresent(var,name)`](assertFormElementPresent(var,name))

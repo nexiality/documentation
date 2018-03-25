@@ -6,7 +6,7 @@ This is synonymous to the concept of "round up".
 
 
 ### Parameters
-- **var**\- the variable that holds the number to round up.
+- **var** - the variable that holds the number to round up.
 
 
 ### Example

@@ -5,8 +5,8 @@ This command is used to add the header value to web service request by calling v
 
 
 ### Parameters
-- **name**\- this parameter is the name of the header
-- **var** \- is the variable name which has the header value
+- **name** - this parameter is the name of the header
+- **var** - the variable name whose value will be used to set the specified header
 
 
 ### Example

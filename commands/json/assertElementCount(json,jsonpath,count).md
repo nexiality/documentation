@@ -6,9 +6,9 @@ This command asserts the number of elements in `json` that match the specified `
 
 
 ### Parameters
-- **json**\- is the json source file path
-- **jsonpath** \- is the jsonpath (Refer below example for syntax usage)
-- **count** \- is the expected count
+- **json** - the JSON content or JSON file to validate for correctness
+- **jsonpath** \- the jsonpath to reference JSON element of interest (Refer below example for syntax usage)
+- **count** \- the expected count
 
 
 ### Example

@@ -6,9 +6,9 @@ This command clears the text from the cells in the given worksheet from an excel
 
 
 ### Parameters
-- **file** \- is the path of the source Excel File
-- **worksheet** \- name of the worksheet
-- **range** \- range of the cells
+- **file** \- the Excel file to clear
+- **worksheet** \- name of the worksheet to clear
+- **range** \- range of cells to clear
 
 
 ### Example

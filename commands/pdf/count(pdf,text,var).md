@@ -6,9 +6,9 @@ This command counts the number of occurrences of `text` in `pdf`. The result cou
 
 
 ### Parameters
-- **pdf** \- is the pdf file path
-- **text** \- is the text value in pdf
-- **var** \- is the variable to store the count
+- **pdf** \- the PDF file to validate
+- **text** \- the text to count
+- **var** \- variable to store the count of `text` in `pdf`
 
 
 ### Example

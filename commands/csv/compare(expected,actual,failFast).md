@@ -10,10 +10,10 @@ This command compares two CSV files. It compares the file size (in bytes) and th
 
 
 ### Parameters
-- **expected**\- is the expected csv file path.
-- **actual** \- is the actual csv file path
-- **failFast** \-  boolean value. If set as `true`, it will fail the test when it detects the first mismatch and stop 
-  further comparison of the content. If `false`, it will continue comparing all the content.
+- **expected** - the expected csv file or CSV content
+- **actual** \- the actual csv file or CSV content
+- **failFast** \-  if `true`, it will fail upon the first mismatch and stop further comparison of the content. 
+  If `false`, it will compare content in entirety.
 
 
 ### Example

@@ -11,7 +11,7 @@ commands are documented in the designated pages (below).  However there are a f
 
 ##### HTTP Response
 When a HTTP request is made, the corresponding server responds with a set of information generally known as 
-<a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html" class="external-link">HTTP Response</a>.  It looks
+<a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html" class="external-link" target="_nexial_external">HTTP Response</a>.  It looks
 something like this:<br/>
 ![response](image/index_02.png)
 
@@ -56,7 +56,7 @@ The status code (as in `${var}.returnCode`) and status text (as in `${var}.statu
 is the numeric value of a response return code. 
 
 For more information about HTTP status codes, refer to
-<a href="https://httpstatuses.com/" class="external-link">https://httpstatuses.com/</a>.  
+<a href="https://httpstatuses.com/" class="external-link" target="_nexial_external">https://httpstatuses.com/</a>.  
 
 
 ### Available Commands

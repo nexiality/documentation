@@ -3,9 +3,9 @@
 
 JMS standards Java Messaging Service.  It is an essential feature in the Java Enterprise Edition specification 
 (since v1.4).  You can get more introductory content about JMS 
-<a href="https://dzone.com/articles/introduction-jms" class="external-link">here</a>, 
-<a href="https://docs.oracle.com/javaee/6/tutorial/doc/bncdq.html" class="external-link">here</a> and 
-<a href="https://en.wikipedia.org/wiki/Java_Message_Service" class="external-link">here</a>.
+<a href="https://dzone.com/articles/introduction-jms" class="external-link" target="_nexial_external">here</a>, 
+<a href="https://docs.oracle.com/javaee/6/tutorial/doc/bncdq.html" class="external-link" target="_nexial_external">here</a> and 
+<a href="https://en.wikipedia.org/wiki/Java_Message_Service" class="external-link" target="_nexial_external">here</a>.
 
 With regards to JMS, Nexial's aim is not to implement every single JMS capability.  From test automation standpoint, 
 the bulk of the message interaction evolves around "send message" and "receive message".  These 2 operations are 
@@ -43,12 +43,12 @@ Possible values:<ul>
 <td>
 <b>[REQUIRED]</b><br/>
 More options could be added on as-needed basis. Raise an 
-<a href="https://github.com/nexiality/nexial-core/issues" class="external-link">issue</a> if your JMS vendor is not 
+<a href="https://github.com/nexiality/nexial-core/issues" class="external-link" target="_nexial_external">issue</a> if your JMS vendor is not 
 on this list.<br/>
 <br/>
 For <codewebspheremq</code> (WebSphere MQ), additional jar files are required to be added to the 
 <code>${NEXIAL_HOME}/lib</code> directory.  Visit 
-<a href="http://www-01.ibm.com/support/docview.wss?uid=swg21376217" class="external-link">here</a> to learn more about
+<a href="http://www-01.ibm.com/support/docview.wss?uid=swg21376217" class="external-link" target="_nexial_external">here</a> to learn more about
 the required WebSphere MQ client jar files.
 </td>
 </tr>

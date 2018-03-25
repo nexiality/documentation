@@ -7,8 +7,8 @@ a seperated text file in `destination`.
 
 
 ### Parameters
-- **pdf** \- is the file path of the pdf document
-- **destination** \- is the destination path where the text files will be stored
+- **pdf** \- the PDF file to process
+- **destination** \- destination path where the text will be stored
 
 
 ### Example

@@ -6,8 +6,8 @@ This command asserts that `num1` is numerically less than `num2`
 
 
 ### Parameters
-- **num1**\- the first number that should be less than the second number
-- **num2**\- the second number
+- **num1** - the first number that should be less than the second number
+- **num2** - the second number
 
 
 ### Example

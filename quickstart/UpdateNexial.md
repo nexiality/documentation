@@ -9,7 +9,7 @@ here to [get Nexial set up in your local environment](InstallingNexial).
 If you have already installed Nexial, here are the steps to updating Nexial on your local 
 environment.
 
-1.  Open your browser to <a href="https://github.com/nexiality/nexial-core/releases" class="external-link">Nexial Release</a>
+1.  Open your browser to <a href="https://github.com/nexiality/nexial-core/releases" class="external-link" target="_nexial_external">Nexial Release</a>
 1.  Find the appropriate build or release to download. Nexial users are encouraged to use the 
 				latest version when possible.
 1.  Stop Nexial, if it's still running. Also ensure no webdriver or winium driver instance 
@@ -42,19 +42,19 @@ for Nexial users!
 
 Here's how:
 
-1.  Open your browser to <a href="https://nexiality.slack.com/" class="external-link">https://nexiality.slack.com</a>
+1.  Open your browser to <a href="https://nexiality.slack.com/" class="external-link" target="_nexial_external">https://nexiality.slack.com</a>
 2.  If you already have an account, proceed to sign in. Otherwise click on 
-				<a href="https://nexiality.slack.com//signup/" class="external-link">create an account</a> to create a free account.
+				<a href="https://nexiality.slack.com//signup/" class="external-link" target="_nexial_external">create an account</a> to create a free account.
 3.  Once you've logged in, click on the "CHANNELS" link on the top-left corner of the Slack page.
 4.  Search for `nexial-support` to find the channel dedicated for Nexial users.
 5.  Click on the channel to join.
 
 Alternatively (and encouraged), you can download 
-<a href="https://slack.com/downloads" class="external-link">the desktop or mobile version of Slack</a>. The native 
+<a href="https://slack.com/downloads" class="external-link" target="_nexial_external">the desktop or mobile version of Slack</a>. The native 
 clients provide better OS integration. You can also invite others to a channel by clicking on the channel name and 
 select "Invite team members to join...":<br/>
 ![join](image/UpdateNexial_05.png)
 
 **Any Nexial related questions, comments, suggestions, criticism, discussions, etc. are 
-welcome in the <a href="https://nexiality.slack.com/messages/C9QH23P0U" class="external-link">#nexial-support channel</a> All good 
-common sense and <a href="http://www.dictionary.com/browse/netiquette" class="external-link">netiquettes</a> enforced.**
+welcome in the <a href="https://nexiality.slack.com/messages/C9QH23P0U" class="external-link" target="_nexial_external">#nexial-support channel</a> All good 
+common sense and <a href="http://www.dictionary.com/browse/netiquette" class="external-link" target="_nexial_external">netiquettes</a> enforced.**

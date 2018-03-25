@@ -5,7 +5,7 @@ This command asserts that `json` resolves to a well-formed JSON document.
 
 
 ### Parameters
-- **json**\- the JSON document or file
+- **json** - the JSON document or file
 
 
 ### Example

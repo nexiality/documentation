@@ -6,9 +6,9 @@ This command converts any worksheet of an Excel file into a CSV file. 
 
 
 ### Parameters
-- **excel** \- is the path of source Excel File
-- **worksheet** \- name of the worksheet, to be converted
-- **csvFile** \- is the path of destination CSV File
+- **excel** \- the Excel file to convert
+- **worksheet** \- name of the worksheet to convert
+- **csvFile** \- the destination CSV File
 
 
 ### Example

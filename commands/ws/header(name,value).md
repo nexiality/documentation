@@ -5,8 +5,8 @@ This command is used to add the header before making any Web Service request. Li
 up request header's **Content-Type, Accept, etc..**
 
 ### Parameters
-- **name** \- this parameter is the name of the header
-- **value** \- is the corresponding value of the header name
+- **name** \- the name of the header to set
+- **value** \- the corresponding value of the specified header `name`
 
 
 ### Example

@@ -18,9 +18,9 @@ This built-in function provides textual formatting of various common data type. 
   and decimal point (if found), using the specified `format`  Supposed `text` is specified as `90ab.v2a`. and `format` 
   is `#.##`.  Then `$(format|decimal|text|format)` would render `90.20`.  For more details on numeric format and how 
   to specify them, consult 
-  <a href="https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html" class="external-link">this page</a> 
+  <a href="https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html" class="external-link" target="_nexial_external">this page</a> 
   or this 
-  <a href="https://docs.oracle.com/javase/tutorial/i18n/format/decimalFormat.html" class="external-link">other page</a>.
+  <a href="https://docs.oracle.com/javase/tutorial/i18n/format/decimalFormat.html" class="external-link" target="_nexial_external">other page</a>.
 - **`$(format|percent|text)`** \- render only the numeric characters within `text` as percentage.  Note that this 
   function considers the value `1.0` as `100%`.  Hence `$(format|percent0.52448)` would render `52.45%`.
 - **`$(format|dollar|text)`** \- render only the numeric characters within `text` as a dollar amount.  
@@ -53,14 +53,14 @@ This built-in function provides textual formatting of various common data type. 
   - Note that character position is zero-based and if the positions specified is outside the range of the specified 
     `text`, then `text` will be rendered as is. 
 - **`$(format|urlencode|text)`** \- perform 
-  <a href="https://en.wikipedia.org/wiki/Percent-encoding" class="external-link">URL Encoding</a> on `text` so that it 
+  <a href="https://en.wikipedia.org/wiki/Percent-encoding" class="external-link" target="_nexial_external">URL Encoding</a> on `text` so that it 
   may be suitable as part of an URL (or URL query). Note that Nexial does not check to if `text` might have already 
   being encoded.  Hence successive calls to this function might result in undesired effect.
 - **`$(format|urldecode|text)`** \- perform 
-  <a href="https://en.wikipedia.org/wiki/Percent-encoding" class="external-link">URL Encoding</a> on `text` so that 
+  <a href="https://en.wikipedia.org/wiki/Percent-encoding" class="external-link" target="_nexial_external">URL Encoding</a> on `text` so that 
   it is more readable or usable for non-HTTP related processing.  Generally speaking, successive call to this function 
   should have not varying result – such call is likely 
-  <a href="https://en.wikipedia.org/wiki/Idempotence" class="external-link">idempotent</a>.
+  <a href="https://en.wikipedia.org/wiki/Idempotence" class="external-link" target="_nexial_external">idempotent</a>.
 
 
 ### Example

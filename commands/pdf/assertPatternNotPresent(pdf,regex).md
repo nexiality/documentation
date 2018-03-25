@@ -6,8 +6,8 @@ This command asserts the given text pattern (`regex`) is **NOT** present in `pdf
 
 
 ### Parameters
-- **pdf** \- is the file path of the PDF document
-- **regex** \- is the regular expression to define the text pattern
+- **pdf** \- the PDF file to validate
+- **regex** \- regular expression to validate if `pdf` DOES NOT contains expected text pattern
 
 
 ### Example

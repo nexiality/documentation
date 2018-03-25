@@ -1,7 +1,7 @@
 {% include_relative _breadcrumb_index.html current="json" %}
 
 
-This set of commands is designed to support <a href="http://www.json.org/" class="external-link">JSON</a> validation 
+This set of commands is designed to support <a href="http://www.json.org/" class="external-link" target="_nexial_external">JSON</a> validation 
 and manipulation as part of a test automation.  For basic validation, [`assertWellformed(json)`](assertWellformed) 
 and [`assertCorrectness(json,schema)`](assertCorrectness) might suffice.  These two commands provide validation at 
 the document level.  For more fine-grained assertion and manipulation, we need a descriptive and structure-aware 

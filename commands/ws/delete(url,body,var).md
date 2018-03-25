@@ -9,7 +9,7 @@ To learn about how to utilize the response returned from the target URL, click [
 
 ### Parameters
 - **url** \- the target URL
-- **body** \- is the payload to be sent to target endpoint.  If not required, use `(empty)` to denote no payload to 
+- **body** \- the payload to be sent to target endpoint.  If not required, use `(empty)` to denote no payload to 
   be sent.
 - **var** \- the variable to hold the [response](index.html#http-response)
 

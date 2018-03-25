@@ -6,8 +6,8 @@ This command saves the `pdf` content as text file.
 
 
 ### Parameters
-- **pdf**\- this parameter is the file path of the pdf document
-- **destination** \- is the destination path where the text file to be saved
+- **pdf** \- the PDF file to process
+- **destination** \- destination path where text to be saved
 
 
 ### Example

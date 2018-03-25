@@ -2,38 +2,34 @@
 
 
 ### Description
-This built-in function focuses on system dates, from the perspective of the test harness (where tests are executed).  
 Not to be confused with another built-in function, $(date), which can be used to manipulate dates and time 
-(i.e _date_ math).  
+(i.e _date_ math).  This built-in function focuses on system dates, from the perspective of the test machine 
+(where tests are executed).  It also use test machine system date to render other relative date information such as 
+`yesterday`, `tomorrow`, `next quarter`, `first day of the month`, etc.  
 
-##### About `format`:
-This built-in function uses the system date of the test harness (i.e. where the test is executed) to render other 
-relative date information such as `yesterday`, `tomorrow`, `next quarter`, `first day of the month`, etc.  For 
-date/time formatting (denoted below as `format`), use 
-<a href="http://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html" class="external-link">the standard Java date/time convention</a>.  
-In some case where only year and quarter information can be considered, use `y`for year and `q` for quarter 
-information.  See Example section below for example.
+##### Date Format
+{% include_relate _dateformat.md %}
 
-Also, there's an option to format the date/time into its 
-<a href="https://en.wikipedia.org/wiki/Unix_time" class="external-link">epoch</a> equivalent.  Instead of using the 
-format as laid out in 
-<a href="http://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html" class="external-link">the standard Java date/time convention</a>, 
-one can use `epoch` to signify that the date/time value should be displayed in its epoch value.  For example: 
-`$(sysdate|now|**epoch**)`, `$(sysdate|firstDOM|**epoch**)`, etc.
+In cases where only year and quarter information should be considered, use `y`for year and `q` for quarter information. 
+For example, `${sysdate|lastQtr|yyyy-q}` will render the last quarter in the format of "4_digit_year-quarter".
 
 
 ### Available Functions
-- **`$(sysdate|now|format)`** \- render the current date/time using the specified `format`. 
+- **`$(sysdate|now|format)`** \- render the current date/time using the specified `format`. For formatting timestamp,
+  use the format like this: **`$(sysdate|now|epoch)`**.
 - **`$(sysdate|today|format)`** \- same as `$(sysdate|now|format)`, kept alive for backward compatibility.
-- **`$(sysdate|yesterday|format)`** \- render yesterday (more precisely, exactly 24 hours ago) using the specified format.
-- **`$(sysdate|tomorrow|format)`** \- render tomorrow (more precisely, exactly 24 hours later) using the specified format.  
+- **`$(sysdate|yesterday|format)`** \- render yesterday (more precisely, exactly 24 hours ago) using the specified 
+  format.
+- **`$(sysdate|tomorrow|format)`** \- render tomorrow (more precisely, exactly 24 hours later) using the specified 
+  format.  
 - **`$(sysdate|currentQtr|format)`** \- render the current quarter using the specified `format`.  Only year and quarter 
   information would be rendered here.
 - **`$(sysdate|lastQtr|format)`** \- render the last quarter using the specified `format`.  Only year and quarter 
   information would be rendered here.
 - **`$(sysdate|nextQtr|format)`** \- render the next quarter using the specified `format`.  Only year and quarter 
   information would be rendered here.  
-- **`$(sysdate|firstDOM|format)`** \- render the first day of the month using specified `format`. 
+- **`$(sysdate|firstDOM|format)`** \- render the first day of the month using specified `format`.  For formatting
+  timestamp, use the format like this: **`$(sysdate|firstDOM|epoch)`**.
 - **`$(sysdate|lastDOM|format)`** \- render the last day of the month using specified `format`.  
 - **`$(sysdate|firstDOW|format)`** \- render the first day of the week using specified `format`. 
 - **`$(sysdate|lastDOW|format)`** \- render the last day of the week using specified `format`. 

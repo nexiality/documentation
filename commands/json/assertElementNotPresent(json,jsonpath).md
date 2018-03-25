@@ -6,8 +6,8 @@ This command asserts the given JSON element as described via `jsonpath` is not p
 
 
 ### Parameters
-- **json**\- JSON content or file
-- **jsopath**\- the path to the JSON element in question
+- **json** - JSON content or file
+- **jsopath** - the path to the JSON element in question
 
 
 ### Example

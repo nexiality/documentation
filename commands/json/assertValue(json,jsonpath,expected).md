@@ -6,7 +6,7 @@ This command asserts that `jsonpath` points to an element (or the first element)
 
 
 ### Parameters
-- **json**\- the JSON document or file
+- **json** - the JSON document or file
 - **jsonpath** \- the path to describe the JSON element (or the first element) in question
 - **expected** \- expected value of the matching JSON element
 

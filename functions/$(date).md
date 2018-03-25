@@ -7,11 +7,8 @@ built-in function assumes the `date` parameter in the standard US date format 
 want to consider using `$(date|stdFormat|date|fromFormat)` or `$(date|format|date|fromFormate|toFormat)` functions to 
 derive the appropriate format first before invoking other date-operational functions.
 
-
 ##### Date Format
-For date/time formatting (denoted below as `format` or `*Format`), check out the following links:
-- <a href="http://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html" class="external-link">the standard Java date/time convention</a>
-- use <a href="https://en.wikipedia.org/wiki/Unix_time" class="external-link">epoch</a> for timestamp.
+{% include_relate _dateformat.md %}
 
 
 ### Available Functions

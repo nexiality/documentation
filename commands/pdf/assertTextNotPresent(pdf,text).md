@@ -6,8 +6,8 @@ This command asserts the given text is not present in `pdf`.
 
 
 ### Parameters
-- **pdf** \- is the pdf document file path
-- **text** \- is the expected text to be asserted that is not present
+- **pdf** \- the PDF file to validate
+- **text** \- the text that is expected NOT to be found in `pdf`.
 
 
 ### Example

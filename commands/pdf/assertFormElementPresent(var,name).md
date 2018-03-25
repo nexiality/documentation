@@ -8,8 +8,8 @@ This command asserts the form element is present in the pdf document.
 
 
 ### Parameters
-- **var** \- is the variable that was used to store the form data from the pdf document
-- **name** \- is the form element name
+- **var** \- the variable that stores previously parsed PDF form data
+- **name** \- the form element name to check
 
 
 ### Example

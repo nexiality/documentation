@@ -6,7 +6,7 @@ synonymous to the concept of "round down".
 
 
 ### Parameters
-- **var**\- the variable that holds the number to round down.
+- **var** - the variable that holds the number to round down.
 
 
 ### Example

@@ -6,8 +6,8 @@ This command asserts the correctness of the json file against the specific schem
 
 
 ### Parameters
-- **json**\- is the json content or full path of the JSON document
-- **schema** \- json schema file
+- **json** - the JSON content or JSON file to validate for correctness
+- **schema** \- json schema file for document correctness validation
 
 
 ### Example

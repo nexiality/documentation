@@ -15,7 +15,7 @@ target variable represents an array, a list, a map or a Java object. 
 ### Parameters
 - **text** \- the text (can be referenced via ${...} syntax) that will be evaluated. 
 - **regex** \- the regular expression to use for this match and replace operation
-- **replace **\- the text to replace all the matched region/portion of `text`
+- **replace ** - the text to replace all the matched region/portion of `text`
 - **resultVar** \- the name of the new variable to save the replaced text
 
 

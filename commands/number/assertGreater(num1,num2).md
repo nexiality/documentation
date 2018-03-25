@@ -6,8 +6,8 @@ This command asserts that `num1` is numerically larger than `num2`.
 
 
 ### Parameters
-- **num1**\- first number, which should be larger than the second
-- **num2**\- second number
+- **num1** - first number, which should be larger than the second
+- **num2** - second number
 
 
 ### Example

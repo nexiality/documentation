@@ -11,17 +11,22 @@ check if a table contains the expected transaction, assert if a online form acce
 Since we have so many commands, we have categorized them into types (aka command types).  Click on one of the links 
 below to learn more about each type and the commands available under each of them.
 
-- [`aws.s3`](aws.s3/): commands regarding AWS S3.
-- [`base`](base/): general commands for data assertion and commonly used operations.
-- [`csv`](csv/): commands regarding the CSV file type.
-- [`excel`](excel/): commands regarding the Excel file type.
-- [`external`](external/): commands to execute external programs or scripts.
-- [`image`](image/): commands regarding image files.
-- [`io`](io/): commands regarding IO operations.
-- [`jms`](jms/): commands to automate messaging (JMS).
-- [`json`](json/): commands to automate JSON files and operations.
-- [`mail`](mail/): commands regarding email operations.
-- [`number`](number/): number-related automation commands.
-- [`pdf`](pdf/): commands regarding the PDF file type.
-- [`rdbms`](rdbms/): commands regarding IO operations.
-- [`ssh`](ssh/): commands to automate SSH-based automation.
+- [`aws.s3`](aws.s3): commands regarding AWS S3.
+- [`base`](base): general commands for data assertion and commonly used operations.
+- [`csv`](csv): commands regarding the CSV file type.
+- [`excel`](excel): commands regarding the Excel file type.
+- [`external`](external): commands to execute external programs or scripts.
+- [`image`](image): commands regarding image files.
+- [`io`](io): commands regarding IO operations.
+- [`jms`](jms): commands to automate messaging (JMS).
+- [`json`](json): commands to automate JSON files and operations.
+- [`mail`](mail): commands regarding email operations.
+- [`number`](number): number-related automation commands.
+- [`pdf`](pdf): commands regarding the PDF file type.
+- [`rdbms`](rdbms): commands regarding IO operations.
+- [`ssh`](ssh): commands to automate SSH-based automation.
+- [`web`](web): commands to regarding web application.
+- [`webalert`](webalert): commands regarding JavaScript alert boxes in a web application.
+- [`webcookie`](webcookie): commands regarding HTTP cookie in a web application.
+- [`ws`](ws): commands to automation Web Services / API.
+- [`xml`](xml): commands regarding the XML file type.

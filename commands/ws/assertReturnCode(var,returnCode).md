@@ -6,7 +6,7 @@ This command is used to assert the expected response code from the actual respon
 response.
 
 For more information about HTTP status codes, refer to 
-<a href="https://httpstatuses.com/" class="external-link">https://httpstatuses.com/</a>.  
+<a href="https://httpstatuses.com/" class="external-link" target="_nexial_external">https://httpstatuses.com/</a>.  
 
 
 ### Parameters

@@ -7,10 +7,10 @@ and will be saved in the given variable.
 
 
 ### Parameters
-- **file** - is the path of the source excel file
-- **worksheet** \- name of the worksheet
-- **range** \- range of the cells separated by **:**
-- **var** \- variable name. Output is stored with this variable name
+- **file** - the Excel file to read from
+- **worksheet** \- name of the worksheet to read from
+- **range** \- range of cells to read from, separated by **:**
+- **var** \- variable name to store the cell values read from specified `file`, `worksheet` and `range`.
 
 
 ### Example

@@ -6,8 +6,8 @@ This command asserts the text with the given pattern (`regex`) is present in `pd
 
 
 ### Parameters
-- **pdf** \- is the file path of the PDF document
-- **regex** \- is the regular expression to define the text pattern
+- **pdf** \- the PDF file to validate
+- **regex** \- regular expression to validate if `pdf` contains expected text pattern
 
 
 ### Example

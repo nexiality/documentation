@@ -12,9 +12,9 @@ enforced in `pdf` content.
 
 
 ### Parameters
-- **pdf**\- this parameter is the file path of the pdf document
-- **textArray** \- is the expected array of text elements
-- **ordered** \- is the boolean value
+- **pdf** \- the PDF file to validate
+- **textArray** \- the expected list of text
+- **ordered** \- `true` if the order of `textArray` must be present in `pdf` in the same order
 
 
 ### Example

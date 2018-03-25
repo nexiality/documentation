@@ -5,7 +5,7 @@ This command asserts the the JSON element as described via `jsonpath` is present
 
 
 ### Parameters
-- **json**\- JSON content or file
+- **json** - JSON content or file
 - **jsonpath** \- the path to the JSON element in question
 
 

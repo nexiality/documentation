@@ -28,8 +28,8 @@ These metadata can be access via the specified `var`, like this:
 
 
 ### Parameters
-- **pdf** \- is the file path of the pdf document
-- **var** \- is the variable name to save metadata
+- **pdf** \- the PDF file to process
+- **var** \- the variable name to save metadata
 
 
 ### Example

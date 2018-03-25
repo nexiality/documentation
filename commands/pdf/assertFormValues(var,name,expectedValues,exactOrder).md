@@ -7,8 +7,13 @@ This command asserts the array of values in the form are present and in the same
 
 
 ### Parameters
-- **var** \- is the variable name in which the form data is stored
-- **name** \- is the name of the form element
-- **expectedValues** \- is the array of expected text values
-- **exactOrder** \- `true` the referenced form values should match the exact order of `expectedValues`.
+- **var** \- the variable that stores previously parsed PDF form data
+- **name** - the name of the form element to validate
+- **expectedValues** \- expected values
+- **exactOrder** \- `true` if the referenced form values should match the exact order of `expectedValues`.
 
+
+### See Also
+- [`saveFormValues(pdf,var,pageAndLineStartEnd,strategy)`](saveFormValues(pdf,var,pageAndLineStartEnd,strategy))
+- [`assertFormValue(var,name,expected)`](assertFormValue(var,name,expected))
+- [`assertFormElementPresent(var,name)`](assertFormElementPresent(var,name))

@@ -8,9 +8,9 @@
 
 
 ### Parameters
-- **file**\- this parameter if the full path of the file along with file name to which the content has to be written.
-- **content**\- this parameter is the content which need to written to the file
-- **append**\- this parameter is a boolean value  if you want to append the existing value or ignore it.
+- **file** - this parameter if the full path of the file along with file name to which the content has to be written.
+- **content** - this parameter is the content which need to written to the file
+- **append** - this parameter is a boolean value  if you want to append the existing value or ignore it.
 
 
 ### Example

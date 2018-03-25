@@ -8,9 +8,9 @@ This command asserts the form value in the pdf document is as `expected`.
 
 
 ### Parameters
-- **var**\- is the variable name in which the form data was stored
-- **name**\- is the name of the form element
-- **expected** \- is the expected value of that form element
+- **var** \- the variable that stores previously parsed PDF form data
+- **name** - the name of the form element to validate
+- **expected** \- the expected value of that form element
 
 
 ### Example
@@ -19,3 +19,9 @@ This command asserts the form value in the pdf document is as `expected`.
 
 **Result:**<br/>
 ![output](image/assertFormValue_02.png)
+
+
+### See Also
+- [`saveFormValues(pdf,var,pageAndLineStartEnd,strategy)`](saveFormValues(pdf,var,pageAndLineStartEnd,strategy))
+- [`assertFormValues(var,name,expectedValues,exactOrder)`](assertFormValues(var,name,expectedValues,exactOrder))
+- [`assertFormElementPresent(var,name)`](assertFormElementPresent(var,name))

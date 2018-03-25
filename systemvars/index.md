@@ -772,7 +772,7 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     The default is <strong><code>true</code></strong>.<br/>
     <br/>
     <strong>Due to a 
-    <a class="external-link" target="_nexial_external" href="https://bugs.chromium.org/p/chromedriver/issues/detail?id=504">known/unresolved 
+    <a href="https://bugs.chromium.org/p/chromedriver/issues/detail?id=504" class="external-link" target="_nexial_external">known/unresolved 
     issue with chrome</a>, if your tests requires resizing or maximizing target browser, the recommendation is to set 
     this variable to <code>false</code>.</strong>
     </td>
@@ -787,7 +787,7 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     <code>browserstack</code>. </strong><strong>Required in order for BrowserStack integration to work.</strong></span>
     <br/>
     This is the username as found in 
-    <a class="external-link" target="_nexial_external" href="https://www.browserstack.com/accounts/settings">https://www.browserstack.com/accounts/settings</a> 
+    <a href="https://www.browserstack.com/accounts/settings" class="external-link" target="_nexial_external">https://www.browserstack.com/accounts/settings</a> 
     (login required).
     </td>
 </tr>
@@ -801,7 +801,7 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     <code>browserstack</code>. Required in order for BrowserStack integration to work.</strong></span>
     <br/>
     This is the access key as found in
-    <a class="external-link" target="_nexial_external" href="https://www.browserstack.com/accounts/settings">https://www.browserstack.com/accounts/settings</a> 
+    <a href="https://www.browserstack.com/accounts/settings" class="external-link" target="_nexial_external">https://www.browserstack.com/accounts/settings</a> 
     (login required).
     </td>
 </tr>
@@ -815,7 +815,7 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     <code>browserstack</code>.</strong></span><br/>
     <span style="color: rgb(0, 0, 0);">Specify the browser to use when executing browser-based automation on 
     BrowserStack. Valid value would be limited to what 
-    <a class="external-link" target="_nexial_external" href="https://www.browserstack.com/list-of-browsers-and-platforms?product=automate">
+    <a href="https://www.browserstack.com/list-of-browsers-and-platforms?product=automate" class="external-link" target="_nexial_external">
     BrowserStack can support</a>. For example, <code>Firefox, Safari, IE, Chrome, Opera, Edge</code>.</span>
     </td>
 </tr>
@@ -828,7 +828,7 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     <span style="color: rgb(0, 0, 0);"><strong>Applicable only when <code>nexial.browser</code> is set to 
     <code>browserstack</code>.</strong></span><br/>
     Specify the browser version to use when executing browser-based automation on BrowserStack. Valid value would be 
-    limited to <a class="external-link" target="_nexial_external" href="https://www.browserstack.com/list-of-browsers-and-platforms?product=automate">
+    limited to <a href="https://www.browserstack.com/list-of-browsers-and-platforms?product=automate" class="external-link" target="_nexial_external">
     what BrowserStack can support</a>.
     </td>
 </tr>
@@ -880,7 +880,7 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     <span style="color: rgb(0, 0, 0);"><strong>Applicable only when <code>nexial.browser</code> is set to 
     <code>browserstack</code>.</strong></span><br/>
     Required if you are testing against internal/local servers. Make sure you have download and started the 
-    <a class="external-link" target="_nexial_external" href="https://www.browserstack.com/local-testing#command-line">
+    <a href="https://www.browserstack.com/local-testing#command-line" class="external-link" target="_nexial_external">
     appropriate BrowserStackLocal binary</a> before executing your tests.
     </td>
 </tr>
@@ -929,10 +929,10 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     <td>true</td>
     <td>
     <strong>Applicable only when <code>nexial.browser</code> is set to <code>safari</code>.</strong><br/>
-    Instruct Nexial to use the <a class="external-link" target="_nexial_external" href="https://developer.apple.com/safari/technology-preview/">
+    Instruct Nexial to use the <a href="https://developer.apple.com/safari/technology-preview/" class="external-link" target="_nexial_external">
     Safari Technology Preview</a> if this system variable is set to <code>true</code>, otherwise use the release 
     version of Safari (default). Set this system variable to <code>true</code> <strong>ONLY</strong> the executing 
-    host has <a class="external-link" target="_nexial_external" href="https://developer.apple.com/safari/technology-preview/">Safari 
+    host has <a href="https://developer.apple.com/safari/technology-preview/" class="external-link" target="_nexial_external">Safari 
     Technology Preview</a> properly installed.
     </td>
 </tr>
@@ -979,7 +979,7 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     reason you see the need to use a different <code>IEDriverServer.exe</code>, then use this system variable to force 
     the use of a out-of-distribution IEDriverServer.<br/>
     <br/>
-    For more detail, see <a class="external-link" target="_nexial_external" href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver">
+    For more detail, see <a href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver" class="external-link" target="_nexial_external">
     https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver</a><br/>
     <br/>
     This system variable is marked as <code>read-only</code> because it is only read once during startup. Further 
@@ -996,7 +996,7 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     Specifies the level at which logging messages are output. Valid values are <code>FATAL</code>, <code>ERROR</code>, 
     <code>WARN</code>, <code>INFO</code>, <code>DEBUG</code>, and <code>TRACE</code>. Defaults to <code>FATAL</code>.<br/>
     <br/>
-    For more detail, see <a class="external-link" target="_nexial_external" href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver">
+    For more detail, see <a href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver" class="external-link" target="_nexial_external">
     https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver</a><br/>
     <br/>
     This system variable is marked as <code>read-only</code> because it is only read once during startup. Further 
@@ -1012,7 +1012,7 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     <strong>Applicable only for automating Internet Explorer.</strong>
     Specifies the full path and file name of the log file.<br/>
     <br/>
-    For more detail, see <a class="external-link" target="_nexial_external" href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver">
+    For more detail, see <a href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver" class="external-link" target="_nexial_external">
     https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver</a><br/>
     <br/>
     This system variable is marked as <code>read-only</code> because it is only read once during startup. Further 
@@ -1029,7 +1029,7 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     Suppresses diagnostic output when the IE driver is started.<br/>
     <br/>
     For more detail, see 
-    <a class="external-link" target="_nexial_external" href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver">
+    <a href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver" class="external-link" target="_nexial_external">
     https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver</a><br/>
     <br/>
     This system variable is marked as <code>read-only</code> because it is only read once during startup. Further 
@@ -1116,7 +1116,7 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     <td>
     Determines whether relative redirects should be rejected. An older HTTP 1.1 specification requires the location 
     value be an absolute URI. But since most browsers tolerates relative URI, 
-    <a class="external-link" target="_nexial_external" href="https://en.wikipedia.org/wiki/HTTP_location">the said HTTP specification hence 
+    <a href="https://en.wikipedia.org/wiki/HTTP_location" class="external-link" target="_nexial_external">the said HTTP specification hence 
     relaxed such restriction</a>. Set this configuration to <code>true</code> to simulate modern browsers' default 
     behavior.
     </td>
@@ -1159,7 +1159,7 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     </table>
 				<br/>
     For a list of common/standard HTTP header names and related information, consult 
-    <a class="external-link" target="_nexial_external" href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields">this link</a>.
+    <a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields" class="external-link" target="_nexial_external">this link</a>.
     </td>
 </tr>
 <tr>
@@ -1219,7 +1219,7 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     <td>
     Specify the time to allow for a taskbar-based notification to stay visible. Such notification would display log 
     information as issued by the <code>desktop</code> commands, and they are displayed as a 
-    <a class="external-link" target="_nexial_external" href="https://www.groovypost.com/wp-content/uploads/2011/10/image252.png">"ballon".</a>
+    <a href="https://www.groovypost.com/wp-content/uploads/2011/10/image252.png" class="external-link" target="_nexial_external">"ballon".</a>
     </td>
 </tr>
 <tr>
