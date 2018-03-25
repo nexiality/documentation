@@ -23,7 +23,7 @@ to manipulate character data. 
 - **`$(count|size|text)`** - renders the length of `text`
 - **`$(count|omit|text|omitChars)`** - renders the number of characters in `text` that are not found in `omitChars`
 - **`$(count|sequence|text|seq)`** - renders the number of matches in `text` based on the specified `seq`.  For 
-  example, `.$(count|sequence|Doo be doo be doo|oo)` would render `3`.
+  example, `$(count|sequence|Doo be doo be doo|oo)` would render `3`.
 
 
 ### Example

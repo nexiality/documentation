@@ -12,7 +12,7 @@ This command saves the response payload to a `file`.  Optionally one can append 
 
 
 ### Example
-**Script:**</br>
+**Script:**<br/>
 ![](image/saveResponsePayLoad_01.png)
 
 **Result:**<br/>

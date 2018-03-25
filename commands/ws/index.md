@@ -42,10 +42,14 @@ Each cookie contains the following property:
 - **domain**: The domain for which a cookie is considered valid and accessible. Syntax: `${var}.cookies[COOKIE_NAME].domain`
 - **expiryDate**: the date of when a cookie would be expired and removed from its attached browser.  Date format is
 	 `Wdy, DD mmm yyyy HH:mm:ss GMT`.  Syntax: `${var}.cookies[COOKIE_NAME].expiryDate`
-- **path**: The URL subset of the origin server to which a cookie was issue.  Syntax: `${var}.cookies[COOKIE_NAME].path`
+- **path**: The URL subset of the origin server to which a cookie was issue.  Similar to the domain option, this is 
+  another way to control access.  The path indicates a URL path that must exist in the requested resource before 
+  sending the Cookie header. Syntax: `${var}.cookies[COOKIE_NAME].path`
 - **persistent**: true or false to indicate if a cookie is a session cookie (expires when browser is restarted) or not
   (cookie is preserves between browser restarts).  Syntax: `${var}.cookies[COOKIE_NAME].persistent`
-- **secure**: true or false to indicate if a cookie requires a secure (HTTPS) connection for access.  Syntax: 
+- **secure**: true or false to indicate if a cookie requires a secure (HTTPS) connection for access.  A secure cookie 
+  will only be sent to the server when a request is made using SSL and the HTTPS protocol. The idea that the contents 
+  of the cookie are of high value and could be potentially damaging to transmit as clear text.  Syntax: 
   `${var}.cookies[COOKIE_NAME].secure`
 
 The status code (as in `${var}.returnCode`) and status text (as in `${var}.statusText) are equivalent, except the former

@@ -12,13 +12,13 @@ For example,<br/>
 
 
 ### Available Functions
-- **$(project|text|...)** \- retrieve the content of a project file.  Assumes that the target file has "text" 
+- **`$(project|text|...)`** \- retrieve the content of a project file.  Assumes that the target file has "text" 
   content (not binary).
 
 
 ### Example
 Suppose we have the following test script:<br/>
-![script](image/$(projectfile)_01.PNG)
+![script](image/$(projectfile)_01.png)
 
 Column **param1** of row 7 shows that we are instructing Nexial to retrieve the text content of a project file 
 under **artifact/data/myfile.txt** and print it in the output.  Similar in row 9, column "param 2", the same 

@@ -83,7 +83,7 @@ pertinent information are specified by Nexial users (see Parameter section).  N
 ### Example
 Below is an example how one can use this command to invoke OAuth exchange.  
 The example below set `nexial.verbose=true` in order to expose additional debugging information.  In practice this is 
-not necessary.</br>
+not necessary.<br/>
 ![](image/oauth_01.png)
 
 Note the commands after `ws.oauth(...)` to illustrate what one could do with `${oauthResponse}` variable.

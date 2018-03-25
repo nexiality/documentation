@@ -23,20 +23,20 @@ one can use `epoch` to signify that the date/time value should be displayed in
 
 
 ### Available Functions
-- **$(sysdate|now|format)** \- render the current date/time using the specified `format`. 
-- **$(sysdate|today|format)** \- same as `$(sysdate|now|format)`, kept alive for backward compatibility.
-- **$(sysdate|yesterday|format)** \- render yesterday (more precisely, exactly 24 hours ago) using the specified format.
-- **$(sysdate|tomorrow|format)** \- render tomorrow (more precisely, exactly 24 hours later) using the specified format.  
-- **$(sysdate|currentQtr|format)** \- render the current quarter using the specified `format`.  Only year and quarter 
+- **`$(sysdate|now|format)`** \- render the current date/time using the specified `format`. 
+- **`$(sysdate|today|format)`** \- same as `$(sysdate|now|format)`, kept alive for backward compatibility.
+- **`$(sysdate|yesterday|format)`** \- render yesterday (more precisely, exactly 24 hours ago) using the specified format.
+- **`$(sysdate|tomorrow|format)`** \- render tomorrow (more precisely, exactly 24 hours later) using the specified format.  
+- **`$(sysdate|currentQtr|format)`** \- render the current quarter using the specified `format`.  Only year and quarter 
   information would be rendered here.
-- **$(sysdate|lastQtr|format)** \- render the last quarter using the specified `format`.  Only year and quarter 
+- **`$(sysdate|lastQtr|format)`** \- render the last quarter using the specified `format`.  Only year and quarter 
   information would be rendered here.
-- **$(sysdate|nextQtr|format)** \- render the next quarter using the specified `format`.  Only year and quarter 
+- **`$(sysdate|nextQtr|format)`** \- render the next quarter using the specified `format`.  Only year and quarter 
   information would be rendered here.  
-- **$(sysdate|firstDOM|format)** \- render the first day of the month using specified `format`. 
-- **$(sysdate|lastDOM|format)** \- render the last day of the month using specified `format`.  
-- **$(sysdate|firstDOW|format)** \- render the first day of the week using specified `format`. 
-- **$(sysdate|lastDOW|format)** \- render the last day of the week using specified `format`. 
+- **`$(sysdate|firstDOM|format)`** \- render the first day of the month using specified `format`. 
+- **`$(sysdate|lastDOM|format)`** \- render the last day of the month using specified `format`.  
+- **`$(sysdate|firstDOW|format)`** \- render the first day of the week using specified `format`. 
+- **`$(sysdate|lastDOW|format)`** \- render the last day of the week using specified `format`. 
 
 
 ### Example

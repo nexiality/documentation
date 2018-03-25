@@ -23,7 +23,7 @@
 - *in progress* [On-Screen Feedback for Desktop Automation]()
 - *in progress* [Ribbon icon is clicking the wrong Icon]()
 - *in progress* [What is the correct way to give XPath to the Table component?]()
-- *in progress* [Getting Error While Starting Winium Driver](WiniumStartingError)
+- [Getting Error While Starting Winium Driver](WiniumStartingError)
 
 
 #### File Handling
