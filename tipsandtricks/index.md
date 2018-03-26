@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb_index.html current="Tips and Tricks" %}
+---
+title: Tips and Tricks
+level: 1
+tags: command base
+comments: true
+---
 
 
 #### General

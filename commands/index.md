@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="command reference" %}
+---
+title: commands
+level: 1
+tags: command base
+comments: true
+---
 
 
 Nexial commands are the _operative_ to carry out the smallest unit of automation.  In many ways it is synonymous

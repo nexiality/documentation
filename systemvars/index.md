@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="System Variables" %}
+---
+title: System Variables
+level: 1
+tags: command base
+comments: true
+---
+
 
 Nexial comes with a set of configuration parameters that control or affect test execution.  These configuration 
 parameters can be specified the same way as test data.  Many of them can be independently created per iteration 

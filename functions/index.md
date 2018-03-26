@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb_index.html current="built-in functions" %}
+---
+title: Built-in Functions
+level: 1
+tags: functions
+comments: true
+---
+
 
 Nexial comes with a series of built-in functions to facilitate common automation routines such as date, count, 
 formatting, random strings.  Not to be confused with predefined or user-defined data variable, these functions are 

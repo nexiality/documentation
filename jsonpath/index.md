@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="Nexial jsonpath" %}
+---
+title: Nexial JsonPath
+level: 1
+tags: jsonpath
+comments: true
+---
+
 
 JSON (/dʒeɪsən/ JAY-sən), short for JavaScript Object Notation, is an open-standard file format that uses 
 human-readable text to transmit data objects consisting of name–value pairs and array data types. It is a very 

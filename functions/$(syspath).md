@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="$(syspath)" %}
+---
+title: $(syspath)
+parent: Built-in Function
+tags: syspath $(syspath)
+comments: true
+---
 
 
 ### Description

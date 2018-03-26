@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="$(random)" %}
+---
+title: $(random)
+parent: Built-in Function
+tags: random $(random)
+comments: true
+---
 
 
 ### Description

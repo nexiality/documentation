@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="$(projectfile)" %}
+---
+title: $(projectfile)
+parent: Built-in Function
+tags: projectfile $(projectfile)
+comments: true
+---
+
 
 ### Description
 This built-in function provides reference to files in the project directory of the running script.  File reference 

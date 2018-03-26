@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="$(format)" %}
+---
+title: $(format)
+parent: Built-in Function
+tags: format $(format)
+comments: true
+---
 
 
 ### Description

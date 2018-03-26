@@ -1,9 +1,9 @@
 ---
 title: Quick Start
-tags: quickstart
+level: 1
+tags: command base
 comments: true
 ---
-{% include_relative _breadcrumb_index.html current="quickstart" %}
 
 
 Let's get started!

@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="$(array)" %}
+---
+title: $(array)
+parent: Built-in Function
+tags: array $(array)
+comments: true
+---
 
 
 ### Description

@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="$(count)" %}
+---
+title: $(count)
+parent: Built-in Function
+tags: count $(count)
+comments: true
+---
 
 
 ### Description

@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="Flow Controls" %}
+---
+title: Flow Controls
+level: 1
+tags: flowcontrols pausebefore pauseafter proceedif failif endloopif endif skipif
+comments: true
+---
 
 
 The concept of flow controls is to provide a variable flow of a test script so as to possibly modify the test 

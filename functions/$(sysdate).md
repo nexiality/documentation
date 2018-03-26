@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="$(sysdate)" %}
+---
+title: $(sysdate)
+parent: Built-in Function
+tags: sysdate $(sysdate)
+comments: true
+---
 
 
 ### Description
