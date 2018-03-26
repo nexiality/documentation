@@ -56,6 +56,11 @@ blockquote {
     max-width: none !important;
 }
 
+#downloads {
+    display:    none;
+    visibility: hidden;
+}
+
 div.breadcrumb {
     padding:          5px;
     margin-bottom:    10px;
@@ -82,14 +87,14 @@ a.breadcrumb:hover {
 }
 
 a code {
-    background-color: rgba(230,250,230,0.9) !important;
-    color: rgba(50,100,60,0.9);
-    text-shadow: none;
-    background-image: url(../../image/link.png);
-    padding: 1px 4px 1px 16px;
+    background-color:    rgba(230, 250, 230, 0.9) !important;
+    color:               rgba(50, 100, 60, 0.9);
+    text-shadow:         none;
+    background-image:    url(../../image/link.png);
+    padding:             1px 4px 1px 16px;
     background-position: 0px 2px;
-    background-repeat: no-repeat;
-    background-size: 16px;
+    background-repeat:   no-repeat;
+    background-size:     16px;
 }
 
 span.breadcrumb {
@@ -150,11 +155,58 @@ a.external-link {
 }
 
 div.search-form {
-    padding: 10px;
     background: #f2f2f2;
-    width: 215px;
-    display: block;
-    position: relative;
-    top: -56px;
-    float: right;
+    display:    block;
+    position:   relative;
+    top:        -115px;
+    float:      right;
+    height:     58px;
+}
+
+div.search-form form {
+    width:   202px;
+    padding: 10px;
+    height:  38px;
+}
+
+div.search-form form .tipue_search_left {
+    padding: 7px 9px 0 0;
+}
+
+div.search-form form input#tipue_search_input {
+    padding: 10px;
+}
+
+#tipue_search_content {
+    max-width:        750px;
+    margin:           0;
+    z-index:          999;
+    position:         absolute;
+    background-color: #f2f2f2;
+    width:            500px;
+    right:            -1px;
+    border:           1px solid #c2c2c2;
+    padding:          10px;
+    top:              75px;
+}
+
+#tipue_search_content #tipue_search_results_count {
+    font-weight: bold;
+}
+
+#tipue_search_content .tipue_search_content_title {
+    color:       #333;
+    margin-top:  10px;
+    font-size:   14pt;
+    font-weight: bold;
+}
+
+#tipue_search_content .tipue_search_content_url {
+    visibility: hidden;
+    display:    none;
+}
+
+#tipue_search_content .tipue_search_content_text {
+    font-size:  11pt;
+    margin-top: 0;
 }

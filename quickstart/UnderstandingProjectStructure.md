@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="Installing Nexial" %}
+---
+title: Quick Start &raquo; Understanding Project Structure
+tags: project structure project.properties script
+comments: true
+---
+{% include_relative _breadcrumb.html current="{{ page.title }}" %}
 
 
 Below is the general directory/file structure of a Nexial project:
@@ -31,3 +36,15 @@ Things to note:
 
 
 ### project.properties
+In addition to the standard script, data and plan files, Nexial also support another to maintain your test data.  This
+is especially useful for managing data that is common across the entire project (i.e. the same project directory). This
+is the main purpose of the `project.properties`.  It is used to store test data that is common amongst all or most of 
+the script so that such information need not be duplicated across multiple data file.  Information such as database
+connectivity, application URL, commonly used XPATH, etc. can now be conveniently managed in one place.  Here are the 
+rules about `project.properties`:
+
+1. It must be found under the project directory as `artifact/project.properties`.
+2. It is expected to be a file that contains the standard name-value pairs, as in `name1=value1`.  Each pair is 
+separated by newline.
+3. It may contain custom data variables as well as Nexial system variables.
+4. Data variables defined in `project.properties` will override the same defined in a data file.

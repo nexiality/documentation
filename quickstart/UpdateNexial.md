@@ -1,3 +1,8 @@
+---
+title: Quick Start &raquo; Update Nexial
+tags: update release
+comments: true
+---
 {% include_relative _breadcrumb.html current="Update Nexial" %}
 
 

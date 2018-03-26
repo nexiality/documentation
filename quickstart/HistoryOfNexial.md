@@ -1,3 +1,8 @@
+---
+title: Quick Start &raquo; History of Nexial
+tags: command history
+comments: true
+---
 {% include_relative _breadcrumb.html current="History of Nexial" %}
 
 ### before Nexial, there was Sentry

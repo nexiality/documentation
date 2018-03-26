@@ -1,3 +1,8 @@
+---
+title: Quick Start &raquo; Installing Nexial
+tags: command jms
+comments: true
+---
 {% include_relative _breadcrumb.html current="Installing Nexial" %}
 
 

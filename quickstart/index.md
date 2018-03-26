@@ -1,3 +1,8 @@
+---
+title: Quick Start
+tags: quickstart
+comments: true
+---
 {% include_relative _breadcrumb_index.html current="quickstart" %}
 
 
