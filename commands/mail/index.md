@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb_index.html current="mail" %}
+---
+title: mail
+tags: command mail smtp
+comments: true
+---
+{% include_relative _breadcrumb_index.html current="{{ page.title }}" %}
 
 The "mail" command type represents a series of automation command(s) regarding sending emails.
 
