@@ -1,3 +1,8 @@
+---
+title: jms &raquo; send(config,messageId,payload)
+tags: command jms
+comments: true
+---
 {% include_relative _breadcrumb.html current="send(config,messageId,payload)" %}
 
 

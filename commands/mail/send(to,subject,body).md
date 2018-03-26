@@ -1,8 +1,8 @@
 ---
 title: mail &raquo; send(to,subject,body)
 tags: command mail
+comments: true
 ---
-
 {% include_relative _breadcrumb.html current="send(to,subject,body)" %}
 
 ### Description

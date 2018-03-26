@@ -30,6 +30,7 @@ Here are the various settings available to configure the appropriate mail server
 | `mail.smtp.bufferSize`      | buffer size for smtp packet; default to system default of `512`     |
 | `mail.smtp.contentType`     | smtp MIME type to use; default is `text/html`                       |
 
+<br/>
 
 ### Available Commands
 - [`send(to,subject,body)`](send(to,subject,body))

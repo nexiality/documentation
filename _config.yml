@@ -11,10 +11,22 @@ plugins:
    - jekyll-redirect-from
    - jekyll-seo-tag
    - jekyll-avatar
- 
-breadcrumbs: true
-breadcrumb_display: true
-breadcrumb_home_display: true
+
+show_downloads: false
+
+google_analytics: UA-116385736-1
+
+# Tipue search settings
+tipue_search:
+  include:
+    pages: true
+  exclude:
+    files: [search.html]
+tipue_search_active: true
+
+#breadcrumbs: true
+#breadcrumb_display: true
+#breadcrumb_home_display: true
 
 read_more: enabled
 comments: disque
@@ -22,9 +34,9 @@ favicon: favicon.ico
 use_logo: true
 logo: image/logo-small.png
 
-search_in_topnav: true
-search_in_sidebar: false
-toggle-sidebar-button: true
+#search_in_topnav: true
+#search_in_sidebar: false
+#toggle-sidebar-button: true
 navbar-toggle: true
 
 sidebars:
