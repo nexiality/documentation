@@ -4,7 +4,8 @@
 @import "{{ site.theme }}";
 
 body {
-    color: #2d2d2d;
+    color:       #2d2d2d;
+    text-shadow: none;
 }
 
 h3 {
@@ -83,6 +84,17 @@ a.breadcrumb:hover {
     color:            #9a4 !important;
     background-color: rgba(140, 200, 40, 0.25) !important;
     text-shadow:      1px 1px 0 #eee;
+}
+
+a code {
+    background-color: rgba(230,250,230,0.9) !important;
+    color: rgba(50,100,60,0.9);
+    text-shadow: none;
+    background-image: url(../../image/link.png);
+    padding: 1px 4px 1px 16px;
+    background-position: 0px 2px;
+    background-repeat: no-repeat;
+    background-size: 16px;
 }
 
 span.breadcrumb {

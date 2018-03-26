@@ -28,3 +28,6 @@ Things to note:
 4. As a convention, it is recommended to use `C:\projects` as the top-level directory for all your Nexial projects.
 
 5. For more information, check out [Understanding Nexial Excel templates](UnderstandingExcelTemplates).
+
+
+### project.properties
