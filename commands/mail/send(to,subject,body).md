@@ -3,7 +3,7 @@ title: mail &raquo; send(to,subject,body)
 tags: command mail
 comments: true
 ---
-{% include_relative _breadcrumb.html current="{{ page.title }}" %}
+{% include_relative _breadcrumb.html current="send(to,subject,body)" %}
 
 ### Description
 This command instructs Nexial to send out an email to one or more email recipients (all as "To") with the same 
