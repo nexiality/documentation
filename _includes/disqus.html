@@ -1,7 +1,7 @@
 <div id="disqus_thread"></div>
 <script>
     var disqus_config = function () {
-        this.page.url        = "{{ page.url || site.url }}";
+        this.page.url        = "{{ page.url || absolute_url }}";
         this.page.identifier = "{{ page.id || page.url }}";
     };
     (function () { // DON'T EDIT BELOW THIS LINE
