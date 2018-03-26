@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="storeCount(json,jsonpath,var)" %}
+---
+title: json &raquo; storeCount(json,jsonpath,var)
+parent: json
+tags: command json jsonpath
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 ### Description
 This command stores the number of elements in `json` that match the specified `jsonpath` in `var`.

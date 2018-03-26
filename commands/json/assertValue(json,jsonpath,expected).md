@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="assertValue(json,jsonpath,expected)" %}
+---
+title: json &raquo; assertValue(json,jsonpath,expected)
+parent: json
+tags: command json jsonpath
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 ### Description
 This command asserts that `jsonpath` points to an element (or the first element) in `json` whose value match that of

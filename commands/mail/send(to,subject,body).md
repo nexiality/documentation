@@ -6,6 +6,7 @@ comments: true
 ---
 {% include _breadcrumb_command.html %}
 
+
 ### Description
 This command instructs Nexial to send out an email to one or more email recipients (all as "To") with the same 
 subject line and same email body.  The email body will default to **text/html**.  This means that email body can 

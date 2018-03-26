@@ -1,4 +1,11 @@
-{% include_relative _breadcrumb.html current="min(var,array)" %}
+---
+title: number &raquo; min(var,array)
+parent: number
+tags: command number
+comments: true
+---
+{% include _breadcrumb_command.html %}
+
 
 ### Description
 This command store the lowest number found in `array` in `var`.

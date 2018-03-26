@@ -1,6 +1,6 @@
 ---
+title: json &raquo; assertElementNotPresent(json,jsonpath)
 parent: json
-title: {{ page.parent }} &raquo; assertElementNotPresent(json,jsonpath)
 tags: command json jsonpath
 comments: true
 ---

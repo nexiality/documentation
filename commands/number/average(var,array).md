@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="average(var,array)" %}
+---
+title: number &raquo; average(var,array)
+parent: number
+tags: command number
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 ### Description
 This command calculates the average of a series of numbers represented by `array`.  The average value is stored as 

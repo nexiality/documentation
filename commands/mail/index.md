@@ -5,6 +5,7 @@ comments: true
 ---
 {% include _breadcrumb_command_type.html %}
 
+
 The "mail" command type represents a series of automation command(s) regarding sending emails.
 
 Current implementation of such capability depends highly on setting the correct/expected system properties (via `-D`, 

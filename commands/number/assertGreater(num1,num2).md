@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="assertGreater(num1,num2)" %}
+---
+title: number &raquo; assertGreater(num1,num2)
+parent: number
+tags: command number
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description

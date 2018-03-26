@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="storeValue(json,jsonpath,var)" %}
+---
+title: json &raquo; storeValue(json,jsonpath,var)
+parent: json
+tags: command json jsonpath
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 ### Description
 This command stores the value of the matching element (or the first matching element) in `json` in `var`.  The matching

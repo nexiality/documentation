@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="floor(var)" %}
+---
+title: number &raquo; floor(var)
+parent: number
+tags: command number
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 ### Description
 This command returns the closest integer value of `var` that is just above (greater than) `var`'s original value.  

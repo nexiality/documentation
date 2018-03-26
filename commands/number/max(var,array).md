@@ -1,4 +1,11 @@
-{% include_relative _breadcrumb.html current="max(var,array)" %}
+---
+title: number &raquo; max(var,array)
+parent: number
+tags: command number
+comments: true
+---
+{% include _breadcrumb_command.html %}
+
 
 ### Description
 This command store the highest number found in `array` in `var`.

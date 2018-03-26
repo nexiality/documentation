@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="ceiling(var)" %}
+---
+title: number &raquo; ceiling(var)
+parent: number
+tags: command number
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 ### Description
 This command returns the closest integer value of `var` that is just below (less) `var`'s original value.  This is

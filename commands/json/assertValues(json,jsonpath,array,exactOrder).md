@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="assertValues(json,jsonpath,array,exactOrder)" %}
+---
+title: json &raquo; assertValues(json,jsonpath,array,exactOrder)
+parent: json
+tags: command json jsonpath
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description
