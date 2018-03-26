@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="saveReplace(text,replace,resultVar)" %}
+---
+title: base &raquo; saveReplace(text,replace,resultVar)
+parent: base
+tags: command base
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description

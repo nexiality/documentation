@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="split(text,delim,saveVar)" %}
+---
+title: base &raquo; split(text,delim,saveVar)
+parent: base
+tags: command base
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description

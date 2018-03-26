@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="prependText(var,prependWith)" %}
+---
+title: base &raquo; prependText(var,prependWith)
+parent: base
+tags: command base
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description

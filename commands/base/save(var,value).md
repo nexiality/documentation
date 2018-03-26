@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="save(var,value)" %}
+---
+title: base &raquo; save(var,value)
+parent: base
+tags: command base
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description

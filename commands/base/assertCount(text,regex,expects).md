@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="assertCount(text,regex,expects)" %}
+---
+title: base &raquo; assertCount(text,regex,expects)
+parent: base
+tags: command base
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description

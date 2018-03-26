@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="waitFor(waitMs)" %}
+---
+title: base &raquo; waitFor(waitMs)
+parent: base
+tags: command base
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description

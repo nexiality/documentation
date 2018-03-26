@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="assertArrayEqual(array1,array2,exactOrder)" %}
+---
+title: base &raquo; assertArrayEqual(array1,array2,exactOrder)
+parent: base
+tags: command base
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description

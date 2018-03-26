@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="macro(file,sheet,name)" %}
+---
+title: base &raquo; macro(file,sheet,name)
+parent: base
+tags: command base
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description

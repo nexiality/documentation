@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="assertNotEmpty(text)" %}
+---
+title: base &raquo; assertNotEmpty(text)
+parent: base
+tags: command base
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description

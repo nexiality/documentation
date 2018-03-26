@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="assertEndsWith(text,suffix)" %}
+---
+title: base &raquo; assertEndsWith(text,suffix)
+parent: base
+tags: command base
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description

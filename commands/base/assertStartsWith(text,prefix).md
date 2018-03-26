@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="assertStartsWith(text,prefix)" %}
+---
+title: base &raquo; assertStartsWith(text,prefix)
+parent: base
+tags: command base
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description

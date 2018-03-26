@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb_index.html current="base" %}
+---
+title: base
+tags: command base
+comments: true
+---
+{% include _breadcrumb_command_type.html %}
 
 The "base" command type represents a series of common automation commands:
 

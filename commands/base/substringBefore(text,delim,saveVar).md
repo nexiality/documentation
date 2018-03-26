@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="substringBefore(text,delim,saveVar)" %}
+---
+title: base &raquo; substringBefore(text,delim,saveVar)
+parent: base
+tags: command base
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description

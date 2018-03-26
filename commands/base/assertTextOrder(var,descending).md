@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="assertTextOrder(var,descending)" %}
+---
+title: base &raquo; assertTextOrder(var,descending)
+parent: base
+tags: command base
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description

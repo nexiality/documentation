@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="assertVarNotPresent(var)" %}
+---
+title: base &raquo; assertVarNotPresent(var)
+parent: base
+tags: command base
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description

@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="assertEqual(expected,actual)" %}
+---
+title: base &raquo; assertEqual(expected,actual)
+parent: base
+tags: command base
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description

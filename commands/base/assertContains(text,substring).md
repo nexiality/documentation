@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="assertContains(text,substring)" %}
+---
+title: base &raquo; assertContains(text,substring)
+parent: base
+tags: command base
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description

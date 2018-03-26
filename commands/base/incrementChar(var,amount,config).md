@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="incrementChar(var,amount,config)" %}
+---
+title: base &raquo; incrementChar(var,amount,config)
+parent: base
+tags: command base
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description

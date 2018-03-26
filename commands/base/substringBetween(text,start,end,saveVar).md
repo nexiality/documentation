@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="substringBetween(text,start,end,saveVar)" %}
+---
+title: base &raquo; substringBetween(text,start,end,saveVar)
+parent: base
+tags: command base
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description

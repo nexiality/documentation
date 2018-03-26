@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="repeatUntil(steps,maxWaitMs)" %}
+---
+title: base &raquo; repeatUntil(steps,maxWaitMs)
+parent: base
+tags: command base
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description

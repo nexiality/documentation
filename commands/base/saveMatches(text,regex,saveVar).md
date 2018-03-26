@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="saveMatches(text,regex,saveVar)" %}
+---
+title: base &raquo; saveMatches(text,regex,saveVar)
+parent: base
+tags: command base
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description
