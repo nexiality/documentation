@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="assertNotPresent(profile,remotePath)" %}
+---
+title: aws.s3 &raquo; assertNotPresent(profile,remotePath)
+parent: aws.s3
+tags: command aws.s3
+comments: true
+---
 
 
 ### Description

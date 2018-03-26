@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="copyFrom(var,profile,remote,local)" %}
+---
+title: aws.s3 &raquo; copyFrom(var,profile,remote,local)
+parent: aws.s3
+tags: command aws.s3
+comments: true
+---
 
 
 ### Description

@@ -1,5 +1,13 @@
-{% include_relative _breadcrumb.html current="count(var,path,pattern)" %}
+---
+title: count(var,path,pattern)
+parent: io
+tags: command io count file regex
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
+
+### {{ page.title }}
 
 ### Description
 This command will count the number of files in particular folder.  The total count of the file are returned by the 

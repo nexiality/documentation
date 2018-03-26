@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb_index.html current="base" %}
+---
+title: aws.s3
+tags: command aws.s3
+comments: true
+---
+
 
 S3, or Simple Storage Service, is a cloud service provided by Amazon AWS.  One can utilize such service to manage files
 and content in the cloud.  Nexial supports the use of S3 via various automation capabilities (below) such as move, copy,

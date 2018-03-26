@@ -3,10 +3,11 @@ title: base
 tags: command base
 comments: true
 ---
-{% include _breadcrumb_command_type.html %}
+
 
 The "base" command type represents a series of common automation commands:
 
+### Available Commands
 - [`appendText(var,appendWith)`](appendText(var,appendWith))
 - [`assertArrayEqual(array1,array2,exactOrder)`](assertArrayEqual(array1,array2,exactOrder))
 - [`assertContains(text,substring)`](assertContains(text,substring))
