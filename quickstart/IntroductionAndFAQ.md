@@ -10,7 +10,7 @@ comments: true
 
 
 ## What is Nexial?
-Nexial is a test automation framework based on a hybrid test design approach.  At its core, its 
+Nexial is a test automation platform based on a hybrid test design approach.  At its core, its 
 design centers around the following goals:
 
 1.  **Lightweight Application Architecture**  
@@ -31,7 +31,7 @@ design centers around the following goals:
     For the most part, test automation is the combination of ‘Action’ and ‘Validation’:  action to 
     simulate interaction and workflow, and validation to assert an expectation.  Using a hybrid 
     approach, Nexial combines the complimentary techniques of keyword-driven automation and 
-    data-driven automation, plus a few of Nexial’s own, to create a test automation framework that 
+    data-driven automation, plus a few of Nexial’s own, to create a test automation platform that 
     yields high level of readability, flexibility and reusability. Some would regard Nexial as an 
     archetype of the _Scriptless Automation_ framework.  
       

@@ -29,31 +29,30 @@
 
 <body>
 <div id="container">
+    <header>
+        <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+        <h2>{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+
+        {% if page.url contains '/commands/' %}
+        {% if page.parent %}
+        {% include _breadcrumb_command.html %}
+        {% else %}
+        {% include _breadcrumb_command_type.html %}
+        {% endif %}
+        {% else %}
+        {% if page.parent %}
+        {% include _breadcrumb_level2.html %}
+        {% else %}
+        {% include _breadcrumb_level1.html %}
+        {% endif %}
+        {% endif %}
+
+        {% if site.tipue_search_active %}
+        {% include search.html %}
+        {% endif %}
+    </header>
+
     <div class="inner">
-
-        <header>
-            <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-            <h2>{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-
-            {% if page.url contains '/commands/' %}
-                {% if page.parent %}
-                {% include _breadcrumb_command.html %}
-                {% else %}
-                {% include _breadcrumb_command_type.html %}
-                {% endif %}
-            {% else %}
-                {% if page.parent %}
-                {% include _breadcrumb_level2.html %}
-                {% else %}
-                {% include _breadcrumb_level1.html %}
-                {% endif %}
-            {% endif %}
-
-            {% if site.tipue_search_active %}
-            {% include search.html %}
-            {% endif %}
-        </header>
-
         <section id="downloads" class="clearfix">
             {% if site.show_downloads %}
             <a href="{{ site.github.zip_url }}" id="download-zip" class="button"><span>Download .zip</span></a>

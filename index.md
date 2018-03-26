@@ -1,4 +1,4 @@
-## Test Automation Framework for _Everyone_!
+## Test Automation Platform for _Everyone_!
 
 ![logo](image/logo-x.png)
 
@@ -15,7 +15,7 @@ ideas/solutions.
 ## Introduction
 
 The main motivation of Nexial is to provide a set of capability to automate software testing.  
-Here's some of the core concerns of this framework:
+Here's some of the core concerns of this platform:
 
 - ***test automation for everyone*** - no coding experience required (but supported), simple and 
   valuable to all project participants
