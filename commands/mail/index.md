@@ -3,7 +3,7 @@ title: mail
 tags: command mail smtp
 comments: true
 ---
-{% include_relative _breadcrumb_index.html current="{{ page.title }}" %}
+{% include_relative _breadcrumb_index.html %}
 
 The "mail" command type represents a series of automation command(s) regarding sending emails.
 
