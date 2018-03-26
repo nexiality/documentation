@@ -43,11 +43,6 @@ td {
     margin: 0 50px;
 }
 
-#downloads {
-    display:    none;
-    visibility: hidden;
-}
-
 blockquote {
     border-left: 10px solid #f2f2f0;
     font-size:   1.2em;
@@ -154,3 +149,12 @@ a.external-link {
     text-shadow:           none;
 }
 
+div.search-form {
+    padding: 10px;
+    background: #f2f2f2;
+    width: 215px;
+    display: block;
+    position: relative;
+    top: -56px;
+    float: right;
+}

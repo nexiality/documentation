@@ -19,12 +19,11 @@
     <script src='{{ "/assets/tipuesearch/tipuesearch.min.js" | relative_url }}'></script>
     {% endif %}
 
-
     {% if site.google_analytics %}
     {% include analytics.html %}
     {% endif %}
-    {% seo %}
 
+    {% seo %}
 </head>
 
 <body>
@@ -51,11 +50,11 @@
             {% endif %}
         </section>
 
-        <hr/>
-
         {% if site.tipue_search_active %}
         {% include search.html %}
         {% endif %}
+
+        <hr/>
 
         <section id="main_content">
             {{ content }}
