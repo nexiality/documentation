@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="assertElementCount(json,jsonpath,count)" %}
+---
+title: json &raquo; assertElementCount(json,jsonpath,count)
+parent: json
+tags: command json
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description

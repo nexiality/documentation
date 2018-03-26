@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="assertCorrectness(json,schema)" %}
+---
+title: json &raquo; assertCorrectness(json,schema)
+parent: json
+tags: command json correctness jsonschema
+comments: true
+---
+{% include _breadcrumb_command.html %}
 
 
 ### Description
