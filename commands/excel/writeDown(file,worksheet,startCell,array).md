@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="writeDown(file,worksheet,startCell,array)" %}
+---
+title: excel &raquo; writeDown(file,worksheet,startCell,array)
+parent: excel
+tags: command excel
+comments: true
+---
 
 
 ### Description

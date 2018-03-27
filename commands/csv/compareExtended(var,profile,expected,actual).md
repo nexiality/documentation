@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="compareExtended(var,profile,expected,actual)" %}
+---
+title: csv &raquo; compareExtended(var,profile,expected,actual)
+parent: csv
+tags: command csv
+comments: true
+---
 
 
 ### Description

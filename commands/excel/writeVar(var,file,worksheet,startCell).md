@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="writeVar(var,file,worksheet,startCell)" %}
+---
+title: excel &raquo; writeVar(var,file,worksheet,startCell)
+parent: excel
+tags: command excel
+comments: true
+---
 
 
 ### Description

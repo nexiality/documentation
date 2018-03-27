@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb_index.html current="csv" %}
+---
+title: csv
+tags: command csv
+comments: true
+---
+
 
 The "csv" command type represents a series of automation commands regarding CSV files and CSV content:
 

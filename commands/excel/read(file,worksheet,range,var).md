@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="read(file,worksheet,range,var)" %}
+---
+title: excel &raquo; read(file,worksheet,range,var)
+parent: excel
+tags: command excel
+comments: true
+---
 
 
 ### Description

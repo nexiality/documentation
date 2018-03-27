@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="clear(file,worksheet,range)" %}
+---
+title: excel &raquo; clear(file,worksheet,range)
+parent: excel
+tags: command excel
+comments: true
+---
 
 
 ### Description

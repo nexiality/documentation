@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb_index.html current="excel" %}
+---
+title: excel &raquo; 
+tags: command excel
+comments: true
+---
+
 
 The "excel" command type represents a series of automation commands regarding excel files and excel contents:
 
