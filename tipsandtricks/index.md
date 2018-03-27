@@ -10,7 +10,7 @@ comments: true
 - [Create new test script, test data or test plan](CreateTestScript_data_plan)
 - *in progress* [How to avoid memory issue by keeping your scripts and data files under control]()
 - *in progress* [How to provide valid and correct script name to avoid any illegal argument exception]()
-- *in progress* [Improving Script Portability]()
+- [Improving Script Portability](ImprovingScriptPortability.md)
 - *in progress* [Integrating with other projects]()
 - *in progress* [Iteration with Nexial]()
 - *in progress* [Record/Playback a Nexial Automation Session]()
@@ -41,7 +41,7 @@ comments: true
 - *in progress* [How to get an Element's Xpath from Chrome]()
 - [Execute Scripts in Headless Browser](ExecuteScripts_HeadlessBrowser)
 - [BrowserStack Integration](BrowserStackIntegration)
-- *in progress* [Script passing on local machine but failing on BrowserStack]()
+- [Script failing on BrowserStack](ScriptFailingonBrowserStack.md)
 
 
 #### Web Service/API Automation

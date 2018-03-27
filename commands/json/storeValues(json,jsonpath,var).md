@@ -4,7 +4,7 @@ parent: json
 tags: command json jsonpath
 comments: true
 ---
-{% include _breadcrumb_command.html %}
+
 
 ### Description
 This command stores the list of value of elements in `json` that matches `jsonpath` to `var`.

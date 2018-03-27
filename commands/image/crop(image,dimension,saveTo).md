@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="crop(image,dimension,saveTo)" %}
+---
+title: image &raquo; crop(image,dimension,saveTo)
+parent: image
+tags: command image
+comments: true
+---
 
 
 ### Description

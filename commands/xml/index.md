@@ -1,4 +1,8 @@
-{% include_relative _breadcrumb_index.html current="xml" %}
+---
+title: xml
+tags: command xml
+comments: true
+---
 
 
 The "xml" command type represents a series of automation commands regarding XML file and XML content.

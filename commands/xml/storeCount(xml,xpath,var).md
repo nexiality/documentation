@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="storeCount(xml,xpath,var)" %}
+---
+title: xml &raquo; storeCount(xml,xpath,var)
+parent: xml
+tags: command xml
+comments: true
+---
 
 ### Description
 This command is used to store the number of elements present in the given xpath in the given `xml`.

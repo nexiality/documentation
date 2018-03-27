@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="storeValue(xml,xpath,var)" %}
+---
+title: xml &raquo; storeValue(xml,xpath,var)
+parent: xml
+tags: command xml
+comments: true
+---
 
 ### Description
 This command is used to store the value from the element with the given xpath in the given `xml` to the variable `var`.

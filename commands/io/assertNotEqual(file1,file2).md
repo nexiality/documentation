@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="assertNotEqual(file1,file2)" %}
+---
+title: io &raquo; assertNotEqual(file1,file2)
+parent: io
+tags: command io
+comments: true
+---
 
 
 ### Description

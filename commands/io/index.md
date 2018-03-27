@@ -1,4 +1,8 @@
-{% include_relative _breadcrumb_index.html current="io" %}
+---
+title: io
+tags: command io
+comments: true
+---
 
 
 The "io" command type represents a series of automation commands regarding io operations:

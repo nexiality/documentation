@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="compare(expected,actual,failFast)" %}
+---
+title: io &raquo; compare(expected,actual,failFast)
+parent: io
+tags: command io
+comments: true
+---
 
 
 ### Description

@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="saveToVar(pdf,var)" %}
+---
+title: pdf &raquo; saveToVar(pdf,var)
+parent: pdf
+tags: command pdf
+comments: true
+---
 
 
 ### Description

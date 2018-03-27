@@ -4,7 +4,7 @@ parent: json
 tags: command json jsonpath
 comments: true
 ---
-{% include _breadcrumb_command.html %}
+
 
 ### Description
 This command asserts that `json` resolves to a well-formed JSON document.

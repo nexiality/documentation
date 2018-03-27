@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="assertTextArray(pdf,textArray,ordered)" %}
+---
+title: pdf &raquo; assertTextArray(pdf,textArray,ordered)
+parent: pdf
+tags: command pdf
+comments: true
+---
 
 
 ### Description

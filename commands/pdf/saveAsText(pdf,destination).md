@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="saveAsText(pdf,destination)" %}
+---
+title: pdf &raquo; saveAsText(pdf,destination)
+parent: pdf
+tags: command pdf
+comments: true
+---
 
 
 ### Description

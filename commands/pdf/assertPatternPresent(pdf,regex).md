@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="assertPatternPresent(pdf,regex)" %}
+---
+title: pdf &raquo; assertPatternPresent(pdf,regex)
+parent: pdf
+tags: command pdf
+comments: true
+---
 
 
 ### Description

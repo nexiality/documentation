@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="count(pdf,text,var)" %}
+---
+title: pdf &raquo; count(pdf,text,var)
+parent: pdf
+tags: command pdf
+comments: true
+---
 
 
 ### Description

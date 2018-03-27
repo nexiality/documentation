@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="runSQL(var,db,sql)" %}
+---
+title: rdbms &raquo; runSQL(var,db,sql)
+parent: rdbms
+tags: command rdbms
+comments: true
+---
 
 
 ### Description

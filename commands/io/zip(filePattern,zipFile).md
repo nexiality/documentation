@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="zip(filePattern,zipFile)" %}
+---
+title: io &raquo; zip(filePattern,zipFile)
+parent: io
+tags: command io
+comments: true
+---
 
 
 ### Description

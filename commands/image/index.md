@@ -1,4 +1,8 @@
-{% include_relative _breadcrumb_index.html current="image" %}
+---
+title: image
+tags: command image
+comments: true
+---
 
 
 The "image" command type represents a series of automation commands regarding image operations 

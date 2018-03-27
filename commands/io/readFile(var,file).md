@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="readFile(var,file)" %}
+---
+title: io &raquo; readFile(var,file)
+parent: io
+tags: command io
+comments: true
+---
 
 
 ### Description

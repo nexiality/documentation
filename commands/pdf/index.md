@@ -1,4 +1,8 @@
-{% include_relative _breadcrumb_index.html current="pdf" %}
+---
+title: pdf
+tags: command pdf
+comments: true
+---
 
 
 A lot can be said about PDF data model.  Not text extraction - which is just the extracting of textual content from a 

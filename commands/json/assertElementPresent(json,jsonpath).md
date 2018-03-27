@@ -4,7 +4,7 @@ parent: json
 tags: command json jsonpath
 comments: true
 ---
-{% include _breadcrumb_command.html %}
+
 
 ### Description
 This command asserts the the JSON element as described via `jsonpath` is present in `json`

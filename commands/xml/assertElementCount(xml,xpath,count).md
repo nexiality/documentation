@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="assertElementCount(xml,xpath,count)" %}
+---
+title: xml &raquo; assertElementCount(xml,xpath,count)
+parent: xml
+tags: command xml
+comments: true
+---
 
 
 ### Description

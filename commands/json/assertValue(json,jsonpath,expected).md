@@ -4,7 +4,7 @@ parent: json
 tags: command json jsonpath
 comments: true
 ---
-{% include _breadcrumb_command.html %}
+
 
 ### Description
 This command asserts that `jsonpath` points to an element (or the first element) in `json` whose value match that of

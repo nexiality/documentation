@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="assertFormValue(var,name,expected)" %}
+---
+title: pdf &raquo; assertFormValue(var,name,expected)
+parent: pdf
+tags: command pdf
+comments: true
+---
 
 
 ### Description

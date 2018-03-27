@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="assertTextNotPresent(pdf,text)" %}
+---
+title: pdf &raquo; assertTextNotPresent(pdf,text)
+parent: pdf
+tags: command pdf
+comments: true
+---
 
 
 ### Description

@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="assertWellformed(xml)" %}
+---
+title: xml &raquo; assertWellformed(xml)
+parent: xml
+tags: command xml
+comments: true
+---
 
 
 ### Description

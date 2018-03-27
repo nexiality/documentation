@@ -1,4 +1,8 @@
-{% include_relative _breadcrumb_index.html current="rdbms" %}
+---
+title: rdbms
+tags: command rdbms
+comments: true
+---
 
 
 This collection of commands, as its name suggests, handle RDBMS-related automations and validations.  As such, Nexial 

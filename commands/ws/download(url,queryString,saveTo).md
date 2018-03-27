@@ -1,7 +1,7 @@
 ---
 title: ws &raquo; download(url,queryString,saveTo)
 parent: ws
-tags: command csv
+tags: command ws web_service api
 comments: true
 ---
 

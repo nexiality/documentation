@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="assertContentEqual(actualPdf,expectedPdf)" %}
+---
+title: pdf &raquo; assertContentEqual(actualPdf,expectedPdf)
+parent: pdf
+tags: command pdf
+comments: true
+---
 
 
 ### Description

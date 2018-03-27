@@ -3,7 +3,6 @@ title: jms &raquo; receive(var,config,waitMs)
 tags: command jms
 comments: true
 ---
-{% include_relative _breadcrumb.html current="receive(var,config,waitMs)" %}
 
 
 ### Description

@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="resize(image,width,height,saveTo)" %}
+---
+title: image &raquo; resize(image,width,height,saveTo)
+parent: image
+tags: command image
+comments: true
+---
 
 
 ### Description

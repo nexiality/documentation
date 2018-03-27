@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="compare(baseline,actual)" %}
+---
+title: image &raquo; compare(baseline,actual)
+parent: image
+tags: command image
+comments: true
+---
 
 
 ### Description

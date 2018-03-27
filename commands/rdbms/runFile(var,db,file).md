@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="runFile(var,db,file)" %}
+---
+title: rdbms &raquo; runFile(var,db,file)
+parent: rdbms
+tags: command rdbms
+comments: true
+---
 
 
 ### Description

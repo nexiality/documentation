@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="copyFiles(source,target)" %}
+---
+title: io &raquo; copyFiles(source,target)
+parent: io
+tags: command io
+comments: true
+---
 
 
 ### Description

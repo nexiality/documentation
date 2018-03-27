@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="writeFile(file,content,append)" %}
+---
+title: io &raquo; writeFile(file,content,append)
+parent: io
+tags: command io
+comments: true
+---
 
 
 ### Description

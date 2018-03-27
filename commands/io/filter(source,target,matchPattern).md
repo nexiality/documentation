@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="filter(source,target,matchPattern)" %}
+---
+title: io &raquo; filter(source,target,matchPattern)
+parent: io
+tags: command io
+comments: true
+---
 
 
 ### Description

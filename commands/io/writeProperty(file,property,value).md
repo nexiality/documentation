@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="writeProperty(file,property,value)" %}
+---
+title: io &raquo; writeProperty(file,property,value)
+parent: io
+tags: command io
+comments: true
+---
 
 
 ### Description

@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="assertReadableFile(file,minByte)" %}
+---
+title: io &raquo; assertReadableFile(file,minByte)
+parent: io
+tags: command io
+comments: true
+---
 
 
 ### Description

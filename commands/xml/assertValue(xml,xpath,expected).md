@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="assertValue(xml,xpath,expected)" %}
+---
+title: xml &raquo; assertValue(xml,xpath,expected)
+parent: xml
+tags: command xml
+comments: true
+---
 
 
 ### Description

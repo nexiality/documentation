@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="assertCorrectness(xml,schema)" %}
+---
+title: xml &raquo; assertCorrectness(xml,schema)
+parent: xml
+tags: command xml
+comments: true
+---
 
 ### Description
 This command is used to assert the correctness of the xml against the given schema definition.

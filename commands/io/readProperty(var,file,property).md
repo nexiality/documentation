@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="readProperty(var,file,property)" %}
+---
+title: io &raquo; readProperty(var,file,property)
+parent: io
+tags: command io
+comments: true
+---
 
 
 ### Description

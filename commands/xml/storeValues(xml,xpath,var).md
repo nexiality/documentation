@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="storeValues(xml,xpath,var)" %}
+---
+title: xml &raquo; storeValues(xml,xpath,var)
+parent: xml
+tags: command xml
+comments: true
+---
 
 
 ### Description

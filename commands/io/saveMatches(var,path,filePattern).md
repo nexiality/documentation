@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="saveMatches(var,path,filePattern)" %}
+---
+title: io &raquo; saveMatches(var,path,filePattern)
+parent: io
+tags: command io
+comments: true
+---
 
 
 ### Description

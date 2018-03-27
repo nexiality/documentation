@@ -1,4 +1,8 @@
-{% include_relative _breadcrumb_index.html current="jms" %}
+---
+title: jms
+tags: command jms
+comments: true
+---
 
 
 JMS standards Java Messaging Service.  It is an essential feature in the Java Enterprise Edition specification 

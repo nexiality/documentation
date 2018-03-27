@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="deleteFiles(location,recursive)" %}
+---
+title: io &raquo; deleteFiles(location,recursive)
+parent: io
+tags: command io
+comments: true
+---
 
 
 ### Description

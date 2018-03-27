@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="saveMetadata(pdf,var)" %}
+---
+title: pdf &raquo; saveMetadata(pdf,var)
+parent: pdf
+tags: command pdf
+comments: true
+---
 
 
 ### Description

@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="moveFiles(source,target)" %}
+---
+title: io &raquo; moveFiles(source,target)
+parent: io
+tags: command io
+comments: true
+---
 
 
 ### Description
