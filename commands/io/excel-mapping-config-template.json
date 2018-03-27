@@ -1,0 +1,178 @@
+{
+
+    "mapping-config": {
+
+        "file-type": "FIXED_LENGTH",
+        "spec-type": "Excel",
+
+        "map-value-to-column": "",
+        "data-type-def-column": "",
+        "field-length-def-column": "",
+        "alignment-def-column": ""
+
+    },
+
+    "file-header-record": {
+        "sheet-name": "",
+        "check-column": "",
+        "precede-by": "",
+        "follow-by": "",
+        "ends-on-blank-row": false,
+        "record-id-field": "<RECORD_ID_FIELD>",
+        "record-id": "<RECORD_ID>",
+        "validations": [
+            {
+                "field-name": "<FIELD_NAME>",
+                "validation-methods": [
+                    {
+                        "type": "<VALIDATION_METHOD>",
+                        "params": "<EXPECTED_VALUES>"
+                    }
+                ]
+            }
+        ],
+        "map-functions": [
+            {
+                "field-name": "<FIELD_NAME>",
+                "function": "<FUNCTION_NAME>",
+                "mapTo": "<var_name>"
+            }
+        ]
+
+    },
+
+    "file-sections": [
+        {
+            "header-record": {
+                "sheet-name": "",
+                "check-column": "",
+                "precede-by": "",
+                "follow-by": "",
+                "ends-on-blank-row": true,
+                "record-id-field": "<RECORD_ID_FIELD>",
+                "record-id": "<RECORD_ID>",
+
+                "validations": [
+                    {
+                        "field-name": "<FIELD_NAME>",
+                        "validation-methods": [
+                            {
+                                "type": "<VALIDATION_METHOD>",
+                                "params": "<EXPECTED_VALUES>"
+                            }
+                        ]
+                    }
+                ],
+                "map-functions": [
+                    {
+                        "field-name": "<FIELD_NAME>",
+                        "function": "<FUNCTION_NAME>",
+                        "mapTo": "<var_name>"
+                    }
+                ]
+
+            },
+            "body-records": [
+                {
+                    "sheet-name": "",
+                    "check-column": "",
+                    "precede-by": "",
+                    "follow-by": "",
+                    "ends-on-blank-row": true,
+                    "record-id-field": "<RECORD_ID_FIELD>",
+                    "record-id": "<RECORD_ID>",
+                    "validations": [
+                        {
+                            "field-name": "<FIELD_NAME>",
+                            "validation-methods": [
+                                {
+                                    "type": "<VALIDATION_METHOD>",
+                                    "params": "<EXPECTED_VALUES>"
+                                }
+                            ]
+                        }
+                    ],
+                    "map-functions": [
+                        {
+                            "field-name": "<FIELD_NAME>",
+                            "sign-field": "<optional><SIGN_FIELD_NAME>",
+                            "function": "<FUNCTION_NAME>",
+                            "mapTo": "<var_name>"
+                        }
+
+                    ]
+                }
+            ],
+            "footer-record": {
+                "sheet-name": "",
+                "check-column": "",
+                "precede-by": "",
+                "follow-by": "",
+                "ends-on-blank-row": true,
+                "record-id-field": "<RECORD_ID_FIELD>",
+                "record-id": "<RECORD_ID>",
+
+                "validations": [
+                    {
+                        "field-name": "<FIELD_NAME>",
+                        "validation-methods": [
+                            {
+                                "type": "<VALIDATION_METHOD>",
+                                "params": "${var_name}"
+                            }
+                        ]
+                    },
+                    {
+                        "field-name": "<FIELD_NAME>",
+                        "validation-methods": [
+                            {
+                                "type": "<VALIDATION_METHOD>",
+                                "params": "<EXPECTED_VALUES>"
+                            }
+                        ]
+                    }
+                ],
+                "map-functions": [
+                    {
+                        "field-name": "<FIELD_NAME>",
+                        "sign-field": "<optional><SIGN_FIELD_NAME>",
+                        "function": "<FUNCTION_NAME>",
+                        "mapTo": "<var_name>"
+                    }
+
+                ]
+            }
+        }
+    ],
+
+    "file-footer-record": {
+        "sheet-name": "",
+        "check-column": "",
+        "precede-by": "",
+        "follow-by": "",
+        "ends-on-blank-row": false,
+        "record-id-field": "<RECORD_ID_FIELD>",
+        "record-id": "<RECORD_ID>",
+        "validations": [
+            {
+                "field-name": "<FIELD_NAME>",
+                "validation-methods": [
+                    {
+                        "type": "<VALIDATION_METHOD>",
+                        "params": "<EXPECTED_VALUES>"
+                    }
+                ]
+            }
+        ],
+        "map-functions": [
+            {
+                "field-name": "<FIELD_NAME>",
+                "function": "<FUNCTION_NAME>",
+                "mapTo": "<var_name>"
+            }
+        ]
+
+    }
+
+}
+
