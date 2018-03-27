@@ -1,0 +1,177 @@
+{
+
+    "mapping-config": {
+        "file-type": "FIXED_LENGTH",
+        "spec-type": "JSON"
+    },
+
+    "file-header-record": {
+        "record-id-field": "<RECORD_ID_FIELD>",
+        "record-id": "<RECORD_ID>",
+        "record-spec": [
+            {
+                "field-name": "<FIELD_NAME>",
+                "data-type": "Alphanumeric",
+                "field-length": 1,
+                "alignment": "<LEFT>"
+            }
+        ],
+        "validations": [
+            {
+                "field-name": "<FIELD_NAME>",
+                "validation-methods": [
+                    {
+                        "type": "<VALIDATION_METHOD>",
+                        "params": "<EXPECTED_VALUE>"
+
+                    }
+                ]
+            }
+        ]
+    },
+    "file-sections": [
+        {
+            "header-record": {
+
+                "record-id-field": "<RECORD_ID_FIELD>",
+                "record-id": "<RECORD_ID>",
+                "record-spec": [
+                    {
+                        "field-name": "<FIELD_NAME>",
+                        "data-type": "Numeric",
+                        "field-length": 5,
+                        "alignment": ""
+                    }
+                ],
+                "validations": [
+                    {
+                        "field-name": "<FIELD_NAME>",
+                        "validation-methods": [
+                            {
+                                "type": "<VALIDATION_METHOD>",
+                                "params": "<EXPECTED_VALUE>"
+
+                            }
+                        ]
+                    }
+                ],
+                "map-functions": [
+                    {
+                        "field-name": "<FIELD_NAME>",
+                        "function": "<FUNCTION_NAME>",
+                        "mapTo": "<var_name>"
+                    }
+                ]
+
+            },
+            "body-records": [
+                {
+
+                    "record-id-field": "<RECORD_ID_FIELD>",
+                    "record-id": "<RECORD_ID>",
+                    "record-spec": [
+                        {
+                            "field-name": "<FIELD_NAME>",
+                            "data-type": "Alphanumeric",
+                            "field-length": 3,
+                            "alignment": ""
+                        }
+                    ],
+                    "validations": [
+                        {
+                            "field-name": "<FIELD_NAME>",
+                            "validation-methods": [
+                                {
+                                    "type": "<VALIDATION_METHOD>",
+                                    "params": "<EXPECTED_VALUE>"
+
+                                }
+                            ]
+                        }
+                    ],
+                    "map-functions": [
+
+                        {
+                            "field-name": "<FIELD_NAME>",
+                            "function": "<FUNCTION_NAME>",
+                            "mapTo": "<var_name>"
+                        }
+
+                    ]
+                }
+            ],
+            "footer-record": {
+
+                "record-id-field": "<RECORD_ID_FIELD>",
+                "record-id": "<RECORD_ID>",
+                "record-spec": [
+                    {
+                        "field-name": "<FIELD_NAME>",
+                        "data-type": "Alphanumeric",
+                        "field-length": 3,
+                        "alignment": "LEFT"
+                    }
+                ],
+                "validations": [
+                    {
+                        "field-name": "<FIELD_NAME>",
+                        "validation-methods": [
+                            {
+                                "type": "<VALIDATION_METHOD>",
+                                "params": "<EXPECTED_VALUE>"
+                            }
+                        ]
+                    }
+                ],
+                "map-functions": [
+
+                    {
+                        "field-name": "<FIELD_NAME>",
+                        "function": "<FUNCTION_NAME>",
+                        "mapTo": "<var_name>"
+                    }
+
+                ]
+            }
+        }
+    ],
+
+    "file-footer-record": {
+
+        "record-id-field": "<RECORD_ID_FIELD>",
+        "record-id": "<RECORD_ID>",
+        "record-spec": [
+            {
+                "field-name": "<FIELD_NAME>",
+                "data-type": "Numeric",
+                "field-length": 3,
+                "alignment": "RIGHT"
+            }
+        ],
+        "validations": [
+            {
+                "field-name": "<FIELD_NAME>",
+                "validation-methods": [
+                    {
+                        "type": "<VALIDATION_METHOD>",
+                        "params": "<EXPECTED_VALUE>"
+
+                    }
+                ]
+            }
+        ],
+        "map-functions": [
+
+            {
+                "field-name": "<FIELD_NAME>",
+                "function": "<FUNCTION_NAME>",
+                "mapTo": "<var_name>"
+            }
+
+        ]
+
+    }
+
+}
+
+
