@@ -1,7 +1,7 @@
 ---
 title: commands
 level: 1
-tags: command base
+tags: commands
 comments: true
 ---
 
