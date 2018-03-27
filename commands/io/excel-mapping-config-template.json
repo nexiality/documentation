@@ -1,15 +1,11 @@
 {
-
     "mapping-config": {
-
         "file-type": "FIXED_LENGTH",
         "spec-type": "Excel",
-
         "map-value-to-column": "",
         "data-type-def-column": "",
         "field-length-def-column": "",
         "alignment-def-column": ""
-
     },
 
     "file-header-record": {
@@ -38,7 +34,6 @@
                 "mapTo": "<var_name>"
             }
         ]
-
     },
 
     "file-sections": [
@@ -51,7 +46,6 @@
                 "ends-on-blank-row": true,
                 "record-id-field": "<RECORD_ID_FIELD>",
                 "record-id": "<RECORD_ID>",
-
                 "validations": [
                     {
                         "field-name": "<FIELD_NAME>",
@@ -70,7 +64,6 @@
                         "mapTo": "<var_name>"
                     }
                 ]
-
             },
             "body-records": [
                 {
@@ -111,7 +104,6 @@
                 "ends-on-blank-row": true,
                 "record-id-field": "<RECORD_ID_FIELD>",
                 "record-id": "<RECORD_ID>",
-
                 "validations": [
                     {
                         "field-name": "<FIELD_NAME>",
@@ -171,8 +163,5 @@
                 "mapTo": "<var_name>"
             }
         ]
-
     }
-
 }
-

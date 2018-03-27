@@ -90,7 +90,6 @@
                         }
                     ],
                     "map-functions": [
-
                         {
                             "field-name": "<FIELD_NAME>",
                             "function": "<FUNCTION_NAME>",
@@ -101,7 +100,6 @@
                 }
             ],
             "footer-record": {
-
                 "record-id-field": "<RECORD_ID_FIELD>",
                 "record-id": "<RECORD_ID>",
                 "record-spec": [
@@ -124,7 +122,6 @@
                     }
                 ],
                 "map-functions": [
-
                     {
                         "field-name": "<FIELD_NAME>",
                         "function": "<FUNCTION_NAME>",
@@ -137,7 +134,6 @@
     ],
 
     "file-footer-record": {
-
         "record-id-field": "<RECORD_ID_FIELD>",
         "record-id": "<RECORD_ID>",
         "record-spec": [
@@ -161,17 +157,11 @@
             }
         ],
         "map-functions": [
-
             {
                 "field-name": "<FIELD_NAME>",
                 "function": "<FUNCTION_NAME>",
                 "mapTo": "<var_name>"
             }
-
         ]
-
     }
-
 }
-
-
