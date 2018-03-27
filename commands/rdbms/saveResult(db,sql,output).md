@@ -18,7 +18,7 @@ Assuming that the query runs successfully, a **`MyResult.csv`** will be create
 and a **`MyResult.json`** (query metadata) will be created in the same directory.
 
 The content of the query metadata differs by the query specified.  In general, it contains the 
-[`Execution Result`](index.html) but without the dataset.  For example, the screenshot shows one such JSON containing:
+[`Execution Result`](index) but without the dataset.  For example, the screenshot shows one such JSON containing:
 
 1. column names
 2. the sql that was executed
@@ -34,7 +34,7 @@ records):<br/>
 
 
 ### Parameters
-- **db** \- the profile from which defines the [`database connectivity details`](index.html).
+- **db** \- the profile from which defines the [`database connectivity details`](index).
 - **sql** \- the query to execute.  Note that if this query does not result in any dataset (such as a UPDATE or 
   INSERT query), then only the result metadata file (JSON) will be generated.
 - **output -** the target file to save the resulting dataset.

@@ -5,6 +5,7 @@ tags: command io count file regex
 comments: true
 ---
 
+
 ### Description
 This command validates any text file with the fields in each record (line) either as a 
 '**Fixed Length Fields'** type or **'Delimiter Separated Fields**' type.
@@ -16,23 +17,23 @@ of each field and the validations to be carried out.
 
 Each field in the record will go through the below validations mentioned.
 - **Data Type:** (**Numeric, Alphanumeric, Blank**)
-		- **Text Alignment Check:** (**Left, Right**)
-		- **REGEX** - Regular expression to check against actual field value
-		- **EQUALS** - Equals to check against actual field value
-		- **IN** - IN to check the presence of actual field value against a list of expected values
-		- **DATE** - to do date field validation against given date pattern. See below for the date pattern syntax.
-		- **SQL** - to check field value against a database query
+  - **Text Alignment Check:** (**Left, Right**) 
+  - **REGEX** - Regular expression to check against actual field value 
+  - **EQUALS** - Equals to check against actual field value 
+  - **IN** - IN to check the presence of actual field value against a list of expected values
+  - **DATE** - to do date field validation against given date pattern. See below for the date pattern syntax. 
+  - **SQL** - to check field value against a database query
 
 - **API** (**In Progress**)
-    - **RANGE**
+  - **RANGE**
 
 - **Map Functions supported**
   Map Functions are to apply below functions on all the records on a field and get the value. Which could be later used to validate against any another field in any record. 
-  - **COUNT** \- Count to calculate the total count of the fields present
-  - **MIN - **to calculate the MIN amount
-  - **MAX** \- to calculate the MAX amount
-  - **AGGREGATE** \- to calculate the aggregate amount
-  - **AVERAGE -** to calculate the average amount
+  - **COUNT** - Count to calculate the total count of the fields present
+  - **MIN** -  to calculate the MIN amount
+  - **MAX** - to calculate the MAX amount
+  - **AGGREGATE** - to calculate the aggregate amount
+  - **AVERAGE** - to calculate the average amount
 
 
 ### Parameters
@@ -95,8 +96,9 @@ Date format pattern letters and their meaning:<br/>
 
 ### See Also
 
+<br/>
 
 ### Downloads
-- [Download config template for Excel Descriptor](excel-mapping-config-template.json) the config template file for 
+- [config template for Excel Descriptor](excel-mapping-config-template.json) the config template file for 
   'Excel' specification.
-- [Download JSON config template](json-mapping-config-template.json) the config template for "JSON' specification.
+- [JSON config template](json-mapping-config-template.json) the config template for "JSON' specification.

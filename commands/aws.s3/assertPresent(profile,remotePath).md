@@ -5,7 +5,6 @@ tags: command aws.s3
 comments: true
 ---
 
-
 ### Description
 This command checks if there are any files(at least one) matching the pattern provided in the `remotePath` i.e in the 
 S3 bucket/folder.
@@ -22,6 +21,8 @@ Check [here](index#s3profile) for more information regarding `profile`.
 Script:<br/>
 ![](image/assertPresent_01.png)
 
+Output:<br/>
+![](image/assertPresent_02.png)
 
 ### See Also
 - [list(var,profile,remotePath)](list(var,profile,remotePath))

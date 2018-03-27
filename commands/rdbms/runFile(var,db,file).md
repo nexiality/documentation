@@ -25,9 +25,9 @@ specified as a parameter.  Other than that, both commands have the same capabil
    2. The result of the second SQL will be assigned to the variable `${payee types}`.
    3. The result of the third SQL will be assigned to the variable `${client}`.  The variable will contain the same 
       properties as per [`runSQL(var,db,sql)`](runSQL(var,db,sql)).  See 
-      [`Working with Execution Result`](index.html) for more details.
+      [`Working with Execution Result`](index) for more details.
 4. These SQL statements can potentially be committed or rolled back as a single transaction (one unit of work).  To 
-   enforce single transaction, [`<connection name>.autocommit`](index.html)` must be set to `false`.
+   enforce single transaction, [`<connection name>.autocommit`](index)` must be set to `false`.
 
 
 ### Parameters

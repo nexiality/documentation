@@ -5,7 +5,6 @@ tags: command aws.s3
 comments: true
 ---
 
-
 ### Description
 This command checks if there are no files matching the pattern provided in `remotePath` (i.e in the S3 bucket/folder).
 
@@ -20,6 +19,9 @@ Check [here](index#s3profile) for more information regarding `profile`.
 ### Example
 Script:<br/>
 ![](image/assertNotPresent_01.png)
+
+Output:<br/>
+![](image/assertNotPresent_02.png)
 
 
 ### See Also

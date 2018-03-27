@@ -16,7 +16,7 @@ transform, or to manipulate, data can be handled in multiple ways:
 2. **[`Nexial built-in functions`](../functions)** - specific to the intrinsic data type, can be nested to perform 
    multiple transformations within one command.  But the nesting can make your script less readable and more difficult 
    to maintain (see below).
-3. **Nexial expression** - ability to_morph_ to/fro data types, can be nested to perform multiple transformations 
+3. **Nexial expression** - ability to _morph_ to/fro data types, can be nested to perform multiple transformations 
   within one command (one test step).  Much more readable than built-in functions - READ ON!
 
 

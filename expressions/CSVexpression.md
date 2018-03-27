@@ -7,7 +7,7 @@ comments: true
 
 
 ### Description
-<a href="https://en.wikipedia.org/wiki/Comma-separated_values" class="external-list" target="_nexial_external">CSV, or Comma-Separated Values</a>, 
+<a href="https://en.wikipedia.org/wiki/Comma-separated_values" class="external-link" target="_nexial_external">CSV, or Comma-Separated Values</a>, 
 is text-based file format to store tabular data.  In many ways this file format can be viewed as a simplified, 
 no-format, version of Excel.   Using this file format, one can stored tabular data (i.e. 2-dimensional) of various 
 types and sizes.  This expression, then, can help to manipulate a CSV file content as part of automation.
@@ -15,9 +15,10 @@ types and sizes.  This expression, then, can help to manipulate a CSV file cont
 As popular as CSV has been since 
 <a href="https://en.wikipedia.org/wiki/FORTRAN#FORTRAN_77" class="external-link" target="_nexial_external">FORTRAN 77</a> 
 (yes, 1978), it might surprise some to know that there isn't yet a standard for it.  The closet of a standard would be 
-[`RFC 4180`](https://tools.ietf.org/html/rfc4180), which is a proposal and a formalization of CSV as a specification, 
-but not yet accepted as specification.  As such, there are many, and some subtle, variations out there and many are 
-staunchly supported by technology communities and companies alike.  The most popular varieties of CVS would be:
+<a href="https://tools.ietf.org/html/rfc4180" class="external-link" target="_nexial_external">RFC 4180</a>, 
+which is a proposal and a formalization of CSV as a specification, but not yet accepted as specification.  As such, 
+there are many, and some subtle, variations out there and many are staunchly supported by technology communities and 
+companies alike.  The most popular varieties of CVS would be:
 
 - **Excel CSV** - the CSV format produced by Microsoft Excel when using its Export functionality.  In essence, such 
 CSV file format:
@@ -31,9 +32,9 @@ CSV file format:
   - uses double quote for non-numeric value
   - uses carriage return (`\r\n`) as record separator
   - regard empty lines as an empty records
-- **[`TDF or TSV`](https://en.wikipedia.org/wiki/Tab-separated_values)** - The tab-delimited format, which uses the 
-  `TAB` character instead of comma as field value delimiter.  This is also the default CSV format for MySQL export. 
-  Such format:
+- **<a href="https://en.wikipedia.org/wiki/Tab-separated_values" class="external-link" target="_nexial_external">`TDF or TSV`</a>** - 
+  The tab-delimited format, which uses the  `TAB` character instead of comma as field value delimiter.  This is also 
+  the default CSV format for MySQL export. Such format:
   - uses `TAB` character as delimiter
   - uses double quote for non-numeric value
   - uses carriage return (`\r\n`) as record separator
@@ -56,7 +57,7 @@ An CSV expression can be initiated in various ways:
 **`IMPORTANT`: It is almost always necessary to invoke the parse() operation first prior to using other operations.**
 The official CSV specification of Microsoft/CSV does not default to using header.  Hence one should consider something like the following:
 
-`[CSV(...) => **parse(header=true)** ... ...]`
+`[CSV(...) => parse(header=true) ... ...]`
 
 See `parse()` below for more details.
 
@@ -75,6 +76,7 @@ where,
 **`[comparator]`** represents how **`[subject]`** is to be compared with **`[controls]`**.  Currently supported 
 comparisons are:
 
+
 | comparator       | description |
 | ---------------- | ----------- |
 | **`=`**          | equals, as in "is _this_ the same as _that_?" |
@@ -92,7 +94,8 @@ comparisons are:
 | **`start with`** | start with, as in "does _this_ starts with _that_?" |
 | **`end with`**   | end with, as in "does _this_ ends with _that_?" |
 | **`match`**      | match by regular expression, as in "can _this_ be expressed via _that_ regular expression?" |
-|
+
+
 **[controls]** represents the variable or data (could be more than one) to consider in order to qualify a condition.
 
 Multiple conditions are separated by pipe (`|`).

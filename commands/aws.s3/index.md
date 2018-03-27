@@ -28,9 +28,10 @@ For example, suppose we have a "profile" named as `projectX`:<br/>
 
 `projectX` will be used as a "profile" throughout the "aws.s3" commands for S3-related automation.
 
+The "aws.s3" command type represents a series of commands regarding AWS S3.
 
-The "aws.s3" command type represents a series of commands regarding AWS S3:
 
+### Available Commands
 - [`assertNotPresent(profile,remotePath)`](assertNotPresent(profile,remotePath))
 - [`assertPresent(profile,remotePath)`](assertPresent(profile,remotePath))
 - [`copyFrom(var,profile,remote,local)`](copyFrom(var,profile,remote,local))
