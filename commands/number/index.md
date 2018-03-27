@@ -3,7 +3,6 @@ title: number
 tags: command number
 comments: true
 ---
-{% include _breadcrumb_command_type.html %}
 
 
 The "number" command type represents a series of automation commands regarding numeric operations:

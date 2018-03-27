@@ -4,7 +4,6 @@ parent: number
 tags: command number
 comments: true
 ---
-{% include _breadcrumb_command.html %}
 
 
 ### Description

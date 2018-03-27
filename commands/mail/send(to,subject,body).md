@@ -4,7 +4,6 @@ parent: mail
 tags: command mail
 comments: true
 ---
-{% include _breadcrumb_command.html %}
 
 
 ### Description

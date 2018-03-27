@@ -4,7 +4,7 @@ parent: number
 tags: command number
 comments: true
 ---
-{% include _breadcrumb_command.html %}
+
 
 ### Description
 This command round the number represented by `var` to the nearest digits (integer) and stores it back to `var`.

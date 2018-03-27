@@ -3,7 +3,6 @@ title: json
 tags: command json jsonpath
 comments: true
 ---
-{% include _breadcrumb_command_type.html %}
 
 
 This set of commands is designed to support <a href="http://www.json.org/" class="external-link" target="_nexial_external">JSON</a> validation 
