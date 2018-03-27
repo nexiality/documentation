@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="jwtSignHS256(var,payload,key)" %}
+---
+title: ws &raquo; jwtSignHS256(var,payload,key)
+parent: ws
+tags: command csv
+comments: true
+---
+
 
 ### Description 
 This command generates JWT Token that can be used further as an Authorization Header in the Web Service Request.

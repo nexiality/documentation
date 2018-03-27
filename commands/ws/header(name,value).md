@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="header(name,value)" %}
+---
+title: ws &raquo; header(name,value)
+parent: ws
+tags: command csv
+comments: true
+---
+
 
 ### Description
 This command is used to add the header before making any Web Service request. Like setting

@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="headerByVar(name,var)" %}
+---
+title: ws &raquo; headerByVar(name,var)
+parent: ws
+tags: command csv
+comments: true
+---
+
 
 ### Description
 This command is used to add the header value to web service request by calling variable name.

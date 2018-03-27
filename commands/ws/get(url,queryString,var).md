@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="get(url,queryString,var)" %}
+---
+title: ws &raquo; get(url,queryString,var)
+parent: ws
+tags: command csv
+comments: true
+---
 
 
 ### Description

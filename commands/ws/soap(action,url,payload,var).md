@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="soap(action,url,payload,var)" %}
+---
+title: ws &raquo; soap(action,url,payload,var)
+parent: ws
+tags: command ws
+comments: true
+---
 
 
 ### Description

@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb_index.html current="ws" %}
+---
+title: ws
+tags: command ws api web_service
+comments: true
+---
+
 
 `ws` is short for Web Service.  For Nexial, this refers to any form of HTTP-based web services (i.e. REST, SOAP, etc.).  
 This set of commands provides a set of web service related interactions and validations.  The specific of each 

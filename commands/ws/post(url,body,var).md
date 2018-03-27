@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="post(url,body,var)" %}
+---
+title: ws &raquo; post(url,body,var)
+parent: ws
+tags: command ws
+comments: true
+---
+
 
 ### Description 
 This command is used to send POST request to the given endpoint URL. This could be used for both SOAP and RESTful 

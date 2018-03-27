@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="put(url,body,var)" %}
+---
+title: ws &raquo; put(url,body,var)
+parent: ws
+tags: command ws
+comments: true
+---
 
 
 ### Description

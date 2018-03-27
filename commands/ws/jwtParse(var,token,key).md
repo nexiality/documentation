@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="jwtParse(var,token,key)" %}
+---
+title: ws &raquo; jwtParse(var,token,key)
+parent: ws
+tags: command csv
+comments: true
+---
+
 
 ### Description
 This command parses the the JWT Token to get the payload with provided digitally signed key, and stores it to `var`.

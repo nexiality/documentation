@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="head(url,var)" %}
+---
+title: ws &raquo; head(url,var)
+parent: ws
+tags: command csv
+comments: true
+---
+
 
 ### Description
 This command is identical to GET except that the server MUST NOT return a message-body in the response. The meta 

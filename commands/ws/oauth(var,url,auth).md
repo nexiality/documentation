@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="oauth(var,url,auth)" %}
+---
+title: ws &raquo; oauth(var,url,auth)
+parent: ws
+tags: command csv
+comments: true
+---
+
 
 ### Description
 This command simulate the OAuth exchange in order to obtain an authority token for granting access to otherwise 

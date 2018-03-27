@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="delete(url,body,var)" %}
+---
+title: ws &raquo; delete(url,body,var)
+parent: ws
+tags: command csv
+comments: true
+---
 
 
 ### Description

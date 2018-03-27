@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="patch(url,body,var)" %}
+---
+title: ws &raquo; patch(url,body,var)
+parent: ws
+tags: command ws
+comments: true
+---
+
 
 ### Description
 This command is used to send a HTTP PATCH request to the given endpoint url with the given request payload
