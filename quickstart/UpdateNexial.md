@@ -1,9 +1,9 @@
 ---
-title: Quick Start &raquo; Update Nexial
+title: Update Nexial
+parent: Quick Start
 tags: update release
 comments: true
 ---
-{% include_relative _breadcrumb.html current="Update Nexial" %}
 
 
 ## Download Nexial

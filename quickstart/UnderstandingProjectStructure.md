@@ -1,9 +1,9 @@
 ---
-title: Quick Start &raquo; Understanding Project Structure
+title: Understanding Project Structure
+parent: Quick Start
 tags: project structure project.properties script
 comments: true
 ---
-{% include_relative _breadcrumb.html current="Understanding Project Structure" %}
 
 
 Below is the general directory/file structure of a Nexial project:

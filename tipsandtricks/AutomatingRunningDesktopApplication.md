@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="Automating Running Desktop Application" %}
+---
+title: Automating Running Desktop Application
+parent: Tips and Tricks
+tags: desktop winium
+comments: true
+---
 
 
 ### Automating running desktop application (i.e. speed up script development)

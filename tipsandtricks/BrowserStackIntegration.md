@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="BrowserStack Integration" %}
+---
+title: BrowserStack Integration
+parent: Tips and Tricks
+tags: browserstack browser web
+comments: true
+---
 
 
 ### Description

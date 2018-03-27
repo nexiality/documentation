@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="Execute Scripts in Headless Browser" %}
+---
+title: Execute Scripts in Headless Browser
+parent: Tips and Tricks
+tags: desktop winium
+comments: true
+---
 
 
 ### Execute Scripts in Headless Browser

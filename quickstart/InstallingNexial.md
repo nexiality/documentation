@@ -1,9 +1,9 @@
 ---
-title: Quick Start &raquo; Installing Nexial
-tags: command jms
+title: Installing Nexial
+parent: Quick Start
+tags: installation install nexial quickstart
 comments: true
 ---
-{% include_relative _breadcrumb.html current="Installing Nexial" %}
 
 
 ## Install Java

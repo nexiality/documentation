@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="XPath for better desktop automation performance" %}
+---
+title: XPath for Better Desktop Automation Performance
+parent: Tips and Tricks
+tags: desktop winium
+comments: true
+---
+
 
 ### XPath for better desktop automation performance
 Nexial auto scans the desktop elements by using `XPATH`, that is being provided through `application.json` file for 

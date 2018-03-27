@@ -1,4 +1,10 @@
-{% include_relative _breadcrumb.html current="Resolving Winium errors when running Desktop Automation" %}
+---
+title: Resolving Winium errors when running Desktop Automation
+parent: Tips and Tricks
+tags: desktop winium
+comments: true
+---
+
 
 ### Getting Error While Starting Winium Driver
 **Context:**

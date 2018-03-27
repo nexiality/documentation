@@ -1,9 +1,9 @@
 ---
-title: Quick Start &raquo; Introduction and FAQ
+title: Introduction and FAQ
+parent: Quick Start
 tags: command quickstart introduction faq design benefit
 comments: true
 ---
-{% include_relative _breadcrumb.html current="Introduction and FAQ" %}
 
 
 ![logo](../image/logo-x.png)

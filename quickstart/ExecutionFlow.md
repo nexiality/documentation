@@ -1,9 +1,9 @@
 ---
-title: Quick Start &raquo; Automation Execution Flow
-tags: execution_flow failfast
+title: Automation Execution Flow
+parent: Quick Start
+tags: execution flow
 comments: true
 ---
-{% include_relative _breadcrumb.html current="Automation Execution Flow" %}
 
 
 There's probably a better place for this... A number of inquiries have surfaced as to the 'nitty-gritty' of 

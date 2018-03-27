@@ -1,4 +1,9 @@
-{% include_relative _breadcrumb.html current="Create new test script, test data or test plan" %}
+---
+title: Create new test script, test data or test plan
+parent: Tips and Tricks
+tags: testplan testscript testdata script data plan excel
+comments: true
+---
 
 
 ### When you want to create a new test script, how would you get a blank script to start with?
