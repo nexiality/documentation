@@ -38,17 +38,17 @@ Also:<br/>
 
 The properties file is located at **C:/Projects/MyFirstProject/artifact/data/** and the name of the file is **file.properties**
 
-![](image/CONFIGexpression_01.PNG)
+![](image/CONFIGexpression_01.png)
 
 **script:**
 
-![](image/CONFIGexpression_02.PNG)
+![](image/CONFIGexpression_02.png)
 
 **Result**:
 
-![](image/CONFIGexpression_03.PNG)
+![](image/CONFIGexpression_03.png)
 
-![](image/CONFIGexpression_04.PNG)
+![](image/CONFIGexpression_04.png)
 
 The file x.properties is updated with the following content:-
 
