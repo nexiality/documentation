@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to double  click element on the page as per the locator and wait for time defined as input parameter.
-*   The command requires xpath locator of the button element on the page
+- This command is to double  click element on the page as per the locator and wait for time defined as input parameter.
+- The command requires xpath locator of the button element on the page
 
 ### Parameter(s)
 
@@ -17,15 +17,13 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/doubleClickAndWait_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/doubleClickAndWait_02.png)
 
 ### See Also
 
-*   [`doubleClick(locator)`](doubleClick(locator))
-*   [`click(locator)`](click(locator))
+- [`doubleClick(locator)`](doubleClick(locator))
+- [`click(locator)`](click(locator))

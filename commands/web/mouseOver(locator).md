@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command will move the mouse to the desired element or control as per the locator defined.
-*   In other words the mouse will move to the element if found or else fail otherwise.
+- This command will move the mouse to the desired element or control as per the locator defined.
+- In other words the mouse will move to the element if found or else fail otherwise.
 
 ### Parameter(s)
 
@@ -16,14 +16,12 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/mouseOver_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/mouseOver_02.png)
 
 ### See Also
 
-*    [`web`](index)
+- [`web`](index)

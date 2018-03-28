@@ -7,21 +7,19 @@ comments: true
 
 ### Description
 
-*   This command is to dismiss the invalid certificate for any website.
-*   In other words if there is any unsecured websites with invalid certificate, this command will dismiss invalid certificate and pass or else fail otherwise.
-*   This command does not require any input parameters
+- This command is to dismiss the invalid certificate for any website.
+- In other words if there is any unsecured websites with invalid certificate, this command will dismiss invalid certificate and pass or else fail otherwise.
+- This command does not require any input parameters
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/dismissInvalidCert_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/dismissInvalidCert_02.png)
 
 ### See Also
 
-*   [`open(url)`](open(url))
-*   [`dismissInvalidCertPopup()`](dismissInvalidCertPopup())
+- [`open(url)`](open(url))
+- [`dismissInvalidCertPopup()`](dismissInvalidCertPopup())

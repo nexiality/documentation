@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to wait till the desired time(in milli seconds) as passed as input parameters.
-*   The command will wait till the desire time and pass or else fail otherwise.
+- This command is to wait till the desired time(in milli seconds) as passed as input parameters.
+- The command will wait till the desire time and pass or else fail otherwise.
 
 ### Parameter(s)
 
@@ -20,11 +20,10 @@ comments: true
 
 ![](image/wait_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/wait_02.png)
 
 ### See Also
 
-*    [`openAndWait(url,waitMs)`](openAndWait(url,waitMs))
-*   [`waitFor(waitMs)`](../base/waitFor(waitMs))
+- [`openAndWait(url,waitMs)`](openAndWait(url,waitMs))
+- [`waitFor(waitMs)`](../base/waitFor(waitMs))

@@ -8,8 +8,8 @@ comments: true
 
 ### Description
 
-*   This command is to assert if the focus is on the element.
-*   The command will pass in the focus is on the element or else fail otherwise.
+- This command is to assert if the focus is on the element.
+- The command will pass in the focus is on the element or else fail otherwise.
 
 ### Parameter(s)
 
@@ -17,14 +17,12 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/assertFocus_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/assertFocus_02.png)
 
 ### See Also
 
-*    [`web`](index.html)
+- [`web`](index.html)

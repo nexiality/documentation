@@ -15,10 +15,10 @@ This command asserts that `text` is not empty - in other word, `text` contains a
 
 
 ### Example
-Script:
+Script:<br/>
 ![script](image/assertNotEmpty_01.png)
 
-Output:
+Output:<br/>
 ![output](image/assertNotEmpty_02.png)
 
 

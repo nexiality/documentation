@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command it to assert the attribute of the web element not present
-*   The command will pass if attribute is not present in the element or fail otherwise.
+- This command it to assert the attribute of the web element not present
+- The command will pass if attribute is not present in the element or fail otherwise.
 
 ### Parameter(s)
 
@@ -17,12 +17,10 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/assertAttributeNotPresent_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/assertAttributeNotPresent_02.png)
 
 ### See Also

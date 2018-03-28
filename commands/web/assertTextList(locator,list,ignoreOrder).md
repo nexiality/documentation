@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to assert the item of the list box.
-*   In other words the command will assert the item of the list box as per the expected list and will pass or else fail otherwise.
+- This command is to assert the item of the list box.
+- In other words the command will assert the item of the list box as per the expected list and will pass or else fail otherwise.
 
 ### Parameter(s)
 
@@ -18,16 +18,14 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/assertTextList_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/assertTextList_02.png)
 
 ### See Also
 
-*    [`assertTextPresent(text)`](assertTextPresent(text).html)
-*   [`assertText(locator,text)`](assertText(locator,text).html)
-*   [`assertTextOrder(locator,descending)`](assertTextOrder(locator,descending).html)
+- [`assertTextPresent(text)`](assertTextPresent(text).html)
+- [`assertText(locator,text)`](assertText(locator,text).html)
+- [`assertTextOrder(locator,descending)`](assertTextOrder(locator,descending).html)

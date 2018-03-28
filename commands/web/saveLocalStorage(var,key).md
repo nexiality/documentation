@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command save the value of a local storage (based on `key`) to the specified `var`.  
-*   If the identified `key` does not resolve to a value (i.e., not found), the specified `var` will be save with no value.
+- This command save the value of a local storage (based on `key`) to the specified `var`.  
+- If the identified `key` does not resolve to a value (i.e., not found), the specified `var` will be save with no value.
 
 ### Parameter(s)
 
@@ -23,4 +23,4 @@ the current browser's local storage has a key named as `__chooser`, with value s
 
 ### See Also
 
-*   [`clearLocalStorage()`](clearLocalStorage())
+- [`clearLocalStorage()`](clearLocalStorage())

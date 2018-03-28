@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to assert frame count on the page.
-*   In other words the command will verify count of the frame on the page and pass or else fail otherwise.
+- This command is to assert frame count on the page.
+- In other words the command will verify count of the frame on the page and pass or else fail otherwise.
 
 ### Parameter(s)
 
@@ -16,14 +16,12 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/assertFrameCount_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/assertFrameCount_02.png)
 
 ### See Also
 
-*    [`assertFramePresent(frameName)`](assertFramePresent(frameName).html)
+- [`assertFramePresent(frameName)`](assertFramePresent(frameName).html)

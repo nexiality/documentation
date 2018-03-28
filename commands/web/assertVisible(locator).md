@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to assert if element is visible on the page.
-*   In other words is element is visible on the page,the command will pass or else fail otherwise.
+- This command is to assert if element is visible on the page.
+- In other words is element is visible on the page,the command will pass or else fail otherwise.
 
 ### Parameter(s)
 
@@ -16,14 +16,12 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/assertVisible_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/assertVisible_02.png)
 
 ### See Also
 
-*    [`assertNotVisible(locator)`](assertNotVisible(locator).html)
+- [`assertNotVisible(locator)`](assertNotVisible(locator).html)

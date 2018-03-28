@@ -7,9 +7,9 @@ comments: true
 
 ### Description
 
-*   This command is to assert text order of the element.
-*   In other words the command will assert the order of the text in the element and will check as per the descending order defined.
-*   The command will pass if the text found with the descending order defined or else fail otherwise.
+- This command is to assert text order of the element.
+- In other words the command will assert the order of the text in the element and will check as per the descending order defined.
+- The command will pass if the text found with the descending order defined or else fail otherwise.
 
 ### Parameter(s)
 
@@ -18,14 +18,12 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/assertTextOrder_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/assertTextOrder_02.png)
 
 ### See Also
 
-*   [`assertTextPresent(text)`](assertTextPresent(text).html)
+- [`assertTextPresent(text)`](assertTextPresent(text).html)

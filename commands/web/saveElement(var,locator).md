@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to save element into variable to be used for future usage.
-*   In other words using this command elements can be saved into variable as per defined locator.
+- This command is to save element into variable to be used for future usage.
+- In other words using this command elements can be saved into variable as per defined locator.
 
 ### Parameter(s)
 
@@ -17,15 +17,13 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/saveElement_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/saveElement_02.png)
 
 ### See Also
 
-*   [`saveAttribute(var,locator,attrName)`](saveAttribute(var,locator,attrName))
-*   [`web`](index)
+- [`saveAttribute(var,locator,attrName)`](saveAttribute(var,locator,attrName))
+- [`web`](index)

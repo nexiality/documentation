@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to assert if the focus is not on the element.
-*   The command will pass in the focus is not on the element or else fail otherwise.
+- This command is to assert if the focus is not on the element.
+- The command will pass in the focus is not on the element or else fail otherwise.
 
 ### Parameter(s)
 
@@ -20,8 +20,7 @@ comments: true
 
 ![](image/assertNotFocus_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/assertNotFocus_02.png)
 
 ### See Also

@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command it to assert the attribute of the web element is present
-*   The command will pass if desired attribute is present in the element or fail otherwise.
+- This command it to assert the attribute of the web element is present
+- The command will pass if desired attribute is present in the element or fail otherwise.
 
 ### Parameter(s)
 
@@ -21,4 +21,4 @@ comments: true
 
 ### See Also
 
-*    [`web`](index.html)
+- [`web`](index.html)

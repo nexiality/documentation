@@ -7,9 +7,9 @@ comments: true
 
 ### Description
 
-*   This command is to deselect the selected item from the listbox.
-*   In other words this command will unselect the item from the listbox as defined as input parameter.
-*   The command will identify the element deselect the element is it is selected and pass or else fail otherwise.
+- This command is to deselect the selected item from the listbox.
+- In other words this command will unselect the item from the listbox as defined as input parameter.
+- The command will identify the element deselect the element is it is selected and pass or else fail otherwise.
 
 ### Parameter(s)
 
@@ -20,10 +20,9 @@ comments: true
 
 ![](image/deselectMulti_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/deselectMulti_02.png)
 
 ### See Also
 
-*    [`selectMultiOptions(locator)`](selectMultiOptions(locator))
+- [`selectMultiOptions(locator)`](selectMultiOptions(locator))

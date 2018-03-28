@@ -7,22 +7,20 @@ comments: true
 
 ### Description
 
-*   This command is to maximize the window of the page.
-*   In other words this command will set the page into maximize mode and pass the command.
-*   There is no input required for this command
+- This command is to maximize the window of the page.
+- In other words this command will set the page into maximize mode and pass the command.
+- There is no input required for this command
 
 ### Parameter(s)
-*   None
+- None
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/maximizeWindow_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/maximizeWindow_02.png)
 
 ### See Also
 
-*   [`web`](index)
+- [`web`](index)

@@ -7,9 +7,9 @@ comments: true
 
 ### Description
 
-*   This command is to click the element by label.
-*   In other words the command will click on the element as per the label of the element provided as input.
-*   The command will click element if found and pass or else fail otherwise.
+- This command is to click the element by label.
+- In other words the command will click on the element as per the label of the element provided as input.
+- The command will click element if found and pass or else fail otherwise.
 
 ### Parameter(s)
 
@@ -17,15 +17,13 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/clickByLabel_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/clickByLabel_02.png)
 
 ### See Also
 
-*   [`click(locator)`](click(locator).html)
-*   [`clickByLabelAndWait(label,waitMs)`](clickByLabelAndWait(label,waitMs).html)
+- [`click(locator)`](click(locator).html)
+- [`clickByLabelAndWait(label,waitMs)`](clickByLabelAndWait(label,waitMs).html)

@@ -7,7 +7,7 @@ comments: true
 
 ### Description
 
-*   This command will save all ID of all open windows/tabs of the current browser instance.  These IDs are saved as an array to the specified `var` variable.  If the current browser is not active or has been completely shut down, then no data will be saved to the specified `var` variable.
+- This command will save all ID of all open windows/tabs of the current browser instance.  These IDs are saved as an array to the specified `var` variable.  If the current browser is not active or has been completely shut down, then no data will be saved to the specified `var` variable.
 
 ### Parameter(s)
 
@@ -15,18 +15,16 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/saveAllWindowIds_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/saveAllWindowIds_02.png)
 
 ### See Also
 
-*   [`saveAllWindowNames(var)`](saveAllWindowNames(var))
-*   [`selectWindow(winId)`](selectWindow(winId))
-*   [`selectWindowByIndex(index)`](selectWindowByIndex(index))
-*   [`selectWindowByIndexAndWait(index,waitMs)`](selectWindowByIndexAndWait(index,waitMs))
-*   [`selectWindowAndWait(winId,waitMs)`](selectWindowAndWait(winId,waitMs))
+- [`saveAllWindowNames(var)`](saveAllWindowNames(var))
+- [`selectWindow(winId)`](selectWindow(winId))
+- [`selectWindowByIndex(index)`](selectWindowByIndex(index))
+- [`selectWindowByIndexAndWait(index,waitMs)`](selectWindowByIndexAndWait(index,waitMs))
+- [`selectWindowAndWait(winId,waitMs)`](selectWindowAndWait(winId,waitMs))

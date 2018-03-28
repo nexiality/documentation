@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to select browser window by index and wait for desired time.
-*   In other words the command will select the window on the basis of the index identified, wait for the time specified and will pass or else fail otherwise.
+- This command is to select browser window by index and wait for desired time.
+- In other words the command will select the window on the basis of the index identified, wait for the time specified and will pass or else fail otherwise.
 
 ### Parameter(s)
 
@@ -27,7 +27,7 @@ comments: true
 
 ### See Also
 
-*    [`saveAllWindowNames(var)`](saveAllWindowNames(var))
-*   [`selectWindow(winId)`](selectWindow(winId))
-*   [`selectWindowByIndex(index)`](selectWindowByIndex(index))
-*   [`selectWindowAndWait(winId,waitMs)`](selectWindowAndWait(winId,waitMs))
+- [`saveAllWindowNames(var)`](saveAllWindowNames(var))
+- [`selectWindow(winId)`](selectWindow(winId))
+- [`selectWindowByIndex(index)`](selectWindowByIndex(index))
+- [`selectWindowAndWait(winId,waitMs)`](selectWindowAndWait(winId,waitMs))

@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to type in keystrokes onto the web element specified via `locator`.  Keystrokes maybe alphanumeric, punctuations, control keys (see below), or a combination of them.  If the specified `locator` does not result in a valid web element, or if the target web element does not accept keystroke (e.g. `<hr/>`), then this command will FAIL.
-*   The acceptable control keys can be specified as follows:
+- This command is to type in keystrokes onto the web element specified via `locator`.  Keystrokes maybe alphanumeric, punctuations, control keys (see below), or a combination of them.  If the specified `locator` does not result in a valid web element, or if the target web element does not accept keystroke (e.g. `<hr/>`), then this command will FAIL.
+- The acceptable control keys can be specified as follows:
 
 {TAB}  
 {BACKSPACE}  
@@ -50,8 +50,7 @@ comments: true
 
 ![](image/typeKeys_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/typeKeys_02.png)
 
 ### See Also

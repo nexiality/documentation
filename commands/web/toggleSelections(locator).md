@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to toggle the selection on the web page.
-*   In other words the command will toggle the button as per the locator identified and pass or else fail otherwise.
+- This command is to toggle the selection on the web page.
+- In other words the command will toggle the button as per the locator identified and pass or else fail otherwise.
 
 ### Parameter(s)
 
@@ -18,10 +18,9 @@ comments: true
 
 ![](image/toggleSelections_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/toggleSelections_02.png)
 
 ### See Also
 
-*   [`select(locator,text)`](select(locator,text))
+- [`select(locator,text)`](select(locator,text))

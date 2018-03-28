@@ -19,10 +19,10 @@ be irrelevant, unstable or contradictory to the intent of the test.
 
 
 ### Example
-Script:
+Script:<br/>
 ![script](image/failImmediate_01.png)
 
-Output:
+Output:<br/>
 ![output](image/failImmediate_02.png)
 
 

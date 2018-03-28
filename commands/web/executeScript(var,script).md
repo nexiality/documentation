@@ -17,16 +17,14 @@ This command allows the execution of an arbitary Javacript on the current browse
 ### Parameter(s)
 
 - **var** - the variable to hold any return value from the executed script.
-- **script** - the script to execute.  Note that Sentry does not provide any syntactical or semantic validation of the script.
+- **script** - the script to execute.  Note that Nexial does not provide any syntactical or semantic validation of the script.
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/executeScript_01.png)
 
-Output:
-
+Output:<br/>
 The script would execute and the browser thus react accordingly
 
 ### See Also

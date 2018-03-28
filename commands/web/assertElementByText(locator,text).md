@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command will assert element as per the text present of the element.
-*   In other words the command will assert the desired text on the element and pass or else fail otherwise.
+- This command will assert element as per the text present of the element.
+- In other words the command will assert the desired text on the element and pass or else fail otherwise.
 
 ### Parameter(s)
 
@@ -17,16 +17,14 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/assertElementByText_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/assertElementByText_02.png)
 
 ### See Also
 
-*   [`assertElementNotPresent(locator)`](assertElementNotPresent(locator).html)
-*   [`assertTextPresent(text)`](assertTextPresent(text).html)
-*   [`assertElementByAttributes(nameValues)`](assertElementByAttributes(nameValues).html)
+- [`assertElementNotPresent(locator)`](assertElementNotPresent(locator).html)
+- [`assertTextPresent(text)`](assertTextPresent(text).html)
+- [`assertElementByAttributes(nameValues)`](assertElementByAttributes(nameValues).html)

@@ -7,9 +7,9 @@ comments: true
 
 ### Description
 
-*   This command is to select element Text as per found with locator.
-*   In other words the command will select is text found on the element and pass or else fail otherwise.
-*   Also make sure this command works if the attribute of the element contains "id".Meaning when xpath is defined it will look for attribute "id" in element.If found command would be successful and pass or else will throw error.
+- This command is to select element Text as per found with locator.
+- In other words the command will select is text found on the element and pass or else fail otherwise.
+- Also make sure this command works if the attribute of the element contains "id".Meaning when xpath is defined it will look for attribute "id" in element.If found command would be successful and pass or else will throw error.
 
 ### Parameter(s)
 
@@ -17,14 +17,12 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/selectText_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/selectText_02.png)
 
 ### See Also
 
-*    [`selectMultiOptions(locator)`](selectMultiOptions(locator))
+- [`selectMultiOptions(locator)`](selectMultiOptions(locator))

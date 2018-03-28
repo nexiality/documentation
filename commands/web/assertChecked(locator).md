@@ -7,9 +7,9 @@ comments: true
 
 ### Description
 
-*   This command is to assert if the element is checked.
-*   This is mostly useful to identify the checkbox or radio button element
-*   The command will pass if required attribute is present and checked or fail otherwise.
+- This command is to assert if the element is checked.
+- This is mostly useful to identify the checkbox or radio button element
+- The command will pass if required attribute is present and checked or fail otherwise.
 
 ### Parameter(s)
 
@@ -17,12 +17,10 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/assertChecked_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/assertChecked_02.png)
 
 ### See Also

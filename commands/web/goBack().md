@@ -8,9 +8,9 @@ comments: true
 
 ### Description
 
-*   This command will navigate back to previous page.
-*   In other words the command will navigate back to previous page and pass or else fail otherwise.
-*   This command does not require any input parameters.  
+- This command will navigate back to previous page.
+- In other words the command will navigate back to previous page and pass or else fail otherwise.
+- This command does not require any input parameters.  
       
     
 
@@ -24,4 +24,4 @@ Output
 
 ### See Also
 
-*    [`goBackAndWait()`](goBackAndWait())
+- [`goBackAndWait()`](goBackAndWait())

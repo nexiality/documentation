@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command it to assert the attribute of the web element.
-*   The command will pass if element found and required attribute is identified or fail otherwise.
+- This command it to assert the attribute of the web element.
+- The command will pass if element found and required attribute is identified or fail otherwise.
 
 ### Parameter(s)
 
@@ -18,12 +18,10 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/assertAttribute_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/assertAttribute_02.png)
 
 ### See Also

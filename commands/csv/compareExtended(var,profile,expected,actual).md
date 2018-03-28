@@ -173,7 +173,7 @@ see above for parameter details
 
 
 ### Example
-Script:
+Script:<br/>
 ![script](image/compareExtended_06.png)
 
 Data file:<br/>

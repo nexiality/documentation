@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is used to upload file in web browser.
-*   in other words command will upload the file in web browser and pass or else fail otherwise.
+- This command is used to upload file in web browser.
+- in other words command will upload the file in web browser and pass or else fail otherwise.
 
 ### Parameter(s)
 
@@ -17,12 +17,10 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/upload_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/upload_02.png)
 
 ### See Also

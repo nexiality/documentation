@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to assert is the element is not present as per the defined locator.
-*   In other words command will look for element not present as per the locator and pass or else fail otherwise.
+- This command is to assert is the element is not present as per the defined locator.
+- In other words command will look for element not present as per the locator and pass or else fail otherwise.
 
 ### Parameter(s)
 
@@ -16,15 +16,13 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/assertElementNotPresent_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/assertElementNotPresent_02.png)
 
 ### See Also
 
-*   [`assertElementPresent(locator)`](assertElementPresent(locator).html)
-*   [`assertAttributePresent(locator,attrName)`](assertAttributePresent(locator,attrName).html)
+- [`assertElementPresent(locator)`](assertElementPresent(locator).html)
+- [`assertAttributePresent(locator,attrName)`](assertAttributePresent(locator,attrName).html)

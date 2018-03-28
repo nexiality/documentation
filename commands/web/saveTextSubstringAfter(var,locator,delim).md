@@ -7,9 +7,9 @@ comments: true
 
 ### Description
 
-*   This command is to sub string the text and get the text after the defined delimiter as input command.
-*   The command will sub string the text found from element and return after text from the delimiter.
-*   The command will return the after text from defined delimiter and pass the command or else fail otherwise.
+- This command is to sub string the text and get the text after the defined delimiter as input command.
+- The command will sub string the text found from element and return after text from the delimiter.
+- The command will return the after text from defined delimiter and pass the command or else fail otherwise.
 
 ### Parameter(s)
 
@@ -19,15 +19,13 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/saveTextSubstringAfter_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/saveTextSubstringAfter_02.png)
 
 ### See Also
 
-*   [`saveTextSubstringBetween(var,locator,start,end)`](saveTextSubstringBetween(var,locator,start,end))
-*   [`saveTextSubstringBefore(var,locator,delim)`](saveTextSubstringBefore(var,locator,delim))
+- [`saveTextSubstringBetween(var,locator,start,end)`](saveTextSubstringBetween(var,locator,start,end))
+- [`saveTextSubstringBefore(var,locator,delim)`](saveTextSubstringBefore(var,locator,delim))

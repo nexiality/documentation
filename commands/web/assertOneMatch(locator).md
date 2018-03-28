@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to make sure and assert only one instance of element is present.
-*   In other words if we defined locator if there is only one match found then command will pass or else fail otherwise
+- This command is to make sure and assert only one instance of element is present.
+- In other words if we defined locator if there is only one match found then command will pass or else fail otherwise
 
 ### Parameter(s)
 
@@ -16,14 +16,12 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/assertOneMatch_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/assertOneMatch_02.png)
 
 ### See Also
 
-*    [`web`](index.html)
+- [`web`](index.html)

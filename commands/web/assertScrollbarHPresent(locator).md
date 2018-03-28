@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to verify if element contains horizontal scroll bar.
-*   In other words the command will pass if the element has horizontal scroll bar or else fail otherwise.
+- This command is to verify if element contains horizontal scroll bar.
+- In other words the command will pass if the element has horizontal scroll bar or else fail otherwise.
 
 ### Parameter(s)
 
@@ -16,14 +16,13 @@ comments: true
 
 ### Example
 
-Script:
+Script:<br/>
       
 ![](image/assertScrollbarHPresent_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/assertScrollbarHPresent_02.png)
 
 ### See Also
 
-*    [`assertScrollbarVPresent(locator)`](assertScrollbarVPresent(locator).html)
+- [`assertScrollbarVPresent(locator)`](assertScrollbarVPresent(locator).html)

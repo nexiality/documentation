@@ -31,7 +31,7 @@ Just provide the file path as an argument. And also has the option to pass argum
 path.
 ![script](image/runProgram_02.png)
 
-Output:
+Output:<br/>
 ![output](image/runProgram_03.png)
 
 The standard output from this program is saved in the output file, that can be found in the corresponding project 

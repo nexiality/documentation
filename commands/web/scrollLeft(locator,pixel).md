@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to scroll left of the scroll element.
-*   In other words the command will scroll left to the defined pixel if element found and will pass the command or else fail otherwise.
+- This command is to scroll left of the scroll element.
+- In other words the command will scroll left to the defined pixel if element found and will pass the command or else fail otherwise.
 
 ### Parameter(s)
 
@@ -17,14 +17,12 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/scrollLeft_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/scrollLeft_02.png)
 
 ### See Also
 
-*    [`scrollTo(locator)`](scrollTo(locator))
+- [`scrollTo(locator)`](scrollTo(locator))

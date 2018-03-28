@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to wait for the title of the page.
-*   In other words command will wait for desired  title and pass if found or else fail otherwise.
+- This command is to wait for the title of the page.
+- In other words command will wait for desired  title and pass if found or else fail otherwise.
 
 ### Parameter(s)
 
@@ -16,14 +16,12 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/waitForTitle_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/waitForTitle_02.png)
 
 ### See Also
 
-*    [`web`](index)
+- [`web`](index)

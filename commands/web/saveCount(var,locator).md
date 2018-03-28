@@ -7,9 +7,9 @@ comments: true
 
 ### Description
 
-*   This command to to save the count of the element found as per the locator passed into command.
-*   In other words command will save the count of the element into defined variable to be used for future usage.
-*   The command will pass if the element found and return element count as pr locator defined or else fail otherwise.
+- This command to to save the count of the element found as per the locator passed into command.
+- In other words command will save the count of the element into defined variable to be used for future usage.
+- The command will pass if the element found and return element count as pr locator defined or else fail otherwise.
 
 ### Parameter(s)
 
@@ -18,15 +18,13 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/saveCount_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/saveCount_02.png)
 
 ### See Also
 
-*   [`saveAttribute(var,locator,attrName)`](saveAttribute(var,locator,attrName))  
-*   [`assertElementPresent(locator)`](assertElementPresent(locator))
+- [`saveAttribute(var,locator,attrName)`](saveAttribute(var,locator,attrName))  
+- [`assertElementPresent(locator)`](assertElementPresent(locator))

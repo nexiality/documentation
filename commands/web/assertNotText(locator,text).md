@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to assert if the desired text is not found on the element
-*   The command will pass if desired text not found or else fail otherwise.
+- This command is to assert if the desired text is not found on the element
+- The command will pass if desired text not found or else fail otherwise.
 
 ### Parameter(s)
 
@@ -17,12 +17,10 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/assertNotText_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/assertNotText_02.png)
 
 ### See Also

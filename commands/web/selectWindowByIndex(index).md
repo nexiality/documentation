@@ -7,7 +7,7 @@ comments: true
 
 ### Description
 
-*   This command is to select an open tab/window by index, which are determined on the order of when the corresponding window/tab being opened.
+- This command is to select an open tab/window by index, which are determined on the order of when the corresponding window/tab being opened.
 
 ### Parameter(s)
 
@@ -25,7 +25,7 @@ comments: true
 
 ### See Also
 
-*   [`saveAllWindowNames(var)`](saveAllWindowNames(var))
-*   [`selectWindow(winId)`](selectWindow(winId))
-*   [`selectWindowByIndexAndWait(index,waitMs)`](selectWindowByIndexAndWait(index,waitMs))
-*   [`selectWindowAndWait(winId,waitMs)`](selectWindowAndWait(winId,waitMs))
+- [`saveAllWindowNames(var)`](saveAllWindowNames(var))
+- [`selectWindow(winId)`](selectWindow(winId))
+- [`selectWindowByIndexAndWait(index,waitMs)`](selectWindowByIndexAndWait(index,waitMs))
+- [`selectWindowAndWait(winId,waitMs)`](selectWindowAndWait(winId,waitMs))

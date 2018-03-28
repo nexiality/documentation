@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to assert title of the page.
-*   In other words command will verify desired  title and pass if found or else fail otherwise.
+- This command is to assert title of the page.
+- In other words command will verify desired  title and pass if found or else fail otherwise.
 
 ### Parameter(s)
 
@@ -16,15 +16,13 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/assertTitle_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/assertTitle_02.png)
 
 ### See Also
 
-*    [`web`](index.html)
-*   [`open(url)`](open(url).html)
+- [`web`](index.html)
+- [`open(url)`](open(url).html)

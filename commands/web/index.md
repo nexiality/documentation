@@ -4,34 +4,36 @@ tags: command web
 comments: true
 ---
 
-For effective automation of Web application, there are a number of critical technical knowledge and techniques to apply.  In general, it is about applying the right technique of writing locators.  Locators are a collections of ways (8 in total) to identify elements of a web page.  Here's a quick summary of the various locators:
-
+For effective automation of Web application, there are a number of critical technical knowledge and techniques to 
+apply.  In general, it is about applying the right technique of writing locators.  Locators are a collections of ways 
+(8 in total) to identify elements of a web page.  Here's a quick summary of the various locators:<br/>
 ![](image/web_01.png)
 
-There are quite a bit of excellent information on the Web regarding locators.  So rather than writing about it, I'll simply point you to them.  Here they are:
+There are quite a bit of excellent information on the Web regarding locators.  So rather than writing about it, 
+I'll simply point you to them.  Here they are:
 
-_**Note: I should mention that most of the information on the Web about locators are not created from the standpoint of a scriptless or hybrid framework like Sentry.  Reader's discretion is advised.**_
+_**Note: Most of the information on the Web about locators are not created from the standpoint 
+of a scriptless or hybrid framework like Nexial.  Reader's discretion is advised...**_
 
-*   [`https://www.tutorialspoint.com/selenium/selenium_locators.htm`](https://www.tutorialspoint.com/selenium/selenium_locators.htm)
-*   [`http://www.seleniumeasy.com/selenium-tutorials/selenium-locators`](http://www.seleniumeasy.com/selenium-tutorials/selenium-locators)
-*   [`http://www.techbeamers.com/use-locators-selenium/`](http://www.techbeamers.com/use-locators-selenium/)
-*   [`http://artoftesting.com/automationTesting/locators-in-selenium-webdriver.html`](http://artoftesting.com/automationTesting/locators-in-selenium-webdriver.html)
-*   [`http://screenster.io/selenium-locators-tutorial-types-best-practices-and-many-more/`](http://screenster.io/selenium-locators-tutorial-types-best-practices-and-many-more/)
+- [`https://www.tutorialspoint.com/selenium/selenium_locators.htm`](https://www.tutorialspoint.com/selenium/selenium_locators.htm)
+- [`http://www.seleniumeasy.com/selenium-tutorials/selenium-locators`](http://www.seleniumeasy.com/selenium-tutorials/selenium-locators)
+- [`http://www.techbeamers.com/use-locators-selenium/`](http://www.techbeamers.com/use-locators-selenium/)
+- [`http://artoftesting.com/automationTesting/locators-in-selenium-webdriver.html`](http://artoftesting.com/automationTesting/locators-in-selenium-webdriver.html)
+- [`http://screenster.io/selenium-locators-tutorial-types-best-practices-and-many-more/`](http://screenster.io/selenium-locators-tutorial-types-best-practices-and-many-more/)
 
 Those who are familiar with locators know the most expressive and powerful type is XPath.  XPath provides the ability to identify a specific web element (or a group of web elements) via its ID, attributes, relative or absolute position and its hierarchy.  However with great power comes great responsibility as well.  Without careful use, one often end up with very convoluted and unmaintainable XPaths.  Such XPaths are not only hard to read, hard to maintain and brittle by nature, they are so slower to execute.  Simplifying XPath and applying right techniques takes a fair bit of knowledge on XPath itself. Here are some online resources that might be helpful:
 
-*   [`https://www.w3schools.com/xml/xpath_syntax.asp`](https://www.w3schools.com/xml/xpath_syntax.asp)
-*   [`https://automatetheplanet.com/underrated-webdriver-locator-xpath/`](https://automatetheplanet.com/underrated-webdriver-locator-xpath/)
+- [`https://www.w3schools.com/xml/xpath_syntax.asp`](https://www.w3schools.com/xml/xpath_syntax.asp)
+- [`https://automatetheplanet.com/underrated-webdriver-locator-xpath/`](https://automatetheplanet.com/underrated-webdriver-locator-xpath/)
 
 Alternatively one might consider converting XPaths to CSS locators.  To learn more, here's a well known article on this subject:
 
-*   [`https://saucelabs.com/blog/why-css-locators-are-the-way-to-go-vs-xpath`](https://saucelabs.com/blog/why-css-locators-are-the-way-to-go-vs-xpath)
+- [`https://saucelabs.com/blog/why-css-locators-are-the-way-to-go-vs-xpath`](https://saucelabs.com/blog/why-css-locators-are-the-way-to-go-vs-xpath)
 
 Here's an online app to help converting XPath to CSS locator:
 
-*   [`http://cssify.appspot.com/`](http://cssify.appspot.com/)
-*   Screenshot:  
-![](image/web_02.png)
+- [`http://cssify.appspot.com/`](http://cssify.appspot.com/)
+    ![](image/web_02.png)
 
 The "web" command type represents a series of automation commands regarding web operations:
 - [`assertAndClick(locator,label)`](assertAndClick(locator,label))

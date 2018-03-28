@@ -7,9 +7,9 @@ comments: true
 
 ### Description
 
-*   This command is to resize the browser windows.
-*   The command will resize the window as per the width and height defined as input parameters.
-*   The command will pass if the valid input was provided to resize or else fail otherwise.
+- This command is to resize the browser windows.
+- The command will resize the window as per the width and height defined as input parameters.
+- The command will pass if the valid input was provided to resize or else fail otherwise.
 
 ### Parameter(s)
 
@@ -18,14 +18,12 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/resizeWindow_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/resizeWindow_02.png)
 
 ### See Also
 
-*    [`open(url)`](open(url))
+- [`open(url)`](open(url))

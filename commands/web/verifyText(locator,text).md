@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to verify  text of the element.
-*   In other words command will verify the text if found or else fail otherwise.
+- This command is to verify  text of the element.
+- In other words command will verify the text if found or else fail otherwise.
 
 ### Parameter(s)
 
@@ -17,14 +17,12 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/verifyText_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/verifyText_02.png)
 
 ### See Also
 
-*    [`assertText(locator,text)`](assertText(locator,text))
+- [`assertText(locator,text)`](assertText(locator,text))

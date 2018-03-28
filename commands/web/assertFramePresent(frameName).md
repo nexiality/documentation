@@ -8,9 +8,9 @@ comments: true
 
 ### Description
 
-*   This command is to assert Frame Present on the page.
-*   In other words command will find frame present on page as per the frame name defined as input Parameters.
-*   The command will pass if the frame found or else fail otherwise.
+- This command is to assert Frame Present on the page.
+- In other words command will find frame present on page as per the frame name defined as input Parameters.
+- The command will pass if the frame found or else fail otherwise.
 
 ### Parameter(s)
 
@@ -26,4 +26,4 @@ OutPut:
 
 ### See Also
 
-*    [`assertFrameCount(count)`](assertFrameCount(count).html)
+- [`assertFrameCount(count)`](assertFrameCount(count).html)

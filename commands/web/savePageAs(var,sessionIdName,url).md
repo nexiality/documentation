@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to save the session of the page into variable.
-*   In other words the command will save the desired session into variable and pass or else fail otherwise.
+- This command is to save the session of the page into variable.
+- In other words the command will save the desired session into variable and pass or else fail otherwise.
 
 ### Parameter(s)
 
@@ -28,4 +28,4 @@ output:
 
 ### See Also
 
-*    [`savePageAsFile(sessionIdName,url,fileName)`](savePageAsFile(sessionIdName,url,fileName))
+- [`savePageAsFile(sessionIdName,url,fileName)`](savePageAsFile(sessionIdName,url,fileName))

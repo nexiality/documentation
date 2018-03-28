@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to save multiple elements into variable to be used for future usage.
-*   In other words using this command if there are multiple elements found as per defined locator then those can be saved into variable.
+- This command is to save multiple elements into variable to be used for future usage.
+- In other words using this command if there are multiple elements found as per defined locator then those can be saved into variable.
 
 ### Parameter(s)
 
@@ -17,15 +17,13 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/saveElements_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/saveElements_02.png)
 
 ### See Also
 
-*   [`saveElement(var,locator)`](saveElement(var,locator))
-*   [`web`](index)
+- [`saveElement(var,locator)`](saveElement(var,locator))
+- [`web`](index)

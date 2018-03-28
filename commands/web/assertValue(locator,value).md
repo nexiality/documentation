@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to assert value of the element found as per the locator.
-*   The command will pass if the value matches with the expected or else fail otherwise.
+- This command is to assert value of the element found as per the locator.
+- The command will pass if the value matches with the expected or else fail otherwise.
 
 ### Parameter(s)
 
@@ -17,15 +17,13 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/assertValue_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/assertValue_02.png)
 
 ### See Also
 
-*    [`web`](index.html)
-*   [`assertVisible(locator)`](assertVisible(locator).html)
+- [`web`](index.html)
+- [`assertVisible(locator)`](assertVisible(locator).html)

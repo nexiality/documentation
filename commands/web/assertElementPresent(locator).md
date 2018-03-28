@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command it to assert element on the web page.
-*   The command will pass if element  is present or fail otherwise.
+- This command it to assert element on the web page.
+- The command will pass if element  is present or fail otherwise.
 
 ### Parameter(s)
 
@@ -18,10 +18,9 @@ comments: true
 
 ![](image/assertElementPresent_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/assertElementPresent_02.png)
 
 ### See Also
 
-*    [`web`](index.html)
+- [`web`](index.html)

@@ -18,7 +18,7 @@ This command deletes the specified cookie by `name`.
 Script:<br/>
 ![](image/delete_01.png)
 
-Output:
+Output:<br/>
 ![](image/delete_02.png)
 
 

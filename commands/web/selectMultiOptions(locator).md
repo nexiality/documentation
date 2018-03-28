@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to select multiple Items from the list-box.
-*   In other words this command will select multiple items from select element and pass the command or else will fail otherwise.
+- This command is to select multiple Items from the list-box.
+- In other words this command will select multiple items from select element and pass the command or else will fail otherwise.
 
 ### Parameter(s)
 
@@ -16,15 +16,13 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/selectMultiOptions_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/selectMultiOptions_02.png)
 
 ### See Also
 
-*   [`selectMulti(locator,array)`](selectMulti(locator,array))
-*   [`deselectMulti(locator,array)`](deselectMulti(locator,array))
+- [`selectMulti(locator,array)`](selectMulti(locator,array))
+- [`deselectMulti(locator,array)`](deselectMulti(locator,array))

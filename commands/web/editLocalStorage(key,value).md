@@ -9,9 +9,9 @@ comments: true
 
 ### Description
 
-*   This command set (possibly overwrite) the current browser's local storage with the key-value specified.  
-*   Existing key will be overwritten.  
-*   With no value is specified - denoted as `(empty)` \- then the specified `key` will be removed from the local storage.
+- This command set (possibly overwrite) the current browser's local storage with the key-value specified.  
+- Existing key will be overwritten.  
+- With no value is specified - denoted as `(empty)` \- then the specified `key` will be removed from the local storage.
 
 ### Parameter(s)
 
@@ -24,5 +24,5 @@ comments: true
 
 ### See Also
 
-*   [`clearLocalStorage()`](clearLocalStorage())
-*   [`saveLocalStorage(var,key)`](saveLocalStorage(var,key))
+- [`clearLocalStorage()`](clearLocalStorage())
+- [`saveLocalStorage(var,key)`](saveLocalStorage(var,key))

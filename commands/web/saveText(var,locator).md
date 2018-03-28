@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to get the text from element and save to the variable to be used for future reference in test.
-*   In other words this command will get the text from the element and will store to the user defined variable.
+- This command is to get the text from element and save to the variable to be used for future reference in test.
+- In other words this command will get the text from the element and will store to the user defined variable.
 
 ### Parameter(s)
 
@@ -17,16 +17,14 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/saveText_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/saveText_02.png)
 
 ### See Also
 
-*   [`assertElementPresent(locator)`](assertElementPresent(locator))
-*   [`saveTextSubstringAfter(var,locator,delim)`](saveTextSubstringAfter(var,locator,delim))
-*   [`saveTextSubstringBefore(var,locator,delim)`](saveTextSubstringBefore(var,locator,delim))
+- [`assertElementPresent(locator)`](assertElementPresent(locator))
+- [`saveTextSubstringAfter(var,locator,delim)`](saveTextSubstringAfter(var,locator,delim))
+- [`saveTextSubstringBefore(var,locator,delim)`](saveTextSubstringBefore(var,locator,delim))

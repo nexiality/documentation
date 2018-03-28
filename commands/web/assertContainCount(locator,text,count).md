@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to assert the text count in that element
-*   In other words the command will identify the text count in the element as pass or else fail otherwise.
+- This command is to assert the text count in that element
+- In other words the command will identify the text count in the element as pass or else fail otherwise.
 
 ### Parameter(s)
 
@@ -18,16 +18,14 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/assertContainCount_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/assertContainCount_02.png)
 
 ### See Also
 
-*   [`assertTextPresent(text)`](assertTextPresent(text).html)
-*   [`assertTextContains(locator,text)`](assertTextContains(locator,text).html)
-*   [`verifyText(locator,text)`](verifyText(locator,text).html)
+- [`assertTextPresent(text)`](assertTextPresent(text).html)
+- [`assertTextContains(locator,text)`](assertTextContains(locator,text).html)
+- [`verifyText(locator,text)`](verifyText(locator,text).html)

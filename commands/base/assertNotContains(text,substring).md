@@ -16,10 +16,10 @@ This command asserts that `text` does not contain `substring`.
 
 
 ### Example
-Script:
+Script:<br/>
 ![script](image/assertNotContains_01.png)
 
-Output:
+Output:<br/>
 ![output](image/assertNotContains_01.png)
 
 

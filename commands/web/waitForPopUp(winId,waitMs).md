@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to wait for the desired web windows browser pop up.
-*   In other words command will look for pop up till the desired window id and wait for the desired time and pass or else fail otherwise.
+- This command is to wait for the desired web windows browser pop up.
+- In other words command will look for pop up till the desired window id and wait for the desired time and pass or else fail otherwise.
 
 ### Parameter(s)
 
@@ -17,17 +17,15 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/waitForPopUp_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/waitForPopUp_02.png)
 
 ### See Also
 
-*   [`selectWindow(winId)`](selectWindow(winId))
-*   [`selectWindowByIndex(index)`](selectWindowByIndex(index))
-*   [`selectWindowByIndexAndWait(index,waitMs)`](selectWindowByIndexAndWait(index,waitMs))
-*   [`selectWindowAndWait(winId,waitMs)`](selectWindowAndWait(winId,waitMs))
+- [`selectWindow(winId)`](selectWindow(winId))
+- [`selectWindowByIndex(index)`](selectWindowByIndex(index))
+- [`selectWindowByIndexAndWait(index,waitMs)`](selectWindowByIndexAndWait(index,waitMs))
+- [`selectWindowAndWait(winId,waitMs)`](selectWindowAndWait(winId,waitMs))

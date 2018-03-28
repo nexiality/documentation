@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to save the attributes of the element found as per defined locator.
-*   The attributes can be stored into variable and can be used for future validation.
+- This command is to save the attributes of the element found as per defined locator.
+- The attributes can be stored into variable and can be used for future validation.
 
 ### Parameter(s)
 
@@ -18,15 +18,14 @@ comments: true
 
 ### Example
 
-Script:
+Script:<br/>
        
 ![](image/saveAttribute_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/saveAttribute_02.png)
 
 ### See Also
 
-*   [`web`](index)
-*   [`assertAttributePresent(locator,attrName)`](assertAttributePresent(locator,attrName))
+- [`web`](index)
+- [`assertAttributePresent(locator,attrName)`](assertAttributePresent(locator,attrName))

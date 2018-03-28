@@ -7,9 +7,9 @@ comments: true
 
 ### Description
 
-*   This command is to get between text from the defined start and end point of the actual text.
-*   The command will return the string between start and end point
-*   The command will return the sub set of the text in between and pass the command or else fail otherwise.
+- This command is to get between text from the defined start and end point of the actual text.
+- The command will return the string between start and end point
+- The command will return the sub set of the text in between and pass the command or else fail otherwise.
 
 ### Parameter(s)
 
@@ -24,11 +24,10 @@ script
 
 ![](image/saveTextSubstringBetween_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/saveTextSubstringBetween_02.png)
 
 ### See Also
 
-*   [`saveTextSubstringBefore(var,locator,delim)`](saveTextSubstringBefore(var,locator,delim))
-*   [`saveTextSubstringAfter(var,locator,delim)`](saveTextSubstringAfter(var,locator,delim))
+- [`saveTextSubstringBefore(var,locator,delim)`](saveTextSubstringBefore(var,locator,delim))
+- [`saveTextSubstringAfter(var,locator,delim)`](saveTextSubstringAfter(var,locator,delim))

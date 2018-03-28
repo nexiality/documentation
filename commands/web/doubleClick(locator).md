@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to double  click element on the page as per the locator.
-*   The command requires xpath locator of the button element on the page.
+- This command is to double  click element on the page as per the locator.
+- The command requires xpath locator of the button element on the page.
 
 ### Parameter(s)
 
@@ -16,15 +16,13 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/doubleClick_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/doubleClick_02.png)
 
 ### See Also
 
-*   [`click(locator)`](click(locator))
-*   [`doubleClickAndWait(locator,waitMs)`](doubleClickAndWait(locator,waitMs))
+- [`click(locator)`](click(locator))
+- [`doubleClickAndWait(locator,waitMs)`](doubleClickAndWait(locator,waitMs))

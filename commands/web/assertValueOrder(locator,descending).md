@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to assert the order of the item in listbox.
-*   In other words the  the command will assert the order of the value in listbox is as expected or not and pass the command or else fail otherwise.
+- This command is to assert the order of the item in listbox.
+- In other words the  the command will assert the order of the value in listbox is as expected or not and pass the command or else fail otherwise.
 
 ### Parameter(s)
 
@@ -27,6 +27,6 @@ output:
 
 ### See Also
 
-*   [`selectMultiOptions(locator)`](selectMultiOptions(locator).html)
-*   [`selectMulti(locator,array)`](selectMulti(locator,array).html)
-*   [`deselectMulti(locator,array)`](deselectMulti(locator,array).html)
+- [`selectMultiOptions(locator)`](selectMultiOptions(locator).html)
+- [`selectMulti(locator,array)`](selectMulti(locator,array).html)
+- [`deselectMulti(locator,array)`](deselectMulti(locator,array).html)

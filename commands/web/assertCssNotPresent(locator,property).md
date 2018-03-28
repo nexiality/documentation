@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to assert if any cascading style sheet not present in the element.
-*   In other words command will assert if css not present for that element,The command will pass or else fail otherwise,
+- This command is to assert if any cascading style sheet not present in the element.
+- In other words command will assert if css not present for that element,The command will pass or else fail otherwise,
 
 ### Parameter(s)
 
@@ -17,14 +17,12 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/assertCssNotPresent_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/assertCssNotPresent_02.png)
 
 ### See Also
 
-*   [`assertCssPresent(locator,property,value)`](assertCssPresent(locator,property,value).html)
+- [`assertCssPresent(locator,property,value)`](assertCssPresent(locator,property,value).html)

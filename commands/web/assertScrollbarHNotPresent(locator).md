@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command will look for horizontal scroll bar not present in element.
-*   If there are no horizontal scroll bar found in element, the command will pass or else fail otherwise.
+- This command will look for horizontal scroll bar not present in element.
+- If there are no horizontal scroll bar found in element, the command will pass or else fail otherwise.
 
 ### Parameter(s)
 
@@ -16,14 +16,12 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/assertScrollbarHNotPresent_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/assertScrollbarHNotPresent_02.png)
 
 ### See Also
 
-*    [`web`](index.html)
+- [`web`](index.html)

@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 
-*   This command is to assert if the defined text is present on current page.
-*   In other words If required text is found the assertion will pass or else fail otherwise.
+- This command is to assert if the defined text is present on current page.
+- In other words If required text is found the assertion will pass or else fail otherwise.
 
 ### Parameter(s)
 
@@ -16,12 +16,10 @@ comments: true
 
 ### Example
 
-Script:
-
+Script:<br/>
 ![](image/assertTextPresent_01.png)
 
-Output:
-
+Output:<br/>
 ![](image/assertTextPresent_02.png)
 
 ### See Also
