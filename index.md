@@ -34,17 +34,17 @@ the **[Introduction](quickstart/IntroductionAndFAQ)** page.
 
 ---------------------------------------------
 
-<a href="quickstart"><div class="quick_link">quick start</div></a>
-<a href="commands"><div class="quick_link">command reference</div></a>
-<a href="systemvars"><div class="quick_link">system variables</div></a>
-<a href="flowcontrols"><div class="quick_link">flow controls</div></a>
+<div class="quick_link"><a href="quickstart">quick start</a></div>
+<div class="quick_link"><a href="commands">command reference</a></div>
+<div class="quick_link"><a href="systemvars">system variables</a></div>
+<div class="quick_link"><a href="flowcontrols">flow controls</a></div>
 
 <div style="clear:both" />
 
-<a href="functions"><div class="quick_link">built-in functions</div></a>
-<a href="expressions"><div class="quick_link">expressions</div></a>
-<a href="jsonpath"><div class="quick_link">jsonpath</div></a>
-<a href="tipsandtricks"><div class="quick_link">tips and tricks</div></a>
+<div class="quick_link"><a href="functions">built-in functions</a></div>
+<div class="quick_link"><a href="expressions">expressions</a></div>
+<div class="quick_link"><a href="jsonpath">jsonpath</a></div>
+<div class="quick_link"><a href="tipsandtricks">tips and tricks</a></div>
 
 <div style="clear:both" />
 
