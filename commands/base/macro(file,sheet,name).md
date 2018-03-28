@@ -15,11 +15,13 @@ This command includes a set of test steps that are kept within a "macro script" 
 of the execution.  One may think of this as a form of "in-place expansion".
 
 ##### Macro script
-The macro look very similar to that of a Nexial script.  It contains the same basic structure of script template, like
-this:
-
-![macro script](image/macro_04.png)
-
+* **Template of macro script:-**<br>
+        1. The macro look very similar to that of a Nexial script.  It contains the same basic structure of script template, like
+    this:
+    ![macro script](image/macro_04.png)<br>
+        2. As you can see macro script don't have first three rows of script template. Also it has first column as macro instead of activity.<br>
+        3. You can get macro script template at **"${NEXIAL_HOME}/template"**. NEXIAL_HOME is the location where nexial-core is unzipped.
+        
 In the depiction above, there are 3 sets of macros:
 1. "sample_greetings": Row 2
 1. "do re mi - line 2 to 5": Row 3 through 6
