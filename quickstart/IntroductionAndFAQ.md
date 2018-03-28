@@ -5,9 +5,7 @@ tags: command quickstart introduction faq design benefit
 comments: true
 ---
 
-
-![logo](../image/logo-x.png)
-
+<img src="../image/logo-x.png" style="box-shadow:none" alt="Nexial"/>
 
 ## What is Nexial?
 Nexial is a test automation platform based on a hybrid test design approach.  At its core, its 
