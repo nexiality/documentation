@@ -1,6 +1,6 @@
 ---
 title: $(sysdate)
-parent: Built-in Function
+parent: built-in function
 tags: sysdate $(sysdate)
 comments: true
 ---

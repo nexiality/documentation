@@ -1,6 +1,6 @@
 ---
 title: $(projectfile)
-parent: Built-in Function
+parent: built-in function
 tags: projectfile $(projectfile)
 comments: true
 ---

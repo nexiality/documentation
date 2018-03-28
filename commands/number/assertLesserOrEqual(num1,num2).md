@@ -16,6 +16,8 @@ This command asserts that `num1` is numerically equal or less than `num2`
 
 
 ### Example
+Note that `${num1}` and `${num2}` are declared in the corresponding data file.
+
 Here is an example to assert that first number is equal or less than the second number:<br/>
 ![](image/assertLesserOrEqual_01.png)
 

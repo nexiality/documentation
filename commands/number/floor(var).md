@@ -16,6 +16,8 @@ This is synonymous to the concept of "round up".
 
 
 ### Example
+Note that `${var2}` is declared in the corresponding data file.
+
 ![script](image/floor_01.png)
 
 Output:<br/>

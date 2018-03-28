@@ -1,6 +1,6 @@
 ---
 title: $(syspath)
-parent: Built-in Function
+parent: built-in function
 tags: syspath $(syspath)
 comments: true
 ---

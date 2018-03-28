@@ -1,6 +1,6 @@
 ---
 title: $(format)
-parent: Built-in Function
+parent: built-in function
 tags: format $(format)
 comments: true
 ---

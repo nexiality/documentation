@@ -16,6 +16,8 @@ This command asserts that `num1` is numerically larger than `num2`.
 
 
 ### Example
+Note that `${num1}` and `${num2}` are declared in the corresponding data file.
+
 Here is an example to use this command. `num1` is expected to be greater than `num2`.<br/>
 ![](image/assertGreater_01.png)
 

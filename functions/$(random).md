@@ -1,6 +1,6 @@
 ---
 title: $(random)
-parent: Built-in Function
+parent: built-in function
 tags: random $(random)
 comments: true
 ---

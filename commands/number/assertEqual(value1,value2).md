@@ -16,6 +16,8 @@ This command asserts equality between two numbers
 
 
 ### Example
+Note that `${num1}` and `${num2}` are declared in the corresponding data file.
+
 Here's an example on how to use this command:<br/>
 ![](image/assertEqual_01.png)
 

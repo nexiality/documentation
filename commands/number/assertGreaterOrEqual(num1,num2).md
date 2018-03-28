@@ -16,6 +16,8 @@ This command asserts that `num1` is numerically the same or larger than `num2`.
 
 
 ### Example
+Note that `${num1}`, `${num2}` and `${num3}` are declared in the corresponding data file.
+
 The given example displays the values of three numbers and the first assertion is made to check for the equality. 
 The second assertion is to check if `num1` is same or greater than `num2`.<br/>
 ![](image/assertGreaterOrEqual_01.png)

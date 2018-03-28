@@ -192,7 +192,7 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     <br/> 
     However, should you choose to use another program, such as WPS, specify this variable in your data sheet. For 
     example,<br/>
-    <img src="image/systemvar_05.jpg" class="resize"/><br/>
+    <img src="image/systemvar_05.png" class="resize"/><br/>
     Alternatively, one can simply specify <code>wps</code>, which will enable Nexial to automatically resolve the 
     correct location of WPS (latest version preferred). For example,<br/>
     <img src="image/systemvar_06.png"/>

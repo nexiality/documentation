@@ -1,6 +1,6 @@
 ## Test Automation Platform for _Everyone_!
 
-![logo](image/logo-x.png)
+<img src="image/logo-x.png" alt="Nexial" style="box-shadow:none"/>
 
 > _**nexial**_  - joining together.  It refers to the joining of knowledge from multiple perspectives 
 and practices to achieve a new understanding of ourselves and nature, and to fuel cultural 
@@ -23,7 +23,7 @@ Here's some of the core concerns of this platform:
 - Hybrid approach to support keyword-based tests and program/script -based tests
 - Local and remote (Jenkins, BrowserStack) support
 - Integration to existing collaboration tools such as JIRA and Confluence
-- Support for various application architecture, includes web (browser), desktop, API/REST/SOA, 
+- Support for various application architecture, includes web (browser), desktop, API/REST/SOAP, 
 		database, batch, ssh
 - Extensive and flexible test management
 - Data management and data generation
@@ -34,17 +34,17 @@ the **[Introduction](quickstart/IntroductionAndFAQ)** page.
 
 ---------------------------------------------
 
-<a href="quickstart/"><div class="quick_link">quick start</div></a>
-<a href="commands/"><div class="quick_link">command reference</div></a>
-<a href="systemvars/"><div class="quick_link">system variables</div></a>
-<a href="flowcontrols/"><div class="quick_link">flow controls</div></a>
+<a href="quickstart"><div class="quick_link">quick start</div></a>
+<a href="commands"><div class="quick_link">command reference</div></a>
+<a href="systemvars"><div class="quick_link">system variables</div></a>
+<a href="flowcontrols"><div class="quick_link">flow controls</div></a>
 
 <div style="clear:both" />
 
-<a href="functions/"><div class="quick_link">built-in functions</div></a>
-<a href="expressions/"><div class="quick_link">expressions</div></a>
-<a href="jsonpath/"><div class="quick_link">jsonpath</div></a>
-<a href="tipsandtricks/"><div class="quick_link">tips and tricks</div></a>
+<a href="functions"><div class="quick_link">built-in functions</div></a>
+<a href="expressions"><div class="quick_link">expressions</div></a>
+<a href="jsonpath"><div class="quick_link">jsonpath</div></a>
+<a href="tipsandtricks"><div class="quick_link">tips and tricks</div></a>
 
 <div style="clear:both" />
 

@@ -16,6 +16,8 @@ synonymous to the concept of "round down".
 
 
 ### Example
+Note that `${var1}` is declared in the corresponding data file.
+
 Here is the example for the usage of this command. `var1` is the variable defined test data with value `125.9`<br/>
 ![script](image/ceiling_01.png)
 

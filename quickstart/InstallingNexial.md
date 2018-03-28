@@ -67,8 +67,7 @@ comments: true
 
 ## Check Excel Version
 Currently Nexial supports Excel 2007 and 2010. Nexial requires the use of XLSX format (old XLS 
-format not supported).  Request ServiceDesk for assistance if you do not have Excel installed or 
-the installed version is too old.
+format not supported).
 
 
 ## Checking Browser Availability and Version

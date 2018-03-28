@@ -31,8 +31,7 @@ Before you can start using the latest version of Nexial, it is important to ensu
 scripts have the latest commands as well. Failure to follow the steps below would very likely 
 hinder the new commands to be shown in your script files.
 
-1.  Open console and point to `bin\` directory under the Nexial installation directory.  
-    ![bin](image/UpdateNexial_02.png)
+1.  Open console and point to `bin` directory under the Nexial installation directory.  
 2.  run the script updater batch file, `nexial-script-update.cmd` with your project directory 
 				as the parameter. For example:  
     **`nexial-script-update.cmd -v -t C:\projects\MyProject`**
@@ -58,7 +57,6 @@ Alternatively (and encouraged), you can download 
 <a href="https://slack.com/downloads" class="external-link" target="_nexial_external">the desktop or mobile version of Slack</a>. The native 
 clients provide better OS integration. You can also invite others to a channel by clicking on the channel name and 
 select "Invite team members to join...":<br/>
-![join](image/UpdateNexial_05.png)
 
 **Any Nexial related questions, comments, suggestions, criticism, discussions, etc. are 
 welcome in the <a href="https://nexiality.slack.com/messages/C9QH23P0U" class="external-link" target="_nexial_external">#nexial-support channel</a> All good 

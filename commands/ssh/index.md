@@ -42,7 +42,7 @@ example, let's suppose a profile named as "`MyServer`":
 | data name                        | data value(s) | description |
 | -------------------------------- | ------------- | ----------- |
 | `MyServer.username`              | **[REQUIRED]** username to access remote host | This is the username to access the specified remote host. Note that all commands will be propagated through the security context of this user |
-| `MyServer.password`              | **[REQUIRED]** credential to access remote host | This is the password for the specified username. It is recommended to consider [encrypt](../../tipsandtricks/nexialcrypt) sensitive information before storing them in data file |
+| `MyServer.password`              | **[REQUIRED]** credential to access remote host | This is the password for the specified username. It is recommended to consider [encrypt](../../tipsandtricks/NexialCrypt) sensitive information before storing them in data file |
 | `MyServer.host`                  | **[REQUIRED]** the remote host, either as IP or hostname |
 | `MyServer.port`                  | the remote port, default is `22` ||
 | `MyServer.strictHostKeyChecking` | `true` (default) or `false` | `true` means that only "known" hosts will be permitted to engage in ssh communication (see next line). Use `false` to indicate that the specified host is already known |

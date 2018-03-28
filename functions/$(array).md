@@ -1,6 +1,6 @@
 ---
 title: $(array)
-parent: Built-in Function
+parent: built-in function
 tags: array $(array)
 comments: true
 ---

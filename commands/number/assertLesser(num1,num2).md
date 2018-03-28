@@ -16,6 +16,8 @@ This command asserts that `num1` is numerically less than `num2`
 
 
 ### Example
+Note that `${num1}` and `${num2}` are declared in the corresponding data file.
+
 Here is an example to see the usage of this command.<br/>
 ![](image/assertLesser_01.png)
 

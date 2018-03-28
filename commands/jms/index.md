@@ -108,7 +108,7 @@ the password to access the target JMS server
 </td>
 <td>
 <b>[REQUIRED] if required by JMS server and <code>provider</code> is not <code>jndi</code> </b><br/>
-Consider using <a href="../../tipsandtricks/nexialcrypt"><code>nexial-crypt</code></a> to protect sensitive information.
+Consider using <a href="../../tipsandtricks/NexialCrypt"><code>nexial-crypt</code></a> to protect sensitive information.
 </td>
 </tr>
 
