@@ -30,7 +30,7 @@ Check [here](index#s3profile) for more information regarding `profile`.
 
 ### Example
 Script:<br/>
-![](image/copyFrom_01.PNG)
+![](image/copyFrom_01.png)
 
 Output:<br/>
 ![](image/copyFrom_02.png)

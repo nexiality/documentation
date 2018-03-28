@@ -31,7 +31,7 @@ and values.  Here are some examples:
 - **`values(section)`** - gets all the values available in the given section
 
 
-###Example
+### Example
 **script:**<br/>
 ![script](image/INIexpression_03.png)
 

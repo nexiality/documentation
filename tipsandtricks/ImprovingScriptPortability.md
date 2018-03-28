@@ -16,7 +16,7 @@ Nexial provides a few ways towards script portability.
 
 
 #### Use $(syspath)
-Use [`$(syspath)`](../functions/$(syspath).md) to reference test artifacts such as script and data file. This 
+Use [`$(syspath)`](../functions/$(syspath)) to reference test artifacts such as script and data file. This 
 built-in function resolves the physical location of test artifacts at runtime so that one would not need to resort to 
 hard coding.  Thus, instead of specifying the fully qualified path, such as `C:\projects\MyProject` or 
 `/Users/user123/projects/MyApplication/artifact/script/TEST-1234.xlsx`, one can specify `$(syspath|project|fullpath)` 

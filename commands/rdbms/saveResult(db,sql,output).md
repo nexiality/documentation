@@ -46,5 +46,5 @@ see above
 
 
 ### See Also
-- [`runSQL(var,db,sql)`](runSQL)
-- [`runSQLs(var,db,sqls)`](runSQLs)
+- [`runSQL(var,db,sql)`](runSQL(var,db,sql))
+- [`runSQLs(var,db,sqls)`](runSQLs(var,db,sqls))

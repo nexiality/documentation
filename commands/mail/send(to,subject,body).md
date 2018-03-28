@@ -28,4 +28,4 @@ script:<br/>
 
 
 ### See Also
--   **[`$(projectfile)`](https://confluence.ep.com/pages/viewpage.action?pageId=9971809)**
+-  [`$(projectfile)`](../../functions/$(projectfile))

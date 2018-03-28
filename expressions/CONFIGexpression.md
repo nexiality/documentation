@@ -23,33 +23,34 @@ Also:<br/>
 - Lines that start with the comment character `!` or `#` are ignored. Blank lines are also ignored.
 - The property value is generally terminated by the end of the line. White space following the property value is not 
   ignored, and is treated as part of the property value.
+
   
 ### Operations
+- **keys()** \- returns all the key names as [LIST](LISTexpression).
+- **remove(key)** \- removes the `key` and returns the updated CONFIG data.
+- **save(filePath)** \- saves the current state of this CONFIG as a "properties" file to `filePath`.
+- **set(key, value)** \- sets `value` to the given `key` and returns the updated CONFIG data.
+- **store(var)** \- save current CONFIG expression to a data variable.  If the specified `var` exists, its value will 
+  be overwritten.  Using this operation, one can put an expression on pause and resume it at a later time.
+- **text()** \- returns the content of the CONFIG data as text.
+- **value(key)** - returns the corresponding value as text.
 
-* **keys()** \- returns all the key names as list.
-* **remove(key)** \- removes the key and returns the updated CONFIG data**.**
-* **save(filePath)** \- saves the data to the file at the given path and returns the CONFIG data.
-* **set(key, value)** \- sets the value to the given key and returns the updated CONFIG data**.**
-* **store(var)** \- save current CONFIG expression to a data variable.  If the specified `var` exists, its value will be overwritten.  Using this operation, one can put an expression on pause and resume it at a later time.
-* **text()** \- returns the content of the CONFIG data as text
-* **value(key)** - returns the corresponding value as text.
 
 ### Examples
-
-The properties file is located at **C:/Projects/MyFirstProject/artifact/data/** and the name of the file is **file.properties**
-
+For this example, let's consider we have a properties file in the data directory, as in 
+**`C:\Projects\MyFirstProject\artifact\data\file.properties`**.<br/>
 ![](image/CONFIGexpression_01.png)
 
-**script:**
-
+**script:**<br/>
+Here the script will read some property keys from the target properties file, remove and update some keys, and finally
+save the changes to another properties file (`x.properties`)<br/>
 ![](image/CONFIGexpression_02.png)
 
-**Result**:
-
+**Result**:<br/>
 ![](image/CONFIGexpression_03.png)
 
 ![](image/CONFIGexpression_04.png)
 
-The file x.properties is updated with the following content:-
-
+The generated `x.properties` looks like this:<br/>
 ![](image/CONFIGexpression_05.png)
+

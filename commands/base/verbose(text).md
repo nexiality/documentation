@@ -35,5 +35,5 @@ function.
 
 
 ### See Also
-- [`$(sysdate)`](../../functions/sysdate)
+- [`$(sysdate)`](../../functions/$(sysdate))
 - [`save(var,value)`](save(var,value))

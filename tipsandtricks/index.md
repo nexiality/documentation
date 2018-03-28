@@ -10,11 +10,10 @@ comments: true
 - [Create new test script, test data or test plan](CreateTestScript_data_plan)
 - *in progress* [How to avoid memory issue by keeping your scripts and data files under control]()
 - *in progress* [How to provide valid and correct script name to avoid any illegal argument exception]()
-- [Improving Script Portability](ImprovingScriptPortability.md)
-- *in progress* [Integrating with other projects]()
-- *in progress* [Iteration with Nexial]()
-- *in progress* [Record/Playback a Nexial Automation Session]()
-- *in progress* [nexial-crypt]()
+- [Improving Script Portability](ImprovingScriptPortability)
+- [Integrating with other projects](IntegratingWithOtherProjects)
+- [Record/Playback a Nexial Execution](RecordPlayback)
+- [nexial-crypt](NexialCrypt)
 - *in progress* [Why isn't Nexial executing my scenario (worksheet)?]()
 
 
@@ -33,7 +32,7 @@ comments: true
 
 #### File Handling
 - *in progress* [How to create a CSV file from another CSV file?]()
-- *in progress* [How to iterate through a set of files]()
+- [How to iterate through a set of files](IterateOverSetOfFiles)
 
 
 #### Web Automation
@@ -41,7 +40,7 @@ comments: true
 - *in progress* [How to get an Element's Xpath from Chrome]()
 - [Execute Scripts in Headless Browser](ExecuteScripts_HeadlessBrowser)
 - [BrowserStack Integration](BrowserStackIntegration)
-- [Script failing on BrowserStack](ScriptFailingonBrowserStack.md)
+- [Script failing on BrowserStack](ScriptFailingonBrowserStack)
 
 
 #### Web Service/API Automation

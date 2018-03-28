@@ -113,8 +113,9 @@ would retrieve the SQL statement associated to this execution.  Of course one c
 other than `result`.
 - `${...}.sql` \- retrieves the SQL statement executed to derive this execution result.
 - `${...}.startTime` \- retrieves the time when this SQL was executed, in 
-  [`epoch`](`https://en.wikipedia.org/wiki/Unix_time`) format.  Considering using the
-  [`date`](../../functions/date) built-in function to convert the timestamp value into a human-readable form.
+  <a href="https://en.wikipedia.org/wiki/Unix_time" class="external-link" target="_nexial_external">`epoch`</a> format.  
+  Considering using the [`date`](../../functions/$(date)) built-in function to convert the timestamp value into a 
+  human-readable form.
 - `${...}.elapsedTime` \- retrieves the time spent to complete the associated SQL execution, in milliseconds.
 - `${...}.rowCount` \- retrieves the number of rows affected by the execution of the associated SQL statement.  This 
    is usually used when executing a INSERT, DELETE or UPDATE statement. 

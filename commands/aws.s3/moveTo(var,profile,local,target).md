@@ -28,7 +28,7 @@ Having subdirectories inside the directory may give incorrect results.
 - **target** \- the bucket or the bucket folder where to copy the files.
 
 
-###Example
+### Example
 **script**<br/>
 ![](image/moveTo_01.png)
 
@@ -42,6 +42,6 @@ Having subdirectories inside the directory may give incorrect results.
 ![](image/moveTo_04.png)
 
 
-###See Also
+### See Also
 - [`copyTo(var,profile,local,target)`](copyTo(var,profile,local,target))
 - [`moveFrom(var,profile,remote,local)`](moveFrom(var,profile,remote,local))

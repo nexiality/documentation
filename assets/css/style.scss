@@ -98,7 +98,9 @@ blockquote {
 }
 
 #container .inner img {
-    max-width: none !important;
+    max-width:  none !important;
+    box-shadow: 2px 2px 15px #555;
+    margin:     5px 0;
 }
 
 #downloads {

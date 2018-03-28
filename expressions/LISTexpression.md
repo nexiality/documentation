@@ -11,11 +11,11 @@ LIST represents expression intended to transform/manipulate a list of _things_.
 a list separated by [`nexial.textDelim`](../systemvars/index#nexial.textDelim)<br/>
 
 For example:<br/>
-![](image/LISTexpression_01.PNG)
+![](image/LISTexpression_01.png)
 
 Here, we are forcing `nexial.textDelim` as comma (`,`), although it is unlikely necessary.  Then we set `myList` to 
 a list of US states. The last command uses a `LIST` expression to sort the US states.  Here's the output:<br/>
-![](image/LISTexpression_02.PNG)
+![](image/LISTexpression_02.png)
 
 
 ### Operations

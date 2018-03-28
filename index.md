@@ -17,34 +17,34 @@ ideas/solutions.
 The main motivation of Nexial is to provide a set of capability to automate software testing.  
 Here's some of the core concerns of this platform:
 
-- ***test automation for everyone*** - no coding experience required (but supported), simple and 
+- ***Test automation for everyone*** - no coding experience required (but supported), simple and 
   valuable to all project participants
-- keyword-driven via simple/familiar spreadsheet interface
-- hybrid approach to support keyword-based tests and program/script -based tests
-- local and remote (Jenkins, BrowserStack) support
-- integration to existing collaboration tools such as JIRA and Confluence
-- support for various application architecture, includes web (browser), desktop, API/REST/SOA, 
+- Keyword-driven via simple/familiar spreadsheet interface
+- Hybrid approach to support keyword-based tests and program/script -based tests
+- Local and remote (Jenkins, BrowserStack) support
+- Integration to existing collaboration tools such as JIRA and Confluence
+- Support for various application architecture, includes web (browser), desktop, API/REST/SOA, 
 		database, batch, ssh
-- extensive and flexible test management
-- data management and data generation
-- support FREP (functional, regression, end-to-end, performance testing)
+- Extensive and flexible test management
+- Data management and data generation
+- Support FREP (functional, regression, end-to-end, performance testing)
 
 For better understanding towards the objective and overview of Nexial, check out 
 the **[Introduction](quickstart/IntroductionAndFAQ)** page.
 
 ---------------------------------------------
 
-<div class="quick_link"><a href="quickstart/">Quick Start</a></div>
-<div class="quick_link"><a href="commands/">Command Reference</a></div>
-<div class="quick_link"><a href="systemvars/">System Variables</a></div>
-<div class="quick_link"><a href="flowcontrols/">Flow Controls</a></div>
+<a href="quickstart/"><div class="quick_link">quick start</div></a>
+<a href="commands/"><div class="quick_link">command reference</div></a>
+<a href="systemvars/"><div class="quick_link">system variables</div></a>
+<a href="flowcontrols/"><div class="quick_link">flow controls</div></a>
 
 <div style="clear:both" />
 
-<div class="quick_link"><a href="functions/">Built-in Functions</a></div>
-<div class="quick_link"><a href="expressions/">Expressions</a></div>
-<div class="quick_link"><a href="jsonpath/">jsonpath</a></div>
-<div class="quick_link"><a href="tipsandtricks/">Tips and Tricks</a></div>
+<a href="functions/"><div class="quick_link">built-in functions</div></a>
+<a href="expressions/"><div class="quick_link">expressions</div></a>
+<a href="jsonpath/"><div class="quick_link">jsonpath</div></a>
+<a href="tipsandtricks/"><div class="quick_link">tips and tricks</div></a>
 
 <div style="clear:both" />
 

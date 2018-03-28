@@ -23,7 +23,7 @@ Even though the target file ends with `.jpg`, this command should still carry o
 
 
 ### Parameters
-- **source** \- full path of the image file to convert.  Consider using [`$(syspath)`](../../functions/syspath), 
+- **source** \- full path of the image file to convert.  Consider using [`$(syspath)`](../../functions/$(syspath)), 
   [`nexial.lastScreenshot`](../../systemvars/index#nexial.lastScreenshot), etc. to keep your script portable.
 - **format** \- one of the supported format (the target format to convert to): `png`, `bmp`, `jpg` or `gif`
 - **saveTo** \- the full path of the target (converted) image

@@ -15,7 +15,7 @@ This command compares two text files (or two text content) and provides a compar
 deemed if any differences are found between `expected`and `actual`.  Note that much like many Nexial commands, both 
 `expected` and `actual` can be expressed as:
 - an external file, referenced either by its physical file (e.g. `C:\my_path\my_file.txt`) or via 
-  [`$(syspath)`](../../functions/syspath) (e.g. `$(syspath|out|fullpath)/my_file.txt`). 
+  [`$(syspath)`](../../functions/$(syspath)) (e.g. `$(syspath|out|fullpath)/my_file.txt`). 
 - a data variable, which would resolve to the text content to be compared (e.g. `${my_data}`).
 - text literal, which might contain newlines, carriage returns and other text formatting (e.g. 
   `This is a line to be tested`).

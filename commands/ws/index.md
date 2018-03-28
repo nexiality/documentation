@@ -9,7 +9,7 @@ comments: true
 This set of commands provides a set of web service related interactions and validations.  The specific of each 
 commands are documented in the designated pages (below).  However there are a few common things to note:
 
-##### [`ws.header(name,value)`](header) 
+##### [ws &nbsp; `header(name,value)`](header(name,value))
 1. This command affects all subsequent `ws` commands.  The main purpose of this command is to prepare or set up 
    HTTP header for the web service calls to be invoked.  Hence one can create a series of HTTP header, for example:  
    ![](./image/index_01.png)

@@ -14,7 +14,7 @@ comments: true
 - Output of the result stored in variable can be read with the attribute as:
   - **`rowCount`** \- the number of selected or affected rows.
   - **`sql`** \- the SQL query used when executing this command.
-  - **`startTime`** \- the time in [`epoch`](../../functions/date) when this command was executed.
+  - **`startTime`** \- the time in [`epoch`](../../functions/$(date)) when this command was executed.
   - **`elapsedTime`** \- the amount of elapsed millisecond to complete the execution of this command.
   - **`columns`** \- the column(s) of the selected resultset. 
   - **`data`** \- the selected resultset due to the execution of the specified SQL.

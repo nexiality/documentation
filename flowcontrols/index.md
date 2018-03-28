@@ -66,7 +66,7 @@ When the _pause_ in effect, you should see a prompt on the console, `>>> Pres
 
 To continue, simply press Enter on the console.
 
-**Note:** The desktop feedback on the taskbar (`nexial notifier`)  is controlled via `nexial.verbose.`
+**Note:** The desktop feedback on the taskbar (`nexial notifier`)  is controlled via `nexial.verbose`.
 
 
 ### FailIf(condition)

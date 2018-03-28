@@ -141,7 +141,7 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     </td>
 </tr>
 <tr>
-    <td><a name="nexial.nullValue"/><code>nexial.nullValue</code></td>
+    <td nowrap="nowrap" class="varname"><a name="nexial.nullValue"/><code>nexial.nullValue</code></td>
     <td>text</td>
     <td><code>(null)</code></td>
     <td>false</td>

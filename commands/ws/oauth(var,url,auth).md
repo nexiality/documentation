@@ -92,7 +92,7 @@ The example below set `nexial.verbose=true` in order to expose additional debu
 not necessary.<br/>
 ![](image/oauth_01.png)
 
-Note the commands after `ws.oauth(...)` to illustrate what one could do with `${oauthResponse}` variable.
+Note the commands after ws &raquo; `oauth(...)` to illustrate what one could do with `${oauthResponse}` variable.
 
 If all goes well, the result would look something like this:<br/>
 ![](image/oauth_02.png)

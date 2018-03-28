@@ -34,7 +34,7 @@ specified as a parameter.  Other than that, both commands have the same capabil
 - **var** \- this parameter  is to store result of the sql query into variable.
 - **db** \-  this parameter is name of the database defined in data file.
 - **file** \- this parameter is the location and the file name where are all sql statement are kept.  
-  Consider using [`syspath`](../../functions/sqlpath) in order to keep all test artifacts in same or similar 
+  Consider using [`syspath`](../../functions/$(syspath)) in order to keep all test artifacts in same or similar 
   directory structure.
 
 

@@ -52,7 +52,7 @@ array.  Here's an example:
 ```
 JSON is a very popular document format, especially with the advent of 
 <a href="https://en.wikipedia.org/wiki/Representational_state_transfer" class="external-link" target="_nexial_target">REST</a> 
-(also see <a href="http://www.restapitutorial.com/lessons/whatisrest" class="external-link" target="_nexial_target">this</a>).  
+(also see <a href="http://www.restapitutorial.com/lessons/whatisrest.html" class="external-link" target="_nexial_target">this</a>).  
 It is considered as _lighter_, easier to read and to manage than XML while, in many ways, providing the same 
 capabilities as XML.  Via Nexial expression for JSON, one can process JSON documents as part of automation using Nexial [`jsonpath`](../jsonpath).  Such capability is useful towards REST api testing and processing.
 
