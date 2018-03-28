@@ -20,6 +20,6 @@ Output:<br/>
 
 
 ### See Also
-- [dismiss()](dismiss())
-- [accept()](accept())
-- [assertText(text,matchBy)](assertText(text,matchBy))
+- [`dismiss()`](dismiss())
+- [`accept()`](accept())
+- [`assertText(text,matchBy)`](assertText(text,matchBy))

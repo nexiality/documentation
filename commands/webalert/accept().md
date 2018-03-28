@@ -21,6 +21,6 @@ Output:<br/>
 
 
 ### See Also
-- [assertText(text,matchBy)](assertText(text,matchBy))
-- [dismiss()](dismiss())
-- [assertPresent()](assertPresent())
+- [`assertText(text,matchBy)`](assertText(text,matchBy))
+- [`dismiss()`](dismiss())
+- [`assertPresent()`](assertPresent())
