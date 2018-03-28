@@ -1,0 +1,30 @@
+---
+title: web &raquo; doubleClick(locator)
+parent: web
+tags: command web
+comments: true
+---
+
+### Description
+
+*   This command is to double  click element on the page as per the locator.
+*   The command requires xpath locator of the button element on the page.
+
+### Parameter(s)
+
+- **locator** - this parameter is the xpath of the element on which action need to be performed.
+
+### Example
+
+Script:
+
+![](image/doubleClick_01.png)
+
+Output:
+
+![](image/doubleClick_02.png)
+
+### See Also
+
+*   [`click(locator)`](click(locator))
+*   [`doubleClickAndWait(locator,waitMs)`](doubleClickAndWait(locator,waitMs))
