@@ -9,6 +9,8 @@ S3, or Simple Storage Service, is a cloud service provided by Amazon AWS.  One c
 and content in the cloud.  Nexial supports the use of S3 via various automation capabilities (below) such as move, copy,
 delete, list, etc.
 
+
+#### Connection Setup
 Similar to other command collections in Nexial, the "aws.s3" command collection utilize a profile-based approach to 
 connect to the target S3 location.  A profile is a collection of data variables that share the same prefix.  In this 
 case, below are the data variables that make up a "s3" profile:
@@ -27,6 +29,10 @@ For example, suppose we have a "profile" named as `projectX`:<br/>
 ![profile](image/index_01.png)
 
 `projectX` will be used as a "profile" throughout the "aws.s3" commands for S3-related automation.
+
+
+{% include _remote_output.md %}
+
 
 The "aws.s3" command type represents a series of commands regarding AWS S3.
 

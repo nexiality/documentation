@@ -94,11 +94,11 @@ Date format pattern letters and their meaning:<br/>
 ![](image/validate_04.png)
 
 
-### See Also
-
-<br/>
-
 ### Downloads
 - [config template for Excel Descriptor](excel-mapping-config-template.json) the config template file for 
   'Excel' specification.
 - [JSON config template](json-mapping-config-template.json) the config template for "JSON' specification.
+
+
+### See Also
+
