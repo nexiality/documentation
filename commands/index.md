@@ -19,6 +19,7 @@ below to learn more about each type and the commands available under each of the
 - [`aws.s3`](aws.s3): commands regarding AWS S3.
 - [`base`](base): general commands for data assertion and commonly used operations.
 - [`csv`](csv): commands regarding the CSV file type.
+- [`desktop`](desktop): commands to automate desktop applications.
 - [`excel`](excel): commands regarding the Excel file type.
 - [`external`](external): commands to execute external programs or scripts.
 - [`image`](image): commands regarding image files.

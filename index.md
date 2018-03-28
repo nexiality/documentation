@@ -48,4 +48,11 @@ the **[Introduction](quickstart/IntroductionAndFAQ)** page.
 
 <div style="clear:both" />
 
+
+<div class="quick_link"><a href="release">release notes</a></div>
+
+<div style="clear:both" />
+
 ---------------------------------------------
+
+

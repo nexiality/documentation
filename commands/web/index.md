@@ -134,7 +134,7 @@ The "web" command type represents a series of automation commands regarding web 
 - [`unselectAllText()`](unselectAllText())
 - [`upload(fieldLocator,file)`](upload(fieldLocator,file))
 - [`verifyContainText(locator,text)`](verifyContainText(locator,text))
-- [`verifyText(locator,text)`](verifyText(locator,text)`)
+- [`verifyText(locator,text)`](verifyText(locator,text))
 - [`wait(waitMs)`](wait(waitMs))
 - [`waitForElementPresent(locator)`](waitForElementPresent(locator)) 
 - [`waitForPopUp(winId,waitMs)`](waitForPopUp(winId,waitMs))
