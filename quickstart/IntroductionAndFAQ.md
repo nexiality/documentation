@@ -1,6 +1,6 @@
 ---
 title: Introduction and FAQ
-parent: Quick Start
+parent: quick start
 tags: command quickstart introduction faq design benefit
 comments: true
 ---

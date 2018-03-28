@@ -1,6 +1,6 @@
 ---
 title: History of Nexial
-parent: Quick Start
+parent: quick start
 tags: command history
 comments: true
 ---

@@ -1,6 +1,6 @@
 ---
 title: Automation Execution Flow
-parent: Quick Start
+parent: quick start
 tags: execution flow
 comments: true
 ---

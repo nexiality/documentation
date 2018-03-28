@@ -1,6 +1,6 @@
 ---
 title: Understanding Project Structure
-parent: Quick Start
+parent: quick start
 tags: project structure project.properties script
 comments: true
 ---
