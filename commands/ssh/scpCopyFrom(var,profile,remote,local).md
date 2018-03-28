@@ -5,6 +5,7 @@ tags: command ssh
 comments: true
 ---
 
+
 ### Description
 This command copies a `remote` file (fully qualified) to a `local` file (fully qualified).
 
