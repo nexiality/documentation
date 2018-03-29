@@ -19,7 +19,7 @@ comments: true
 
 ![](image/saveLocalStorage_01.png)
 
-the current browser's local storage has a key named as `__chooser`, with value set to `[{"email":"iamtest@[gmail.com](http://gmail.com/)"}]`. 
+the current browser's local storage has a key named as `__chooser`, with value set to `{"email":"iamtest@[gmail.com"}. 
 
 ### See Also
 

@@ -37,7 +37,7 @@ records):<br/>
 - **db** \- the profile from which defines the [`database connectivity details`](index).
 - **sql** \- the query to execute.  Note that if this query does not result in any dataset (such as a UPDATE or 
   INSERT query), then only the result metadata file (JSON) will be generated.
-- **output -** the target file to save the resulting dataset.
+- **output** - the target file to save the resulting dataset.
 
 
 ### Example

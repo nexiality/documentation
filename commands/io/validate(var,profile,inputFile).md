@@ -37,9 +37,9 @@ Each field in the record will go through the below validations mentioned.
 
 
 ### Parameters
-- **var -** variable name to store the results
-- **profile -** profile name that has to be defined in data file **(see below example)**
-- **inputFile -** input file path that is to be validated
+- **var** - variable name to store the results
+- **profile** - profile name that has to be defined in data file **(see below example)**
+- **inputFile** - input file path that is to be validated
 
 
 ### Example

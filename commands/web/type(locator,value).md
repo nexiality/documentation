@@ -13,7 +13,7 @@ comments: true
 ### Parameters
 
 - **locator** - this parameter is xpath locator of the element
-- **value -**  this parameter is the actual value to be typed into element.
+- **value** -  this parameter is the actual value to be typed into element.
 
 ### Example
 
