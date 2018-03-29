@@ -11,7 +11,7 @@ comments: true
 - In other words this command will click  on the element and wait as per the time defined as input parameters.
 - The command will perform the action if found or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **locator** - this parameter is the xpath of the element on which action need to be performed
 - **waitMs** - this parameter is the time in milliseconds.

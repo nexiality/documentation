@@ -10,7 +10,7 @@ comments: true
 - This command is to open the desired URL.
 - This command will open the URL in desired URL defined in the data file.
 
-### Parameter(s)
+### Parameters
 
 - **url** - this parameter is the URL to be opened.
 

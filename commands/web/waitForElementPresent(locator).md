@@ -11,7 +11,7 @@ comments: true
 - In other words the command will wait for element till is active on the page.
 - The command will pass if the element is found or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **locator** - this parameter is the locator of the element.
 

@@ -11,7 +11,7 @@ comments: true
 - This is useful to switch between frames in the web page.
 - The i frame will be selected the Iframe element as per the locator and will pass or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **locator** - this parameter is the locator of the Iframe
 

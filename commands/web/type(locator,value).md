@@ -10,7 +10,7 @@ comments: true
 - This command is to type text into element where there is a capability to enter text.
 - In other words this command will enter text as per the vales passed and locator of the element.
 
-### Parameter(s)
+### Parameters
 
 - **locator** - this parameter is xpath locator of the element
 - **value -**  this parameter is the actual value to be typed into element.

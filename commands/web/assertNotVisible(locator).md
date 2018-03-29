@@ -11,7 +11,7 @@ comments: true
 - In other words this command will assert the element on the page with is available but not visible.
 - The command will look for the element and assert for not visible if found the command will pass or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **locator** - this parameter is the locator of the element.
 

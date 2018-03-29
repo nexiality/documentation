@@ -11,7 +11,7 @@ comments: true
 - In other words this command will refresh the browser and pass or else fail otherwise if not active browser found to be refreshed.
 - No input parameter required for this command.
 
-### Parameter(s)
+### Parameters
 
 ### Example
 

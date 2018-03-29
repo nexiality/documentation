@@ -10,7 +10,7 @@ comments: true
 - This command is to select the window as per the windows ID provided.
 - In other words command will locate the window as per the input and select the window and pass or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **winId** - this parameter is the browser window Id.
 

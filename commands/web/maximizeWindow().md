@@ -11,7 +11,7 @@ comments: true
 - In other words this command will set the page into maximize mode and pass the command.
 - There is no input required for this command
 
-### Parameter(s)
+### Parameters
 - None
 ### Example
 

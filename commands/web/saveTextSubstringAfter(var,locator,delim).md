@@ -11,7 +11,7 @@ comments: true
 - The command will sub string the text found from element and return after text from the delimiter.
 - The command will return the after text from defined delimiter and pass the command or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **var** - this parameter is to store the return value of the command.
 - **locator** - this parameter is locator of the element

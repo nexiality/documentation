@@ -10,7 +10,7 @@ comments: true
 - This command is to assert the text count in that element
 - In other words the command will identify the text count in the element as pass or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **locator** - this parameter is the locator of the element.
 - **text** - this parameter is the text of the element.

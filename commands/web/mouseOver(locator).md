@@ -10,7 +10,7 @@ comments: true
 - This command will move the mouse to the desired element or control as per the locator defined.
 - In other words the mouse will move to the element if found or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **locator** - this parameter is locator(xpath) of the element to be identified.
 

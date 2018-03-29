@@ -14,7 +14,7 @@ This command allows the execution of an arbitary Javacript on the current browse
 2.  Exposing internal state of Web application  
     At times it might be useful to retrieve one or more application states at the JavaScript-level.  For example, we can use this command to retrieve the version of JQuery used by a Web application.
 
-### Parameter(s)
+### Parameters
 
 - **var** - the variable to hold any return value from the executed script.
 - **script** - the script to execute.  Note that Nexial does not provide any syntactical or semantic validation of the script.

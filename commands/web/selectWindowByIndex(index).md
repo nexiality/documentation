@@ -9,7 +9,7 @@ comments: true
 
 - This command is to select an open tab/window by index, which are determined on the order of when the corresponding window/tab being opened.
 
-### Parameter(s)
+### Parameters
 
 - **index** - this parameter is the index number of the browser windows 
 

@@ -12,7 +12,7 @@ comments: true
 - The command will refresh and pass if active browser found or else fail otherwise.
 - No input parameter required for this command
 
-### Parameter(s)
+### Parameters
 
 ### Example
 

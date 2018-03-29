@@ -11,7 +11,7 @@ comments: true
 - In other words the command will double click on the element as per the label of the element provided as input.
 - The command will double click element if found and pass or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **label** - this actual label name displayed for the element.
 

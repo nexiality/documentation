@@ -9,7 +9,7 @@ comments: true
 
 - This command will save all the active session window names (if any). If no browser instance is running, no data will be saved to the specified `var` variable.
 
-### Parameter(s)
+### Parameters
 
 - **var** - this parameter is the variable where name of the browser windows are stored.
 

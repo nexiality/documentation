@@ -10,7 +10,7 @@ comments: true
 - This command is to assert value of the element found as per the locator.
 - The command will pass if the value matches with the expected or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **locator** - this parameter is the locator of the element.
 - **value** -  this parameter is value to be found in the element and asserted.

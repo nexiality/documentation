@@ -12,7 +12,7 @@ comments: true
 - If any locator which returns multiple element, then this command can be used to get the text of all the elements.
 - All the text return form the element are stored and returned to user in array list.
 
-### Parameter(s)
+### Parameters
 
 - **var** - this parameter is to store the variable of the element.
 - **locator** - this parameter is the locator of the element.

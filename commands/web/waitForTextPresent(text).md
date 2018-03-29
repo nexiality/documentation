@@ -11,7 +11,7 @@ comments: true
 - In other words command will wait till the defined text is present on the page.
 - The command will pass if text found or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **text** - this parameter is the text to be present on the page.
 

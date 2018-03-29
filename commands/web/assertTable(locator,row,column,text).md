@@ -11,7 +11,7 @@ comments: true
 - In other words the command will assert the required value from table as per the row & column provided as Input Parameters.
 - The command will pass if the required values are found in the table or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **locatorScript** - this parameter is the locator of the element.
 - **row** - this parameter is the row number of the web table.

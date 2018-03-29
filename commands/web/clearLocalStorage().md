@@ -9,7 +9,7 @@ comments: true
 
 - clear the current browser's [local storage](https://en.wikipedia.org/wiki/Web_storage#Local_and_session_storage).
 
-### Parameter(s)
+### Parameters
 
 ### Example
 

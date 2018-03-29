@@ -10,7 +10,7 @@ comments: true
 - This command will look for horizontal scroll bar not present in element.
 - If there are no horizontal scroll bar found in element, the command will pass or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **locator** - this parameter if the xpath of the element.
 

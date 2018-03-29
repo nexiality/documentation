@@ -39,7 +39,7 @@ comments: true
 {F11}  
 {F12}
 
-### Parameter(s)
+### Parameters
 
 - **locator** - this parameter is the locator of the element.
 - **value** - this parameter is the key value which need to be send.

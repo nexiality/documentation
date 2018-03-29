@@ -10,7 +10,7 @@ comments: true
 - This command is to assert frame count on the page.
 - In other words the command will verify count of the frame on the page and pass or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **count** - this parameter is the expected frame count on the page.
 

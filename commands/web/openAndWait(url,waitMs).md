@@ -11,7 +11,7 @@ comments: true
 - In other words command will open the url, wait for milliseconds and pass the command if successful or else fail otherwise.
 - The browser it will pick and run as defined in the data file.
 
-### Parameter(s)
+### Parameters
 
 - **url** - this parameter is the wep page  to be opened.
 - **waitMs** - this parameter is the time to wait after opening the page.

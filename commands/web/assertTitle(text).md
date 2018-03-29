@@ -10,7 +10,7 @@ comments: true
 - This command is to assert title of the page.
 - In other words command will verify desired  title and pass if found or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **text** - this parameter is the name/Title of the page.
 

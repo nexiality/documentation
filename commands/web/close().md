@@ -17,7 +17,7 @@ comments: true
   closing of a tab/window. This default "quiescent time" of 3 seconds can be modified via specifying a desired value 
   for [`nexial.browser.postCloseWaitMs`](../../systemvars/index.html#nexial.browser.postCloseWaitMs) in the corresponding data sheet.
 
-### Parameter(s)
+### Parameters
 
 - NONE
 

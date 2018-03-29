@@ -10,7 +10,7 @@ comments: true
 - This command is to wait for the desired web windows browser pop up.
 - In other words command will look for pop up till the desired window id and wait for the desired time and pass or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **winId** - this parameter is the window Id to wait for.
 - **waitMs** - this parameter is the wait time.

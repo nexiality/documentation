@@ -10,7 +10,7 @@ comments: true
 - This command it to assert element on the web page.
 - The command will pass if element  is present or fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **locator** - this parameter if the xpath of the element.
 

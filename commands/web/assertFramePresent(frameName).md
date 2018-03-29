@@ -12,7 +12,7 @@ comments: true
 - In other words command will find frame present on page as per the frame name defined as input Parameters.
 - The command will pass if the frame found or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **frameName** - this parameter is the expected frame to be looked on the page.
 

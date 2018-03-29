@@ -15,27 +15,36 @@ I'll simply point you to them.  Here they are:
 _**Note: Most of the information on the Web about locators are not created from the standpoint 
 of a scriptless or hybrid framework like Nexial.  Reader's discretion is advised...**_
 
-- [`https://www.tutorialspoint.com/selenium/selenium_locators.htm`](https://www.tutorialspoint.com/selenium/selenium_locators.htm)
-- [`http://www.seleniumeasy.com/selenium-tutorials/selenium-locators`](http://www.seleniumeasy.com/selenium-tutorials/selenium-locators)
-- [`http://www.techbeamers.com/use-locators-selenium/`](http://www.techbeamers.com/use-locators-selenium/)
-- [`http://artoftesting.com/automationTesting/locators-in-selenium-webdriver.html`](http://artoftesting.com/automationTesting/locators-in-selenium-webdriver.html)
-- [`http://screenster.io/selenium-locators-tutorial-types-best-practices-and-many-more/`](http://screenster.io/selenium-locators-tutorial-types-best-practices-and-many-more/)
+- <a href="https://www.tutorialspoint.com/selenium/selenium_locators.htm" class="external-link" target="_nexial_target">https://www.tutorialspoint.com/selenium/selenium_locators.htm</a>
+- <a href="http://www.seleniumeasy.com/selenium-tutorials/selenium-locators" class="external-link" target="_nexial_target">http://www.seleniumeasy.com/selenium-tutorials/selenium-locators</a>
+- <a href="http://www.techbeamers.com/use-locators-selenium/" class="external-link" target="_nexial_target">http://www.techbeamers.com/use-locators-selenium/</a>
+- <a href="http://artoftesting.com/automationTesting/locators-in-selenium-webdriver.html" class="external-link" target="_nexial_target">http://artoftesting.com/automationTesting/locators-in-selenium-webdriver.html</a>
+- <a href="http://screenster.io/selenium-locators-tutorial-types-best-practices-and-many-more/" class="external-link" target="_nexial_target">http://screenster.io/selenium-locators-tutorial-types-best-practices-and-many-more/</a>
 
-Those who are familiar with locators know the most expressive and powerful type is XPath.  XPath provides the ability to identify a specific web element (or a group of web elements) via its ID, attributes, relative or absolute position and its hierarchy.  However with great power comes great responsibility as well.  Without careful use, one often end up with very convoluted and unmaintainable XPaths.  Such XPaths are not only hard to read, hard to maintain and brittle by nature, they are so slower to execute.  Simplifying XPath and applying right techniques takes a fair bit of knowledge on XPath itself. Here are some online resources that might be helpful:
+Those who are familiar with locators know the most expressive and powerful type is XPath.  XPath provides the ability 
+to identify a specific web element (or a group of web elements) via its ID, attributes, relative or absolute position 
+and its hierarchy.  However with great power comes great responsibility as well.  Without careful use, one often end 
+up with very convoluted and unmaintainable XPaths.  Such XPaths are not only hard to read, hard to maintain and 
+brittle by nature, they are so slower to execute.  Simplifying XPath and applying right techniques takes a fair bit 
+of knowledge on XPath itself. Here are some online resources that might be helpful:<br/>
 
-- [`https://www.w3schools.com/xml/xpath_syntax.asp`](https://www.w3schools.com/xml/xpath_syntax.asp)
-- [`https://automatetheplanet.com/underrated-webdriver-locator-xpath/`](https://automatetheplanet.com/underrated-webdriver-locator-xpath/)
+- <a href="https://www.w3schools.com/xml/xpath_syntax.asp" class="external-link" target="_nexial_target">https://www.w3schools.com/xml/xpath_syntax.asp</a>
+- <a href="https://automatetheplanet.com/underrated-webdriver-locator-xpath/" class="external-link" target="_nexial_target">https://automatetheplanet.com/underrated-webdriver-locator-xpath/</a>
 
-Alternatively one might consider converting XPaths to CSS locators.  To learn more, here's a well known article on this subject:
+Alternatively one might consider converting XPaths to CSS locators.  To learn more, here's a well known article on 
+this subject:<br/>
 
-- [`https://saucelabs.com/blog/why-css-locators-are-the-way-to-go-vs-xpath`](https://saucelabs.com/blog/why-css-locators-are-the-way-to-go-vs-xpath)
+- <a href="https://saucelabs.com/blog/why-css-locators-are-the-way-to-go-vs-xpath" class="external-link" target="_nexial_target">https://saucelabs.com/blog/why-css-locators-are-the-way-to-go-vs-xpath</a>
 
-Here's an online app to help converting XPath to CSS locator:
+Here's an online app to help converting XPath to CSS locator:<br/>
 
-- [`http://cssify.appspot.com/`](http://cssify.appspot.com/)
-    ![](image/web_02.png)
+- <a href="http://cssify.appspot.com/" class="external-link" target="_nexial_target">http://cssify.appspot.com/</a>
+  
+  ![](image/web_02.png)
 
-The "web" command type represents a series of automation commands regarding web operations:
+The "web" command type represents a series of automation commands regarding web operations.
+
+### Available Commands
 - [`assertAndClick(locator,label)`](assertAndClick(locator,label))
 - [`assertAttribute(locator,attrName,value)`](assertAttribute(locator,attrName,value))
 - [`assertAttributeContains(locator,attrName,contains)`](assertAttributeContains(locator,attrName,contains))
@@ -142,3 +151,4 @@ The "web" command type represents a series of automation commands regarding web 
 - [`waitForPopUp(winId,waitMs)`](waitForPopUp(winId,waitMs))
 - [`waitForTextPresent(text)`](waitForTextPresent(text))
 - [`waitForTitle(text)`](waitForTitle(text))
+

@@ -10,7 +10,7 @@ comments: true
 - This command it to assert the attribute of the web element.
 - The command will pass if element found and required attribute is identified or fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **locator** - this parameter if the xpath of the element.
 - **attrName** - this parameter is the name of the attribute to be identified in the element.

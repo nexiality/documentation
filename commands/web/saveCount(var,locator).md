@@ -11,7 +11,7 @@ comments: true
 - In other words command will save the count of the element into defined variable to be used for future usage.
 - The command will pass if the element found and return element count as pr locator defined or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **var** - this parameter is to store the return value from the command into variable.  can be any user defined name.
 - **locator** - this parameter is the locator(xpath) of the element.

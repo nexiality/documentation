@@ -11,7 +11,7 @@ comments: true
 - The command will return the string between start and end point
 - The command will return the sub set of the text in between and pass the command or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **var** - this parameter is to store the return value of the command.
 - **locator** - this parameter is locator of the element

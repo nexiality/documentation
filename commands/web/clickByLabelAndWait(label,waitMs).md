@@ -11,7 +11,7 @@ comments: true
 - In other words the command will click on the element as per the label defined and wait.
 - The command will  click the element if found and pass or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **label** - this parameter is actual label name displayed for the element.
 - **waitMs** - this parameter is the time to wait(time should be defined in milliseconds)

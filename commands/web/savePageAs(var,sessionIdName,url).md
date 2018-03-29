@@ -10,7 +10,7 @@ comments: true
 - This command is to save the session of the page into variable.
 - In other words the command will save the desired session into variable and pass or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **var** - this parameter is a variable to store the session
 - **sessionIdName** - this parameter is the name or ID of the current session on the page.

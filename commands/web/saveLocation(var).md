@@ -10,7 +10,7 @@ comments: true
 - This command is to to save the current active location of the web page.
 - The variable can be defined to save the page location to be used for later usage in the test.
 
-### Parameter(s)
+### Parameters
 
 - **var** - this parameter is the variable where the current location of the web page is save.
 

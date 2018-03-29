@@ -12,7 +12,7 @@
 - In other words the command will select the browser window if valid browser window id is provided and pass the command or else fail otherwise.
 - Also this command can be used if there is one active browser windows and need to be selected, then null value can be passed to winId.
 
-### Parameter(s)
+### Parameters
 
 - **winId** - this parameter is the browser window id
 - **waitMs** - this parameter is the wait time 

@@ -10,7 +10,7 @@ comments: true
 - This command is to assert if element is visible on the page.
 - In other words is element is visible on the page,the command will pass or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **locator** - this parameter is the locator(xpath) of the element to be found.
 

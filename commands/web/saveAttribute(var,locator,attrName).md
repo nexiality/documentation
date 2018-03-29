@@ -10,7 +10,7 @@ comments: true
 - This command is to save the attributes of the element found as per defined locator.
 - The attributes can be stored into variable and can be used for future validation.
 
-### Parameter(s)
+### Parameters
 
 - **var** - this parameter is variable for storing the  attribute values found for the element.
 - **locator** - this parameter is locator(xpath) of the element.

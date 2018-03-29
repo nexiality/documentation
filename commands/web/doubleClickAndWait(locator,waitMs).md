@@ -10,7 +10,7 @@ comments: true
 - This command is to double  click element on the page as per the locator and wait for time defined as input parameter.
 - The command requires xpath locator of the button element on the page
 
-### Parameter(s)
+### Parameters
 
 - **locator** - this parameter is the locator of the element.
 - **waitMs** - this parameter is the time to wait after click

@@ -10,7 +10,7 @@ comments: true
 - This command is to click an element on the page as per the locator.
 - The command requires xpath locator of the target element on the page.
 
-### Parameter(s)
+### Parameters
 
 - **locator** - this parameter is the xpath of the element on which action need to be performed.
 

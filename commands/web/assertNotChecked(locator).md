@@ -11,7 +11,7 @@ comments: true
 - This is mostly useful to identify the checkbox or radio button element for not checked
 - The command will pass if required attribute is present and unchecked or fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **locator** - this parameter if the xpath of the element.
 

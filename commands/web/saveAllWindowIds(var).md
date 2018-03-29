@@ -9,7 +9,7 @@ comments: true
 
 - This command will save all ID of all open windows/tabs of the current browser instance.  These IDs are saved as an array to the specified `var` variable.  If the current browser is not active or has been completely shut down, then no data will be saved to the specified `var` variable.
 
-### Parameter(s)
+### Parameters
 
 - **var** - this parameter is the variable to store all active browser window ids.
 

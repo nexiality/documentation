@@ -10,7 +10,7 @@ comments: true
 - This command is to verify if element contains horizontal scroll bar.
 - In other words the command will pass if the element has horizontal scroll bar or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **locator** - this parameter is the locator of the element.
 

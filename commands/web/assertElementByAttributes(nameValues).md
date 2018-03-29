@@ -12,7 +12,7 @@ comments: true
 - Multiple   name values  can be provided in order to identify the element and assert it.
 - The command assert the element and pass or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **nameValues** - this parameter is the attribute name of the element.  
       

@@ -10,7 +10,7 @@ comments: true
 - This command is to select browser window by index and wait for desired time.
 - In other words the command will select the window on the basis of the index identified, wait for the time specified and will pass or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **index**\- this parameter is the index number of the browser windows
 - **waitMs** - this parameter is the time to wait once the desired browser window is identified.

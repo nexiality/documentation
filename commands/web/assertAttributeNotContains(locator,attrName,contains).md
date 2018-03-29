@@ -9,7 +9,7 @@ comments: true
 
 - This command asserts that an attribute, denoted by `attrName`, belonging to an web element whose locator is represented by `locator` \- such attribute **does not contain** the value as specified in `contains`.
 
-### Parameter(s)
+### Parameters
 
 - **locator** - the locator of the target web element
 - **attrName** - the name of the attribute belonging to the web element

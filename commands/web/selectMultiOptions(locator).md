@@ -10,7 +10,7 @@ comments: true
 - This command is to select multiple Items from the list-box.
 - In other words this command will select multiple items from select element and pass the command or else will fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **locator** - this parameter is the locator of the element e.g like list box, combo box etc.
 

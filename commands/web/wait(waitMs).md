@@ -10,7 +10,7 @@ comments: true
 - This command is to wait till the desired time(in milli seconds) as passed as input parameters.
 - The command will wait till the desire time and pass or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **waitMs** - this parameter is the time defined to wait.\[ Remember time need to be defined in milliseconds\]
 

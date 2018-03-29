@@ -11,7 +11,7 @@ comments: true
 - The command will resize the window as per the width and height defined as input parameters.
 - The command will pass if the valid input was provided to resize or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **width** - this parameter is the width of the browser window to resize
 - **height** - this parameter is the height of the browser window to resize.

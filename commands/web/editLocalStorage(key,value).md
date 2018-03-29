@@ -13,7 +13,7 @@ comments: true
 - Existing key will be overwritten.  
 - With no value is specified - denoted as `(empty)` \- then the specified `key` will be removed from the local storage.
 
-### Parameter(s)
+### Parameters
 
 - **key** - the name in local storage to which the specified `value` will be saved.
 - **value** - the value to store in local storage.

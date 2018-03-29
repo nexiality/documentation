@@ -10,7 +10,7 @@ comments: true
 - This command is to assert the link with label.
 - In other words the command will assert the link by label of the text and pass or else fail otherwise.
 
-### Parameter(s)
+### Parameters
 
 - **label** - this parameter is the label name of the element.Actual Ui label displayed for the link
 

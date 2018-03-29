@@ -11,7 +11,7 @@ comments: true
 - In other words the command will find the count of the element  as per defined locator and pass or else fail otherwise.
 - This command is useful if there is a need to find number of element found as per defined locator.
 
-### Parameter(s)
+### Parameters
 
 - **locator** - this parameter is to find the locator of the element.
 - **count** - this parameter is the expected element count.
