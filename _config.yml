@@ -1,6 +1,6 @@
 theme: jekyll-theme-tactile
-title: nexial automation
-description: documentation for nexial, test automation toolkit for everyone!
+title: Nexial Automation
+description: the Test Automation Platform for everyone!
 
 plugins:
    - jekyll-mentions

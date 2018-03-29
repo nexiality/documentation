@@ -1,4 +1,6 @@
-## Test Automation Platform for _Everyone_!
+## Nexial Automation
+
+#### Test Automation Platform for _Everyone_!
 
 <img src="image/logo-x.png" alt="Nexial" style="box-shadow:none"/>
 
