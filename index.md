@@ -9,7 +9,7 @@ and practices to achieve a new understanding of ourselves and nature, and to fue
 advancement. 
 
 The name reflects our desire and intention to perfect the "art" and "science" of Software Testing 
-and the promotion of Quality Artisian.  As professional QA, we are all _nexialists_ - we see links
+and the promotion of Quality Artisan.  As professional QA, we are all _nexialists_ - we see links
 in the disconnected and synergy in the seemingly independent, and draw from such new 
 ideas/solutions.
 
