@@ -638,7 +638,7 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     <td>false</td>
     <td>
     Delay the initialization of web browser until the first command of 
-    <a href="../commands/web/open()">web &raquo; <code>open()</code></a> is invoked. 
+    <a href="../commands/web/open(url)">web &raquo; <code>open()</code></a> is invoked. 
     Generally one would not need to worry about this. Change this <strong>ONLY IF YOU KNOW WHAT YOU ARE DOING!</strong>
     </td>
 </tr>
@@ -717,7 +717,7 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     <td>
     Time allotted, in millisecond, to allow the system is settled down and process any <em>clean up</em> after a 
     browser instance is closed. The default for this is <code>3000</code>, which means the execution of 
-    <a href="../commands/web/close">web &raquo; <code>close()</code></a> will add 3 seconds by default to the overall 
+    <a href="../commands/web/close()">web &raquo; <code>close()</code></a> will add 3 seconds by default to the overall 
     execution time.
     </td>
 </tr>
@@ -1299,7 +1299,7 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     Nexial will simply reuse the existing running instance and thus save time.<br/>
     <br/>
     However, it is important to note that 
-    <a href="../commands/web/closeApplication()">desktop &raquo; <code>closeApplication()</code></a> command will 
+    <a href="../commands/desktop/closeApplication()">desktop &raquo; <code>closeApplication()</code></a> command will 
     effectively be ignored. One would set this system variable to <code>false</code> in order to terminate the 
     running AUT instance. Example:<br/>
     <img src="image/systemvar_28.png" class="resize"/><br/>
