@@ -29,4 +29,4 @@ Output:<br/>
 
 
 ### See Also
-- [`sftpMoveTo(var,profile,local,remote)`](sftpMoveTo(var,profile,local,remote).md)
+- [`sftpMoveTo(var,profile,local,remote)`](sftpMoveTo(var,profile,local,remote))
