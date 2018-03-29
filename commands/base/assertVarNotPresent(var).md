@@ -14,8 +14,14 @@ of the variable, not its value (i.e. not `${...}`)
 ### Parameters
 - **var** \- The name of the variable in question
 
-
 ### Example
+**Script:-** <br>
+![](image/assertVarNotPresent(var)_01.png)
+
+**Output:-**
+![](image/assertVarNotPresent(var)_02.png)
+
+In above example test step second and third are failed because nexial.browser is defined in script while nexial.textDelim is defined in data file.
 
 
 ### See Also
