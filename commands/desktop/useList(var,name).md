@@ -12,8 +12,8 @@ comments: true
 
 ### Parameters
 
-- **var** - this parameter is the variable where the return value by the command will be stored.
-- **name** - this parameter is the name of the list displayed in UI.
+- `var` - this parameter is the variable where the return value by the command will be stored.
+- `name` - this parameter is the name of the list displayed in UI.
 
 ### Example
 

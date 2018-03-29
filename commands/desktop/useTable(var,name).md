@@ -17,15 +17,15 @@ There is additional setup need to be followed to scan the element of the data gr
 
 in order to handle and scan these fields, special handling is required in application.json file.Few Additional components are required to scan under table.
 
-- **headers**  :  Provide headers of the table(basically column name of the table
-- **headerHeight** : this is a special case where format of the table is different than regular table, then table height need to be provided.
-- **cellTypes** : These is required to identify special elements in the table like text box masked text, date field contains.for such field, cell Type need to be provided.
-- **clickOffsetX** : This offset if the   
+- `headers`  :  Provide headers of the table(basically column name of the table
+- `headerHeight` : this is a special case where format of the table is different than regular table, then table height need to be provided.
+- `cellTypes` : These is required to identify special elements in the table like text box masked text, date field contains.for such field, cell Type need to be provided.
+- `clickOffsetX` : This offset if the   
 
 ### Parameters
 
-- **var** - this parameter will store the return values from table element
-- **name** - this parameter is the name of the table.(check the json file for the name defined)
+- `var` - this parameter will store the return values from table element
+- `name` - this parameter is the name of the table.(check the json file for the name defined)
 
 ### Example
 

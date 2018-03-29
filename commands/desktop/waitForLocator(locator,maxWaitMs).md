@@ -13,8 +13,8 @@ comments: true
 
 ### Parameters
 
-- **locator** - this parameter is the locator of the element
-- **maxWaitMs** - this parameter is the maximum wait time.The Time need to be set in milliseconds.
+- `locator` - this parameter is the locator of the element
+- `maxWaitMs` - this parameter is the maximum wait time.The Time need to be set in milliseconds.
 
 ### Example
 
