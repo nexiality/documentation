@@ -12,10 +12,10 @@ comments: true
 - In some instances, closing a tab/window would also trigger some "_clean up_" process internal to the target browser.  
   This is especially true for browsers with add-ons/plugins, as some add-ons have their own "shut down" process when 
   the attached browser tab/window is terminated.  For this reason, we have created a specific Nexial system variable - 
-  [`sentry.browser.postCloseWaitMs`](../../systemvars/index.html#sentry.browser.postCloseWaitMs) - to provide some 
+  [`nexial.browser.postCloseWaitMs`](../../systemvars/index.html#nexial.browser.postCloseWaitMs) - to provide some 
   "quiescent time" after a tab/window is closed.  This would allow the browser and affected add-ons to react to the 
   closing of a tab/window. This default "quiescent time" of 3 seconds can be modified via specifying a desired value 
-  for [`sentry.browser.postCloseWaitMs`](../../systemvars/index.html#sentry.browser.postCloseWaitMs) in the corresponding data sheet.
+  for [`nexial.browser.postCloseWaitMs`](../../systemvars/index.html#nexial.browser.postCloseWaitMs) in the corresponding data sheet.
 
 ### Parameter(s)
 
