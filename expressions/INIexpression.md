@@ -7,7 +7,7 @@ comments: true
 
 
 ### Description
-The [**INI** file format](https://en.wikipedia.org/wiki/INI_file) is an informal standard for configuration files for 
+The <a href="https://en.wikipedia.org/wiki/INI_file" class="external-link" target="_nexial_target">**INI** file format</a> is an informal standard for configuration files for 
 some platforms or software. INI files are simple text files with a basic structure composed of sections, properties, 
 and values.  Here are some examples:
 

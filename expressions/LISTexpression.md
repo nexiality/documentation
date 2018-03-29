@@ -72,5 +72,5 @@ a list of US states. The last command uses a `LIST` expression to sort the US 
   [`nexial.textDelim`](../systemvars/index#nexial.textDelim)) as separator between item list items.
 - **`union(list)`** \- transform the current list by appending to it the items in the specified `list` that are not 
   found.  In essence, this operation creates a new list that contains all the items in both list without any repeats.  
-  See [Union (set theory)](https://en.wikipedia.org/wiki/Union_(set_theory)) for more details.
+  See <a href="https://en.wikipedia.org/wiki/Union_(set_theory)" class="external-link" target="_nexial_target">Union (set theory)</a> for more details.
   

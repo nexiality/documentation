@@ -29,7 +29,7 @@ _The authorization code grant is illustrated in Figure 1._
 
 ##### _Figure 1. Authorization code flow_
 
-![`Flowchart showing the authorization code flow`](https://www.ibm.com/developerworks/library/se-oauthjavapt3/image002.png)
+![Flowchart showing the authorization code flow](https://www.ibm.com/developerworks/library/se-oauthjavapt3/image002.png)
 
 _The flow illustrated in Figure 1 includes the following steps:_
 
