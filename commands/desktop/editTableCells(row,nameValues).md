@@ -47,7 +47,7 @@ comments: true
 
 
 
-### Parameter(s)
+### Parameters
 
 - **row** - this parameter is to specify the row number
 - **nameValues** -  is a set of cell-value pairs. The format is <column name>= <value> (or) <column name>=<value\[Key\]> for each pair.   

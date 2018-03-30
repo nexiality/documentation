@@ -10,8 +10,8 @@ This command will wait of the element with name specified as per the time provid
 
 ### Parameters
 
-- **name** - this parameter is the name of the element found in locator.
-- **maxWaitMs** - this parameter if the time to wait
+- `name` - this parameter is the name of the element found in locator.
+- `maxWaitMs` - this parameter if the time to wait
 
 ### Example
 

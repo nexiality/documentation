@@ -14,14 +14,14 @@ comments: true
 
 It needs further configuration in extra component of the application.json file for respective hierarchical table. Along with the headers information, there are three additional elements to be defined. And those are:
 
-- **hierarchyColumn**  - is the column name where the hierarchy category is defined.
-- **hierarchyList** - is the list of the names defined in the hierarchyColumn.
-- **categoryColumn** - is the column name where the hierarchy is defined and the expand and collapse button options are given.
+- `hierarchyColumn`  - is the column name where the hierarchy category is defined.
+- `hierarchyList` - is the list of the names defined in the hierarchyColumn.
+- `categoryColumn` - is the column name where the hierarchy is defined and the expand and collapse button options are given.
 
 **IMP**:
 
-- **"hierarchyColumn"** and "hierarchyList" elements are to be provided in extra, if such column is available in hier tables. 
-- **"categoryColumn"** is **MUST** to be provided as this column would be available for current hierarchical model tables.
+- `hierarchyColumn` and `hierarchyList` elements are to be provided in extra, if such column is available in hier tables. 
+- `categoryColumn` is **MUST** to be provided as this column would be available for current hierarchical model tables.
 
 ### Parameters
 
