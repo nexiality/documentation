@@ -15,7 +15,7 @@ ideas/solutions.
 
 ## Introduction
 
-The main motivation of Nexial is to provide a set of capability to automate software testing.  
+The main motivation of Nexial is to provide a set of capabilities to automate software testing.  
 Here's some of the core concerns of this platform:
 
 - ***Test automation for everyone*** - no coding experience required (but supported), simple and 
