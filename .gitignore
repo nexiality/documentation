@@ -304,4 +304,5 @@ classes/
 logs/
 /nexial-core_main.iml
 /nexial-core_test.iml
+documentation.iml
 output/

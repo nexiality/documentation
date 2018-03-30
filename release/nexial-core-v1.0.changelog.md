@@ -61,6 +61,10 @@ Here is the list of supported commands separated by their command type:
 - [`substringBetween(text,start,end,saveVar)`](../commands/base/substringBetween(text,start,end,saveVar))
 - [`verbose(text)`](../commands/base/verbose(text))
 - [`waitFor(waitMs)`](../commands/base/waitFor(waitMs))
+- fixed NPE when secret file is not found in classpath
+- remove direct spring dependency from S3-support code
+- support externally controlled "nexial.properties" to be loaded to control resource configuration (S3, email, etc.).  
+  Not required unless `nexial.outputToCloud` is set to `true`
 
 #### [csv]
 - [`compare(expected,actual,failFast)`](../commands/csv/compare(expected,actual,failFast))
