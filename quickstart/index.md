@@ -13,4 +13,5 @@ Let's get started!
 - [Update Nexial](UpdateNexial)
 - [Understanding Excel Templates](UnderstandingExcelTemplates)
 - [Understanding Project Structure](UnderstandingProjectStructure)
+- [Batch files](BatchFiles)
 - [Automation Execution Flow](ExecutionFlow)
