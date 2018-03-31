@@ -27,16 +27,18 @@ This is the main script is used to execute Nexial script or plan.  This command 
 
 For example,<br/>
 - Execute a Nexial script:<br/>
-  **`nexial.cmd -script c:\projects\myProject\artifact\script\myProject.xlsx`**.
+  `nexial.cmd -script c:\projects\myProject\artifact\script\myProject.xlsx`
 - Execute a Nexial plan:<br/>
-  **`nexial.cmd -plan c:\projects\myProject\artifact\plan\myProject.xlsx`**.
+  `nexial.cmd -plan c:\projects\myProject\artifact\plan\myProject.xlsx`
 - Execute one specific scenario (i.e. worksheet):<br/>
-  **`nexial.cmd -script c:\projects\myProject\artifact\script\myProject.xlsx -scenario test1`**. 
+  `nexial.cmd -script c:\projects\myProject\artifact\script\myProject.xlsx -scenario test1` 
 
+<br/>
 
 #### **`nexial-crypt.cmd` / `nexial-crypt.sh`**
 This command is used to encrypt the sensitive data. For more detail, click [here](../tipsandtricks/NexialCrypt.html).
 
+<br/>
 
 #### **`nexial-desktop-xpath-update.cmd` / `nexial-desktop-xpath-update.sh`**
 This script updates the XPath(s) used for desktop automation (i.e. application.json).  This script has 
@@ -47,15 +49,17 @@ following options:
 | **`-t`** | **[REQUIRED]** This option is for location of a single JSON test script or a directory to update.|
 | **`-v`** | This option is to turn on verbose logging. This is optional.|
 
+<br/>
 
 #### **`nexial-project.cmd` / `nexial-project.sh`**
 This command is used to create new nexial-project. For example, the following will create a new project with the name 
 `projectName`.  By default it will be created in **C:\projects\projectName** folder for Windows, or 
 `/Users/<user_id>/projects/projectName` for MacOSX:
 
-**`nexial-project.cmd projectName`** 
-**`nexial-project.sh projectName`** 
+`nexial-project.cmd projectName` 
+`nexial-project.sh projectName` 
 
+<br/>
 
 #### **`nexial-script-update.cmd` / `nexial-script-update.sh`**
 This script updates one or more test scripts with the latest available commands (dropdowns in spreadsheets). It has 
@@ -67,8 +71,9 @@ two command line options:<br/>
 | **`-v`** | This option is to turn on verbose logging. This is optional.|
 
 For example, the following will update all the scripts from given path.<br/>
-**`nexial-script-update.cmd -v -t C:\projects\myProject\artifact\script`**. 
+`nexial-script-update.cmd -v -t C:\projects\myProject\artifact\script` 
 
+<br/>
 
 #### **`nexial-variable-update.cmd` / `nexial-variable-update.sh`**
 This script refactors the data variables referenced across test artifacts to provide uniformity across script authors 
@@ -85,5 +90,5 @@ This script has three command line options:<br/>
 | **`-v`** | This option is to turn on verbose logging. |
 
 For example, the following renames the key `oldKey1` to `newKey1`, and `oldKey2` to `newKey2`, and so on:<br/>
-**`nexial-variable-update.cmd -v -d oldKey1=newKey1;oldKey2=newKey2;oldKey3=newKey3 -t projectFullPath`** 
+`nexial-variable-update.cmd -v -d oldKey1=newKey1;oldKey2=newKey2;oldKey3=newKey3 -t projectFullPath` 
     
