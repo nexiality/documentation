@@ -1,5 +1,5 @@
 ---
-title: base &raquo; assertStartsWith(text,prefix)
+title: assertStartsWith(text,prefix)
 parent: base
 tags: command base
 comments: true

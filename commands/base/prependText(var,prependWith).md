@@ -1,5 +1,5 @@
 ---
-title: base &raquo; prependText(var,prependWith)
+title: prependText(var,prependWith)
 parent: base
 tags: command base
 comments: true

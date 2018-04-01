@@ -1,5 +1,5 @@
 ---
-title: web &raquo; select(locator,text)
+title: select(locator,text)
 parent: web
 tags: command web
 comments: true

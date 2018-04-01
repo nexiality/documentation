@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; minimize()
+title: minimize()
 parent: desktop
 tags: command desktop
 comments: true

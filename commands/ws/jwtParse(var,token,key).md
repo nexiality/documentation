@@ -1,5 +1,5 @@
 ---
-title: ws &raquo; jwtParse(var,token,key)
+title: jwtParse(var,token,key)
 parent: ws
 tags: command ws web_service api
 comments: true

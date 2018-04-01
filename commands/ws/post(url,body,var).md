@@ -1,5 +1,5 @@
 ---
-title: ws &raquo; post(url,body,var)
+title: post(url,body,var)
 parent: ws
 tags: command ws
 comments: true

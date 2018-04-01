@@ -1,5 +1,5 @@
 ---
-title: web &raquo; saveLocation(var)
+title: saveLocation(var)
 parent: web
 tags: command web
 comments: true

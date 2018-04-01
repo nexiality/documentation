@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; assertAttribute(locator,attribute,expected)
+title: assertAttribute(locator,attribute,expected)
 parent: desktop
 tags: command desktop
 comments: true

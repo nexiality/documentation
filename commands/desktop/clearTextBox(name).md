@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; clearTextBox(name) 
+title: clearTextBox(name) 
 parent: desktop
 tags: command desktop
 comments: true

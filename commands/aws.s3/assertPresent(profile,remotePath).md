@@ -1,5 +1,5 @@
 ---
-title: aws.s3 &raquo; assertPresent(profile,remotePath)
+title: assertPresent(profile,remotePath)
 parent: aws.s3
 tags: command aws.s3
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: ws &raquo; soap(action,url,payload,var)
+title: soap(action,url,payload,var)
 parent: ws
 tags: command ws
 comments: true

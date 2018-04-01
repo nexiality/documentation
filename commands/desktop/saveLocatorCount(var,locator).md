@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo;  saveLocatorCount(var,locator)
+title:  saveLocatorCount(var,locator)
 parent: desktop
 tags: command desktop
 comments: true

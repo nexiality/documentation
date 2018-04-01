@@ -1,5 +1,5 @@
 ---
-title: base &raquo; repeatUntil(steps,maxWaitMs)
+title: repeatUntil(steps,maxWaitMs)
 parent: base
 tags: command base
 comments: true

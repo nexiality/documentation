@@ -1,5 +1,5 @@
 ---
-title: web &raquo; doubleClickByLabelAndWait(label,waitMs)
+title: doubleClickByLabelAndWait(label,waitMs)
 parent: web
 tags: command web
 comments: true

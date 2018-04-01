@@ -1,5 +1,5 @@
 ---
-title: xml &raquo; assertCorrectness(xml,schema)
+title: assertCorrectness(xml,schema)
 parent: xml
 tags: command xml
 comments: true

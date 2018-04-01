@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertScrollbarVPresent(locator)
+title: assertScrollbarVPresent(locator)
 parent: web
 tags: command web
 comments: true

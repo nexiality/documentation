@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; toggleExplorerBar()
+title: toggleExplorerBar()
 parent: desktop
 tags: command desktop
 comments: true

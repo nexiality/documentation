@@ -1,5 +1,5 @@
 ---
-title: web &raquo; saveTextSubstringBetween(var,locator,start,end)
+title: saveTextSubstringBetween(var,locator,start,end)
 parent: web
 tags: command web
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: io &raquo; readFile(var,file)
+title: readFile(var,file)
 parent: io
 tags: command io
 comments: true

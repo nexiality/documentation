@@ -1,5 +1,5 @@
 ---
-title: ws &raquo; saveResponsePayload(var,file,append)
+title: saveResponsePayload(var,file,append)
 parent: ws
 tags: command ws
 comments: true

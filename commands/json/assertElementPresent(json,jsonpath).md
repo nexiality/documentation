@@ -1,5 +1,5 @@
 ---
-title: json &raquo; assertElementPresent(json,jsonpath)
+title: assertElementPresent(json,jsonpath)
 parent: json
 tags: command json jsonpath
 comments: true

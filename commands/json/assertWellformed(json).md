@@ -1,5 +1,5 @@
 ---
-title: json &raquo; assertWellformed(json)
+title: assertWellformed(json)
 parent: json
 tags: command json jsonpath
 comments: true

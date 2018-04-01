@@ -1,5 +1,5 @@
 ---
-title: web &raquo; saveTextArray(var,locator)
+title: saveTextArray(var,locator)
 parent: web
 tags: command web
 comments: true

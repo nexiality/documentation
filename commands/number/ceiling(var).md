@@ -1,5 +1,5 @@
 ---
-title: number &raquo; ceiling(var)
+title: ceiling(var)
 parent: number
 tags: command number
 comments: true

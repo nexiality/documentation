@@ -1,5 +1,5 @@
 ---
-title: base &raquo; save(var,value)
+title: save(var,value)
 parent: base
 tags: command base
 comments: true

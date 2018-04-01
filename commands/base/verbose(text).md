@@ -1,5 +1,5 @@
 ---
-title: base &raquo; verbose(text)
+title: verbose(text)
 parent: base
 tags: command base
 comments: true

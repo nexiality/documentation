@@ -1,5 +1,5 @@
 ---
-title: web &raquo; selectWindow(winId)
+title: selectWindow(winId)
 parent: web
 tags: command web
 comments: true

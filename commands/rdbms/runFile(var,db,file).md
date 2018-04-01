@@ -1,5 +1,5 @@
 ---
-title: rdbms &raquo; runFile(var,db,file)
+title: runFile(var,db,file)
 parent: rdbms
 tags: command rdbms
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: web &raquo; goBack()
+title: goBack()
 parent: web
 tags: command web
 comments: true

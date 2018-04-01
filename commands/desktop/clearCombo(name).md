@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; clearCombo(name)
+title: clearCombo(name)
 parent: desktop
 tags: command desktop
 comments: true

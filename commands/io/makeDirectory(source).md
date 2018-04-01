@@ -1,5 +1,5 @@
 ---
-title: io &raquo; makeDirectory(source)
+title: makeDirectory(source)
 parent: io
 tags: command io
 comments: true

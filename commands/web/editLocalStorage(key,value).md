@@ -1,5 +1,5 @@
 ---
-title: web &raquo; editLocalStorage(key,value)
+title: editLocalStorage(key,value)
 parent: web
 tags: command web
 comments: true

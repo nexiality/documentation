@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertNotText(locator,text)
+title: assertNotText(locator,text)
 parent: web
 tags: command web
 comments: true

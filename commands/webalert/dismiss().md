@@ -1,5 +1,5 @@
 ---
-title: webalert &raquo; dismiss()
+title: dismiss()
 parent: webalert
 tags: command webalert alert web
 comments: true

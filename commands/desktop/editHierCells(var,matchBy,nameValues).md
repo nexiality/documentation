@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; editHierCells(var,matchBy,nameValues)
+title: editHierCells(var,matchBy,nameValues)
 parent: desktop
 tags: command desktop
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: base &raquo; assertEqual(expected,actual)
+title: assertEqual(expected,actual)
 parent: base
 tags: command base
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: excel &raquo; write(file,worksheet,startCell,data)
+title: write(file,worksheet,startCell,data)
 parent: excel
 tags: command excel
 comments: true

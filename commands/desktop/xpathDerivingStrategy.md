@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; xpath creation using uispy
+title: xpath creation using uispy
 parent: desktop
 tags: xpath creation using uispy
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; assertWindowTitleContains(contains)
+title: assertWindowTitleContains(contains)
 parent: desktop
 tags: command desktop
 comments: true

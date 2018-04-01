@@ -59,9 +59,11 @@ comments: true
 - [`collapseHierTable()`](collapseHierTable())
 - [`editHierCells(var,matchBy,nameValues)`](editHierCells(var,matchBy,nameValues))
 - [`editTableCells(row,nameValues)`](editTableCells(row,nameValues))
-- [`getRowCount(var)`](getRowCount(var))
-- [`getTableRows(var,beginRow,endRow)`](getTableRows(var,beginRow,endRow))
-- [`getTableRowsAll(var)`](getTaableRowsAll(var))
+
+[//]: # (- getRowCount(var)
+[//]: # (- getTableRows(var,beginRow,endRow)
+[//]: # (- getTableRowsAll(var)
+
 - [`hideExplorerBar()`](hideExplorerBar)
 - [`login(form,username,password)`](login(form,username,password))
 - [`maximize()`](maximize())

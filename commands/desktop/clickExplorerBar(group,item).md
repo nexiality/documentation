@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; clickExplorerBar(group,item)
+title: clickExplorerBar(group,item)
 parent: desktop
 tags: command desktop
 comments: true

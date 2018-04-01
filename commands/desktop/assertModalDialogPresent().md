@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; assertModalDialogPresent()
+title: assertModalDialogPresent()
 parent: desktop
 tags: command desktop
 comments: true

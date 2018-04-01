@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; collapseHierTable()
+title: collapseHierTable()
 parent: desktop
 tags: command desktop
 comments: true

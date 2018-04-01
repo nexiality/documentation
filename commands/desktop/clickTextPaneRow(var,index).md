@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; clickTextPaneRow(var,index)
+title: clickTextPaneRow(var,index)
 parent: desktop
 tags: command desktop
 comments: true

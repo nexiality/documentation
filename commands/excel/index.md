@@ -1,5 +1,5 @@
 ---
-title: excel &raquo; 
+title: excel 
 tags: command excel
 comments: true
 ---

@@ -1,5 +1,5 @@
 ---
-title: web &raquo; savePageAsFile(sessionIdName,url,fileName)
+title: savePageAsFile(sessionIdName,url,fileName)
 parent: web
 tags: command web
 comments: true

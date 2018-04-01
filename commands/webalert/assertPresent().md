@@ -1,5 +1,5 @@
 ---
-title: webalert &raquo; assertPresent()
+title: assertPresent()
 parent: webalert
 tags: command webalert alert web
 comments: true

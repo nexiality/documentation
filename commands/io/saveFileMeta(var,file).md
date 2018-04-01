@@ -1,5 +1,5 @@
 ---
-title: io &raquo; saveFileMeta(var,file)
+title: saveFileMeta(var,file)
 parent: io
 tags: command io
 comments: true

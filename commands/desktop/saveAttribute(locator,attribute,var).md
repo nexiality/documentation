@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; saveAttribute(locator,attribute,var)
+title: saveAttribute(locator,attribute,var)
 parent: desktop
 tags: command desktop
 comments: true

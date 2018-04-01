@@ -1,5 +1,5 @@
 ---
-title: io &raquo; copyFiles(source,target)
+title: copyFiles(source,target)
 parent: io
 tags: command io
 comments: true

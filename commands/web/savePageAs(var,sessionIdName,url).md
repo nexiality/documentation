@@ -1,5 +1,5 @@
 ---
-title: web &raquo; savePageAs(var,sessionIdName,url)
+title: savePageAs(var,sessionIdName,url)
 parent: web
 tags: command web
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: io &raquo; count(var,path,pattern) 
+title: count(var,path,pattern) 
 parent: io
 tags: command io count file regex
 comments: true

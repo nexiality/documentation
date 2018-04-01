@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; editTableCells(row,nameValues)
+title: editTableCells(row,nameValues)
 parent: desktop
 tags: command desktop
 comments: true

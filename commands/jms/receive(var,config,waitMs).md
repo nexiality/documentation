@@ -1,5 +1,5 @@
 ---
-title: jms &raquo; receive(var,config,waitMs)
+title: receive(var,config,waitMs)
 tags: command jms
 comments: true
 ---

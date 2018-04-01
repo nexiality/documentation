@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo;  clickTab(group,name)
+title:  clickTab(group,name)
 parent: desktop
 tags: command desktop
 comments: true

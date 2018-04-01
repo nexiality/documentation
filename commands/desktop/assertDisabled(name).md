@@ -1,16 +1,18 @@
 ---
-title: desktop &raquo; assertDisabled(name)
+title: assertDisabled(name)
 parent: desktop
 tags: command desktop
 comments: true
 ---
 
 ### Description
-- This command asserts that the desktop element specified by `name` is currently disabled (i.e. not ready for interaction)
+- This command asserts that the desktop element specified by `name` is currently disabled (i.e. not ready for 
+  interaction).
+
 
 ### Parameter
-
 - **name** -  the name associated to the target desktop component.
+
 
 ### Example
 

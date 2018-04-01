@@ -1,5 +1,5 @@
 ---
-title: ssh &raquo; sftpDelete(var,profile,remote)
+title: sftpDelete(var,profile,remote)
 parent: ssh
 tags: command ssh
 comments: true

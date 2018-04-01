@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertAndClick(locator,label)
+title: assertAndClick(locator,label)
 parent: web
 tags: command web
 comments: true

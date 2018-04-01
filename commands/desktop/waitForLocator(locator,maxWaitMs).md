@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; waitForLocator(locator,maxWaitMs)
+title: waitForLocator(locator,maxWaitMs)
 parent: desktop
 tags: command desktop
 comments: true

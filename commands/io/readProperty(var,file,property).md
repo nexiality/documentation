@@ -1,5 +1,5 @@
 ---
-title: io &raquo; readProperty(var,file,property)
+title: readProperty(var,file,property)
 parent: io
 tags: command io
 comments: true

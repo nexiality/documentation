@@ -1,5 +1,5 @@
 ---
-title: web &raquo; verifyContainText(locator,text)
+title: verifyContainText(locator,text)
 parent: web
 tags: command web
 comments: true

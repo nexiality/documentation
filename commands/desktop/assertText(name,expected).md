@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; assertText(name,expected)
+title: assertText(name,expected)
 parent: desktop
 tags: command desktop
 comments: true

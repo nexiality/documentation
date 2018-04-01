@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; clickButton(name)
+title: clickButton(name)
 parent: desktop
 tags: command desktop
 comments: true

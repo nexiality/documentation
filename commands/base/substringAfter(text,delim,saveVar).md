@@ -1,5 +1,5 @@
 ---
-title: base &raquo; substringAfter(text,delim,saveVar)
+title: substringAfter(text,delim,saveVar)
 parent: base
 tags: command base
 comments: true

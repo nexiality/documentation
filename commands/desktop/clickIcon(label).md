@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; clickIcon(label)
+title: clickIcon(label)
 parent: desktop
 tags: command desktop
 comments: true

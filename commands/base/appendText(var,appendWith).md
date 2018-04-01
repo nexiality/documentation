@@ -1,5 +1,5 @@
 ---
-title: base &raquo; appendText(var,appendWith)
+title: appendText(var,appendWith)
 parent: base
 tags: command base
 comments: true

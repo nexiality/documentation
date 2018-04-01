@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; assertTableColumnContains(column,contains)
+title: assertTableColumnContains(column,contains)
 parent: desktop
 tags: command desktop
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; assertLocatorPresent(locator)
+title: assertLocatorPresent(locator)
 parent: desktop
 tags: command desktop
 comments: true

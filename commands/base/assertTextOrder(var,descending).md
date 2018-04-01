@@ -1,5 +1,5 @@
 ---
-title: base &raquo; assertTextOrder(var,descending)
+title: assertTextOrder(var,descending)
 parent: base
 tags: command base
 comments: true

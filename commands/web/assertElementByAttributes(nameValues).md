@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertElementByAttributes(nameValues)
+title: assertElementByAttributes(nameValues)
 parent: web
 tags: command web
 comments: true

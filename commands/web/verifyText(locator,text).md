@@ -1,5 +1,5 @@
 ---
-title: web &raquo; verifyText(locator,text)
+title: verifyText(locator,text)
 parent: web
 tags: command web
 comments: true

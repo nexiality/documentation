@@ -1,5 +1,5 @@
 ---
-title: pdf &raquo; count(pdf,text,var)
+title: count(pdf,text,var)
 parent: pdf
 tags: command pdf
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: base &raquo; failImmediate(text)
+title: failImmediate(text)
 parent: base
 tags: command base
 comments: true

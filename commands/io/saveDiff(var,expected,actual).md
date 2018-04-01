@@ -1,5 +1,5 @@
 ---
-title: io &raquo; saveDiff(var,expected,actual)
+title: saveDiff(var,expected,actual)
 parent: io
 tags: command io
 comments: true

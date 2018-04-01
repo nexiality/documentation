@@ -1,5 +1,5 @@
 ---
-title: step &raquo; perform(instructions)
+title: perform(instructions)
 parent: step
 tags: command step
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertTextCount(locator,text,count)
+title: assertTextCount(locator,text,count)
 parent: web
 tags: command web
 comments: true

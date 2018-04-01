@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; saveWindowTitle(var)
+title: saveWindowTitle(var)
 parent: desktop
 tags: command desktop
 comments: true

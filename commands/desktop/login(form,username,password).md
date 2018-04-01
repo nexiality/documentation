@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; login(form,username,password)
+title: login(form,username,password)
 parent: desktop
 tags: command desktop
 comments: true

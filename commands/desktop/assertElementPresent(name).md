@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; assertElementPresent(name)
+title: assertElementPresent(name)
 parent: desktop
 tags: command desktop
 comments: true

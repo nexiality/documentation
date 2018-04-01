@@ -1,5 +1,5 @@
 ---
-title: xml &raquo; storeValue(xml,xpath,var)
+title: storeValue(xml,xpath,var)
 parent: xml
 tags: command xml
 comments: true

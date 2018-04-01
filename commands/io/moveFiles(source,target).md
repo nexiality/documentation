@@ -1,5 +1,5 @@
 ---
-title: io &raquo; moveFiles(source,target)
+title: moveFiles(source,target)
 parent: io
 tags: command io
 comments: true

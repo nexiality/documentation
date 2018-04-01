@@ -1,5 +1,5 @@
 ---
-title: base &raquo; assertNotEmpty(text)
+title: assertNotEmpty(text)
 parent: base
 tags: command base
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: web &raquo; scrollLeft(locator,pixel)
+title: scrollLeft(locator,pixel)
 parent: web
 tags: command web
 comments: true

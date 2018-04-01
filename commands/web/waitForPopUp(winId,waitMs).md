@@ -1,5 +1,5 @@
 ---
-title: web &raquo; waitForPopUp(winId,waitMs)
+title: waitForPopUp(winId,waitMs)
 parent: web
 tags: command web
 comments: true

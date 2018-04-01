@@ -1,5 +1,5 @@
 ---
-title: json &raquo; assertValue(json,jsonpath,expected)
+title: assertValue(json,jsonpath,expected)
 parent: json
 tags: command json jsonpath
 comments: true

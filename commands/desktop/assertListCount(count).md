@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo;  assertListCount(count)
+title:  assertListCount(count)
 parent: desktop
 tags: command desktop
 comments: true

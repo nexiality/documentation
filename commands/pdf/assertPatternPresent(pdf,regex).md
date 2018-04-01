@@ -1,5 +1,5 @@
 ---
-title: pdf &raquo; assertPatternPresent(pdf,regex)
+title: assertPatternPresent(pdf,regex)
 parent: pdf
 tags: command pdf
 comments: true

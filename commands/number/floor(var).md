@@ -1,5 +1,5 @@
 ---
-title: number &raquo; floor(var)
+title: floor(var)
 parent: number
 tags: command number
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: webcookie &raquo; deleteAll()
+title: deleteAll()
 parent: webcookie
 tags: command webcookie cookie web
 comments: true

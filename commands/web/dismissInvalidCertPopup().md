@@ -1,5 +1,5 @@
 ---
-title: web &raquo; dismissInvalidCertPopup()
+title: dismissInvalidCertPopup()
 parent: web
 tags: command web
 comments: true

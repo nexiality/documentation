@@ -1,5 +1,5 @@
 ---
-title: web &raquo; selectWindowByIndexAndWait(index,waitMs)
+title: selectWindowByIndexAndWait(index,waitMs)
 parent: web
 tags: command web
 comments: true

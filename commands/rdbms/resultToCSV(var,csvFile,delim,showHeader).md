@@ -1,5 +1,5 @@
 ---
-title: rdbms &raquo; resultToCSV(var,csvFile,delim,showHeader)
+title: resultToCSV(var,csvFile,delim,showHeader)
 parent: rdbms
 tags: command rdbms
 comments: true

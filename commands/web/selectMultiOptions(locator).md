@@ -1,5 +1,5 @@
 ---
-title: web &raquo; selectMultiOptions(locator)
+title: selectMultiOptions(locator)
 parent: web
 tags: command web
 comments: true

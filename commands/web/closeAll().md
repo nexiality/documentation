@@ -1,5 +1,5 @@
 ---
-title: web &raquo; closeAll()
+title: closeAll()
 parent: web
 tags: command web
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: xml &raquo; assertValue(xml,xpath,expected)
+title: assertValue(xml,xpath,expected)
 parent: xml
 tags: command xml
 comments: true

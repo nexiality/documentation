@@ -1,5 +1,5 @@
 ---
-title: number &raquo; round(var,closestDigit)
+title: round(var,closestDigit)
 parent: number
 tags: command number
 comments: true

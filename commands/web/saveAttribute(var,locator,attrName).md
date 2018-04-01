@@ -1,5 +1,5 @@
 ---
-title: web &raquo; saveAttribute(var,locator,attrName)
+title: saveAttribute(var,locator,attrName)
 parent: web
 tags: command web
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: image &raquo; compare(baseline,actual)
+title: compare(baseline,actual)
 parent: image
 tags: command image
 comments: true

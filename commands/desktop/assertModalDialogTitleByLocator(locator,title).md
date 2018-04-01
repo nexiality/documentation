@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo;  assertModalDialogTitleByLocator(locator,title)
+title:  assertModalDialogTitleByLocator(locator,title)
 parent: desktop
 tags: command desktop
 comments: true

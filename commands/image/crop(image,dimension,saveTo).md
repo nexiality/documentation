@@ -1,5 +1,5 @@
 ---
-title: image &raquo; crop(image,dimension,saveTo)
+title: crop(image,dimension,saveTo)
 parent: image
 tags: command image
 comments: true

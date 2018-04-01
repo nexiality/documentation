@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertTextOrder(locator,descending)
+title: assertTextOrder(locator,descending)
 parent: web
 tags: command web
 comments: true

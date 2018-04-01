@@ -1,5 +1,5 @@
 ---
-title: web &raquo; selectMulti(locator,array)
+title: selectMulti(locator,array)
 parent: web
 tags: command web
 comments: true

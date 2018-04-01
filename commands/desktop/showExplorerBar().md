@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; showExplorerBar()
+title: showExplorerBar()
 parent: desktop
 tags: command desktop
 comments: true

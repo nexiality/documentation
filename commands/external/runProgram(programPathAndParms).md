@@ -1,5 +1,5 @@
 ---
-title: external &raquo; runProgram(programPathAndParms)
+title: runProgram(programPathAndParms)
 parent: external
 tags: command external
 comments: true

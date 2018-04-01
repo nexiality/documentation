@@ -1,5 +1,5 @@
 ---
-title: step &raquo; validate(prompt,responses,passResponses)
+title: validate(prompt,responses,passResponses)
 parent: step
 tags: command step
 comments: true

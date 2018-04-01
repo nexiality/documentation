@@ -1,5 +1,5 @@
 ---
-title: xml &raquo; assertValues(xml,xpath,array,exactOrder)
+title: assertValues(xml,xpath,array,exactOrder)
 parent: xml
 tags: command xml
 comments: true

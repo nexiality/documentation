@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; assertTableCell(row,column,contains)
+title: assertTableCell(row,column,contains)
 parent: desktop
 tags: command desktop
 comments: true

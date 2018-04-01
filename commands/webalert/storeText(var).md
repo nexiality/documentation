@@ -1,5 +1,5 @@
 ---
-title: webalert &raquo; storeText(var)
+title: storeText(var)
 parent: webalert
 tags: command webalert alert web
 comments: true

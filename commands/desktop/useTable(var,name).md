@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; useTable(var,name)
+title: useTable(var,name)
 parent: desktop
 tags: command desktop
 comments: true

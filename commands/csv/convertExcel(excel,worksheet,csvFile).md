@@ -1,5 +1,5 @@
 ---
-title: csv &raquo; convertExcel(excel,worksheet,csvFile)
+title: convertExcel(excel,worksheet,csvFile)
 parent: csv
 tags: command csv
 comments: true

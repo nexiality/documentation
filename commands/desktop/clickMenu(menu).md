@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; clickMenu(menu)
+title: clickMenu(menu)
 parent: desktop
 tags: command desktop
 comments: true

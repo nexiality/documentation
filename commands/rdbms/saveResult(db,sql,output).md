@@ -1,5 +1,5 @@
 ---
-title: rdbms &raquo; saveResult(db,sql,output)
+title: saveResult(db,sql,output)
 parent: rdbms
 tags: command rdbms
 comments: true

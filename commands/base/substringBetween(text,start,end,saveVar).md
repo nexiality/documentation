@@ -1,5 +1,5 @@
 ---
-title: base &raquo; substringBetween(text,start,end,saveVar)
+title: substringBetween(text,start,end,saveVar)
 parent: base
 tags: command base
 comments: true

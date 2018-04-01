@@ -1,5 +1,5 @@
 ---
-title: web &raquo; open(url)
+title: open(url)
 parent: web
 tags: command web
 comments: true

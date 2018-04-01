@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; useForm(formName)
+title: useForm(formName)
 parent: desktop
 tags: command desktop
 comments: true

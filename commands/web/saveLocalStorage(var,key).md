@@ -1,5 +1,5 @@
 ---
-title: web &raquo; saveLocalStorage(var,key)
+title: saveLocalStorage(var,key)
 parent: web
 tags: command web
 comments: true

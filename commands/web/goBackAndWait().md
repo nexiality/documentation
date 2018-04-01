@@ -1,5 +1,5 @@
 ---
-title: web &raquo; goBackAndWait()
+title: goBackAndWait()
 parent: web
 tags: command web
 comments: true

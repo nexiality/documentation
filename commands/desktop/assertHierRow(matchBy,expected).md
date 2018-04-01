@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; assertHierRow(matchBy,expected)
+title: assertHierRow(matchBy,expected)
 parent: desktop
 tags: command desktop
 comments: true

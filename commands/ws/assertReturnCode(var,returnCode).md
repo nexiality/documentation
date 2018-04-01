@@ -1,5 +1,5 @@
 ---
-title: ws &raquo; assertReturnCode(var,returnCode)
+title: assertReturnCode(var,returnCode)
 parent: ws
 tags: command ws web_service api
 comments: true

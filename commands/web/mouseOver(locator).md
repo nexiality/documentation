@@ -1,5 +1,5 @@
 ---
-title: web &raquo; mouseOver(locator)
+title: mouseOver(locator)
 parent: web
 tags: command web
 comments: true

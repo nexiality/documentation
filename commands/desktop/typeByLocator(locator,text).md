@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; typeByLocator(locator,text)
+title: typeByLocator(locator,text)
 parent: desktop
 tags: command desktop
 comments: true

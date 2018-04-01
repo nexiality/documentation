@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; assertMenuEnabled(menu)
+title: assertMenuEnabled(menu)
 parent: desktop
 tags: command desktop
 comments: true

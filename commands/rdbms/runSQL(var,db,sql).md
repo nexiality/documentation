@@ -1,5 +1,5 @@
 ---
-title: rdbms &raquo; runSQL(var,db,sql)
+title: runSQL(var,db,sql)
 parent: rdbms
 tags: command rdbms
 comments: true

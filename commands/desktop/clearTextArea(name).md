@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; clearTextArea(name)
+title: clearTextArea(name)
 parent: desktop
 tags: command desktop
 comments: true

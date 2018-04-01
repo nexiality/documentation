@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertFrameCount(count)
+title: assertFrameCount(count)
 parent: web
 tags: command web
 comments: true

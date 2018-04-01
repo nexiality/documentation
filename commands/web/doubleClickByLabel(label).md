@@ -1,5 +1,5 @@
 ---
-title: web &raquo; doubleClickByLabel(label)
+title: doubleClickByLabel(label)
 parent: web
 tags: command web
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: web &raquo; deselectMulti(locator,array)
+title: deselectMulti(locator,array)
 parent: web
 tags: command web
 comments: true

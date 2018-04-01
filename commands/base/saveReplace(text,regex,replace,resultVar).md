@@ -1,5 +1,5 @@
 ---
-title: base &raquo; saveReplace(text,regex,replace,resultVar)
+title: saveReplace(text,regex,replace,resultVar)
 parent: base
 tags: command base
 comments: true

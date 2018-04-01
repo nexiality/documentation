@@ -1,5 +1,5 @@
 ---
-title: ssh &raquo; scpCopyTo(var,profile,local,remote)
+title: scpCopyTo(var,profile,local,remote)
 parent: ssh
 tags: command ssh
 comments: true

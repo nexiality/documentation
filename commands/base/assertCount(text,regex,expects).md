@@ -1,5 +1,5 @@
 ---
-title: base &raquo; assertCount(text,regex,expects)
+title: assertCount(text,regex,expects)
 parent: base
 tags: command base
 comments: true

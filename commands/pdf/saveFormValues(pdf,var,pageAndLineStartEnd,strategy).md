@@ -1,5 +1,5 @@
 ---
-title: pdf &raquo; saveFormValues(pdf,var,pageAndLineStartEnd,strategy)
+title: saveFormValues(pdf,var,pageAndLineStartEnd,strategy)
 parent: pdf
 tags: command pdf
 comments: true

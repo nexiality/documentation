@@ -1,5 +1,5 @@
 ---
-title: aws.s3 &raquo; moveTo(var,profile,local,target)
+title: moveTo(var,profile,local,target)
 parent: aws.s3
 tags: command aws.s3
 comments: true

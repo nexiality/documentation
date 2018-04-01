@@ -1,5 +1,5 @@
 ---
-title: web &raquo; maximizeWindow()
+title: maximizeWindow()
 parent: web
 tags: command web
 comments: true

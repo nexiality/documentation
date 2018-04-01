@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; maximize()
+title: maximize()
 parent: desktop
 tags: command desktop
 comments: true

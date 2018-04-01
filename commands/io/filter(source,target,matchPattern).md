@@ -1,5 +1,5 @@
 ---
-title: io &raquo; filter(source,target,matchPattern)
+title: filter(source,target,matchPattern)
 parent: io
 tags: command io
 comments: true

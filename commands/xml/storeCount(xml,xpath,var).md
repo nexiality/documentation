@@ -1,5 +1,5 @@
 ---
-title: xml &raquo; storeCount(xml,xpath,var)
+title: storeCount(xml,xpath,var)
 parent: xml
 tags: command xml
 comments: true

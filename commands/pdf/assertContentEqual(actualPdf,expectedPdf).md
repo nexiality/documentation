@@ -1,5 +1,5 @@
 ---
-title: pdf &raquo; assertContentEqual(actualPdf,expectedPdf)
+title: assertContentEqual(actualPdf,expectedPdf)
 parent: pdf
 tags: command pdf
 comments: true

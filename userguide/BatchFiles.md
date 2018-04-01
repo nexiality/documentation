@@ -27,6 +27,7 @@ This is the main script is used to execute Nexial script or plan.  This command 
 | **`-plan`**       | This option is to for running plan. This will require full path of plan. <br/>This is required if `-script` is missing.|
 | **`-script`**     | This option is to for running script. This will require full path of script. <br/>This is required if `-plan` is missing.|
 | **`-scenario`**   | This will run one or more test scenarios separated by comma.|
+<br/>
 
 For example,<br/>
 - Execute a Nexial script:<br/>

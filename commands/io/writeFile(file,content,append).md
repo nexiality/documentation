@@ -1,5 +1,5 @@
 ---
-title: io &raquo; writeFile(file,content,append)
+title: writeFile(file,content,append)
 parent: io
 tags: command io
 comments: true

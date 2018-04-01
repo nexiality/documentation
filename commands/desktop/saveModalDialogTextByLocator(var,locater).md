@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; saveModalDialogTextByLocator(var,appLocator)
+title: saveModalDialogTextByLocator(var,appLocator)
 parent: desktop
 tags: command desktop
 comments: true

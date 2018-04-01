@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; clickTextPane(name,criteria)
+title: clickTextPane(name,criteria)
 parent: desktop
 tags: command desktop
 comments: true

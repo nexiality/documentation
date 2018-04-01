@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertOneMatch(locator)
+title: assertOneMatch(locator)
 parent: web
 tags: command web
 comments: true

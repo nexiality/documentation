@@ -1,5 +1,5 @@
 ---
-title: web &raquo; waitForTextPresent(text)
+title: waitForTextPresent(text)
 parent: web
 tags: command web
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; clickFirstMatchRow(nameValues)
+title: clickFirstMatchRow(nameValues)
 parent: desktop
 tags: command desktop
 comments: true

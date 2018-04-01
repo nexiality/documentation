@@ -1,5 +1,5 @@
 ---
-title: web &raquo; saveCount(var,locator)
+title: saveCount(var,locator)
 parent: web
 tags: command web
 comments: true

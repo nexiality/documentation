@@ -1,5 +1,5 @@
 ---
-title: web &raquo; clickByLabelAndWait(label,waitMs)
+title: clickByLabelAndWait(label,waitMs)
 parent: web
 tags: command web
 comments: true

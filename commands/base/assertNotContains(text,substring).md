@@ -1,5 +1,5 @@
 ---
-title: base &raquo; assertNotContains(text,substring)
+title: assertNotContains(text,substring)
 parent: base
 tags: command base
 comments: true

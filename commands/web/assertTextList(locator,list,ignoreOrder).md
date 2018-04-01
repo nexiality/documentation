@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertTextList(locator,list,ignoreOrder)
+title: assertTextList(locator,list,ignoreOrder)
 parent: web
 tags: command web
 comments: true

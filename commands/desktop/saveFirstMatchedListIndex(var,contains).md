@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; saveFirstMatchedListIndex(var,contains)
+title: saveFirstMatchedListIndex(var,contains)
 parent: desktop
 tags: command desktop
 comments: true

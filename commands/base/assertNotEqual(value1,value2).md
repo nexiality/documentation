@@ -1,5 +1,5 @@
 ---
-title: base &raquo; assertNotEqual(value1,value2)
+title: assertNotEqual(value1,value2)
 parent: base
 tags: command base
 comments: true

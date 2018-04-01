@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; saveHierCells(var,matchBy,column,nestedOnly)
+title: saveHierCells(var,matchBy,column,nestedOnly)
 parent: desktop
 tags: command desktop
 comments: true

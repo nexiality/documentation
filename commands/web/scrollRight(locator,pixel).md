@@ -1,5 +1,5 @@
 ---
-title: web &raquo; scrollRight(locator,pixel)
+title: scrollRight(locator,pixel)
 
 parent: web
 tags: command web

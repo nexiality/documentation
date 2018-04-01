@@ -1,5 +1,5 @@
 ---
-title: ssh &raquo; sftpCopyTo(var,profile,local,remote)
+title: sftpCopyTo(var,profile,local,remote)
 parent: ssh
 tags: command ssh
 comments: true

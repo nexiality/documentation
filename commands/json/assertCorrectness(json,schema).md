@@ -1,5 +1,5 @@
 ---
-title: json &raquo; assertCorrectness(json,schema)
+title: assertCorrectness(json,schema)
 parent: json
 tags: command json correctness jsonschema
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: base &raquo; waitFor(waitMs)
+title: waitFor(waitMs)
 parent: base
 tags: command base
 comments: true

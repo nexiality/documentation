@@ -1,5 +1,5 @@
 ---
-title: ws &raquo; headerByVar(name,var)
+title: headerByVar(name,var)
 parent: ws
 tags: command ws web_service api
 comments: true

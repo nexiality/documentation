@@ -1,5 +1,5 @@
 ---
-title: image &raquo; convert(source,format,saveTo)
+title: convert(source,format,saveTo)
 parent: image
 tags: command image
 comments: true

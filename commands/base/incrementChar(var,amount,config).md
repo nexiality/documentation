@@ -1,5 +1,5 @@
 ---
-title: base &raquo; incrementChar(var,amount,config)
+title: incrementChar(var,amount,config)
 parent: base
 tags: command base
 comments: true

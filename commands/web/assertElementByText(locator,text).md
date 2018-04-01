@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertElementByText(locator,text)
+title: assertElementByText(locator,text)
 parent: web
 tags: command web
 comments: true

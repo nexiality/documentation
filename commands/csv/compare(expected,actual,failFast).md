@@ -1,5 +1,5 @@
 ---
-title: csv &raquo; compare(expected,actual,failFast)
+title: compare(expected,actual,failFast)
 parent: csv
 tags: command csv
 comments: true

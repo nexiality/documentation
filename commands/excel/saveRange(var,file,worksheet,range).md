@@ -1,5 +1,5 @@
 ---
-title: excel &raquo; saveRange(var,file,worksheet,range)
+title: saveRange(var,file,worksheet,range)
 parent: excel
 tags: command excel
 comments: true

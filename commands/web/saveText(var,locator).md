@@ -1,5 +1,5 @@
 ---
-title: web &raquo; saveText(var,locator)
+title: saveText(var,locator)
 parent: web
 tags: command web
 comments: true

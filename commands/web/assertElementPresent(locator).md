@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertElementPresent(locator)
+title: assertElementPresent(locator)
 parent: web
 tags: command web
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: web &raquo; wait(waitMs)
+title: wait(waitMs)
 parent: web
 tags: command web
 comments: true

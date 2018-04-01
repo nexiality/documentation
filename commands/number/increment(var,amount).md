@@ -1,5 +1,5 @@
 ---
-title: number &raquo; increment(var,amount)
+title: increment(var,amount)
 parent: number
 tags: command number
 comments: true

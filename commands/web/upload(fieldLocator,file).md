@@ -1,5 +1,5 @@
 ---
-title: web &raquo; upload(fieldLocator,file)
+title: upload(fieldLocator,file)
 parent: web
 tags: command web
 comments: true

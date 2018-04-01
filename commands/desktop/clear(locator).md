@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; clear(locator)
+title: clear(locator)
 parent: desktop
 tags: command desktop
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; hideExplorerBar()
+title: hideExplorerBar()
 parent: desktop
 tags: command desktop
 comments: true

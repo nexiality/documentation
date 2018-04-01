@@ -1,5 +1,5 @@
 ---
-title: web &raquo; resizeWindow(width,height)
+title: resizeWindow(width,height)
 parent: web
 tags: command web
 comments: true

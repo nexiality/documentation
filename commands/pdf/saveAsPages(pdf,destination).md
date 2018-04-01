@@ -1,5 +1,5 @@
 ---
-title: pdf &raquo; saveAsPages(pdf,destination)
+title: saveAsPages(pdf,destination)
 parent: pdf
 tags: command pdf
 comments: true

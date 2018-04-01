@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertFramePresent(frameName)
+title: assertFramePresent(frameName)
 parent: web
 tags: command web
 comments: true

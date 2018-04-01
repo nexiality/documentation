@@ -1,5 +1,5 @@
 ---
-title: io &raquo; deleteFiles(location,recursive)
+title: deleteFiles(location,recursive)
 parent: io
 tags: command io
 comments: true

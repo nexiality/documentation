@@ -1,5 +1,5 @@
 ---
-title: excel &raquo; writeVar(var,file,worksheet,startCell)
+title: writeVar(var,file,worksheet,startCell)
 parent: excel
 tags: command excel
 comments: true

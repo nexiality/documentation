@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo;  saveElementCount(locator,var)
+title:  saveElementCount(locator,var)
 parent: desktop
 tags: command desktop
 comments: true

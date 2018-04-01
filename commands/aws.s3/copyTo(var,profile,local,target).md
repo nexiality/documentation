@@ -1,5 +1,5 @@
 ---
-title: aws.s3 &raquo; copyTo(var,profile,local,target)
+title: copyTo(var,profile,local,target)
 parent: aws.s3
 tags: command aws.s3
 comments: true

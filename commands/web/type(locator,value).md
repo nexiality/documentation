@@ -1,5 +1,5 @@
 ---
-title: web &raquo; type(locator,value)
+title: type(locator,value)
 parent: web
 tags: command web
 comments: true

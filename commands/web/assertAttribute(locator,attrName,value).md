@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertAttribute(locator,attrName,value)
+title: assertAttribute(locator,attrName,value)
 parent: web
 tags: command web
 comments: true

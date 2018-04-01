@@ -1,5 +1,5 @@
 ---
-title: base &raquo; split(text,delim,saveVar)
+title: split(text,delim,saveVar)
 parent: base
 tags: command base
 comments: true

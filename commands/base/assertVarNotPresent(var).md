@@ -1,5 +1,5 @@
 ---
-title: base &raquo; assertVarNotPresent(var)
+title: assertVarNotPresent(var)
 parent: base
 tags: command base
 comments: true

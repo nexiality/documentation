@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertTable(locator,row,column,text)
+title: assertTable(locator,row,column,text)
 parent: web
 tags: command web
 comments: true

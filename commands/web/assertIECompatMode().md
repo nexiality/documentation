@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertIECompatMode()
+title: assertIECompatMode()
 parent: web
 tags: command web
 comments: true

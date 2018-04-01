@@ -1,5 +1,5 @@
 ---
-title: web &raquo; openAndWait(url,waitMs)
+title: openAndWait(url,waitMs)
 parent: web
 tags: command web
 comments: true

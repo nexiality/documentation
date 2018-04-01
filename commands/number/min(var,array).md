@@ -1,5 +1,5 @@
 ---
-title: number &raquo; min(var,array)
+title: min(var,array)
 parent: number
 tags: command number
 comments: true

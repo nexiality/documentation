@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; saveProcessId(locator,var)
+title: saveProcessId(locator,var)
 parent: desktop
 tags: command desktop
 comments: true

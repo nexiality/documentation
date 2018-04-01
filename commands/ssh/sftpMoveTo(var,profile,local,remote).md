@@ -1,5 +1,5 @@
 ---
-title: ssh &raquo; sftpMoveTo(var,profile,local,remote)
+title: sftpMoveTo(var,profile,local,remote)
 parent: ssh
 tags: command ssh
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo;  clickRadio(name)
+title:  clickRadio(name)
 parent: desktop
 tags: command desktop
 comments: true

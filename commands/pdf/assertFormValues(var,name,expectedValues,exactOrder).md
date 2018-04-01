@@ -1,5 +1,5 @@
 ---
-title: pdf &raquo; assertFormValues(var,name,expectedValues,exactOrder)
+title: assertFormValues(var,name,expectedValues,exactOrder)
 parent: pdf
 tags: command pdf
 comments: true

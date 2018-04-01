@@ -1,5 +1,5 @@
 ---
-title: json &raquo; assertValues(json,jsonpath,array,exactOrder)
+title: assertValues(json,jsonpath,array,exactOrder)
 parent: json
 tags: command json jsonpath
 comments: true

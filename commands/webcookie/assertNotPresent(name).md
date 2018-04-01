@@ -1,5 +1,5 @@
 ---
-title: webcookie &raquo; assertNotPresent(name)
+title: assertNotPresent(name)
 parent: webcookie
 tags: command webcookie cookie web
 comments: true

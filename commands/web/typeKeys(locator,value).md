@@ -1,5 +1,5 @@
 ---
-title: web &raquo; typeKeys(locator,value)
+title: typeKeys(locator,value)
 parent: web
 tags: command web
 comments: true

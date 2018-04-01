@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertAttributeNotPresent(locator,attrName)
+title: assertAttributeNotPresent(locator,attrName)
 parent: web
 tags: command web
 comments: true

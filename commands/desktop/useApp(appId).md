@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; useApp(appId)
+title: useApp(appId)
 parent: desktop
 tags: command desktop
 comments: true

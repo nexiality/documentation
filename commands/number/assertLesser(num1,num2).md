@@ -1,5 +1,5 @@
 ---
-title: number &raquo; assertLesser(num1,num2)
+title: assertLesser(num1,num2)
 parent: number
 tags: command number
 comments: true

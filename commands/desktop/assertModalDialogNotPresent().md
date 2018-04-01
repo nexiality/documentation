@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; assertModalDialogNotPresent()
+title: assertModalDialogNotPresent()
 parent: desktop
 tags: command desktop
 comments: true

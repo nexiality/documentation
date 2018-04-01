@@ -1,5 +1,5 @@
 ---
-title: json &raquo; assertElementNotPresent(json,jsonpath)
+title: assertElementNotPresent(json,jsonpath)
 parent: json
 tags: command json jsonpath
 comments: true

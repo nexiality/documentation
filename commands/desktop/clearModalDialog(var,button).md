@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; clearModalDialog(var,button)
+title: clearModalDialog(var,button)
 parent: desktop
 tags: command desktop
 comments: true

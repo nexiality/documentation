@@ -1,5 +1,5 @@
 ---
-title: aws.s3 &raquo; list(var,profile,remotePath)
+title: list(var,profile,remotePath)
 parent: aws.s3
 tags: command aws.s3
 comments: true

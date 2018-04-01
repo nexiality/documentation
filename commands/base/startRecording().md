@@ -1,5 +1,5 @@
 ---
-title: base &raquo; startRecording
+title: startRecording
 parent: base
 tags: command base
 comments: true

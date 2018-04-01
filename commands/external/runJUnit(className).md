@@ -1,5 +1,5 @@
 ---
-title: external &raquo; runJUnit(className)
+title: runJUnit(className)
 parent: external
 tags: command external
 comments: true

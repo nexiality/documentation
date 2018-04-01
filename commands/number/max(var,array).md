@@ -1,5 +1,5 @@
 ---
-title: number &raquo; max(var,array)
+title: max(var,array)
 parent: number
 tags: command number
 comments: true

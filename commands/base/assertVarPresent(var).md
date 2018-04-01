@@ -1,5 +1,5 @@
 ---
-title: base &raquo; assertVarPresent(var)
+title: assertVarPresent(var)
 parent: base
 tags: command base
 comments: true

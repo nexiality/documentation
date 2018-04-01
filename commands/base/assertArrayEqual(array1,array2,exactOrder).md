@@ -1,5 +1,5 @@
 ---
-title: base &raquo; assertArrayEqual(array1,array2,exactOrder)
+title: assertArrayEqual(array1,array2,exactOrder)
 parent: base
 tags: command base
 comments: true

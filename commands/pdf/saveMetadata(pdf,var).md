@@ -1,5 +1,5 @@
 ---
-title: pdf &raquo; saveMetadata(pdf,var)
+title: saveMetadata(pdf,var)
 parent: pdf
 tags: command pdf
 comments: true

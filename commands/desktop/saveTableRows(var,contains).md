@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; saveTableRows(var,contains)
+title: saveTableRows(var,contains)
 parent: desktop
 tags: command desktop
 comments: true

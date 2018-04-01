@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertAttributeContains(locator,attrName,contains)
+title: assertAttributeContains(locator,attrName,contains)
 parent: web
 tags: command web
 comments: true

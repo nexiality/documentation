@@ -1,5 +1,5 @@
 ---
-title: web &raquo; waitForElementPresent(locator)
+title: waitForElementPresent(locator)
 parent: web
 tags: command web
 comments: true

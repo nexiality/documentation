@@ -1,5 +1,5 @@
 ---
-title: web &raquo; waitForTitle(text)
+title: waitForTitle(text)
 parent: web
 tags: command web
 comments: true

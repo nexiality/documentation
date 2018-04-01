@@ -1,5 +1,5 @@
 ---
-title: web &raquo; click(locator)
+title: click(locator)
 parent: web
 tags: command web
 comments: true

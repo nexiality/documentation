@@ -1,5 +1,5 @@
 ---
-title: webalert &raquo; accept()
+title: accept()
 parent: webalert
 tags: command webalert alert web
 comments: true

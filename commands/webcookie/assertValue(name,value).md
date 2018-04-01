@@ -1,5 +1,5 @@
 ---
-title: webcookie &raquo; assertValue(name,value)
+title: assertValue(name,value)
 parent: webcookie
 tags: command webcookie cookie web
 comments: true

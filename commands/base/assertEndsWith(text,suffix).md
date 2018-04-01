@@ -1,5 +1,5 @@
 ---
-title: base &raquo; assertEndsWith(text,suffix)
+title: assertEndsWith(text,suffix)
 parent: base
 tags: command base
 comments: true

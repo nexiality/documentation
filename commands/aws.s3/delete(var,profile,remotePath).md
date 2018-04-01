@@ -1,5 +1,5 @@
 ---
-title: aws.s3 &raquo; delete(var,profile,remotePath)
+title: delete(var,profile,remotePath)
 parent: aws.s3
 tags: command aws.s3
 comments: true

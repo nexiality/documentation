@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; waitFor(name,maxWaitMs)
+title: waitFor(name,maxWaitMs)
 parent: desktop
 tags: command desktop
 comments: true

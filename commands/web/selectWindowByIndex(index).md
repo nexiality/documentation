@@ -1,5 +1,5 @@
 ---
-title: web &raquo; selectWindowByIndex(index)
+title: selectWindowByIndex(index)
 parent: web
 tags: command web
 comments: true

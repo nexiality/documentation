@@ -1,5 +1,5 @@
 ---
-title: excel &raquo; clear(file,worksheet,range)
+title: clear(file,worksheet,range)
 parent: excel
 tags: command excel
 comments: true

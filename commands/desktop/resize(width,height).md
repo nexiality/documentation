@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; resize(width,height)
+title: resize(width,height)
 parent: desktop
 tags: command desktop
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; typeTextBox(name,text1,text2,text3,text4)
+title: typeTextBox(name,text1,text2,text3,text4)
 parent: desktop
 tags: command desktop
 comments: true

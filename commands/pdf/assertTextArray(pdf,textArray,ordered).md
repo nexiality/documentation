@@ -1,5 +1,5 @@
 ---
-title: pdf &raquo; assertTextArray(pdf,textArray,ordered)
+title: assertTextArray(pdf,textArray,ordered)
 parent: pdf
 tags: command pdf
 comments: true

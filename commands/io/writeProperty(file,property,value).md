@@ -1,5 +1,5 @@
 ---
-title: io &raquo; writeProperty(file,property,value)
+title: writeProperty(file,property,value)
 parent: io
 tags: command io
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: web &raquo; unselectAllText()
+title: unselectAllText()
 parent: web
 tags: command web
 comments: true

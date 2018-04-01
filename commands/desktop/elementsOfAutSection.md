@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; elements of aut section
+title: elements of aut section
 parent: desktop
 tags: elements of aut section
 comments: true

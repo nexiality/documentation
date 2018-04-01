@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertCssPresent(locator,property,value)
+title: assertCssPresent(locator,property,value)
 parent: web
 tags: command web
 comments: true

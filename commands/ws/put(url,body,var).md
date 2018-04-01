@@ -1,5 +1,5 @@
 ---
-title: ws &raquo; put(url,body,var)
+title: put(url,body,var)
 parent: ws
 tags: command ws
 comments: true

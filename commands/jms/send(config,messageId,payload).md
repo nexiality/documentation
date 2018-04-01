@@ -1,5 +1,5 @@
 ---
-title: jms &raquo; send(config,messageId,payload)
+title: send(config,messageId,payload)
 tags: command jms
 comments: true
 ---

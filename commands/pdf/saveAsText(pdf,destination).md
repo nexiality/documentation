@@ -1,5 +1,5 @@
 ---
-title: pdf &raquo; saveAsText(pdf,destination)
+title: saveAsText(pdf,destination)
 parent: pdf
 tags: command pdf
 comments: true

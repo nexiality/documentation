@@ -1,5 +1,5 @@
 ---
-title: xml &raquo; assertWellformed(xml)
+title: assertWellformed(xml)
 parent: xml
 tags: command xml
 comments: true

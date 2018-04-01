@@ -1,5 +1,5 @@
 ---
-title: xml &raquo; assertElementNotPresent(xml,xpath)
+title: assertElementNotPresent(xml,xpath)
 parent: xml
 tags: command xml
 comments: true

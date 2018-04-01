@@ -1,5 +1,5 @@
 ---
-title: base &raquo; assertContains(text,substring)
+title: assertContains(text,substring)
 parent: base
 tags: command base
 comments: true

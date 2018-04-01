@@ -1,5 +1,5 @@
 ---
-title: json &raquo; assertElementCount(json,jsonpath,count)
+title: assertElementCount(json,jsonpath,count)
 parent: json
 tags: command json
 comments: true

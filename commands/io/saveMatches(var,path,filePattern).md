@@ -1,5 +1,5 @@
 ---
-title: io &raquo; saveMatches(var,path,filePattern)
+title: saveMatches(var,path,filePattern)
 parent: io
 tags: command io
 comments: true

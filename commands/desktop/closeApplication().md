@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; closeApplication()
+title: closeApplication()
 parent: desktop
 tags: command desktop
 comments: true

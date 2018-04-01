@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertFocus(locator)
+title: assertFocus(locator)
 parent: web
 tags: command web
 comments: true

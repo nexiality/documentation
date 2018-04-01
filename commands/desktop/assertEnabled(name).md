@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; assertEnabled(name)
+title: assertEnabled(name)
 parent: desktop
 tags: command desktop
 comments: true

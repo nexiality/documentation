@@ -1,5 +1,5 @@
 ---
-title: image &raquo; resize(image,width,height,saveTo)
+title: resize(image,width,height,saveTo)
 parent: image
 tags: command image
 comments: true

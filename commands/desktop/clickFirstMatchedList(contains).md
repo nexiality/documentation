@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; clickFirstMatchedList(contains)
+title: clickFirstMatchedList(contains)
 parent: desktop
 tags: command desktop
 comments: true

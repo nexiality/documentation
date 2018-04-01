@@ -1,5 +1,5 @@
 ---
-title: io &raquo; assertReadableFile(file,minByte)
+title: assertReadableFile(file,minByte)
 parent: io
 tags: command io
 comments: true

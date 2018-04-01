@@ -1,5 +1,5 @@
 ---
-title: io &raquo; zip(filePattern,zipFile)
+title: zip(filePattern,zipFile)
 parent: io
 tags: command io
 comments: true

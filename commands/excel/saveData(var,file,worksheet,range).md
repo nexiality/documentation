@@ -1,5 +1,5 @@
 ---
-title: excel &raquo; saveData(var,file,worksheet,range)
+title: saveData(var,file,worksheet,range)
 parent: excel
 tags: command excel
 comments: true

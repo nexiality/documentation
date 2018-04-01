@@ -1,9 +1,10 @@
 ---
-title: desktop &raquo; elements of app section
+title: Elements of 'app' section
 parent: desktop
 tags: elements of app section
 comments: true
 ---
+
 
 ### Elements under 'app' section
 
@@ -45,6 +46,7 @@ comments: true
     }
 }
 ```
+
 **xpath:**
 - The value for this key is to provide the xpath of the application under Test.
 - This is is staring point from where the initial xpath will get created for your application(**app**)
@@ -56,9 +58,11 @@ comments: true
      "xpathGenerationStrategy": "USE_ALL"
 }
 ```
-- use `USE_ALL` as xpathGenerationStrategy, when it is required to find the element with `@AutomationId`, `@Name`, `@ConrolType` to generate Xpath, regardless of their values.
-- in other words if you are not sure how the element to be scanned by name or automationId etc, if this hint is provide nexial will try all the attributes.
 
+- use `USE_ALL` as xpathGenerationStrategy, when it is required to find the element with `@AutomationId`, 
+  `@Name`, `@ConrolType` to generate Xpath, regardless of their values.
+- in other words if you are not sure how the element to be scanned by `Name` or `AutomationId` etc, if this hint is 
+  provide nexial will try all the attributes.
 
 
 ```json
@@ -67,9 +71,9 @@ comments: true
 }
 ```
 
-  -  use `FAVOR_AUTOMATION_ID_OVER_NAME` as xpathGenerationStrategy, when it is required to favor and find element with `@AutomationId`.
-  -  this strategy should be used when element requires the use of \@AutomationId only if its value is not dynamic.
-  -  this strategy is useful when In some applications, automation id represents a dynamically generated id that cannot be reliably reused.
+-  use `FAVOR_AUTOMATION_ID_OVER_NAME` as xpathGenerationStrategy, when it is required to favor and find element with `@AutomationId`.
+-  this strategy should be used when element requires the use of `@AutomationId` only if its value is not dynamic.
+-  this strategy is useful when In some applications, automation id represents a dynamically generated id that cannot be reliably reused.
 
 ```json
 {
@@ -77,8 +81,9 @@ comments: true
 }
 ```
 
-- use `IGNORE_NUMERIC_AUTOMATION_ID` as `xpathGenerationStrategy`, when it is required to favor name and will ignore attribute AutomationId.
-- this `key` for strategy should be us when element requires the use only name and ignore automationID .
+- use `IGNORE_NUMERIC_AUTOMATION_ID` as `xpathGenerationStrategy`, when it is required to favor name and will 
+  ignore attribute `AutomationId`.
+- this `key` for strategy should be us when element requires the use only name and ignore `AutomationId`.
 
 
 **componentTypeHint:**

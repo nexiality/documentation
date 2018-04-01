@@ -1,5 +1,5 @@
 ---
-title: pdf &raquo; assertFormElementPresent(var,name)
+title: assertFormElementPresent(var,name)
 parent: pdf
 tags: command pdf
 comments: true

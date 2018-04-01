@@ -1,5 +1,5 @@
 ---
-title: web &raquo; selectFrame(locator)
+title: selectFrame(locator)
 parent: web
 tags: command web
 comments: true

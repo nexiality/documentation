@@ -1,5 +1,5 @@
 ---
-title: io &raquo; assertEqual(file1,file2)
+title: assertEqual(file1,file2)
 parent: io
 tags: command io
 comments: true

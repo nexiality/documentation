@@ -1,5 +1,5 @@
 ---
-title: excel &raquo; writeDown(file,worksheet,startCell,array)
+title: writeDown(file,worksheet,startCell,array)
 parent: excel
 tags: command excel
 comments: true

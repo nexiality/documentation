@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; clickTableRow(row)
+title: clickTableRow(row)
 parent: desktop
 tags: command desktop
 comments: true

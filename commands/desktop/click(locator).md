@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; click(locator)
+title: click(locator)
 parent: desktop
 tags: command desktop
 comments: true

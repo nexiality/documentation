@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; assertNotChecked(name)
+title: assertNotChecked(name)
 parent: desktop
 tags: command desktop
 comments: true

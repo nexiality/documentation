@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; useList(var,name)
+title: useList(var,name)
 parent: desktop
 tags: command desktop
 comments: true

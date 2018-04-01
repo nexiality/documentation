@@ -1,5 +1,5 @@
 ---
-title: webcookie &raquo; saveAll(var)
+title: saveAll(var)
 parent: webcookie
 tags: command webcookie cookie web
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: web &raquo; saveTextSubstringAfter(var,locator,delim)
+title: saveTextSubstringAfter(var,locator,delim)
 parent: web
 tags: command web
 comments: true

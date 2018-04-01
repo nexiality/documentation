@@ -1,5 +1,5 @@
 ---
-title: web &raquo; doubleClick(locator)
+title: doubleClick(locator)
 parent: web
 tags: command web
 comments: true

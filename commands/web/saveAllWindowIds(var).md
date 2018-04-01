@@ -1,5 +1,5 @@
 ---
-title: web &raquo; saveAllWindowIds(var)
+title: saveAllWindowIds(var)
 parent: web
 tags: command web
 comments: true

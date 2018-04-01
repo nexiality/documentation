@@ -1,5 +1,5 @@
 ---
-title: web &raquo; refresh()
+title: refresh()
 parent: web
 tags: command web
 comments: true

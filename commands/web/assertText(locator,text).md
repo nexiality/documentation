@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertText(locator,text)
+title: assertText(locator,text)
 parent: web
 tags: command web
 comments: true

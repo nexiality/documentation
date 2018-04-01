@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; saveHierRow(var,matchBy)
+title: saveHierRow(var,matchBy)
 parent: desktop
 tags: command desktop
 comments: true

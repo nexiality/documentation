@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; clickCheckbox(name)
+title: clickCheckbox(name)
 parent: desktop
 tags: command desktop
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: io &raquo; compare(expected,actual,failFast)
+title: compare(expected,actual,failFast)
 parent: io
 tags: command io
 comments: true

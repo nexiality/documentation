@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; clickOffset(locator,xOffset,yOffset)
+title: clickOffset(locator,xOffset,yOffset)
 parent: desktop
 tags: command desktop
 comments: true

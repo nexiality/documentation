@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertTextContains(locator,text)
+title: assertTextContains(locator,text)
 parent: web
 tags: command web
 comments: true

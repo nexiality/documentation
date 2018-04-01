@@ -1,5 +1,5 @@
 ---
-title: pdf &raquo; assertTextNotPresent(pdf,text)
+title: assertTextNotPresent(pdf,text)
 parent: pdf
 tags: command pdf
 comments: true

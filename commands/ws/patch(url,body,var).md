@@ -1,5 +1,5 @@
 ---
-title: ws &raquo; patch(url,body,var)
+title: patch(url,body,var)
 parent: ws
 tags: command ws
 comments: true

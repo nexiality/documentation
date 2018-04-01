@@ -1,5 +1,5 @@
 ---
-title: json &raquo; storeValue(json,jsonpath,var)
+title: storeValue(json,jsonpath,var)
 parent: json
 tags: command json jsonpath
 comments: true

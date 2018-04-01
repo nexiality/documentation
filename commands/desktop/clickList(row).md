@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; clickList(row)
+title: clickList(row)
 parent: desktop
 tags: command desktop
 comments: true

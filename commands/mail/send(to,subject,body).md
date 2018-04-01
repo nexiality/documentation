@@ -1,5 +1,5 @@
 ---
-title: mail &raquo; send(to,subject,body)
+title: send(to,subject,body)
 parent: mail
 tags: command mail
 comments: true

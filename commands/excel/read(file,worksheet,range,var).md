@@ -1,5 +1,5 @@
 ---
-title: excel &raquo; read(file,worksheet,range,var)
+title: read(file,worksheet,range,var)
 parent: excel
 tags: command excel
 comments: true

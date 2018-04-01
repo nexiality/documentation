@@ -1,5 +1,5 @@
 ---
-title: ws &raquo; get(url,queryString,var)
+title: get(url,queryString,var)
 parent: ws
 tags: command ws web_service api
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: io &raquo; unzip(zipFile,target)
+title: unzip(zipFile,target)
 parent: io
 tags: command io
 comments: true

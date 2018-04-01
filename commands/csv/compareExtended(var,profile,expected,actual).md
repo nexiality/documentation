@@ -1,5 +1,5 @@
 ---
-title: csv &raquo; compareExtended(var,profile,expected,actual)
+title: compareExtended(var,profile,expected,actual)
 parent: csv
 tags: command csv
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertIENavtiveMode()
+title: assertIENavtiveMode()
 parent: web
 tags: command web
 comments: true

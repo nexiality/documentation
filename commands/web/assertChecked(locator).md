@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertChecked(locator)
+title: assertChecked(locator)
 parent: web
 tags: command web
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: pdf &raquo; assertPatternNotPresent(pdf,regex)
+title: assertPatternNotPresent(pdf,regex)
 parent: pdf
 tags: command pdf
 comments: true

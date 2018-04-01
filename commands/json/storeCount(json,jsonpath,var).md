@@ -1,5 +1,5 @@
 ---
-title: json &raquo; storeCount(json,jsonpath,var)
+title: storeCount(json,jsonpath,var)
 parent: json
 tags: command json jsonpath
 comments: true

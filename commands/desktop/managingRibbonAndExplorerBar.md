@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; managing ribbon and explorer bar
+title: managing ribbon and explorer bar
 parent: desktop
 tags: managing ribbon and explorer bar
 comments: true

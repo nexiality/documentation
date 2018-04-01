@@ -1,5 +1,5 @@
 ---
-title: step &raquo; observe(prompt)
+title: observe(prompt)
 parent: step
 tags: command step
 comments: true

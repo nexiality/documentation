@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; saveText(var,name)
+title: saveText(var,name)
 parent: desktop
 tags: command desktop
 comments: true

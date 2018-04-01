@@ -1,5 +1,5 @@
 ---
-title: base &raquo; saveMatches(text,regex,saveVar)
+title: saveMatches(text,regex,saveVar)
 parent: base
 tags: command base
 comments: true

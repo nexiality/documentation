@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertNotVisible(locator)
+title: assertNotVisible(locator)
 parent: web
 tags: command web
 comments: true

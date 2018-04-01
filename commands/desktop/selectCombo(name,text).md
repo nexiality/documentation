@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; selectCombo(name,text)
+title: selectCombo(name,text)
 parent: desktop
 tags: command desktop
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertCssNotPresent(locator,property)
+title: assertCssNotPresent(locator,property)
 parent: web
 tags: command web
 comments: true

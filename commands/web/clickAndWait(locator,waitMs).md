@@ -1,5 +1,5 @@
 ---
-title: web &raquo; clickAndWait(locator,waitMs)
+title: clickAndWait(locator,waitMs)
 parent: web
 tags: command web
 comments: true

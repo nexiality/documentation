@@ -1,5 +1,5 @@
 ---
-title: web &raquo; executeScript(var,script)
+title: executeScript(var,script)
 parent: web
 tags: command web
 comments: true

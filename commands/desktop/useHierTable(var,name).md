@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; useHierTable(var,name)
+title: useHierTable(var,name)
 parent: desktop
 tags: command desktop
 comments: true

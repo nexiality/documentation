@@ -1,5 +1,5 @@
 ---
-title: ws &raquo; oauth(var,url,auth)
+title: oauth(var,url,auth)
 parent: ws
 tags: command ws web_service api
 comments: true

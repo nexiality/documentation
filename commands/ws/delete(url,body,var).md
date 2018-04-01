@@ -1,5 +1,5 @@
 ---
-title: ws &raquo; delete(url,body,var)
+title: delete(url,body,var)
 parent: ws
 tags: command ws web_service api
 comments: true

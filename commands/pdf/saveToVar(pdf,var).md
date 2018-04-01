@@ -1,5 +1,5 @@
 ---
-title: pdf &raquo; saveToVar(pdf,var)
+title: saveToVar(pdf,var)
 parent: pdf
 tags: command pdf
 comments: true

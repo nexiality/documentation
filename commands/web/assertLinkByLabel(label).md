@@ -1,5 +1,5 @@
 ---
-title: web &raquo; assertLinkByLabel(label)
+title: assertLinkByLabel(label)
 parent: web
 tags: command web
 comments: true

@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; saveFirstListData(var,contains)
+title: saveFirstListData(var,contains)
 parent: desktop
 tags: command desktop
 comments: true

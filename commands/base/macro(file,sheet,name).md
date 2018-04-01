@@ -1,5 +1,5 @@
 ---
-title: base &raquo; macro(file,sheet,name)
+title: macro(file,sheet,name)
 parent: base
 tags: command base
 comments: true

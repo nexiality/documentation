@@ -1,5 +1,5 @@
 ---
-title: desktop &raquo; saveTextPane(var,name,criteria)
+title: saveTextPane(var,name,criteria)
 parent: desktop
 tags: command desktop
 comments: true

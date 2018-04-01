@@ -1,5 +1,5 @@
 ---
-title: number &raquo; average(var,array)
+title: average(var,array)
 parent: number
 tags: command number
 comments: true

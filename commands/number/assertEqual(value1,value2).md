@@ -1,5 +1,5 @@
 ---
-title: number &raquo; assertEqual(value1,value2)
+title: assertEqual(value1,value2)
 parent: number
 tags: command number
 comments: true

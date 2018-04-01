@@ -1,5 +1,5 @@
 ---
-title: web &raquo; refreshAndWait()
+title: refreshAndWait()
 parent: web
 tags: command web
 comments: true
