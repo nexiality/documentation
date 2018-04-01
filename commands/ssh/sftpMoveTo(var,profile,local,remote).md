@@ -29,4 +29,4 @@ Output:<br/>
 
 
 ### See Also
-- [`scpMoveFrom(var,profile,local,remote)`](sftpMoveFrom(var,profile,remote,local))
+- [`sftpMoveFrom(var,profile,local,remote)`](sftpMoveFrom(var,profile,remote,local))

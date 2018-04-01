@@ -31,5 +31,5 @@ The output shows what's being matched and stored:<br/>
 
 
 ### See Also
-- [assertCount(text,regex,expects)](assertCount(text,regex,expects))
-- [saveReplace(text,regex,replace,resultVar)](saveReplace(text,regex,replace,resultVar))
+- [`assertCount(text,regex,expects)`](assertCount(text,regex,expects))
+- [`saveReplace(text,regex,replace,resultVar)`](saveReplace(text,regex,replace,resultVar))

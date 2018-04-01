@@ -1,6 +1,6 @@
 ---
 title: SQL expression
-parent: expressions
+parent: Expressions
 tags: command expressions
 comments: true
 ---

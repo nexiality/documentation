@@ -1,6 +1,6 @@
 ---
 title: Understanding Project Structure
- parent: user guide
+parent: User Guide
 tags: project structure project.properties script
 comments: true
 ---

@@ -27,3 +27,4 @@ In above example test, step 2 and 3 failed because `nexial.browser` is defined i
 
 
 ### See Also
+- [`assertVarPresent(var)`](assertVarPresent(var))

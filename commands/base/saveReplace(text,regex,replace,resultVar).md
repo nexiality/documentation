@@ -33,5 +33,5 @@ The output shows the modified text under `var10`:<br/>
 
 
 ### See Also
-- [assertCount(text,regex,expects)](assertCount(text,regex,expects))
-- [saveMatches(text,regex,saveVar)](saveMatches(text,regex,saveVar))
+- [`assertCount(text,regex,expects)`](assertCount(text,regex,expects))
+- [`saveMatches(text,regex,saveVar)`](saveMatches(text,regex,saveVar))

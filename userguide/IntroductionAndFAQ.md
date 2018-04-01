@@ -1,13 +1,13 @@
 ---
-title: Introduction and FAQ
- parent: user guide
+title: Introduction
+parent: User Guide
 tags: command userguide introduction faq design benefit
 comments: true
 ---
 
 <img src="../image/logo-x.png" style="box-shadow:none" alt="Nexial"/>
 
-## What is Nexial?
+### What is Nexial?
 Nexial is a test automation platform based on a hybrid test design approach.  At its core, its 
 design centers around the following goals:
 
@@ -54,7 +54,7 @@ design centers around the following goals:
     manipulation capabilities.  All these capabilities are accessible via the same spreadsheet.
 
 
-## What can I do with it?
+### What can I do with it?
 One can use Nexial to create test automation across a myriad of applications such as desktop 
 applications, web applications, service applications, etc.  Coding is not required. Via 
 [simple conventions](UnderstandingProjectStructure) and [test design guidelines](UnderstandingExcelTemplates), 
@@ -62,7 +62,7 @@ one can create test automation that maintain independence between the test (test
 and flexibility to mix-and-match test scripts and test data at execution time.
 
 
-## How does it work?
+### How does it work?
 Here is the basic workflow:
 1.  Automation engineer captures test steps and validation using spreadsheet (test script).
 2.  Automation engineer enters test data into a separate spreadsheet (test data).
@@ -80,7 +80,7 @@ simplified.
 Step 3 through 7 can be a part of a larger CI/CD orchestration.
 
 
-## What do I need to get started?
+### What do I need to get started?
 In a nutshell, one would need:
 1.  A computer (PC, Mac, and *NIX most of the time).
 2.  JDK 1.8+
@@ -89,7 +89,7 @@ In a nutshell, one would need:
 For more details and step-by-step instruction, check out the [Install Nexial](InstallingNexial) page.
 
 
-## Where can I go for more help/support?
+### Where can I go for more help/support?
 For online documentation, start [here](../commands/).  For additional questions, inquiries or help, 
 submit your request to our 
 <a href="https://github.com/nexiality/nexial-core/issues" class="external-link" target="_nexial_external">GitHub issue</a>.  Likewise, for any 
@@ -97,7 +97,7 @@ suggestion on new features for Nexial, submit an
 <a href="https://github.com/nexiality/nexial-core/issues" class="external-link" target="_nexial_external">issue</a> as well. 
 
 
-## What can I expect from future release?
+### What can I expect from future release?
 Even before it’s 1.0 debut, Nexial has been in used by multiple projects.  But in a way, this isn’t 
 a ‘1.0’ release – at least not in the typical sense.  Calling it ‘1.0’ is just a way to officially mark 
 its progress, and to give us a way of comparing against future releases.  The cadence we would like 

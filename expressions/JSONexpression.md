@@ -1,6 +1,6 @@
 ---
 title: JSON expression
-parent: expressions
+parent: Expressions
 tags: command expressions
 comments: true
 ---

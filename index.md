@@ -36,25 +36,24 @@ the **[Introduction](userguide/IntroductionAndFAQ)** page.
 
 ---------------------------------------------
 
-<div class="quick_link"><a href="userguide">user guide</a></div>
-<div class="quick_link"><a href="commands">command reference</a></div>
-<div class="quick_link"><a href="systemvars">system variables</a></div>
-<div class="quick_link"><a href="flowcontrols">flow controls</a></div>
+<div class="quick_link"><a href="userguide">User Guide</a></div>
+<div class="quick_link"><a href="commands">Command Reference</a></div>
+<div class="quick_link"><a href="systemvars">System Variables</a></div>
+<div class="quick_link"><a href="flowcontrols">Flow Controls</a></div>
 
 <div style="clear:both" />
 
-<div class="quick_link"><a href="functions">built-in functions</a></div>
-<div class="quick_link"><a href="expressions">expressions</a></div>
-<div class="quick_link"><a href="jsonpath">jsonpath</a></div>
-<div class="quick_link"><a href="tipsandtricks">tips and tricks</a></div>
+<div class="quick_link"><a href="functions">Built-in Functions</a></div>
+<div class="quick_link"><a href="expressions">Expressions</a></div>
+<div class="quick_link"><a href="jsonpath">Jsonpath</a></div>
+<div class="quick_link"><a href="tipsandtricks">Tips and Tricks</a></div>
 
 <div style="clear:both" />
 
 
-<div class="quick_link"><a href="release">release notes</a></div>
+<div class="quick_link"><a href="release">Release Notes</a></div>
 
 <div style="clear:both" />
 
 ---------------------------------------------
-
 

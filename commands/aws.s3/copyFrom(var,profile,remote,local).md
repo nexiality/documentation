@@ -38,10 +38,10 @@ Output:<br/>
 Script:<br/>
 ![](image/copyFrom_03.png)
 
-Output:<br>
+Output:<br/>
 ![](image/copyFrom_04.png)
 
 
 ### See Also
-- [moveFrom(var,profile,remote,local)](moveFrom(var,profile,remote,local))
-- [copyTo(var,profile,local,target)](copyTo(var,profile,local,target))
+- [`moveFrom(var,profile,remote,local)`](moveFrom(var,profile,remote,local))
+- [`copyTo(var,profile,local,target)`](copyTo(var,profile,local,target))

@@ -26,5 +26,5 @@ Output:<br/>
 - [`assertValue(name,value)`](assertValue(name,value))
 - [`assertPresent(name)`](assertPresent(name))
 - [`assertNotPresent(name)`](assertNotPresent(name))
-- [`deleteAll(name)`](deleteAll(name))
+- [`deleteAll()`](deleteAll())
 

@@ -15,7 +15,7 @@ Note that `var` is the name of the variable, not its value (i.e. not `${...}`
 
 
 ### Example
-**Script:** <br>
+**Script:** <br/>
 ![](image/assertVarPresent(var)_01.png)
 
 **Output:**
@@ -26,3 +26,4 @@ In above example test step 2 and 3 passed because `nexial.browser` is defined in
 
 
 ### See Also
+- [`assertVarNotPresent(var)`](assertVarNotPresent(var))

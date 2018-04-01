@@ -1,6 +1,6 @@
 ---
 title: History of Nexial
- parent: user guide
+parent: User Guide
 tags: command history
 comments: true
 ---

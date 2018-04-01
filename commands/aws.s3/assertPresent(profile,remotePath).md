@@ -25,4 +25,4 @@ Output:<br/>
 ![](image/assertPresent_02.png)
 
 ### See Also
-- [list(var,profile,remotePath)](list(var,profile,remotePath))
+- [`list(var,profile,remotePath)`](list(var,profile,remotePath))

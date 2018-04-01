@@ -1,6 +1,6 @@
 ---
 title: Batch Files
- parent: user guide
+parent: User Guide
 tags: command userguide batch cmd sh
 comments: true
 ---

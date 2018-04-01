@@ -1,6 +1,6 @@
 ---
  title: web &raquo; selectWindowAndWait(winId,waitMs)
- parent: web
+parent: web
  tags: command web
  comments: true
 ---

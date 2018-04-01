@@ -1,6 +1,6 @@
 ---
 title: $(date)
-parent: built-in function
+parent: Built-in Functions
 tags: date $(date)
 comments: true
 ---

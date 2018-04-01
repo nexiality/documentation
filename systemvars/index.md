@@ -20,7 +20,7 @@ table.sysvar th { padding:5px; border:1px #aaa solid; }
 table.sysvar td { padding:5px; border:1px #ddd solid; text-align:left; vertical-align:top; }
 table.sysvar img.resize { width:960px; }
 table.sysvar td.varname code { background:transparent; border:none; color:#555; }
-table.sysvar td.varname a code { background:transparent; border:none; color:#555; }
+table.sysvar td.varname a code { background:transparent; border:none; color:#555; padding-left: 3px; }
 table.sysvar img { margin:8px 0; }
 table.sysvar blockquote { font-size:1em; }
 table.sysvar a code { color:#d5000d; background-color:transparent; border:none; font-weight:normal; }
@@ -676,7 +676,7 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     <td>false</td>
     <td>
     Determine the browser page stability during test execution. Generally most of the modern web applications are rich 
-    in interactivity which require some background process to be completed when page gets loaded. But older or simpler 
+    in interactivity which require some background proceed to be completed when page gets loaded. But older or simpler 
     web applications do not have such requirement. For such case, one can use this system variable to speed up test 
     automation.<br/>
     <br/> 

@@ -1,6 +1,6 @@
 ---
 title: $(count)
-parent: built-in function
+parent: Built-in Functions
 tags: count $(count)
 comments: true
 ---

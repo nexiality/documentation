@@ -161,15 +161,19 @@ span.breadcrumb {
     color: #808070;
 }
 
+a {
+    color:            rgba(50, 100, 60, 0.9);
+    background-color: rgba(150, 180, 150, 0.35);
+    padding:          2px 2px;
+}
+
 a code {
-    background-color:    rgba(200, 230, 200, 0.9) !important;
-    color:               rgba(50, 100, 60, 0.9);
-    text-shadow:         none;
-    background-image:    url(../../image/link.png);
-    padding:             2px 4px 2px 18px;
-    background-position: 1px 3px;
-    background-repeat:   no-repeat;
-    background-size:     16px;
+    color:           rgba(50, 100, 60, 0.9);
+    border:          none;
+    text-shadow:     none;
+    padding:         2px 4px 2px 18px;
+    background:      rgba(150, 180, 150, 0.35) url(../../image/link.png) no-repeat 1px 3px;
+    background-size: 16px;
 }
 
 span.command-type {

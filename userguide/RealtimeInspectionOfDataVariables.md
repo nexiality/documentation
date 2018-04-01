@@ -1,6 +1,6 @@
 ---
 title: Realtime Inspection of Data Variables
-parent: Tips and Tricks
+parent: User Guide
 tags: command tipsandtricks inspect inspectonpause
 comments: true
 ---

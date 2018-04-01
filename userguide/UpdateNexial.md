@@ -1,12 +1,12 @@
 ---
 title: Update Nexial
- parent: user guide
+parent: User Guide
 tags: update release
 comments: true
 ---
 
 
-## Download Nexial
+### Download Nexial
 Nexial development team will continue to update the Nexial code base so that enhancements and fixes 
 can be timely provided. If you haven't installed Nexial yet, be sure to follow the instructions 
 here to [get Nexial set up in your local environment](InstallingNexial).
@@ -26,7 +26,7 @@ environment.
 1.  Done! Now you have the latest version of Nexial.
 
 
-## Update Command Listing
+### Update Command Listing
 Before you can start using the latest version of Nexial, it is important to ensure that your 
 scripts have the latest commands as well. Failure to follow the steps below would very likely 
 hinder the new commands to be shown in your script files.
@@ -40,7 +40,7 @@ hinder the new commands to be shown in your script files.
 4.  Now you are ready to use the latest version of Nexial.
 
 
-## Stay in the Know
+### Stay in the Know
 Want to stay in the know of the latest updates to Nexial? Sign up to the Slack channel dedicated 
 for Nexial users!
 

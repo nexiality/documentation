@@ -1,5 +1,5 @@
 ---
-title: nexial jsonpath
+title: Nexial Jsonpath
 level: 1
 tags: jsonpath
 comments: true

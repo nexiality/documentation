@@ -31,6 +31,7 @@ below to learn more about each type and the commands available under each of the
 - [`pdf`](pdf): commands regarding the PDF file type.
 - [`rdbms`](rdbms): commands regarding IO operations.
 - [`ssh`](ssh): commands to automate SSH-based automation.
+- [`step`](step): commands for manual tasks and validations.
 - [`web`](web): commands to regarding web application.
 - [`webalert`](webalert): commands regarding JavaScript alert boxes in a web application.
 - [`webcookie`](webcookie): commands regarding HTTP cookie in a web application.

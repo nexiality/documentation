@@ -25,4 +25,4 @@ Output:<br/>
 
 
 ### See Also
-- [assertEqual(file1,file2)](assertEqual(file1,file2))
+- [`assertEqual(file1,file2)`](assertEqual(file1,file2))

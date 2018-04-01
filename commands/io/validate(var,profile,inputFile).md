@@ -25,7 +25,8 @@ Each field in the record will go through the below validations mentioned.
   - **SQL** - to check field value against a database query
 
 - **API** (**In Progress**)
-  - **RANGE**
+
+- **RANGE**
 
 - **Map Functions supported**
   Map Functions are to apply below functions on all the records on a field and get the value. Which could be later used to validate against any another field in any record. 
@@ -95,10 +96,6 @@ Date format pattern letters and their meaning:<br/>
 
 
 ### Downloads
-- [config template for Excel Descriptor](excel-mapping-config-template.json) the config template file for 
-  'Excel' specification.
-- [JSON config template](json-mapping-config-template.json) the config template for "JSON' specification.
-
-
-### See Also
+- [Excel Descriptor Template](excel-mapping-config-template.json): the config template file for 'Excel' specification.
+- [JSON Config Template](json-mapping-config-template.json): the config template for "JSON' specification.
 
