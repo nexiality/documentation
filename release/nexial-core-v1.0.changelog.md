@@ -6,12 +6,12 @@ comments: true
 ---
 
 
-# Release 1.0
-##### 2018-03-30
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-1.0" class="external-link" target="_nexial_target">Release 1.0</a>
+2018-03-30
 
 #### First release of Nexial Automation Platform.  
 
-For those familar with Sentry, this would be Sentry v1.6.  If you have
+For those familiar with Sentry, this would be Sentry v1.6.  If you have
 test scripts created in Sentry, be sure to `bin/sentry2nexial.cmd` script for your project **PRIOR** to executing
 with Nexial.
 
