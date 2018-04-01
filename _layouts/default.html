@@ -36,12 +36,17 @@
     {% if site.google_analytics %}
     {% include analytics.html %}
     {% endif %}
+
+    <script>
+    function onload() { if (document.location.hash) { window.scrollBy(0, -200); } }
+    </script>
 </head>
 
-<body>
+<body onload="onload()">
 <div id="container">
     <header>
-        <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+        <!--<h1>Nexial Automation &raquo; {{ page.title | default: site.title | default: site.github.repository_name }}</h1>-->
+        <h1>Nexial Automation</h1>
         <h2>{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
 
         {% if page.level and page.level == 1 %}

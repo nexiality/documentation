@@ -9,7 +9,7 @@ comments: true
 ### Description
 This command lists the remote files/directory via SFTP. 
 
-For output process via `var`, check out [Command Output Processing](index.md#command-output-processing)
+For output process via `var`, check out [Command Output Processing](index#command-output-processing)
 
 
 ### Parameters

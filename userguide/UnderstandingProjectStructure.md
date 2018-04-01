@@ -6,7 +6,7 @@ comments: true
 ---
 
 Nexial is designed to work with a variety of directory/file structures.  One can specify target script or data file 
-locations when running [`nexia.[cmd|sh]`](BatchFiles.md#nexial.cmd-/-nexial.sh).  However it is recommended to follow 
+locations when running [`nexial.[cmd|sh]`](BatchFiles#nexialcmd--nexialsh).  However it is recommended to follow 
 the standard Nexial automation project structure so that:
 1. Test artifacts are well-organized to reduce conflicts and to improve artifact management,
 2. Your project can integrate more easily (think Integration Testing) with other project(s) that follow the same 
@@ -31,10 +31,10 @@ Below is the general directory/file structure of a standard Nexial automation pr
 
    2. `artifact/data` - this directory will store your test data.  By default the data file is expected to be named in
    correspondent to the test script: `<TEST SCRIPT NAME>.data.xlsx`.  But this convention can be overridden during
-   execution via the `-data` flag to [`nexial.[cmd|sh]` script](BatchFiles.md#nexial.cmd-/-nexial.sh).  Similar to test 
+   execution via the `-data` flag to [`nexial.[cmd|sh]` script](BatchFiles#nexialcmd--nexialsh).  Similar to test 
    scripts, each data file would contain one or many data sheets (worksheets) that correspond to the test scenarios.  
    Again, this is the convention.  Deviating from this convention can be attained via the `-datasheet` flag to 
-   [`nexial.[cmd|sh]` script](BatchFiles.md#nexial.cmd-/-nexial.sh).  
+   [`nexial.[cmd|sh]` script](BatchFiles#nexialcmd--nexialsh).  
    In general, other data files such as SQL, JSON, test data files (text) are stored in this location as well.
 
    3. `artifact/plan` - this directory will store all the test plan.  Each test plan may contain one or more test 
@@ -68,14 +68,14 @@ Below is the general directory/file structure of a standard Nexial automation pr
    It is generally a good idea to keep output separated by its execution.  Hence the timestamp-based approach allows
    each execution its dedicated output directory.  One can consider using the same output location to store any
    output files generated as part of the execution.  See 
-   [`$(syspath|out|...)`](../functions/$(syspath).md#available-functions) for more details.
+   [`$(syspath|out|...)`](../functions/$(syspath)#available-functions) for more details.
    When [`nexial.outputToCloud`](../systemvars/#nexial.outputToCloud) to set to `true`, the generated output will be
    uploaded to designated cloud location and removed from local output directory.
 
 
 ### Additional Notes
 For convenience, use the `bin/nexial-project.cmd` or `bin/nexial-project.sh` to generate the project structure for 
-you. See [`nexial-project.[cmd|sh]](BatchFiles.md#nexial-project.cmd-/-nexial-project.sh) for more details.
+you. See [`nexial-project.[cmd|sh]`](BatchFiles#nexial-projectcmd--nexial-projectsh) for more details.
 
 As a convention, it is recommended to use `C:\projects` or `/Users/<username/project` (MacOSX) as the top-level 
 directory for all your Nexial projects.

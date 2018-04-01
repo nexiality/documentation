@@ -10,7 +10,7 @@ comments: true
 This command automates the copying of a remote resource to a local one via SFTP protocol.  Local file, if exist, 
 will be overwritten.
 
-For output process via `var`, check out [Command Output Processing](index.md#command-output-processing)
+For output process via `var`, check out [Command Output Processing](index#command-output-processing)
 
 
 ### Parameters

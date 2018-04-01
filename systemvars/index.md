@@ -23,7 +23,7 @@ table.sysvar td.varname code { background:transparent; border:none; color:#555; 
 table.sysvar td.varname a code { background:transparent; border:none; color:#555; padding-left: 3px; }
 table.sysvar img { margin:8px 0; }
 table.sysvar blockquote { font-size:1em; }
-table.sysvar a code { color:#d5000d; background-color:transparent; border:none; font-weight:normal; }
+table.sysvar a code { background-color:transparent; border:none; font-weight:normal; }
 
 .highlight-red { background-color:#ffe7e7; } 
 

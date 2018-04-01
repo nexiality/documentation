@@ -158,7 +158,8 @@ span.breadcrumb {
 }
 
 .quick_link a {
-    color: #808070;
+    color:            #808070;
+    background-color: transparent;
 }
 
 a {
@@ -167,12 +168,16 @@ a {
     padding:          2px 2px;
 }
 
+a:hover {
+    color: #353;
+}
+
 a code {
     color:           rgba(50, 100, 60, 0.9);
     border:          none;
     text-shadow:     none;
     padding:         2px 4px 2px 18px;
-    background:      rgba(150, 180, 150, 0.35) url(../../image/link.png) no-repeat 1px 3px;
+    background:      url(../../image/link.png) no-repeat 1px 3px;
     background-size: 16px;
 }
 

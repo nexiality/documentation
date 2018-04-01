@@ -9,7 +9,7 @@ comments: true
 ### Description
 This command copies a `remote` file (fully qualified) to a `local` file (fully qualified).
 
-For output process via `var`, check out [Command Output Processing](index.md#command-output-processing)
+For output process via `var`, check out [Command Output Processing](index#command-output-processing)
 
 
 ### Parameters
