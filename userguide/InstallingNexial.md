@@ -1,7 +1,7 @@
 ---
 title: Installing Nexial
-parent: quick start
-tags: installation install nexial quickstart
+ parent: user guide
+tags: installation install nexial userguide
 comments: true
 ---
 

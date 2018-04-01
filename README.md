@@ -31,7 +31,7 @@ Here's some of the core concerns of this platform:
 - Supports FRIP (functional, regression, integration, performance testing)
 
 For better understanding towards the objective and overview of Nexial, check out 
-the **[Introduction](quickstart/IntroductionAndFAQ.md)** page.
+the **[Introduction](userguide/IntroductionAndFAQ.md)** page.
 
 For more information, please visit [Our Site](https://nexiality.github.io/documentation/).
 

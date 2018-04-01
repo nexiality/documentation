@@ -1,7 +1,7 @@
 ---
 title: System Variables
 level: 1
-tags: command base
+tags: system variables systemvariables
 comments: true
 ---
 
@@ -244,6 +244,17 @@ table.sysvar a code { color:#d5000d; background-color:transparent; border:none; 
     <td>
     Determine if Nexial to pause after each test step. When set to true, Nexial will pause test execution after each 
     step. User will need to press <code>Enter</code> on the console to resume the next step.
+    </td>
+</tr>
+<tr>
+    <td nowrap="nowrap" class="varname"><a name="nexial.inspectOnPause"/><code>nexial.inspectOnPause</code></td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>false</td>
+    <td>
+    During <a href="../flowcontrols/#pausebefore--pauseafter">PauseBefore() or PauseAfter()</a>, it is possible
+    to interact with Nexial to inquire of the state of a data variable, a built-in function or a Nexial expression.
+    For more details, visit this page.
     </td>
 </tr>
 <tr>

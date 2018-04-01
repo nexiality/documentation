@@ -143,7 +143,7 @@ How about finding the average hours worked in 2016, round to the closest hour?<b
 ![](image/index_06.png)
 
 
-### **When to use which, and why?**
+### When to use which, and why?
 All three: Nexial commands, Nexial built-in function and Nexial expression, each has its place and purpose.  In some 
 ways they are interchangeable. But for the most part, here are the guiding factors to decide which approach should be 
 applied.

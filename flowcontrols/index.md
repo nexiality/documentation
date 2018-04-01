@@ -109,7 +109,7 @@ The above example would read:
 > otherwise, run the update SQL on "COMPLETED_SALES" table.
 
 
-### **ProceedIf(condition)**
+### ProceedIf(condition)
 This flow control is essentially the same as **`SkipIf(condition)`** (above), albeit the logical inverse of it.  
 Basically it would read: "`If `**`condition`**` is true, then proceed if the current test step`" .  Depending on 
 the flow of the test steps in reference, some times it might _read_ better to use `ProceedIf` rather than `SkipIf`.  

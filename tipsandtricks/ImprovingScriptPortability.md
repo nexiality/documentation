@@ -42,7 +42,7 @@ For example, assuming the current project is `C:\projects\Project1`:
   `../../Projects2/artifact/data/Project2_script.data.xlsx`
 
 
-#### When `nexial.assistantMode` is enabled:
+#### When `nexial.assistantMode` is enabled
 Specifying the spreadsheet program is **ONLY** required to enable Nexial to open up the execution output automatically 
 after the execution is completed. Otherwise, no need to specify this information at all. To achieve portability, 
 use one of the following ways to specify the spreadsheet program path:  

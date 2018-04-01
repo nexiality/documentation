@@ -17,7 +17,7 @@ example:
 > nexial.sh -plan ... ...
 
 Another way of setting these mail related system properties is via the 
-[`project.properties`](../../quickstart/UnderstandingProjectStructure#project.properties) file.
+[`project.properties`](../../userguide/UnderstandingProjectStructure#project.properties) file.
 
 Here are the various settings available to configure the appropriate mail server for your automation:
 

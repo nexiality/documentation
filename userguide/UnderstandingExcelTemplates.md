@@ -1,6 +1,6 @@
 ---
 title: Understanding Excel Templates
-parent: quick start
+ parent: user guide
 tags: excel template
 comments: true
 ---

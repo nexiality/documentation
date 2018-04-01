@@ -1,19 +1,17 @@
 ---
 title: Tips and Tricks
 level: 1
-tags: command base
+tags: tips tricks tipsandtricks how-to
 comments: true
 ---
 
 
 #### General
-- [Create new test script, test data or test plan](CreateTestScript_data_plan)
 - *in progress* [How to avoid memory issue by keeping your scripts and data files under control]()
 - *in progress* [How to provide valid and correct script name to avoid any illegal argument exception]()
 - [Improving Script Portability](ImprovingScriptPortability)
 - [Integrating with other projects](IntegratingWithOtherProjects)
 - [Record/Playback a Nexial Execution](RecordPlayback)
-- [nexial-crypt](NexialCrypt)
 - *in progress* [Why isn't Nexial executing my scenario (worksheet)?]()
 
 
@@ -42,6 +40,3 @@ comments: true
 - [BrowserStack Integration](BrowserStackIntegration)
 - [Script failing on BrowserStack](ScriptFailingonBrowserStack)
 
-
-#### Web Service/API Automation
-- *in progress* [Web Services Automation]()

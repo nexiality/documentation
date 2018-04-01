@@ -1,6 +1,6 @@
 ---
 title: Update Nexial
-parent: quick start
+ parent: user guide
 tags: update release
 comments: true
 ---

@@ -6,8 +6,7 @@ comments: true
 ---
 
 
-
-### Elements under 'aut' section:
+### Elements under 'aut' section
 
 ```json
 {

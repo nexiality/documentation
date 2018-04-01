@@ -32,11 +32,11 @@ Here's some of the core concerns of this platform:
 - Supports FRIP (functional, regression, integration, performance testing)
 
 For better understanding towards the objective and overview of Nexial, check out 
-the **[Introduction](quickstart/IntroductionAndFAQ)** page.
+the **[Introduction](userguide/IntroductionAndFAQ)** page.
 
 ---------------------------------------------
 
-<div class="quick_link"><a href="quickstart">quick start</a></div>
+<div class="quick_link"><a href="userguide">user guide</a></div>
 <div class="quick_link"><a href="commands">command reference</a></div>
 <div class="quick_link"><a href="systemvars">system variables</a></div>
 <div class="quick_link"><a href="flowcontrols">flow controls</a></div>

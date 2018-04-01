@@ -13,7 +13,7 @@ the respective form. Providing an efficient `XPATH` for the desktop components
 script execution.
 
 
-#### How to make an efficient `XPATH`?  The below steps may help:
+#### How to make an efficient `XPATH`?  The below steps may help
 - If the desktop component has `@AutomationId` attribute and the value is consistent, use only this attribute to find 
   the component and no need to combine with other attributes like `@ControlType`.
 - Nexial uses this as parent `XPATH` and auto scans all the child elements for that form. So, all the child elements 
@@ -27,7 +27,7 @@ script execution.
   ![json](image/EfficientXPATH_Desktop_01.png)
 
 
-### How to convert the existing json files? Use the tool included in Nexial:
+### How to convert the existing json files? Use the tool included in Nexial
 - `XPATH`s used in `application.json` file (including cache json files) for all the desktop components, could be 
   modified to achieve optimized `XPATH`s which means avoiding `@ControlType` when `@AutomationId` is provided.
 - `nexial-desktop-xpath-update.cmd` is able to convert the `XPATH`s for the existing json files.
