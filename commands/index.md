@@ -30,7 +30,8 @@ below to learn more about each type and the commands available under each of the
 - [`mail`](mail): commands regarding email operations.
 - [`number`](number): number-related automation commands.
 - [`pdf`](pdf): commands regarding the PDF file type.
-- [`rdbms`](rdbms): commands regarding IO operations.
+- [`rdbms`](rdbms): commands regarding RDBMS operations.
+- [`redis`](redis): commands regarding Redis database operations.
 - [`ssh`](ssh): commands to automate SSH-based automation.
 - [`step`](step): commands for manual tasks and validations.
 - [`web`](web): commands to regarding web application.
