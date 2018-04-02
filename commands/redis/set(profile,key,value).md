@@ -11,7 +11,7 @@ This command is used to set the `value` as the value of the `key`.
 
 
 ### Parameters
-- **profile** - is the profile name with which `redis` database details are defined. (Refer [here](index.md#defining-profile) to know how to define `profile`)
+- **profile** - is the profile name with which `redis` database details are defined. (Refer [here](index.html#defining-profile) to know how to define `profile`)
 - **key** - is the key for which the `value` to be set.
 - **value** - is the value to be set to the specified `key`. 
 
