@@ -61,15 +61,13 @@ comments: true
 - [`editTableCells(row,nameValues)`](editTableCells(row,nameValues))
 
 [//]: # (- getRowCount(var)
-[//]: # (- getTableRows(var,beginRow,endRow)
-[//]: # (- getTableRowsAll(var)
-
 - [`hideExplorerBar()`](hideExplorerBar)
 - [`login(form,username,password)`](login(form,username,password))
 - [`maximize()`](maximize())
 - [`minimize()`](minimize())
 - [`resize(width,height)`](resize(width,height))
 - [`saveAllTableRows(var)`](saveAllTableRows(var))
+- [`saveTableRowsRange(var,beginRow,endRow)`](saveTableRowsRange(var,beginRow,endRow))
 - [`saveAttributeByLocator(var,locator,attribute)`](saveAttributeByLocator(var,locator,attribute))
 - [`saveElementCount(var,name)`](saveElementCount(var,name))
 - [`saveFirstListData(var,contains)`](saveFirstListData(var,contains))
