@@ -16,10 +16,10 @@ comments: true
 
 ### Example
 
-Script:<br/>
+**Script**:<br/>
 ![](image/selectMultiOptions_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/selectMultiOptions_02.png)
 
 ### See Also

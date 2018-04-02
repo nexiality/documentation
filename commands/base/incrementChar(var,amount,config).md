@@ -1,4 +1,5 @@
 ---
+layout: default
 title: incrementChar(var,amount,config)
 parent: base
 tags: command base
@@ -33,10 +34,10 @@ Currently Nexial provides 3 approaches to increment:
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/incrementChar_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/incrementChar_02.png)
 
 

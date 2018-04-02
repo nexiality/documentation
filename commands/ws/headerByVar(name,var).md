@@ -19,7 +19,7 @@ This command is used to add the header value to web service request by calling v
 **Script**:<br/>
 ![](image/headerByVar_01.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![](image/headerByVar_02.png)
 
 

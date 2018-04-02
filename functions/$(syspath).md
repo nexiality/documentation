@@ -46,7 +46,7 @@ example,
 Here are some examples of using this built-in function:<br/>
 ![script](image/$(syspath)_01.png)
 
-... and the output:<br/>
+... and the **output**:<br/>
 ![output](image/$(syspath)_02.png)
 
 

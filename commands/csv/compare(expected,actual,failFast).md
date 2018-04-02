@@ -26,10 +26,10 @@ This command compares two CSV files. It compares the file size (in bytes) and th
 Test Data:<br/>
 ![data](image/compare_01.png)
 
-Script:<br/>
+**Script**:<br/>
 ![script](image/compare_02.png)
 
-Output: failure on first line and fourth string
+**Output**: failure on first line and fourth string<br/>
 ![output](image/compare_03.png)
 
 

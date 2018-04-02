@@ -13,16 +13,16 @@ For output process via `var`, check out [Command Output Processing](index#comman
 
 
 ### Parameters
-- **var** \- the variable name that references the the outcome of this command.
-- **profile** \- the profile that encapsulate the SSH connectivity and security information.
+- **var** \- the variable name that references the outcome of this command.
+- **profile** \- the profile that encapsulates the SSH connectivity and security information.
 - **remote** \- the pattern which specifies the folder, file or a pattern of files.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/sftpDelete_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/sftpDelete_02.png)
 
 

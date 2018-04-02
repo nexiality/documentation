@@ -22,5 +22,5 @@ checking, specified `(empty)`, `(blank)` or `-1` for `minByte`.
 Example:<br/>
 ![script](image/assertReadable_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/assertReadable_02.png)

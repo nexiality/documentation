@@ -23,14 +23,14 @@ For example,<br/>
 
 
 ### Example
-Suppose we have the following test script:<br/>
+Suppose we have the following test **Script**:<br/>
 ![script](image/$(projectfile)_01.png)
 
 Column **param1** of row 7 shows that we are instructing Nexial to retrieve the text content of a project file 
 under **artifact/data/myfile.txt** and print it in the output.  Similar in row 9, column "param 2", the same 
 built-in function is used again for file content comparison.
 
-Here's the output:<br/>
+Here's the **output**:<br/>
 ![output](image/$(projectfile)_02.png)
 
 Notice that the output at row 7 is the same as the "text" property printed on row 8. 

@@ -43,7 +43,7 @@ comments: true
 
 - The value for this key is to provide the .NET configuration required for the application under test. The .NET configuration file is usually named as \[application_executable\].exe.config.
 - This key is optional, and is only used to retrieve the built version information in order to reference a specific build of the AUT.
-- If this is key is provided, the output file will be generated withe the current version number of the app.
+- If this is key is provided, the output file will be generated within the current version number of the app.
 
 - **terminateExisting:**
 

@@ -17,10 +17,10 @@ This command saves the response payload to a `file`.  Optionally one can append 
 
 
 ### Example
-**Script:**<br/>
+**Script**:<br/>
 ![](image/saveResponsePayLoad_01.png)
 
-**Result:**<br/>
+**Output**:<br/>
 File saved at the given location. Click on the provided link to open the file directly from the output file
 ![](image/saveResponsePayLoad_02.png)
 

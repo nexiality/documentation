@@ -22,7 +22,7 @@ fail.<br/>
 **Script**:<br/>
 ![](image/assertWellFormed_02.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![](image/assertWellFormed_03.png)
 
 

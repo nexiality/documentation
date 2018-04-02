@@ -22,7 +22,7 @@ rows.  Rows are separated by `\n` and cells are separated by `${nexial.textDelim
 **Script**:<br/>
 ![](image/writeVar_01.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![](image/writeVar_02.png)
 
 

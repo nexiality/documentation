@@ -16,22 +16,22 @@ script will be saved to the output directory, and made available on the output f
 
 
 ### Parameters
-- **programPathAndParms** \- this parameter is the path along with the name of the exe file to be launched.
+- **programPathAndParms** \- this parameter is the path along with the name of the exe file to be launched
 
 
 ### Example 1
-Script:<br/>
+**Script**:<br/>
 ![script](image/runProgram_01.png)
 
 
 ### Example 2
-Running a sample.bat file
+Running a sample.bat file.
 
 Just provide the file path as an argument. And also has the option to pass arguments for that program along with the 
 path.
 ![script](image/runProgram_02.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/runProgram_03.png)
 
 The standard output from this program is saved in the output file, that can be found in the corresponding project 

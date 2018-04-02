@@ -7,13 +7,13 @@ comments: true
 
 
 ### Automating running desktop application (i.e. speed up script development)
-The common approach to developing your automation script is to simulate the entire interaction flow between a persona 
+The common approach to develop your automation script is to simulate the entire interaction flow between a persona 
 and the target application, from beginning to end.  In other words, the typical steps one would develop the script to:
-1.  start the application,
-2.  authenticate (if needed),
-3.  navigate to the appropriate UI screen/form,
-4.  perform the intended business transactions, and
-5.  finally terminate the application.
+1.  Start the application,
+2.  Authenticate (if needed),
+3.  Navigate to the appropriate UI screen/form,
+4.  Perform the intended business transactions, and
+5.  Finally terminate the application.
  
 This seems reasonable enough. However it is not always most efficient to execute all these steps during automation 
 script development.  Imagine you are developing on a specific, and perhaps intricate, sequence of steps.  Each time 

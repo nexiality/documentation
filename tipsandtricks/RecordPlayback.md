@@ -1,5 +1,5 @@
 ---
-title: RecordPlayback
+title: Record/Playback a Nexial Execution
 parent: Tips and Tricks
 tags: command tipsandtricks
 comments: true

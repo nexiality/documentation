@@ -1,4 +1,5 @@
 ---
+layout: default
 title: prependText(var,prependWith)
 parent: base
 tags: command base

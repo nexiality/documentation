@@ -21,7 +21,7 @@ This command asserts the form element is present in the pdf document.
 **Script**:<br/>
 ![script](image/assertFormElementPresent_01.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![](image/assertFormElementPresent_02.png)
 
 

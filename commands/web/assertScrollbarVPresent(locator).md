@@ -16,11 +16,10 @@ comments: true
 
 ### Example
 
-Script
 
 ![](image/assertScrollbarVPresent_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/assertScrollbarVPresent_02.png)
 
 ### See Also

@@ -25,7 +25,7 @@ To learn about how to utilize the response returned from the target URL, click [
 **Script**:<br/>
 ![](image/head_01.png)
 
-**Result**: The response is returned with headers and does not have the response payload.<br/>
+**Output**: The response is returned with headers and does not have the response payload.<br/>
 ![](image/head_02.png)
 
 

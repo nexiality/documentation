@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertArrayEqual(array1,array2,exactOrder)
 parent: base
 tags: command base
@@ -19,10 +20,10 @@ internally uses the `${nexial.textDelim}` system variable to parse text string
 
 
 ### Example
-Example on how to use this command (the highlighted rows as guide):
+Example on how to use this command (the highlighted rows as guide):<br/>
 ![script](image/assertArrayEqual_01.png)
 
-... the output:
+... the output:<br/>
 ![output](image/assertArrayEqual_02.png)
 
 

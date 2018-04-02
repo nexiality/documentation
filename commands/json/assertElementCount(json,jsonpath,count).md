@@ -22,8 +22,8 @@ This command asserts the number of elements in `json` that match the specified `
 
 Use dot (.) notation to navigate to the child element. See the below example for syntax usage:
 
-Script:<br/>
+**Script**:<br/>
 ![script](image/assertElementCount_02.png)
 
-Result:<br/>
+**Output**:<br/>
 ![output](image/assertElementCount_03.png)

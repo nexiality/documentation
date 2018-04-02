@@ -41,12 +41,12 @@ For this example, let's consider we have a properties file in the data directory
 **`C:\Projects\MyFirstProject\artifact\data\file.properties`**.<br/>
 ![](image/CONFIGexpression_01.png)
 
-**script:**<br/>
+**Script**:<br/>
 Here the script will read some property keys from the target properties file, remove and update some keys, and finally
 save the changes to another properties file (`x.properties`)<br/>
 ![](image/CONFIGexpression_02.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![](image/CONFIGexpression_03.png)
 
 ![](image/CONFIGexpression_04.png)

@@ -18,7 +18,7 @@ comments: true
 
 ![](image/assertElementPresent_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/assertElementPresent_02.png)
 
 ### See Also

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: appendText(var,appendWith)
 parent: base
 tags: command base

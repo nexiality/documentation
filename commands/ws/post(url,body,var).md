@@ -28,7 +28,7 @@ To learn about how to utilize the response returned from the target URL, click [
 **Script**:<br/>
 ![](image/post_01.png)
 
-**Result:**<br/>
+**Output**:<br/>
 ![](image/post_02.png)
 
 

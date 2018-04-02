@@ -17,10 +17,10 @@ comments: true
 
 ### Example
 
-Script:<br/>
+**Script**:<br/>
 ![](image/doubleClickAndWait_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/doubleClickAndWait_02.png)
 
 ### See Also

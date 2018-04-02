@@ -22,7 +22,7 @@ In the given pdf document, it has 94 pages. All 94 pages will be saved as 94 tex
 **Script**:<br/>
 ![script](image/saveAsPages_01.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![output](image/saveAsPages_02.png)
 
 Text file names are appended with page number as shown:<br/>

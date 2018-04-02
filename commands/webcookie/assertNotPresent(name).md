@@ -15,10 +15,10 @@ This command asserts that the specified cookie is not present for current URL.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/assertNotPresent_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/assertNotPresent_02.png)
 
 

@@ -18,7 +18,7 @@ comments: true
 
 ![](image/click_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/click_02.png)
 
 ### See Also

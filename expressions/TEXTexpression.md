@@ -59,13 +59,13 @@ comments: true
 Example 1 - chain up a "upper" and a "append":<br/>
 ![](image/TEXTexpression_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/TEXTexpression_02.png)
 
 Example 2 - find uniqueness, and change text<br/>
 ![](image/TEXTexpression_03.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/TEXTexpression_04.png)
 
 Example 2 - Convert the given text content to csv format separated by the given positions. Text input could be a 
@@ -76,8 +76,8 @@ In this example, after converting to csv format, it saves the csv content to the
 Date file:<br/>
 ![](image/TEXTexpression_05.png)
 
-Script:<br/>
+**Script**:<br/>
 ![](image/TEXTexpression_06.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/TEXTexpression_07.png)

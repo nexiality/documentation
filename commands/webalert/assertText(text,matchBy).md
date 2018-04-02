@@ -25,10 +25,10 @@ command is executed.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/assertText_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/assertText_02.png)
 
 

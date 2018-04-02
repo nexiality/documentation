@@ -19,8 +19,8 @@ comments: true
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/writeFile_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/writeFile_02.png)

@@ -22,7 +22,7 @@ In the below example, the number of 'Shift' elements is 7.<br/>
 **Script**:<br/>
 ![](image/storeCount_02.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![](image/storeCount_03.png)
 
 

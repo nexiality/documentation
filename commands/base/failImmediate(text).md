@@ -1,4 +1,5 @@
 ---
+layout: default
 title: failImmediate(text)
 parent: base
 tags: command base
@@ -19,10 +20,10 @@ be irrelevant, unstable or contradictory to the intent of the test.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/failImmediate_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/failImmediate_02.png)
 
 

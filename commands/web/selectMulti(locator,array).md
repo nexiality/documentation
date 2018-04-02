@@ -13,13 +13,13 @@ comments: true
 ### Parameters
 
 - **locator** - this parameter is the locator of the list or combo box element.
-- **array** - this parameter is the the item values to be selected in the list or combo Box.
+- **array** - this parameter is the item values to be selected in the list or combo Box.
 
 ### Example
-
+**Script**:<br/>
 ![](image/selectMulti_01.png)
 
-output:
+**Output**:<br/>
 
 ![](image/selectMulti_02.png)
 

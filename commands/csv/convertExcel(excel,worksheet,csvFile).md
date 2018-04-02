@@ -18,10 +18,10 @@ This command converts any worksheet of an Excel file into a CSV file. 
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/convertExcel_01.png)
 
-Result: .csv file is created at given location
+**Output**: .csv file is created at given location<br/>
 ![output](image/convertExcel_02.png)
 
 

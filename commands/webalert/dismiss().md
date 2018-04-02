@@ -17,10 +17,10 @@ command is executed.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/dismiss_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/dismiss_02.png)
 
 

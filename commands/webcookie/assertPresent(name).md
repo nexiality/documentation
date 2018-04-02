@@ -15,10 +15,10 @@ This command asserts that cookie with the specified `name` exist for the current
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/assertPresent_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/assertPresent_02.png)
 
 

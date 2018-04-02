@@ -39,10 +39,10 @@ specified as a parameter.  Other than that, both commands have the same capabil
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/runFile_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/runFile_02.png)
 
 

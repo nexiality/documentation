@@ -1,4 +1,5 @@
 ---
+layout: default
 title: verbose(text)
 parent: base
 tags: command base

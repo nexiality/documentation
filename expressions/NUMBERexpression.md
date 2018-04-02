@@ -31,8 +31,8 @@ NUMBER treats its data a number, from which mathematical or numerical operations
 
 
 ### Example
-**Script:**<br/>
+**Script**:<br/>
 ![script](image/NUMBERexpression_01.png)
 
-**Result:**<br/>
+**Output**:<br/>
 ![output](image/NUMBERexpression_02.png)

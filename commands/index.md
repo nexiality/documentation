@@ -1,6 +1,6 @@
 ---
 layout: default
-title: commands
+title: Commands
 level: 1
 tags: commands
 comments: true

@@ -19,7 +19,7 @@ comments: true
 
 ![](image/assertNotVisible_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/assertNotVisible_02.png)
 
 ### See Also

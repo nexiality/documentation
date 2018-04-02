@@ -22,7 +22,7 @@ This command writes the data in the excel `worksheet` across the row with the `g
 **Script**:<br/>
 ![](image/writeAcross_01.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![](image/writeAcross_02.png)
 
 

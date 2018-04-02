@@ -16,8 +16,8 @@ This command saves the content of `pdf` to a variable `var`.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/saveToVar_01.png)
 
-Result:<br/>
+**Output**:<br/>
 ![output](image/saveToVar_02.png)

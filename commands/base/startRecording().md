@@ -1,4 +1,5 @@
 ---
+layout: default
 title: startRecording
 parent: base
 tags: command base
@@ -16,7 +17,7 @@ is saved as a MP4 in the **output** directory under `captures` folder.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/startRecording_02.png)
 
 This command is used in conjunction with [`stopRecording()`](stopRecording()) command. Using 

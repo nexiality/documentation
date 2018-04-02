@@ -15,10 +15,10 @@ This command saves all the cookies, as a list, in `var`.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/saveAll_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/saveAll_02.png)
 
 

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertEqual(expected,actual)
 parent: base
 tags: command base
@@ -16,10 +17,10 @@ This command compares 2 text together, character by character.  It returns `tr
 
 
 ### Example
-Example of this command:
+Example of this command:<br/>
 ![script](image/assertEqual_01.png)
 
-... output:
+... output:<br/>
 ![output](image/assertEqual_02.png)
 
 

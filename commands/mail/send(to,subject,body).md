@@ -15,15 +15,15 @@ be HTML. 
 ### Parameters
 - **to** \- one or more email recipients, separated by comma.  For example, 
   `john_doe@company1.com,jane_smith@company2.com`
-- **subject** \- the email subject line.  All recipients will receive the same email subject line.
+- **subject** \- the email subject line.  All recipients will receive the same email subject line
 - **body** \- the email body, which all recipients will receive.  HTML is allowed since the default encoding will be 
   `text/html`.  Also, it is possible to use 
-  the **[`$(projectfile)`](../../functions/$(projectfile))** built-in variable to pull in email content from a file.  
-  Token replacement will be in effect.
+  the **[`$(projectfile)`](../../functions/$(projectfile))** built-in variable to pull in email content from a file.
+  Token replacement will be in effect
 
 
 ### Example
-script:<br/>
+**Script**:<br/>
 ![](image/send_01.png)
 
 

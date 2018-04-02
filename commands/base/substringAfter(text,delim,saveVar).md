@@ -1,4 +1,5 @@
 ---
+layout: default
 title: substringAfter(text,delim,saveVar)
 parent: base
 tags: command base

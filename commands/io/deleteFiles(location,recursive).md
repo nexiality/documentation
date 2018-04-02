@@ -17,10 +17,10 @@ recursive occurrence with the same file name.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/deleteFile_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/deleteFile_02.png)
 
 

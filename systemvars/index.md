@@ -637,7 +637,7 @@ table.sysvar a code { background-color:transparent; border:none; font-weight:nor
     Dimension format as follows:
     <ul>
       <li>Expects lowercase "x" is allowed between width and height. (e.g <code>1048<strong>x</strong>900</code>).</li>
-      <li>Neither height or width can be set to a value less than 100.</li>
+      <li>Neither height nor width can be set to a value less than 100.</li>
     </ul>
 	   <img src="image/systemvar_20.png"/>
     </td>

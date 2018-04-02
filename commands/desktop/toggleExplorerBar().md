@@ -1,4 +1,5 @@
 ---
+layout: default
 title: toggleExplorerBar()
 parent: desktop
 tags: command desktop

@@ -22,8 +22,8 @@ in totality.  Use `exactOrder` to indicate if exact order is expected.
 **Book Store Data in JSON**<br/>
 ![bookStoreData](image/bookStoreData.png)
 
-Script:<br/>
+**Script**:<br/>
 ![script](image/assertValues_01.png)
 
-Result:<br/>
+**Output**:<br/>
 ![output](image/assertValues_02.png)

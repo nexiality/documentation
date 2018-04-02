@@ -20,7 +20,7 @@ This command clears the text from the cells in the given worksheet from an excel
 **Script**:
 ![script](image/clear_01.png)
 
-**Output**:
+**Output**:<br/>
 ![output](image/clear_02.png)
 
 

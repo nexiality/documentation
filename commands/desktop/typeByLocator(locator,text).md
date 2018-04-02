@@ -1,4 +1,5 @@
 ---
+layout: default
 title: typeByLocator(locator,text)
 parent: desktop
 tags: command desktop

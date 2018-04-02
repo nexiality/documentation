@@ -19,10 +19,10 @@ This command asserts the form value in the pdf document is as `expected`.
 
 
 ### Example
-**Script:**<br/>
+**Script**:<br/>
 ![script](image/assertFormValue_01.png)
 
-**Result:**<br/>
+**Output**:<br/>
 ![output](image/assertFormValue_02.png)
 
 

@@ -28,10 +28,10 @@ or a public/private key pair using **RSA**.<br/>
 ### Example
 The actual json content is read from the local file and passed as an argument as payload.
 
-**Script**: <br/>
+**Script**:<br/>
 ![](image/jwtSignHS256_01.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![](image/jwtSignHS256_02.png)
 
 

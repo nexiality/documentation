@@ -1,4 +1,5 @@
 ---
+layout: default
 title: substringBefore(text,delim,saveVar)
 parent: base
 tags: command base
@@ -25,7 +26,7 @@ Note that:
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/substringBefore_01.png)
 
 ... and the output as follows:<br/>

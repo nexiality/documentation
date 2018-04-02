@@ -21,5 +21,5 @@ PDF file to convert into text file.
 **Script**:<br/>
 ![script](image/saveAsText_01.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![output](image/saveAsText_02.png)

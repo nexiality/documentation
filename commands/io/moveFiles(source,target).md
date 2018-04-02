@@ -17,10 +17,10 @@ This command will move the files from one location to other. The user need to pr
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/moveFiles_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/moveFiles_02.png)
 
 

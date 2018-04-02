@@ -11,10 +11,10 @@ This command delete all cookie from the current web page session.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/deleteAll_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/deleteAll_02.png)
 
 

@@ -15,10 +15,10 @@ This command asserts that the specified `text` is found in the specified element
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/assertTextContains_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/assertTextContains_02.png)
 
 

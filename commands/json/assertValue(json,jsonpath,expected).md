@@ -24,5 +24,5 @@ This command asserts that `jsonpath` points to an element (or the first element)
 **Script**:<br/>
 ![script](image/assertValue_01.png)
 
-**Result:**<br/>
+**Output**:<br/>
 ![output](image/assertValue_02.png)

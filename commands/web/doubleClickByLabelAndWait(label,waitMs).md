@@ -20,7 +20,7 @@ comments: true
 
 ![](image/doubleClickByLabelAndWait_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/doubleClickByLabelAndWait_02.png)
 
 ### See Also

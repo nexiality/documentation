@@ -16,8 +16,8 @@ This command asserts the correctness of the json file against the specific schem
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/assertCorrectness_01.png)
 
-Result:<br/>
+**Output**:<br/>
 ![output](image/assertCorrectness_02.png)

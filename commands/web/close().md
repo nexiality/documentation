@@ -23,10 +23,10 @@ comments: true
 
 ### Example
 
-Script:<br/>
+**Script**:<br/>
 ![](image/close_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/close_02.png)
 
 ### See Also

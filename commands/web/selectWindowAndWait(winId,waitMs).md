@@ -1,5 +1,5 @@
 ---
- title: web &raquo; selectWindowAndWait(winId,waitMs)
+title: selectWindowAndWait(winId,waitMs)
 parent: web
  tags: command web
  comments: true
@@ -19,10 +19,10 @@ parent: web
 
 ### Example
 
-Script:<br/>
+**Script**:<br/>
 ![](image/selectWindowAndWait_01.png)
 
-Output:<br/>
+**Output**:<br/>
        
 ![](image/selectWindowAndWait_02.png)
 

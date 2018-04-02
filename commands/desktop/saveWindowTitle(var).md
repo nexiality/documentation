@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveWindowTitle(var)
 parent: desktop
 tags: command desktop

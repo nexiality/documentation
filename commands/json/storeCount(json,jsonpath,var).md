@@ -26,6 +26,6 @@ Finds the number of books with category type as fiction, in the store<br/>
 See the usage of the dot notation with condition to filter the books with category equals to fiction<br/>
 ![script](image/storeCount_01.png)
 
-**Result**:<br/>
+**Output**:<br/>
 Total 3 books of type fiction.<br/>
 ![output](image/storeCount_02.png)

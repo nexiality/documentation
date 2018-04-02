@@ -17,10 +17,10 @@ This command increments the number represented by `var`.  If `var` is not found,
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/increment_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/increment_02.png)
 
 

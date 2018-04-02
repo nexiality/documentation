@@ -20,10 +20,10 @@ This command is used to assert the number of total elements that comes under giv
 The below xml file has 7 child elements with name 'Shift' under parent element 'Timecard'<br/>
 ![](image/assertElementCount_01.png)
 
-**Script:**<br/>
+**Script**:<br/>
 ![](image/assertElementCount_02.png)
 
-**Result:**<br/>
+**Output**:<br/>
 ![](image/assertElementCount_03.png)
 
 

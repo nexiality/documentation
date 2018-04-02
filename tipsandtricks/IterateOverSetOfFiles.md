@@ -1,5 +1,5 @@
 ---
-title: IterateOverSetOfFiles
+title: How to Iterate Through a Set of Files
 parent: Tips and Tricks
 tags: command tipsandtricks
 comments: true
@@ -27,10 +27,10 @@ Let's walk through the steps:<br/>
     [Nexial Expression](../expressions).
 3. Next, we iterate through the list of matched files so that these files can be processed one at a time.  To do so, 
    we need:
-   1. the number of matches found – **input file count** (see above, Row 7)
-   2. the starting index of the matched file list – **input file index** (see above, Row 8)
-   3. the number of steps to perform within one iteration (see above, Row 9)
-   4. the condition to which the iterate would end – this usually involves some form of assertion to compare the 
+   1. The number of matches found – **input file count** (see above, Row 7)
+   2. The starting index of the matched file list – **input file index** (see above, Row 8)
+   3. The number of steps to perform within one iteration (see above, Row 9)
+   4. The condition to which the iterate would end – this usually involves some form of assertion to compare the 
       current file index against total number of file (see above, Row 10)
 4. During the iteration, each file is identified via a file index (**`input file index`** in this case).  As a 
    convenience, one can save such file to another variable (see above, Row 11) before further processing

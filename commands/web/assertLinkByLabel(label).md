@@ -16,11 +16,11 @@ comments: true
 
 ### Example
 
- Script:
+**Script**:<br/>
 
 ![](image/assertLinkByLabel_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/assertLinkByLabel_02.png)
 
 ### See Also

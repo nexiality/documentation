@@ -17,10 +17,10 @@ The data can be stored into variable and can be used for further testing require
 
 
 ### Example
-script:<br/>
+**Script**:<br/>
 ![script](image/saveFileMeta_01.png)
 
-output:<br/>
+**Output**:<br/>
 ![output](image/saveFileMeta_02.png)
 
 

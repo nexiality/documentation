@@ -19,10 +19,10 @@ and will be saved in the given variable.
 
 
 ### Example
-**Script:**<br/>
+**Script**:<br/>
 ![script](image/read_01.png)
 
-**Output:**<br/>
+**Output**:<br/>
 ![output](image/read_02.png)
 
 

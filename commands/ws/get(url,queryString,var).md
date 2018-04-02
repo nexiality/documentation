@@ -25,7 +25,7 @@ Get the stock quote with the given query string. Here the query is to get the st
 **Script**:<br/>
 ![](image/get_01.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![](image/get_02.png)
 
 

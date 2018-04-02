@@ -18,7 +18,7 @@ This command round the number represented by `var` to the nearest digits (intege
 ### Example 
 ![script](image/round_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/round_02.png)
 
 

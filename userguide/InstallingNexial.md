@@ -97,16 +97,16 @@ Currently Nexial supports Excel 2007 and 2010. Nexial requires the use of XLSX f
 
 ### Setting up Your First Project
 1. Create Project Structure
-   1.  open console and point to `bin` directory under the Nexial installation directory.  
+   1.  Open console and point to `bin` directory under the Nexial installation directory.  
        ![nexial_bin](image/InstallingNexial_07.png) 
-   1.  invoke the project creator script - `nexial-project.cmd MyFirstProject`  
+   1.  Invoke the project creator script - `nexial-project.cmd MyFirstProject`  
        ![nexial-project](image/InstallingNexial_08.png)
    1.  If everything works, then you should see the message "`creating project home at ...`" and "`DONE"`
    1.  You should see the following directory create, along with various files in it:  
        ![script_dir](image/InstallingNexial_09.png)
    1.  To gain better understanding of the project structure, check out 
        [Understanding Nexial project structure](UnderstandingProjectStructure)
-   1.  to gain better understanding of the Nexial automation script format and usage, check out 
+   1.  To gain better understanding of the Nexial automation script format and usage, check out 
        [Understanding Nexial Excel templates](UnderstandingExcelTemplates)
    1.  _Now it's time to run some automation_!
 

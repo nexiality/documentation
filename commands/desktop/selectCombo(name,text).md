@@ -1,4 +1,5 @@
 ---
+layout: default
 title: selectCombo(name,text)
 parent: desktop
 tags: command desktop

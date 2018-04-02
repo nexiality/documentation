@@ -12,10 +12,10 @@ else fail otherwise.  There is not input parameter required for this command.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/assertPresent_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/assertPresent_02.png)
 
 

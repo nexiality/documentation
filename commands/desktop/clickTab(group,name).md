@@ -13,7 +13,7 @@ Presetting:
 
 - **Step1**: Add the xpath of the Tab group in application.json.
 
-- **Step2**: Add  _"componentTypeHint":"TabGroup" _as shown in the example
+- **Step2**: Add  _"componentTypeHint":"TabGroup"_ as shown in the example
 
 - **Step3**: Scan the tabs using useForm() command from the script
 

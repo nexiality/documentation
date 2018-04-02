@@ -89,7 +89,14 @@
         </section>
 
         <section id="main_content">
-            <h3 class="pageTitle">{{ page.title }}</h3>
+            <h3 class="pageTitle">
+            {% if page.url contains '/commands/' and page.parent %}
+            {{ page.parent }} &raquo; {{ page.title }}
+            {% else %}
+            {{ page.title }}
+            {% endif %}
+            </h3>
+
             {{ content }}
         </section>
 

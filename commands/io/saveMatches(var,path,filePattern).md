@@ -22,6 +22,6 @@ been given to MS Office documents so that the working documents (such as `~myFi
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/saveMatches_01.png)
 

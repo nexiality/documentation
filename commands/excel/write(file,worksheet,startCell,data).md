@@ -25,7 +25,7 @@ The `data` is expected to
 **Script**:<br/>
 ![script](image/write_01.png)
 
-**Output:**<br/>
+**Output**:<br/>
 ![output](image/write_02.png)
 
 

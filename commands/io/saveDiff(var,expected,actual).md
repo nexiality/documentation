@@ -25,10 +25,10 @@ The general format of the _diff_ is:<br/>
 
 
 ### Example
-script:<br/>
+**Script**:<br/>
 ![script](image/saveDiff_02.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/saveDiff_03.png)
 
 

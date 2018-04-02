@@ -16,10 +16,10 @@ found or else fail otherwise.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/assertNotText_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/assertNotText_02.png)
 
 

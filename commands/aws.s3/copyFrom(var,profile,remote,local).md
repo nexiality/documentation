@@ -1,4 +1,5 @@
 ---
+layout: default
 title: copyFrom(var,profile,remote,local)
 parent: aws.s3
 tags: command aws.s3
@@ -29,16 +30,16 @@ Check [here](index#s3profile) for more information regarding `profile`.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/copyFrom_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/copyFrom_02.png)
 
-Script:<br/>
+**Script**:<br/>
 ![](image/copyFrom_03.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/copyFrom_04.png)
 
 

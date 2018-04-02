@@ -1,5 +1,5 @@
 ---
-title: ImprovingScriptPortability
+title: Improving Script Portability
 parent: Tips and Tricks
 tags: command tipsandtricks
 comments: true

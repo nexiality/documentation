@@ -20,7 +20,7 @@ Note that `${var2}` is declared in the corresponding data file.
 
 ![script](image/floor_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/floor_02.png)
 
 

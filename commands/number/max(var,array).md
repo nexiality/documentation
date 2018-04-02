@@ -18,7 +18,7 @@ This command store the highest number found in `array` in `var`.
 ### Example
 ![script](image/max_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/max_02.png)
 
 

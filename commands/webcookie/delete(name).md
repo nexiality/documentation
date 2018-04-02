@@ -15,10 +15,10 @@ This command deletes the specified cookie by `name`.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/delete_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/delete_02.png)
 
 

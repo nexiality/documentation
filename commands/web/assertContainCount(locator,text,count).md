@@ -18,10 +18,10 @@ comments: true
 
 ### Example
 
-Script:<br/>
+**Script**:<br/>
 ![](image/assertContainCount_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/assertContainCount_02.png)
 
 ### See Also

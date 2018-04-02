@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertVarNotPresent(var)
 parent: base
 tags: command base
@@ -16,10 +17,10 @@ of the variable, not its value (i.e. not `${...}`).
 
 
 ### Example
-**Script:**<br/>
+**Script**:<br/>
 ![](image/assertVarNotPresent(var)_01.png)
 
-**Output:**<br/>
+**Output**:<br/>
 ![](image/assertVarNotPresent(var)_02.png)
 
 In above example test, step 2 and 3 failed because `nexial.browser` is defined in the script while 

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: useApp(appId)
 parent: desktop
 tags: command desktop

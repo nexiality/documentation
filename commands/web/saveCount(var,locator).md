@@ -18,10 +18,10 @@ comments: true
 
 ### Example
 
-Script:<br/>
+**Script**:<br/>
 ![](image/saveCount_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/saveCount_02.png)
 
 ### See Also

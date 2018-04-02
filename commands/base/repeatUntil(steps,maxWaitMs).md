@@ -1,4 +1,5 @@
 ---
+layout: default
 title: repeatUntil(steps,maxWaitMs)
 parent: base
 tags: command base
@@ -35,7 +36,7 @@ certain time, check for specific text or state of a web page or application.
 3. All other commands (besides the first assertion command) within the repeat-until loop is expected to `PASS`
    1. Failure in any of these commands (expect the first) will result in the termination of repeat-until loop - the 
    `repeatUntil(steps,maxWaitMs)` command is considered as `FAIL`
-   2. EXCEPT when [`nexial.failFast` is set to `false`](../../systemvars/index.html#nexial.failFast). The repeat-until 
+   2. EXCEPT when [`nexial.failFast`](../../systemvars/index.html#nexial.failFast) is set to `false`. The repeat-until 
    loop honors the `nexial.failFast` system variable so that one can "collect-all-failures" rather than 
    "fail-at-first-instance".
    3. To enforce the "fail-at-first-instance" requirement, either

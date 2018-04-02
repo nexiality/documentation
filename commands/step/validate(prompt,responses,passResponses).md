@@ -24,10 +24,10 @@ The screenshot below is an example that shows the `prompt` and a set of possible
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/validate(prompt,responses,passResponses)_02.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/validate(prompt,responses,passResponses)_03.png)
 
 

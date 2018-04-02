@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveReplace(text,regex,replace,resultVar)
 parent: base
 tags: command base

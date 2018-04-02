@@ -19,7 +19,7 @@ This command asserts the given text is present in `pdf`.
 **Script**:<br/>
 ![script](image/assertTextPresent_01.png)
 
-**Result:**<br/>
+**Output**:<br/>
 ![output](image/assertTextPresent_02.png)
 
 

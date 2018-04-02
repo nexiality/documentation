@@ -35,5 +35,5 @@ to manipulate character data. 
 Here's an example how `$(count)` are used:<br/>
 ![script](image/$(count)_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/$(count)_02.png)

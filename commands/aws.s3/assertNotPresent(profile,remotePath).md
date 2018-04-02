@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertNotPresent(profile,remotePath)
 parent: aws.s3
 tags: command aws.s3
@@ -17,10 +18,10 @@ Check [here](index#s3profile) for more information regarding `profile`.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/assertNotPresent_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/assertNotPresent_02.png)
 
 

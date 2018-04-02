@@ -16,10 +16,10 @@ the element.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/assertAndClick_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/assertAndClick_02.png)
 
 

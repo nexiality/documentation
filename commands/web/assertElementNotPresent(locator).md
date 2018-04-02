@@ -16,10 +16,10 @@ comments: true
 
 ### Example
 
-Script:<br/>
+**Script**:<br/>
 ![](image/assertElementNotPresent_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/assertElementNotPresent_02.png)
 
 ### See Also

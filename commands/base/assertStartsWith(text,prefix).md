@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertStartsWith(text,prefix)
 parent: base
 tags: command base
@@ -17,7 +18,7 @@ same as `prefix`, similarly with both `text` and `prefix` are empty.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/assertStartsWith_01.png)
 
 

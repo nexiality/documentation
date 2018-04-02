@@ -20,7 +20,7 @@ comments: true
 
 ![](image/assertFramePresent_01.png)
 
-OutPut:
+**Output**:<br/>
 
 ![](image/assertFramePresent_02.png)
 

@@ -7,7 +7,7 @@ comments: true
 
 
 ### Description
-This command parses the the JWT Token to get the payload with provided digitally signed key, and stores it to `var`.
+This command parses the JWT Token to get the payload with provided digitally signed key, and stores it to `var`.
 
 
 ### Parameters
@@ -20,7 +20,7 @@ This command parses the the JWT Token to get the payload with provided digitally
 **Script**:<br/>
 ![](image/jwtParse_01.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![](image/jwtParse_02.png)
 
 

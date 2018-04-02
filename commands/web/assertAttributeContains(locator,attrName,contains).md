@@ -17,10 +17,10 @@ comments: true
 
 ### Example
 
-Script:<br/>
+**Script**:<br/>
 ![](image/assertAttributeContains_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/assertAttributeContains_02.png)
 
 ### See Also

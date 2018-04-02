@@ -1,4 +1,5 @@
 ---
+layout: default
 title: useTable(var,name)
 parent: desktop
 tags: command desktop

@@ -26,9 +26,9 @@ enforced in `pdf` content.
 If the ordered parameter in the command is set as **true**, expected and actual are asserted for the same order. 
 If set as **false**, it will ignore the order.
 
-**Script:**<br/>
+**Script**:<br/>
 ![script](image/assertTextArray_01.png)
 
-**Result:**<br/>
+**Output**:<br/>
 ![output](image/assertTextArray_02.png)
 

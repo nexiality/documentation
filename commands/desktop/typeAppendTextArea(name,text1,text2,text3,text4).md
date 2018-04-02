@@ -1,4 +1,5 @@
 ---
+layout: default
 title: typeAppendTextArea(name,text1,text2,text3,text4)
 parent: desktop
 tags: command desktop

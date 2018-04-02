@@ -1,5 +1,5 @@
 ---
-title: IntegratingWithOtherProjects
+title: Integrating with Other Projects
 parent: Tips and Tricks
 tags: command tipsandtricks
 comments: true
@@ -83,6 +83,6 @@ is available.
        intent.  Using `nexial.scriptRef.*` we can provide contextual information about a script or iteration.  Using 
        `nexial.scenarioRef.*` we would contextualize a test scenario.  See **[`System Variables`](../systemvars/index.html)** 
        for more details.
-    3. Make use of Nexial Execution Dashboard] to provide a visual summary of your Integration Testing, both the 
+    3. Make use of Nexial Execution Dashboard to provide a visual summary of your Integration Testing, both the 
        latest and those completed in the past.
 

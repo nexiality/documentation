@@ -16,10 +16,10 @@ This command saves the cookie (name, value, path, etc.) into variable.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/save_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/save_02.png)
 
 

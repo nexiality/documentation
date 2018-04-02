@@ -56,10 +56,10 @@ One can control the behavior of this command in the following ways:
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/compare_05.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/compare_06.png)
 
 The link **`log report`** will link to the text-based comparison report.  The link **`json report`** will link to the 

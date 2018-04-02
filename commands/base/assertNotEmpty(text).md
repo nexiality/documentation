@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertNotEmpty(text)
 parent: base
 tags: command base
@@ -15,10 +16,10 @@ This command asserts that `text` is not empty - in other word, `text` contains a
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/assertNotEmpty_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/assertNotEmpty_02.png)
 
 

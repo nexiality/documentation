@@ -18,11 +18,11 @@ comments: true
 
 ### Example
 
-script:
+**Script**:<br/>
 
 ![](image/savePageAs_01.png)
 
-output:
+**Output**:<br/>
 
  ![](image/savePageAs_02.png)
 

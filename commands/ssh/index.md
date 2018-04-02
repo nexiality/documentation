@@ -7,8 +7,8 @@ comments: true
 
 ### Description
 **SSH**, stands for **S**ecure **Sh**ell, is a popular and well-regarded form of accessing and controlling remote 
-compute and I/O resources.  While being known mostly amongst the *NIX and Mac users, it is recently gaining 
-popularity and acceptance in the Windows/PC world.  Using ssh protocol, one can securely transfer files between a 
+compute and I/O resources.  While being known mostly amongsts the *NIX and Mac users, it is recently gaining 
+popularity and acceptance in the Windows/PC world.  Using the ssh protocol, one can securely transfer files between a 
 remote and local location, as well as access and control compute resources remotely. 
 
 ![](image/ssh_01.png)

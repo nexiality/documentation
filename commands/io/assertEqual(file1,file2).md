@@ -16,10 +16,10 @@ This command will assert if the contents of the files are identical.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/assertEqual_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/assertEqual_02.png)
 
 

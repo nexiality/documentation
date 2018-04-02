@@ -18,7 +18,7 @@ This command store the lowest number found in `array` in `var`.
 ### Example
 ![script](image/min_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/min_02.png)
 
 

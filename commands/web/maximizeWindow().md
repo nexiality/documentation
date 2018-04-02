@@ -15,10 +15,10 @@ comments: true
 - None
 ### Example
 
-Script:<br/>
+**Script**:<br/>
 ![](image/maximizeWindow_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/maximizeWindow_02.png)
 
 ### See Also

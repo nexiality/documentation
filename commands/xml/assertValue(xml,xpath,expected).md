@@ -20,10 +20,10 @@ This command is used to assert the value of the element at the given xpath in th
 In the given xml file, asserting the value of the element `BaseRate`:<br/>
 ![](image/assertValue_01.png)
 
-Script:<br/>
+**Script**:<br/>
 ![](image/assertValue_02.png)
 
-Result:<br/>
+**Output**:<br/>
 ![](image/assertValue_03.png)
 
 

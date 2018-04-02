@@ -27,7 +27,7 @@ This example is to get stock quote.
 **Script**:<br/>
 ![](image/soap_01.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![](image/soap_02.png)
 
 

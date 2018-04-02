@@ -51,7 +51,7 @@ Below is the general directory/file structure of a standard Nexial automation pr
    corresponding data file.  Some data, however, is reusable across the entire project.  This is the purpose of 
    `artifact/project.properties`.  
       ##### project.properties
-      The the main purpose of `artifact/project.properties` is to manage data that is common across the entire project 
+      The main purpose of `artifact/project.properties` is to manage data that is common across the entire project 
       (i.e. the same project directory). Information such as database connectivity, application URL, commonly used 
       locators, etc. can be stored in one place. This improves reuse and maintainability. Here are the rules about 
       `project.properties`:

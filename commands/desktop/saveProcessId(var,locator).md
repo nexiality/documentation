@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveProcessId(locator,var)
 parent: desktop
 tags: command desktop

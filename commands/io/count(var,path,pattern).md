@@ -20,11 +20,11 @@ command.
 
 
 ### Example
-script:<br/>
+**Script**:<br/>
 ![script](image/count_01.png)
 
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/count_02.png)
 
 

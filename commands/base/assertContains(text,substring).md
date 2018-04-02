@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertContains(text,substring)
 parent: base
 tags: command base
@@ -17,10 +18,10 @@ either in the beginning, the ending or the middle of `text`.
 
 
 ### Example
-Here's an example:
+Here's an example:<br/>
 ![script](image/assertContains_01.png)
 
-and the output:
+And, the **output**:<br/>
 ![output](image/assertContains_02.png)
 
 

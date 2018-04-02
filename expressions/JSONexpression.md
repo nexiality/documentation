@@ -80,9 +80,9 @@ To manipulate JSON document, check out [`Nexial jsonpath`](../jsonpath) for m
 
 
 ### Example
-**Script:**<br/>
+**Script**:<br/>
 ![script](image/JSONexpression_01.png)
 
-**Result:**<br/>
+**Output**:<br/>
 ![output](image/JSONexpression_02.png)
 

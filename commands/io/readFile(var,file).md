@@ -16,10 +16,10 @@ This command read the entire content of  `file` and stores into a data variable 
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/readFile_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/readFile_02.png)
 
 

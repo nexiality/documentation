@@ -1,4 +1,5 @@
 ---
+layout: default
 title: aws.s3
 tags: command aws.s3
 comments: true

@@ -15,13 +15,13 @@ This command verifies the element in xml file based on the specified `xpath`.
 
 
 ### Example
-**Script:**<br/>
+**Script**:<br/>
 ![](image/assertElementPresent_01.png)
 
 **Data File:**<br/>
 ![](image/assertElementPresent_03.png)
 
-**Output:**<br/>
+**Output**:<br/>
 ![](image/assertElementPresent_02.png)
 
 

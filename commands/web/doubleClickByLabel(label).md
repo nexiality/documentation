@@ -17,10 +17,10 @@ comments: true
 
 ### Example
 
-Script:<br/>
+**Script**:<br/>
 ![](image/doubleClickByLabel_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/doubleClickByLabel_02.png)
 
 ### See Also

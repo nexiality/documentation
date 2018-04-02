@@ -1,4 +1,5 @@
 ---
+layout: default 
 title: assertPresent(profile,remotePath)
 parent: aws.s3
 tags: command aws.s3
@@ -18,10 +19,10 @@ Check [here](index#s3profile) for more information regarding `profile`.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/assertPresent_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/assertPresent_02.png)
 
 ### See Also

@@ -18,10 +18,10 @@ comments: true
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/unzip_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/unzip_02.png)
 
 

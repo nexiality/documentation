@@ -1,4 +1,5 @@
 ---
+layout: default
 title: waitFor(name,maxWaitMs)
 parent: desktop
 tags: command desktop

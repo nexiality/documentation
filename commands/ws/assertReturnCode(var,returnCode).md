@@ -23,7 +23,7 @@ For more information about HTTP status codes, refer to 
 **Script**:<br/>
 ![](image/assertReturnCode_01.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![](image/assertReturnCode_02.png)
 
 

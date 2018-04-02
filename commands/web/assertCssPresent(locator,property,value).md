@@ -18,11 +18,11 @@ comments: true
 
 ### Example
 
- Script:
+**Script**:<br/>
 
 ![](image/assertCssPresent_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/assertCssPresent_02.png)
 
 ### See Also

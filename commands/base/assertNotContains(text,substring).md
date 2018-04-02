@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertNotContains(text,substring)
 parent: base
 tags: command base
@@ -16,10 +17,10 @@ This command asserts that `text` does not contain `substring`.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/assertNotContains_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/assertNotContains_01.png)
 
 

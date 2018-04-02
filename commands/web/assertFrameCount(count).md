@@ -16,10 +16,10 @@ comments: true
 
 ### Example
 
-Script:<br/>
+**Script**:<br/>
 ![](image/assertFrameCount_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/assertFrameCount_02.png)
 
 ### See Also

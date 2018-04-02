@@ -16,12 +16,10 @@ comments: true
 - **descending** - this parameter is the value to order.The input has to true or false.
 
 ### Example
-
-script
-
+**Script**:<br/>
 ![](image/assertValueOrder_01.png)
 
-output:
+**Output**:<br/>
 
 ![](image/assertValueOrder_02.png)
 

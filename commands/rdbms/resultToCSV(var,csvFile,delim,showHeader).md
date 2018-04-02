@@ -22,10 +22,10 @@ comments: true
 
 
 ### Example
-script:<br/>
+**Script**:<br/>
 ![](image/resultToCSV_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/resultToCSV_02.png)
 
 

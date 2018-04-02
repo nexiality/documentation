@@ -15,10 +15,10 @@ This command will create the directory on the path provided as `source`.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/makeDirectory_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/makeDirectory_02.png)
 
 

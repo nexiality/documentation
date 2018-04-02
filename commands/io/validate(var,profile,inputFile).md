@@ -60,7 +60,7 @@ is **project_profile**.
 **Script**:<br/>
 ![](image/validate_02.png)
 
-**Result**:<br/>
+**Output**:<br/>
 The output file
 - Displays the total number of records processed with failed count
 - Also provides a link to open the generated report file. The generated excel report file will have all the details, 

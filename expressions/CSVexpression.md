@@ -152,7 +152,7 @@ This filter specification will be used within the following operations:
 - **`length`** - Synonymous to **`size`** and **`rowCount`**.
 
 - **`merge(var,keyColumn)`** - merge the CSV data represented by `var` into existing CSV content.  `keyColumn`, 
-  if specified, is used to merge the 2 CSV content in such a way that the the record of the same key are merged 
+  if specified, is used to merge the 2 CSV content in such a way that the record of the same key are merged 
   together.  In general, there are 3 uses of this operation:
 
 	 - **merge two CSV files that have no header** - in such case, records will be merged line-by-line with no regard 
@@ -219,7 +219,7 @@ This filter specification will be used within the following operations:
 	     - Nexial also support auto-detection of delimiter, so you caomit `delim` to simplify your automation. 
 
 	   - **`quote`** - the character (single) to use to wrap non-numeric (such as text) values.  Default is double quote.  
-	     `quote='` would force Nexial to consider single quote as the the "wrapping" for non-numeric values.
+	     `quote='` would force Nexial to consider single quote as the "wrapping" for non-numeric values.
 	     - Nexial also supports auto-detection of value quoting, so you ca omit quote to simplify your automation.
 
 	   - **`header`** - true or false to signify if the first line should be treated as column names.  If `header=false`, 

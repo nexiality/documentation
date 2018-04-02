@@ -1,4 +1,5 @@
 ---
+layout: default
 title: delete(var,profile,remotePath)
 parent: aws.s3
 tags: command aws.s3
@@ -23,16 +24,16 @@ Another example is `my_bucket/my_folder/*-*`, where all the files containing `-`
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/delete_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/delete_02.png)
 
-Script:<br/>
+**Script**:<br/>
 ![](image/delete_03.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/delete_04.png)
 
 

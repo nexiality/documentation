@@ -20,10 +20,10 @@ comments: true
 
 
 ### Example
-script:<br/>
+**Script**:<br/>
 ![script](image/writeFile_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/writeProperty_02.png)
 
 

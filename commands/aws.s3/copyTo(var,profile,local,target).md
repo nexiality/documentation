@@ -1,4 +1,5 @@
 ---
+layout: default
 title: copyTo(var,profile,local,target)
 parent: aws.s3
 tags: command aws.s3
@@ -27,16 +28,16 @@ Having subdirectories inside the directory may give incorrect results.
 
 
 ### Example
-**Script:**<br/>
+**Script**:<br/>
 ![](image/copyTo_01.png)
 
-**Result:-**<br/>
+**Output**:<br/>
 ![](image/copyTo_02.png)
 
-**Script:**<br/>
+**Script**:<br/>
 ![](image/copyTo_03.png)
 
-**Result:-**<br/>
+**Output**:<br/>
 ![](image/copyTo_04.png)
 
 

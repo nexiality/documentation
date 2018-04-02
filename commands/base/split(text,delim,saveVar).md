@@ -1,4 +1,5 @@
 ---
+layout: default
 title: split(text,delim,saveVar)
 parent: base
 tags: command base
@@ -20,7 +21,7 @@ using variable expansion (ie. `${..}`) if the underlying data is not text (such
 
 
 ### Example
-script:<br/>
+**Script**:<br/>
 ![script](image/split_01.png)
 
 output (note the last 2 lines above, how the element of an array can be assessed via the `${...}[i]` syntax):

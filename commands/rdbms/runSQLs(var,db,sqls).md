@@ -22,10 +22,10 @@ comments: true
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/runSQLs_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/runSQLs_02.png)
 
 

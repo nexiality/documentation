@@ -1,4 +1,5 @@
 ---
+layout: default
 title:  saveElementCount(locator,var)
 parent: desktop
 tags: command desktop

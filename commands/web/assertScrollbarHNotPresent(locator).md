@@ -16,10 +16,10 @@ comments: true
 
 ### Example
 
-Script:<br/>
+**Script**:<br/>
 ![](image/assertScrollbarHNotPresent_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/assertScrollbarHNotPresent_02.png)
 
 ### See Also

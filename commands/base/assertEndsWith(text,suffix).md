@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertEndsWith(text,suffix)
 parent: base
 tags: command base

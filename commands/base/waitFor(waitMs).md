@@ -1,4 +1,5 @@
 ---
+layout: default
 title: waitFor(waitMs)
 parent: base
 tags: command base
@@ -20,7 +21,7 @@ milliseconds added to the total wait time, esp. during high load.
 
 
 ### Example
-Here's the test script:<br/>
+Here's the test **Script**:<br/>
 ![script](image/waitFor_01.png)
 
 And the output shows the time elapsed due to the specified `waitMs`:<br/>

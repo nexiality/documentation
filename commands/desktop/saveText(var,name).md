@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveText(var,name)
 parent: desktop
 tags: command desktop

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveMatches(text,regex,saveVar)
 parent: base
 tags: command base

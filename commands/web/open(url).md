@@ -16,10 +16,10 @@ comments: true
 
 ### Example
 
-Script:<br/>
+**Script**:<br/>
 ![](image/open_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/open_02.png)
 
 ### See Also

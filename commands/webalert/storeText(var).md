@@ -16,10 +16,10 @@ retrieval of dialog text is not possible, this command will FAIL.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/storeText_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/storeText_02.png)
 
 

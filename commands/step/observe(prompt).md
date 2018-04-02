@@ -20,13 +20,13 @@ application under test.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/observe(prompt)_02.png)
 
 During execution, the prompt is displayed on console (\| Write Observation Here):<br/> 
 ![](image/observe(prompt)_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/observe(prompt)_03.png)
 
 

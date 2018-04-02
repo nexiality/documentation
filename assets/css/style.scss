@@ -9,16 +9,16 @@ body {
 }
 
 header {
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 50px;
-    background-color: rgba(90,115,75,0.9);
-    margin-top: 0;
-    box-shadow: 0 5px 15px;
-    position: fixed;
-    width: 100%;
-    height: 152px;
-    white-space: nowrap;
+    padding-top:      0;
+    padding-bottom:   0;
+    padding-left:     50px;
+    background-color: rgba(90, 115, 75, 0.9);
+    margin-top:       0;
+    box-shadow:       0 5px 15px;
+    position:         fixed;
+    width:            100%;
+    height:           152px;
+    white-space:      nowrap;
 }
 
 header h1 {
@@ -294,14 +294,21 @@ div.search-form form input#tipue_search_input {
 }
 
 #tipue_search_content {
-    max-width: 450px;
-    margin:    -25px 0;
-    z-index:   999;
-    position:  absolute;
-    width:     500px;
-    right:     -1px;
-    padding:   10px;
-    top:       75px;
+    /*max-width:        750px;*/
+    width:            500px;
+    padding:          12px !important;
+    margin:           -24px -2px 0 0 !important;
+    background-color: rgba(250, 250, 250, 0.9);
+    border:           3px solid rgba(90, 115, 75, 0.9);
+    border-radius:    15px 0 15px 15px;
+    box-shadow:       -5px 0 15px rgba(90, 115, 75, 0.7);
+    overflow-wrap:    break-word;
+    word-break:       normal;
+    border-top:       none;
+    z-index:          999;
+    position:         absolute;
+    right:            -1px;
+    top:              75px;
 }
 
 #tipue_search_content #tipue_search_results_count {
@@ -310,13 +317,10 @@ div.search-form form input#tipue_search_input {
 }
 
 #tipue_search_content .tipue_search_content_title {
-    color:            #333;
-    font-size:        14pt;
-    font-weight:      bold;
-    background-color: rgba(200, 200, 180, 0.35);
-    box-shadow:       0 2px 5px #555;
-    padding:          3px 5px;
-    margin:           12px 0 3px;
+    font-size:   14pt;
+    font-weight: bold;
+    color:       rgba(90, 115, 75, 0.9);
+    margin:      10px 0 -5px;
 }
 
 #tipue_search_content .tipue_search_content_url {
@@ -325,12 +329,20 @@ div.search-form form input#tipue_search_input {
 }
 
 #tipue_search_content .tipue_search_content_text {
-    font-size:  11pt;
-    margin-top: 0;
+    font-size:   11pt;
+    margin-top:  0;
+    overflow:    visible;
+    white-space: normal;
 }
 
 #tipue_search_content nav {
     text-align: right;
+}
+
+#tipue_search_foot_boxes li.current,
+#tipue_search_foot_boxes li a {
+    padding: 10px 12px !important;
+    margin:  0 3px !important;
 }
 
 div#disqus_thread {

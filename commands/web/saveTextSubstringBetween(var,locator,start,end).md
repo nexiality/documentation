@@ -19,12 +19,10 @@ comments: true
 - **start** - this parameter is end point of the text.
 
 ### Example
-
-script
-
+**Script**:<br/>
 ![](image/saveTextSubstringBetween_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/saveTextSubstringBetween_02.png)
 
 ### See Also

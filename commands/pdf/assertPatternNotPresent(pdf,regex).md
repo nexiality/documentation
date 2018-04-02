@@ -19,7 +19,7 @@ This command asserts the given text pattern (`regex`) is **NOT** present in `pdf
 **Script**:<br/>
 ![script](image/assertPatternNotPresent_01.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![output](image/assertPatternNotPresent_02.png)
 
 

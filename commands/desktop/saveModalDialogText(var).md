@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveModalDialogText(appLocator,var)
 parent: desktop
 tags: command desktop

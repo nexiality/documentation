@@ -14,9 +14,9 @@ window is created automatically upon the initial call to [web &raquo; `open(url)
 [web &raquo; `openAndWait(url,waitMs)`](../commands/web/openAndWait(url,waitMs)).  So here's a possible strategy to one
 can consider:
 
-- open browser window with the appropriate `url`.
-- maximize the browser window
-- continue with the rest of the automation.
+- Open browser window with the appropriate `url`.
+- Maximize the browser window
+- Continue with the rest of the automation.
 
 For example,<br/>
 ![](image/ScriptFailingonBrowserStack_01.png)

@@ -46,11 +46,11 @@ comments: true
 
 ### Example
 
- Script:
+**Script**:<br/>
 
 ![](image/typeKeys_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/typeKeys_02.png)
 
 ### See Also

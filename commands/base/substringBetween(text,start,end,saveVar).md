@@ -1,4 +1,5 @@
 ---
+layout: default
 title: substringBetween(text,start,end,saveVar)
 parent: base
 tags: command base

@@ -23,7 +23,7 @@ This command writes a list of data in the excel `worksheet` down the column from
 **Script**:<br/>
 ![](image/writeDown_01.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![](image/writeDown_02.png)
 
 

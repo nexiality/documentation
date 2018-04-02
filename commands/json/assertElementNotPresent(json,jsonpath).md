@@ -19,9 +19,9 @@ This command asserts the given JSON element as described via `jsonpath` is not p
 **Book Store Data in JSON**<br/>
 ![bookStoreData](image/bookStoreData.png)
 
-Script:<br/>
+**Script**:<br/>
 ![script](image/assertElementNotPresent_01.png)
 
-Result:<br/>
+**Output**:<br/>
 ![output](image/assertElementNotPresent_02.png)
 

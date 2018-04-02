@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertNotEqual(value1,value2)
 parent: base
 tags: command base

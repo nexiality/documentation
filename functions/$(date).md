@@ -54,7 +54,7 @@ derive the appropriate format first before invoking other date-operational funct
 Here are some examples on how to use this built-in function:<br/>
 ![script](image/$(date)_01.png)
 
-and the output:<br/>
+and the **output**:<br/>
 ![output](image/$(date)_02.png)
 
 

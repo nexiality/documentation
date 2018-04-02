@@ -15,11 +15,11 @@ comments: true
 
 ### Example
 
- Script:
+**Script**:<br/>
 
 ![](image/selectWindowByIndex_01.png)
 
- Output:
+**Output**:<br/>
 
 ![](image/selectWindowByIndex_02.png)
 

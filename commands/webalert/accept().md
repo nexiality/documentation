@@ -7,15 +7,15 @@ comments: true
 
 
 ### Description
-This command clicks 'Yes' or issues a confirmative action on the the alert dialog window.  The command does not 
+This command clicks 'Yes' or issues a confirmative action on the alert dialog window.  The command does not 
 require any input parameters.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/accept_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/accept_02.png)
 
 

@@ -15,10 +15,10 @@ comments: true
 
 ### Example
 
-Script:<br/>
+**Script**:<br/>
 ![](image/refresh_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/refresh_02.png)
 
 ### See Also

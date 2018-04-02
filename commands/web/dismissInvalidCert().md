@@ -13,10 +13,10 @@ comments: true
 
 ### Example
 
-Script:<br/>
+**Script**:<br/>
 ![](image/dismissInvalidCert_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/dismissInvalidCert_02.png)
 
 ### See Also

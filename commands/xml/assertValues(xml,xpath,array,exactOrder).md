@@ -22,10 +22,10 @@ Below is the xml file used for example:<br/>
 ![](image/assertValues_01.png)
 
 
-**Script**:
+**Script**:<br/>
 ![](image/assertValues_02.png)
 
-**Result**:
+**Output**:<br/>
 ![](image/assertValues_03.png)
 
 

@@ -22,7 +22,7 @@ pdf document.
 **Script**:<br/>
 ![script](image/assertPatternPresent_01.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![output](image/assertPatternPresent_02.png)
 
 

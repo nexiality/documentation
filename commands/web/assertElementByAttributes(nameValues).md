@@ -23,11 +23,11 @@ comments: true
 
 ### Example
 
-script:
+**Script**:<br/>
 
 ![](image/assertElementByAttributes_02.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/assertElementByAttributes_03.png)
 
 ### See Also

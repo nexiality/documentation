@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertTextOrder(var,descending)
 parent: base
 tags: command base
@@ -19,10 +20,10 @@ in ascending order.
 
 
 ### Example
-Here's an example:
+Here's an example:<br/>
 ![script](image/assertTextOrder_01.png)
 
-And the output:
+And the output:<br/>
 ![output](image/assertTextOrder_02.png)
 
 

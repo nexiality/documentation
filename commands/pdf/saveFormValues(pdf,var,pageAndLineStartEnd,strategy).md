@@ -31,7 +31,7 @@ This command saves the form values from the pdf document and store the data in t
 **Script**:<br/>
 ![script](image/saveFormValues_01.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![output](image/saveFormValues_02.png)
 
 

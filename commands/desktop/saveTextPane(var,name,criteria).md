@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveTextPane(var,name,criteria)
 parent: desktop
 tags: command desktop

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: xpath creation using uispy
 parent: desktop
 tags: xpath creation using uispy

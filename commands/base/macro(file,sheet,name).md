@@ -1,4 +1,5 @@
 ---
+layout: default
 title: macro(file,sheet,name)
 parent: base
 tags: command base
@@ -53,10 +54,10 @@ value for the same macro, and thus extend further flexibility.
 macro file:<br/>
 ![macro](image/macro_01.png)
 
-Script calling macro script:<br/>
+Script calling macro **Script**:<br/>
 ![script](image/macro_02.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/macro_03.png)
 
 

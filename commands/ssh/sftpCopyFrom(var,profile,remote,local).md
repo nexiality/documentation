@@ -14,17 +14,17 @@ For output process via `var`, check out [Command Output Processing](index#comman
 
 
 ### Parameters
-- **var** \- the variable name that references the the outcome of this command.
-- **profile** \- the profile that encapsulate the SSH connectivity and security information.
+- **var** \- the variable name that references the outcome of this command.
+- **profile** \- the profile that encapsulates the SSH connectivity and security information.
 - **remote** \- the pattern which specifies the folder, file or a pattern of files.
 - **local** \- the directory to which the files should be copied.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/sftpCopyFrom_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/sftpCopyFrom_02.png)
 
 

@@ -25,7 +25,7 @@ In the below given xml, the date values of all the shift elements can be retriev
 ![](image/storeValues_02.png)
 
 **Output**:<br/>
-##### ![](image/storeValues_03.png)
+![](image/storeValues_03.png)
 
 
 ### See Also

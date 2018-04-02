@@ -17,10 +17,10 @@ This command calculates the average of a series of numbers represented by `array
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/average_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/average_02.png)
 
 

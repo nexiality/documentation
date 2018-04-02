@@ -24,5 +24,5 @@ criteria is described in `jsonpath`.
 **Script**:<br/>
 ![script](image/storeValue_01.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![output](image/storeValue_02.png)

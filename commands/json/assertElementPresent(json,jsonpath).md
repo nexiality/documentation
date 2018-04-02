@@ -7,7 +7,7 @@ comments: true
 
 
 ### Description
-This command asserts the the JSON element as described via `jsonpath` is present in `json`
+This command asserts the JSON element as described via `jsonpath` is present in `json`
 
 
 ### Parameters
@@ -22,6 +22,6 @@ This command asserts the the JSON element as described via `jsonpath` is present
 **Script**:<br/>
 ![](image/assertElementPresent_01.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![](image/assertElementPresent_02.png)
 

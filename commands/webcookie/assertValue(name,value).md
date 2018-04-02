@@ -16,10 +16,10 @@ This command asserts the `value` of a cookie specified by `name`.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/assertValue_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/assertValue_02.png)
 
 

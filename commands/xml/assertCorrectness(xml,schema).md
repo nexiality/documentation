@@ -14,10 +14,10 @@ This command is used to assert the correctness of the xml against the given sche
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/assertCorrectness_01.png)
 
-Result:<br/>
+**Output**:<br/>
 ![](image/assertCorrectness_02.png)
 
 

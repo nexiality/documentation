@@ -50,9 +50,9 @@ by specifying a **DATE** instance with one of the following:
 
 
 ### Example
-**script:**<br/>
+**Script**:<br/>
 ![script](image/DATEexpression_01.png)
 
-**Result:**<br/>
+**Output**:<br/>
 ![output](image/DATEexpression_02.png)
 

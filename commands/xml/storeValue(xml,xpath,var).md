@@ -20,9 +20,9 @@ In the given example the value of the `BaseRate` element is 50.0<br/>
 ![](image/storeValue_01.png)
 
 **Script**:<br/>
-##### ![](image/storeValue_02.png)
+![](image/storeValue_02.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![](image/storeValue_03.png)
 
 

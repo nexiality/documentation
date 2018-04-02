@@ -16,11 +16,11 @@ comments: true
 
 ### Example
 
- Script:
+**Script**:<br/>
 
 ![](image/wait_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/wait_02.png)
 
 ### See Also

@@ -21,10 +21,10 @@ This command allows the execution of an arbitary Javacript on the current browse
 
 ### Example
 
-Script:<br/>
+**Script**:<br/>
 ![](image/executeScript_01.png)
 
-Output:<br/>
+**Output**:<br/>
 The script would execute and the browser thus react accordingly
 
 ### See Also

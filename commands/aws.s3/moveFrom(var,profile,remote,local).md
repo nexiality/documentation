@@ -1,4 +1,5 @@
 ---
+layout: default
 title: moveFrom(var,profile,remote,local)
 parent: aws.s3
 tags: command aws.s3
@@ -31,16 +32,16 @@ Check [here](index#s3profile) for more information regarding `profile`.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/moveFrom_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/moveFrom_02.png)
 
-Script:<br/>
+**Script**:<br/>
 ![](image/moveFrom_03.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/moveFrom_04.png)
 
 

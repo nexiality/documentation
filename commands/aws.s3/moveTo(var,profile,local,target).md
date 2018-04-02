@@ -1,4 +1,5 @@
 ---
+layout: default
 title: moveTo(var,profile,local,target)
 parent: aws.s3
 tags: command aws.s3
@@ -29,16 +30,16 @@ Having subdirectories inside the directory may give incorrect results.
 
 
 ### Example
-**script**<br/>
+**Script**:<br/>
 ![](image/moveTo_01.png)
 
-**result**</br>
+**Output**:<br/>
 ![](image/moveTo_02.png)
 
-**script**<br/>
+**Script**:<br/>
 ![](image/moveTo_03.png)
 
-**result**<br/>
+**Output**:<br/>
 ![](image/moveTo_04.png)
 
 

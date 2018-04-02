@@ -20,6 +20,6 @@ This command counts the number of occurrences of `text` in `pdf`. The result cou
 **Script**:<br/>
 ![script](image/count_01.png)  
 
-**Result**:<br/>
+**Output**:<br/>
 ![output](image/count_02.png)
 

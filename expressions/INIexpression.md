@@ -32,8 +32,8 @@ and values.  Here are some examples:
 
 
 ### Example
-**script:**<br/>
+**Script**:<br/>
 ![script](image/INIexpression_03.png)
 
-**Result:**<br/>
+**Output**:<br/>
 ![output](image/INIexpression_04.png)

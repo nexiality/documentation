@@ -17,10 +17,10 @@ ensure no duplicate contents between files.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/assertNotEqual_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/assertNotEqual_02.png)
 
 

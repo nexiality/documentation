@@ -18,10 +18,10 @@ comments: true
 
 ### Example
 
-Script:<br/>
+**Script**:<br/>
 ![](image/openAndWait_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/openAndWait_02.png)
 
 ### See Also

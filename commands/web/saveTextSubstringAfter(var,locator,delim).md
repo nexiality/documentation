@@ -19,10 +19,10 @@ comments: true
 
 ### Example
 
-Script:<br/>
+**Script**:<br/>
 ![](image/saveTextSubstringAfter_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/saveTextSubstringAfter_02.png)
 
 ### See Also

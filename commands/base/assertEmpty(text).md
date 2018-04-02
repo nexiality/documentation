@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertEmpty(text)
 parent: base
 tags: command base
@@ -16,10 +17,10 @@ This command assert if `text` is empty.  It is considered FAIL if `text` is not 
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/assertEmpty_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/assertEmpty_02.png)
 
 

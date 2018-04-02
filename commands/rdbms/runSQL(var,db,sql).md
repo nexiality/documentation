@@ -27,10 +27,10 @@ comments: true
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/runSQL_1.png)  
 
-Output:<br/>
+**Output**:<br/>
 ![](image/runSQL_2.png)
 
 

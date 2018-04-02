@@ -1,4 +1,5 @@
 ---
+layout: default
 title: stopRecording
 parent: base
 tags: command base

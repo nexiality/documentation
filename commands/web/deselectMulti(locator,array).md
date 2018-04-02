@@ -20,7 +20,7 @@ comments: true
 
 ![](image/deselectMulti_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/deselectMulti_02.png)
 
 ### See Also

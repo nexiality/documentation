@@ -19,5 +19,5 @@ This command asserts the content of the actual pdf document as expected document
 **Script**:<br/>
 ![script](image/assertContentEqual_01.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![output](image/assertContentEqual_02.png)

@@ -21,10 +21,10 @@ After completing, press the `Enter` key to resume execution.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/perform(instructions)_02.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/perform(instructions)_03.png)
 
 

@@ -18,10 +18,10 @@ value in a data variable denoted as `var.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/readProperty_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/readProperty_02.png)
 
 

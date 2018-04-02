@@ -18,7 +18,7 @@ comments: true
 
 ![](image/toggleSelections_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/toggleSelections_02.png)
 
 ### See Also

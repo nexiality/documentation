@@ -23,7 +23,7 @@ not present.
 **Script**:<br/>
 ![](image/assertElementNotPresent_02.png)
 
-**Result:**
+**Output**:<br/>
 ![](image/assertElementNotPresent_03.png)
 
 

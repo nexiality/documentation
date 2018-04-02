@@ -1,4 +1,5 @@
 ---
+layout: default
 title: waitForLocator(locator,maxWaitMs)
 parent: desktop
 tags: command desktop

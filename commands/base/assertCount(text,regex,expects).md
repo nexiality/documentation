@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertCount(text,regex,expects)
 parent: base
 tags: command base
@@ -25,7 +26,7 @@ target variable represents an array, a list, a map or a Java object.
 Below is a test script that uses `assertCount(text,regex,expects)`<br/>
 ![script](image/assertCount_01.png)
 
-Here's the output:<br/>
+Here's the **Output**:<br/>
 ![output](image/assertCount_02.png)
 
 

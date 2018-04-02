@@ -1,4 +1,5 @@
 ---
+layout: default
 title: list(var,profile,remotePath)
 parent: aws.s3
 tags: command aws.s3
@@ -26,16 +27,16 @@ where we get all the keys starting with `my_bucket/my_folder`.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![](image/list_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/list_02.png)
 
-Script:<br/>
+**Script**:<br/>
 ![](image/list_03.png)
 
-Output:<br/>
+**Output**:<br/>
 ![](image/list_04.png)
 
 

@@ -48,5 +48,5 @@ By default, [`nexial.textDelim`](../systemvars/index#nexial.textDelim) has the
 Here are some examples on how to use this built-in function:<br/>
 ![script](image/$(array)_03.png)
 
-... and the output:<br/>
+... and the **output**:<br/>
 ![output](image/$(array)_04.png)

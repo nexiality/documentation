@@ -174,13 +174,13 @@ see above for parameter details
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/compareExtended_06.png)
 
-Data file:<br/>
+**Data file**:<br/>
 ![data](image/compareExtended_07.png)
 
-Here's the output:
+**Output**:<br/>
 ![output](image/compareExtended_08.png)
 
 

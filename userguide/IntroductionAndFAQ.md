@@ -22,7 +22,7 @@ design centers around the following goals:
     domain knowledge to shorten the quality feedback loop and raising quality consciousness across 
     the team.  Since no coding is required, it is faster and less costly to develop automation 
     scripts with Nexial.  With Nexial, automation engineers can elaborate the test steps, scenarios 
-    and data using spreadsheet.  Nexial also support the execution of external programs so any 
+    and data using spreadsheets.  Nexial also supports the execution of external programs so any 
     pre-existing scripts can be launched as part of a test execution.  
 
 3.  **Hybrid Test Design Approach**  
@@ -30,7 +30,7 @@ design centers around the following goals:
     simulate interaction and workflow, and validation to assert an expectation.  Using a hybrid 
     approach, Nexial combines the complimentary techniques of keyword-driven automation and 
     data-driven automation, plus a few of Nexial’s own, to create a test automation platform that 
-    yields high level of readability, flexibility and reusability. Some would regard Nexial as an 
+    yields a high level of readability, flexibility and reusability. Some would regard Nexial as an 
     archetype of the _Scriptless Automation_ framework.  
       
 4.  **Open and Practical Test Artifact**  
@@ -58,7 +58,7 @@ design centers around the following goals:
 One can use Nexial to create test automation across a myriad of applications such as desktop 
 applications, web applications, service applications, etc.  Coding is not required. Via 
 [simple conventions](UnderstandingProjectStructure) and [test design guidelines](UnderstandingExcelTemplates), 
-one can create test automation that maintain independence between the test (test steps) and data, 
+one can create test automation that maintains independence between the test (test steps) and data, 
 and flexibility to mix-and-match test scripts and test data at execution time.
 
 
@@ -74,7 +74,7 @@ Here is the basic workflow:
 7.  When all the steps in the spreadsheet have been executed, the output file is available for 
 				review and distribution.
 
-Using Nexial-designed spreadsheet with dropdown of commands (keywords), Step 1 can be greatly 
+Using Nexial-designed spreadsheet with a dropdown (or pull-down) of commands (keywords), Step 1 can be greatly 
 simplified.
 
 Step 3 through 7 can be a part of a larger CI/CD orchestration.
@@ -98,7 +98,7 @@ suggestion on new features for Nexial, submit an
 
 
 ### What can I expect from future release?
-Even before it’s 1.0 debut, Nexial has been in used by multiple projects.  But in a way, this isn’t 
+Even before it’s 1.0 debut, Nexial has been in use by multiple projects.  But in a way, this isn’t 
 a ‘1.0’ release – at least not in the typical sense.  Calling it ‘1.0’ is just a way to officially mark 
 its progress, and to give us a way of comparing against future releases.  The cadence we would like 
 to keep would be two-fold:

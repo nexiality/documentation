@@ -72,7 +72,7 @@ This built-in function provides textual formatting of various common data type. 
 Here's an example of the `$(format)` function is action:<br/>
 ![script](image/$(format)_01.png)
 
-The test output:<br/>
+The test **output**:<br/>
 ![output](image/$(format)_02.png)
 
 

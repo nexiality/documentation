@@ -15,7 +15,7 @@ comments: true
 
 ### Example
 
-Script:<br/>
+**Script**:<br/>
 ![](image/goBackAndWait_01.png)
 
 Output

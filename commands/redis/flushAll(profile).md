@@ -1,5 +1,5 @@
 ---
-title: redis &raquo; flushAll(profile)
+title: flushAll(profile)
 parent: redis
 tags: command redis
 comments: true
@@ -9,6 +9,7 @@ comments: true
 ### Description
 This command is used to remove all keys from all databases.
 
+
 ### Parameters
 - **profile** - is the profile name with which `redis` database details are defined.
 
@@ -16,5 +17,5 @@ This command is used to remove all keys from all databases.
 ### Example
 
 
-### See also
+### See Also
 - [`flushDb(profile)`](flushDb(profile))

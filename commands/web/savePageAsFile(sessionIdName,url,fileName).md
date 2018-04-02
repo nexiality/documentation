@@ -17,10 +17,10 @@ comments: true
 - **fileName** - this parameter is a filename along with path and desired extension where the session details need to be saved.
 
 ### Example
-
+**Script**:<br/>
 ![](image/savePageAsFile_01.png)
 
-output:
+**Output**:<br/>
 
 ![](image/savePageAsFile_02.png)
 

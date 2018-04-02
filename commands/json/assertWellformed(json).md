@@ -21,5 +21,5 @@ This command asserts that `json` resolves to a well-formed JSON document.
 **Script**:<br/>
 ![script](image/assertWellformed_01.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![output](image/assertWellformed_02.png)

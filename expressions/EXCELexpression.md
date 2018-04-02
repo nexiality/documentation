@@ -93,5 +93,5 @@ The content of excel file stored at location `C:\projects\xyz.xlsx` is:
 **Script**:<br/>
 ![Script](image/EXCELexpression_05.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![Output](image/EXCELexpression_06.png)

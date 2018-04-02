@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveFirstMatchedListIndex(var,contains)
 parent: desktop
 tags: command desktop

@@ -23,7 +23,7 @@ Here's an example of comparing a captured screenshot against a predefined baseli
 
 See [`nexial.lastScreenshot`](../../systemvars/index#nexial.lastScreenshot) for more details on this system variable.
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/compare_02.png)
 
 If there are errors, the result will reflect the violation against the defined tolerance:<br/>

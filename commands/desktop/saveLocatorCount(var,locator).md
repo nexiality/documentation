@@ -1,4 +1,5 @@
 ---
+layout: default
 title:  saveLocatorCount(var,locator)
 parent: desktop
 tags: command desktop

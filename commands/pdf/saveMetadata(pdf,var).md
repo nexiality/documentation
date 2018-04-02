@@ -41,5 +41,5 @@ These metadata can be access via the specified `var`, like this:
 **Script**:<br/>
 ![script](image/saveMetadata_01.png)
 
-**Result**:<br/>
+**Output**:<br/>
 ![output](image/saveMetadata_02.png)

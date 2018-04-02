@@ -16,10 +16,10 @@ This command is to zip all files or folder, based on specified `filePattern`.
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/zip_01.png)
 
-Output:<br/>
+**Output**:<br/>
 ![output](image/zip_02.png)
 
 Location of the zip file created:<br/>

@@ -16,8 +16,8 @@ This command copies files from one location to other.
 
 
 ### Example
-script:<br/>
+**Script**:<br/>
 ![script](image/copyFiles_01.png)
 
-output:<br/>
+**Output**:<br/>
 ![output](image/copyFiles_02.png)
