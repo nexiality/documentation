@@ -15,6 +15,10 @@ The screen recording can start within any part of a script file.  It will be sta
 command is invoked until [`stopRecording()`](stopRecording()) is invoked _WITHIN THE SAME SCRIPT_.  The recording 
 is saved as a MP4 in the **output** directory under `captures` folder.
 
+### Useful tip
+- You can control the screen recording by setting `nexial.recordingEnabled` system variable to `true` or `false`.
+- This can be useful when toggling between environments where screen recording is not ideal (such as CI/CD).
+- See [`System Variables`](../../systemvars/index.html) page and search for `nexial.recordingEnabled` for your reference.
 
 ### Example
 **Script**:<br/>
