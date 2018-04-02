@@ -1,4 +1,5 @@
 ---
+layout: default
 title: compare(expected,actual,failFast)
 parent: csv
 tags: command csv

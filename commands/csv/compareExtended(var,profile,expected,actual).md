@@ -1,4 +1,5 @@
 ---
+layout: default
 title: compareExtended(var,profile,expected,actual)
 parent: csv
 tags: command csv

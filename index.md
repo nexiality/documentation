@@ -1,3 +1,9 @@
+---
+layout: default
+title: Nexial Automation
+---
+
+
 ## Nexial Automation
 
 #### Test Automation Platform for _Everyone_!

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: commands
 level: 1
 tags: commands
