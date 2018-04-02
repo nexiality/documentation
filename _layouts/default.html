@@ -38,11 +38,11 @@
     {% endif %}
 
     <script>
-    function onload() { if (document.location.hash) { window.scrollBy(0, -200); } }
+    function adjustPosition() { if (document.location.href.indexOf('#') != -1) { window.scrollBy(0, -200); } }
     </script>
 </head>
 
-<body onload="onload()">
+<body onload="adjustPosition()">
 <div id="container">
     <header>
         <!--<h1>Nexial Automation &raquo; {{ page.title | default: site.title | default: site.github.repository_name }}</h1>-->
