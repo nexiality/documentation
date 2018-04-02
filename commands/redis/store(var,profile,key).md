@@ -11,7 +11,7 @@ This command is used to retrieve the value of the `key` specified from the datab
 
 ### Parameters
 - **var** - is the variable name where the retrieved value to be stored. 
-- **profile** - is the profile name with which `redis` database details are defined.
+- **profile** - is the profile name with which `redis` database details are defined. (Refer [here](index.md#defining-profile) to know how to define `profile`)
 - **key** - is the database key from which the value to be retrieved.
 
 

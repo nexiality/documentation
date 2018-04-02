@@ -11,7 +11,7 @@ This command is used to find all keys matching the given `keyPattern` and store 
 
 ### Parameters
 - **var** - is the variable name where the retrieved matched keys to be stored. 
-- **profile** - is the profile name with which `redis` database details are defined.
+- **profile** - is the profile name with which `redis` database details are defined. (Refer [here](index.md#defining-profile) to know how to define `profile`)
 - **keyPattern** - is the `pattern` to find the matching keys.
 
 

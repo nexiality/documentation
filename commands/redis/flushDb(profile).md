@@ -11,7 +11,7 @@ This command is used to remove all keys from the current database.
 
 
 ### Parameters
-- **profile** - is the profile name with which `redis` database details are defined.
+- **profile** - is the profile name with which `redis` database details are defined. (Refer [here](index.md#defining-profile) to know how to define `profile`)
 
 
 ### Example

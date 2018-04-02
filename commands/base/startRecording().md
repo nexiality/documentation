@@ -16,9 +16,8 @@ command is invoked until [`stopRecording()`](stopRecording()) is invoked _WITHIN
 is saved as a MP4 in the **output** directory under `captures` folder.
 
 ### Useful tip
-- You can control the screen recording by setting `nexial.recordingEnabled` system variable to `true` or `false`.
+- You can control the screen recording by setting [`nexial.recordingEnabled`](../../systemvars/index.html#nexial.recordingEnabled) system variable to `true` or `false`.
 - This can be useful when toggling between environments where screen recording is not ideal (such as CI/CD).
-- See [`System Variables`](../../systemvars/index.html) page and search for `nexial.recordingEnabled` for your reference.
 
 ### Example
 **Script**:<br/>

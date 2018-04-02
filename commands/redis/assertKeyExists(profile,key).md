@@ -11,7 +11,7 @@ This command is used to assert if the given `key` exists in the database.
 
 
 ### Parameters
--  **profile** - is the profile name with which `redis` database connection details are defined.
+-  **profile** - is the profile name with which `redis` database connection details are defined. (Refer [here](index.md#defining-profile) to know how to define `profile`)
 -  **key** - is the key that is to be asserted if it exists in the given database.
 
 

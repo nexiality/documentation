@@ -11,7 +11,7 @@ This command is used to rename a key in the database.
 
 
 ### Parameters
-- **profile** - is the profile name with which `redis` database details are defined.
+- **profile** - is the profile name with which `redis` database details are defined. (Refer [here](index.md#defining-profile) to know how to define `profile`)
 - **current** - is the current key name required to be renamed.
 - **new** - is the new name to be given to the specified key.
 
