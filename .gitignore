@@ -306,3 +306,7 @@ logs/
 /nexial-core_test.iml
 documentation.iml
 output/
+/_sass/*
+/.jekyll-metadata
+/jekyll-theme-tactile.gemspec
+/jekyll-theme-tactile-0.1.0.gem
