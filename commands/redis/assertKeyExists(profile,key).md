@@ -14,8 +14,10 @@ This command is used to assert if the given `key` exists in the database.
 -  **key** - is the key that is to be asserted if it exists in the given database.
 
 ### Example
+
 Script:
 ![](image/assertKeyExists_01.png)
+
 Output:
 ![](image/assertKeyExists_02.png)
 

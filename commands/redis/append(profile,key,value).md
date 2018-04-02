@@ -14,11 +14,11 @@ This command is used to append the value of the `key` with the given `value`.
 -  **value** - this parameter is the value that is to be appended with the value of the given `key`.
 
 ### Example
-Script
 
+Script
 ![](image/append_01.png)
 
 Output
-
 ![](image/append_02.png)
+
 ### See also

@@ -14,10 +14,12 @@ This command is used to retrieve the value of the `key` specified from the datab
 - **key** - is the database key from which the value to be retrieved.
 
 ### Example
+
 Script:
 ![](image/store_01.png)
+
 Output:
 ![](image/store_02.png)
-### See also
 
-[`storeKeys(var,profile,keyPattern)`](storeKeys(var,profile,keyPattern))
+### See also
+- [`storeKeys(var,profile,keyPattern)`](storeKeys(var,profile,keyPattern))

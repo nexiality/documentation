@@ -31,4 +31,4 @@ Output:
 
 ### See also
 
-[`store(var,profile,key)`](store(var,profile,key))
+- [`store(var,profile,key)`](store(var,profile,key))

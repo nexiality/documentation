@@ -12,7 +12,9 @@ This command is used to remove all keys from all databases.
 ### Parameters
 - **profile** - is the profile name with which `redis` database details are defined.
 
+
 ### Example
 
 
 ### See also
+- [`flushDb(profile)`](flushDb(profile))

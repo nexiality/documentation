@@ -11,7 +11,9 @@ This command is used to remove the entry of the given `key` from `redis` databas
 
 ### Parameters
 - **profile** - the profile which defines the `redis` connection details.
--  **key** - this parameter is the `key` that is to be deleted. 
+- **key** - this parameter is the `key` that is to be deleted. 
+
+
 ### Example
 
 

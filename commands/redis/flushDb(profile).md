@@ -22,4 +22,4 @@ Output:
 
 ### See also
 
-[`flushAll(profile)`](flushAll(profile))
+- [`flushAll(profile)`](flushAll(profile))

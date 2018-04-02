@@ -22,5 +22,5 @@ Output:
 
 ### See also
 
-[`store(var,profile,key)`](store(var,profile,key))
-[`storeKeys(var,profile,keyPattern)`](storeKeys(var,profile,keyPattern))
+- [`store(var,profile,key)`](store(var,profile,key))
+- [`storeKeys(var,profile,keyPattern)`](storeKeys(var,profile,keyPattern))
