@@ -107,7 +107,7 @@ Currently Nexial supports Excel 2007 and 2010. Nexial requires the use of XLSX f
    1.  To gain better understanding of the project structure, check out 
        [Understanding Nexial project structure](UnderstandingProjectStructure)
    1.  To gain better understanding of the Nexial automation script format and usage, check out 
-       [Understanding Nexial Excel templates](UnderstandingExcelTemplates)
+       [Understanding Nexial Test Artifact](UnderstandingExcelTemplates)
    1.  _Now it's time to run some automation_!
 
 

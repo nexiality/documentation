@@ -15,7 +15,7 @@ Let's get started!
 - [Introduction and FAQ](IntroductionAndFAQ)
 - [Installing Nexial](InstallingNexial)
 - [Update Nexial](UpdateNexial)
-- [Understanding Excel Templates](UnderstandingExcelTemplates)
+- [Understanding Nexial Test Artifact](UnderstandingExcelTemplates)
 - [Understanding Project Structure](UnderstandingProjectStructure)
 - [Data Management](DataManagement)
 - [Nexial batch files](BatchFiles)

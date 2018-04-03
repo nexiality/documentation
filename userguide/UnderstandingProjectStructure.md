@@ -80,7 +80,7 @@ you. See [`nexial-project.[cmd|sh]`](BatchFiles#nexial-projectcmd--nexial-projec
 As a convention, it is recommended to use `C:\projects` or `/Users/<username/project` (MacOSX) as the top-level 
 directory for all your Nexial projects.
 
-For more information, check out [Understanding Nexial Excel templates](UnderstandingExcelTemplates).
+For more information, check out [Understanding Nexial Test Artifact](UnderstandingExcelTemplates).
 
 ### Adding new test artifact
 Nexial is distributed with a set of empty, ready-to-use templates for your automation.  Navigate to 
