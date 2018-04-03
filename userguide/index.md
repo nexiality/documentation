@@ -24,6 +24,8 @@ Let's get started!
 - [Executing Nexial in CI/CD](ExecutingNexialInCICD)
 
 
-[//]: # (_Curious about where we've come from, and how Nexial came to be?_<br/>)
-[//]: # (History of Nexial HistoryOfNexial)
+------------------------------------------------------------------------------------------------------------------------
+
+_Curious about where we've come from, and how Nexial came to be?_<br/>
+[History of Nexial](HistoryOfNexial.md)
 

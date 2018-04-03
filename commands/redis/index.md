@@ -16,16 +16,22 @@ automatic partitioning with Redis Cluster.
 
 Learn more about redis:
 - <a href="https://redis.io/topics/introduction" class="external-link" target="_nexial_target">https://redis.io/topics/introduction</a>
+
+
+#### Defining profile
+Nexial simplifies the connectivity to a Redis server via the concept of a `profile`, much like the case for 
+[`rdbms`](../rdbms), [`ssh`](../ssh) and [`aws.s3 ](../aws.s3).  In this case, the profile would contain the connection
+URL to the target Redis server.  For example,<br/>
+![](image/redis_02.png)<br/>
+
+Here, `myredis` would be considered the profile name, and be used as the `profile` argument in commands below.
+
+For more details about Redis connectivity, check out the following links:
 - <a href="https://github.com/lettuce-io/lettuce-core/wiki/Redis-URI-and-connection-details" class="external-link" target="_nexial_target">https://github.com/lettuce-io/lettuce-core/wiki/Redis-URI-and-connection-details</a>
 - <a href="https://www.iana.org/assignments/uri-schemes/prov/redis" class="external-link" target="_nexial_target">https://www.iana.org/assignments/uri-schemes/prov/redis</a>
 
-#### Defining profile
-- Nexial simplifies managing the database details by creating a `profile`.
-- For e.g, define the profile in the data file, just as any other variable name:
-![](image/redis_02.png)<br>
-- So here becomes `myredis` as the profile name.
-- Use this profile name as an argument to all the below listed out commands wherever is applicable.
-- Nexial identifies all the variables prefixed with this profile name and uses the corresponding values to connect with database.
+Note: Future version of Nexial might include additional Redis connectivity details.
+  
 
 ### Available Commands
 - [`append(profile,key,value)`](append(profile,key,value))
