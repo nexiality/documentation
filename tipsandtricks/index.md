@@ -7,11 +7,12 @@ comments: true
 
 
 #### General
-- *in progress* [How to avoid memory issue by keeping your scripts and data files under control]()
-- *in progress* [How to provide valid and correct script name to avoid any illegal argument exception]()
+- [Avoid OutOfMemory error - Trim Test Artifacts](TrimTestArtifacts.md)
+- [Best Practice on Script Names](ValidScriptNames)
 - [Improving Script Portability](ImprovingScriptPortability)
 - [Integrating with other projects](IntegratingWithOtherProjects)
 - [Record/Playback a Nexial Execution](RecordPlayback)
+- [Security Issues on Executable](SecurityIssuesExecutableFiles)
 - *in progress* [Why isn't Nexial executing my scenario (worksheet)?]()
 
 
