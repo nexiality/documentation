@@ -9,7 +9,7 @@ comments: true
 ### Description
 <a href="https://en.wikipedia.org/wiki/Comma-separated_values" class="external-link" target="_nexial_external">CSV, or Comma-Separated Values</a>, 
 is text-based file format to store tabular data.  In many ways this file format can be viewed as a simplified, 
-no-format, version of Excel.   Using this file format, one can stored tabular data (i.e. 2-dimensional) of various 
+no-format, version of Excel.   Using this file format, one can store tabular data (i.e. 2-dimensional) of various 
 types and sizes.  This expression, then, can help to manipulate a CSV file content as part of automation.
 
 As popular as CSV has been since 
@@ -188,7 +188,7 @@ This filter specification will be used within the following operations:
     | CSV to merge from:                  |![](image/csv_09.jpg)|
     | CSV to merge into, **AFTER** merge: |![](image/csv_10.jpg)|
     <br/>
-	   Not that passing **\\(empty\\)** is required as the keyColumn to signify that no shared column is between these 2 
+	   Note that passing **\\(empty\\)** is required as the keyColumn to signify that no shared column is between these 2 
 	   CSV data.
 
 	 - **merge two CSV files that have headers and share the same `keyColumn`** - in this case, header exists for both 
@@ -216,7 +216,7 @@ This filter specification will be used within the following operations:
     `name=value|name=value|name=value|...` or `name=value,name=value,name=value,...`pairs.
 	   - **`delim`** - the character (single) to use as separator between field values.  For example, `delim=\,` would use 
 	     comma as delimiter, `delim=;` would use semi-colon as delimiter.  Default is comma.
-	     - Nexial also support auto-detection of delimiter, so you caomit `delim` to simplify your automation. 
+	     - Nexial also support auto-detection of delimiter, so you can omit `delim` to simplify your automation. 
 
 	   - **`quote`** - the character (single) to use to wrap non-numeric (such as text) values.  Default is double quote.  
 	     `quote='` would force Nexial to consider single quote as the "wrapping" for non-numeric values.

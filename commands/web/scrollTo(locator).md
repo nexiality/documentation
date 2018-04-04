@@ -7,7 +7,7 @@ comments: true
 
 ### Description
 
-- This command is to scroll to to desired element.
+- This command is to scroll to desired element.
 - In other words this command will scroll to the desired element defined and Pass or else fail otherwise.
 - The locator till which the scroll need to be performed has to be defined in input parameters.
 

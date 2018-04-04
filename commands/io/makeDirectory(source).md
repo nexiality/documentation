@@ -11,7 +11,7 @@ This command will create the directory on the path provided as `source`.
 
 
 ### Parameters
-- **source:** \- this parameter is required to provide the location where directory needs to be created.
+- **source:** \- the location where directory is to be created
 
 
 ### Example

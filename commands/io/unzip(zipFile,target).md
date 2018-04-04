@@ -7,8 +7,8 @@ comments: true
 
 
 ### Description
-- This command is to to unzip the files.
-- In other words this command will unzip the desired file into the target location..
+- This command is to unzip the files.
+- In other words this command will unzip the desired file into the target location.
 - If the unzip is successful command will pass or else fail otherwise.
 
 

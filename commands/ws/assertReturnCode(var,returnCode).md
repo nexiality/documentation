@@ -7,8 +7,7 @@ comments: true
 
 
 ### Description
-This command is used to assert the expected response code from the actual response code received in the service 
-response.
+This command is used to assert the expected response code from the service response received.
 
 For more information about HTTP status codes, refer to 
 <a href="https://httpstatuses.com/" class="external-link" target="_nexial_external">https://httpstatuses.com/</a>.  

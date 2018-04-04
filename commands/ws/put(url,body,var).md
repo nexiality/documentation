@@ -7,7 +7,7 @@ comments: true
 
 
 ### Description
-This command is used to send a HTTP PUT request to the given url with the given request body.
+This command sends a HTTP PUT request to the given `url` with the given request `body`.
 
 To learn about how to utilize the response returned from the target URL, click [here](index.html#http-response).
 

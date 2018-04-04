@@ -14,10 +14,10 @@ the same implementation for both commands.**
 This command compares two text files (or two text content) and provides a comparison report at the end.  A `FAIL` is 
 deemed if any differences are found between `expected`and `actual`.  Note that much like many Nexial commands, both 
 `expected` and `actual` can be expressed as:
-- an external file, referenced either by its physical file (e.g. `C:\my_path\my_file.txt`) or via 
+- An external file, referenced either by its physical file (e.g. `C:\my_path\my_file.txt`) or via 
   [`$(syspath)`](../../functions/$(syspath)) (e.g. `$(syspath|out|fullpath)/my_file.txt`). 
-- a data variable, which would resolve to the text content to be compared (e.g. `${my_data}`).
-- text literal, which might contain newlines, carriage returns and other text formatting (e.g. 
+- A data variable, which would resolve to the text content to be compared (e.g. `${my_data}`).
+- Text literal, which might contain newlines, carriage returns and other text formatting (e.g. 
   `This is a line to be tested`).
 
 This is possible for `expected` and `actual` to derive from different sources (e.g. one from a file while the 
@@ -49,10 +49,10 @@ One can control the behavior of this command in the following ways:
 
 
 ### Parameters
-- **expected** \- this parameter is the expected file or text.
-- **actual** \-this parameter is the actual file or text.
+- **expected** \- this parameter is the expected file or text
+- **actual** \-this parameter is the actual file or text
 - **failFast** \-this parameter is the boolean value true or false to determine if the script execution need to be 
-  continued or stopped at this comparison.
+  continued or stopped at this comparison
 
 
 ### Example

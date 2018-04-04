@@ -7,7 +7,7 @@ comments: true
 
 ### Description
 
-- This command to to save the count of the element found as per the locator passed into command.
+- This command to save the count of the element found as per the locator passed into command.
 - In other words command will save the count of the element into defined variable to be used for future usage.
 - The command will pass if the element found and return element count as pr locator defined or else fail otherwise.
 

@@ -7,13 +7,12 @@ comments: true
 
 
 ### Description
-This command will move the files from one location to other. The user need to provide `source` and 
-`destination`.
+This command moves the files from one location to other. The user need to provide `source` and `destination`.
 
 
 ### Parameters
-- **source** \- this parameter is the source location of the file to be picked.
-- **target** \- this parameter is the target location of the file to be moved
+- **source** \- the source location of the file to be moved
+- **target** \- the target location to move to
 
 
 ### Example

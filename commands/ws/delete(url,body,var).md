@@ -7,7 +7,7 @@ comments: true
 
 
 ### Description
-This command is used to send a HTTP DELETE request to perform delete operation with the given url and query string.
+This command sends a HTTP DELETE request to perform delete operation with the given `url` and `body` (request payload).
 
 To learn about how to utilize the response returned from the target URL, click [here](index.html#http-response).
 

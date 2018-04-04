@@ -18,7 +18,7 @@ In the given example downloading the image from web using web service url.
 
 
 ### Example
-**script**:<br/>
+**Script**:<br/>
 ![](image/download_01.png)
 
 **Output**:<br/>

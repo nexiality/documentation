@@ -11,8 +11,8 @@ This command copies files from one location to other.
 
 
 ### Parameters
-- **source** : Full path of the files to be copied
-- **target** : Full path of the filed to be pasted
+- **source** : Full path of the files to copy
+- **target** : Full path of the destination
 
 
 ### Example

@@ -118,7 +118,7 @@ The tricky bit is to decipher its intent.  The way Nexial functions are designe
 **inside-out** fashion.  Meaning, one would read to know the innermost function first, and move outward.  Yes, this 
 can get clumsy and definitely not business-friendly!
 
-In contract, Nexial expression offers a more natural, **left-to-right** readability design that would hopefully make 
+In contrast, Nexial expression offers a more natural, **left-to-right** readability design that would hopefully make 
 it easier for its reader to derive the intent more effectively.  Here's the same script using Nexial expression 
 (last line):
 

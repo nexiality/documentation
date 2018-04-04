@@ -55,7 +55,7 @@ Here are the default extraction strategies:
 
 | Option | Possible Data | Default Value | Description | 
 | --- | --- | --- | --- | 
-|nexial.pdfFormStrategy.**[NAME]**.basedOn | ALTERNATING_ROW  ALTERNATING_CELL SHARE_CELL HEADER_ONLY SHARE_CELL_THEN_ALT_CELL | |  use one of the strategies as your starting point |
+|nexial.pdfFormStrategy.**[NAME]**.basedOn |ALTERNATING_ROW<br/>ALTERNATING_CELL<br/>SHARE_CELL<br/>HEADER_ONLY<br/>SHARE_CELL_THEN_ALT_CELL | |  use one of the strategies as your starting point |
 |nexial.pdfFormStrategy.**[NAME]**.keyThenValue | true / false | | determine if form 'key' should appear before the corresponding 'value' |
 |nexial.pdfFormStrategy.**[NAME]**.keyPattern | regular expression | ^([0-9A-Za-z\\\/\ \.\,\"\'\(\)\[\]\#\-]+)\:?\s*$ | the extraction pattern for form 'key' |
 |nexial.pdfFormStrategy.**[NAME]**.keyValueDelimiter | text | : | the delimiter (or separator) between form 'key' and 'value' |
