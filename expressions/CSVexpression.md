@@ -62,7 +62,7 @@ The official CSV specification of Microsoft/CSV does not default to using header
 See `parse()` below for more details.
 
 
-**Nexial Filter**
+### Nexial Filter
 It is often needed to filter or sift out some part of the entire data set.  For that, Nexial provides a 
 "mini language" of sorts where the filtering condition can be easily expressed.  Such condition uses the following 
 format:
