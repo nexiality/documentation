@@ -271,7 +271,7 @@ This filter specification will be used within the following operations:
 	 - THEN we can deduce the following as the "template":  
 	   Here is **`${description}`**, which is located in **`${fullAddress}`**, we call ourselves **`${code}`**.
 
-	 - HENCE the expression <code>[CSV(**${file}**) => parse(...) render(**${template}**)]</code> would yield:
+	 - HENCE the expression <code>[CSV(${file}) => parse(...) render(${template})]</code> would yield:
 	 
 	   ![](image/csv_17.jpg)
 	 
