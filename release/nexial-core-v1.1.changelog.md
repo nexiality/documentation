@@ -26,3 +26,8 @@ using with Nexial.
 - reduce log verbosity for 3rd-party library
 - added/fixed multiple unit tests
 
+[base]
+- rename command number.assertBetween(num,lower,upper) to number.assertBetween(num,min,max) to improve readability
+
+[desktop]
+- command desktop.scanTable(var,name) to desktop.getRowCount(var,name)

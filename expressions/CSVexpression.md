@@ -32,7 +32,7 @@ CSV file format:
   - uses double quote for non-numeric value
   - uses carriage return (`\r\n`) as record separator
   - regard empty lines as an empty records
-- **<a href="https://en.wikipedia.org/wiki/Tab-separated_values" class="external-link" target="_nexial_external">`TDF or TSV`</a>** - 
+- **<a href="https://en.wikipedia.org/wiki/Tab-separated_values" class="external-link" target="_nexial_external">TDF or TSV</a>** - 
   The tab-delimited format, which uses the  `TAB` character instead of comma as field value delimiter.  This is also 
   the default CSV format for MySQL export. Such format:
   - uses `TAB` character as delimiter
