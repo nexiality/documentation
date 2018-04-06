@@ -22,7 +22,8 @@ Let's get started!
 - [Automation Execution Flow](ExecutionFlow)
 - [Realtime Inspection of Data Variables](RealtimeInspectionOfDataVariables)
 - [Executing Nexial in CI/CD](ExecutingNexialInCICD)
-
+- [Nexial Execution Dashboard](ExecutionDashboard)
+- [Nexial Execution Dashboard HOWTO](ExecutionDashboardHOWTO)
 
 ------------------------------------------------------------------------------------------------------------------------
 
