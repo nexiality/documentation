@@ -4,10 +4,12 @@ parent: User Guide
 tags: execution dashboard how to
 comments: true
 ---
-Introduction
-------------
 
-Nexial Execution Summary (better known as **Nexial Execution Dashboard**) refers to a feature in Nexial to render a dashboard-like, Web-based report across multiple test executions. This report helps its reader to visual the high-level execution characteristics over time, which includes:
+
+### Introduction
+Nexial Execution Summary (better known as **Nexial Execution Dashboard**) refers to a feature in Nexial to render a 
+dashboard-like, Web-based report across multiple test executions. This report helps its reader to visual the 
+high-level execution characteristics over time, which includes:
 
 *   Number of steps executed per execution or per iteration
 *   Number of steps PASSed per execution or per iteration
@@ -17,44 +19,41 @@ Nexial Execution Summary (better known as **Nexial Execution Dashboard**) refer
 
 In addition to the above, one may also access the individual execution report (spreadsheet) per iteration.
 
-Jenkins Setup
--------------
+
+### Jenkins Setup
 
 #### Displaying Execution Dashboard on a Jenkins job page
 
 1.  **One-time** Setup
+	*   Plugins needed: [anything-goes](https://wiki.jenkins.io/pages/viewpage.action?pageId=60915753)
+	*   Jenkins | Manage Jenkins | Configure Global Security ( http://\[jenkins_host\]/configureSecurity/ ):
+	    *   Under Markup Formatter, select `Allow arbitrary HTML includin JavaScript (UNSAFE)`  
+	        ![](image/ExecutionDashboardHOWTO_01.png)
 
-*   Plugins needed: [anything-goes](https://wiki.jenkins.io/pages/viewpage.action?pageId=60915753)
-*   Jenkins | Manage Jenkins | Configure Global Security ( http://\[jenkins_host\]/configureSecurity/ ):
-    *   Under Markup Formatter, select `Allow arbitrary HTML includin JavaScript (UNSAFE)`  
-        ![](image/ExecutionDashboardHOWTO_01.png)
-
-1.  On Job Page
-
-*   click `edit description`
-*   enter description as<br>
-    ```html
-    <iframe style="float:right; height:700px !important; width:500px !important; margin:0; padding:4px; border:none" 
-           src="https://s3.us-west-2.amazonaws.com/BUCKET_NAME/nexial-summary/resources/executionsummary.html?project=INSERT_YOUR_PROJECT_NAME_HERE&orientation=rightside">
-    </iframe>
-    ``` 
-   **replace src url with your `executionsummary.html` url**<br>
-   **replace `INSERT_YOUR_PROJECT_NAME_HERE` with your project name**
-*   click `Submit` to save changes
-*   Note that you can put the above HTML as part of your job description (recommend at the end).
+2.  On Job Page
+	*   click `edit description`
+	*   enter description as<br>
+	    ```html
+	    <iframe style="float:right; height:700px !important; width:500px !important; margin:0; padding:4px; border:none" 
+	           src="https://s3.us-west-2.amazonaws.com/BUCKET_NAME/nexial-summary/resources/executionsummary.html?project=INSERT_YOUR_PROJECT_NAME_HERE&orientation=rightside">
+	    </iframe>
+	    ``` 
+	   **replace src url with your `executionsummary.html` url**<br>
+	   **replace `INSERT_YOUR_PROJECT_NAME_HERE` with your project name**
+	*   click `Submit` to save changes
+	*   Note that you can put the above HTML as part of your job description (recommend at the end).
 
 
-Confluence Setup
-----------------
+#### Confluence Setup
 
 #### Displaying Execution Dashboard on a Confluence page
 
 1.  Create or Edit a Confluence Page.
 2.  Move cursor to the appropriate spot on the page.(Where you see `plus(+)` sign)
-3.  From Confluence Edit toolbar, select Insert > Other Macros  
+3.  From Confluence Edit toolbar, select Insert > Other Macros  <br/>
     ![](image/ExecutionDashboardHOWTO_02.png)
 4.  From the popup window, enter `HTML` to search.
-5.  Select the macro `HTML`.
+5.  Select the macro `HTML`.<br/>
     ![](image/ExecutionDashboardHOWTO_03.png)
 6.  Click `Insert`
 7.  Back on the Confluence page, in Edit mode, you should see a "box" titled HTML.
@@ -65,8 +64,9 @@ Confluence Setup
     </iframe>
     ```
     **replace src url with your `executionsummary.html` url**<br>
-    **replace `INSERT_YOUR_PROJECT_NAME_HERE` with your project name**<br>
+    **replace `INSERT_YOUR_PROJECT_NAME_HERE` with your project name**<br/>
       
     ![](image/ExecutionDashboardHOWTO_04.png)
         
 9.  Finish the rest of your editing, and click `Save`.
+

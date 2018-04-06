@@ -30,8 +30,7 @@ Here are some of the core design considerations for this platform:
 - Hybrid approach to support keyword-based tests and program/script -based tests
 - Local and remote (Jenkins, BrowserStack) support
 - Integration to existing collaboration tools such as JIRA and Confluence
-- Supports various application architecture, includes web (browser), desktop, API/REST/SOAP, 
-		database, batch, ssh
+- Supports various application architecture, includes web (browser), desktop, API/REST/SOAP, database, batch, ssh
 - Extensive and flexible test management
 - Data management and data generation
 - Supports FRIP (functional, regression, integration, performance testing)
