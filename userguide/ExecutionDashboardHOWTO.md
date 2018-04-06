@@ -7,9 +7,8 @@ comments: true
 
 
 ### Introduction
-Nexial Execution Summary (better known as **Nexial Execution Dashboard**) refers to a feature in Nexial to render a 
-dashboard-like, Web-based report across multiple test executions. This report helps its reader to visual the 
-high-level execution characteristics over time, which includes:
+This is a feature of Nexial to render a dashboard-like, Web-based report across multiple test executions. This report 
+helps its reader to visual the high-level execution characteristics over time, which includes:
 
 *   Number of steps executed per execution or per iteration
 *   Number of steps PASSed per execution or per iteration
@@ -25,21 +24,22 @@ In addition to the above, one may also access the individual execution report (s
 #### Displaying Execution Dashboard on a Jenkins job page
 
 1.  **One-time** Setup
-	*   Plugins needed: [anything-goes](https://wiki.jenkins.io/pages/viewpage.action?pageId=60915753)
-	*   Jenkins | Manage Jenkins | Configure Global Security ( http://\[jenkins_host\]/configureSecurity/ ):
+	*   Plugins needed: <a href="https://wiki.jenkins.io/pages/viewpage.action?pageId=60915753" class="external-link" target="_nexial_target">anything-goes</a>
+	*   Jenkins | Manage Jenkins | Configure Global Security ( `http://\[jenkins_host\]/configureSecurity/` ):
 	    *   Under Markup Formatter, select `Allow arbitrary HTML includin JavaScript (UNSAFE)`  
-	        ![](image/ExecutionDashboardHOWTO_01.png)
+	    ![](image/ExecutionDashboardHOWTO_01.png)
 
 2.  On Job Page
 	*   click `edit description`
-	*   enter description as<br>
+	*   enter description as<br/>
 	    ```html
 	    <iframe style="float:right; height:700px !important; width:500px !important; margin:0; padding:4px; border:none" 
-	           src="https://s3.us-west-2.amazonaws.com/BUCKET_NAME/nexial-summary/resources/executionsummary.html?project=INSERT_YOUR_PROJECT_NAME_HERE&orientation=rightside">
+	           src="<YOUR_S3_LOCATION_AS_URL>/executionsummary.html?project=INSERT_YOUR_PROJECT_NAME_HERE&orientation=rightside">
 	    </iframe>
 	    ``` 
-	   **replace src url with your `executionsummary.html` url**<br>
-	   **replace `INSERT_YOUR_PROJECT_NAME_HERE` with your project name**
+	   **replace src url with your `executionsummary.html` url**<br/>
+	   **replace `INSERT_YOUR_PROJECT_NAME_HERE` with your project name**<BR/>
+	   **replace `<YOUR_S3_LOCATION_AS_URL>` with your project name**<br/>
 	*   click `Submit` to save changes
 	*   Note that you can put the above HTML as part of your job description (recommend at the end).
 
@@ -60,13 +60,12 @@ In addition to the above, one may also access the individual execution report (s
 8.  Insert this html text in box, enter
     ```html
     <iframe width="100%" height="650px" style="float:right;width:100% !important;min-height:100% important;margin:0;padding:0;border:none" 
-            src="https://s3.us-west-2.amazonaws.com/BUCKET_NAME/nexial-summary/resources/executionsummary.html?project=INSERT_YOUR_PROJECT_NAME_HERE">
+            src="<YOUR_S3_LOCATION_AS_URL>/executionsummary.html?project=INSERT_YOUR_PROJECT_NAME_HERE">
     </iframe>
     ```
     **replace src url with your `executionsummary.html` url**<br>
     **replace `INSERT_YOUR_PROJECT_NAME_HERE` with your project name**<br/>
-      
-    ![](image/ExecutionDashboardHOWTO_04.png)
+	   **replace `<YOUR_S3_LOCATION_AS_URL>` with your project name**<br/>
         
 9.  Finish the rest of your editing, and click `Save`.
 
