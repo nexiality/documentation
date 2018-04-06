@@ -78,29 +78,14 @@ You'll see the URL of the execution output towards the end of the execution, lik
 
 ![](image/ExecutionDashboard_05.png)
 
-###How to Compose Dashboard Details
+### How to Compose Dashboard Details
 We run nexial script to collect all the necessary data as summary.json from execution-summary.json specific to project which is uploaded to cloud. 
 
-###Steps to consolidate summary<br>
-1. The last n number of runs data to be consolidated, n is execCount provided in config.json which is specific to project. If it's not present it will consider default execCount from resource/json folder. 
-2. Listing out latest n number of execution-summary.json from project.
+### Steps to consolidate summary<br>
+1. The last n number of runs data to be consolidated, n is execCount provided in config.json which is specific to project. If it's not present it will consider default execCount. 
+2. Listing out latest n number of execution-summary.json.
 3. Consolidate necessary data like number of steps PASSed and FAILed, total steps, PASS % and duration.
 4. Upload consolidated summary.json to project specific nexial-summary folder.
-
-###Project Structure<br>
-                                        Bucket
-                                           |
-                                    nexial-summary(can give any name)          
-                                           |                 
-            project(project specific files)       resources(default/common files) file   
-                        |                                     |
-                    project_name                           executionsummary.html
-                        |                                  library
-                       css                                 css 
-                       json                                js
-                           -summary.json                   json
-                       js                                  image
-                                                            
 
 ### For DevOps or CI/CD Support
 
