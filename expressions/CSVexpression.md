@@ -104,11 +104,11 @@ Eventually this (currently dubbed as nexial filter) will be used across Nexial w
 condition-based decision (such as Flow Control) is needed - stay tuned!
 
 Example,
-- `"A" = "A"` - condition: is "A" equals to "A"
-- `${fruit} **in** [apple|banana|chicken|shoes]` - condition: is ${fruit} one of the items in the list 
-  `apple, banana, chicken, shoes`
-- `${error message} **start with** "Error: "` - condition: does `${error message}` starts with the text `"Error: "`?
-- `${rate} **between** [7.005|7.8001]` - condition: is ${rate} between `7.005` and `7.8001`
+- `"A" = "A"` - condition: _is "A" equals to "A"?_
+- `${fruit} in [apple|banana|chicken|shoes]` - condition: _is ${fruit} one of the items in the list 
+  `apple, banana, chicken, shoes`?_
+- `${error message} start with "Error: "` - condition: _does `${error message}` starts with the text `"Error: "`?_
+- `${rate} between [7.005|7.8001]` - condition: _is ${rate} between `7.005` and `7.8001`?_
 
 This filter specification will be used within the following operations:
 - `filter(conditions)`
@@ -158,9 +158,9 @@ This filter specification will be used within the following operations:
 	 - **merge two CSV files that have no header** - in such case, records will be merged line-by-line with no regard 
 	   to the data value.  For example:<br/>
 	   <code>
-	   [CSV( **${csv file to merge from}** ) => parse store(**merge_from**)]<br/>
+	   [CSV( ${csv file to merge from} ) => parse store(merge_from)]<br/>
     ... ...<br/>
-    [CSV( **${csv file to merge into}** ) => parse(header=false) merge(**merge_from,\\(empty\\)**) store(**merge_into**)]
+    [CSV( ${csv file to merge into} ) => parse(header=false) merge(merge_from,\\(empty\\)) store(merge_into)]
     </code><br/>
     <br/>
 
@@ -176,9 +176,9 @@ This filter specification will be used within the following operations:
   - **merge two CSV files that have headers, but without keyColumn** - in this case, `header` exists in both CSV file, 
     but they do not share any common column from the merge can be based on.  For example:<br/>
     <code>
-    [CSV( **${csv file to merge from}** ) => parse(header=true) store(**merge_from**)]<br/>
+    [CSV( ${csv file to merge from} ) => parse(header=true) store(merge_from)]<br/>
     ... ...<br/>
-    [CSV( **${csv file to merge into}** ) => parse(header=true) merge(**merge_from,\\(empty\\)**) store(**merge_into)**]<br/>
+    [CSV( ${csv file to merge into} ) => parse(header=true) merge(merge_from,\\(empty\\)) store(merge_into)]<br/>
     </code><br/>
     <br/>
     
@@ -195,9 +195,9 @@ This filter specification will be used within the following operations:
 	   CSV data and they also share (at least) one common column whereby merge can use it to align the records.  For 
 	   example,
 				<code>	 
-			 [CSV( **${csv file to merge from}** ) => parse(header=true) store(**merge_from**)]<br/>
+			 [CSV( ${csv file to merge from} ) => parse(header=true) store(merge_from)]<br/>
 				... ...<br/>
-				[CSV( **${csv file to merge into}** ) => parse(header=true) merge(**merge_from,SSN**) store(**merge_into**)]<br/>
+				[CSV( ${csv file to merge into} ) => parse(header=true) merge(merge_from,SSN) store(merge_into)]<br/>
 				</code><br/>
 				<br/>
 
@@ -271,7 +271,7 @@ This filter specification will be used within the following operations:
 	 - THEN we can deduce the following as the "template":  
 	   Here is **`${description}`**, which is located in **`${fullAddress}`**, we call ourselves **`${code}`**.
 
-	 - HENCE the expression <code>[CSV(**${file}**) => parse(...) render(**${template}**)]</code> would yield:
+	 - HENCE the expression <code>[CSV(${file}) => parse(...) render(${template})]</code> would yield:
 	 
 	   ![](image/csv_17.jpg)
 	 

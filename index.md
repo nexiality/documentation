@@ -14,16 +14,15 @@ title: Nexial Automation
 and practices to achieve a new understanding of ourselves and nature, and to fuel cultural 
 advancement. 
 
-The name reflects our desire and intention to perfect the "art" and "science" of Software Testing 
-and the promotion of Quality Artisan.  As professional QA, we are all _nexialists_ - we see links
-in the disconnected and synergy in the seemingly independent, and draw from such new 
-ideas/solutions.
+The name reflects our desire and intention to perfect the "art" and "science" of Software Testing and the promotion of 
+Quality Artisan.  As professional Quality Advocates, we are all _nexialists_ - we see links in the disconnected and 
+synergy in the seemingly independent, and draw from such new ideas/solutions.
 
 
 ## Introduction
 
 The main motivation of Nexial is to provide a set of capabilities to automate software testing.  
-Here's some of the core concerns of this platform:
+Here are some of the core design considerations for this platform:
 
 - ***Test automation for everyone*** - no coding experience required (but supported), simple and 
   valuable to all project participants
@@ -37,8 +36,7 @@ Here's some of the core concerns of this platform:
 - Data management and data generation
 - Supports FRIP (functional, regression, integration, performance testing)
 
-For better understanding towards the objective and overview of Nexial, check out 
-the **[Introduction](userguide/IntroductionAndFAQ)** page.
+For better understanding of Nexial, check out the **[Introduction](userguide/IntroductionAndFAQ)** page.
 
 ---------------------------------------------
 
