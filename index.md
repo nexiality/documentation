@@ -10,7 +10,7 @@ title: Nexial Automation
 
 <img src="image/logo-x.png" alt="Nexial" style="box-shadow:none"/>
 
-> _**nexial**_  - joining together.  It refers to the joining of knowledge from multiple perspectives 
+> _**nexial**_ [nek-_sheel_] - joining together.  It refers to the joining of knowledge from multiple perspectives 
 and practices to achieve a new understanding of ourselves and nature, and to fuel cultural 
 advancement. 
 

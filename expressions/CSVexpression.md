@@ -236,7 +236,7 @@ This filter specification will be used within the following operations:
 	     - convert the CSV component into text.
 
   - **`removeColumns(namesOrIndices)`** - remove the entire column qualified via namesOrIndices parameter, which can be 
-    a list of column names or column positions (zero-based).  Multiple values are separated by pipe (`|`).
+    a list of column names or column positions (zero-based).  Multiple columns are separated by comma (`,`).
 
   - **`removeRows(conditions)`** - remove all rows that meet the specified conditions.  For example, consider the 
     following CSV file:
