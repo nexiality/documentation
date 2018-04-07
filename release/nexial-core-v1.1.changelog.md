@@ -6,6 +6,10 @@ comments: true
 ---
 
 
+## BETA
+
+--------------------------------------------------
+
 ### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-1.1" class="external-link" target="_nexial_target">Release 1.1</a>
 2018-05-??
 
@@ -25,7 +29,9 @@ using with Nexial.
 - fixed NUMBER expression when dealing with whole number.  Previous implementation converts whole number to decimal number, but this is now fixed.
 - reduce log verbosity for 3rd-party library
 - added/fixed multiple unit tests
-
+- fixed extra line creation when performing data variable refactoring via DataVariableUpdater 
+- allow project.properties setting to proliferate even when no secret file is found
+ 
 [base]
 - rename command number.assertBetween(num,lower,upper) to number.assertBetween(num,min,max) to improve readability
 
