@@ -27,6 +27,9 @@ using with Nexial.
 - added/fixed multiple unit tests
 - fixed extra line creation when performing data variable refactoring via DataVariableUpdater 
 - allow project.properties setting to proliferate even when no secret file is found
+- enhanced `bin/` scripts so that they can be run without being in the `bin/` directory directly.
+- enhanced `bin/nexial-project.sh` to support project directory not under the standard `C:\projects\` or 
+  `/Users/<username>/projects` directory.
 
 [base]
 - rename command number.assertBetween(num,lower,upper) to number.assertBetween(num,min,max) to improve readability
