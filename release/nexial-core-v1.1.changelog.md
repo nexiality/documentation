@@ -30,9 +30,18 @@ using with Nexial.
 - enhanced `bin/` scripts so that they can be run without being in the `bin/` directory directly.
 - enhanced `bin/nexial-project.sh` to support project directory not under the standard `C:\projects\` or 
   `/Users/<username>/projects` directory.
+- implemented "delayed" logging strategy (LogbackUtils)
+  - when nexial first started, all file-based logs are pointing to ${java.io.tmpdir}
+  - when the "out" directory is determined, file-based logs are redirected to ${out}/logs directory
+- implemented performance improvement on reading Excel files
+  - delete "temp" Excel files ONLY if they were "dup-then-open"
+  - implemented functional calls to eliminate excessive worksheet reads
 
 [base]
-- rename command number.assertBetween(num,lower,upper) to number.assertBetween(num,min,max) to improve readability
+- rename command `number.assertBetween(num,lower,upper)` to `number.assertBetween(num,min,max)` to improve readability
+- base.verbose()
+  - reduce console log for base.verbose() command (not necessary)
+  - add original script param as comment when generating result of a base.verbose() call
 
 [nexial filter]
 - nexial filter now supported in flow control as well as CSV Expression (already the case since 1.0)
@@ -54,3 +63,12 @@ using with Nexial.
 
 [jms]
 - fixed bad reflection class in WebSphereMQJmsClientConfig.  Both BeanUtils and MethodUtils failed since they mistakenly took the MQConnectionFactory as a Map instance.
+
+[web]
+- shipped with [geckodriver 0.20.1 (Firefox)](https://github.com/mozilla/geckodriver/blob/release/CHANGES.md#0201-2018-04-06):
+	- Avoid attempting to kill Firefox process that has stopped.	
+	- With the change to allow Firefox enough time to shut down in 0.20.0, geckodriver started unconditionally killing 
+	  the process to reap its exit status. This caused geckodriver to inaccurately report a successful Firefox shutdown 
+	  as a failure.
+	- The regression should not have caused any functional problems, but the termination cause and the exit status are 
+	  now reported correctly.
