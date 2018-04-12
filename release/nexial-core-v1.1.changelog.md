@@ -36,6 +36,7 @@ using with Nexial.
 - implemented performance improvement on reading Excel files
   - delete "temp" Excel files ONLY if they were "dup-then-open"
   - implemented functional calls to eliminate excessive worksheet reads
+- skip pause when running nexial under JUnit
 
 [base]
 - rename command `number.assertBetween(num,lower,upper)` to `number.assertBetween(num,min,max)` to improve readability
@@ -54,6 +55,7 @@ using with Nexial.
 - Expression defaults to using scale of 25 (i.e. 25 decimal places) when dealing with double.  Currently applied to LIST and NUMBER.
 - Expression defaults to rounding "up" when dealing with double.  Currently applied to LIST and NUMBER.
 - fixed NUMBER expression when dealing with whole number.  Previous implementation converts whole number to decimal number, but this is now fixed.
+- fixed EXCEL.clear where it was missing last column
 
 [CSV expression]
 - `removeColumns` now supports one or many columns referenced by name or index (zero-based)
