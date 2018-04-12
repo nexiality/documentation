@@ -43,6 +43,8 @@ using with Nexial.
 - base.verbose()
   - reduce console log for base.verbose() command (not necessary)
   - add original script param as comment when generating result of a base.verbose() call
+- base.macro()
+  - maintain the flow control as defined by the calling scripts.
 
 [nexial filter]
 - nexial filter now supported in flow control as well as CSV Expression (already the case since 1.0)
@@ -74,3 +76,7 @@ using with Nexial.
 	  as a failure.
 	- The regression should not have caused any functional problems, but the termination cause and the exit status are 
 	  now reported correctly.
+
+[ws]
+- fixed `oauth()` to support OAuth response that contains multiple entitlements, products, etc. (Essentially JSON array).
+
