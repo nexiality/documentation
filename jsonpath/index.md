@@ -91,7 +91,7 @@ To generalize, Nexial's `jsonpath` follows these rules:
    - Finally return the JSON fragment of that node `"d"`. 
 2. **Use `[ref]` to represent either a primitive item or a JSON fragment within a JSON array**.  `ref` can either be 
    a zero-based index or the name of a child item.
-   - For example, **`a.b\[1\].c`** means:
+   - For example, **`a.b[1].c`** means:
      - Under a JSON node `"a"`, look for an JSON array named `"b"`,
      - Under that JSON array `"b"`, go to its second item (arrays are zero-based),
      - Within the second item of the JSON array `"b"`, look for a node named `"c"`,
