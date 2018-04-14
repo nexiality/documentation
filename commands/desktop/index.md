@@ -58,8 +58,6 @@ comments: true
 - [`collapseHierTable()`](collapseHierTable())
 - [`editHierCells(var,matchBy,nameValues)`](editHierCells(var,matchBy,nameValues))
 - [`editTableCells(row,nameValues)`](editTableCells(row,nameValues))
-
-[//]: # (- getRowCount(var)
 - [`hideExplorerBar()`](hideExplorerBar)
 - [`login(form,username,password)`](login(form,username,password))
 - [`maximize()`](maximize())
@@ -77,6 +75,7 @@ comments: true
 - [`saveModalDialogText(var)`](saveModalDialogText(var))
 - [`saveModalDialogTextByLocator(var,locater)`](saveModalDialogTextByLocator(var,locater))
 - [`saveProcessId(var,locator)`](saveProcessId(var,locator))
+- [`saveRowCount(var)`](saveRowCount(var))
 - [`saveTableRows(var,contains)`](saveTableRows(var,contains))
 - [`saveTableRowsRange(var,beginRow,endRow)`](saveTableRowsRange(var,beginRow,endRow))
 - [`saveText(var,name)`](saveText(var,name))
