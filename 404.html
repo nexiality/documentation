@@ -42,12 +42,17 @@
         gtag('config', 'UA-116385736-1');
     </script>
     <script>
-        if (/(.+\/)(quickstart)(\/.+)/.test(document.location.pathname)) {
-            document.location = document.location.pathname.replace(/(.+\/)(quickstart)(\/.+)/, '$1userguide$3');
+        // redirector
+        if (/(.+\/)(quickstart)(\/.*)/.test(document.location.pathname)) {
+            document.location = document.location.pathname.replace(/(.+\/)(quickstart)(\/.*)/, '$1userguide$3');
         }
 
         if (document.location.pathname.startsWith('/documentation/commands/desktop/getTaableRowsAll(var)')) {
             document.location = '/documentation/commands/desktop/saveTableRows(var,contains)';
+        }
+
+        if (document.location.pathname.startsWith('/documentation/tipsandtricks/CreateTestScript_data_plan')) {
+            document.location = '/documentation/userguide/UnderstandingProjectStructure';
         }
 
         // documentation/commands/desktop/getRowCount(var)
