@@ -10,7 +10,6 @@ comments: true
 
 
 ### Available Commands
-
 - [`assertAttribute(locator,attribute,expected)`](assertAttribute(locator,attribute,expected))
 - [`assertChecked(name)`](assertChecked(name))
 - [`assertDisabled(name)`](assertDisabled(name))
@@ -43,8 +42,8 @@ comments: true
 - [`clickByLocator(locator)`](clickByLocator(locator))
 - [`clickCheckBox(name)`](clickCheckbox(name))
 - [`clickExplorerBar(group,item)`](clickExplorerBar(group,item))
-- [`clickFirstMatchRow(nameValues)`](clickFirstMatchRow(nameValues))
 - [`clickFirstMatchedList(contains)`](clickFirstMatchedList(contains))
+- [`clickFirstMatchRow(nameValues)`](clickFirstMatchRow(nameValues))
 - [`clickIcon(label)`](clickIcon(label))
 - [`clickList(row)`](clickList(row))
 - [`clickMenu(menu)`](clickMenu(menu))
@@ -67,7 +66,6 @@ comments: true
 - [`minimize()`](minimize())
 - [`resize(width,height)`](resize(width,height))
 - [`saveAllTableRows(var)`](saveAllTableRows(var))
-- [`saveTableRowsRange(var,beginRow,endRow)`](saveTableRowsRange(var,beginRow,endRow))
 - [`saveAttributeByLocator(var,locator,attribute)`](saveAttributeByLocator(var,locator,attribute))
 - [`saveElementCount(var,name)`](saveElementCount(var,name))
 - [`saveFirstListData(var,contains)`](saveFirstListData(var,contains))
@@ -80,6 +78,7 @@ comments: true
 - [`saveModalDialogTextByLocator(var,locater)`](saveModalDialogTextByLocator(var,locater))
 - [`saveProcessId(var,locator)`](saveProcessId(var,locator))
 - [`saveTableRows(var,contains)`](saveTableRows(var,contains))
+- [`saveTableRowsRange(var,beginRow,endRow)`](saveTableRowsRange(var,beginRow,endRow))
 - [`saveText(var,name)`](saveText(var,name))
 - [`saveTextPane(var,name,criteria)`](saveTextPane(var,name,criteria))
 - [`saveWindowTitle(var)`](saveWindowTitle(var))

@@ -1,20 +1,4 @@
 <!DOCTYPE html>
-<!--
-  ~ Copyright 2012-2018 the original author or authors.
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  -->
-
 <html lang="en-US">
 <head>
     <title>Nexial Automation | the Test Automation Platform for everyone!</title>
@@ -58,10 +42,18 @@
         gtag('config', 'UA-116385736-1');
     </script>
     <script>
-        function adjustPosition() { if (document.location.href.indexOf('#') != -1) { window.scrollBy(0, -200); } }
+        if (/(.+\/)(quickstart)(\/.+)/.test(document.location.pathname)) {
+            document.location = document.location.pathname.replace(/(.+\/)(quickstart)(\/.+)/, '$1userguide$3');
+        }
+
+        if (document.location.pathname.startsWith('/documentation/commands/desktop/getTaableRowsAll(var)')) {
+            document.location = '/documentation/commands/desktop/saveTableRows(var,contains)';
+        }
+
+        // documentation/commands/desktop/getRowCount(var)
     </script>
 </head>
-<body onload="adjustPosition()">
+<body>
 <div id="container">
     <header>
         <!--<h1>Nexial Automation &raquo; Nexial Automation</h1>-->
