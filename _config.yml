@@ -51,3 +51,5 @@ feedback_email: mikeliucc@users.noreply.github.com
 github_button_location_top_navbar: false
 github_button_location_below_title: false
 github_button_location_page_bottom: false
+
+permalink: /layouts/404.html
