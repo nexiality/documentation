@@ -57,7 +57,8 @@ using with Nexial.
 - Expression defaults to using scale of 25 (i.e. 25 decimal places) when dealing with double.  Currently applied to LIST and NUMBER.
 - Expression defaults to rounding "up" when dealing with double.  Currently applied to LIST and NUMBER.
 - fixed NUMBER expression when dealing with whole number.  Previous implementation converts whole number to decimal number, but this is now fixed.
-- fixed EXCEL.clear where it was missing last column
+- fixed EXCEL.clear where it was missing last column.
+- `CSV » htmlTable`: render CSV into a HTML table.
 
 [CSV expression]
 - `removeColumns` now supports one or many columns referenced by name or index (zero-based)

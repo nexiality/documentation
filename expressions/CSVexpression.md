@@ -116,7 +116,8 @@ This filter specification will be used within the following operations:
 
 
 ### Operations
-- **`asciiTable`** - render CSV content into a ASCII-based table.  See example for details.
+- **`asciiTable`** - render CSV content into a ASCII-based table. Also known/usable as 'ascii-table'.  See example for 
+  details.  Also, `htmlTable` (below) is a related operation to generate HTML table.
 
 - **`column(column_name_or_index)`** - get all the data belonging to the same column as a LIST.  For CSV without 
   header information, use column index (0-based). 
@@ -134,11 +135,24 @@ This filter specification will be used within the following operations:
     `filter([ANY FIELD] contains USA)` means filter a row if any of its fields contains `USA`.
 
 - **`headers`** - retrieves the column names of the current CSV content as a **[`LIST`](LISTexpression)**.  If 
-	 current CSV is not parsed with header=true, then null is returned.
+	 current CSV is not parsed with `header=true`, then `null` is returned.
 
+- **`htmlTable`** - render CSV content into a HTML table.  Also known/usable as `html-table`.  For text-only rendering, 
+  consider using `asciiTable` operation (above) instead.  Let's see an example:<br/>
+  
+  Suppose the following CSV:<br/>
+  ![](image/CSVexpression_01.png)
+  
+  Using `[CSV(...) => html-table text]`, we can render the same CSV into something like the following:<br/>
+  ![](image/CSVexpression_02.png)
+  
+  Note that some amount of CSS is needed to format the generated HTML as shown above.  In this case, the CSS looks
+  like this:<br/>
+  ![](image/CSVexpression_03.png)
+  
 - **`json`** - convert current state of the CSV content to a JSON document.Technically speaking, it's a JSON array 
-		(to represent rows) with multiple JSON document (each for one row).The CSV content in question may be one or more 
-		rows, with or without headers. For example, here's the transformation from one CSV document (with header) to a JSON:
+  (to represent rows) with multiple JSON document (each for one row).The CSV content in question may be one or more 
+  rows, with or without headers. For example, here's the transformation from one CSV document (with header) to a JSON:
 
   ![](image/csv_01.jpg) ![](image/csv_02.jpg)
 

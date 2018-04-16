@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <META charset="utf-8">
+    <META http-equiv="X-UA-Compatible" content="chrome=1">
+    <META NAME="Author" CONTENT="Nexial Automation Platform">
+    <META NAME="Generator" CONTENT="Nexial Automation Platform">
+    <style>
+        body {
+            font-family:      Thonburi, sans-serif;
+            background-color: rgba(220, 220, 220, 0.25);
+            padding:          10px;
+            margin:           0;
+            font-size:        11pt;
+        }
+
+        h1 {
+            border-top:       1px solid rgba(100, 100, 120, 0.7);
+            border-bottom:    1px solid rgba(100, 100, 120, 0.7);
+            margin-top:       35px;
+            background-color: rgba(100, 100, 120, 0.15);
+            letter-spacing:   0.15em;
+            border-left:      10px solid rgba(100, 100, 120, 0.7);
+            padding:          3px 3px 3px 10px;
+            box-shadow:       0 5px 5px rgba(100, 100, 120, 0.7);
+        }
+
+        div.explain {
+            color:      #008;
+            padding:    0 0 10px 20px;
+            font-style: italic;
+        }
+
+        hr {
+            border: 1px solid rgba(100, 100, 120, 0.7);
+        }
+
+        div.stats {
+            padding:          10px 10px 10px 2px;
+            background-color: rgba(200, 200, 220, 0.15);
+            margin:           0 20px;
+        }
+
+        div.stats table thead tr th {
+            padding:       0 25px 0 4px;
+            border-bottom: 1px solid rgba(100, 100, 120, 0.7);
+            text-align:    left;
+            border-left:   7px solid rgba(100, 100, 120, 0.7);
+            text-shadow:   1px 1px 5px #bbb;
+        }
+
+        div.stats table tbody tr td {
+            padding:       0 25px 0 4px;
+            border-bottom: 1px solid rgba(100, 100, 120, 0.15);
+            text-align:    left;
+            border-left:   7px solid rgba(100, 100, 120, 0.15);
+        }
+
+        footer {
+            padding:          10px;
+            background-color: rgba(100, 100, 120, 0.15);
+            margin:           30px 0;
+            color:            rgba(100, 100, 120, 0.7);
+            font-size:        10pt;
+            text-transform:   lowercase;
+        }
+
+        div.tagline {
+            text-align:     center;
+            letter-spacing: 0.15em;
+            padding:        25px 0 0;
+            text-shadow:    1px 1px 1px #fff;
+        }
+    </style>
+</head>
+<body>
+
+<h1>SEARCH</h1>
+<div class="explain">
+    Below is the latest stats for our automated Google searches, cumulative across all searches performed.
+</div>
+<div class="stats">
+    ${search stats table}
+</div>
+
+<hr/>
+
+<h1>POSTS</h1>
+<div class="explain">
+    Below is the latest stats for the available Online Posts (${API base url}):
+</div>
+<div class="stats">
+    ${posts stats table}
+</div>
+
+<hr/>
+
+<h1>COMMENTS</h1>
+<div class="explain">
+    Below is the latest stats for the available comments:
+</div>
+<div class="stats">
+    ${comments stats table}
+</div>
+<br/>
+<div class="explain">
+    Of all the email addressed used to post comments, here are the top 5 (up to 5) most popular email domains:
+</div>
+<div class="stats">
+    ${top email domains table}
+</div>
+
+<hr/>
+
+<footer>
+    Last Updated: ${ANALYSIS update date}
+    <div class="tagline">powered by nexial</div>
+</footer>
+
+</body>
+</html>

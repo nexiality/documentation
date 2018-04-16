@@ -1,0 +1,36 @@
+
+******************************
+|          SEARCH            |
+******************************
+Below is the latest stats for our automated Google searches, cumulative across all searches performed.
+
+${search stats table}
+
+--------------------------------------------------------------------------------
+
+******************************
+|           POSTS            |
+******************************
+Below is the latest stats for the available Online Posts (${API base url}):
+
+${posts stats table}
+
+
+--------------------------------------------------------------------------------
+
+******************************
+|          COMMENTS          |
+******************************
+Below is the latest stats for the available comments:
+
+${comments stats table}
+
+Of all the email addressed used to post comments, here are the top 5 (up to 5) most popular email domains:
+
+${top email domains table}
+
+--------------------------------------------------------------------------------
+
+Last Updated: ${ANALYSIS update date}
+
+-----powered by nexial----------------------------------------------------------
