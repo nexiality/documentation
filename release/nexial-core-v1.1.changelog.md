@@ -69,6 +69,9 @@ using with Nexial.
 [jms]
 - fixed bad reflection class in WebSphereMQJmsClientConfig.  Both BeanUtils and MethodUtils failed since they mistakenly took the MQConnectionFactory as a Map instance.
 
+[step]
+- `observe(prompt)`: fixed output to render response as second parameter.
+
 [web]
 - shipped with [geckodriver 0.20.1 (Firefox)](https://github.com/mozilla/geckodriver/blob/release/CHANGES.md#0201-2018-04-06):
 	- Avoid attempting to kill Firefox process that has stopped.	
