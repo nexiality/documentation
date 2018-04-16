@@ -60,10 +60,10 @@ Multiple conditions (as part of `[controls]`) are separated by pipe (`|`).
 | condition                                                               | description |
 |-------------------------------------------------------------------------|-------------|
 |`"A" = "A"`                                                              | _is "A" equals to "A"?_ |
-| <code>${fruit} in [apple|banana|chicken|shoes]</code>       | _is `${fruit}` one of the items in the list `apple, banana, chicken, shoes`?_ |
+| <code>${fruit} in [apple|banana|chicken|shoes]</code>                   | _is `${fruit}` one of the items in the list `apple, banana, chicken, shoes`?_ |
 |`${error message} start with "Error: "`                                  | _does `${error message}` starts with the text `"Error: "`?_ |
-|<code>${rate} between [7.005&124;7.8001]</code>                          | _is `${rate}` between `7.005` and `7.8001`?_ |
-|<code>${my_age} between [${min_age}&124;${max_age}]</code>               | _is `${my_age}` between `${min_age}` and `${max_age}`?_ |
+|<code>${rate} between [7.005|7.8001]</code>                              | _is `${rate}` between `7.005` and `7.8001`?_ |
+|<code>${my_age} between [${min_age}|${max_age}]</code>                   | _is `${my_age}` between `${min_age}` and `${max_age}`?_ |
 |` ${my_fruit} match [A-Za-z]{5} & ${my_age} > 25`                        | _is `${my_fruit}` 5 alphabets **and** `${my_age}` greater than `25`?_ |
 |`${my_name} end with nathan`                                             | _Does `${my_name}` end with `nathan` (such as Jonathan)?_ |
 |`${is_login} is false`                                                   | _is `${is_login}` false (i.e. NOT true)?_ |
