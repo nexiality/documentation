@@ -28,7 +28,7 @@ controls to a test execution.  For example,
 Each flow control directives can be activated or suppressed via one or more conditions.  The general syntax of a 
 flow control looks like this:
 
-[**`SkipIf|ProceedIf|EndIf|EndLoopIf|FailIf|PauseBefore|PauseAfter`**](**`[nexial filter conditions]"`**)
+**`[SkipIf|ProceedIf|EndIf|EndLoopIf|FailIf|PauseBefore|PauseAfter]([nexial filter conditions])`
 
 For further details and examples of `[nexial filter conditions]`, click [Nexial Filter](../flowcontrols/filter).
 - Use **`&`** to create a multi-condition flow control.
