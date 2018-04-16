@@ -62,59 +62,6 @@ The official CSV specification of Microsoft/CSV does not default to using header
 See `parse()` below for more details.
 
 
-### Nexial Filter
-It is often needed to filter or sift out some part of the entire data set.  For that, Nexial provides a 
-"mini language" of sorts where the filtering condition can be easily expressed.  Such condition uses the following 
-format:
-
-> **`[subject] [comparator] [controls]`**
-
-where,
-
-**`[subject]`** represents the variable or data to consider in order to qualify a condition.
-
-**`[comparator]`** represents how **`[subject]`** is to be compared with **`[controls]`**.  Currently supported 
-comparisons are:
-
-
-| comparator       | description |
-| ---------------- | ----------- |
-| **`=`**          | equals, as in "is _this_ the same as _that_?" |
-| **`!=`**         | not equals, as in "is _this_ not the same as _that_?" |
-| **`>`**          | greater than, as in "is _this value_ greater than that value?"  Only applicable to numbers. |
-| **`>=`**         | greater or equal to, as in "is _this value_ greater or the same as _that value_?" Only applicable to numbers. |
-| **`<`**          | less than, as in "is _this value_ less than _that value_?" Only applicable to numbers. |
-| **`<=`**         | less or equal to, as in "is that value less or equal to that value?" Only applicable to numbers. |
-| **`is`**         | is one of ..., as in "is _this_ one of the values in _that_ list?" |
-| **`is not`**     | is not any of ..., as in "is _this_ not found in any of the values in _that_ list?" |
-| **`in`**         | same as **is** |
-| **`not in`**     | same as not **in** |
-| **`between`**    | between/within, as in "is _this_ value within the range of these two values?" Only applicable to numbers. |
-| **`contain`**    | containing, as in "does _this_ contains _that_?"  |
-| **`start with`** | start with, as in "does _this_ starts with _that_?" |
-| **`end with`**   | end with, as in "does _this_ ends with _that_?" |
-| **`match`**      | match by regular expression, as in "can _this_ be expressed via _that_ regular expression?" |
-
-
-**[controls]** represents the variable or data (could be more than one) to consider in order to qualify a condition.
-
-Multiple conditions are separated by pipe (`|`).
-
-Eventually this (currently dubbed as nexial filter) will be used across Nexial where narrowing down of dataset or 
-condition-based decision (such as Flow Control) is needed - stay tuned!
-
-Example,
-- `"A" = "A"` - condition: _is "A" equals to "A"?_
-- `${fruit} in [apple|banana|chicken|shoes]` - condition: _is ${fruit} one of the items in the list 
-  `apple, banana, chicken, shoes`?_
-- `${error message} start with "Error: "` - condition: _does `${error message}` starts with the text `"Error: "`?_
-- `${rate} between [7.005|7.8001]` - condition: _is ${rate} between `7.005` and `7.8001`?_
-
-This filter specification will be used within the following operations:
-- `filter(conditions)`
-- `removeRows(conditions)`
-
-
 ### Operations
 - **`asciiTable`** - render CSV content into a ASCII-based table. Also known/usable as 'ascii-table'.  See example for 
   details.  Also, `htmlTable` (below) is a related operation to generate HTML table.
@@ -126,13 +73,16 @@ This filter specification will be used within the following operations:
 
 - **`config`** - convert CSV content into CONFIG instance.
 
-- **`fetch(conditions)`** - fetch the first row that matched the specified conditions.  These conditions are 
-  evaluated on the columns based their respective name or index. The condition follows the syntax as laid out above. 
+- **`fetch(conditions)`** - fetch the first row that matched the specified 
+  [conditions](../flowcontrols/filter#specification).  These conditions are evaluated on the columns based their 
+  respective name or index. The condition follows the syntax as laid out in [Nexial Filter](../flowcontrols/filter). 
 
-- **`filter(conditions)`** - keep only the rows that matches the specified conditions.  These conditions are evaluated 
-  on the columns based their respective name or index. The condition follows the syntax as laid out above. 
-    * as of Nexial v1.2, one can use the reserved word [ANY FIELD] to target any field.  For example, 
-    `filter([ANY FIELD] contains USA)` means filter a row if any of its fields contains `USA`.
+- **`filter(conditions)`** - keep only the rows that matches the specified 
+  [conditions](../flowcontrols/filter#specification).  These conditions are evaluated on the columns based their 
+  respective name or index. The condition follows the syntax as laid out above.  One can use the reserved word 
+  `[ANY FIELD]` to target any field.  For example, `filter([ANY FIELD] contains USA)` means filter a row if any of 
+  its fields contains `USA`.
+  - `conditions` follows the syntax as laid out in [Nexial Filter](../flowcontrols/filter). 
 
 - **`headers`** - retrieves the column names of the current CSV content as a **[`LIST`](LISTexpression)**.  If 
 	 current CSV is not parsed with `header=true`, then `null` is returned.
@@ -255,8 +205,8 @@ This filter specification will be used within the following operations:
 - **`removeColumns(namesOrIndices)`** - remove the entire column qualified via namesOrIndices parameter, which can be 
   a list of column names or column positions (zero-based).  Multiple columns are separated by comma (`,`).
 
-- **`removeRows(conditions)`** - remove all rows that meet the specified conditions.  For example, consider the 
-  following CSV file:
+- **`removeRows(conditions)`** - remove all rows that meet the specified 
+  [conditions](../flowcontrols/filter#specification).  For example, consider the following CSV file:
 	 
   ![](image/csv_14.jpg)
 
@@ -267,6 +217,8 @@ This filter specification will be used within the following operations:
 
   One can use the reserved word `[ANY FIELD]` to target any field.  For example, `removeRows([ANY FIELD] contains USA)` 
   means remove a row if any of its fields contains `USA`.
+  
+  The `conditions` parameter follows the syntax as laid out in [Nexial Filter](../flowcontrols/filter).
 
 - **`renameColumn(find,replace)`** - rename a column, as defined by `find`, with new value as defined by `replace`. 
   The column position is maintained.
@@ -356,8 +308,10 @@ This filter specification will be used within the following operations:
 **Example**
 
 **Example 1: Using filter to limit the rows of a CSV file.**
-- For more details about initializing a CSV structure, please read this (above).
-- For more details about filter condition, please read this (above).
+- For more details about initializing a CSV structure, please read the section on 
+  [Initiate CSV expression](CSVexpression#different-ways-to-initiate-csv-expression).
+
+- For more details about filter condition, please read [Nexial Filter](../flowcontrols/filter).
 
   Suppose a file named expression-example1.csv exists in the artifact/data directory with the following content:<br/>	   
   ![](image/csv_22.jpg)

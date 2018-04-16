@@ -28,22 +28,13 @@ controls to a test execution.  For example,
 Each flow control directives can be activated or suppressed via one or more conditions.  The general syntax of a 
 flow control looks like this:
 
-[**`SkipIf|ProceedIf|EndIf|FailIf|PauseBefore|PauseAfter`**](**`[variable] [operator] "[control value]" & [variable] [operator] "[control value]"`** ...)
+[**`SkipIf|ProceedIf|EndIf|EndLoopIf|FailIf|PauseBefore|PauseAfter`**](**`[nexial filter conditions]"`**)
 
-- **\[variable\]** \- the variable, in the form of `${...}` whose value will be evaluated against `[control value]` 
-  to qualify the associated flow control.
-- **\[operator\]** \-  the operator to use when evaluating `[variable name]` against `[control value]`.  The 
-  available operators are:
-  1. **=** \- is `a` the same as `b`?
-  2. **!=** \- is `a` **NOT** the same as `b`?
-  3. **is** \- is `a` one of the values represented by `b`?  The values of `b` must be enclosed within `[...]`.  
-     For example, `["CA", "NY", "LV"]`
-- **\[control value\]** \- the value used to evaluate against `[variable name]`.  This must be surrounded by double 
-  quotes.
+For further details and examples of `[nexial filter conditions]`, click [Nexial Filter](../flowcontrols/filter).
 - Use **`&`** to create a multi-condition flow control.
 
-More than one flow controls may be specified for a given test step. In such case, here is the order of 
-importance/evaluation:
+More than one flow controls may be specified for a given test step.  During execution, Nexial evaluates the flow controls
+with the following order of significance:
 1. `PauseBefore()`
 2. `FailIF()`
 3. `EndLoopIf()`
