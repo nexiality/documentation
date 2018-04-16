@@ -174,7 +174,7 @@ This filter specification will be used within the following operations:
 	<code>
 	[CSV( ${csv file to merge from} ) => parse store(merge_from)]<br/>
     ... ...<br/>
-    [CSV( ${csv file to merge into} ) => parse(header=false) merge(merge_from,\\(empty\\)) store(merge_into)]
+    [CSV( ${csv file to merge into} ) => parse(header=false) merge(merge_from,\(empty\)) store(merge_into)]
     </code>
     <br/>
 
@@ -193,7 +193,7 @@ This filter specification will be used within the following operations:
     <code>
     [CSV( ${csv file to merge from} ) => parse(header=true) store(merge_from)]<br/>
     ... ...<br/>
-    [CSV( ${csv file to merge into} ) => parse(header=true) merge(merge_from,\\(empty\\)) store(merge_into)]<br/>
+    [CSV( ${csv file to merge into} ) => parse(header=true) merge(merge_from,\(empty\)) store(merge_into)]<br/>
     </code>
     <br/>
     
@@ -204,7 +204,7 @@ This filter specification will be used within the following operations:
     | CSV to merge into, **AFTER** merge: |![](image/csv_10.jpg)|
     
     <br/>
-    Note that passing **\\(empty\\)** is required as the keyColumn to signify that no shared column is between these 2 
+    Note that passing **\(empty\)** is required as the keyColumn to signify that no shared column is between these 2 
     CSV data.
 
   - **merge two CSV files that have headers and share the same `keyColumn`** - in this case, header exists for both 
