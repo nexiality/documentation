@@ -596,6 +596,28 @@ table.sysvar a code { background-color:transparent; border:none; font-weight:nor
     </td>
 </tr>
 <tr>
+    <td class="highlight-green" colspan="5">
+    <span>For <a href="../commands/external/">external</code></a> testing only. </span>
+    </td>
+</tr>
+<tr>
+    <td nowrap="nowrap" class="varname"><a name="nexial.external.output"/><code>nexial.external.output</code></td>
+    <td>text</td>
+    <td></td>
+    <td>true</td>
+    <td>
+    This system variable reflects the filename of the output generated as a result of executing a 
+    <a href="../commands/external/runProgram(programPathAndParms)">external &raquo; <code>runProgram(programPathAndParms)</code></a>
+    command.<br/>
+    When executing the <a href="../commands/external/runProgram(programPathAndParms)">external &raquo; <code>runProgram(programPathAndParms)</code></a>
+    command, Nexial also captures the output (<i>standard out</i>) created by target external program.  The captured 
+    output is then stored to the output directory (as in <code>$(syspath|output|fullPath)</code>) and linked to the
+    execution output.<br/>
+    With the captured output filename derivable via this system variable, one can further the automation with regards
+    the captured output.
+    </td>
+</tr>
+<tr>
     <td class="highlight-green" colspan="5"><span>For browser-based testing only. </span></td>
 </tr>
 <tr>
