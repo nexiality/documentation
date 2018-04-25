@@ -79,6 +79,23 @@ Here are the list of possible configuration (assuming the `profile` is `MyFil
 		</td>
 </tr>
 <tr>
+	<td><code>MyFiles.compareExt.ignore</code></td>
+	<td>The column(s) to ignore for comparison.</td>
+	<td>
+		Specifying the column(s) to ignore during field-by-field matching.  Multiple columns are seperated by
+		<a href="../../systemvars/index#nexial.textDelim"><code>${nexial.textDelim}</code></a>.  The columns are
+		based on those specified in the expected file.  If a "ignore" column is mapped to a different column on the 
+		actual field (via the <code>...compareExt.match....</code> configuration), then the mapped column of the actual 
+		field will be ignored as well.  If the "ignore" column is not mapped, then Nexial assumes that the same column
+		on both the expected and actual files.<br/>
+		<br/>
+		Note that ignoring one or more columns for matching does not preclude them to be used as part of the 
+		comparison result.  This means that one can specify a column to be ignored for comparison, but use the same
+		column in the comparison report (see <a href="#compareExtended_result">compareExtended result</a> below) 
+		via the <code>[profile].compareExt.output.display</code> configuration (see below). 
+		</td>
+</tr>
+<tr>
 	<td><code>MyFiles.compareExt.output.display</code></td>
 	<td>The column(s) - the <code>expected</code>file's perspective - to display as part of output.</td>
 	<td>Use this configuration to include or omit certain fields. Not all fields are used for matching. If the 
@@ -113,10 +130,11 @@ Here are the list of possible configuration (assuming the `profile` is `MyFil
 </tr>
 </tbody>
 </table>
-
+<br/>
 Here's an example of the comparison configuration (in this case, the `profile` is `AppOutput`):
 ![config](image/compareExtended_01.png)
 
+### compareExtended result
 For output, there are various data elements that are available.  Below is a depiction of what one can retrieve from 
 the comparison result (referenced by the specified `var` variable):
 

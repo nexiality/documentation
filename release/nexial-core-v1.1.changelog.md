@@ -63,6 +63,7 @@ using with Nexial.
 
 [CSV expression]
 - `removeColumns` now supports one or many columns referenced by name or index (zero-based)
+- `compareExtedned` now supports "ignore fields" so that certain fields can be ignored for comparison (and still be included in the comparison result).
 
 [desktop]
 - command desktop.scanTable(var,name) to desktop.getRowCount(var,name)
