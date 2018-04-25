@@ -91,7 +91,7 @@ Here are the list of possible configuration (assuming the `profile` is `MyFil
 		<br/>
 		Note that ignoring one or more columns for matching does not preclude them to be used as part of the 
 		comparison result.  This means that one can specify a column to be ignored for comparison, but use the same
-		column in the comparison report (see <a href="#compareExtended_result">compareExtended result</a> below) 
+		column in the comparison report (see <a href="#compareextended-result">compareExtended result</a> below) 
 		via the <code>[profile].compareExt.output.display</code> configuration (see below). 
 		</td>
 </tr>
