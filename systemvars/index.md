@@ -1433,7 +1433,7 @@ list of available System properties:
 </tr>
 <tr>
     <td nowrap="nowrap" class="varname"><a name="user.dir"/><code>user.dir</code></td>
-    <td>aka Current working directory<br/>
+    <td>a.k.a. Current working directory<br/>
     This is the directory where Nexial - ultimately Java - was run. In most cases this would be <code>${NEXIAL_HOME}/bin</code></td>
     <td>&nbsp;</td>
 </tr>
