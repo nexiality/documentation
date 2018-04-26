@@ -1373,8 +1373,8 @@ For example, should one do such in a Nexial script:<br/>
 
 This will print out the user ID that executed the script.
 
-One can considered these System properties as reflection of the current test harness (where Nexial runs).  Below is a 
-complete list of available System properties:
+One can considered these System properties as reflection of the current test harness (where Nexial runs).  Below is the
+list of available System properties:
 
 <table class="sysvar" cellspacing="0" cellpadding="3">
 <tbody>
@@ -1385,7 +1385,7 @@ complete list of available System properties:
 </tr>
 <tr>
     <td nowrap="nowrap" class="varname"><a name="file.separator"/><code>file.separator</code></td>
-    <td>The character used to separate files and directory. On Windows, this is usually \. On *NIX and OSX, this would be /</td>
+    <td>The character used to separate files and directory. On Windows, this is usually <code>\</code>. On *NIX and OSX, this would be <code>/</code></td>
     <td>&nbsp;</td>
 </tr>
 <tr>
@@ -1439,7 +1439,7 @@ complete list of available System properties:
 </tr>
 <tr>
     <td nowrap="nowrap" class="varname"><a name="user.home"/><code>user.home</code></td>
-    <td>User home directory&nbsp;</td>
+    <td>User home directory</td>
     <td>
     <code>C:\Users\Administrator</code><br/>
     <code>/Users/admin</code>
@@ -1463,9 +1463,10 @@ complete list of available System properties:
 </table>
 <br/>
 
-Example: 
+Example:<br/>
 Script (note that `${whoami}` is defined as data variable with the value of `${user.name}`):<br/>
 ![](image/systemvar_31.jpg)
 
 Output:<br/>
 ![](image/systemvar_32.jpg)
+
