@@ -14,6 +14,9 @@ via `-D` option), which will override the same settings in data file.
 Below are a list of configurable system variables.  During the test execution, Nexial may generates one or more 
 variables which maybe incorporated as part of your test script.
 
+For standard System properties, see the section below titled as [Standard System Properties](#standard-system-properties).
+<br/>
+
 <style>
 table.sysvar { width:1250px; text-align:left; vertical-align:top; }
 table.sysvar th { padding:5px; border:1px #aaa solid; }
@@ -195,7 +198,7 @@ table.sysvar a code { background-color:transparent; border:none; font-weight:nor
     <img src="image/systemvar_05.png" class="resize"/><br/>
     Alternatively, one can simply specify <code>wps</code>, which will enable Nexial to automatically resolve the 
     correct location of WPS (latest version preferred). For example,<br/>
-    <img src="image/systemvar_06.png"/>
+    <img src="image/systemvar_06.png" style="width:360px"/>
     </td>
 </tr>
 <tr>
@@ -1357,3 +1360,112 @@ table.sysvar a code { background-color:transparent; border:none; font-weight:nor
 </tr>
 </tbody>
 </table>
+<br/>
+<br/>
+
+### Standard System Properties
+As a Java application, Nexial supports a set of standard System properties that are common across operation systems.  
+These properties are managed and exposed by the Java runtime, which might increase in number over time. Nexial, in 
+turn, expose these properties so that they may be used as part of automation.
+
+For example, should one do such in a Nexial script:<br/>
+![](image/systemvar_30.jpg)
+
+This will print out the user ID that executed the script.
+
+One can considered these System properties as reflection of the current test harness (where Nexial runs).  Below is a 
+complete list of available System properties:
+
+<table class="sysvar" cellspacing="0" cellpadding="3">
+<tbody>
+<tr>
+    <th nowrap="nowrap">property name</th>
+    <th nowrap="nowrap">explanation</th>
+    <th nowrap="nowrap">example</th>
+</tr>
+<tr>
+    <td nowrap="nowrap" class="varname"><a name="file.separator"/><code>file.separator</code></td>
+    <td>The character used to separate files and directory. On Windows, this is usually \. On *NIX and OSX, this would be /</td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <td nowrap="nowrap" class="varname"><a name="java.home"/><code>java.home</code></td>
+    <td>Where the current Java runtime is installed</td>
+    <td>&nbsp;</td>
+</tr> 
+<tr>
+    <td nowrap="nowrap" class="varname"><a name="java.io.tmpdir"/><code>java.io.tmpdir</code></td>
+    <td>Current temp directory. The actual directory differs from host to host, depending on how each machine is set up</td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <td nowrap="nowrap" class="varname"><a name="java.version"/><code>java.version</code></td>
+    <td>The version of the current Java runtime, include the minor and patch number</td>
+    <td><code>1.8.0_152</code></td>
+</tr>
+<tr>
+    <td nowrap="nowrap" class="varname"><a name="line.separator"/><code>line.separator</code></td>
+    <td>The character(s) used as line separator. On Windows this is commonly implemented as the \r\n, while in *NIX and OSX it's the \n character</td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <td nowrap="nowrap" class="varname"><a name="os.arch"/><code>os.arch</code></td>
+    <td>The operating system architecture of the current host</td>
+    <td><code>x86_64</code></td>
+</tr>
+<tr>
+    <td nowrap="nowrap" class="varname"><a name="os.name"/><code>os.name</code></td>
+    <td>The short name of the current operating system</td>
+    <td>
+    <code>Mac OS X</code></br>
+    <code>Windows</code>
+    </td>
+</tr>
+<tr>
+    <td nowrap="nowrap" class="varname"><a name="os.version"/><code>os.version</code></td>
+    <td>The operating system version</td>
+    <td><code>10.12.6</code></td>
+</tr>
+<tr>
+    <td nowrap="nowrap" class="varname"><a name="user.country"/><code>user.country</code></td>
+    <td>The country or region code of the user that executed Nexial</td>
+    <td><code>US</code></td>
+</tr>
+<tr>
+    <td nowrap="nowrap" class="varname"><a name="user.dir"/><code>user.dir</code></td>
+    <td>aka Current working directory<br/>
+    This is the directory where Nexial - ultimately Java - was run. In most cases this would be <code>${NEXIAL_HOME}/bin</code></td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <td nowrap="nowrap" class="varname"><a name="user.home"/><code>user.home</code></td>
+    <td>User home directory&nbsp;</td>
+    <td>
+    <code>C:\Users\Administrator</code><br/>
+    <code>/Users/admin</code>
+    </td>
+</tr>
+<tr>
+    <td nowrap="nowrap" class="varname"><a name="user.language"/><code>user.language</code></td>
+    <td>The language code of the user that executed Nexial</td>
+    <td><code>en</code></td>
+</tr>
+<tr>
+    <td nowrap="nowrap" class="varname"><a name="user.name"/><code>user.name</code></td>
+    <td>The user ID of the user that executed Nexial.</td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <td nowrap="nowrap" class="varname"><a name="user.timezone"/><code>user.timezone</code></td>
+    <td>The timezone of the operation system that executed Nexial</td>
+    <td><code>America/Los_Angeles</code></td>
+</tr>
+</table>
+<br/>
+
+Example: 
+Script (note that `${whoami}` is defined as data variable with the value of `${user.name}`):<br/>
+![](image/systemvar_31.jpg)
+
+Output:<br/>
+![](image/systemvar_32.jpg)
