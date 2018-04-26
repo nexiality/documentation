@@ -1460,6 +1460,7 @@ list of available System properties:
     <td>The timezone of the operation system that executed Nexial</td>
     <td><code>America/Los_Angeles</code></td>
 </tr>
+</tbody>
 </table>
 <br/>
 
