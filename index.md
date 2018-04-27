@@ -42,7 +42,6 @@ To see Nexial in action, watch this short demo showcasing how Nexial
 
 <iframe width="560" height="555" src="https://www.youtube-nocookie.com/embed/b372XikN1YU?cc_lang_pref=en&cc_load_policy=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <br/>
-<br/>
 
 **Wanna try? Have at it!**
 1. Download [Nexial distro](https://github.com/nexiality/nexial-core/releases)

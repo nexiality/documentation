@@ -44,10 +44,10 @@ This command is useful in the following scenarios:
 
 
 ### Example
-![script](image/save_01.png)
+![script](image/clear_01.png)
 
-Row 7 save the text `World` to a variable named as `var1`.  Row 8 retrieves the same variable as part of a longer 
-string to product `Hello World`.
+Since [`nexial.runID`](../../systemvars/index#nexial.runID) is a READ ONLY system property, the intention to clear 
+it will be ignored.  Other data variables will be cleared.
 
 
 ### See Also
