@@ -438,7 +438,7 @@ table.sysvar a code { background-color:transparent; border:none; font-weight:nor
     <td nowrap="nowrap" class="varname"><a name="nexial.recordingEnabled"/><code>nexial.recordingEnabled</code></td>
     <td>boolean</td>
     <td>true</td>
-    <td>&nbsp;</td>
+    <td>false</td>
     <td>
     Determine if the screen recording is enabled or not during test Execution.This system variable 
     <strong>CAN</strong> be read from data file,&nbsp;specified via command line or via <code>project.properties</code>. 
@@ -452,7 +452,7 @@ table.sysvar a code { background-color:transparent; border:none; font-weight:nor
     <td nowrap="nowrap" class="varname"><a name="nexial.screenRecorder"/><code>nexial.screenRecorder</code></td>
     <td>String</td>
     <td>mp4</td>
-    <td>&nbsp;</td>
+    <td class="highlight-red">true</td>
     <td>
     Determine format of the recording file need to be created. Currently supported screen recording files to be 
     <code>mp4</code> (default) or <code>avi</code><br/>
@@ -475,7 +475,7 @@ table.sysvar a code { background-color:transparent; border:none; font-weight:nor
     <td nowrap="nowrap" class="varname"><a name="nexial.scope.iteration"/><code>nexial.scope.iteration</code></td>
     <td>ranges</td>
     <td>1</td>
-    <td>false</td>
+    <td class="highlight-red">true</td>
     <td>
     Specify the iteration or iteration range to execute. This can expressed as number (each represent the iteration 
     index) or a number range. For example,<br/>
@@ -525,7 +525,7 @@ table.sysvar a code { background-color:transparent; border:none; font-weight:nor
     <td nowrap="nowrap" class="varname"><a name="nexial.scope.fallbackToPrevious"/><code>nexial.scope.fallbackToPrevious</code></td>
     <td>boolean</td>
     <td>true</td>
-    <td>false</td>
+    <td class="highlight-red">true</td>
     <td>
     Specify the desired behavior when specific data is not defined. Set this to true means to traverse backward (in 
     iteration) until the data is found in previous iteration. Setting it to false would enforce null to be used.
@@ -607,7 +607,7 @@ table.sysvar a code { background-color:transparent; border:none; font-weight:nor
     <td nowrap="nowrap" class="varname"><a name="nexial.external.output"/><code>nexial.external.output</code></td>
     <td>text</td>
     <td></td>
-    <td>true</td>
+    <td class="highlight-red">true</td>
     <td>
     This system variable reflects the filename of the output generated as a result of executing a 
     <a href="../commands/external/runProgram(programPathAndParms)">external &raquo; <code>runProgram(programPathAndParms)</code></a>
@@ -645,7 +645,7 @@ table.sysvar a code { background-color:transparent; border:none; font-weight:nor
     <td nowrap="nowrap" class="varname"><a name="nexial.browser.windowSize"/><code>nexial.browser.windowSize</code></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="highlight-red">true</td>
     <td>
     Specify the initial browser window size to be opened during test execution. Generally if windows size is not 
     provided, the driver uses either previously-set or self-determined <code>width/height</code> during runtime. 
@@ -671,7 +671,7 @@ table.sysvar a code { background-color:transparent; border:none; font-weight:nor
     <td nowrap="nowrap" class="varname"><a name="nexial.delayBrowser"/><code>nexial.delayBrowser</code></td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="highlight-red">true</td>
     <td>
     Delay the initialization of web browser until the first command of 
     <a href="../commands/web/open(url)">web &raquo; <code>open()</code></a> is invoked. 
@@ -682,7 +682,7 @@ table.sysvar a code { background-color:transparent; border:none; font-weight:nor
     <td nowrap="nowrap" class="varname"><a name="nexial.browser.ie.requireWindowFocus"/><code>nexial.browser.ie.requireWindowFocus</code></td>
     <td><code>boolean</code></td>
     <td>false</td>
-    <td>true</td>
+    <td class="highlight-red">true</td>
     <td>
     <strong>Applicable only for Internet Explorer Browser.</strong><br/>
 	   <ul>
@@ -771,7 +771,7 @@ table.sysvar a code { background-color:transparent; border:none; font-weight:nor
     <td nowrap="nowrap" class="varname"><a name="nexial.ignoreBrowserAlert"/><code>nexial.ignoreBrowserAlert</code></td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="highlight-red">true</td>
     <td>
     For browser-based testing only. Determine the behavior to used if an unexpected Alert is found. If set to true, 
     unexpected alert will be ignored.
@@ -1065,7 +1065,7 @@ table.sysvar a code { background-color:transparent; border:none; font-weight:nor
     <td nowrap="nowrap" class="varname"><a name="webdriver.ie.driver.silent"/><code>webdriver.ie.driver.silent</code></td>
     <td>boolean</td>
     <td>false</td>
-    <td class="highlight-red">false</td>
+    <td class="highlight-red">true</td>
     <td>
     <strong>Applicable only for automating Internet Explorer.</strong><br/>
     Suppresses diagnostic output when the IE driver is started.<br/>
@@ -1265,13 +1265,6 @@ table.sysvar a code { background-color:transparent; border:none; font-weight:nor
     </td>
 </tr>
 <tr>
-    <td nowrap="nowrap" class="varname"><a name="nexial.lastModalDialogText"/><code>nexial.lastModalDialogText</code></td>
-    <td>text</td>
-    <td>&nbsp;</td>
-    <td class="highlight-red">true</td>
-    <td>Contains the textual element of the last modal dialog box of the AUT during test execution.</td>
-</tr>
-<tr>
     <td nowrap="nowrap" class="varname"><a name="nexial.desktop.fullScreenCapture"/><code>nexial.desktop.fullScreenCapture</code></td>
     <td>boolean</td>
     <td>false</td>
@@ -1289,7 +1282,7 @@ table.sysvar a code { background-color:transparent; border:none; font-weight:nor
     <td nowrap="nowrap" class="varname"><a name="nexial.desktop.dialogLookup"/><code>nexial.desktop.dialogLookup</code></td>
     <td>boolean</td>
     <td>false</td>
-    <td>&nbsp;</td>
+    <td>false</td>
     <td>
     Specify if any uncertainty of showing up of dialog boxes while editing the desktop table cells. If any such 
     dialog box comes up, Nexial will stop further editing the table cells and the step will be failed.
@@ -1313,7 +1306,7 @@ table.sysvar a code { background-color:transparent; border:none; font-weight:nor
     <td nowrap="nowrap" class="varname"><a name="nexial.winiumPort"/><code>nexial.winiumPort</code></td>
     <td>number</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="highlight-red">true</td>
     <td>
     Specify the port to use (by Winium driver) when automating against a desktop application. Winium uses this port 
     to communicate between Nexial and the Winium command processor. If none specified, Nexial will search for a 
@@ -1326,7 +1319,7 @@ table.sysvar a code { background-color:transparent; border:none; font-weight:nor
     <td>true</td>
     <td>false</td>
     <td>
-    Determine if Senry should run the current AUT exe in "Solo" mode (default) - which means to reuse
+    Determine if Nexial should run the current AUT exe in "Solo" mode (default) - which means to reuse
     existing instances if found. This means that one could forcefully configure the AUT to run as a single
     instance, even when multiple <a href="../commands/desktop/useApp(appId)">desktop &raquo; <code>useApp(appId)</code></a> 
     command was invoked. This is especially useful when dealing with an application that requires additional time

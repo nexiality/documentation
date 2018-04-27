@@ -46,6 +46,7 @@ using with Nexial.
   - add original script param as comment when generating result of a base.verbose() call
 - base.macro()
   - maintain the flow control as defined by the calling scripts.
+- new command `base.clear(vars)`: automate the clearing of one or more variables.  Useful for manageing memory footprint
 
 [nexial filter]
 - nexial filter now supported in flow control as well as CSV Expression (already the case since 1.0)
