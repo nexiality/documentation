@@ -126,14 +126,14 @@ a.breadcrumb {
 }
 
 a.breadcrumb:hover {
-    color:            #574 !important;
-    background-color: rgba(200, 255, 50, 0.95) !important;
+    color:            #574;
+    background-color: rgba(200, 255, 50, 0.95);
     text-shadow:      1px 1px 1px #fff;
 }
 
 span.breadcrumb {
-    color:            #574 !important;
-    background-color: rgba(200, 255, 50, 0.95) !important;
+    color:            #574;
+    background-color: rgba(200, 255, 50, 0.95);
     padding:          12px 8px 10px;
     box-shadow:       2px 0 15px #ff9;
     margin-left:      5px;
@@ -332,8 +332,16 @@ div.search-form form input#tipue_search_input {
 #tipue_search_content .tipue_search_content_text {
     font-size:   11pt;
     margin-top:  0;
-    overflow:    visible;
+    overflow:    hidden;
     white-space: normal;
+    max-height:  100px;
+}
+
+.tipue_search_content_bold {
+    color:            #463;
+    background-color: rgba(200, 255, 50, 0.35);
+    text-shadow:      1px 1px 1px #ff9;
+    box-shadow:       -1px 1px 5px #888;
 }
 
 #tipue_search_content nav {
@@ -344,6 +352,21 @@ div.search-form form input#tipue_search_input {
 #tipue_search_foot_boxes li a {
     padding: 10px 12px !important;
     margin:  0 3px !important;
+}
+
+#tipue_search_hide {
+    position:         relative;
+    float:            right;
+    font-size:        9pt;
+    font-weight:      bold;
+    color:            rgba(240, 240, 240, 0.85);
+    cursor:           pointer;
+    border:           1px solid #888;
+    padding:          0 4px;
+    background-color: #888;
+    margin:           -10px -9px 10px 9px;
+    text-shadow:      1px 1px 5px #000;
+    box-shadow:       1px 1px 2px #000;
 }
 
 div#disqus_thread {

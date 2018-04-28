@@ -1,5 +1,5 @@
 <div class="breadcrumb">
-    <a class="breadcrumb" href="{{ site.baseurl }}">Home</a> &raquo;
+    <a class="breadcrumb" href="{{ site.baseurl | default: "/" }}">Home</a> &raquo;
     <a class="breadcrumb" href="index.html">{{ page.parent }}</a> &raquo;
     <span class="breadcrumb">{{ page.title }}</span>
 </div>

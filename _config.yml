@@ -22,7 +22,8 @@ tipue_search:
     pages: true
   exclude:
     files: [search.html]
-tipue_search_active: false
+#tipue_search_active: false
+tipue_search_active: true
 
 #breadcrumbs: true
 #breadcrumb_display: true
