@@ -23,6 +23,7 @@ The "base" command type represents a series of common automation commands:
 - [`assertTextOrder(var,descending)`](assertTextOrder(var,descending))
 - [`assertVarNotPresent(var)`](assertVarNotPresent(var))
 - [`assertVarPresent(var)`](assertVarPresent(var))
+- [`clear(vars)`](clear(vars))
 - [`failImmediate(text)`](failImmediate(text))
 - [`incrementChar(var,amount,config)`](incrementChar(var,amount,config))
 - [`macro(file,sheet,name)`](macro(file,sheet,name))
