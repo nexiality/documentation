@@ -39,8 +39,8 @@ var tipuesearch_replace = {
 // Weighting
 var tipuesearch_weight = {
     'weight': [
-        {'url': '/commands/', 'score': 20},
-        {'url': '/release/', 'score': -50}
+        {'url': '/commands/', 'score': 100},
+        {'url': '/release/', 'score': -500}
     ]
 };
 
@@ -79,7 +79,7 @@ var tipuesearch_string_12 = 'Should be';
 var tipuesearch_string_13 = 'characters or more.';
 var tipuesearch_string_14 = 'seconds';
 var tipuesearch_string_15 = 'Searches related to';
-var tipuesearch_string_16 = '<div id="tipue_search_hide" onclick="return hideSearchContent()">X</div>';
+var tipuesearch_string_16 = '<div id="tipue_search_hide" onclick="$(\'#tipue_search_content\').hide();">X</div>';
 
 // Internals
 

@@ -244,7 +244,8 @@ div.search-form form input#tipue_search_input {
     margin:             0;
 }
 
-@media screen and (min-width: 0) and (max-width: 1100px) {
+/*@media screen and (min-width: 0) and (max-width: 1100px) {*/
+@media screen and (min-width: 0) and (max-width: 600px) {
     header {
         padding-top:    0;
         padding-bottom: 0;
@@ -295,27 +296,73 @@ div.search-form form input#tipue_search_input {
     }
 }
 
+@media screen and (min-height: 0) and (max-height: 680px) {
+
+    #tipue_search_content {
+        height:           500px;
+        max-height:       500px;
+        width:            450px;
+        max-width:        450px;
+        padding:          12px !important;
+        margin:           -24px -2px 0 0 !important;
+        border:           3px solid rgba(90, 115, 75, 0.9);
+        background-color: rgba(250, 250, 250, 0.9);
+        border-top:       none;
+        border-radius:    15px 0 15px 15px;
+        box-shadow:       -5px 0 15px rgba(90, 115, 75, 0.7);
+        overflow-y:       auto;
+        overflow-wrap:    break-word;
+        word-break:       normal;
+        position:         absolute;
+        right:            -1px;
+        top:              75px;
+        z-index:          999;
+    }
+}
+
 #tipue_search_content {
-    /*max-width:        750px;*/
-    width:            500px;
-    padding:          12px !important;
+    width:            450px;
+    height:           500px;
+    padding:          2px 0 0 10px !important;
     margin:           -24px -2px 0 0 !important;
+    top:              75px;
+    right:            0;
     background-color: rgba(250, 250, 250, 0.9);
     border:           3px solid rgba(90, 115, 75, 0.9);
+    border-top:       none;
     border-radius:    15px 0 15px 15px;
     box-shadow:       -5px 0 15px rgba(90, 115, 75, 0.7);
     overflow-wrap:    break-word;
     word-break:       normal;
-    border-top:       none;
-    z-index:          999;
+    overflow:         auto;
     position:         absolute;
-    right:            -1px;
-    top:              75px;
+    z-index:          999;
+}
+
+#tipue_search_content #tipue_search_hide {
+    float:            right;
+    font-size:        9pt;
+    font-weight:      bold;
+    color:            rgba(240, 240, 240, 0.85);
+    cursor:           pointer;
+    border:           1px solid #888;
+    padding:          0 4px;
+    background-color: #888;
+    margin:           0 4px 0 15px;
+    text-shadow:      1px 1px 5px #000;
+    box-shadow:       1px 1px 2px #000;
 }
 
 #tipue_search_content #tipue_search_results_count {
-    font-weight: bold;
     text-align:  right;
+    color:       #888;
+    font-weight: normal;
+}
+
+#tipue_search_content #search_preview {
+    height:   420px;
+    overflow: auto;
+    width:    445px;
 }
 
 #tipue_search_content .tipue_search_content_title {
@@ -332,7 +379,7 @@ div.search-form form input#tipue_search_input {
 
 #tipue_search_content .tipue_search_content_text {
     font-size:   11pt;
-    margin-top:  0;
+    margin:      0 10px 0 10px;
     overflow:    hidden;
     white-space: normal;
     max-height:  100px;
@@ -346,28 +393,37 @@ div.search-form form input#tipue_search_input {
 }
 
 #tipue_search_content nav {
-    text-align: right;
+    width:            100% !important;
+    right:            0;
+    text-align:       right;
+    background-color: rgba(165, 175, 155, 0.95);
+    padding-right:    10px;
+    position:         relative;
+    box-shadow:       0 -3px 15px rgba(105, 105, 105, 0.65);
+    height:           45px;
+    left:             -10px;
+}
+
+div#tipue_search_foot {
+    margin:      12px 0 0 0 !important;
+    padding-top: 15px;
+}
+
+#tipue_search_foot_boxes li.current {
+    padding:       10px 17px 11px 17px;
+    background:    #ddd !important;
+    border:        1px inset #e3e3e3 !important;
+    border-radius: 1px;
+    color:         #aaa !important;
+    margin-right:  7px;
+    text-align:    center;
+    cursor:        default;
 }
 
 #tipue_search_foot_boxes li.current,
 #tipue_search_foot_boxes li a {
     padding: 10px 12px !important;
     margin:  0 3px !important;
-}
-
-#tipue_search_hide {
-    position:         relative;
-    float:            right;
-    font-size:        9pt;
-    font-weight:      bold;
-    color:            rgba(240, 240, 240, 0.85);
-    cursor:           pointer;
-    border:           1px solid #888;
-    padding:          0 4px;
-    background-color: #888;
-    margin:           -10px -9px 10px 9px;
-    text-shadow:      1px 1px 5px #000;
-    box-shadow:       1px 1px 2px #000;
 }
 
 div#disqus_thread {

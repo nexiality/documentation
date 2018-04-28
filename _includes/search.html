@@ -1,28 +1,44 @@
 <div class="search-form">
     <form action="{{ page.url | relative_url }}">
-        <div class="tipue_search_left"><img src="{{ "/assets/tipuesearch/search.png" | relative_url }}"
-            class="tipue_search_icon">
+        <div class="tipue_search_left">
+            <img src="{{ "/assets/tipuesearch/search.png" | relative_url }}" class="tipue_search_icon">
         </div>
         <div class="tipue_search_right">
+            <!--<input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" list="search" required>-->
             <input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required>
         </div>
         <div style="clear: both;"></div>
     </form>
 
+    <!--<datalist id="search">-->
+    <!--<option>csv</option>-->
+    <!--<option>desktop</option>-->
+    <!--<option>expression</option>-->
+    <!--<option>jsonpath</option>-->
+    <!--<option>system variables</option>-->
+    <!--</datalist>-->
+
     <div id="tipue_search_content">
         <div id="tipue_search_hide">X</div>
+        <div id="tipue_search_results_count"></div>
+        <div id="search_preview"></div>
     </div>
 
     <script>
         $(document).ready(function () {
             $('#tipue_search_input').tipuesearch({
-                'show':           5,
-                'contextLength':  10,
-                'contextStart':   10,
-                'showURL':        false,
-                'contextBuffer':  30,
-                'showContext':    true,
-                'highlightTerms': true
+                'show':             10,
+                'contextStart':     10,
+                'contextLength':    20,
+                'contextBuffer':    20,
+                'descriptiveWords': 25,
+                'showTitleCount':   false,
+                'wholeWords':       false,
+                'showURL':          false,
+                'showContext':      true,
+                'showTime':         true,
+                'highlightTerms':   true,
+                'debug':            false
             });
         });
     </script>
