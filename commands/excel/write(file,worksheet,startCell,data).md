@@ -1,4 +1,5 @@
 ---
+layout: default
 title: write(file,worksheet,startCell,data)
 parent: excel
 tags: command excel

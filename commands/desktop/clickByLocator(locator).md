@@ -1,4 +1,5 @@
 ---
+layout: default
 title: clickByLocator(locator)
 parent: desktop
 tags: command desktop

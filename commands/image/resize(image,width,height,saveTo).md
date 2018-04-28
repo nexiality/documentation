@@ -1,4 +1,5 @@
 ---
+layout: default
 title: resize(image,width,height,saveTo)
 parent: image
 tags: command image

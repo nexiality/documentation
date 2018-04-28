@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertHierCells(matchBy,column,expected,nestedOnly)
 parent: desktop
 tags: command desktop

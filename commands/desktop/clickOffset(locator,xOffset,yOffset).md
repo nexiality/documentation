@@ -1,4 +1,5 @@
 ---
+layout: default
 title: clickOffset(locator,xOffset,yOffset)
 parent: desktop
 tags: command desktop

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: LIST expression
 parent: Expressions
 tags: command expressions

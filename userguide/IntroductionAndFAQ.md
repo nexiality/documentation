@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Introduction
 parent: User Guide
 tags: command userguide introduction faq design benefit

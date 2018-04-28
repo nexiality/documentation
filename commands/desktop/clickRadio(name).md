@@ -1,4 +1,5 @@
 ---
+layout: default
 title:  clickRadio(name)
 parent: desktop
 tags: command desktop

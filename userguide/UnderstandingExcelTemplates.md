@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Understanding Nexial Test Artifact
 parent: User Guide
 tags: excel template

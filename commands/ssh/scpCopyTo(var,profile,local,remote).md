@@ -1,4 +1,5 @@
 ---
+layout: default
 title: scpCopyTo(var,profile,local,remote)
 parent: ssh
 tags: command ssh

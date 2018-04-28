@@ -1,4 +1,5 @@
 ---
+layout: default
 title: set(profile,key,value)
 parent: redis
 tags: command redis

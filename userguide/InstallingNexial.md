@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Installing Nexial
 parent: User Guide
 tags: installation install nexial userguide

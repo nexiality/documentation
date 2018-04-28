@@ -1,4 +1,5 @@
 ---
+layout: default
 title: clearTextBox(name) 
 parent: desktop
 tags: command desktop

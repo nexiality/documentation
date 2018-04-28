@@ -1,4 +1,5 @@
 ---
+layout: default
 title: clickByLabel(label)
 parent: web
 tags: command web

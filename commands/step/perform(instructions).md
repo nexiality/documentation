@@ -1,4 +1,5 @@
 ---
+layout: default
 title: perform(instructions)
 parent: step
 tags: command step

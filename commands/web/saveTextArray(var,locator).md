@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveTextArray(var,locator)
 parent: web
 tags: command web

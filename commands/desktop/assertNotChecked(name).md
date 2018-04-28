@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertNotChecked(name)
 parent: desktop
 tags: command desktop

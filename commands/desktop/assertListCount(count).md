@@ -1,4 +1,5 @@
 ---
+layout: default
 title:  assertListCount(count)
 parent: desktop
 tags: command desktop

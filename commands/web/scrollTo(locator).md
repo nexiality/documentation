@@ -1,4 +1,5 @@
 ---
+layout: default
 title: scrollTo(locator)
 parent: web
 tags: command web

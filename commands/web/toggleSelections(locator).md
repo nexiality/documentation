@@ -1,4 +1,5 @@
 ---
+layout: default
 title: toggleSelections(locator)
 parent: web
 tags: command web

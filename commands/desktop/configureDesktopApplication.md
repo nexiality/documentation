@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Configure Desktop Application
 parent: desktop
 tags: configure desktop application

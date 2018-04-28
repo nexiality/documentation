@@ -1,4 +1,5 @@
 ---
+layout: default
 title: scrollLeft(locator,pixel)
 parent: web
 tags: command web

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: sftpDelete(var,profile,remote)
 parent: ssh
 tags: command ssh

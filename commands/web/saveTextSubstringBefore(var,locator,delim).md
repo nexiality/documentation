@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveTextSubstringBefore(var,locator,delim)
 parent: web
 tags: command web

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Realtime Inspection of Data Variables
 parent: User Guide
 tags: command tipsandtricks inspect inspectonpause

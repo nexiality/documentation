@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Nexial Execution Dashboard
 parent: User Guide
 tags: execution dashboard

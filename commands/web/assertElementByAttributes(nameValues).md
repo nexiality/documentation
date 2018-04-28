@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertElementByAttributes(nameValues)
 parent: web
 tags: command web

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: read(file,worksheet,range,var)
 parent: excel
 tags: command excel

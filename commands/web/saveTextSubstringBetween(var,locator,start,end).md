@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveTextSubstringBetween(var,locator,start,end)
 parent: web
 tags: command web

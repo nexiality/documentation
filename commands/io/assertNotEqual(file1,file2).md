@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertNotEqual(file1,file2)
 parent: io
 tags: command io

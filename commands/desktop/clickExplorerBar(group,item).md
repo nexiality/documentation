@@ -1,4 +1,5 @@
 ---
+layout: default
 title: clickExplorerBar(group,item)
 parent: desktop
 tags: command desktop

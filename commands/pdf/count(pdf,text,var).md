@@ -1,4 +1,5 @@
 ---
+layout: default
 title: count(pdf,text,var)
 parent: pdf
 tags: command pdf

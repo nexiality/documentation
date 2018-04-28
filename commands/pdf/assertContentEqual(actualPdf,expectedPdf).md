@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertContentEqual(actualPdf,expectedPdf)
 parent: pdf
 tags: command pdf

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertElementCount(locator,count)
 parent: web
 tags: command web

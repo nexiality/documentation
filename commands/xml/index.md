@@ -1,4 +1,5 @@
 ---
+layout: default
 title: xml
 tags: command xml
 comments: true

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertPatternPresent(pdf,regex)
 parent: pdf
 tags: command pdf

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertTextList(locator,list,ignoreOrder)
 parent: web
 tags: command web

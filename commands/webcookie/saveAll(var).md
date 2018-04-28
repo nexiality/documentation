@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveAll(var)
 parent: webcookie
 tags: command webcookie cookie web

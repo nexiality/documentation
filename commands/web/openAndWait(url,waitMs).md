@@ -1,4 +1,5 @@
 ---
+layout: default
 title: openAndWait(url,waitMs)
 parent: web
 tags: command web

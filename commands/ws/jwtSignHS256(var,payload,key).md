@@ -1,4 +1,5 @@
 ---
+layout: default
 title: jwtSignHS256(var,payload,key)
 parent: ws
 tags: command ws web_service api

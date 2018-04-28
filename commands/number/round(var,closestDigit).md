@@ -1,4 +1,5 @@
 ---
+layout: default
 title: round(var,closestDigit)
 parent: number
 tags: command number

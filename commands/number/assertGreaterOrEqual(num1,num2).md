@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertGreaterOrEqual(num1,num2)
 parent: number
 tags: command number

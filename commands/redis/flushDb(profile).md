@@ -1,4 +1,5 @@
 ---
+layout: default
 title: flushDb(profile)
 parent: redis
 tags: command redis

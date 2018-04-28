@@ -1,4 +1,5 @@
 ---
+layout: default
 title: clickFirstMatchedList(contains)
 parent: desktop
 tags: command desktop

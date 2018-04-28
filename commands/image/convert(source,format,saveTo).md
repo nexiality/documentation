@@ -1,4 +1,5 @@
 ---
+layout: default
 title: convert(source,format,saveTo)
 parent: image
 tags: command image

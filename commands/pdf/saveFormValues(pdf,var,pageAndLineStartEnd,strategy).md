@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveFormValues(pdf,var,pageAndLineStartEnd,strategy)
 parent: pdf
 tags: command pdf

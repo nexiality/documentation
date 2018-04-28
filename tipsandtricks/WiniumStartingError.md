@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Resolving Winium errors when running Desktop Automation
 parent: Tips and Tricks
 tags: desktop winium

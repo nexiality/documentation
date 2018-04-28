@@ -1,4 +1,5 @@
 ---
+layout: default
 title: clearTextArea(name)
 parent: desktop
 tags: command desktop

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: selectWindowByIndexAndWait(index,waitMs)
 parent: web
 tags: command web

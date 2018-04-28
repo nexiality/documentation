@@ -1,4 +1,5 @@
 ---
+layout: default
 title: unselectAllText()
 parent: web
 tags: command web

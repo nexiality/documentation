@@ -1,4 +1,5 @@
 ---
+layout: default
 title: selectMultiOptions(locator)
 parent: web
 tags: command web

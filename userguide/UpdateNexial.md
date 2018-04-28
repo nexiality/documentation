@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Update Nexial
 parent: User Guide
 tags: update release

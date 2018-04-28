@@ -1,4 +1,5 @@
 ---
+layout: default
 title: closeAll()
 parent: web
 tags: command web

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertNotText(locator,text)
 parent: web
 tags: command web

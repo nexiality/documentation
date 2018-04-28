@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertAndClick(locator,label)
 parent: web
 tags: command web

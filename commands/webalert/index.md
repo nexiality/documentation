@@ -1,4 +1,5 @@
 ---
+layout: default
 title: webalert
 tags: command webalert web alert
 comments: true

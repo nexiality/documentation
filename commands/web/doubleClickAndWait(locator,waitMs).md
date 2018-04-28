@@ -1,4 +1,5 @@
 ---
+layout: default
 title: doubleClickAndWait(locator,waitMs)
 parent: web
 tags: command web

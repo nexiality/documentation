@@ -1,4 +1,5 @@
 ---
+layout: default
 title: readFile(var,file)
 parent: io
 tags: command io

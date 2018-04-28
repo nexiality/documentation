@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertIENavtiveMode()
 parent: web
 tags: command web

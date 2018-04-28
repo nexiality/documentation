@@ -1,4 +1,5 @@
 ---
+layout: default
 title: ws
 tags: command ws api web_service
 comments: true

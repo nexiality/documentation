@@ -1,4 +1,5 @@
 ---
+layout: default
 title: clickIcon(label)
 parent: desktop
 tags: command desktop

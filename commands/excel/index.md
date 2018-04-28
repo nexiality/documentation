@@ -1,4 +1,5 @@
 ---
+layout: default
 title: excel 
 tags: command excel
 comments: true

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: clickList(row)
 parent: desktop
 tags: command desktop

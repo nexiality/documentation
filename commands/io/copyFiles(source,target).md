@@ -1,4 +1,5 @@
 ---
+layout: default
 title: copyFiles(source,target)
 parent: io
 tags: command io

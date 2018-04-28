@@ -1,4 +1,5 @@
 ---
+layout: default
 title: savePageAs(var,sessionIdName,url)
 parent: web
 tags: command web

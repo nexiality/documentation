@@ -1,4 +1,5 @@
 ---
+layout: default
 title: clickTextPane(name,criteria)
 parent: desktop
 tags: command desktop

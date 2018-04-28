@@ -1,4 +1,5 @@
 ---
+layout: default
 title: INI expression
 parent: Expressions
 tags: command expressions

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertAttribute(locator,attribute,expected)
 parent: desktop
 tags: command desktop

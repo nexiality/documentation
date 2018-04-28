@@ -1,4 +1,5 @@
 ---
+layout: default
 title: storeCount(xml,xpath,var)
 parent: xml
 tags: command xml

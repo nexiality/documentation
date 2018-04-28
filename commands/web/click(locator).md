@@ -1,4 +1,5 @@
 ---
+layout: default
 title: click(locator)
 parent: web
 tags: command web

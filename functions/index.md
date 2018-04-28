@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Built-in Functions
 level: 1
 tags: functions

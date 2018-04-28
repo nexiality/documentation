@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertTextArray(pdf,textArray,ordered)
 parent: pdf
 tags: command pdf

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: runFile(var,db,file)
 parent: rdbms
 tags: command rdbms

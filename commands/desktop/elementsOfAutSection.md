@@ -1,4 +1,5 @@
 ---
+layout: default
 title: elements of aut section
 parent: desktop
 tags: elements of aut section

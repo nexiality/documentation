@@ -1,4 +1,5 @@
 ---
+layout: default
 title: ceiling(var)
 parent: number
 tags: command number

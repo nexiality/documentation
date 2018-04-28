@@ -1,4 +1,5 @@
 ---
+layout: default
 title: hideExplorerBar()
 parent: desktop
 tags: command desktop

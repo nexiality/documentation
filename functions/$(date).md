@@ -1,4 +1,5 @@
 ---
+layout: default
 title: $(date)
 parent: Built-in Functions
 tags: date $(date)

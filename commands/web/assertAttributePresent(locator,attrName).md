@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertAttributePresent(locator,attrName)
 parent: web
 tags: command web

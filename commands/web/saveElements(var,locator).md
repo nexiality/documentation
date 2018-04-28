@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveElements(var,locator)
 parent: web
 tags: command web

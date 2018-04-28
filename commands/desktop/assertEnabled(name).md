@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertEnabled(name)
 parent: desktop
 tags: command desktop

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Improving Script Portability
 parent: Tips and Tricks
 tags: command tipsandtricks

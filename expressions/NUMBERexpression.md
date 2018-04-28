@@ -1,4 +1,5 @@
 ---
+layout: default
 title: NUMBER expression
 parent: Expressions
 tags: command expressions

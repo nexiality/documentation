@@ -1,4 +1,5 @@
 ---
+layout: default
 title: head(url,var)
 parent: ws
 tags: command ws web_service api

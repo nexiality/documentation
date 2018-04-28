@@ -1,4 +1,5 @@
 ---
+layout: default
 title: goBack()
 parent: web
 tags: command web

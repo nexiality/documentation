@@ -1,4 +1,5 @@
 ---
+layout: default
 title: send(to,subject,body)
 parent: mail
 tags: command mail

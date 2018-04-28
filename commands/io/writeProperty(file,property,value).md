@@ -1,4 +1,5 @@
 ---
+layout: default
 title: writeProperty(file,property,value)
 parent: io
 tags: command io

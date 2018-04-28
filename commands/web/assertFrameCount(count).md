@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertFrameCount(count)
 parent: web
 tags: command web

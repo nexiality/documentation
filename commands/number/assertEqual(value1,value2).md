@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertEqual(value1,value2)
 parent: number
 tags: command number

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: editTableCells(row,nameValues)
 parent: desktop
 tags: command desktop

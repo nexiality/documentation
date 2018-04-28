@@ -1,4 +1,5 @@
 ---
+layout: default
 title: external
 tags: command external
 comments: true

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: CONFIG expression
 parent: Expressions
 tags: command expressions

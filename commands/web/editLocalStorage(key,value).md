@@ -1,4 +1,5 @@
 ---
+layout: default
 title: editLocalStorage(key,value)
 parent: web
 tags: command web

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertLocatorNotPresent(locator)
 parent: desktop
 tags: command desktop

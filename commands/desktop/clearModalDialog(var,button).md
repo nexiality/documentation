@@ -1,4 +1,5 @@
 ---
+layout: default
 title: clearModalDialog(var,button)
 parent: desktop
 tags: command desktop

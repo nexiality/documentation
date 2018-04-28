@@ -1,4 +1,5 @@
 ---
+layout: default
 title: compare(baseline,actual)
 parent: image
 tags: command image

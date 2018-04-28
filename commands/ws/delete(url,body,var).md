@@ -1,4 +1,5 @@
 ---
+layout: default
 title: delete(url,body,var)
 parent: ws
 tags: command ws web_service api

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertLinkByLabel(label)
 parent: web
 tags: command web

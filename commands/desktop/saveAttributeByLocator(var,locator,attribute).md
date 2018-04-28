@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveAttributeByLocator(var,locator,attribute)
 parent: desktop
 tags: command desktop

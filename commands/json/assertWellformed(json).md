@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertWellformed(json)
 parent: json
 tags: command json jsonpath

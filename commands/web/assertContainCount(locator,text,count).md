@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertContainCount(locator,text,count)
 parent: web
 tags: command web

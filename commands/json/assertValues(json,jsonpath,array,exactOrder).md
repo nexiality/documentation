@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertValues(json,jsonpath,array,exactOrder)
 parent: json
 tags: command json jsonpath

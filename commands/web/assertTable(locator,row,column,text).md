@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertTable(locator,row,column,text)
 parent: web
 tags: command web

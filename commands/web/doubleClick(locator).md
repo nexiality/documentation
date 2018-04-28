@@ -1,4 +1,5 @@
 ---
+layout: default
 title: doubleClick(locator)
 parent: web
 tags: command web

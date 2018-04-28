@@ -1,4 +1,5 @@
 ---
+layout: default
 title: clickFirstMatchRow(nameValues)
 parent: desktop
 tags: command desktop

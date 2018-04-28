@@ -1,4 +1,5 @@
 ---
+layout: default
 title: deleteAll()
 parent: webcookie
 tags: command webcookie cookie web

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: runJUnit(className)
 parent: external
 tags: command external

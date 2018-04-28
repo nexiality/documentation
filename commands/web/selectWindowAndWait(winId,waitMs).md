@@ -1,8 +1,9 @@
 ---
+layout: default
 title: selectWindowAndWait(winId,waitMs)
 parent: web
- tags: command web
- comments: true
+tags: command web
+comments: true
 ---
  
 ### Description

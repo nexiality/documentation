@@ -1,4 +1,5 @@
 ---
+layout: default
 title: get(url,queryString,var)
 parent: ws
 tags: command ws web_service api

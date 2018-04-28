@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Batch Files
 parent: User Guide
 tags: command userguide batch cmd sh

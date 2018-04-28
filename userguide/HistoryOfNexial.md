@@ -1,4 +1,5 @@
 ---
+layout: default
 title: History of Nexial
 parent: User Guide
 tags: command history

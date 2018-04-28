@@ -1,4 +1,5 @@
 ---
+layout: default
 title: rename(profile,current,new)
 parent: redis
 tags: command redis

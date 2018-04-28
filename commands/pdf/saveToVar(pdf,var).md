@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveToVar(pdf,var)
 parent: pdf
 tags: command pdf

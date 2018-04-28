@@ -1,4 +1,5 @@
 ---
+layout: default
 title: login(form,username,password)
 parent: desktop
 tags: command desktop

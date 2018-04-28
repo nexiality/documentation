@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertElementNotPresent(locator)
 parent: web
 tags: command web

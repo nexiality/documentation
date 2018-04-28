@@ -1,4 +1,5 @@
 ---
+layout: default
 title: How to Iterate Through a Set of Files
 parent: Tips and Tricks
 tags: command tipsandtricks

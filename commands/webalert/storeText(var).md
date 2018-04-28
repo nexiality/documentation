@@ -1,4 +1,5 @@
 ---
+layout: default
 title: storeText(var)
 parent: webalert
 tags: command webalert alert web

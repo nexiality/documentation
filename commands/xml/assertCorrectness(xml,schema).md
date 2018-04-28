@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertCorrectness(xml,schema)
 parent: xml
 tags: command xml

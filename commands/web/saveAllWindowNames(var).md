@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveAllWindowNames(var)
 parent: web
 tags: command web

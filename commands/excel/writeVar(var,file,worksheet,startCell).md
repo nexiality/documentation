@@ -1,4 +1,5 @@
 ---
+layout: default
 title: writeVar(var,file,worksheet,startCell)
 parent: excel
 tags: command excel

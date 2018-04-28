@@ -1,4 +1,5 @@
 ---
+layout: default
 title: wait(waitMs)
 parent: web
 tags: command web

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertTextPresent(pdf,text)
 parent: pdf
 tags: command pdf

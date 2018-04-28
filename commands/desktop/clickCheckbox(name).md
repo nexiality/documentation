@@ -1,4 +1,5 @@
 ---
+layout: default
 title: clickCheckbox(name)
 parent: desktop
 tags: command desktop

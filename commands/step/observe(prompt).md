@@ -1,4 +1,5 @@
 ---
+layout: default
 title: observe(prompt)
 parent: step
 tags: command step

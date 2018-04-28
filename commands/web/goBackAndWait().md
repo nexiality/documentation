@@ -1,4 +1,5 @@
 ---
+layout: default
 title: goBackAndWait()
 parent: web
 tags: command web

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: receive(var,config,waitMs)
 tags: command jms
 comments: true

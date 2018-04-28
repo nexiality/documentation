@@ -1,4 +1,5 @@
 ---
+layout: default
 title: post(url,body,var)
 parent: ws
 tags: command ws

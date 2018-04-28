@@ -1,4 +1,5 @@
 ---
+layout: default
 title: number
 tags: command number
 comments: true

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Elements of 'app' section
 parent: desktop
 tags: elements of app section

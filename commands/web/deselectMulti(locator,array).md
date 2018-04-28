@@ -1,4 +1,5 @@
 ---
+layout: default
 title: deselectMulti(locator,array)
 parent: web
 tags: command web

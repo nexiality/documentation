@@ -1,4 +1,5 @@
 ---
+layout: default
 title: moveFiles(source,target)
 parent: io
 tags: command io

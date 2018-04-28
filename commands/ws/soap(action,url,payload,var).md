@@ -1,4 +1,5 @@
 ---
+layout: default
 title: soap(action,url,payload,var)
 parent: ws
 tags: command ws

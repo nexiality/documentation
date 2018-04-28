@@ -1,4 +1,5 @@
 ---
+layout: default
 title: rdbms
 tags: command rdbms
 comments: true

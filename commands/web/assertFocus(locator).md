@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertFocus(locator)
 parent: web
 tags: command web

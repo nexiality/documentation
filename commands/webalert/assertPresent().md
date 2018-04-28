@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertPresent()
 parent: webalert
 tags: command webalert alert web

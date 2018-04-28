@@ -1,4 +1,5 @@
 ---
+layout: default
 title: filter(source,target,matchPattern)
 parent: io
 tags: command io

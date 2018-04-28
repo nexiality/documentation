@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertSelected(name,text)
 parent: desktop
 tags: command desktop

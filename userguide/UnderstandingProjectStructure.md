@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Understanding Project Structure
 parent: User Guide
 tags: project structure project.properties script

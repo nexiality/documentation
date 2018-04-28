@@ -1,4 +1,5 @@
 ---
+layout: default
 title: ssh
 tags: command ssh
 comments: true

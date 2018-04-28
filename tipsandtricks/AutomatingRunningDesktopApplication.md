@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Automating Running Desktop Application
 parent: Tips and Tricks
 tags: desktop winium

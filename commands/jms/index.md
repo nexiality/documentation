@@ -1,4 +1,5 @@
 ---
+layout: default
 title: jms
 tags: command jms
 comments: true

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertReadableFile(file,minByte)
 parent: io
 tags: command io

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: average(var,array)
 parent: number
 tags: command number

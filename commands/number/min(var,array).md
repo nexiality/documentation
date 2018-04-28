@@ -1,4 +1,5 @@
 ---
+layout: default
 title: min(var,array)
 parent: number
 tags: command number

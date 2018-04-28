@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Best Practice on Script Names
 parent: Tips and Tricks
 tags: command tipsandtricks

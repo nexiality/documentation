@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertPresent(name)
 parent: webcookie
 tags: command webcookie cookie web

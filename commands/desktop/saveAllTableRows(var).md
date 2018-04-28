@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveAllTableRows(var)
 parent: desktop
 tags: command desktop

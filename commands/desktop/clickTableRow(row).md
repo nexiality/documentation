@@ -1,4 +1,5 @@
 ---
+layout: default
 title: clickTableRow(row)
 parent: desktop
 tags: command desktop

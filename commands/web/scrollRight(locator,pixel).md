@@ -1,6 +1,6 @@
 ---
+layout: default
 title: scrollRight(locator,pixel)
-
 parent: web
 tags: command web
 comments: true

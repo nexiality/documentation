@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertText(name,expected)
 parent: desktop
 tags: command desktop

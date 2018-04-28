@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Security Issues on Executable
 parent: Tips and Tricks
 tags: command tipsandtricks security

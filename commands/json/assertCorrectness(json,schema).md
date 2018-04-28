@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertCorrectness(json,schema)
 parent: json
 tags: command json correctness jsonschema

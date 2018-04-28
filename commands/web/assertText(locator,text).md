@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertText(locator,text)
 parent: web
 tags: command web

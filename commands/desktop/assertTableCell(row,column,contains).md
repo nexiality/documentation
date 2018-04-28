@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertTableCell(row,column,contains)
 parent: desktop
 tags: command desktop

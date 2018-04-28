@@ -1,4 +1,5 @@
 ---
+layout: default
 title: clear(file,worksheet,range)
 parent: excel
 tags: command excel

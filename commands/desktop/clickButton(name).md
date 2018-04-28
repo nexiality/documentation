@@ -1,4 +1,5 @@
 ---
+layout: default
 title: clickButton(name)
 parent: desktop
 tags: command desktop

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertFormElementPresent(var,name)
 parent: pdf
 tags: command pdf

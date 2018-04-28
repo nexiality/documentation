@@ -1,4 +1,5 @@
 ---
+layout: default
 title: validate(var,profile,inputFile)
 parent: io
 tags: command io count file regex

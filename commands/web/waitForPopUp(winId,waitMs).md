@@ -1,4 +1,5 @@
 ---
+layout: default
 title: waitForPopUp(winId,waitMs)
 parent: web
 tags: command web

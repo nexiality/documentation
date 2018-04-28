@@ -1,4 +1,5 @@
 ---
+layout: default
 title: headerByVar(name,var)
 parent: ws
 tags: command ws web_service api

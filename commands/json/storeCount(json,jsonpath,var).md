@@ -1,4 +1,5 @@
 ---
+layout: default
 title: storeCount(json,jsonpath,var)
 parent: json
 tags: command json jsonpath

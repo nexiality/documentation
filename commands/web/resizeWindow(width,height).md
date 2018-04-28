@@ -1,4 +1,5 @@
 ---
+layout: default
 title: resizeWindow(width,height)
 parent: web
 tags: command web

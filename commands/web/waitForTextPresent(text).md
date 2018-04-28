@@ -1,4 +1,5 @@
 ---
+layout: default
 title: waitForTextPresent(text)
 parent: web
 tags: command web

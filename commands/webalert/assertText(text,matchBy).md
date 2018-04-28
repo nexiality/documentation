@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertText(text,matchBy)
 parent: webalert
 tags: command webalert alert web

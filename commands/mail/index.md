@@ -1,4 +1,5 @@
 ---
+layout: default
 title: mail
 tags: command mail smtp
 comments: true

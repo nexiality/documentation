@@ -1,4 +1,5 @@
 ---
+layout: default
 title: jwtParse(var,token,key)
 parent: ws
 tags: command ws web_service api

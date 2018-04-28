@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertModalDialogPresent()
 parent: desktop
 tags: command desktop

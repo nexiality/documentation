@@ -1,4 +1,5 @@
 ---
+layout: default
 title: $(random)
 parent: Built-in Functions
 tags: random $(random)

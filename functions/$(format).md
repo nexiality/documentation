@@ -1,4 +1,5 @@
 ---
+layout: default
 title: $(format)
 parent: Built-in Functions
 tags: format $(format)

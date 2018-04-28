@@ -1,4 +1,5 @@
 ---
+layout: default
 title: savePageAsFile(sessionIdName,url,fileName)
 parent: web
 tags: command web

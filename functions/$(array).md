@@ -1,4 +1,5 @@
 ---
+layout: default
 title: $(array)
 parent: Built-in Functions
 tags: array $(array)

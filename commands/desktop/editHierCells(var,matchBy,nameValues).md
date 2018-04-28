@@ -1,4 +1,5 @@
 ---
+layout: default
 title: editHierCells(var,matchBy,nameValues)
 parent: desktop
 tags: command desktop

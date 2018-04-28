@@ -1,4 +1,5 @@
 ---
+layout: default
 title: pdf
 tags: command pdf
 comments: true

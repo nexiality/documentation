@@ -1,4 +1,5 @@
 ---
+layout: default
 title: selectWindow(winId)
 parent: web
 tags: command web

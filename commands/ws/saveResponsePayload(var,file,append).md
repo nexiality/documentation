@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveResponsePayload(var,file,append)
 parent: ws
 tags: command ws

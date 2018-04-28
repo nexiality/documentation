@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertPatternNotPresent(pdf,regex)
 parent: pdf
 tags: command pdf

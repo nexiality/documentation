@@ -1,4 +1,5 @@
 ---
+layout: default
 title: managing ribbon and explorer bar
 parent: desktop
 tags: managing ribbon and explorer bar

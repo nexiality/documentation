@@ -1,4 +1,5 @@
 ---
+layout: default
 title: count(var,path,pattern) 
 parent: io
 tags: command io count file regex

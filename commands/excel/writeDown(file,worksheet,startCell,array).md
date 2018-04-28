@@ -1,4 +1,5 @@
 ---
+layout: default
 title: writeDown(file,worksheet,startCell,array)
 parent: excel
 tags: command excel

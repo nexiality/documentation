@@ -1,4 +1,5 @@
 ---
+layout: default
 title: clickAndWait(locator,waitMs)
 parent: web
 tags: command web

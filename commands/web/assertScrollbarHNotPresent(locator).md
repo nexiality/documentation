@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertScrollbarHNotPresent(locator)
 parent: web
 tags: command web

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: writeFile(file,content,append)
 parent: io
 tags: command io

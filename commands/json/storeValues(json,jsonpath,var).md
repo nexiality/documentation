@@ -1,4 +1,5 @@
 ---
+layout: default
 title: storeValues(json,jsonpath,var)
 parent: json
 tags: command json jsonpath

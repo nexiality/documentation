@@ -1,4 +1,5 @@
 ---
+layout: default
 title: io
 tags: command io
 comments: true

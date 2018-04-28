@@ -1,4 +1,5 @@
 ---
+layout: default
 title: resize(width,height)
 parent: desktop
 tags: command desktop

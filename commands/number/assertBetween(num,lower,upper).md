@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertBetween(num,lower,upper)
 parent: number
 tags: command number

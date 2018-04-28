@@ -1,4 +1,5 @@
 ---
+layout: default
 title: closeApplication()
 parent: desktop
 tags: command desktop

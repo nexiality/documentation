@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveAsText(pdf,destination)
 parent: pdf
 tags: command pdf

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveResult(db,sql,output)
 parent: rdbms
 tags: command rdbms

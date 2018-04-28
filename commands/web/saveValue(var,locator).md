@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveValue(var,locator)
 parent: web
 tags: command web

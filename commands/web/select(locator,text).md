@@ -1,4 +1,5 @@
 ---
+layout: default
 title: select(locator,text)
 parent: web
 tags: command web

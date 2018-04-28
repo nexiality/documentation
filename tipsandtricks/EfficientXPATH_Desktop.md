@@ -1,4 +1,5 @@
 ---
+layout: default
 title: XPath for Better Desktop Automation Performance
 parent: Tips and Tricks
 tags: desktop winium

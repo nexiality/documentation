@@ -1,4 +1,5 @@
 ---
+layout: default
 title: webcookie
 tags: command webcookie cookie web
 comments: true

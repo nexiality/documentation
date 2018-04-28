@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertElementCount(json,jsonpath,count)
 parent: json
 tags: command json

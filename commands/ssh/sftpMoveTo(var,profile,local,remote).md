@@ -1,4 +1,5 @@
 ---
+layout: default
 title: sftpMoveTo(var,profile,local,remote)
 parent: ssh
 tags: command ssh

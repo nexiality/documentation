@@ -1,4 +1,5 @@
 ---
+layout: default
 title: storeKeys(var,profile,keyPattern)
 parent: redis
 tags: command redis

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertFramePresent(frameName)
 parent: web
 tags: command web

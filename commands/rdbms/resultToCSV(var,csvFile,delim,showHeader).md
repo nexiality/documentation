@@ -1,4 +1,5 @@
 ---
+layout: default
 title: resultToCSV(var,csvFile,delim,showHeader)
 parent: rdbms
 tags: command rdbms

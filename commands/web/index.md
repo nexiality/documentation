@@ -1,5 +1,6 @@
 ---
 title: web
+layout: default
 tags: command web
 comments: true
 ---

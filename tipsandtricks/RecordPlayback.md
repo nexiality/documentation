@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Record/Playback a Nexial Execution
 parent: Tips and Tricks
 tags: command tipsandtricks

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertCssPresent(locator,property,value)
 parent: web
 tags: command web

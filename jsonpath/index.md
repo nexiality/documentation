@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Nexial Jsonpath
 level: 1
 tags: jsonpath

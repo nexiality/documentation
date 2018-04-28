@@ -1,4 +1,5 @@
 ---
+layout: default
 title: SQL expression
 parent: Expressions
 tags: command expressions

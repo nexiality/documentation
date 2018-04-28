@@ -1,4 +1,5 @@
 ---
+layout: default
 title: User Guide
 level: 1
 tags: commands userguide quickstart

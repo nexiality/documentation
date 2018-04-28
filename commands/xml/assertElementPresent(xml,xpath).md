@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertElementPresent(xml,xpath)
 parent: xml
 tags: command xml

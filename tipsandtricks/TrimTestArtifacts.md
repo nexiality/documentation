@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Avoid OutOfMemory error - Trim Test Artifacts
 parent: Tips and Tricks
 tags: command tipsandtricks security

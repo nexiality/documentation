@@ -1,4 +1,5 @@
 ---
+layout: default
 title: dismissInvalidCert()
 parent: web
 tags: command web

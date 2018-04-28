@@ -1,4 +1,5 @@
 ---
+layout: default
 title: desktop
 tags: desktop command
 comments: true

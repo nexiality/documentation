@@ -1,4 +1,5 @@
 ---
+layout: default
 title: mouseOver(locator)
 parent: web
 tags: command web

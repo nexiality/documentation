@@ -1,4 +1,5 @@
 ---
+layout: default
 title: refreshAndWait()
 parent: web
 tags: command web

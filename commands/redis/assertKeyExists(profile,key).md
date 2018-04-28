@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertKeyExists(profile,key)
 parent: redis
 tags: command redis

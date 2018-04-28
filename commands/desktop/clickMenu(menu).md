@@ -1,4 +1,5 @@
 ---
+layout: default
 title: clickMenu(menu)
 parent: desktop
 tags: command desktop

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: $(projectfile)
 parent: Built-in Functions
 tags: projectfile $(projectfile)

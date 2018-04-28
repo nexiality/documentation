@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertFormValue(var,name,expected)
 parent: pdf
 tags: command pdf

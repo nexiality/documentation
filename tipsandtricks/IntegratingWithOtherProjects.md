@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Integrating with Other Projects
 parent: Tips and Tricks
 tags: command tipsandtricks

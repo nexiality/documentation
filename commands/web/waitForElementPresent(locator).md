@@ -1,4 +1,5 @@
 ---
+layout: default
 title: waitForElementPresent(locator)
 parent: web
 tags: command web

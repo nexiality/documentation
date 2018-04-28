@@ -1,4 +1,5 @@
 ---
+layout: default
 title: clickByLabelAndWait(label,waitMs)
 parent: web
 tags: command web

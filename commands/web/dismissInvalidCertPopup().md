@@ -1,4 +1,5 @@
 ---
+layout: default
 title: dismissInvalidCertPopup()
 parent: web
 tags: command web

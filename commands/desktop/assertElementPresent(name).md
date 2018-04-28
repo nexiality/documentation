@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertElementPresent(name)
 parent: desktop
 tags: command desktop

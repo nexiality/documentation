@@ -1,4 +1,5 @@
 ---
+layout: default
 title: $(syspath)
 parent: Built-in Functions
 tags: syspath $(syspath)

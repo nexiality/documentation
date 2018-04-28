@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Script Failing on BrowserStack
 parent: Tips and Trick
 tags: command tipsandtricks browserstack ie

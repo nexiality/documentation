@@ -1,4 +1,5 @@
 ---
+layout: default
 title: oauth(var,url,auth)
 parent: ws
 tags: command ws web_service api

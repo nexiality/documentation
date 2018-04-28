@@ -1,4 +1,5 @@
 ---
+layout: default
 title: doubleClickByLabel(label)
 parent: web
 tags: command web

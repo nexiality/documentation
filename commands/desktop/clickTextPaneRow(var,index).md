@@ -1,4 +1,5 @@
 ---
+layout: default
 title: clickTextPaneRow(var,index)
 parent: desktop
 tags: command desktop

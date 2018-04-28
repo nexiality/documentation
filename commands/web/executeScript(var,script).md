@@ -1,4 +1,5 @@
 ---
+layout: default
 title: executeScript(var,script)
 parent: web
 tags: command web

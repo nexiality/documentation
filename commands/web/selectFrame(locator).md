@@ -1,4 +1,5 @@
 ---
+layout: default
 title: selectFrame(locator)
 parent: web
 tags: command web

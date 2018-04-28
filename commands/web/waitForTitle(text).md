@@ -1,4 +1,5 @@
 ---
+layout: default
 title: waitForTitle(text)
 parent: web
 tags: command web

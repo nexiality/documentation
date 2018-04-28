@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertValue(locator,value)
 parent: web
 tags: command web

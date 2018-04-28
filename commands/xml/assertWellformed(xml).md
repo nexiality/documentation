@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertWellformed(xml)
 parent: xml
 tags: command xml

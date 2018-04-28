@@ -1,4 +1,5 @@
 ---
+layout: default
 title:  clickTab(group,name)
 parent: desktop
 tags: command desktop

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: $(sysdate)
 parent: Built-in Functions
 tags: sysdate $(sysdate)

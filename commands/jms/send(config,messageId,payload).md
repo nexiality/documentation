@@ -1,4 +1,5 @@
 ---
+layout: default
 title: send(config,messageId,payload)
 tags: command jms
 comments: true

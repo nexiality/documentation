@@ -1,4 +1,5 @@
 ---
+layout: default
 title: $(count)
 parent: Built-in Functions
 tags: count $(count)

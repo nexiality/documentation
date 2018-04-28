@@ -1,4 +1,5 @@
 ---
+layout: default
 title: nexial-core 1.0 (2018-03-30)
 parent: release
 tags: release nexial-core 1.0

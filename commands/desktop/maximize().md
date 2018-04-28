@@ -1,4 +1,5 @@
 ---
+layout: default
 title: maximize()
 parent: desktop
 tags: command desktop

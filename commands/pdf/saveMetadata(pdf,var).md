@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveMetadata(pdf,var)
 parent: pdf
 tags: command pdf

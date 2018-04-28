@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveLocalStorage(var,key)
 parent: web
 tags: command web

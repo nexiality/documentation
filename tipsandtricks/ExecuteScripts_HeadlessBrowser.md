@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Execute Scripts in Headless Browser
 parent: Tips and Tricks
 tags: desktop winium

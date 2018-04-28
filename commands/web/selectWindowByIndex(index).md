@@ -1,4 +1,5 @@
 ---
+layout: default
 title: selectWindowByIndex(index)
 parent: web
 tags: command web

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: download(url,queryString,saveTo)
 parent: ws
 tags: command ws web_service api

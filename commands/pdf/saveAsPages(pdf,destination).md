@@ -1,4 +1,5 @@
 ---
+layout: default
 title: saveAsPages(pdf,destination)
 parent: pdf
 tags: command pdf

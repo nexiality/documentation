@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertOneMatch(locator)
 parent: web
 tags: command web

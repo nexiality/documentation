@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertValue(xml,xpath,expected)
 parent: xml
 tags: command xml

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: readProperty(var,file,property)
 parent: io
 tags: command io

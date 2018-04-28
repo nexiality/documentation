@@ -1,4 +1,5 @@
 ---
+layout: default
 title: collapseHierTable()
 parent: desktop
 tags: command desktop

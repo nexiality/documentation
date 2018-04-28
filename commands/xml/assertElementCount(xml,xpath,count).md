@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertElementCount(xml,xpath,count)
 parent: xml
 tags: command xml

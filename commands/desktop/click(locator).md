@@ -1,4 +1,5 @@
 ---
+layout: default
 title: click(locator)
 parent: desktop
 tags: command desktop

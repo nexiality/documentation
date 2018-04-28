@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertElementByText(locator,text)
 parent: web
 tags: command web

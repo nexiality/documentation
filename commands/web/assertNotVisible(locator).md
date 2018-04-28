@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertNotVisible(locator)
 parent: web
 tags: command web

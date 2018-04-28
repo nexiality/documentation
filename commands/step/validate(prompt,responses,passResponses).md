@@ -1,4 +1,5 @@
 ---
+layout: default
 title: validate(prompt,responses,passResponses)
 parent: step
 tags: command step

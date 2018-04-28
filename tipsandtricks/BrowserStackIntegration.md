@@ -1,4 +1,5 @@
 ---
+layout: default
 title: BrowserStack Integration
 parent: Tips and Tricks
 tags: browserstack browser web

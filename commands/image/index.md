@@ -1,4 +1,5 @@
 ---
+layout: default
 title: image
 tags: command image
 comments: true

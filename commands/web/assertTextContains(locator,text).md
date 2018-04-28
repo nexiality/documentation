@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertTextContains(locator,text)
 parent: web
 tags: command web

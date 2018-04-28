@@ -1,4 +1,5 @@
 ---
+layout: default
 title: crop(image,dimension,saveTo)
 parent: image
 tags: command image

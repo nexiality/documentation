@@ -1,4 +1,5 @@
 ---
+layout: default
 title: deleteFiles(location,recursive)
 parent: io
 tags: command io

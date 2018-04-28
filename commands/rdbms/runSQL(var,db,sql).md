@@ -1,4 +1,5 @@
 ---
+layout: default
 title: runSQL(var,db,sql)
 parent: rdbms
 tags: command rdbms

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertScrollbarVPresent(locator)
 parent: web
 tags: command web

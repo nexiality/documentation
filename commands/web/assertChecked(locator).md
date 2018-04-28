@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertChecked(locator)
 parent: web
 tags: command web

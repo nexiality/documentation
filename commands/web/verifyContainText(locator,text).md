@@ -1,4 +1,5 @@
 ---
+layout: default
 title: verifyContainText(locator,text)
 parent: web
 tags: command web

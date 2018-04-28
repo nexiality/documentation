@@ -1,4 +1,5 @@
 ---
+layout: default
 title: increment(var,amount)
 parent: number
 tags: command number

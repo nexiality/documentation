@@ -1,4 +1,5 @@
 ---
+layout: default
 title: assertValues(xml,xpath,array,exactOrder)
 parent: xml
 tags: command xml
