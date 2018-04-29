@@ -30,9 +30,7 @@ var tipuesearch_stop_words = ["a", "about", "above", "after", "again", "against"
 // Word replace
 var tipuesearch_replace = {
     'words': [
-        {'word': 'tip', 'replace_with': 'tipue'},
-        {'word': 'javscript', 'replace_with': 'javascript'},
-        {'word': 'jqeury', 'replace_with': 'jquery'}
+        {'word': 'javscript', 'replace_with': 'javascript'}
     ]
 };
 
@@ -47,9 +45,7 @@ var tipuesearch_weight = {
 // Illogical stemming
 var tipuesearch_stem = {
     'words': [
-        {'word': 'e-mail', 'stem': 'email'},
-        {'word': 'javascript', 'stem': 'jquery'},
-        {'word': 'javascript', 'stem': 'js'}
+        {'word': 'e-mail', 'stem': 'email'}
     ]
 };
 
