@@ -160,6 +160,7 @@ applied.
 
 
 ### Available Expressions
+- [`BAI2expression`](BAI2expression)
 - [`CONFIG expression`](CONFIGexpression)
 - [`CSV expression`](CSVexpression)
 - [`DATE expression`](DATEexpression)
