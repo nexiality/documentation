@@ -5,7 +5,8 @@
         </div>
         <div class="tipue_search_right">
             <!--<input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" list="search" required>-->
-            <input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required>
+            <input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" placeholder="Type search term then ENTER" required>
+            <div id="clear_search" onclick="$('#tipue_search_input').val('');$('#tipue_search_content').hide();">X</div>
         </div>
         <div style="clear: both;"></div>
     </form>

@@ -38,7 +38,7 @@ To see Nexial in action, watch this short demo showcasing how Nexial
 4. stores API responses and Google search stats into database (database automation, with sqlite),
 5. finally, performs a few simple data analytical queries and reports (database automation, Nexial expression). 
 
-[Nexial in Action](https://www.youtube.com/watch?v=b372XikN1YU)
+[Nexial in Action](https://www.youtube.com/watch?v=b372XikN1YU&cc_lang_pref=en&cc_load_policy=1)
 
 <iframe width="560" height="555" src="https://www.youtube-nocookie.com/embed/b372XikN1YU?cc_lang_pref=en&cc_load_policy=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <br/>
