@@ -85,6 +85,13 @@ See `parse()` below for more details.
   its fields contains `USA`.
   - `conditions` follows the syntax as laid out in [Nexial Filter](../flowcontrols/filter). 
 
+- **`groupCount(columns)`** - create a new CVS using the specified column(s) and the last column as the count of 
+  occurrences.  Multiple columns are separated by comma (`,`).  The newly formed CSV will named the last column (
+  where the count information is stored) as `Count`.
+
+- **`groupSum(columns)`** - create new CSV using the specified column(s) to group rows of same valules.  The last
+ specified column is considered as the one holding the values to aggregate, and will be named as `Sum`.
+
 - **`headers`** - retrieves the column names of the current CSV content as a **[`LIST`](LISTexpression)**.  If 
 	 current CSV is not parsed with `header=true`, then `null` is returned.
 

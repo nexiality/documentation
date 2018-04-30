@@ -62,6 +62,8 @@ using with Nexial.
 - fixed NUMBER expression when dealing with whole number.  Previous implementation converts whole number to decimal number, but this is now fixed.
 - fixed EXCEL.clear where it was missing last column.
 - `CSV » htmlTable`: render CSV into a HTML table.
+- `CSV » groupCount`: new CSV with count information of columns with same data
+- `CSV » groupSum`: new CSV with sum information grouped by columns with same data
 
 [CSV expression]
 - `removeColumns` now supports one or many columns referenced by name or index (zero-based)
