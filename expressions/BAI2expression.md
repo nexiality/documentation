@@ -26,8 +26,8 @@ comments: true
 | 98  | `Group Trailer` | Ends Group | `Record Code`<br/>`Group Total Amount`<br/>`Group Total Accounts`<br/>`Group Total Records`|
 | 99  | `File Trailer` | Ends File | `Record Code`<br/>`File Total Amount`<br/>`File Total Groups`<br/>`File Total Records`|
 
-- BAI2 Sample File
-![](image/BAI2expression_01.png)
+- BAI2 Sample File<br/>
+- ![](image/BAI2expression_01.png)
 
 
 ### Operations
