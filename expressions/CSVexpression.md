@@ -85,9 +85,26 @@ See `parse()` below for more details.
   its fields contains `USA`.
   - `conditions` follows the syntax as laid out in [Nexial Filter](../flowcontrols/filter). 
 
-- **`groupCount(columns)`** - create a new CVS using the specified column(s) and the last column as the count of 
-  occurrences.  Multiple columns are separated by comma (`,`).  The newly formed CSV will named the last column (
-  where the count information is stored) as `Count`.
+- **`groupCount(columns)`** - create a new CVS using the specified column(s) and a new column (last column) as the 
+  count of occurrences.  Multiple columns are separated by comma (`,`).  The newly formed CSV will named the last 
+  column (the count) as `Count`.  Let's see an example,<br/>
+  Suppose we have a [CSV file of various sales information](CSV_sample1.csv), like this:<br/>
+  ![sample csv](image/csv_27.png)<br/>
+  To create a CSV file that would count up the occurrences of different `Country`, we can do something like this:<br/>
+  
+  `[CSV(${sample_csv} => parse(header=true) group-count(Country) text]`
+  
+  The above would: (1) parse the CSV file denoted as `${sample_csv}` and perform a "group count" on the column 
+  `Country`. The end CSV file looks something like this:<br/>
+  
+  ![](image/csv_28.png)
+  
+  You can download the same CSV file [here](CSV_groupCount1.csv)<br/>
+  
+  It is possible to include multiple columns for grouping, suchas `groupCount(Country,State)`, which would yield results
+  like this:
+  
+  ![](image/csv_29.png)
 
 - **`groupSum(columns)`** - create new CSV using the specified column(s) to group rows of same valules.  The last
  specified column is considered as the one holding the values to aggregate, and will be named as `Sum`.
