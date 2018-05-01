@@ -173,6 +173,39 @@ table.sysvar a code { background-color:transparent; border:none; font-weight:nor
     </td>
 </tr>
 <tr>
+    <td nowrap="nowrap" class="varname"><a name="nexial.enableEmail"/><code>nexial.enableEmail</code></td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>false</td>
+    <td>
+    Enable email notification at the end of an execution.  By default this is not enabled as using email to communicate
+    execution status carries a variety of possible side issues.  Nonetheless, email notification is supported in Nexial.
+    Here are the steps:<ol>
+    <li>Enable this system variable</li>
+    <li>Define the mail server connectivity details:
+	    <ul>
+	        <li>mail.smtp.host=&lt;the hostname or DNS name of your mail server&gt;</li>
+		    <li>mail.smtp.port=25 (or whatever the configured SMTP port is)</li>
+		    <li>mail.smtp.from=&lt;the FROM email address&gt;</li>
+	        <li>mail.smtp.auth=true|false</li>
+		    <li>mail.smtp.username=&lt;username only needed if mail.smtp.auth is set to true&gt;</li>
+		    <li>mail.smtp.password=&lt;password only needed if mail.smtp.auth is set to true&gt;</li>
+		</ul>
+    </li>
+    <li>Define the recepient email or list via the <code>nexial.scope.mailTo</code> system variable.
+    </ol>
+    <br/>
+    All these settings can be added via command line (i.e. <code>-D...</code>), 
+    <a href="../../userguide/UnderstandingProjectStructure#project.properties"><code>project.properties</code></a> or
+    the appropriate data file.  For example, from command line:<br/>
+    <code>
+    set JAVA_OPT=-Dnexial.enableEmail=true -Dmail.smtp.host=mail.mycompany.com -Dmail.smtp.auth=false -Dnexial.scope.mail=my_and_myself@mycompany.com<br/>
+    <br/>
+    nexial.cmd -script ... ...
+    </code>
+    </td>
+</tr>
+<tr>
     <td nowrap="nowrap" class="varname"><a name="nexial.assistantMode"/><code>nexial.assistantMode</code></td>
     <td>boolean</td>
     <td>false</td>

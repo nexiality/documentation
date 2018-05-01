@@ -6,25 +6,30 @@ comments: true
 ---
 
 
-The "mail" command type represents a series of automation command(s) regarding sending emails.
+The "mail" command type represents the automation command regarding sending emails.  Future enhancement could include
+the retrieval of emails as well (_if you need this feature sooner, submit an 
+<a href="https://github.com/nexiality/nexial-core/issues/new" class="external-link" target="_nexial_external">issue</a> 
+to increase the priority thereof_).
 
-Current implementation of such capability depends highly on setting the correct/expected system properties (via `-D`, 
-for example).  We will be looking to rewrite the underlying email connectivity to a more flexible and comprehensive 
-solution.  For now, be aware of the following system properties, which must be set prior to a Nexial execution.  For 
-example:
+In order to send email, appropriate mail server connectivity must be defined first.  The section below describes how
+mail server connectivity would be configured. 
+
+It is noteworthy to clarify that the mail server connectivity used here may not necessarily be the same as that used
+by Nexial to [send out email notification](../../systemvars/index#nexial.enableEmail).
+
+### Mail Settings
+The `mail` command type uses a "profile" to group related data variables together, much like the case for 
+[`ssh`](../ssh/index#connection-setup), [`rdbms`](../rdbms/index#database-connection-setup) or 
+[`aws.s3`](../aws.s3/index#connection-setup).  The profile-based connectivity setting can be defined via command line 
+(i.e. `-D`), [`project.properties`](../../userguide/UnderstandingProjectStructure#project.properties), or the 
+appropriate data file.  For example, via command line:
 
 > set JAVA_OPT=-DMyMail.from=boss@mystore.com -DMyMail.host=mail.mystore.com -DMyMail.port=25
 > 
 > nexial.sh -plan ... ...
 
-Another way of setting these mail related system properties is via the 
-[`project.properties`](../../userguide/UnderstandingProjectStructure#project.properties) file.
-
-### Mail Settings
-The `mail` command type uses a "profile" to group related data variables together, much like the case for 
-[`ssh`](../ssh/index#connection-setup), [`rdbms`](../rdbms/index#database-connection-setup) or 
-[`aws.s3`](../aws.s3/index#connection-setup). Here are the various settings available to configure the appropriate 
-mail server for your automation (assuming profile is `MyEmail`):
+Here are the various settings available to configure the appropriate mail server for your automation 
+(assuming profile is `MyEmail`):
 
 | data variable         | description                                                                    |
 | --------------------- | ------------------------------------------------------------------------------ |
@@ -42,5 +47,7 @@ mail server for your automation (assuming profile is `MyEmail`):
 
 <br/>
 
+
 ### Available Commands
 - [`send(profile,to,subject,body)`](send(profile,to,subject,body))
+

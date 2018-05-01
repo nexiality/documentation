@@ -12,6 +12,8 @@ This command instructs Nexial to send out an email to one or more email recipien
 subject line and same email body.  The email body will default to **text/html**.  This means that email body can 
 be HTML. 
 
+Read about [Mail Settings](index#mail-settings) for details about configuring mail server for your automation.
+
 
 ### Parameters
 - **profile** - the profile of the target mail connectivty.  See [mail settings](index#mail-settings) for more details.
