@@ -64,35 +64,45 @@ See `parse()` below for more details.
 
 
 ### Operations
-- **`asciiTable`** - render CSV content into a ASCII-based table. Also known/usable as 'ascii-table'.  See example for 
-  details.  Also, `htmlTable` (below) is a related operation to generate HTML table.
 
-- **`column(column_name_or_index)`** - get all the data belonging to the same column as a LIST.  For CSV without 
+##### asciiTable
+- render CSV content into a ASCII-based table. Also known/usable as 'ascii-table'.  See example for 
+  details.  Also, [`htmlTable`](#htmltable) is a related operation to generate HTML table.
+
+##### column(column_name_or_index) 
+- get all the data belonging to the same column as a LIST.  For CSV without 
   header information, use column index (0-based). 
 
-- **`columnCount`** - number of columns to the current state of the CSV content.
+##### columnCount
+- number of columns to the current state of the CSV content.
 
-- **`config`** - convert CSV content into CONFIG instance.
+##### config 
+- convert CSV content into [CONFIG](CONFIGexpression) instance.
 
-- **`fetch(conditions)`** - fetch the first row that matched the specified 
+##### fetch(conditions)
+- fetch the first row that matched the specified 
   [conditions](../flowcontrols/filter#specification).  These conditions are evaluated on the columns based their 
   respective name or index. The condition follows the syntax as laid out in [Nexial Filter](../flowcontrols/filter). 
 
-- **`filter(conditions)`** - keep only the rows that matches the specified 
+##### filter(conditions)
+- keep only the rows that matches the specified 
   [conditions](../flowcontrols/filter#specification).  These conditions are evaluated on the columns based their 
   respective name or index. The condition follows the syntax as laid out above.  One can use the reserved word 
   `[ANY FIELD]` to target any field.  For example, `filter([ANY FIELD] contains USA)` means filter a row if any of 
   its fields contains `USA`.
-  - `conditions` follows the syntax as laid out in [Nexial Filter](../flowcontrols/filter). 
+- `conditions` follows the syntax as laid out in [Nexial Filter](../flowcontrols/filter). 
 
-- **`groupCount(columns)`** - create a new CVS using the specified column(s) and a new column (last column) as the 
+##### groupCount(columns)
+- create a new CVS using the specified column(s) and a new column (last column) as the 
   count of occurrences.  Multiple columns are separated by comma (`,`).  The newly formed CSV will named the last 
-  column (the count) as `Count`.  Let's see an example,<br/>
-  Suppose we have a [CSV file of various sales information](CSV_sample1.csv), like this:<br/>
-  ![sample csv](image/csv_27.png)<br/>
-  To create a CSV file that would count up the occurrences of different `Country`, we can do something like this:<br/>
+  column (the count) as `Count`.  
   
-  `[CSV(${sample_csv} => parse(header=true) group-count(Country) text]`
+  Let's see an example. Suppose we have a [CSV file of various sales information](CSV_sample1.csv), like this:<br/>
+  ![sample csv](image/csv_27.png)<br/>
+  
+  To create a CSV file that would count up the occurrences of different `Country`, we can do something like this:
+  
+  `[CSV(${sample_csv}) => parse(header=true) group-count(Country) text]`
   
   The above would: (1) parse the CSV file denoted as `${sample_csv}` and perform a "group count" on the column 
   `Country`. The end CSV file looks something like this:<br/>
@@ -101,19 +111,44 @@ See `parse()` below for more details.
   
   You can download the same CSV file [here](CSV_groupCount1.csv)<br/>
   
-  It is possible to include multiple columns for grouping, suchas `groupCount(Country,State)`, which would yield results
-  like this:
+  It is possible to include multiple columns for grouping, such as `groupCount(Country,State)`, which would yield 
+  results like this:
   
   ![](image/csv_29.png)
 
-- **`groupSum(columns)`** - create new CSV using the specified column(s) to group rows of same valules.  The last
- specified column is considered as the one holding the values to aggregate, and will be named as `Sum`.
+##### groupSum(columns)
+- create new CSV using the specified column(s) to group rows of same valules.  The last
+  specified column is considered as the one holding the values to aggregate, and will be named as `Sum`.
 
-- **`headers`** - retrieves the column names of the current CSV content as a **[`LIST`](LISTexpression)**.  If 
+  This operation is similar to [`groupCount(columns)`](#groupcount(columns)) except, instead of counting occurrence of 
+  equivalent data, this operation groups the equivalent data and sums up another corresponding numeric column.  In 
+  other words, it's akin to saying "Look at all the values in Column A, group them by their values so that equivalent 
+  values are in the same group.  Then find the corresponding Column B (assuming numeric value) and sum up the values 
+  thereof by the associated group".
+  
+  Let's look at an example.  Suppose we have a [CSV file of various sales information](CSV_sample1.csv):<br/>
+  ![sample csv](image/csv_27.png)<br/>
+  
+  We can group by `Country` and sum the corresponding `Price` column, like this:<br/>
+  
+  `[CSV(${sample_csv}) => parse(header=true) group-sum(Country,Price) text]`
+  
+  The result CSV would look something like this:<br/>
+  
+  ![](image/csv_30.png)<br/>
+  
+  As show, the data in `Country` is grouped together and the corresponding `Price` summed by under the column named 
+  `Sum`.  Just like `groupCount(columns)`, it is possible specify multiple columns for multi-level grouping and summing.
+  
+  Note that **the last column must be the target column to sum, and it must be a "numeric" column**.
+
+##### headers
+- retrieves the column names of the current CSV content as a **[`LIST`](LISTexpression)**.  If 
 	 current CSV is not parsed with `header=true`, then `null` is returned.
 
-- **`htmlTable`** - render CSV content into a HTML table.  Also known/usable as `html-table`.  For text-only rendering, 
-  consider using `asciiTable` operation (above) instead.  Let's see an example:<br/>
+##### htmlTable
+- render CSV content into a HTML table.  Also known/usable as `html-table`.  For text-only rendering, 
+  consider using [`asciiTable`](#asciitable) operation instead.  Let's see an example:<br/>
   
   Suppose the following CSV:<br/>
   ![](image/CSVexpression_01.png)
@@ -125,7 +160,8 @@ See `parse()` below for more details.
   like this:<br/>
   ![](image/CSVexpression_03.png)
   
-- **`json`** - convert current state of the CSV content to a JSON document.Technically speaking, it's a JSON array 
+##### json
+- convert current state of the CSV content to a JSON document.Technically speaking, it's a JSON array 
   (to represent rows) with multiple JSON document (each for one row).The CSV content in question may be one or more 
   rows, with or without headers. For example, here's the transformation from one CSV document (with header) to a JSON:
 
@@ -138,70 +174,75 @@ See `parse()` below for more details.
   As shown above, CSV with header produces JSON with names (node names), and CSV without header produces JSON array of 
   array without name/label references.
 
-- **`length`** - Synonymous to **`size`** and **`rowCount`**.
+##### length
+-  Synonymous to **[`size`](#size)** and **[`rowCount`](#rowcount)**.
 
-- **`merge(var,keyColumn)`** - merge the CSV data represented by `var` into existing CSV content.  `keyColumn`, 
+##### merge(var,keyColumn)
+- merge the CSV data represented by `var` into existing CSV content.  `keyColumn`, 
   if specified, is used to merge the 2 CSV content in such a way that the record of the same key are merged 
   together.  In general, there are 3 uses of this operation:
 
-  - **merge two CSV files that have no header** - in such case, records will be merged line-by-line with no regard 
-	to the data value.  For example:<br/>
-	<code>
-	[CSV( ${csv file to merge from} ) => parse store(merge_from)]<br/>
-    ... ...<br/>
-    [CSV( ${csv file to merge into} ) => parse(header=false) merge(merge_from,\(empty\)) store(merge_into)]
-    </code>
-    <br/>
+- **merge two CSV files that have no header** - in such case, records will be merged line-by-line with no regard 
+  to the data value.  For example:<br/>
+<code>
+[CSV( ${csv file to merge from} ) => parse store(merge_from)]<br/>
+... ...<br/>
+[CSV( ${csv file to merge into} ) => parse(header=false) merge(merge_from,\(empty\)) store(merge_into)]
+</code>
+<br/>
 
-    | file                                | snapshot            |
-    | ----------------------------------- | ------------------- |
-    | CSV to merge into:                  |![](image/csv_05.jpg)|
-    | CSV to merge from:                  |![](image/csv_06.jpg)|
-    | CSV to merge into, **AFTER** merge: |![](image/csv_07.jpg)|
-    
-    <br/>
-    Note that passing **`\(empty\)`** is required as the keyColumn to signify that no shared column is between these 
-    2 CSV data.
-	     
-  - **merge two CSV files that have headers, but without keyColumn** - in this case, `header` exists in both CSV file, 
-    but they do not share any common column from the merge can be based on.  For example:<br/>
-    <code>
-    [CSV( ${csv file to merge from} ) => parse(header=true) store(merge_from)]<br/>
-    ... ...<br/>
-    [CSV( ${csv file to merge into} ) => parse(header=true) merge(merge_from,\(empty\)) store(merge_into)]<br/>
-    </code>
-    <br/>
-    
-    | file                                | snapshot            |
-    | ----------------------------------- | ------------------- |
-    | CSV to merge into:                  |![](image/csv_08.jpg)|
-    | CSV to merge from:                  |![](image/csv_09.jpg)|
-    | CSV to merge into, **AFTER** merge: |![](image/csv_10.jpg)|
-    
-    <br/>
-    Note that passing **\(empty\)** is required as the keyColumn to signify that no shared column is between these 2 
-    CSV data.
+| file                                | snapshot            |
+| ----------------------------------- | ------------------- |
+| CSV to merge into:                  |![](image/csv_05.jpg)|
+| CSV to merge from:                  |![](image/csv_06.jpg)|
+| CSV to merge into, **AFTER** merge: |![](image/csv_07.jpg)|
 
-  - **merge two CSV files that have headers and share the same `keyColumn`** - in this case, header exists for both 
-    CSV data and they also share (at least) one common column whereby merge can use it to align the records.  For 
-    example,<br/>
-	<code>
-	[CSV( ${csv file to merge from} ) => parse(header=true) store(merge_from)]<br/>
-	... ...<br/>
-	[CSV( ${csv file to merge into} ) => parse(header=true) merge(merge_from,SSN) store(merge_into)]<br/>
-	</code><br/>
+<br/>
 
-    | file                                | snapshot            |
-    | ----------------------------------- | ------------------- |
-    | CSV to merge into:                  |![](image/csv_11.jpg)|
-    | CSV to merge from:                  |![](image/csv_12.jpg)|
-    | CSV to merge into, **AFTER** merge: |![](image/csv_13.jpg)|
+Note that passing **`\(empty\)`** is required as the keyColumn to signify that no shared column is between these 
+2 CSV data.
+     
+- **merge two CSV files that have headers, but without keyColumn** - in this case, `header` exists in both CSV file, 
+  but they do not share any common column from the merge can be based on.  For example:<br/>
+<code>
+[CSV( ${csv file to merge from} ) => parse(header=true) store(merge_from)]<br/>
+... ...<br/>
+[CSV( ${csv file to merge into} ) => parse(header=true) merge(merge_from,\(empty\)) store(merge_into)]<br/>
+</code>
+<br/>
 
-    <br/>
-    Notice that the merged CSV is matching up the First Name and Last Name based on SSN, even though the order of 
-    these SSN are not the same.
+| file                                | snapshot            |
+| ----------------------------------- | ------------------- |
+| CSV to merge into:                  |![](image/csv_08.jpg)|
+| CSV to merge from:                  |![](image/csv_09.jpg)|
+| CSV to merge into, **AFTER** merge: |![](image/csv_10.jpg)|
 
-- **`parse(config)`** - (re)parse current CSV data with consideration towards the specified configurations. By 
+<br/>
+
+Note that passing **`(empty)`** is required as the keyColumn to signify that no shared column is between these 2 
+CSV data.
+
+- **merge two CSV files that have headers and share the same `keyColumn`** - in this case, header exists for both 
+  CSV data and they also share (at least) one common column whereby merge can use it to align the records.  For 
+  example,<br/>
+<code>
+[CSV( ${csv file to merge from} ) => parse(header=true) store(merge_from)]<br/>
+... ...<br/>
+[CSV( ${csv file to merge into} ) => parse(header=true) merge(merge_from,SSN) store(merge_into)]<br/>
+</code><br/>
+
+| file                                | snapshot            |
+| ----------------------------------- | ------------------- |
+| CSV to merge into:                  |![](image/csv_11.jpg)|
+| CSV to merge from:                  |![](image/csv_12.jpg)|
+| CSV to merge into, **AFTER** merge: |![](image/csv_13.jpg)|
+
+<br/>
+Notice that the merged CSV is matching up the First Name and Last Name based on SSN, even though the order of 
+these SSN are not the same.
+
+##### parse(config)
+- (re)parse current CSV data with consideration towards the specified configurations. By 
   default, Nexial uses the Excel CSV (see above) as the file format to parse a CSV file.  Using this operation, one 
   can change the way a CSV file is parsed. The configuration will be specified in the form of 
   `name=value|name=value|name=value|...` or `name=value,name=value,name=value,...`pairs.
@@ -227,10 +268,12 @@ See `parse()` below for more details.
       comma needs to be escape since it is also used as a parameter separator.  Hence `delim=\,`.
     - convert the CSV component into text.
 
-- **`removeColumns(namesOrIndices)`** - remove the entire column qualified via namesOrIndices parameter, which can be 
+##### removeColumns(namesOrIndices)
+- Remove the entire column qualified via namesOrIndices parameter, which can be 
   a list of column names or column positions (zero-based).  Multiple columns are separated by comma (`,`).
 
-- **`removeRows(conditions)`** - remove all rows that meet the specified 
+##### removeRows(conditions)
+- Remove all rows that meet the specified 
   [conditions](../flowcontrols/filter#specification).  For example, consider the following CSV file:
 	 
   ![](image/csv_14.jpg)
@@ -245,11 +288,12 @@ See `parse()` below for more details.
   
   The `conditions` parameter follows the syntax as laid out in [Nexial Filter](../flowcontrols/filter).
 
-- **`renameColumn(find,replace)`** - rename a column, as defined by `find`, with new value as defined by `replace`. 
-  The column position is maintained.
+##### renameColumn(find,replace)
+- Rename a column, as defined by `find`, with new value as defined by `replace`.  The column position is maintained.
 
-- **`render(template)`** - to mass-generate a series of text based on the fusing of CSV data and a designated 
-  "template".  Suppose 
+##### render(template)
+- Mass-generate a series of text based on the fusing of CSV data and a designated "template".  Suppose:
+
   1. we have a CSV file with the following content:<br/>
   ![](image/csv_16.jpg)
 
@@ -270,40 +314,52 @@ See `parse()` below for more details.
     in each CSV record.  For as many records as there are, Nexial will perform the same "merge" to produce many lines 
     of text.
 
-- **`row(index)`** - retrieves one row of data as a **[`LIST`](LISTexpression)**.  index is zero-based.  If index is 
+##### row(index)
+- retrieves one row of data as a **[`LIST`](LISTexpression)**.  index is zero-based.  If index is 
   not valid or too large, then null will be returned.
 
-- **`rowCount`** - number of rows to the current state of the CSV content.  Synonymous to **`size`** and **`length`**.
+##### rowCount
+- number of rows to the current state of the CSV content.  Synonymous to **[`size`](#size)** and **[`length`](#length)**.
 
-- **`pack`** - remove all empty rows from current CSV content. This could either be blank lines or lines with only 
+##### pack
+- remove all empty rows from current CSV content. This could either be blank lines or lines with only 
   field delimiter (such as comma).
 
-- **`save(file)`** - save current CSV content to external file. If specified file represents an existing file, it 
+##### save(file)
+- save current CSV content to external file. If specified file represents an existing file, it 
   will be overwritten.
 
-- **`size`** - retrieves the number of rows in current CSV content. Synonymous to **`rowCount`** and **`length`**.
+##### size
+- retrieves the number of rows in current CSV content. Synonymous to **[`rowCount`](#row(index))** and 
+  **[`length`](#length)**.
 
-- **`sortAscending(column)`** - sort the entire CSV content by the specified column, in ascending order.  Note that 
+##### sortAscending(column)
+- sort the entire CSV content by the specified column, in ascending order.  Note that 
   the target **CSV MUST HAVE HEADERS**!
 
-- **`sortDescending(column)`** - sort the entire CSV content by the specified column, in descending order.  Note that 
+##### sortDescending(column)
+- sort the entire CSV content by the specified column, in descending order.  Note that 
   the target **CSV MUST HAVE HEADERS**!
 
-- **`store(var)`** - save current CSV expression (including content) to a data variable.  If the specified var exists, 
+##### store(var)
+- save current CSV expression (including content) to a data variable.  If the specified var exists, 
   its value will be overwritten.  Using this operation, one can put an expression on pause and resume it at a later 
   time.
 
-- **`text`** - transform the current CSV data to text.  This would be the plain text rendition of the CSV content.  
-  Note that the latest CSV format as specified via the **`parse()`** operation is observed and will affect the text 
-  output.
+##### text
+- transform the current CSV data to text.  This would be the plain text rendition of the CSV content.  
+  Note that the latest CSV format as specified via the **[`parse(config)`](#parse(config))** operation is observed 
+  and will affect the text output.
 
-- **`transpose`** - transpose current CSV content so that row datas are displayed as column data, and column's as row's.
+##### transpose
+- transpose current CSV content so that row datas are displayed as column data, and column's as row's.
 
-- **`xml(root,row,cell)`** - convert current state of the CSV content to a XML document.   Technically speaking, it's a 
-  2-level XML document - first level to represent 'rows' and second level to represent 'one row'. The first level node 
-  name is specified through root parameter while the second level node name is specified through row parameter. For 
-  each column, cell is used to specify its node name.  It is possible to omit any of the root,row,cell specification - 
-  simply use a space to use the default shown below:
+##### xml(root,row,cell)
+- convert current state of the CSV content to a XML document.  It's a 2-level XML document, with the first level 
+  representing 'rows' and second level 'one row'. The first level node name is specified through `root` parameter while 
+  the second level node name is specified through row `parameter`. For each column, `cell` is used to specify its node 
+  name.  It is possible to omit any of the `root`, `row`, `cell` specification - simply use a space to use the default 
+  shown below:
   - `root` - default node name is rows
   - `row` - default node name is row
   - `cell` - default node name is cell
@@ -330,7 +386,9 @@ See `parse()` below for more details.
      
   As shown above, the column names are missing and default node names are applied.
 
-**Example**
+---
+
+### Examples
 
 **Example 1: Using filter to limit the rows of a CSV file.**
 - For more details about initializing a CSV structure, please read the section on 
@@ -345,9 +403,9 @@ See `parse()` below for more details.
   the same file:<br/>
   ![](image/csv_23.jpg)
 
-  You'll note that the `parse()` operation is only invoked one (2nd line).  Using the `store()` operation, we can 
-  reuse the CSV structure (in 3rd and 4th line).  In this example, we assigned `myCSV` to the parsed CSV structure 
-  in line 2.
+  You'll note that the [`parse(config)`](#parse(config)) operation is only invoked one (2nd line).  Using the 
+  [`store(var)`](#store(var)) operation, we can reuse the CSV structure (in 3rd and 4th line).  In this example, we 
+  assigned `myCSV` to the parsed CSV structure in line 2.
   - The first filter operation limits to rows where the column `First Name` is exactly `David`.  In this case, there 
     should only be 1 row (row 3 of the input CSV file) matched.
   - The second filter operation limits to rows where the column Mobile Phone contains `-6641` **AND** the column `Fax` 
@@ -366,3 +424,4 @@ See `parse()` below for more details.
 
   ![](image/csv_26.jpg)
 
+---
