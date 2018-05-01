@@ -19,7 +19,7 @@ White space that appears between the property name and property value is ignored
 1. `name=Stephen`
 2. `name = Stephen`
 
-Also:<br/>
+Also:
 - White space at the beginning of the line is also ignored.
 - Lines that start with the comment character `!` or `#` are ignored. Blank lines are also ignored.
 - The property value is generally terminated by the end of the line. White space following the property value is not 

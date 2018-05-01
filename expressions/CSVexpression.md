@@ -65,26 +65,26 @@ See `parse()` below for more details.
 
 ### Operations
 
-##### asciiTable
+#### asciiTable
 - render CSV content into a ASCII-based table. Also known/usable as 'ascii-table'.  See example for 
   details.  Also, [`htmlTable`](#htmltable) is a related operation to generate HTML table.
 
-##### column(column_name_or_index) 
+#### column(column_name_or_index) 
 - get all the data belonging to the same column as a LIST.  For CSV without 
   header information, use column index (0-based). 
 
-##### columnCount
+#### columnCount
 - number of columns to the current state of the CSV content.
 
-##### config 
+#### config 
 - convert CSV content into [CONFIG](CONFIGexpression) instance.
 
-##### fetch(conditions)
+#### fetch(conditions)
 - fetch the first row that matched the specified 
   [conditions](../flowcontrols/filter#specification).  These conditions are evaluated on the columns based their 
   respective name or index. The condition follows the syntax as laid out in [Nexial Filter](../flowcontrols/filter). 
 
-##### filter(conditions)
+#### filter(conditions)
 - keep only the rows that matches the specified 
   [conditions](../flowcontrols/filter#specification).  These conditions are evaluated on the columns based their 
   respective name or index. The condition follows the syntax as laid out above.  One can use the reserved word 
@@ -92,7 +92,7 @@ See `parse()` below for more details.
   its fields contains `USA`.
 - `conditions` follows the syntax as laid out in [Nexial Filter](../flowcontrols/filter). 
 
-##### groupCount(columns)
+#### groupCount(columns)
 - create a new CVS using the specified column(s) and a new column (last column) as the 
   count of occurrences.  Multiple columns are separated by comma (`,`).  The newly formed CSV will named the last 
   column (the count) as `Count`.  
@@ -116,7 +116,7 @@ See `parse()` below for more details.
   
   ![](image/csv_29.png)
 
-##### groupSum(columns)
+#### groupSum(columns)
 - create new CSV using the specified column(s) to group rows of same valules.  The last
   specified column is considered as the one holding the values to aggregate, and will be named as `Sum`.
 
@@ -142,11 +142,11 @@ See `parse()` below for more details.
   
   Note that **the last column must be the target column to sum, and it must be a "numeric" column**.
 
-##### headers
+#### headers
 - retrieves the column names of the current CSV content as a **[`LIST`](LISTexpression)**.  If 
 	 current CSV is not parsed with `header=true`, then `null` is returned.
 
-##### htmlTable
+#### htmlTable
 - render CSV content into a HTML table.  Also known/usable as `html-table`.  For text-only rendering, 
   consider using [`asciiTable`](#asciitable) operation instead.  Let's see an example:<br/>
   
@@ -160,7 +160,7 @@ See `parse()` below for more details.
   like this:<br/>
   ![](image/CSVexpression_03.png)
   
-##### json
+#### json
 - convert current state of the CSV content to a JSON document.Technically speaking, it's a JSON array 
   (to represent rows) with multiple JSON document (each for one row).The CSV content in question may be one or more 
   rows, with or without headers. For example, here's the transformation from one CSV document (with header) to a JSON:
@@ -174,10 +174,10 @@ See `parse()` below for more details.
   As shown above, CSV with header produces JSON with names (node names), and CSV without header produces JSON array of 
   array without name/label references.
 
-##### length
+#### length
 -  Synonymous to **[`size`](#size)** and **[`rowCount`](#rowcount)**.
 
-##### merge(var,keyColumn)
+#### merge(var,keyColumn)
 - merge the CSV data represented by `var` into existing CSV content.  `keyColumn`, 
   if specified, is used to merge the 2 CSV content in such a way that the record of the same key are merged 
   together.  In general, there are 3 uses of this operation:
@@ -241,7 +241,7 @@ CSV data.
 Notice that the merged CSV is matching up the First Name and Last Name based on SSN, even though the order of 
 these SSN are not the same.
 
-##### parse(config)
+#### parse(config)
 - (re)parse current CSV data with consideration towards the specified configurations. By 
   default, Nexial uses the Excel CSV (see above) as the file format to parse a CSV file.  Using this operation, one 
   can change the way a CSV file is parsed. The configuration will be specified in the form of 
@@ -268,11 +268,11 @@ these SSN are not the same.
       comma needs to be escape since it is also used as a parameter separator.  Hence `delim=\,`.
     - convert the CSV component into text.
 
-##### removeColumns(namesOrIndices)
+#### removeColumns(namesOrIndices)
 - Remove the entire column qualified via namesOrIndices parameter, which can be 
   a list of column names or column positions (zero-based).  Multiple columns are separated by comma (`,`).
 
-##### removeRows(conditions)
+#### removeRows(conditions)
 - Remove all rows that meet the specified 
   [conditions](../flowcontrols/filter#specification).  For example, consider the following CSV file:
 	 
@@ -288,10 +288,10 @@ these SSN are not the same.
   
   The `conditions` parameter follows the syntax as laid out in [Nexial Filter](../flowcontrols/filter).
 
-##### renameColumn(find,replace)
+#### renameColumn(find,replace)
 - Rename a column, as defined by `find`, with new value as defined by `replace`.  The column position is maintained.
 
-##### render(template)
+#### render(template)
 - Mass-generate a series of text based on the fusing of CSV data and a designated "template".  Suppose:
 
   1. we have a CSV file with the following content:<br/>
@@ -314,47 +314,47 @@ these SSN are not the same.
     in each CSV record.  For as many records as there are, Nexial will perform the same "merge" to produce many lines 
     of text.
 
-##### row(index)
+#### row(index)
 - retrieves one row of data as a **[`LIST`](LISTexpression)**.  index is zero-based.  If index is 
   not valid or too large, then null will be returned.
 
-##### rowCount
+#### rowCount
 - number of rows to the current state of the CSV content.  Synonymous to **[`size`](#size)** and **[`length`](#length)**.
 
-##### pack
+#### pack
 - remove all empty rows from current CSV content. This could either be blank lines or lines with only 
   field delimiter (such as comma).
 
-##### save(file)
+#### save(file)
 - save current CSV content to external file. If specified file represents an existing file, it 
   will be overwritten.
 
-##### size
+#### size
 - retrieves the number of rows in current CSV content. Synonymous to **[`rowCount`](#row(index))** and 
   **[`length`](#length)**.
 
-##### sortAscending(column)
+#### sortAscending(column)
 - sort the entire CSV content by the specified column, in ascending order.  Note that 
   the target **CSV MUST HAVE HEADERS**!
 
-##### sortDescending(column)
+#### sortDescending(column)
 - sort the entire CSV content by the specified column, in descending order.  Note that 
   the target **CSV MUST HAVE HEADERS**!
 
-##### store(var)
+#### store(var)
 - save current CSV expression (including content) to a data variable.  If the specified var exists, 
   its value will be overwritten.  Using this operation, one can put an expression on pause and resume it at a later 
   time.
 
-##### text
+#### text
 - transform the current CSV data to text.  This would be the plain text rendition of the CSV content.  
   Note that the latest CSV format as specified via the **[`parse(config)`](#parse(config))** operation is observed 
   and will affect the text output.
 
-##### transpose
+#### transpose
 - transpose current CSV content so that row datas are displayed as column data, and column's as row's.
 
-##### xml(root,row,cell)
+#### xml(root,row,cell)
 - convert current state of the CSV content to a XML document.  It's a 2-level XML document, with the first level 
   representing 'rows' and second level 'one row'. The first level node name is specified through `root` parameter while 
   the second level node name is specified through row `parameter`. For each column, `cell` is used to specify its node 
