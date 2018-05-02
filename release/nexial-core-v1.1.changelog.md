@@ -16,6 +16,7 @@ using with Nexial.
 
 
 ### General
+- Now supports [BAI2 Expression](../expressions/BAI2expression) to parse and validate text files with `BAI2` file format.
 - Upgraded to <a href="https://github.com/JetBrains/kotlin/releases/tag/v1.2.31" class="external-link" target="nexial_link">Kotlin 1.2.31</a>
 - Enabled [`project.properties`](../userguide/UnderstandingProjectStructure#project.properties) setting to take effect 
   even when no site-wide Nexial setting jar is found.
@@ -45,6 +46,10 @@ using with Nexial.
   - Enhanced `bin/*.[sh|cmd]` scripts so that they can be run outside of the `bin/` directory.
   - Enhanced `bin/nexial-project.[sh|cmd]` to support project directory not found under the standard `C:\projects\` or 
     `/Users/<username>/projects` directory.
+
+### [BAI2 Expression](../expressions/BAI2expression)
+- [BAI2 Expression](../expressions/BAI2expression) is a new expression added to support parsing and validating text files with `BAI2` file format.
+- Supports files in compliance with [BAI Standard Specifications](https://www.bai.org/docs/default-source/libraries/site-general-downloads/cash_management_2005.pdf).
 
 ### [Nexial Filter](../flowcontrols/filter)
 - [Nexial Filter](../flowcontrols/filter) now supported in flow control as well as CSV Expression (since 1.0).
