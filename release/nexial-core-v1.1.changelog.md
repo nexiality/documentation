@@ -47,9 +47,6 @@ using with Nexial.
   - Enhanced `bin/nexial-project.[sh|cmd]` to support project directory not found under the standard `C:\projects\` or 
     `/Users/<username>/projects` directory.
 
-### [BAI2 Expression](../expressions/BAI2expression)
-- [BAI2 Expression](../expressions/BAI2expression) is a new expression added to support parsing and validating text files with `BAI2` file format.
-- Supports files in compliance with [BAI Standard Specifications](https://www.bai.org/docs/default-source/libraries/site-general-downloads/cash_management_2005.pdf).
 
 ### [Nexial Filter](../flowcontrols/filter)
 - [Nexial Filter](../flowcontrols/filter) now supported in flow control as well as CSV Expression (since 1.0).
@@ -64,6 +61,10 @@ using with Nexial.
   - Defaults to using scale of 25 (i.e. 25 decimal places) when dealing with double.
   - Defaults to rounding "up" when dealing with double.
   - Currently applied to [LIST](../expressions/LISTexpression) and [NUMBER](../expressions/NUMBERexpression).
+
+  ###### [BAI2 Expression]
+  - [BAI2 Expression](../expressions/BAI2expression) is a **NEW** expression to support parsing and validating text files with `BAI2` file format.
+  - Supports files in compliance with [BAI Standard Specifications](https://www.bai.org/docs/default-source/libraries/site-general-downloads/cash_management_2005.pdf).
 
   ###### [CSV expression]
   - [CSV » `htmlTable`](../expressions/CSVexpression#htmltable): **NEW** operation to render CSV content into a HTML table.
