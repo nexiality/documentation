@@ -27,7 +27,7 @@ using with Nexial.
   the output file.  With this new System variable, it is possible to read and automate on the content of the same file.
 - Updated [Email Notification](../systemvars/index.md#nexial.enableEmail) code to send out email notification at the 
   end of an execution.  To enable notification, be sure to read up on 
-  [nexial.enableEmail](../systemvars/index.md#nexial.enableEmail)
+  [nexial.enableEmail](../systemvars/index.md#nexial.enableEmail).
 - **Output-to-Cloud** fixes and enhancements:
   - Add additional checks to ensure required settings are appropriately configured before use.
   - Any "output to cloud" code routine could fail-fast if improper/missing S3 connectivity is encountered.
@@ -93,7 +93,7 @@ using with Nexial.
   comparison result).
 
 #### [desktop commands](../commands/desktop/index)
-- desktop &rarquo; `getRowCount(var)` renamed to [desktop &raquo; `saveRowCount(var)`](../commands/desktop/saveRowCount(var)) 
+- desktop &raquo; `getRowCount(var)` renamed to [desktop &raquo; `saveRowCount(var)`](../commands/desktop/saveRowCount(var)) 
   to improve readability.
 - desktop &raquo; `scanTable(var,name)` renamed to [desktop &raquo; `useTable(var,name)`](../commands/desktop/useTable(var,name).md)
   to improve readability.
@@ -114,19 +114,18 @@ using with Nexial.
 - number &raquo; `assertBetween(num,lower,upper)` renamed to 
   [number &raquo; `assertBetween(num,min,max)`](../commands/number/assertBetween(num,min,max)) to improve readability.
 
-#### step commands
+#### [step commands](../commands/steps/index)
 - [step &raquo; `observe(prompt)`](../commands/step/observe(prompt)): fixed output to render response as second parameter.
 
 #### [web commands](../commands/web/index)
 - shipped with [geckodriver 0.20.1 (Firefox)](https://github.com/mozilla/geckodriver/blob/release/CHANGES.md#0201-2018-04-06):
-	- Avoid attempting to kill Firefox process that has stopped.	
-	- With the change to allow Firefox enough time to shut down in 0.20.0, geckodriver started unconditionally killing 
-	  the process to reap its exit status. This caused geckodriver to inaccurately report a successful Firefox shutdown 
-	  as a failure.
-	- The regression should not have caused any functional problems, but the termination cause and the exit status are 
-	  now reported correctly.
+  - Avoid attempting to kill Firefox process that has stopped.	
+  - With the change to allow Firefox enough time to shut down in 0.20.0, geckodriver started unconditionally killing 
+    the process to reap its exit status. This caused geckodriver to inaccurately report a successful Firefox shutdown 
+    as a failure.
+  - The regression should not have caused any functional problems, but the termination cause and the exit status are 
+    now reported correctly.
 
 #### [ws commands](../commands/ws/index)
 - fixed `oauth()` to support OAuth response that contains multiple entitlements, products, etc. (Essentially JSON array).
 
----
