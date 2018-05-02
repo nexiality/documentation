@@ -35,7 +35,7 @@ using with Nexial.
   - Reduce log verbosity for 3rd-party libraries.
   - Implemented "delayed" logging strategy so that more logs can be captured in execution-specific log files.
     - When Nexial first started, all file-based logs are pointing to `${java.io.tmpdir}`.
-    - When the "output" directory is determined, file-based logs are redirected to ${out}/logs directory.
+    - When the "output" directory is determined, file-based logs are redirected to `${out}/logs` directory.
 - Unit testing:
   - Added/fixed multiple unit tests.
   - Skip pause when running Nexial under unit testing.
@@ -118,7 +118,8 @@ using with Nexial.
 - [step &raquo; `observe(prompt)`](../commands/step/observe(prompt)): fixed output to render response as second parameter.
 
 #### [web commands](../commands/web/index)
-- shipped with [geckodriver 0.20.1 (Firefox)](https://github.com/mozilla/geckodriver/blob/release/CHANGES.md#0201-2018-04-06):
+- shipped with 
+  <a href="https://github.com/mozilla/geckodriver/blob/release/CHANGES.md#0201-2018-04-06" class="external-link" target="nexial_link">geckodriver 0.20.1 (Firefox)</a>:
   - Avoid attempting to kill Firefox process that has stopped.	
   - With the change to allow Firefox enough time to shut down in 0.20.0, geckodriver started unconditionally killing 
     the process to reap its exit status. This caused geckodriver to inaccurately report a successful Firefox shutdown 
@@ -127,5 +128,6 @@ using with Nexial.
     now reported correctly.
 
 #### [ws commands](../commands/ws/index)
-- fixed `oauth()` to support OAuth response that contains multiple entitlements, products, etc. (Essentially JSON array).
+- fixed [ws &raquo; `oauth()`](../commands/ws/oauth(var,url,auth)) to support OAuth response that contains multiple 
+  entitlements, products, etc. (essentially JSON array).
 
