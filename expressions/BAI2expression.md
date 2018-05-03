@@ -51,7 +51,7 @@ Example 1 - filter all the `Group` blocks with `Group Status` as 1<br/>
 **Output:**<br/>
 ![](image/BAI2_03.png)
 
-Example 2 - list all the `Bank Customer Account Number` values in the filtered groups<br/>
+Example 2 - list all the `Bank Customer Account` field values in the filtered groups<br/>
 **Script:**<br/>
 ![](image/BAI2_04.png)
 
