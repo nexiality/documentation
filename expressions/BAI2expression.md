@@ -77,3 +77,25 @@ comments: true
 
 **Output:**<br/>
 - ![](image/BAI2_09.png)
+
+##### Example 5: Usage of `csv`
+**Use case:**
+ - Filter all the transactions in the file and convert into `CSV` data type.
+ - And then the expression can be further extended with `CSV` operations.<br/>
+**Script:**<br/>
+- ![](image/BAI2_10.png)
+
+**Output:**<br/>
+- ![](image/BAI2_11.png)
+
+##### Example 6: Usage of `save(path)`
+**Use case:**
+ - Filter all the groups in the file and save the output to a file.<br/>
+**Script:**<br/>
+
+- ![](image/BAI2_12.png)
+
+**Output:**<br/>
+- Output with filtered groups are saved to given file `path`:
+
+- ![](image/BAI2_13.png)

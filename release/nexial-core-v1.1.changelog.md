@@ -47,7 +47,6 @@ using with Nexial.
   - Enhanced `bin/nexial-project.[sh|cmd]` to support project directory not found under the standard `C:\projects\` or 
     `/Users/<username>/projects` directory.
 
-
 ### [Nexial Filter](../flowcontrols/filter)
 - [Nexial Filter](../flowcontrols/filter) now supported in flow control as well as CSV Expression (since 1.0).
 - Added more conditions to Nexial Filter. The [complete list](../flowcontrols/filter#specification) is:
@@ -63,7 +62,7 @@ using with Nexial.
   - Currently applied to [LIST](../expressions/LISTexpression) and [NUMBER](../expressions/NUMBERexpression).
 
   ###### [BAI2 Expression]
-  - [BAI2 Expression](../expressions/BAI2expression) is a **NEW** expression to support parsing and validating text files with `BAI2` file format.
+  - [BAI2 Expression](../expressions/BAI2expression) is a new expression added to support parsing and validating text files with `BAI2` file format.
   - Supports files in compliance with [BAI Standard Specifications](https://www.bai.org/docs/default-source/libraries/site-general-downloads/cash_management_2005.pdf).
 
   ###### [CSV expression]
