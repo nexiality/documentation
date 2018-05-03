@@ -39,63 +39,50 @@ comments: true
 - **`save(path)`** - saves the content to given file path. File path is to be specified including file name.  
 - **`store(var)`** - stores the content to given variable name in memory. This variable name can be used in consecutive steps. 
 
-### Examples
+### Example
 
-- Sample BAI2 file used for examples:
-- ![](image/BAI2_01.png) 
+Sample BAI2 file used for examples:<br/>
+![](image/BAI2_01.png) 
 
-##### Example 1: Usage of `filter(recordType,name)`
-**Use case:** Filter all the groups with `Group Status` as 1<br/>
+Example 1 - filter all the `Group` blocks with `Group Status` as 1<br/>
 **Script:**<br/>
-- ![](image/BAI2_02.png)
+![](image/BAI2_02.png)
 
 **Output:**<br/>
-- ![](image/BAI2_03.png)
+![](image/BAI2_03.png)
 
-##### Example 2: Usage of `field(recordType,name)`
-**Use case:** List all the Bank Customer Account numbers in the filtered groups
+Example 2 - list all the `Bank Customer Account Number` values in the filtered groups<br/>
 **Script:**<br/>
-- ![](image/BAI2_04.png)
+![](image/BAI2_04.png)
 
 **Output:**<br/>
-- ![](image/BAI2_05.png)
+![](image/BAI2_05.png)
 
-##### Example 3: Mixed use of expressions. Expression transformed through various data types `BAI2`, `LIST` and `NUMBER`.
-**Use case:** Sum all the group total amounts and assert with total file amount <br/>
+Example 3 - sum all the `Group Total Amount` values and assert with total file amount <br/>
 **Script:**<br/>
-- ![](image/BAI2_06.png)
+![](image/BAI2_06.png)
 
 **Output:**<br/>
-- ![](image/BAI2_07.png)
+![](image/BAI2_07.png)
 
-##### Example 4: Usage of `store(var)`
-**Use case:**
- - Filter all the transactions in the file and list out all the `Transaction Amount` values.
- -  You can then transform to `Number` data type and can expand with more operations.<br/>
+Example 4 - filter all the `Transaction` records in the file and list out all the `Transaction Amount` values<br/>
 **Script:**<br/>
-- ![](image/BAI2_08.png)
+![](image/BAI2_08.png)
 
 **Output:**<br/>
-- ![](image/BAI2_09.png)
+![](image/BAI2_09.png)
 
-##### Example 5: Usage of `csv`
-**Use case:**
- - Filter all the transactions in the file and convert into `CSV` data type.
- - And then the expression can be further extended with `CSV` operations.<br/>
+Example 5 - filter all the `Transaction` records in the file and convert into `csv` data type<br/>
 **Script:**<br/>
-- ![](image/BAI2_10.png)
+![](image/BAI2_10.png)
 
 **Output:**<br/>
-- ![](image/BAI2_11.png)
+![](image/BAI2_11.png)
 
-##### Example 6: Usage of `save(path)`
-**Use case:**
- - Filter all the groups in the file and save the output to a file.<br/>
+Example 6: filter all the `Group` blocks in the file and `save` the output to a file.<br/>
 **Script:**<br/>
-
-- ![](image/BAI2_12.png)
+![](image/BAI2_12.png)
 
 **Output:**<br/>
-- Output with filtered groups are saved to given file `path`:
-
-- ![](image/BAI2_13.png)
+Output with filtered `Group` blocks are saved to given file `path`:<br/>
+![](image/BAI2_13.png)
