@@ -14,7 +14,7 @@ comments: true
 - Read more about [BAI Standard Specifications](https://www.bai.org/docs/default-source/libraries/site-general-downloads/cash_management_2005.pdf) in PDF. 
 
 #### BAI2 File Structure
-- Record types and filed names that needs to be used in the `BAI2` expression:
+Record types and field names that needs to be used in the `BAI2` expression:
 
 | Record Code | Record Type | Purpose | Field Names |
 | --- | --- | --- | --- |
@@ -26,8 +26,8 @@ comments: true
 | 98  | `Group Trailer` | Ends Group | `Record Code`<br/>`Group Total Amount`<br/>`Group Total Accounts`<br/>`Group Total Records`|
 | 99  | `File Trailer` | Ends File | `Record Code`<br/>`File Total Amount`<br/>`File Total Groups`<br/>`File Total Records`|
 
-- BAI2 Sample File<br/>
-- ![](image/BAI2_01.png)
+BAI2 Sample File<br/>
+![](image/BAI2_01.png)
 
 
 ### Operations
@@ -58,7 +58,7 @@ Example 2 - list all the `Bank Customer Account Number` values in the filtered g
 **Output:**<br/>
 ![](image/BAI2_05.png)
 
-Example 3 - sum all the `Group Total Amount` values and assert with total file amount <br/>
+Example 3 - sum all the `Group Total Amount` values from each `Group Trailer` record and assert with `File Total Amount` value from `File Trailer` record<br/>
 **Script:**<br/>
 ![](image/BAI2_06.png)
 
