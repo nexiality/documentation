@@ -18,6 +18,12 @@ For example,<br/>
 Assuming that the query runs successfully, a **`MyResult.csv`** will be created in the `out` directory (as specified), 
 and a **`MyResult.json`** (query metadata) will be created in the same directory.
 
+Below is a snapshot of the `output` CSV file generated via this command (comma-separated fields, newline-separated 
+records):<br/>
+![](image/saveResult_02.png)
+
+
+#### Query Metadata
 The content of the query metadata differs by the query specified.  In general, it contains the 
 [`Execution Result`](index) but without the dataset.  For example, the screenshot shows one such JSON containing:
 
@@ -29,9 +35,6 @@ The content of the query metadata differs by the query specified.  In general, 
 
 ![](image/saveResult_03.png)
 
-Below is a snapshot of the `output` CSV file generated via this command (comma-separated fields, newline-separated 
-records):<br/>
-![](image/saveResult_02.png)
 
 
 ### Parameters
@@ -42,10 +45,11 @@ records):<br/>
 
 
 ### Example
-see above
+
 ![](image/saveResult_04.png)
 
 
 ### See Also
 - [`runSQL(var,db,sql)`](runSQL(var,db,sql))
 - [`runSQLs(var,db,sqls)`](runSQLs(var,db,sqls))
+- [`saveResults(db,sqls,outputDir)`](saveResults(db,sqls,outputDir))
