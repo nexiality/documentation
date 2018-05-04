@@ -47,6 +47,35 @@ Here are the various settings available to configure the appropriate mail server
 
 <br/>
 
+#### Gmail
+Sending email via Gmail is possible, albeit a few things to take care initially.
+
+Here's the settings for targeting Gmail as the mail host:<br/>
+![](image/mail_01.png)
+
+Note that you need to fill in the correct email and password for `Gmail.username` and `Gmail.password`. You can 
+optionally rename the profile from `Gmail` to something else.
+
+Gmail by default enforces "secured third-party client app" such that programmatically access (such as Nexial does) is 
+denied.  You might see a similar error as below when running a `mail` command against Gmail:<br/>
+
+![](image/mail_02.png)
+
+This is an indication that the email account in questionis restricted to "secured third-party client app" only. For 
+further understanding about this, please visit 
+<a href="https://support.google.com/mail/answer/7126229?visit_id=1-636610148744612821-503885497&rd=2#cantsignin" class="external-link" target="nexial_link">https://support.google.com/mail/answer/7126229?visit_id=1-636610148744612821-503885497&rd=2#cantsignin</a>
+and <a href="https://support.google.com/accounts/answer/6010255" class="external-link" target="nexial_link">https://support.google.com/accounts/answer/6010255</a>.
+
+This issue can be addressed via 
+<a href="https://myaccount.google.com/lesssecureapps" class="external-link" target="nexial_link">https://myaccount.google.com/lesssecureapps</a>. 
+After successfully signing in to your Gmail account, proceed to enable "les secure apps" option:
+
+![](image/mail_03.png)
+
+After this, you should be able to send email via your Gmail account.  For security reason, it is recommended **NOT**
+to use your personal account for automation.  Instead, set up another Gmail account for the purpose of automating
+the sending of emails via Nexial.
+
 
 ### Available Commands
 - [`send(profile,to,subject,body)`](send(profile,to,subject,body))
