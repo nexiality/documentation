@@ -17,6 +17,12 @@ comments: true
   `project.properties` or data sheets.
 
 
+### Nexial Expression
+- allow for "tight-space" expression with no spaces between `[..]` and `=>` and the subsequent operations.
+ 
+
 #### [rdbms commands](../commands/rdbms/index)
 - [rdbms &raquo; `saveResults(db,sqls,outputDir)`](../commands/rdbms/saveResults(db,sqls,outputDir)): **NEW** command
   to execute a series of queries and save the results to CSV files.
+
+
