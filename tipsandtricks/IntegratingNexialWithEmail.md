@@ -37,8 +37,6 @@ export JAVA_OPT="$JAVA_OPT -Dmail.smtp.auth=true -Dmail.smtp.username=<email> -D
 ./nexial.sh -script ~/projects/... ...
 ```
 
-<br/>
-
 (on Windows):<br/>
 ```batch
 set JAVA_OPT=-Dnexial.enableEmail=true -Dnexial.mailTo=<recipients> 
@@ -48,8 +46,6 @@ set JAVA_OPT=%JAVA_OPT% -Dmail.smtp.auth=true -Dmail.smtp.username=<email> -Dmai
 ... ...
 nexial.cmd -script C:\projects\... ...
 ```
-
-<br/>
 
 ### Via project.properties
 The `project.properties` is expected to be found under the `artifact/` directory.
@@ -64,13 +60,12 @@ mail.smtp.from=nexiality@@users.noreply.github.com
 mail.smtp.auth=true
 mail.smtp.username=<mail account>
 mail.smtp.password=<password>
-
 ```
 
 
 ### Via data sheet
 ![](image/IntegratingNexialWithEmail_01.png)<br/>
-<br/>
+
 
 ### Combining to Improve Flexibility
 It is important to note that it is entirely possible to mix up the above 3 techniques to improve flexibiltiy.  For 
@@ -83,7 +78,6 @@ the new email recipients via System variable, like this:
 export JAVA_OPT=-Dnexial.mailTo=<email_3,email_4>
 ... ...
 ./nexial.sh -script ... ...
-
 ```
 
 Only the `nexial.mailTo` System variable is needed here.  The rest of the mail settings can remained in data sheets or
