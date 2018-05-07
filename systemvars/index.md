@@ -196,7 +196,7 @@ table.sysvar a code { background-color:transparent; border:none; font-weight:nor
     </ol>
     <br/>
     All these settings can be added via command line (i.e. <code>-D...</code>), 
-    <a href="../../userguide/UnderstandingProjectStructure#project.properties"><code>project.properties</code></a> or
+    <a href="../userguide/UnderstandingProjectStructure#projectproperties"><code>project.properties</code></a> or
     the appropriate data file.  For example, from command line:<br/>
     <code>
     set JAVA_OPT=-Dnexial.enableEmail=true -Dmail.smtp.host=mail.mycompany.com -Dmail.smtp.auth=false -Dnexial.scope.mail=my_and_myself@mycompany.com<br/>
