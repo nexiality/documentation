@@ -44,4 +44,4 @@ comments: true
 
 
 #### External Services
-- [Integrating with Email](IntegratingNexialWithEmail.md)
+- [Integrating with Email](IntegratingNexialWithEmail)
