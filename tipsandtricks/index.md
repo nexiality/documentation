@@ -42,3 +42,6 @@ comments: true
 - [BrowserStack Integration](BrowserStackIntegration)
 - [Script failing on BrowserStack](ScriptFailingonBrowserStack)
 
+
+#### External Services
+- [Integrating with Email](IntegratingNexialWithEmail.md)
