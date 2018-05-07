@@ -211,8 +211,30 @@ For standard System properties, see the section below titled as [Standard System
         <td>false</td>
         <td>false</td>
         <td>
-            Determine if Nexial should automatically open the output in Excel after each iteration. This could be a timesaver
-            since one would not have to manually search for the output file.<br/>
+            Determine if Nexial should automatically open the output in Excel after each iteration. This could be a 
+            timesaver since one would not have to manually search for the output file.<br/>
+            <br/>
+            For readability's sake, there's another System variable - <code>nexial.openResult</code> - that would
+            provide the same functionality.  It's your choice to use either one of these 2 System variables.  However,
+            please note that for backward compatibility reasons, 
+            <code>nexial.assistantMode</code> will overrides <code>nexial.openResult</code>.<br/>
+            <br/>
+            This configuration is forcefully turned off during remote execution.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="nexial.openResult"/><code>nexial.openResult</code></td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            Determine if Nexial should automatically open the output in Excel after each iteration. This could be a 
+            timesaver since one would not have to manually search for the output file.<br/>
+            <br/>
+            This System variable provides the same functionality as <code>nexial.assistantMode</code>, albeit perhaps
+            more readable. It's your choice to use either one of these 2 System variables.  However, please note that 
+            for backward compatibility reasons, 
+            <code>nexial.assistantMode</code> will overrides <code>nexial.openResult</code>.<br/>
             <br/>
             This configuration is forcefully turned off during remote execution.
         </td>
