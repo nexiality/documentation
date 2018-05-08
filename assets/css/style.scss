@@ -82,6 +82,14 @@ td {
     text-shadow:      none;
 }
 
+audio {
+    z-index: 1;
+}
+
+table audio {
+    display: table-cell;
+}
+
 .inner {
     width:       970px !important;
     margin:      0 50px;

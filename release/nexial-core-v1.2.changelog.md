@@ -15,7 +15,7 @@ comments: true
   underlying bug (in POI) is documented at https://bz.apache.org/bugzilla/show_bug.cgi?id=57423
 - fixed Nexial email notification so that email settings can be configured either System properties (i.e. `-D`), 
   `project.properties` or data sheets.
-
+- Nexial Setup now ready for use.  Checks dos. for usage details.
 
 ### Nexial Expression
 - allow for "tight-space" expression with no spaces between `[..]` and `=>` and the subsequent operations.
