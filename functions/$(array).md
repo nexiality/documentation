@@ -26,10 +26,10 @@ By default, [`nexial.textDelim`](../systemvars/index#nexial.textDelim) has the
 ### Available Functions
 - **`$(array|length)`** \- renders the length of the target array.  An empty array would render `0`.
 - **`$(array|index)`** \- renders the position within the target array where the first occurrence of a specified 
-  element is found.  For example, `$(array|Apple,Orange,Banana|Orange)` would return `1`.  Note that Nexial is 
+  element is found.  For example, `$(array|index|Apple,Orange,Banana|Orange)` would return `1`.  Note that Nexial is 
   zero-based.
 - **`$(array|item)`** \- renders the element of the specified position (zero-based) in the target array.  For example, 
-  `$(array|Salt,Pepper,Sugar,Cheese|3)` would render `Cheese`. 
+  `$(array|item|Salt,Pepper,Sugar,Cheese|3)` would render `Cheese`. 
 - **`$(array|subarray)`** \- renders a portion of the target array, based on the specified `start` and `end` positions.
 - **`$(array|distinct)`** \- renders the target array by removing duplicated elements.
 - **`$(array|ascending)`** \- renders the target array in ascending order.  The order is determined lexicographically 
