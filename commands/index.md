@@ -32,6 +32,7 @@ below to learn more about each type and the commands available under each of the
 - [`pdf`](pdf): commands regarding the PDF file type.
 - [`rdbms`](rdbms): commands regarding RDBMS operations.
 - [`redis`](redis): commands regarding Redis database operations.
+- [`sound`](sound): commands to automate audio alert and notification.
 - [`ssh`](ssh): commands to automate SSH-based automation.
 - [`step`](step): commands for manual tasks and validations.
 - [`web`](web): commands to regarding web application.

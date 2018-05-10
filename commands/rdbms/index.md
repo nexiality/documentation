@@ -111,7 +111,7 @@ of wrapper - one for SELECT statements and the other one for INSERT/UPDATE/DELET
 
 To reference the specific execution result, one would use the dot notation (`.`) like this: `${result}.sql` . This 
 would retrieve the SQL statement associated to this execution.  Of course one could assign a different variable name 
-other than `result`.
+other than `result`. 
 - `${...}.sql` \- retrieves the SQL statement executed to derive this execution result.
 - `${...}.startTime` \- retrieves the time when this SQL was executed, in 
   <a href="https://en.wikipedia.org/wiki/Unix_time" class="external-link" target="_nexial_external">epoch</a> format.  
@@ -152,3 +152,4 @@ Note that many database vendors (and the corresponding database drivers) adhere 
 - [`runSQL(var,db,sql)`](runSQL(var,db,sql))
 - [`runSQLs(var,db,sqls)`](runSQLs(var,db,sqls))
 - [`saveResult(db,sql,output)`](saveResult(db,sql,output))
+- [`saveResults(db,sqls,outputDir)`](saveResults(db,sqls,outputDir))
