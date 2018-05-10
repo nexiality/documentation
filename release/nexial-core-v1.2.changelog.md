@@ -17,10 +17,10 @@ comments: true
   `project.properties` or data sheets.
 - Nexial Setup now ready for use.  Checks dos. for usage details.
 
-### Nexial Expression
+#### Nexial Expression
 - allow for "tight-space" expression with no spaces between `[..]` and `=>` and the subsequent operations.
 
-### Built-in Function
+#### Built-in Function
 - [$(execution)](../functions/$(execution)): **NEW** built-in function to expose execution-time metadata. 
 
 #### [rdbms commands](../commands/rdbms/index)
@@ -28,7 +28,7 @@ comments: true
   to execute a series of queries and save the results to CSV files.
 
 
-### [sound commands](../commands/sound/index)
+#### [sound commands](../commands/sound/index)
 - new set of commands to generate digitalized sound and to generate text-to-speech
 - [sound &raquo; `play(audio)`](../commands/sound/play(audio)): **NEW** command to play either 
   [predefined digitized sounds](../commands/sound/play(audio)#example) or audio file (WAV or MP3) of your own choosing.
