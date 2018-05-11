@@ -35,4 +35,6 @@ comments: true
 - [sound &raquo; `speak(text)`](../commands/sound/speak(text)): **NEW** command to generate text-to-speech during execution.
 - [sound &raquo; `laser(repeats)](../commands/sound/laser(repeats)): **NEW** command to generate digitized "laser" sounds.
   One may use `repeats` to control the sound duration.
-
+  
+#### [Configuration setup](../userguide/BatchFiles)
+- [User Configuration Setup](../userguide/BatchFiles): Provision for the user to have their own configuration setup.

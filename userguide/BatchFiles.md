@@ -42,7 +42,34 @@ For example,<br/>
   `nexial.cmd -script c:\projects\myProject\artifact\script\myProject.xlsx -scenario test1` 
 
 ---------------------------------------------
+#### nexial-setup.cmd / nexial-setup.sh
 
+This is the script used to setup the user specific configurations. This command has following command line options:
+
+| options           | explanation |
+| ----------------- | ----------- |
+| **`-file`** | This is the location of the key value pairs user wants to setup.| 
+| **`-key`** | This is the key used to encrypt the data.|
+<br/>
+
+For example,<br/>
+- Setup user defined configurations:<br/>
+  `nexial-setup.cmd -f "C:\Projects\config.data" -k "|7FDo8#Q;;mZ>G22"`
+  
+##### Usage
+1.  Open a console and point it to `${NEXIAL_HOME}/bin`
+2.  Run `nexial-crypt.cmd` (Windows) or `./nexial-crypt.sh` (*NIX, OSX) with the data file and the secret key as follows:  
+    `nexial-setup.cmd -f "C:\Projects\config.data" -k "|7FDo8#Q;;mZ>G22"`
+3.  The config.data file content looks like the following:  
+    ![](image/NexialSetup_01.png)
+4.  When the Nexial command is run with the appropriate arguments it creates a lib called setup.jar inside the lib folder.
+    Also a message is displayed asking you to delete the config file as shown below:  
+    ![](image/NexialSetup_02.png)
+5.  Now you can further zip this using the `jar` command and distribute it further with the team. For example
+    `jar -cf nexial.zip .`
+6. That is it! the latest zip you have is configured with the necessary configurations.
+
+---------------------------------------------
 #### nexial-crypt.cmd / nexial-crypt.sh
 This script is used to encrypt the sensitive data.
 
