@@ -8,7 +8,7 @@ comments: true
 
 
 #### General
-- [Avoid OutOfMemory error - Trim Test Artifacts](TrimTestArtifacts.md)
+- [Avoid OutOfMemory error - Trim Test Artifacts](TrimTestArtifacts)
 - [Best Practice on Script Names](ValidScriptNames)
 - [Improving Script Portability](ImprovingScriptPortability)
 - [Integrating with other projects](IntegratingWithOtherProjects)

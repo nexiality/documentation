@@ -8,14 +8,14 @@ comments: true
 
 
 ### Description
-This command plays one of the predefined sounds, or an user-defined audio file if such file is specified as `audio`.
-Note that this command can only play MP3 and WAV files at this time.  If you need support for additional audio encoding, 
+This command plays one of the predefined sounds or an user-defined audio file via the `audio` parameter.
+Note that this command can only play MP3 and WAV files at this time. If you need support for additional audio encoding, 
 please feel free to request by create an 
 <a href="https://github.com/nexiality/nexial-core/issues/new" class="external-link" target="nexial_external">issue</a>.
 
-Note that this command will automatically skipped over when the execution is triggered in a CI (Jenkins) environment. I
-mean, "_If a Nexial test makes a sound in an execution and no one is around to hear it, does it make a sound_?" Any 
-_metaphysicists_ out there?
+Note also that this command will automatically skipped over when the execution is triggered in a CI (Jenkins) 
+environment. I mean, "_If a Nexial test makes a sound in an execution and no one is around to hear it, does it make 
+a sound_?" Any _metaphysicists_ out there?
 
 See below for sampling of predefined sounds.
 
@@ -25,7 +25,7 @@ See below for sampling of predefined sounds.
 
 
 ### Example
-Below is the list of predefined sounds available as part of Nexial distribution.  More will be added from time to time.
+Below is the list of predefined sounds available as part of Nexial distribution. More will be added from time to time.
 
 | Name     | Example                                     | Sampling                                                    |
 |----------|---------------------------------------------|-------------------------------------------------------------|
@@ -54,10 +54,13 @@ Below is the list of predefined sounds available as part of Nexial distribution.
 
 <br/>
 
-Alternatively, one could use custom audio file.  For example:<br/>
+Alternatively, one could use custom audio file. For example:<br/>
 > sound &raquo; `play(audio)` &#124; `$(syspath|data|fullpath)/myaudio.mp3`
 
 <br/>
 
 ### See Also
+- [sound &raquo; `laser(repeats)`](laser(repeats))
+- [sound &raquo; `speak(text)`](speak(text))
+
 

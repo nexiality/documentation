@@ -1,27 +1,30 @@
 ---
 layout: default
 title: sound
-tags: command sound mp3 wav beep alert 
+tags: command sound mp3 wav beep alert speak talk
 comments: true
 ---
 
 
 ### Description
-The sound commands is an interesting set of commands. They are not designed for automation, as one would traditionally 
-considered as automation. Instead, they are designed to enhence one's automation execution by providing audio 
+The sound commands are an interesting set of commands. They are not designed for automation as one would traditionally 
+considered as automation. Instead, they are designed to enhance one's automation execution by providing audio 
 notifications.
 
-Consider the following: Supposed you have an automation scripts to test out a long list of functionality. The entire 
-script takes hours to complete. While you could run the script in the background (while you work on other tasks), it 
-might be advantageous to know when the script has finished or failed. Perhaps you are running a suite of tests, of 
-which each would take more than an hour to complete. As such it could be useful to know when a new script has started
-to execute so that you can track the progress of your test suite.
+Consider the following: Supposed you have an automation script to test out a long list of functionality. The entire 
+script takes hours to complete. Instead of checking the status of the execution every now and again, a more efficient
+way would to have the automation tool inform you of critical statuses - the classical pull versus push model. Some
+examples of such notification would be:
+- _Notify me when an error occurred_
+- _Notify me when my script is started_
+- _Notify me when my script is complete_
+- _Notify me when `${total_order}` is more than 500_
 
-All these scenarios, and many more, are the impetus for designing such sound commands, which drive at using audio as 
+All these examples, and many more, are the impetus for designing such sound commands, which drive at using audio as 
 notification of the execution progress or critical events. By using different sounds 
 ([Predefined Audio Library](play(audio)#example)) one can create distinguishing audio cues for different events such
-as "start", "failed" or "complete". It is noteworthy to state that audio notification has another advantage against the
-more common, GUI-based notification, namely **non-invasiveness**. 
+as "start", "failed" or "complete". Another advantage of using audio notification against the more common, 
+GUI-based notification is its less **invasive** nature. 
 <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dn742472(v=vs.85).aspx" class="external-link" target="nexial_external">UI notifications</a>, 
 such as pop up windows, alert dialogs, status bar bubbles, toast messages, etc. are designed to interrupt one's focus.
 At times this can be rather jarring and counter-productive, esp. if one's reading something on the computer screen. 
@@ -37,5 +40,7 @@ show a "SKIPPED" result for any sound commands executed in a zero-touch environm
 
 
 ### Available Commands
-- [`play(audio)`](play(audio))
-- [`laser()`]()
+- [sound &raquo; `laser(repeats)`](laser(repeats))
+- [sound &raquo; `play(audio)`](play(audio))
+- [sound &raquo; `speak(text)`](speak(text))
+

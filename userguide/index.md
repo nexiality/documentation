@@ -28,5 +28,5 @@ Let's get started!
 ------------------------------------------------------------------------------------------------------------------------
 
 _Curious about where we've come from, and how Nexial came to be?_<br/>
-[History of Nexial](HistoryOfNexial.md)
+[History of Nexial](HistoryOfNexial)
 
