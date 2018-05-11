@@ -14,7 +14,7 @@ This built-in function provides textual formatting of various common data type. 
 ### Available Functions
 - **`$(format|upper|text)`** \- convert `text` to its UPPERCASE equivalent.
 - **`$(format|lower|text)`** \- convert `text` to its lowercase equivalent.
-- **`$(format|lower|text)`** \- convert `text` to title case - that is, the first letter of each word is 
+- **`$(format|titlecase|text)`** \- convert `text` to title case - that is, the first letter of each word is 
   converted to uppercase, while the rest to lowercase.
 - **`$(format|left|text|length)`** \- render only the left-most portion of `text`, for the specified `length`.
 - **`$(format|right|text|length)`** \- render only the right-most portion of `text`, for the specified `length`.
