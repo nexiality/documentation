@@ -50,6 +50,7 @@ This is the script used to setup the user specific configurations. This command 
 | ----------------- | ----------- |
 | **`-file`** | This is the location of the key value pairs user wants to setup.| 
 | **`-key`** | This is the key used to encrypt the data.|
+
 <br/>
 
 For example,<br/>
