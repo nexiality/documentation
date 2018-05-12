@@ -10,7 +10,8 @@ comments: true
 ### Description
 This command generates audio notification, just like other [sound commands](index). However this one is different in 
 that it generates audio rendition of specified `text` via text-to-speech technology. By specifying `text`, this command
-converts the audio equivalent, which can be purposed as effective audio notification.
+converts the audio equivalent, which can be purposed as an effective form of audio notification.
+
 
 ### Setup
 Current implementation limits `text` to 500 characters since this has direct impact of the underlying AWS usage 
@@ -23,7 +24,7 @@ following configuration details must be set up:
 | `tts.accessKey`  |             | [**REQUIRED**] Specify the AWS access key to use for the text-to-speech service. |
 | `tts.secretKey`  |             | [**REQUIRED**] Specify the AWS secret key to use for the text-to-speech service. |
 | `tts.sampleRate` | 22050       | (Optional) The audio frequency specified in Hz. The valid values are `8000`, `16000` and `22050`. |
-| `tts.language`   | en-GB       | The language code of `text` to which to translate. Here are languages currently supported:<br/> ![](image/speak_01.png) |
+| `tts.language`   | en-GB       | (Optional) The language code of `text` to which to translate. Here are languages currently supported:<br/> ![](image/speak_01.png) |
 
 <br/>
 

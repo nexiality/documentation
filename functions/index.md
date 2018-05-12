@@ -16,6 +16,7 @@ combination with test data to render dynamic values.
 - [`$(array)`]($(array))
 - [`$(count)`]($(count))
 - [`$(date)`]($(date))
+- [`$(execution)`]($(execution))
 - [`$(format)`]($(format))
 - [`$(projectfile)`]($(projectfile))
 - [`$(random)`]($(random))

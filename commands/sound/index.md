@@ -28,13 +28,13 @@ GUI-based notification is its less **invasive** nature.
 <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dn742472(v=vs.85).aspx" class="external-link" target="nexial_external">UI notifications</a>, 
 such as pop up windows, alert dialogs, status bar bubbles, toast messages, etc. are designed to interrupt one's focus.
 At times this can be rather jarring and counter-productive, esp. if one's reading something on the computer screen. 
-Using audio notification, there isn't any shift of visual focus (i.e. nothing's blocking one's view) and yet it provides
+Using audio notification, there isn't any shift of vision focus (i.e. nothing's blocking one's view) and yet it provides
 similar level of usefulness even when one's turned away from the computer.
 
 
 ### Zero-Touch Environment
 When executing under a zero-touch environment - CI environment like Jenkins - the sound commands will automatically
-skipped over since it does not make sense to play audio notifications remotely. Besides, in a likelihood, the CI
+skipped over since it does not make sense to play audio notifications remotely. Besides, in all likelihood, the CI
 host is likely configured any sound cards or audio out (such as AWS EC2 or Azure VM). The execution result should
 show a "SKIPPED" result for any sound commands executed in a zero-touch environment.
 
