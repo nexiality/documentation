@@ -17,6 +17,7 @@ comments: true
   `project.properties` or data sheets.
 - Nexial Setup now ready for use.  Checks dos. for usage details.
 - [User Configuration Setup](../userguide/BatchFiles): Provision for the user to have their own configuration setup.
+- updated to kotlin 1.2.41
 
 #### Nexial Expression
 - allow for "tight-space" expression with no spaces between `[..]` and `=>` and the subsequent operations.
@@ -35,4 +36,4 @@ comments: true
 - [sound &raquo; `speak(text)`](../commands/sound/speak(text)): **NEW** command to generate text-to-speech during execution.
 - [sound &raquo; `laser(repeats)](../commands/sound/laser(repeats)): **NEW** command to generate digitized "laser" sounds.
   One may use `repeats` to control the sound duration.
-
+- limit tts text to 500 character
