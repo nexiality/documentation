@@ -20,6 +20,7 @@ comments: true
 - updated to kotlin 1.2.41
 - update code to handle parsing of built-in function when `nexial.textDelim` is pipe (`|`), which is also the separator
   for built-in function parameter.
+- updated `bin/nexial-project.sh` to allow for script/data files be added to existing project.
 
 #### Nexial Expression
 - allow for "tight-space" expression with no spaces between `[..]` and `=>` and the subsequent operations.
@@ -28,8 +29,6 @@ comments: true
 - [`$(execution)`](../functions/$(execution)): **NEW** built-in function to expose execution-time metadata. 
 - [`$(array)`](../functions/$(array)): now handles scenario where `nexial.textDelim` is pipe (`|`), which conflicts 
   with function separator.
-
-
 
 #### [rdbms commands](../commands/rdbms/index)
 - [rdbms &raquo; `saveResults(db,sqls,outputDir)`](../commands/rdbms/saveResults(db,sqls,outputDir)): **NEW** command
