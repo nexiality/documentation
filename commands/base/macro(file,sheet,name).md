@@ -18,10 +18,8 @@ of the execution.  One may think of this as a form of "in-place expansion".
 [`Section command`](section(steps)) is extension of macro. Section command is evolved from the idea of having finer control 
 over flow control across entire macro or also for individual macro steps. Now macro became more flexible with this.
 
-Lets see how it is converted to section command.
-
-##### How it is converted to section
-   [`Section command`](section(steps)) is the extension of the Macro. Nexial internally converts macro command to section command. Lets walk through this.
+#### How it is converted to section
+   As `Section command` is the extension of the Macro, nexial internally converts macro command to section command. Lets walk through this.
    1. First of all, we will get set of reusable steps from parameters of macro command and getting count of reusable steps.
    2. Replacing base.macro(file,sheet,name) command with base.section(steps) where steps is no. of macro i.e reusable steps.
    3. Then corresponding imported macro steps from macro file added as subsequent steps in script file.
@@ -29,7 +27,7 @@ Lets see how it is converted to section command.
    5. Output for section command converted from macro is styled differently to give better visual against normal steps.
    
 
-##### Macro script
+#### Macro script
 - **Template of macro script:**<br/>
         1. The macro look very similar to that of a Nexial script.  It contains the same basic structure of script template, like
     this:
