@@ -40,6 +40,9 @@ comments: true
   nuances.
 - [base &raquo; `section(steps)`](../commands/base/section(steps)): **NEW** command to capture macro steps so that 
   flow control can be expressed across the entire "macro step group" (or section), or individually per step.
+- [base &raquo; `section(steps)`](../commands/base/section(steps)): fixed logic so that we can properly 'skipped' any
+  enclosed [base &raquo; `repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)) steps when
+  the section command is 'skipped'. 
 
 #### [rdbms commands](../commands/rdbms/index)
 - [rdbms &raquo; `saveResults(db,sqls,outputDir)`](../commands/rdbms/saveResults(db,sqls,outputDir)): **NEW** command
