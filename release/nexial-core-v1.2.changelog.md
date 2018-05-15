@@ -21,6 +21,10 @@ comments: true
 - update code to handle parsing of built-in function when `nexial.textDelim` is pipe (`|`), which is also the separator
   for built-in function parameter.
 - updated `bin/nexial-project.sh` to allow for script/data files be added to existing project.
+- update execution output with different style/color for different columns
+- update execution output so that key columns are allocated sufficient width.
+- update execution output so that each row would be allocated sufficient height without appearing too "cramped".
+- update execution output so that "description" columns of macro, section and repeat-until will appear differently to provide better visual cues.
 
 #### Nexial Expression
 - allow for "tight-space" expression with no spaces between `[..]` and `=>` and the subsequent operations.
@@ -29,6 +33,13 @@ comments: true
 - [`$(execution)`](../functions/$(execution)): **NEW** built-in function to expose execution-time metadata. 
 - [`$(array)`](../functions/$(array)): now handles scenario where `nexial.textDelim` is pipe (`|`), which conflicts 
   with function separator.
+
+#### [base commands](../commands/base/index)
+- [base &raquo; `macro(file,sheet,name)`](../commands/base/macro(file,sheet,name)) now merge with 
+  [base &raquo; `section(steps)`](../commands/base/section(steps)) so that we can express additional flow control
+  nuances.
+- [base &raquo; `section(steps)`](../commands/base/section(steps)): **NEW** command to capture macro steps so that 
+  flow control can be expressed across the entire "macro step group" (or section), or individually per step.
 
 #### [rdbms commands](../commands/rdbms/index)
 - [rdbms &raquo; `saveResults(db,sqls,outputDir)`](../commands/rdbms/saveResults(db,sqls,outputDir)): **NEW** command
