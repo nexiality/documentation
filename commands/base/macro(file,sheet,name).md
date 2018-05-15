@@ -10,10 +10,24 @@ comments: true
 ### Description
 The main idea with macro is to enable the reuse of a set of test steps.  Not only the reuse of the scripting effort, 
 but this technique also helps with the reuse of execution.  This helps to create uniformity in the execution of common
-steps.
+steps. ***Macro command is converted to section command internally.***
 
 This command includes a set of test steps that are kept within a "macro script" (more below) and execute them as part
-of the execution.  One may think of this as a form of "in-place expansion".
+of the execution.  One may think of this as a form of "in-place expansion". 
+
+[`Section command`](section(steps)) is extension of macro. Section command is evolved from the idea of having finer control 
+over flow control across entire macro or also for individual macro steps. Now macro became more flexible with this.
+
+Lets see how it is converted to section command.
+
+##### How it is converted to section
+   [`Section command`](section(steps)) is the extension of the Macro. Nexial internally converts macro command to section command. Lets walk through this.
+   1. First of all, we will get set of reusable steps from parameters of macro command and getting count of reusable steps.
+   2. Replacing base.macro(file,sheet,name) command with base.section(steps) where steps is no. of macro i.e reusable steps.
+   3. Then corresponding imported macro steps from macro file added as subsequent steps in script file.
+   4. Then it is treated as section command altogether.
+   5. Output for section command converted from macro is styled differently to give better visual against normal steps.
+   
 
 ##### Macro script
 - **Template of macro script:**<br/>
@@ -62,3 +76,4 @@ Script calling macro **Script**:<br/>
 
 
 ### See Also
+- [`section(steps)`](section(steps))
