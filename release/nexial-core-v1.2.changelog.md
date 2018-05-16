@@ -53,7 +53,7 @@ comments: true
 - [sound &raquo; `play(audio)`](../commands/sound/play(audio)): **NEW** command to play either 
   [predefined digitized sounds](../commands/sound/play(audio)#example) or audio file (WAV or MP3) of your own choosing.
 - [sound &raquo; `speak(text)`](../commands/sound/speak(text)): **NEW** command to generate text-to-speech during execution.
-- [sound &raquo; `laser(repeats)](../commands/sound/laser(repeats)): **NEW** command to generate digitized "laser" sounds.
+- [sound &raquo; `laser(repeats)`](../commands/sound/laser(repeats)): **NEW** command to generate digitized "laser" sounds.
   One may use `repeats` to control the sound duration.
 - limit tts text to 500 character
 
