@@ -11,6 +11,9 @@ comments: true
 
 
 ### General
+- fixed #data sheet updation in output file with current values from the execution context.
+- fix to save #data sheet values in sorted order.
+- updated with nexial-seeknow-1.0.jar
 - fixed internal logic to handle the insertion of Excel rows that avoids the infamous "unreadable content" error. The
   underlying bug (in POI) is documented at https://bz.apache.org/bugzilla/show_bug.cgi?id=57423
 - fixed Nexial email notification so that email settings can be configured either System properties (i.e. `-D`), 
