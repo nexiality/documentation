@@ -17,15 +17,21 @@ This command has its own purpose like other nexial commands. This command works 
 execution flow for multiple subsequent commands as well as for subsequent steps. 
 
 For Example,<br/>
-1. In the execution of "search of all defective products", there might not be any defective products. It is not a 
-   application fault so one might want to ignore all subsequent steps. Instead of writing skipIf() or proceedIf() 
-   condition for all the subsequent steps which is to be ignored, write it once for entire section and add subsequent 
-   steps in the section by specifying subsequent step count.
-2. In same example, if there is defective product and further execution is likely to generate false-positive result, 
-   wants to use failIf() condition. So, one can use SkipIf() for entire section and failIf() for some of the subsequent 
-   steps where it is needed. 
+- Let's consider testing of web application. We will most likely have login, sign up scenarios. We will have one section for login 
+and other for sign up. If we don't have credentials, we have to sign up otherwise directly login to app. So if we do have credentials
+we need to ignore all sign up section steps. Let's consider next scenario too. The login section will have its own flow controls like
+if password does not have special character, we will end the automation script directly. 
+In this kind of scenario where we will need particular set of steps to be skipped or in case of multiple flow control, 
+section command can be more useful. It will add more flexibility for use of flow controls.
 
+For better visual for output of subsequent commands in section against normal command, we have different style for section commmand 
+and subsequent commandd in that section description cell.
+ 1. Section command steps have **►** character in their description cell as a prefix with one space indentation for description.
+ For example if section has 10 steps, description cell of these 10 subsequent commands will have **►** character as a prefix.  
+ 2. Section command and subsequent steps altogether have different color. You can see following output file. 
 
+### Limitations
+    
 ### Parameters
 - **steps** - this parameter specifies the number of subsequent (as in **immediately following**) commands to 
   consider in a section.

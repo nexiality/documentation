@@ -62,6 +62,25 @@ Below is the general directory/file structure of a standard Nexial automation pr
        3. It may contain custom data variables as well as Nexial system variables. 
        4. Data variables defined in `project.properties` will override the same defined in a data file.
 
+       Let's have a look at project.properties file-<br>
+       
+       ```properties
+       # You are reading the ".properties" entry.
+       ! The exclamation mark can also mark text as comments.
+       # The key characters =, and : should be written with a preceding backslash to ensure that they are properly loaded.
+       # However, there is no need to precede the value characters =, and : by a backslash.
+       key1 = value1
+       key2=Value2
+       # The backslash below tells the application to continue reading the value onto the next line.
+       message = Welcome to \
+                 Nexial!
+       # Add spaces to the key
+       key\ with\ spaces = This is the value that could be looked up with the key "key with spaces".
+       # If you want your property to include a backslash, it should be escaped by another backslash
+       path=c:\\wiki\\templates
+       ```
+       For more information on properties file, refer to [this](https://docs.oracle.com/cd/E26180_01/Platform.94/ATGProgGuide/html/s0204propertiesfileformat01.html) 
+
 2. The `output` directory contains the output of each test execution named as a `run id`, which is simply the 
    timestamp of the start of an execution.  The `captures` directory stores all the screenshots, the `logs` 
    directory stores all the log files, and the output is named similarly to the corresponding test script:

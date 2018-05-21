@@ -18,7 +18,9 @@ this array is referenced by a variable named `array1`.<br/>
 ![](image/$(array)_02.png)
 
 The above script defines an array of 2 elements ( `Smith, John` and `Appleseed, Johnny`) \- the delimiter defined on 
-the first row is the pipe character (`|`), not comma.
+the first row is the pipe character (`|`), not comma. As pipe character (`|`) is separator for built-in function parameters, 
+we have to escape pipe character for array. As you can show in above image, array1 has value `Smith, John\|Appleseed, Johnny` 
+with pipe character escaped.
 
 By default, [`nexial.textDelim`](../systemvars/index#nexial.textDelim) has the value of a comma (`,`).
 
