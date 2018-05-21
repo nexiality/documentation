@@ -167,9 +167,20 @@ For standard System properties, see the section below titled as [Standard System
         <td>true</td>
         <td>false</td>
         <td>
-            Determine if execution output (report, screenshots, etc.) should be save to cloud storage so that they may be
+            Determine if execution output (report, screenshots, etc.) should be saved to cloud storage so that they may be
             retrieved remotely. When such configuration is turned on, the console log will indicate as such:<br/>
-            <img src="image/systemvar_04.jpg" class="resize"/>
+            <img src="image/systemvar_04.jpg" class="resize"/><br/>
+            <br/>
+            Note that cloud storage support is not enabled by default (it's not free). One can enable such capability
+            by adding the following configuration for S3 connectivity (in addition to setting 
+            <code>nexial.outputToCloud</code> as <code>true</code>:<br/>
+            <br/>
+            <table cellpadding="0" cellspacing="0">
+            <tr><th align="left">otc.region</th><td>The desire <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html" class="external-link" target="nexial_target">AWS region</a>. Default is <code>us-west-2</code>.</td></tr> 
+            <tr><th align="left">otc.accessKey</th><td>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys" class="external-link" target="nexial_target">AWS access key</a> to access the target S3 service.</td></tr> 
+            <tr><th align="left">otc.secretKey</th><td>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys" class="external-link" target="nexial_target">AWS secret key</a> to access the target S3 service.</td></tr> 
+            <tr><th align="left">nexial.outputCloudBase</th><td>The target bucket and path to use for storing execution output.</td></tr> 
+            </table> 
         </td>
     </tr>
     <tr>
