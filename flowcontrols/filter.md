@@ -29,8 +29,8 @@ comparisons are:
 
 | comparator          | description |
 | ------------------- | ----------- |
-| **`=`**             | equals, as in "is _this_ the same as _that_?" |
-| **`!=`**            | not equals, as in "is _this_ not the same as _that_?" |
+| **`=`**             | equals, as in "is _this_ the same as _that_?". It supports for both _text_ and _number values_ as well. |
+| **`!=`**            | not equals, as in "is _this_ not the same as _that_?". It supports for both _text_ and _number values_ as well.  |
 | **`>`**             | greater than, as in "is _this value_ greater than that value?"  Only applicable to numbers. |
 | **`>=`**            | greater or equal to, as in "is _this value_ greater or the same as _that value_?" Only applicable to numbers. |
 | **`<`**             | less than, as in "is _this value_ less than _that value_?" Only applicable to numbers. |
@@ -49,7 +49,6 @@ comparisons are:
 | **`is defined`**    | is the specified data variable defined (such as in a data sheet)? |
 | **`is undefined`**  | is the specified data variable **NOT** defined (in a data sheet, project.properties, etc.)? |
 | **`has length of`** | does the specified data variable contains value of __ character.  Only applicable to text or numeric value. |
-
 
 **`[controls]`** represents the variable or data (could be more than one) to consider in order to qualify a condition.
 

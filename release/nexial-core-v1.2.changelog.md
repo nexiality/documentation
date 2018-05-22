@@ -32,6 +32,9 @@ comments: true
 #### Nexial Expression
 - allow for "tight-space" expression with no spaces between `[..]` and `=>` and the subsequent operations.
 
+#### Flow Controls
+- [`Nexial Filter`](../flowcontrols/filter): `=` and `!=` comparators extended to support both text and number values.
+
 #### Built-in Function
 - [`$(execution)`](../functions/$(execution)): **NEW** built-in function to expose execution-time metadata. 
 - [`$(array)`](../functions/$(array)): now handles scenario where `nexial.textDelim` is pipe (`|`), which conflicts 
