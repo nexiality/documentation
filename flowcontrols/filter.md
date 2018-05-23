@@ -29,8 +29,8 @@ comparisons are:
 
 | comparator          | description |
 | ------------------- | ----------- |
-| **`=`**             | equals, as in "is _this_ the same as _that_?". It supports for both _text_ and _number values_ as well. |
-| **`!=`**            | not equals, as in "is _this_ not the same as _that_?". It supports for both _text_ and _number values_ as well.  |
+| **`=`**             | equals, as in "is _this_ the same as _that_?". It supports for both _text_ and _numeric values_ as well. |
+| **`!=`**            | not equals, as in "is _this_ not the same as _that_?". It supports for both _text_ and _numeric values_ as well.  |
 | **`>`**             | greater than, as in "is _this value_ greater than that value?"  Only applicable to numbers. |
 | **`>=`**            | greater or equal to, as in "is _this value_ greater or the same as _that value_?" Only applicable to numbers. |
 | **`<`**             | less than, as in "is _this value_ less than _that value_?" Only applicable to numbers. |

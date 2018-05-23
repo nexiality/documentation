@@ -8,7 +8,7 @@ comments: true
 
 
 ### Install Java
-1. Check if Java is installed - **Java 1.8 or above required**
+1. Check if Java is installed - **Java 1.8 or above required, and 64-bit Java is highly recommended**
    1.  Open console via:  
        **Windows**:  Start | Run | `cmd <ENTER>`  
        **MacOSX**: Open Spotlight or type `CMD-Space` | `terminal <ENTER>`
@@ -34,8 +34,8 @@ comments: true
        ![download_jdk](image/InstallingNexial_03.png)
    1.  Click on **Accept License Agreement**.  
        ![accept_license](image/InstallingNexial_04.png)
-   1.  Select the appropriate download file suitable for your workstation.  Recommended to select the 64bit version 
-       for better performance and efficient memory management.
+   1.  Select the appropriate download file suitable for your workstation.  Recommended to select **the 64bit version 
+       for better performance and efficient memory management**.
 
 2. Installing Java
    1.  **For Windows only: HIGHLY RECOMMENDED TO INSTALL JAVA IN A DIRECTORY THAT DOES NOT CONTAIN SPACES**  

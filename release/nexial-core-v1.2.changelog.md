@@ -28,12 +28,17 @@ comments: true
 - update execution output so that key columns are allocated sufficient width.
 - update execution output so that each row would be allocated sufficient height without appearing too "cramped".
 - update execution output so that "description" columns of macro, section and repeat-until will appear differently to provide better visual cues.
+- expanded the notification options from sound or tts to sms, email and console.
+- event notification now supports 4 events: `nexial.notifyOnStart`, `nexial.notifyOnComplete`, `nexial.notifyOnPause`, `nexial.notifyOnError`.
+- event notification now supports 5 channels: audio, tts, sms, email and console.
+- Fixed NexialSetup to support longer secret key
+- Fixed NexialSetup to add more user-friendly messages
 
 #### Nexial Expression
 - allow for "tight-space" expression with no spaces between `[..]` and `=>` and the subsequent operations.
 
 #### Flow Controls
-- [`Nexial Filter`](../flowcontrols/filter): `=` and `!=` comparators extended to support both text and number values.
+- [`Nexial Filter`](../flowcontrols/filter): `=` and `!=` comparators extended to support both text and numeric values.
 
 #### Built-in Function
 - [`$(execution)`](../functions/$(execution)): **NEW** built-in function to expose execution-time metadata. 
@@ -54,6 +59,10 @@ comments: true
 - [rdbms &raquo; `saveResults(db,sqls,outputDir)`](../commands/rdbms/saveResults(db,sqls,outputDir)): **NEW** command
   to execute a series of queries and save the results to CSV files.
 
+#### [sms commands](../commands/sms/index)
+- sms.sendText(phones,text): **NEW** command to send SMS messages to one or more phone numbers.  AWS account setup required.
+- adding support for AWS SNS for SMS capability
+
 #### [sound commands](../commands/sound/index)
 - new set of commands to generate digitalized sound and to generate text-to-speech
 - [sound &raquo; `play(audio)`](../commands/sound/play(audio)): **NEW** command to play either 
@@ -68,4 +77,5 @@ comments: true
   Most notably changes:
   - Added `User-Agent` header to requests from Selenium to give remote ends more visibility into distribution of clients.
   - Implemented WebStorage in ChromeDriver and FirefoxDriver.
+- reduce nexial.pollWaitMs from 800 to 250ms. Fingers crossed!
 

@@ -15,8 +15,9 @@ converts the audio equivalent, which can be purposed as an effective form of aud
 
 ### Setup
 Current implementation limits `text` to 500 characters since this has direct impact of the underlying AWS usage 
-(and thus billing). Nexial utilizes AWS Polly as the underlying text-to-speech engine. In order to enable AWS Polly, the
-following configuration details must be set up:
+(and thus billing). Nexial utilizes 
+<a href="https://aws.amazon.com/polly/" class="external-link" link="nexial_target">AWS Polly</a> 
+as the underlying text-to-speech engine. To enable AWS Polly, the following configuration details must be provided:
 
 | setting          | default     | explanation |
 |------------------|-------------|-------------|

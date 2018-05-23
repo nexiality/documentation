@@ -47,6 +47,14 @@
             document.location = document.location.pathname.replace(/(.+\/)(quickstart)(\/.*)/, '$1userguide$3');
         }
 
+        if (document.location.pathname.endsWith('/documentation/quickstart')) {
+            document.location = '/documentation/userguide/index.html';
+        }
+
+        if (document.location.pathname.endsWith('/userguide/UnderstandingProjectStructure')) {
+            document.location = '/documentation/userguide/UnderstandingProjectStructure';
+        }
+
         if (document.location.pathname.startsWith('/documentation/commands/desktop/getTaableRowsAll(var)')) {
             document.location = '/documentation/commands/desktop/saveTableRows(var,contains)';
         }
