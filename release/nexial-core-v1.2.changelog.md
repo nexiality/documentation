@@ -32,6 +32,8 @@ comments: true
 - event notification now supports 5 channels: audio, tts, sms, email and console.
 - Fixed NexialSetup to support longer secret key
 - Fixed NexialSetup to add more user-friendly messages
+- Fixed logic to skip enclosed steps of a repeat-until loop within in section command
+- minor logical fix to $(execution) built-in function when it is invoked during iteration/script completion (command and step information aren't available then).
 
 #### Nexial Expression
 - allow for "tight-space" expression with no spaces between `[..]` and `=>` and the subsequent operations.
