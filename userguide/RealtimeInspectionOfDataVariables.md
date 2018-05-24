@@ -1,25 +1,25 @@
 ---
 layout: default
-title: Realtime Inspection of Data Variables
+title: Real-time Inspection of Data Variables
 parent: User Guide
-tags: command tipsandtricks inspect inspectonpause
+tags: command tipsandtricks inspect inspectonpause real-time realtime inspection variable functions
 comments: true
 ---
 
 
 With [`PauseBefore()`](../flowcontrols/index#pausebefore()--pauseafter()) and 
 [`PauseAfter()`](../flowcontrols/index#pausebefore()--pauseafter()), one can pause an execution to review 
-console logs and application state.  With the capability of "inpsect-on-pause", one can also inquire in real time
+console logs and application state. With the capability of "inpsect-on-pause", one can also inquire in real time
 the state and value of data variables, or the use of [built-in functions](../functions) and 
-[Nexial expressions](../expressions).  Since this can be enabled from any test step, this is particularly useful 
+[Nexial expressions](../expressions). Since this can be enabled from any test step, this is particularly useful 
 for troubleshooting and debugging running scripts.
 
 
 ### Benefits
 - Observe the value of a data variable at a particular point in the execution.
-- Observe the outcome of a **[`Nexial Expressions`](../expressions/index)** in the script at a particular point in the 
+- Observe the outcome of a [`Nexial Expressions`](../expressions/index) in the script at a particular point in the 
   execution.
-- Observe the outcome of a **[`Nexial Built-in-Functions`](../functions/index.html)** in the script at a particular 
+- Observe the outcome of a [`Nexial Built-in-Functions`](../functions/index.html) in the script at a particular 
   point in the execution.
 
 
@@ -27,11 +27,11 @@ for troubleshooting and debugging running scripts.
 - Find the test step(s) where the execution should be paused.
 - Add [`PauseBefore()`](../flowcontrols/index#pausebefore()--pauseafter()) or 
   [`PauseAfter()`](../flowcontrols/index#pausebefore()--pauseafter()) to the flow control column of such step(s).
-- set the system variable **[`nexial.inspectOnPause`](../systemvars/index#nexial.inspectOnPause)** as **true**. This
+- set the system variable [`nexial.inspectOnPause`](../systemvars/index#nexial.inspectOnPause) as `true`. This
   can be done in [various places](../userguide/DataManagement).
 - [Execute your script](../userguide/BatchFiles#nexialcmd--nexialsh) as one normally would. Nexial would pause the
   execution just before (`PauseBefore()`) or just after (`PauseAfter()`) the test steps where the "pause" control 
-  flow was placed.  Now we can interact with Nexial to inspect data variables, etc.
+  flow was placed. Now we can interact with Nexial to inspect data variables, etc.
 - When inspection is complete, one can press `ENTER` key or type in `:resume` to continue execution.
 
 **Note**: Nexial is designed to disable "pauses" in CI/CD environment, which it determines dynamically at runtime. One
@@ -43,8 +43,8 @@ The example below obtain the current timestamp from a API, check the response re
 elapsed time and round-trip time:<br/>
 ![](image/RealtimeInspectionofDataVariables_01.png)
 
-Notice that a `PauseAfter()` is added in the flow control of the last step.  The system variable 
-`nexial.inspectOnPause` is set to `true` in the corresponding data file.
+Notice that a `PauseAfter()` is added in the flow control of the last step. The system variable 
+[`nexial.inspectOnPause`](../systemvars/index#nexial.inspectOnPause) is set to `true` in the corresponding data file.
 
 When the inspect-on-pause is in effect, you should see a prompt on the console as shown below:<br/>
 ![](image/RealtimeInspectionofDataVariables_02.png)

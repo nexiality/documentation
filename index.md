@@ -47,17 +47,17 @@ To see Nexial in action, watch this short demo showcasing how Nexial
 1. Download [Nexial distro](https://github.com/nexiality/nexial-core/releases)
 2. Follow the [installation guide](https://nexiality.github.io/documentation/userguide/InstallingNexial) (most steps are one-time work)
 3. Download the ["nexial-in-action" project](nexial-in-action.zip) and unzip to local directory
-4. Run it:
+4. Run it:<br/>
    Mac/Linux:
-	```
-	cd <NEXIAL_HOME>/bin
-	./nexial.sh -plan <MY_NEXIAL_IN_ACTION_PROJECT>/artifact/plan/demo1-plan.xlsx
-	```
+   ```
+   cd <NEXIAL_HOME>/bin
+   ./nexial.sh -plan <MY_NEXIAL_IN_ACTION_PROJECT>/artifact/plan/demo1-plan.xlsx
+   ```
 	
    Windows:
    ```
-	cd <NEXIAL_HOME>\bin
-	nexial.cmd -plan <MY_NEXIAL_IN_ACTION_PROJECT>\artifact\plan\demo1-plan.xlsx
+   cd <NEXIAL_HOME>\bin
+   nexial.cmd -plan <MY_NEXIAL_IN_ACTION_PROJECT>\artifact\plan\demo1-plan.xlsx
    ```
 
 ---------------------------------------------

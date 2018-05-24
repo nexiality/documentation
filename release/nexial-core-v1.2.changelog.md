@@ -11,7 +11,7 @@ comments: true
 
 
 ### General
-- fixed #data sheet updation in output file with current values from the execution context.
+- fixed #data sheet update in output file with current values from the execution context.
 - fix to save #data sheet values in sorted order.
 - updated with nexial-seeknow-1.0.jar
 - fixed internal logic to handle the insertion of Excel rows that avoids the infamous "unreadable content" error. The
@@ -28,7 +28,6 @@ comments: true
 - update execution output so that key columns are allocated sufficient width.
 - update execution output so that each row would be allocated sufficient height without appearing too "cramped".
 - update execution output so that "description" columns of macro, section and repeat-until will appear differently to provide better visual cues.
-- expanded the notification options from sound or tts to sms, email and console.
 - event notification now supports 4 events: `nexial.notifyOnStart`, `nexial.notifyOnComplete`, `nexial.notifyOnPause`, `nexial.notifyOnError`.
 - event notification now supports 5 channels: audio, tts, sms, email and console.
 - Fixed NexialSetup to support longer secret key

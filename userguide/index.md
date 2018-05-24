@@ -20,8 +20,12 @@ Let's get started!
 - [Understanding Project Structure](UnderstandingProjectStructure)
 - [Data Management](DataManagement)
 - [Nexial batch files](BatchFiles)
+- [Execution Flow Control](../flowcontrols/index)
+- [Nexial Filter](../flowcontrols/filter)
+- [Nexial Expression](../expressions/index)
+- [Execution Event Notification](EventNotification)
 - [Automation Execution Flow](ExecutionFlow)
-- [Realtime Inspection of Data Variables](RealtimeInspectionOfDataVariables)
+- [Real-time Inspection of Data Variables](RealtimeInspectionOfDataVariables)
 - [Executing Nexial in CI/CD](ExecutingNexialInCICD)
 - [Nexial Execution Dashboard](ExecutionDashboard)
 
