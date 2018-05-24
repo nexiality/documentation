@@ -41,7 +41,7 @@ comments: true
 - [Execute Scripts in Headless Browser](ExecuteScripts_HeadlessBrowser)
 - [BrowserStack Integration](BrowserStackIntegration)
 - [Script failing on BrowserStack](ScriptFailingonBrowserStack)
-- [Wait for Web element creation or activation](WaitForWebElemenCreationOrActivation)
+- [Reduce web automation flakiness with wait strategies](ReduceWebAutomationFlakiness)
 
 
 #### External Services
