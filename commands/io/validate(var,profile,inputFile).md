@@ -69,6 +69,10 @@ The output file
 
 ![](image/validate_03.png)
 
+Map Function Format to use condition:
+![](image/validate_05.png)
+
+
 Date format pattern letters and their meaning:<br/>
 - G - Era designator (AD)
 - y - Year (1996; 96)
