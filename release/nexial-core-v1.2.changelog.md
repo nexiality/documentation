@@ -45,6 +45,7 @@ comments: true
 - [`$(execution)`](../functions/$(execution)): **NEW** built-in function to expose execution-time metadata. 
 - [`$(array)`](../functions/$(array)): now handles scenario where `nexial.textDelim` is pipe (`|`), which conflicts 
   with function separator.
+- [`$(date)`](../functions/$(date)): fix epoch-to-clock format so that we can properly format timestamp (ms) to something like HH:mm:ss format.
 
 #### [base commands](../commands/base/index)
 - [base &raquo; `macro(file,sheet,name)`](../commands/base/macro(file,sheet,name)) now merge with 
