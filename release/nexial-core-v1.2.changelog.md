@@ -57,6 +57,9 @@ comments: true
   enclosed [base &raquo; `repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)) steps when
   the section command is 'skipped'. 
 
+#### [io commands](../commands/io/index)
+- [io &raquo; `validate(var,profile,inputFile)`](../commands/io/validate(var,profile,inputFile)): now supports to apply map functions with provided conditions, in [`Nexial Filter`](../flowcontrols/filter) format. 
+
 #### [rdbms commands](../commands/rdbms/index)
 - [rdbms &raquo; `saveResults(db,sqls,outputDir)`](../commands/rdbms/saveResults(db,sqls,outputDir)): **NEW** command
   to execute a series of queries and save the results to CSV files.
