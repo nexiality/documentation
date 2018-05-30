@@ -10,7 +10,7 @@ comments: true
 ### Description
 This built-in function provides basic operation to manipulate date such add "adding day", "setting hour".  This 
 built-in function assumes the `date` parameter in the standard US date format (i.e. `MM/dd/yyyy HH:mm:ss`).  You might 
-want to consider using `$(date|stdFormat|date|fromFormat)` or `$(date|format|date|fromFormate|toFormat)` functions to 
+want to consider using `$(date|stdFormat|date|fromFormat)` or `$(date|format|date|fromFormat|toFormat)` functions to 
 derive the appropriate format first before invoking other date-operational functions.
 
 ##### Date Format
