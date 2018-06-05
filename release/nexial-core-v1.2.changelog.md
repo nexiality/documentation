@@ -47,6 +47,11 @@ comments: true
   with function separator.
 - [`$(date)`](../functions/$(date)): fix epoch-to-clock format so that we can properly format timestamp (ms) to something like HH:mm:ss format.
 
+#### [desktop commands](../commands/desktop/index)
+- Added new desktop command [desktop &raquo; `sendKeysToTextBox(name,text1,text2,text3,text4)`](../commands/desktop/sendKeysToTextBox(name,text1,text2,text3,text4)) to enter text into a text field.
+- It is exactly similar to [desktop &raquo; `typeTextBox(name,text1,text2,text3,text4)`](../commands/desktop/typeTextBox(name,text1,text2,text3,text4)).
+- Recommended to use this command as a secondary option, only when any text field in the desktop does not respond properly with [desktop &raquo; `typeTextBox(name,text1,text2,text3,text4)`](typeTextBox(name,text1,text2,text3,text4)) command. 
+
 #### [base commands](../commands/base/index)
 - [base &raquo; `macro(file,sheet,name)`](../commands/base/macro(file,sheet,name)) now merge with 
   [base &raquo; `section(steps)`](../commands/base/section(steps)) so that we can express additional flow control
