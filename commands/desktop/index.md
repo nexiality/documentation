@@ -83,6 +83,7 @@ comments: true
 - [`saveTextPane(var,name,criteria)`](saveTextPane(var,name,criteria))
 - [`saveWindowTitle(var)`](saveWindowTitle(var))
 - [`selectCombo(name,text)`](selectCombo(name,text))
+- [`sendKeysToTextBox(name,text1,text2,text3,text4)`](sendKeysToTextBox(name,text1,text2,text3,text4))
 - [`showExplorerBar()`](showExplorerBar())
 - [`toggleExplorerBar()`](toggleExplorerBar())
 - [`typeAppendTextArea(name,text1,text2,text3,text4)`](typeAppendTextArea(name,text1,text2,text3,text4))
