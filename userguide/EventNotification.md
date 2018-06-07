@@ -12,10 +12,10 @@ critical execution events and to improve user experience with automation. Nexial
 the intended audience of significant events during the execution. It does so via multiple form of techniques.
 
 Currently, these are the events that can be configured for notification:
-1. **OnStart**: represented by a System variable **`nexial.notifyOnStart`**; indicates the start of an iteration 
-   (note: by default all scripts have at least one iteration).
-2. **OnComplete**: represented by a System variable **`nexial.notifyOnComplete`**; indicates the completion of an 
-   iteration.
+1. **OnScriptStart**: represented by a System variable **`nexial.notifyOnScriptStart`**; indicates the start of an 
+   iteration (note: by default all scripts have at least one iteration).
+2. **OnScriptComplete**: represented by a System variable **`nexial.notifyOnScriptComplete`**; indicates the completion 
+   of an iteration.
 3. **OnError**: represented by a System variable **`nexial.notifyOnError`**; indicates when an error occurred or when a 
    step failed.
 4. **OnPause**: represented by a System variable **`nexial.notifyOnPause`**; indicates when an execution is paused, 

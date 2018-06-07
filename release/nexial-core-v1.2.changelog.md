@@ -11,6 +11,7 @@ comments: true
 
 
 ### General
+- In order to improve security, please update your Java (JRE or JDK) to 1.8, Update 151 (JDK 8u151) or the <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">latest version</a>
 - fixed #data sheet update in output file with current values from the execution context.
 - fix to save #data sheet values in sorted order.
 - updated with nexial-seeknow-1.0.jar
@@ -34,6 +35,8 @@ comments: true
 - Fixed NexialSetup to add more user-friendly messages
 - Fixed logic to skip enclosed steps of a repeat-until loop within in section command
 - minor logical fix to $(execution) built-in function when it is invoked during iteration/script completion (command and step information aren't available then).
+- widen event support beyond the existing 4 (start, complete, pause, error)
+- added multi-plan support.  Now it is possible to specify multiple plan files (no multiple plan-sheets support)
 
 #### Nexial Expression
 - allow for "tight-space" expression with no spaces between `[..]` and `=>` and the subsequent operations.
@@ -84,3 +87,8 @@ comments: true
   - Implemented WebStorage in ChromeDriver and FirefoxDriver.
 - reduce nexial.pollWaitMs from 800 to 250ms. Fingers crossed!
 
+#### [ws commands](../commands/ws/index)
+- supports async HTTP request (context variables yet to be done to allow automation)
+
+#### [ws.async commands](../commands/ws.async/index)
+- new set of commands to support asynchronous web service or API invocation
