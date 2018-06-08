@@ -11,6 +11,7 @@ comments: true
 
 
 ### General
+- fixed `outputToCloud` option, to function properly to push the output to AWS s3 bucket.
 - In order to improve security, please update your Java (JRE or JDK) to 1.8, Update 151 (JDK 8u151) or the <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">latest version</a>
 - fixed #data sheet update in output file with current values from the execution context.
 - fix to save #data sheet values in sorted order.
