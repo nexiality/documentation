@@ -20,6 +20,7 @@ Let's get started!
 - [Understanding Project Structure](UnderstandingProjectStructure)
 - [Data Management](DataManagement)
 - [Nexial batch files](BatchFiles)
+- [Executing Multiple Plan Files](ExecutingMultiplePlanFiles)
 - [Execution Flow Control](../flowcontrols/index)
 - [Nexial Filter](../flowcontrols/filter)
 - [Nexial Expression](../expressions/index)
