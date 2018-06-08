@@ -432,6 +432,18 @@ For standard System properties, see the section below titled as [Standard System
         </td>
     </tr>
     <tr>
+        <td nowrap="nowrap" class="varname"><a name="nexial.lastPlanStep"/><code>nexial.lastPlanStep</code></td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            A <code>true</code> or <code>false</code>, indicate to stop or continue the execution after the script.
+            This can be useful when one wants to interrupt/stop execution flow immediate after completion of the script.
+            This would be last step in the plan executions. This is only applicable while running a plan as only plan will have
+            multiple scripts. It should be set in respective data file of the script.
+        </td>
+    </tr>
+    <tr>
         <td nowrap="nowrap" class="varname"><a name="nexial.manageMemory"/><code>nexial.manageMemory</code></td>
         <td>boolean</td>
         <td>false</td>

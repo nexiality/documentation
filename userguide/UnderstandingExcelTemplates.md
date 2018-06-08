@@ -10,7 +10,7 @@ comments: true
 Here is the hierarchy of automation, in Nexial-speak:
 
 ```text
-Test Plan                                  (commonly found in {PROJECT}/artifact/script)
+Test Plan                                  (commonly found in {PROJECT}/artifact/plan)
 +-- (1 or more) Test Script                (commonly found in {PROJECT}/artifact/script)
     +-- (1 or more) Iteration              (defined via nexial.scope.iteration System Variable)
         +-- (1 or more) Scenario           (synonymous to worksheet in test script file)

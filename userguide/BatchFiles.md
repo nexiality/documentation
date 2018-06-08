@@ -163,3 +163,22 @@ For example, the following renames the key `oldKey1` to `newKey1`, and `oldKey2`
 `nexial-variable-update.cmd -v -d oldKey1=newKey1;oldKey2=newKey2;oldKey3=newKey3 -t projectFullPath` 
 
 ---------------------------------------------
+
+#### nexial-log-parser.cmd / nexial-log-parser.sh
+This script capture required log statements (mainly for elapsed time between request and response of given step) from a log 
+file generated through execution and stored to new file.<br/>
+
+| options  | explanation |
+| -------- | ----------- |
+| **`-t`** | **[REQUIRED]** This option is for location of a log file to be parsed.|
+| **`-s`** | **[REQUIRED]** This option is for location of new log file to be generated.|
+| **`-c`** | This option is for specifying type of logs to be tracked. Possible values for this are desktop, rdbms, ws and all(default). This is optional.|
+
+For example, the following will create new log file with required logs only.<br/>
+`nexial-log-parser.cmd -t C:\projects\myProject\output\20180608_121212\nexial-20180608_121212.log -s C:\projects\myProject\newLogs.log -c ws` <br/>
+This will extract `ws` request and response logs from `nexial-20180608_121212.log` and store it to `newLog.log`.
+
+This script comes into picture when one wants to capture response time for step. For example, someone wants to do performance testing for API calls,
+`ws` criteria will gather information about request and response time from logs and calculate elapsed time for the same.
+
+---------------------------------------------
