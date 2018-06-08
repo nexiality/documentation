@@ -16,6 +16,7 @@ The "number" command type represents a series of automation commands regarding n
 - [`assertLesserOrEqual(num1,num2)`](assertLesserOrEqual(num1,num2))
 - [`average(var,array)`](average(var,array))
 - [`ceiling(var)`](ceiling(var))
+- [`decrement(var,amount)`](decrement(var,amount))
 - [`floor(var)`](floor(var))
 - [`increment(var,amount)`](increment(var,amount))
 - [`max(var,array)`](max(var,array))
