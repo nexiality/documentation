@@ -8,7 +8,6 @@ plugins:
    - jekyll-redirect-from
    - jekyll-sitemap
    - jekyll-feed
-   - jekyll-redirect-from
    - jekyll-seo-tag
    - jekyll-avatar
 

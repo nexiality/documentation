@@ -679,7 +679,7 @@ For standard System properties, see the section below titled as [Standard System
     </tr>
     <tr>
         <td class="highlight-green" colspan="5">
-            <span>For <a href="../commands/external/">external</code></a> testing only. </span>
+            <span>For <a href="../commands/external/"><code>external</code></a> testing only. </span>
         </td>
     </tr>
     <tr>
@@ -1328,6 +1328,21 @@ For standard System properties, see the section below titled as [Standard System
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
+    </tr>
+    <tr>
+        <td class="highlight-green" colspan="5"><span>For <a href="../commands/ws.async"><code>ws.async</code></a> commands only.</span></td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="nexial.ws.async.shutdownWaitMs"/><code>nexial.ws.async.shutdownWaitMs</code></td>
+        <td>millisecond</td>
+        <td>180000</td>
+        <td>false</td>
+        <td>
+        In order to support the download to file that might potentially take longer than the execution time, Nexial will
+        attempt to wait for the asynchronous HTTP invocations (if any) to complete before shutting down.  The amount of 
+        such wait time is by default set to 180000 (3 minutes). One may override the default with another value, in 
+        millisecond, to possible speed up or prolong the shutdown event.
+        </td>
     </tr>
     <tr>
         <td class="highlight-green" colspan="5"><span>For desktop-based (<code>desktop</code> commands) testing only.</span></td>
