@@ -55,7 +55,7 @@ comments: true
 - Fixed NexialSetup to add more user-friendly messages.
 - Updated [`bin/nexial-project.sh` or `bin/nexial-project.cmd`](../userguide/BatchFiles#nexial-project.cmd-/-nexial-project.sh) 
   to allow new script/data files to be added to existing project.
-- **Multi-plan support** now available. It is not possible to [specify multiple plan files](../userguide/BatchFiles#nexial.cmd-/-nexial.sh) 
+- **Multi-plan support** now available. It is now possible to [specify multiple plan files](../userguide/BatchFiles#nexial.cmd-/-nexial.sh) 
   per execution so that each execution can span across one or more plans. Currently not supporting multiple sheets per 
   plan file.
 
