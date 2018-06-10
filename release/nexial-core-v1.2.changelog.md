@@ -14,7 +14,7 @@ comments: true
 - In order to improve security and performance, please update to Java (JRE or JDK) 1.8, Update 151 (JDK 8u151) or above.
   To download the latest version of Java 1,8, click <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" class="external-link" target="nexial_link">here</a>.
 - Updated to Kotlin 1.2.41
-- [`nexial.outputToCloud`](../systemvars/index#nexial.outputToCloud): fixed a few edge condition to allow upload of 
+- [`nexial.outputToCloud`](../systemvars/index#nexial.outputToCloud): fixed a few edge conditions to allow upload of 
   execution output to AWS S3.
 - Fixes applied so that the data variables in the `#data` sheet of the output file reflect the values at the time of 
   execution (as opposed to the value as scripted in the data file).  
@@ -103,7 +103,7 @@ comments: true
   enclosed steps of a repeat-until loop within in a [section](../commands/base/section(steps))
 
 #### [desktop commands](../commands/desktop/index)
-- [desktop &raquo; `list`](../commands/desktop/clickTextPane(name,criteria).md): improved performance by skipping all 
+- [desktop &raquo; `clickTextPane(name,criteria)`](../commands/desktop/clickTextPane(name,criteria)): improved performance by skipping all 
   rows that do not match the specified range. Also updated to using nexial-seeknow-1.0.jar
 - [desktop &raquo; `sendKeysToTextBox(name,text1,text2,text3,text4)`](../commands/desktop/sendKeysToTextBox(name,text1,text2,text3,text4)): 
   **NEW** command to enter text into a text field. Shortcuts are also supported.  This command perform the same 
