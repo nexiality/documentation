@@ -102,10 +102,10 @@ For more explanation please visit [HTTP response](../ws/index#http-response).
 
 
 ### Available Commands
-- [`delete(url,body,var)`](delete(url,body,output))
+- [`delete(url,body,output)`](delete(url,body,output))
 - [`download(url,queryString,saveTo)`](download(url,queryString,saveTo))
-- [`get(url,queryString,var)`](get(url,queryString,output))
-- [`head(url,var)`](head(url,output))
-- [`patch(url,body,var)`](patch(url,body,output))
-- [`post(url,body,var)`](post(url,body,output))
-- [`put(url,body,var)`](put(url,body,output))
+- [`get(url,queryString,output)`](get(url,queryString,output))
+- [`head(url,output)`](head(url,output))
+- [`patch(url,body,output)`](patch(url,body,output))
+- [`post(url,body,output)`](post(url,body,output))
+- [`put(url,body,output)`](put(url,body,output))
