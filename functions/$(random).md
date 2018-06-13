@@ -38,9 +38,9 @@ to a _true_ number, consider the following strategy:<br/>
   _printable character range_. See 
   <a href="http://www.charstable.com/_site_media/ascii/chars-table-landscape.jpg" class="external-link" target="_nexial_external">here</a> for 
   more details of the characters included. 
-- **`$(random|character|length)`** \- render a random string based on the specified `character` and the 
+- **`$(random|characters|<specify characters>|length)`** \- render a random string based on the specified `characters` and the 
   specified `length`.  This can be particularly useful to validate functionality with specified characteristics on 
-  input characters, such as password.  For example, `$(random|abcdefghijklmnopqrstuvwxyz!@#$%^*()|8)` will render 8 
+  input characters, such as password.  For example, `$(random|characters|abcdefghijklmnopqrstuvwxyz!@#$%^*()|8)` will render 8 
   characters randomly from the **`abcdefghijklmnopqrstuvwxyz!@#$%^*()`** range.  
     
 
