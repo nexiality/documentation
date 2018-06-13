@@ -12,10 +12,7 @@ comments: true
 
 ### General
 
-#### Nexial Expression
-
-#### Flow Controls
-
+<!--
 #### Event Notification
 nexial.notifyOnWebOpen
 nexial.notifyOnDesktopUseApp
@@ -26,8 +23,8 @@ nexial.notifyOnWsStart
 nexial.notifyOnWsComplete
 nexial.notifyOnRdbmsStart
 nexial.notifyOnRdbmsComplete
-
+-->
 
 #### Built-in Function
+- fixed parsing logic to honor escaping conflicting characters such as `$`, `(`, `)` and `|`.
 
-#### [ws commands](../commands/ws/index)
