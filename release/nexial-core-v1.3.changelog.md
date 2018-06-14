@@ -26,5 +26,7 @@ nexial.notifyOnRdbmsComplete
 -->
 
 #### Built-in Function
-- fixed parsing logic to honor escaping conflicting characters such as `$`, `(`, `)` and `|`.
+- fixed parsing logic to honor escaping conflicting characters such as `$`, `(`, `)` and `|`.  These characters are 
+  considered as conflict since they are used to define built-in functions.
+  
 
