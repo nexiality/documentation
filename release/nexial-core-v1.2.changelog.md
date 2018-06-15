@@ -147,7 +147,8 @@ comments: true
   - `/session/:sessionId/send_command` and `/session/:sessionId/send_command_and_get_result` changed to proper 
     extension commands
 - reduce [`nexial.pollWaitMs`](../systemvars/index#nexial.pollWaitMs) from 800 to 250ms as default. This should improve 
-  performance (hopefully!)
+  performance (hopefully!)  If you are using older browsers (such as IE) you might want to switch this value back to the
+  old `800` (millisecond) or higher value.
 
 #### [ws commands](../commands/ws/index)
 - refactored existing code to support asynchronous HTTP requests (context variables yet to be done to allow automation)
