@@ -868,6 +868,27 @@ For standard System properties, see the section below titled as [Standard System
         </td>
     </tr>
     <tr>
+        <td nowrap="nowrap" class="varname"><a name="nexial.web.preemptiveAlertCheck"/><code>nexial.web.preemptiveAlertCheck</code></td>
+        <td>boolean</td>
+        <td>true</td>
+        <td class="highlight-red">false</td>
+        <td>
+            (<strong><code>web</code></strong> commands only). By default, Nexial checks for the presence of JavaScript 
+            alert/confirm/prompt dialog after a web command (such as click or type). If found, Nexial will harvest the 
+            text of the JavaScript dialog as <code>nexial.lastAlertText</code>, which effectively <i>dismiss</i> the 
+            dialog box as well, before proceeding on.<br/><br/>
+            While this default behavior provides convenience, it is not without performance overhead. In order for
+            Nexial to dismiss JavaScript dialog, it has to inquire via the underlying web driver against the browser in
+            automation. Depending on the browser, this could take a few milliseconds to roughly half a second. From the 
+            perspective of the entire automation, this time overhead could be significant.<br/><br/>
+            By default, this System variable is set as <code>true</code>, which means Nexial will proactively check and
+            dismiss JavaScript dialog after a web command (e.g. click or type). If your AUT does not emit JavaScript 
+            dialog (such as <code>alert('...')</code>), it could be a good idea to turn off this feature by setting 
+            <code>nexial.web.preemptiveAlertCheck</code> as <code>false</code>. Our rudimentary tests show
+            a 12 - 20% time improvement when this feature is turned off, most noticeably when running under IE.
+        </td>
+    </tr>
+    <tr>
         <td nowrap="nowrap" class="varname"><a name="nexial.highlight"/><code>nexial.highlight</code></td>
         <td>boolean</td>
         <td>false</td>
