@@ -747,6 +747,23 @@ For standard System properties, see the section below titled as [Standard System
         </td>
     </tr>
     <tr>
+        <td nowrap="nowrap" class="varname"><a name="nexial.browser.forceJSClick"/><code>nexial.browser.forceJSClick</code></td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+        By default, Nexial uses Selenium API (i.e. via <code>WebElement</code>) for click event. This generally works. 
+        However with the combination of a certain browser and certain web application, timing sometimes work against 
+        expectation.  Such anamaly is especially noticeable with IE and AJAX-rich web applications (from which timing 
+        might be less than predictable). To circumvent this issue, one may turn on the feature of forcefully issuing 
+        click event via JavaScript by setting <code>nexial.browser.forceJSClick</code> to <code>true</code>.
+        <br/><br/> 
+        Consequently, this feature is also effective as a workaround for IE to handle the click event on a target inside 
+        an iframe, which can be particularly problematic when the click event triggers a 'File Download' that in turn 
+        triggers a IE-only 'Download Notification' outside of the iframe.
+        </td>
+    </tr>
+    <tr>
         <td nowrap="nowrap" class="varname"><a name="nexial.delayBrowser"/><code>nexial.delayBrowser</code></td>
         <td>boolean</td>
         <td>false</td>
