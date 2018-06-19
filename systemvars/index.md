@@ -764,14 +764,31 @@ For standard System properties, see the section below titled as [Standard System
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.delayBrowser"/><code>nexial.delayBrowser</code></td>
-        <td>boolean</td>
+        <td nowrap="nowrap" class="varname"><a name="nexial.browser.postCloseWaitMs"/><code>nexial.browser.postCloseWaitMs</code></td>
+        <td>integer</td>
+        <td>3000</td>
         <td>false</td>
+        <td>
+            Time allotted, in millisecond, to allow the system is settled down and process any <em>clean up</em> after a
+            browser instance is closed. The default for this is <code>3000</code>, which means the execution of
+            <a href="../commands/web/close()">web &raquo; <code>close()</code></a> will add 3 seconds by default to the overall
+            execution time.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="nexial.browser.incognito"/><code>nexial.browser.incognito</code></td>
+        <td>boolean</td>
+        <td>true</td>
         <td class="highlight-red">true</td>
         <td>
-            Delay the initialization of web browser until the first command of
-            <a href="../commands/web/open(url)">web &raquo; <code>open()</code></a> is invoked.
-            Generally one would not need to worry about this. Change this <strong>ONLY IF YOU KNOW WHAT YOU ARE DOING!</strong>
+            Determine if the target browser should be initialized by Nexial in incognito/private mode. The common
+            practice is to <u>ALWAYS</u> run browser in such mode to avoid residual side-effects to the browser between tests.
+            The default is <strong><code>true</code></strong>.<br/>
+            <br/>
+            <strong>Due to a
+                <a href="https://bugs.chromium.org/p/chromedriver/issues/detail?id=504" class="external-link" target="_nexial_external">known/unresolved
+                    issue with chrome</a>, if your tests requires resizing or maximizing target browser, the recommendation is to set
+                this variable to <code>false</code>.</strong>
         </td>
     </tr>
     <tr>
@@ -788,6 +805,45 @@ For standard System properties, see the section below titled as [Standard System
                     <code>true</code> using working with IE Browser.</li>
             </ul>
             <img src="image/systemvar_22.png"/>
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="nexial.safari.cleanSession"/><code>nexial.browser.safari.cleanSession</code></td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>true</td>
+        <td>
+            <strong>Applicable only when <code>nexial.browser</code> is set to <code>safari</code>.</strong><br/>
+            Instruct Nexial to delete all existing session data when starting a new browser session. This includes browser
+            history, cache, cookies, HTML5 local storage, and HTML5 databases. Setting this to true is some times necessary in
+            order to simulate a "<em>brand new browser</em>" or "<em>first visit</em>" experience.<br/>
+            <strong>Warning</strong>: Since Safari uses a single profile for the current user, enabling this will
+            <strong>permanently erase any existing session data.</strong>
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="nexial.safari.useTechPreview"/><code>nexial.browser.safari.useTechPreview</code></td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>true</td>
+        <td>
+            <strong>Applicable only when <code>nexial.browser</code> is set to <code>safari</code>.</strong><br/>
+            Instruct Nexial to use the <a href="https://developer.apple.com/safari/technology-preview/" class="external-link" target="_nexial_external">
+            Safari Technology Preview</a> if this system variable is set to <code>true</code>, otherwise use the release
+            version of Safari (default). Set this system variable to <code>true</code> <strong>ONLY</strong> the executing
+            host has <a href="https://developer.apple.com/safari/technology-preview/" class="external-link" target="_nexial_external">Safari
+            Technology Preview</a> properly installed.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="nexial.delayBrowser"/><code>nexial.delayBrowser</code></td>
+        <td>boolean</td>
+        <td>false</td>
+        <td class="highlight-red">true</td>
+        <td>
+            Delay the initialization of web browser until the first command of
+            <a href="../commands/web/open(url)">web &raquo; <code>open()</code></a> is invoked.
+            Generally one would not need to worry about this. Change this <strong>ONLY IF YOU KNOW WHAT YOU ARE DOING!</strong>
         </td>
     </tr>
     <tr>
@@ -839,18 +895,6 @@ For standard System properties, see the section below titled as [Standard System
         <td>
             Determine the much time to wait for a dynamic page/response to stabilize before proceeding to next test step.
             This is set at a 400ms increment.
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.browser.postCloseWaitMs"/><code>nexial.browser.postCloseWaitMs</code></td>
-        <td>integer</td>
-        <td>3000</td>
-        <td>false</td>
-        <td>
-            Time allotted, in millisecond, to allow the system is settled down and process any <em>clean up</em> after a
-            browser instance is closed. The default for this is <code>3000</code>, which means the execution of
-            <a href="../commands/web/close()">web &raquo; <code>close()</code></a> will add 3 seconds by default to the overall
-            execution time.
         </td>
     </tr>
     <tr>
@@ -918,22 +962,6 @@ For standard System properties, see the section below titled as [Standard System
             of a test execution in progress. Here's an example (where the field <code>Joe</code> is
             highlighted):<br/>
             <img src="image/systemvar_27.jpg"/>
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.browser.incognito"/><code>nexial.browser.incognito</code></td>
-        <td>boolean</td>
-        <td>true</td>
-        <td class="highlight-red">true</td>
-        <td>
-            Determine if the target browser should be initialized by Nexial in incognito/private mode. The common
-            practice is to <u>ALWAYS</u> run browser in such mode to avoid residual side-effects to the browser between tests.
-            The default is <strong><code>true</code></strong>.<br/>
-            <br/>
-            <strong>Due to a
-                <a href="https://bugs.chromium.org/p/chromedriver/issues/detail?id=504" class="external-link" target="_nexial_external">known/unresolved
-                    issue with chrome</a>, if your tests requires resizing or maximizing target browser, the recommendation is to set
-                this variable to <code>false</code>.</strong>
         </td>
     </tr>
     <tr>
@@ -1061,38 +1089,10 @@ For standard System properties, see the section below titled as [Standard System
         </td>
         <td>false</td>
         <td>
-    <span style="color: rgb(0, 0, 0);"><strong>Applicable only when <code>nexial.browser</code> is set to
-    <code>browserstack</code>.</strong></span><br/>
+            <span style="color: rgb(0, 0, 0);"><strong>Applicable only when <code>nexial.browser</code> is set to
+            <code>browserstack</code>.</strong></span><br/>
             OS version you want to test. For example:<br/>Windows: <code>XP, 7, 8, 8.1 and 10</code><br/>OS X:
             <code>Snow Leopard, Lion, Mountain Lion, Mavericks, Yosemite, El Capitan, Sierra</code>
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.safari.cleanSession"/><code>nexial.browser.safari.cleanSession</code></td>
-        <td>boolean</td>
-        <td>false</td>
-        <td>true</td>
-        <td>
-            <strong>Applicable only when <code>nexial.browser</code> is set to <code>safari</code>.</strong><br/>
-            Instruct Nexial to delete all existing session data when starting a new browser session. This includes browser
-            history, cache, cookies, HTML5 local storage, and HTML5 databases. Setting this to true is some times necessary in
-            order to simulate a "<em>brand new browser</em>" or "<em>first visit</em>" experience.<br/>
-            <strong>Warning</strong>: Since Safari uses a single profile for the current user, enabling this will
-            <strong>permanently erase any existing session data.</strong>
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.safari.useTechPreview"/><code>nexial.browser.safari.useTechPreview</code></td>
-        <td>boolean</td>
-        <td>false</td>
-        <td>true</td>
-        <td>
-            <strong>Applicable only when <code>nexial.browser</code> is set to <code>safari</code>.</strong><br/>
-            Instruct Nexial to use the <a href="https://developer.apple.com/safari/technology-preview/" class="external-link" target="_nexial_external">
-            Safari Technology Preview</a> if this system variable is set to <code>true</code>, otherwise use the release
-            version of Safari (default). Set this system variable to <code>true</code> <strong>ONLY</strong> the executing
-            host has <a href="https://developer.apple.com/safari/technology-preview/" class="external-link" target="_nexial_external">Safari
-            Technology Preview</a> properly installed.
         </td>
     </tr>
     <tr>
