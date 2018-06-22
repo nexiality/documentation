@@ -34,6 +34,11 @@ nexial.notifyOnRdbmsComplete
 - due to the close in time between start of an execution, the first script and the first scenario, the TTS notification
   has been modified to opt for speak-and-wait (previously speak-no-wait) strategy.
 
+#### Nexial Expression
+- CSV: added  **`maxColumns`** as an optional configuration during `parse()` to instruct Nexial to allocate beyond the 
+  default max columns (512) in order to process very wide CSV file. Note that changing this value will have both memory 
+  footprint and performance implication. This setting is usually not needed.
+
 #### [web commands](../commands/web)
 - shipped with <a href="https://github.com/mozilla/geckodriver/releases/tag/v0.21.0" class="external-link" target="nexial_external">geckodriver 0.21.0</a> 
   for Firefox browser. Significant changes include:

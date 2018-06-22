@@ -261,6 +261,10 @@ these SSN are not the same.
   - **`recordDelim`** - determine the character(s) between 2 records.  Default is carriage return (`\r\n`).
     - Nexial supports auto-detection of line delimiter, so you can omit `recordDelim` to simplify your automation.
 
+  - **`maxColumns`** - instruct Nexial to allocate beyond the default max columns (512) in order to process very wide
+    CSV file. Note that changing this value will have both memory footprint and performance implication. This setting
+    is usually not needed.
+    
   - Example: `[CSV(text) => parse(delim=\,|header=true|recordDelim=\r\n) text]` reads:
     - convert text into a CSV component, using the default Excel CSV format.
     - re-parse the same text but this time using **comma as the field delimiter**, the 
