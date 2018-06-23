@@ -11,6 +11,7 @@ comments: true
 
 
 ### General
+- improved some console messages (and error messages).
 
 <!--
 todo: discuss with team
