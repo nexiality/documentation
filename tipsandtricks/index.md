@@ -42,7 +42,7 @@ comments: true
 - [BrowserStack Integration](BrowserStackIntegration)
 - [Script failing on BrowserStack](ScriptFailingonBrowserStack)
 - [Reduce web automation flakiness with wait strategies](ReduceWebAutomationFlakiness)
-
+- [Improving IE Automation](WebAutomationOnIE)
 
 #### External Services
 - [Integrating with Email](IntegratingNexialWithEmail)
