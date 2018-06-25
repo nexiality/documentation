@@ -11,6 +11,7 @@ comments: true
 
 
 ### General
+- upgraded to Kotlin 1.2.50.
 - improved some console messages (and error messages).
 
 <!--
