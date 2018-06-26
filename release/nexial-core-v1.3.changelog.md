@@ -42,6 +42,16 @@ nexial.notifyOnRdbmsComplete
   footprint and performance implication. This setting is usually not needed.
 
 #### [web commands](../commands/web)
+- shipped with <a href="https://raw.githubusercontent.com/SeleniumHQ/selenium/master/java/CHANGELOG" class="external-link" target="nexial_external">Selenium v3.13.0</a>.
+  Significant changes include:
+  - Exposing a `RemoteWebDriverBuilder` which can be used to construct instances of selenium when talking to servers 
+    that speak the w3c protocol.
+  - Fixed loading of Grid hub and node config files.
+  - Fixed `noProxy` handling in Grid.
+  - Added bindings for custom ChromeDriver commands (GET_NETWORK_CONDITIONS, SET_NETWORK_CONDITIONS and 
+    DELETE_NETWORK_CONDITIONS) that allows client code to utilize built-in throttling functionality. (#3479)
+  - Minimised data being encoded as JSON when serialising Java objects.
+  - EventFiringWebDriver now fires events before and after `getText` and implements `HasCapabilities`.
 - shipped with <a href="https://github.com/mozilla/geckodriver/releases/tag/v0.21.0" class="external-link" target="nexial_external">geckodriver 0.21.0</a> 
   for Firefox browser. Significant changes include:
   - minimum recommended Firefox changed: **Firefox 57 (or greater)**
@@ -178,3 +188,13 @@ nexial.notifyOnRdbmsComplete
   - note that if this System variable is set to `true` or undefined, any harvested alert text would be available via the
     `nexial.lastAlertTet` System variable.
 - code fix to avoid exception in [web &raquo; `selectWindowByIndex(index)`](../commands/web/selectWindowByIndex(index))
+- preliminary support for Electron app automation. To use this, 
+  1. set `nexial.browser` to `electron`.
+  2. set `nexial.browser.electron.appLocation` to the path of the target Electron application binary/executable.
+  - most web commands should work. The following commands are currently not supported (by either Electron or the 
+    underlying WebDriver):
+    - [web &raquo; `maximizeWindow()`](../commands/web/maximizeWindow())
+    - [web &raquo; `resizeWindow(width,height)`](../commands/web/resizeWindow(width,height))
+    - [web &raquo; `goBack()`](../commands/web/goBack())
+    - [web &raquo; `goBackAndWait()`](../commands/web/goBackAndWait())
+ 
