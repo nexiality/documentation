@@ -13,6 +13,10 @@ comments: true
 ### General
 - upgraded to Kotlin 1.2.50.
 - improved some console messages (and error messages).
+- improved console and log output so that they are now in sync! Almost ALL console output is now captured in the log 
+  file as well.
+- fixed logic error when `nexial.outputToCloud` is `true` but Nexial Cloud Integration is not properly set up.
+- fixed logic to determine chrome log location and file name
 
 <!--
 todo: discuss with team
