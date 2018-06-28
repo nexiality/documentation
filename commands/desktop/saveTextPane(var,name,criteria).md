@@ -23,7 +23,7 @@ For criteria, here are the possible options:
 - **`regex`** - specify the regex to match by; takes precedence over "contains" match.
 - **`stopOnEmptyText`** - if `true`, Nexial will stop further scanning when a blank/empty row is found.  Recommend to always set this criteria as true unless finding all the empty rows in a `TextPane` is important. 
 - **`limitRows`** - specified the rows (zero-based) to consider for matching - e.g. `limitRows=0,1,2,3,11,12`. When used, all unspecified rows will be skipped.  Use this to improve speed.
-- **`color`** - specified the color as a criteria to match. Used in the form of `red=[0-255],green=[0-255],blue=[0-255]`.  For example, `color=red:255` means match on **RED** text, `color=red:255;green=255` means match on **YELLOW** text.
+- **`color`** - specified the color as a criteria to match. Used in the form of `red=[0-255],green=[0-255],blue=[0-255]`.  For example, `color=red:255` means match on **RED** text, `color=red:255;green:255` means match on **YELLOW** text. To say **BLACK**, specify `color=red:0;green:0;blue:0`.
 
   
 
@@ -34,6 +34,14 @@ For criteria, here are the possible options:
 - **criteria** - The criteria to use when matching against the text content of the target `TextPane` 
 
 ### Example
+**Script**:<br/>
+`criteria` to select first matched row that `contains` text in `color` red <br/>
+![script](image/saveTextPane_01.png)<br/>
+
+`criteria` to select first matched row that `contains` same text in `color` black <br/>
+![script](image/saveTextPane_02.png)<br/>
+
+If no color is specified, selects the first matched row irrespective of any color.
 
 ### See Also
 
