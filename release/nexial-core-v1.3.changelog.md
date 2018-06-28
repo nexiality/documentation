@@ -17,6 +17,10 @@ comments: true
   file as well.
 - fixed logic error when `nexial.outputToCloud` is `true` but Nexial Cloud Integration is not properly set up.
 - fixed logic to determine chrome log location and file name
+- output spreadsheet now include link to multiple log files
+- when `nexial.outputToCloud` is set to `true`, Nexial wil re-upload log files to S3 towards the end of the exeuction
+  so that the log file will have nearly the complete log information.
+
 
 <!--
 todo: discuss with team
