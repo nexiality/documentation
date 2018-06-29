@@ -21,7 +21,9 @@ comments: true
 - when `nexial.outputToCloud` is set to `true`, Nexial wil re-upload log files to S3 towards the end of the execution
   so that the log file will have nearly the complete log information.
 - fixed error that was preventing execution summary (JSON) to be uploaded to cloud storage.
-
+- first beta of nexial installer for Windows now available. The installer script is located in 
+  `%NEXIAL_HOME%/bin/installer/window/install.cmd`. Mac version forthcoming
+- exist `bin/nexial.cmd` with the exit code from Nexial.
 
 <!--
 todo: discuss with team
