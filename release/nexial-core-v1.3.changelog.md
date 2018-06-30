@@ -24,6 +24,7 @@ comments: true
 - first beta of nexial installer for Windows now available. The installer script is located in 
   `%NEXIAL_HOME%/bin/installer/window/install.cmd`. Mac version forthcoming
 - exist `bin/nexial.cmd` with the exit code from Nexial.
+- Nexial Installer move to separate project, [nexiality/nexial-installer](https://github.com/nexiality/nexial-installer/)
 
 <!--
 todo: discuss with team
