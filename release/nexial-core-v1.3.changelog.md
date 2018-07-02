@@ -25,6 +25,8 @@ comments: true
   `%NEXIAL_HOME%/bin/installer/window/install.cmd`. Mac version forthcoming
 - exist `bin/nexial.cmd` with the exit code from Nexial.
 - Nexial Installer move to separate project, [nexiality/nexial-installer](https://github.com/nexiality/nexial-installer/)
+- fix for linux to use `which` instead of `which --read-alias` when resolving location of browser execution. This 
+  should resolve problem when running Nexial in TTY
 
 <!--
 todo: discuss with team
