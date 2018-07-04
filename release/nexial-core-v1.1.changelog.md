@@ -55,7 +55,7 @@ using with Nexial.
 - Nexial filter now uses pipe (`|`) as separator for item listing, which should be enclosed in `[...]` unless there's 
   only 1 item.
 
-#### [Nexial Expression](../expression/index)
+#### [Nexial Expression](../expressions/index)
 - Uniformed handling of numeric values:
   - Defaults to using scale of 25 (i.e. 25 decimal places) when dealing with double.
   - Defaults to rounding "up" when dealing with double.
@@ -119,7 +119,7 @@ using with Nexial.
 - number &raquo; `assertBetween(num,lower,upper)` renamed to 
   [number &raquo; `assertBetween(num,min,max)`](../commands/number/assertBetween(num,min,max)) to improve readability.
 
-#### [step commands](../commands/steps/index)
+#### [step commands](../commands/step/index)
 - [step &raquo; `observe(prompt)`](../commands/step/observe(prompt)): fixed output to render response as second parameter.
 
 #### [web commands](../commands/web/index)
