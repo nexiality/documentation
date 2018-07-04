@@ -27,6 +27,7 @@ comments: true
 - Nexial Installer move to separate project, [nexiality/nexial-installer](https://github.com/nexiality/nexial-installer/)
 - fix for linux to use `which` instead of `which --read-alias` when resolving location of browser execution. This 
   should resolve problem when running Nexial in TTY
+- fixed .commons.sh to properly handle situation where a browser can be found in multiple locations.
 
 <!--
 todo: discuss with team
@@ -211,4 +212,11 @@ nexial.notifyOnRdbmsComplete
     - [web &raquo; `resizeWindow(width,height)`](../commands/web/resizeWindow(width,height))
     - [web &raquo; `goBack()`](../commands/web/goBack())
     - [web &raquo; `goBackAndWait()`](../commands/web/goBackAndWait())
- 
+- update Edge WebDriver to version: 6.17134
+  - Edge version supported: 17.17134
+- System variable `nexial.safari.cleanSession` removed since safari now ALWAYS open clean session.
+- update to [latest version of chromedriver built for electron app](https://github.com/electron/electron/releases/tag/v2.0.4).
+- update code to initialize firefox and geckodriver; no more deprecated calls.
+- when checking for browser and webdriver readiness, treat "unexpected end of stream on Connection" NOT as fatal so that Nexial can avoid opening new browser.
+- added settings to firefox to favor tab over windows
+- added settings to firefox to allow windows to be closed via JavaScript.

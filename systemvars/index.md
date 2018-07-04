@@ -808,20 +808,6 @@ For standard System properties, see the section below titled as [Standard System
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.safari.cleanSession"/><code>nexial.browser.safari.cleanSession</code></td>
-        <td>boolean</td>
-        <td>false</td>
-        <td>true</td>
-        <td>
-            <strong>Applicable only when <code>nexial.browser</code> is set to <code>safari</code>.</strong><br/>
-            Instruct Nexial to delete all existing session data when starting a new browser session. This includes browser
-            history, cache, cookies, HTML5 local storage, and HTML5 databases. Setting this to true is some times necessary in
-            order to simulate a "<em>brand new browser</em>" or "<em>first visit</em>" experience.<br/>
-            <strong>Warning</strong>: Since Safari uses a single profile for the current user, enabling this will
-            <strong>permanently erase any existing session data.</strong>
-        </td>
-    </tr>
-    <tr>
         <td nowrap="nowrap" class="varname"><a name="nexial.safari.useTechPreview"/><code>nexial.browser.safari.useTechPreview</code></td>
         <td>boolean</td>
         <td>false</td>
