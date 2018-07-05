@@ -56,20 +56,19 @@ Multiple conditions (as part of `[controls]`) are separated by pipe (`|`).
 
 
 ### Example
-
-| condition                                                               | description |
-|-------------------------------------------------------------------------|-------------|
-| <code>"A" = "A"</code>                                                  | _is "A" equals to "A"?_ |
-| <code>${fruit} in [apple|banana|chicken|shoes]</code>                   | _is `${fruit}` one of the items in the list `apple, banana, chicken, shoes`?_ |
-| <code>${error message} start with "Error: "</code>                      | _does `${error message}` starts with the text `"Error: "`?_ |
-| <code>${rate} between [7.005|7.8001]</code>                             | _is `${rate}` between `7.005` and `7.8001`?_ |
-| <code>${my_age} between [${min_age}|${max_age}]</code>                  | _is `${my_age}` between `${min_age}` and `${max_age}`?_ |
-| <code>${my_fruit} match [A-Za-z]{5} | ${my_age} > 25</<code>            | _is `${my_fruit}` 5 alphabets **and** `${my_age}` greater than `25`?_ |
-| <code>${my_name} end with nathan</code>                                 | _Does `${my_name}` end with `nathan` (such as Jonathan)?_ |
-| <code>${is_login} is false</code>                                       | _is `${is_login}` false (i.e. NOT true)?_ |
-| <code>not_a_var is undefined</code>                                     | _is there a variable defined as `not_a_var`?_ <br/><br/>**Note that `not_a_var` is not specified in the format of <br/>`${...}`**since we are referencing the data variable, not the inferred value. |
-| <code>my_age is defined | ${my_age} is not empty | ${my_age} has length of 2</code> | _is there a variable defined as `my_age`, and such variable <br/>is not empty and contains 2 characters?_ <br/><br/>**Note that `my_age` is not specified in the format of <br/>`${...}` in the context of the `is defined` condition** since <br/>we are referencing the data variable, not the inferred value.  <br/>However, with the `is not empty` and `has length of` <br/>conditions, we would use the `${...}` form. |
-
+<table class="sysvar" cellspacing="0" cellpadding="3">
+<tr><th>condition</th><th>description</th></tr>
+<tr><td><code>"A" = "A"</code></td><td>is "A" equals to "A"?</td></tr>
+<tr><td><code>${fruit} in [apple|banana|chicken|shoes]</code></td><td>is <code>${fruit}</code> one of the items in the list <code>apple, banana, chicken, shoes</code>?</td></tr>
+<tr><td><code>${error message} start with "Error: "</code></td><td>does <code>${error message}</code> starts with the text <code>"Error: "</code>?</td></tr>
+<tr><td><code>${rate} between [7.005|7.8001]</code></td><td>is <code>${rate}</code> between <code>7.005</code> and <code>7.8001</code>?</td></tr>
+<tr><td><code>${my_age} between [${min_age}|${max_age}]</code></td><td>is <code>${my_age}</code> between <code>${min_age}</code> and <code>${max_age}</code>?</td></tr>
+<tr><td><code>${my_fruit} match [A-Za-z]{5} | ${my_age} &gt; 25</code></td><td>is <code>${my_fruit}</code> 5 alphabets <b>and</b> <code>${my_age}</code> greater than <code>25</code>?</td></tr>
+<tr><td><code>${my_name} end with nathan</code></td><td>Does <code>${my_name}</code> end with <code>nathan</code> (such as Jonathan)?</td></tr>
+<tr><td><code>${is_login} is false</code></td><td>is <code>${is_login}</code> false (i.e. NOT true)?</td></tr>
+<tr><td><code>not_a_var is undefined</code></td><td>is there a variable defined as <code>not_a_var</code>?<br/><br/><b>Note that <code>not_a_var</code> is not specified in the format of <code>${...}</code></b> since we are referencing the data variable, not the inferred value.</td></tr>
+<tr><td><code>my_age is defined | ${my_age} is not empty | ${my_age} has length of 2</code></td><td>is there a variable defined as <code>my_age</code>, and such variable is not empty and contains 2 characters?<br/><br/><b>Note that <code>my_age</code> is not specified in the format of <code>${...}</code> in the context of the <code>is defined</code> condition</b> since we are referencing the data variable, not the inferred value.  <br/>However, with the <code>is not empty</code> and <code>has length of</code> conditions, we would use the <code>${...}</code> form.</td></tr>
+</table>
 
 ### See Also
 This filter specification will be used within the following operations:
