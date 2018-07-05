@@ -59,20 +59,20 @@ Multiple conditions (as part of `[controls]`) are separated by pipe (`|`).
 
 | condition                                                               | description |
 |-------------------------------------------------------------------------|-------------|
-|`"A" = "A"`                                                              | _is "A" equals to "A"?_ |
+| <code>"A" = "A"</code>                                                  | _is "A" equals to "A"?_ |
 | <code>${fruit} in [apple|banana|chicken|shoes]</code>                   | _is `${fruit}` one of the items in the list `apple, banana, chicken, shoes`?_ |
-|`${error message} start with "Error: "`                                  | _does `${error message}` starts with the text `"Error: "`?_ |
-|<code>${rate} between [7.005|7.8001]</code>                              | _is `${rate}` between `7.005` and `7.8001`?_ |
-|<code>${my_age} between [${min_age}|${max_age}]</code>                   | _is `${my_age}` between `${min_age}` and `${max_age}`?_ |
-|` ${my_fruit} match [A-Za-z]{5} & ${my_age} > 25`                        | _is `${my_fruit}` 5 alphabets **and** `${my_age}` greater than `25`?_ |
-|`${my_name} end with nathan`                                             | _Does `${my_name}` end with `nathan` (such as Jonathan)?_ |
-|`${is_login} is false`                                                   | _is `${is_login}` false (i.e. NOT true)?_ |
-|`not_a_var is undefined`                                                 | _is there a variable defined as `not_a_var`?_ <br/><br/>**Note that `not_a_var` is not specified in the format of <br/>`${...}`**since we are referencing the data variable, not the inferred value. |
-|`my_age is defined & ${my_age} is not empty & ${my_age} has length of 2` | _is there a variable defined as `my_age`, and such variable <br/>is not empty and contains 2 characters?_ <br/><br/>**Note that `my_age` is not specified in the format of <br/>`${...}` in the context of the `is defined` condition** since <br/>we are referencing the data variable, not the inferred value.  <br/>However, with the `is not empty` and `has length of` <br/>conditions, we would use the `${...}` form. |
+| <code>${error message} start with "Error: "</code>                      | _does `${error message}` starts with the text `"Error: "`?_ |
+| <code>${rate} between [7.005|7.8001]</code>                             | _is `${rate}` between `7.005` and `7.8001`?_ |
+| <code>${my_age} between [${min_age}|${max_age}]</code>                  | _is `${my_age}` between `${min_age}` and `${max_age}`?_ |
+| <code>${my_fruit} match [A-Za-z]{5} | ${my_age} > 25</<code>            | _is `${my_fruit}` 5 alphabets **and** `${my_age}` greater than `25`?_ |
+| <code>${my_name} end with nathan</code>                                 | _Does `${my_name}` end with `nathan` (such as Jonathan)?_ |
+| <code>${is_login} is false</code>                                       | _is `${is_login}` false (i.e. NOT true)?_ |
+| <code>not_a_var is undefined</code>                                     | _is there a variable defined as `not_a_var`?_ <br/><br/>**Note that `not_a_var` is not specified in the format of <br/>`${...}`**since we are referencing the data variable, not the inferred value. |
+| <code>my_age is defined | ${my_age} is not empty | ${my_age} has length of 2</code> | _is there a variable defined as `my_age`, and such variable <br/>is not empty and contains 2 characters?_ <br/><br/>**Note that `my_age` is not specified in the format of <br/>`${...}` in the context of the `is defined` condition** since <br/>we are referencing the data variable, not the inferred value.  <br/>However, with the `is not empty` and `has length of` <br/>conditions, we would use the `${...}` form. |
 
 
 ### See Also
 This filter specification will be used within the following operations:
-- [CSV &raquo; `filter(conditions)`](../expressions/CSVexpression#operations)
-- [CSV &raquo; `removeRows(conditions)`](../expressions/CSVexpression#operations)
+- [CSV &raquo; `filter(conditions)`](../expressions/CSVexpression#filter(conditions))
+- [CSV &raquo; `removeRows(conditions)`](../expressions/CSVexpression#removerows(conditions))
 - [Flow Controls](index)
