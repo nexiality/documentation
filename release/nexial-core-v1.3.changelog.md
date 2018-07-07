@@ -35,13 +35,14 @@ comments: true
   has been modified to opt for speak-and-wait (previously speak-no-wait) strategy.
 
 #### Nexial Expression
-  ###### [CSV expression]
-  - added  **`maxColumns`** as an optional configuration during `parse()` to instruct Nexial to allocate beyond the 
-    default max columns (512) in order to process very wide CSV file. Note that changing this value will have both memory 
-    footprint and performance implication. This setting is usually not needed.
-  - fixed [`CSV expression`](../expressions/CSVexpression) to accurately parse the match items in a "is" or "in" filter.
-    For example, `filter(Name in [Johnny|Sammy|Manny])`.
-    Refer [Documentation for Nexial filter](https://nexiality.github.io/documentation/flowcontrols/filter) for details.
+
+###### [CSV expression]
+- added  **`maxColumns`** as an optional configuration during `parse()` to instruct Nexial to allocate beyond the 
+  default max columns (512) in order to process very wide CSV file. Note that changing this value will have both memory 
+  footprint and performance implication. This setting is usually not needed.
+- fixed [`CSV expression`](../expressions/CSVexpression) to accurately parse the match items in a "is" or "in" filter.
+  For example, `filter(Name in [Johnny|Sammy|Manny])`.
+  Refer [Documentation for Nexial filter](https://nexiality.github.io/documentation/flowcontrols/filter) for details.
 
 #### System variables
 - added new System variable - [`nexial.web.preemptiveAlertCheck`](../systemvars/index#nexial.web.preemptiveAlertCheck)
