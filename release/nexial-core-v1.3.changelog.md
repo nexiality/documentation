@@ -1,47 +1,30 @@
 ---
 layout: default
-title: nexial-core 1.3 (2018-07-??)
+title: nexial-core 1.3 (2018-07-06)
 parent: release
 tags: release nexial-core 1.3
 comments: true
 ---
 
 ### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-1.3" class="external-link" target="_nexial_target">Release 1.3</a>
-2018-07-??
-
+2018-07-06
 
 ### General
 - upgraded to Kotlin 1.2.50.
-- improved some console messages (and error messages).
-- improved console and log output so that they are now in sync! Almost ALL console output is now captured in the log 
-  file as well.
-- fixed logic error when `nexial.outputToCloud` is `true` but Nexial Cloud Integration is not properly set up.
-- fixed logic to determine chrome log location and file name
-- output spreadsheet now include link to multiple log files
-- when `nexial.outputToCloud` is set to `true`, Nexial wil re-upload log files to S3 towards the end of the execution
-  so that the log file will have nearly the complete log information.
-- fixed error that was preventing execution summary (JSON) to be uploaded to cloud storage.
-- first beta of nexial installer for Windows now available. The installer script is located in 
-  `%NEXIAL_HOME%/bin/installer/window/install.cmd`. Mac version forthcoming
-- exist `bin/nexial.cmd` with the exit code from Nexial.
-- Nexial Installer move to separate project, [nexiality/nexial-installer](https://github.com/nexiality/nexial-installer/)
+- improved log file information, to be in sync with almost ALL console output messages.
+- fixed logic when [`nexial.outputToCloud`](../systemvars/index#nexial.outputToCloud) is set to `true`, but 
+  `Nexial Cloud Integration` is not properly set up.
+- when [`nexial.outputToCloud`](../systemvars/index#nexial.outputToCloud) is set to `true`, Nexial will re-upload log 
+  files to S3 at the end of the execution. So that the log file will have the complete log information.
+- fixed logic to determine chrome log location and file name.
+- output spreadsheet now includes link to multiple log files for completeness.
+- fixed error that was preventing execution summary (JSON) to upload to cloud storage.
+- [Nexial Installer](https://github.com/nexiality/nexial-installer/releases) for Linux, Mac and Windows is now available.
+  For the usage, read [Nexial Installer README](https://github.com/nexiality/nexial-installer/blob/master/README) 
+- [PR #6])(https://github.com/nexiality/nexial-core/pull/6) `bin/nexial.cmd` exits with the actual exit code from Nexial.
 - fix for linux to use `which` instead of `which --read-alias` when resolving location of browser execution. This 
-  should resolve problem when running Nexial in TTY
-- fixed .commons.sh to properly handle situation where a browser can be found in multiple locations.
-
-<!--
-todo: discuss with team
-#### Event Notification
-nexial.notifyOnWebOpen
-nexial.notifyOnDesktopUseApp
-nexial.notifyOnDesktopUseForm
-nexial.notifyOnDesktopUseTable
-nexial.notifyOnDesktopUseList
-nexial.notifyOnWsStart
-nexial.notifyOnWsComplete
-nexial.notifyOnRdbmsStart
-nexial.notifyOnRdbmsComplete
--->
+  should resolve problem when running Nexial in TTY.
+- fixed `commons.sh` to properly handle situation where a browser can be found in multiple locations.
 
 #### Built-in Function
 - fixed parsing logic to honor escaping conflicting characters such as `$`, `(`, `)` and `|`.  These characters are 
@@ -52,9 +35,25 @@ nexial.notifyOnRdbmsComplete
   has been modified to opt for speak-and-wait (previously speak-no-wait) strategy.
 
 #### Nexial Expression
-- CSV: added  **`maxColumns`** as an optional configuration during `parse()` to instruct Nexial to allocate beyond the 
-  default max columns (512) in order to process very wide CSV file. Note that changing this value will have both memory 
-  footprint and performance implication. This setting is usually not needed.
+  ###### [CSV expression]
+  - added  **`maxColumns`** as an optional configuration during `parse()` to instruct Nexial to allocate beyond the 
+    default max columns (512) in order to process very wide CSV file. Note that changing this value will have both memory 
+    footprint and performance implication. This setting is usually not needed.
+  - fixed [`CSV expression`](../expressions/CSVexpression) to accurately parse the match items in a "is" or "in" filter.
+    For example, `filter(Name in [Johnny|Sammy|Manny])`.
+    Refer [Documentation for Nexial filter](https://nexiality.github.io/documentation/flowcontrols/filter) for details.
+
+#### System variables
+- added new System variable - [`nexial.web.preemptiveAlertCheck`](../systemvars/index#nexial.web.preemptiveAlertCheck)
+  to opt out for pre-emptive checks of `alert`,`confirm` or `prompt` (JavaScript) dialogs during web automation.
+  This pre-emptive checks are turned on by default for convenience.  However for performance reason one might opt to
+  turn off this check (which DOES take time), esp. when automating a web app that does not generate JavaScript dialog
+  (`alert`, `confirm` or `prompt`). Our simple tests show that switching this System variable to `false` (default is `true`)
+  yields about 15-20% time improvement.
+  - note that if this System variable is set to `true` or undefined, any harvested alert text would be available via the
+    [`nexial.lastAlertText`](../systemvars/index.md#nexial.lastAlertText) System variable.
+- System variable [`nexial.safari.cleanSession`](../systemvars/index#nexial.safari.cleanSession) removed since safari now
+  ALWAYS open clean session.    
 
 #### [web commands](../commands/web)
 - shipped with <a href="https://raw.githubusercontent.com/SeleniumHQ/selenium/master/java/CHANGELOG" class="external-link" target="nexial_external">Selenium v3.13.0</a>.
@@ -195,13 +194,6 @@ nexial.notifyOnRdbmsComplete
     stating "Do not let this page create any more alerts." Unlike standard Windows alerts, these use controls that are 
     only available via Active Accessibility to retrieve the text. The driver now is able to detect and retrieve text 
     from these types of alerts.
-- added new System variable - `nexial.web.preemptiveAlertCheck` - to opt out for pre-emptive checks of `alert`, 
-  `confirm` or `prompt` (JavaScript) dialogs during web automation. This pre-emptive checks are turned on by default 
-  for convenience.  However for performance reason one might opt to turn off this check (which DOES take time), esp. 
-  when automating a web app that does not generate JavaScript dialog (`alert`, `confirm` or `prompt`). Our simple tests
-  show that switching this System variable to `false` (default is `true`) yields about 15-20% time improvement.
-  - note that if this System variable is set to `true` or undefined, any harvested alert text would be available via the
-    `nexial.lastAlertTet` System variable.
 - code fix to avoid exception in [web &raquo; `selectWindowByIndex(index)`](../commands/web/selectWindowByIndex(index))
 - preliminary support for Electron app automation. To use this, 
   1. set `nexial.browser` to `electron`.
@@ -212,11 +204,12 @@ nexial.notifyOnRdbmsComplete
     - [web &raquo; `resizeWindow(width,height)`](../commands/web/resizeWindow(width,height))
     - [web &raquo; `goBack()`](../commands/web/goBack())
     - [web &raquo; `goBackAndWait()`](../commands/web/goBackAndWait())
+- update to [latest version of chromedriver built for electron app](https://github.com/electron/electron/releases/tag/v2.0.4).
 - update Edge WebDriver to version: 6.17134
   - Edge version supported: 17.17134
-- System variable `nexial.safari.cleanSession` removed since safari now ALWAYS open clean session.
-- update to [latest version of chromedriver built for electron app](https://github.com/electron/electron/releases/tag/v2.0.4).
 - update code to initialize firefox and geckodriver; no more deprecated calls.
-- when checking for browser and webdriver readiness, treat "unexpected end of stream on Connection" NOT as fatal so that Nexial can avoid opening new browser.
-- added settings to firefox to favor tab over windows
-- added settings to firefox to allow windows to be closed via JavaScript.
+  - when checking for browser and webdriver readiness, treat "unexpected end of stream on Connection" and "Software 
+    caused connection abort: recv failed" NOT as fatal so that Nexial can avoid opening new browser (as attempts to 
+    revive from webdriver crash).
+  - added settings to firefox to favor tab over windows.
+  - added settings to firefox to allow windows to be closed via JavaScript.
