@@ -13,8 +13,10 @@ comments: true
 
 
 #### [web commands](../commands/web)
-- implemented auto download of Edge webdriver in order to support multiple builds of Windows 10.
 - preliminary support for Microsoft Edge browser for Windows 10. 
   - **Note**: XPATH locator is not supported in the 10240 build of Windows 10/Edge/webdriver
+- implemented auto download of Edge webdriver in order to support multiple builds of Windows 10.
+  - Nexial no longer shipped with any Edge webdriver. Instead now it automatically downloads one that is appropriate
+    for the version of Windows 10 running the execution.
 - supports tag-based locator using `tag=` prefix
 - browser-specific support on "switch-window" capability. Currently Edge does not support "switch-window".
