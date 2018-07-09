@@ -8,7 +8,7 @@ comments: true
 
 The "mail" command type represents the automation command regarding sending emails.  Future enhancement could include
 the retrieval of emails as well (_if you need this feature sooner, submit an 
-<a href="https://github.com/nexiality/nexial-core/issues/new" class="external-link" target="_nexial_external">issue</a> 
+<a href="https://github.com/nexiality/nexial-core/issues/new" class="external-link" target="_nexial_link">issue</a> 
 to increase the priority thereof_).
 
 In order to send email, appropriate mail server connectivity must be defined first.  The section below describes how

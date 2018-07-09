@@ -176,9 +176,9 @@ For standard System properties, see the section below titled as [Standard System
             <code>nexial.outputToCloud</code> as <code>true</code>:<br/>
             <br/>
             <table cellpadding="0" cellspacing="0">
-            <tr><th align="left">otc.region</th><td>The desire <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html" class="external-link" target="nexial_target">AWS region</a>. Default is <code>us-west-2</code>.</td></tr> 
-            <tr><th align="left">otc.accessKey</th><td>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys" class="external-link" target="nexial_target">AWS access key</a> to access the target S3 service.</td></tr> 
-            <tr><th align="left">otc.secretKey</th><td>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys" class="external-link" target="nexial_target">AWS secret key</a> to access the target S3 service.</td></tr> 
+            <tr><th align="left">otc.region</th><td>The desire <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html" class="external-link" target="_nexial_link">AWS region</a>. Default is <code>us-west-2</code>.</td></tr> 
+            <tr><th align="left">otc.accessKey</th><td>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys" class="external-link" target="_nexial_link">AWS access key</a> to access the target S3 service.</td></tr> 
+            <tr><th align="left">otc.secretKey</th><td>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys" class="external-link" target="_nexial_link">AWS secret key</a> to access the target S3 service.</td></tr> 
             <tr><th align="left">nexial.outputCloudBase</th><td>The target bucket and path to use for storing execution output.</td></tr> 
             </table> 
         </td>

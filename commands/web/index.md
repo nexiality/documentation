@@ -1,49 +1,153 @@
 ---
 title: web
 layout: default
-tags: command web
+tags: command web browser firefox chrome ie edge safari electron
 comments: true
 ---
 
-For effective automation of Web application, there are a number of critical technical knowledge and techniques to 
-apply.  In general, it is about applying the right technique of writing locators.  Locators are a collections of ways 
-(8 in total) to identify elements of a web page.  Here's a quick summary of the various locators:<br/>
-![](image/web_01.png)
+Nexial supports browser automation via the popular 
+<a href="https://en.wikipedia.org/wiki/Selenium_(software)" class="external-link" target="_nexial_link">Selenium<a/>/
+<a href="https://www.seleniumhq.org/docs/03_webdriver.jsp" class="external-link" target="_nexial_link">WebDriver</a>
+automation framework. In effect, Nexial translates the commands in the Nexial script (spreadsheet) to Selenium- or 
+WebDriver- specific API calls, along with other automation work such as error handling and browser lifecycle management.
+Similar with [web cookie](../webcookie/) and [JavaScript alert](../webalert) automation, Nexial acts as the translator
+to mediate between the automation script and the underlying Selenium/WebDriver framework. As part of the overall 
+approach on building an automation platform, the Nexial development team tries to keep up the latest official releases 
+of its third-party libraries. Selenium is no exception. As of July 2018 Nexial uses Selenium 3.1.13 and the latest 
+releases of related webdrivers.
 
-There are quite a bit of excellent information on the Web regarding locators.  So rather than writing about it, 
-I'll simply point you to them.  Here they are:
+
+### Locators
+For effective automation of Web application, there are a number of critical technical knowledge and techniques to 
+apply. The most important of which is the right technique of writing locators. Locators are a collections of ways 
+(7 in total) to identify elements of a web page. It is by such mechanism one can effectively identify elements on a web
+page, interact with them and perform automation upon them. 
 
 _**Note: Most of the information on the Web about locators are not created from the standpoint 
-of a scriptless or hybrid framework like Nexial.  Reader's discretion is advised...**_
+of a scriptless or hybrid framework like Nexial. This applies to the links in this page. Reader's discretion is 
+advised...**_
 
-- <a href="https://www.tutorialspoint.com/selenium/selenium_locators.htm" class="external-link" target="_nexial_target">https://www.tutorialspoint.com/selenium/selenium_locators.htm</a>
-- <a href="http://www.seleniumeasy.com/selenium-tutorials/selenium-locators" class="external-link" target="_nexial_target">http://www.seleniumeasy.com/selenium-tutorials/selenium-locators</a>
-- <a href="http://www.techbeamers.com/use-locators-selenium/" class="external-link" target="_nexial_target">http://www.techbeamers.com/use-locators-selenium/</a>
-- <a href="http://artoftesting.com/automationTesting/locators-in-selenium-webdriver.html" class="external-link" target="_nexial_target">http://artoftesting.com/automationTesting/locators-in-selenium-webdriver.html</a>
-- <a href="http://screenster.io/selenium-locators-tutorial-types-best-practices-and-many-more/" class="external-link" target="_nexial_target">http://screenster.io/selenium-locators-tutorial-types-best-practices-and-many-more/</a>
+Here's a quick summary of the various locators:<br/>
+{% include _locators.html %}
 
-Those who are familiar with locators know the most expressive and powerful type is XPath.  XPath provides the ability 
-to identify a specific web element (or a group of web elements) via its ID, attributes, relative or absolute position 
-and its hierarchy.  However with great power comes great responsibility as well.  Without careful use, one often end 
-up with very convoluted and unmaintainable XPaths.  Such XPaths are not only hard to read, hard to maintain and 
-brittle by nature, they are so slower to execute.  Simplifying XPath and applying right techniques takes a fair bit 
-of knowledge on XPath itself. Here are some online resources that might be helpful:<br/>
+-----
 
-- <a href="https://www.w3schools.com/xml/xpath_syntax.asp" class="external-link" target="_nexial_target">https://www.w3schools.com/xml/xpath_syntax.asp</a>
-- <a href="https://automatetheplanet.com/underrated-webdriver-locator-xpath/" class="external-link" target="_nexial_target">https://automatetheplanet.com/underrated-webdriver-locator-xpath/</a>
+### Browser Support
+Nexial currently supports the following browsers (recent versions only):
+- [Firefox (via geckodriver)](#firefox)
+- [Firefox in Headless Mode](#firefox-headless)
+- [Chrome](#chrome)
+- [Chrome in Headless Mode](#chrome-headless)
+- [Chrome in Embedded Mode](#chrome-embedded)
+- [Electron (Chromium)](#electron)
+- [Safari (on MacOS)](#safari)
+- [Safari Technology Preview (on MacOS)](#safari-technology-preview)
+- [Internet Explorer 9 and above (on Windows 7 and above)](#internet-explorer)
+- [Microsoft Edge (currently in beta) (on Windows 10)](#microsoft-edge)
+- [BrowserStack](#browserstack)
 
-Alternatively one might consider converting XPaths to CSS locators.  To learn more, here's a well known article on 
-this subject:<br/>
+#### Firefox
+Enabling Firefox automation is straightforward:
+1. Make sure a recent version of <a href="https://www.mozilla.org/en-US/firefox/" class="external-link" target="_nexial_link">Firefox</a> 
+   suitable to your platform is installed locally. For Linux and Mac OS, `firefox` or `firefox-bin` is expected to be 
+   found in the `$PATH` environment variable. The order of paths in `$PATH` determines the precedence in being selected 
+   as the target executable for automation. For Windows, Firefox is expected to be installed in either
+   `%ProgramFiles%\Mozilla Firefox` or `%ProgramFiles(x86)%\Mozilla Firefox`.
+2. Set [`nexial.browser`](../../systemvars/index#nexial.browser) to `firefox`.
+3. Begin scripting...
 
-- <a href="https://saucelabs.com/blog/why-css-locators-are-the-way-to-go-vs-xpath" class="external-link" target="_nexial_target">https://saucelabs.com/blog/why-css-locators-are-the-way-to-go-vs-xpath</a>
+#### Firefox Headless
+Follow the same instruction as [Firefox](index#firefox), except setting 
+[`nexial.browser`](../../systemvars/index#nexial.browser) to `firefox.headless`.
 
-Here's an online app to help converting XPath to CSS locator:<br/>
+#### Chrome
+Enabling Chrome automation requires the following steps:
+1. Make sure a recent version of <a href="https://www.google.com/chrome/" class="external-link" target="_nexial_link">Chrome</a>
+   suitable to your platform is installed locally. Linux installation differs based on distro - check distribution 
+   vendor website or Google for more details. Do be sure that `google-chrome` can be found in `$PATH` environment 
+   variable. For Mac, `Google Chrome` is expected to be installed either in the standard `/Applications/Google Chrome.app` 
+   or in the home directory of the current user (give precedence).
+2. Set [`nexial.browser`](../../systemvars/index#nexial.browser) to `chrome`.
+3. Begin scripting...
 
-- <a href="http://cssify.appspot.com/" class="external-link" target="_nexial_target">http://cssify.appspot.com/</a>
-  
-  ![](image/web_02.png)
+#### Chrome Headless
+Follow the same instruction as [Chrome](index#chrome), except setting 
+[`nexial.browser`](../../systemvars/index#nexial.browser) to `chrome.headless`.
 
-The "web" command type represents a series of automation commands regarding web operations.
+#### Chrome Embedded
+<a href="https://en.wikipedia.org/wiki/Chromium_Embedded_Framework" class="external-link" target="_nexial_link">Chrome Embedded Framework</a>,
+or CEF for short, is 
+<a href="https://bitbucket.org/chromiumembedded/" class="external-link" target="_nexial_link">an open source framework</a> 
+for embedding chrome browser (technically chromium) in a desktop application. The ability to do so opens up a wide 
+range of possibilities in application development.
+
+To enable CEF automation, follow these steps:
+1. Make sure the Chrome-embedded application (AUT) is properly installed. In most cases, one should find a `libcef.dll`
+   or `libcef.so` in the same location as the CEF-enabled application.
+2. Set [`nexial.browser`](../../systemvars/index#nexial.browser) to `chrome.embedded`.
+3. Set [`nexial.browser.embedded.appLocation`](../../systemvars/index#nexial.browser.embedded.appLocation) to the full
+   path of the application executable program.
+4. Begin scripting...
+
+#### Electron
+<a href="https://en.wikipedia.org/wiki/Electron_(software_framework)" class="external-link" target="_nexial_link">Electron</a>
+is an open source framework to create desktop applications using JavaScript. It combines the use of Node.js runtime as
+the backend and Chromium as the frontend engine to create a compelling, cross-platform desktop GUI framework that powers
+popular applications such as Atom, Microsoft team, Microsoft Visual Studio Code, WhatsApp, Slack and Cycligent.
+
+To enable Electron application automation, follow these steps:
+1. Make sure the target Electron application is properly installed.
+2. Set [`nexial.browser`](../../systemvars/index#nexial.browser) to `electron`.
+3. Set [`nexial.browser.electron.appLocation`](../../systemvars/index#nexial.browser.electron.appLocation) to the full
+   path of the executable program. For MacOS, the executable is usually found under `$APPLICATION/Contents/MacOS/`.
+4. Begin scripting...
+
+#### Safari
+Enabling Safari automation requires the following steps:
+1. Make sure a recent version of <a href="https://support.apple.com/downloads/#safari" class="external-link" target="_nexial_link">Safari</a>
+   is installed locally. Only MacOS is supported for safari automation at this time.
+2. Set [`nexial.browser`](../../systemvars/index#nexial.browser) to `safari`.
+3. Begin scripting...
+
+#### Safari Technology Preview
+Enabling Safari Technology Preview automation requires the following steps:
+1. Make sure a recent version of <a href="https://developer.apple.com/safari/technology-preview/" class="external-link" target="_nexial_link">Safari Technology Preview</a>
+   is installed locally. Only MacOS is supported for Safari automation at this time.
+2. Set [`nexial.browser`](../../systemvars/index#nexial.browser) to `safari`.
+3. Set [`nexial.browser.safari.useTechPreview`](../../systemvars/index#nexial.browser.safari.useTechPreview) to `true`.
+4. Begin scripting...
+
+#### Internet Explorer
+Enabling IE automation requires the following steps:
+1. Make sure a recent version of <a href="https://www.microsoft.com/en-us/download/internet-explorer.aspx" class="external-link" target="_nexial_link">Internet Explorer</a>
+   suitable to your platform is installed locally. Only Windows 7 and above is supported at this time.
+2. Set [`nexial.browser`](../../systemvars/index#nexial.browser) to `ie`.
+3. Be sure to read through and follow the recommendations listed in 
+   [Web Automation On IE](../../tipsandtricks/WebAutomationOnIE.md).
+4. Begin scripting...
+
+#### Microsoft Edge
+Enabling IE automation requires the following steps:
+1. Make sure a recent version of <a href="https://www.microsoft.com/en-us/windows/microsoft-edge" class="external-link" target="_nexial_link">Microsft Edge Browser</a>
+   suitable to your platform is installed locally. Only Windows 10 is supported at this time.
+2. Set [`nexial.browser`](../../systemvars/index#nexial.browser) to `edge`.
+3. Be sure to read through and follow the recommendations listed in 
+   [Web Automation On IE](../../tipsandtricks/WebAutomationOnIE.md) (these IE recommendations are applicable to Edge 
+   as well!).
+4. Begin scripting...
+
+#### BrowserStack
+<a href="http://browserstack.com/" class="external-link" target="_nexial_link">BrowserStack</a> is a popular cloud, web 
+and mobile testing platform that enables developers to test their websites and mobile applications across on-demand 
+browsers, operating systems and real mobile devices. This is a paid service.
+
+To enable BrowserStack integration, be sure to read up on the 
+[BrowserStack Integration](../../tipsandtricks/BrowserStackIntegration.md) page.
+
+-----
+
+The "web" command type represents a series of automation commands regarding web operations. See below for a list of 
+available commands.
 
 ### Available Commands
 - [`assertAndClick(locator,label)`](assertAndClick(locator,label))

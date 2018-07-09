@@ -7,7 +7,7 @@ comments: true
 ---
 
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-1.0" class="external-link" target="_nexial_target">Release 1.0</a>
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-1.0" class="external-link" target="_nexial_link">Release 1.0</a>
 2018-03-30
 
 #### First release of Nexial Automation Platform.  
@@ -286,15 +286,15 @@ Here is the list of supported commands separated by their command type:
 - [`sftpMoveTo(var,profile,local,remote)`](../commands/ssh/sftpMoveTo(var,profile,local,remote))
 
 #### [web]
-- shipped with <a href="https://chromedriver.storage.googleapis.com/2.37/notes.txt" class="external-link" target="_nexial_external">chromedriver v2.37</a>, this includes
+- shipped with <a href="https://chromedriver.storage.googleapis.com/2.37/notes.txt" class="external-link" target="_nexial_link">chromedriver v2.37</a>, this includes
 	- Supports Chrome v63-65
 	- Resolved issue 2221: Add command-line option to log INFO level to stderr [[Pri-2]]
 	- Resolved issue  450: ChromeDriver hangs when switching to new window whose document is being overwritten [[Pri-2]]
-- shipped with <a href="https://github.com/mozilla/geckodriver/releases/tag/v0.20.0" class="external-link" target="_nexial_external">geckodriver v0.20.0 (firefox)</a>, 
+- shipped with <a href="https://github.com/mozilla/geckodriver/releases/tag/v0.20.0" class="external-link" target="_nexial_link">geckodriver v0.20.0 (firefox)</a>, 
  this includes:
 	- fixes to shut down firefox process _more_ cleanly.
 	- keyDown and keyUp action now support more than single primitive characters
-- shipped with <a href="https://raw.githubusercontent.com/SeleniumHQ/selenium/master/java/CHANGELOG" class="external-link" target="_nexial_external">selenium 3.11.0</a>,
+- shipped with <a href="https://raw.githubusercontent.com/SeleniumHQ/selenium/master/java/CHANGELOG" class="external-link" target="_nexial_link">selenium 3.11.0</a>,
  this includes:
   - Removed deprecated methods from `RemoteWebDriver`.
 - [`assertAndClick(locator,label)`](../commands/web/assertAndClick(locator,label))

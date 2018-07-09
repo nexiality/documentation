@@ -8,7 +8,7 @@ comments: true
 
 ### Description
 
-- clear the current browser's <a href="https://en.wikipedia.org/wiki/Web_storage#Local_and_session_storage" class="external-link" target="_nexial_target">local storage</a>.
+- clear the current browser's <a href="https://en.wikipedia.org/wiki/Web_storage#Local_and_session_storage" class="external-link" target="_nexial_link">local storage</a>.
 
 ### Parameters
 

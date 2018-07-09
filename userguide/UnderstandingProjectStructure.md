@@ -84,7 +84,7 @@ Below is the general directory/file structure of a standard Nexial automation pr
        path=c:\\wiki\\templates
        ```
        For more information on properties file, refer to 
-       <a href="https://docs.oracle.com/cd/E26180_01/Platform.94/ATGProgGuide/html/s0204propertiesfileformat01.html" class="external-link" target="nexial_external">Properties file format</a>. 
+       <a href="https://docs.oracle.com/cd/E26180_01/Platform.94/ATGProgGuide/html/s0204propertiesfileformat01.html" class="external-link" target="_nexial_link">Properties file format</a>. 
 
 2. The `output` directory contains the output of each test execution named as a `run id`, which is simply the 
    timestamp of the start of an execution.  The `captures` directory stores all the screenshots, the `logs` 

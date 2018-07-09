@@ -8,15 +8,15 @@ comments: true
 
 
 ### Description
-<a href="https://en.wikipedia.org/wiki/Comma-separated_values" class="external-link" target="_nexial_external">CSV, or Comma-Separated Values</a>, 
+<a href="https://en.wikipedia.org/wiki/Comma-separated_values" class="external-link" target="_nexial_link">CSV, or Comma-Separated Values</a>, 
 is text-based file format to store tabular data.  In many ways this file format can be viewed as a simplified, 
 no-format, version of Excel.   Using this file format, one can store tabular data (i.e. 2-dimensional) of various 
 types and sizes.  This expression, then, can help to manipulate a CSV file content as part of automation.
 
 As popular as CSV has been since 
-<a href="https://en.wikipedia.org/wiki/FORTRAN#FORTRAN_77" class="external-link" target="_nexial_external">FORTRAN 77</a> 
+<a href="https://en.wikipedia.org/wiki/FORTRAN#FORTRAN_77" class="external-link" target="_nexial_link">FORTRAN 77</a> 
 (yes, 1978), it might surprise some to know that there isn't yet a standard for it.  The closet of a standard would be 
-<a href="https://tools.ietf.org/html/rfc4180" class="external-link" target="_nexial_external">RFC 4180</a>, 
+<a href="https://tools.ietf.org/html/rfc4180" class="external-link" target="_nexial_link">RFC 4180</a>, 
 which is a proposal and a formalization of CSV as a specification, but not yet accepted as specification.  As such, 
 there are many, and some subtle, variations out there and many are staunchly supported by technology communities and 
 companies alike.  The most popular varieties of CVS would be:
@@ -33,7 +33,7 @@ CSV file format:
   - uses double quote for non-numeric value
   - uses carriage return (`\r\n`) as record separator
   - regard empty lines as an empty records
-- **<a href="https://en.wikipedia.org/wiki/Tab-separated_values" class="external-link" target="_nexial_external">TDF or TSV</a>** - 
+- **<a href="https://en.wikipedia.org/wiki/Tab-separated_values" class="external-link" target="_nexial_link">TDF or TSV</a>** - 
   The tab-delimited format, which uses the  `TAB` character instead of comma as field value delimiter.  This is also 
   the default CSV format for MySQL export. Such format:
   - uses `TAB` character as delimiter

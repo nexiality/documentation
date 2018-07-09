@@ -25,7 +25,7 @@ In addition to the above, one may also access the individual execution report (s
 #### Displaying Execution Dashboard on a Jenkins job page
 
 1.  **One-time** Setup
-	*   Plugins needed: <a href="https://wiki.jenkins.io/pages/viewpage.action?pageId=60915753" class="external-link" target="_nexial_target">anything-goes</a>
+	*   Plugins needed: <a href="https://wiki.jenkins.io/pages/viewpage.action?pageId=60915753" class="external-link" target="_nexial_link">anything-goes</a>
 	*   Jenkins | Manage Jenkins | Configure Global Security ( `http://\[jenkins_host\]/configureSecurity/` ):
 	    *   Under Markup Formatter, select `Allow arbitrary HTML includin JavaScript (UNSAFE)`  
 	    ![](image/ExecutionDashboardHOWTO_01.png)

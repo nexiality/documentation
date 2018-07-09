@@ -44,15 +44,15 @@ load the appropriate connection driver (a.k.a. JDBC driver).  The valid values 
 - `<connection name>` **.url** \- this specifies how to connect to the target database.  Some connection string may 
   contain username and password.  Hence the `.username` and `.password` are required.  For more details about 
   connection string, check the following links:
-  - <a href="https://msdn.microsoft.com/en-us/library/ms378428(v=sql.110).aspx" class="external-link" target="_nexial_external">Microsoft SQL Server connection string</a>
-  - <a href="http://www.orafaq.com/wiki/JDBC#Thin_driver" class="external-link" target="_nexial_external">Oracle thin driver connection string</a>
+  - <a href="https://msdn.microsoft.com/en-us/library/ms378428(v=sql.110).aspx" class="external-link" target="_nexial_link">Microsoft SQL Server connection string</a>
+  - <a href="http://www.orafaq.com/wiki/JDBC#Thin_driver" class="external-link" target="_nexial_link">Oracle thin driver connection string</a>
     - not distributed as part of Nexial due to vendor restriction.  Please visit vendor website to obtain appropriate 
       driver files.
-  - <a href="https://www.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.apdv.java.doc/src/tpc/imjcc_r0052342.html" class="external-link" target="_nexial_external">IBM DB2 thin driver connection string</a>
+  - <a href="https://www.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.apdv.java.doc/src/tpc/imjcc_r0052342.html" class="external-link" target="_nexial_link">IBM DB2 thin driver connection string</a>
     - not distributed as part of Nexial due to vendor restriction.  Please visit vendor website to obtain appropriate 
       driver files.
-  - <a href="https://jdbc.postgresql.org/documentation/80/connect.html" class="external-link" target="_nexial_external">PostgreSQL connection string</a>
-  - <a href="https://dev.mysql.com/doc/connector-j/5.1/en/connector-j-reference-configuration-properties.html" class="external-link" target="_nexial_external">MySQL connection string</a>
+  - <a href="https://jdbc.postgresql.org/documentation/80/connect.html" class="external-link" target="_nexial_link">PostgreSQL connection string</a>
+  - <a href="https://dev.mysql.com/doc/connector-j/5.1/en/connector-j-reference-configuration-properties.html" class="external-link" target="_nexial_link">MySQL connection string</a>
 
 In addition to the above, there are other useful configurations:
 1. `<connection name>` **.user** \- the username to use to connect to the target database.
@@ -114,7 +114,7 @@ would retrieve the SQL statement associated to this execution.  Of course one c
 other than `result`. 
 - `${...}.sql` \- retrieves the SQL statement executed to derive this execution result.
 - `${...}.startTime` \- retrieves the time when this SQL was executed, in 
-  <a href="https://en.wikipedia.org/wiki/Unix_time" class="external-link" target="_nexial_external">epoch</a> format.  
+  <a href="https://en.wikipedia.org/wiki/Unix_time" class="external-link" target="_nexial_link">epoch</a> format.  
   Considering using the [`date`](../../functions/$(date)) built-in function to convert the timestamp value into a 
   human-readable form.
 - `${...}.elapsedTime` \- retrieves the time spent to complete the associated SQL execution, in milliseconds.

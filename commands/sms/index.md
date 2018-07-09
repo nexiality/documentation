@@ -8,7 +8,7 @@ comments: true
 
 ### Description
 Automate the process of sending 
-<a href="https://en.wikipedia.org/wiki/SMS" style="external-link" target="nexial_external">SMS</a> to one or more mobile
+<a href="https://en.wikipedia.org/wiki/SMS" class="external-link" target="_nexial_link">SMS</a> to one or more mobile
 numbers. Note that a [one-time setup](#one-time-setup) is required in order to enable the cloud-based SMS messaging 
 capability. This also means that while Nexial does not incur any cost to automate SMS messaging, the
 underlying cloud service can likely incur some costs to utilize the feature.

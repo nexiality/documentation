@@ -52,7 +52,7 @@ To accommodate for different response time throughout the user interaction, one 
 the automation). This can be time consuming, error prone and inefficient. Instead, one can use another System variable 
 called [`nexial.web.alwaysWait`](../systemvars/index#nexial.web.alwaysWait) to tackle this total page load time problem. 
 When this System variable is set to `true`, Nexial will activate 
-<a href="https://seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/FluentWait.html" class="external-link" target="nexial_external">Selenium 3' FluentWait</a>
+<a href="https://seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/FluentWait.html" class="external-link" target="_nexial_link">Selenium 3' FluentWait</a>
 as a strategy to poll the target web element _until_ a specified time. In other words, we can instruct Nexial to 
 "return _that_element as soon as it is available, but not more than x amount of time". This is much more efficient
 and flexible as we can specific a "max" wait for the entire application but not impose that same "max" wait uniformly 

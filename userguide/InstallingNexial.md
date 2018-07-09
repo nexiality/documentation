@@ -20,14 +20,14 @@ comments: true
       ![java_18](image/InstallingNexial_02.png)<br/>
       Below is a snapshot of an outdated Java installation (1.6.0.45). If the version of your Java installation
       is not `1.8.x`, then please consider a reinstallation or upgrade to the latest version of 
-      <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" class="external-link" target="_nexial_target">Java 1.8</a>.
+      <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" class="external-link" target="_nexial_link">Java 1.8</a>.
       <br/>
       ![java_16](image/InstallingNexial_02a.png)
    1. If the version of Java installed is **1.8** or above, proceed to next section (Check Excel Version).  if the 
       version of Java installed is less than 1.8, proceed to Step 2 (below).
 
 2. Download Java
-   1. Open your browser and point to <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" class="external-link" target="_nexial_external">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>
+   1. Open your browser and point to <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" class="external-link" target="_nexial_link">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>
    1. Click on the Download button just below JDK.<br/>
       ![download_jdk](image/InstallingNexial_03.png)
    1. Click on **Accept License Agreement**.<br/>
@@ -43,11 +43,11 @@ comments: true
        
       - By default, Java is installed to either `C:\Program Files\Java\jdk...` or 
         `C:\Program Files (x86)\Java\jdk...`.   
-      - For more hep, visit <a href="https://java.com/en/download/help/download_options.xml#windows" class="external-link" target="_nexial_external">https://java.com/en/download/help/download_options.xml#windows</a>
+      - For more hep, visit <a href="https://java.com/en/download/help/download_options.xml#windows" class="external-link" target="_nexial_link">https://java.com/en/download/help/download_options.xml#windows</a>
        
       **MacOSX**: double-click on the downloaded installer.  Follow the instructions of the installer.  For more help, 
       visit 
-      <a href="https://java.com/en/download/help/mac_install.xml" class="external-link" target="_nexial_external">https://java.com/en/download/help/mac_install.xml</a>
+      <a href="https://java.com/en/download/help/mac_install.xml" class="external-link" target="_nexial_link">https://java.com/en/download/help/mac_install.xml</a>
 
 3. Check `PATH`, `JAVA_HOME`, `JRE_HOME`
    Windows: 
@@ -75,7 +75,7 @@ Currently Nexial supports Excel 2007 and 2010. Nexial requires the use of XLSX f
    versions of Firefox will work as well.  Support from Nexial team is provided on a case-by-case basis.
 1. **Chrome** - latest and almost all recent versions are supported.  Older version can be supported via using the 
    corresponding 
-   <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" class="external-link" target="_nexial_external">older versions of chrome driver</a>.
+   <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" class="external-link" target="_nexial_link">older versions of chrome driver</a>.
 1. **Safari** \- version 9 or above is supported, with the latest most likely to be most stable.
 
 ### Installing Nexial

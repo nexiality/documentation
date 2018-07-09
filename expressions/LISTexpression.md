@@ -25,7 +25,7 @@ a list of US states. The last command uses a `LIST` expression to sort the US 
 
 #### ascending
 - Re-order the list in ascending order, based on the 
-  <a href="https://en.wikipedia.org/wiki/Lexicographical_order" class="external-link" target="_nexial_target">natural lexicographical order</a>.
+  <a href="https://en.wikipedia.org/wiki/Lexicographical_order" class="external-link" target="_nexial_link">natural lexicographical order</a>.
 
 #### average
 - Calculate the average of all the numbers found in the list as a [`NUMBER`](NUMBERexpression).   Non-numeric items in 
@@ -37,7 +37,7 @@ a list of US states. The last command uses a `LIST` expression to sort the US 
 
 #### descending
 - Re-order the list in descending order, based on the 
-  <a href="https://en.wikipedia.org/wiki/Lexicographical_order" class="external-link" target="_nexial_target">natural lexicographical order</a>.
+  <a href="https://en.wikipedia.org/wiki/Lexicographical_order" class="external-link" target="_nexial_link">natural lexicographical order</a>.
 
 #### distinct
 - Remove all duplicate items in the list.
@@ -54,7 +54,7 @@ a list of US states. The last command uses a `LIST` expression to sort the US 
 
 #### intersect(list)
 - Transform the current list by creating a new list that contains only the items found in both `list`.  See 
-  <a href="https://en.wikipedia.org/wiki/Union_(set_theory)" class="external-link" target="_nexial_target">Intersection (set theory)</a> for more details.
+  <a href="https://en.wikipedia.org/wiki/Union_(set_theory)" class="external-link" target="_nexial_link">Intersection (set theory)</a> for more details.
 
 #### item(index)
 - Retrieve the item on the list based on its `index`.  If invalid `index` is specified, an empty string is returned.
@@ -128,5 +128,5 @@ a list of US states. The last command uses a `LIST` expression to sort the US 
 #### union(list)
 - Transform the current list by appending to it the items in the specified `list` that are not found.  In essence, 
   this operation creates a new list that contains all the items in both list without any repeats. See 
-  <a href="https://en.wikipedia.org/wiki/Union_(set_theory)" class="external-link" target="_nexial_target">Union (set theory)</a> for more details.
+  <a href="https://en.wikipedia.org/wiki/Union_(set_theory)" class="external-link" target="_nexial_link">Union (set theory)</a> for more details.
   

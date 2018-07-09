@@ -25,7 +25,7 @@ notification of the execution progress or critical events. By using different so
 ([Predefined Audio Library](play(audio)#example)) one can create distinguishing audio cues for different events such
 as "start", "failed" or "complete". Another advantage of using audio notification against the more common, 
 GUI-based notification is its less **invasive** nature. 
-<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dn742472(v=vs.85).aspx" class="external-link" target="nexial_external">UI notifications</a>, 
+<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dn742472(v=vs.85).aspx" class="external-link" target="_nexial_link">UI notifications</a>, 
 such as pop up windows, alert dialogs, status bar bubbles, toast messages, etc. are designed to interrupt one's focus.
 At times this can be rather jarring and counter-productive, esp. if one's reading something on the computer screen. 
 Using audio notification, there isn't any shift of vision focus (i.e. nothing's blocking one's view) and yet it provides

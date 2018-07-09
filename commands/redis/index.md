@@ -16,7 +16,7 @@ transactions and different levels of on-disk persistence, and provides high avai
 automatic partitioning with Redis Cluster.
 
 Learn more about redis:
-- <a href="https://redis.io/topics/introduction" class="external-link" target="_nexial_target">https://redis.io/topics/introduction</a>
+- <a href="https://redis.io/topics/introduction" class="external-link" target="_nexial_link">https://redis.io/topics/introduction</a>
 
 
 #### Defining profile
@@ -28,8 +28,8 @@ URL to the target Redis server.  For example,<br/>
 Here, `myredis` would be considered the profile name, and be used as the `profile` argument in commands below.
 
 For more details about Redis connectivity, check out the following links:
-- <a href="https://github.com/lettuce-io/lettuce-core/wiki/Redis-URI-and-connection-details" class="external-link" target="_nexial_target">https://github.com/lettuce-io/lettuce-core/wiki/Redis-URI-and-connection-details</a>
-- <a href="https://www.iana.org/assignments/uri-schemes/prov/redis" class="external-link" target="_nexial_target">https://www.iana.org/assignments/uri-schemes/prov/redis</a>
+- <a href="https://github.com/lettuce-io/lettuce-core/wiki/Redis-URI-and-connection-details" class="external-link" target="_nexial_link">https://github.com/lettuce-io/lettuce-core/wiki/Redis-URI-and-connection-details</a>
+- <a href="https://www.iana.org/assignments/uri-schemes/prov/redis" class="external-link" target="_nexial_link">https://www.iana.org/assignments/uri-schemes/prov/redis</a>
 
 Note: Future version of Nexial might include additional Redis connectivity details.
   

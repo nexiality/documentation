@@ -11,7 +11,7 @@ comments: true
 This command plays one of the predefined sounds or an user-defined audio file via the `audio` parameter.
 Note that this command can only play MP3 and WAV files at this time. If you need support for additional audio encoding, 
 please feel free to request by create an 
-<a href="https://github.com/nexiality/nexial-core/issues/new" class="external-link" target="nexial_external">issue</a>.
+<a href="https://github.com/nexiality/nexial-core/issues/new" class="external-link" target="_nexial_link">issue</a>.
 
 Note also that this command will automatically skipped over when the execution is triggered in a CI (Jenkins) 
 environment. I mean, "_If a Nexial test makes a sound in an execution and no one is around to hear it, does it make 

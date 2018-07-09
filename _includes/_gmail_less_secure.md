@@ -6,11 +6,11 @@ denied.  You might see a similar error as below when running a `mail` command ag
 
 This is an indication that the email account in questionis restricted to "secured third-party client app" only. For 
 further understanding about this, please visit 
-<a href="https://support.google.com/mail/answer/7126229?visit_id=1-636610148744612821-503885497&rd=2#cantsignin" class="external-link" target="nexial_link">https://support.google.com/mail/answer/7126229?visit_id=1-636610148744612821-503885497&rd=2#cantsignin</a>
-and <a href="https://support.google.com/accounts/answer/6010255" class="external-link" target="nexial_link">https://support.google.com/accounts/answer/6010255</a>.
+<a href="https://support.google.com/mail/answer/7126229?visit_id=1-636610148744612821-503885497&rd=2#cantsignin" class="external-link" target="_nexial_link">https://support.google.com/mail/answer/7126229?visit_id=1-636610148744612821-503885497&rd=2#cantsignin</a>
+and <a href="https://support.google.com/accounts/answer/6010255" class="external-link" target="_nexial_link">https://support.google.com/accounts/answer/6010255</a>.
 
 This issue can be addressed via 
-<a href="https://myaccount.google.com/lesssecureapps" class="external-link" target="nexial_link">https://myaccount.google.com/lesssecureapps</a>. 
+<a href="https://myaccount.google.com/lesssecureapps" class="external-link" target="_nexial_link">https://myaccount.google.com/lesssecureapps</a>. 
 After successfully signing in to your Gmail account, proceed to enable "les secure apps" option:
 
 ![](/documentation/image/gmail_03.png)

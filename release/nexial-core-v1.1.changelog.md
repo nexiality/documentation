@@ -6,7 +6,7 @@ tags: release nexial-core 1.1
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v1.1_0027" class="external-link" target="_nexial_target">Release 1.1</a>
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v1.1_0027" class="external-link" target="_nexial_link">Release 1.1</a>
 2018-05-02
 
 
@@ -17,7 +17,7 @@ using with Nexial.
 
 ### General
 - Now supports [BAI2 Expression](../expressions/BAI2expression) to parse and validate text files with `BAI2` file format.
-- Upgraded to <a href="https://github.com/JetBrains/kotlin/releases/tag/v1.2.31" class="external-link" target="nexial_link">Kotlin 1.2.31</a>
+- Upgraded to <a href="https://github.com/JetBrains/kotlin/releases/tag/v1.2.31" class="external-link" target="_nexial_link">Kotlin 1.2.31</a>
 - Enabled [`project.properties`](../userguide/UnderstandingProjectStructure#project.properties) setting to take effect 
   even when no site-wide Nexial setting jar is found.
 - Performance improvement on reading Excel files:
@@ -124,7 +124,7 @@ using with Nexial.
 
 #### [web commands](../commands/web/index)
 - shipped with 
-  <a href="https://github.com/mozilla/geckodriver/blob/release/CHANGES.md#0201-2018-04-06" class="external-link" target="nexial_link">geckodriver 0.20.1 (Firefox)</a>:
+  <a href="https://github.com/mozilla/geckodriver/blob/release/CHANGES.md#0201-2018-04-06" class="external-link" target="_nexial_link">geckodriver 0.20.1 (Firefox)</a>:
   - Avoid attempting to kill Firefox process that has stopped.	
   - With the change to allow Firefox enough time to shut down in 0.20.0, geckodriver started unconditionally killing 
     the process to reap its exit status. This caused geckodriver to inaccurately report a successful Firefox shutdown 

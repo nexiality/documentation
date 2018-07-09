@@ -27,14 +27,14 @@ The more simplest way is to delete the rows/columns that has no relevant informa
 
 **Note**:  If your test artifacts are under 100KB, this is usually not needed.  If you are facing OutOfMemory issue
 with small Excel files, then it's likely a different issue.  Please open an 
-<a href="https://github.com/nexiality/nexial-core/issues" class="external-link" target="_nexial_target">issue</a> for 
+<a href="https://github.com/nexiality/nexial-core/issues" class="external-link" target="_nexial_link">issue</a> for 
 further support.
 
 
 ### Steps to Clean up Excel file
 Below are the steps to reduce (at times drastically) the Excel file size.  This involves selecting a whole set of
 unused spreadsheets and "cleaning" them.  For more information on how to select a huge series of rows or columns, check
-out <a href="https://exceljet.net/keyboard-shortcuts/extend-the-selection-to-the-last-cell-right" class="external-link" target="_nexial_target">this page</a>.
+out <a href="https://exceljet.net/keyboard-shortcuts/extend-the-selection-to-the-last-cell-right" class="external-link" target="_nexial_link">this page</a>.
 
 #### Test Plan
 1. Navigate to the location of the plan files (i.e. `artifact/plan`)

@@ -6,7 +6,7 @@ tags: release nexial-core 1.3
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-1.3" class="external-link" target="_nexial_target">Release 1.3</a>
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-1.3" class="external-link" target="_nexial_link">Release 1.3</a>
 2018-07-06
 
 ### General
@@ -57,7 +57,7 @@ comments: true
   ALWAYS open clean session.    
 
 #### [web commands](../commands/web)
-- shipped with <a href="https://raw.githubusercontent.com/SeleniumHQ/selenium/master/java/CHANGELOG" class="external-link" target="nexial_external">Selenium v3.13.0</a>.
+- shipped with <a href="https://raw.githubusercontent.com/SeleniumHQ/selenium/master/java/CHANGELOG" class="external-link" target="_nexial_link">Selenium v3.13.0</a>.
   Significant changes include:
   - Exposing a `RemoteWebDriverBuilder` which can be used to construct instances of selenium when talking to servers 
     that speak the w3c protocol.
@@ -67,7 +67,7 @@ comments: true
     DELETE_NETWORK_CONDITIONS) that allows client code to utilize built-in throttling functionality. (#3479)
   - Minimised data being encoded as JSON when serialising Java objects.
   - EventFiringWebDriver now fires events before and after `getText` and implements `HasCapabilities`.
-- shipped with <a href="https://github.com/mozilla/geckodriver/releases/tag/v0.21.0" class="external-link" target="nexial_external">geckodriver 0.21.0</a> 
+- shipped with <a href="https://github.com/mozilla/geckodriver/releases/tag/v0.21.0" class="external-link" target="_nexial_link">geckodriver 0.21.0</a> 
   for Firefox browser. Significant changes include:
   - minimum recommended Firefox changed: **Firefox 57 (or greater)**
   - (added) Support for the chrome element identifier from Firefox.

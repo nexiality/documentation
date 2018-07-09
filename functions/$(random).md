@@ -36,7 +36,7 @@ to a _true_ number, consider the following strategy:<br/>
 - **`$(random|any|length)`** \- render a random string with any character between ASCII 32 and 126 (inclusive), with 
   specified `length`.  The ASCII range is sometimes known as "space-to-tilde" range, or the 
   _printable character range_. See 
-  <a href="http://www.charstable.com/_site_media/ascii/chars-table-landscape.jpg" class="external-link" target="_nexial_external">here</a> for 
+  <a href="http://www.charstable.com/_site_media/ascii/chars-table-landscape.jpg" class="external-link" target="_nexial_link">here</a> for 
   more details of the characters included. 
 - **`$(random|characters|<specify characters>|length)`** \- render a random string based on the specified `characters` and the 
   specified `length`.  This can be particularly useful to validate functionality with specified characteristics on 

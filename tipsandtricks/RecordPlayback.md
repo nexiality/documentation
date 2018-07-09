@@ -35,7 +35,7 @@ A few things to note:
 3. Any mouse or keyboard events will also be recorded.  The recording is scoped to the **entire desktop**.
 4. By default Nexial records in MP4 format.  If you'd like to record in AVI format 
    (see [`nexial.record.format`](../systemvars/index#nexial.screenRecorder)), you should do a one-time installation of 
-   the <a href="https://assets.techsmith.com/Downloads/TSCC.msi" class="external-link" target="_nexial_external">TSCC codec (free)</a>.
+   the <a href="https://assets.techsmith.com/Downloads/TSCC.msi" class="external-link" target="_nexial_link">TSCC codec (free)</a>.
 5. The same behavior is expected as with Nexial output and screenshot captures. If 
    [`nexial.outputToCloud`](../systemvars/index.html#nexial.outputToCloud) is true, then the recorded video will be 
    uploaded to cloud as well.
@@ -43,7 +43,7 @@ A few things to note:
 
 ### How-To
 1. If the target video is AVI, make sure you have the 
-   <a href="https://assets.techsmith.com/Downloads/TSCC.msi" class="external-link" target="_nexial_external">TSCC codec (free)</a>
+   <a href="https://assets.techsmith.com/Downloads/TSCC.msi" class="external-link" target="_nexial_link">TSCC codec (free)</a>
    installed on the host where the recording will be performed.
 2. From your Nexial script, identify where the recording should start.  Add in a new command 
    [base &raquo; `startRecording()`](../commands/base/startRecording())`, like this:  
@@ -54,7 +54,7 @@ A few things to note:
 5. From the generated Nexial output file, you should see something like this:  
    ![](image/Record_Playback_04.png)
 6. One may click on the link to download/play the recorded automation run.  For OS X, an AVI player such as 
-   <a href="http://ftp.free.org/mirrors/videolan/vlc/2.2.4/macosx/vlc-2.2.4.dmg" class="external-link" target="_nexial_target">VLC</a> 
-   or <a href="https://mac.eltima.com/download/elmediaplayer.dmg" class="external-link" target="_nexial_target">Elmedia Player</a> 
+   <a href="http://ftp.free.org/mirrors/videolan/vlc/2.2.4/macosx/vlc-2.2.4.dmg" class="external-link" target="_nexial_link">VLC</a> 
+   or <a href="https://mac.eltima.com/download/elmediaplayer.dmg" class="external-link" target="_nexial_link">Elmedia Player</a> 
    can be used to playback the recording.
 

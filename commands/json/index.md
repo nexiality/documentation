@@ -7,7 +7,7 @@ comments: true
 
 
 This set of commands is designed to support 
-<a href="http://www.json.org/" class="external-link" target="_nexial_external">JSON</a> validation and manipulation 
+<a href="http://www.json.org/" class="external-link" target="_nexial_link">JSON</a> validation and manipulation 
 as part of a test automation.  For basic validation, [`assertWellformed(json)`](assertCorrectness(json,schema)) 
 and [`assertCorrectness(json,schema)`](assertCorrectness(json,schema)) might suffice.  These two commands provide 
 validation at the document level.  For more fine-grained assertion and manipulation, we need a descriptive and 
