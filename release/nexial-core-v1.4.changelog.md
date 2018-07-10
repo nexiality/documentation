@@ -12,6 +12,18 @@ comments: true
 ### General
 
 
+### Flow Control
+- `TimeTrackStart(label)` and `TimeTrackEnd()`: new flow control to mark start/end time of any arbitrary group of steps.
+
+
+#### Event Notification
+- new event handling to mark the elapsed time of a well-defined events:
+  - `nexial.trackExecution=true`: log start/end and elapsed time of an execution.
+  - `nexial.trackScript=true`: log start/end and elapsed time of a script.
+  - `nexial.trackIteration=true`: log start/end and elapsed time of an iteration.
+  - `nexial.trackScenario=true`: log start/end and elapsed time of a scenario.
+
+
 #### [web commands](../commands/web)
 - preliminary support for Microsoft Edge browser for Windows 10. 
   - **Note**: XPATH locator is not supported in the 10240 build of Windows 10/Edge/webdriver
