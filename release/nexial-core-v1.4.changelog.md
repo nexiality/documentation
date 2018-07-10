@@ -30,5 +30,6 @@ comments: true
 - implemented auto download of Edge webdriver in order to support multiple builds of Windows 10.
   - Nexial no longer shipped with any Edge webdriver. Instead now it automatically downloads one that is appropriate
     for the version of Windows 10 running the execution.
+  - fixed code to default to min. OS version (10.0.10240) if an old version of Windows 10 is encountered.
 - supports tag-based locator using `tag=` prefix
 - browser-specific support on "switch-window" capability. Currently Edge does not support "switch-window".
