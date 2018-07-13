@@ -601,7 +601,7 @@ For standard System properties, see the section below titled as [Standard System
         <td>&nbsp</td>
         <td>false</td>
         <td>
-            This system variable is to specify variety of format for time tracking logs. Default format is 
+            This system variable is to specify variety of formats for time tracking logs. Default format is 
             <code>START_DATE|START_TIME|END_DATE|END_TIME|ELAPSED_TIME|THREAD_NAME|LABEL|REMARK</code>.
             For more information on time tracking, see <a href="../flowcontrols/timeTracking"><code>Time Tracking</code></a>
         </td>
