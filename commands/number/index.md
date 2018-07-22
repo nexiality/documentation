@@ -9,7 +9,7 @@ comments: true
 The "number" command type represents a series of automation commands regarding numeric operations:
 
 - [`assertBetween(num,min,max)`](assertBetween(num,min,max))
-- [`assertEqual(value1,value2)`](assertEqual(value1,value2))
+- [`assertEqual(num1,num2)`](assertEqual(num1,num2))
 - [`assertGreater(num1,num2)`](assertGreater(num1,num2))
 - [`assertGreaterOrEqual(num1,num2)`](assertGreaterOrEqual(num1,num2))
 - [`assertLesser(num1,num2)`](assertLesser(num1,num2))

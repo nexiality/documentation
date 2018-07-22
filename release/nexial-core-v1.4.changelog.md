@@ -28,6 +28,31 @@ comments: true
   - `nexial.trackScenario=true`: log start/end and elapsed time of a scenario.
 
 
+### Nexial Expression
+- The ` in ` condition will now consider an empty string as match to an empty filter.
+- The ` not in ` condition will not consider an non-empty string as match to an empty filter (as in " this string is not part of empty filter").
+
+
+### [number commands](../commands/number)
+- update code to align with documentation; command parameters are now correctly named.
+  - **You will likely need to run 
+    [`bin/nexial-script-update.cmd|sh`](../userguide/BatchFiles#nexial-script-update.cmd-/-nexial-script-update.sh) on
+    your project, and might need to update your scripts accordingly to match the command parameter changes.**
+  - `assertEqual(value1,value2)` now correctly named as [`assertEqual(num1,num2)`](../commands/number/assertEqual(num1,num2))
+  - `average(variableName,array)` now correctly named as [`average(var,array)`](../commands/number/average(var,array))
+  - `ceiling(variableName)` now correctly named as [`ceiling(var)`](../commands/number/ceiling(var)))
+  - `decrement(variableName,amount)` now correctly named as [`decrement(var,amount)`](../commands/number/decrement(var,amount)))
+  - `floor(variableName)` now correctly named as [`floor(var)`](../commands/number/floor(var)))
+  - `increment(variableName,amount)` now correctly named as [`increment(var,amount)`](../commands/number/increment(var,amount)))
+  - `max(variableName,array)` now correctly named as [`max(var,array)`](../commands/number/max(var,array))
+  - `min(variableName,array)` now correctly named as [`min(var,array)`](../commands/number/min(var,array))
+  - `round(variableName,closestDigit)` now correctly named as [`round(var,closestDigit)`](../commands/number/round(var,closestDigit))
+
+
+### [json command](../commands/json)
+- [`addToReplace`]: new command to add or replace JSON fragment to existing JSON
+
+
 #### [web commands](../commands/web)
 - preliminary support for Microsoft Edge browser for Windows 10. 
   - **Note**: XPATH locator is not supported in the 10240 build of Windows 10/Edge/webdriver

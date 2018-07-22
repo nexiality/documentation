@@ -11,13 +11,13 @@ comments: true
 NUMBER treats its data a number, from which mathematical or numerical operations may be performed.
 
 **Note**: Where the argument to the operations listed below is `numbers`, the expected separators between numbers
-is comma (`,`).  Spaces between numbers are allowed.  For example,
+is comma (`,`). Spaces between numbers are allowed. For example,
 
 ```text
 [NUMBER(92) => add(44, 92, 71.23, 801.23, -1092) minus(11, 44.002) multiply( 15.01, 0.902 ) divide(5.0190, 0.07092)]
 ```
 
-The arthimetic operations are conducted from left to right, without arithmetic order of precedence.  The above 
+The arthimetic operations are conducted from left to right, without arithmetic order of precedence. The above 
 example would yield `-1770.2978788893238`.
 
 
@@ -35,7 +35,8 @@ example would yield `-1770.2978788893238`.
 - **`round`** \- transform current number by rounding it to the closest integer.
 - **`roundTo(closestDigit)`** \- transform current number by rounding it to the `closestDigit`.  The `closestDigit` 
   is used to specify "the closest digit", "the closest tenth", "the closest hundredth", etc.  For example, 
-  `[NUMBER(173921.22) => roundTo(1000)]` would yield `174000`.
+  `[NUMBER(173921.22) => roundTo(1000)]` would yield `174000`. However to retain decimals, one would specify
+  `0.` followed by number of desired decimal places instead. `[NUMBER(173921.22) => roundTo(0.0)]` would yield `173921.2`. 
 - **`store(var)`** \- save current NUMBER expression to a data variable.  If the specified `var` exists, its value 
   will be overwritten.  Using this operation, one can put an expression on pause and resume it at a later time.
 - **`text`** \- transform current number to text
