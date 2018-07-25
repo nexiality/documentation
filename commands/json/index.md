@@ -16,6 +16,7 @@ structure-aware specification to communicate the intent - something akins to XPa
 
 
 ### Available Commands
+- [`addOrReplace(json,jsonpath,input,var)`](addOrReplace(json,jsonpath,input,var))
 - [`assertCorrectness(json,schema)`](assertCorrectness(json,schema))
 - [`assertElementCount(json,jsonpath,count)`](assertElementCount(json,jsonpath,count))
 - [`assertElementNotPresent(json,jsonpath)`](assertElementNotPresent(json,jsonpath))

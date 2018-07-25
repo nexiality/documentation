@@ -1,0 +1,823 @@
+<style>
+    table.rule_table {
+        width:  100%;
+        border: 1px solid #888;
+    }
+
+    table.rule_table thead th {
+        vertical-align: middle;
+    }
+
+    table.rule_table td {
+        border:     1px solid #aaa;
+        padding:    5px;
+        text-align: center;
+    }
+
+    table.rule_table td.action {
+        font-weight: bold;
+    }
+
+    table.rule_table td.example {
+        background-color: rgba(230, 230, 230, 0.8);
+        padding:          5px 5px 0;
+    }
+
+    table.example_table {
+        border:        1px solid #ddd;
+        margin-bottom: 10px;
+    }
+
+    table.example_table th {
+        background-color: #f0f0dd;
+        color:            #bb8;
+        border:           1px solid;
+        width:            45px;
+    }
+
+    table.example_table th, table.example_table td {
+        padding:        3px 3px 3px 8px;
+        vertical-align: middle;
+        font-size:      9pt;
+        text-align:     left;
+    }
+</style>
+
+<p>
+    The determination of whether to add to or replace a portion of target JSON depends on a number of rules. Essentially
+    it comes down to the following rule:
+<ul>
+    <li>
+        If the last "node" of <code>jsonpath</code> points to a non-existing JSON node, then <code>input</code> will
+        be added to target <code>json</code>.
+    </li>
+    <li>
+        If <code>jsonpath</code> cannot resolve to a JSON node in <code>json</code> or a non-existing leaf node, then
+        <code>input</code> will be ignored.
+    </li>
+    <li>
+        If <code>jsonpath</code> points to an existing JSON node, then
+        <ul>
+            <li>
+                If target JSON is an array (i.e. <code>[...]</code>), <code>input</code>appended to the array.
+            </li>
+            <li>
+                If target JSON is a simple value (text, number, boolean), it will be replaced by <code>input</code>.
+            </li>
+            <li>
+                If target JSON node is a JSON document (i.e. <code>{...}</code>), <code>input</code> that is also JSON
+                document will be merged to target JSON node. Other types of <code>input</code> will be ignored.
+            </li>
+        </ul>
+    </li>
+</ul>
+
+Let's further understand these rules with further explanations and examples below.
+</p>
+
+<table border="1" cellpadding="3" class="rule_table">
+    <thead>
+    <tr>
+        <th>action</th>
+        <th>json</th>
+        <th>jsonpath<br/>(points to)</th>
+        <th>input</th>
+        <th>example</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <td class="action">ADD</td>
+        <td>empty or <code>{}</code></td>
+        <td>empty</td>
+        <td>document</td>
+        <td class="example">
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td><em>empty</em></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td><em>empty</em></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>"color": "yellow"</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>{ "color": "yellow" }</code></td>
+                </tr>
+            </table>
+            <table width="100%" cellpadding="3" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td><em>empty</em></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td><em>empty</em></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>{ "color": "yellow"}</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>{ "color": "yellow" }</code></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="action">ADD</td>
+        <td>document</td>
+        <td><em>empty</em></td>
+        <td>document</td>
+        <td class="example">
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>{ "shape": "square" }</code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><em>empty</em></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>"color": "yellow"</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>{"shape":"square", "color":"yellow"}</code></td>
+                </tr>
+            </table>
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>{ "COLOR": "YELLOW" }</code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><em>empty</em></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>{"color":"yellow"}</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>{"color":"yellow","COLOR":"YELLOW"}</code></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="action">REPLACE</td>
+        <td>document</td>
+        <td><em>empty</em></td>
+        <td>document</td>
+        <td class="example">
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>
+                        {"departments":[<br/>
+                        &nbsp;&nbsp;{"group":"Technology","employees":["John","James","Jack"]},<br/>
+                        &nbsp;&nbsp;{"group":"Accounting","employees":["Adam","Abbey","Apollo"]}<br/>
+                        ]}
+                    </code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><em>empty</em></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>{"department":null}</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td nowrap="nowrap"><code>{"department":null}</code></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="action">REPLACE</td>
+        <td>document</td>
+        <td><em>empty</em></td>
+        <td>null</td>
+        <td class="example">
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>
+                        {"departments":[<br/>
+                        &nbsp;&nbsp;{"group":"Technology","employees":["John","James","Jack"]},<br/>
+                        &nbsp;&nbsp;{"group":"Accounting","employees":["Adam","Abbey","Apollo"]}<br/>
+                        ]}
+                    </code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><em>empty</em></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>null</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>null</code></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="action">ADD</td>
+        <td>document</td>
+        <td>node (existing)</td>
+        <td>document</td>
+        <td class="example">
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>{"color":{"name":"YELLOW","hue":{"red":255}}}</code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><code>color.hue</code></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>{"green":255,"blue":0}</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>
+                        {"color":{<br/>
+                        &nbsp;&nbsp;"name":"YELLOW",<br/>
+                        &nbsp;&nbsp;"hue":{"red":255,"green":255,"blue":0}}<br>
+                        }
+                    </code></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="action">REPLACE</td>
+        <td>document</td>
+        <td>node (existing)</td>
+        <td>document (same name as existing node)</td>
+        <td class="example">
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>{"color":{"brightness":0.254,"name":"YELLOW","hue":[255,0,0]}}</code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><code>color</code></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>{"hue":[255,255,0]}</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>
+                        {"color":{<br/>
+                        &nbsp;&nbsp;"brightness":0.254,<br/>
+                        &nbsp;&nbsp;"name":"YELLOW",<br/>
+                        &nbsp;&nbsp;"hue":[255,255,0]}<br/>
+                        }
+                    </code></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="action">ADD</td>
+        <td>document</td>
+        <td>array (existing)</td>
+        <td>document</td>
+        <td class="example">
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>
+                        {"departments":[<br/>
+                        &nbsp;&nbsp;{"employees":["John","James","Jack"],"group":"Technology"},<br/>
+                        &nbsp;&nbsp;{"employees":["Adam","Abbey","Apollo"],"group":"Accounting"}<br/>
+                        ]}
+                    </code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><code>departments</code></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>{"group":"Support","employees":["Peter","Paul","Pippy"]}</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>
+                        {"departments":[<br/>
+                        &nbsp;&nbsp;{"employees":["John","James","Jack"],"group":"Technology"},<br/>
+                        &nbsp;&nbsp;{"employees":["Adam","Abbey","Apollo"],"group":"Accounting"},<br/>
+                        &nbsp;&nbsp;{"employees":["Peter","Paul","Pippy"],"group":"Support"}<br/>
+                        ]}
+                    </code></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="action">ADD</td>
+        <td>document</td>
+        <td>array (existing)</td>
+        <td>array</td>
+        <td class="example">
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>{"color":{"brightness":0.254,"name":"YELLOW","hue":[255,0,0]}}</code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><code>color.hue</code></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>[1,2,3]</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>
+                        {"color":{<br/>
+                        &nbsp;&nbsp;"brightness":0.254,<br/>
+                        &nbsp;&nbsp;"name":"YELLOW",<br/>
+                        &nbsp;&nbsp;"hue":[255,0,0,1,2,3]}<br/>
+                        }
+                    </code></td>
+                </tr>
+            </table>
+
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>
+                        {"departments":[<br/>
+                        &nbsp;&nbsp;{"group":"Technology","employees":["John","James","Jack"]},<br/>
+                        &nbsp;&nbsp;{"group":"Accounting","employees":["Adam","Abbey","Apollo"]}<br/>
+                        ]}
+                    </code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><code>departments[1].employees</code></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>["Peter","Paul","Pippy"]</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>
+                        {"departments":[<br/>
+                        &nbsp;&nbsp;{"group":"Technology","employees":["John","James","Jack"]},<br/>
+                        &nbsp;&nbsp;{"group":"Accounting","employees":["Adam","Abbey","Apollo","Peter","Paul","Pippy"]}<br/>
+                        ]}
+                    </code></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="action">ADD</td>
+        <td>document</td>
+        <td>array (empty, existing)</td>
+        <td>document</td>
+        <td class="example">
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>
+                        {"departments":[<br/>
+                        &nbsp;&nbsp;{"employees":["John","James","Jack"],"group":"Technology"},<br/>
+                        &nbsp;&nbsp;{"employees":["Adam","Abbey","Apollo"],"group":"Accounting"},<br/>
+                        &nbsp;&nbsp;{"favorites":[]}<br/>
+                        ]}
+                    </code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><code>departments[2].favorites</code></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>{"color":"pink","numbers":[3,2,1.5]}</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>
+                        {"departments":[<br/>
+                        &nbsp;&nbsp;{"employees":["John","James","Jack"],"group":"Technology"},<br/>
+                        &nbsp;&nbsp;{"employees":["Adam","Abbey","Apollo"],"group":"Accounting"},<br/>
+                        &nbsp;&nbsp;{"favorites":[{"color":"pink","numbers":[3,2,1.5]}]}<br/>
+                        ]}
+                    </code></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="action">ADD</td>
+        <td>document</td>
+        <td>array index (existing)</td>
+        <td>simple value</td>
+        <td class="example">
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>
+                        {"departments":[<br/>
+                        &nbsp;&nbsp;{"group":"Technology","employees":["John","James","Jack"]},<br/>
+                        &nbsp;&nbsp;{"group":"Accounting","employees":["Adam","Abbey","Apollo"]}<br/>
+                        ]}
+                    </code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><code>departments[1].employees[3]</code></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>1353.234</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>
+                        {"departments":[<br/>
+                        &nbsp;&nbsp;{"group":"Technology","employees":["John","James","Jack"]},<br/>
+                        &nbsp;&nbsp;{"group":"Accounting","employees":["Adam","Abbey","Apollo",1353.234]}<br/>
+                        ]}
+                    </code></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="action">REPLACE</td>
+        <td>document</td>
+        <td>array index (existing)</td>
+        <td>document</td>
+        <td class="example">
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>
+                        {"departments":[<br/>
+                        &nbsp;&nbsp;{"employees":["John","James","Jack"],"group":"Technology"},<br/>
+                        &nbsp;&nbsp;{"employees":["Adam","Abbey","Apollo"],"group":"Accounting"},<br/>
+                        &nbsp;&nbsp;{"favorites":[]}<br/>
+                        ]}
+                    </code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><code>departments[2]</code></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>{"favorites":{"color":"black","numbers":[42,39,7.14]}}</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>
+                        {"departments":[<br/>
+                        &nbsp;&nbsp;{"employees":["John","James","Jack"],"group":"Technology"},<br/>
+                        &nbsp;&nbsp;{"employees":["Adam","Abbey","Apollo"],"group":"Accounting"},<br/>
+                        &nbsp;&nbsp;{"favorites":{"color":"black","numbers":[42,39,7.14]}}<br/>
+                        ]}
+                    </code></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="action">REPLACE</td>
+        <td>document</td>
+        <td>array index (existing)</td>
+        <td>array</td>
+        <td class="example">
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>{"color":{"brightness":0.254,"name":"YELLOW","hue":[255,0,0]}}</code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><code>color.hue[1]</code></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>[255,0]</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>
+                        {"color":{<br/>
+                        &nbsp;&nbsp;"brightness":0.254,<br/>
+                        &nbsp;&nbsp;"name":"YELLOW",<br/>
+                        &nbsp;&nbsp;"hue":[255,[255,0],0]}<br/>
+                        }
+                    </code></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="action">REPLACE</td>
+        <td>document</td>
+        <td>array index (existing)</td>
+        <td>document</td>
+        <td class="example">
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>
+                        {"departments":[<br/>
+                        &nbsp;&nbsp;{"group":"Technology","employees":["John","James","Jack"]},<br/>
+                        &nbsp;&nbsp;{"group":"Accounting","employees":["Adam","Abbey","Apollo"]}<br/>
+                        ]}
+                    </code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><code>departments[0]</code></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>{"employees":null,"group":null}</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>
+                        {"departments":[<br/>
+                        &nbsp;&nbsp;{"group":null,"employees":null},<br/>
+                        &nbsp;&nbsp;{"group":"Accounting","employees":["Adam","Abbey","Apollo"]}<br/>
+                        ]}
+                    </code></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="action">REPLACE</td>
+        <td>document</td>
+        <td>simple value (existing)</td>
+        <td>document</td>
+        <td class="example">
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>{"color":"YELLOW"}</code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><code>color</code></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>{"red":250,"green":250,"blue":230}</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>{"color":{"red":250,"green":250,"blue":230}}</code></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="action">ADD</td>
+        <td>array</td>
+        <td><em>empty</em></td>
+        <td>document</td>
+        <td class="example">
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>[255,2,3]</code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><em>empty</em></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>{"extra":[213,94]}</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>[255,2,3,{"extra":[213,94]}]</code></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="action">ADD</td>
+        <td>array</td>
+        <td><em>empty</em></td>
+        <td>array</td>
+        <td class="example">
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>[255,2,3]</code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><em>empty</em></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>[254,54]</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>[255,2,3,254,54]</code></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="action">ADD</td>
+        <td>array</td>
+        <td>array</td>
+        <td>list</td>
+        <td class="example">
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>{"color":["YELLOW"]}</code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><code>color</code></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>true,"chicken",59.2</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>{"color":["YELLOW",true,"chicken",59.2]}</code></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="action">ADD</td>
+        <td>array</td>
+        <td>array index (non-existing)</td>
+        <td>list</td>
+        <td class="example">
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>{"color":["YELLOW"]}</code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><code>color[1]</code></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>true,"chicken",59.2</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>{"color":["YELLOW",[true,"chicken",59.2]]}</code></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="action">ADD</td>
+        <td>array</td>
+        <td>array index (non-existing)</td>
+        <td>simple value</td>
+        <td class="example">
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>{"color":["YELLOW"]}</code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><code>color[1]</code></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>pink</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>{"color":["YELLOW","pink"]}</code></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="action">none</td>
+        <td>document</td>
+        <td>node (non-existing)</td>
+        <td>array</td>
+        <td class="example">
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>
+                        {"departments":[<br/>
+                        &nbsp;&nbsp;{"group":"Technology","employees":["John","James","Jack"]},<br/>
+                        &nbsp;&nbsp;{"group":"Accounting","employees":["Adam","Abbey","Apollo"]}<br/>
+                        ]}
+                    </code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><code>departments[1].years</code></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>[16,5,2.7]</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td nowrap="nowrap"><code>
+                        {"departments":[<br/>
+                        &nbsp;&nbsp;{"group":"Technology","employees":["John","James","Jack"]},<br/>
+                        &nbsp;&nbsp;{"group":"Accounting","employees":["Adam","Abbey","Apollo"]}<br/>
+                        ]}
+                    </code></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td class="action">none</td>
+        <td>array</td>
+        <td>node (non-existing)</td>
+        <td>array</td>
+        <td class="example">
+            <table width="100%" cellpadding="5" border="1" class="example_table">
+                <tr>
+                    <th>json</th>
+                    <td nowrap="nowrap"><code>[255,2,3]</code></td>
+                </tr>
+                <tr>
+                    <th>jsonpath</th>
+                    <td nowrap="nowrap"><code>a</code></td>
+                </tr>
+                <tr>
+                    <th>input</th>
+                    <td nowrap="nowrap"><code>[213,94]</code></td>
+                </tr>
+                <tr>
+                    <th>result</th>
+                    <td><code>[255,2,3]</code></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    </tbody>
+
+</table>
