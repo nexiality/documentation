@@ -10,6 +10,7 @@ comments: true
 2018-08-??
 
 ### General
+- upgraded to kotlin 1.2.51
 
 
 ### Flow Control
@@ -30,7 +31,8 @@ comments: true
 
 ### Nexial Expression
 - The ` in ` condition will now consider an empty string as match to an empty filter.
-- The ` not in ` condition will not consider an non-empty string as match to an empty filter (as in " this string is not part of empty filter").
+- The ` not in ` condition will not consider an non-empty string as match to an empty filter (as in " this string is 
+  not part of empty filter").
 
 
 ### [number commands](../commands/number)
@@ -64,3 +66,5 @@ comments: true
     - https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4468545/
 - supports tag-based locator using `tag=` prefix
 - browser-specific support on "switch-window" capability. Currently Edge does not support "switch-window".
+- `firefox` is set as default browser ONLY when a web command is invoked. This fixed some confusion regarding browser
+  initialization in the context of iteration and plan.
