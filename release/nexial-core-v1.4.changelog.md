@@ -11,7 +11,8 @@ comments: true
 
 ### General
 - upgraded to kotlin 1.2.51
-
+- fixed nexial issue #7. Script reference information such as `Data File`, `DataSheet(s)`, `runtime args` and `JAVA_OPT`
+  is included in output file `#summary` sheet.
 
 ### Flow Control
 - `TimeTrackStart(label)` and `TimeTrackEnd()`: new flow control to mark start/end time of any arbitrary group of steps.
