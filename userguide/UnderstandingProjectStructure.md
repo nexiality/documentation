@@ -78,7 +78,7 @@ Below is the general directory/file structure of a standard Nexial automation pr
                  Nexial!
 
        # Add spaces to the key
-       key\ with\ spaces = This is the value that could be looked up with the key "key with spaces".
+       key with spaces = This is the value that could be looked up with the key "key with spaces".
 
        # If you want your property to include a backslash, it should be escaped by another backslash
        path=c:\\wiki\\templates
