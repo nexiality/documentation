@@ -107,6 +107,21 @@ Below is the general directory/file structure of a standard Nexial automation pr
    passed and failed.<br/>  
    ![](image/UnderstandingProjectStructure_04.png)
     
+3. The `script` file has two sections. Top section has the information about entire test scenario and bottom section contain
+   test steps to be run for automation. For better understanding about scenario and test steps of test scripts,
+   user can provide necessary information in `description` column of respective sections. Nexial supports dynamically generated 
+   data in description column though data variables. This will provide more significant, purposeful information and users will 
+   have better understanding and context of actual execution. Lets have a look at the following example asserting the contents
+   of file.
+   
+   Data:-<br>
+   ![](image/UnderstandingProjectStructure_05.png)
+
+   Script:-<br>
+   ![](image/UnderstandingProjectStructure_06.png)
+   
+   Output:-<br>
+   ![](image/UnderstandingProjectStructure_07.png)
 
 ### Additional Notes
 For convenience, use the `bin/nexial-project.cmd` or `bin/nexial-project.sh` to generate the project structure for 
