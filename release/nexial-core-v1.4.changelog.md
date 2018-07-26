@@ -54,7 +54,8 @@ comments: true
 
 
 ### [json command](../commands/json)
-- [`addToReplace`]: new command to add or replace JSON fragment to existing JSON
+- [`addToReplace`](../commands/json/addOrReplace(json,jsonpath,input,var)): new command to add or replace JSON element 
+  in existing JSON
 
 
 #### [web commands](../commands/web)
