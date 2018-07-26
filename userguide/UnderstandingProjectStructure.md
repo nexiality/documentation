@@ -96,7 +96,17 @@ Below is the general directory/file structure of a standard Nexial automation pr
    [`$(syspath|out|...)`](../functions/$(syspath)#available-functions) for more details.
    When [`nexial.outputToCloud`](../systemvars/#nexial.outputToCloud) to set to `true`, the generated output will be
    uploaded to designated cloud location and removed from local output directory.
+    
+   1. The generated output file comes with `#summary` sheet, where in, the execution summary for that iteration is provided.
+   Along with summary information, details of execution environment such as `run from`, `run user` and `java version`
+   is provided. And script reference information is included such as `Data File`, `DataSheet(s)`, `runtime args` and
+   `JAVA_OPT`, that are used for the test execution.<br/><br/>
+   ![](image/UnderstandingProjectStructure_03.png)
 
+   2. `#summary` sheet also includes with consolidated test results, such as, `duration` per `activity` and total steps
+   passed and failed.<br/>  
+   ![](image/UnderstandingProjectStructure_04.png)
+    
 
 ### Additional Notes
 For convenience, use the `bin/nexial-project.cmd` or `bin/nexial-project.sh` to generate the project structure for 
