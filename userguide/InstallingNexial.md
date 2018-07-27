@@ -9,13 +9,13 @@ comments: true
 
 ### Install Java
 1. Check if Java is installed - **Java 1.8 or above required, and 64-bit Java is highly recommended**
-   1. Open console via: 
-      **Windows**:  Start | Run | `cmd <ENTER>` 
-      **MacOSX**: Open Spotlight or type `CMD-Space` | `terminal <ENTER>`
-   1. `java -version <ENTER>`
-   1. If you get something like the following, please following Step 2 (below):<br/>
+   1. Open console via: <br/>
+      **Windows**:  Start | Run | `cmd <ENTER>`<br/> 
+      **MacOSX**: Open the Terminal app, or open Spotlight (`CMD-Space`) and then type `terminal <ENTER>`<br/>
+      `java -version <ENTER>`
+   3. If you get something like the following, please following Step 2 (below):<br/>
       ![no_java](image/InstallingNexial_01.png)
-   1. If you are not getting the above message, check that the version of Java installed is 1.8<br/>
+   4. If you are not getting the above message, check that the version of Java installed is 1.8<br/>
       or above.  For example,<br/>
       ![java_18](image/InstallingNexial_02.png)<br/>
       Below is a snapshot of an outdated Java installation (1.6.0.45). If the version of your Java installation
@@ -23,16 +23,16 @@ comments: true
       <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" class="external-link" target="_nexial_link">Java 1.8</a>.
       <br/>
       ![java_16](image/InstallingNexial_02a.png)
-   1. If the version of Java installed is **1.8** or above, proceed to next section (Check Excel Version).  if the 
+   5. If the version of Java installed is **1.8** or above, proceed to next section (Check Excel Version). If the 
       version of Java installed is less than 1.8, proceed to Step 2 (below).
 
 2. Download Java
    1. Open your browser and point to <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" class="external-link" target="_nexial_link">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>
-   1. Click on the Download button just below JDK.<br/>
+   2. Click on the Download button just below JDK.<br/>
       ![download_jdk](image/InstallingNexial_03.png)
-   1. Click on **Accept License Agreement**.<br/>
+   3. Click on **Accept License Agreement**.<br/>
       ![accept_license](image/InstallingNexial_04.png)
-   1. Select the appropriate download file suitable for your workstation.  Recommended to select **the 64bit version 
+   4. Select the appropriate download file suitable for your workstation.  Recommended to select **the 64bit version 
       for better performance and efficient memory management**.
 
 2. Installing Java
