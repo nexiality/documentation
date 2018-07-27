@@ -109,7 +109,7 @@ welcome!
    1. Invoke the project creator script - `nexial-project.cmd MyFirstProject`
       ![nexial-project](image/InstallingNexial_08.png)
    1. If everything works, then you should see the message "`creating project home at ...`" and "`DONE"`
-   1. You should see the following directory create, along with various files in it:
+   1. You should see the following directory create, along with various files in it:<br/>
       ![script_dir](image/InstallingNexial_09.png)
    1. To gain better understanding of the project structure, check out 
       [Understanding Nexial project structure](UnderstandingProjectStructure)
