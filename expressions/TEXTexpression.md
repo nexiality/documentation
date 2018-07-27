@@ -12,48 +12,51 @@ comments: true
 
 
 ### Operations
-- **`after(criteria)`** \- retain the portion of text after the specified `criteria`.
-- **`append(text,text,text,...)`** \- add one or more text to the end of `text`.
+- **`after(criteria)`** - retain the portion of text after the specified `criteria`.
+- **`append(text,text,text,...)`** - add one or more text to the end of `text`.
 - **`appendIfMissing(appendWith)`** - add `appendWith` to the end of current text ONLY if `appendWith` is currently 
-  not at the end of text
-- **`before(criteria)`** \- retain the portion of text before the specified `criteria`.
-- **`between(start,end)`** \- retain the portion of text that is between the specified `start` and `end` text.
-- **`count(searchFor)`** \- transfer into a [`NUMBER`](NUMBERexpression) data type that contains the number of 
+  not at the end of text.
+- **`before(criteria)`** - retain the portion of text before the specified `criteria`.
+- **`between(start,end)`** - retain the portion of text that is between the specified `start` and `end` text.
+- **`count(searchFor)`** - transfer into a [`NUMBER`](NUMBERexpression) data type that contains the number of 
   occurrence for `searchFor`.
 - **`csv(position1,position2,...)`** - converts the given text content to csv format, separated by the given position 
   numbers for each line.
-- **`distinct`** \- remove any duplicate characters from text.
-- **`insert(after,text)`** \- search for `after` in text, and if found, add the specified text to it.  If `after` is 
+- **`distinct`** - remove any duplicate characters from text.
+- **`insert(after,text)`** - search for `after` in text, and if found, add the specified text to it.  If `after` is 
   not found, no changes will be made to text.
-- **`length`** \- transfer into a [`NUMBER`](NUMBERexpression) data type that contains the length of text.
-- **`list(delim)`** \- transfer into a [`LIST`](LISTexpression) data type by converting text into a list, using 
+- **`length`** - transfer into a [`NUMBER`](NUMBERexpression) data type that contains the length of text.
+- **`list(delim)`** - transfer into a [`LIST`](LISTexpression) data type by converting text into a list, using 
   `delim` as the character to split.
-- **`lower`** \- turn text into lowercase equivalent.
-- **`number`** \- transfer into a [`NUMBER`](NUMBERexpression) data type by converting text into a numeric value.  
+- **`lower`** - turn text into lowercase equivalent.
+- **`number`** - transfer into a [`NUMBER`](NUMBERexpression) data type by converting text into a numeric value.  
   Failure to explicitly convert text into number will result in an ERROR condition.
-- **`normalize`** \- remove any leading or trailing whitespaces and also remove duplicate whitespace characters in 
+- **`normalize`** - remove any leading or trailing whitespaces and also remove duplicate whitespace characters in 
   text. The end result is that text will not contain any occurrences of successive spaces.
-- **`pack`** \- remove all whitespace characters (tab, space, line feed, carriage return) from text.
-- **`prepend(text,text,text,...)`** \- add one or more text to the beginning of `text`.
+- **`pack`** - remove all whitespace characters (tab, space, line feed, carriage return) from text.
+- **`prepend(text,text,text,...)`** - add one or more text to the beginning of `text`.
 - **`prependIfMissing(prependWith)`** - add `prependWith` to the beginning of current text ONLY if `prependWith` if 
-  currently not at the beginning of text
-- **`remove(criteria)`** \- remove any and all occurrences of `criteria`.
-- **`removeEnd(ending)`** / **remove-end(ending)** \- remove ending character sequence (substring) of text that 
+  currently not at the beginning of text.
+- **`remove(criteria)`** - remove any and all occurrences of `criteria`.
+- **`removeEnd(ending)`** / `**remove-end(ending)**` - remove ending character sequence (substring) of text that 
   matches `ending`.
-- **`removeStart(start)`** / **remove-start(start)** \- remove starting character sequence (substring) of text that 
+- **`removeRegex(regex)`** - remove character(s) that matches `regex`.
+- **`removeStart(start)`** / **remove-start(start)** - remove starting character sequence (substring) of text that 
   matches `start`.
-- **`replace(searchFor,replaceWith)`** \- as the name suggest, this operation will search for `searchFor` and replace 
+- **`replace(searchFor,replaceWith)`** - as the name suggest, this operation will search for `searchFor` and replace 
   matches with `replaceWith`.
 - **`replaceRegex(searchRegex,replaceWith)`** - perform a regex-search on text using `searchRegex` and replace all 
   matches with `replaceWith`.  Note that grouping character `(` and `)` should be escaped as `\(...\)`.  For example, 
   `[TEXT(...) => replaceRegex(**\(chicken\)**,beef)]`
-- **`store(var)`** \- save current TEXT expression to a data variable.  If the specified `var` exists, its value will 
+- **`retain(keep)`** - retain only the characters found in `keep`.
+- **`retainRegex(regex)`** - retain only the characters matched to `regex`.
+- **`store(var)`** - save current TEXT expression to a data variable.  If the specified `var` exists, its value will 
   be overwritten.  Using this operation, one can put an expression on pause and resume it at a later time.
-- **`substring(start,end)`** \- retain the portion of text from the `start` position (zero-based) to the `end` 
+- **`substring(start,end)`** - retain the portion of text from the `start` position (zero-based) to the `end` 
   position (exclusive).
 - **`title`** - turn text into Title Case, while the first letter of every word is capitalized.
-- **`trim`** \- remove any non-printable character in the beginning or ending of text.
-- **`upper`** \- turn text into UPPERCASE equivalent.
+- **`trim`** - remove any non-printable character in the beginning or ending of text.
+- **`upper`** - turn text into UPPERCASE equivalent.
 
 
 ### Example

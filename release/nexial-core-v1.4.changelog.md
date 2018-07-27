@@ -11,9 +11,10 @@ comments: true
 
 ### General
 - upgraded to kotlin 1.2.51
-- fixed nexial issue #7. Script reference information such as `Data File`, `DataSheet(s)`, `runtime args` and `JAVA_OPT`
-  is included in output file `#summary` sheet.
+- [Issue #7](https://github.com/nexiality/nexial-core/issues/7): Script reference information such as 
+  `Data File`, `DataSheet(s)`, `runtime args` and `JAVA_OPT` is included in output file `#summary` sheet.
 - Support for data variables in description columns of test scripts.
+
 
 ### Flow Control
 - `TimeTrackStart(label)` and `TimeTrackEnd()`: new flow control to mark start/end time of any arbitrary group of steps.
@@ -23,7 +24,7 @@ comments: true
 - fixed code to promote `buildnum` to execution summary.
 
 
-#### Event Notification
+### Event Notification
 - new event handling to mark the elapsed time of a well-defined events:
   - `nexial.trackExecution=true`: log start/end and elapsed time of an execution.
   - `nexial.trackScript=true`: log start/end and elapsed time of a script.
@@ -32,9 +33,14 @@ comments: true
 
 
 ### Nexial Expression
-- The ` in ` condition will now consider an empty string as match to an empty filter.
-- The ` not in ` condition will not consider an non-empty string as match to an empty filter (as in " this string is 
+- The `in` condition will now consider an empty string as match to an empty filter.
+- The `not in` condition will not consider an non-empty string as match to an empty filter (as in " this string is 
   not part of empty filter").
+  
+  #### [TEXT expression](../expressions/TEXTexpression)
+  - TEXT &raquo; `removeRegex(regex)`: remove character(s) that matches user-supplied `regex`.
+  - TEXT &raquo; `retain(keep)`: retain only the  character(s) that in the user-supplied `keep`.
+  - TEXT &raquo; `retainRegex(regex)`: retain only the character(s) that matches user-supplied `regex`.
 
 
 ### [number commands](../commands/number)
@@ -54,8 +60,9 @@ comments: true
 
 
 ### [json command](../commands/json)
-- [`addToReplace`](../commands/json/addOrReplace(json,jsonpath,input,var)): new command to add or replace JSON element 
-  in existing JSON
+- [Issue #4](https://github.com/nexiality/nexial-core/issues/4): 
+  [`addToReplace`](../commands/json/addOrReplace(json,jsonpath,input,var)); new command to add or replace JSON element 
+  in existing JSON.
 
 
 #### [web commands](../commands/web)
