@@ -42,6 +42,9 @@ comments: true
   - TEXT &raquo; `retain(keep)`: retain only the  character(s) that in the user-supplied `keep`.
   - TEXT &raquo; `retainRegex(regex)`: retain only the character(s) that matches user-supplied `regex`.
 
+  #### [JSON expression](../expressions/JSONexpression)
+  - JSON &raquo; `addOrReplace(jsonpath,input)`: supports adding or replacing elements in existing JSON document/array.
+
 
 ### [number commands](../commands/number)
 - update code to align with documentation; command parameters are now correctly named.
