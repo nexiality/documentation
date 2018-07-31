@@ -38,13 +38,21 @@ comments: true
   not part of empty filter").
   
   #### [TEXT expression](../expressions/TEXTexpression)
-  - TEXT &raquo; `removeRegex(regex)`: remove character(s) that matches user-supplied `regex`.
-  - TEXT &raquo; `retain(keep)`: retain only the  character(s) that in the user-supplied `keep`.
-  - TEXT &raquo; `retainRegex(regex)`: retain only the character(s) that matches user-supplied `regex`.
+  - `removeRegex(regex)`: remove character(s) that matches user-supplied `regex`.
+  - `retain(keep)`: retain only the  character(s) that in the user-supplied `keep`.
+  - `retainRegex(regex)`: retain only the character(s) that matches user-supplied `regex`.
 
   #### [JSON expression](../expressions/JSONexpression)
-  - JSON &raquo; `addOrReplace(jsonpath,input)`: supports adding or replacing elements in existing JSON document/array.
+  - `addOrReplace(jsonpath,input)`: supports adding or replacing elements in existing JSON document/array.
 
+  ### [CSV expression](../expressions/CSVexpression)
+  - `retainColumns(columnNamesOrIndices)`: retain only the specified columns (by name or by position, separated by 
+    commas) in a CSV. Think of this operation as the opposite of `removeColumns(namesOrIndices)`.
+  - `replaceColumnRegex(searchFor,replaceWith,columnNameOrIndex)`: for the specified column (by name or by position),
+    search for `searchFor` regular expression and replace matches by `replaceWith`. Regex group supported.
+  - `distinct`: remove all duplicate rows from CSV. 
+  - `parse`: new option added (`trim`) to retain leading/trailing whitespaces from parsed value. By default, trimming is
+    in effect.
 
 ### [number commands](../commands/number)
 - update code to align with documentation; command parameters are now correctly named.

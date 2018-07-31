@@ -79,6 +79,9 @@ See `parse()` below for more details.
 #### config 
 - convert CSV content into [CONFIG](CONFIGexpression) instance.
 
+#### distinct
+- remove all duplicate rows from the CSV content.
+
 #### fetch(conditions)
 - fetch the first row that matched the specified 
   [conditions](../flowcontrols/filter#specification).  These conditions are evaluated on the columns based their 
@@ -265,6 +268,11 @@ these SSN are not the same.
     CSV file. Note that changing this value will have both memory footprint and performance implication. This setting
     is usually not needed.
     
+  - **`trim`** - instruct Nexial to retain or trim of any leading and/or trailing whitespaces per parsed value. By 
+    default, Nexial will trim each parsed value so ` California ` would be stored as `California` - the `trim` option is
+    by default `true`. But at times it is critical to retain all the data found from its original sources. As such, one
+    can specify `trim=false` to retain leading/trailing whitespaces. 
+    
   - Example: `[CSV(text) => parse(delim=\,|header=true|recordDelim=\r\n) text]` reads:
     - convert text into a CSV component, using the default Excel CSV format.
     - re-parse the same text but this time using **comma as the field delimiter**, the 
@@ -308,8 +316,8 @@ these SSN are not the same.
      ourselves <b>PHX</b>.</code>
 
   - THEN we can deduce the following as the "template":<br/>
-    <code>Here is <b>`${description}`</b>, which is located in <b>`${fullAddress}`</b>, we call ourselves 
-    <b>`${code}`</b>.</code>
+    <code>Here is <b>${description}</b>, which is located in <b>${fullAddress}</b>, we call ourselves 
+    <b>${code}</b>.</code>
 
   - HENCE the expression `[CSV(${file}) => parse(...) render(${template})]` would yield:<br/>
     ![](image/csv_17.jpg)
@@ -318,6 +326,17 @@ these SSN are not the same.
     in each CSV record.  For as many records as there are, Nexial will perform the same "merge" to produce many lines 
     of text.
 
+#### replaceColumnRegex(searchFor,replaceWith,columnNameOrIndex)
+- For the specified column (by name or by position), search for `searchFor` regular expression and replace matches 
+  by `replaceWith`. Regex group supported.  For example, 
+  `[CSV(${...}) => parse(...) replaceColumnRegex((\d+)(\d\d),$1.$2,1)]` would search in the 2nd column of the CVS for
+  a match against the pattern "a series of at least 3 consecutive digits" and replace it with the same digits with a
+  decimal point place just before the second-to-last digit.  In other words, `12345` would become `123.45`.
+
+#### retainColumns(columnNamesOrIndices)
+- Retain only the specified columns (by name or by position, separated by commas) in a CSV. Think of this operation as 
+  the opposite of `removeColumns(namesOrIndices)`. Any misreferenced columns will be ignored.
+  
 #### row(index)
 - retrieves one row of data as a **[`LIST`](LISTexpression)**.  index is zero-based.  If index is 
   not valid or too large, then null will be returned.
