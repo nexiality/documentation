@@ -14,6 +14,8 @@ comments: true
 - [Issue #7](https://github.com/nexiality/nexial-core/issues/7): Script reference information such as 
   `Data File`, `DataSheet(s)`, `runtime args` and `JAVA_OPT` is included in output file `#summary` sheet.
 - Support for data variables in description columns of test scripts.
+- Better error message when not using the minimum version of Java with Nexial.
+- prevent deleting of local log files when "output to cloud" is enabled.
 
 
 ### Flow Control
