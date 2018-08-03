@@ -101,3 +101,4 @@ comments: true
   longer ship webdrivers with Nexial. This will reduce Nexial distro size and speed up download speed.
   - firefox driver helper implementation completes; geckodriver removed from Nexial distro.
   - edge driver helper implementation completes
+  - chrome-electron driver helper implementation completes
