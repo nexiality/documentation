@@ -56,6 +56,12 @@ comments: true
   - `parse`: new option added (`trim`) to retain leading/trailing whitespaces from parsed value. By default, trimming is
     in effect.
 
+### [csv commands](../commands/csv)
+- fixed parsing error found in 
+  [csv &raquo; `compareExtended(var,profile,expected,actual)`](../commands/csv/compareExtended(var,profile,expected,actual))
+  that otherwise prevent parsing of files with multiple characters that might be candidate as field delimiter.
+  
+
 ### [number commands](../commands/number)
 - update code to align with documentation; command parameters are now correctly named.
   - **You will likely need to run 
