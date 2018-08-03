@@ -91,3 +91,7 @@ comments: true
 - browser-specific support on "switch-window" capability. Currently Edge does not support "switch-window".
 - `firefox` is set as default browser ONLY when a web command is invoked. This fixed some confusion regarding browser
   initialization in the context of iteration and plan.
+- initial implementation for "download-as-needed" webdriver support. Once complete for all webdrivers, we'll no
+  longer ship webdrivers with Nexial. This will reduce Nexial distro size and speed up download speed.
+  - firefox driver helper implementation completes; geckodriver removed from Nexial distro.
+  - edge driver helper implementation completes
