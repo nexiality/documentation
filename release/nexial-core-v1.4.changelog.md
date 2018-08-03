@@ -102,3 +102,4 @@ comments: true
   - firefox driver helper implementation completes; geckodriver removed from Nexial distro.
   - edge driver helper implementation completes
   - chrome-electron driver helper implementation completes
+  - chrome driver helper implementation completes
