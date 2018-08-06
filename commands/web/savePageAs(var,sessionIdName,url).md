@@ -7,26 +7,26 @@ comments: true
 ---
 
 ### Description
+This command saves the content of a URL into variable. One can use `sessionIdName` to selectively pass on specific
+cookie name/value pair from current web page into the request of the `url`. If no session cookie is available or 
+required, one can specify `(null)` or `(blank)` for `sessionIdName`.
 
-- This command is to save the session of the page into variable.
-- In other words the command will save the desired session into variable and pass or else fail otherwise.
+The content of the specified `url`, if successfully downloaded, will be saved as text to the specified `var`.
+
 
 ### Parameters
+- **var** - this parameter is a variable to store the session.
+- **sessionIdName** - name of the session cookie, if any, to pass from current web page to the specified `url`.
+- **url** - the url from which the content would be saved to `var`.
 
-- **var** - this parameter is a variable to store the session
-- **sessionIdName** - this parameter is the name or ID of the current session on the page.
-- **url** - this parameter is the url from which session need to be identified.
 
 ### Example
-
 **Script**:<br/>
-
 ![](image/savePageAs_01.png)
 
 **Output**:<br/>
-
  ![](image/savePageAs_02.png)
 
-### See Also
 
+### See Also
 - [`savePageAsFile(sessionIdName,url,fileName)`](savePageAsFile(sessionIdName,url,fileName))

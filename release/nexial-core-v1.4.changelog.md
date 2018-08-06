@@ -107,3 +107,4 @@ comments: true
 - [`assertTextMatches(text,minMatch,scrollTo)`](../commands/web/assertTextMatches(text,minMatch,scrollTo)) - assert the 
   minimum number of occurrence of `text` in current web page, and optionally scroll to the specified instance.
 - fixed error when automating scrolling on an element that might not support scrolling (e.g. Window, Document, Html)
+- fixed missing byte array to string conversion in `web >> savePageAs(var,sessionIdName,url)`
