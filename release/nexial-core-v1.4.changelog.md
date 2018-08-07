@@ -55,6 +55,7 @@ comments: true
   - `distinct`: remove all duplicate rows from CSV. 
   - `parse`: new option added (`trim`) to retain leading/trailing whitespaces from parsed value. By default, trimming is
     in effect.
+  - code fix to honor pipe character (`|`) as delimiter
 
 ### [csv commands](../commands/csv)
 - fixed parsing error found in 

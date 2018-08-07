@@ -70,8 +70,8 @@ See `parse()` below for more details.
   details.  Also, [`htmlTable`](#htmltable) is a related operation to generate HTML table.
 
 #### column(column_name_or_index) 
-- get all the data belonging to the same column as a LIST.  For CSV without 
-  header information, use column index (0-based). 
+- get all the data belonging to the same column as a **[`LIST`](LISTexpression)**.  For CSV without header information, 
+  use column index (0-based). 
 
 #### columnCount
 - number of columns to the current state of the CSV content.
