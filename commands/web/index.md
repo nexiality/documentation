@@ -144,6 +144,13 @@ browsers, operating systems and real mobile devices. This is a paid service.
 To enable BrowserStack integration, be sure to read up on the 
 [BrowserStack Integration](../../tipsandtricks/BrowserStackIntegration.md) page.
 
+### WebDriver Support
+Nexial automatically downloads required webdriver, during runtime as needed. Webdrivers are downloaded to user's home
+directory under `.nexial` folder. Also, a `.manifest` file with the driver details is maintained in the same
+directory. The `.manifest` file is used to check and download the latest version available based on the current OS.
+If there should be any reason not to update to the newer/latest webdriver (e.g. due to compatibility with older browser),
+one can disable the automatic webdriver update by setting `"neverCheck": true` in `.manifest` file.
+
 -----
 
 The "web" command type represents a series of automation commands regarding web operations. See below for a list of 
@@ -185,6 +192,8 @@ available commands.
 - [`assertTextContains(locator,text)`](assertTextContains(locator,text))
 - [`assertTextCount(locator,text,count)`](assertTextCount(locator,text,count))
 - [`assertTextList(locator,list,ignoreOrder)`](assertTextList(locator,list,ignoreOrder))
+- [`assertTextMatches(text,minMatch,scrollTo)`](assertTextMatches(text,minMatch,scrollTo))
+- [`assertTextNotPresent(text)`](assertTextNotPresent(text))
 - [`assertTextOrder(locator,descending)`](assertTextOrder(locator,descending))
 - [`assertTextPresent(text)`](assertTextPresent(text))
 - [`assertTitle(text)`](assertTitle(text))
