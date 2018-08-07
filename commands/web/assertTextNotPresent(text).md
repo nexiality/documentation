@@ -1,33 +1,36 @@
 ---
 layout: default
-title: assertTextPresent(text)
+title: assertTextNotPresent(text)
 parent: web
 tags: command web
 comments: true
 ---
 
 ### Description
+This command asserts that the specified `text` is not present in current page.
 
-- This command is to assert if the defined text is present on current page.
-- In other words If required text is found the assertion will pass or else fail otherwise.
+Note:
+- Nexial scans for the specified `text` with no regards to the associated styling, positioning or tags. So what might 
+  seem like "hidden" text will be included as part of the scan.
+- Nexial will scan the specified `text` case-sensitively.
+
 
 ### Parameters
+- **text** - text that should be found in the content of the current page.
 
-- **text** - this parameter is the actual text to be found on the page.
 
 ### Example
-
 **Script**:<br/>
-![](image/assertTextPresent_01.png)
+![](image/assertText_01.png)
 
 **Output**:<br/>
-![](image/assertTextPresent_02.png)
+![](image/assertText_02.png)
 
 ### See Also
 - [`assertNotText(locator,text)`](assertNotText(locator,text))
 - [`assertText(locator,text)`](assertText(locator,text))
 - [`assertTextContains(locator,text)`](assertTextContains(locator,text))
 - [`assertTextMatches(text,minMatch,scrollTo)`](assertTextMatches(text,minMatch,scrollTo))
-- [`assertTextNotPresent(text)`](assertTextNotPresent(text))
+- [`assertTextPresent(text)`](assertTextPresent(text))
 - [`verifyContainText(locator,text)`](verifyContainText(locator,text))
 - [`verifyText(locator,text)`](verifyText(locator,text).html)

@@ -1,70 +1,85 @@
 ---
 layout: default
-title: nexial-core 1.4 (2018-08-??)
+title: nexial-core 1.4 (2018-08-07)
 parent: release
 tags: release nexial-core 1.4
 comments: true
 ---
 
 ### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-1.4" class="external-link" target="_nexial_link">Release 1.4</a>
-2018-08-??
+2018-08-07
+
 
 ### General
-- upgraded to kotlin 1.2.51
+- Upgraded to Kotlin 1.2.51
 - [Issue #7](https://github.com/nexiality/nexial-core/issues/7): Script reference information such as 
-  `Data File`, `DataSheet(s)`, `runtime args` and `JAVA_OPT` is included in output file `#summary` sheet.
-- Support for data variables in description columns of test scripts.
-- Better error message when not using the minimum version of Java with Nexial.
-- prevent deleting of local log files when "output to cloud" is enabled.
+  `Data File`, `DataSheet(s)`, `runtime args` and `JAVA_OPT` is included in output file `#summary` sheet. Visit
+  [Understanding Project Structure](../userguide/UnderstandingProjectStructure) to see a sample output file.
+- Support for data variable expansion in "description" columns of test scripts. It is now possible to specify data 
+  variable using the `${...}` form in both the "description" column in the script header (Cell A2) and the "description"
+  columns in test steps (Row B). Nexial will expand these `${...}` into actual value during output generation. Visit
+  [Understanding Project Structure](../userguide/UnderstandingProjectStructure) to see a sample output file.
+- Better error message when not using the minimum version of Java with Nexial. The minimum version of Java required is 
+  **1.8.0_151**.
+- Prevent deleting of local log files when "output to cloud" is enabled.
 
 
 ### Flow Control
-- `TimeTrackStart(label)` and `TimeTrackEnd()`: new flow control to mark start/end time of any arbitrary group of steps.
+- `TimeTrackStart(label)` and `TimeTrackEnd()`: **NEW** flow control to mark start/end time of any arbitrary group of 
+  steps. Via this new flow control, it is possible for one to mark the start and stop time between 2 test steps. The 
+  timing information is logged separately as pipe-delimiter text file in the `log/nexial-timetrack.log` under the output 
+  directory. For more details, visit [Time Tracking](../flowcontrols/timeTracking) page for more details and 
+  customization options.
 
 
 ### Execution Dashboard
-- fixed code to promote `buildnum` to execution summary.
+- Fixed code to promote `buildnum` in the Execution Summary section of the execution output.
 
 
 ### Event Notification
-- new event handling to mark the elapsed time of a well-defined events:
-  - `nexial.trackExecution=true`: log start/end and elapsed time of an execution.
-  - `nexial.trackScript=true`: log start/end and elapsed time of a script.
-  - `nexial.trackIteration=true`: log start/end and elapsed time of an iteration.
-  - `nexial.trackScenario=true`: log start/end and elapsed time of a scenario.
+- **NEW** event handling to mark the elapsed time of a well-defined events:
+  - `nexial.timetrack.trackExecution`: log start/end and elapsed time of an execution. Set this to `true` to enable.
+  - `nexial.timetrack.trackScript`: log start/end and elapsed time of a script. Set this to `true` to enable.
+  - `nexial.timetrack.trackIteration`: log start/end and elapsed time of an iteration. Set this to `true` to enable.
+  - `nexial.timetrack.trackScenario`: log start/end and elapsed time of a scenario. Set this to `true` to enable.
+  - For more details, visit [Time Tracking](../flowcontrols/timeTracking) page for more details and customization 
+    options.
 
 
-### Nexial Expression
-- The `in` condition will now consider an empty string as match to an empty filter.
-- The `not in` condition will not consider an non-empty string as match to an empty filter (as in " this string is 
-  not part of empty filter").
-  
-  #### [TEXT expression](../expressions/TEXTexpression)
-  - `removeRegex(regex)`: remove character(s) that matches user-supplied `regex`.
-  - `retain(keep)`: retain only the  character(s) that in the user-supplied `keep`.
-  - `retainRegex(regex)`: retain only the character(s) that matches user-supplied `regex`.
+### Nexial Expression  
 
-  #### [JSON expression](../expressions/JSONexpression)
-  - `addOrReplace(jsonpath,input)`: supports adding or replacing elements in existing JSON document/array.
+#### [TEXT expression](../expressions/TEXTexpression)
+- `removeRegex(regex)`: **NEW** operation to remove character(s) that matches user-supplied `regex`.
+- `retain(keep)`: **NEW** operation to retain only the  character(s) that in the user-supplied `keep`.
+- `retainRegex(regex)`: **NEW** operation to retain only the character(s) that matches user-supplied `regex`.
 
-  ### [CSV expression](../expressions/CSVexpression)
-  - `retainColumns(columnNamesOrIndices)`: retain only the specified columns (by name or by position, separated by 
-    commas) in a CSV. Think of this operation as the opposite of `removeColumns(namesOrIndices)`.
-  - `replaceColumnRegex(searchFor,replaceWith,columnNameOrIndex)`: for the specified column (by name or by position),
-    search for `searchFor` regular expression and replace matches by `replaceWith`. Regex group supported.
-  - `distinct`: remove all duplicate rows from CSV. 
-  - `parse`: new option added (`trim`) to retain leading/trailing whitespaces from parsed value. By default, trimming is
-    in effect.
-  - code fix to honor pipe character (`|`) as delimiter
+#### [JSON expression](../expressions/JSONexpression)
+- `addOrReplace(jsonpath,input)`: **NEW** operation to supports adding or replacing elements in existing JSON 
+document/array.
+
+#### [CSV expression](../expressions/CSVexpression)
+- For `fetch(conditions)`, `filter(conditions)` and `removeRows(conditions)`:  the `in` condition will now consider 
+an empty string as match to an empty filter. The `not in` condition will not consider an non-empty string as match 
+to an empty filter (as in " this string is not part of empty filter").
+- `retainColumns(columnNamesOrIndices)`: **NEW** operation to retain only the specified columns (by name or by 
+position, separated by commas) in a CSV. Think of this operation as the opposite of `removeColumns(namesOrIndices)`.
+- `replaceColumnRegex(searchFor,replaceWith,columnNameOrIndex)`: **NEW** operation where the specified column (by 
+name or by position), search for `searchFor` regular expression will be performed and all matches be replaced with 
+`replaceWith`. Regex group supported.
+- `distinct`: **NEW** to remove all duplicate rows from CSV. 
+- `parse`: new option added (`trim`) to retain leading/trailing whitespaces from parsed value. By default, trimming is
+in effect.
+- Code fix to honor pipe character (`|`) as delimiter
+
 
 ### [csv commands](../commands/csv)
-- fixed parsing error found in 
+- Fixed parsing error found in 
   [csv &raquo; `compareExtended(var,profile,expected,actual)`](../commands/csv/compareExtended(var,profile,expected,actual))
   that otherwise prevent parsing of files with multiple characters that might be candidate as field delimiter.
   
 
 ### [number commands](../commands/number)
-- update code to align with documentation; command parameters are now correctly named.
+- Update code to align with documentation; command parameters are now correctly named.
   - **You will likely need to run 
     [`bin/nexial-script-update.cmd|sh`](../userguide/BatchFiles#nexial-script-update.cmd-/-nexial-script-update.sh) on
     your project, and might need to update your scripts accordingly to match the command parameter changes.**
@@ -81,36 +96,28 @@ comments: true
 
 ### [json command](../commands/json)
 - [Issue #4](https://github.com/nexiality/nexial-core/issues/4): 
-  [`addToReplace`](../commands/json/addOrReplace(json,jsonpath,input,var)); new command to add or replace JSON element 
-  in existing JSON.
+  [`addToReplace`](../commands/json/addOrReplace(json,jsonpath,input,var)); **NEW** command to add or replace JSON 
+  element in existing JSON.
 
 
 #### [web commands](../commands/web)
-- preliminary support for Microsoft Edge browser for Windows 10. 
+- Support for Microsoft Edge browser for Windows 10. 
   - **Note**: XPATH locator is not supported in the 10240 build of Windows 10/Edge/webdriver
-- implemented auto download of Edge webdriver in order to support multiple builds of Windows 10.
-  - Nexial no longer shipped with any Edge webdriver. Instead now it automatically downloads one that is appropriate
-    for the version of Windows 10 running the execution.
-  - fixed code to default to min. OS version (10.0.10240) if an old version of Windows 10 is encountered.
-  - known issues:
-    - https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4468545/
-- supports tag-based locator using `tag=` prefix
-- browser-specific support on "switch-window" capability. Currently Edge does not support "switch-window".
+  - known issues: 
+  <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4468545/" class="external-link" target="nexial_external">https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4468545/</a>
+- Automatic webdriver download/update now available:
+  - Nexial no longer ships with any webdriver. Instead now it automatically downloads the webdriver according to 
+    what's specified in [`${nexial.browser}`](../systemvars/index#nexial.browser) and that which is appropriate for the
+    operation system (that executes Nexial).
+  - Refer to [WebDriver Support](../commands/web#webdriver-support) for more details.
+- Supports tag-based locator using `tag=` prefix.
+- Browser-specific support on "switch-window" capability. Currently Edge does not support "switch-window".
 - `firefox` is set as default browser ONLY when a web command is invoked. This fixed some confusion regarding browser
   initialization in the context of iteration and plan.
-- initial implementation for "download-as-needed" webdriver support. Once complete for all webdrivers, we'll no
-  longer ship webdrivers with Nexial. This will reduce Nexial distro size and speed up download speed.
-  - firefox driver helper implementation completes; geckodriver removed from Nexial distro.
-  - edge driver helper implementation completes
-  - chrome-electron driver helper implementation completes
-  - chrome driver helper implementation completes
-  - firefox headless and chrome headless driver are also supported now
-  - ie driver helper implementation completes
-- user can refer `.nexial` folder in user home directory to know the web driver details. Nexial uses these details for
-auto-download feature to download the latest driver from internet. If user wants to use existing driver and does not
-want to check for the latest version, it can be done by setting the option in `.manifest` file as `"neverCheck": true`.
-Please make sure for right syntax while altering this option, to avoid parsing error.
-- [`assertTextMatches(text,minMatch,scrollTo)`](../commands/web/assertTextMatches(text,minMatch,scrollTo)) - assert the 
-  minimum number of occurrence of `text` in current web page, and optionally scroll to the specified instance.
-- fixed error when automating scrolling on an element that might not support scrolling (e.g. Window, Document, Html)
-- fixed missing byte array to string conversion in `web >> savePageAs(var,sessionIdName,url)`
+- [`assertTextMatches(text,minMatch,scrollTo)`](../commands/web/assertTextMatches(text,minMatch,scrollTo)) - **NEW** 
+  command to assert the minimum number of occurrence of `text` in current web page, and optionally scroll to the 
+  specified instance.
+- Fixed error when automating scrolling on an element that might not support scrolling (e.g. `window`, `document`, 
+  `html`)
+- Fixed missing byte array to string conversion in 
+  [web &raquo; `savePageAs(var,sessionIdName,url)`](../commands/web/savePageAs(var,sessionIdName,url))
