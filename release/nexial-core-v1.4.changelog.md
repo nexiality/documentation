@@ -107,8 +107,8 @@ comments: true
   - ie driver helper implementation completes
 - user can refer `.nexial` folder in user home directory to know the web driver details. Nexial uses these details for
 auto-download feature to download the latest driver from internet. If user wants to use existing driver and does not
-want to check for the latest version, it can be done by setting the option in `.manifest` file as `neverCheck": true`.
-Please make sure for right syntax while adding this option, to avoid parsing error.
+want to check for the latest version, it can be done by setting the option in `.manifest` file as `"neverCheck": true`.
+Please make sure for right syntax while altering this option, to avoid parsing error.
 - [`assertTextMatches(text,minMatch,scrollTo)`](../commands/web/assertTextMatches(text,minMatch,scrollTo)) - assert the 
   minimum number of occurrence of `text` in current web page, and optionally scroll to the specified instance.
 - fixed error when automating scrolling on an element that might not support scrolling (e.g. Window, Document, Html)
