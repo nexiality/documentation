@@ -13,6 +13,7 @@ comments: true
 ### General
 - supports replacing multiple `(empty)`, `(blank)`, `(tab)` and `(eol)` with the appropriate values in the parameter. 
   For example, `(blank)(blank)(blank)` will now be replaced as `   ` (3 spaces).
+- Added new command line option(`-p`) in `nexial-variable-update.cmd` batch file to only preview updating variables. It won't update variables just showcase which variables will be updated. 
 
 
 ### Flow Control

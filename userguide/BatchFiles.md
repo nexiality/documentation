@@ -146,21 +146,39 @@ For example, the following will update all the scripts from given path.<br/>
 ---------------------------------------------
 
 #### nexial-variable-update.cmd / nexial-variable-update.sh
-This script refactors the data variables referenced across test artifacts to provide uniformity across script authors 
+This script refactor the data variables referenced across test artifacts to provide uniformity across script authors 
 and teams.  One may specify the current keys and new keys in the form of:
 
 `-d "key1=NEW_KEY1;key2=NEW_KEY2;..."`
  
-This script has three command line options:<br/> 
+This script has four command line options:<br/> 
 
 | options  | explanation |
 | -------- | ----------- |
-| **`-d`** | This option is for data variables to replace in the form of old_var=new_var |
-| **`-t`** | This option is path of project/starting location of update data varaiable |
+| **`-d`** | **[REQUIRED]** This option is for data variables to replace in the form of old_var=new_var |
+| **`-t`** | **[REQUIRED]** This option is path of project/starting location of update data variable |
 | **`-v`** | This option is to turn on verbose logging |
+| **`-p`** | This option is to preview the results for the data variables being updated without affecting any files.So it won't allow to update data variables across test artifacts files. |
 
 For example, the following renames the key `oldKey1` to `newKey1`, and `oldKey2` to `newKey2`, and so on:<br/>
 `nexial-variable-update.cmd -v -d oldKey1=newKey1;oldKey2=newKey2;oldKey3=newKey3 -t projectFullPath` 
+
+If you just want to examine the positions of `oldKey1`, `oldKey2` and so on which will be affected, but don't want to refactor them. Following will preview it-<br/>
+`nexial-variable-update.cmd -v -d oldKey1=newKey1;oldKey2=newKey2;oldKey3=newKey3 -t projectFullPath -p` <br/>
+
+Format of data variable update preview has four columns-
+
+| column  | explanation |
+| -------- | ----------- |
+| **`File`** | This will have relative path of file with respect to starting location of update data variable given by `-t` command line option. |
+| **`Worksheet/Scenario`** | This will have worksheet name of data file or scripts. |
+| **`Position`** |This is the position of line/cell being refactored/affected. |
+| **`Updating Lines/Cells`** | Updating lines/Cells column will have line/cells before replacement and after replacement separated by `=>`. |
+
+For example, let's have a look at variable update preview.<br>
+Following command is executed for the preview-<br>
+`-v -t C:\projects\demo\artifact -d list1=list;nexialProject=project;result12=result1; -p`<br>
+![](image/BatchFiles_02.png)
 
 ---------------------------------------------
 
