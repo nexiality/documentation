@@ -1,6 +1,6 @@
 ---
 layout: default
-title: expressions
+title: Expressions
 level: 1
 tags: command expressions
 comments: true
