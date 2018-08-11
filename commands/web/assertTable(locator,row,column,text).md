@@ -7,27 +7,26 @@ comments: true
 ---
 
 ### Description
+This command asserts the value of a table cell based on the `locator` of the said table and the `row`/`column` position 
+of the said cell. Unlike most of Nexial commands, both `row` and `column` are 1-based position (i.e. first column 
+would be `1`, second would be `2`, and so on).
 
-- This command is the assert the row and column values of the table.
-- In other words the command will assert the required value from table as per the row & column provided as Input Parameters.
-- The command will pass if the required values are found in the table or else fail otherwise.
 
 ### Parameters
+- **locator** - locator of the target table component.
+- **row** - 1-based target row position.
+- **column** - 1-based target column position.
+- **text** - the text to assert against the target cell.
 
-- **locatorScript** - this parameter is the locator of the element.
-- **row** - this parameter is the row number of the web table.
-- **column** - this parameter is the column number of web table.
-- **text** - this parameter is the actual text to be found in the table row and column.
 
 ### Example
-
 **Script**:<br/>
 ![](image/assertTable_01.png)
 
 **Output**:<br/>
 ![](image/assertTable_02.png)
 
-### See Also
 
+### See Also
 - [`assertTextPresent(text)`](assertTextPresent(text).html)
 - [`assertElementPresent(locator)`](assertElementPresent(locator).html)

@@ -13,6 +13,8 @@ comments: true
 ### General
 - supports replacing multiple `(empty)`, `(blank)`, `(tab)` and `(eol)` with the appropriate values in the parameter. 
   For example, `(blank)(blank)(blank)` will now be replaced as `   ` (3 spaces).
+- `nexial-variable-update.cmd|sh`: fixed wrong verbiage for option -p
+- `nexial-script-update.cmd|sh`: minor updates to output to improve clarity
 
 
 ### Flow Control
@@ -42,3 +44,11 @@ comments: true
   and possibly reduce some flakiness.
 - enable web element highlight during the execution of `assert`* commands. Note that [`nexial.highlight`] must be set
   to `true` to activate web element highlighting.
+- [`saveTableAsCsv(locator,nextPageLocator,file)`](../commands/web/saveTableAsCsv(locator,nextPageLocator,file)): 
+  **NEW** command to automate the collection of HTML table data into a CSV file.
+- added firefox-specific fix for selecting option from a <SELECT> element. Only tested on single-option <SELECT> for now.
+- [`assertTable(locator,row,column,text)`](../commands/web/assertTable(locator,row,column,text)): fixed internal
+  locator to find cell data with more coverage.
+- [`savePageAsFile(sessionId,url,file)`](../commands/web/savePageAsFile(sessionId,url,file)): shorten parameter 
+  `fileName` to just `file`.
+  
