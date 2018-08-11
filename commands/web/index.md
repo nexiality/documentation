@@ -235,6 +235,7 @@ available commands.
 - [`saveLocation(var)`](saveLocation(var))
 - [`savePageAs(var,sessionIdName,url)`](savePageAs(var,sessionIdName,url))
 - [`savePageAsFile(sessionIdName,url,fileName)`](savePageAsFile(sessionIdName,url,fileName))
+- [`saveTableAsCsv(locator,nextPageLocator,file)`](saveTableAsCsv(locator,nextPageLocator,file))
 - [`saveText(var,locator)`](saveText(var,locator))
 - [`saveTextArray(var,locator)`](saveTextArray(var,locator))
 - [`saveTextSubstringAfter(var,locator,delim)`](saveTextSubstringAfter(var,locator,delim))
