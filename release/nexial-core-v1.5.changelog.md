@@ -54,3 +54,5 @@ comments: true
   locator to find cell data with more coverage.
 - [`savePageAsFile(sessionId,url,file)`](../commands/web/savePageAsFile(sessionId,url,file)): shorten parameter 
   `fileName` to just `file`.
+- [`dragAndDrop(fromLocator,toLocator)`](../commands/web/dragAndDrop(fromLocator,toLocator)): **NEW** command to
+  support drag-and-drop automation from one element to another on the same page.
