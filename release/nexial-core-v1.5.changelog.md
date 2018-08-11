@@ -13,9 +13,10 @@ comments: true
 ### General
 - supports replacing multiple `(empty)`, `(blank)`, `(tab)` and `(eol)` with the appropriate values in the parameter. 
   For example, `(blank)(blank)(blank)` will now be replaced as `   ` (3 spaces).
-- Added new command line option(`-p`) in `nexial-variable-update.cmd` batch file to only preview updating variables. It won't update variables just showcase which variables will be updated. 
-- `nexial-variable-update.cmd|sh`: fixed wrong verbiage for option -p
-- `nexial-script-update.cmd|sh`: minor updates to output to improve clarity
+- `nexial-variable-update.cmd|sh`: Added new command line option (`-p`) to preview variable updates. It won't update 
+  variables just showcase which variables will be updated. 
+- `nexial-variable-update.cmd|sh`: fixed wrong verbiage for option `-p`.
+- `nexial-script-update.cmd|sh`: minor updates to output to improve clarity.
 
 
 ### Flow Control
@@ -29,7 +30,8 @@ comments: true
 ### [io commands](../commands/io)
 - file validation support to give a choice to the user to define record spec configuration for any one record type or
   for a combination of the record types(file header, section header, section body, section footer, file footer).
-   
+
+
 ### [csv commands](../commands/csv)
   
 
@@ -47,9 +49,8 @@ comments: true
   to `true` to activate web element highlighting.
 - [`saveTableAsCsv(locator,nextPageLocator,file)`](../commands/web/saveTableAsCsv(locator,nextPageLocator,file)): 
   **NEW** command to automate the collection of HTML table data into a CSV file.
-- added firefox-specific fix for selecting option from a <SELECT> element. Only tested on single-option <SELECT> for now.
+- added firefox-specific fix for selecting option from a <SELECT> element. Only tested on single-option <SELECT> so far.
 - [`assertTable(locator,row,column,text)`](../commands/web/assertTable(locator,row,column,text)): fixed internal
   locator to find cell data with more coverage.
 - [`savePageAsFile(sessionId,url,file)`](../commands/web/savePageAsFile(sessionId,url,file)): shorten parameter 
   `fileName` to just `file`.
-  
