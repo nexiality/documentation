@@ -17,6 +17,7 @@ comments: true
   variables just showcase which variables will be updated. 
 - `nexial-variable-update.cmd|sh`: fixed wrong verbiage for option `-p`.
 - `nexial-script-update.cmd|sh`: minor updates to output to improve clarity.
+- `nexia.cmd|sh`: minor command line option help regarding multi-plan support.
 
 
 ### Flow Control
