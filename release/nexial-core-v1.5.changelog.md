@@ -57,3 +57,5 @@ comments: true
   `fileName` to just `file`.
 - [`dragAndDrop(fromLocator,toLocator)`](../commands/web/dragAndDrop(fromLocator,toLocator)): **NEW** command to
   support drag-and-drop automation from one element to another on the same page.
+- [`nexial.web.unfocusAfterType`](../systemvars/index#nexial.web.unfocusAfterType): support automation to blur the
+  target web element after entering input.
