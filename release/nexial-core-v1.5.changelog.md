@@ -28,6 +28,11 @@ comments: true
 
 ### Nexial Expression  
 
+
+### [base commands](../commands/base)
+- [`clear(vars)`](../commands/base/clear(vars)): improve output/console messages. No change in functionality/logic.
+
+
 ### [io commands](../commands/io)
 - file validation support to give a choice to the user to define record spec configuration for any one record type or
   for a combination of the record types(file header, section header, section body, section footer, file footer).
@@ -59,3 +64,7 @@ comments: true
   support drag-and-drop automation from one element to another on the same page.
 - [`nexial.web.unfocusAfterType`](../systemvars/index#nexial.web.unfocusAfterType): support automation to blur the
   target web element after entering input.
+- [`checkAll(locator)`](../commands/web/checkAll(locator)): **NEW** command to "check" all matching CheckBox web 
+  elements.
+- [`uncheckAll(locator)`](../commands/web/uncheckAll(locator)): **NEW** command to "uncheck" all matching CheckBox web 
+  elements.
