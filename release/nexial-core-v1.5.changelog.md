@@ -39,12 +39,15 @@ comments: true
 
 
 ### [csv commands](../commands/csv)
+- [`fromExcel(excel,worksheet,csvFile`]: **NEW** command to replace the deprecated convertExcel() command.
   
 
 ### [number commands](../commands/number)
 
 
 ### [json command](../commands/json)
+- [`fromCsv(csv,header,jsonFile)`](../commands/json/fromCsv(csv,header,jsonFile)): **NEW** command to convert CSV to 
+  JSON.
 
 
 #### [web commands](../commands/web)
