@@ -27,6 +27,8 @@ comments: true
 
 
 ### Nexial Expression  
+- [CSV `excel(file,sheet,startCell)`](../expressions/CSVexpression.md#excel): **NEW** operation to import CSV into
+  a Excel worksheet. By default, `startCell` is set to `A1`.
 
 
 ### [base commands](../commands/base)
