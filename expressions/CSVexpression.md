@@ -49,11 +49,11 @@ subtleties (see the `parse()` operation below).
 ### Different ways to initiate CSV expression
 An CSV expression can be initiated in various ways:
 
-|syntax|explanation|
-|---|---|
-|`[CSV(file) => ...]`|Initiate a CSV expression via an external file.<br/>This file can be expressed via a variable (syntax: `${var_points_to_my_csv_file}`), or as the fully qualified path (e.g. `C:\my_files\data.csv`).  Such expression will read in the entire content of the specified CSV file. Note that the specified file is considered as "disconnected", meaning that changes to the CSV content will not automatically/directly affect the CSV file until a **`save()`** operation is issued.|
+|syntax                        |explanation                                                                            |
+|------------------------------|---------------------------------------------------------------------------------------|
+|`[CSV(file) => ...]`          |Initiate a CSV expression via an external file.<br/>This file can be expressed via a variable (syntax: `${var_points_to_my_csv_file}`), or as the fully qualified path (e.g. `C:\my_files\data.csv`).  Such expression will read in the entire content of the specified CSV file. Note that the specified file is considered as "disconnected", meaning that changes to the CSV content will not automatically/directly affect the CSV file until a **`save()`** operation is issued.|
 |`[CSV(${csv_content}) => ...]`|Initiate a CSV expression via CSV content (expressed as text).<br/>The content can be expressed via a variable (syntax: `${csv_content}`).|
-|`[CSV(var) => ...]`|Continue a previously initiated CSV expression denoted by var.<br/>Note that var **`does not`** follow the `${...}` syntax. Simply specify the variable name to instruct Nexial to resume a previously initiated CSV expression (that was saved via the **`store()`** operation). See **`store()`** operation below for more details.|
+|`[CSV(var) => ...]`           |Continue a previously initiated CSV expression denoted by var.<br/>Note that var **`does not`** follow the `${...}` syntax. Simply specify the variable name to instruct Nexial to resume a previously initiated CSV expression (that was saved via the **`store()`** operation). See **`store()`** operation below for more details.|
 
 **`IMPORTANT`: It is almost always necessary to invoke the parse() operation first prior to using other operations.**
 The official CSV specification of Microsoft/CSV does not default to using header.  Hence one should consider something like the following:
@@ -81,6 +81,12 @@ See `parse()` below for more details.
 
 #### distinct
 - remove all duplicate rows from the CSV content.
+
+#### excel(file,sheet,startCell)
+- to import CSV into the `sheet` of the specified Excel starting from `startCell` position. The cell position is 
+  specified using conventional Excel cell like `A3`, `P11`, from which the CSV content will be intended. If current
+  CSV content contains header, then it will be included in the import as the first row.  Both `file` and `sheet` can
+  reference non-existing resources, which Nexial will create on-the-fly.
 
 #### fetch(conditions)
 - fetch the first row that matched the specified 
