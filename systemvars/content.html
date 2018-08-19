@@ -292,7 +292,7 @@
             <a name="nexial.spreadsheet.program"><code>nexial.spreadsheet.program</code></a>
         </td>
         <td>text</td>
-        <td><code>excel</code></td>
+        <td>excel</td>
         <td class="highlight-red">true</td>
         <td>
             Configure the full path, including the executable name, of the program to use when opening Nexial output at
@@ -1009,8 +1009,8 @@
         <td nowrap="nowrap" class="varname">
             <a name="nexial.enforcePageSourceStability"><code>nexial.enforcePageSourceStability</code></a>
         </td>
-        <td><code>boolean</code></td>
-        <td><code>true</code></td>
+        <td>boolean</td>
+        <td>true</td>
         <td>false</td>
         <td>
             Determine the browser page stability during test execution. Generally most of the modern web applications
@@ -1082,7 +1082,7 @@
             a web element <b>UNTIL</b> the focus has been shifted from that web element. The need to
             "unfocus-after-typing" hence becomes a pre-requisite for effective web automation for some web applications.
             <br/>
-            By default, this System variable is set to <code>false</code>.  Setting it to <code>true</code> would enable
+            By default, this System variable is set to <code>false</code>. Setting it to <code>true</code> would enable
             the "unfocus-after-typing" behavior, which effectively adds a TAB key after entering the specified input.
         </td>
     </tr>
@@ -1110,7 +1110,8 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.ignoreBrowserAlert"><code>nexial.ignoreBrowserAlert</code></a></td>
+        <td nowrap="nowrap" class="varname"><a
+            name="nexial.ignoreBrowserAlert"><code>nexial.ignoreBrowserAlert</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td class="highlight-red">true</td>
@@ -1131,18 +1132,57 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.highlight"><code>nexial.highlight</code></a></td>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.web.highlight"><code>nexial.web.highlight</code></a>
+        </td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
         <td>
+            <b>RENAMED FROM THE OUTDATED <code>nexial.hightlight</code> FOR CONSISTENCY AND PROPER NAMESPACING.</b>
+            <br/><br/>
+
             Highlight each web form element as an automation action is performed on it. These automation actions are
-            typically some form of click or type. Mouseover will not trigger such highlighting. Currently the
-            highlight style is set to <strong><code>background:#faf557</code></strong> for a period of
-            <strong>250ms</strong>; this currently cannot be changed. The "<em>flashing yellow effect</em>" is meant as
-            a visual indicator of a test execution in progress. Here's an example (where the field <code>Joe</code> is
-            highlighted):<br/>
+            typically some form of clicking or typing. "Mouseover" will not trigger such highlighting. <br/><br/>
+
+            Currently the highlight style is set to <strong><code>background:#faf557</code></strong> (default for
+            <a href="#nexial.web.highlight.style"><code>nexial.web.highlight.style</code></a>) for a period of
+            <strong>250ms</strong> (default for
+            <a href="#nexial.web.highlight.waitMs"><code>nexial.web.highlight.waitMs</code></a>). <br/><br/>
+
+            The "<em>flashing yellow effect</em>" (default style) is meant as a visual indicator of a test execution in
+            progress. Here's an example (where the field <code>Joe</code> is highlighted):<br/>
             <img src="image/systemvar_27.jpg"/>
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.web.highlight.waitMs"><code>nexial.web.highlight.waitMs</code></a>
+        </td>
+        <td>integer</td>
+        <td>250</td>
+        <td>false</td>
+        <td>
+            <b>RENAMED FROM THE OUTDATED <code>nexial.hightlightWaitMs</code> FOR CONSISTENCY AND PROPER
+                NAMESPACING.</b>
+            <br/>
+            <br/>
+
+            The amount of time, in milliseconds, before the highlight effect is removed and the style of target web
+            element restored. This is only effective when
+            <a href="#nexial.web.highlight"><code>nexial.web.highlight</code></a> is set to <code>true</code>.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.web.highlight.style"><code>nexial.web.highlight.style</code></a>
+        </td>
+        <td>text</td>
+        <td><code>background:#faf557</code></td>
+        <td>false</td>
+        <td>
+            The applicable CSS style to the target web element during highlighting. This is only effective when
+            <a href="#nexial.web.highlight"><code>nexial.web.highlight</code></a> is set to <code>true</code>.
         </td>
     </tr>
     <tr>
@@ -1161,7 +1201,8 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.automatekey"><code>nexial.browserstack.automatekey</code></a></td>
+        <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.automatekey"><code>nexial.browserstack.automatekey</code></a>
+        </td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -1216,7 +1257,8 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.resolution"><code>nexial.browserstack.resolution</code></a></td>
+        <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.resolution"><code>nexial.browserstack.resolution</code></a>
+        </td>
         <td>text</td>
         <td>1024x768</td>
         <td>false</td>
@@ -1233,7 +1275,8 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.app.buildnumber"><code>nexial.browserstack.app.buildnumber</code></a></td>
+        <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.app.buildnumber"><code>nexial.browserstack.app.buildnumber</code></a>
+        </td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -1243,7 +1286,8 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.enablelocal"><code>nexial.browserstack.enablelocal</code></a></td>
+        <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.enablelocal"><code>nexial.browserstack.enablelocal</code></a>
+        </td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
@@ -1267,7 +1311,8 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.os.version"><code>nexial.browserstack.os.version</code></a></td>
+        <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.os.version"><code>nexial.browserstack.os.version</code></a>
+        </td>
         <td>text</td>
         <td>&nbsp;
         </td>
@@ -1413,7 +1458,7 @@
             <a name="nexial.ws.connectionTimeout"><code>nexial.ws.connectionTimeout</code></a>
         </td>
         <td>milliseconds</td>
-        <td><code>300000</code></td>
+        <td>300000</td>
         <td>false</td>
         <td>
             Determine the connection timeout value (in milliseconds) until a connection is established. A timeout value
@@ -1423,7 +1468,7 @@
     <tr>
         <td nowrap="nowrap" class="varname"><a name="nexial.ws.readTimeout"><code>nexial.ws.readTimeout</code></a></td>
         <td>milliseconds</td>
-        <td><code>300000</code></td>
+        <td>300000</td>
         <td>false</td>
         <td>
             Determine the socket timeout value when reading response payload from either a reused or new connection.
@@ -1431,14 +1476,16 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.ws.enableRedirects"><code>nexial.ws.enableRedirects</code></a></td>
+        <td nowrap="nowrap" class="varname"><a
+            name="nexial.ws.enableRedirects"><code>nexial.ws.enableRedirects</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
         <td>Determines whether redirects should be handled automatically.</td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.ws.enabledExpectContinue"><code>nexial.ws.enabledExpectContinue</code></a></td>
+        <td nowrap="nowrap" class="varname"><a name="nexial.ws.enabledExpectContinue"><code>nexial.ws.enabledExpectContinue</code></a>
+        </td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
@@ -1545,7 +1592,8 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.ws.digest.password"><code>nexial.ws.digest.password</code></a></td>
+        <td nowrap="nowrap" class="varname"><a
+            name="nexial.ws.digest.password"><code>nexial.ws.digest.password</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -1576,7 +1624,8 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.ws.basic.password"><code>nexial.ws.basic.password</code></a></td>
+        <td nowrap="nowrap" class="varname"><a name="nexial.ws.basic.password"><code>nexial.ws.basic.password</code></a>
+        </td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -1586,7 +1635,8 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.ws.async.shutdownWaitMs"><code>nexial.ws.async.shutdownWaitMs</code></a></td>
+        <td nowrap="nowrap" class="varname"><a name="nexial.ws.async.shutdownWaitMs"><code>nexial.ws.async.shutdownWaitMs</code></a>
+        </td>
         <td>millisecond</td>
         <td>180000</td>
         <td>false</td>
@@ -1616,7 +1666,8 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.desktop.fullScreenCapture"><code>nexial.desktop.fullScreenCapture</code></a></td>
+        <td nowrap="nowrap" class="varname"><a name="nexial.desktop.fullScreenCapture"><code>nexial.desktop.fullScreenCapture</code></a>
+        </td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
@@ -1630,7 +1681,8 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.desktop.dialogLookup"><code>nexial.desktop.dialogLookup</code></a></td>
+        <td nowrap="nowrap" class="varname"><a
+            name="nexial.desktop.dialogLookup"><code>nexial.desktop.dialogLookup</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
@@ -1640,7 +1692,8 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.winiumJoinExisting"><code>nexial.winiumJoinExisting</code></a></td>
+        <td nowrap="nowrap" class="varname"><a
+            name="nexial.winiumJoinExisting"><code>nexial.winiumJoinExisting</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>

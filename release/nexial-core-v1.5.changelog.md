@@ -56,8 +56,14 @@ comments: true
 - honor [`nexial.browser.forceJSClick`](../systemvars/index#nexial.browser.forceJSClick) so that if it is set to 
   `false` then Nexial will not automate `click` event via JavaScript. This might slightly improve execution performance
   and possibly reduce some flakiness.
-- enable web element highlight during the execution of `assert`* commands. Note that [`nexial.highlight`] must be set
-  to `true` to activate web element highlighting.
+- enable web element highlight during the execution of `assert`* commands. Note that [`nexial.web.highlight`] must be 
+  set to `true` to activate web element highlighting.
+- [`nexial.web.highlight`](../systemvars/index#nexial.web.highlight): renamed from the previous `nexial.highlight`
+  System variable (which is still working) for consistency and clearer namespacing.
+- [`nexial.web.highlight.waitMs`](../systemvars/index#nexial.web.highlight.waitMs): renamed from the previous 
+  `nexial.highlightWaitMs` (which is still working) for consistency and clearer namespacing.
+- [`nexial.web.highlight.style`](../systemvars/index#nexial.web.highlight.styl): **NEW** System variable to allow for
+  customization of web element highlighting, which is assumed as CSS style. The default is `background:#faf557;`.
 - [`saveTableAsCsv(locator,nextPageLocator,file)`](../commands/web/saveTableAsCsv(locator,nextPageLocator,file)): 
   **NEW** command to automate the collection of HTML table data into a CSV file.
 - added firefox-specific fix for selecting option from a <SELECT> element. Only tested on single-option <SELECT> so far.
