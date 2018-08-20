@@ -38,6 +38,7 @@ comments: true
 ### [io commands](../commands/io)
 - file validation support to give a choice to the user to define record spec configuration for any one record type or
   for a combination of the record types(file header, section header, section body, section footer, file footer).
+- fix file validation support, for huge data files efficiently.Improves performance in file parsing and validating.
 
 
 ### [csv commands](../commands/csv)
