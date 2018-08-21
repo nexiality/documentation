@@ -26,5 +26,6 @@ The "io" command type represents a series of automation commands regarding io op
 - [`unzip(zipFile,target)`](unzip(zipFile,target))
 - [`validate(var,profile,inputFile)`](validate(var,profile,inputFile))
 - [`writeFile(file,content,append)`](writeFile(file,content,append))
+- [`writeFileAsIs(file,content,append)`](writeFile(file,content,append))
 - [`writeProperty(file,property,value)`](writeProperty(file,property,value))
 - [`zip(filePattern,zipFile)`](zip(filePattern,zipFile))

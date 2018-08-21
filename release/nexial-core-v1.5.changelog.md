@@ -53,6 +53,8 @@ comments: true
 - fix file validation support, for huge data files efficiently.Improves performance in file parsing and validating.
 - [io &raquo; `writeFile(file,content,append)`](../commands/io/writeFile(file,content,append)): now consider the 
   `content` parameter either as a file or text content.
+- [io &raquo; `writeFileAsIs(file,content,append)`](../commands/io/writeFileAsIs(file,content,append)): **NEW** commands
+  to write to file without data variable substitution.
 
 
 ### [csv commands](../commands/csv)
