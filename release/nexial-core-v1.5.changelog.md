@@ -17,10 +17,19 @@ comments: true
   variables just showcase which variables will be updated. 
 - `nexial-variable-update.cmd|sh`: fixed wrong verbiage for option `-p`.
 - `nexial-script-update.cmd|sh`: minor updates to output to improve clarity.
-- `nexia.cmd|sh`: minor command line option help regarding multi-plan support.
+- `nexial.cmd|sh`: minor command line option help regarding multi-plan support.
+- [`nexial.pauseOnError`](../systemvars/index#nexial.pauseOnError): **NEW** System variable to enable the pausing of
+  execution when a FAIL is encountered. Can be combined in use with 
+  [`nexial.inspectOnPause`](../systemvars/index#nexial.inspectOnPause)
+
+
+### Nexial Filter
+- fixed logic error with the ` contain ` filter. The corrected code works as a "contains one of ..." match.
+- fixed code to handle variable substitution when evaluating filter.
 
 
 ### Flow Control
+- more informative console output when evaluating flow control.
 
 
 ### Event Notification
@@ -38,6 +47,8 @@ comments: true
 ### [io commands](../commands/io)
 - file validation support to give a choice to the user to define record spec configuration for any one record type or
   for a combination of the record types(file header, section header, section body, section footer, file footer).
+- [io &raquo; `writeFile(file,content,append)`](../commands/io/writeFile(file,content,append)): now consider the 
+  `content` parameter either as a file or text content.
 
 
 ### [csv commands](../commands/csv)
@@ -79,3 +90,12 @@ comments: true
   elements.
 - [`uncheckAll(locator)`](../commands/web/uncheckAll(locator)): **NEW** command to "uncheck" all matching CheckBox web 
   elements.
+- [web &raquo; `checkAll(locator)`](../commands/web/checkAll(locator)): fixed code so that multiple matching web 
+  elements are refetched after each `check`. This prevents the element staleness issue.
+- [web &raquo; `uncheckAll(locator)`](../commands/web/uncheckAll(locator)): fixed code so that multiple matching web 
+  elements are refetched after each `uncheck`. This prevents the element staleness issue.
+- minor perf. improvement for type() and click() commands.
+- [web &raquo; `saveText(var,locator)`](../commands/web/saveText(var,locator)): fixed code from throwing error when the 
+  target locator did not resolve to a valid web element.
+- [web &raquo; `assertText(locator,text)`](../commands/web/assertText(locator,text)): fixed code from throwing error 
+  when the target locator did not resolve to a valid web element.

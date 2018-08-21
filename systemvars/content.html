@@ -369,6 +369,26 @@
         </td>
     </tr>
     <tr>
+        <td nowrap="nowrap" class="varname"><a name="nexial.pauseOnError"><code>nexial.pauseOnError</code></a></td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            During script development, it is often advantageous to "step through" the execution so that improvements
+            and correction can be made upon runtime observation. However for a very large execution run, it might be
+            rather time consuming to re-run the execution from the beginning each time. Having a way to course correct
+            when a FAIL condition is encountered during execution could be very helpful.<br/><br/>
+
+            This is the premise of this System variable. When set to <code>true</code>, Nexial will pause the execution
+            when a FAIL condition is encountered. This gives automation engineer an opportunity to observe and trace
+            through both the AUT and the script in action. When use in combination with
+            <a href="#nexial.inspectOnPause"><code>nexial.inspectOnPause</code></a>, this can be a even more powerful
+            tool to work through the FAIL condition as and when error occurs.<br/><br/>
+
+            By default, this System variable is set to <code>false</code>.
+        </td>
+    </tr>
+    <tr>
         <td nowrap="nowrap" class="varname"><a name="nexial.failFast"><code>nexial.failFast</code></a></td>
         <td>boolean</td>
         <td>false</td>
