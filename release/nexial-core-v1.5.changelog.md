@@ -31,6 +31,10 @@ comments: true
 ### Flow Control
 
 
+### Built-in Function
+- [`file`](../functions/$(file)): **NEW** built-in function to provide file-related functionality.
+
+
 ### Event Notification
 
 
