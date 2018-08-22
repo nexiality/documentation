@@ -33,6 +33,7 @@ comments: true
 
 ### Built-in Function
 - [`file`](../functions/$(file)): **NEW** built-in function to provide file-related functionality.
+- fixed wrong references in `$(syspath|script)`
 
 
 ### Event Notification
@@ -67,6 +68,10 @@ comments: true
 ### [json command](../commands/json)
 - [`fromCsv(csv,header,jsonFile)`](../commands/json/fromCsv(csv,header,jsonFile)): **NEW** command to convert CSV to 
   JSON.
+
+
+### [rdbms command](../commands/rdbms)
+- support reading of file content when execution `runSQL()` and `saveResult()` commands
 
 
 #### [web commands](../commands/web)
@@ -105,3 +110,15 @@ comments: true
   target locator did not resolve to a valid web element.
 - [web &raquo; `assertText(locator,text)`](../commands/web/assertText(locator,text)): fixed code from throwing error 
   when the target locator did not resolve to a valid web element.
+- shipped with <a href="https://raw.githubusercontent.com/SeleniumHQ/selenium/master/java/CHANGELOG" class="external-link" target="nexial_link">Selenium 3.14.0</a>:
+  - Added new capabilities for safari driver: automaticInspection and automaticProfiling (#6095)
+  - Adding High Sierra to the platform set. Fixes #5969
+  - Fixing potential Zip Slip Vulnerability, see 
+    [https://snyk.io/research/zip-slip-vulnerability](https://snyk.io/research/zip-slip-vulnerability)
+  - Allow temporary installation of FF extension (#1) (#5751)
+  - Fix windowSize option in Firefox in Javascript (#6075)
+  - Pass found elements to the EventListener's afterFind method (#6191)
+  - Add native events under se:ieOptions. (#6183)
+- improve log messages (console) over FAIL conditions
+- support page load time out
+- graceful passthrough when `open()` takes longer than expected to load page due to external links
