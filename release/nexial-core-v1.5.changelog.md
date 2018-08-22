@@ -11,6 +11,7 @@ comments: true
 
 
 ### General
+- upgraded to nexial-seeknow 1.1. Supports reading text pane with two gray variants of background colors.
 - supports replacing multiple `(empty)`, `(blank)`, `(tab)` and `(eol)` with the appropriate values in the parameter. 
   For example, `(blank)(blank)(blank)` will now be replaced as `   ` (3 spaces).
 - `nexial-variable-update.cmd|sh`: Added new command line option (`-p`) to preview variable updates. It won't update 
