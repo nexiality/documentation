@@ -52,6 +52,7 @@ comments: true
 - file validation support to give a choice to the user to define record spec configuration for any one record type or
   for a combination of the record types(file header, section header, section body, section footer, file footer).
 - fix file validation support, for huge data files efficiently.Improves performance in file parsing and validating.
+- add **NEW** data types: `Any`, `REGEX`, `Person Name`, `Alpha`, `Alpha Upper` and `Alpha Lower`.
 - [io &raquo; `writeFile(file,content,append)`](../commands/io/writeFile(file,content,append)): now consider the 
   `content` parameter either as a file or text content.
 - [io &raquo; `writeFileAsIs(file,content,append)`](../commands/io/writeFileAsIs(file,content,append)): **NEW** commands
