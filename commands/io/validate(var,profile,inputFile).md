@@ -14,28 +14,42 @@ This command validates any text file with the fields in each record (line) eithe
 Various validations can be carried out as configured. The configurations includes, self description 
 of each field and the validations to be carried out.
 
-**Validation Types supported**:
+#### Validation Types supported
+Each field value in the record will go through basic validations:
+1. Data Type
+   * `Numeric`
+   * `Alphanumeric`
+   * `Alpha`
+   * `Alpha Upper`
+   * `Alpha Lower`
+   * `Blank`
+   * `Person Name`
+   * `Regex` - Syntax `REGEX:<pattern>`
+   * `Any` -  any ASCII character [32-126]
+2. Text Alignment
+   * `Left`
+   * `Right`
+ 
+Other validations needs to be configured for each field of the record:
+1. `REGEX` - Regular expression to check against actual field value 
+2. `EQUALS` - Equals to check against actual field value 
+3. `IN` - IN to check the presence of actual field value against a list of expected values
+4. `DATE` - to do date field validation against given date pattern. See below for the date pattern syntax. 
+5. `SQL` - to check field value against a database query
 
-Each field in the record will go through the below validations mentioned.
-- **Data Type:** (**Numeric, Alphanumeric, Blank**)
-  - **Text Alignment Check:** (**Left, Right**) 
-  - **REGEX** - Regular expression to check against actual field value 
-  - **EQUALS** - Equals to check against actual field value 
-  - **IN** - IN to check the presence of actual field value against a list of expected values
-  - **DATE** - to do date field validation against given date pattern. See below for the date pattern syntax. 
-  - **SQL** - to check field value against a database query
 
-- **API** (**In Progress**)
+In Progress
+1. `API`
+2. `RANGE`
 
-- **RANGE**
-
-- **Map Functions supported**
-  Map Functions are to apply below functions on all the records on a field and get the value. Which could be later used to validate against any another field in any record. 
-  - **COUNT** - Count to calculate the total count of the fields present
-  - **MIN** -  to calculate the MIN amount
-  - **MAX** - to calculate the MAX amount
-  - **AGGREGATE** - to calculate the aggregate amount
-  - **AVERAGE** - to calculate the average amount
+#### Map Functions supported
+Map Functions are to apply below functions on all the records on a field and get the value. Which could be later used 
+to validate against any another field in any record. 
+1. `COUNT` - count to calculate the total count of the fields present
+2. `MIN` -  to calculate the MIN amount
+3. `MAX` - to calculate the MAX amount
+4. `AGGREGATE` - to calculate the aggregate amount
+5. `AVERAGE` - to calculate the average amount
 
 
 ### Parameters
