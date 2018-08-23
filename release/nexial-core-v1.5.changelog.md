@@ -124,3 +124,7 @@ comments: true
 - improve log messages (console) over FAIL conditions
 - support page load time out
 - graceful passthrough when `open()` takes longer than expected to load page due to external links
+- update code to handle new electron webdriver
+- [web &raquo; `checkAll(locator)`](../commands/web/checkAll(locator)) and 
+  [web &raquo; `uncheckAll(locator)`](../commands/web/uncheckAll(locator)): added wait time between each matched 
+  element to reduce flakiness; improved logging
