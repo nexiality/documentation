@@ -17,15 +17,18 @@ of each field and the validations to be carried out.
 #### Validation Types supported
 Each field value in the record will go through basic validations:
 1. Data Type
-   * `Numeric`
-   * `Alphanumeric`
-   * `Alpha`
-   * `Alpha Upper`
-   * `Alpha Lower`
-   * `Blank`
+   * `Numeric` - only numeric characters
+   * `Alphanumeric` - only alphabetic and numeric characters.
+   * `Alpha` - only alphabetic characters.
+   * `Alpha Upper` - alphabetic characters in upper case.
+   * `Alpha Lower` - alphabetic characters in lower case.
+   * `Blank` - blank
    * `Person Name`
-   * `Regex` - Syntax `REGEX:<pattern>`
-   * `Any` -  any ASCII character [32-126]
+      * common data type for `First Name` and `Last Name`.
+      * accepts at least one or more characters and can be combined with ` ,.'-`.  
+      * you can also use `First Name` for **First Name** and `Last Name` for **Last Name** to be more specific.
+   * `Regex` - syntax `REGEX:<pattern>`
+   * `Any` - any <a href="https://en.wikipedia.org/wiki/ASCII#Printable_characters" class="external-link" target="_nexial_link">ASCII printable characters</a>
 2. Text Alignment
    * `Left`
    * `Right`
