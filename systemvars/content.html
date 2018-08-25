@@ -1048,14 +1048,17 @@
         <td nowrap="nowrap" class="varname"><a name="nexial.pollWaitMs"><code>nexial.pollWaitMs</code></a></td>
         <td>milliseconds</td>
         <td>30000</td>
-        <td>false</td>
+        <td class="highlight-red">true</td>
         <td>
             The time to wait for the impact caused by an action (such as click) to subside. In modern web-based
             application, esp. those implemented with AJAX, not all the resulting elements (DOM, resource, etc.) are
             available at the same time. As the browser concurrently downloads and renders each component, the position
             and hierarchical order of these components might change as well. One should consider this configuration as a
             "max wait time" – meaning that if the rendered content has settled or expected element is reachable prior
-            to this time, then Nexial will stop waiting and resume execution.
+            to this time, then Nexial will stop waiting and resume execution.<br/><br/>
+
+            Note that as per WebDriver specification, the poll wait time is only set once per initial use of a browser-
+            specific webdriver instance.
         </td>
     </tr>
     <tr>
@@ -1064,7 +1067,7 @@
         <td>3000</td>
         <td>false</td>
         <td>
-            The number of milliseconds to wait before taking a screenshot on current browser. &nbsp;This would allow the
+            The number of milliseconds to wait before taking a screenshot on current browser. This would allow the
             UI elements to "<em>settle down</em>".
         </td>
     </tr>

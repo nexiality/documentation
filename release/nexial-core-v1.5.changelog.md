@@ -22,6 +22,8 @@ comments: true
 - [`nexial.pauseOnError`](../systemvars/index#nexial.pauseOnError): **NEW** System variable to enable the pausing of
   execution when a FAIL is encountered. Can be combined in use with 
   [`nexial.inspectOnPause`](../systemvars/index#nexial.inspectOnPause)
+- support specifying data variable override via command line. Same effect as using `set JAVA_OPT=-D...` but this may be 
+  simpler for some folks.
 
 
 ### Nexial Filter
@@ -35,6 +37,7 @@ comments: true
 ### Built-in Function
 - [`file`](../functions/$(file)): **NEW** built-in function to provide file-related functionality.
 - fixed wrong references in `$(syspath|script)`
+- support for `informal` date/time formatting to mimic human conversation.
 
 
 ### Event Notification
@@ -43,6 +46,8 @@ comments: true
 ### Nexial Expression  
 - [CSV `excel(file,sheet,startCell)`](../expressions/CSVexpression.md#excel): **NEW** operation to import CSV into
   a Excel worksheet. By default, `startCell` is set to `A1`.
+- [DATE expression](../expressions/DATEexpression): support for `informal` date/time formatting to mimic human 
+  conversation.
 
 
 ### [base commands](../commands/base)
@@ -127,4 +132,8 @@ comments: true
 - update code to handle new electron webdriver
 - [web &raquo; `checkAll(locator)`](../commands/web/checkAll(locator)) and 
   [web &raquo; `uncheckAll(locator)`](../commands/web/uncheckAll(locator)): added wait time between each matched 
-  element to reduce flakiness; improved logging
+  element to reduce flakiness; improved logging.
+- [`focus(locator)`](../commands/web/focus(locator)): **NEW** command to place cursor focus on the first element that
+  matches specified `locator`. Note that if the matched element is a textbox or textarea, Nexial will also automate a 
+  click to put the cursor on the target INPUT element.
+- code enhanced to stabilize webdriver initialization between different browsers.

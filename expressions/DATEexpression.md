@@ -34,7 +34,11 @@ by specifying a **DATE** instance with one of the following:
 - **addSecond(second)** \- add `seconds` to the current _second_ part of the date instance.
 - **addYear(years)** \- add `years` to the current _year_ part of the date instance.
 - **format(targetFormat)** \- transform the same date instance into another textual form, using the specified 
-  `targetFormat.`
+  `targetFormat`. Use <a href="https://en.wikipedia.org/wiki/Unix_time" class="external-link" target="_nexial_external"><code>epoch</code></a> 
+  to format date as timestamp. Use `informal` to format date in colloquial, non-exact manner that mimic human 
+  conversation. For example, `informal` format would output `about a minute ago` instead of `00:00:57`, or 
+  `about a month and a half ago` rather than `2018/08/24 00:01:32`. The `informal` format is suitable to use in 
+  conjunction with the [sound &raquo; `speak(text)`](../commands/sound/speak(text)) command.
 - **setDay(days)** \- set the `day` part of the date instance.
 - **setDOW(days)** \- set the `day of the week` part of the date instance.  Use the numeric value mapped to the day 
   of the week: `1=SUNDAY, 2=MONDAY, 3=TUESDAY, 4=WEDNESDAY, 5=THURSDAY, 6=FRIDAY, 7=SATURDAY`.
