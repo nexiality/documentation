@@ -24,6 +24,7 @@ comments: true
   [`nexial.inspectOnPause`](../systemvars/index#nexial.inspectOnPause)
 - support specifying data variable override via command line. Same effect as using `set JAVA_OPT=-D...` but this may be 
   simpler for some folks.
+- prevent the evaluation of fail-fast when command does not result in a FAIL condition (e.g. SKIP)
 
 
 ### Nexial Filter
@@ -137,3 +138,5 @@ comments: true
   matches specified `locator`. Note that if the matched element is a textbox or textarea, Nexial will also automate a 
   click to put the cursor on the target INPUT element.
 - code enhanced to stabilize webdriver initialization between different browsers.
+- [web &raquo; `typeKeys(locator,value)`](../commands/web/typeKeys(locator,value)): automatically adds `TAB` when 
+  `value` is `(empty)` so that the appropriate HTML event may be triggered.

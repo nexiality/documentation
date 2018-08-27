@@ -544,12 +544,17 @@
         <td>false</td>
         <td>
             Determine the number of failure that can be tolerated before Nexial forcefully terminates the test
-            execution. This must not be used in conjunction with <code>nexial.failFast</code>, as
-            <code>nexial.failFast</code> will always take precedence. In addition, the failure count in this case is
-            execution-bound – meaning, the count will be considered from a single step to its scenario, across multiple
-            test script within a single test plan.<br/>
-            By default, Nexial will not fail the test execution regardless of the number of failure, if
-            <code>nexial.failFast</code> is not set to <code>true</code>.
+            execution. In effect, this System variable provides a way to implement a "fail-not-so-fast" execution.
+            <br/><br/>
+            <code>nexial.failFast</code> (when set to <code>true</code>) provides a way to terminate execution on the
+            first occurrence of a FAIL condition (of a command) - hence "fail-fast". In contrast, the
+            <code>nexial.failAfter</code> System variable "slows down" the execution termination by allowing for FAIL
+            conditions to occur. By specifying a integer value to <code>nexial.failAfter</code>, one can apply the idea
+            of "error tolerance" to prolong an execution that contains failures. <i>A sort of a failure-grace, as it
+            were.</i>
+            <br/><br/>
+            Note that this System variable supersedes <code>nexial.failFast</code>, and FAIL count is not reset across
+            scripts, iterations or scenarios. By default, this System variable is not activated.
         </td>
     </tr>
     <tr>

@@ -386,43 +386,40 @@
             </p>
             <p>
                 The <a href="https://www.w3.org/TR/CSS/#selectors" class="external-link" target="_nexial_link">W3C
-                CSS-Selector</a>
-                provides a wide range of capabilities to reference web elements, of which most are implemented in
-                Selenium 3.x. In general, the CSS selectors can be divided into the following categories:
-            <ul>
-                <li>HTML tag</li>
-                <li>ID via the <code>#id</code> syntax</li>
-                <li>Classname via the <code>.class</code> syntax</li>
-                <li>Attribute via the <code>@attrib</code> syntax</li>
-                <li>String matches: equals (<code>=</code>), start with (<code>^=</code>), ends with (<code>$=</code>),
-                    contains (<code>*=</code>)
-                </li>
-                <li>Inward hierarchy: descendant, direct child (<code>&gt;</code>), first child
-                    (<code>:first-child</code>), last child (<code>:last-child</code>), nth child
-                    (<code>:nth-child(n)</code>)
-                </li>
-                <li>Outward hierarchy: immediate after (<code>+</code>), before (<code>~</code>).</li>
-                <li>Pseudo Class: active element (<code>:active</code>), enabled (<code>:enabled</code>), disabled
-                    (<code>:disabled</code>), etc.
-                </li>
-            </ul>
-            The topic and discussion about CSS selectors is a substantial one. Instead of repeating what has already
-            been widely written, popular links to the topic CSS selectors are listed below:
-            <ul>
-                <li><a href="https://www.w3schools.com/cssref/css_selectors.asp" class="external-link"
-                       target="_nexial_link">w3shools - CSS Selector Reference</a></li>
-                <li><a href="https://saucelabs.com/resources/articles/selenium-tips-css-selectors" class="external-link"
-                       target="_nexial_link">saucelabs - Selenium Tips: CSS Selectors</a></li>
-                <li><a href="https://www.swtestacademy.com/css-selenium/" class="external-link" target="_nexial_link">swtestacademy
-                    - How to Write Effective CSS Selenium Selectors</a></li>
-                <li><a href="https://www.cheatography.com/janesh/cheat-sheets/css-selectors-for-selenium-webdriver/"
-                       class="external-link" target="_nexial_link">cheatography - CSS Selectors for Selenium WebDriver
-                    Cheat Sheet</a></li>
-                <li><a href="https://yuanjiang.space/selenium-css-selector" class="external-link" target="_nexial_link">yuanjiang
-                    - Selenium css selector</a></li>
-            </ul>
-            </p>
-            <p>
+                CSS-Selector</a> provides a wide range of capabilities to reference web elements, of which most are
+                implemented in Selenium 3.x. In general, the CSS selectors can be divided into the following categories:
+                <ul>
+                    <li>HTML tag</li>
+                    <li>ID via the <code>#id</code> syntax</li>
+                    <li>Classname via the <code>.class</code> syntax</li>
+                    <li>Attribute via the <code>@attrib</code> syntax</li>
+                    <li>String matches: equals (<code>=</code>), start with (<code>^=</code>), ends with
+                        (<code>$=</code>), contains (<code>*=</code>)</li>
+                    <li>Inward hierarchy: descendant, direct child (<code>&gt;</code>), first child
+                        (<code>:first-child</code>), last child (<code>:last-child</code>), nth child
+                        (<code>:nth-child(n)</code>)</li>
+                    <li>Outward hierarchy: immediate after (<code>+</code>), before (<code>~</code>).</li>
+                    <li>Pseudo Class: active element (<code>:active</code>), enabled (<code>:enabled</code>), disabled
+                        (<code>:disabled</code>), etc.</li>
+                </ul>
+
+                The topic and discussion about CSS selectors is a substantial one. Many great resources are widely
+                available. Here are some of the popular ones:
+                <ul>
+                    <li><a href="https://www.w3schools.com/cssref/css_selectors.asp" class="external-link"
+                           target="_nexial_link">w3shools - CSS Selector Reference</a></li>
+                    <li><a href="https://saucelabs.com/resources/articles/selenium-tips-css-selectors"
+                           class="external-link" target="_nexial_link">saucelabs - Selenium Tips: CSS Selectors</a></li>
+                    <li><a href="https://www.swtestacademy.com/css-selenium/" class="external-link"
+                           target="_nexial_link">swtestacademy - How to Write Effective CSS Selenium Selectors</a></li>
+                    <li><a href="https://www.cheatography.com/janesh/cheat-sheets/css-selectors-for-selenium-webdriver/"
+                           class="external-link" target="_nexial_link">cheatography - CSS Selectors for Selenium
+                        WebDriver Cheat Sheet</a></li>
+                    <li><a href="https://yuanjiang.space/selenium-css-selector" class="external-link"
+                           target="_nexial_link">yuanjiang - Selenium css selector</a></li>
+                    <li><a href="https://webkit.org/blog/3615/css-selectors-inside-selectors-discover-matches-not-and-nth-child/"
+                           class="external-link" target="_nexial_link">Complex CSS Selectors Inside Selectors</a></li>
+                </ul>
             </p>
         </td>
     </tr>
@@ -482,7 +479,7 @@
                 be helpful:
             <ul>
                 <li><a href="https://www.w3.org/TR/1999/REC-xpath-19991116/" class="external-link"
-                       target="_nexial_link">W2C - XML Path Language (XPath) 1.0</a></li>
+                       target="_nexial_link">W3C - XML Path Language (XPath) 1.0</a></li>
                 <li><a href="https://www.guru99.com/xpath-selenium.html" class="external-link" target="_nexial_link">
                     gugu99 - XPath in Selenium WebDriver: Complete Tutorial</a></li>
                 <li><a href="https://www.w3schools.com/xml/xpath_intro.asp" class="external-link" target="_nexial_link">
@@ -514,3 +511,12 @@ on the eyes. Here's an online app to help converting XPath to CSS locator:<br/>
     http://cssify.appspot.com/<br/>
     <img src="image/web_02.png"/>
 </a>
+<br/>
+
+Google Chrome comes with a sleuth of useful features to perform common tasks such as selecting and inspecting DOM
+elements, and monitoring DOM events. This is available from the Chrome DevTools (aka Console):<br/>
+<a href="https://developers.google.com/web/tools/chrome-devtools/console/command-line-reference" class="external-link" target="_nexial_target">
+    Command Line API Reference<br/>
+    <img src="image/web_05.png"/>
+</a>
+<br/>
