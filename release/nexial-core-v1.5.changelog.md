@@ -25,6 +25,8 @@ comments: true
 - support specifying data variable override via command line. Same effect as using `set JAVA_OPT=-D...` but this may be 
   simpler for some folks.
 - prevent the evaluation of fail-fast when command does not result in a FAIL condition (e.g. SKIP)
+- JVM memory allocation settings are removed from `.commons` files. User can set through command line using `JAVA_OPT`
+  option.
 
 
 ### Nexial Filter
