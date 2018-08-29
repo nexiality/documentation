@@ -60,7 +60,7 @@ comments: true
 ### [io commands](../commands/io)
 - file validation support to give a choice to the user to define record spec configuration for any one record type or
   for a combination of the record types(file header, section header, section body, section footer, file footer).
-- fix file validation support, for huge data files efficiently.Improves performance in file parsing and validating.
+- fix file validation support, for huge data files efficiently.  Improves performance in file parsing and validating.
 - add **NEW** data types: `Any`, `REGEX`, `Person Name`, `Alpha`, `Alpha Upper` and `Alpha Lower`.
 - [io &raquo; `writeFile(file,content,append)`](../commands/io/writeFile(file,content,append)): now consider the 
   `content` parameter either as a file or text content.
@@ -142,3 +142,4 @@ comments: true
 - code enhanced to stabilize webdriver initialization between different browsers.
 - [web &raquo; `typeKeys(locator,value)`](../commands/web/typeKeys(locator,value)): automatically adds `TAB` when 
   `value` is `(empty)` so that the appropriate HTML event may be triggered.
+  - added support for multi-key (include CONTROL, ALT, SHIFT) supports.

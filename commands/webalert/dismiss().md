@@ -8,7 +8,7 @@ comments: true
 
 
 ### Description
-This command dismisses any currently-present alert dialog.
+This command dismisses any currently-present alert dialog.  
 
 The text of the alert dialog, if present, will be saved to `nexial.lastAlertText`, which can be retrieved after this
 command is executed.
