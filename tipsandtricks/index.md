@@ -14,6 +14,7 @@ comments: true
 - [Integrating with other projects](IntegratingWithOtherProjects)
 - [Record/Playback a Nexial Execution](RecordPlayback)
 - [Security Issues on Executable](SecurityIssuesExecutableFiles)
+- [Mass-generate data values via 1 data variable and iteration](scope-currentIteration)
 - *in progress* [Why isn't Nexial executing my scenario (worksheet)?]()
 
 
