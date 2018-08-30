@@ -13,5 +13,6 @@ This command type will deal with the JavaScript alert on web application.
 - [`assertPresent()`](assertPresent())
 - [`assertText(text,matchBy)`](assertText(text,matchBy))
 - [`dismiss()`](dismiss())
+- [`replyCancel(text)`](replyCancel(text))
+- [`replyOK(text)`](replyOK(text))
 - [`storeText(var)`](storeText(var))
-
