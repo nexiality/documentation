@@ -27,6 +27,8 @@ comments: true
 - prevent the evaluation of fail-fast when command does not result in a FAIL condition (e.g. SKIP)
 - JVM memory allocation settings are removed from `.commons` files. User can set through command line using `JAVA_OPT`
   option.
+- [`nexial.currentActivity`](../systemvars/index#nexial.currentActivity): **NEW** System variable to indicate the 
+  Activity currently in execution
 
 
 ### Nexial Filter
@@ -143,3 +145,9 @@ comments: true
 - [web &raquo; `typeKeys(locator,value)`](../commands/web/typeKeys(locator,value)): automatically adds `TAB` when 
   `value` is `(empty)` so that the appropriate HTML event may be triggered.
   - added support for multi-key (include CONTROL, ALT, SHIFT) supports.
+
+
+### [webalert commands](../commands/webalert)
+- [`replyOK(text)`](../commands/webalert/replyOK(text)): **NEW** command to automate prompt reply and then click OK.
+- [`replyCancel(text)`](../commands/webalert/replyCancel(text)): **NEW** command to automate prompt reply and then click 
+  Cancel.
