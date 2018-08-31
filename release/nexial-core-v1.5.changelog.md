@@ -53,6 +53,7 @@ comments: true
   a Excel worksheet. By default, `startCell` is set to `A1`.
 - [DATE expression](../expressions/DATEexpression): support for `informal` date/time formatting to mimic human 
   conversation.
+- [DATE expression](../expressions/DATEexpression): fixed date operation with negative values.
 
 
 ### [base commands](../commands/base)
@@ -73,9 +74,6 @@ comments: true
 ### [csv commands](../commands/csv)
 - [`fromExcel(excel,worksheet,csvFile`]: **NEW** command to replace the deprecated convertExcel() command.
   
-
-### [number commands](../commands/number)
-
 
 ### [json command](../commands/json)
 - [`fromCsv(csv,header,jsonFile)`](../commands/json/fromCsv(csv,header,jsonFile)): **NEW** command to convert CSV to 
