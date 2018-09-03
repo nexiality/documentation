@@ -29,4 +29,4 @@ The content of the specified `url`, if successfully downloaded, will be saved as
 
 
 ### See Also
-- [`savePageAsFile(sessionIdName,url,fileName)`](savePageAsFile(sessionIdName,url,fileName))
+- [`savePageAsFile(sessionIdName,url,file)`](savePageAsFile(sessionIdName,url,file))

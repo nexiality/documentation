@@ -13,7 +13,7 @@ comments: true
 
 ### Parameters
 
-- **locator** - this parameter if the xpath of the element.
+- **locator** - this parameter is the xpath of the element.
 
 ### Example
 

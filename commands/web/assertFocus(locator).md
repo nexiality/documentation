@@ -10,11 +10,11 @@ comments: true
 ### Description
 
 - This command is to assert if the focus is on the element.
-- The command will pass in the focus is on the element or else fail otherwise.
+- The command will pass if the focus is on the element or else fail otherwise.
 
 ### Parameters
 
-- **locator** - this parameter if the xpath of the element.
+- **locator** - this parameter is the xpath of the element.
 
 ### Example
 
