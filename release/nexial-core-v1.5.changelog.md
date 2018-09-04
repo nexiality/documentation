@@ -36,16 +36,10 @@ comments: true
 - fixed code to handle variable substitution when evaluating filter.
 
 
-### Flow Control
-
-
 ### Built-in Function
 - [`file`](../functions/$(file)): **NEW** built-in function to provide file-related functionality.
 - fixed wrong references in `$(syspath|script)`
 - support for `informal` date/time formatting to mimic human conversation.
-
-
-### Event Notification
 
 
 ### Nexial Expression  

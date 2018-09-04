@@ -32,6 +32,9 @@ a list of US states. The last command uses a `LIST` expression to sort the US 
   the list will be ignored, and not count towards the calculation of the average.  In almost all cases, this will be a 
   decimal number.
 
+#### count
+- Find the number of items in this list as a [`NUMBER`](NUMBERexpression). Alias to [`length`](#length).
+
 #### combine(delim)
 - Same as [`text`](#text), but with customized separator (`delim`).
 
@@ -66,7 +69,7 @@ a list of US states. The last command uses a `LIST` expression to sort the US 
 - Retrieve the last item in the list as a [`TEXT`](TEXTexpression).
 
 #### length
-- Find the length of this list as a [`NUMBER`](NUMBERexpression).
+- Find the length of this list as a [`NUMBER`](NUMBERexpression). Alias to [`count`](#count).
 
 #### max
 - Find the largest number in the list as a [`NUMBER`](NUMBERexpression).
