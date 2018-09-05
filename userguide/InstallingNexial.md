@@ -53,14 +53,15 @@ comments: true
    Windows: 
    1. Start | Run | sysdm.cpl <ENTER> | click "Advanced" tab | click "Environment Variables..." button<br/>
       ![sysdm](image/InstallingNexial_05.png) 
-   1. Under System variable, search for a variable named `Path`.
-   1. Ensure that the `bin\` directory of the installed Java is part of the value of `PATH`.  
+   2. Under System variable, search for a variable named `Path`.
+   3. Ensure that the `bin\` directory of the installed Java is part of the value of `PATH`.  
       Preferably it should be the first entry of its value.  For example:<br/>
       ![sysdm_path](image/InstallingNexial_06.png) 
-   1. Similarly search for a variable named `JAVA_HOME`.  If not found, click `New...` button to create one. Its value 
+   4. Similarly search for a variable named `JAVA_HOME`.  If not found, click `New...` button to create one. Its value 
       should be that of the installed directory of Java.
-   1. Similarly search for a variable named `JRE_HOME`.  If not found, there is no need to create it. If found, check 
+   5. Similarly search for a variable named `JRE_HOME`.  If not found, there is no need to create it. If found, check 
       that it has the same value as `JAVA_HOME`.
+   6. These changes will *NOT* take effect on any opened console. Either open new console or restart existing ones.
 
 
 ### Check Excel Version
@@ -70,13 +71,13 @@ Nexial requires Excel 2007/2010 or above. It requires the use of XLSX format (ol
 ### Checking Browser Availability and Version
 1. **Internet Explorer** - Nexial at this time only supports Internet Explorer 9 or above.  In the future we might 
    consider older versions of Internet Explorer.  Nexial however will support either 32 or 64 bit.
-1. **Firefox** - as stated on Selenium's website: "..._Support for Firefox is the latest release, the previous 
+2. **Firefox** - as stated on Selenium's website: "..._Support for Firefox is the latest release, the previous 
    release, the latest ESR release and the previous ESR release..._"  However there is a high likelihood that older 
    versions of Firefox will work as well.  Support from Nexial team is provided on a case-by-case basis.
-1. **Chrome** - latest and almost all recent versions are supported.  Older version can be supported via using the 
+3. **Chrome** - latest and almost all recent versions are supported.  Older version can be supported via using the 
    corresponding 
    <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" class="external-link" target="_nexial_link">older versions of chrome driver</a>.
-1. **Safari** \- version 9 or above is supported, with the latest most likely to be most stable.
+4. **Safari** \- version 9 or above is supported, with the latest most likely to be most stable.
 
 ### Installing Nexial
 1. Download Nexial
@@ -85,10 +86,10 @@ Nexial requires Excel 2007/2010 or above. It requires the use of XLSX format (ol
       Note that the instruction for updating to newer version of Nexial is the same as installing it anew.
 2. Installing Nexial
    1. Create a directory in your local workstation/VDI as `C:\projects\`
-   1. Unzip the downloaded Nexial package to `C:\projects\`.  For example, `C:\projects\nexial-core` 
+   2. Unzip the downloaded Nexial package to `C:\projects\`.  For example, `C:\projects\nexial-core` 
       is the location where the content of the zip file is unzipped.
-   1. The location where Nexial is unzipped to is referred to as `NEXIAL_HOME`.
-   1. Done!
+   3. The location where Nexial is unzipped to is referred to as `NEXIAL_HOME`.
+   4. Done!
 
 #### nexial-installer
 An alternative, and possibly simpler alternative, to installing Nexial is to use 
@@ -106,16 +107,16 @@ welcome!
 1. Create Project Structure
    1. Open console and point to `bin` directory under the Nexial installation directory.<br/>
       ![nexial_bin](image/InstallingNexial_07.png) 
-   1. Invoke the project creator script - `nexial-project.cmd MyFirstProject`
+   2. Invoke the project creator script - `nexial-project.cmd MyFirstProject`
       ![nexial-project](image/InstallingNexial_08.png)
-   1. If everything works, then you should see the message "`creating project home at ...`" and "`DONE"`
-   1. You should see the following directory create, along with various files in it:<br/>
+   3. If everything works, then you should see the message "`creating project home at ...`" and "`DONE"`
+   4. You should see the following directory create, along with various files in it:<br/>
       ![script_dir](image/InstallingNexial_09.png)
-   1. To gain better understanding of the project structure, check out 
+   5. To gain better understanding of the project structure, check out 
       [Understanding Nexial project structure](UnderstandingProjectStructure)
-   1. To gain better understanding of the Nexial automation script format and usage, check out 
+   6. To gain better understanding of the Nexial automation script format and usage, check out 
       [Understanding Nexial Test Artifact](UnderstandingExcelTemplates)
-   1. _Now it's time to run some automation_!
+   7. _Now it's time to run some automation_!
 
 
 ### Running your first test automation
@@ -143,12 +144,12 @@ welcome!
    1. The second line above (`-Dnexial.assistantMode=on`) is optional.  It is used to instruct 
       Nexial to open the test result when the test is complete. It is safe to omit but could save 
       you a few steps.
-   1. In some situation where SMTP is not permitted, email notification **must** be disabled.
+   2. In some situation where SMTP is not permitted, email notification **must** be disabled.
       The second line **cannot be omitted** and **MUST** be
       `set JAVA_OPT=-Dnexial.assistantMode=on -Dnexial.enableEmail=off`
       or
       `set JAVA_OPT=-Dnexial.enableEmail=off` 
-   1.  The third line is to invoke Nexial to run the test as scripted in the file specified via 
+   3.  The third line is to invoke Nexial to run the test as scripted in the file specified via 
        `-script` argument.
 6. If all's well, you should see something like the following on your console:<br/>
    ![nexial_output](image/InstallingNexial_12.png) 
@@ -162,12 +163,12 @@ welcome!
    
    1. Cell E5 prints `Hello World`.  At this time it might not appear obvious since we just print 
       out a static string of text. Our next example will show more interesting tests.
-   1. `L1:O2` is the execution summary.  It shows where the test was run, who and when it was run 
+   2. `L1:O2` is the execution summary.  It shows where the test was run, who and when it was run 
       and top-level execution numbers.  Note that the time duration is slightly different than 
       what's reported on the console.  The additional time as specified in the console is the 
       additional time to clean up the test run.
-   1. Column M shows the elapsed time in millisecond to complete the corresponding test step
-   1. Column N shows `PASS`, `FAIL` or `SKIP` as the result of the corresponding test step. 
+   3. Column M shows the elapsed time in millisecond to complete the corresponding test step
+   4. Column N shows `PASS`, `FAIL` or `SKIP` as the result of the corresponding test step. 
 
 **Congratulations**! You have just successfully run your first automation script via Nexial. Let's 
 dig deeper...
