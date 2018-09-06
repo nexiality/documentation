@@ -11,6 +11,7 @@ comments: true
 
 
 ### General
+- support default output directory via environment variable `NEXIAL_OUTPUT`
 
 
 ### Nexial Filter
