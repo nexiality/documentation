@@ -9,6 +9,8 @@ comments: true
 The "excel" command type represents a series of automation commands regarding excel files and excel contents:
 
 - [`clear(file,worksheet,range)`](clear(file,worksheet,range))
+- [`csv(file,worksheet,range,output)`](csv(file,worksheet,range,output))
+- [`json(file,worksheet,range,header,output)`](json(file,worksheet,range,header,output))
 - [`read(file,worksheet,range,var) - to be deleted`](read(file,worksheet,range,var))
 - [`saveData(var,file,worksheet,range)`](saveData(var,file,worksheet,range))
 - [`saveRange(var,file,worksheet,range)`](saveRange(var,file,worksheet,range))

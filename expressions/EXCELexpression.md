@@ -44,7 +44,26 @@ To specify the location of a cell, simply use the format: `[column letter][row 
 - return the number of columns captured.
 
 #### csv
-- transform current EXCEL content into **[`CSV`](CSVexpression)**.
+- transform current EXCEL content into **[`CSV`](CSVexpression)**. Field delimiter will be set to the current value of
+  [`nexial.textDelim`](../systemvars/index#nexial.textDelim) (default to comma), and record delimiter will be set to
+  CRLF (`\r\n`).
+
+#### csvWithHeader
+- transform current EXCEL content into **[`CSV`](CSVexpression)**, using the first row as header. Field delimiter will 
+  be set to the current value of [`nexial.textDelim`](../systemvars/index#nexial.textDelim) (default to comma), and 
+  record delimiter will be set to CRLF (`\r\n`).
+
+#### json(firstRowAsHeader)
+- transform current EXCEL content into **[`JSON`](JSONexpression)**. This operation provides 2 forms of transformations.
+  When `firstRowAsHeader` is set to `false`, the current EXCEL content is converted into a JSON array containing one or 
+  more JSON array. For example,
+  ![](../expressions/image/csv_04.jpg)
+
+  However, if `firstRowAsHeader` is set to `true`, then the first row of the current EXCEL content is assumed to be a
+  header row. The transformed JSON document would thus be a JSON array containing one or more JSON document, like this:
+  ![](../expressions/image/csv_02.jpg)
+  
+  See [CSV &raquo; `json()`](CSVexpression#json) for additional details.
 
 #### pack
 - trim (remove beginning and trailing spaces) the values of captured cell and remove any blank rows in 

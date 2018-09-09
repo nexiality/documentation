@@ -23,13 +23,13 @@ nodes may be arranged in different order without changing its logical context.  
 ```json
 {
     "age": 19,
-    "hobby": "Fly to the moom",
+    "hobby": "Fly to the moon",
     "name": "Johnny Rocket"
 }
 ```
 
 Technically they are 2 separate and different documents. But logically speaking, they represent the same set of 
-information (i.e. Johnny Rocket, who is 19, likes to fly to the moon). This command serves the purpose of asserting
+information (i.e. _Johnny Rocket, who is 19, likes to fly to the moon_). This command serves the purpose of asserting
 the logical equivalence of 2 JSON documents. As such, the above 2 documents would be considered as "equal".
 
 In contract, [base &raquo; `assertEqual(expected,actual)`](../base/assertEqual(expected,actual)) performs byte-level
@@ -80,12 +80,16 @@ The example shows such capability.  After comparison (which ends in FAIL due to 
 ![](image/assertEqual_03.png)
 
 **Output**:<br/>
-Here's the difference report as a JSON document:
+Here's the comparison report as a JSON document. One will observe that the comparison is expressed as a JSON array, 
+where each node represents a difference between the 2 JSON documents. The `$` character represents the top of the
+document (or root node) so that `$.batters.batter[1].type` would mean "_the node named `type` from the 2nd element 
+(0-based) of its parent array named `batter` whose parent node is named `batters` whose parent node is the root of the 
+JSON document_".
 ![](image/assertEqual_05.png)
 
+As a JSON document, we can query the comparison report for more specific details via the [json commands](../json/index)
+and [JSON Path](../../jsonpath), which is shown below from row 7 through 25. 
 ![](image/assertEqual_04.png)
-
-
 
 
 ### See Also

@@ -35,7 +35,12 @@ comments: true
   with characters that might be misinterpreted as array delimiter. Now it should be safe/correct to issue: 
   `web    | saveElements(var,locator) | MyList | //div` 
   `number | assertEquals(num1,num2)   | 53      | [LIST(${MyList}) => count] `
-
+- [`[EXCEL(...) => csvWithHeader`](../expressions/EXCELexpression#csvwithheader): convert a contiguous cell range (from
+  Excel worksheet) to a [`CSV`](../expressions/CSVexpression) where the first range is treated as header.
+- [`[EXCEL(...) => json(firstRowAsHeader)`](../expressions/EXCELexpression#jsonfirstrowasheader): convert a contiguous 
+  cell range (from Excel worksheet) to a [`JSON`](../expressions/JSONexpression) where the first range may be treated 
+  as header to impact the output JSON structure.
+    
 
 ### [base commands](../commands/base)
 
@@ -44,10 +49,19 @@ comments: true
 
 
 ### [csv commands](../commands/csv)
-  
+
+
+### [excel commands](../commands/csv)
+- [`csv(file,worksheet,range,output)`](../commands/excel/csv(file,worksheet,range,output)): **NEW** command to convert
+  a contiguous cell range (from Excel worksheet) to a CSV file (`output`).
+- [`json(file,worksheet,range,header,output)`](../commands/excel/json(file,worksheet,range,header,output)): **NEW**
+  command to convert a contiguous cell range (from Excel worksheet) to a JSON file (`output`).
+
 
 ### [json command](../commands/json)
-- [`assertEqual(expected,actual)](../commands/json/assertEqual(expected,actual)): **NEW** command to compare JSON documents.
+- [`assertEqual(expected,actual)](../commands/json/assertEqual(expected,actual)): **NEW** command to compare JSON 
+  documents.
+
 
 ### [rdbms command](../commands/rdbms)
 
