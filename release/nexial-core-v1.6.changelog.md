@@ -47,7 +47,7 @@ comments: true
   
 
 ### [json command](../commands/json)
-
+- [`assertEqual(expected,actual)](../commands/json/assertEqual(expected,actual)): **NEW** command to compare JSON documents.
 
 ### [rdbms command](../commands/rdbms)
 

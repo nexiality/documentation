@@ -21,6 +21,7 @@ structure-aware specification to communicate the intent - something akins to XPa
 - [`assertElementCount(json,jsonpath,count)`](assertElementCount(json,jsonpath,count))
 - [`assertElementNotPresent(json,jsonpath)`](assertElementNotPresent(json,jsonpath))
 - [`assertElementPresent(json,jsonpath)`](assertElementPresent(json,jsonpath))
+- [`assertEqual(expected,actual)`](assertEqual(expected,actual))
 - [`assertValue(json,jsonpath,expected)`](assertValue(json,jsonpath,expected))
 - [`assertValues(json,jsonpath,array,exactOrder)`](assertValues(json,jsonpath,array,exactOrder))
 - [`assertWellformed(json)`](assertWellformed(json))
