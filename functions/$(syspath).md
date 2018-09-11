@@ -50,6 +50,11 @@ Here are some examples of using this built-in function:<br/>
 ... and the **output**:<br/>
 ![output](image/$(syspath)_02.png)
 
+**Note**: When this function needs to be used around the text that may contain path separator `/`, for e.g. `XML`
+or `HTML` ending tags like `<file>$(syspath|data|fullpath)/mydata.txt</file>`, in such a case, it is recommended to
+first assign the path value to a variable and then use that variable to resolve the target text. For e.g. in a
+data file, first assign the path value to a variable `mydatafile` and the value as `$(syspath|data|fullpath)/mydata.txt`
+and then in the target text as `<file>${mydatafile}</file>`.
 
-### See Also
+ ### See Also
 - [`$(projectfile)`]($(projectfile))
