@@ -56,5 +56,6 @@ first assign the path value to a variable and then use that variable to resolve 
 data file, first assign the path value to a variable `mydatafile` and the value as `$(syspath|data|fullpath)/mydata.txt`
 and then in the target text as `<file>${mydatafile}</file>`.
 
+
  ### See Also
 - [`$(projectfile)`]($(projectfile))
