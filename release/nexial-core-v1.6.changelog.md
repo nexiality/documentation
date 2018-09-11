@@ -33,7 +33,7 @@ comments: true
 ### Nexial Expression  
 - [`[LIST(...) => count]`](../expressions/LISTexpression.md#count): added logic to compensate for web element array 
   with characters that might be misinterpreted as array delimiter. Now it should be safe/correct to issue: 
-  `web    | saveElements(var,locator) | MyList | //div` 
+  `web    | saveElements(var,locator) | MyList | //div` <br/>
   `number | assertEquals(num1,num2)   | 53      | [LIST(${MyList}) => count] `
 - [`[EXCEL(...) => csvWithHeader`](../expressions/EXCELexpression#csvwithheader): convert a contiguous cell range (from
   Excel worksheet) to a [`CSV`](../expressions/CSVexpression) where the first range is treated as header.
@@ -73,6 +73,10 @@ comments: true
 
 
 #### [web commands](../commands/web)
+
+
+### [web commands](../commands/web)
+- reduce verbosity in web commands (controllable via `nexial.verbose`)
 
 
 ### [webalert commands](../commands/webalert)
