@@ -51,7 +51,13 @@ comments: true
 ### [csv commands](../commands/csv)
 
 
-### [excel commands](../commands/csv)
+### [excel commands](../commands/excel)
+- [`assertPassword(file)`](../commands/excel/assertPassword(file)): **NEW** command to assert if a password is set to 
+  Excel file.
+- [`clearPassword(file,password)`](../commands/excel/clearPassword(file,password)): **NEW** command to clear the 
+  password from Excel file.
+- [`setPassword(file,password)`](../commands/excel/setPassword(file,password)): **NEW** command to set a password to 
+  Excel file.
 - [`csv(file,worksheet,range,output)`](../commands/excel/csv(file,worksheet,range,output)): **NEW** command to convert
   a contiguous cell range (from Excel worksheet) to a CSV file (`output`).
 - [`json(file,worksheet,range,header,output)`](../commands/excel/json(file,worksheet,range,header,output)): **NEW**
