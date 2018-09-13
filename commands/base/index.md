@@ -30,6 +30,7 @@ The "base" command type represents a series of common automation commands:
 - [`prependText(var,prependWith)`](prependText(var,prependWith))
 - [`repeatUntil(steps,maxWaitMs)`](repeatUntil(steps,maxWaitMs))
 - [`save(var,value)`](save(var,value))
+- [`saveCount(text,regex,saveVar)`](saveCount(text,regex,saveVar))
 - [`saveMatches(text,regex,saveVar)`](saveMatches(text,regex,saveVar))
 - [`saveReplace(text,regex,replace,resultVar)`](saveReplace(text,regex,replace,resultVar))
 - [`split(text,delim,saveVar)`](split(text,delim,saveVar))
