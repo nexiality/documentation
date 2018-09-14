@@ -11,6 +11,7 @@ comments: true
 
 
 ### General
+- upgraded to nexial-seeknow-1.2. Supports sikulix-1.1.3.
 - support default output directory via environment variable `NEXIAL_OUTPUT`
 
 
