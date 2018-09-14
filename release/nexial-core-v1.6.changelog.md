@@ -79,6 +79,7 @@ comments: true
 ### [web commands](../commands/web)
 - reduce verbosity in web commands (controllable via `nexial.verbose`)
 - code fix for downloading electron driver
-
+- [`maximizeWindow()`](../commands/web/maximizeWindow()): FAIL for Electron since it's not supported by underlying driver.
+- [`goBack()`](../commands/web/goBack()): FAIL for Electron since it's not supported by underlying driver.
 
 ### [webalert commands](../commands/webalert)

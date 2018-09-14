@@ -7,21 +7,21 @@ comments: true
 ---
 
 ### Description
+This command maximizes the browser window. Due to underlying webdriver support, this command does not
+work for Electron application.
 
-- This command is to maximize the window of the page.
-- In other words this command will set the page into maximize mode and pass the command.
-- There is no input required for this command
 
 ### Parameters
-- None
-### Example
+None
 
+
+### Example
 **Script**:<br/>
 ![](image/maximizeWindow_01.png)
 
 **Output**:<br/>
 ![](image/maximizeWindow_02.png)
 
-### See Also
 
-- [`web`](index)
+### See Also
+- [`resizeWindow(width,height)`](resizeWindow(width,height))
