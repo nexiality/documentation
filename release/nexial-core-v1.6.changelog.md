@@ -78,6 +78,7 @@ comments: true
 
 ### [web commands](../commands/web)
 - reduce verbosity in web commands (controllable via `nexial.verbose`)
+- code fix for downloading electron driver
 
 
 ### [webalert commands](../commands/webalert)
