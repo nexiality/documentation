@@ -13,8 +13,6 @@ comments: true
 ### General
 - upgraded to nexial-seeknow-1.2. Supports sikulix-1.1.3.
 - support default output directory via environment variable `NEXIAL_OUTPUT`
-- code fix to support array item reference via data variable. So now, `${my_data}[2]` would refer to the 3rd item of
-  `${my_data}` (assuming `${my_data}` represents an array).
 
 
 ### Nexial Filter
@@ -84,5 +82,7 @@ comments: true
 - code fix for downloading electron driver
 - [`maximizeWindow()`](../commands/web/maximizeWindow()): FAIL for Electron since it's not supported by underlying driver.
 - [`goBack()`](../commands/web/goBack()): FAIL for Electron since it's not supported by underlying driver.
+- [`saveDivsAsCsv(headerCellsLoc,rowLocator,cellLocator,nextPageLocator,file)`](../commands/web/saveDivsAsCsv(headerCellsLoc,rowLocator,cellLocator,nextPageLocator,file)):
+  **NEW** command to save a "DIV"-style grid data to CSV file.
 
 ### [webalert commands](../commands/webalert)
