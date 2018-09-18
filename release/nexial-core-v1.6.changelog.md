@@ -82,7 +82,7 @@ comments: true
 - code fix for downloading electron driver
 - [`maximizeWindow()`](../commands/web/maximizeWindow()): FAIL for Electron since it's not supported by underlying driver.
 - [`goBack()`](../commands/web/goBack()): FAIL for Electron since it's not supported by underlying driver.
-- [`saveDivsAsCsv(headerCellsLoc,rowLocator,cellLocator,nextPageLocator,file)`](../commands/web/saveDivsAsCsv(headerCellsLoc,rowLocator,cellLocator,nextPageLocator,file)):
+- [`saveDivsAsCsv(headers,rows,cells,nextPage,file)`](../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)):
   **NEW** command to save a "DIV"-style grid data to CSV file.
 
 ### [webalert commands](../commands/webalert)

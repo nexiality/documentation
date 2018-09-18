@@ -231,6 +231,7 @@ available commands.
 - [`saveAllWindowNames(var)`](saveAllWindowNames(var))
 - [`saveAttribute(var,locator,attrName)`](saveAttribute(var,locator,attrName))
 - [`saveCount(var,locator)`](saveCount(var,locator))
+- [`saveDivsAsCsv(headers,rows,cells,nextPage,file)`](saveDivsAsCsv(headers,rows,cells,nextPage,file))
 - [`saveElement(var,locator)`](saveElement(var,locator))
 - [`saveElements(var,locator)`](saveElements(var,locator))
 - [`saveLocalStorage(var,key)`](saveLocalStorage(var,key))
