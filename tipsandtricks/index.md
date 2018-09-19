@@ -13,6 +13,7 @@ comments: true
 - [Improving Script Portability](ImprovingScriptPortability)
 - [Integrating with other projects](IntegratingWithOtherProjects)
 - [Record/Playback a Nexial Execution](RecordPlayback)
+- [Save time on running Nexial](SaveTimeRunningNexial)
 - [Security Issues on Executable](SecurityIssuesExecutableFiles)
 - [Mass-generate data values via 1 data variable and iteration](scope-currentIteration)
 - *in progress* [Why isn't Nexial executing my scenario (worksheet)?]()
