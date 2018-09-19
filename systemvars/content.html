@@ -180,6 +180,31 @@
         </td>
     </tr>
     <tr>
+        <td nowrap="nowrap" class="varname"><a name="nexial.var.ignored"><code>nexial.var.ignored</code></a></td>
+        <td>text / list</td>
+        <td></td>
+        <td>false</td>
+        <td>
+            By default Nexial searches for data variables in the form of <code>${...}</code> and substitutes them with
+            the appropriate value. This is an useful feature to create dynamic data substitution and generation.<br/>
+            <br/>
+            However at times it is important that some data variables are left as it is. It might be a case of multi-
+            stage text processing where Nexial is used to process some of the data variables and another program for
+            additional data variables (which should be left alone). It might be a case of time-triggered processing
+            where some data variables become available/meaningful at a later time (and thus should be ignored presently).
+            Whatever the case may be, one can use this System variable to define a list of data variables to be ignored.
+            All the data variables defined in this System variable will be left as is.<br/>
+            <br/>
+            It is important to note that this System variable should be <b>ONLY</b> the data variable name. For example,
+            the following is considered correct:<br/>
+            <img src="image/systemvar_33.png" alt="acceptable"/><br/>
+            <br/>
+            But the following is considered incorrect:<br/>
+            <img src="image/systemvar_34.png" alt="wrong"/><br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
         <td nowrap="nowrap" class="varname"><a name="nexial.outputToCloud"><code>nexial.outputToCloud</code></a></td>
         <td>boolean</td>
         <td>true</td>
@@ -615,7 +640,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname"><a name="nexial.screenRecorder"><code>nexial.screenRecorder</code></a></td>
-        <td>String</td>
+        <td>text</td>
         <td>mp4</td>
         <td class="highlight-red">true</td>
         <td>
@@ -694,7 +719,7 @@
     <tr>
         <td nowrap="nowrap" class="varname"><a name="nexial.timetrack.format"><code>nexial.timetrack.format</code></a>
         </td>
-        <td>string</td>
+        <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
         <td>
@@ -706,7 +731,7 @@
     <tr>
         <td nowrap="nowrap" class="varname"><a name="nexial."><code>nexial.currentActivity</code></a>
         </td>
-        <td>string</td>
+        <td>text</td>
         <td>&nbsp;</td>
         <td>true</td>
         <td>
@@ -993,7 +1018,7 @@
         <td nowrap="nowrap" class="varname">
             <a name="nexial.browser.ie.requireWindowFocus"><code>nexial.browser.ie.requireWindowFocus</code></a>
         </td>
-        <td><code>boolean</code></td>
+        <td>boolean</td>
         <td>false</td>
         <td class="highlight-red">true</td>
         <td>
@@ -1166,7 +1191,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname"><a name="nexial.lastAlertText"><code>nexial.lastAlertText</code></a></td>
-        <td>string</td>
+        <td>text</td>
         <td>&nbsp;</td>
         <td class="highlight-red">true</td>
         <td>
@@ -1401,7 +1426,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname"><a name="webdriver.ie.driver"><code>webdriver.ie.driver</code></a></td>
-        <td>string</td>
+        <td>text</td>
         <td>&nbsp;</td>
         <td class="highlight-red">true</td>
         <td>
@@ -1423,7 +1448,7 @@
         <td nowrap="nowrap" class="varname">
             <a name="webdriver.ie.driver.loglevel"><code>webdriver.ie.driver.loglevel</code></a>
         </td>
-        <td>string</td>
+        <td>text</td>
         <td>FATAL</td>
         <td class="highlight-red">true</td>
         <td>
@@ -1445,7 +1470,7 @@
         <td nowrap="nowrap" class="varname">
             <a name="webdriver.ie.driver.logfile"><code>webdriver.ie.driver.logfile</code></a>
         </td>
-        <td>string</td>
+        <td>text</td>
         <td>&nbsp;</td>
         <td class="highlight-red">true</td>
         <td>
@@ -1486,11 +1511,11 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname"><a name="nexial.imageTolerance"><code>nexial.imageTolerance</code></a></td>
-        <td>float</td>
+        <td>decimal</td>
         <td>0</td>
         <td>false</td>
         <td>
-            For <code>image</code> commands only. Determine the amount of tolerance (0..100) when comparing two image
+            For <code>image</code> commands only. Determine the amount of tolerance (0 to 100) when comparing two image
             artifact. 0 means "zero-tolerance".
         </td>
     </tr>
