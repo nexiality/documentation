@@ -47,12 +47,11 @@ comments: true
 - [`saveCount(text,regex,saveVar)`](../commands/base/saveCount(text,regex,saveVar)): **NEW** command to save the number of
   matches (based on `regex`) found in `text.
 
-### [io commands](../commands/io)
-- [`nexial.io.eolConfig`](../systemvars/index#nexial.io.eolConfig): **NEW** System variable to control EOL character
-  during file-write.
-
-
 ### [csv commands](../commands/csv)
+
+
+### [desktop commands](../commands/desktop)
+- code fix to get text from the disabled combo type element
 
 
 ### [excel commands](../commands/excel)
@@ -68,15 +67,17 @@ comments: true
   command to convert a contiguous cell range (from Excel worksheet) to a JSON file (`output`).
 
 
+### [io commands](../commands/io)
+- [`nexial.io.eolConfig`](../systemvars/index#nexial.io.eolConfig): **NEW** System variable to control EOL character
+  during file-write.
+
+
 ### [json command](../commands/json)
 - [`assertEqual(expected,actual)](../commands/json/assertEqual(expected,actual)): **NEW** command to compare JSON 
   documents.
 
 
 ### [rdbms command](../commands/rdbms)
-
-
-#### [web commands](../commands/web)
 
 
 ### [web commands](../commands/web)
