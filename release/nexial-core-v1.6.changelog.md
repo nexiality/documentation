@@ -44,10 +44,12 @@ comments: true
     
 
 ### [base commands](../commands/base)
-- [`saveCount(text,regex,saveVar)`](../commands/base/saveCount(text,regex,saveVar)): *NEW* command to save the number of
+- [`saveCount(text,regex,saveVar)`](../commands/base/saveCount(text,regex,saveVar)): **NEW** command to save the number of
   matches (based on `regex`) found in `text.
 
 ### [io commands](../commands/io)
+- [`nexial.io.eolConfig`](../systemvars/index#nexial.io.eolConfig): **NEW** System variable to control EOL character
+  during file-write.
 
 
 ### [csv commands](../commands/csv)

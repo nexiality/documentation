@@ -18,6 +18,8 @@ data variable substitution during its file-write operation.
 The `content` parameter may be a fully qualified file path or text content. Nexial will resolve this variation 
 internally. Use the `append` parameter to either overwrite (if `file` exists) or append content.
 
+{% include_relative eol.md %}
+
 
 ### Parameters
 - **file** - this parameter if the full path of the file along with file name to which the content has to be written.
@@ -36,4 +38,5 @@ internally. Use the `append` parameter to either overwrite (if `file` exists) or
 ### See Also
 - [`writeFileAsIs(file,content,append)`](writeFileAsIs(file,content,append))
 - [`writeProperty(file,property,value)`](writeProperty(file,property,value))
-- [`$(file|write)`](../../functions/$(file))
+- [`$(file|append)`](../../functions/$(file))
+- [`$(file|overwrite)`](../../functions/$(file))

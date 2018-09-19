@@ -886,6 +886,27 @@
         </td>
     </tr>
     <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.io.eolConfig"><code>nexial.io.eolConfig</code></a>
+        </td>
+        <td>text</td>
+        <td>platform</td>
+        <td>false</td>
+        <td>
+            Control the end-of-line (EOL) character to use when writing content to a file via
+            <a href="../commands/io/writeFile(file,content,append)">io &raquo; <code>writeFile(file,content,append)</code></a>
+            or <a href="../commands/io/writeFileAsIs(file,content,append)">io &raquo; <code>writeFileAsIs(file,content,append)</code></a>
+            commands. Possible options are:<br/>
+            <br/>
+            <ul>
+                <li><code>as is</code> - no change to the EOL characters in the source content</li>
+                <li><code>platform</code> - change EOL characters in accordance to the executing operating system</li>
+                <li><code>windows</code> - change EOL characters to Window format (<code>\r\n</code>)</li>
+                <li><code>unix</code> - change EOL characters to *NIX/Mac format (<code>\n</code>)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
         <td class="highlight-green" colspan="5">
             <span>For <a href="../commands/external/"><code>external</code></a> testing only. </span>
         </td>
