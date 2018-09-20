@@ -11,9 +11,13 @@ comments: true
 
 
 ### General
+- upgraded to Kotlin 1.2.70
 - upgraded to nexial-seeknow-1.2. Supports sikulix-1.1.3.
 - support default output directory via environment variable `NEXIAL_OUTPUT`
 - support "ignored variable" via **NEW** System variable [`nexial.var.ignored`](../systemvars/index#nexial.var.ignored).
+- code fix to support newer version of WPS (post-execution to open result automatically)
+- prevent open results in CI/CD env.
+
 
 ### Nexial Filter
 
