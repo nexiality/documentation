@@ -45,18 +45,16 @@ comments: true
 - [`[EXCEL(...) => json(firstRowAsHeader)`](../expressions/EXCELexpression#jsonfirstrowasheader): convert a contiguous 
   cell range (from Excel worksheet) to a [`JSON`](../expressions/JSONexpression) where the first range may be treated 
   as header to impact the output JSON structure.
-    
+- `save()` operation now supports appending content to existing file.    
+
 
 ### [base commands](../commands/base)
 - [`saveCount(text,regex,saveVar)`](../commands/base/saveCount(text,regex,saveVar)): **NEW** command to save the number of
   matches (based on `regex`) found in `text.
 
-### [csv commands](../commands/csv)
-
 
 ### [desktop commands](../commands/desktop)
 - code fix to get text from the disabled combo type element.
-
 
 
 ### [excel commands](../commands/excel)
@@ -85,6 +83,10 @@ comments: true
 
 
 ### [rdbms command](../commands/rdbms)
+
+
+### [step commands](../commands/step)
+- [`observe(prompt)`] now supports error capturing. Use `FAIL ` as the beginning of your response to mark a step as FAIL.
 
 
 ### [web commands](../commands/web)
