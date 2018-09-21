@@ -25,7 +25,7 @@ Each field value in the record will go through basic validations:
    * `Blank` - blank
    * `Person Name`
       * common data type for `First Name` and `Last Name`.
-      * accepts at least one or more characters and can be combined with ` ,.'-`.  
+      * accepts at least one or more characters and can be combined with a `space`, `comma`, `dot`, `hyphen` or `apostrophe`.  
       * you can also use `First Name` for **First Name** and `Last Name` for **Last Name** to be more specific.
    * `Regex` - syntax `REGEX:<pattern>`
    * `Any` - any <a href="https://en.wikipedia.org/wiki/ASCII#Printable_characters" class="external-link" target="_nexial_link">ASCII printable characters</a>
