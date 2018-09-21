@@ -55,7 +55,8 @@ comments: true
 
 
 ### [desktop commands](../commands/desktop)
-- code fix to get text from the disabled combo type element
+- code fix to get text from the disabled combo type element.
+
 
 
 ### [excel commands](../commands/excel)
@@ -74,6 +75,8 @@ comments: true
 ### [io commands](../commands/io)
 - [`nexial.io.eolConfig`](../systemvars/index#nexial.io.eolConfig): **NEW** System variable to control EOL character
   during file-write.
+- [`validate(var,profile,inputFile)`](../commands/io/validate(var,profile,inputFile)): minor code fix for equals 
+  validation and IN check error report format.
 
 
 ### [json command](../commands/json)
