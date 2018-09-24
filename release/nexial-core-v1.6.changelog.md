@@ -96,5 +96,6 @@ comments: true
 - [`goBack()`](../commands/web/goBack()): FAIL for Electron since it's not supported by underlying driver.
 - [`saveDivsAsCsv(headers,rows,cells,nextPage,file)`](../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)):
   **NEW** command to save a "DIV"-style grid data to CSV file.
+- [`maximizeWindow()`](../commands/web/maximizeWindow()): implemented native maximize strategy for Chrome/Mac since 
+  Chrome on Mac doesn't support window maximizing.
 
-### [webalert commands](../commands/webalert)
