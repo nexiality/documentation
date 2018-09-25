@@ -224,6 +224,7 @@ available commands.
 - [`mouseOver(locator)`](mouseOver(locator))
 - [`open(url)`](open(url))
 - [`openAndWait(url,waitMs)`](openAndWait(url,waitMs))
+- [`openHttpBasic(url,username,password)`](openHttpBasic(url,username,password))
 - [`refresh()`](refresh())
 - [`refreshAndWait()`](refreshAndWait())
 - [`resizeWindow(width,height)`](resizeWindow(width,height))
