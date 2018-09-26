@@ -88,6 +88,7 @@ comments: true
   a contiguous cell range (from Excel worksheet) to a CSV file (`output`).
 - [`json(file,worksheet,range,header,output)`](../commands/excel/json(file,worksheet,range,header,output)): **NEW**
   command to convert a contiguous cell range (from Excel worksheet) to a JSON file (`output`).
+- [`csv(file,worksheet,range,output)`](../commands/excel/csv(file,worksheet,range,output)): support multiple ranges.
 
 
 ### [io commands](../commands/io)
