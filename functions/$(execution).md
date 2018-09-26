@@ -27,9 +27,6 @@ This built-in function expose the execution-level metadata, both the runtime and
 - **`$(execution|script|name)`** - display the script name (without file extension) currently in execution
 - **`$(execution|script|fullpath)`** - display the fullpath of the script currently in execution
 
-### Note
-It is quite obvious that you can not use $(execution|step) function like 
-
 ### Example
 
 
