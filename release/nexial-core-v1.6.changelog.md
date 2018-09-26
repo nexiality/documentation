@@ -102,6 +102,7 @@ comments: true
 
 
 ### [rdbms command](../commands/rdbms)
+- fixed the issue of resolving SQL variable name that defined in the SQL file per each statement.
 
 
 ### [step commands](../commands/step)
