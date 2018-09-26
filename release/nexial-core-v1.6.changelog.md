@@ -30,7 +30,8 @@ comments: true
   might be misinterpreted as array delimiter. Now it should be safe/correct to issue: 
   `web    | saveElements(var,locator) | MyList | //div` 
   `number | assertEquals(num1,num2)   | 53      | $(array|length|${MyList}) `
-
+- [`$(execution|step)`](../functions/$(execution)): added new built-in function param to have step level metadata like 
+  activity, description, command etc. 
 
 ### Event Notification
 
