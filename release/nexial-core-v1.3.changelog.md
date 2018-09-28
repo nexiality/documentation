@@ -6,7 +6,7 @@ tags: release nexial-core 1.3
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-1.3" class="external-link" target="_nexial_link">Release 1.3</a>
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v1.3_0110" class="external-link" target="_nexial_link">Release 1.3</a>
 2018-07-06
 
 ### General
