@@ -8,7 +8,7 @@ comments: true
 
 
 ### Description
-This command transform a contiguous cell `range` (could be ranges, see below) from a Excel `worksheet` to a 
+This command transforms a contiguous cell `range` (could be ranges, see below) from a Excel `worksheet` to a 
 CSV file (`output`). The `file` parameter represents the Excel file to read from.
 
 The `range` parameter can either represent one contiguous range, such as `A1:M40` (contiguous from cell A1 through 

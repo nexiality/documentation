@@ -89,6 +89,8 @@ comments: true
 - [`json(file,worksheet,range,header,output)`](../commands/excel/json(file,worksheet,range,header,output)): **NEW**
   command to convert a contiguous cell range (from Excel worksheet) to a JSON file (`output`).
 - [`csv(file,worksheet,range,output)`](../commands/excel/csv(file,worksheet,range,output)): support multiple ranges.
+- [`columnarCsv(file,worksheet,ranges,output)`](../commands/excel/columnarCsv(file,worksheet,ranges,output)): support
+  merging of multiple ranges from the same worksheet. The merge is performed columnwise (not adding new rows).
 
 
 ### [io commands](../commands/io)
