@@ -17,9 +17,18 @@ comments: true
 - support "ignored variable" via **NEW** System variable [`nexial.var.ignored`](../systemvars/index#nexial.var.ignored).
 - code fix to support newer version of WPS (post-execution to open result automatically)
 - prevent open results in CI/CD env.
+- configurable JVM max memory via NEXIAL_MAX_MEM environment variable.
+- exclude empty log files as links in execution summary
+- include data variables specified via `JAVA_OPT` in execution summary
+- (Linux/MacOSX only) store the batch file used to execute Nexial in the execution output directory. Good for 
+  troubleshooting.
+- prevent runtime error when WPS is selected as the spreadsheet program and the execution is conducted on Mac/Linux.
 
 
 ### Nexial Filter
+- ` not contain `: **NEW** filter to support the `${...}` not contain "..." filter.
+- ` not start with `: **NEW** filter to support the `${...}` not start with "..." filter.
+- ` not end with `: **NEW** filter to support the `${...}` not end with "..." filter.
 
 
 ### Flow Control
@@ -71,6 +80,7 @@ comments: true
 ### [base commands](../commands/base)
 - [`saveCount(text,regex,saveVar)`](../commands/base/saveCount(text,regex,saveVar)): **NEW** command to save the number of
   matches (based on `regex`) found in `text.
+- add code to automatically shut down screen recording at the end of an execution.
 
 
 ### [desktop commands](../commands/desktop)
@@ -126,3 +136,5 @@ comments: true
   URL protected by HTTP Basic authentication.
 - [`typeKeys(locator,value)`](../commands/web/typeKeys(locator,value)): support keystroke automation on currently 
   active web element (no locator specified.)
+- configurable driver logging for chrome and electron automation
+- by default `electron` will not favor JS-based clicks
