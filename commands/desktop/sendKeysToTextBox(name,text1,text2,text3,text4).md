@@ -21,8 +21,13 @@ comments: true
 - **text1** - this parameter is the actual text or shortcut key to be entered into Text Box.
 - **text2,text3,text4** - this parameter is the optional and can be used in need basis where you need to send some Key strokes after you enter text like \[ENTER\], \[CTRL\]\[END\],\[ALT\] \[ENTER\]  
       
-    
+### Note
 
+- If Nexial user wants to enter actual text or shortcut key with key strokes in same text box, the best way to use is the combination of actual text and key strokes. <br>
+For example, if user want to enter text at the start of text box, he need to use `[HOME]` to move cursor to the start position and then enter `text`. He can enter like `[HOME]text` as same parameter as well as different parameters. 
+But the best way for it is `[HOME-t-e-x-t]`. It will send actual text with key strokes at the same time.
+ 
+  
 ### Example
 
 
