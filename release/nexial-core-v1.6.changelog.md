@@ -41,6 +41,9 @@ comments: true
   `number | assertEquals(num1,num2)   | 53      | $(array|length|${MyList}) `
 - [`$(execution|step)`](../functions/$(execution)): added new built-in function param to have step level metadata like 
   activity, description, command etc. 
+- **`$(format|base64decode|text)`** - base64 decode `text`.
+- **`$(format|base64encode|text)`** - base64 encode `text`.
+
 
 ### Event Notification
 
@@ -75,6 +78,9 @@ comments: true
   - **`updateContent(xpath,content)`** - also known as **`update-content(xpath,content)`**. This operation updates (
     technically speaking, replace) the content of the matched elements with the specified `content`. `content` may be 
     text or XML nodes. If `content` is empty, then the content of the target elements are effectively removed. 
+- [`TEXT` expression](../expressions/TEXTexpression)
+  - **`base64decoding`** - base64 decode text.
+  - **`base64encoding`** - base64 encode text.
 
 
 ### [base commands](../commands/base)
