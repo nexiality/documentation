@@ -79,8 +79,8 @@ comments: true
     technically speaking, replace) the content of the matched elements with the specified `content`. `content` may be 
     text or XML nodes. If `content` is empty, then the content of the target elements are effectively removed. 
 - [`TEXT` expression](../expressions/TEXTexpression)
-  - **`base64decoding`** - base64 decode text.
-  - **`base64encoding`** - base64 encode text.
+  - **`base64decode`** - base64 decode text.
+  - **`base64encode`** - base64 encode text.
 
 
 ### [base commands](../commands/base)

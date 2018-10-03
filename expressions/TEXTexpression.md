@@ -16,8 +16,8 @@ comments: true
 - **`append(text,text,text,...)`** - add one or more text to the end of `text`.
 - **`appendIfMissing(appendWith)`** - add `appendWith` to the end of current text ONLY if `appendWith` is currently 
   not at the end of text.
-- **`base64decoding`** - base64 decode text.
-- **`base64encoding`** - base64 encode text.
+- **`base64decode`** - base64 decode text.
+- **`base64encode`** - base64 encode text.
 - **`before(criteria)`** - retain the portion of text before the specified `criteria`.
 - **`between(start,end)`** - retain the portion of text that is between the specified `start` and `end` text.
 - **`count(searchFor)`** - transfer into a [`NUMBER`](NUMBERexpression) data type that contains the number of 
