@@ -52,7 +52,7 @@ comments: true
 - [`[LIST(...) => count]`](../expressions/LISTexpression.md#count): added logic to compensate for web element array 
   with characters that might be misinterpreted as array delimiter. Now it should be safe/correct to issue: 
   `web    | saveElements(var,locator) | MyList | //div` <br/>
-  `number | assertEquals(num1,num2)   | 53      | [LIST(${MyList}) => count] `
+  `number | assertEquals(num1,num2)   | 53     | [LIST(${MyList}) => count] `
 - [`[EXCEL(...) => csvWithHeader`](../expressions/EXCELexpression#csvwithheader): convert a contiguous cell range (from
   Excel worksheet) to a [`CSV`](../expressions/CSVexpression) where the first range is treated as header.
 - [`[EXCEL(...) => json(firstRowAsHeader)`](../expressions/EXCELexpression#jsonfirstrowasheader): convert a contiguous 
@@ -84,8 +84,8 @@ comments: true
 
 
 ### [base commands](../commands/base)
-- [`saveCount(text,regex,saveVar)`](../commands/base/saveCount(text,regex,saveVar)): **NEW** command to save the number of
-  matches (based on `regex`) found in `text.
+- [`saveCount(text,regex,saveVar)`](../commands/base/saveCount(text,regex,saveVar)): **NEW** command to save the number 
+  of matches (based on `regex`) found in `text.
 - add code to automatically shut down screen recording at the end of an execution.
 
 
@@ -142,5 +142,5 @@ comments: true
   URL protected by HTTP Basic authentication.
 - [`typeKeys(locator,value)`](../commands/web/typeKeys(locator,value)): support keystroke automation on currently 
   active web element (no locator specified.)
-- configurable driver logging for chrome and electron automation
+- configurable driver logging for chrome and electron automation via `nexial.browser.logElectron`
 - by default `electron` will not favor JS-based clicks

@@ -33,10 +33,20 @@
     argument (i.e. via <code>-D</code> option), which will override the same settings in data file.
 </p>
 
-<p>
-    User can configure JVM memory allocation from command line. Use <code>set JAVA_OPT=-Xmx&lt;size&gt;</code> to
-    specify maximum Java heap size. Use <code>set JAVA_OPT=-Xms&lt;size&gt;</code> to set minimum Java heap size.
-    For e.g, <code>set JAVA_OPT=-Xmx4096m</code>, sets maximum heap size as 4GB.
+<p style="margin-left: 25px !important; margin-right: 50px; background-color: rgba(200,250,230,0.5); padding: 10px;">
+    Nexial is written predominantly in Java. User can configure the JVM memory allocation (the amount of memory usable
+    by the Java process that executes Nexial) via the <b><code>NEXIAL_MAX_MEM</code></b> environment variable. To
+    specify this environment variable:<br/>
+    <br/>
+    On Windows, before running <code>nexial.cmd</code>:<br/>
+    <code>set NEXIAL_MAX_MEM=4096m</code><br/>
+    <br/>
+
+    On Linux/MacOS, before running <code>nexial.sh</code>:<br/>
+    <code>export NEXIAL_MAX_MEM=4096m</code><br/>
+    <br/>
+
+    The above specifies for 4GB of memory for Nexial.
 </p>
 <p>
     Below are a list of configurable system variables. During the test execution, Nexial may generates one or more
