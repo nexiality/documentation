@@ -114,6 +114,7 @@ comments: true
   during file-write.
 - [`validate(var,profile,inputFile)`](../commands/io/validate(var,profile,inputFile)): minor code fix for equals 
   validation and IN check error report format.
+- [`rename(target,newFile)`](../commands/io/rename(target,newName)): **NEW** command to rename file or directory.
 
 
 ### [json command](../commands/json)

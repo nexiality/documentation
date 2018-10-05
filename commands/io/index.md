@@ -20,6 +20,7 @@ The "io" command type represents a series of automation commands regarding io op
 - [`moveFiles(source,target)`](moveFiles(source,target))
 - [`readFile(var,file)`](readFile(var,file))
 - [`readProperty(var,file,property)`](readProperty(var,file,property))
+- [`rename(target,newName)`](rename(target,newName))
 - [`saveDiff(var,expected,actual)`](saveDiff(var,expected,actual))
 - [`saveFileMeta(var,file)`](saveFileMeta(var,file))
 - [`saveMatches(var,path,filePattern)`](saveMatches(var,path,filePattern))
