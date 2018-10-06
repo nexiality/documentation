@@ -1154,8 +1154,19 @@
         <td>3</td>
         <td>false</td>
         <td>
-            Determine the much time to wait for a dynamic page/response to stabilize before proceeding to next test
+            Determine how much time to wait for a dynamic page/response to stabilize before proceeding to next test
             step. This is set at a 400ms increment.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="nexial.web.pageLoadWaitMs"><code>nexial.web.pageLoadWaitMs</code></a></td>
+        <td>integer</td>
+        <td>10000</td>
+        <td>false</td>
+        <td>
+            Sets the amount of time (in millisecond) to wait for a page load to complete before considering the page
+            load event (such as <a href="../commands/web/open(url)">web &raquo; <code>open(url</code></a>) is
+            considered as FAIL. If the timeout is negative, page loads can be indefinite.
         </td>
     </tr>
     <tr>

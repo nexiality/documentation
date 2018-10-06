@@ -118,8 +118,10 @@ comments: true
 
 
 ### [json command](../commands/json)
-- [`assertEqual(expected,actual)](../commands/json/assertEqual(expected,actual)): **NEW** command to compare JSON 
+- [`assertEqual(expected,actual)`](../commands/json/assertEqual(expected,actual)): **NEW** command to compare JSON 
   documents.
+- [`addOrReplace(json,jsonpath,input,var)`](../commands/json(addOrReplace(json,jsonpath,input,var)): now supports
+  `json` either as JSON content or JSON file (must be fully qualified).
 
 
 ### [rdbms command](../commands/rdbms)
@@ -145,3 +147,5 @@ comments: true
   active web element (no locator specified.)
 - configurable driver logging for chrome and electron automation via `nexial.browser.logElectron`
 - by default `electron` will not favor JS-based clicks
+- [`../commands/web/executeScript(var,script)`](../commands/web/executeScript(var,script)): now support execution of
+  JavaScript file.
