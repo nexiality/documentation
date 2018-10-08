@@ -116,7 +116,7 @@ comments: true
 ### [json command](../commands/json)
 - [`assertEqual(expected,actual)`](../commands/json/assertEqual(expected,actual)): **NEW** command to compare JSON 
   documents.
-- [`addOrReplace(json,jsonpath,input,var)`](../commands/json(addOrReplace(json,jsonpath,input,var)): now supports
+- [`addOrReplace(json,jsonpath,input,var)`](../commands/json/addOrReplace(json,jsonpath,input,var)): now supports
   `json` either as JSON content or JSON file (must be fully qualified).
 
 
