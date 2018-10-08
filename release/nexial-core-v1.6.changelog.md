@@ -1,13 +1,13 @@
 ---
 layout: default
-title: nexial-core 1.6 (2018-10-??)
+title: nexial-core 1.6 (2018-10-08)
 parent: release
 tags: release nexial-core 1.6
 comments: true
 ---
 
 ### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-1.6" class="external-link" target="_nexial_link">Release 1.6</a>
-2018-10-??
+2018-10-08
 
 
 ### General
@@ -23,6 +23,8 @@ comments: true
 - (Linux/MacOSX only) store the batch file used to execute Nexial in the execution output directory. Good for 
   troubleshooting.
 - prevent runtime error when WPS is selected as the spreadsheet program and the execution is conducted on Mac/Linux.
+- fixed error regarding iteration data when `nexial.fallbackToPrevious` is set to `false`. Now Nexial correctly resolves
+  data variable in the appropriate iteration definition, as specified in the data sheet.
 
 
 ### Nexial Filter
@@ -145,7 +147,8 @@ comments: true
   URL protected by HTTP Basic authentication.
 - [`typeKeys(locator,value)`](../commands/web/typeKeys(locator,value)): support keystroke automation on currently 
   active web element (no locator specified.)
-- configurable driver logging for chrome and electron automation via `nexial.browser.logElectron`
 - by default `electron` will not favor JS-based clicks
+- configurable driver logging for chrome and electron automation via `nexial.browser.logElectron`
+- configurable driver logging for chrome and electron automation via `nexial.browser.logChrome`
 - [`../commands/web/executeScript(var,script)`](../commands/web/executeScript(var,script)): now support execution of
   JavaScript file.
