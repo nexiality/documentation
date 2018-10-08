@@ -1103,6 +1103,42 @@
         </td>
     </tr>
     <tr>
+        <td nowrap="nowrap" class="varname"><a name="nexial.web.logElectron"><code>nexial.web.logElectron</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            Enable/Disable webdriver logging when automating against an Electron application. The
+            <code>nexial.browser</code> System variable must be set to <code>electron</code>. When enabled, Nexial will
+            create under the <code>log</code> directory of the execution output directory a log file named as
+            <code>electron-[application].log</code>, where <code>[application]</code> is the name of the application
+            under test. This file will contain the webdriver logs during automation, and will be linked in the
+            <code>#summary</code> tab of the execution report (.xlsx) under the <code>logs</code> section.<br/>
+
+            While not usually needed, webdriver log contain be very useful towards troubleshooting and debugging
+            intercommunication issues between webdriver and AUT.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="nexial.web.logChrome"><code>nexial.web.logChrome</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            Enable/Disable webdriver logging when automating against Chrome browser. The <code>nexial.browser</code>
+            System variable must be set to <code>chrome</code> or <code>chrome-headless</code>. When enabled, Nexial
+            will create under the <code>log</code> directory of the execution output directory a log file named as
+            <code>chrome-browser.log</code>. This file will contain the webdriver logs during automation, and will be
+            linked in the <code>#summary</code> tab of the execution report (.xlsx) under the <code>logs</code>
+            section.<br/>
+
+            While not usually needed, webdriver log contain be very useful towards troubleshooting and debugging
+            intercommunication issues between webdriver and the Chrome browser.
+        </td>
+    </tr>
+    <tr>
         <td nowrap="nowrap" class="varname">
             <a name="nexial.enforcePageSourceStability"><code>nexial.enforcePageSourceStability</code></a>
         </td>
@@ -1425,8 +1461,7 @@
         <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.os.version"><code>nexial.browserstack.os.version</code></a>
         </td>
         <td>text</td>
-        <td>&nbsp;
-        </td>
+        <td>&nbsp;</td>
         <td>false</td>
         <td>
             <strong>Applicable only when <code>nexial.browser</code> is set to <code>browserstack</code>.</strong><br/>
