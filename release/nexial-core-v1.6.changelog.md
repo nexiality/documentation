@@ -146,5 +146,4 @@ comments: true
   [`nexial.browser.logElectron`](../systemvars/index#nexial.browser.logElectron)
 - configurable driver logging for chrome and electron automation via 
   [`nexial.browser.logChrome`](../systemvars/index#nexial.browser.logChrome)
-- [`../commands/web/executeScript(var,script)`](../commands/web/executeScript(var,script)): now support execution of
-  JavaScript file.
+- [`executeScript(var,script)`](../commands/web/executeScript(var,script)): now support execution of JavaScript file.
