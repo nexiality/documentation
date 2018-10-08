@@ -27,13 +27,10 @@ comments: true
   data variable in the appropriate iteration definition, as specified in the data sheet.
 
 
-### Nexial Filter
+### [Nexial Filter](../expressions)
 - ` not contain `: **NEW** filter to support the `${...}` not contain "..." filter.
 - ` not start with `: **NEW** filter to support the `${...}` not start with "..." filter.
 - ` not end with `: **NEW** filter to support the `${...}` not end with "..." filter.
-
-
-### Flow Control
 
 
 ### Built-in Function
@@ -45,9 +42,6 @@ comments: true
   activity, description, command etc. 
 - **`$(format|base64decode|text)`** - base64 decode `text`.
 - **`$(format|base64encode|text)`** - base64 encode `text`.
-
-
-### Event Notification
 
 
 ### Nexial Expression  
@@ -148,7 +142,9 @@ comments: true
 - [`typeKeys(locator,value)`](../commands/web/typeKeys(locator,value)): support keystroke automation on currently 
   active web element (no locator specified.)
 - by default `electron` will not favor JS-based clicks
-- configurable driver logging for chrome and electron automation via `nexial.browser.logElectron`
-- configurable driver logging for chrome and electron automation via `nexial.browser.logChrome`
+- configurable driver logging for chrome and electron automation via 
+  [`nexial.browser.logElectron`](../systemvars/index#nexial.browser.logElectron)
+- configurable driver logging for chrome and electron automation via 
+  [`nexial.browser.logChrome`](../systemvars/index#nexial.browser.logChrome)
 - [`../commands/web/executeScript(var,script)`](../commands/web/executeScript(var,script)): now support execution of
   JavaScript file.
