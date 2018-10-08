@@ -35,9 +35,9 @@ comments: true
 
 ### Built-in Function
 - [`$(array|length)`](../functions/$(array)): added logic to compensate for web element array with characters that 
-  might be misinterpreted as array delimiter. Now it should be safe/correct to issue: 
-  `web    | saveElements(var,locator) | MyList | //div` 
-  `number | assertEquals(num1,num2)   | 53      | $(array|length|${MyList}) `
+  might be misinterpreted as array delimiter. Now it should be safe/correct to issue: <br/>
+  `web    | saveElements(var,locator) | MyList | //div` <br/>
+  `number | assertEquals(num1,num2)   | 53      | $(array|length|${MyList})`
 - [`$(execution|step)`](../functions/$(execution)): added new built-in function param to have step level metadata like 
   activity, description, command etc. 
 - **`$(format|base64decode|text)`** - base64 decode `text`.
@@ -49,9 +49,9 @@ comments: true
   with characters that might be misinterpreted as array delimiter. Now it should be safe/correct to issue: 
   `web    | saveElements(var,locator) | MyList | //div` <br/>
   `number | assertEquals(num1,num2)   | 53     | [LIST(${MyList}) => count] `
-- [`[EXCEL(...) => csvWithHeader`](../expressions/EXCELexpression#csvwithheader): convert a contiguous cell range (from
+- [`[EXCEL(...) => csvWithHeader]`](../expressions/EXCELexpression#csvwithheader): convert a contiguous cell range (from
   Excel worksheet) to a [`CSV`](../expressions/CSVexpression) where the first range is treated as header.
-- [`[EXCEL(...) => json(firstRowAsHeader)`](../expressions/EXCELexpression#jsonfirstrowasheader): convert a contiguous 
+- [`[EXCEL(...) => json(firstRowAsHeader)]`](../expressions/EXCELexpression#jsonfirstrowasheader): convert a contiguous 
   cell range (from Excel worksheet) to a [`JSON`](../expressions/JSONexpression) where the first range may be treated 
   as header to impact the output JSON structure.
 - `save()` operation now supports appending content to existing file.
@@ -81,7 +81,7 @@ comments: true
 
 ### [base commands](../commands/base)
 - [`saveCount(text,regex,saveVar)`](../commands/base/saveCount(text,regex,saveVar)): **NEW** command to save the number 
-  of matches (based on `regex`) found in `text.
+  of matches (based on `regex`) found in `text`.
 - add code to automatically shut down screen recording at the end of an execution.
 
 
@@ -121,7 +121,7 @@ comments: true
 
 
 ### [rdbms command](../commands/rdbms)
-- fixed the issue of resolving SQL variable name that defined in the SQL file per each statement.
+- fixed the issue of resolving SQL variable name that defined in the SQL file per statement.
 
 
 ### [step commands](../commands/step)
