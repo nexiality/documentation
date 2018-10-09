@@ -55,8 +55,8 @@ comparisons are:
 
 **`[controls]`** represents the variable or data (could be more than one) to consider in order to qualify a condition.
 
-Multiple conditions (as part of `[controls]`) are separated by pipe (`|`).  This represents the "AND" conditions, as in
-"_condition 1_ **AND** _condition 2_". For example, `${name} contain "Smith" | ${age} between [18|65]` would mean 
+Multiple conditions (as part of `[controls]`) are separated by pipe (` & `).  This represents the "AND" conditions, as in
+"_condition 1_ **AND** _condition 2_". For example, `${name} contain "Smith" & ${age} between [18|65]` would mean 
 "_Smith-somebody_ who is between 18 and 65 years old".
 
 
@@ -72,7 +72,7 @@ Multiple conditions (as part of `[controls]`) are separated by pipe (`|`).  This
 <tr><td><code>${my_name} end with nathan</code></td><td>Does <code>${my_name}</code> end with <code>nathan</code> (such as Jonathan)?</td></tr>
 <tr><td><code>${is_login} is false</code></td><td>is <code>${is_login}</code> false (i.e. NOT true)?</td></tr>
 <tr><td><code>not_a_var is undefined</code></td><td>is there a variable defined as <code>not_a_var</code>?<br/><br/><b>Note that <code>not_a_var</code> is not specified in the format of <code>${...}</code></b> since we are referencing the data variable, not the inferred value.</td></tr>
-<tr><td><code>my_age is defined | ${my_age} is not empty | ${my_age} has length of 2</code></td><td>is there a variable defined as <code>my_age</code>, and such variable is not empty and contains 2 characters?<br/><br/><b>Note that <code>my_age</code> is not specified in the format of <code>${...}</code> in the context of the <code>is defined</code> condition</b> since we are referencing the data variable, not the inferred value.  <br/>However, with the <code>is not empty</code> and <code>has length of</code> conditions, we would use the <code>${...}</code> form.</td></tr>
+<tr><td><code>my_age is defined & ${my_age} is not empty & ${my_age} has length of 2</code></td><td>is there a variable defined as <code>my_age</code>, and such variable is not empty and contains 2 characters?<br/><br/><b>Note that <code>my_age</code> is not specified in the format of <code>${...}</code> in the context of the <code>is defined</code> condition</b> since we are referencing the data variable, not the inferred value.  <br/>However, with the <code>is not empty</code> and <code>has length of</code> conditions, we would use the <code>${...}</code> form.</td></tr>
 <tr><td><code>${os.name} not start with "Windows"</code></td><td>the current operating system is NOT a Windows OS</td></tr>
 </table>
 
