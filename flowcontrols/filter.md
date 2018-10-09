@@ -53,9 +53,10 @@ comparisons are:
 | **`is undefined`**  | is the specified data variable **NOT** defined (in a data sheet, project.properties, etc.)? |
 | **`has length of`** | does the specified data variable contains value of __ character.  Only applicable to text or numeric value. |
 
-**`[controls]`** represents the variable or data (could be more than one) to consider in order to qualify a condition.
+**`[controls]`** represents the variable or data (could be more than one) to consider in order to qualify a condition. 
+It must be separated by pipe (` | `) like `${fruit} in [apple|banana|chicken|shoes]`. 
 
-Multiple conditions (as part of `[controls]`) are separated by pipe (` & `).  This represents the "AND" conditions, as in
+Multiple conditions are separated by ampersand (` & `).  This represents the "AND" conditions, as in
 "_condition 1_ **AND** _condition 2_". For example, `${name} contain "Smith" & ${age} between [18|65]` would mean 
 "_Smith-somebody_ who is between 18 and 65 years old".
 
