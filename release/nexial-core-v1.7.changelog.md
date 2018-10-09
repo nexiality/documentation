@@ -44,3 +44,4 @@ comments: true
 
 
 ### [web commands](../commands/web)
+- update code to support mobile web testing via browserstack.
