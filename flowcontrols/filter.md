@@ -55,7 +55,9 @@ comparisons are:
 
 **`[controls]`** represents the variable or data (could be more than one) to consider in order to qualify a condition.
 
-Multiple conditions (as part of `[controls]`) are separated by pipe (`|`).
+Multiple conditions (as part of `[controls]`) are separated by pipe (`|`).  This represents the "AND" conditions, as in
+"_condition 1_ **AND** _condition 2_". For example, ` ${name} contain "Smith" | ${age} between [18|65] ` would mean 
+"`${name}` contains Smith **AND** ${age} is between 18 and 65, inclusively."
 
 
 ### Example
