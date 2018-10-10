@@ -14,6 +14,7 @@ comments: true
 
 
 ### [Nexial Filter](../flowcontrols/filter)
+- fixed rare condition where Winium is invoked where it should not.
 
 
 ### [Built-in Function](../functions)
