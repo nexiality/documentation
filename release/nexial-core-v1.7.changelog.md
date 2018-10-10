@@ -11,6 +11,10 @@ comments: true
 
 
 ### General
+- enhancement to Nexial's screen capturing capability. Now screenshot can be taken even if the current command is not
+  one dealing with UI. Previously only [web](../commands/web) and [desktop](../commands/desktop) commands can be used to
+  capture screenshot (of the current test step). With this new change, Nexial will use the latest UI-related command
+  as reference point to capture screenshot. 
 
 
 ### [Nexial Filter](../flowcontrols/filter)
@@ -24,6 +28,13 @@ comments: true
 
 
 ### [base commands](../commands/base)
+- [`assertArrayContain(array,expected)`](../commands/base/assertArrayContain(array,expected)): **NEW** command to assert
+  that all the items in `expected` exists in `array`. `expected` can either be a single item or multiple items separated
+  by [`nexial.textDelim`](../systemvars/index#nexial.textDelim), as the case for `array`.  The items in `expected` need
+  not be of the same order as those in `array`.
+- [`assertArrayNotContain(array,unexpected)`](../commands/base/assertArrayNotContain(array,unexpected)): **NEW** command 
+  to assert that all the items in `unexpected` DO NOT exist in `array`. `unexpected` can either be a single item or 
+  multiple items separated by [`nexial.textDelim`](../systemvars/index#nexial.textDelim), as the case for `array`.
 
 
 ### [desktop commands](../commands/desktop)
@@ -46,3 +57,6 @@ comments: true
 
 ### [web commands](../commands/web)
 - update code to support mobile web testing via browserstack.
+- support autodownload and execution of BrowserStackLocal, if 
+  [`nexial.browserstack.enablelocal`](../systemvars/index#nexial.browserstack.enablelocal) or `browserstack.local` is
+  set to `true`
