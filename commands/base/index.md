@@ -10,7 +10,9 @@ The "base" command type represents a series of common automation commands:
 
 ### Available Commands
 - [`appendText(var,appendWith)`](appendText(var,appendWith))
+- [`assertArrayContain(array,expected)`](assertArrayContain(array,expected))
 - [`assertArrayEqual(array1,array2,exactOrder)`](assertArrayEqual(array1,array2,exactOrder))
+- [`assertArrayNotContain(array,unexpected)`](assertArrayContain(array,unexpected))
 - [`assertContains(text,substring)`](assertContains(text,substring))
 - [`assertCount(text,regex,expects)`](assertCount(text,regex,expects))
 - [`assertEmpty(text)`](assertEmpty(text))
