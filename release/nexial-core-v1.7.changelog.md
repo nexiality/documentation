@@ -60,3 +60,7 @@ comments: true
 - support autodownload and execution of BrowserStackLocal, if 
   [`nexial.browserstack.enablelocal`](../systemvars/index#nexial.browserstack.enablelocal) or `browserstack.local` is
   set to `true`
+- support auto download/start/shut down of 
+  <a href="https://www.browserstack.com/local-testing#configuration" class="external-link" target="nexial_target">BrowserStackLocal</a>, 
+  which is needed to test corporate's private and internal servers, alongside public URLs, using the BrowserStack 
+  cloud, which has support for firewalls, proxies and Active Directory.
