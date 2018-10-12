@@ -67,3 +67,4 @@ comments: true
   <a href="https://www.browserstack.com/local-testing#configuration" class="external-link" target="nexial_target">BrowserStackLocal</a>, 
   which is needed to test corporate's private and internal servers, alongside public URLs, using the BrowserStack 
   cloud, which has support for firewalls, proxies and Active Directory.
+- support configuration to request browser to accept invalid SSL certificate (might be useful for intranet testing).
