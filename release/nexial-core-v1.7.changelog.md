@@ -35,6 +35,7 @@ comments: true
 - [`assertArrayNotContain(array,unexpected)`](../commands/base/assertArrayNotContain(array,unexpected)): **NEW** command 
   to assert that all the items in `unexpected` DO NOT exist in `array`. `unexpected` can either be a single item or 
   multiple items separated by [`nexial.textDelim`](../systemvars/index#nexial.textDelim), as the case for `array`.
+- code fix: consider "null=null" and "empty=empty" when comparing arrays
 
 
 ### [desktop commands](../commands/desktop)
@@ -47,6 +48,8 @@ comments: true
 
 
 ### [json command](../commands/json)
+- [`assertValues(json,jsonpath,array,exactOrder)`](../commands/json/assertValues(json,jsonpath,array,exactOrder)): code
+  fix to properly consider null values.
 
 
 ### [rdbms command](../commands/rdbms)
