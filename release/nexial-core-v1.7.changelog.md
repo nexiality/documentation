@@ -68,3 +68,6 @@ comments: true
   which is needed to test corporate's private and internal servers, alongside public URLs, using the BrowserStack 
   cloud, which has support for firewalls, proxies and Active Directory.
 - support configuration to request browser to accept invalid SSL certificate (might be useful for intranet testing).
+- turn off "page source support" mode for browser stack automation to speed up execution.
+- support the toggling of "real_mobile" for browser stack automation via `browserstack.real_mobile`
+- disable browser window maximizing for mobile web automation
