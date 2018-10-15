@@ -59,15 +59,27 @@ comments: true
 
 
 ### [web commands](../commands/web)
-- update code to support mobile web testing via browserstack.
-- support autodownload and execution of BrowserStackLocal, if 
-  [`nexial.browserstack.enablelocal`](../systemvars/index#nexial.browserstack.enablelocal) or `browserstack.local` is
-  set to `true`
-- support auto download/start/shut down of 
-  <a href="https://www.browserstack.com/local-testing#configuration" class="external-link" target="nexial_target">BrowserStackLocal</a>, 
-  which is needed to test corporate's private and internal servers, alongside public URLs, using the BrowserStack 
-  cloud, which has support for firewalls, proxies and Active Directory.
 - support configuration to request browser to accept invalid SSL certificate (might be useful for intranet testing).
-- turn off "page source support" mode for browser stack automation to speed up execution.
-- support the toggling of "real_mobile" for browser stack automation via `browserstack.real_mobile`
-- disable browser window maximizing for mobile web automation
+- support screenshot when JavaScript dialog (modal) is present. When JavaScript dialog is found, instead of Selenium's screenshot capability, Nexial will resort to Java's fullscreen capture.
+- initial support for CrossBrowserTesting (alternative to BrowserStack). Note: **Not all functionality are tested yet.**
+- disable the checking of browser stability via page source when JavaScript dialog is present.
+- BrowserStack support:
+  - disable browser window maximizing for mobile web automation
+  - update code to support mobile web testing via browserstack.
+  - support autodownload and execution of BrowserStackLocal, if 
+    [`nexial.browserstack.enablelocal`](../systemvars/index#nexial.browserstack.enablelocal) or `browserstack.local` is
+    set to `true`
+  - support auto download/start/shut down of 
+    <a href="https://www.browserstack.com/local-testing#configuration" class="external-link" target="nexial_target">BrowserStackLocal</a>, 
+    which is needed to test corporate's private and internal servers, alongside public URLs, using the BrowserStack 
+    cloud, which has support for firewalls, proxies and Active Directory.
+  - turn off "page source support" mode for browser stack automation to speed up execution.
+  - support the toggling of "real_mobile" for browser stack automation via `browserstack.real_mobile`
+  - default to `nexial.browser.windowSize` when `browserstack.resolution` data variable is not available.
+  - automatic download/install/invocation of BrowserStackLocal executable when `browserstack.local` is set to `true`
+  - automatic termination of BrowserStackLocal when execution ends.
+  - disabling the setting of browser window size if mobile web testing is in effect.
+- Safari support:
+  - prior to highlighting, scroll the target element so that it is visible
+  - handle UnhandledAlertException when a JavaScript dialog is present during automation.
+  - fixed error when setting browser window size
