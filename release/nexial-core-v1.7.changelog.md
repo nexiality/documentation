@@ -22,7 +22,9 @@ comments: true
 
 
 ### [Built-in Function](../functions)
-
+- [`$(date|format|date|fromDate|toDate)`](../functions/$(date)): **NEW** time format - `base10time` - to support 
+  conversion of time to/from an existing time format, such as `HH:mm:ss`, to/from `base10time` format. As such we can
+  convert time information from the conventional `HH:mm:ss` into a base-10 decimal number.
 
 ### [Nexial Expression](../expressions)  
 
@@ -59,6 +61,7 @@ comments: true
 
 
 ### [step commands](../commands/step)
+- update console display of command prompt across all step commands to improve readability.
 
 
 ### [web commands](../commands/web)

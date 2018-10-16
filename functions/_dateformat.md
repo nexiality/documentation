@@ -7,4 +7,6 @@ For date/time formatting (denoted below as `format` or `*Format`), Nexial sup
   For example, `informal` format would output `about a minute ago` instead of `00:00:57`, or 
   `about a month and a half ago` rather than `2018/08/24 00:01:32`. The `informal` format is suitable to use in 
   conjunction with the [sound &raquo; `speak(text)`](../commands/sound/speak(text)) command.
+- `base10time` to express time information as a base-10 decimal number. For example, `10:25:30` would be converted as
+  `10.425`, `14.32918` would be converted as `14:19:46`.
 
