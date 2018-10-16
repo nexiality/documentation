@@ -87,3 +87,10 @@ For better understanding of Nexial, check out the **[Introduction](userguide/In
 
 ---------------------------------------------
 
+<div style="width:420px; vertical-align:middle; height:60px; background: rgba(250,250,230,0.45)">
+    <img src="https://nexiality.github.io/documentation/image/browserstack/Browserstack-logo@2x.png"
+        style="box-shadow:none; padding:10px 15px 10px; width:150px;" align="left"/>
+    <div style="vertical-align:middle; padding:10px 0; font-size:10pt; color:#333;">
+        Nexial Automation uses <a href="http://browserstack.com">BrowserStack</a> for compatibility and feature testing.
+    </div>
+</div>
