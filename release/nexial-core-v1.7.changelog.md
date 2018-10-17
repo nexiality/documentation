@@ -15,7 +15,8 @@ comments: true
   one dealing with UI. Previously only [web](../commands/web) and [desktop](../commands/desktop) commands can be used to
   capture screenshot (of the current test step). With this new change, Nexial will use the latest UI-related command
   as reference point to capture screenshot. 
-
+- enhancement to how Nexial resolves scripts and data files both for script and plan execution. Alos, better error
+  messages are now in place.
 
 ### [Nexial Filter](../flowcontrols/filter)
 - fixed rare condition where Winium is invoked where it should not.
