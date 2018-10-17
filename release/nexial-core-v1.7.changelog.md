@@ -89,3 +89,4 @@ comments: true
   - prior to highlighting, scroll the target element so that it is visible
   - handle UnhandledAlertException when a JavaScript dialog is present during automation.
   - fixed error when setting browser window size
+- remove scrollbar from chrome screenshots.
