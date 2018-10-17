@@ -87,10 +87,24 @@ For better understanding of Nexial, check out the **[Introduction](userguide/In
 
 ---------------------------------------------
 
-<div style="width:420px; vertical-align:middle; height:60px; background: rgba(250,250,230,0.45)">
-    <img src="https://nexiality.github.io/documentation/image/browserstack/Browserstack-logo@2x.png"
+<div align="center">
+
+<div style="width:450px; vertical-align:middle; height:60px; background:rgba(250,250,230,0.45);">
+    <img src="image/browserstack/Browserstack-logo@2x.png"
         style="box-shadow:none; padding:10px 15px 10px; width:150px;" align="left"/>
     <div style="vertical-align:middle; padding:10px 0; font-size:10pt; color:#333;">
-        Nexial Automation uses <a href="http://browserstack.com">BrowserStack</a> for compatibility and feature testing.
+        Nexial Automation enables test automation with <a href="http://browserstack.com">BrowserStack</a>.
     </div>
+</div>
+
+<br/>
+
+<div style="width:450px; vertical-align:middle; background: rgba(250,250,230,0.45);">
+    <img src="image/cbt/CrossBrowserTesting-logo-small.png" style="box-shadow:none; padding:0 15px 0;" align="left"/>
+    <br/>
+    <div style="vertical-align:middle; padding:10px; font-size:10pt; color:#333; clear:both">
+        Nexial Automation enables test automation with <a href="http://crossbrowsertesting.com">CrossBrowserTesting</a>.
+    </div>
+</div>
+
 </div>
