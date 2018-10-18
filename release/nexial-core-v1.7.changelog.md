@@ -18,6 +18,7 @@ comments: true
 - enhancement to how Nexial resolves scripts and data files both for script and plan execution. Also better error
   messages are now in place.
 - code fix to honor fail-immediate on critical commands such as [web &raquo; `open(url)`](../commands/web/open(url)).
+- enhance execution output to "paint" description column as red if the corresponding step fails.
 
 
 ### [Nexial Filter](../flowcontrols/filter)
