@@ -15,7 +15,7 @@ comments: true
   one dealing with UI. Previously only [web](../commands/web) and [desktop](../commands/desktop) commands can be used to
   capture screenshot (of the current test step). With this new change, Nexial will use the latest UI-related command
   as reference point to capture screenshot. 
-- enhancement to how Nexial resolves scripts and data files both for script and plan execution. Alos, better error
+- enhancement to how Nexial resolves scripts and data files both for script and plan execution. Also better error
   messages are now in place.
 - code fix to honor fail-immediate on critical commands such as [web &raquo; `open(url)`](../commands/web/open(url)).
 
@@ -73,7 +73,8 @@ comments: true
 
 ### [web commands](../commands/web)
 - support configuration to request browser to accept invalid SSL certificate (might be useful for intranet testing).
-- support screenshot when JavaScript dialog (modal) is present. When JavaScript dialog is found, instead of Selenium's screenshot capability, Nexial will resort to Java's fullscreen capture.
+- support screenshot when JavaScript dialog (modal) is present. When JavaScript dialog is found, instead of Selenium's 
+  screenshot capability, Nexial will resort to Java's fullscreen capture.
 - initial support for CrossBrowserTesting (alternative to BrowserStack). Note: **Not all functionality are tested yet.**
 - disable the checking of browser stability via page source when JavaScript dialog is present.
 - BrowserStack support:
@@ -92,6 +93,13 @@ comments: true
   - automatic download/install/invocation of BrowserStackLocal executable when `browserstack.local` is set to `true`
   - automatic termination of BrowserStackLocal when execution ends.
   - disabling the setting of browser window size if mobile web testing is in effect.
+  - avoid setting empty or invalid browser when executing mobile web testing; device default (iOS->Safari, 
+    Android->Chrome, etc.) will be enforced during mobile web testing. 
+  - fixed window positioning issue when running Safari.
+  - forcefully delay window resizing on Safari until after a URL is invoked; this fixed the error "A request to use a 
+    window could not be satisfied because the window could not be found."
+  - enable network and console logging on BrowserStack when `browserstack.debug` is set to `true`.
+  - support execution status reporting back to BrowserStack when a script has completed.
 - Safari support:
   - prior to highlighting, scroll the target element so that it is visible
   - handle UnhandledAlertException when a JavaScript dialog is present during automation.
