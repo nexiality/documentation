@@ -61,6 +61,10 @@ comments: true
 ### [rdbms command](../commands/rdbms)
 
 
+### [ssh commands](../commands/ssh)
+- support empty password (use `(empty)`) for cases where the target SSH server allows for it.
+
+
 ### [step commands](../commands/step)
 - update console display of command prompt across all step commands to improve readability.
 
@@ -90,4 +94,10 @@ comments: true
   - prior to highlighting, scroll the target element so that it is visible
   - handle UnhandledAlertException when a JavaScript dialog is present during automation.
   - fixed error when setting browser window size
-- remove scrollbar from chrome screenshots.
+- remove scrollbar during screenshots for chrome headless. Chrome browser still exhibit scrollbar during screen capturing.
+- [`select(locator,text)`](../commands/web/select(locator,text)): now supports selection based on regular expression. 
+  Use `REGEX:` as prefix to enable regex-based text selection. Note that for SELECT element that supports only single
+  selection, only the first match will be selected.
+- [`deselect(locator,text)`](../commands/web/deselect(locator,text)): **NEW** command to deselect (unselect?) from a
+  SELECT element based on `text`. For regex-based deselect, add `REGEX:` prefix to `text`.
+
