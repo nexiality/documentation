@@ -17,6 +17,8 @@ comments: true
   as reference point to capture screenshot. 
 - enhancement to how Nexial resolves scripts and data files both for script and plan execution. Alos, better error
   messages are now in place.
+- code fix to honor fail-immediate on critical commands such as [web &raquo; `open(url)`](../commands/web/open(url)).
+
 
 ### [Nexial Filter](../flowcontrols/filter)
 - fixed rare condition where Winium is invoked where it should not.
