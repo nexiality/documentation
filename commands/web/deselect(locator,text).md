@@ -1,30 +1,30 @@
 ---
 layout: default
 title: deselect(locator,text)
-parent: web
+parent: web SELECT deselect
 tags: command web
 comments: true
 ---
 
-### Description
 
-- This command is to select text from the list element.
-- This command is used to select the text on element like "comboBox" or "ListBox"
-- In other words as as per locator if element is found, the command will select the desired Text and pass the command or else fail otherwise.
+### Description
+This command automates the deselection of `OPTION` element(s) from a `SELECT` element identified via `locator`. The
+target `OPTION` element is identified via `text`, which could be plain text for single element identification (i.e. 
+exact match) or regex-based element identification (i.e. multi-match).  Visit the 
+[Note section of `select(locator,text)`](select(locator,text).html#note) for more technical details.
+
 
 ### Parameters
+- **locator** - this parameter is the locator of the `SELECT` element.
+- **text** - this parameter is the text to be deselected from the `SELECT` element.
 
-- **locator** - this parameter is the locator of the element.
-- **text** - this parameter is the text to be selected on the element.
 
 ### Example
 
-**Script**:<br/>
-![](image/select_01.png)
-
-**Output**:<br/>
-![](image/select_02.png)
 
 ### See Also
-
+- [`deselectMulti(locator,array)`](deselectMulti(locator,array))
+- [`select(locator,text)`](select(locator,text))
+- [`selectMulti(locator,array)`](selectMulti(locator,array))
+- [`selectMultiOptions(locator)`](selectMultiOptions(locator))
 - [`type(locator,value)`](type(locator,value))
