@@ -70,6 +70,10 @@ comments: true
 
 ### [step commands](../commands/step)
 - update console display of command prompt across all step commands to improve readability.
+- [`validate(prompt,responses,passResponses)`](../commands/step/validate(prompt,responses,passResponses)): enhanced to 
+  capture user's comment (optional) after providing validation response.
+- [`perform(instructions)`](../commands/step/perform(instructions)): enhanced to capture user's comment (optional) 
+  after the instructed actions are performed.
 
 
 ### [web commands](../commands/web)
