@@ -19,6 +19,7 @@ comments: true
   messages are now in place.
 - code fix to honor fail-immediate on critical commands such as [web &raquo; `open(url)`](../commands/web/open(url)).
 - enhance execution output to "paint" description column as red if the corresponding step fails.
+- revamp Excel handling to improve performance.
 
 
 ### [Nexial Filter](../flowcontrols/filter)
@@ -44,6 +45,7 @@ comments: true
 - code fix: consider "null=null" and "empty=empty" when comparing arrays
 - reduce some of more "cryptic" console output passed down from Selenium 2 implementation.
 
+
 ### [desktop commands](../commands/desktop)
 
 
@@ -59,6 +61,8 @@ comments: true
 - [`assertValues(json,jsonpath,array,exactOrder)`](../commands/json/assertValues(json,jsonpath,array,exactOrder)): 
   enhanced to support better comparison-equivalent logic (like that of 
   [`assertEqual(expected,actual)`](../commands/json/assertEqual(expected,actual))).
+- [`assertEqual(expected,actual)`](../commands/json/assertEqual(expected,actual))): enhanced with better message to aid
+  in troubleshooting.
 
 
 ### [rdbms command](../commands/rdbms)
