@@ -20,6 +20,9 @@ comments: true
 - code fix to honor fail-immediate on critical commands such as [web &raquo; `open(url)`](../commands/web/open(url)).
 - enhance execution output to "paint" description column as red if the corresponding step fails.
 - revamp Excel handling to improve performance.
+- enhancement to console logging - reduce verbosity to improve readability
+- enhancement to console logging - WE'VE GOT COLORS!
+- enhancement to console logging - log FAIL steps as ERROR level
 
 
 ### [Nexial Filter](../flowcontrols/filter)
