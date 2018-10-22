@@ -40,16 +40,16 @@ comments: true
 - **`prependIfMissing(prependWith)`** - add `prependWith` to the beginning of current text ONLY if `prependWith` if 
   currently not at the beginning of text.
 - **`remove(criteria)`** - remove any and all occurrences of `criteria`.
-- **`removeEnd(ending)`** / `**remove-end(ending)**` - remove ending character sequence (substring) of text that 
+- **`removeEnd(ending)`** / **`remove-end(ending)`** - remove ending character sequence (substring) of text that 
   matches `ending`.
 - **`removeRegex(regex)`** - remove character(s) that matches `regex`.
-- **`removeStart(start)`** / **remove-start(start)** - remove starting character sequence (substring) of text that 
+- **`removeStart(start)`** / **`remove-start(start)`** - remove starting character sequence (substring) of text that 
   matches `start`.
 - **`replace(searchFor,replaceWith)`** - as the name suggest, this operation will search for `searchFor` and replace 
   matches with `replaceWith`.
 - **`replaceRegex(searchRegex,replaceWith)`** - perform a regex-search on text using `searchRegex` and replace all 
   matches with `replaceWith`.  Note that grouping character `(` and `)` should be escaped as `\(...\)`.  For example, 
-  `[TEXT(...) => replaceRegex(**\(chicken\)**,beef)]`
+  `[TEXT(...) => replaceRegex(\(chicken\),beef)]`
 - **`retain(keep)`** - retain only the characters found in `keep`.
 - **`retainRegex(regex)`** - retain only the characters matched to `regex`.
 - **`store(var)`** - save current TEXT expression to a data variable.  If the specified `var` exists, its value will 
