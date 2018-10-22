@@ -23,6 +23,8 @@ comments: true
 - enhancement to console logging - reduce verbosity to improve readability
 - enhancement to console logging - WE'VE GOT COLORS!
 - enhancement to console logging - log FAIL steps as ERROR level
+- further reducing startup time by moving some Excel style initialization towards later
+- minor reduction of console logging to improve readability
 
 
 ### [Nexial Filter](../flowcontrols/filter)
