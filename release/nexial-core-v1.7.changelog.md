@@ -26,6 +26,7 @@ comments: true
 - further reducing startup time by moving some Excel style initialization towards later
 - minor reduction of console logging to improve readability
 - code fix to include data variables from project.properties and System properties to execution output
+- code fix to restore smtp capability
 
 
 ### [Nexial Filter](../flowcontrols/filter)
