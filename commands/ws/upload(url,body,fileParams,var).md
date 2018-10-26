@@ -13,7 +13,20 @@ command inherently issues a POST request, but with multipart support. The `body`
 file request parameters where each is kept as a separate line. The `fileParams` is a list of the request parameters 
 that should be considered as files (i.e. the files to upload). See the following example:
 
+![](image/upload_01.png)
 
+The `body` parameter contains one or more request parameters to be sent to the target endpoint (`url`). Each of the 
+request parameters is specified as a separate line (as shown above). However only one of the parameters represents the 
+file to upload. The `fileParams` parameter is used to distinguish between the "regular" request parameters (`favourite` 
+and `userType` in this case) and the request parameter(s) that represent the multipart data to upload. In this case,
+`fileParams` to set to the value `reportZip`. Nexial uses such information to determine what to upload. 
+
+One will observe that `reportZip` is assigned as `${zipFile}` as part of the request parameter. Since `reportZip` is
+specified as one of the `fileParams`, Nexial will proceed to resolve the file entity via the `${zipFile}` data variable.
+
+The response from the target endpoint is saved to a data variable denoted by `var`. If all goes well, 
+`${var}.responseCode` should be 200.
+ 
 
 ### Parameters
 - **url** - the target URL
@@ -23,6 +36,7 @@ that should be considered as files (i.e. the files to upload). See the following
 
 
 ### Example
+see above.
 
 
 ### See Also

@@ -81,3 +81,4 @@ For more information about HTTP status codes, refer to
 - [`put(url,body,var)`](put(url,body,var))
 - [`saveResponsePayload(var,file,append)`](saveResponsePayload(var,file,append))
 - [`soap(action,url,payload,var)`](soap(action,url,payload,var))
+- [`upload(url,body,fileParams,var)`](upload(url,body,fileParams,var))
