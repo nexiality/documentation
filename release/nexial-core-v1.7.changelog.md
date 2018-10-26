@@ -60,6 +60,7 @@ comments: true
 
 
 ### [io commands](../commands/io)
+- [`base64(var,file)`](../commands/io/base64(var,file)): read and encode file content as base64.
 
 
 ### [json command](../commands/json)
@@ -127,3 +128,8 @@ comments: true
 - [`deselect(locator,text)`](../commands/web/deselect(locator,text)): **NEW** command to deselect (unselect?) from a
   SELECT element based on `text`. For regex-based deselect, add `REGEX:` prefix to `text`.
 
+
+### [ws commands](../commands/ws)
+- [`upload(url,body,fileParams,var)`](../commands/ws/upload(url,body,fileParams,var)): **NEW** command to upload one or
+  more files as multipart-data, along with other request parameters, to specified endpoint (`url`).
+  
