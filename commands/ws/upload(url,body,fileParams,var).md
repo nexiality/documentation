@@ -43,3 +43,4 @@ see above.
 - [`delete(url,body,var)`](delete(url,body,var))
 - [`put(url,body,var)`](put(url,body,var))
 - [`download(url,queryString,saveTo)`](download(url,queryString,saveTo))
+
