@@ -27,6 +27,7 @@ comments: true
 - minor reduction of console logging to improve readability
 - code fix to include data variables from project.properties and System properties to execution output
 - code fix to restore smtp capability
+- code fix against edge cases on infinite loop; now both `null` and `(null)` values are treated as `NULL` values.
 
 
 ### [Nexial Filter](../flowcontrols/filter)
