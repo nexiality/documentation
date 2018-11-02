@@ -18,6 +18,7 @@ Since we have so many commands, we have categorized them into types (aka command
 below to learn more about each type and the commands available under each of them.
 
 - [`aws.s3`](aws.s3): commands regarding AWS S3.
+- [`aws.ses`](aws.ses): commands regarding AWS SES.
 - [`base`](base): general commands for data assertion and commonly used operations.
 - [`csv`](csv): commands regarding the CSV file type.
 - [`desktop`](desktop): commands to automate desktop applications.

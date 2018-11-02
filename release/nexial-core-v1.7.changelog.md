@@ -28,6 +28,8 @@ comments: true
 - code fix to include data variables from project.properties and System properties to execution output
 - code fix to restore smtp capability
 - code fix against edge cases on infinite loop; now both `null` and `(null)` values are treated as `NULL` values.
+- enhanced nexial mailer to handle inflight mail configuration changes (e.g. between iterations) and to support AWS SES.
+- fixed overflow condition when generating new command-listing JSON that has more than 26 command types.
 
 
 ### [Nexial Filter](../flowcontrols/filter)
@@ -38,8 +40,17 @@ comments: true
 - [`$(date|format|date|fromDate|toDate)`](../functions/$(date)): **NEW** time format - `base10time` - to support 
   conversion of time to/from an existing time format, such as `HH:mm:ss`, to/from `base10time` format. As such we can
   convert time information from the conventional `HH:mm:ss` into a base-10 decimal number.
+- [`$(execution|meta|nexial)`]: display current Nexial version
+- [`$(execution|meta|java)`]: display current Java version
 
 ### [Nexial Expression](../expressions)  
+
+
+### [aws.ses commands](../commands/aws.ses)
+- [`sendHtmlMail(profile,to,subject,body)`](../commands/aws.ses/sendHtmlMail(profile,to,subject,body)): **NEW** command 
+  to send email via AWS SES.
+- [`sendTextMail(profile,to,subject,body)`](../commands/aws.ses/sendTextMail(profile,to,subject,body)): **NEW** command 
+  to send email via AWS SES.
 
 
 ### [base commands](../commands/base)
