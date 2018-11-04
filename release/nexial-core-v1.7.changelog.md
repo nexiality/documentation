@@ -30,6 +30,7 @@ comments: true
 - code fix against edge cases on infinite loop; now both `null` and `(null)` values are treated as `NULL` values.
 - enhanced nexial mailer to handle inflight mail configuration changes (e.g. between iterations) and to support AWS SES.
 - fixed overflow condition when generating new command-listing JSON that has more than 26 command types.
+- alpha version of Nexial Interactive now available! Not fully tested; please kindly report issues on GitHub.
 
 
 ### [Nexial Filter](../flowcontrols/filter)
