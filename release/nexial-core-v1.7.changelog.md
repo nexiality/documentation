@@ -31,7 +31,6 @@ comments: true
 - enhanced nexial mailer to handle inflight mail configuration changes (e.g. between iterations) and to support AWS SES.
 - fixed overflow condition when generating new command-listing JSON that has more than 26 command types.
 - alpha version of Nexial Interactive now available! Not fully tested; please kindly report issues on GitHub.
-- new variable - `nexial.printErrorDetails` - to control the printing of underlying Java exception when such is thrown.
 
 
 ### [Nexial Filter](../flowcontrols/filter)
@@ -45,11 +44,15 @@ comments: true
 - [`$(execution|meta|nexial)`]: display current Nexial version
 - [`$(execution|meta|java)`]: display current Java version
 
+
 ### [Nexial Expression](../expressions)  
 
+
 ### [System variables](../systemvars)
-- [`nexial.imageDiffColor`](../systemvars/index#nexial.imageDiffColor): **NEW** system variable to define color for 
-highlighting difference when comparing two images.
+- [`nexial.imageDiffColor`](../systemvars/index#nexial.imageDiffColor): **NEW** System variable to define color for 
+  highlighting difference when comparing two images.
+- [`nexial.printErrorDetails`](../systemvars/index#nexial.printErrorDetails) - **NEW*** System variable to control the 
+  printing of underlying Java exception when such is thrown.
 
 
 ### [aws.ses commands](../commands/aws.ses)
@@ -153,6 +156,16 @@ highlighting difference with rectangle in new image.
   SELECT element based on `text`. For regex-based deselect, add `REGEX:` prefix to `text`.
 - [`clickWithKeys(locator,keys)`](../commands/web/clickWithKeys(locator,keys)): **NEW** command to click on target with 
   the keystrokes like {CONTROL}, {SHIFT} specified via `keys`.
+- update to <a href="https://raw.githubusercontent.com/SeleniumHQ/selenium/master/java/CHANGELOG" class="external_link" target="_nexial_link">Selenium 3.141.0</a> 
+  (should be 3.14.1?). Significant changes include:
+  - Beta commands in SafariDriver for opening a new window or tab.
+  - Clean up of internal of `Select` element wrapper (#6501)
+  - Acknowledge that Mojave is a `Platform` (#6552)
+  - Fixed WebDriverBackedSelenium servlet by registering a session finalization listener.
+  - Prepended command names in https error response reports (#6321)
+  - Removed the apache-backed httpclient.
+  - Added a basic ServiceBuilder for Internet Explorer (#6181)
+
 
 ### [ws commands](../commands/ws)
 - [`upload(url,body,fileParams,var)`](../commands/ws/upload(url,body,fileParams,var)): **NEW** command to upload one or
