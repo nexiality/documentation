@@ -81,7 +81,7 @@ comments: true
 
 
 ### [image commands](../commands/image)
--[`saveDiff(baseline,actual)`](../commands/image/saveDiff(baseline,actual)): **NEW** command to compare two images and 
+-[`compare(baseline,actual)`](../commands/image/compare(baseline,actual)): modified command to compare two images and 
 highlighting difference with rectangle in new image.
 -[`colorbit(source,bit,saveTo)`](../commands/image/colorbit(source,bit,saveTo)): **NEW** command to convert image color bit.
 
