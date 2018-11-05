@@ -31,6 +31,7 @@ comments: true
 - enhanced nexial mailer to handle inflight mail configuration changes (e.g. between iterations) and to support AWS SES.
 - fixed overflow condition when generating new command-listing JSON that has more than 26 command types.
 - alpha version of Nexial Interactive now available! Not fully tested; please kindly report issues on GitHub.
+- new variable - `nexial.printErrorDetails` - to control the printing of underlying Java exception when such is thrown.
 
 
 ### [Nexial Filter](../flowcontrols/filter)
