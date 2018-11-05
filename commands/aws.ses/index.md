@@ -1,0 +1,50 @@
+---
+layout: default
+title: aws.ses
+tags: command aws.ses ses mail smtp email
+comments: true
+---
+
+
+SES, or Simple Email Service, is a cloud service provided by Amazon AWS.  One can utilize such service to send, receive
+and manage email activities in the cloud.  Currently Nexial supports the use of SES for sending email to one or more 
+recipients (to, cc, or bcc). The email content can be either HTML or plain text.
+
+
+#### Connection Setup
+Similar to other command collections in Nexial, the "aws.ses" commands utilize a profile-based approach to connect to 
+the target service.  A profile is a collection of data variables that share the same prefix.  In this 
+case, below are the data variables that make up a "SES" profile:
+<a name="s3profile"/>
+
+|data variable                       |value                                                          | note                                                    |
+|------------------------------------|---------------------------------------------------------------|---------------------------------------------------------|
+|`<profile>.aws.accessKey`           |The access key for SES connection                              |(REQUIRED) For more information, consult <a href="https://aws.amazon.com/premiumsupport/knowledge-center/create-access-key/" class="external-link" target="_nexial_link">AWS online documentation</a>|
+|`<profile>.aws.secretKey`           |The secret key for SES connection                              |(REQUIRED) More information available on <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys" class="external-link" target="_nexial_external">AWS online documentation</a>|
+|`<profile>.aws.region`              |The target region to invoke SES                                |<a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html#region-endpoints" class="external-link" target="_nexial_external">Available SES endpoints/regions</a>. Default is `us-west-2`|
+|`<profile>.aws.from`                |The "from" address for each email sent via this profile        |(REQUIRED) A valid email address (not necessarily a valid email account)|
+|`<profile>.aws.cc`                  |The "cc" address(es) for each email sent via this profile      |Multiple email addresses are separated by [`nexial.textDelim`](../../systemvars/index#nexial.textDelim)|
+|`<profile>.aws.bcc`                 |The "bcc" address(es) for each email sent via this profile     |Multiple email addresses are separated by [`nexial.textDelim`](../../systemvars/index#nexial.textDelim)|
+|`<profile>.aws.replyTo`             |The "reply-to" address(es) for each email sent via this profile|If supplied, this is the "reply to" email address(s). If not, the `to` address will be assumed. Multiple email addresses are separated by [`nexial.textDelim`](../../systemvars/index#nexial.textDelim)|
+|`<profile>.aws.configurationSetName`|The SES rules to apply on sending emails                       |<a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/using-configuration-sets.html" class="external-link" target="_nexial_external">Using Amazon SES Configuration Sets</a>|
+|`<profile>.aws.xmailer`             |The extra "tag line" at the end of each email sent             |Useful to provide contextual information regarding the email content. For example, one could add `$(execution|script|name) on $(execution|meta|nexial)` as a "X-Mailer" to indicate where the email is sent from (i.e. which script and with which version of Nexial)|
+
+<br/>
+
+For example, suppose we have a "profile" named as `mailer`:<br/>
+![profile](image/aws.ses-01.png)
+
+Shown above, `mailer` will be used as a "profile" throughout the "aws.ses" commands for SES-related automation.
+
+**NOTE**: 
+1. Consider using [nexial-crypt](../../userguide/BatchFiles#nexial-cryptcmd--nexial-cryptsh) to encrypt your access
+   key and secret key information.
+2. It is possible to create multiple profiles and use them selectively during execution.
+
+
+The "aws.ses" command type represents a series of commands regarding AWS SES.
+
+
+### Available Commands
+- [`sendHtmlMail(profile,to,subject,body)`](sendHtmlMail(profile,to,subject,body))
+- [`sendTextMail(profile,to,subject,body)`](sendTextMail(profile,to,subject,body))

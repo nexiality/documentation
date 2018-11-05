@@ -97,7 +97,7 @@ See `parse()` below for more details.
 - keep only the rows that matches the specified 
   [conditions](../flowcontrols/filter#specification).  These conditions are evaluated on the columns based their 
   respective name or index. The condition follows the syntax as laid out above.  One can use the reserved word 
-  `[ANY FIELD]` to target any field.  For example, `filter([ANY FIELD] contains USA)` means filter a row if any of 
+  `[ANY FIELD]` to target any field.  For example, `filter([ANY FIELD] contain USA)` means filter a row if any of 
   its fields contains `USA`.
 - `conditions` follows the syntax as laid out in [Nexial Filter](../flowcontrols/filter). 
 
@@ -301,7 +301,7 @@ these SSN are not the same.
 
   ![](image/csv_15.jpg)
 
-  One can use the reserved word `[ANY FIELD]` to target any field.  For example, `removeRows([ANY FIELD] contains USA)` 
+  One can use the reserved word `[ANY FIELD]` to target any field.  For example, `removeRows([ANY FIELD] contain USA)` 
   means remove a row if any of its fields contains `USA`.
   
   The `conditions` parameter follows the syntax as laid out in [Nexial Filter](../flowcontrols/filter).

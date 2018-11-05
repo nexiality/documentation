@@ -12,7 +12,7 @@ delete, list, etc.
 
 
 #### Connection Setup
-Similar to other command collections in Nexial, the "aws.s3" command collection utilize a profile-based approach to 
+Similar to other command collections in Nexial, the "aws.s3" commands utilize a profile-based approach to 
 connect to the target S3 location.  A profile is a collection of data variables that share the same prefix.  In this 
 case, below are the data variables that make up a "s3" profile:
 

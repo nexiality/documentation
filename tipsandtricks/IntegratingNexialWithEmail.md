@@ -31,7 +31,7 @@ Let's see how we can set things up to enable email notification.
 ```bash
 export JAVA_OPT="-Dnexial.enableEmail=true -Dnexial.mailTo=<recipients> "
 export JAVA_OPT="$JAVA_OPT -Dmail.smtp.host=<mail server> -Dmail.smtp.port=25 "
-export JAVA_OPT="$JAVA_OPT -Dmail.smtp.from=nexiality@@users.noreply.github.com "
+export JAVA_OPT="$JAVA_OPT -Dmail.smtp.from=nexiality@users.noreply.github.com "
 export JAVA_OPT="$JAVA_OPT -Dmail.smtp.auth=true -Dmail.smtp.username=<email> -Dmail.smtp.password=<password>"
 ... ...
 ./nexial.sh -script ~/projects/... ...
@@ -41,7 +41,7 @@ export JAVA_OPT="$JAVA_OPT -Dmail.smtp.auth=true -Dmail.smtp.username=<email> -D
 ```batch
 set JAVA_OPT=-Dnexial.enableEmail=true -Dnexial.mailTo=<recipients> 
 set JAVA_OPT=%JAVA_OPT% -Dmail.smtp.host=<email server> -Dmail.smtp.port=25 
-set JAVA_OPT=%JAVA_OPT% -Dmail.smtp.from=nexiality@@users.noreply.github.com  
+set JAVA_OPT=%JAVA_OPT% -Dmail.smtp.from=nexiality@users.noreply.github.com  
 set JAVA_OPT=%JAVA_OPT% -Dmail.smtp.auth=true -Dmail.smtp.username=<email> -Dmail.smtp.password=<password>   
 ... ...
 nexial.cmd -script C:\projects\... ...
@@ -56,7 +56,7 @@ nexial.scope.mailTo=<comma-separated recipient emails>
 
 mail.smtp.host=<mail server>
 mail.smtp.port=25
-mail.smtp.from=nexiality@@users.noreply.github.com
+mail.smtp.from=nexiality@users.noreply.github.com
 mail.smtp.auth=true
 mail.smtp.username=<mail account>
 mail.smtp.password=<password>
