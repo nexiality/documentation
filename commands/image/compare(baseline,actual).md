@@ -10,8 +10,10 @@ comments: true
 ### Description
 This command compares 2 images (`baseline` and `actual`), and the result as the basis of PASS/FAIL for this command.  
 The comparison uses [`nexial.imageTolerance`](../../systemvars/index#nexial.imageTolerance)` as variance for the 
-comparison.
+comparison. 
 
+User can use  command [`saveDiff(baseline,actual)`](saveDiff(baseline,actual)) which adds extra feature 
+where difference of two image is highlighted in new image.
 
 ### Parameters
 - **baseline** \- the full path of the expected image to compare.
@@ -29,3 +31,6 @@ See [`nexial.lastScreenshot`](../../systemvars/index#nexial.lastScreenshot) fo
 
 If there are errors, the result will reflect the violation against the defined tolerance:<br/>
 ![output2](image/compare_03.png)
+
+### See Also
+- [`saveDiff(baseline,actual)`](saveDiff(baseline,actual))

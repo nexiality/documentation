@@ -41,6 +41,10 @@ comments: true
 
 ### [Nexial Expression](../expressions)  
 
+### [System variables](../systemvars)
+- [`nexial.imageDiffColor`](../systemvars/index#nexial.imageDiffColor): **NEW** system variable to define color for 
+highlighting difference when comparing two images.
+
 
 ### [base commands](../commands/base)
 - [`assertArrayContain(array,expected)`](../commands/base/assertArrayContain(array,expected)): **NEW** command to assert
@@ -58,6 +62,12 @@ comments: true
 
 
 ### [excel commands](../commands/excel)
+
+
+### [image commands](../commands/image)
+-[`saveDiff(baseline,actual)`](../commands/image/saveDiff(baseline,actual)): **NEW** command to compare two images and 
+highlighting difference with rectangle in new image.
+-[`colorbit(source,bit,saveTo)`](../commands/image/colorbit(source,bit,saveTo)): **NEW** command to convert image color bit.
 
 
 ### [io commands](../commands/io)
@@ -128,7 +138,8 @@ comments: true
   selection, only the first match will be selected.
 - [`deselect(locator,text)`](../commands/web/deselect(locator,text)): **NEW** command to deselect (unselect?) from a
   SELECT element based on `text`. For regex-based deselect, add `REGEX:` prefix to `text`.
-
+- [`clickWithKeys(locator,keys)`](../commands/web/clickWithKeys(locator,keys)): **NEW** command to click on target with 
+  the keystrokes like {CONTROL}, {SHIFT} specified via `keys`.
 
 ### [ws commands](../commands/ws)
 - [`upload(url,body,fileParams,var)`](../commands/ws/upload(url,body,fileParams,var)): **NEW** command to upload one or
