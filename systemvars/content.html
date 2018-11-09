@@ -196,14 +196,14 @@
         <td>false</td>
         <td>
             By default Nexial searches for data variables in the form of <code>${...}</code> and substitutes them with
-            the appropriate value. This is an useful feature to create dynamic data substitution and generation.<br/>
+            the corresponding value. This is an useful feature to create dynamic data substitution and generation.<br/>
             <br/>
             However at times it is important that some data variables are left as it is. It might be a case of multi-
             stage text processing where Nexial is used to process some of the data variables and another program for
             additional data variables (which should be left alone). It might be a case of time-triggered processing
-            where some data variables become available/meaningful at a later time (and thus should be ignored presently).
-            Whatever the case may be, one can use this System variable to define a list of data variables to be ignored.
-            All the data variables defined in this System variable will be left as is.<br/>
+            where some data variables become available/meaningful at a later time (and thus should be ignored
+            presently). Whatever the case may be, one can use this System variable to define a list of data variables
+            to be ignored. All the data variables defined in this System variable will be left as is.<br/>
             <br/>
             It is important to note that this System variable should be <b>ONLY</b> the data variable name. For example,
             the following is considered correct:<br/>
@@ -211,6 +211,25 @@
             <br/>
             But the following is considered incorrect:<br/>
             <img src="image/systemvar_34.png" alt="wrong"/><br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="nexial.var.defaultAsIs"><code>nexial.var.defaultAsIs</code></a></td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            By default Nexial searches for data variables in the form of <code>${...}</code> and substitutes them with
+            the corresponding value. If a data variable, as derived from the <code>${...}</code> syntax, is not found
+            or is not associated with a value, Nexial will replace the corresponding <code>${...}</code> with empty
+            value - effectively removing that <code>${...}</code> text.<br/>
+            However at times it may be important <b>NOT</b> to substitute missing data variable with empty value and
+            keep the <code>${...}</code> as is. Perhaps the missing data variable(s) will be made available later in
+            the execution or be handled by another downstream process. For this reason, one can use this System variable
+            to instruct Nexial <b>NOT</b> to empty out non-existing data variable substitution.<br/>
+            By default, this System variable is set to <code>false</code>. Changing it to <code>true</code> will leave
+            all non-matching <code>${...}</code> as is.
             <br/>
         </td>
     </tr>
