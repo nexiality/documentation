@@ -11,13 +11,13 @@ This command supports the drag-and-drop automation from one element to another o
 element that supports drag-and-drop interaction.
 
 __Note__: during drag-and-drop automation, it is advised not to enable web element highlighting (via 
-[`nexial.highlight`](../../systemvars/index#nexial.highlight)) as it might lead to infrequently and inconsistent 
+[`nexial.highlight`](../../systemvars/index#nexial.highlight)) as it might lead to inconsistent 
 behavior.
 
 
 ### Parameters
-- **fromLocator** - this parameter is the locator(xpath) of the element
-- **toLocator** - this parameter is the locator(xpath) of the element
+- **fromLocator** - this parameter is the locator of the element
+- **toLocator** - this parameter is the locator of the element
 
 
 ### Example

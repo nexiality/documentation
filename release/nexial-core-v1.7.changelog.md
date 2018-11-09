@@ -31,6 +31,9 @@ comments: true
 - enhanced nexial mailer to handle inflight mail configuration changes (e.g. between iterations) and to support AWS SES.
 - fixed overflow condition when generating new command-listing JSON that has more than 26 command types.
 - alpha version of Nexial Interactive now available! Not fully tested; please kindly report issues on GitHub.
+- further optimization of Nexial internal processing for faster startup time.
+- further improvement on Nexial Interactive, nearly 92% feature complete.
+  - added color output on console for Nexial Interactive; more to come.
 
 
 ### [Nexial Filter](../flowcontrols/filter)
@@ -53,6 +56,8 @@ comments: true
   highlighting difference when comparing two images.
 - [`nexial.printErrorDetails`](../systemvars/index#nexial.printErrorDetails) - **NEW*** System variable to control the 
   printing of underlying Java exception when such is thrown.
+- [`nexial.var.defaultAsIs`](../systemvars/index#nexial.var.defaultAsIs) - **NEW** System variable to control 
+  unresolved data variable during substitution.
 
 
 ### [aws.ses commands](../commands/aws.ses)
@@ -165,6 +170,9 @@ highlighting difference with rectangle in new image.
   - Prepended command names in https error response reports (#6321)
   - Removed the apache-backed httpclient.
   - Added a basic ServiceBuilder for Internet Explorer (#6181)
+- [`openIgnoreTimeout`](../commands/web/openIngoreTimeout(url)): **NEW** command to open to a URL and tolerate page 
+  load that might extent between defined timeout 
+  (i.e. [`nexial.web.pageLoadWaitMs`](../systemvars/index#nexial.web.pageLoadWaitMs)).
 
 
 ### [ws commands](../commands/ws)
