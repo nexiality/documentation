@@ -170,7 +170,7 @@ highlighting difference with rectangle in new image.
   - Prepended command names in https error response reports (#6321)
   - Removed the apache-backed httpclient.
   - Added a basic ServiceBuilder for Internet Explorer (#6181)
-- [`openIgnoreTimeout`](../commands/web/openIngoreTimeout(url)): **NEW** command to open to a URL and tolerate page 
+- [`openIgoreTimeout(url)`](../commands/web/openIgoreTimeout(url)): **NEW** command to open to a URL and tolerate page 
   load that might extent between defined timeout 
   (i.e. [`nexial.web.pageLoadWaitMs`](../systemvars/index#nexial.web.pageLoadWaitMs)).
 

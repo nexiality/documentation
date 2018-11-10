@@ -32,3 +32,4 @@ example above were pulled from another example.
 ### See Also
 - [`open(url)`](open(url))
 - [`openAndWait(url,waitMs)`](openAndWait(url,waitMs))
+- [`openIgnoreTimeout(url)`](openIgnoreTimeout(url))

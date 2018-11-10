@@ -7,24 +7,24 @@ comments: true
 ---
 
 ### Description
+This command will issue web request defined as `url`. If `waitMs` millisecond has passed and the request is not 
+completed, this command will consider it as FAIL.
 
-- This command will open the web page defined as url & will wait for time as defined.
-- In other words command will open the url, wait for milliseconds and pass the command if successful or else fail otherwise.
-- The browser it will pick and run as defined in the data file.
 
 ### Parameters
-
 - **url** - this parameter is the wep page  to be opened.
 - **waitMs** - this parameter is the time to wait after opening the page.
 
-### Example
 
+### Example
 **Script**:<br/>
 ![](image/openAndWait_01.png)
 
 **Output**:<br/>
 ![](image/openAndWait_02.png)
 
-### See Also
 
+### See Also
 - [`open(url)`](open(url))
+- [`openHttpBasic(url,username,password)`](openHttpBasic(url,username,password))
+- [`openIgnoreTimeout(url)`](openIgnoreTimeout(url))
