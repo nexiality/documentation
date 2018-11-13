@@ -16,7 +16,7 @@ that one truly learn.
 
 This is the initial impetus of **Nexial Interactive**. The idea is to provide an environment where one learn about 
 Nexial and about automation at a more consumable and effective pace. One can use Nexial Interactive to step through one 
-or more commands repeatedly, each time with possibly different parametrization.  The experiment-observe-repeat cycle 
+or more commands repeatedly, each time with possibly different parametrization. The experiment-observe-repeat cycle 
 through Nexial Interactive hopefully fosters a more engaging and intuitive way to:
 - learn Nexial
 - learn about automation
@@ -57,19 +57,20 @@ If all goes well, a console-based menu (like below) will appear.<br/>
 
 This represents the active Nexial Interactive session. The top half of the menu shows the current configuration: the 
 assigned script, the assigned scenario and the assigned activities/steps to execute. The second half are the available 
-options one can use to control the current Nexial Interactive session. Use any of the option keys (highlighted with 
-white background) control current session. 
+options one can use to control the current Nexial Interactive session. Use the option keys (highlighted with white 
+background) to control current session. 
 
 - Use `X` to execute the currently assigned activities or steps. 
+  ![](image/ni_execute_output.png)
 - Use `H` to display help information, where contain further information of these options.<br/>
   ![](image/ni_help.png)
 - Use `Q` to quit Nexial Interactive.
 
 Note that the main objective of Nexial Interactive is to execute a subset of the automation script, possibly repeatedly,
 so that we can better understand the target application, the automation objective, or the Nexial capability. For such
-reasons, Nexial Interactive does not support test plan or multiple scenarios.  The common pattern is to focus on a block 
+reasons, Nexial Interactive does not support test plan or multiple scenarios. The common pattern is to focus on a block 
 of steps (of one scenario, naturally), work through the experiment-observe-repeat cycle, and move on to the next block 
-of steps. One can (re)assign the number of steps or scenario between execution.  One can also activate Inspection (
+of steps. One can (re)assign the number of steps or scenario between execution. One can also activate Inspection (
 similar to [`nexial.inspectOnPause`](../systemvars/index#nexial.inspectOnPause)) to analyze and learn about data 
 variables, [built-in functions](../functions) and [Nexial expressions](../expressions).<br/>
 
