@@ -1,13 +1,13 @@
 ---
 layout: default
-title: nexial-core 1.7 (2018-11-??)
+title: nexial-core 1.7 (2018-11-13)
 parent: release
 tags: release nexial-core 1.7
 comments: true
 ---
 
 ### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-1.7" class="external-link" target="_nexial_link">Release 1.7</a>
-2018-11-??
+2018-11-13
 
 
 ### General
@@ -17,33 +17,27 @@ comments: true
   as reference point to capture screenshot. 
 - enhancement to how Nexial resolves scripts and data files both for script and plan execution. Also better error
   messages are now in place.
-- code fix to honor fail-immediate on critical commands such as [web &raquo; `open(url)`](../commands/web/open(url)).
 - enhance execution output to "paint" description column as red if the corresponding step fails.
-- revamp Excel handling to improve performance.
+- optimization of Nexial internal processing and revamp Excel handling to improve performance.
+- further reducing startup time by moving some Excel style initialization towards later
+- minor reduction of console logging to improve readability
 - enhancement to console logging - reduce verbosity to improve readability
 - enhancement to console logging - WE'VE GOT COLORS!
 - enhancement to console logging - log FAIL steps as ERROR level
-- further reducing startup time by moving some Excel style initialization towards later
-- minor reduction of console logging to improve readability
 - code fix to include data variables from project.properties and System properties to execution output
-- code fix to restore smtp capability
 - code fix against edge cases on infinite loop; now both `null` and `(null)` values are treated as `NULL` values.
-- enhanced nexial mailer to handle inflight mail configuration changes (e.g. between iterations) and to support AWS SES.
 - fixed overflow condition when generating new command-listing JSON that has more than 26 command types.
+- code fix to restore smtp capability
+- enhanced nexial mailer to handle inflight mail configuration changes (e.g. between iterations) and to support AWS SES.
 
 
 ### [Nexial Interactive](../interactive)
-- alpha version of Nexial Interactive now available! Not fully tested; please kindly report issues on GitHub.
-- further optimization of Nexial internal processing for faster startup time.
-- further improvement on Nexial Interactive, nearly 92% feature complete.
-  - added color output on console for Nexial Interactive; more to come.
+- 1st version of Nexial Interactive now available! Only basic functionality tested; please kindly 
+  <a href="https://github.com/nexiality/nexial-core/issues/new/choose" class="external-link" target="_nexial_link">report issues on GitHub</a>.
+- added color output on console for Nexial Interactive; more to come.
 - support options to assign all steps
 - support options to open script and data file
 - support reading of scenario from command line
-
-
-### [Nexial Filter](../flowcontrols/filter)
-- fixed rare condition where Winium is invoked where it should not.
 
 
 ### [Built-in Function](../functions)
@@ -52,9 +46,6 @@ comments: true
   convert time information from the conventional `HH:mm:ss` into a base-10 decimal number.
 - [`$(execution|meta|nexial)`]: display current Nexial version
 - [`$(execution|meta|java)`]: display current Java version
-
-
-### [Nexial Expression](../expressions)  
 
 
 ### [System variables](../systemvars)
@@ -86,9 +77,7 @@ comments: true
 
 
 ### [desktop commands](../commands/desktop)
-
-
-### [excel commands](../commands/excel)
+- fixed rare condition where Winium is invoked where it should not.
 
 
 ### [image commands](../commands/image)
@@ -109,9 +98,6 @@ highlighting difference with rectangle in new image.
   [`assertEqual(expected,actual)`](../commands/json/assertEqual(expected,actual))).
 - [`assertEqual(expected,actual)`](../commands/json/assertEqual(expected,actual))): enhanced with better message to aid
   in troubleshooting.
-
-
-### [rdbms command](../commands/rdbms)
 
 
 ### [ssh commands](../commands/ssh)
@@ -176,6 +162,7 @@ highlighting difference with rectangle in new image.
   - Prepended command names in https error response reports (#6321)
   - Removed the apache-backed httpclient.
   - Added a basic ServiceBuilder for Internet Explorer (#6181)
+- [web &raquo; `open(url)`](../commands/web/open(url)): code fix to honor fail-immediate condition.
 - [`openIgoreTimeout(url)`](../commands/web/openIgoreTimeout(url)): **NEW** command to open to a URL and tolerate page 
   load that might extent between defined timeout 
   (i.e. [`nexial.web.pageLoadWaitMs`](../systemvars/index#nexial.web.pageLoadWaitMs)).
@@ -184,4 +171,4 @@ highlighting difference with rectangle in new image.
 ### [ws commands](../commands/ws)
 - [`upload(url,body,fileParams,var)`](../commands/ws/upload(url,body,fileParams,var)): **NEW** command to upload one or
   more files as multipart-data, along with other request parameters, to specified endpoint (`url`).
-  
+
