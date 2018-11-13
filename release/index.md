@@ -15,3 +15,4 @@ comments: true
 - [v1.4 (2018-08-07)](nexial-core-v1.4.changelog)
 - [v1.5 (2018-09-03)](nexial-core-v1.5.changelog)
 - [v1.6 (2018-10-08)](nexial-core-v1.6.changelog)
+- [v1.7 (2018-11-13)](nexial-core-v1.7.changelog)
