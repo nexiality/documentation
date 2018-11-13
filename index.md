@@ -52,8 +52,8 @@ To see Nexial in action, watch this short demo showcasing how Nexial
    ```
    cd <NEXIAL_HOME>/bin
    ./nexial.sh -plan <MY_NEXIAL_IN_ACTION_PROJECT>/artifact/plan/demo1-plan.xlsx
-   ```
-	
+   ``` 
+
    Windows:
    ```
    cd <NEXIAL_HOME>\bin
@@ -64,25 +64,16 @@ To see Nexial in action, watch this short demo showcasing how Nexial
 
 For better understanding of Nexial, check out the **[Introduction](userguide/IntroductionAndFAQ)** page.
 
----------------------------------------------
-
 <div class="quick_link"><a href="userguide">User Guide</a></div>
 <div class="quick_link"><a href="commands">Command Reference</a></div>
 <div class="quick_link"><a href="systemvars">System Variables</a></div>
 <div class="quick_link"><a href="flowcontrols">Flow Controls</a></div>
-
-<div style="clear:both" />
-
 <div class="quick_link"><a href="functions">Built-in Functions</a></div>
 <div class="quick_link"><a href="expressions">Expressions</a></div>
 <div class="quick_link"><a href="jsonpath">Jsonpath</a></div>
+<div class="quick_link"><a href="interactive">Nexial Interactive</a></div>
 <div class="quick_link"><a href="tipsandtricks">Tips and Tricks</a></div>
-
-<div style="clear:both" />
-
-
 <div class="quick_link"><a href="release">Release Notes</a></div>
-
 <div style="clear:both" />
 
 ---------------------------------------------
