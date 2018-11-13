@@ -44,8 +44,8 @@ comments: true
 - [`$(date|format|date|fromDate|toDate)`](../functions/$(date)): **NEW** time format - `base10time` - to support 
   conversion of time to/from an existing time format, such as `HH:mm:ss`, to/from `base10time` format. As such we can
   convert time information from the conventional `HH:mm:ss` into a base-10 decimal number.
-- [`$(execution|meta|nexial)`]: display current Nexial version
-- [`$(execution|meta|java)`]: display current Java version
+- [`$(execution|meta|nexial)`](../functions/$(execution)): display current Nexial version.
+- [`$(execution|meta|java)`](../functions/$(execution)): display current Java version.
 
 
 ### [System variables](../systemvars)
