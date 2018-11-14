@@ -51,7 +51,7 @@ comments: true
 ### [System variables](../systemvars)
 - [`nexial.imageDiffColor`](../systemvars/index#nexial.imageDiffColor): **NEW** System variable to define color for 
   highlighting difference when comparing two images.
-- [`nexial.printErrorDetails`](../systemvars/index#nexial.printErrorDetails) - **NEW*** System variable to control the 
+- [`nexial.printErrorDetails`](../systemvars/index#nexial.printErrorDetails) - **NEW** System variable to control the 
   printing of underlying Java exception when such is thrown.
 - [`nexial.var.defaultAsIs`](../systemvars/index#nexial.var.defaultAsIs) - **NEW** System variable to control 
   unresolved data variable during substitution.

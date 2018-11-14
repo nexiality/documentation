@@ -11,17 +11,12 @@ and manage email activities in the cloud.  Currently Nexial supports the use of 
 recipients (to, cc, or bcc). The email content can be either HTML or plain text.
 
 
-#### Connection Setup
-Similar to other command collections in Nexial, the "aws.ses" commands utilize a profile-based approach to connect to 
-the target service.  A profile is a collection of data variables that share the same prefix.  In this 
-case, below are the data variables that make up a "SES" profile:
-<a name="s3profile"/>
+{% include _aws_setup.md %}
+
+In addition, the following connection configuration should be considered as well:
 
 |data variable                       |value                                                          | note                                                    |
 |------------------------------------|---------------------------------------------------------------|---------------------------------------------------------|
-|`<profile>.aws.accessKey`           |The access key for SES connection                              |(REQUIRED) For more information, consult <a href="https://aws.amazon.com/premiumsupport/knowledge-center/create-access-key/" class="external-link" target="_nexial_link">AWS online documentation</a>|
-|`<profile>.aws.secretKey`           |The secret key for SES connection                              |(REQUIRED) More information available on <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys" class="external-link" target="_nexial_external">AWS online documentation</a>|
-|`<profile>.aws.region`              |The target region to invoke SES                                |<a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html#region-endpoints" class="external-link" target="_nexial_external">Available SES endpoints/regions</a>. Default is `us-west-2`|
 |`<profile>.aws.from`                |The "from" address for each email sent via this profile        |(REQUIRED) A valid email address (not necessarily a valid email account)|
 |`<profile>.aws.cc`                  |The "cc" address(es) for each email sent via this profile      |Multiple email addresses are separated by [`nexial.textDelim`](../../systemvars/index#nexial.textDelim)|
 |`<profile>.aws.bcc`                 |The "bcc" address(es) for each email sent via this profile     |Multiple email addresses are separated by [`nexial.textDelim`](../../systemvars/index#nexial.textDelim)|
