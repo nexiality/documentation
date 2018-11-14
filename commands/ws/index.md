@@ -59,10 +59,11 @@ Each cookie contains the following property:
   `${var}.cookies[COOKIE_NAME].secure`
 
 The status code (as in `${var}.returnCode`) and status text (as in `${var}.statusText) are equivalent, except the former
-is the numeric value of a response return code. 
+is the numeric value of a response return code.
 
 For more information about HTTP status codes, refer to
-<a href="https://httpstatuses.com/" class="external-link" target="_nexial_external">https://httpstatuses.com/</a>.  
+<a href="https://httpstatuses.com/" class="external-link" target="_nexial_external">https://httpstatuses.com/</a> and 
+<a href="https://www.restapitutorial.com/httpstatuscodes.html" class="external-link" target="_nexial_external">https://www.restapitutorial.com/httpstatuscodes.html</a>.  
 
 
 ### Available Commands
