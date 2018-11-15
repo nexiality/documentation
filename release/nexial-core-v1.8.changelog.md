@@ -12,6 +12,7 @@ comments: true
 
 ### General
 - rename some System variables so that their name are prefixed with `nexial.` to avoid conflicts.
+- code fix to ensure that macro/section expansion won't inadvertently merge passed the "ignored" section.
 
 
 ### [Nexial Interactive](../interactive)
