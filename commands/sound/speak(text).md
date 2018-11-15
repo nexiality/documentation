@@ -19,13 +19,13 @@ Current implementation limits `text` to 500 characters since this has direct imp
 <a href="https://aws.amazon.com/polly/" class="external-link" link="nexial_target">AWS Polly</a> 
 as the underlying text-to-speech engine. To enable AWS Polly, the following configuration details must be provided:
 
-| setting          | default     | explanation |
-|------------------|-------------|-------------|
-| `tts.region`     | `us-east-1` | (Optional) Specify the AWS region to use for the text-to-speech service. |
-| `tts.accessKey`  |             | [**REQUIRED**] Specify the AWS access key to use for the text-to-speech service. |
-| `tts.secretKey`  |             | [**REQUIRED**] Specify the AWS secret key to use for the text-to-speech service. |
-| `tts.sampleRate` | 22050       | (Optional) The audio frequency specified in Hz. The valid values are `8000`, `16000` and `22050`. |
-| `tts.language`   | en-GB       | (Optional) The language code of `text` to which to translate. Here are languages currently supported:<br/> ![](image/speak_01.png) |
+| setting               | default     | explanation |
+|-----------------------|-------------|-------------|
+|`nexial.tts.region`    | `us-east-1` | (Optional) Specify the AWS region to use for the text-to-speech service. |
+|`nexial.tts.accessKey` |             | [**REQUIRED**] Specify the AWS access key to use for the text-to-speech service. |
+|`nexial.tts.secretKey` |             | [**REQUIRED**] Specify the AWS secret key to use for the text-to-speech service. |
+|`nexial.tts.sampleRate`| 22050       | (Optional) The audio frequency specified in Hz. The valid values are `8000`, `16000` and `22050`. |
+|`nexial.tts.language`  | en-GB       | (Optional) The language code of `text` to which to translate. Here are languages currently supported:<br/> ![](image/speak_01.png) |
 
 <br/>
 
@@ -34,14 +34,14 @@ via command line and via `project.properties`. For example,
 
 - via command line:
   ```batch 
-  set JAVA_OPT=-Dtts.accessKey=... -Dtts.secretKey=...
+  set JAVA_OPT=-Dnexial.tts.accessKey=... -Dnexial.tts.secretKey=...
   nexial.cmd -script ... ...
   ```
 - via `project.properties`:
   ```properties
-  tts.accessKey=...
-  tts.secretKey=...
-  tts.language=en-US
+  nexial.tts.accessKey=...
+  nexial.tts.secretKey=...
+  nexial.tts.language=en-US
   ```
 
 ### Text Pattern

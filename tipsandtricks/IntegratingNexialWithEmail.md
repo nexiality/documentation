@@ -14,7 +14,7 @@ in order to send out email notification:
 
 1. Turn on email notification by setting the System variable [`nexial.enableEmail`](../systemvars/index#nexia.enableEmail) 
    to `true`.
-2. Define the recepient(s) for the email notification.  Multiple email addresses should be separated by comma (`,`).
+2. Define the recipient(s) for the email notification.  Multiple email addresses should be separated by comma (`,`).
 3. Email host
 4. Email port (typically port 25)
 5. Is authentication required to send email?
@@ -30,9 +30,9 @@ Let's see how we can set things up to enable email notification.
 (on *NIX/MacOS):<br/>
 ```bash
 export JAVA_OPT="-Dnexial.enableEmail=true -Dnexial.mailTo=<recipients> "
-export JAVA_OPT="$JAVA_OPT -Dmail.smtp.host=<mail server> -Dmail.smtp.port=25 "
-export JAVA_OPT="$JAVA_OPT -Dmail.smtp.from=nexiality@users.noreply.github.com "
-export JAVA_OPT="$JAVA_OPT -Dmail.smtp.auth=true -Dmail.smtp.username=<email> -Dmail.smtp.password=<password>"
+export JAVA_OPT="$JAVA_OPT -Dnexial.mail.smtp.host=<mail server> -Dnexial.mail.smtp.port=25 "
+export JAVA_OPT="$JAVA_OPT -Dnexial.mail.smtp.from=nexiality@users.noreply.github.com "
+export JAVA_OPT="$JAVA_OPT -Dnexial.mail.smtp.auth=true -Dnexial.mail.smtp.username=<email> -Dnexial.mail.smtp.password=<password>"
 ... ...
 ./nexial.sh -script ~/projects/... ...
 ```
@@ -40,9 +40,9 @@ export JAVA_OPT="$JAVA_OPT -Dmail.smtp.auth=true -Dmail.smtp.username=<email> -D
 (on Windows):<br/>
 ```batch
 set JAVA_OPT=-Dnexial.enableEmail=true -Dnexial.mailTo=<recipients> 
-set JAVA_OPT=%JAVA_OPT% -Dmail.smtp.host=<email server> -Dmail.smtp.port=25 
-set JAVA_OPT=%JAVA_OPT% -Dmail.smtp.from=nexiality@users.noreply.github.com  
-set JAVA_OPT=%JAVA_OPT% -Dmail.smtp.auth=true -Dmail.smtp.username=<email> -Dmail.smtp.password=<password>   
+set JAVA_OPT=%JAVA_OPT% -Dnexial.mail.smtp.host=<email server> -Dnexial.mail.smtp.port=25 
+set JAVA_OPT=%JAVA_OPT% -Dnexial.mail.smtp.from=nexiality@users.noreply.github.com  
+set JAVA_OPT=%JAVA_OPT% -Dnexial.mail.smtp.auth=true -Dnexial.mail.smtp.username=<email> -Dnexial.mail.smtp.password=<password>   
 ... ...
 nexial.cmd -script C:\projects\... ...
 ```
@@ -54,12 +54,12 @@ The `project.properties` is expected to be found under the `artifact/` directory
 nexial.enableEmail=true
 nexial.scope.mailTo=<comma-separated recipient emails>
 
-mail.smtp.host=<mail server>
-mail.smtp.port=25
-mail.smtp.from=nexiality@users.noreply.github.com
-mail.smtp.auth=true
-mail.smtp.username=<mail account>
-mail.smtp.password=<password>
+nexial.mail.smtp.host=<mail server>
+nexial.mail.smtp.port=25
+nexial.mail.smtp.from=nexiality@users.noreply.github.com
+nexial.mail.smtp.auth=true
+nexial.mail.smtp.username=<mail account>
+nexial.mail.smtp.password=<password>
 ```
 
 
@@ -69,10 +69,10 @@ mail.smtp.password=<password>
 
 ### Combining to Improve Flexibility
 It is important to note that it is entirely possible to mix up the above 3 techniques to improve flexibiltiy.  For 
-example, one might have a series of scripts configured to send email notification to `email_1` and `email_2`,
-but when these scripts are executed in the Jenkins environment, email notification should be sent to `email_3` and
-`email_4`.  There wouldn't be a need to modify existing scripts or `project.properties`.  Instead, one can specify
-the new email recipients via System variable, like this:
+example, one might have a series of scripts configured to send email notification to `email_1` and `email_2`, but when 
+these scripts are executed in the Jenkins environment, email notification should be sent to `email_3` and `email_4`.  
+There would not be a need to modify existing scripts or `project.properties`.  Instead, one can specify the new email 
+recipients via System variable, like this:
 
 ```bash
 export JAVA_OPT=-Dnexial.mailTo=<email_3,email_4>
@@ -90,16 +90,16 @@ Since Gmail is a very popular email solution, it's worth the effort to provide G
 ```properties
 nexial.enableEmail=true
 nexial.mailTo=<recipients>
-mail.smtp.host=smtp.gmail.com
-mail.smtp.port=587
-mail.smtp.from=nexial-noreply@gmail.com
-mail.smtp.starttls.enable=true
-mail.smtp.auth=true
-mail.smtp.username=<email>
-mail.smtp.password=<password>
+nexial.mail.smtp.host=smtp.gmail.com
+nexial.mail.smtp.port=587
+nexial.mail.smtp.from=nexial-noreply@gmail.com
+nexial.mail.smtp.starttls.enable=true
+nexial.mail.smtp.auth=true
+nexial.mail.smtp.username=<email>
+nexial.mail.smtp.password=<password>
 ```
 
-Note that `mail.smtp.starttls.enable` is **REQUIRED** to be `true` for Gmail.  Same for `mail.smtp.auth` and the 
-target email and password for authentication.
+Note that `nexial.mail.smtp.starttls.enable` is **REQUIRED** to be `true` for Gmail.  Same for `nexial.mail.smtp.auth` 
+and the target email and password for authentication.
 
 {% include _gmail_less_secure.md %}

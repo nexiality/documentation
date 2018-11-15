@@ -249,7 +249,7 @@
             <br/>
             <table cellpadding="0" cellspacing="0">
                 <tr>
-                    <th align="left">otc.region</th>
+                    <th align="left">nexial.otc.region</th>
                     <td>
                         The desire
                         <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html"
@@ -257,14 +257,14 @@
                     </td>
                 </tr>
                 <tr>
-                    <th align="left">otc.accessKey</th>
+                    <th align="left">nexial.otc.accessKey</th>
                     <td>The
                         <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys"
                            class="external-link" target="_nexial_link">AWS access key</a> to access target S3 service.
                     </td>
                 </tr>
                 <tr>
-                    <th align="left">otc.secretKey</th>
+                    <th align="left">nexial.otc.secretKey</th>
                     <td>The
                         <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys"
                            class="external-link" target="_nexial_link">AWS secret key</a> to access target S3 service.
@@ -272,7 +272,7 @@
                 </tr>
                 <tr>
                     <th align="left">nexial.outputCloudBase</th>
-                    <td>The target bucket and path to use for storing execution output.</td>
+                    <td>The target bucket and path (prefix) to use for storing execution output.</td>
                 </tr>
             </table>
         </td>
@@ -290,12 +290,12 @@
                 <li>Enable this system variable</li>
                 <li>Define the mail server connectivity details:
                     <ul>
-                        <li>mail.smtp.host=&lt;the hostname or DNS name of your mail server&gt;</li>
-                        <li>mail.smtp.port=25 (or whatever the configured SMTP port is)</li>
-                        <li>mail.smtp.from=&lt;the FROM email address&gt;</li>
-                        <li>mail.smtp.auth=true|false</li>
-                        <li>mail.smtp.username=&lt;username only needed if mail.smtp.auth is set to true&gt;</li>
-                        <li>mail.smtp.password=&lt;password only needed if mail.smtp.auth is set to true&gt;</li>
+                        <li>nexial.mail.smtp.host=&lt;the hostname or DNS name of your mail server&gt;</li>
+                        <li>nexial.mail.smtp.port=25 (or whatever the configured SMTP port is)</li>
+                        <li>nexial.mail.smtp.from=&lt;the FROM email address&gt;</li>
+                        <li>nexial.mail.smtp.auth=true|false</li>
+                        <li>nexial.mail.smtp.username=&lt;username only needed if nexial.mail.smtp.auth is set to true&gt;</li>
+                        <li>nexial.mail.smtp.password=&lt;password only needed if nexial.mail.smtp.auth is set to true&gt;</li>
                     </ul>
                 </li>
                 <li>Define the recipient email or list via the <code>nexial.scope.mailTo</code> system variable.</li>
@@ -305,8 +305,8 @@
             <a href="../userguide/UnderstandingProjectStructure#projectproperties"><code>project.properties</code></a>
             or the appropriate data file. For example, from command line:<br/>
             <code>
-                set JAVA_OPT=-Dnexial.enableEmail=true -Dmail.smtp.host=mail.mycompany.com -Dmail.smtp.auth=false
-                -Dnexial.scope.mail=my_and_myself@mycompany.com<br/>
+                set JAVA_OPT=-Dnexial.enableEmail=true -Dnexial.mail.smtp.host=mail.mycompany.com
+                 -Dnexial.mail.smtp.auth=false -Dnexial.scope.mail=my_and_myself@mycompany.com<br/>
                 <br/>
                 nexial.cmd -script ... ...
             </code>

@@ -11,9 +11,11 @@ comments: true
 
 
 ### General
+- rename some System variables so that their name are prefixed with `nexial.` to avoid conflicts.
 
 
 ### [Nexial Interactive](../interactive)
+- now supports reloading of `project.properties` (option: `9`)
 
 
 ### [Built-in Function](../functions)
@@ -43,6 +45,8 @@ comments: true
 
 
 ### [image commands](../commands/image)
+- [`compare(baseline,actual)`](../commands/image/compare(baseline,actual)): increase the thickness of the highlighting 
+  border to improve readability.
 
 
 ### [io commands](../commands/io)
