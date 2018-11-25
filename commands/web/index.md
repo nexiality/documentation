@@ -24,7 +24,7 @@ apply. The most important of which is the right technique of writing locators. L
 page, interact with them and perform automation upon them. 
 
 _**Note: Most of the information on the Web about locators are not created from the standpoint 
-of a scriptless or hybrid framework like Nexial. This applies to the links in this page. Reader's discretion is 
+of a codeless or hybrid framework like Nexial. This applies to the links in this page. Reader's discretion is 
 advised...**_
 
 Here's a quick summary of the various locators:<br/>
@@ -45,6 +45,7 @@ Nexial currently supports the following browsers (recent versions only):
 - [Internet Explorer 9 and above (on Windows 7 and above)](#internet-explorer)
 - [Microsoft Edge (currently in beta) (on Windows 10)](#microsoft-edge)
 - [BrowserStack](#browserstack)
+- [CrossBrowserTesting](#crossbrowsertesting)
 
 #### Firefox
 Enabling Firefox automation is straightforward:
@@ -123,7 +124,7 @@ Enabling IE automation requires the following steps:
    suitable to your platform is installed locally. Only Windows 7 and above is supported at this time.
 2. Set [`nexial.browser`](../../systemvars/index#nexial.browser) to `ie`.
 3. Be sure to read through and follow the recommendations listed in 
-   [Web Automation On IE](../../tipsandtricks/WebAutomationOnIE.md).
+   [Web Automation On IE](../../tipsandtricks/WebAutomationOnIE).
 4. Begin scripting...
 
 #### Microsoft Edge
@@ -132,7 +133,7 @@ Enabling IE automation requires the following steps:
    suitable to your platform is installed locally. Only Windows 10 is supported at this time.
 2. Set [`nexial.browser`](../../systemvars/index#nexial.browser) to `edge`.
 3. Be sure to read through and follow the recommendations listed in 
-   [Web Automation On IE](../../tipsandtricks/WebAutomationOnIE.md) (these IE recommendations are applicable to Edge 
+   [Web Automation On IE](../../tipsandtricks/WebAutomationOnIE) (these IE recommendations are applicable to Edge 
    as well!).
 4. Begin scripting...
 
@@ -142,7 +143,21 @@ and mobile testing platform that enables developers to test their websites and m
 browsers, operating systems and real mobile devices. This is a paid service.
 
 To enable BrowserStack integration, be sure to read up on the 
-[BrowserStack Integration](../../tipsandtricks/BrowserStackIntegration.md) page.
+[BrowserStack Integration](../../tipsandtricks/BrowserStackIntegration) page.
+
+#### CrossBrowserTesting
+_excerpts from <a href="https://crossbrowsertesting.com/blog/browsers/what-is-cross-browser-testing/" class="external-link" target="_nexial_link">CrossBrowserTesting.com</a>:_ 
+> ... Browser testing is a method of quality assurance for web applications across multiple browsers. ... 
+> It’s implemented to ensure a website’s functionality and design and includes testing a range of 
+> devices and operating systems being used in the market and customer base.
+
+<a href="http://www.crossbrowsertesting.com/" class="external-link" target="_nexial_link">CrossBrowserTesting</a> is a 
+popular cloud, web and mobile testing platform that enables developers to test their websites and mobile applications 
+across on-demand browsers, operating systems and real mobile devices. And, much like BrowserStack, this is also a paid 
+service.
+
+To enable CrossBrowserTesting integration, be sure to read up on the 
+[CrossBrowserTesting Integration](../../tipsandtricks/CrossBrowserTestingIntegration) page.
 
 ### WebDriver Support
 Nexial automatically downloads required webdriver, during runtime as needed. Webdrivers are downloaded to user's home

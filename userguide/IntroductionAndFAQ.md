@@ -32,7 +32,7 @@ design centers around the following goals:
     approach, Nexial combines the complimentary techniques of keyword-driven automation and 
     data-driven automation, plus a few of Nexial’s own, to create a test automation platform that 
     yields a high level of readability, flexibility and reusability. Some would regard Nexial as an 
-    archetype of the _Scriptless Automation_ framework.  
+    archetype of the _Codeless Automation_ framework.  
       
 4.  **Open and Practical Test Artifact**  
     Using a structured format such as a spreadsheet as the basis of all test artifacts might seem 

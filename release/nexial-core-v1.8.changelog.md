@@ -17,6 +17,11 @@ comments: true
 
 ### [Nexial Interactive](../interactive)
 - now supports reloading of `project.properties` (option: `9`)
+- improved support for iteration. Data is re-calibrated when iteration changed during a Nexial Interactive session.
+- improved support for script/data file (re)loading. When a script or data file is (re)loaded, the activity assignment 
+  is re-calibrated as well to account for possible step or activity changes.
+- improved support for assigning activities: use `*` to assign all available activities from the assigned scenario.
+- improved support for assigning steps: use `*` to assign all available steps from the assigned scenario.
 
 
 ### [Built-in Function](../functions)
@@ -63,6 +68,14 @@ comments: true
 
 
 ### [web commands](../commands/web)
+- improved [CrossBrowserTesting](../tipsandtricks/CrossBrowserTestingIntegration) support
+  - now with execution status reporting (at the end of execution).
+  - now support automation on mobile devices (Android and iOS).
+  - delay safari window resizing (same as on BrowserStack).
+  - automatically download/update/execute CrosssBrowserTesting local executable.
+  - additional logging added.
+  - no switching of window when automating against mobile devices.
+- support mobile device emulation when automating on chrome browser (locally).
 
 
 ### [ws commands](../commands/ws)
