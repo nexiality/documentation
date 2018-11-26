@@ -68,7 +68,7 @@ comments: true
 
 
 ### [web commands](../commands/web)
-- improved [CrossBrowserTesting](../tipsandtricks/CrossBrowserTestingIntegration) support
+- improved [CrossBrowserTesting support](../tipsandtricks/CrossBrowserTestingIntegration):
   - now with execution status reporting (at the end of execution).
   - now support automation on mobile devices (Android and iOS).
   - delay safari window resizing (same as on BrowserStack).

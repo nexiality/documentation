@@ -33,7 +33,7 @@
     argument (i.e. via <code>-D</code> option), which will override the same settings in data file.
 </p>
 
-<p style="margin-left: 25px !important; margin-right: 50px; background-color: rgba(200,250,230,0.5); padding: 10px;">
+<p style="margin-left:25px !important; margin-right:50px; background-color:rgba(200,200,200,0.7); padding:10px;">
     Nexial is written predominantly in Java. User can configure the JVM memory allocation (the amount of memory usable
     by the Java process that executes Nexial) via the <b><code>NEXIAL_MAX_MEM</code></b> environment variable. To
     specify this environment variable:<br/>
@@ -57,8 +57,6 @@
     For standard System properties, see the section below titled as
     <a href="#standard-system-properties">Standard System Properties</a>.
 </p>
-
-<br/>
 
 <table class="sysvar" cellspacing="0" cellpadding="3">
     <tbody>
@@ -93,13 +91,13 @@
             <br/>
             <u><strong>Organize your output better</strong></u><br/>
             Surely you can see how this:<br/>
-            <img src="image/systemvar_01.jpg"/><br/>
+            <img src="image/systemvar_01.jpg" alt="nexial.runID.prefix example"/><br/>
             ... is more organized and informative than:<br/>
-            <img src="image/systemvar_02.jpg"/><br/>
+            <img src="image/systemvar_02.jpg" alt="nexial.runID.prefix example"/><br/>
             <u><strong>Create multiple summarization of your execution output</strong></u><br/>
             Using the prefix, we can render multiple execution summary output (HTML) so that output of the same prefix
             can be summarized together. For example,<br/>
-            <img src="image/systemvar_03.jpg" class="resize"/><br/>
+            <img src="image/systemvar_03.jpg" class="resize" alt="nexial.runID.prefix example"/><br/>
             Using the above summarization, one can track the change in execution over time - total steps, pass % and
             execution duration.<br/>
             <br/>
@@ -215,7 +213,9 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.var.defaultAsIs"><code>nexial.var.defaultAsIs</code></a></td>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.var.defaultAsIs"><code>nexial.var.defaultAsIs</code></a>
+        </td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
@@ -241,13 +241,14 @@
         <td>
             Determine if execution output (report, screenshots, etc.) should be saved to cloud storage so that they may
             be retrieved remotely. When such configuration is turned on, the console log will indicate as such:<br/>
-            <img src="image/systemvar_04.jpg" class="resize"/><br/>
+            <img src="image/systemvar_04.jpg" class="resize" alt="nexial.outputToCloud example"/><br/>
             <br/>
             Note that cloud storage support is not enabled by default (it's not free). One can enable such capability
             by adding the following configuration for S3 connectivity (in addition to setting
             <code>nexial.outputToCloud</code> as <code>true</code>:<br/>
             <br/>
             <table cellpadding="0" cellspacing="0">
+                <tbody>
                 <tr>
                     <th align="left">nexial.otc.region</th>
                     <td>
@@ -274,6 +275,7 @@
                     <th align="left">nexial.outputCloudBase</th>
                     <td>The target bucket and path (prefix) to use for storing execution output.</td>
                 </tr>
+                </tbody>
             </table>
         </td>
     </tr>
@@ -306,7 +308,7 @@
             or the appropriate data file. For example, from command line:<br/>
             <code>
                 set JAVA_OPT=-Dnexial.enableEmail=true -Dnexial.mail.smtp.host=mail.mycompany.com
-                 -Dnexial.mail.smtp.auth=false -Dnexial.scope.mail=my_and_myself@mycompany.com<br/>
+                -Dnexial.mail.smtp.auth=false -Dnexial.scope.mail=my_and_myself@mycompany.com<br/>
                 <br/>
                 nexial.cmd -script ... ...
             </code>
@@ -360,10 +362,10 @@
             <br/>
             However, should you choose to use another program, such as WPS, specify this variable in your data sheet.
             For example,<br/>
-            <img src="image/systemvar_05.png" class="resize"/><br/>
+            <img src="image/systemvar_05.png" class="resize" alt="nexial.spreadsheet.program example"/><br/>
             Alternatively, one can simply specify <code>wps</code>, which will enable Nexial to automatically resolve
             the correct location of WPS (latest version preferred). For example,<br/>
-            <img src="image/systemvar_06.png" style="width:360px"/>
+            <img src="image/systemvar_06.png" style="width:360px" alt="nexial.spreadsheet.program example"/>
         </td>
     </tr>
     <tr>
@@ -375,10 +377,10 @@
             This configuration does not modify the behavior or outcome of a test execution. Instead it is used to
             create reference information, which may change over iteration, to improve the readability of the execution
             output. For example,<br/>
-            <img src="image/systemvar_07.png"/><br/>
+            <img src="image/systemvar_07.png" alt="nexial.scriptRef example"/><br/>
             Adding these information - while one may reference them within script - do not necessarily change the
             execution or behavior of related script(s). However, the output would look something like this:<br/>
-            <img src="image/systemvar_08.png"/><br/>
+            <img src="image/systemvar_08.png" alt="nexial.scriptRef example"/><br/>
             As such, the output provides contextual information about the execution such as:
             <ul>
                 <li><i>"Against which build was the test executed"</i></li>
@@ -397,13 +399,13 @@
             to the scenario level (not script). As such, one can provide context information at the scenario level,
             which can
             possible change over iterations. Example:<br/>
-            <img src="image/systemvar_09.png"/><br/>
+            <img src="image/systemvar_09.png" alt="nexial.scenarioRef example"/><br/>
             <br/>
             Here the <code>companyId</code> is changing from <code>15</code> to <code>1602</code> between iteration 1
             and 2.
             The output would reflect as such:<br/>
-            <img src="image/systemvar_10.png"/><br/>
-            <img src="image/systemvar_11.png"/>
+            <img src="image/systemvar_10.png" alt="nexial.scenarioRef example"/><br/>
+            <img src="image/systemvar_11.png" alt="nexial.scenarioRef example"/>
         </td>
     </tr>
     <tr>
@@ -566,7 +568,7 @@
         <td>
             A <code>true</code> or <code>false</code> to indicate the outcome of the last command. This can be useful
             when used as flow control condition. For example,<br/>
-            <img src="image/systemvar_12.png" class="resize"/><br/>
+            <img src="image/systemvar_12.png" class="resize" alt="nexial.lastOutcome example"/><br/>
             Since <code>myNumber</code> is not <code>6</code>, the assertion (2nd line) will fail. Now using the
             <code>${nexial.lastOutcome}</code> as the condition, we can fail the entire execution when a
             <em>critical error</em> is found.
@@ -595,19 +597,19 @@
             run. For example:<br/>
             <p style="margin: 10px 0 0 30px; padding:0;">
                 [on Windows]:<br/>
-                <img src="image/systemvar_13.png"/><br/>
+                <img src="image/systemvar_13.png" alt="nexial.manageMemory example"/><br/>
                 <br/>
                 [on OSX]:<br/>
-                <img src="image/systemvar_14.png" width="530"/><br/>
+                <img src="image/systemvar_14.png" width="530" alt="nexial.manageMemory example"/><br/>
             </p>
             The purpose of this environment variable is to instruct Nexial to enable aggressive memory management. When
             enabled (<code>nexial.manageMemory=true</code>), Nexial will conduct garbage collection (GC) to reclaim any
             unused heap memory after the completion of each test script execution. You will see something similar as
             the following, which show that GC was executed and the memory footprint changes between the GC.<br/>
-            <img src="image/systemvar_15.jpg" class="resize"/><br/>
+            <img src="image/systemvar_15.jpg" class="resize" alt="nexial.manageMemory example"/><br/>
             At the end of the entire execution, Nexial also print out a summary of the memory usage between different
             test scenarios:<br/>
-            <img src="image/systemvar_16.jpg" class="resize"/>
+            <img src="image/systemvar_16.jpg" class="resize" alt="nexial.manageMemory example"/>
         </td>
     </tr>
     <tr>
@@ -661,11 +663,12 @@
             At the end of an execution, one may observe a printout of the SUCCESS evaluation due to this system
             variable.
             For example,<br/>
-            <img src="image/systemvar_17.jpg" class="resize"/>
+            <img src="image/systemvar_17.jpg" class="resize" alt="nexial.minExecSuccessRate example"/>
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.recordingEnabled"><code>nexial.recordingEnabled</code></a>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.recordingEnabled"><code>nexial.recordingEnabled</code></a>
         </td>
         <td>boolean</td>
         <td>true</td>
@@ -760,7 +763,8 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.timetrack.format"><code>nexial.timetrack.format</code></a>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.timetrack.format"><code>nexial.timetrack.format</code></a>
         </td>
         <td>text</td>
         <td>&nbsp;</td>
@@ -772,7 +776,8 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial."><code>nexial.currentActivity</code></a>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial."><code>nexial.currentActivity</code></a>
         </td>
         <td>text</td>
         <td>&nbsp;</td>
@@ -786,7 +791,8 @@
         <td class="highlight-green" colspan="5"><span>For iteration-based testing only.</span></td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.scope.iteration"><code>nexial.scope.iteration</code></a>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.scope.iteration"><code>nexial.scope.iteration</code></a>
         </td>
         <td>ranges</td>
         <td>1</td>
@@ -889,7 +895,7 @@
             If true, content comparison will produce a text-based comparison report at the end. The report is stored in
             the output directory (along with other test output) or in the cloud (if <code>nexial.outputToCloud</code> is
             true) and will be downloadable via the test output:<br/>
-            <img src="image/systemvar_18.jpg" class="resize"/>
+            <img src="image/systemvar_18.jpg" class="resize" alt="nexial.compare.textReport example"/>
             <br/>
             By default, this system variable is <code>true</code>. See
             <a href="../commands/io/compare(expected,actual,failFast)">io &raquo; <code>compare(expected,actual,failFast)</code></a>
@@ -907,7 +913,7 @@
             If true, content comparison will produce a JSON-based comparison report at the end. The report is stored in
             the output directory (along with other test output) or in the cloud (if <code>nexial.outputToCloud</code> is
             true) and will be downloadable ia the test output:<br/>
-            <img src="image/systemvar_19.jpg" class="resize"/>
+            <img src="image/systemvar_19.jpg" class="resize" alt="nexial.compare.jsonReport example"/>
             <br/>
             By default, this system variable is <code>false</code>. See
             <a href="../commands/io/compare(expected,actual,failFast)">io &raquo; <code>compare(expected,actual,failFast)</code></a>
@@ -937,7 +943,8 @@
         <td>false</td>
         <td>
             Control the end-of-line (EOL) character to use when writing content to a file via
-            <a href="../commands/io/writeFile(file,content,append)">io &raquo; <code>writeFile(file,content,append)</code></a>
+            <a href="../commands/io/writeFile(file,content,append)">io &raquo;
+                <code>writeFile(file,content,append)</code></a>
             or <a href="../commands/io/writeFileAsIs(file,content,append)">io &raquo; <code>writeFileAsIs(file,content,append)</code></a>
             commands. Possible options are:<br/>
             <br/>
@@ -955,7 +962,8 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.external.output"><code>nexial.external.output</code></a>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.external.output"><code>nexial.external.output</code></a>
         </td>
         <td>text</td>
         <td></td>
@@ -989,14 +997,21 @@
                 <li><code>chrome.headless</code></li>
                 <li><code>safari</code></li>
                 <li><code>ie</code></li>
-                <li><code>browserstack</code> (see below for <code>nexial.browserstack.&ast;</code> system variables)
+                <li>
+                    <code>browserstack</code> (see below for <a href="#browserstack"><code>browserstack.&ast;</code>
+                    variables</a>)
+                </li>
+                <li>
+                    <code>crossbrowsertesting</code> (see below for
+                    <a href="#crossbrowsertesting"><code>cbt.&ast;</code> variables</a>)
                 </li>
             </ul>
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a
-            name="nexial.browser.windowSize"><code>nexial.browser.windowSize</code></a></td>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.browser.windowSize"><code>nexial.browser.windowSize</code></a>
+        </td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="highlight-red">true</td>
@@ -1021,7 +1036,7 @@
                 </li>
                 <li>Neither height nor width can be set to a value less than 100.</li>
             </ul>
-            <img src="image/systemvar_20.png"/>
+            <img src="image/systemvar_20.png" alt="nexial.browser.windowSize example"/>
         </td>
     </tr>
     <tr>
@@ -1097,7 +1112,7 @@
                     <code>true</code> using working with IE Browser.
                 </li>
             </ul>
-            <img src="image/systemvar_22.png"/>
+            <img src="image/systemvar_22.png" alt="nexial.browser.ie.requireWindowFocus example"/>
         </td>
     </tr>
     <tr>
@@ -1111,14 +1126,11 @@
             <strong>Applicable only when <code>nexial.browser</code> is set to <code>safari</code>.</strong><br/>
             Instruct Nexial to use the
             <a href="https://developer.apple.com/safari/technology-preview/" class="external-link"
-               target="_nexial_external">
-                Safari Technology Preview</a> if this system variable is set to <code>true</code>, otherwise use the
-            release
-            version of Safari (default). Set this system variable to <code>true</code> <strong>ONLY</strong> the
-            executing host has
+               target="_nexial_external">Safari Technology Preview</a> if this system variable is set to
+            <code>true</code>, otherwise use the release version of Safari (default). Set this system variable to
+            <code>true</code> <strong>ONLY</strong> the executing host has
             <a href="https://developer.apple.com/safari/technology-preview/" class="external-link"
-               target="_nexial_external">
-                Safari Technology Preview</a> properly installed.
+               target="_nexial_external">Safari Technology Preview</a> properly installed.
         </td>
     </tr>
     <tr>
@@ -1136,7 +1148,8 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.web.logElectron"><code>nexial.web.logElectron</code></a>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.web.logElectron"><code>nexial.web.logElectron</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -1154,7 +1167,8 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.web.logChrome"><code>nexial.web.logChrome</code></a>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.web.logChrome"><code>nexial.web.logChrome</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -1187,7 +1201,7 @@
             By default the value is set to <code>true</code> and will ensure that the web page in question is stabilized
             before proceeding to next command. If this system variable is set to <code>false</code>, this enforcement
             will be omitted. For example:<br/>
-            <img src="image/systemvar_23.png"/>
+            <img src="image/systemvar_23.png" alt="nexial.enforcePageSourceStability example"/>
         </td>
     </tr>
     <tr>
@@ -1228,7 +1242,8 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.web.pageLoadWaitMs"><code>nexial.web.pageLoadWaitMs</code></a></td>
+        <td nowrap="nowrap" class="varname"><a
+            name="nexial.web.pageLoadWaitMs"><code>nexial.web.pageLoadWaitMs</code></a></td>
         <td>integer</td>
         <td>10000</td>
         <td>false</td>
@@ -1308,7 +1323,7 @@
         <td>
             (<strong><code>webalert</code></strong> commands only). The text of the last javascript alert found during
             test execution. For example:<br/>
-            <img src="image/systemvar_24.png"/>
+            <img src="image/systemvar_24.png" alt="nexial.lastAlertText example"/>
         </td>
     </tr>
     <tr>
@@ -1319,7 +1334,7 @@
         <td>false</td>
         <td>false</td>
         <td>
-            <b>RENAMED FROM THE OUTDATED <code>nexial.hightlight</code> FOR CONSISTENCY AND PROPER NAMESPACING.</b>
+            <b>RENAMED FROM THE OUTDATED <code>nexial.highlight</code> FOR CONSISTENCY AND PROPER NAMESPACING.</b>
             <br/><br/>
 
             Highlight each web form element as an automation action is performed on it. These automation actions are
@@ -1332,7 +1347,7 @@
 
             The "<em>flashing yellow effect</em>" (default style) is meant as a visual indicator of a test execution in
             progress. Here's an example (where the field <code>Joe</code> is highlighted):<br/>
-            <img src="image/systemvar_27.jpg"/>
+            <img src="image/systemvar_27.jpg" alt="nexial.highlight example"/>
         </td>
     </tr>
     <tr>
@@ -1343,7 +1358,7 @@
         <td>250</td>
         <td>false</td>
         <td>
-            <b>RENAMED FROM THE OUTDATED <code>nexial.hightlightWaitMs</code> FOR CONSISTENCY AND PROPER
+            <b>RENAMED FROM THE OUTDATED <code>nexial.highlightWaitMs</code> FOR CONSISTENCY AND PROPER
                 NAMESPACING.</b>
             <br/>
             <br/>
@@ -1363,144 +1378,6 @@
         <td>
             The applicable CSS style to the target web element during highlighting. This is only effective when
             <a href="#nexial.web.highlight"><code>nexial.web.highlight</code></a> is set to <code>true</code>.
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname">
-            <a name="nexial.browserstack.username"><code>nexial.browserstack.username</code></a>
-        </td>
-        <td>text</td>
-        <td>&nbsp;</td>
-        <td>false</td>
-        <td>
-            <strong>Applicable only when <code>nexial.browser</code> is set to <code>browserstack</code>. Required in
-                order for BrowserStack integration to work.</strong><br/>
-            This is the username as found in
-            <a href="https://www.browserstack.com/accounts/settings" class="external-link" target="_nexial_external">https://www.browserstack.com/accounts/settings</a>
-            (login required).
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.automatekey"><code>nexial.browserstack.automatekey</code></a>
-        </td>
-        <td>text</td>
-        <td>&nbsp;</td>
-        <td>false</td>
-        <td>
-            <strong>Applicable only when <code>nexial.browser</code> is set to <code>browserstack</code>. Required in
-                order for BrowserStack integration to work.</strong><br/>
-            This is the access key as found in
-            <a href="https://www.browserstack.com/accounts/settings" class="external-link" target="_nexial_external">
-                https://www.browserstack.com/accounts/settings</a> (login required).
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname">
-            <a name="nexial.browserstack.browser"><code>nexial.browserstack.browser</code></a>
-        </td>
-        <td>text</td>
-        <td>chrome</td>
-        <td>false</td>
-        <td>
-            <strong>Applicable only when <code>nexial.browser</code> is set to <code>browserstack</code>.</strong><br/>
-            Specify the browser to use when executing browser-based automation on BrowserStack. Valid value would be
-            limited to what <a href="https://www.browserstack.com/list-of-browsers-and-platforms?product=automate"
-                               class="external-link" target="_nexial_external">BrowserStack can support</a>. For
-            example, <code>Firefox, Safari, IE, Chrome, Opera, Edge</code>.
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname">
-            <a name="nexial.browserstack.browser.version"><code>nexial.browserstack.browser.version</code></a>
-        </td>
-        <td>text</td>
-        <td>latest stable</td>
-        <td>false</td>
-        <td>
-            <strong>Applicable only when <code>nexial.browser</code> is set to <code>browserstack</code>.</strong><br/>
-            Specify the browser version to use when executing browser-based automation on BrowserStack. Valid value
-            would be limited to <a href="https://www.browserstack.com/list-of-browsers-and-platforms?product=automate"
-                                   class="external-link" target="_nexial_external">what BrowserStack can support</a>.
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a
-            name="nexial.browserstack.debug"><code>nexial.browserstack.debug</code></a>
-        </td>
-        <td>boolean</td>
-        <td>true</td>
-        <td>false</td>
-        <td>
-            <strong>Applicable only when <code>nexial.browser</code> is set to <code>browserstack</code>.</strong><br/>
-            As per BrowserStack documentation: Required if you want to generate screenshots at various steps in your
-            test.
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.resolution"><code>nexial.browserstack.resolution</code></a>
-        </td>
-        <td>text</td>
-        <td>1024x768</td>
-        <td>false</td>
-        <td>
-            <strong>Applicable only when <code>nexial.browser</code> is set to <code>browserstack</code>.</strong><br/>
-            Set the resolution of target VM before beginning of your automation. Below is what BrowserStack
-            supports:<br/>
-            <strong>Windows (XP,7):</strong> <code>800x600, 1024x768, 1280x800, 1280x1024, 1366x768, 1440x900,
-            1680x1050, 1600x1200, 1920x1200, 1920x1080, 2048x1536</code><br/>
-            <strong>Windows (8,8.1,10):</strong> <code>1024x768, 1280x800, 1280x1024, 1366x768, 1440x900, 1680x1050,
-            1600x1200, 1920x1200, 1920x1080, 2048x1536</code><br/>
-            <strong>OS X:</strong> <code>1024x768, 1280x960, 1280x1024, 1600x1200, 1920x1080</code><br/>
-            <strong>Default:</strong> <code>1024x768</code>
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.app.buildnumber"><code>nexial.browserstack.app.buildnumber</code></a>
-        </td>
-        <td>text</td>
-        <td>&nbsp;</td>
-        <td>false</td>
-        <td>
-            <strong>Applicable only when <code>nexial.browser</code> is set to <code>browserstack</code>.</strong><br/>
-            Allow user to group a set of automations under a specific label that would represent a specific AUT build.
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.enablelocal"><code>nexial.browserstack.enablelocal</code></a>
-        </td>
-        <td>boolean</td>
-        <td>false</td>
-        <td>false</td>
-        <td>
-            <strong>Applicable only when <code>nexial.browser</code> is set to<code>browserstack</code>.</strong><br/>
-            Required if you are testing against internal/local servers. Make sure you have download and started the
-            <a href="https://www.browserstack.com/local-testing#command-line" class="external-link"
-               target="_nexial_external">appropriate BrowserStackLocal binary</a> before executing your tests.
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname">
-            <a name="nexial.browserstack.os"><code>nexial.browserstack.os</code></a>
-        </td>
-        <td>text</td>
-        <td>&nbsp;</td>
-        <td>false</td>
-        <td>
-            <strong>Applicable only when <code>nexial.browser</code> is set to <code>browserstack</code>.</strong><br/>
-            OS you want to test. For example: <code>WINDOWS, OS X</code>
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.browserstack.os.version"><code>nexial.browserstack.os.version</code></a>
-        </td>
-        <td>text</td>
-        <td>&nbsp;</td>
-        <td>false</td>
-        <td>
-            <strong>Applicable only when <code>nexial.browser</code> is set to <code>browserstack</code>.</strong><br/>
-            OS version you want to test. For example:<br/>
-            Windows: <code>XP, 7, 8, 8.1 and 10</code><br/>
-            OS X: <code>Snow Leopard, Lion, Mountain Lion, Mavericks, Yosemite, El Capitan, Sierra</code>
         </td>
     </tr>
     <tr>
@@ -1616,7 +1493,8 @@
         </td>
     </tr>
     <tr>
-        <td class="highlight-green" colspan="5"><span>For image-based testing (<code>image</code> commands) only.</span>
+        <td class="highlight-green" colspan="5">
+            <span>For image-based testing (<code>image</code> commands) only.</span>
         </td>
     </tr>
     <tr>
@@ -1674,7 +1552,8 @@
         <td>Determines whether redirects should be handled automatically.</td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.ws.enabledExpectContinue"><code>nexial.ws.enabledExpectContinue</code></a>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.ws.enabledExpectContinue"><code>nexial.ws.enabledExpectContinue</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -1777,7 +1656,7 @@
         <td>false</td>
         <td rowspan="4">
             Authenticate HTTP interaction via the digest authentication scheme as defined in RFC 2617. All but
-            <code>nexial.ws.digest.nouce</code> are required configuration parameters to activate such authentication.
+            <code>nexial.ws.digest.nonce</code> are required configuration parameters to activate such authentication.
             Any required configuration missing would not triggered such authentication.
         </td>
     </tr>
@@ -1796,7 +1675,8 @@
         <td>false</td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.ws.digest.nouce"><code>nexial.ws.digest.nouce</code></a>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.ws.digest.nonce"><code>nexial.ws.digest.nonce</code></a>
         </td>
         <td>text</td>
         <td>&nbsp;</td>
@@ -1814,7 +1694,8 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.ws.basic.password"><code>nexial.ws.basic.password</code></a>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.ws.basic.password"><code>nexial.ws.basic.password</code></a>
         </td>
         <td>text</td>
         <td>&nbsp;</td>
@@ -1825,7 +1706,8 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.ws.async.shutdownWaitMs"><code>nexial.ws.async.shutdownWaitMs</code></a>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.ws.async.shutdownWaitMs"><code>nexial.ws.async.shutdownWaitMs</code></a>
         </td>
         <td>millisecond</td>
         <td>180000</td>
@@ -1852,11 +1734,12 @@
             Specify the time to allow for a taskbar-based notification to stay visible. Such notification would display
             log information as issued by the <code>desktop</code> commands, and they are displayed as a
             <a href="https://www.groovypost.com/wp-content/uploads/2011/10/image252.png" class="external-link"
-               target="_nexial_external">"ballon".</a>
+               target="_nexial_external">"balloon".</a>
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.desktop.fullScreenCapture"><code>nexial.desktop.fullScreenCapture</code></a>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.desktop.fullScreenCapture"><code>nexial.desktop.fullScreenCapture</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -1925,9 +1808,9 @@
             However, it is important to note that <a href="../commands/desktop/closeApplication()">desktop &raquo;
             <code>closeApplication()</code></a> command will effectively be ignored. One would set this system variable
             to <code>false</code> in order to terminate the running AUT instance. Example:<br/>
-            <img src="image/systemvar_28.png" class="resize"/><br/>
+            <img src="image/systemvar_28.png" class="resize" alt="nexial.winiumSoloMode example"/><br/>
             <br/>
-            <img src="image/systemvar_29.png" class="resize"/>
+            <img src="image/systemvar_29.png" class="resize" alt="nexial.winiumSoloMode example"/>
         </td>
     </tr>
     <tr>
@@ -1950,8 +1833,9 @@
     </tr>
     </tbody>
 </table>
+
 <br/>
-<br/>
+<hr/>
 
 <h3 id="standard-system-properties">Standard System Properties</h3>
 <p>
@@ -1967,9 +1851,10 @@
 
 <p>This will print out the user ID that executed the script.</p>
 
-<p>One can considered these System properties as reflection of the current test harness (where Nexial runs). Below is
-    the
-    list of available System properties:</p>
+<p>
+    One can considered these System properties as reflection of the current test harness (where Nexial runs). Below is
+    the list of available System properties:
+</p>
 
 <table class="sysvar" cellspacing="0" cellpadding="3">
     <tbody>
@@ -2034,7 +1919,8 @@
     <tr>
         <td nowrap="nowrap" class="varname"><a name="user.dir"><code>user.dir</code></a></td>
         <td>a.k.a. Current working directory<br/>
-            This is the directory where Nexial - ultimately Java - was run. In most cases this would be <code>${NEXIAL_HOME}/bin</code>
+            This is the directory where Nexial - ultimately Java - was run. In most cases this would be
+            <code>${NEXIAL_HOME}/bin</code>
         </td>
         <td>&nbsp;</td>
     </tr>
@@ -2063,6 +1949,7 @@
     </tr>
     </tbody>
 </table>
+
 <br/>
 
 <p>
@@ -2076,3 +1963,357 @@
     Output:<br/>
     <img src="image/systemvar_32.jpg" alt=""/>
 </p>
+
+<br/>
+<hr/>
+
+<h3 id="browserstack">BrowserStack-specific Properties</h3>
+<p>
+    <b>Applicable only when <code>nexial.browser</code> is set to <code>browserstack</code>.</b><br/>
+    For more information, visit the <a href="../tipsandtricks/BrowserStackIntegration">BrowserStack Integration</a>
+    page.
+</p>
+
+<table class="sysvar" cellspacing="0" cellpadding="3">
+    <tbody>
+    <tr>
+        <th nowrap="nowrap">configuration</th>
+        <th nowrap="nowrap">data type</th>
+        <th nowrap="nowrap">default</th>
+        <th nowrap="nowrap">read only?</th>
+        <th nowrap="nowrap">description</th>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.browserstack.username"><code>nexial.browserstack.username</code></a>
+        </td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td>false</td>
+        <td>
+            <b>[REQUIRED]</b> This is the username as found in
+            <a href="https://www.browserstack.com/accounts/settings" class="external-link" target="_nexial_external">
+                https://www.browserstack.com/accounts/settings</a> (login required).
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.browserstack.automatekey"><code>nexial.browserstack.automatekey</code></a>
+        </td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td>false</td>
+        <td>
+            <b>[REQUIRED]</b> This is the access key as found in
+            <a href="https://www.browserstack.com/accounts/settings" class="external-link" target="_nexial_external">
+                https://www.browserstack.com/accounts/settings</a> (login required).
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.browserstack.browser"><code>nexial.browserstack.browser</code></a>
+        </td>
+        <td>text</td>
+        <td>chrome</td>
+        <td>false</td>
+        <td>
+            Specify the browser to use when executing browser-based automation on BrowserStack. Valid value would be
+            limited to what
+            <a href="https://www.browserstack.com/list-of-browsers-and-platforms?product=automate"
+               class="external-link" target="_nexial_external">BrowserStack can support</a>.<br/>
+            For example, <code>Firefox, Safari, IE, Chrome, Opera, Edge</code>.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.browserstack.browser.version"><code>nexial.browserstack.browser.version</code></a>
+        </td>
+        <td>text</td>
+        <td>latest stable</td>
+        <td>false</td>
+        <td>
+            Specify the browser version to use when executing browser-based automation on BrowserStack. Valid value
+            would be limited to
+            <a href="https://www.browserstack.com/list-of-browsers-and-platforms?product=automate" class="external-link"
+               target="_nexial_external">what BrowserStack can support</a>.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.browserstack.debug"><code>nexial.browserstack.debug</code></a>
+        </td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>false</td>
+        <td>
+            As per BrowserStack documentation: Required if you want to generate screenshots at various steps in your
+            test.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.browserstack.resolution"><code>nexial.browserstack.resolution</code></a>
+        </td>
+        <td>text</td>
+        <td>1024x768</td>
+        <td>false</td>
+        <td>
+            Set the resolution of target VM before beginning of your automation. Below is what BrowserStack
+            supports:<br/>
+            <br/>
+            <strong>Windows (XP,7):</strong> <code>800x600, 1024x768, 1280x800, 1280x1024, 1366x768, 1440x900,
+            1680x1050, 1600x1200, 1920x1200, 1920x1080, 2048x1536</code><br/>
+            <br/>
+            <strong>Windows (8,8.1,10):</strong> <code>1024x768, 1280x800, 1280x1024, 1366x768, 1440x900, 1680x1050,
+            1600x1200, 1920x1200, 1920x1080, 2048x1536</code><br/>
+            <br/>
+            <strong>OS X:</strong> <code>1024x768, 1280x960, 1280x1024, 1600x1200, 1920x1080</code><br/>
+            <br/>
+            <strong>Default:</strong> <code>1024x768</code>
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.browserstack.app.buildnumber"><code>nexial.browserstack.app.buildnumber</code></a>
+        </td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td>false</td>
+        <td>
+            Allow user to group a set of automation under a specific label that would represent a specific AUT build.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.browserstack.enablelocal"><code>nexial.browserstack.enablelocal</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            Required if you are testing against internal/local servers. Nexial will automatically download/execute the
+            OS-specific BrowserStackLocal binary before executing your tests.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.browserstack.os"><code>nexial.browserstack.os</code></a>
+        </td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td>false</td>
+        <td>
+            OS you want to test. For example: <code>WINDOWS, OS X</code>
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.browserstack.os.version"><code>nexial.browserstack.os.version</code></a>
+        </td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td>false</td>
+        <td>
+            OS version you want to test. For example:<br/>
+            <br/>
+            Windows: <code>XP, 7, 8, 8.1 and 10</code><br/>
+            <br/>
+            OS X: <code>Snow Leopard, Lion, Mountain Lion, Mavericks, Yosemite, El Capitan, Sierra</code>
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.browserstack.captureCrash"><code>nexial.browserstack.captureCrash</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>Capture additional details if an automation session should crash.</td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="browserstack.*"><code>browserstack.*</code></a>
+        </td>
+        <td>*&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>false</td>
+        <td>
+            Nexial will pass on all BrowserStack-specific "capabilities" to BrowserStack during automation. See the
+            <a href="https://www.browserstack.com/automate/capabilities#" class="external-link" target="_nexial_link">
+                Capabilities Reference</a> page for the supported capabilities (search for "Browserstack-specific
+            capabilities")
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+<br/>
+<hr/>
+
+<h3 id="crossbrowsertesting">CrossBrowserTesting-specific Properties (CBT)</h3>
+<p>
+    <b>Applicable only when <code>nexial.browser</code> is set to <code>crossbrowsertesting</code>.</b><br/>
+    For more information, visit the <a href="../tipsandtricks/CrossBrowserTestingIntegration">CrossBrowserTesting
+    Integration</a> page.
+</p>
+<p>
+</p>
+
+<table class="sysvar" cellspacing="0" cellpadding="3">
+    <tbody>
+    <tr>
+        <th nowrap="nowrap">configuration</th>
+        <th nowrap="nowrap">data type</th>
+        <th nowrap="nowrap">default</th>
+        <th nowrap="nowrap">read only?</th>
+        <th nowrap="nowrap">description</th>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="cbt.username"><code>cbt.username</code></a></td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td>false</td>
+        <td>
+            <b>[REQUIRED]</b> This is the username found in
+            <a href="https://app.crossbrowsertesting.com/selenium/run" class="external-link" link="_nexial_link">
+                Automation: Getting Started</a> (login required).
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="cbt.authkey"><code>cbt.authkey</code></a></td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td>false</td>
+        <td>
+            <b>[REQUIRED]</b> This is the Auth Key found in
+            <a href="https://app.crossbrowsertesting.com/selenium/run" class="external-link" link="_nexial_link">
+                Automation: Getting Started</a> (login required).
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="cbt.browserName"><code>cbt.browserName</code></a></td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td>false</td>
+        <td>
+            <b>[REQUIRED]</b> The name of the browser to test. For a list of supported browsers, check out
+            <a href="https://help.crossbrowsertesting.com/selenium-testing/tutorials/crossbrowsertesting-automation-capabilities/"
+               class="external-link" target="_nexial_link">CBT's Selenium Automation Capabilities</a> page or
+            <a href="http://crossbrowsertesting.com/api/v3/selenium/browsers"
+               class="external-link" target="_nexial_link">http://crossbrowsertesting.com/api/v3/selenium/browsers</a>.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="cbt.screenResolution"><code>cbt.screenResolution</code></a></td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td>false</td>
+        <td>
+            (<i>OPTIONAL</i>) The preferred resolution of the OS for automated testing. The default is `1366x768`.<br/>
+            Only applicable for desktop browser.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="cbt.version"><code>cbt.version</code></a></td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td>false</td>
+        <td>
+            (<i>OPTIONAL</i>) The browser version to test. Default is <code>latest</code>.<br/>
+            Only applicable for desktop browser.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="cbt.platform"><code>cbt.platform</code></a></td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td>false</td>
+        <td>
+            (<b>REQUIRED</b> for desktop browser) OS for the target browser.<br/>
+            Only applicable for desktop browser.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="cbt.deviceName"><code>cbt.deviceName</code></a></td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td>false</td>
+        <td>
+            (<b>REQUIRED</b> for mobile browser) The target mobile device name.<br/>
+            Only applicable for mobile browser automation.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="cbt.deviceOrientation"><code>cbt.deviceOrientation</code></a></td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td>false</td>
+        <td>
+            <code>landscape</code> or <code>portrait</code> (default).<br/>
+            Only applicable for mobile browser automation.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="cbt.build"><code>cbt.build</code></a></td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td>false</td>
+        <td>
+            (<i>OPTIONAL</i>) free-form description of the build version of the target application.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="cbt.name"><code>cbt.name</code></a></td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td>false</td>
+        <td>
+            (<i>OPTIONAL</i>) free-form description of your test.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="cbt.record_video"><code>cbt.record_video</code></a></td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td>false</td>
+        <td>
+            (<i>OPTIONAL</i>) <code>true</code> (default) to start video recording of the target browser during test
+            (max length 10 minutes).
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="cbt.record_network"><code>cbt.record_network</code></a></td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td>false</td>
+        <td>
+            (<i>OPTIONAL</i>) <code>true</code> to record the network packages incurred by the test automation.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="cbt.max_duration"><code>cbt.max_duration</code></a></td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td>false</td>
+        <td>
+            (<i>OPTIONAL</i>) Maximum test length in seconds. Use to refrain from timing out during long tests.
+            Default is 30 minutes.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="cbt.timezone"><code>cbt.timezone</code></a></td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td class="highlight-red">true</td>
+        <td>
+            (<i>OPTIONAL</i>) timezone set on the browser. A full list of values can be found
+            <a href="https://help.crossbrowsertesting.com/selenium-testing/resources/list-of-timezones/"
+               class="external-link" target="_nexial_link">here</a>.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<br/>
+<hr/>

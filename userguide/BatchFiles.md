@@ -7,31 +7,32 @@ comments: true
 ---
 
 
-### Introduction
-Nexial ships with a variety of batch files and shell scripts to aid the process of automation.  These scripts range
+## Introduction
+Nexial ships with a variety of batch files and shell scripts to aid the process of automation. These scripts range
 from project creation to execution, and we will be adding more from time to time.
 
-All batch files  can be found under `${NEXIAL_HOME}/bin`:<br/>
+All batch files can be found under `${NEXIAL_HOME}/bin`:<br/>
 ![](image/BatchFiles_01.png)
 
 
-### Available Batch Files
+## Available Batch Files
 
-#### nexial.cmd / nexial.sh
+### nexial.cmd / nexial.sh
 This is the main script is used to execute Nexial script or plan.  This command has following command line options:
 
-| options           | explanation |
-| ----------------- | ----------- |
-| **`-data`**       | This option will ensure the data file location relative to executing script. <br/>Default data file is `../data/<script_name>.data.xlsx`.| 
-| **`-datasheets`** | This option will restrict to a comma-seperated list of data sheets for this test execution. <br/>Default will utilize all the sheets of data file.|
-| **`-output`**     | This will ensure output directory where results are stored. <br/>Default location is `../../output` relative to script/plan.|
-| **`-plan`**       | This option is to for running plan. This will require full path of plan. <br/>This is required if `-script` is missing.|
-| **`-script`**     | This option is to for running script. This will require full path of script. <br/>This is required if `-plan` is missing.|
-| **`-scenario`**   | This will run one or more test scenarios separated by comma.|
+|options           |explanation  |
+|------------------|-------------|
+|**`-data`**       | This option will ensure the data file location relative to executing script. <br/>Default data file is `../data/<script_name>.data.xlsx`.| 
+|**`-datasheets`** | This option will restrict to a comma-seperated list of data sheets for this test execution. <br/>Default will utilize all the sheets of data file.|
+|**`-interactive`**| [_optional_] Run Nexial in [Interactive Mode](../interactive). |
+|**`-output`**     | This will ensure output directory where results are stored. <br/>Default location is `../../output` relative to script/plan.|
+|**`-override`**   | [_optional_] Add or override data variables in the form of `name=value`. <br/>Multiple overrides are supported via multiple `-override name=value` arguments.<br/>Note that variable name or value with spaces must be enclosed in double quotes.|
+|**`-plan`**       | This option is to for running plan. This will require full path of plan. <br/>This is required if `-script` is missing.|
+|**`-script`**     | This option is to for running script. This will require full path of script. <br/>This is required if `-plan` is missing.|
+|**`-scenario`**   | This will run one or more test scenarios separated by comma.|
 
 <br/>
-
-For example,<br/>
+For example,
 - Execute a Nexial script:<br/>
   `nexial.cmd -script c:\projects\myProject\artifact\script\myProject.xlsx`
 
@@ -39,17 +40,21 @@ For example,<br/>
   `nexial.cmd -plan c:\projects\myProject\artifact\plan\myProject.xlsx`
 
 - Execute one specific scenario (i.e. worksheet):<br/>
-  `nexial.cmd -script c:\projects\myProject\artifact\script\myProject.xlsx -scenario test1` 
+  `nexial.cmd -script c:\projects\myProject\artifact\script\myProject.xlsx -scenario test1`
+
+- Execute 2 scenarios with data variable overrides<br/>
+  `nexial.cmd -script c:\projects\Project1\artifact\script\script17.xlsx -scenario scenario1,scenario1a -override nexial.outputToCloud=true -override myData=XYZ`
 
 ---------------------------------------------
-#### nexial-setup.cmd / nexial-setup.sh
+
+### nexial-setup.cmd / nexial-setup.sh
 
 This is the script used to setup the user specific configurations. This command has following command line options:
 
-| options           | explanation |
-| ----------------- | ----------- |
-| **`-file`** | This is the location of the key value pairs user wants to setup.| 
-| **`-key`** | This is the key used to encrypt the data.|
+|options                 |explanation                                                      |
+|------------------------|-----------------------------------------------------------------|
+|**`-file`** or **`-f`** | This is the location of the key value pairs user wants to setup.| 
+|**`-key`** or **`-k`**  | This is the key used to encrypt the data.                       |
 
 <br/>
 
@@ -58,20 +63,22 @@ For example,<br/>
   `nexial-setup.cmd -f "C:\Projects\config.data" -k "|7FDo8#Q;;mZ>G22"`
   
 ##### Usage
-1.  Open a console and point it to `${NEXIAL_HOME}/bin`
-2.  Run `nexial-crypt.cmd` (Windows) or `./nexial-crypt.sh` (*NIX, OSX) with the data file and the secret key as follows:  
-    `nexial-setup.cmd -f "C:\Projects\config.data" -k "|7FDo8#Q;;mZ>G22"`
-3.  The config.data file content looks like the following:  
-    ![](image/NexialSetup_01.png)
-4.  When the Nexial command is run with the appropriate arguments it creates a lib called setup.jar inside the lib folder.
-    Also a message is displayed asking you to delete the config file as shown below:  
-    ![](image/NexialSetup_02.png)
-5.  Now you can further zip this using the `jar` command and distribute it further with the team. For example
-    `jar -cf nexial.zip .`
-6. That is it! the latest zip you have is configured with the necessary configurations.
+1. Open a console and point it to `${NEXIAL_HOME}/bin`
+2. Run `nexial-crypt.cmd` (Windows) or `./nexial-crypt.sh` (*NIX, OSX) with the data file and the secret key as follows:
+   `nexial-setup.cmd -f "C:\Projects\config.data" -k "|7FDo8#Q;;mZ>G22"`
+3. The config.data file content looks like the following:
+   ![](image/NexialSetup_01.png)
+4. When the Nexial command is run with the appropriate arguments it creates a lib called setup.jar inside the lib folder.
+   Also a message is displayed asking you to delete the config file as shown below:
+   ![](image/NexialSetup_02.png)
+5. Now you can further zip this using the `jar` command and distribute it further with the team. For example:<br/>
+   `jar -cf nexial.zip .`
+6. That is it! The latest zip you have is configured with the necessary configurations.
 
 ---------------------------------------------
-#### nexial-crypt.cmd / nexial-crypt.sh
+
+### nexial-crypt.cmd / nexial-crypt.sh
+
 This script is used to encrypt the sensitive data.
 
 For sensitive information such as password, it may be important to store them encrypted at rest to avoid tampering or 
@@ -88,42 +95,41 @@ It should be considered as best practice to encrypt information that would other
 where automation scripts are made available (e.g. via SCM), this is especially important.
 
 ##### Usage
-1.  Open a console and point it to `${NEXIAL_HOME}/bin`
-2.  Run `nexial-crypt.cmd` (Windows) or `./nexial-crypt.sh` (*NIX, OSX) with the target sensitive data as an argument:  
-    ![](image/NexialCrypt_02.png)
-3.  The script will encrypt the argument and provide the encrypted form:  
-    ![](image/NexialCrypt_03.png)
-4.  Copy the highlighted encrypted data (including `crypt:`) to data file:  
-    ![](image/NexialCrypt_04.png)
-5.  That's it! Now you can reference this data via its name, as is `${TopSecret}`.
+1. Open a console and point it to `${NEXIAL_HOME}/bin`
+2. Run `nexial-crypt.cmd` (Windows) or `./nexial-crypt.sh` (*NIX, OSX) with the target sensitive data as an argument:
+   ![](image/NexialCrypt_02.png)
+3. The script will encrypt the argument and provide the encrypted form:
+   ![](image/NexialCrypt_03.png)
+4. Copy the highlighted encrypted data (including `crypt:`) to data file:
+   ![](image/NexialCrypt_04.png)
+5. That's it! Now you can reference this data via its name, as is `${TopSecret}`.
 
 ##### Notes
 1. At times, using command line console (especially on Windows) can present some challenges when encrypting special 
    characters such as pipe (`|`), percent (`%`), ampersand (`&`) or question mark (`?`).  When dealing with special 
    character, be sure to surround the entire input parameter with double quote.  For example,<br/>
    `nexial-crypt.cmd "ab&c"`<br/>
-   `nexial-crypt.cmd "ab|c"`  
+   `nexial-crypt.cmd "ab|c"`
 2. If the intent input contains double quote (`"`), then one would need to surround the entire input with double 
    quote, and also prepend the double quote with another double quote.  For example,<br/>
    `nexial-crypt.cmd "ab""c"`
 
 ---------------------------------------------
 
-#### nexial-desktop-xpath-update.cmd / nexial-desktop-xpath-update.sh
-This script updates the XPath(s) used for desktop automation (i.e. application.json).  This script has 
-following options:
+### nexial-desktop-xpath-update.cmd / nexial-desktop-xpath-update.sh
+This script updates the XPath(s) used for desktop automation (i.e. application.json). This script has following options:
 
-| options  | explanation |
-| -------- | ----------- |
-| **`-t`** | **[REQUIRED]** This option is for location of a single JSON test script or a directory to update.|
-| **`-v`** | This option is to turn on verbose logging. This is optional.|
+|options  |explanation                                                                                      |
+|---------|-------------------------------------------------------------------------------------------------|
+|**`-t`** |**[REQUIRED]** This option is for location of a single JSON test script or a directory to update.|
+|**`-v`** |This option is to turn on verbose logging. This is optional.                                     |
 
 ---------------------------------------------
 
 #### nexial-project.cmd / nexial-project.sh
 This command is used to create new nexial-project. For example, the following will create a new project with the name 
-`projectName`.  By default it will be created in `C:\projects\projectName` folder for Windows, or 
-`/Users/<user_id>/projects/projectName` for MacOSX:
+`projectName`. By default it will be created in `C:\projects\projectName` folder for Windows, or 
+`/Users/<user_id>/projects/projectName` for MacOSX/*NIX:
 
 `nexial-project.cmd projectName`
 
@@ -131,72 +137,79 @@ This command is used to create new nexial-project. For example, the following wi
 
 ---------------------------------------------
 
-#### nexial-script-update.cmd / nexial-script-update.sh
+### nexial-script-update.cmd / nexial-script-update.sh
 This script updates one or more test scripts with the latest available commands (dropdowns in spreadsheets). It has 
 two command line options:<br/>
 
-| options  | explanation |
-| -------- | ----------- |
-| **`-t`** | **[REQUIRED]** This option is for location of a single Excel test script or a directory to update.|
-| **`-v`** | This option is to turn on verbose logging. This is optional.|
+|options  | explanation                                                                                      |
+|---------|--------------------------------------------------------------------------------------------------|
+|**`-t`** |**[REQUIRED]** This option is for location of a single Excel test script or a directory to update.|
+|**`-v`** |This option is to turn on verbose logging. This is optional.                                      |
 
 For example, the following will update all the scripts from given path.<br/>
 `nexial-script-update.cmd -v -t C:\projects\myProject\artifact\script` 
 
 ---------------------------------------------
 
-#### nexial-variable-update.cmd / nexial-variable-update.sh
-This script refactor the data variables referenced across test artifacts to provide uniformity across script authors 
-and teams.  One may specify the current keys and new keys in the form of:
+### nexial-variable-update.cmd / nexial-variable-update.sh
 
+This script refactor the data variables referenced across test artifacts to provide uniformity across script authors 
+and teams. One may specify the current keys and new keys in the form of:
 `-d "key1=NEW_KEY1;key2=NEW_KEY2;..."`
  
 This script has four command line options:<br/> 
 
-| options  | explanation |
-| -------- | ----------- |
-| **`-d`** | **[REQUIRED]** This option is for data variables to replace in the form of old_var=new_var |
-| **`-t`** | **[REQUIRED]** This option is path of project/starting location of update data variable |
-| **`-v`** | This option is to turn on verbose logging |
-| **`-p`** | This option is to preview the results for the data variables being updated without affecting any files.So it won't allow to update data variables across test artifacts files. |
+|options  |explanation                                                                                      |
+|---------|-------------------------------------------------------------------------------------------------|
+|**`-d`** |**[REQUIRED]** This option is for data variables to replace in the form of `old_var=new_var`     |
+|**`-t`** |**[REQUIRED]** This option is path of project/starting location of update data variable          |
+|**`-v`** |This option is to turn on verbose logging                                                        |
+|**`-p`** |This option is to preview the results for the data variables being updated without affecting any files. So it won't update data variables across artifacts.|
 
+<br/>
 For example, the following renames the key `oldKey1` to `newKey1`, and `oldKey2` to `newKey2`, and so on:<br/>
 `nexial-variable-update.cmd -v -d oldKey1=newKey1;oldKey2=newKey2;oldKey3=newKey3 -t projectFullPath` 
 
-If you just want to examine the positions of `oldKey1`, `oldKey2` and so on which will be affected, but don't want to refactor them. Following will preview it-<br/>
-`nexial-variable-update.cmd -v -d oldKey1=newKey1;oldKey2=newKey2;oldKey3=newKey3 -t projectFullPath -p` <br/>
+If you just want to examine the positions of `oldKey1`, `oldKey2` and so on which will be affected, but don't 
+want to refactor them. Following will preview the substitutions:<br/>
+`nexial-variable-update.cmd -v -d oldKey1=newKey1;oldKey2=newKey2;oldKey3=newKey3 -t projectFullPath -p`<br/>
 
-Format of data variable update preview has four columns-
+Format of data variable update preview has four columns:
 
-| column  | explanation |
-| -------- | ----------- |
-| **`File`** | This will have relative path of file with respect to starting location of update data variable given by `-t` command line option. |
-| **`Worksheet/Scenario`** | This will have worksheet name of data file or scripts. |
-| **`Position`** |This is the position of line/cell being refactored/affected. |
-| **`Updating Lines/Cells`** | Updating lines/Cells column will have line/cells before replacement and after replacement separated by `=>`. |
+|column                     |explanation                                                                     |
+|---------------------------|--------------------------------------------------------------------------------|
+|**`File`**                 |This will have relative path of file with respect to starting location of update data variable given by `-t` command line option. |
+|**`Worksheet/Scenario`**   |This will have worksheet name of data file or scripts.                          |
+|**`Position`**             |This is the position of line/cell being refactored/affected.                    |
+|**`Updating Lines/Cells`** |Updating lines/Cells column will have line/cells before replacement and after replacement separated by `=>`. |
 
-For example, let's have a look at variable update preview.<br>
-Following command is executed for the preview-<br>
-`-v -t C:\projects\demo\artifact -d list1=list;nexialProject=project;result12=result1; -p`<br>
+<br/>
+For example, let's have a look at variable update preview. Following command is executed for the preview:<br/>
+`-v -t C:\projects\demo\artifact -d list1=list;nexialProject=project;result12=result1; -p`
+
 ![](image/BatchFiles_02.png)
 
 ---------------------------------------------
 
-#### nexial-log-parser.cmd / nexial-log-parser.sh
+### nexial-log-parser.cmd / nexial-log-parser.sh
+
 This script capture required log statements (mainly for elapsed time between request and response of given step) from a log 
 file generated through execution and stored to new file.<br/>
 
-| options  | explanation |
-| -------- | ----------- |
-| **`-t`** | **[REQUIRED]** This option is for location of a log file to be parsed.|
-| **`-s`** | **[REQUIRED]** This option is for location of new log file to be generated.|
-| **`-c`** | This option is for specifying type of logs to be tracked. Possible values for this are desktop, rdbms, ws and all(default). This is optional.|
+|options  |explanation                                                                                      |
+|---------|-------------------------------------------------------------------------------------------------|
+|**`-t`** |**[REQUIRED]** This option is for location of a log file to be parsed.                           |
+|**`-s`** |**[REQUIRED]** This option is for location of new log file to be generated.                      |
+|**`-c`** |This option is for specifying type of logs to be tracked. Possible values for this are desktop, rdbms, ws and all(default). This is optional.|
 
+<br/>
 For example, the following will create new log file with required logs only.<br/>
 `nexial-log-parser.cmd -t C:\projects\myProject\output\20180608_121212\nexial-20180608_121212.log -s C:\projects\myProject\newLogs.log -c ws` <br/>
+
 This will extract `ws` request and response logs from `nexial-20180608_121212.log` and store it to `newLog.log`.
 
-This script comes into picture when one wants to capture response time for step. For example, someone wants to do performance testing for API calls,
-`ws` criteria will gather information about request and response time from logs and calculate elapsed time for the same.
+This script comes into picture when one wants to capture response time for step. For example, someone wants to do 
+performance testing for API calls, `ws` criteria will gather information about request and response time from logs and 
+calculate elapsed time for the same.
 
 ---------------------------------------------

@@ -17,7 +17,7 @@ of its third-party libraries. Selenium is no exception. As of July 2018 Nexial u
 releases of related webdrivers.
 
 
-### Locators
+## Locators
 For effective automation of Web application, there are a number of critical technical knowledge and techniques to 
 apply. The most important of which is the right technique of writing locators. Locators are a collections of ways 
 (7 in total) to identify elements of a web page. It is by such mechanism one can effectively identify elements on a web
@@ -32,7 +32,7 @@ Here's a quick summary of the various locators:<br/>
 
 -----
 
-### Browser Support
+## Browser Support
 Nexial currently supports the following browsers (recent versions only):
 - [Firefox (via geckodriver)](#firefox)
 - [Firefox in Headless Mode](#firefox-headless)
@@ -47,7 +47,8 @@ Nexial currently supports the following browsers (recent versions only):
 - [BrowserStack](#browserstack)
 - [CrossBrowserTesting](#crossbrowsertesting)
 
-#### Firefox
+
+### Firefox
 Enabling Firefox automation is straightforward:
 1. Make sure a recent version of <a href="https://www.mozilla.org/en-US/firefox/" class="external-link" target="_nexial_link">Firefox</a> 
    suitable to your platform is installed locally. For Linux and Mac OS, `firefox` or `firefox-bin` is expected to be 
@@ -57,11 +58,13 @@ Enabling Firefox automation is straightforward:
 2. Set [`nexial.browser`](../../systemvars/index#nexial.browser) to `firefox`.
 3. Begin scripting...
 
-#### Firefox Headless
+
+### Firefox Headless
 Follow the same instruction as [Firefox](index#firefox), except setting 
 [`nexial.browser`](../../systemvars/index#nexial.browser) to `firefox.headless`.
 
-#### Chrome
+
+### Chrome
 Enabling Chrome automation requires the following steps:
 1. Make sure a recent version of <a href="https://www.google.com/chrome/" class="external-link" target="_nexial_link">Chrome</a>
    suitable to your platform is installed locally. Linux installation differs based on distro - check distribution 
@@ -71,11 +74,53 @@ Enabling Chrome automation requires the following steps:
 2. Set [`nexial.browser`](../../systemvars/index#nexial.browser) to `chrome`.
 3. Begin scripting...
 
-#### Chrome Headless
+#### Mobile Device Emulation
+It is possible to emulate mobile device during automation via the Chrome webdriver (i.e. `nexial.browser` as `chrome`).
+There are 2 ways of enabling mobile device emulation:
+1. via the `nexial.browser.emulation.deviceName` data variable
+2. via the `nexial.browser.emulation.userAgent` data variable.
+
+The first approach is simpler. Simply specify a mobile device name that is supported by the Chrome browser to enable
+such emulation. For example,<br/>
+![](image/web_06.png)
+
+The second approach offers finer controls. Along with the "User Agent" string to match the target mobile device, one
+can also specify the width (via `nexial.browser.emulation.width` data variable), the height 
+(`nexial.browser.emulation.height` data variable), the pixel ratio (via the `nexial.browser.emulation.pixelRatio` data 
+variable) and touch activation (via the `nexial.browser.emulation.touch` data variable). For example,<br/>
+![](image/web_07.png)
+
+Note that `nexial.browser.emulation.pixelRatio` defaults to `3.0` and `nexial.browser.emulation.touch` defaults to 
+`true`. 
+
+For a list of supported mobile devices and their respective "user-agent" string, visit the following link: 
+<a href="https://codesearch.chromium.org/codesearch/f/chromium/src/third_party/blink/renderer/devtools/front_end/emulated_devices/module.json" 
+class="external-link" target="_nexial_link">
+https://codesearch.chromium.org/codesearch/f/chromium/src/third_party/blink/renderer/devtools/front_end/emulated_devices/module.json
+</a><br/>
+![](image/chrome-mobile-emu-find-useragent.gif)
+
+
+For more information about mobile device emulation, visit ChromeDriver's 
+<a href="http://chromedriver.chromium.org/mobile-emulation" class="external-link" target="_nexial_link">Mobile Emulation</a> 
+page. While it is cost effective to use the emulation capability of ChromeDriver, it is noteworthy that there are 
+<a href="https://bugs.chromium.org/p/chromedriver/issues/detail?id=2144&desc=2" 
+class="external-link" target="_nexial_link">known issues and limitations</a> of using ChromeDriver's mobile emulation.
+
+Note that screen capturing when emulation is active might cause a sudden "grow-and-shrink" behavior as shown below:<br/>
+![](image/chrome-mobile-emu-screenshot-sudden-grow.gif)
+
+Emulators cannot accurately reflect the real devices in terms of hardware and OS-specific nuances. For more accurate
+testing, consider using [BrowserStack](#browserstack) or [CrossBrowserTesting](#crossbrowsertesting) services (both 
+commercial) instead.
+
+
+### Chrome Headless
 Follow the same instruction as [Chrome](index#chrome), except setting 
 [`nexial.browser`](../../systemvars/index#nexial.browser) to `chrome.headless`.
 
-#### Chrome Embedded
+
+### Chrome Embedded
 <a href="https://en.wikipedia.org/wiki/Chromium_Embedded_Framework" class="external-link" target="_nexial_link">Chrome Embedded Framework</a>,
 or CEF for short, is 
 <a href="https://bitbucket.org/chromiumembedded/" class="external-link" target="_nexial_link">an open source framework</a> 
@@ -90,7 +135,8 @@ To enable CEF automation, follow these steps:
    path of the application executable program.
 4. Begin scripting...
 
-#### Electron
+
+### Electron
 <a href="https://en.wikipedia.org/wiki/Electron_(software_framework)" class="external-link" target="_nexial_link">Electron</a>
 is an open source framework to create desktop applications using JavaScript. It combines the use of Node.js runtime as
 the backend and Chromium as the frontend engine to create a compelling, cross-platform desktop GUI framework that powers
@@ -103,14 +149,16 @@ To enable Electron application automation, follow these steps:
    path of the executable program. For MacOS, the executable is usually found under `$APPLICATION/Contents/MacOS/`.
 4. Begin scripting...
 
-#### Safari
+
+### Safari
 Enabling Safari automation requires the following steps:
 1. Make sure a recent version of <a href="https://support.apple.com/downloads/#safari" class="external-link" target="_nexial_link">Safari</a>
    is installed locally. Only MacOS is supported for safari automation at this time.
 2. Set [`nexial.browser`](../../systemvars/index#nexial.browser) to `safari`.
 3. Begin scripting...
 
-#### Safari Technology Preview
+
+### Safari Technology Preview
 Enabling Safari Technology Preview automation requires the following steps:
 1. Make sure a recent version of <a href="https://developer.apple.com/safari/technology-preview/" class="external-link" target="_nexial_link">Safari Technology Preview</a>
    is installed locally. Only MacOS is supported for Safari automation at this time.
@@ -118,7 +166,8 @@ Enabling Safari Technology Preview automation requires the following steps:
 3. Set [`nexial.browser.safari.useTechPreview`](../../systemvars/index#nexial.browser.safari.useTechPreview) to `true`.
 4. Begin scripting...
 
-#### Internet Explorer
+
+### Internet Explorer
 Enabling IE automation requires the following steps:
 1. Make sure a recent version of <a href="https://www.microsoft.com/en-us/download/internet-explorer.aspx" class="external-link" target="_nexial_link">Internet Explorer</a>
    suitable to your platform is installed locally. Only Windows 7 and above is supported at this time.
@@ -127,7 +176,8 @@ Enabling IE automation requires the following steps:
    [Web Automation On IE](../../tipsandtricks/WebAutomationOnIE).
 4. Begin scripting...
 
-#### Microsoft Edge
+
+### Microsoft Edge
 Enabling IE automation requires the following steps:
 1. Make sure a recent version of <a href="https://www.microsoft.com/en-us/windows/microsoft-edge" class="external-link" target="_nexial_link">Microsft Edge Browser</a>
    suitable to your platform is installed locally. Only Windows 10 is supported at this time.
@@ -137,7 +187,8 @@ Enabling IE automation requires the following steps:
    as well!).
 4. Begin scripting...
 
-#### BrowserStack
+
+### BrowserStack
 <a href="http://browserstack.com/" class="external-link" target="_nexial_link">BrowserStack</a> is a popular cloud, web 
 and mobile testing platform that enables developers to test their websites and mobile applications across on-demand 
 browsers, operating systems and real mobile devices. This is a paid service.
@@ -145,7 +196,8 @@ browsers, operating systems and real mobile devices. This is a paid service.
 To enable BrowserStack integration, be sure to read up on the 
 [BrowserStack Integration](../../tipsandtricks/BrowserStackIntegration) page.
 
-#### CrossBrowserTesting
+
+### CrossBrowserTesting
 _excerpts from <a href="https://crossbrowsertesting.com/blog/browsers/what-is-cross-browser-testing/" class="external-link" target="_nexial_link">CrossBrowserTesting.com</a>:_ 
 > ... Browser testing is a method of quality assurance for web applications across multiple browsers. ... 
 > It’s implemented to ensure a website’s functionality and design and includes testing a range of 
@@ -158,6 +210,7 @@ service.
 
 To enable CrossBrowserTesting integration, be sure to read up on the 
 [CrossBrowserTesting Integration](../../tipsandtricks/CrossBrowserTestingIntegration) page.
+
 
 ### WebDriver Support
 Nexial automatically downloads required webdriver, during runtime as needed. Webdrivers are downloaded to user's home
