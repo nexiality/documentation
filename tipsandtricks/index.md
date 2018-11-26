@@ -42,6 +42,7 @@ comments: true
 - *in progress* [How to get an Element's Xpath from Chrome]()
 - [Execute Scripts in Headless Browser](ExecuteScripts_HeadlessBrowser)
 - [BrowserStack Integration](BrowserStackIntegration)
+- [CrossBrowserTesting Integration](CrossBrowserTestingIntegration)
 - [Script failing on BrowserStack](ScriptFailingonBrowserStack)
 - [Reduce web automation flakiness with wait strategies](ReduceWebAutomationFlakiness)
 - [Improving IE Automation](WebAutomationOnIE)
