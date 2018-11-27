@@ -13,6 +13,7 @@ comments: true
 ### General
 - rename some System variables so that their name are prefixed with `nexial.` to avoid conflicts.
 - code fix to ensure that macro/section expansion won't inadvertently merge passed the "ignored" section.
+- improved support for XML/HTML during data variable substitution.
 
 
 ### [Nexial Interactive](../interactive)
@@ -76,7 +77,11 @@ comments: true
   - additional logging added.
   - no switching of window when automating against mobile devices.
 - support mobile device emulation when automating on chrome browser (locally).
-
+- shipped with <a href="https://raw.githubusercontent.com/SeleniumHQ/selenium/master/java/CHANGELOG" class="external-link" target="_nexial_link">Selenium v3.141.59</a>.
+  Significant changes include:
+  - Restored remoteHost support
+  - Implement `WrapsElement` by `Select` element wrapper (#6616)
+  - Default the number of threads assigned to the server to 200, which is what it was in 3.13.0
 
 ### [ws commands](../commands/ws)
 
