@@ -82,6 +82,7 @@ comments: true
   - Restored remoteHost support
   - Implement `WrapsElement` by `Select` element wrapper (#6616)
   - Default the number of threads assigned to the server to 200, which is what it was in 3.13.0
+- code fix to prevent loading of web driver unnecessarily.
 
 ### [ws commands](../commands/ws)
 
