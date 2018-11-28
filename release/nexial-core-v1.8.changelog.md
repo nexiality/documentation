@@ -14,6 +14,8 @@ comments: true
 - rename some System variables so that their name are prefixed with `nexial.` to avoid conflicts.
 - code fix to ensure that macro/section expansion won't inadvertently merge passed the "ignored" section.
 - improved support for XML/HTML during data variable substitution.
+- [`${nexial.lastOutputLink}`](../systemvars/index#nexial.lastOutputLink): **NEW** System variable to capture the 
+  location of the last output file (only generated via certain commands).
 
 
 ### [Nexial Interactive](../interactive)
@@ -54,6 +56,7 @@ comments: true
 ### [image commands](../commands/image)
 - [`compare(baseline,actual)`](../commands/image/compare(baseline,actual)): increase the thickness of the highlighting 
   border to improve readability.
+- increase thread stack size to support comparison of larger images.
 
 
 ### [io commands](../commands/io)
@@ -82,7 +85,7 @@ comments: true
   - Restored remoteHost support
   - Implement `WrapsElement` by `Select` element wrapper (#6616)
   - Default the number of threads assigned to the server to 200, which is what it was in 3.13.0
-- code fix to prevent loading of web driver unnecessarily.
+- code fix to prevent unnecessary loading of web driver.
 
 ### [ws commands](../commands/ws)
 
