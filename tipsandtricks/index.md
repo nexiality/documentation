@@ -16,6 +16,7 @@ comments: true
 - [Save time on running Nexial](SaveTimeRunningNexial)
 - [Security Issues on Executable](SecurityIssuesExecutableFiles)
 - [Mass-generate data values via 1 data variable and iteration](scope-currentIteration)
+- [Display current date-time in specific timezone](DisplayCurrentTimeInSpecificTimeZone)
 - *in progress* [Why isn't Nexial executing my scenario (worksheet)?]()
 
 
