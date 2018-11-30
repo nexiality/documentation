@@ -80,9 +80,10 @@ comments: true
   - now with execution status reporting (at the end of execution).
   - now support automation on mobile devices (Android and iOS).
   - delay safari window resizing (same as on BrowserStack).
-  - automatically download/update/execute CrosssBrowserTesting local executable.
+  - automatically download/update/execute CrossBrowserTesting local executable.
   - additional logging added.
   - no switching of window when automating against mobile devices.
+  - code fixes to handle CrossBrowserTesting local download changes (URL changes).
 - support mobile device emulation when automating on chrome browser (locally).
 - shipped with <a href="https://raw.githubusercontent.com/SeleniumHQ/selenium/master/java/CHANGELOG" class="external-link" target="_nexial_link">Selenium v3.141.59</a>.
   Significant changes include:
