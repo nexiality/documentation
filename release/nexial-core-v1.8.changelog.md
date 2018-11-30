@@ -27,6 +27,10 @@ comments: true
 - improved support for assigning steps: use `*` to assign all available steps from the assigned scenario.
 
 
+### [Nexial Filter](../flowcontrols/filter)
+- new unary filter to simplify boolean filter conditions.
+
+
 ### [Built-in Function](../functions)
 
 

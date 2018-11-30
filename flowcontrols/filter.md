@@ -60,6 +60,18 @@ Multiple conditions are separated by ampersand (` & `).  This represents the "AN
 "_condition 1_ **AND** _condition 2_". For example, `${name} contain "Smith" & ${age} between [18|65]` would mean 
 "_Smith-somebody_ who is between 18 and 65 years old".
 
+(Since Nexial 1.8) There is another unique type of filter - the unary filter. This type of filter only has `[subject]`
+and it should always evaluate to either `true` or `false`. Consider the following uses of the unary filter in the 
+context of [Flow Control](index):
+
+- `SkipIf(true)`: this means to **always** skip the corresponding step since `true` is _always_ true.
+- `ProceedIf(false)`: this means to **always** bypass the corresponding step since `false` is _never_ true.
+- `ProceedIf(${condition})`: this means to proceed with the corresponding step if `${condition}` should evaluate to 
+   `true`.
+- `EndIf(!${stopNow})`: this means to end the current execution if `${stopNow}` does not evaluate to `true` (`!` 
+  means "negate", hence the opposite of `false` would be `true`).
+- `EndIf(not ${stopNow})`: same as above.
+
 
 ### Example
 <table class="sysvar" cellspacing="0" cellpadding="3">
