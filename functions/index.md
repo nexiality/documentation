@@ -4,6 +4,8 @@ title: Built-in Functions
 level: 1
 tags: functions
 comments: true
+redirect_from:
+  - /functions
 ---
 
 

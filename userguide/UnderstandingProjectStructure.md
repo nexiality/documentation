@@ -4,6 +4,9 @@ title: Understanding Project Structure
 parent: User Guide
 tags: project structure project.properties script
 comments: true
+redirect_from:
+  - /documentation/tipsandtricks/CreateTestScript_data_plan
+  - /tipsandtricks/CreateTestScript_data_plan
 ---
 
 Nexial is designed to work with a variety of directory/file structures. One can specify target script or data file 

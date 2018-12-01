@@ -4,6 +4,8 @@ title: Flow Controls
 level: 1
 tags: flowcontrols pausebefore pauseafter proceedif failif endloopif endif skipif
 comments: true
+redirect_from:
+  - /flowcontrols
 ---
 
 

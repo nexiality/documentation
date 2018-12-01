@@ -4,6 +4,8 @@ title: Release Notes
 level: 1
 tags: release
 comments: true
+redirect_from:
+  - /release
 ---
 
 

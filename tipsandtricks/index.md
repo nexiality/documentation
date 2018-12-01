@@ -4,6 +4,8 @@ title: Tips and Tricks
 level: 1
 tags: tips tricks tipsandtricks how-to
 comments: true
+redirect_from:
+  - /tipsandtricks
 ---
 
 

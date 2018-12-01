@@ -4,6 +4,8 @@ title: Commands
 level: 1
 tags: commands
 comments: true
+redirect_from:
+  - /commands
 ---
 
 

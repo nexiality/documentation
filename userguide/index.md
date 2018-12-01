@@ -4,6 +4,9 @@ title: User Guide
 level: 1
 tags: commands userguide quickstart
 comments: true
+redirect_from:
+  - /userguide
+  - /quickstart
 ---
 
 **Welcome to Nexial Automation Platform!**

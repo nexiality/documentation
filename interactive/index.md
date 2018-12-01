@@ -4,6 +4,8 @@ title: Nexial Interactive
 level: 1
 tags: interactive learn debug troubleshoot reload
 comments: true
+redirect_from:
+  - /interactive
 ---
 
 

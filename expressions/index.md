@@ -4,6 +4,8 @@ title: Expressions
 level: 1
 tags: command expressions
 comments: true
+redirect_from:
+  - /expressions
 ---
 
 

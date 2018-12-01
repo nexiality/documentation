@@ -4,6 +4,9 @@ title: saveTableRows(var,contains)
 parent: desktop
 tags: command desktop
 comments: true
+redirect_from:
+  - /documentation/commands/desktop/getTaableRowsAll(var)
+  - /commands/desktop/getTaableRowsAll(var)
 ---
 
 ### Description

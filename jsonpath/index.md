@@ -4,6 +4,8 @@ title: Nexial Jsonpath
 level: 1
 tags: jsonpath
 comments: true
+redirect_from:
+  - /jsonpath
 ---
 
 
@@ -31,26 +33,30 @@ it has not gained the same momentum and ubiquity like XPath.  There are several
 
 In the interest of simplicity, and readability, we have opted to create our own JSON query specification - 
 unfortunately and so-predictable named as... **`jsonpath`**. ![sad](../image/sad.png) 
-_(well, the name was picked a while back, and it didn't seem like a problem back then...)_
+_(well, the name was picked a while back, and it did not seem like a problem back then...)_
 
 The main goal behind Nexial's `jsonpath` was to provide a simple and low-entrance approach to express the most 
 common types of JSON fragments.  Consider the following JSON document:
 
 ```json
 {
-    "name": "John Smith",
-    "age": 17,
+    "name":"John Smith",
+    "age":17,
     "address": {
-        "street1": "123 Elm Street",
-        "street2": null,
-        "city": "Gotham",
-        "state": "Solid",
-        "zip": "54321"
+        "street1":"123 Elm Street",
+        "street2":null,
+        "city":"Gotham",
+        "state":"Solid",
+        "zip":"54321"
     },
-    "data1": [ "abc", "efg", "hij" ],
+    "data1": [ "abc","efg","hij" ],
     "data2": [
-        { "klm": "nop" },
-        { "qrs": 999.01 }
+        {
+            "klm":"nop"
+        },
+        {
+            "qrs":999.01
+        }
     ]
 }
 ```
