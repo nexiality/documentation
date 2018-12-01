@@ -152,8 +152,9 @@ highlighting difference with rectangle in new image.
 - [`deselect(locator,text)`](../commands/web/deselect(locator,text)): **NEW** command to deselect (unselect?) from a
   SELECT element based on `text`. For regex-based deselect, add `REGEX:` prefix to `text`.
 - [`clickWithKeys(locator,keys)`](../commands/web/clickWithKeys(locator,keys)): **NEW** command to click on target with 
-  the keystrokes like {CONTROL}, {SHIFT} specified via `keys`.
-- update to <a href="https://raw.githubusercontent.com/SeleniumHQ/selenium/master/java/CHANGELOG" class="external_link" target="_nexial_link">Selenium 3.141.0</a> 
+  the keystrokes like `{CONTROL}`, `{SHIFT}` specified via `keys`.
+- update to <a href="https://raw.githubusercontent.com/SeleniumHQ/selenium/master/java/CHANGELOG" class="external_link" 
+  target="_nexial_link">Selenium 3.141.0</a> 
   (should be 3.14.1?). Significant changes include:
   - Beta commands in SafariDriver for opening a new window or tab.
   - Clean up of internal of `Select` element wrapper (#6501)

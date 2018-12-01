@@ -48,6 +48,31 @@
         <h1>Nexial Automation</h1>
         <h2>{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
 
+        <select class="quick_links_dropdown" id="quick_links_dropdown"
+                onchange="document.location=this.selectedOptions[0].value;">
+            <option value="{{'/'              | prepend:site.baseurl }}">Home</option>
+            <option value="{{'/userguide'     | prepend:site.baseurl }}"
+                    {% if page.url contains '/userguide/' %}selected="true"{% endif %}>User Guide</option>
+            <option value="{{'/commands'      | prepend:site.baseurl }}"
+                    {% if page.url contains '/commands/' %}selected="true"{% endif %}>Command Reference</option>
+            <option value="{{'/systemvars'    | prepend:site.baseurl }}"
+                    {% if page.url contains '/systemvars/' %}selected="true"{% endif %}>System Variables</option>
+            <option value="{{'/flowcontrols'  | prepend:site.baseurl }}"
+                    {% if page.url contains '/flowcontrols/' %}selected="true"{% endif %}>Flow Controls</option>
+            <option value="{{'/functions'     | prepend:site.baseurl }}"
+                    {% if page.url contains '/functions/' %}selected="true"{% endif %}>Built-in Functions</option>
+            <option value="{{'/expressions'   | prepend:site.baseurl }}"
+                    {% if page.url contains '/expressions/' %}selected="true"{% endif %}>Expressions</option>
+            <option value="{{'/jsonpath'      | prepend:site.baseurl }}"
+                    {% if page.url contains '/jsonpath/' %}selected="true"{% endif %}>Jsonpath</option>
+            <option value="{{'/interactive'   | prepend:site.baseurl }}"
+                    {% if page.url contains '/interactive/' %}selected="true"{% endif %}>Nexial Interactive</option>
+            <option value="{{'/tipsandtricks' | prepend:site.baseurl }}"
+                    {% if page.url contains '/tipsandtricks/' %}selected="true"{% endif %}>Tips and Tricks</option>
+            <option value="{{'/release'       | prepend:site.baseurl }}"
+                    {% if page.url contains '/release/' %}selected="true"{% endif %}>Release Notes</option>
+        </select>
+
         {% if page.level and page.level == 1 %}
             {% include _breadcrumb_level1.html %}
         {% else %}
@@ -102,21 +127,22 @@
         <br/>
 
         <hr/>
-        <br/>
-        <div class="quick_link"><a href="{{ '/userguide' | prepend:site.baseurl }}">User Guide</a></div>
-        <div class="quick_link"><a href="{{ '/commands' | prepend:site.baseurl }}">Command Reference</a></div>
-        <div class="quick_link"><a href="{{ '/systemvars' | prepend:site.baseurl }}">System Variables</a></div>
-        <div class="quick_link"><a href="{{ '/flowcontrols' | prepend:site.baseurl }}">Flow Controls</a></div>
-        <div class="quick_link"><a href="{{ '/functions' | prepend:site.baseurl }}">Built-in Functions</a></div>
-        <div class="quick_link"><a href="{{ '/expressions' | prepend:site.baseurl }}">Expressions</a></div>
-        <div class="quick_link"><a href="{{ '/jsonpath' | prepend:site.baseurl }}">Jsonpath</a></div>
-        <div class="quick_link"><a href="{{ '/interactive' | prepend:site.baseurl }}">Nexial Interactive</a></div>
-        <div class="quick_link"><a href="{{ '/tipsandtricks' | prepend:site.baseurl }}">Tips and Tricks</a></div>
-        <div class="quick_link"><a href="{{ '/release' | prepend:site.baseurl }}">Release Notes</a></div>
-        <div style="clear:both"></div>
+
+        <div class="quick_links">
+            <a class="quick_link" href="{{ '/userguide' | prepend:site.baseurl }}">User Guide</a>
+            <a class="quick_link" href="{{ '/commands' | prepend:site.baseurl }}">Command Reference</a>
+            <a class="quick_link" href="{{ '/systemvars' | prepend:site.baseurl }}">System Variables</a>
+            <a class="quick_link" href="{{ '/flowcontrols' | prepend:site.baseurl }}">Flow Controls</a>
+            <a class="quick_link" href="{{ '/functions' | prepend:site.baseurl }}">Built-in Functions</a>
+            <a class="quick_link" href="{{ '/expressions' | prepend:site.baseurl }}">Expressions</a>
+            <a class="quick_link" href="{{ '/jsonpath' | prepend:site.baseurl }}">Jsonpath</a>
+            <a class="quick_link" href="{{ '/interactive' | prepend:site.baseurl }}">Nexial Interactive</a>
+            <a class="quick_link" href="{{ '/tipsandtricks' | prepend:site.baseurl }}">Tips and Tricks</a>
+            <a class="quick_link" href="{{ '/release' | prepend:site.baseurl }}">Release Notes</a>
+        </div>
+
         <hr/>
 
-        <br/>
         <br/>
 
         {% if page.comments %}

@@ -30,7 +30,7 @@ Here are some of the core design considerations for this platform:
 
 ---------------------------------------------
 
-#### Nexial in Action
+## Nexial in Action
 To see Nexial in action, watch this short demo showcasing how Nexial 
 1. performs a few Google searches (browser automation), 
 2. uses one of the search results to invoke a few REST API calls (API automation),
@@ -41,9 +41,8 @@ To see Nexial in action, watch this short demo showcasing how Nexial
 [Nexial in Action](https://www.youtube.com/watch?v=b372XikN1YU&cc_lang_pref=en&cc_load_policy=1)
 
 <iframe width="560" height="555" src="https://www.youtube-nocookie.com/embed/b372XikN1YU?cc_lang_pref=en&cc_load_policy=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-<br/>
 
-**Wanna try? Have at it!**
+#### Wanna try? Have at it!
 1. Download [Nexial distro](https://github.com/nexiality/nexial-core/releases)
 2. Follow the [installation guide](https://nexiality.github.io/documentation/userguide/InstallingNexial) (most steps are one-time work)
 3. Download the ["nexial-in-action" project](nexial-in-action.zip) and unzip to local directory
@@ -68,21 +67,23 @@ For better understanding of Nexial, check out the **[Introduction](userguide/In
 
 <div align="center">
 
-<div style="width:450px; vertical-align:middle; height:60px; background:rgba(250,250,230,0.45);">
+<div class="sponsor">
     <img src="image/browserstack/Browserstack-logo@2x.png"
         style="box-shadow:none; padding:10px 15px 10px; width:150px;" align="left"/>
-    <div style="vertical-align:middle; padding:10px 0; font-size:10pt; color:#333;">
-        Nexial Automation enables test automation with <a href="http://browserstack.com">BrowserStack</a>.
+    <div class="description">
+        Nexial Automation enables test automation with <a href="http://browserstack.com" class="external-link" 
+        target="_nexial_link">BrowserStack</a>
     </div>
 </div>
 
 <br/>
 
-<div style="width:450px; vertical-align:middle; background: rgba(250,250,230,0.45);">
-    <img src="image/cbt/CrossBrowserTesting-logo-small.png" style="box-shadow:none; padding:0 15px 0;" align="left"/>
+<div class="sponsor">
+    <img src="image/cbt/CrossBrowserTesting-logo-small.png" style="box-shadow:none; padding:0 15px 0;" align="center"/>
     <br/>
-    <div style="vertical-align:middle; padding:10px; font-size:10pt; color:#333; clear:both">
-        Nexial Automation enables test automation with <a href="http://crossbrowsertesting.com">CrossBrowserTesting</a>.
+    <div class="description" style="padding:2px 5px 20px 5px;text-align:center;">
+        Nexial Automation enables test automation with <a href="http://crossbrowsertesting.com" class="external-link" 
+        target="_nexial_link">CrossBrowserTesting</a>
     </div>
 </div>
 

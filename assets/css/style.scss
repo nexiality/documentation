@@ -58,6 +58,19 @@ h3.pageTitle {
   border-left:  20px solid #5d8540;
 }
 
+.quick_links_dropdown {
+  position:         fixed;
+  top:              50px;
+  right:            10px;
+  width:            270px;
+  height:           35px;
+  vertical-align:   middle;
+  background-color: rgba(220, 220, 200, 0.85);
+  border:           2px solid rgba(150, 150, 130, 0.65);
+  color:            rgba(80, 80, 60, 0.95);
+  box-shadow:       0 4px 20px rgba(50, 75, 35, 0.9);
+}
+
 ul, ol {
   padding-left: 20px !important;
 }
@@ -132,7 +145,7 @@ div.breadcrumb {
 
 a.breadcrumb {
   color:            #dfc !important;
-  background-color: rgba(140, 200, 40, 0.95);
+  background-color: rgba(140, 200, 40, 0.95) !important;
   padding:          12px 10px 10px;
   box-shadow:       3px 1px 3px #151;
   margin:           0 7px;
@@ -140,7 +153,7 @@ a.breadcrumb {
 
 a.breadcrumb:hover {
   color:            #574;
-  background-color: rgba(200, 255, 50, 0.95);
+  background-color: rgba(200, 255, 50, 0.95) !important;;
   text-shadow:      1px 1px 1px #fff;
 }
 
@@ -153,34 +166,40 @@ span.breadcrumb {
   text-shadow:      1px 1px 1px #ff9;
 }
 
-.quick_link {
+.quick_links {
+  clear:  both;
+  margin: 20px 0;
+  height: 180px;
+}
+
+.quick_links a.quick_link {
   margin:           auto 20px 20px auto;
   padding:          6px;
   border:           2px solid #b0b0a0;
-  background-color: rgba(200, 200, 180, 0.4);
-  font-weight:      bold;
+  background-color: rgba(200, 200, 180, 0.4) !important;
+  font-weight:      bold !important;
   font-variant:     all-small-caps;
   font-size:        14pt;
   width:            192px;
   vertical-align:   middle;
   text-align:       center;
   float:            left;
-}
-
-.quick_link:hover {
-  background-color: rgba(220, 240, 220, 0.85);
-  border:           2px solid rgba(100, 100, 100, 0.3);
-}
-
-.quick_link a {
   color:            #808070;
-  background-color: transparent !important;
+  cursor:           pointer;
+}
+
+.quick_links a.quick_link:hover {
+  background-color: rgba(200, 200, 180, 0.15) !important;
+  border:           2px solid rgba(100, 100, 100, 0.3) !important;
+  text-shadow:      1px 1px 15px #555 !important;
+  color:            #eee;
+  box-shadow:       0 0 2px rgba(250, 250, 250, 0.75);
 }
 
 a {
   color:            rgba(40, 90, 50, 0.9);
   background-color: rgba(180, 220, 180, 0.35) !important;
-  font-weight:      bold !important;
+  //font-weight:      bold !important;
   padding:          2px 2px;
 }
 
@@ -221,9 +240,9 @@ a.external-link {
   padding:               1px 4px 1px 18px;
   background:            rgba(100, 100, 100, 0.65) url(../../image/external_link.png) no-repeat !important;
   color:                 #dda !important;
-  background-position-x: 1px !important;
-  background-position-y: 3px !important;
-  font-weight:           normal;
+  background-position-x: 2px !important;
+  background-position-y: 1px !important;
+  font-weight:           normal !important;
   text-shadow:           none;
 }
 
@@ -460,8 +479,7 @@ div#tipue_search_foot {
   cursor:        default;
 }
 
-#tipue_search_foot_boxes li.current,
-#tipue_search_foot_boxes li a {
+#tipue_search_foot_boxes li.current, #tipue_search_foot_boxes li a {
   padding: 10px 12px !important;
   margin:  0 3px !important;
 }
@@ -471,3 +489,17 @@ div#disqus_thread {
   background-color: rgba(250, 250, 250, 0.75);
 }
 
+div.sponsor {
+  width:            450px;
+  vertical-align:   middle;
+  background-color: rgba(250, 250, 230, 0.45);
+  box-shadow:       0 0 35px rgba(250, 250, 230, 0.75);
+}
+
+div.sponsor .description {
+  vertical-align: middle;
+  text-align:     left;
+  padding:        10px;
+  font-size:      10pt;
+  color:          #333;
+}
