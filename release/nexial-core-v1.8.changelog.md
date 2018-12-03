@@ -25,6 +25,8 @@ comments: true
   is re-calibrated as well to account for possible step or activity changes.
 - improved support for assigning activities: use `*` to assign all available activities from the assigned scenario.
 - improved support for assigning steps: use `*` to assign all available steps from the assigned scenario.
+- improved support for assigning activities: use activity indices (digits) instead of activity names. Note: Use `A` to 
+  reset back to all activities.
 
 
 ### [Nexial Filter](../flowcontrols/filter)
