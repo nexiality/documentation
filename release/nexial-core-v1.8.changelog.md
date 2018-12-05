@@ -86,6 +86,8 @@ comments: true
   - additional logging added.
   - no switching of window when automating against mobile devices.
   - code fixes to handle CrossBrowserTesting local download changes (URL changes).
+  - configurable wait time (millisecond) after CrossBrowserTesting local has been initiated, to allow sufficient time
+    to stabilize the executable.
 - support mobile device emulation when automating on chrome browser (locally).
 - shipped with <a href="https://raw.githubusercontent.com/SeleniumHQ/selenium/master/java/CHANGELOG" class="external-link" target="_nexial_link">Selenium v3.141.59</a>.
   Significant changes include:
