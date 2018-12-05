@@ -16,6 +16,9 @@ comments: true
 - improved support for XML/HTML during data variable substitution.
 - [`${nexial.lastOutputLink}`](../systemvars/index#nexial.lastOutputLink): **NEW** System variable to capture the 
   location of the last output file (only generated via certain commands).
+- support skipping of command via "strikethrough": Use `Ctrl-5` on a "command" column to skip over the corresponding
+  test step. This effectively add a `SkipIf(true)` flow control to the corresponding "flow controls" column. 
+  Use `Ctrl-5` again to enable the corresponding test step.
 
 
 ### [Nexial Interactive](../interactive)
@@ -95,6 +98,7 @@ comments: true
   - Implement `WrapsElement` by `Select` element wrapper (#6616)
   - Default the number of threads assigned to the server to 200, which is what it was in 3.13.0
 - code fix to prevent unnecessary loading of web driver.
+
 
 ### [ws commands](../commands/ws)
 
