@@ -72,7 +72,7 @@ comments: true
 
 
 ### [json command](../commands/json)
-
+- fixed json array parsing logic when its textual representation contains whitespace.
 
 ### [ssh commands](../commands/ssh)
 
