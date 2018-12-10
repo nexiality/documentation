@@ -39,6 +39,7 @@ This built-in function expose the execution-level metadata, both the runtime and
 
 - **`$(execution|meta|nexial)`** - display the current Nexial version.
 - **`$(execution|meta|java)`** - display the current Java version.
+- **`$(execution|meta|user)`** - display the username of the current Nexial execution.
 
 
 ### Example
