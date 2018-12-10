@@ -19,6 +19,14 @@ comments: true
 - support skipping of command via "strikethrough": Use `Ctrl-5` on a "command" column to skip over the corresponding
   test step. This effectively add a `SkipIf(true)` flow control to the corresponding "flow controls" column. 
   Use `Ctrl-5` again to enable the corresponding test step.
+- `bin/nexial-project.cmd|sh`: 
+  - automatically create `.meta/project.id` under the target project directory to identify each project. This manifest 
+    file can be useful (in the future) for tracking and comparison purpose.
+  - create additional script/data files into existing project directory, without overwriting existing artifacts.
+- minor updates to artifact templates
+- update execution output on "SKIPPED" test steps (description is now italicized)
+- update code on macro handling logic; no longer cache macro steps in support of Nexial Interactive. Performance impact should be minimal.
+- step disabling is now supported on test script, macro and test plan.
 
 
 ### [Nexial Interactive](../interactive)
@@ -37,6 +45,7 @@ comments: true
 
 
 ### [Built-in Function](../functions)
+- `$(execution|meta|user)`: *NEW* function to reveal execution-time user
 
 
 ### [System variables](../systemvars)
