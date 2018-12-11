@@ -102,6 +102,12 @@ comments: true
     to stabilize the executable.
   - configuration wait time can now be set to `auto` (default) for Nexial to determine most appropriate time to proceed 
     with test automation.
+  - support updating of execution status per browser use within same execution. It is now possible to configure via 
+    `cbt.reportStatus` when the execution status update should occur - `iteration`, `script`, `execution`.
+  - execution status update now accompanied with description (in CBT, description is shown in "Notes and Tags" section).
+- improved [BrowserStack support](../tipsandtricks/BrowserStackIntegration):
+  - support updating of execution status per browser use within same execution. It is now possible to configure via 
+    `nexial.browserstack.reportStatus` when the execution status update should occur - `iteration`, `script` or `execution`.
 - support mobile device emulation when automating on chrome browser (locally).
 - shipped with <a href="https://raw.githubusercontent.com/SeleniumHQ/selenium/master/java/CHANGELOG" class="external-link" target="_nexial_link">Selenium v3.141.59</a>.
   Significant changes include:

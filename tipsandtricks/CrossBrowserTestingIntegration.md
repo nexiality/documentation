@@ -83,6 +83,9 @@ the way execution result and output are generated. The steps to integration with
    <br/>
    Check CBT's <a href="https://help.crossbrowsertesting.com/selenium-testing/tutorials/crossbrowsertesting-automation-capabilities/" 
    class="external-link" target="_nexial_link">Selenium Automation Capabilities</a> for more details.
+   
+   According to CBT documentation, `cbt.build` and `cbt.name` carry different connotations:
+   ![](image/CBT_06.png)
 
 6. That's it!  Run your test as you normally would. With CBT, the automation is performed remotely. You can watch the 
    execution in action via CBT's <a href="https://app.crossbrowsertesting.com/selenium/results" class="external-link" 
