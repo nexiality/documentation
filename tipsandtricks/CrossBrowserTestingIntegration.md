@@ -87,7 +87,23 @@ the way execution result and output are generated. The steps to integration with
    According to CBT documentation, `cbt.build` and `cbt.name` carry different connotations:
    ![](image/CBT_06.png)
 
-6. That's it!  Run your test as you normally would. With CBT, the automation is performed remotely. You can watch the 
+6. Nexial also supports execution status update on CBT's <a href="https://app.crossbrowsertesting.com/selenium/results" 
+   class="external-link" target="_nexial_link">Test Center</a>. The execution status update can be performed at one of
+   3 possible scopes via the `cbt.reportStatus` data variable:
+   1. `cbt.reportStatus` = `iteration`: instructs Nexial to update execution status at the end of each iteration. Any 
+      failed step within the same iteration would mark the execution status as `Fail` on CBT. This is most suitable
+      when different browser (on CBT) is specified for each iteration. 
+   2. `cbt.reportStatus` = `script`: instructs Nexial to update execution status at the end of each script (after all 
+      iterations of such script is complete). This is suitable when the same browser (on CBT) is used throughout the
+      execution of a script, regardless of iterations.
+   3. `cbt.reportStatus` = `execution`: instructs Nexial to update execution status at the end of the execution. Any
+      failed step within such execution would mark the execution status as `Fail` on CBT. 
+
+   When updating execution status, Nexial also provide a summary of the execution relevant to the specified "scope". 
+   Below is an example of how the execution status and corresponding summary appear in CBT:
+   ![](image/CBT_07.png)
+
+7. That's it!  Run your test as you normally would. With CBT, the automation is performed remotely. You can watch the 
    execution in action via CBT's <a href="https://app.crossbrowsertesting.com/selenium/results" class="external-link" 
    target="_nexial_link">Test Center</a>. You won't see any browser being launched locally. However all the screenshots 
    are captured in the same way as with local browser testing.
