@@ -28,6 +28,9 @@ comments: true
 - update code on macro handling logic; no longer cache macro steps in support of Nexial Interactive. Performance impact should be minimal.
 - step disabling is now supported on test script, macro and test plan.
 - fixed gmail mail support due to namespace conflict in mail configuration.
+- add `[nexial] ` prefix to mail subject in mail notification.
+- propagate data variable changes between iterations.
+
 
 ### [Nexial Interactive](../interactive)
 - now supports reloading of `project.properties` (option: `9`)
