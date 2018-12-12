@@ -1,4 +1,4 @@
-<style>
+<style xmlns="http://www.w3.org/1999/html">
     table.sysvar { width: 1250px; text-align: left; vertical-align: top; }
 
     table.sysvar th { padding: 5px; border: 1px #aaa solid; }
@@ -300,7 +300,7 @@
                         <li>nexial.mail.smtp.password=&lt;password only needed if nexial.mail.smtp.auth is set to true&gt;</li>
                     </ul>
                 </li>
-                <li>Define the recipient email or list via the <code>nexial.scope.mailTo</code> system variable.</li>
+                <li>Define the recipient email or list via the <code>nexial.mailTo</code> system variable.</li>
             </ol>
             <br/>
             All these settings can be added via command line (i.e. <code>-D...</code>),
@@ -308,7 +308,7 @@
             or the appropriate data file. For example, from command line:<br/>
             <code>
                 set JAVA_OPT=-Dnexial.enableEmail=true -Dnexial.mail.smtp.host=mail.mycompany.com
-                -Dnexial.mail.smtp.auth=false -Dnexial.scope.mail=my_and_myself@mycompany.com<br/>
+                -Dnexial.mail.smtp.auth=false -Dnexial.mailTo=me_and_myself@mycompany.com<br/>
                 <br/>
                 nexial.cmd -script ... ...
             </code>
@@ -320,15 +320,8 @@
         <td>false</td>
         <td>false</td>
         <td>
-            Determine if Nexial should automatically open the output in Excel after each iteration. This could be a
-            time saver since one would not have to manually search for the output file.<br/>
-            <br/>
-            For readability's sake, there's another System variable - <code>nexial.openResult</code> - that would
-            provide the same functionality. It's your choice to use either one of these 2 System variables. However,
-            please note that for backward compatibility reasons,
-            <code>nexial.assistantMode</code> will overrides <code>nexial.openResult</code>.<br/>
-            <br/>
-            This configuration is forcefully turned off during remote execution.
+            <i>DEPRECATED SYSTEM VARIABLE NAME.
+                PLEASE SEE <a href="#nexial.openResult"><code>nexial.openResult</code></a> INSTEAD.</i>
         </td>
     </tr>
     <tr>
@@ -339,11 +332,6 @@
         <td>
             Determine if Nexial should automatically open the output in Excel after each iteration. This could be a
             time saver since one would not have to manually search for the output file.<br/>
-            <br/>
-            This System variable provides the same functionality as <code>nexial.assistantMode</code>, albeit perhaps
-            more readable. It's your choice to use either one of these 2 System variables. However, please note that
-            for backward compatibility reasons,<code>nexial.assistantMode</code> will overrides
-            <code>nexial.openResult</code>.<br/>
             <br/>
             This configuration is forcefully turned off during remote execution.
         </td>
@@ -357,7 +345,7 @@
         <td class="highlight-red">true</td>
         <td>
             Configure the full path, including the executable name, of the program to use when opening Nexial output at
-            the end of an execution run. This is only applicable when <code>nexial.assistantMode</code> is enabled. By
+            the end of an execution run. This is only applicable when <code>nexial.openResult</code> is enabled. By
             default, Nexial will invoke Microsoft Excel to open the execution output in context.<br/>
             <br/>
             However, should you choose to use another program, such as WPS, specify this variable in your data sheet.
@@ -682,7 +670,7 @@
             <strong>NOTE</strong>: this system variable is <strong>NOT</strong> read from data file, and
             <strong><u>MUST</u> </strong>be specified via command line. For example,<br/>
             <blockquote style="margin: 10px 0 0 19px; border-left-color: rgb(46, 61, 84); padding: 10px 20px;">
-                <code>set JAVA_OPT=-Dnexial.minExecSuccessRate=97.55 -Dnexial.assistantMode=true</code>
+                <code>set JAVA_OPT=-Dnexial.minExecSuccessRate=97.55 -Dnexial.openResult=true</code>
                 <code>... ...</code>
                 <code>nexial.cmd -plan C:\projects\... ... ...</code>
             </blockquote>
@@ -905,6 +893,23 @@
         <td>
             The index (1-base) of the last completed iteration. This does not indicate whether the last iteration was
             completed with or without any failure.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.scope.refetchDataFile"><code>nexial.scope.refetchDataFile</code></a>
+        </td>
+        <td>integer</td>
+        <td>&nbsp;</td>
+        <td class="highlight-red">true</td>
+        <td>
+            Determine whether Nexial should re-read the target data file per iteration or not. Sometimes it is
+            beneficial to refetch the target data file between iteration in case its content has been modified during
+            preceeding iteration. This is the default behavior.
+            <br/>
+            However, at times one might have the intention not to do so in order to preserve the changes made to data
+            variables from one iteration to the next. In such case, one should set
+            <code>nexial.scope.refetchDataFile</code> as <code>false</code>.
         </td>
     </tr>
     <tr>

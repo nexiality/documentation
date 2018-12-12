@@ -30,6 +30,7 @@ comments: true
 - fixed gmail mail support due to namespace conflict in mail configuration.
 - add `[nexial] ` prefix to mail subject in mail notification.
 - propagate data variable changes between iterations.
+- implemented `nexial.scope.refetchDataFile` to preserve data variable changes between iteration.
 
 
 ### [Nexial Interactive](../interactive)

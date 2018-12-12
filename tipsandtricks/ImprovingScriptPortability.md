@@ -43,14 +43,17 @@ For example, assuming the current project is `C:\projects\Project1`:
   `../../Projects2/artifact/data/Project2_script.data.xlsx`
 
 
-#### When `nexial.assistantMode` is enabled
+#### When `nexial.openResult` is enabled
 Specifying the spreadsheet program is **ONLY** required to enable Nexial to open up the execution output automatically 
 after the execution is completed. Otherwise, no need to specify this information at all. To achieve portability, 
 use one of the following ways to specify the spreadsheet program path:  
 
 - set the environment variables from command line before executing the scripts:<br/>
-  > `set JAVA_OPT=-Dnexial.assistantMode=on -Dnexial.spreadsheet.program=wps`<br/>
-  > `nexial.cmd -script ....`
+  ```
+  set JAVA_OPT=-Dnexial.openResult=on -Dnexial.spreadsheet.program=wps
+  ... ...
+  nexial.cmd -script ...
+  ```
 
 - a perhaps simple way is to specify the spreadsheet program of choice in data file<br/>
 

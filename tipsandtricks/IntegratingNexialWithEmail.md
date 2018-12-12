@@ -52,7 +52,7 @@ The `project.properties` is expected to be found under the `artifact/` directory
 
 ```properties
 nexial.enableEmail=true
-nexial.scope.mailTo=<comma-separated recipient emails>
+nexial.mailTo=<comma-separated recipient emails>
 
 nexial.mail.smtp.host=<mail server>
 nexial.mail.smtp.port=25
@@ -65,6 +65,7 @@ nexial.mail.smtp.password=<password>
 
 ### Via data sheet
 ![](image/IntegratingNexialWithEmail_01.png)<br/>
+_Note that_ `nexial.scope.mailTo` _is the old System variable name. Please use_ `nexial.mailTo` _instead._
 
 
 ### Combining to Improve Flexibility

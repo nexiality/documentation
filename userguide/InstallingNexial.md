@@ -136,17 +136,17 @@ welcome!
 5. From console, do the following:
    ```batch
    cd C:\projects\nexial-core\bin
-   set JAVA_OPT=-Dnexial.assistantMode=on
+   set JAVA_OPT=-Dnexial.openResult=on
    nexial.cmd -script c:\projects\MyFirstProject\artifact\script\MyFirstProject.xlsx
    ```
 
    **Critical**, note the following:
-   1. The second line above (`-Dnexial.assistantMode=on`) is optional.  It is used to instruct 
+   1. The second line above (`-Dnexial.openResult=on`) is optional.  It is used to instruct 
       Nexial to open the test result when the test is complete. It is safe to omit but could save 
       you a few steps.
    2. In some situation where SMTP is not permitted, email notification **must** be disabled.
       The second line **cannot be omitted** and **MUST** be
-      `set JAVA_OPT=-Dnexial.assistantMode=on -Dnexial.enableEmail=off`
+      `set JAVA_OPT=-Dnexial.openResult=on -Dnexial.enableEmail=off`
       or
       `set JAVA_OPT=-Dnexial.enableEmail=off` 
    3.  The third line is to invoke Nexial to run the test as scripted in the file specified via 
@@ -157,7 +157,7 @@ welcome!
    For now, don't worry too much about these logs.  The most critical portion is near the end 
    where Nexial reports a summary of the test.  The above screenshot showed that 1 iteration ran, 
    with 1 step completed within 842ms.
-7. If you have the `assistantMode` turned on, then the output file should have been opened as well.  
+7. If you have `openResult` set as `on` or `true`, then the output file should have been opened as well.  
    You see the first line (Row 4) looking something like this:<br/>
    ![output](image/InstallingNexial_13.png)
    
