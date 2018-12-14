@@ -31,6 +31,12 @@ comments: true
 - add `[nexial] ` prefix to mail subject in mail notification.
 - propagate data variable changes between iterations.
 - implemented `nexial.scope.refetchDataFile` to preserve data variable changes between iteration.
+  - if data file is to be re-fetched, then Nexial now correctly fetch the correct data file.
+- code fix on reading Excel cells that contain value other than STRING.
+- `nexial.executionCount`: *NEW* System variable to indicate the number of steps executed in real-time.
+- `nexial.executionSkipCount`: *NEW* System variable to indicate the number of steps skipped in current execution in real-time.
+- `nexial.executionPassCount`: *NEW* System variable to indicate the number of steps passed in current execution in real-time.
+- `nexial.executionFailCount`: *NEW* System variable to indicate the number of steps failed in current execution in real-time.
 
 
 ### [Nexial Interactive](../interactive)
