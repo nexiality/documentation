@@ -39,6 +39,11 @@ comments: true
 - `nexial.executionFailCount`: *NEW* System variable to indicate the number of steps failed in current execution in real-time.
 
 
+### Event Notification
+- now supports [conditional event notification](../userguide/EventNotification#conditional-notification) via 
+  `nexial.notifyOn...If` data variables:
+
+
 ### [Nexial Interactive](../interactive)
 - now supports reloading of `project.properties` (option: `9`)
 - improved support for iteration. Data is re-calibrated when iteration changed during a Nexial Interactive session.

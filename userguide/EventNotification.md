@@ -15,15 +15,18 @@ Currently, these are the events that can be configured for notification:
 
   | Event Name              | System Variable                    | Explanation                                         |
   |:------------------------|:-----------------------------------|:----------------------------------------------------|
-  | **OnExecutionStart**    | `nexial.notifyOnExecutionStart`    | Start of an Execution
-  | **OnExecutionComplete** | `nexial.notifyOnExecutionComplete` | Completion of an Execution; the end of a Nexial run |
-  | **OnScriptStart**       | `nexial.notifyOnScriptStart`       | Start of a Script; indicates the start of an iteration (note: by default all scripts have at least one iteration). |    
-  | **OnScriptComplete**    | `nexial.notifyOnScriptComplete`    | Complete of a Script; indicates the completion of an iteration. |
-  | **OnScenarioStart**     | `nexial.notifyOnScenarioStart`     | Start of a Scenario                                 |
-  | **OnScenarioComplete**  | `nexial.notifyOnScenarioComplete`  | Completion of a Scenario                            |
+  | **OnExecutionStart**    | `nexial.notifyOnExecutionStart`    | Start of an Execution                               |
+  | **OnExecutionComplete** | `nexial.notifyOnExecutionComplete` | Completion of an Execution; the end of a Nexial run.|
+  | **OnScriptStart**       | `nexial.notifyOnScriptStart`       | Start of a Script; indicates the start of the first iteration of a script (note: by default all scripts have at least one iteration). |    
+  | **OnScriptComplete**    | `nexial.notifyOnScriptComplete`    | Complete of a Script; indicates the completion of a script. |
+  | **OnIterationStart**    | `nexial.notifyOnIterationStart`    | Start of an Iteration; indicates the start of an iteration (note: by default all scripts have at least one iteration). |    
+  | **OnIterationComplete** | `nexial.notifyOnIterationComplete` | Complete of an Iteration; indicates the completion of an iteration. |
+  | **OnScenarioStart**     | `nexial.notifyOnScenarioStart`     | Start of a Scenario.                                |
+  | **OnScenarioComplete**  | `nexial.notifyOnScenarioComplete`  | Completion of a Scenario.                           |
   | **OnError**             | `nexial.notifyOnError`             | An failure occurred; indicates when an error occurred or when a step failed. |
   | **OnPause**             | `nexial.notifyOnPause`             | Execution is Paused; indicates when an execution is paused, such as via the [PauseBefore flow control](../flowcontrols/index#pausebefore()-/-pauseafter()). |
 
+<br/>
 Notifications can be send to one of the following channels by using one of these keyword as prefix:
 1. **`audio:`** one can use one of the [included audio samples](../commands/sound/play(audio)#example) or specify your 
    own.
@@ -36,8 +39,48 @@ Notifications can be send to one of the following channels by using one of these
    (`|`) character.
 5. **`console:`** pause the console with a preconfigured message.
 
+### Conditional Notification
+Notifications can also be further controlled via [Nexial Filter](../flowcontrols/filter.md). In this way, the 
+notifications can be suppressed until the specific conditions (i.e. filters) are met. Notification conditions are 
+represented via a set of System variables corresponding to each event:
 
-### Examples
+  | Notification Event                 | Notification Condition               |
+  |:-----------------------------------|:-------------------------------------|
+  | `nexial.notifyOnExecutionStart`    | `nexial.notifyOnExecutionStartIf`    |
+  | `nexial.notifyOnExecutionComplete` | `nexial.notifyOnExecutionCompleteIf` |
+  | `nexial.notifyOnScriptStart`       | `nexial.notifyOnScriptStartIf`       |    
+  | `nexial.notifyOnScriptComplete`    | `nexial.notifyOnScriptCompleteIf`    |
+  | `nexial.notifyOnIterationStart`    | `nexial.notifyOnIterationStartIf`    |    
+  | `nexial.notifyOnIterationComplete` | `nexial.notifyOnIterationCompleteIf` |
+  | `nexial.notifyOnScenarioStart`     | `nexial.notifyOnScenarioStartIf`     |
+  | `nexial.notifyOnScenarioComplete`  | `nexial.notifyOnScenarioCompleteIf`  |
+  | `nexial.notifyOnError`             | `nexial.notifyOnErrorIf`             |
+  | `nexial.notifyOnPause`             | `nexial.notifyOnPauseIf`             |
+
+<br/>
+
+#### Example 1
+![](image/ExecutionNotification_09.png)
+
+The above data sheet indicates that the "OnIterationComplete" event notification, which is configured as an email 
+notification, will be triggered only at the completion of the 2nd iteration. 
+
+The notification is enabled via the `nexial.notifyOnIterationComplete` System variable, and the 
+"triggered only at the completion of the 2nd iteration" is specified via `nexial.notifyOnIterationCompleteIf`.
+
+Note: See [`nexial.scope.currentIteration`](../systemvars/index#nexial.scope.currentIteration) for more details about
+this System variable.
+
+#### Example 2
+![](image/ExecutionNotification_10.png)
+
+This example shows how one can delay the speech announcement until the 6th occurrence of failure.
+
+Note: See [`nexial.executionFailCount`](../systemvars/index#nexial.executionFailCount) for more details about this
+System variable.
+
+
+### More Examples
 One can mix-and-match the desired event with one of the available notification channels via System variables. For 
 examples:
 
@@ -52,6 +95,8 @@ examples:
   | Email          | Row 12  | When current execution is paused (such as via `PauseAfter()` flow control), email <br/>`my_email@my_company.com` of the same, along of current date/time |
   | Email          | Row 12  | When a scenario starts to execution, email `person1@my_company.com` and <br/>`another@geemail.com` with a message "Scenario ___ of ____ has started. |
   | Console        | Row 13  | When a scenario is done, pause the execution with a message on the console: <br/>"Waiting for Your Command, Master..." |
+
+<br/>
 
 Here are a couple of examples of the email send out via Nexial's event notification feature:<br/>
  ![](image/ExecutionNotification_05.png)<br/>
