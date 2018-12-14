@@ -32,8 +32,6 @@ comments: true
 - propagate data variable changes between iterations.
 - implemented `nexial.scope.refetchDataFile` to preserve data variable changes between iteration.
   - if data file is to be re-fetched, then Nexial now correctly fetch the correct data file.
-- code fix so that execution output for Mac would properly display hyperlinked output (such as 
-  `$(syspath|script|fullpath)`) and clicking on such link would open the corresponding resources directly.
 - code fix on reading Excel cells that contain value other than STRING.
 - `nexial.executionCount`: *NEW* System variable to indicate the number of steps executed in real-time.
 - `nexial.executionSkipCount`: *NEW* System variable to indicate the number of steps skipped in current execution in real-time.
