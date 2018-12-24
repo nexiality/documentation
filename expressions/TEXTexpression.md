@@ -52,6 +52,8 @@ comments: true
   `[TEXT(...) => replaceRegex(\(chicken\),beef)]`
 - **`retain(keep)`** - retain only the characters found in `keep`.
 - **`retainRegex(regex)`** - retain only the characters matched to `regex`.
+- **`save(path,append)`** - save current text content to `path`. If `path` resolves to an existing file, `append` 
+  set as `true` will append current text content to the said file. `append` is optional and defaults to `false`.
 - **`store(var)`** - save current TEXT expression to a data variable.  If the specified `var` exists, its value will 
   be overwritten.  Using this operation, one can put an expression on pause and resume it at a later time.
 - **`substring(start,end)`** - retain the portion of text from the `start` position (zero-based) to the `end` 

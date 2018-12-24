@@ -25,7 +25,8 @@ comments: true
   - create additional script/data files into existing project directory, without overwriting existing artifacts.
 - minor updates to artifact templates
 - update execution output on "SKIPPED" test steps (description is now italicized)
-- update code on macro handling logic; no longer cache macro steps in support of Nexial Interactive. Performance impact should be minimal.
+- update code on macro handling logic; no longer cache macro steps in support of Nexial Interactive. Performance impact 
+  should be minimal.
 - step disabling is now supported on test script, macro and test plan.
 - fixed gmail mail support due to namespace conflict in mail configuration.
 - add `[nexial] ` prefix to mail subject in mail notification.
@@ -34,14 +35,26 @@ comments: true
   - if data file is to be re-fetched, then Nexial now correctly fetch the correct data file.
 - code fix on reading Excel cells that contain value other than STRING.
 - `nexial.executionCount`: *NEW* System variable to indicate the number of steps executed in real-time.
-- `nexial.executionSkipCount`: *NEW* System variable to indicate the number of steps skipped in current execution in real-time.
-- `nexial.executionPassCount`: *NEW* System variable to indicate the number of steps passed in current execution in real-time.
-- `nexial.executionFailCount`: *NEW* System variable to indicate the number of steps failed in current execution in real-time.
+- `nexial.executionSkipCount`: *NEW* System variable to indicate the number of steps skipped in current execution in 
+  real-time.
+- `nexial.executionPassCount`: *NEW* System variable to indicate the number of steps passed in current execution in 
+  real-time.
+- `nexial.executionFailCount`: *NEW* System variable to indicate the number of steps failed in current execution in 
+  real-time.
+- major improvement in memory footprint by applying aggressive memory conservation after each iteration and script 
+  execution.
+- code fix for a minor improvement on expanding the column width of `#data` worksheet during output generation.
 
 
-### Event Notification
+### [Event Notification](../userguide/EventNotification)
 - now supports [conditional event notification](../userguide/EventNotification#conditional-notification) via 
   `nexial.notifyOn...If` data variables:
+
+
+### [Nexial Expression](../expression)
+- [`nexial.expression.OpenFileAsIs`](../systemvars/index#nexial.expression.OpenFileAsIs): **NEW** System variable to 
+  instruct Nexial on omitting data variable substitution during the opening of external file during the evaluation of
+  a Nexial expression.
 
 
 ### [Nexial Interactive](../interactive)
@@ -67,23 +80,39 @@ comments: true
 
 
 ### [aws.s3 commands](../commands/aws.ses)
-- support AWS <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-api.html" class="external-link" target="_nexial_link">Assume Role"</a> 
-  during credential challenge. Now it is possible to include the switching of a AWS IAM role as part of your automation. 
-  This feature is available for all integrated AWS services, which is thus far S3 and SES. For more information, read 
-  the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_permissions-to-switch.html" class="external-link" target="_nexial_link">Granting a User Permissions to Switch Roles</a>.
+- support AWS <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-api.html" 
+  class="external-link" target="_nexial_link">Assume Role"</a> during credential challenge. Now it is possible to 
+  include the switching of a AWS IAM role as part of your automation. This feature is available for all integrated AWS 
+  services, which is thus far S3 and SES. For more information, read the <a 
+  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_permissions-to-switch.html" class="external-link" 
+  target="_nexial_link">Granting a User Permissions to Switch Roles</a>.
 
 
 ### [aws.ses commands](../commands/aws.ses)
-- support AWS <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-api.html" class="external-link" target="_nexial_link">Assume Role"</a> 
-  during credential challenge. Now it is possible to include the switching of a AWS IAM role as part of your automation. 
-  This feature is available for all integrated AWS services, which is thus far S3 and SES. For more information, read 
-  the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_permissions-to-switch.html" class="external-link" target="_nexial_link">Granting a User Permissions to Switch Roles</a>.
+- support AWS <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-api.html" 
+  class="external-link" target="_nexial_link">Assume Role"</a> during credential challenge. Now it is possible to 
+  include the switching of a AWS IAM role as part of your automation. This feature is available for all integrated AWS 
+  services, which is thus far S3 and SES. For more information, read the <a 
+  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_permissions-to-switch.html" class="external-link" 
+  target="_nexial_link">Granting a User Permissions to Switch Roles</a>.
 
 
 ### [base commands](../commands/base)
+- [`saveVariablesByPrefix(var,prefix)`](../commands/base/saveVariablesByPrefix(var,prefix)): **NEW** command to save
+  all variable names with `prefix` as a list to `var`.
+- [`saveVariablesByRegex(var,regex)`](../commands/base/saveVariablesByRegex(var,regex)): **NEW** command to save all
+  variable names that match `regex` as a list to `var`.
 
 
 ### [desktop commands](../commands/desktop)
+
+
+### [excel commands](../commands/excel)
+- major improvement in memory footprint by applying aggressive memory conservation after 
+  [`writeDown(file,worksheet,startCell,array)`](../commands/excel/writeDown(file,worksheet,startCell,array)),
+  [`writeAcross(file,worksheet,startCell,array)`](../commands/excel/writeAcross(file,worksheet,startCell,array)),
+  [`write(file,worksheet,startCell,data)`](../commands/excel/write(file,worksheet,startCell,data)) and
+  [`writeVar(var,file,worksheet,startCell)`](../commands/excel/writeVar(var,file,worksheet,startCell)).
 
 
 ### [image commands](../commands/image)
@@ -93,6 +122,8 @@ comments: true
 
 
 ### [io commands](../commands/io)
+- [`searchAndReplace(file,config,saveAs)`](../commands/io/searchAndReplace(file,config,saveAs)): **NEW** command to
+  search/replace through the content of `file` via the name/value pair found in `config`.
 
 
 ### [json command](../commands/json)
@@ -122,10 +153,10 @@ comments: true
   - execution status update now accompanied with description (in CBT, description is shown in "Notes and Tags" section).
 - improved [BrowserStack support](../tipsandtricks/BrowserStackIntegration):
   - support updating of execution status per browser use within same execution. It is now possible to configure via 
-    `nexial.browserstack.reportStatus` when the execution status update should occur - `iteration`, `script` or `execution`.
+    `nexial.browserstack.reportStatus` when the execution status update should occur: `iteration`,`script`,`execution`.
 - support mobile device emulation when automating on chrome browser (locally).
-- shipped with <a href="https://raw.githubusercontent.com/SeleniumHQ/selenium/master/java/CHANGELOG" class="external-link" target="_nexial_link">Selenium v3.141.59</a>.
-  Significant changes include:
+- shipped with <a href="https://raw.githubusercontent.com/SeleniumHQ/selenium/master/java/CHANGELOG" 
+  class="external-link" target="_nexial_link">Selenium v3.141.59</a>. Significant changes include:
   - Restored remoteHost support
   - Implement `WrapsElement` by `Select` element wrapper (#6616)
   - Default the number of threads assigned to the server to 200, which is what it was in 3.13.0
@@ -134,3 +165,9 @@ comments: true
 
 ### [ws commands](../commands/ws)
 
+
+### [xml commands](../commands/xml)
+- [`storeValues(xml,xpath,var)`](../commands/xml/storeValues(xml,xpath,var)): code fix to appropriately handle attribute 
+  values.
+- [`assertValues(xml,xpath,array,exactOrder)`](../commands/xml/assertValues(xml,xpath,array,exactOrder)): code fix to 
+  appropriately handle attribute values.

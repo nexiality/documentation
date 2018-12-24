@@ -78,7 +78,8 @@ To manipulate JSON document, check out [`Nexial jsonpath`](../jsonpath) for m
   `jsonpath` with the specified `replaceWith`.  Depending on the JSON in question and the specified JSON path, the 
   match could either be `null` (none matched), text (matched to a textual value), JSON object or JSON array.  Since 
   `replaceWith` is treated as text, the end result of the JSON document in question could become structurally different. 
-- **`save(path)`** - save current JSON document to file represented by `path`.
+- **`save(path,append)`** - save current JSON content to `path`. If `path` resolves to an existing file, `append` 
+  set as `true` will append current JSON content to the said file. `append` is optional and defaults to `false`.
 - **`store(var)`** - save current JSON expression to a data variable.  If the specified `var` exists, its value will 
   be overwritten.  Using this operation, one can put an expression on pause and resume it at a later time.
 - **`text`** - transform a JSON document to its textual representation.  JSON object will be enclosed in `{...}`, 

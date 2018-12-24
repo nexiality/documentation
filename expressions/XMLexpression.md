@@ -21,7 +21,8 @@ XML provides transformational operations on a XML document.
 - **`count(xpath)`** - counts the number of elements present at the specified `xpath`.
 - **`extract(xpath)`** - transform current XML document using `xpath`.
 - **`remove(xpath)`** - remove from the source XML the element(s) that matches the specified `xpath`.
-- **`save(path)`** - save current XML document to file represented by `path`.
+- **`save(path,append)`** - save current expression content to `path`. If `path` resolves to an existing file, `append` 
+  set as `true` will append current expression content to the said file. `append` is optional and defaults to `false`.
 - **`store(var)`** - save current XML expression to a data variable.  If the specified `var` exists, its value will 
   be overwritten.  Using this operation, one can put an expression on pause and resume it at a later time.
 - **`text`** - transform current XML document into its textual representation.

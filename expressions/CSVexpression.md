@@ -355,8 +355,8 @@ these SSN are not the same.
   field delimiter (such as comma).
 
 #### save(file)
-- save current CSV content to external file. If specified file represents an existing file, it 
-  will be overwritten.
+- save current CSV content to `path`. If `path` resolves to an existing file, `append` set as `true` will append 
+  current CSV content to the said file. `append` is optional and defaults to `false`.
 
 #### size
 - retrieves the number of rows in current CSV content. Synonymous to **[`rowCount`](#row(index))** and 

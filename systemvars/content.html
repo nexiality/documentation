@@ -855,7 +855,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial."><code>nexial.currentActivity</code></a>
+            <a name="nexial.currentActivity"><code>nexial.currentActivity</code></a>
         </td>
         <td>text</td>
         <td>&nbsp;</td>
@@ -863,6 +863,23 @@
         <td>
             This system variable is to indicate the Activity currently in Execution. It will only show activity name
             currently executing.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.expression.OpenFileAsIs"><code>nexial.expression.OpenFileAsIs</code></a>
+        </td>
+        <td>false</td>
+        <td>&nbsp;</td>
+        <td>false</td>
+        <td>
+            When using Nexial Expression, it is possible to specify the content of an external file rather than deriving
+            text content via a data variable. However by default, Nexial will read the specified text file with intent
+            to substitute any found data variables with the corresponding values during the time of reading such file.
+            While this is often desirable, at times one might want to avoiding such integrated automation.
+            <br/>
+            <br/>
+            To instruct Nexial not to perform data variable substitution, set this System variable to <code>true</code>.
         </td>
     </tr>
     <tr>

@@ -35,6 +35,8 @@ The "base" command type represents a series of common automation commands:
 - [`saveCount(text,regex,saveVar)`](saveCount(text,regex,saveVar))
 - [`saveMatches(text,regex,saveVar)`](saveMatches(text,regex,saveVar))
 - [`saveReplace(text,regex,replace,resultVar)`](saveReplace(text,regex,replace,resultVar))
+- [`saveVariablesByPrefix(var,prefix)`](saveVariablesByPrefix(var,prefix))
+- [`saveVariablesByRegex(var,regex)`](saveVariablesByRegex(var,regex))
 - [`split(text,delim,saveVar)`](split(text,delim,saveVar))
 - [`startRecording()`](startRecording())
 - [`stopRecording()`](stopRecording())
