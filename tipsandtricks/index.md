@@ -10,17 +10,17 @@ redirect_from:
 
 
 #### General
-- [Avoid OutOfMemory error - Trim Test Artifacts](TrimTestArtifacts)
 - [Best Practice on Script Names](ValidScriptNames)
 - [Improving Script Portability](ImprovingScriptPortability)
 - [Integrating with other projects](IntegratingWithOtherProjects)
 - [Record/Playback a Nexial Execution](RecordPlayback)
 - [Save time on running Nexial](SaveTimeRunningNexial)
+- [Avoid OutOfMemory error - Trim Test Artifacts](TrimTestArtifacts)
+- [Improving Memory Management](ImprovingMemoryManagement)
 - [Security Issues on Executable](SecurityIssuesExecutableFiles)
 - [Mass-generate data values via 1 data variable and iteration](scope-currentIteration)
 - [Render Date/time in Specific Timezone](DisplayCurrentTimeInSpecificTimeZone)
-- [Improving Memory Management](ImprovingMemoryManagement)
-- *in progress* [Why isn't Nexial executing my scenario (worksheet)?]()
+- [Why isn't Nexial executing my scenario (worksheet)?!](ScenarioExecution)
 
 
 #### Desktop Automation
@@ -37,13 +37,12 @@ redirect_from:
 
 
 #### File Handling
-- *in progress* [How to create a CSV file from another CSV file?]()
+- [How to create a CSV file from another CSV file?](CreateCSVFromOtherCSV)
 - [How to iterate through a set of files](IterateOverSetOfFiles)
 
 
 #### Web Automation
-- *in progress* [Web Application Automation]()
-- *in progress* [How to get an Element's Xpath from Chrome]()
+- [How to get a web element's XPath from Chrome](FindXPathFromChrome)
 - [Execute Scripts in Headless Browser](ExecuteScripts_HeadlessBrowser)
 - [BrowserStack Integration](BrowserStackIntegration)
 - [CrossBrowserTesting Integration](CrossBrowserTestingIntegration)

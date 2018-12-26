@@ -89,7 +89,7 @@ table {
 
 th {
   background-color: rgba(100, 100, 100, 0.2);
-  padding: 3px;
+  padding:          3px;
 }
 
 td {
@@ -115,8 +115,11 @@ table audio {
 }
 
 blockquote {
-  border-left: 10px solid #f2f2f0;
-  font-size:   1.2em;
+  border-left: 20px solid #ccc;
+  font-size:   1.1em;
+  color:       #066;
+  background:  rgba(100, 150, 150, 0.10) !important;
+  padding:     15px;
 }
 
 #main-content img {
