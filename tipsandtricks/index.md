@@ -19,6 +19,7 @@ redirect_from:
 - [Security Issues on Executable](SecurityIssuesExecutableFiles)
 - [Mass-generate data values via 1 data variable and iteration](scope-currentIteration)
 - [Render Date/time in Specific Timezone](DisplayCurrentTimeInSpecificTimeZone)
+- [Improving Memory Management](ImprovingMemoryManagement)
 - *in progress* [Why isn't Nexial executing my scenario (worksheet)?]()
 
 
