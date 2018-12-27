@@ -40,10 +40,39 @@ Other validations needs to be configured for each field of the record:
 4. `DATE` - to do date field validation against given date pattern. See below for the date pattern syntax. 
 5. `SQL` - to check field value against a database query
 
-
-In Progress
+Validations in progress (not yet implemented):
 1. `API`
 2. `RANGE`
+
+Example of a `SQL` validation:
+```json
+"validations": [
+    {
+        "field-name": "<FIELD_NAME>",
+        "validation-methods": [
+            {
+                "type": "SQL",
+                "params": [
+                    "mydb",
+                    "SELECT …  ${…} … "
+                ]
+            }
+        ]
+    }
+]
+```
+
+The above example performs a SQL-based validation on the field marked as `<FIELD_NAME>`. The first parameter `mydb` 
+refers to the database connection profile for executing the specified SQL (the second parameter). Below is an 
+example of a database connection profile set up in a data file:<br/>
+
+![](../rdbms/image/index_01.png)
+
+The SQL statement is expected as a SELECT statement which will return 1 or more rows as indication as a positive 
+validation. No rows returned means that the desired validation has failed. It is possible to include other field values
+or data variables as part of the validation SQL statement. Use the standard `${...}` syntax to construct a dynamic SQL
+statement. 
+
 
 #### Map Functions supported
 Map Functions are to apply below functions on all the records on a field and get the value. Which could be later used 
