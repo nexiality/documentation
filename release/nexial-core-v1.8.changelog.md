@@ -7,7 +7,7 @@ comments: true
 ---
 
 ### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-1.8" class="external-link" target="_nexial_link">Release 1.8</a>
-2018-12-??
+2019-01-??
 
 
 ### General
@@ -44,6 +44,11 @@ comments: true
 - major improvement in memory footprint by applying aggressive memory conservation after each iteration and script 
   execution.
 - code fix for a minor improvement on expanding the column width of `#data` worksheet during output generation.
+- Code updates to improve the fatal error reporting in execution output.
+- Code updates on step skipping: **overwriting** instead of _appending_ `SkipIf(true)` to any existing flow control.
+- Code updates to reduce undesirable runtime errors.
+- Code updates to properly handle invalid or malformed test scenarios.
+- Code updates to sort `#data` worksheet on the execution output to favor System variables over user-defined variables.
 
 
 ### [Event Notification](../userguide/EventNotification)
