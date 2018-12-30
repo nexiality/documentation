@@ -1,21 +1,5 @@
-/*
- * Copyright 2012-2018 the original author or authors.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 body {
-    font-family:      Tahoma, serif;
+    font-family:      "Trebuchet MS", sans-serif;
     font-size:        11pt;
     margin:           0;
     background-color: transparent;
@@ -92,14 +76,6 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
 
 .execValue { text-align: left; font-weight: bold; background-color: rgba(255, 255, 255, 0.75); color: #333; }
 
-.execNum {
-    text-align:  right;
-    font-weight: bold;
-    white-space: nowrap;
-    max-width:   10px !important;
-    border:      1px solid rgba(200, 200, 200, 0.75);
-}
-
 .result { font-family: Tahoma, serif; font-size: 10pt; border: none; background: #fff; }
 
 .result td, .result th { border-bottom: 1px solid #ddd; }
@@ -142,6 +118,8 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
 
 .exec-summary-header {
     clear:                      both;
+    width:                      max-content;
+    min-width:                  100%;
     margin-right:               5px;
     background-color:           rgba(150, 160, 171, 0.75);
     border-top-left-radius:     10px;
@@ -154,7 +132,7 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
     font-size:      9pt;
     text-transform: uppercase;
 
-    padding:        10px 5px 0 5px;
+    padding:        14px 5px 0 5px;
 
     float:          left;
     text-align:     left;
@@ -165,7 +143,13 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
 
 .exec-summary-header .label-small { width: auto; }
 
-.exec-summary { clear: both; }
+.exec-summary-header table th:last-child { padding-right: 68px; }
+
+.exec-summary {
+    clear:     both;
+    width:     max-content;
+    min-width: 100%;
+}
 
 .exec-summary .planStep {
     padding:                   0 !important;
@@ -180,9 +164,7 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
     z-index: 99;
 }
 
-.label-datetime, .value-datetime { min-width: 175px; width: 175px; }
-
-.label-time, .value-time { min-width: 80px; width: 80px; }
+.plan-step-summary { display: table; }
 
 .plan-step-summary .value {
     font-weight:      bold;
@@ -213,7 +195,7 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
 .iteration {
     padding:       0 !important;
     clear:         both;
-    margin:        5px 0 30px 20px;
+    margin:        5px 0 15px 20px;
     border-radius: 0;
     border:        none;
 }
@@ -249,71 +231,104 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
     overflow:         hidden;
 }
 
-.label-num, .value-num { min-width: 60px; width: 60px; max-width: 60px; white-space: nowrap; }
+.label-datetime, .value-datetime { min-width: 150px; width: 150px; }
 
-.label-num { text-align: center !important; }
+.label-time, .value-time { min-width: 70px; width: 70px; }
 
-.value-num { text-align: right !important; }
+.label-datetime, .label-time, .value-datetime, .value-time { text-align: center !important; }
 
-.label-title, .value-title { text-wrap: none; min-width: 300px; width: 300px; }
+.label-num, .value-num { text-align: right !important; }
+
+.label-num, .value-num { min-width: 70px; width: 70px; max-width: 70px; white-space: nowrap; }
+
+.label-title, .value-title {
+    text-wrap:     none !important;
+    text-overflow: ellipsis;
+    white-space:   nowrap;
+    min-width:     250px;
+    width:         250px;
+}
 
 .value-title { font-weight: bold; }
 
-.plan-step-summary .value-title, .exec-summary-header .label-title { min-width: 385px; width: 385px; }
+.plan-step-summary .value-title, .exec-summary-header .label-title { min-width: 355px; width: 355px; }
 
-.plan-step-summary .value-iteration, .exec-summary-header .label-iteration { min-width: 150px; width: 150px; }
-
-.value-time { min-width: 70px !important; }
+.label-iteration, .value-iteration { min-width: 60px; width: 60px; text-align: center !important; }
 
 .value-scriptRef, .value-scenarioRef {
     font-weight:      normal;
     vertical-align:   text-top;
-    height:           content-box;
     color:            rgba(64, 62, 13, 1);
     background-color: rgba(228, 227, 201, 0.5);
     padding:          5px;
     margin:           5px 0 0 0;
+    white-space:      nowrap;
+    width:            240px;
+    font-family:      monospace;
+    font-size:        9pt;
 }
 
 .label-ref {
-    float:         left;
-    clear:         both;
-    font-family:   monospace;
-    color:         rgba(64, 62, 13, 0.5);
-    width:         50%;
-    text-overflow: ellipsis;
-    overflow:      hidden;
+    color:          rgba(64, 62, 13, 0.5);
+    text-overflow:  ellipsis;
+    overflow:       hidden;
+    vertical-align: text-top;
 }
 
 .value-ref {
-    font-family:   monospace;
-    width:         50%;
     text-overflow: ellipsis;
     overflow:      hidden;
+    padding:       0 0 0 5px;
 }
 
 .info {
-    float:    right;
-    position: sticky;
-    right:    -2px;
-    top:      21px;
-    color:    rgba(64, 62, 53, 0.75);
+    float:         right;
+    position:      relative;
+    right:         -6px;
+    top:           -6px;
+    color:         rgba(64, 62, 53, 0.75);
+    z-index:       99;
+    display:       inline;
+    margin-bottom: -15px;
 }
 
 .value-tally {
-    text-decoration-line:  underline;
-    text-decoration-color: rgba(80, 80, 80, 0.75);
-    text-decoration-style: double;
+    font-weight:             bold !important;
+    text-decoration-line:    underline;
+    text-underline-position: under;
+    text-decoration-color:   rgba(80, 80, 80, 0.75);
+    text-decoration-style:   double;
 }
 
 .spacer, .spacer2 { flex-grow: 100; }
 
 .spacer2 { border: none !important; }
 
-tr:hover {
-    background-color: rgba(210, 210, 210, 0.15);
+tr:hover { background-color: rgba(125, 125, 120, 0.12); }
+
+td.hasFailure { background: #fdd !important; color: #800; }
+
+td.allPass { background: #dfd !important; color: #080; }
+
+.result-controls {
+    padding:      5px 0 10px 0;
+    font-family:  Tahoma, serif;
+    font-variant: small-caps;
+    text-shadow:  1px 1px 5px rgba(200, 200, 200, 1);
 }
 
-.hasFailure { background: #fdd; font-weight: bold; color: #800; }
+.result-controls i {
+    padding:          5px;
+    color:            rgba(20, 40, 80, 0.5);
+    cursor:           pointer;
+    border:           2px outset;
+    margin-right:     10px;
+    background-color: rgba(200, 220, 230, 0.5);
+    border-radius:    10px;
+}
 
-.allPass { background: #dfd; color: #080; }
+.result-controls i:hover {
+    color:            rgba(30, 30, 80, 1);
+    text-shadow:      1px 1px 4px #fff;
+    background-color: rgba(180, 180, 200, 0.75);
+}
