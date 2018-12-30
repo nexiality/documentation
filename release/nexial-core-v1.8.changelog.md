@@ -49,6 +49,9 @@ comments: true
 - Code updates to reduce undesirable runtime errors.
 - Code updates to properly handle invalid or malformed test scenarios.
 - Code updates to sort `#data` worksheet on the execution output to favor System variables over user-defined variables.
+- *NEW* HTML execution output aimed to consolidate all execution summary within 1 HtML page. Should be most helpful
+  for plan-based execution.
+- `nexial.openExecutionSummary`: *NEW* System variable to automatically open execution output (HTML) after its generated.
 
 
 ### [Event Notification](../userguide/EventNotification)
