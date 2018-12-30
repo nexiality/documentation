@@ -315,6 +315,7 @@ td.allPass { background: #dfd !important; color: #080; }
     font-family:  Tahoma, serif;
     font-variant: small-caps;
     text-shadow:  1px 1px 5px rgba(200, 200, 200, 1);
+    float:        right;
 }
 
 .result-controls i {
