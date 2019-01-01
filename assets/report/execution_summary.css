@@ -1,6 +1,6 @@
 body {
     font-family:      "Trebuchet MS", sans-serif;
-    font-size:        11pt;
+    font-size:        10pt;
     margin:           0;
     background-color: transparent;
     padding:          25px;
@@ -12,7 +12,7 @@ body {
     font-weight:      bold;
     background-color: rgba(228, 227, 201, 1);
     color:            rgba(64, 62, 13, 1);
-    box-shadow:       0 0 25px rgba(88, 77, 61, 0.75);
+    box-shadow:       0 0 10px rgba(88, 77, 61, 0.75);
     border:           2px solid rgba(37, 114, 71, 1);
     vertical-align:   middle;
     padding:          15px;
@@ -22,21 +22,61 @@ body {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
-.showhide-all {
-    position:  relative;
-    font-size: 25px;
-    float:     right;
-    top:       -5px;
-    right:     -5px;
-    padding:   2px 6px;
-    color:     rgba(124, 122, 73, 1);
+.result-controls {
+    margin:              3px 0 15px 0;
+    padding:             5px 0px 10px 10px;
+    color:               rgba(100, 100, 100, 1);
+    float:               right;
+    -webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+    clear:               both;
 }
 
-.showhide-all i {
-    cursor: pointer;
+.result-controls i {
+    cursor:       pointer;
+    margin-right: 5px;
+    padding:      5px;
 }
 
-.showhide-all i:hover { text-shadow: 1px 1px 5px rgba(255, 255, 255, 1); }
+.result-controls i span {
+    padding-left: 3px;
+    font-family:  Thonburi, sans-serif;
+}
+
+.result-controls i.off {
+    color:         rgba(100, 100, 100, 0.75);
+    border-bottom: 2px solid rgba(100, 100, 100, 0.75);
+}
+
+.result-controls i.on {
+    color:         rgba(40, 150, 40, 1);
+    border-bottom: 2px solid rgba(50, 180, 50, 1);
+}
+
+.result-controls i:hover {
+    text-shadow:      1px 1px 4px #fff;
+    background-color: rgba(40, 40, 40, 0.1);
+    box-shadow:       0 -1px 4px rgba(40, 40, 40, 0.5);
+}
+
+.result-controls i.fa-exclamation-circle.off {
+    color:         rgba(100, 100, 100, 0.75);
+    border-bottom: 2px solid rgba(100, 100, 100, 0.75);
+}
+
+.result-controls i.fa-exclamation-circle.on {
+    color:         rgba(150, 40, 40, 1);
+    border-bottom: 2px solid rgba(150, 40, 40, 1);
+}
+
+.result-controls i.fa-expand {
+    color:         rgba(80, 80, 80, 1);
+    border-bottom: 2px solid rgba(80, 80, 80, 1);
+}
+
+.result-controls i.fa-compress {
+    color:         rgba(100, 100, 100, 0.75);
+    border-bottom: 2px solid rgba(100, 100, 100, 0.75);
+}
 
 .showhide {
     position:                   relative;
@@ -68,6 +108,7 @@ body {
 
 div.execMeta {
     font-size: 10pt;
+    clear:     both;
 }
 
 table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
@@ -75,6 +116,11 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
 .execLabel { width: 145px;color: #555;background-color: rgba(239, 239, 239, 0.75); padding: 5px 3px; }
 
 .execValue { text-align: left; font-weight: bold; background-color: rgba(255, 255, 255, 0.75); color: #333; }
+
+.execValueFail {
+    color:       #d00 !important;
+    text-shadow: 1px 1px 4px #f88;
+}
 
 .result { font-family: Tahoma, serif; font-size: 10pt; border: none; background: #fff; }
 
@@ -168,7 +214,7 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
 
 .plan-step-summary .value {
     font-weight:      bold;
-    font-size:        11pt;
+    font-size:        10pt;
     text-overflow:    ellipsis;
     overflow:         hidden;
 
@@ -186,6 +232,18 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
 .plan-step-summary .value-small {
     width:   auto;
     padding: 8px 15px 2px 5px !important;
+}
+
+.plan-step-summary .value {
+    /*padding-top: 10px;*/
+}
+
+.plan-step-summary .noFailure {
+    background-color: rgba(239, 255, 239, 1);
+}
+
+.plan-step-summary .hasFailure {
+    background-color: rgba(255, 239, 239, 1);
 }
 
 .label-script, .value-script { width: 250px; }
@@ -221,7 +279,7 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
 
 .exec-summary .planStep .iteration .value {
     font-weight:      normal;
-    font-size:        11pt;
+    font-size:        10pt;
     background-color: rgba(255, 255, 255, 0.25);
     border-bottom:    1px solid rgba(100, 100, 100, 0.25);
     height:           auto;
@@ -242,11 +300,9 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
 .label-num, .value-num { min-width: 70px; width: 70px; max-width: 70px; white-space: nowrap; }
 
 .label-title, .value-title {
-    text-wrap:     none !important;
-    text-overflow: ellipsis;
-    white-space:   nowrap;
-    min-width:     250px;
-    width:         250px;
+    text-wrap: none !important;
+    min-width: 250px;
+    width:     250px;
 }
 
 .value-title { font-weight: bold; }
@@ -309,27 +365,3 @@ tr:hover { background-color: rgba(125, 125, 120, 0.12); }
 td.hasFailure { background: #fdd !important; color: #800; }
 
 td.allPass { background: #dfd !important; color: #080; }
-
-.result-controls {
-    padding:      5px 0 10px 0;
-    font-family:  Tahoma, serif;
-    font-variant: small-caps;
-    text-shadow:  1px 1px 5px rgba(200, 200, 200, 1);
-    float:        right;
-}
-
-.result-controls i {
-    padding:          5px;
-    color:            rgba(20, 40, 80, 0.5);
-    cursor:           pointer;
-    border:           2px outset;
-    margin-right:     10px;
-    background-color: rgba(200, 220, 230, 0.5);
-    border-radius:    10px;
-}
-
-.result-controls i:hover {
-    color:            rgba(30, 30, 80, 1);
-    text-shadow:      1px 1px 4px #fff;
-    background-color: rgba(180, 180, 200, 0.75);
-}
