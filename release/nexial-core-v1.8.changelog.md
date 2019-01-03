@@ -51,6 +51,7 @@ comments: true
 - Code updates to sort `#data` worksheet on the execution output to favor System variables over user-defined variables.
 - **NEW** HTML execution output aimed to consolidate all execution summary within 1 HtML page. Should be most helpful
   for plan-based execution.
+- `os.hostname`: **NEW** System variable to expose the host name of current test harness.
 
 
 ### [Event Notification](../userguide/EventNotification)
