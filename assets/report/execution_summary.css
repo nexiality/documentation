@@ -122,6 +122,8 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
     text-shadow: 1px 1px 4px #f88;
 }
 
+.execValue pre { margin: 0; }
+
 .result { font-family: Tahoma, serif; font-size: 10pt; border: none; background: #fff; }
 
 .result td, .result th { border-bottom: 1px solid #ddd; }
