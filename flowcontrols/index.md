@@ -102,6 +102,25 @@ The above example would read:
 > 
 > otherwise, run the update SQL on "COMPLETED_SALES" table.
 
+#### On-the-spot Step Skipping
+_Another way (easier way?) to skip steps?_
+
+`SkipIf()` provides a powerful way to skip over certain steps based on execution-time condition. However at times, one
+finds the need to skip a series of steps without any condition. For example, one might want to temporarily "disable"
+one or more steps in order to observe change in behavior in the target application (AUT). 
+
+Nexial supports such step disabling via the use of "strikethrough", like this:
+1. Move cursor to the "command" column of the desire step to skip.
+2. Apply "strikethrough" formatting over the command of the said step. Use `Ctrl-5` to apply the strikethrough 
+   formatting.
+3. Alternatively, highlight a contiguous set of commands of the steps to skip and use `Ctrl-5` to skip over them.
+4. During execution, Nexial will automatically place a `SkipIf(true)` flow control to the corresponding 
+   "flow controls" column, thus effectively skip over such steps.
+5. Use `Ctrl-5` again to re-enable the previous "disabled steps.
+
+This technique can be applied to test steps, to macro steps and to test plan (apply "strikethrough" over the "script" 
+column).
+
 
 ### ProceedIf(condition)
 This flow control is essentially the same as **`SkipIf(condition)`** (above), albeit the logical inverse of it.  

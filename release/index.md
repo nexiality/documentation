@@ -18,3 +18,4 @@ redirect_from:
 - [v1.5 (2018-09-03)](nexial-core-v1.5.changelog)
 - [v1.6 (2018-10-08)](nexial-core-v1.6.changelog)
 - [v1.7 (2018-11-13)](nexial-core-v1.7.changelog)
+- [v1.8 (2019-01-04)](nexial-core-v1.8.changelog)

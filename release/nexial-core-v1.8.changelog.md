@@ -1,60 +1,73 @@
 ---
 layout: default
-title: nexial-core 1.8 (2018-12-??)
+title: nexial-core 1.8 (2019-01-04)
 parent: release
 tags: release nexial-core 1.8
 comments: true
 ---
 
 ### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-1.8" class="external-link" target="_nexial_link">Release 1.8</a>
-2019-01-??
+2019-01-04
 
 
 ### General
+#### Fixes:
 - rename some System variables so that their name are prefixed with `nexial.` to avoid conflicts.
-- code fix to ensure that macro/section expansion won't inadvertently merge passed the "ignored" section.
+- ensure that macro/section expansion won't inadvertently merge passed the "ignored" section.
+- update code on macro handling logic; no longer cache macro steps in support of Nexial Interactive. Performance impact 
+  should be minimal.
+- fixed GMail mail support due to namespace conflict in mail configuration.
+- propagate data variable changes between iterations.
+- fix on reading Excel cells that contain value other than STRING.
+- reduce undesirable runtime errors.
+- better handling of invalid or malformed test scenarios.
+
+#### Improvements:
 - improved support for XML/HTML during data variable substitution.
-- [`${nexial.lastOutputLink}`](../systemvars/index#nexial.lastOutputLink): **NEW** System variable to capture the 
-  location of the last output file (only generated via certain commands).
-- support skipping of command via "strikethrough": Use `Ctrl-5` on a "command" column to skip over the corresponding
-  test step. This effectively add a `SkipIf(true)` flow control to the corresponding "flow controls" column. 
-  Use `Ctrl-5` again to enable the corresponding test step.
-- `bin/nexial-project.cmd|sh`: 
+- minor stylistic updates to artifact templates.
+- minor improvement on expanding the column width of `#data` worksheet during output generation.
+- update execution output on "SKIPPED" test steps (description is now italicized).
+- sort `#data` worksheet on the execution output to favor System variables over user-defined variables.
+- improve the fatal error reporting in execution output.
+- add `[nexial] ` prefix to mail subject in mail notification.
+- major improvement in memory footprint by applying aggressive memory conservation after each iteration and script 
+  execution.
+- speed up batch script executions (`bin/*.sh`) for Mac/*NIX.
+- improved output formatting for `nexial-variable-update` utility batch.
+
+#### New:
+- [Step Disabling](../flowcontrols/index#on-the-spot-step-skipping):
+  - support skipping of command via "strikethrough": Use `Ctrl-5` on a "command" column to skip over the corresponding
+    test step. This effectively add a `SkipIf(true)` flow control to the corresponding "flow controls" column. 
+    Use `Ctrl-5` again to enable the corresponding test step.
+  - supported on test script, macro and test plan.
+  - **overwriting** instead of _appending_ `SkipIf(true)` to any existing [flow control](../flowcontrols).
+- [`bin/nexial-project.cmd|sh`](../userguide/BatchFiles#nexial-projectcmd--nexial-projectsh): 
   - automatically create `.meta/project.id` under the target project directory to identify each project. This manifest 
     file can be useful (in the future) for tracking and comparison purpose.
   - create additional script/data files into existing project directory, without overwriting existing artifacts.
-- minor updates to artifact templates
-- update execution output on "SKIPPED" test steps (description is now italicized)
-- update code on macro handling logic; no longer cache macro steps in support of Nexial Interactive. Performance impact 
-  should be minimal.
-- step disabling is now supported on test script, macro and test plan.
-- fixed gmail mail support due to namespace conflict in mail configuration.
-- add `[nexial] ` prefix to mail subject in mail notification.
-- propagate data variable changes between iterations.
-- implemented `nexial.scope.refetchDataFile` to preserve data variable changes between iteration.
+- HTML Output:
+  - **NEW** HTML execution output aimed to consolidate all execution summary within 1 HtML page. Should be most 
+    helpful for plan-driven execution or iteration-laden execution.
+  - automatically opens execution output HTML when `nexial.openResult` is set to `true`.
+
+
+### [System Variables](../systemvars/index):
+- [`nexial.lastOutputLink`](../systemvars/index#nexial.lastOutputLink): **NEW** System variable to capture the 
+  location of the last output file (only generated via certain commands).
+- [`nexial.scope.refetchDataFile`](../systemvars/index#nexial.scope.refetchDataFile): **NEW** System variable to 
+  preserve data variable changes between iteration.
   - if data file is to be re-fetched, then Nexial now correctly fetch the correct data file.
-- code fix on reading Excel cells that contain value other than STRING.
-- `nexial.executionCount`: *NEW* System variable to indicate the number of steps executed in real-time.
-- `nexial.executionSkipCount`: *NEW* System variable to indicate the number of steps skipped in current execution in 
-  real-time.
-- `nexial.executionPassCount`: *NEW* System variable to indicate the number of steps passed in current execution in 
-  real-time.
-- `nexial.executionFailCount`: *NEW* System variable to indicate the number of steps failed in current execution in 
-  real-time.
-- major improvement in memory footprint by applying aggressive memory conservation after each iteration and script 
-  execution.
-- code fix for a minor improvement on expanding the column width of `#data` worksheet during output generation.
-- Code updates to improve the fatal error reporting in execution output.
-- Code updates on step skipping: **overwriting** instead of _appending_ `SkipIf(true)` to any existing flow control.
-- Code updates to reduce undesirable runtime errors.
-- Code updates to properly handle invalid or malformed test scenarios.
-- Code updates to sort `#data` worksheet on the execution output to favor System variables over user-defined variables.
-- **NEW** HTML execution output aimed to consolidate all execution summary within 1 HtML page. Should be most helpful
-  for plan-based execution.
-- automatically opens execution output HTML when `nexial.openResult` is set to `true`.
-- `os.hostname`: **NEW** System variable to expose the host name of current test harness.
-- Code updates to speed up batch script executions (`bin/*.sh`) for Mac/*NIX.
-- slightly improved output format for `nexial-variable-update` utility batch.
+- [`nexial.executionCount`](../systemvars/index#nexial.executionCount): **NEW** System variable to indicate the number 
+  of steps executed in real-time.
+- [`nexial.executionSkipCount`](../systemvars/index#nexial.executionSkipCount): **NEW** System variable to indicate 
+  the number of steps skipped in current execution in real-time.
+- [`nexial.executionPassCount`](../systemvars/index#nexial.executionPassCount): **NEW** System variable to indicate 
+  the number of steps passed in current execution in real-time.
+- [`nexial.executionFailCount`](../systemvars/index#nexial.executionFailCount): **NEW** System variable to indicate 
+  the number of steps failed in current execution in real-time.
+- [`os.hostname`](../systemvars/index#os.hostname): **NEW** System variable to expose the host name of current test 
+  harness.
 
 
 ### [Event Notification](../userguide/EventNotification)
@@ -84,11 +97,8 @@ comments: true
 
 
 ### [Built-in Function](../functions)
-- `$(execution|meta|user)`: *NEW* function to reveal execution-time user
+- `$(execution|meta|user)`: **NEW** function to reveal execution-time user
 - [`$(syspath)`](../functions/$(syspath)): now supports `plan` as well.
-
-
-### [System variables](../systemvars)
 
 
 ### [aws.s3 commands](../commands/aws.ses)
@@ -116,9 +126,6 @@ comments: true
   variable names that match `regex` as a list to `var`.
 
 
-### [desktop commands](../commands/desktop)
-
-
 ### [excel commands](../commands/excel)
 - major improvement in memory footprint by applying aggressive memory conservation after 
   [`writeDown(file,worksheet,startCell,array)`](../commands/excel/writeDown(file,worksheet,startCell,array)),
@@ -140,11 +147,6 @@ comments: true
 
 ### [json command](../commands/json)
 - fixed json array parsing logic when its textual representation contains whitespace.
-
-### [ssh commands](../commands/ssh)
-
-
-### [step commands](../commands/step)
 
 
 ### [web commands](../commands/web)
@@ -173,9 +175,6 @@ comments: true
   - Implement `WrapsElement` by `Select` element wrapper (#6616)
   - Default the number of threads assigned to the server to 200, which is what it was in 3.13.0
 - code fix to prevent unnecessary loading of web driver.
-
-
-### [ws commands](../commands/ws)
 
 
 ### [xml commands](../commands/xml)

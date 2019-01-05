@@ -7,6 +7,10 @@ comments: true
 ---
 
 
+> **NOTE**: **[Nexial Interactive](../interactive)** now includes Inspection, and is generally considered a better 
+> feature for exploring data variables and expression during execution. After reading about Inspection, you may want
+> to also learn more about **[Nexial Interactive](../interactive)**.
+
 With [`PauseBefore()`](../flowcontrols/index#pausebefore()--pauseafter()) and 
 [`PauseAfter()`](../flowcontrols/index#pausebefore()--pauseafter()), one can pause an execution to review 
 console logs and application state. With the capability of "inpsect-on-pause", one can also inquire in real time
