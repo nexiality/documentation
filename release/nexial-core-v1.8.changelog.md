@@ -51,7 +51,10 @@ comments: true
 - Code updates to sort `#data` worksheet on the execution output to favor System variables over user-defined variables.
 - **NEW** HTML execution output aimed to consolidate all execution summary within 1 HtML page. Should be most helpful
   for plan-based execution.
+- automatically opens execution output HTML when `nexial.openResult` is set to `true`.
 - `os.hostname`: **NEW** System variable to expose the host name of current test harness.
+- Code updates to speed up batch script executions (`bin/*.sh`) for Mac/*NIX.
+- slightly improved output format for `nexial-variable-update` utility batch.
 
 
 ### [Event Notification](../userguide/EventNotification)
@@ -82,6 +85,7 @@ comments: true
 
 ### [Built-in Function](../functions)
 - `$(execution|meta|user)`: *NEW* function to reveal execution-time user
+- [`$(syspath)`](../functions/$(syspath)): now supports `plan` as well.
 
 
 ### [System variables](../systemvars)

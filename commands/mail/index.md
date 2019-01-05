@@ -60,5 +60,5 @@ optionally rename the profile from `Gmail` to something else.
 
 
 ### Available Commands
-- [mail &rarquo; `send(profile,to,subject,body)`](../mail/send(profile,to,subject,body))
+- [mail &raquo; `send(profile,to,subject,body)`](../mail/send(profile,to,subject,body))
 

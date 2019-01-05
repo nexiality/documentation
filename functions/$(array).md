@@ -17,34 +17,37 @@ The above script defines an array of 6 elements (`icon`, `picture`, `diagram`,
 this array is referenced by a variable named `array1`.<br/>
 ![](image/$(array)_02.png)
 
-The above script defines an array of 2 elements ( `Smith, John` and `Appleseed, Johnny`) \- the delimiter defined on 
-the first row is the pipe character (`|`), not comma. As pipe character (`|`) is separator for built-in function parameters, 
-we have to escape pipe character for array. As you can show in above image, array1 has value `Smith, John\|Appleseed, Johnny` 
-with pipe character escaped.
+The above script defines an array of 2 elements ( `Smith, John` and `Appleseed, Johnny`) - the delimiter defined on 
+the first row is the pipe character (`|`), not comma. As pipe character (`|`) is separator for built-in function 
+parameters, we have to escape pipe character for array. As you can show in above image, array1 has value 
+`Smith, John\|Appleseed, Johnny` with pipe character escaped.
 
 By default, [`nexial.textDelim`](../systemvars/index#nexial.textDelim) has the value of a comma (`,`).
 
 
 ### Available Functions
-- **`$(array|length)`** \- renders the length of the target array.  An empty array would render `0`.
-- **`$(array|index)`** \- renders the position within the target array where the first occurrence of a specified 
-  element is found.  For example, `$(array|index|Apple,Orange,Banana|Orange)` would return `1`.  Note that Nexial is 
-  zero-based.
-- **`$(array|item)`** \- renders the element of the specified position (zero-based) in the target array.  For example, 
-  `$(array|item|Salt,Pepper,Sugar,Cheese|3)` would render `Cheese`. 
-- **`$(array|subarray)`** \- renders a portion of the target array, based on the specified `start` and `end` positions.
-- **`$(array|distinct)`** \- renders the target array by removing duplicated elements.
-- **`$(array|ascending)`** \- renders the target array in ascending order.  The order is determined lexicographically 
-  via the ASCII values of the array elements.
-- **`$(array|descending)`** - renders the target array in descending order.  The order is determined lexicographically 
-  via the ASCII values of the array elements.
-- **`$(array|reverse)`** \- renders the array in its reversed order.
-- **`$(array|insert)`** \- add an element into the target array, at the specified position, and then render the 
-  resulting array.
-- **`$(array|prepend)`** \- add an element to the end of the target array, and then render the resulting array.
-- **`$(array|append)`** - add an element to the beginning of the target array, and then render the resulting array.
-- **`$(array|remove)`** \- remove an element from the array, at the specified position, and then render the result 
-  array.
+- **`$(array|append|myarray|item)`** - add an element (`item`) to the beginning of the target array (`myarray`), and 
+  then render the resulting array.
+- **`$(array|ascending|myarray)`** - renders the target array (`myarray`) in ascending order.  The order is determined 
+  lexicographically via the ASCII values of the array elements.
+- **`$(array|descending|myarray)`** - renders the target array (`myarray`) in descending order.  The order is determined 
+  lexicographically via the ASCII values of the array elements.
+- **`$(array|distinct|myarray)`** - renders the target array (`myarray`) by removing duplicated elements.
+- **`$(array|index|myarray|item)`** - renders the position within the target array (`myarray`) where the first 
+  occurrence of a specified element (`item`) is found.  For example, `$(array|index|Apple,Orange,Banana|Orange)` would 
+  return `1`.  Note that Nexial is zero-based.
+- **`$(array|insert|myarray|index|item)`** - add an element (`item`) into the target array (`myarray`), at the specified 
+  position (`index`), and then render the resulting array.
+- **`$(array|item|myarray|index)`** - renders the element (`item`) of the specified position (`index`, zero-based) in 
+  the target array (`myarray`).  For example, `$(array|item|Salt,Pepper,Sugar,Cheese|3)` would render `Cheese`. 
+- **`$(array|length|myarray)`** - renders the length of the target array (`myarray`).  An empty array would render `0`.
+- **`$(array|prepend|myarray|item)`** - add an element (`item`) to the end of the target array (`myarray`), and then 
+  render the resulting array.
+- **`$(array|remove|myarray|index)`** - remove an element (`item`) from the array (`myarray`), at the specified 
+  position (`index`), and then render the resulting array.
+- **`$(array|reverse|myarray)`** - renders the array (`myarray`) in its reversed order.
+- **`$(array|subarray|myarray|start|end)`** - renders a portion of the target array (`myarray`), based on the 
+  specified `start` and `end` positions.
 
 
 ### Example

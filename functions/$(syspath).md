@@ -9,34 +9,36 @@ comments: true
 
 ### Description
 This built-in function provides the resolution of the physical location of your project artifacts, ie. test scripts, 
-test data, etc.  By using this function, one can keep the test project more portable. Instead of specifying the fully 
+test data, etc. By using this function, one can keep the test project more portable. Instead of specifying the fully 
 qualified path, such as `C:\projects\MyProject` or 
 `/Users/user123/projects/MyApplication/artifact/script/TEST-1234.xlsx`, one can specify `$(syspath|project|fullpath)` 
-or `$(syspath|script|fullpath)/TEST-1234.xlsx` instead.  During execution, Nexial will resolve the appropriate 
+or `$(syspath|script|fullpath)/TEST-1234.xlsx` instead. During execution, Nexial will resolve the appropriate 
 physical path, thus your script is guarded against location or even OS changes.
 
 For each of the following options, one can add a second parameter as followed:
-- **name** \- the (directory) name of the target location
-- **fullpath** \- the fully qualified location of the target location
-- **base** \- the parent location of the target location
+- **name** - the (directory) name of the target location
+- **fullpath** - the fully qualified location of the target location
+- **base** - the parent location of the target location
 
 
 ### Available Functions
-- **`$(syspath|project|...)`** \- the location of the target project.
-- **`$(syspath|script|...)`** \- the standard location where Nexial scripts (Excel) are stored.  This is usually the 
+- **`$(syspath|project|...)`** - the location of the target project.
+- **`$(syspath|script|...)`** - the standard location where Nexial scripts (Excel) are stored. This is usually the 
   `artifact/script` directory under the target project.
-- **`$(syspath|data|...)`** \- the standard location where Nexial test data (Excel) are stored. This is usually the 
+- **`$(syspath|data|...)`** - the standard location where Nexial test data (Excel) are stored. This is usually the 
   `artifact/data`  directory under the target project, but can be overridden via the `-data` command line argument.
-- **`$(syspath|out|...)`** \- the output directory for the current execution.  This would be a directory named `output` 
+- **`$(syspath|plan|...)`** - the standard location where Nexial plans (Excel) are stored. This is usually the
+  `artifact/plan` directory under the target project.
+- **`$(syspath|out|...)`** - the output directory for the current execution. This would be a directory named `output` 
   under the target project, or whatever specified via the `-output` command line argument.
-- **`$(syspath|screenshot|...)`** \- the standard location where screen captures are stored.  This is usually a 
+- **`$(syspath|screenshot|...)`** - the standard location where screen captures are stored. This is usually a 
   directory named  `captures` under the output directory.
-- **`$(syspath|log|...)`** \- the standard location where logs are being kept.  This is usually a directory named 
+- **`$(syspath|log|...)`** - the standard location where logs are being kept. This is usually a directory named 
   `logs` under the output directory.
-- **`$(syspath|temp|...)`** \- the standard temporary storage location as defined via `java.io.tempdir` environment 
+- **`$(syspath|temp|...)`** - the standard temporary storage location as defined via `java.io.tempdir` environment 
   variable, which is often mapped to the `%TEMP%` or `$TMP` system variable.
 
-For each of these functions, one would add a secondary parameter as listed in the **Description** section.  For 
+For each of these functions, one would add a secondary parameter as listed in the **Description** section. For 
 example,
 - `$(syspath|project|name)` would render the directory name of the current project
 - `$(syspath|out|base)` would render the parent directory (full path) of the output directory
