@@ -8,13 +8,14 @@ comments: true
 
 
 ### Description
-This command clears the text from the cells in the given worksheet from an excel file in the given range.
+This command clears the text from the cells in the given `worksheet` from an excel `file` in the given range. 
+A "special" range value of `*` will instruct Nexial to remove the target `worksheet` and recreate it.
 
 
 ### Parameters
-- **file** \- the Excel file to clear
-- **worksheet** \- name of the worksheet to clear
-- **range** \- range of cells to clear
+- **file** - the Excel file to clear
+- **worksheet** - name of the worksheet to clear
+- **range** - range of cells to clear
 
 
 ### Example

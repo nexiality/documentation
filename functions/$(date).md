@@ -34,11 +34,11 @@ derive the appropriate format first before invoking other date-operational funct
   specified `date` is assumed in standard format (`MM/dd/yyyy HH:mm:ss`).
 - **`$(date|addSecond|date|seconds)`** - add seconds to `date`. Use negative value to denote the "subtract" intent. The 
   specified `date` is assumed in standard format (`MM/dd/yyyy HH:mm:ss`).
-- **`$(date|setYear|date|years)`** \- set the year portion of `date` to the specified `years`. The specified `date` is 
+- **`$(date|setYear|date|year)`** \- set the year portion of `date` to the specified `years`. The specified `date` is 
   assumed in standard format (`MM/dd/yyyy HH:mm:ss`).
-- **`$(date|setMonth|date|months)`** \- set the month portion of `date` to the specified months. The specified `date` is 
+- **`$(date|setMonth|date|month)`** \- set the month portion of `date` to the specified months. The specified `date` is 
   assumed in standard format (`MM/dd/yyyy HH:mm:ss`).
-- **`$(date|setDay|date|days)`** \- set the day portion of `date` to the specified days. The specified `date` is assumed 
+- **`$(date|setDay|date|day)`** \- set the day portion of `date` to the specified days. The specified `date` is assumed 
   in standard format (`MM/dd/yyyy HH:mm:ss`).
 - **`$(date|setHour|date|hours)`** \- set the hour portion of `date` to the specified hours. The specified `date` is 
   assumed in standard format (`MM/dd/yyyy HH:mm:ss`).
@@ -46,7 +46,7 @@ derive the appropriate format first before invoking other date-operational funct
   `date` is assumed in standard format (`MM/dd/yyyy HH:mm:ss`).
 - **`$(date|setSecond|date|seconds)`** \- set the second portion of `date` to the specified seconds. The specified 
   `date` is assumed in standard format (`MM/dd/yyyy HH:mm:ss`).
-- **`$(date|setDOW|date|days)`** \- derive the "day of the week" for a given date.   The specified `date` is assumed in 
+- **`$(date|setDOW|date|day)`** \- derive the "day of the week" for a given date.   The specified `date` is assumed in 
   standard format (`MM/dd/yyyy HH:mm:ss`). Use the `days` parameter to set the day of the week.  0 means Sunday.  For 
   example, March 21th 2013 is a Thursday.  `$(date|setDOW|03/21/2013|1)` would yield `30/18/2013`, which is a Monday.   
 
