@@ -11,4 +11,4 @@ The "csv" command type represents a series of automation commands regarding CSV 
 - [`compare(expected,actual,failFast)`](compare(expected,actual,failFast))
 - [`compareExtended(var,profile,expected,actual)`](compareExtended(var,profile,expected,actual))
 - [`convertExcel(excel,worksheet,csvFile)`](convertExcel(excel,worksheet,csvFile))
-
+- [`fromExcel(excel,worksheet,csvFile)`](fromExcel(excel,worksheet,csvFile))
