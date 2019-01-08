@@ -12,6 +12,7 @@ comments: true
 
 ### General
 #### Fixes:
+- open execution output doesn't create new command console.
 
 #### Improvements:
 
