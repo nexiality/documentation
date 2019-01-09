@@ -66,13 +66,16 @@ To manipulate JSON document, check out [`Nexial jsonpath`](../jsonpath) for m
   then add or replace it with `input`. The end result would be the modified JSON document/array. Refer to
   [json &raquo; `addOrReplace(json,jsonpath,input,var)`](../commands/json/addOrReplace(json,jsonpath,input,var)#rules) 
   for additional details and the rules of adding or replacing element in an existing JSON document.
+- **`beautify`** - "pretty" formatting on current JSON document to improve readability.
 - **`count(jsonpath)`** - counts the number of nodes present that matched with specified `jsonpath`.
 - **`extract(jsonpath)`** - extract a portion of the JSON document based on the specified [`jsonpath`](../jsonpath).  
   Depending on the JSON in question and the specified JSON path, the result could either be `null` (none matched), 
   text (matched to a textual value), JSON object or JSON array.
 - **`list`** - transform a JSON Array or text to a [`LIST`](LISTexpression). Works best with JSON Array that contains 
   single text value (e.g. `["apple","orange","banana"]`).  Does not work with a JSON object.
-- **`pack`** - remove any `null` JSON node (essentially JSON node without value); akin to _compacting_ a document.
+- **`minify`** - compressed current JSON document; suitable for effecient data transfer.
+- **`pack`** - remove any `null` JSON node (essentially JSON node without value); akin to _compacting_ a document. 
+  Consequently, this operation also "beautifies" the current JSON document.
 - **`remove(jsonpath)`** - deletes JSON nodes that matched to the specified `jsonpath`.
 - **`replace(jsonpath,replaceWith)`** - replace the first match of the JSON in question based on the specified 
   `jsonpath` with the specified `replaceWith`.  Depending on the JSON in question and the specified JSON path, the 

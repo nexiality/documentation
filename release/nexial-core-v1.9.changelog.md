@@ -26,6 +26,8 @@ comments: true
 
 
 ### [Nexial Expression](../expression)
+- [JSON &raquo; `beautify`](../expressions/JSONexpression): **NEW** beautify `json` to improve readability.
+- [JSON &raquo; `minify`](../expressions/JSONexpression): **NEW** minify `json` to improve data transfer efficiency.
 
 
 ### [Nexial Interactive](../interactive)
@@ -49,7 +51,8 @@ comments: true
 ### [excel commands](../commands/excel)
 - automatically create missing Excel files when using any of the `write*()` commands.
 - allow the reading of an empty cell range follow by other Excel operations such as `transpose()`.
-- [`clear(file,worksheet,range)`](../commands/excel/clear(file,worksheet,range)): now clearing a non-existent file or worksheet would not throw any error.
+- [`clear(file,worksheet,range)`](../commands/excel/clear(file,worksheet,range)): now clearing a non-existent file or 
+  worksheet would not throw any error.
 
 
 ### [image commands](../commands/image)
@@ -59,6 +62,8 @@ comments: true
 
 
 ### [json command](../commands/json)
+- [`beautify(json,var)`](../commands/json/beautify(json,var)): **NEW** beautify `json` to improve readability.
+- [`minify(json,var)`](../commands/json/minify(json,var)): **NEW** minify `json` to improve data transfer efficiency.
 
 
 ### [web commands](../commands/web)
