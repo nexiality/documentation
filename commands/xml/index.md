@@ -44,6 +44,8 @@ Also consider the following online resources for trying out XPath:
 - [`assertValue(xml,xpath,expected)`](assertValue(xml,xpath,expected))
 - [`assertValues(xml,xpath,array,exactOrder)`](assertValues(xml,xpath,array,exactOrder))
 - [`assertWellformed(xml)`](assertWellformed(xml))
+- [`beautify(xml,var)`](beautify(xml,var))
+- [`minify(xml,var)`](minify(xml,var))
 - [`storeCount(xml,xpath,var)`](storeCount(xml,xpath,var))
 - [`storeValue(xml,xpath,var)`](storeValue(xml,xpath,var))
 - [`storeValues(xml,xpath,var)`](storeValues(xml,xpath,var))

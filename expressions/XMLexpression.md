@@ -18,8 +18,10 @@ XML provides transformational operations on a XML document.
 - **`content(xpath)`** - retrieves the content of the element(s) that matched the specified `xpath`. If exactly one 
   match is found, this operation returns a [`TEXT`](TEXTexpression) data type. If more than one matches are found, 
   a [`LIST`](LISTexpression) data type is returned instead.
+- **`beautify`** - "pretty" formatting on current XML document to improve readability.
 - **`count(xpath)`** - counts the number of elements present at the specified `xpath`.
 - **`extract(xpath)`** - transform current XML document using `xpath`.
+- **`minify`** - compressed current XML document which are suitable for effecient data transfer.
 - **`remove(xpath)`** - remove from the source XML the element(s) that matches the specified `xpath`.
 - **`save(path,append)`** - save current expression content to `path`. If `path` resolves to an existing file, `append` 
   set as `true` will append current expression content to the said file. `append` is optional and defaults to `false`.

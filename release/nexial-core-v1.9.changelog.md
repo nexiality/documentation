@@ -28,6 +28,8 @@ comments: true
 ### [Nexial Expression](../expression)
 - [JSON &raquo; `beautify`](../expressions/JSONexpression): **NEW** beautify `json` to improve readability.
 - [JSON &raquo; `minify`](../expressions/JSONexpression): **NEW** minify `json` to improve data transfer efficiency.
+- [XML &raquo; `beautify`](../expressions/XMLexpression): **NEW** beautify `xml` to improve readability.
+- [XML &raquo; `minify`](../expressions/XMLexpression): **NEW** minify `xml` to improve data transfer efficiency.
 
 
 ### [Nexial Interactive](../interactive)
@@ -70,3 +72,5 @@ comments: true
 
 
 ### [xml commands](../commands/xml)
+- [`beautify(json,var)`](../commands/json/beautify(json,var)): **NEW** beautify `xml` to improve readability.
+- [`minify(json,var)`](../commands/json/minify(json,var)): **NEW** minify `xml` to improve data transfer efficiency.
