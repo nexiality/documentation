@@ -20,6 +20,8 @@ comments: true
 
 
 ### [System Variables](../systemvars/index):
+- [`nexial.web.dragFrom`](../systemvars/index#nexial.web.dragFrom): **NEW** determine where the "drag" action on a web 
+  element should start from.
 
 
 ### [Event Notification](../userguide/EventNotification)
@@ -30,6 +32,7 @@ comments: true
 - [JSON &raquo; `minify`](../expressions/JSONexpression): **NEW** minify `json` to improve data transfer efficiency.
 - [XML &raquo; `beautify`](../expressions/XMLexpression): **NEW** beautify `xml` to improve readability.
 - [XML &raquo; `minify`](../expressions/XMLexpression): **NEW** minify `xml` to improve data transfer efficiency.
+- code fix to enable the use of `]` character as part of operation parameter.
 
 
 ### [Nexial Interactive](../interactive)
@@ -69,6 +72,8 @@ comments: true
 
 
 ### [web commands](../commands/web)
+- [`dragTo(fromLocator,xOffset,yOffset)`](../commands/web/dragTo(fromLocator,xOffset,yOffset)): **NEW** automates the
+  "drag" action on a web element.
 
 
 ### [xml commands](../commands/xml)

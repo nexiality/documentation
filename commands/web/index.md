@@ -277,6 +277,8 @@ available commands.
 - [`clickWithKeys(locator,keys)`](clickWithKeys(locator,keys)) 
 - [`close()`](close())
 - [`closeAll()`](closeAll())
+- [`dragAndDrop(fromLocator,toLocator)`](dragAndDrop(fromLocator,toLocator))
+- [`dragTo(fromLocator,xOffset,yOffset)`](dragTo(fromLocator,xOffset,yOffset))
 - [`deselectMulti(locator,array)`](deselectMulti(locator,array))
 - [`dismissInvalidCert()`](dismissInvalidCert())
 - [`dismissInvalidCertPopup()`](dismissInvalidCertPopup())
