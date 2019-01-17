@@ -15,6 +15,9 @@ comments: true
 - open execution output doesn't create new command console.
 
 #### Improvements:
+- generates JUnit-compatible XML at the end of execution. This file is **ALWAYS** named as `junit.xml` and placed in
+  the output directory.
+- console output now includes additional information useful for CI/CD.
 
 #### New:
 
@@ -74,7 +77,7 @@ comments: true
 ### [web commands](../commands/web)
 - [`dragTo(fromLocator,xOffset,yOffset)`](../commands/web/dragTo(fromLocator,xOffset,yOffset)): **NEW** automates the
   "drag" action on a web element.
-
+- fixed issue when running different browser between iterations or scripts (within plan).
 
 ### [xml commands](../commands/xml)
 - [`beautify(json,var)`](../commands/json/beautify(json,var)): **NEW** beautify `xml` to improve readability.

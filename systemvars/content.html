@@ -53,6 +53,14 @@
     The above specifies for 4GB of memory for Nexial.
 </p>
 <p>
+    For more details about the exit status that Nexial emits at the end of execution, or a set of standard output
+    at the end of execution, please click on the links below.
+    <ul>
+    <li><a href="exitstatus"><b>Exit Status</b></a></li>
+    <li><a href="endofexecution"><b>End of Execution</b></a></li>
+    </ul>
+</p>
+<p>
     Below are a list of configurable system variables. During the test execution, Nexial may generates one or more
     variables which maybe incorporated as part of your test script.
 </p>
@@ -669,10 +677,10 @@
             By default, only an execution with 100% PASS rate would be considered as a <em>SUCCESS</em>. Well, from time
             to time, success isn't always that straightforward. There might be valid and one-off reason as to why the
             criteria of SUCCESS would be more lenient. Using this system property, one can tune the minimum rate of
-            PASS(es) in order for an execution to be considered as SUCCESS. An SUCCESS will in turn yield a exit status
-            of <code>0</code>, which is the equivalent in scripting of "everything's fine, proceed on!". This can be
-            very useful (and indeed necessary) for CI/CD environment, or when a Nexial execution is part of a bigger
-            scripting effort.<br/>
+            PASS(es) in order for an execution to be considered as SUCCESS. An SUCCESS will in turn yield a
+            <a href="exitcodes.html">exit status</a> of <code>0</code>, which is the equivalent in scripting of
+            "<i>everything's fine, proceed on!</i>". This can be very useful (and indeed necessary) for CI/CD
+            environment, or when a Nexial execution is part of a bigger scripting effort.<br/>
             <br/>
             By default, this system variable has a value of <code>100</code> (as in 100%). Specifying a number lower
             than 100, such as <code>95.51</code> to fine tune the criteria for a SUCCESS<i>ful</i> execution.
@@ -690,6 +698,9 @@
             variable.
             For example,<br/>
             <img src="image/systemvar_17.jpg" class="resize" alt="nexial.minExecSuccessRate example"/>
+            <br/>
+            See <a href="exitcodes.html">Exit Codes</a> and <a href="endofexecution.html">End of Execution</a>
+            for more details about this topic.
         </td>
     </tr>
     <tr>
