@@ -12,11 +12,17 @@ part of a larger pipeline (think CI/CD).
 
 Here's an snapshot of what one can find at the end of a Nexial execution:
 
+![](image/endofexecution_01.png)
 
+Observe the following:
+1. `OUTPUT:` shows the output directory created for this specific execution.
+2. `EXECUTION:` shows the location of the execution output (HTML) for this specific execution.
+3. `JUNIT XML:` show the location of the JUnit XML generated for this specific execution.
+4. `SUCCESS RATE:` show the PASS percentage of this specific execution.
+5. `EXIT STATUS:` show the [exit status](exitstatus) of this specific execution. Subsequently this will also be
+   the exit status of `nexial.cmd` or `nexial.sh`.
 
-One of such information is the <a href="https://en.wikipedia.org/wiki/Exit_status" class="external-link" 
-target="nexial_link">exit status</a>. The main idea is that one can use the exit status to make informed decision 
-regarding a Nexial execution. Note that exit status represents the "overall status" of an execution. In general, a value
-of `0` means that the execution has completed successfully. This does not mean that there were no test step failure, 
-however. It simply means that the execution has completed.
+Having the above information will allow either an external or parent process to parse for additional details
+regarding a Nexial execution. For example, one could harvest for information to dynamically generate an email with
+execution status and links.
 
