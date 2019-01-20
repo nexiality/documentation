@@ -13,11 +13,14 @@ comments: true
 ### General
 #### Fixes:
 - open execution output doesn't create new command console.
+- code fix to ensure `nexial.scenarioRef` data variables do not taint subsequent scenarios.
 
 #### Improvements:
 - generates JUnit-compatible XML at the end of execution. This file is **ALWAYS** named as `junit.xml` and placed in
   the output directory.
 - console output now includes additional information useful for CI/CD.
+- execution output (HTML) now includes links to script, data and output files.
+- generated JUnit XML now contains additional execution metadata regarding script, data, and iteration.
 
 #### New:
 
@@ -54,6 +57,10 @@ comments: true
 
 
 ### [base commands](../commands/base)
+
+
+### [external commands](../commands/external)
+- code fix to support the invocation of external program/batch that contains spaces in either file name or directory name.
 
 
 ### [excel commands](../commands/excel)
