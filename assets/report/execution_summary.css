@@ -6,6 +6,24 @@ body {
     padding:          25px;
 }
 
+a {
+    color:           rgba(50, 100, 60, 1);
+    font-weight:     bold;
+    text-decoration: none;
+    background:      rgba(50, 100, 60, 0.1) url(https://nexiality.github.io/documentation/image/link.png) no-repeat 2px 2px;
+    padding:         2px 5px 3px 18px;
+    border-radius:   5px;
+}
+
+a:visited {
+    color: rgba(50, 100, 60, 1);
+}
+
+a:hover {
+    color:            rgba(50, 245, 60, 1);
+    background-color: rgba(50, 50, 50, 0.7);
+}
+
 .title {
     font-size:        14pt;
     font-family:      Tahoma, serif;
