@@ -16,6 +16,7 @@ comments: true
 - code fix to ensure `nexial.scenarioRef` data variables do not taint subsequent scenarios.
 - code fix to ensure execution metadata is generated when `nexial.outputToCloud` is set to true. This is needed to 
   update Execution Dashboard.
+- code fix JUnit XML generation for edge case where reference data is defined with no value.
 
 #### Improvements:
 - generates JUnit-compatible XML at the end of execution. This file is **ALWAYS** named as `junit.xml` and placed in
