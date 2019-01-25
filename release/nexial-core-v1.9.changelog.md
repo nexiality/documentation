@@ -17,6 +17,7 @@ comments: true
 - code fix to ensure execution metadata is generated when `nexial.outputToCloud` is set to true. This is needed to 
   update Execution Dashboard.
 - code fix JUnit XML generation for edge case where reference data is defined with no value.
+- code fix to ensure that user given value is selected from combo box
 
 #### Improvements:
 - generates JUnit-compatible XML at the end of execution. This file is **ALWAYS** named as `junit.xml` and placed in
@@ -31,7 +32,8 @@ comments: true
 ### [System Variables](../systemvars/index):
 - [`nexial.web.dragFrom`](../systemvars/index#nexial.web.dragFrom): **NEW** determine where the "drag" action on a web 
   element should start from.
-
+- [`nexial.desktop.table.clickBeforeEdit`](../systemvars/index#nexial.desktop.table.clickBeforeEdit): **NEW** determine 
+ if desktop table first row needs to be clcked or not before editing.
 
 ### [Event Notification](../userguide/EventNotification)
 
