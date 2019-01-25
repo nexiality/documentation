@@ -1891,21 +1891,28 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a
-            name="nexial.desktop.table.clickBeforeEdit"><code>nexial.desktop.table.clickBeforeEdit</code></a></td>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.desktop.table.clickBeforeEdit"><code>nexial.desktop.table.clickBeforeEdit</code></a>
+        </td>
         <td>boolean</td>
         <td>true</td>
         <td>false</td>
         <td>
-            Specify if user needs to click on table's first row or not. By default it is set to <code>true</code>.
-            When user is adding new row in the table and it is also first row of table, user needs to click on
-            first row before editing to retrieve the column. But sometime Nexial is unable to retrieve column to
-            add row. So user needs to set it as <code>false</code> to not allow Nexial to click on table row.
+            When automating the editing of a table cell (desktop application only), it is often a good idea to bring
+            focus to the target row or cell prior to commencing the editing. This is the default behavior for Nexial.
+            When executing <a href="../commands/desktop/editTableCells(row,nameValues)">desktop &raquo;
+            <code>editTableCells(row,nameValues)</code></a>, Nexial will, by default, click on the target table row -
+            thus bringing such row to focus - and then proceed to enter specified data to target cells. However there
+            might be situation where this initial click is not necessary or desirable. In such situation, one can
+            turn off the default behavior:<br/><br/>
+
+            <code>nexial.desktop.table.clickBeforeEdit</code> | <code>false</code>
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a
-            name="nexial.desktop.dialogLookup"><code>nexial.desktop.dialogLookup</code></a></td>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.desktop.dialogLookup"><code>nexial.desktop.dialogLookup</code></a>
+        </td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
@@ -1948,8 +1955,7 @@
         <td>
             Determine if Nexial should run the current AUT exe in "Solo" mode (default) - which means to reuse
             existing instances if found. This means that one could forcefully configure the AUT to run as a single
-            instance, even when multiple <a href="../commands/desktop/useApp(appId)">desktop &raquo;
-            <code>useApp(appId)</code></a>
+            instance, even when multiple <a href="../commands/desktop/useApp(appId)">desktop &raquo; <code>useApp(appId)</code></a>
             command was invoked. This is especially useful when dealing with an application that requires additional
             time and resources to "startup". When subsequent <a href="../commands/desktop/useApp(appId)">desktop
             &raquo; <code>useApp(appId)</code></a> command is invoked, Nexial will simply reuse the existing running
