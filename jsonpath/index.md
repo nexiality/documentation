@@ -14,13 +14,14 @@ human-readable text to transmit data objects consisting of name–value pairs an
 common data format used for asynchronous browser/server communication, and is seen by many as a replacement for XML 
 for web-based and HTTP-based data exchange.  As with any data exchange, it is commonly necessary to manipulate the 
 data (in this case, JSON) between exchanges.  Like XPath (currently 
-<a href="https://www.w3.org/TR/xpath-30/" class="external-link" target="_nexial_external">in version 3.0</a>) is used to process XML documents, 
-we need a descriptive and structure-aware specification to express the same for JSON.  Enters JSONPath.
+<a href="https://www.w3.org/TR/xpath-30/" class="external-link" target="_nexial_external">in version 3.0</a>) is used 
+to process XML documents, we need a descriptive and structure-aware specification to express the same for JSON.  Enters 
+JSONPath.
 
-As you might have guessed, there is already a fairly 
-<a href="http://goessner.net/articles/JsonPath/" class="external-link" target="_nexial_external">well-defined standard out there for JSONPath</a>.  
-Published since 2007, it has picked up some following and subsequent success stories along the way.  But by and large 
-it has not gained the same momentum and ubiquity like XPath.  There are several reasons:
+As you might have guessed, there is already a fairly <a href="http://goessner.net/articles/JsonPath/" 
+class="external-link" target="_nexial_external">well-defined standard out there for JSONPath</a>. Published since 2007, 
+it has picked up some following and subsequent success stories along the way.  But by and large it has not gained the 
+same momentum and ubiquity like XPath.  There are several reasons:
 1. There are competing declarative query languages for JSON (jpath, jacl, JSONiq, etc.) and none of these, 
    including JSONPath, is currently under official consideration by W3C, the standards body for open Web technology.
 2. JSON is native in JavaScript (**J** in `JSON`); requiring no additional language-level or API support to 
@@ -114,19 +115,28 @@ To generalize, Nexial's `jsonpath` follows these rules:
    - **match-by-equality**: `[node name=node value]`
      - `department[finance].employee[id=1234].name` reads:
        - In the `"department"` called `"finance"`, find the `"name"` of the `"employee"` whose `"id"` is `1234`.
-       - This is useful when a given JSON property, such as `"id"` in this case is not unique to a specific JSON node and its value can be useful to identify a specific JSON fragment. 
+       - This is useful when a given JSON property, such as `"id"` in this case is not unique to a specific JSON node 
+         and its value can be useful to identify a specific JSON fragment. 
      - `state[name=California].city[name=Greenville].population` reads:
-       - In the `"state"` node that contains a `"name"` property with value `"California"`, look for a child node named `"city"` that contains a `"name"` property valued as `"Greenville"`.  Then when such `"city"` node is found, return its `"population"`.
-       - We can consider this technique as a way of narrowing down the amount of JSON fragment to process.  By specifying the right amount of filter we can simplify the work of processing or parsing what might have being a large JSON document.
+       - In the `"state"` node that contains a `"name"` property with value `"California"`, look for a child node 
+         named `"city"` that contains a `"name"` property valued as `"Greenville"`.  Then when such `"city"` node is 
+         found, return its `"population"`.
+       - We can consider this technique as a way of narrowing down the amount of JSON fragment to process.  By 
+         specifying the right amount of filter we can simplify the work of processing or parsing what might have being 
+         a large JSON document.
      - **match-by-regex**: [**REGEX**:regular expression for node name=**REGEX**:regular expression for node value]
        - `employee[birthdate=REGEX:1985-\.+].full_name`
-         - Search for all employees who are born in the year 1985 (assuming the date format of year-month-date), and then return their full name.
-         - Notice that the dot (`.`) should be preceded by a backslash (`\`) - _geek term: escape_ \- to avoid confusion from being treatment as a hierarchy separator.
+         - Search for all employees who are born in the year 1985 (assuming the date format of year-month-date), and 
+           then return their full name.
+         - Notice that the dot (`.`) should be preceded by a backslash (`\`) - _geek term: escape_ \- to avoid 
+           confusion from being treatment as a hierarchy separator.
        - `product[made_from=REGEX:\.+(USA|America)].[name=REGEX:*\.*Guitar\.*]`
          - Find all American made guitars.
        - `work_history[REGEX:(zipcode|postal)=REGEX:900\.{2,}].[REGEX:(H|h)ours]` 
-         - Find all the hours (denoted by `Hours` or `hours`) worked in the postal code (denoted by `zipcode` or `postal`) that starts with `900`.
-         - Yes, regex is support on both node name and node value.  But careful not to abuse it for create hard-to-read `jsonpath`, as regex often do.
+         - Find all the hours (denoted by `Hours` or `hours`) worked in the postal code (denoted by `zipcode` or 
+           `postal`) that starts with `900`.
+         - Yes, regex is support on both node name and node value.  But careful not to abuse it for create hard-to-read 
+           `jsonpath`, as regex often do.
 4. During the traversal of the specified `jsonpath`, if the intended fragment cannot be reached, Nexial will 
    return `null`.
 
@@ -134,7 +144,33 @@ As shown above, Nexial's `jsonpath` is comparatively simplistic – it really
 angled brackets (`[ref]`).  But within the confines of these basic rules, we should be able to address the most 
 common queries and still retain its readability. 
 
-In the future, we might consider adopting JSONPath, such as 
-<a href="https://github.com/json-path/JsonPath" class="external-link" target="_nexial_external">https://github.com/json-path/JsonPath</a>, so 
+### JSONPath Function
+As of [Nexial v1.9](../release/nexial-core-v1.9.changelog.md), we are introducing the concept of "function" to JSONPath.
+The main idea is to provide the ability to apply one or more functional computation on the end representation of a 
+`jsonpath`. Currently here are the supported functions:
+
+1. `sum` - **ONLY FOR ARRAY/LIST OF NUMBERS**. Add up all the numbers. 
+2. `count` - Count the number of items in a JSON array (or list). For non-array object, `1` is returned instead.
+3. `first` - Find the first item of a JSON array. For non-array object, such object is returned instead.
+4. `last` - Find the last item of a JSON array. For non-array object, such object is returned instead.
+5. `average` - **ONLY FOR ARRAY/LIST OF NUMBERS**. Find the average of a list of numbers.
+6. `max` - **ONLY FOR ARRAY/LIST OF NUMBERS**. Find the maximum number of a JSON array (or list).
+7. `min` - **ONLY FOR ARRAY/LIST OF NUMBERS**. Find the minimum number of a JSON array (or list).
+8. `unique` - **ONLY FOR ARRAY/LIST**. Removed all duplicated items from a JSON array (or list).
+9. `distinct` - **ONLY FOR ARRAY/LIST**. Same as `unique`.
+10. `ascending` - **ONLY FOR ARRAY/LIST**. Sort the items in a JSON array (or list).
+11. `descending` - **ONLY FOR ARRAY/LIST**. Sort in descending order the items in a JSON array (or list).
+
+Example:
+```
+country[name=USA].state.population => sum
+```
+
+The above to collect all the values of `population` of each states under USA and sum them up.
+
+
+
+In the future, we might consider adopting JSONPath, such as <a href="https://github.com/json-path/JsonPath" 
+class="external-link" target="_nexial_external">https://github.com/json-path/JsonPath</a>, so 
 that we can provide more comprehensive JSON querying capability for more complex test scenarios. Stay tuned...
 

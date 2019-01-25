@@ -42,6 +42,8 @@ comments: true
 - [XML &raquo; `beautify`](../expressions/XMLexpression): **NEW** beautify `xml` to improve readability.
 - [XML &raquo; `minify`](../expressions/XMLexpression): **NEW** minify `xml` to improve data transfer efficiency.
 - code fix to enable the use of `]` character as part of operation parameter.
+- **NEW**: 1st phase of [JSON function](../jsonpath/index.html#jsonpath-function) now available.
+- [NUMBER &raquo; `average`](../expressions/JSONexpression): **NEW** calculate the average of a list of numbers.
 
 
 ### [Nexial Interactive](../interactive)
@@ -82,12 +84,15 @@ comments: true
 ### [json command](../commands/json)
 - [`beautify(json,var)`](../commands/json/beautify(json,var)): **NEW** beautify `json` to improve readability.
 - [`minify(json,var)`](../commands/json/minify(json,var)): **NEW** minify `json` to improve data transfer efficiency.
+- **NEW**: 1st phase of [JSON function](../jsonpath/index.html#jsonpath-function) now available.
 
 
 ### [web commands](../commands/web)
 - [`dragTo(fromLocator,xOffset,yOffset)`](../commands/web/dragTo(fromLocator,xOffset,yOffset)): **NEW** automates the
   "drag" action on a web element.
 - fixed issue when running different browser between iterations or scripts (within plan).
+- code fix to recover from current active window being no longer available.
+
 
 ### [xml commands](../commands/xml)
 - [`beautify(json,var)`](../commands/json/beautify(json,var)): **NEW** beautify `xml` to improve readability.
