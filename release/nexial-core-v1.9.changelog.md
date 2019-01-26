@@ -46,6 +46,8 @@ comments: true
 - code fix to enable the use of `]` character as part of operation parameter.
 - **NEW**: 1st phase of [JSON function](../jsonpath/index.html#jsonpath-function) now available.
 - [NUMBER &raquo; `average`](../expressions/JSONexpression): **NEW** calculate the average of a list of numbers.
+- [JSON &raquo; `select`](../expressions/JSONexpression): **NEW** using multiple jsonpath to "extract" out of a JSON
+  document into [CSV](../expressions/CSVexpression) expression.
 
 
 ### [Nexial Interactive](../interactive)
