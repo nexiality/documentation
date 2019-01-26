@@ -72,7 +72,8 @@ comments: true
 
 ### [external commands](../commands/external)
 - code fix to support the invocation of external program/batch that contains spaces in either file name or directory name.
-- [`runProgramNoWait()`](../commands/external/runProgram(programPathAndParms).md)
+- [`runProgramNoWait()`](../commands/external/runProgramNoWait(programPathAndParams)): **NEW** command to execute
+  external program without waiting for it to terminate. Basically, fire-and-forget on external program.
 
 
 ### [excel commands](../commands/excel)
