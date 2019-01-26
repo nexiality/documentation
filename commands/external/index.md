@@ -10,4 +10,5 @@ The "external" command type represents a series of automation commands regarding
 external programs (executable, scripts, etc.):
 
 - [`runJUnit(className)`](runJUnit(className))
-- [`runProgram(programPathAndParms)`](runProgram(programPathAndParms))
+- [`runProgram(programPathAndParams)`](runProgram(programPathAndParams))
+- [`runProgramNoWait(programPathAndParams)`](runProgramNoWait(programPathAndParams))
