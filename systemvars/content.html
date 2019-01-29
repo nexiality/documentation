@@ -9,10 +9,10 @@
 
     table.sysvar td.varname code {
         background: rgba(250, 250, 250, 0.9) !important;
-        border: none !important;
-        color: #000;
-        padding: 3px;
-        margin: -2px;
+        border:     none !important;
+        color:      #000;
+        padding:    3px;
+        margin:     -2px;
     }
 
     table.sysvar img { margin: 8px 0; }
@@ -55,10 +55,10 @@
 <p>
     For more details about the exit status that Nexial emits at the end of execution, or a set of standard output
     at the end of execution, please click on the links below.
-    <ul>
+<ul>
     <li><a href="exitstatus"><b>Exit Status</b></a></li>
     <li><a href="endofexecution"><b>End of Execution</b></a></li>
-    </ul>
+</ul>
 </p>
 <p>
     Below are a list of configurable system variables. During the test execution, Nexial may generates one or more
@@ -1067,8 +1067,8 @@
         <td>
             Control the end-of-line (EOL) character to use when writing content to a file via
             <a href="../commands/io/writeFile(file,content,append)">io &raquo;
-                <code>writeFile(file,content,append)</code></a>
-            or <a href="../commands/io/writeFileAsIs(file,content,append)">io &raquo; <code>writeFileAsIs(file,content,append)</code></a>
+                <code>writeFile(file,content,append)</code></a> or
+            <a href="../commands/io/writeFileAsIs(file,content,append)">io &raquo; <code>writeFileAsIs(file,content,append)</code></a>
             commands. Possible options are:<br/>
             <br/>
             <ul>
@@ -1079,6 +1079,62 @@
             </ul>
         </td>
     </tr>
+
+    <tr>
+        <td class="highlight-green" colspan="5">
+            <span>For <code>JSON</code></a> testing only. </span>
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.json.treatJsonAsIs"><code>nexial.json.treatJsonAsIs</code></a>
+        </td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>false</td>
+        <td>
+            For JSON fragment extraction using command or expression, Nexial, by default, stores the resulting content
+            as close (or as compatible) to JSON as possible. This means that if the resulting content is a JSON array,
+            it will be stored like such:<br/>
+            <code>["Apple","Orange","Banana"]</code><br/>
+            <br/>
+            While this is perhaps more correct, it is at times more convenient to store the same information simply as
+            a list, like so:<br/>
+            <code>[Apple,Orange,Banana]</code><br/>
+            <br/>
+            In doing so, we could further simplify the automation of parsing or comparison.<br/>
+            <br/>
+            The purpose of this System variable is to do exactly that. By default, this System variable is set to
+            <code>true</code> - default behavior to keep extracted JSON fragments as "real" JSON as possible. When this
+            System variable is set to <code>false</code>, Nexial will remove double quotes (shown above) from the
+            extracted text data.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.json.lastCompareResults"><code>nexial.json.lastCompareResults</code></a>
+        </td>
+        <td>json</td>
+        <td></td>
+        <td class="highlight-red">true</td>
+        <td>
+            <b>For <a href="../commands/json/assertEqual(expected,actual)">json &raquo;
+                <code>assertEqual(expectedJson,actualJson)</code></a> only.</b>
+            <br/>
+            <br/>
+
+            Invoking <a href="../commands/json/assertEqual(expected,actual)">json &raquo;
+            <code>assertEqual(expectedJson,actualJson)</code></a> could reveal the structural differences between
+            the "expected" and "actual" JSON documents. Such differences are stored in yet another JSON document so that
+            one can further automate against the differences found. One can use this System variable to retrieve this
+            "diff" JSON.<br/>
+            <br/>
+            Note that one might want to consider using
+            <a href="#nexial.lastOutputLink"><code>nexial.lastOutputLink</code></a> to retrieve the file that
+            contains the "diff" JSON document.
+        </td>
+    </tr>
+
     <tr>
         <td class="highlight-green" colspan="5">
             <span>For <a href="../commands/external/"><code>external</code></a> testing only. </span>
@@ -1955,7 +2011,8 @@
         <td>
             Determine if Nexial should run the current AUT exe in "Solo" mode (default) - which means to reuse
             existing instances if found. This means that one could forcefully configure the AUT to run as a single
-            instance, even when multiple <a href="../commands/desktop/useApp(appId)">desktop &raquo; <code>useApp(appId)</code></a>
+            instance, even when multiple <a href="../commands/desktop/useApp(appId)">desktop &raquo;
+            <code>useApp(appId)</code></a>
             command was invoked. This is especially useful when dealing with an application that requires additional
             time and resources to "startup". When subsequent <a href="../commands/desktop/useApp(appId)">desktop
             &raquo; <code>useApp(appId)</code></a> command is invoked, Nexial will simply reuse the existing running

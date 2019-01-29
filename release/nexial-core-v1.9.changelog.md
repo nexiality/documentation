@@ -17,6 +17,7 @@ comments: true
 - code fix to ensure execution metadata is generated when `nexial.outputToCloud` is set to true. This is needed to 
   update Execution Dashboard.
 - code fix JUnit XML generation for edge case where reference data is defined with no value.
+- code fix for logic error when reading project.properties during Nexial execution startup.
 
 #### Improvements:
 - generates JUnit-compatible XML at the end of execution. This file is **ALWAYS** named as `junit.xml` and placed in
@@ -34,6 +35,12 @@ comments: true
 - [`nexial.desktop.table.clickBeforeEdit`](../systemvars/index#nexial.desktop.table.clickBeforeEdit): **NEW** determine 
   if editing a row of a table/grid component of a desktop application would require an initial click. Default is `true`, 
   which means Nexial will always click on the row prior to editing. Applicable to desktop automation only.
+- [`nexial.json.treatJsonAsIs`](../systemvars/index#nexial.json.treatJsonAsIs): **NEW** System variable to control
+  how Json fragments extracted via JsonPath should be treated. If set to false, then the double quotes around text data
+  will be removed (note: Json standards require text data to be wrapped in double quotes). This may simplify automation
+  by eliminating the need to remove double quotes. The default is to leave the Json fragment as is (i.e. double quotes 
+  stay). 
+
 
 ### [Event Notification](../userguide/EventNotification)
 
@@ -48,6 +55,7 @@ comments: true
 - [NUMBER &raquo; `average`](../expressions/JSONexpression): **NEW** calculate the average of a list of numbers.
 - [JSON &raquo; `select`](../expressions/JSONexpression): **NEW** using multiple jsonpath to "extract" out of a JSON
   document into [CSV](../expressions/CSVexpression) expression.
+- [CSV &raquo; `replaceColumnRegx`](../expressions/CSVexpression): now supports regex replacement on multi-line text. 
 
 
 ### [Nexial Interactive](../interactive)
@@ -95,6 +103,12 @@ comments: true
 - [`beautify(json,var)`](../commands/json/beautify(json,var)): **NEW** beautify `json` to improve readability.
 - [`minify(json,var)`](../commands/json/minify(json,var)): **NEW** minify `json` to improve data transfer efficiency.
 - **NEW**: 1st phase of [JSON function](../jsonpath/index.html#jsonpath-function) now available.
+- [`storeValue(json,jsonpath,var)`](../commands/json/storeValue(json,jsonpath,var)): now support extraction of Json 
+  fragments as is or remove double quotes around text to ease parsing and comparison tasks. See 
+  [nexial.json.treatJsonAsIs](../systemvars/index#nexial.json.treatJsonAsIs) for more details.
+- [`storeValues(json,jsonpath,var)`](../commands/json/storeValues(json,jsonpath,var)): now support extraction of Json 
+  fragments as is or remove double quotes around text to ease parsing and comparison tasks. See 
+  [nexial.json.treatJsonAsIs](../systemvars/index#nexial.json.treatJsonAsIs) for more details.
 
 
 ### [web commands](../commands/web)
