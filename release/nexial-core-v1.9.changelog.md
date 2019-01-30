@@ -18,6 +18,9 @@ comments: true
   update Execution Dashboard.
 - code fix JUnit XML generation for edge case where reference data is defined with no value.
 - code fix for logic error when reading project.properties during Nexial execution startup.
+- code fix to ensure in-place data variable updates (i.e. changes to data variable via script, such as using 
+  [base &raquo; `save(var,value)`](../commands/base/save(var,value))) also updates System properties, if such data 
+  variable was initially defined as a System property.
 
 #### Improvements:
 - generates JUnit-compatible XML at the end of execution. This file is **ALWAYS** named as `junit.xml` and placed in
@@ -67,7 +70,9 @@ comments: true
 ### [Built-in Function](../functions)
 
 
-### [aws.s3 commands](../commands/aws.ses)
+### [aws.s3 commands](../commands/aws.s3)
+- [`copyFrom(var,profile,remote,local)`](../commands/aws.s3/copyFrom(var,profile,remote,local)): allow copy of S3 
+  resource to a local file with a different name. Note that this file must exist prior to this command being invoked.
 
 
 ### [aws.ses commands](../commands/aws.ses)
