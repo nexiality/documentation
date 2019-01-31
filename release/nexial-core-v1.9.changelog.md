@@ -21,6 +21,7 @@ comments: true
 - code fix to ensure in-place data variable updates (i.e. changes to data variable via script, such as using 
   [base &raquo; `save(var,value)`](../commands/base/save(var,value))) also updates System properties, if such data 
   variable was initially defined as a System property.
+- fixes to execution output (HTML) to omit empty reference data. 
 
 #### Improvements:
 - generates JUnit-compatible XML at the end of execution. This file is **ALWAYS** named as `junit.xml` and placed in
@@ -82,7 +83,8 @@ comments: true
 
 
 ### [desktop commands](../commands/desktop)
-- code fix to ensure that user input is selected from combo box
+- code fix to ensure that user input is selected from combo box.
+- code fix to retrieve text from TextArea element.
 
 
 ### [external commands](../commands/external)
@@ -121,6 +123,7 @@ comments: true
   "drag" action on a web element.
 - fixed issue when running different browser between iterations or scripts (within plan).
 - code fix to recover from current active window being no longer available.
+- code fix to update execution result in CBT before clearing out execution-bound reference data.
 
 
 ### [xml commands](../commands/xml)
