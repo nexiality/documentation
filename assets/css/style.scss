@@ -42,6 +42,11 @@ h1 {
   font-size: 32pt;
 }
 
+section h2 {
+  color:         #7d9530;
+  margin-bottom: 2px;
+}
+
 h3 {
   color:         #8da540;
   margin-bottom: 2px;
@@ -90,11 +95,13 @@ table {
 th {
   background-color: rgba(100, 100, 100, 0.2);
   padding:          3px;
+  border:           1px solid #999;
 }
 
 td {
   background-color: rgba(250, 250, 250, 0.9);
-  padding:          3px;
+  border:           1px solid #dbdbdb;
+  padding:          5px;
   text-align:       left;
   vertical-align:   top;
   text-shadow:      none;
@@ -505,4 +512,10 @@ div.sponsor .description {
   padding:        10px;
   font-size:      10pt;
   color:          #333;
+}
+
+pre.explain {
+  font-family: "Marker Felt", "Comic Sans MS", sans-serif;
+  background-color: rgba(250,250,250,0.8);
+  color: #330;
 }

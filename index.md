@@ -23,10 +23,10 @@ Here are some of the core design considerations for this platform:
   relevant to all project participants
 - Hybrid, Keyword-driven and standards-based; simple/familiar spreadsheet (Excel) interface
 - Supports many application architecture and interface - web (browser), desktop, API/REST/SOAP, database, batch, ssh
-- Extensive and flexible test and data management
+- Extensible and flexible test and data management
 - Local and remote (Jenkins, BrowserStack) support
 - Integration to existing collaboration tools such as JIRA and Confluence
-- Supports FRIP (functional, regression, integration, performance testing)
+- Supports F.R.I.P. (functional, regression, integration, performance testing)
 
 ---------------------------------------------
 

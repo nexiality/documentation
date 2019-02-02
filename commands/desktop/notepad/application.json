@@ -1,0 +1,29 @@
+{
+    "aut": {
+        "path": "C:\\windows\\system32",
+        "exe": "notepad.exe",
+        "dotnetConfig": "",
+        "terminateExisting": true
+    },
+
+    "defaultWaitMs": 2000,
+    "appStartupWaitMs": 2000,
+
+    "app": {
+        "xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']",
+
+        "components": {
+            "TitleBar": {
+                "xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.TitleBar' and @AutomationId='TitleBar']"
+            },
+
+            "MenuBar": {
+                "xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']"
+            },
+
+            "document": {
+                "xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.Document']"
+            }
+        }
+    }
+}

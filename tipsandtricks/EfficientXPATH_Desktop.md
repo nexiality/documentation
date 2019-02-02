@@ -14,16 +14,16 @@ the respective form. Providing an efficient `XPATH` for the desktop components
 script execution.
 
 
-#### How to make an efficient `XPATH`?  The below steps may help
+### How to make an efficient `XPATH`?  The below steps may help
 - If the desktop component has `@AutomationId` attribute and the value is consistent, use only this attribute to find 
   the component and no need to combine with other attributes like `@ControlType`.
 - Nexial uses this as parent `XPATH` and auto scans all the child elements for that form. So, all the child elements 
   will have the `XPATH` until the parent element same as that was provided in application.json file.
 - If you want to omit adding `@ControlType` attribute, for all the child elements that are auto scanned, specify 
-  `"globalXpathGenerationStrategy": "OMIT\_CONTROL\_TYPE"` in application.json file in the `"app"` section. This will 
-  be applied to all the components.
+  `"globalXpathGenerationStrategy": "OMIT_CONTROL_TYPE"` in the `"app"` section of `application.json`. This will be 
+  applied to all the components.
 - By providing this, it will omit adding the **`@ControlType`** of the element while creating cache json file for all 
-		the elements.
+  the elements.
 - It is an optional information that user needs to provide if the XPATH to be generated omitting `@ControlType`.
   ![json](image/EfficientXPATH_Desktop_01.png)
 

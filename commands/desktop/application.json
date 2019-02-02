@@ -1,0 +1,40 @@
+{
+    "aut": {
+        "path"                          : "...",
+        "exe"                           : "...",
+        "args"                          : "...",
+        "workingDirectory"              : "...",
+        "dotnetConfig"                  : "...",
+        "terminateExisting"             : false
+    },
+
+    "defaultWaitMs"                     : 800,
+    "appStartupWaitMs"                  : 1000,
+
+    "app": {
+        "xpath"                         : "...",
+        "components": {
+
+            "Main Component 1": {
+                "xpath"                 : "...",
+                "components": {
+                    "Sub Component 1a": {
+                        "xpath"         : "..."
+                    },
+                    "Sub Component 2a": {
+                        "xpath"         : "..."
+                    }
+                }
+            },
+
+            "Main Component 2": {
+                "xpath"                 : "...",
+                "components": {
+                    "Sub Component 2a": {
+                        "xpath"         : "..."
+                    }
+                }
+            }
+        }
+    }
+}
