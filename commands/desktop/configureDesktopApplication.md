@@ -52,7 +52,7 @@ JSON file contains primarily two categories of information:
 
 By default, this `application.json` is expected to be found in:
 
-`<PROJECT>/artifact/data/desktop/<app id>/application.json`
+`<PROJECT>/artifact/data/desktop/<appId>/application.json`
 
 The `app id` can be any text of your choosing as long as it is suitable as a directory and file name. This structure 
 allow one to automate against multiple desktop applications. Each application is uniquely identifiable by its 
@@ -283,12 +283,16 @@ or the [desktop &raquo; `useForm(formName)`](useForm(formName)) command.
 ![](image/desktop.useApp.png)<br/>
 ![](image/desktop.useForm.png)<br/>
 
-We will focus on [desktop &raquo; `useApp(appId)`](useApp(appId)) for now. When this command is invoked, Nexial does 
-the following:
-1. Parse `<PROJECT>/artifact/data/desktop/<app id>/application.json`.
+We will focus on [desktop &raquo; `useApp(appId)`](useApp(appId)) for now. 
+
+
+### AutoScan via desktop &raquo; useApp(appId)
+When this command is invoked, Nexial does the following:
+1. Parse `<PROJECT>/artifact/data/desktop/<appId>/application.json`.
 2. Find any "containers" registered under `"app"` &raquo; `"components"`.
 3. For each container found, Nexial search for the corresponding JSON file under
-   `<PROJECT>/artifact/data/desktop/<app id>/<app id>.<component name>.json`. 
+   `<PROJECT>/artifact/data/desktop/<appId>/<appId>.<component name>.json`. [Common UI components](commonComponents) 
+   will be stored in `<PROJECT>/artifact/data/desktop/<appId>/<appId>.commons.json`.
 4. For each missing JSON file, Nexial initiate the AutoScan process to discover any UI components under the 
    corresponding container.
 5. When the AutoScan process is complete, the corresponding JSON file is generated. Thus the AutoScan process would 
@@ -321,7 +325,90 @@ The highlighted labels - `File` and `New` - are what we will use in the Nexial s
 
 ![](image/autoscan-notepad-clickmenu.png)
 
-The benefit of AutoScan:
+As a comparison, to perform the same automation via XPATH would be significantly more tedious:
+![](image/desktop.clickByLocator.png)
+
+
+### AutoScan via desktop &raquo; useForm(formName)
+The above showed the process of performing AutoScan on [common UI components](commonComponents) such as title bar and 
+menu bar. Let's now look at how the AutoScan process looks like for other "container" components.
+
+The purpose of [desktop &raquo; `useApp(appId)`](useApp(appId)) is to parse the corresponding `application.json` and all
+registered components. As we saw in previous section, Nexial automatically scans for common UI components when the
+corresponding `<appId>.commons.json` is missing. Similarly when the corresponding JSON file for a "container" - or 
+"form" - is missing, Nexial likewise initiates the AutoScan process to discover the underlying UI components of such 
+"container". Nexial uses the term "form" to refer to the UI component container.
+
+In the case of Notepad, there isn't any "form" to speak of. UI Spy shows that Notepad contains only 3 components - 
+title bar, menu bar and "document" (where one types):
+
+![](image/UISpy%20-%20notepad%20UI%20components.png)
+
+However, "document" isn't really a "form" since it doesn't contain any UI component. In fact, we need to modify this 
+"document" component a bit in order to perform automation on it. For steps to automating a UI component are generally
+as follows:
+
+1. Invoke [desktop &raquo; `useApp(appId)`](useApp(appId)) on the target application.
+2. Invoke [desktop &raquo; `useForm(formName)`](useForm(formName)) on the target form (container) of the same 
+   application.
+3. Invoke one of the desktop command on a UI component of the same form. For example: 
+   [desktop &raquo; `typeTextArea(name,text1)`](typeTextArea(name,text1,text2,text3,text4))
+
+At step 2 (above), Nexial determines that the corresponding JSON file (in this case, `notepad.document.json`) is missing
+and will proceed to perform AutoScan on the `document` "form". However this form component does not contain any UI 
+components. Here's the generated `notepad.document.json` after [desktop &raquo; `useForm(formName)`](useForm(formName))
+completes:
+
+```json5
+{
+  "type": "DesktopElement",
+  "xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.Document']",
+  "controlType": "ControlType.Document",
+  "automationId": "15",
+  "elementType": "TextArea",
+  "label": "document",
+  "extra": {},
+  "components": {}
+}
+```
+
+The `"components"` section is empty, indicating that no UI component was found within this `"document"` "form". This is 
+where customization can help. We can self-reference the `"document"` as its own UI component by add the following to 
+the "document" element:
+
+```json5
+{
+  "type": "DesktopElement",
+  "xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.Document']",
+  "controlType": "ControlType.Document",
+  "automationId": "15",
+  "elementType": "TextArea",
+  "label": "document",
+  "extra": {},
+  "components": {
+	"edit": {
+		"type": "DesktopElement",
+		"xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.Document']",
+		"controlType": "ControlType.Document",
+		"automationId": "15",
+		"elementType": "TextArea",
+		"label": "document",
+	}
+  }
+}
+```
+
+Notice that the `"edit"` component has the same XPATH as its container. Now we can edit on the Notepad via the 
+[desktop &raquo; `typeTextArea(name,text1,text2,text3,text4)`](typeTextArea(name,text1,text2,text3,text4)), like this:
+
+![](image/desktop.typeTextArea.png)
+
+... which would yield the following effect to the target Notepad application.
+
+![](image/autoscan-notepad-edit.png)
+
+
+### The benefit of AutoScan
 1. **Auto-discovery of UI components** found within a "container" component. One can think of such container as a
    "form", a "pane" or a "section" that contains a related grouping of UI components. This reduce the need for 
    automation engineer to hand code the XPATH for each UI component.
@@ -347,12 +434,13 @@ The benefit of AutoScan:
    same project. One can build up multiple repositories of applications and extend their use across the entire project.
    Such reuse speeds up script development and maintain consistency across the project.
 
-<!-- There are a lot more content regarding Nexial's desktop automation and AutoScan process. Click on the links below to
+
+There are a lot more content regarding Nexial's desktop automation and AutoScan process. Click on the links below to
 learn more:
-- [Back](index)
 - [Common Desktop Components](commonComponents)
+- [AutoScan via desktop &raquo; useForm(formName)](autoscanViaUseForm)
 - [desktop JSON files for Notepad](jsonForNotepad)
 - [desktop JSON files for Calc](jsonForCalc)
 - [More configuration for component](componentConfiguration)
--->
----
+
+[Back to Desktop Commands](index)
