@@ -130,6 +130,8 @@ comments: true
 - fixed issue when running different browser between iterations or scripts (within plan).
 - code fix to recover from current active window being no longer available.
 - code fix to update execution result in CBT before clearing out execution-bound reference data.
+- [`clickOffset(locator,x,y)`](../commands/web/clickOffset(locator,x,y)): **NEW** command to click on a target web 
+  element by its offset.
 
 
 ### [xml commands](../commands/xml)
