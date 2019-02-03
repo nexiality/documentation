@@ -1,0 +1,34 @@
+{
+    "aut": {
+        "path": "C:\\windows\\system32",
+        "exe": "calc.exe",
+        "dotnetConfig": "",
+        "terminateExisting": true
+    },
+
+    "defaultWaitMs": 800,
+    "appStartupWaitMs": 2000,
+
+    "app": {
+        "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']",
+
+        "components": {
+            "TitleBar": {
+                "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.TitleBar' and @AutomationId='TitleBar']"
+            },
+
+            "MenuBar": {
+                "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']"
+            },
+
+            "standard": {
+                "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']"
+            },
+
+            "scientific": {
+                "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']"
+            }
+
+        }
+    }
+}

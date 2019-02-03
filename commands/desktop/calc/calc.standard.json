@@ -1,0 +1,579 @@
+{
+    "type": "DesktopElement",
+    "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']",
+    "controlType": "ControlType.Pane",
+    "name": "",
+    "elementType": "Form",
+    "label": "standard",
+    "extra": { },
+    "components": {
+        "0": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='0' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "0",
+            "elementType": "Button",
+            "label": "0",
+            "extra": { },
+            "components": { }
+        },
+        "1": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='1' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "1",
+            "elementType": "Button",
+            "label": "1",
+            "extra": { },
+            "components": { }
+        },
+        "2": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='2' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "2",
+            "elementType": "Button",
+            "label": "2",
+            "extra": { },
+            "components": { }
+        },
+        "3": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='3' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "3",
+            "elementType": "Button",
+            "label": "3",
+            "extra": { },
+            "components": { }
+        },
+        "4": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='4' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "4",
+            "elementType": "Button",
+            "label": "4",
+            "extra": { },
+            "components": { }
+        },
+        "5": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='5' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "5",
+            "elementType": "Button",
+            "label": "5",
+            "extra": { },
+            "components": { }
+        },
+        "6": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='6' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "6",
+            "elementType": "Button",
+            "label": "6",
+            "extra": { },
+            "components": { }
+        },
+        "7": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='7' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "7",
+            "elementType": "Button",
+            "label": "7",
+            "extra": { },
+            "components": { }
+        },
+        "8": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='8' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "8",
+            "elementType": "Button",
+            "label": "8",
+            "extra": { },
+            "components": { }
+        },
+        "9": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='9' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "9",
+            "elementType": "Button",
+            "label": "9",
+            "extra": { },
+            "components": { }
+        },
+        "Add": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Add' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Add",
+            "elementType": "Button",
+            "label": "Add",
+            "extra": { },
+            "components": { }
+        },
+        "Subtract": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Subtract' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Subtract",
+            "elementType": "Button",
+            "label": "Subtract",
+            "extra": { },
+            "components": { }
+        },
+        "Multiply": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Multiply' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Multiply",
+            "elementType": "Button",
+            "label": "Multiply",
+            "extra": { },
+            "components": { }
+        },
+        "Divide": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Divide' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Divide",
+            "elementType": "Button",
+            "label": "Divide",
+            "extra": { },
+            "components": { }
+        },
+        "Decimal separator": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Decimal separator' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Decimal separator",
+            "elementType": "Button",
+            "label": "Decimal separator",
+            "extra": { },
+            "components": { }
+        },
+        "Negate": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Negate' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Negate",
+            "elementType": "Button",
+            "label": "Negate",
+            "extra": { },
+            "components": { }
+        },
+        "Memory clear": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Memory clear' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Memory clear",
+            "elementType": "Button",
+            "label": "Memory clear",
+            "extra": { },
+            "components": { }
+        },
+        "Memory recall": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Memory recall' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Memory recall",
+            "elementType": "Button",
+            "label": "Memory recall",
+            "extra": { },
+            "components": { }
+        },
+        "Memory store": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Memory store' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Memory store",
+            "elementType": "Button",
+            "label": "Memory store",
+            "extra": { },
+            "components": { }
+        },
+        "Memory add": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Memory add' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Memory add",
+            "elementType": "Button",
+            "label": "Memory add",
+            "extra": { },
+            "components": { }
+        },
+        "Memory subtract": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Memory subtract' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Memory subtract",
+            "elementType": "Button",
+            "label": "Memory subtract",
+            "extra": { },
+            "components": { }
+        },
+        "Backspace": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Backspace' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Backspace",
+            "elementType": "Button",
+            "label": "Backspace",
+            "extra": { },
+            "components": { }
+        },
+        "Running History": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@ControlType='ControlType.Text']",
+            "controlType": "ControlType.Text",
+            "elementType": "Label",
+            "label": "Running History",
+            "extra": { },
+            "components": { }
+        },
+        "Clear entry": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Clear entry' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Clear entry",
+            "elementType": "Button",
+            "label": "Clear entry",
+            "extra": { },
+            "components": { }
+        },
+        "Clear": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Clear' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Clear",
+            "elementType": "Button",
+            "label": "Clear",
+            "extra": { },
+            "components": { }
+        },
+        "Square root": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Square root' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Square root",
+            "elementType": "Button",
+            "label": "Square root",
+            "extra": { },
+            "components": { }
+        },
+        "Percentage": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Percentage' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Percentage",
+            "elementType": "Button",
+            "label": "Percentage",
+            "extra": { },
+            "components": { }
+        },
+        "Reciprocal": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Reciprocal' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Reciprocal",
+            "elementType": "Button",
+            "label": "Reciprocal",
+            "extra": { },
+            "components": { }
+        },
+        "Equals": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Equals' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Equals",
+            "elementType": "Button",
+            "label": "Equals",
+            "extra": { },
+            "components": { }
+        },
+        "Degrees": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Degrees' and @ControlType='ControlType.RadioButton']",
+            "controlType": "ControlType.RadioButton",
+            "name": "Degrees",
+            "elementType": "Radio",
+            "label": "Degrees",
+            "extra": { },
+            "components": { }
+        },
+        "Radians": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Radians' and @ControlType='ControlType.RadioButton']",
+            "controlType": "ControlType.RadioButton",
+            "name": "Radians",
+            "elementType": "Radio",
+            "label": "Radians",
+            "extra": { },
+            "components": { }
+        },
+        "Grads": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Grads' and @ControlType='ControlType.RadioButton']",
+            "controlType": "ControlType.RadioButton",
+            "name": "Grads",
+            "elementType": "Radio",
+            "label": "Grads",
+            "extra": { },
+            "components": { }
+        },
+        "Integer part": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Integer part' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Integer part",
+            "elementType": "Button",
+            "label": "Integer part",
+            "extra": { },
+            "components": { }
+        },
+        "Degree minute second": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Degree minute second' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Degree minute second",
+            "elementType": "Button",
+            "label": "Degree minute second",
+            "extra": { },
+            "components": { }
+        },
+        "Pi": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Pi' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Pi",
+            "elementType": "Button",
+            "label": "Pi",
+            "extra": { },
+            "components": { }
+        },
+        "Exponential notation": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Exponential notation' and @ControlType='ControlType.CheckBox']",
+            "controlType": "ControlType.CheckBox",
+            "name": "Exponential notation",
+            "elementType": "Checkbox",
+            "label": "Exponential notation",
+            "extra": { },
+            "components": { }
+        },
+        "Inverse functions": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Inverse functions' and @ControlType='ControlType.CheckBox']",
+            "controlType": "ControlType.CheckBox",
+            "name": "Inverse functions",
+            "elementType": "Checkbox",
+            "label": "Inverse functions",
+            "extra": { },
+            "components": { }
+        },
+        "Hyperbolic sine": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Hyperbolic sine' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Hyperbolic sine",
+            "elementType": "Button",
+            "label": "Hyperbolic sine",
+            "extra": { },
+            "components": { }
+        },
+        "Hyperbolic cosine": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Hyperbolic cosine' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Hyperbolic cosine",
+            "elementType": "Button",
+            "label": "Hyperbolic cosine",
+            "extra": { },
+            "components": { }
+        },
+        "Hyperbolic tangent": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Hyperbolic tangent' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Hyperbolic tangent",
+            "elementType": "Button",
+            "label": "Hyperbolic tangent",
+            "extra": { },
+            "components": { }
+        },
+        "Exponential": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Exponential' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Exponential",
+            "elementType": "Button",
+            "label": "Exponential",
+            "extra": { },
+            "components": { }
+        },
+        "Natural log": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Natural log' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Natural log",
+            "elementType": "Button",
+            "label": "Natural log",
+            "extra": { },
+            "components": { }
+        },
+        "Sine": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Sine' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Sine",
+            "elementType": "Button",
+            "label": "Sine",
+            "extra": { },
+            "components": { }
+        },
+        "Cosine": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Cosine' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Cosine",
+            "elementType": "Button",
+            "label": "Cosine",
+            "extra": { },
+            "components": { }
+        },
+        "Tangent": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Tangent' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Tangent",
+            "elementType": "Button",
+            "label": "Tangent",
+            "extra": { },
+            "components": { }
+        },
+        "Modulo": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Modulo' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Modulo",
+            "elementType": "Button",
+            "label": "Modulo",
+            "extra": { },
+            "components": { }
+        },
+        "Open parenthesis": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Open parenthesis' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Open parenthesis",
+            "elementType": "Button",
+            "label": "Open parenthesis",
+            "extra": { },
+            "components": { }
+        },
+        "Square": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Square' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Square",
+            "elementType": "Button",
+            "label": "Square",
+            "extra": { },
+            "components": { }
+        },
+        "Raise to y power": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Raise to y power' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Raise to y power",
+            "elementType": "Button",
+            "label": "Raise to y power",
+            "extra": { },
+            "components": { }
+        },
+        "Cube": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Cube' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Cube",
+            "elementType": "Button",
+            "label": "Cube",
+            "extra": { },
+            "components": { }
+        },
+        "Log": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Log' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Log",
+            "elementType": "Button",
+            "label": "Log",
+            "extra": { },
+            "components": { }
+        },
+        "Close parenthesis": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Close parenthesis' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Close parenthesis",
+            "elementType": "Button",
+            "label": "Close parenthesis",
+            "extra": { },
+            "components": { }
+        },
+        "Factorial": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Factorial' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Factorial",
+            "elementType": "Button",
+            "label": "Factorial",
+            "extra": { },
+            "components": { }
+        },
+        "Order of y root": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Order of y root' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Order of y root",
+            "elementType": "Button",
+            "label": "Order of y root",
+            "extra": { },
+            "components": { }
+        },
+        "Cube root": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Cube root' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Cube root",
+            "elementType": "Button",
+            "label": "Cube root",
+            "extra": { },
+            "components": { }
+        },
+        "Anti log": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@Name='Anti log' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Anti log",
+            "elementType": "Button",
+            "label": "Anti log",
+            "extra": { },
+            "components": { }
+        },
+        "standard": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ClassName='CalcFrame' and @ControlType='ControlType.Pane']/*[@ControlType='ControlType.Text' and position()=5]",
+            "controlType": "ControlType.Text",
+            "elementType": "Label",
+            "label": "standard",
+            "extra": { },
+            "components": { }
+        }
+    }
+}

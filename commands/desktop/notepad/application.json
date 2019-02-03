@@ -6,7 +6,7 @@
         "terminateExisting": true
     },
 
-    "defaultWaitMs": 2000,
+    "defaultWaitMs": 800,
     "appStartupWaitMs": 2000,
 
     "app": {
@@ -23,6 +23,10 @@
 
             "document": {
                 "xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.Document']"
+            },
+
+            "save as": {
+                "xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@Name='Save As' and @ControlType='ControlType.Window']"
             }
         }
     }

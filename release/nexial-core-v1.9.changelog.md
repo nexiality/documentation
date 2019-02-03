@@ -85,6 +85,12 @@ comments: true
 ### [desktop commands](../commands/desktop)
 - code fix to ensure that user input is selected from combo box.
 - code fix to retrieve text from TextArea element.
+- code fix to avoid unnecessarily "double" typing via 
+  [desktop &raquo; `typeTextArea(name,text1,text2,text3,text4)`](../commands/desktop/typeTextArea(name,text1,text2,text3,text4)),
+  [desktop &raquo; `typeTextBox(name,text1,text2,text3,text4)`](../commands/desktop/typeTextBox(name,text1,text2,text3,text4)),
+  and [desktop &raquo; `sendKeysToTextBox(name,text1,text2,text3,text4)`](../commands/desktop/sendKeysToTextBox(name,text1,text2,text3,text4)))
+- code fix to resolve focus issue when multiple [desktop &raquo; `clickMenu(menu)`](../commands/desktop/clickMenu(menu))
+  are executed consecutively.
 
 
 ### [external commands](../commands/external)

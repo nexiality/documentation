@@ -1,0 +1,275 @@
+{
+    "appId": "calc",
+    "aut": {
+        "path": "C:\\windows\\system32",
+        "exe": "calc.exe",
+        "dotnetConfig": "",
+        "terminateExisting": true,
+        "runFromWorkingDirectory": false
+    },
+    "defaultWaitMs": 800,
+    "appStartupWaitMs": 2000,
+    "resourceBaseLocation": "C:\\projects\\desktop-example\\artifact\\data\\desktop\\calc",
+    "fileBasedResource": true,
+    "app": {
+        "type": "DesktopElement",
+        "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']",
+        "controlType": "ControlType.Window",
+        "name": "Calculator",
+        "elementType": "Window",
+        "label": "app",
+        "extra": {},
+        "components": {
+            "TitleBar": {
+                "type": "DesktopElement",
+                "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.TitleBar' and @AutomationId='TitleBar']",
+                "controlType": "ControlType.TitleBar",
+                "name": "Calculator",
+                "automationId": "TitleBar",
+                "elementType": "TitleBar",
+                "label": "TitleBar",
+                "extra": {},
+                "components": {
+                    "Minimize": {
+                        "type": "DesktopElement",
+                        "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.TitleBar' and @AutomationId='TitleBar']/*[@AutomationId='Minimize' and @Name='Minimize' and @ControlType='ControlType.Button']",
+                        "controlType": "ControlType.Button",
+                        "name": "Minimize",
+                        "automationId": "Minimize",
+                        "elementType": "Button",
+                        "label": "Minimize",
+                        "extra": {},
+                        "components": {}
+                    },
+                    "Maximize": {
+                        "type": "DesktopElement",
+                        "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.TitleBar' and @AutomationId='TitleBar']/*[@AutomationId='Maximize' and @Name='Maximize' and @ControlType='ControlType.Button']",
+                        "controlType": "ControlType.Button",
+                        "name": "Maximize",
+                        "automationId": "Maximize",
+                        "elementType": "Button",
+                        "label": "Maximize",
+                        "extra": {},
+                        "components": {}
+                    },
+                    "Close": {
+                        "type": "DesktopElement",
+                        "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.TitleBar' and @AutomationId='TitleBar']/*[@AutomationId='Close' and @Name='Close' and @ControlType='ControlType.Button']",
+                        "controlType": "ControlType.Button",
+                        "name": "Close",
+                        "automationId": "Close",
+                        "elementType": "Button",
+                        "label": "Close",
+                        "extra": {},
+                        "components": {}
+                    }
+                }
+            },
+            "MenuBar": {
+                "type": "DesktopMenuBar",
+                "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']",
+                "controlType": "ControlType.MenuBar",
+                "name": "Application",
+                "automationId": "MenuBar",
+                "elementType": "MenuBar",
+                "label": "MenuBar",
+                "extra": {},
+                "components": {
+                    "View": {
+                        "type": "DesktopElement",
+                        "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']/*[@Name='View' and @ControlType='ControlType.MenuItem']",
+                        "controlType": "ControlType.MenuItem",
+                        "name": "View",
+                        "elementType": "MenuItem",
+                        "label": "View",
+                        "extra": {},
+                        "components": {
+                            "Standard": {
+                                "type": "DesktopElement",
+                                "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']/*[@Name='View' and @ControlType='ControlType.MenuItem']/*[@ControlType='ControlType.Menu']/*[@Name='Standard' and @ControlType='ControlType.MenuItem']",
+                                "controlType": "ControlType.MenuItem",
+                                "name": "Standard",
+                                "elementType": "MenuItem",
+                                "label": "Standard",
+                                "extra": {},
+                                "components": {}
+                            },
+                            "Scientific": {
+                                "type": "DesktopElement",
+                                "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']/*[@Name='View' and @ControlType='ControlType.MenuItem']/*[@ControlType='ControlType.Menu']/*[@Name='Scientific' and @ControlType='ControlType.MenuItem']",
+                                "controlType": "ControlType.MenuItem",
+                                "name": "Scientific",
+                                "elementType": "MenuItem",
+                                "label": "Scientific",
+                                "extra": {},
+                                "components": {}
+                            },
+                            "Programmer": {
+                                "type": "DesktopElement",
+                                "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']/*[@Name='View' and @ControlType='ControlType.MenuItem']/*[@ControlType='ControlType.Menu']/*[@Name='Programmer' and @ControlType='ControlType.MenuItem']",
+                                "controlType": "ControlType.MenuItem",
+                                "name": "Programmer",
+                                "elementType": "MenuItem",
+                                "label": "Programmer",
+                                "extra": {},
+                                "components": {}
+                            },
+                            "Statistics": {
+                                "type": "DesktopElement",
+                                "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']/*[@Name='View' and @ControlType='ControlType.MenuItem']/*[@ControlType='ControlType.Menu']/*[@Name='Statistics' and @ControlType='ControlType.MenuItem']",
+                                "controlType": "ControlType.MenuItem",
+                                "name": "Statistics",
+                                "elementType": "MenuItem",
+                                "label": "Statistics",
+                                "extra": {},
+                                "components": {}
+                            },
+                            "History": {
+                                "type": "DesktopElement",
+                                "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']/*[@Name='View' and @ControlType='ControlType.MenuItem']/*[@ControlType='ControlType.Menu']/*[@Name='History' and @ControlType='ControlType.MenuItem']",
+                                "controlType": "ControlType.MenuItem",
+                                "name": "History",
+                                "elementType": "MenuItem",
+                                "label": "History",
+                                "extra": {},
+                                "components": {}
+                            },
+                            "Digit grouping": {
+                                "type": "DesktopElement",
+                                "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']/*[@Name='View' and @ControlType='ControlType.MenuItem']/*[@ControlType='ControlType.Menu']/*[@Name='Digit grouping' and @ControlType='ControlType.MenuItem']",
+                                "controlType": "ControlType.MenuItem",
+                                "name": "Digit grouping",
+                                "elementType": "MenuItem",
+                                "label": "Digit grouping",
+                                "extra": {},
+                                "components": {}
+                            },
+                            "Basic": {
+                                "type": "DesktopElement",
+                                "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']/*[@Name='View' and @ControlType='ControlType.MenuItem']/*[@ControlType='ControlType.Menu']/*[@Name='Basic' and @ControlType='ControlType.MenuItem']",
+                                "controlType": "ControlType.MenuItem",
+                                "name": "Basic",
+                                "elementType": "MenuItem",
+                                "label": "Basic",
+                                "extra": {},
+                                "components": {}
+                            },
+                            "Unit conversion": {
+                                "type": "DesktopElement",
+                                "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']/*[@Name='View' and @ControlType='ControlType.MenuItem']/*[@ControlType='ControlType.Menu']/*[@Name='Unit conversion' and @ControlType='ControlType.MenuItem']",
+                                "controlType": "ControlType.MenuItem",
+                                "name": "Unit conversion",
+                                "elementType": "MenuItem",
+                                "label": "Unit conversion",
+                                "extra": {},
+                                "components": {}
+                            },
+                            "Date calculation": {
+                                "type": "DesktopElement",
+                                "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']/*[@Name='View' and @ControlType='ControlType.MenuItem']/*[@ControlType='ControlType.Menu']/*[@Name='Date calculation' and @ControlType='ControlType.MenuItem']",
+                                "controlType": "ControlType.MenuItem",
+                                "name": "Date calculation",
+                                "elementType": "MenuItem",
+                                "label": "Date calculation",
+                                "extra": {},
+                                "components": {}
+                            },
+                            "Worksheets": {
+                                "type": "DesktopElement",
+                                "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']/*[@Name='View' and @ControlType='ControlType.MenuItem']/*[@ControlType='ControlType.Menu']/*[@Name='Worksheets' and @ControlType='ControlType.MenuItem']",
+                                "controlType": "ControlType.MenuItem",
+                                "name": "Worksheets",
+                                "elementType": "MenuItem",
+                                "label": "Worksheets",
+                                "extra": {},
+                                "components": {
+                                    "Mortgage": {
+                                        "type": "DesktopElement",
+                                        "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']/*[@Name='View' and @ControlType='ControlType.MenuItem']/*[@ControlType='ControlType.Menu']/*[@Name='Worksheets' and @ControlType='ControlType.MenuItem']/*[@ControlType='ControlType.Menu']/*[@Name='Mortgage' and @ControlType='ControlType.MenuItem']",
+                                        "controlType": "ControlType.MenuItem",
+                                        "name": "Mortgage",
+                                        "elementType": "MenuItem",
+                                        "label": "Mortgage",
+                                        "extra": {},
+                                        "components": {}
+                                    },
+                                    "Vehicle lease": {
+                                        "type": "DesktopElement",
+                                        "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']/*[@Name='View' and @ControlType='ControlType.MenuItem']/*[@ControlType='ControlType.Menu']/*[@Name='Worksheets' and @ControlType='ControlType.MenuItem']/*[@ControlType='ControlType.Menu']/*[@Name='Vehicle lease' and @ControlType='ControlType.MenuItem']",
+                                        "controlType": "ControlType.MenuItem",
+                                        "name": "Vehicle lease",
+                                        "elementType": "MenuItem",
+                                        "label": "Vehicle lease",
+                                        "extra": {},
+                                        "components": {}
+                                    },
+                                    "Fuel economy (mpg)": {
+                                        "type": "DesktopElement",
+                                        "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']/*[@Name='View' and @ControlType='ControlType.MenuItem']/*[@ControlType='ControlType.Menu']/*[@Name='Worksheets' and @ControlType='ControlType.MenuItem']/*[@ControlType='ControlType.Menu']/*[@Name='Fuel economy (mpg)' and @ControlType='ControlType.MenuItem']",
+                                        "controlType": "ControlType.MenuItem",
+                                        "name": "Fuel economy (mpg)",
+                                        "elementType": "MenuItem",
+                                        "label": "Fuel economy (mpg)",
+                                        "extra": {},
+                                        "components": {}
+                                    },
+                                    "Fuel economy (L/100 km)": {
+                                        "type": "DesktopElement",
+                                        "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']/*[@Name='View' and @ControlType='ControlType.MenuItem']/*[@ControlType='ControlType.Menu']/*[@Name='Worksheets' and @ControlType='ControlType.MenuItem']/*[@ControlType='ControlType.Menu']/*[@Name='Fuel economy (L/100 km)' and @ControlType='ControlType.MenuItem']",
+                                        "controlType": "ControlType.MenuItem",
+                                        "name": "Fuel economy (L/100 km)",
+                                        "elementType": "MenuItem",
+                                        "label": "Fuel economy (L/100 km)",
+                                        "extra": {},
+                                        "components": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "Edit": {
+                        "type": "DesktopElement",
+                        "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']/*[@Name='Edit' and @ControlType='ControlType.MenuItem']",
+                        "controlType": "ControlType.MenuItem",
+                        "name": "Edit",
+                        "elementType": "MenuItem",
+                        "label": "Edit",
+                        "extra": {},
+                        "components": {}
+                    },
+                    "Help": {
+                        "type": "DesktopElement",
+                        "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']/*[@Name='Help' and @ControlType='ControlType.MenuItem']",
+                        "controlType": "ControlType.MenuItem",
+                        "name": "Help",
+                        "elementType": "MenuItem",
+                        "label": "Help",
+                        "extra": {},
+                        "components": {
+                            "View Help": {
+                                "type": "DesktopElement",
+                                "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']/*[@Name='Help' and @ControlType='ControlType.MenuItem']/*[@ControlType='ControlType.Menu']/*[@Name='View Help' and @ControlType='ControlType.MenuItem']",
+                                "controlType": "ControlType.MenuItem",
+                                "name": "View Help",
+                                "elementType": "MenuItem",
+                                "label": "View Help",
+                                "extra": {},
+                                "components": {}
+                            },
+                            "About Calculator": {
+                                "type": "DesktopElement",
+                                "xpath": "/*[@ClassName='CalcFrame' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']/*[@Name='Help' and @ControlType='ControlType.MenuItem']/*[@ControlType='ControlType.Menu']/*[@Name='About Calculator' and @ControlType='ControlType.MenuItem']",
+                                "controlType": "ControlType.MenuItem",
+                                "name": "About Calculator",
+                                "elementType": "MenuItem",
+                                "label": "About Calculator",
+                                "extra": {},
+                                "components": {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

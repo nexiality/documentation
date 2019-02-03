@@ -114,7 +114,7 @@ The purpose of `"aut"` in `application.json` is to define the mechanics of invok
 |`"path"`             |The directory where the executable is found. Be sure to escape the backslash (i.e. `\\`). For example, `C:\\windows\\Systeme32`. |
 |`"exe"`              |The executable file name. For example, `notepad.exe`                                            |
 |`"args"`             |[optional] The command line arguments to be passed to the target executable.                    |
-|`"workingDirectory"` |[optional] The directory from where the application should be launched. This is needed for application that could potentially behave differently based on where is launched. This is equivalent to specifying the "Start in" parameter for a Windows shortcut.<br/>![](image/index_01.png)<br/>Note that this directory must be read/write -able during execution.|
+|`"workingDirectory"` |[optional] The directory from where the application should be launched. This is needed for application that could potentially behave differently based on where is launched. This is equivalent to specifying the "Start in" parameter for a Windows shortcut. For example:<br/>![](image/index_01.png)<br/>Note that this directory must be read/write -able during execution.|
 |`"dotnetConfig"`     |[optional] Only applicable to .NET application. Some .NET application is shipped with a corresponding `.config` file (XML), such as `MyApplication.exe.config`, which Nexial can use to extract application version and/or build number for reporting purpose.|
 |`"terminateExisting"`|[optional] `true` if Nexial should terminate any running instances of the application during the invocation of [desktop &raquo; `(useApp(appId)`](useApp(appId)) (i.e. initialization) and terminate any running instance at the end of an execution. Default is `false`. |
 
@@ -183,7 +183,7 @@ In the case of Notepad, this XPATH is:
 
     /*[@ClassName='Notepad' and @ControlType='ControlType.Window']
 
-There are other configurations for each `"app"` or component, such as `xpathGenerationStrategy` and `label`, but we 
+There are other configurations for `"app"` or its components, such as `xpathGenerationStrategy` and `label`, but we 
 will address them later.
 
 The `"components"` section (under `"app"`) is a nested structure to describe the UI component hierarchy is an application.
@@ -195,7 +195,7 @@ One can see that the ODBC Data Source Administrator dialog has another structure
 ODBC core components"`). And under that data grid structure, there are more UI components. To support such nested
 component structure, one can nest the `"components"` under another `"components"` and so on. 
 
-Jumping back to Notepad, let's see what we can add under `"components"`.
+Back to Notepad, let's see what we can add under `"components"`.
 
 
 #### `"components"`
@@ -218,7 +218,7 @@ Each UI component placed under the `"components"` section will look more or less
 Let's create 3 UI components for Notepad: the title bar, the status bar, the menu bar and the main area where text 
 edit is done (aka "document"):
 
-1. Title Bar
+1. Title Bar<br/>
    UI Spy shows the following:<br/>
    ![](image/UISpy%20-%20notepad%20titlebar%20identification.png)<br/>
    Since the title bar is a component under the Notepad application window, the XPATH for it needs to include the XPATH
@@ -226,14 +226,14 @@ edit is done (aka "document"):
 
         /*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.TitleBar' and @AutomationId='TitleBar']
 
-2. Menu Bar
+2. Menu Bar<br/>
    UI Spy shows the following:<br/>
    ![](image/UISpy%20-%20notepad%20menubar%20identification.png)<br/>
    Once again, XPATH of the parent component (the application window) must be included as well:
 
         /*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']
         
-3. "document" (where the text would go)
+3. "document" (where the text would go)<br/>
    UI Spy shows the following:<br/>
    ![](image/UISpy%20-%20notepad%20document%20identification.png)<br/>
    Here's the XPATH for it:
@@ -261,13 +261,13 @@ The entire section of `"app"` now looks like this:
 }
 ```
 
-The "document" components is fairly straightforward - it doesn't contain any UI components. The title bar contains only
-a few UI components, namely the "Minimize" button, the "Maximize" button and the "Close" button. But menu bar contains 
-quite a few menu items. For example:
+The "document" components is fairly straightforward. It has no UI components contained in it. The title bar contains 
+only a few UI components, namely the "Minimize" button, the "Maximize" button and the "Close" button. But menu bar 
+contains quite a few menu items. For example:
 
 ![](image/Notepad%20-%20menu.png)
 
-This would be quite an undertaking if one's required to hand code and maintain all the XPATH for each of these menu 
+This would be quite an undertaking if one is required to hand code and maintain all the XPATH for each of these menu 
 items.
 
 
@@ -308,7 +308,7 @@ JSON files being generated:
 
 ![](image/autoscan-notepad-done.png)
 
-The [`notepad.commons.json` (download)](notepad/notepad.commons.json) contains the buttons (Minimize, Maximize, Close) 
+The `notepad.commons.json` contains the buttons (Minimize, Maximize, Close) 
 on the title bar and the menu items for Notepad. Below is a graphical depiction of the UI components discovered via the 
 AutoScan process (some details omitted for brevity):
 
@@ -334,30 +334,26 @@ The above showed the process of performing AutoScan on [common UI components](co
 menu bar. Let's now look at how the AutoScan process looks like for other "container" components.
 
 The purpose of [desktop &raquo; `useApp(appId)`](useApp(appId)) is to parse the corresponding `application.json` and all
-registered components. As we saw in previous section, Nexial automatically scans for common UI components when the
-corresponding `<appId>.commons.json` is missing. Similarly when the corresponding JSON file for a "container" - or 
-"form" - is missing, Nexial likewise initiates the AutoScan process to discover the underlying UI components of such 
+registered components. As we saw in previous section, Nexial automatically scans for the common UI components when the
+corresponding `<appId>.commons.json` is missing. Similarly when the corresponding JSON file for a "container" (or 
+"form") is missing, Nexial likewise initiates the AutoScan process to discover the underlying UI components of such 
 "container". Nexial uses the term "form" to refer to the UI component container.
 
-In the case of Notepad, there isn't any "form" to speak of. UI Spy shows that Notepad contains only 3 components - 
-title bar, menu bar and "document" (where one types):
-
-![](image/UISpy%20-%20notepad%20UI%20components.png)
-
-However, "document" isn't really a "form" since it doesn't contain any UI component. In fact, we need to modify this 
-"document" component a bit in order to perform automation on it. For steps to automating a UI component are generally
-as follows:
-
+For steps to automating a UI component are generally as follows:
 1. Invoke [desktop &raquo; `useApp(appId)`](useApp(appId)) on the target application.
 2. Invoke [desktop &raquo; `useForm(formName)`](useForm(formName)) on the target form (container) of the same 
    application.
 3. Invoke one of the desktop command on a UI component of the same form. For example: 
    [desktop &raquo; `typeTextArea(name,text1)`](typeTextArea(name,text1,text2,text3,text4))
 
-At step 2 (above), Nexial determines that the corresponding JSON file (in this case, `notepad.document.json`) is missing
-and will proceed to perform AutoScan on the `document` "form". However this form component does not contain any UI 
-components. Here's the generated `notepad.document.json` after [desktop &raquo; `useForm(formName)`](useForm(formName))
-completes:
+In the case of Notepad, there isn't any "form" to speak of. UI Spy shows that Notepad contains only 3 components - 
+title bar, menu bar and "document" (where one types):
+
+![](image/UISpy%20-%20notepad%20UI%20components.png)
+
+At step 2 (above), when Nexial determines that the corresponding JSON file (in this case, `notepad.document.json`) is 
+missing, it performs AutoScan on the `"document"` "form". Since `"document"` does not contain any UI components, here is 
+the generated `notepad.document.json` after [desktop &raquo; `useForm(formName)`](useForm(formName)) completes:
 
 ```json5
 {
@@ -392,13 +388,15 @@ the "document" element:
 		"controlType": "ControlType.Document",
 		"automationId": "15",
 		"elementType": "TextArea",
-		"label": "document",
+		"label": "edit",
 	}
   }
 }
 ```
 
-Notice that the `"edit"` component has the same XPATH as its container. Now we can edit on the Notepad via the 
+Now it will appear to Nexial that `"app"` contains a `"document"` container (or form), and `"document"` contains a UI
+component named `"edit"`. Even though the XPATH for `"edit"` and `"document"` are the same, Nexial will overlook this 
+and allow the hierarchy customization. Now we can edit on the Notepad via the 
 [desktop &raquo; `typeTextArea(name,text1,text2,text3,text4)`](typeTextArea(name,text1,text2,text3,text4)), like this:
 
 ![](image/desktop.typeTextArea.png)
@@ -406,6 +404,69 @@ Notice that the `"edit"` component has the same XPATH as its container. Now we c
 ... which would yield the following effect to the target Notepad application.
 
 ![](image/autoscan-notepad-edit.png)
+
+As a comparison, let's see another "form" that contains UI components. When saving a file in Notepad, the standard 
+Windows "Save As" dialog is displayed for user can specify the target file and location:
+
+![](image/autoscan-saveasdialog.png)
+
+With the help of UI Spy, we can derive the XPATH for this dialog as the following:
+
+![](image/autoscan-saveasdialog2.png)
+
+    /*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@Name='Save As' and @ControlType='ControlType.Window']
+
+We can give this "form" any name of our choosing (to improve readability). Here's one rendition:
+
+```json5
+{
+  ... ...
+
+  "app": {
+    "xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']",
+    
+    "components": {
+      "TitleBar": {
+        "xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.TitleBar' and @AutomationId='TitleBar']"
+      },
+      
+      "MenuBar": {
+        "xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.MenuBar' and @AutomationId='MenuBar']"
+      },
+      
+      "document": {
+        "xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.Document']"
+      },
+      
+      "save as": {
+        "xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@Name='Save As' and @ControlType='ControlType.Window']"
+      }
+    }
+  }
+}
+```
+
+The above shows a new "form" named `"save as"`. This is the "Save As" dialog. Since the corresponding 
+`notepad.save as.json` has not yet being created, Nexial will activate AutoScan to discover the UI components in this 
+dialog window. We will use the same [desktop &raquo; `useForm(formName)`](useForm(formName)) command to shift the focus
+from `"document"` to `"save as"`:
+
+![](image/autoscan-saveasdialog-useform.png)
+
+As before, the execution log shows the AutoScan process kicked in (and took about 6 seconds):
+
+![](image/autoscan-saveasdialog-log.png)
+
+Here's a graphical depiction of the generated `notepad.save as.json` (edited for brevity) and how it mapped to the 
+"Save As" dialog:
+
+![](image/autoscan-saveasdialog-json.png)
+
+Now we can use the generated labels in our script, like this:
+
+![](image/autoscan-saveasdialog-save.png)
+
+We can apply the same technique for other dialogs such as "Open", "Print Setup" and "Font".
 
 
 ### The benefit of AutoScan

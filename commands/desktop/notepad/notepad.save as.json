@@ -1,0 +1,80 @@
+{
+    "type": "DesktopElement",
+    "xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@Name='Save As' and @ControlType='ControlType.Window']",
+    "controlType": "ControlType.Window",
+    "name": "Save As",
+    "elementType": "Window",
+    "label": "save as",
+    "extra": {},
+    "components": {
+        "Toolbar": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@Name='Save As' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.ToolBar' and position()=1]",
+            "controlType": "ControlType.ToolBar",
+            "elementType": "ToolBar",
+            "label": "Toolbar",
+            "extra": {},
+            "components": {
+                "Hide Folders": {
+                    "type": "DesktopElement",
+                    "xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@Name='Save As' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.ToolBar' and position()=1]/*[@Name='Hide Folders' and @ControlType='ControlType.Button']",
+                    "controlType": "ControlType.Button",
+                    "name": "Hide Folders",
+                    "elementType": "Button",
+                    "label": "Hide Folders",
+                    "extra": {},
+                    "components": {}
+                }
+            }
+        },
+        "Save": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@Name='Save As' and @ControlType='ControlType.Window']/*[@Name='Save' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Save",
+            "elementType": "Button",
+            "label": "Save",
+            "extra": {},
+            "components": {}
+        },
+        "Cancel": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@Name='Save As' and @ControlType='ControlType.Window']/*[@Name='Cancel' and @ControlType='ControlType.Button']",
+            "controlType": "ControlType.Button",
+            "name": "Cancel",
+            "elementType": "Button",
+            "label": "Cancel",
+            "extra": {},
+            "components": {}
+        },
+        "File name": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@Name='Save As' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.Pane' and position()=1]/*[@AutomationId='FileNameControlHost' and @ControlType='ControlType.ComboBox']",
+            "controlType": "ControlType.ComboBox",
+            "automationId": "FileNameControlHost",
+            "elementType": "TypeAheadCombo",
+            "label": "File name",
+            "extra": {},
+            "components": {}
+        },
+        "Save as type": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@Name='Save As' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.Pane' and position()=1]/*[@AutomationId='FileTypeControlHost' and @ControlType='ControlType.ComboBox']",
+            "controlType": "ControlType.ComboBox",
+            "automationId": "FileTypeControlHost",
+            "elementType": "SingleSelectList",
+            "label": "Save as type",
+            "extra": {},
+            "components": {}
+        },
+        "Encoding": {
+            "type": "DesktopElement",
+            "xpath": "/*[@ClassName='Notepad' and @ControlType='ControlType.Window']/*[@Name='Save As' and @ControlType='ControlType.Window']/*[@ControlType='ControlType.ComboBox' and position()=1]",
+            "controlType": "ControlType.ComboBox",
+            "elementType": "SingleSelectList",
+            "label": "Encoding",
+            "extra": {},
+            "components": {}
+        }
+    }
+}
