@@ -110,5 +110,5 @@ comments: true
 
 
 ### [xml commands](../commands/xml)
-- [`beautify(json,var)`](../commands/json/beautify(json,var)): **NEW** beautify `xml` to improve readability.
-- [`minify(json,var)`](../commands/json/minify(json,var)): **NEW** minify `xml` to improve data transfer efficiency.
+- [`beautify(xml,var)`](../commands/xml/beautify(xml,var)): **NEW** beautify `xml` to improve readability.
+- [`minify(xml,var)`](../commands/xml/minify(xml,var)): **NEW** minify `xml` to improve data transfer efficiency.
