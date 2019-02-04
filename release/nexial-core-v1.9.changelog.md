@@ -1,13 +1,13 @@
 ---
 layout: default
-title: nexial-core 1.9 (2019-02-??)
+title: nexial-core 1.9 (2019-02-04)
 parent: release
 tags: release nexial-core 1.9
 comments: true
 ---
 
 ### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-1.9" class="external-link" target="_nexial_link">Release 1.9</a>
-2019-02-??
+2019-02-04
 
 
 ### General
@@ -23,14 +23,13 @@ comments: true
   variable was initially defined as a System property.
 - fixes to execution output (HTML) to omit empty reference data. 
 
+
 #### Improvements:
 - generates JUnit-compatible XML at the end of execution. This file is **ALWAYS** named as `junit.xml` and placed in
   the output directory.
 - console output now includes additional information useful for CI/CD.
 - execution output (HTML) now includes links to script, data and output files.
 - generated JUnit XML now contains additional execution metadata regarding script, data, and iteration.
-
-#### New:
 
 
 ### [System Variables](../systemvars/index):
@@ -46,9 +45,6 @@ comments: true
   stay). 
 
 
-### [Event Notification](../userguide/EventNotification)
-
-
 ### [Nexial Expression](../expression)
 - [JSON &raquo; `beautify`](../expressions/JSONexpression): **NEW** beautify `json` to improve readability.
 - [JSON &raquo; `minify`](../expressions/JSONexpression): **NEW** minify `json` to improve data transfer efficiency.
@@ -62,24 +58,9 @@ comments: true
 - [CSV &raquo; `replaceColumnRegx`](../expressions/CSVexpression): now supports regex replacement on multi-line text. 
 
 
-### [Nexial Interactive](../interactive)
-
-
-### [Nexial Filter](../flowcontrols/filter)
-
-
-### [Built-in Function](../functions)
-
-
 ### [aws.s3 commands](../commands/aws.s3)
 - [`copyFrom(var,profile,remote,local)`](../commands/aws.s3/copyFrom(var,profile,remote,local)): allow copy of S3 
   resource to a local file with a different name. Note that this file must exist prior to this command being invoked.
-
-
-### [aws.ses commands](../commands/aws.ses)
-
-
-### [base commands](../commands/base)
 
 
 ### [desktop commands](../commands/desktop)
@@ -104,12 +85,6 @@ comments: true
 - allow the reading of an empty cell range follow by other Excel operations such as `transpose()`.
 - [`clear(file,worksheet,range)`](../commands/excel/clear(file,worksheet,range)): now clearing a non-existent file or 
   worksheet would not throw any error.
-
-
-### [image commands](../commands/image)
-
-
-### [io commands](../commands/io)
 
 
 ### [json command](../commands/json)
