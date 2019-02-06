@@ -39,6 +39,10 @@ Notifications can be send to one of the following channels by using one of these
    (`|`) character.
 5. **`console:`** pause the console with a preconfigured message.
 
+It may be of help to consider using the [$(execution) built-in function](../functions/$(execution)), which can expose
+execution-time automation metadata such as script, scenario, iteration, activity and step information.
+
+
 ### Conditional Notification
 Notifications can also be further controlled via [Nexial Filter](../flowcontrols/filter.md). In this way, the 
 notifications can be suppressed until the specific conditions (i.e. filters) are met. Notification conditions are 
@@ -58,6 +62,7 @@ represented via a set of System variables corresponding to each event:
   | `nexial.notifyOnPause`             | `nexial.notifyOnPauseIf`             |
 
 <br/>
+
 
 #### Example 1
 ![](image/ExecutionNotification_09.png)
@@ -112,4 +117,4 @@ such scenario via console log:<br/>
 ### Additional Notes
 1. Audio, TTS and console notification will be disabled in zero-touch environment (CI/CD, Jenkins, e.g.).
 2. TTS, sms and email notification requires additional setup for proper connectivity. 
-
+3. Check out [$(execution) built-in function](../functions/$(execution)) to retrieve execution-time automation metadata.
