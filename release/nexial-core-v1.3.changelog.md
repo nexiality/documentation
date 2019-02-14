@@ -20,7 +20,7 @@ comments: true
 - output spreadsheet now includes link to multiple log files for completeness.
 - fixed error that was preventing execution summary (JSON) to upload to cloud storage.
 - [Nexial Installer](https://github.com/nexiality/nexial-installer/releases) for Linux, Mac and Windows is now available.
-  For the usage, read [Nexial Installer README](https://github.com/nexiality/nexial-installer/blob/master/README) 
+  For the usage, read [Nexial Installer README](https://github.com/nexiality/nexial-installer/blob/master/README.md) 
 - [PR #6])(https://github.com/nexiality/nexial-core/pull/6) `bin/nexial.cmd` exits with the actual exit code from Nexial.
 - fix for linux to use `which` instead of `which --read-alias` when resolving location of browser execution. This 
   should resolve problem when running Nexial in TTY.
