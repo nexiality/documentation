@@ -1,3 +1,4 @@
+/*
 body {
     font-family:      "Trebuchet MS", sans-serif;
     font-size:        10pt;
@@ -22,4 +23,211 @@ a:visited {
 a:hover {
     color:            rgba(50, 245, 60, 1);
     background-color: rgba(50, 50, 50, 0.7);
+}
+
+.title {
+    font-size:        14pt;
+    font-family:      Tahoma, serif;
+    font-weight:      bold;
+    background-color: rgba(228, 227, 201, 1);
+    color:            rgba(64, 62, 13, 1);
+    box-shadow:       0 0 10px rgba(88, 77, 61, 0.75);
+    border:           2px solid rgba(37, 114, 71, 1);
+    vertical-align:   middle;
+    padding:          15px;
+}
+
+.title span {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.showhide {
+    position:                   relative;
+    font-size:                  18px;
+    float:                      right;
+    top:                        -10px;
+    right:                      -10px;
+    padding:                    2px 6px;
+    border-top-right-radius:    10px;
+    border-bottom-right-radius: 10px;
+    background-color:           rgba(150, 160, 171, 0.75);
+    box-shadow:                 0 0 1px #333;
+}
+
+.showhide i {
+    padding: 3px;
+    cursor:  pointer;
+}
+
+.showhide i:hover { text-shadow: 0 0 15px rgba(255, 255, 255, 1); }
+*/
+
+.category {
+    font-size:                  12pt;
+    font-family:                Tahoma, serif;
+    font-weight:                normal;
+    text-shadow:                2px 2px 5px rgba(0, 0, 0, 0.25);
+    background-color:           rgba(120, 120, 101, 0.25);
+    color:                      rgba(64, 62, 63, 1);
+    border:                     2px solid rgba(71, 71, 71, 0.75);
+    vertical-align:             middle;
+    padding:                    5px 10px 5px 10px;
+    border-top-left-radius:     15px;
+    border-top-right-radius:    15px;
+    border-bottom-right-radius: 15px;
+    box-shadow:                 0 3px 10px rgba(80, 80, 40, 0.5);
+}
+
+.category .showhide {
+    top: -5px;
+}
+
+.macro-container {
+    margin:                  -22px 0 0 0 !important;
+    border-top:              none !important;
+    border-top-left-radius:  0 !important;
+    border-top-right-radius: 0 !important;
+    background-color:        rgba(255, 255, 255, 0.1);
+    padding-top:             20px !important;
+}
+
+.macro-file-container {
+    margin-top:    30px;
+    margin-bottom: 10px;
+}
+
+.macro-file {
+    font-size: 11pt;
+    display:   block;
+    margin:    8px 0;
+}
+
+.macro-container .top {
+    height:         28px;
+    vertical-align: middle;
+    width:          100%;
+    font-family:    Tahoma, serif;
+    font-size:      9pt;
+    display:        block;
+    white-space:    nowrap;
+}
+
+.macro-container .dataTables_filter {
+    float:      left;
+    text-align: left;
+    clear:      none;
+    padding:    5px 0 0 0;
+    margin:     0 10px 0 0;
+}
+
+.macro-container .dataTables_info {
+    text-align: center;
+    clear:      none !important;
+    padding:    7px 0 0 0;
+    margin:     0 15px;
+}
+
+.macro-container .dataTables_length {
+    clear:   none;
+    padding: 6px 0 0 0;
+    margin:  0 15px;
+}
+
+.macro-container .dataTables_paginate {
+    float:   right;
+    padding: 2px 0 0 0;
+    margin:  2px 0 0 0;
+}
+
+.macro-container .dataTables_paginate a {
+    font-weight: normal;
+}
+
+.macro-container .dataTables_paginate a.paginate_button {
+    padding:       2px 5px;
+    background:    linear-gradient(to bottom, #fff 0%, rgba(200, 200, 200, 0.75) 100%);
+    border-radius: 10px;
+}
+
+.project-artifact {
+    padding-top: 5px;
+    width:       100% !important;
+}
+
+.project-artifact .label {
+    font-weight:      normal;
+    font-size:        9pt;
+    text-transform:   uppercase;
+    white-space:      nowrap;
+    text-wrap:        none;
+
+    background-color: rgba(220, 220, 220, 0.5);
+    border-bottom:    1px solid rgba(100, 100, 100, 0.5);
+    padding:          5px;
+
+    text-align:       left;
+    vertical-align:   middle;
+
+    height:           25px;
+    width:            33%;
+}
+
+.project-artifact tbody td {
+    vertical-align: top;
+}
+
+.macro-name {
+    margin:      5px 0;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(80, 80, 80, 0.5);
+}
+
+.macro-description, .description {
+    font-family: "Trebuchet MS", sans-serif !important;
+    color:       rgba(80, 80, 10, 0.75) !important;
+    font-weight: normal !important;
+    text-shadow: none !important;
+    font-style:  italic;
+    font-size:   9pt !important;
+}
+
+.macro-description {
+    margin: 5px 0;
+}
+
+.datavar {
+    margin:           0 0 5px 0;
+    width:            100%;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.datavar .datavar-label {
+    font-weight:      lighter;
+    font-size:        8pt;
+    color:            rgba(64, 62, 13, 0.5);
+    background-color: rgba(228, 227, 201, 0.5);
+    width:            65px;
+    text-transform:   lowercase;
+    border:           none !important;
+    text-align:       left;
+}
+
+.datavar .datavar-name {
+    font-family:      monospace;
+    font-weight:      bold;
+    font-size:        10pt;
+    color:            rgba(64, 62, 13, 1);
+    background-color: rgba(228, 227, 201, 0.5);
+    text-shadow:      1px 1px 5px rgba(0, 0, 0, 0.25);
+    border:           none !important;
+    text-align:       left;
+}
+
+.btn-clipboard {
+    margin:           2px;
+    font-size:        12pt;
+    border:           none;
+    background-color: transparent;
+    color:            #555;
+    cursor:           pointer;
 }
