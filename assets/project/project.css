@@ -1,66 +1,9 @@
-/*
-body {
-    font-family:      "Trebuchet MS", sans-serif;
-    font-size:        10pt;
-    margin:           0;
-    background-color: transparent;
-    padding:          25px;
+.scanTime {
+    font-weight: normal;
+    font-size:   9pt;
+    text-shadow: none !important;
+    color:       rgba(0, 0, 0, 0.5);
 }
-
-a {
-    color:           rgba(50, 100, 60, 1);
-    font-weight:     bold;
-    text-decoration: none;
-    background:      rgba(50, 100, 60, 0.1) url(https://nexiality.github.io/documentation/image/link.png) no-repeat 2px 2px;
-    padding:         2px 5px 3px 18px;
-    border-radius:   5px;
-}
-
-a:visited {
-    color: rgba(50, 100, 60, 1);
-}
-
-a:hover {
-    color:            rgba(50, 245, 60, 1);
-    background-color: rgba(50, 50, 50, 0.7);
-}
-
-.title {
-    font-size:        14pt;
-    font-family:      Tahoma, serif;
-    font-weight:      bold;
-    background-color: rgba(228, 227, 201, 1);
-    color:            rgba(64, 62, 13, 1);
-    box-shadow:       0 0 10px rgba(88, 77, 61, 0.75);
-    border:           2px solid rgba(37, 114, 71, 1);
-    vertical-align:   middle;
-    padding:          15px;
-}
-
-.title span {
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
-}
-
-.showhide {
-    position:                   relative;
-    font-size:                  18px;
-    float:                      right;
-    top:                        -10px;
-    right:                      -10px;
-    padding:                    2px 6px;
-    border-top-right-radius:    10px;
-    border-bottom-right-radius: 10px;
-    background-color:           rgba(150, 160, 171, 0.75);
-    box-shadow:                 0 0 1px #333;
-}
-
-.showhide i {
-    padding: 3px;
-    cursor:  pointer;
-}
-
-.showhide i:hover { text-shadow: 0 0 15px rgba(255, 255, 255, 1); }
-*/
 
 .category {
     font-size:                  12pt;
@@ -75,20 +18,19 @@ a:hover {
     border-top-left-radius:     15px;
     border-top-right-radius:    15px;
     border-bottom-right-radius: 15px;
-    box-shadow:                 0 3px 10px rgba(80, 80, 40, 0.5);
+    box-shadow:                 0 4px 10px rgba(80, 80, 40, 0.5);
+    clear:                      both;
 }
 
-.category .showhide {
-    top: -5px;
-}
+.category .showhide { top: -0.25em; }
 
 .macro-container {
-    margin:                  -22px 0 0 0 !important;
-    border-top:              none !important;
-    border-top-left-radius:  0 !important;
-    border-top-right-radius: 0 !important;
+    margin:                  -12px 12px 0 0;
+    border-top:              none;
+    border-top-left-radius:  0;
+    border-top-right-radius: 0;
     background-color:        rgba(255, 255, 255, 0.1);
-    padding-top:             20px !important;
+    padding-top:             20px;
 }
 
 .macro-file-container {

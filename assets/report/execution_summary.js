@@ -17,7 +17,7 @@ function hideSection(/*HTMLElement*/icon) {
  */
 function isCurrentlyOff(/*HTMLElement|String*/target) {
     let elem = (typeof target) === 'string' ? $('#' + target) : $(target);
-    return elem.attr('class').indexOf('off') > -1;
+    return elem && elem.attr('class') && elem.attr('class').indexOf('off') > -1;
 }
 
 function turnOn(/*HTMLElement*/icon, /*String?*/classes) {

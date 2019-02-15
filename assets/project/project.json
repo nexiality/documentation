@@ -1,0 +1,134 @@
+{
+  "name": "shubham",
+  "scanTime": 1550225706626,
+  "macros": [
+    {
+      "location": "artifact/script",
+      "file": "external-programs.xlsx",
+      "data": [
+        {
+          "sheet": "MacroLibrary",
+          "macro": "execute-no-wait",
+          "description": "Execute an external program (${external.program.cmdline}) without waiting for it to terminate. After the target program is executed, Nexial will proceed with the remaining execution. Check ${nexial.lastOutputLink} for program output.",
+          "expects": [
+            {
+              "name": "external.program.cmdline",
+              "default": "",
+              "description": "the fully qualified path of the external program to execute"
+            }
+          ],
+          "produces": []
+        },
+        {
+          "sheet": "MacroLibrary",
+          "macro": "execute-wait-terminate",
+          "description": "Execute an external program (${external.program.cmdline}). Check ${nexial.lastOutputLink} for program output.",
+          "expects": [
+            {
+              "name": "external.program.cmdline",
+              "default": "",
+              "description": "the fully qualified path of the external program to execute"
+            }
+          ],
+          "produces": []
+        },
+        {
+          "sheet": "MacroLibrary",
+          "macro": "find-executable-pid",
+          "description": "Find the process ID (pid) of an active process (${external.program.execname}).",
+          "expects": [
+            {
+              "name": "external.program.execname",
+              "default": "",
+              "description": "file name of an active process/program"
+            }
+          ],
+          "produces": [
+            {
+              "name": "external.program.pid",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "sheet": "MacroLibrary",
+          "macro": "terminate-executable",
+          "description": "Terminate an active process/program via its process ID (${external.program.pid}). Check ${nexial.lastOutputLink} for console output.",
+          "expects": [
+            {
+              "name": "external.program.pid",
+              "default": "",
+              "description": "process ID of the target process"
+            }
+          ],
+          "produces": []
+        }
+      ]
+    }
+  ],
+  "macros": [
+    {
+      "location": "artifact/script",
+      "file": "external-programs.xlsx",
+      "data": [
+        {
+          "sheet": "MacroLibrary",
+          "macro": "execute-no-wait",
+          "description": "Execute an external program (${external.program.cmdline}) without waiting for it to terminate. After the target program is executed, Nexial will proceed with the remaining execution. Check ${nexial.lastOutputLink} for program output.",
+          "expects": [
+            {
+              "name": "external.program.cmdline",
+              "default": "",
+              "description": "the fully qualified path of the external program to execute"
+            }
+          ],
+          "produces": []
+        },
+        {
+          "sheet": "MacroLibrary",
+          "macro": "execute-wait-terminate",
+          "description": "Execute an external program (${external.program.cmdline}). Check ${nexial.lastOutputLink} for program output.",
+          "expects": [
+            {
+              "name": "external.program.cmdline",
+              "default": "",
+              "description": "the fully qualified path of the external program to execute"
+            }
+          ],
+          "produces": []
+        },
+        {
+          "sheet": "MacroLibrary",
+          "macro": "find-executable-pid",
+          "description": "Find the process ID (pid) of an active process (${external.program.execname}).",
+          "expects": [
+            {
+              "name": "external.program.execname",
+              "default": "",
+              "description": "file name of an active process/program"
+            }
+          ],
+          "produces": [
+            {
+              "name": "external.program.pid",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "sheet": "MacroLibrary",
+          "macro": "terminate-executable",
+          "description": "Terminate an active process/program via its process ID (${external.program.pid}). Check ${nexial.lastOutputLink} for console output.",
+          "expects": [
+            {
+              "name": "external.program.pid",
+              "default": "",
+              "description": "process ID of the target process"
+            }
+          ],
+          "produces": []
+        }
+      ]
+    }
+  ]
+}

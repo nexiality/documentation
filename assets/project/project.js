@@ -13,6 +13,23 @@ let HINT_CLIPBOARD         = 'Copy macro to clipboard.\n' +
                              '  Please verify macro file location after\n' +
                              '  paste.';
 
+function loadProjectJson(/*Function*/callback) {
+    let params = {};
+    window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
+
+    let jsonLocation = params.json;
+    if (!jsonLocation) { return; }
+
+    $.getJSON(jsonLocation, function (json) { callback(json); });
+}
+
+function displayProject(/*Object*/json) {
+    let projectName = json.name;
+    let scanTime    = new Date(json.scanTime);
+    $('.title').html('Project :: ' + projectName + '<br/>' +
+                     '<span class="scanTime">last updated: ' + scanTime + '</span>');
+}
+
 function displayMacros(/*Array*/macroData) {
     if (!macroData || macroData.length < 1) { return; }
 
@@ -37,6 +54,10 @@ function displayMacros(/*Array*/macroData) {
         // call macro data table
         toMacroDataTable('div[id="' + macroId + '"] .macro-table', macro);
     }
+}
+
+function postInit() {
+    new ClipboardJS('.btn-clipboard');
 }
 
 function toMacroCommand(/*String*/location, /*String*/file, /*String*/sheet, /*String*/macro) {
@@ -145,21 +166,15 @@ function toDataVarRow(/*String*/label,/*String*/content,/*String?*/className) {
            '</tr>';
 }
 
-function initMacroDisplay() {
-    let params = {};
-    window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
-
-    let jsonLocation = params.json;
-    if (!jsonLocation) { return; }
-
-    $.getJSON(jsonLocation, function (json) {
-        let projectJson = json;
-        console.log('projectJon = ' + projectJson);
-        displayMacros(projectJson.macros);
-        postInit();
-    });
+function toggleMacro(/*HTMLElement*/icon) {
+    toggleShowHide(icon, '#macro-container');
 }
 
-function postInit() {
-    new ClipboardJS('.btn-clipboard');
+function toggleCategoryExpansion(/*HTMLElement*/icon) {
+    toggleExpansion(icon);
+    if (isCurrentlyOff(icon)) {
+        turnOff($('#macro-toggle'));
+    } else {
+        turnOn($('#macro-toggle'));
+    }
 }
