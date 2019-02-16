@@ -1,17 +1,13 @@
 "use strict";
 
 let DEFAULT_MACRO_LOCATION = 'artifact/script';
-let HINT_CLIPBOARD         = 'Copy macro to clipboard.\n' +
-                             '-----------------------------------------\n' +
-                             '  After copy, paste (Ctrl-V or Command-V)\n' +
-                             '  into the \'cmd type\' column (Column C)\n' +
-                             '  of the target step.\n\n' +
-                             '  Note that the reference to the macro\n' +
-                             '  file (Param 1) might not be correct,\n' +
-                             '  especially if it is referenced by\n' +
-                             '  another project.\n\n' +
-                             '  Please verify macro file location after\n' +
-                             '  paste.';
+let HINT_CLIPBOARD         = 'Copy macro to clipboard';
+let MACRO_INSTRUCTION      = '<i class="fas fa-chalkboard-teacher"></i> Click on a copy icon ' +
+                             '<i class="far fa-clipboard"></i> to copy the corresponding macro. After copy, ' +
+                             'paste (Ctrl-V or Command-V) into the \'cmd type\' column (Column C) of the target ' +
+                             'step. Note that the reference to the macro file (Param 1) might not be correct, ' +
+                             'especially if it is referenced by another project. Please verify macro file location ' +
+                             'after pasting it to the test script.';
 
 function loadProjectJson(/*Function*/callback) {
     let params = {};
@@ -33,18 +29,20 @@ function displayProject(/*Object*/json) {
 function displayMacros(/*Array*/macroData) {
     if (!macroData || macroData.length < 1) { return; }
 
+    $('#macro-container').append('<div class="instruction">' + MACRO_INSTRUCTION + '</div>');
+
     for (let i = 0; i < macroData.length; i++) {
         let macro        = macroData[i];
         let macroId      = 'macro-' + macro.file;
-        let macroFileUrl = macro.location + '/' + macro.file;
+        let macroUrl = macro.location + '/' + macro.file;
 
         // create HTML
         $('#macro-container').append(
             '<div id="' + macroId + '" class="macro-file-container">' +
             '<div class="macro-file">' +
-            '<a target="_nexial_link" href="' + macroFileUrl + '">' + macroFileUrl + '</a>' +
+            '<a target="_nexial_link" href="' + macroUrl + '"><i class="far fa-file-alt"></i>' + macroUrl + '</a>' +
             '</div>' +
-            '<table class="project-artifact macro-table display" data-page-length="20">' +
+            '<table class="project-artifact macro-table display" data-page-length="10">' +
             '<thead>' +
             '<tr><th class="label">Macro</th><th class="label">Expects</th><th class="label">Produces</th></tr>' +
             '</thead>' +
@@ -96,7 +94,8 @@ function toMacroDataTable(/*String*/containerId, /*JSONObject*/macroData) {
     return $(containerId).DataTable({
         processing: true,
         select:     true,
-        dom:        '<"top"f i l p>rt',
+        dom:        '<"top"f l i p>rt',
+        lengthMenu: [[10, 25, -1], [10, 25, "All"]],
         data:       data,
         columns:    [
             {
@@ -166,9 +165,7 @@ function toDataVarRow(/*String*/label,/*String*/content,/*String?*/className) {
            '</tr>';
 }
 
-function toggleMacro(/*HTMLElement*/icon) {
-    toggleShowHide(icon, '#macro-container');
-}
+function toggleMacro(/*HTMLElement*/icon) { toggleShowHide(icon, '#macro-container'); }
 
 function toggleCategoryExpansion(/*HTMLElement*/icon) {
     toggleExpansion(icon);

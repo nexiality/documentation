@@ -1,3 +1,78 @@
+/* override from execution_summary.css */
+a {
+    font-weight:     bold;
+    text-decoration: none;
+    padding:         5px;
+    border-radius:   5px;
+
+    color:           rgba(60, 100, 120, 1);
+    background:      rgba(50, 120, 185, 0.1);
+}
+
+a > i {
+    margin: 0 2px;
+}
+
+a:visited {
+    color: rgba(60, 100, 120, 1);
+}
+
+a:hover {
+    color:            rgba(180, 220, 255, 1) !important;
+    background-color: rgba(50, 50, 50, 0.75);
+}
+
+.title {
+    border-top-left-radius:  15px;
+    border-top-right-radius: 15px;
+    border:                  none;
+    color:                   rgba(13, 62, 64, 1);
+    box-shadow:              0 -8px 10px rgba(30, 60, 80, 0.5);
+    background-image:        linear-gradient(180deg, rgba(100, 175, 245, 0.45), rgba(255, 255, 255, 0.1));
+    background-color:        rgba(255, 255, 255, 0.1);
+}
+
+.result-controls i.off {
+    color:         rgba(100, 100, 100, 0.5);
+    border-bottom: 2px solid rgba(100, 100, 100, 0.5);
+}
+
+.result-controls i.on {
+    color:         rgba(80, 100, 140, 1);
+    border-bottom: 2px solid rgba(100, 120, 180, 1);
+}
+
+.result-controls i.fa-expand {
+    color:         rgba(70, 70, 70, 1);
+    border-bottom: 2px solid rgba(70, 70, 70, 1);
+}
+
+.result-controls i.fa-compress {
+    color:         rgba(100, 100, 100, 0.5);
+    border-bottom: 2px solid rgba(100, 100, 100, 0.5);
+}
+
+.result-controls i.fa-expand {
+}
+
+.instruction {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size:   9pt;
+    color:       rgba(50, 50, 50, 0.85);
+    line-height: 1.5em;
+}
+
+.instruction .fa-chalkboard-teacher {
+    font-size: 16pt;
+    color:     rgba(60, 100, 130, 0.9);
+    margin:    0 5px -1px 0;
+}
+
+.instruction .fa-clipboard {
+    font-size: 12pt;
+}
+
+/* specific to project inspector page */
 .scanTime {
     font-weight: normal;
     font-size:   9pt;
@@ -6,36 +81,35 @@
 }
 
 .category {
-    font-size:                  12pt;
-    font-family:                Tahoma, serif;
-    font-weight:                normal;
-    text-shadow:                2px 2px 5px rgba(0, 0, 0, 0.25);
-    background-color:           rgba(120, 120, 101, 0.25);
-    color:                      rgba(64, 62, 63, 1);
-    border:                     2px solid rgba(71, 71, 71, 0.75);
-    vertical-align:             middle;
-    padding:                    5px 10px 5px 10px;
-    border-top-left-radius:     15px;
-    border-top-right-radius:    15px;
-    border-bottom-right-radius: 15px;
-    box-shadow:                 0 4px 10px rgba(80, 80, 40, 0.5);
-    clear:                      both;
+    font-size:        12pt;
+    font-family:      Tahoma, serif;
+    font-weight:      normal;
+    vertical-align:   middle;
+    clear:            both;
+    padding:          4px 10px 5px 15px;
+    border:           none;
+    border-radius:    5px 15px 15px 5px;
+    box-shadow:       0 1px 10px rgba(40, 60, 80, 0.5);
+    text-shadow:      1px 1px 5px rgba(0, 0, 0, 0.35);
+    color:            rgba(60, 70, 80, 1);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(100, 175, 245, 0.25));
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .category .showhide { top: -0.25em; }
 
 .macro-container {
-    margin:                  -12px 12px 0 0;
+    margin:                  -11px 8px 0 2px;
+    border:                  1px solid rgba(50, 50, 50, 0.15);
     border-top:              none;
     border-top-left-radius:  0;
     border-top-right-radius: 0;
     background-color:        rgba(255, 255, 255, 0.1);
-    padding-top:             20px;
 }
 
 .macro-file-container {
-    margin-top:    30px;
-    margin-bottom: 10px;
+    margin-top:    20px;
+    margin-bottom: 40px;
 }
 
 .macro-file {
@@ -89,6 +163,7 @@
     padding:       2px 5px;
     background:    linear-gradient(to bottom, #fff 0%, rgba(200, 200, 200, 0.75) 100%);
     border-radius: 10px;
+    border:        1px solid #979797;
 }
 
 .project-artifact {
@@ -102,16 +177,15 @@
     text-transform:   uppercase;
     white-space:      nowrap;
     text-wrap:        none;
-
-    background-color: rgba(220, 220, 220, 0.5);
-    border-bottom:    1px solid rgba(100, 100, 100, 0.5);
     padding:          5px;
-
     text-align:       left;
     vertical-align:   middle;
 
     height:           25px;
     width:            33%;
+
+    background-color: rgba(220, 220, 220, 0.5);
+    border-bottom:    1px solid rgba(100, 100, 100, 0.5);
 }
 
 .project-artifact tbody td {
@@ -126,7 +200,7 @@
 
 .macro-description, .description {
     font-family: "Trebuchet MS", sans-serif !important;
-    color:       rgba(80, 80, 10, 0.75) !important;
+    color:       rgba(10, 80, 80, 0.75);
     font-weight: normal !important;
     text-shadow: none !important;
     font-style:  italic;
@@ -144,25 +218,28 @@
 }
 
 .datavar .datavar-label {
-    font-weight:      lighter;
+    font-weight:      normal;
     font-size:        8pt;
-    color:            rgba(64, 62, 13, 0.5);
-    background-color: rgba(228, 227, 201, 0.5);
     width:            65px;
     text-transform:   lowercase;
     border:           none !important;
     text-align:       left;
+    vertical-align:   middle;
+
+    color:            rgba(13, 52, 64, 0.65);
+    background-color: rgba(170, 190, 200, 0.65);
 }
 
 .datavar .datavar-name {
     font-family:      monospace;
     font-weight:      bold;
     font-size:        10pt;
-    color:            rgba(64, 62, 13, 1);
-    background-color: rgba(228, 227, 201, 0.5);
-    text-shadow:      1px 1px 5px rgba(0, 0, 0, 0.25);
     border:           none !important;
     text-align:       left;
+
+    color:            rgba(13, 52, 64, 1);
+    background-color: rgba(200, 210, 220, 0.4);
+    text-shadow:      1px 1px 5px rgba(0, 0, 0, 0.25);
 }
 
 .btn-clipboard {
