@@ -146,7 +146,7 @@ Note that many database vendors (and the corresponding database drivers) adhere 
 'Address' is considered NOT THE SAME as 'address' or 'ADDRESS'.
 
 
-### See Also
+### Available Commands
 - [`resultToCSV(var,csvFile,delim,showHeader)`](resultToCSV(var,csvFile,delim,showHeader))
 - [`runFile(var,db,file)`](runFile(var,db,file))
 - [`runSQL(var,db,sql)`](runSQL(var,db,sql))
