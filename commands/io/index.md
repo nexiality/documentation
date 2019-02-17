@@ -8,6 +8,8 @@ comments: true
 
 The "io" command type represents a series of automation commands regarding io operations:
 
+
+### Available Commands
 - [`assertEqual(file1,file2)`](assertEqual(file1,file2))
 - [`assertNotEqual(file1,file2)`](assertNotEqual(file1,file2))
 - [`assertReadableFile(file,minByte)`](assertReadableFile(file,minByte))

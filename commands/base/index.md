@@ -8,6 +8,7 @@ comments: true
 
 The "base" command type represents a series of common automation commands:
 
+
 ### Available Commands
 - [`appendText(var,appendWith)`](appendText(var,appendWith))
 - [`assertArrayContain(array,expected)`](assertArrayContain(array,expected))

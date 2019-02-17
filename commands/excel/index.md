@@ -8,6 +8,8 @@ comments: true
 
 The "excel" command type represents a series of automation commands regarding excel files and excel contents:
 
+
+### Available Commands
 - [`assertPassword(file)`](assertPassword(file))
 - [`clear(file,worksheet,range)`](clear(file,worksheet,range))
 - [`clearPassword(file,password)`](clearPassword(file,password))
