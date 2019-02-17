@@ -8,6 +8,7 @@ comments: true
 This command type deals with web cookies.
 
 
+### Available Commands
 - [`assertNotPresent(name)`](assertNotPresent(name))
 - [`assertPresent(name)`](assertPresent(name))
 - [`assertValue(name,value)`](assertValue(name,value))

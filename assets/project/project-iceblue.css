@@ -32,7 +32,15 @@ a:hover {
 }
 
 .footer {
-    background-color: #d0e0e9;
+    background-color: transparent;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: none;
+    box-shadow: 0 12px 15px rgba(0,40,40,0.45);
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.1), #d0e0e9);
+    padding: 8px !important;
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.95);
+    color: #555;
 }
 
 .footer a {
