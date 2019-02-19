@@ -24,6 +24,11 @@ function displayProject(/*Object*/json) {
     let scanTime    = new Date(json.scanTime);
     $('.title').html('Project :: ' + projectName + '<br/>' +
                      '<span class="scanTime">last updated: ' + scanTime + '</span>');
+    if (json.advices && json.advices.length > 0) {
+        let adviceText = '';
+        json.advices.forEach(advice => { adviceText += advice + '<br/>'; });
+        $('#project-advice').html(adviceText);
+    }
 }
 
 function displayMacros(/*Array*/macroData) {
@@ -32,9 +37,14 @@ function displayMacros(/*Array*/macroData) {
     $('#macro-container').append('<div class="instruction">' + MACRO_INSTRUCTION + '</div>');
 
     for (let i = 0; i < macroData.length; i++) {
-        let macro        = macroData[i];
-        let macroId      = 'macro-' + macro.file;
+        let macro    = macroData[i];
+        let macroId  = 'macro-' + macro.file;
         let macroUrl = macro.location + '/' + macro.file;
+
+        let adviceText = '';
+        if (macro.advices && macro.advices.length) {
+            macro.advices.forEach(advice => { adviceText += advice + '<br/>'; });
+        }
 
         // create HTML
         $('#macro-container').append(
@@ -42,6 +52,7 @@ function displayMacros(/*Array*/macroData) {
             '<div class="macro-file">' +
             '<a target="_nexial_link" href="' + macroUrl + '"><i class="far fa-file-alt"></i>' + macroUrl + '</a>' +
             '</div>' +
+            (adviceText !== '' ? '<div class="advice">' + adviceText + '</div>' : '') +
             '<table class="project-artifact macro-table display" data-page-length="10">' +
             '<thead>' +
             '<tr><th class="label">Macro</th><th class="label">Expects</th><th class="label">Produces</th></tr>' +

@@ -30,6 +30,7 @@ below to learn more about each type and the commands available under each of the
 - [`io`](io): commands regarding IO operations.
 - [`jms`](jms): commands to automate messaging (JMS).
 - [`json`](json): commands to automate JSON files and operations.
+- [`macro`](macro): commands designed to facilitate standard macro behavior and documentation.
 - [`mail`](mail): commands regarding email operations.
 - [`number`](number): number-related automation commands.
 - [`pdf`](pdf): commands regarding the PDF file type.

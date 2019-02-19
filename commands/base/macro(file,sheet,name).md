@@ -10,7 +10,7 @@ comments: true
 ### Description
 The main idea with macro is to enable the reuse of a set of test steps. Not only the reuse of the scripting effort, 
 but this technique also helps with the reuse of execution. This helps to create uniformity in the execution of common
-steps. ***Macro command is converted to [base &raquo; `section(steps)`](section(steps)) command during execution.***
+steps. **Macro command is converted to [base &raquo; `section(steps)`](section(steps)) command during execution.**
 
 This command includes a set of test steps that are kept within a "macro script" (more below) and execute them as part
 of the execution. One may think of this as a form of "in-place expansion". 

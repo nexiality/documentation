@@ -32,15 +32,15 @@ a:hover {
 }
 
 .footer {
-    background-color: transparent;
-    border-bottom-left-radius: 15px;
+    background-color:           transparent;
+    border-bottom-left-radius:  15px;
     border-bottom-right-radius: 15px;
-    border: none;
-    box-shadow: 0 12px 15px rgba(0,40,40,0.45);
-    background-image: linear-gradient(-180deg, rgba(255,255,255,0.1), #d0e0e9);
-    padding: 8px !important;
-    text-shadow: 1px 1px 0px rgba(255,255,255,0.95);
-    color: #555;
+    border:                     none;
+    box-shadow:                 0 12px 15px rgba(0, 40, 40, 0.45);
+    background-image:           linear-gradient(-180deg, rgba(255, 255, 255, 0.1), #d0e0e9);
+    padding:                    8px !important;
+    text-shadow:                1px 1px 0px rgba(255, 255, 255, 0.95);
+    color:                      #555;
 }
 
 .footer a {
@@ -79,7 +79,7 @@ a:hover {
 .instruction {
     font-family: "Trebuchet MS", sans-serif;
     font-size:   9pt;
-    color:       rgba(50, 50, 50, 0.85);
+    color:       rgba(50, 50, 50, 0.75);
     line-height: 1.5em;
 }
 
@@ -270,4 +270,28 @@ a:hover {
     background-color: transparent;
     color:            #555;
     cursor:           pointer;
+}
+
+#project-advice {
+    margin: 10px;
+}
+
+.advice {
+    font-family:      "Verdana", sans-serif;
+    font-size:        8pt;
+    color:            #800;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.75) -50%, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0.15) 75%, rgba(100, 100, 100, 0.75) 150%);
+    padding:          8px;
+    margin:           15px 40px;
+    border-radius:    5px;
+    vertical-align:   middle;
+    line-height:      01.5em;
+    box-shadow:       2px 2px 5px rgba(100, 100, 100, 0.95);
+}
+
+.advice a {
+    background-color: transparent;
+    color:            #a00;
+    padding:          0;
 }

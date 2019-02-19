@@ -213,3 +213,8 @@ performance testing for API calls, `ws` criteria will gather information about r
 calculate elapsed time for the same.
 
 ---------------------------------------------
+
+
+### nexial-project-inspector.cmd / nexial-project-inspector.sh
+
+---------------------------------------------

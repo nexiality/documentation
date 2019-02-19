@@ -13,16 +13,44 @@ Nexial is designed to work with a variety of directory/file structures. One can 
 locations when running [`nexial.[cmd|sh]`](BatchFiles#nexialcmd--nexialsh). However it is recommended to follow 
 the standard Nexial automation project structure so that:
 1. Test artifacts are well-organized to reduce conflicts and to improve artifact management,
-2. Your project can integrate more easily (think Integration Testing) with other project(s) that follow the same 
+2. Your project can integrate more easily with other project(s) (think Integration Testing) that follow the same 
    structure,
-3. Automation is simplified since Nexial would derive most of the path-related work for you via known convention
+3. Automation is simplified since Nexial would derive most of the path-related work for you via the same common 
+   convention.
+
 
 ### Nexial Project Structure
-Below is the general directory/file structure of a standard Nexial automation project:
-
+Below is the general directory/file structure of a standard Nexial automation project:<br/>
 ![](image/UnderstandingProjectStructure_01.png)
 
-1. The `artifact` directory contains 3 sub-directories: `data`, `plan`, `script`. These are the directories are used 
+1. `.meta/project.id`:<br/>
+   <a name="project.id"></a>
+   Technically, this is not a required file. It helps to keep all instances of the same project on
+   using the same name, and thus easier to manage across people and teams. Let's further understand the underlying 
+   problem via an example. Suppose John checks out `ProjectA` from the source code repository (say, GIT) to a local 
+   directory, `C:\projects\ProjectA` but Sam checks out the same project to a local directory `C:\projects\MyProject`. 
+   In addition, Amy checks out a _different_ project locally, also as `C:\projects\MyProject`.<br/> 
+   ![](image/UnderstandingProjectStructure_00.png)<br/>
+   By default Nexial derives the project ID based on the directory name. So as shown above, in John's case, the project 
+   name would be `ProjectA` while both Sam's and Amy's would be `MyProject`. Whilst John and Sam are working on the 
+   same project and Amy on a different one, it would appear as if Sam and Amy are on the same project and John on 
+   another one. Such inconsistency can be further exasperated when one attempts to integrate these projects into a
+   large test.
+   
+   To eliminate such issue, Nexial employs the concept of "metadata" so that all instances of the same project will be
+   regarded as the same in terms of project identification. Contained in this `.meta/project.id` is such project 
+   identification. Instead of deriving project ID based on the corresponding directory name, Nexial can identify the 
+   same via the `.meta/project.id` file - which is committed to the corresponding source code repository and 
+   subsequently checked out by project participants.<br/>
+   ![](image/UnderstandingProjectStructure_00a.png)
+   
+   To generate such file, one can create it manually, or use 
+   [`bin/nexial-project.sh` or `bin/nexial-project.cmd`](BatchFiles#nexial-projectcmd--nexial-projectsh) batch file.
+
+   Future effort of Nexial will use the same "metadata" concept for further enhancements such as execution output
+   analysis.
+   
+2. The `artifact` directory contains 3 sub-directories: `data`, `plan`, `script`. These are the directories are used 
    to store test data, test plan and test scripts respectively.
 
    1. `artifact/script` - this directory will store your test scripts.  The script files may be named to your 
@@ -51,13 +79,13 @@ Below is the general directory/file structure of a standard Nexial automation pr
    assumed to be found in `artifact/data` directory. One may use relative path, such as 
    `../../AnotherProject/artifact/script/AnotherScript.xlsx`, to reference test artifacts of another project. 
    
-   4. `project.properties` (not shown above) - this is a "reserved" file designated to maintain project-wide data and
-   configuration. With any automation project, there are various "scopes" of data. Some data is meant for a specific
-   scenario - such should be stored within the datasheet (worksheet in data file) named after that scenario. Some data
-   is meant to be used through an entire test script - such should be stored in the `#default` datasheet of the 
-   corresponding data file. Some data, however, is reusable across the entire project. This is the purpose of 
+   4. `artifact/project.properties` (not shown above) - this is a "reserved" file designated to maintain project-wide 
+   data and configuration. With any automation project, there are various "scopes" of data. Some data is meant for a 
+   specific scenario - such should be stored within the datasheet (worksheet in data file) named after that scenario. 
+   Some data is meant to be used through an entire test script - such should be stored in the `#default` datasheet of 
+   the corresponding data file. Some data, however, is reusable across the entire project. This is the purpose of 
    `artifact/project.properties`.
-      ##### project.properties
+      ##### `project.properties`
       The main purpose of `artifact/project.properties` is to manage data that is common across the entire project 
       (i.e. the same project directory). Information such as database connectivity, application URL, commonly used 
       locators, etc. can be stored in one place. This improves reuse and maintainability. Here are the rules about 
@@ -74,35 +102,37 @@ Below is the general directory/file structure of a standard Nexial automation pr
        # You are reading the ".properties" entry.
        ! The exclamation mark can also mark text as comments.
 
-       # The key characters =, and : should be written with a preceding backslash to ensure that they are properly loaded.
+       # The key characters =, and : should be written with a preceding backslash to ensure that 
+       # they are properly loaded.
        # However, there is no need to precede the value characters =, and : by a backslash.
        key1 = value1
        key2=Value2
 
-       # The backslash below tells the application to continue reading the value onto the next line.
+       # Backslash below tells the application to continue reading the value from the next line.
        message = Welcome to \
                  Nexial!
 
        # Add spaces to the key
        key with spaces = This is the value that could be looked up with the key "key with spaces".
 
-       # If you want your property to include a backslash, it should be escaped by another backslash
+       # If you want your property to include a backslash, escaped it by another backslash
        path=c:\\wiki\\templates
        ```
        For more information on properties file, refer to 
-       <a href="https://docs.oracle.com/cd/E26180_01/Platform.94/ATGProgGuide/html/s0204propertiesfileformat01.html" class="external-link" target="_nexial_link">Properties file format</a>. 
+       <a href="https://docs.oracle.com/cd/E26180_01/Platform.94/ATGProgGuide/html/s0204propertiesfileformat01.html" 
+       class="external-link" target="_nexial_link">Properties file format</a>. 
 
-2. The output directory contains the output of each test execution named as a `run id`, which is simply the 
-   timestamp of the start of an execution.  The `captures` directory stores all the screenshots, the `logs` 
-   directory stores all the log files, and the output is named similarly to the corresponding test script:
-   `[TEST SCRIPT NAME].[START DATE/TIME].[ITERATION].xlsx`.
-   It is generally a good idea to keep output separated by its execution. Hence the timestamp-based approach allows
-   each execution its dedicated output directory. One can consider using the same output location to store any
-   output files generated as part of the execution. See 
+3. <a name="output"></a>The `output` directory contains the output of each test execution named as a `run id`, which is 
+   simply the timestamp of the start of an execution.  The `captures` directory stores all the screenshots and capture 
+   videos (if any). The `logs` directory stores all the log files, with the main log file named as 
+   `nexial-[START DATE/TIME].log`. The execution output file is named similarly to the corresponding test script:
+   `[TEST SCRIPT NAME].[START DATE/TIME].[ITERATION].xlsx`. It is generally a good idea to keep output separated by 
+   its execution. Hence the timestamp-based approach allows each execution its dedicated output directory. One can 
+   consider using the same output location to store any output files generated as part of the execution. See 
    [`$(syspath|out|...)`](../functions/$(syspath)#available-functions) for more details.
    When [`nexial.outputToCloud`](../systemvars/#nexial.outputToCloud) to set to `true`, the generated output will be
    uploaded to designated cloud location and removed from local output directory.
-    
+
    1. The generated output file comes with a `#summary` sheet, wherein the execution summary for that iteration is 
       shown. Along with summary information, additional execution details are also available:
       1. `run from`: the host from which this execution was conducted.
@@ -134,8 +164,17 @@ Below is the general directory/file structure of a standard Nexial automation pr
       Test Script/Scenario:<br/>
       ![](image/UnderstandingProjectStructure_06.png)
    
-      Output File:<br>
+      Output File:<br/>
       ![](image/UnderstandingProjectStructure_07.png)
+
+   4. <a name="summary"></a>Nexial also produces another output at the end of execution, one which provides a higher 
+      level of execution output and extrapolation across test plans, test scripts, iterations, scenarios, and 
+      activities:<br/>
+      ![](image/UnderstandingProjectStructure_08.png)
+
+      This file is always generated in the output directory as `execution-output.html`. It provides summary data points
+      at multiple levels and links to the execution output file. Some amount of interactivity is available where
+      one can toggle the visibility of script, iteration, scenarios and activities data.
 
 
 ### Additional Notes
