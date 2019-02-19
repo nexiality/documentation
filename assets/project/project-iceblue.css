@@ -298,6 +298,12 @@ a:hover {
     border-bottom:    1px dotted rgba(80, 0, 0, 0.5);
 }
 
+.advice a:hover {
+    color:         rgba(255, 10, 10, 1) !important;
+    border-top:    1px dotted rgba(250, 0, 0, 1);
+    border-bottom: 1px dotted rgba(250, 0, 0, 1);
+}
+
 .advice code {
     font-weight: bold;
     color:       #000;

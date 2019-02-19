@@ -134,9 +134,10 @@ blockquote {
 }
 
 #container .inner img {
-  max-width:  none !important;
-  box-shadow: 2px 2px 15px #555;
-  margin:     5px 0;
+  max-width:     none !important;
+  box-shadow:    2px 2px 15px #555;
+  margin:        5px 0;
+  border-radius: 10px;
 }
 
 #downloads {
@@ -515,7 +516,7 @@ div.sponsor .description {
 }
 
 pre.explain {
-  font-family: "Marker Felt", "Comic Sans MS", sans-serif;
-  background-color: rgba(250,250,250,0.8);
-  color: #330;
+  font-family:      "Marker Felt", "Comic Sans MS", sans-serif;
+  background-color: rgba(250, 250, 250, 0.8);
+  color:            #330;
 }

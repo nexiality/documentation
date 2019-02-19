@@ -176,6 +176,13 @@ Below is the general directory/file structure of a standard Nexial automation pr
       at multiple levels and links to the execution output file. Some amount of interactivity is available where
       one can toggle the visibility of script, iteration, scenarios and activities data.
 
+   5. <a name="junit"></a>Along with the above-stated output, Nexial also produces a JUNIT compatible xml file. This
+      XML file is always generated in the output directory as `junit.xml`. This file is useful when integrating with
+      JUNIT-compatible tools and plugins such as:<br/>
+      ![](image/UnderstandingProjectStructure_09.png)<br/>
+      ![](image/UnderstandingProjectStructure_10.png)<br/>
+      ![](image/UnderstandingProjectStructure_11.png)<br/>
+
 
 ### Additional Notes
 For convenience, use the `bin/nexial-project.cmd` or `bin/nexial-project.sh` to generate the project structure for 
