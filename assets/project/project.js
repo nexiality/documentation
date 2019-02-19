@@ -28,6 +28,8 @@ function displayProject(/*Object*/json) {
         let adviceText = '';
         json.advices.forEach(advice => { adviceText += advice + '<br/>'; });
         $('#project-advice').html(adviceText);
+    } else {
+        $('#project-advice').remove();
     }
 }
 
