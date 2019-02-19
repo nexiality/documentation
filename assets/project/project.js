@@ -4,10 +4,10 @@ let DEFAULT_MACRO_LOCATION = 'artifact/script';
 let HINT_CLIPBOARD         = 'Copy macro to clipboard';
 let MACRO_INSTRUCTION      = '<i class="fas fa-chalkboard-teacher"></i> Click on a copy icon ' +
                              '<i class="far fa-clipboard"></i> to copy the corresponding macro. After copy, ' +
-                             'paste (Ctrl-V or Command-V) into the \'cmd type\' column (Column C) of the target ' +
-                             'step. Note that the reference to the macro file (Param 1) might not be correct, ' +
-                             'especially if it is referenced by another project. Please verify macro file location ' +
-                             'after pasting it to the test script.';
+                             'paste (<code>Ctrl-V</code> or <code>Command-V</code>) into the <b>[cmd type]</b> ' +
+                             'column (Column C) of the target step. Note that the reference to the macro file ' +
+                             'in <b>[param 1]</b> might not be correct, especially if it is referenced by another project. ' +
+                             'Please verify macro file location after pasting it to the test script.';
 
 function loadProjectJson(/*Function*/callback) {
     let params = {};
