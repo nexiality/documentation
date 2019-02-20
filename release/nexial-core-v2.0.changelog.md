@@ -13,8 +13,8 @@ comments: true
 ### General
 #### Fixes:
 
-
 #### Improvements:
+- minor improvement on logging to help troubleshoot test step errors.
 
 
 ### [System Variables](../systemvars/index):
@@ -24,6 +24,15 @@ comments: true
 
 
 ### [aws.s3 commands](../commands/aws.s3)
+
+
+### [macro commands](../commands/macro)
+- [`description()`](../commands/macro/description()): **NEW** no-op command for script author to provide macro 
+  documentation in a standard way.
+- [`expects(var,default)`](../commands/macro/expects(var,default)): **NEW** command to assert expected data variable 
+  prior to invoking the enclosing macro.
+- [`produces(var,value)`](../commands/macro/produces(var,value)): **NEW** command to indicate the data variable that 
+  will be created/overwritten as part of the enclosing macro execution. 
 
 
 ### [desktop commands](../commands/desktop)
@@ -44,6 +53,7 @@ comments: true
   last window to be selected.
 - enhancement to speed up Electron automation by removing "page source support" and "preemptive dialog checks". Both
   of these checks are not common (and at times not applicable) to Electron applications.
+- [`saveAttributeList(var,locator,attrName)`]: *NEW* command to save the value of an attribute for all matching elements.
 
 
 ### [xml commands](../commands/xml)
