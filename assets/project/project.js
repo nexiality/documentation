@@ -97,6 +97,10 @@ function toClipboardButton(macroRef) {
            '</button>';
 }
 
+function formatDescription(/*String?*/description) {
+    return description ? description.replace(/\n/g, "<br/>") : description;
+}
+
 function toMacroDataTable(/*String*/containerId, /*JSONObject*/macroData) {
     if (!containerId || !macroData || !macroData.data) { return; }
 
@@ -113,13 +117,11 @@ function toMacroDataTable(/*String*/containerId, /*JSONObject*/macroData) {
         columns:    [
             {
                 data: function (row, type, set, meta) {
-                    let macroCmd = toMacroCommand(macroLocation, macroFile, row.sheet, row.macro);
-
                     return '<div class="macro-name">' +
                            row.sheet + ':' + row.macro +
-                           toClipboardButton(macroCmd) +
+                           toClipboardButton(toMacroCommand(macroLocation, macroFile, row.sheet, row.macro)) +
                            '</div>' +
-                           '<div class="macro-description">' + row.description + '</div>';
+                           '<div class="macro-description">' + formatDescription(row.description) + '</div>';
                 }
             },
             {
@@ -127,17 +129,17 @@ function toMacroDataTable(/*String*/containerId, /*JSONObject*/macroData) {
                     if (row.expects && row.expects.length > 0) {
                         let html = '';
                         for (let i = 0; i < row.expects.length; i++) {
-                            let expectedData = row.expects[i];
-                            if (!expectedData) { continue; }
+                            let expect = row.expects[i];
+                            if (!expect) { continue; }
                             html += '<table class="datavar expects" cellspacing="3">' +
-                                    toDataVarRow('Data Variable', expectedData.name) +
-                                    toDataVarRow('Default', expectedData.default) +
-                                    toDataVarRow('Description', expectedData.description, 'description') +
+                                    toDataVarRow('Data Variable', expect.name) +
+                                    toDataVarRow('Default', expect.default) +
+                                    toDataVarRow('Description', formatDescription(expect.description), 'description') +
                                     '</table>';
                         }
                         return html;
                     } else {
-                        return '<NONE>';
+                        return '&nbsp;';
                     }
                 }
             },
@@ -146,16 +148,16 @@ function toMacroDataTable(/*String*/containerId, /*JSONObject*/macroData) {
                     if (row.produces && row.produces.length > 0) {
                         let html = '';
                         for (let i = 0; i < row.produces.length; i++) {
-                            let producedData = row.produces[i];
-                            if (!producedData) { continue; }
+                            let produce = row.produces[i];
+                            if (!produce) { continue; }
                             html += '<table class="datavar produces" cellspacing="3">' +
-                                    toDataVarRow('Data Variable', producedData.name) +
-                                    toDataVarRow('Description', producedData.description, 'description') +
+                                    toDataVarRow('Data Variable', produce.name) +
+                                    toDataVarRow('Description', formatDescription(produce.description), 'description') +
                                     '</table>';
                         }
                         return html;
                     } else {
-                        return '<NONE>';
+                        return '&nbsp;';
                     }
                 }
             }
