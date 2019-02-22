@@ -15,10 +15,15 @@ comments: true
 
 #### Improvements:
 - minor improvement on logging to help troubleshoot test step errors.
-
+- [`nexial-variable-update`](../userguide/BatchFiles.md#nexial-variable-updatecmd--nexial-variable-updatesh) script 
+   now supports macro and HTML files. Also reduced excessive logging.
+- event notification: mail notification now supports HTML via System variable `nexial.notifyViaHTML`.
 
 ### [System Variables](../systemvars/index):
 
+
+### [Built-in Function](../functions)
+- [execution]: better support for execution metadata, specifically for scenario and script
 
 ### [Nexial Expression](../expression)
 
