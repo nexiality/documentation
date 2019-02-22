@@ -12,6 +12,9 @@ comments: true
 
 ### General
 #### Fixes:
+- fix email notification when email address isn't specified
+- force email notification to be sent as HTML
+- [`nexial-variable-update`](../userguide/BatchFiles.md#nexial-variable-updatecmd--nexial-variable-updatesh): slight improvement on logging
 
 #### Improvements:
 - minor improvement on logging to help troubleshoot test step errors.
