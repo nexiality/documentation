@@ -21,8 +21,7 @@ This command serves 2 purposes:
 
 ### Parameters
 - **var** - the data variable this macro expects to be defined prior to its invocation.
-- **default** - the default value to use if the expected data variable is not defined. Use either `(empty)` or `(null)`
-  if no default is to be given.
+- **default** - the default value to use if the expected data variable is not defined.
 
 
 ### Example
