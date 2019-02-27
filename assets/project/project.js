@@ -2,12 +2,8 @@
 
 let DEFAULT_MACRO_LOCATION = 'artifact/script';
 let HINT_CLIPBOARD         = 'Copy macro to clipboard';
-let MACRO_INSTRUCTION      = '<i class="fas fa-chalkboard-teacher"></i> Click on a copy icon ' +
-                             '<i class="far fa-clipboard"></i> to copy the corresponding macro. After copy, ' +
-                             'paste (<code>Ctrl-V</code> or <code>Command-V</code>) into the <b>[cmd type]</b> ' +
-                             'column (Column C) of the target step. Note that the reference to the macro file ' +
-                             'in <b>[param 1]</b> might not be correct, especially if it is referenced by another project. ' +
-                             'Please verify macro file location after pasting it to the test script.';
+let showHideOption         = {duration: 50};
+let docWindow              = null;
 
 function loadProjectJson(/*Function*/callback) {
     let params = {};
@@ -27,16 +23,111 @@ function displayProject(/*Object*/json) {
     if (json.advices && json.advices.length > 0) {
         let adviceText = '';
         json.advices.forEach(advice => { adviceText += advice + '<br/>'; });
-        $('#project-advice').html(adviceText);
+        $('#project-advice').html(adviceText).show(showHideOption);
     } else {
         $('#project-advice').remove();
     }
 }
 
+function displayDataVariable(/*Object*/dataVariables) {
+    if (!dataVariables) { return; }
+
+    let tbody = $('#data-container .data-table tbody');
+
+    for (let name in dataVariables) {
+        let defs = dataVariables[name];
+
+        if (defs && defs.length > 0) {
+            let defsTable = '<table class="datavar data-definitions">';
+            let advices   = '';
+
+            for (let i = 0; i < defs.length; i++) {
+                let def = defs[i];
+
+                let typeClass = '';
+                let icon      = '';
+                switch (def.type.name) {
+                    case 'step': {
+                        icon      = '<i class="far fa-edit"></i>';
+                        typeClass = 'data-step';
+                        break;
+                    }
+                    case 'commandline': {
+                        icon      = '<i class="far fa-window-restore"></i>';
+                        typeClass = 'data-command';
+                        break;
+                    }
+                    case 'project.properties': {
+                        icon      = '<i class="far fa-file-alt"></i>';
+                        typeClass = 'data-project';
+                        break;
+                    }
+                    case 'datasheet': {
+                        icon      = '<i class="far fa-file-excel"></i>';
+                        typeClass = 'data-datasheet';
+                        break;
+                    }
+                    case '#default': {
+                        icon      = '<i class="fas fa-table"></i>';
+                        typeClass = 'data-default';
+                        break;
+                    }
+                }
+
+                defsTable += '<tr class="' + typeClass + '">' +
+                             '<td class="datavar-label">' +
+                             '<a href="' + def.location + '">' + icon + def.location + '</a>' +
+                             '&nbsp;&nbsp;' + (def.dataSheet || '') +
+                             '&nbsp;&nbsp;' + (def.position || '') +
+                             '</td>' +
+                             '<td class="datavar-name">' + def.definedAs + '</td>' +
+                             '</tr>';
+
+                if (def.advices && def.advices.length > 0) {
+                    for (let j = 0; j < def.advices.length; j++) {
+                        advices += '<div class="advice">' + def.advices[j] + '</div>';
+                    }
+                }
+            }
+
+            defsTable += '</table>';
+            let nameHTML = name.startsWith('nexial.') ?
+                           '<a href="#" onclick="return openDocWindow(\'' + name + '\');">' + name + '</a>' : name;
+            tbody.append('<tr><td class="data-name">' + nameHTML + advices + '</td><td>' + defsTable + '</td></tr>');
+            advices = '';
+        }
+    }
+
+    $('.data-table').DataTable({
+        processing: true,
+        select:     true,
+        dom:        '<"top"f l i p>rt',
+        lengthMenu: [[10, 25, -1], [10, 25, "All"]],
+        colReorder: true,
+        columnDefs: [
+            {targets: [0], orderData: [1, 0]},
+            {targets: [1], orderData: [1, 0]}
+        ]
+    });
+
+    $('#data-container').show(showHideOption);
+    turnOn($('#data-toggle'));
+}
+
+function openDocWindow(/*String*/varname) {
+    if (docWindow !== null && !docWindow.closed) {
+        docWindow.close();
+        docWindow = null;
+    }
+
+    docWindow = window.open('https://nexiality.github.io/documentation/systemvars/index#' + varname, '_nexial');
+    return false;
+}
+
 function displayMacros(/*Array*/macroData) {
     if (!macroData || macroData.length < 1) { return; }
 
-    $('#macro-container').append('<div class="instruction">' + MACRO_INSTRUCTION + '</div>');
+    let container = $('#macro-container');
 
     for (let i = 0; i < macroData.length; i++) {
         let macro    = macroData[i];
@@ -49,13 +140,13 @@ function displayMacros(/*Array*/macroData) {
         }
 
         // create HTML
-        $('#macro-container').append(
+        container.append(
             '<div id="' + macroId + '" class="macro-file-container">' +
             '<div class="macro-file">' +
             '<a target="_nexial_link" href="' + macroUrl + '"><i class="far fa-file-alt"></i>' + macroUrl + '</a>' +
             '</div>' +
             (adviceText !== '' ? '<div class="advice">' + adviceText + '</div>' : '') +
-            '<table class="project-artifact macro-table display" data-page-length="10">' +
+            '<table class="macro-table project-artifact display" data-page-length="10">' +
             '<thead>' +
             '<tr><th class="label">Macro</th><th class="label">Expects</th><th class="label">Produces</th></tr>' +
             '</thead>' +
@@ -65,6 +156,9 @@ function displayMacros(/*Array*/macroData) {
         // call macro data table
         toMacroDataTable('div[id="' + macroId + '"] .macro-table', macro);
     }
+
+    container.show(showHideOption);
+    turnOn($('#macro-toggle'));
 }
 
 function postInit() {
@@ -89,10 +183,7 @@ function toMacroCommand(/*String*/location, /*String*/file, /*String*/sheet, /*S
 }
 
 function toClipboardButton(macroRef) {
-    return '<button' +
-           ' class="btn btn-clipboard"' +
-           ' title="' + HINT_CLIPBOARD + '"' +
-           ' data-clipboard-text="' + macroRef + '">' +
+    return '<button class="btn btn-clipboard" title="' + HINT_CLIPBOARD + '" data-clipboard-text="' + macroRef + '">' +
            '<i aria-hidden="true" class="far fa-clipboard"></i>' +
            '</button>';
 }
@@ -113,6 +204,7 @@ function toMacroDataTable(/*String*/containerId, /*JSONObject*/macroData) {
         select:     true,
         dom:        '<"top"f l i p>rt',
         lengthMenu: [[10, 25, -1], [10, 25, "All"]],
+        colReorder: true,
         data:       data,
         columns:    [
             {
@@ -163,10 +255,7 @@ function toMacroDataTable(/*String*/containerId, /*JSONObject*/macroData) {
             }
         ],
         columnDefs: [
-            {
-                targets:   [1, 2],
-                className: 'dt-body-center'
-            }
+            {targets: [1, 2], className: 'dt-body-center'}
         ]
     });
 }
@@ -182,11 +271,29 @@ function toDataVarRow(/*String*/label,/*String*/content,/*String?*/className) {
 
 function toggleMacro(/*HTMLElement*/icon) { toggleShowHide(icon, '#macro-container'); }
 
+function toggleData(/*HTMLElement*/icon) { toggleShowHide(icon, '#data-container'); }
+
 function toggleCategoryExpansion(/*HTMLElement*/icon) {
     toggleExpansion(icon);
     if (isCurrentlyOff(icon)) {
         turnOff($('#macro-toggle'));
+        turnOff($('#data-toggle'));
     } else {
         turnOn($('#macro-toggle'));
+        turnOn($('#data-toggle'));
+    }
+}
+
+function toggleAdvice(/*HTMLElement*/icon, /*String*/target) { toggleDataDefs(icon, target + ' .advice'); }
+
+function toggleDataDefs(/*HTMLElement*/icon, /*String*/target) {
+    if (!icon || !target) { return; }
+
+    if (isCurrentlyOff(icon)) {
+        $(target).show(showHideOption);
+        turnOn(icon);
+    } else {
+        $(target).hide(showHideOption);
+        turnOff(icon);
     }
 }

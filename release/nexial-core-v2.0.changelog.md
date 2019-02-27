@@ -14,19 +14,25 @@ comments: true
 #### Fixes:
 - fix email notification when email address isn't specified
 - force email notification to be sent as HTML
-- [`nexial-variable-update`](../userguide/BatchFiles.md#nexial-variable-updatecmd--nexial-variable-updatesh): slight improvement on logging
+- [`nexial-variable-update`](../userguide/BatchFiles.md#nexial-variable-updatecmd--nexial-variable-updatesh): slight 
+  improvement on logging
 
 #### Improvements:
 - minor improvement on logging to help troubleshoot test step errors.
 - [`nexial-variable-update`](../userguide/BatchFiles.md#nexial-variable-updatecmd--nexial-variable-updatesh) script 
    now supports macro and HTML files. Also reduced excessive logging.
 - event notification: mail notification now supports HTML via System variable `nexial.notifyViaHTML`.
+- [`nexial-project-inspector`](../userguide/BatchFiles.md#nexial-project-inspectorcmd--nexial-project-inspectorsh):
+  **NEW** utility batch file to generate project level information and insight. Current version supports macro and 
+  data variable inspection. More enhancement forthcoming.
+  
 
 ### [System Variables](../systemvars/index):
 
 
 ### [Built-in Function](../functions)
 - [execution]: better support for execution metadata, specifically for scenario and script
+
 
 ### [Nexial Expression](../expression)
 
@@ -39,6 +45,8 @@ comments: true
   documentation in a standard way.
 - [`expects(var,default)`](../commands/macro/expects(var,default)): **NEW** command to assert expected data variable 
   prior to invoking the enclosing macro.
+  - the `default` param is no longer required to be filled in. When missing, the specified `var` is required data
+    variable from the viewpoint of the enclosing macro.
 - [`produces(var,value)`](../commands/macro/produces(var,value)): **NEW** command to indicate the data variable that 
   will be created/overwritten as part of the enclosing macro execution. 
 

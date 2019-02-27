@@ -26,7 +26,7 @@ a:hover {
     border-top-right-radius: 15px;
     border:                  none;
     color:                   rgba(13, 62, 64, 1);
-    box-shadow:              0px -8px 15px -2px rgba(30, 60, 80, 0.75);
+    box-shadow:              0 -8px 15px -2px rgba(30, 60, 80, 0.75);
     background-image:        linear-gradient(180deg, rgba(100, 175, 245, 0.45), rgba(255, 255, 255, 0.1));
     background-color:        rgba(255, 255, 255, 0.1);
 }
@@ -60,8 +60,8 @@ a:hover {
 }
 
 .result-controls i.on {
-    color:         rgba(80, 100, 140, 1);
-    border-bottom: 2px solid rgba(100, 120, 180, 1);
+    color:         rgba(80, 100, 120, 1);
+    border-bottom: 2px solid rgba(100, 120, 140, 1);
 }
 
 .result-controls i.fa-expand {
@@ -120,7 +120,7 @@ a:hover {
 
 .category .showhide { top: -0.25em; }
 
-.macro-container {
+.project-container {
     margin:                  -11px 8px 0 2px;
     border:                  1px solid rgba(50, 50, 50, 0.15);
     border-top:              none;
@@ -129,18 +129,7 @@ a:hover {
     background-color:        rgba(255, 255, 255, 0.1);
 }
 
-.macro-file-container {
-    margin-top:    20px;
-    margin-bottom: 40px;
-}
-
-.macro-file {
-    font-size: 11pt;
-    display:   block;
-    margin:    8px 0;
-}
-
-.macro-container .top {
+.project-container .top {
     height:         28px;
     vertical-align: middle;
     width:          100%;
@@ -150,7 +139,7 @@ a:hover {
     white-space:    nowrap;
 }
 
-.macro-container .dataTables_filter {
+.project-container .dataTables_filter {
     float:      left;
     text-align: left;
     clear:      none;
@@ -158,30 +147,30 @@ a:hover {
     margin:     0 10px 0 0;
 }
 
-.macro-container .dataTables_info {
+.project-container .dataTables_info {
     text-align: center;
     clear:      none !important;
     padding:    7px 0 0 0;
     margin:     0 15px;
 }
 
-.macro-container .dataTables_length {
+.project-container .dataTables_length {
     clear:   none;
     padding: 6px 0 0 0;
     margin:  0 15px;
 }
 
-.macro-container .dataTables_paginate {
+.project-container .dataTables_paginate {
     float:   right;
     padding: 2px 0 0 0;
     margin:  2px 0 0 0;
 }
 
-.macro-container .dataTables_paginate a {
+.project-container .dataTables_paginate a {
     font-weight: normal;
 }
 
-.macro-container .dataTables_paginate a.paginate_button {
+.project-container .dataTables_paginate a.paginate_button {
     padding:       2px 5px;
     background:    linear-gradient(to bottom, #fff 0%, rgba(200, 200, 200, 0.75) 100%);
     border-radius: 10px;
@@ -211,27 +200,9 @@ a:hover {
     border-bottom:    1px solid rgba(100, 100, 100, 0.5);
 }
 
-.project-artifact tbody td {
+.project-artifact > tbody > tr > td {
     vertical-align: top;
-}
-
-.macro-name {
-    margin:      5px 0;
-    font-weight: bold;
-    text-shadow: 1px 1px 5px rgba(80, 80, 80, 0.5);
-}
-
-.macro-description, .description {
-    font-family: "Trebuchet MS", sans-serif !important;
-    color:       rgba(10, 80, 80, 0.75);
-    font-weight: normal !important;
-    text-shadow: none !important;
-    font-style:  italic;
-    font-size:   9pt !important;
-}
-
-.macro-description {
-    margin: 5px 0;
+    width:          33%;
 }
 
 .datavar {
@@ -243,26 +214,28 @@ a:hover {
 .datavar .datavar-label {
     font-weight:      normal;
     font-size:        8pt;
-    width:            65px;
-    text-transform:   lowercase;
     border:           none !important;
     text-align:       left;
-    vertical-align:   middle;
+    vertical-align:   text-top;
+    white-space:      nowrap;
 
-    color:            rgba(13, 52, 64, 0.65);
-    background-color: rgba(170, 190, 200, 0.65);
+    color:            rgba(13, 52, 64, 0.75);
+    background-color: rgba(170, 190, 200, 0.45);
 }
 
 .datavar .datavar-name {
-    font-family:      monospace;
-    font-weight:      bold;
-    font-size:        10pt;
-    border:           none !important;
-    text-align:       left;
+    font-family: monospace;
+    font-weight: bold;
+    font-size:   10pt;
+    border:      none !important;
+    text-align:  left;
+    white-space: nowrap;
 
-    color:            rgba(13, 52, 64, 1);
-    background-color: rgba(200, 210, 220, 0.4);
-    text-shadow:      1px 1px 5px rgba(0, 0, 0, 0.25);
+    color:       rgba(13, 52, 64, 0.85);
+}
+
+.datavar .description {
+    white-space: unset !important;
 }
 
 .btn-clipboard {
@@ -285,6 +258,8 @@ a:hover {
     margin:           15px 50px;
     border-radius:    5px;
     line-height:      1.5em;
+    text-shadow:      none;
+    font-weight:      normal;
 
     color:            #700;
     background-color: rgba(255, 245, 245, 0.5);
@@ -310,4 +285,169 @@ a:hover {
 .advice code {
     font-weight: bold;
     color:       #000;
+}
+
+/* data variables */
+.data-container .container-controls {
+    background-color: rgba(180, 200, 220, 0.45);
+    border:           1px inset rgba(150, 180, 200, 0.85);
+    border-radius:    10px 2px 2px 10px;
+    display:          inline-block;
+    padding:          0 2px 0 10px;
+    margin:           -34px 50px 34px 0;
+    box-shadow:       1px 1px 1px rgba(240, 250, 255, 0.85);
+    background-image: linear-gradient(-180deg, rgba(0, 10, 30, 0.25) 2%, transparent 8%);
+}
+
+.data-container .container-controls i {
+    border:         none;
+    font-size:      7.5pt;
+    margin-right:   3px;
+    padding:        0 2px;
+    vertical-align: middle;
+}
+
+.data-container .container-controls i.on {
+    color: rgba(80, 90, 120, 0.85);
+}
+
+.data-container .container-controls i.off {
+    color: rgba(100, 100, 100, 0.5);
+}
+
+.data-container .container-controls i:hover {
+    box-shadow:       none;
+    background-color: transparent;
+}
+
+.data-table .datavar-label {
+    white-space:    nowrap;
+    vertical-align: middle;
+}
+
+.data-table .datavar-label > a {
+    padding:            0 8px 0 0;
+    display:            inline-block;
+    font-size:          110%;
+    margin:             1px 0 -1px 15px;
+    border-radius:      0 15px 15px 0;
+    border:             1px solid rgba(50, 100, 115, 0.65);
+    border-left-style:  none;
+    border-right-width: 0;
+    text-shadow:        1px 1px 1px rgba(245, 245, 245, 0.85);
+    background-image:   linear-gradient(90deg, rgba(255, 255, 255, 0.75) 0%, rgba(230, 250, 250, 0.75) 5%);
+}
+
+.data-table .datavar-label > a:hover {
+    background-image: none;
+    text-shadow:      1px 1px 2px #000;
+}
+
+.data-table .datavar-label > a:hover i {
+    background-image: none;
+    text-shadow:      0 0 5px rgba(0, 0, 0, 0.75);
+}
+
+.data-table .datavar-label > a .far,
+.data-table .datavar-label > a .fas {
+    position:    relative;
+    top:         2px;
+    left:        -7px;
+    text-shadow: 0 0 5px rgba(245, 245, 255, 0.75);
+}
+
+.data-table .datavar-label > a .far:hover,
+.data-table .datavar-label > a .fas:hover {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+}
+
+.data-table .datavar-label > a .fa-edit {
+    font-size: 18px;
+    margin:    -4px -5px -1px -8px;
+    top:       1.5px;
+}
+
+.data-table .datavar-label > a .fa-table {
+    top:       2.5px;
+    font-size: 18px;
+    margin:    -4px -2px 0 -8px;
+}
+
+.data-table .datavar-label > a .fa-window-restore {
+    font-size: 18px;
+    margin:    -5px 4px 0 -14px;
+    left:      0;
+}
+
+.data-table .datavar-label > a .fa-terminal {
+    font-size:     11px;
+    background:    rgba(150, 170, 170, 0.85);
+    top:           0;
+    padding:       3px 2px;
+    border-radius: 2px;
+    box-shadow:    2px 0 2px rgba(100, 120, 120, 0.95);
+    margin:        -2px -6px -2px -9px;
+}
+
+.data-table .datavar-label > a .fa-file-alt {
+    font-size: 18px;
+    left:      0;
+    margin:    -5px 6px 0 -12px;
+    top:       1.5px;
+}
+
+.data-table .datavar-label > a .fa-file-excel {
+    font-size: 18px;
+    margin:    -5px -1px 0 -5px;
+    top:       1.5px;
+}
+
+.data-table .datavar-name {
+    white-space:      unset;
+    width:            100%;
+    background-color: rgba(180, 200, 200, 0.25);
+}
+
+.data-table .advice {
+    margin: 10px 5px 10px 15px;
+}
+
+/* macro */
+.macro-file-container {
+    margin-top:    20px;
+    margin-bottom: 40px;
+}
+
+.macro-file {
+    font-size: 11pt;
+    display:   block;
+    margin:    8px 0;
+}
+
+.macro-name, .data-name {
+    margin:      5px 0;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(80, 80, 80, 0.5);
+}
+
+.macro-description, .description {
+    font-family: "Trebuchet MS", sans-serif !important;
+    color:       rgba(10, 80, 80, 0.75);
+    font-weight: normal !important;
+    text-shadow: none !important;
+    font-style:  italic;
+    font-size:   9pt !important;
+}
+
+.macro-description {
+    margin: 5px 0;
+}
+
+.macro-container, .data-container, #project-advice {
+    display: none;
+}
+
+.macro-table .datavar-label {
+    width:          65px;
+    text-transform: lowercase;
 }
