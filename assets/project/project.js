@@ -2,6 +2,7 @@
 
 let DEFAULT_MACRO_LOCATION = 'artifact/script';
 let HINT_CLIPBOARD         = 'Copy macro to clipboard';
+let REGEX_COMMAND          = /(.+)\.(.+\(.+\))/g;
 let showHideOption         = {duration: 50};
 let docWindow              = null;
 
@@ -74,13 +75,26 @@ function displayDataVariable(/*Object*/dataVariables) {
                     }
                 }
 
+                let position = '';
+                if (def.dataSheet) { position += '<i class="fas fa-chevron-right"></i>' + def.dataSheet; }
+                if (def.position) { position += '<i class="fas fa-chevron-right"></i>' + def.position; }
+
+                let definedAs = '';
+                if (def.type.name === 'step' && def.definedAs.match(REGEX_COMMAND)) {
+                    let type    = def.definedAs.replace(REGEX_COMMAND, '$1');
+                    let command = def.definedAs.replace(REGEX_COMMAND, '$2');
+                    definedAs   =
+                        '<a href="#" onclick="return openCommandDocWindow(\'' + type + '\',\'' + command + '\');">' +
+                        type + ' &raquo; ' + command + '</a>';
+                } else {
+                    definedAs = def.definedAs;
+                }
+
                 defsTable += '<tr class="' + typeClass + '">' +
                              '<td class="datavar-label">' +
-                             '<a href="' + def.location + '">' + icon + def.location + '</a>' +
-                             '&nbsp;&nbsp;' + (def.dataSheet || '') +
-                             '&nbsp;&nbsp;' + (def.position || '') +
+                             '<a href="' + def.location + '">' + icon + def.location + '</a>' + position +
                              '</td>' +
-                             '<td class="datavar-name">' + def.definedAs + '</td>' +
+                             '<td class="datavar-name">' + definedAs + '</td>' +
                              '</tr>';
 
                 if (def.advices && def.advices.length > 0) {
@@ -91,9 +105,20 @@ function displayDataVariable(/*Object*/dataVariables) {
             }
 
             defsTable += '</table>';
-            let nameHTML = name.startsWith('nexial.') ?
-                           '<a href="#" onclick="return openDocWindow(\'' + name + '\');">' + name + '</a>' : name;
-            tbody.append('<tr><td class="data-name">' + nameHTML + advices + '</td><td>' + defsTable + '</td></tr>');
+
+            let dataNameClass = '';
+            let nameHTML;
+            if (name.startsWith('nexial.') &&
+                (!name.startsWith('nexial.scenarioRef.') && !name.startsWith('nexial.scriptRef.'))) {
+                nameHTML      = '<a href="#" onclick="return openSysVarDocWindow(\'' + name + '\');">' + name + '</a>';
+                dataNameClass = ' data-system';
+            } else {
+                nameHTML = name;
+            }
+
+            tbody.append('<tr class="' + dataNameClass + '">' +
+                         '<td class="data-name">' + nameHTML + advices + '</td><td>' + defsTable + '</td>' +
+                         '</tr>');
             advices = '';
         }
     }
@@ -102,25 +127,30 @@ function displayDataVariable(/*Object*/dataVariables) {
         processing: true,
         select:     true,
         dom:        '<"top"f l i p>rt',
-        lengthMenu: [[10, 25, -1], [10, 25, "All"]],
-        colReorder: true,
-        columnDefs: [
-            {targets: [0], orderData: [1, 0]},
-            {targets: [1], orderData: [1, 0]}
-        ]
+        lengthMenu: [[10, 25, -1], [10, 25, "All"]]
     });
 
     $('#data-container').show(showHideOption);
     turnOn($('#data-toggle'));
 }
 
-function openDocWindow(/*String*/varname) {
+function openSysVarDocWindow(/*String*/varname) {
     if (docWindow !== null && !docWindow.closed) {
         docWindow.close();
         docWindow = null;
     }
 
     docWindow = window.open('https://nexiality.github.io/documentation/systemvars/index#' + varname, '_nexial');
+    return false;
+}
+
+function openCommandDocWindow(/*String*/type,/*String*/command) {
+    if (docWindow !== null && !docWindow.closed) {
+        docWindow.close();
+        docWindow = null;
+    }
+
+    docWindow = window.open('https://nexiality.github.io/documentation/commands/' + type + '/' + command, '_nexial');
     return false;
 }
 
@@ -284,16 +314,25 @@ function toggleCategoryExpansion(/*HTMLElement*/icon) {
     }
 }
 
-function toggleAdvice(/*HTMLElement*/icon, /*String*/target) { toggleDataDefs(icon, target + ' .advice'); }
+function toggleAdvice(/*HTMLElement*/icon) { toggleDataDefs(icon); }
 
-function toggleDataDefs(/*HTMLElement*/icon, /*String*/target) {
-    if (!icon || !target) { return; }
+function toggleDataDefs(/*HTMLElement*/icon) {
+    if (!icon) { return; }
 
     if (isCurrentlyOff(icon)) {
-        $(target).show(showHideOption);
         turnOn(icon);
     } else {
-        $(target).hide(showHideOption);
         turnOff(icon);
     }
+
+    // gather all on's and off's
+    let css = '';
+    if (isCurrentlyOff($('#advice-toggle'))) { css += '.data-table .advice { display: none; }\n'; }
+    if (isCurrentlyOff($('#sysvar-toggle'))) { css += '.data-table .data-system { display: none; }\n'; }
+    if (isCurrentlyOff($('#data-step-toggle'))) { css += '.data-table .data-step { display: none; }\n'; }
+    if (isCurrentlyOff($('#data-command-toggle'))) { css += '.data-table .data-command { display: none; }\n'; }
+    if (isCurrentlyOff($('#data-project-toggle'))) { css += '.data-table .data-project { display: none; }\n'; }
+    if (isCurrentlyOff($('#data-datasheet-toggle'))) { css += '.data-table .data-datasheet { display: none; }\n'; }
+    if (isCurrentlyOff($('#data-default-toggle'))) { css += '.data-table .data-default { display: none; }\n'; }
+    $('#nexial-project').empty().text(css);
 }

@@ -16,6 +16,7 @@ comments: true
 - force email notification to be sent as HTML
 - [`nexial-variable-update`](../userguide/BatchFiles.md#nexial-variable-updatecmd--nexial-variable-updatesh): slight 
   improvement on logging
+- internal tracking of system variables and respective default value.
 
 #### Improvements:
 - minor improvement on logging to help troubleshoot test step errors.
@@ -25,7 +26,8 @@ comments: true
 - [`nexial-project-inspector`](../userguide/BatchFiles.md#nexial-project-inspectorcmd--nexial-project-inspectorsh):
   **NEW** utility batch file to generate project level information and insight. Current version supports macro and 
   data variable inspection. More enhancement forthcoming.
-  
+  - scan data variable across test scripts, batch files, project.properties, datasheets and #default
+ 
 
 ### [System Variables](../systemvars/index):
 

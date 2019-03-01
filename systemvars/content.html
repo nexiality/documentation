@@ -312,7 +312,8 @@
                         <li>nexial.mail.smtp.password=&lt;password only needed if nexial.mail.smtp.auth is set to true&gt;</li>
                     </ul>
                 </li>
-                <li>Define the recipient email or list via the <code>nexial.mailTo</code> system variable.</li>
+                <li>Define the recipient email or list via the <a href="#nexial.mailTo"><code>nexial.mailTo</code></a>
+                    system variable.</li>
             </ol>
             <br/>
             All these settings can be added via command line (i.e. <code>-D...</code>),
@@ -324,6 +325,19 @@
                 <br/>
                 nexial.cmd -script ... ...
             </code>
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a name="nexial.mailTo"><code>nexial.mailTo</code></a></td>
+        <td>text</td>
+        <td></td>
+        <td>false</td>
+        <td>
+            A comma-separated list of email addresses to receive Nexial's email notification at the end of an execution.
+            <br/><br/>
+            <b>NOTE: <code>nexial.enableEmail</code> MUST BE SET TO <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b>
+            <br/><br/>
+            Consult <a href="#nexial.enableEmail"><code>nexial.enableEmail</code></a> for more details.
         </td>
     </tr>
     <tr>
