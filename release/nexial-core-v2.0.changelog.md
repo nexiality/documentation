@@ -17,6 +17,7 @@ comments: true
 - [`nexial-variable-update`](../userguide/BatchFiles.md#nexial-variable-updatecmd--nexial-variable-updatesh): slight 
   improvement on logging
 - internal tracking of system variables and respective default value.
+- fix to allow shutting down of winium driver with session as required (useful in the case of clickByLocator like commands)
 
 #### Improvements:
 - minor improvement on logging to help troubleshoot test step errors.
@@ -35,6 +36,9 @@ comments: true
 ### [Built-in Function](../functions)
 - [execution]: better support for execution metadata, specifically for scenario and script
 
+#### Event Notification
+- Nexial now supports Email notification with customized subject, also `cc, bcc, from(sender)` Email 
+  notification as HTML too.
 
 ### [Nexial Expression](../expression)
 

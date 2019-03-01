@@ -27,6 +27,7 @@ Currently, these are the events that can be configured for notification:
   | **OnPause**             | `nexial.notifyOnPause`             | Execution is Paused; indicates when an execution is paused, such as via the [PauseBefore flow control](../flowcontrols/index#pausebefore()-/-pauseafter()). |
 
 <br/>
+
 Notifications can be send to one of the following channels by using one of these keyword as prefix:
 1. **`audio:`** one can use one of the [included audio samples](../commands/sound/play(audio)#example) or specify your 
    own.
@@ -36,8 +37,25 @@ Notifications can be send to one of the following channels by using one of these
    (`|`) character.
 4. **`email:`** send a preconfigured message to one or more email addresses, separated by 
    [`nexial.textDelim`](../systemvars/index#nexial.textDelim). Email addresses and message are separated by a pipe 
-   (`|`) character.
-5. **`console:`** pause the console with a preconfigured message.
+   (`|`) character which are Mandatory to send a mail. Nexial also provides facility for user to add some more email 
+   configs in `name=value` pair separated by pipe(`|`) character.<br>
+   
+   |  Name   | Value           | Explanation                                  |
+   | ------- |-----------------|----------------------------------------------|
+   | from    | email address   |(OPTIONAL)Email address of mail sender.       |
+   | cc      | email addresses |(OPTIONAL)Add `cc` recipients to mail separated by `nexial.textDelim`|
+   | bcc     | email addresses |(OPTIONAL)Add `bcc` recipients to mail separated by `nexial.textDelim`.|
+   | subject | Subject of mail |(OPTIONAL)This will customize mail subject.   |
+   | body    | Message or file |(OPTIONAL)This is mail body sent through email. |
+   | html    | yes or no       |(OPTIONAL)Add message content as html or not. |
+   | footer  | yes or no       |(OPTIONAL)Add footer to message  body or not. |
+   
+   **Note** :- 
+   1. For backward compatibility, Nexial still supports messages without `body` keyword like 
+   `email:[recipient list|This is mail content]`. It must be last part of configs. 
+   For example, <br>
+   ![](image/EventNotification_02.png)<br>
+ 5. **`console:`** pause the console with a preconfigured message.
 
 It may be of help to consider using the [$(execution) built-in function](../functions/$(execution)), which can expose
 execution-time automation metadata such as script, scenario, iteration, activity and step information.
