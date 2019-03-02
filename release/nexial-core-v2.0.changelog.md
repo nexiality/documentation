@@ -37,13 +37,22 @@ comments: true
 - [execution]: better support for execution metadata, specifically for scenario and script
 
 #### Event Notification
-- Nexial now supports Email notification with customized subject, also `cc, bcc, from(sender)` Email 
-  notification as HTML too.
+- Nexial now supports email notification with customized `subject`, `cc`, `bcc`, `from`, `footer`. One can optionally 
+  configure such email to be sent as HTML or plain text (default). See 
+  [Execution Event Notification](../userguide/EventNotification) for more details.
+  - remove `nexial.notifyAsHTML` System variable removed.
+- SMS notification: now supports configurable execution metada inclusion as a footer.
+
 
 ### [Nexial Expression](../expression)
 
 
 ### [aws.s3 commands](../commands/aws.s3)
+
+
+### [base commands](../commands/base)
+- [base &raquo; `repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)): enhanced with additional
+  logging to aid in troubleshooting and debugging.
 
 
 ### [macro commands](../commands/macro)

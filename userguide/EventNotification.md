@@ -33,29 +33,47 @@ Notifications can be send to one of the following channels by using one of these
    own.
 2. **`tts:`** Text-to-Speech; create your own notification message and let Nexial speak it on your behalf.
 3. **`sms:`** send a preconfigured message to one or more mobile numbers, separated by 
-   [`nexial.textDelim`](../systemvars/index#nexial.textDelim). Phone numbers and message are separated by a pipe 
-   (`|`) character.
+   [`nexial.textDelim`](../systemvars/index#nexial.textDelim). Phone numbers and text configuration are separated by 
+   a pipe (`|`) character. The text configuration has 2 forms:
+
+   (a) A set of pipe-delimited configurations:
+
+   | name    | value           | description                                                                         |
+   |:------- |:----------------|:------------------------------------------------------------------------------------|
+   | text    | text or file    | (REQUIRED) text to send. This may be _templatized_ via external file.               |
+   | footer  | yes or no       | (OPTIONAL) `yes` means adding an email footer to include execution metadata in the form of "{NEXIAL VERSION}/{USER}@{HOST}". Default is `no`. |
+   
+   For example: `sms:1213-555-8000,1(374)123-4567|footer=yes|text=hello world!`<br/>
+   
+   (b) Just text message to send. Such text will not contain any footer. For example:<br/>
+   For example: `sms:1213-555-8000,1(374)123-4567|hello world!`
+
 4. **`email:`** send a preconfigured message to one or more email addresses, separated by 
-   [`nexial.textDelim`](../systemvars/index#nexial.textDelim). Email addresses and message are separated by a pipe 
-   (`|`) character which are Mandatory to send a mail. Nexial also provides facility for user to add some more email 
-   configs in `name=value` pair separated by pipe(`|`) character.<br>
+   [`nexial.textDelim`](../systemvars/index#nexial.textDelim). Email addresses and message configuration are separated 
+   by a pipe (`|`) character. The message configuration are expected in the form of `name=value` pairs separated by 
+   pipe (`|`). Here are the possible configurations:
    
-   |  Name   | Value           | Explanation                                  |
-   | ------- |-----------------|----------------------------------------------|
-   | from    | email address   |(OPTIONAL)Email address of mail sender.       |
-   | cc      | email addresses |(OPTIONAL)Add `cc` recipients to mail separated by `nexial.textDelim`|
-   | bcc     | email addresses |(OPTIONAL)Add `bcc` recipients to mail separated by `nexial.textDelim`.|
-   | subject | Subject of mail |(OPTIONAL)This will customize mail subject.   |
-   | body    | Message or file |(OPTIONAL)This is mail body sent through email. |
-   | html    | yes or no       |(OPTIONAL)Add message content as html or not. |
-   | footer  | yes or no       |(OPTIONAL)Add footer to message  body or not. |
+   | name    | value           | description                                                                         |
+   |:------- |:----------------|:------------------------------------------------------------------------------------|
+   | from    | email address   | (OPTIONAL) customize sender email address. Default is `nexial-noreply@ep.com`.      |
+   | cc      | email addresses | (OPTIONAL) Add to CC recipient list, separated by `nexial.textDelim`.               |
+   | bcc     | email addresses | (OPTIONAL) Add to BCC recipient list, separated by `nexial.textDelim`.              |
+   | subject | email subject   | (OPTIONAL) customize mail subject. Default is `[nexial-notification] {EVENT NAME}`. |
+   | body    | text or file    | (REQUIRED) mail body to send. This may be _templatized_ via external file.          |
+   | html    | yes or no       | (OPTIONAL) `yes` means send email as HTML. Default is `no`.                         |
+   | footer  | yes or no       | (OPTIONAL) `yes` means adding an email footer to include execution metadata in the form of "{NEXIAL VERSION}/{USER}@{HOST}". Default is `no`. |
+
+   Since only `body` is required, the following can be considered as the minimum setup to enable email notification:
+   ```
+   nexial.notifyOn... | email:person1@company.com|body=This is to inform you that...
+   ```
    
-   **Note** :- 
-   1. For backward compatibility, Nexial still supports messages without `body` keyword like 
-   `email:[recipient list|This is mail content]`. It must be last part of configs. 
-   For example, <br>
-   ![](image/EventNotification_02.png)<br>
- 5. **`console:`** pause the console with a preconfigured message.
+   Here's an example of a more complete setup:<br/>
+   ![](image/EventNotification_02.png)
+       
+   **Note**: 
+   For backward compatibility, Nexial still supports the older format of `email:[recipient1,...]|Email content`. 
+5. **`console:`** pause the console with a preconfigured message.
 
 It may be of help to consider using the [$(execution) built-in function](../functions/$(execution)), which can expose
 execution-time automation metadata such as script, scenario, iteration, activity and step information.
