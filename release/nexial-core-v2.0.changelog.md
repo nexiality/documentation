@@ -18,16 +18,19 @@ comments: true
   improvement on logging
 - internal tracking of system variables and respective default value.
 - fix to allow shutting down of winium driver with session as required (useful in the case of clickByLocator like commands)
+- move `nexial-3rdparty.log` under execution-specific log directory
 
 #### Improvements:
 - minor improvement on logging to help troubleshoot test step errors.
 - [`nexial-variable-update`](../userguide/BatchFiles.md#nexial-variable-updatecmd--nexial-variable-updatesh) script 
    now supports macro and HTML files. Also reduced excessive logging.
-- event notification: mail notification now supports HTML via System variable `nexial.notifyViaHTML`.
 - [`nexial-project-inspector`](../userguide/BatchFiles.md#nexial-project-inspectorcmd--nexial-project-inspectorsh):
   **NEW** utility batch file to generate project level information and insight. Current version supports macro and 
   data variable inspection. More enhancement forthcoming.
   - scan data variable across test scripts, batch files, project.properties, datasheets and #default
+- [project id binding](../userguide/UnderstandingProjectStructure#project.id): use `.meta/project.id` to bind project
+  identification across sandboxes (local project directory) instead of using project directory name. The same
+  binding now affects cloud storage location to keep output of the same project together.
  
 
 ### [System Variables](../systemvars/index):
@@ -84,7 +87,7 @@ comments: true
   last window to be selected.
 - enhancement to speed up Electron automation by removing "page source support" and "preemptive dialog checks". Both
   of these checks are not common (and at times not applicable) to Electron applications.
-- [`saveAttributeList(var,locator,attrName)`]: *NEW* command to save the value of an attribute for all matching elements.
+- [`saveAttributeList(var,locator,attrName)`]: **NEW** command to save the value of an attribute for all matching elements.
 
 
 ### [xml commands](../commands/xml)

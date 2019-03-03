@@ -26,7 +26,7 @@ Below is the general directory/file structure of a standard Nexial automation pr
 1. `.meta/project.id`:<br/>
    <a name="project.id"></a>
    Technically, this is not a required file. It helps to keep all instances of the same project on
-   using the same name, and thus easier to manage across people and teams. Let's further understand the underlying 
+   using the same name, and thus easier to manage across participants and teams. Let's further understand the underlying 
    problem via an example. Suppose John checks out `ProjectA` from the source code repository (say, GIT) to a local 
    directory, `C:\projects\ProjectA` but Sam checks out the same project to a local directory `C:\projects\MyProject`. 
    In addition, Amy checks out a _different_ project locally, also as `C:\projects\MyProject`.<br/> 
@@ -44,12 +44,16 @@ Below is the general directory/file structure of a standard Nexial automation pr
    subsequently checked out by project participants.<br/>
    ![](image/UnderstandingProjectStructure_00a.png)
    
-   To generate such file, one can create it manually, or use 
-   [`bin/nexial-project.sh` or `bin/nexial-project.cmd`](BatchFiles#nexial-projectcmd--nexial-projectsh) batch file.
+   To generate such file, one can create it manually, or use the  
+   [`bin/nexial-project.sh` or `bin/nexial-project.cmd`](BatchFiles#nexial-projectcmd--nexial-projectsh) batch file. A
+   a team, changes to this `.meta/project.id` file can be driven through consensus and propagated through source code 
+   repository (such as GIT).
 
-   Future effort of Nexial will use the same "metadata" concept for further enhancements such as execution output
-   analysis.
-   
+   When this `project.id` file is available, Nexial uses it to affix the output location when 
+   [`nexial.outputToCloud`](../systemvars/index#nexial.outputToCloud) is enabled. As such we can keep the output of the
+   same project in the same cloud storage location. Future effort will use this same `project.id` for further
+   enhancements such as execution output analysis, tracking and comparison.
+
 2. The `artifact` directory contains 3 sub-directories: `data`, `plan`, `script`. These are the directories are used 
    to store test data, test plan and test scripts respectively.
 
