@@ -50,7 +50,10 @@ comments: true
 ### [Nexial Expression](../expression)
 
 
-### [aws.s3 commands](../commands/aws.s3)
+### [aws.sqs commands](../commands/aws.sqs)
+- [aws &raquo; `receiveMessage(profile,queue,timeout,var)`]: **NEW** command to receive message from a AWS SQS queue.
+- [aws &raquo; `receiveMessages(profile,queue,timeout,var)`]: **NEW** command to receive messages from a AWS SQS queue.
+- [aws &raquo; `sendMessage(profile,queue,var)`]: **NEW** command to send a message from a AWS SQS queue.
 
 
 ### [base commands](../commands/base)
