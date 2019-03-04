@@ -218,3 +218,23 @@ calculate elapsed time for the same.
 ### nexial-project-inspector.cmd / nexial-project-inspector.sh
 
 ---------------------------------------------
+
+### nexial-macro-update.cmd / nexial-macro-update.sh
+
+This script refactor the macro name referenced across test scripts and macro files to provide uniformity across script 
+authoor and teams.<br/>
+This script has four command line options:<br/> 
+
+|options  |explanation                                                                               |
+|---------|------------------------------------------------------------------------------------------|
+|**`-t`** |**[REQUIRED]** This option is path of project/starting location of updating macro.  .     |
+|**`-f`** |**[REQUIRED]** This option is file name of macro from which macro name to be replaced.    |
+|**`-s`** |**[REQUIRED]** This option is worksheet of above macro file.                              |
+|**`-m`** |**[REQUIRED]** This option is the macro name which needs to be replaced across scripts.   |
+
+<br/>
+For example, the following renames the macro `oldMacro1` to `newMacro1`, and `oldMacro2` to `newMacro2`, and so on:<br/>
+
+`nexial-variable-update.cmd -t searchPath -mf macroFile -ms macrosheet -mn oldMacro1=newMacro1,oldMacro2=newMacro2` 
+
+---------------------------------------------

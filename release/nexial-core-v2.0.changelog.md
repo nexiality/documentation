@@ -11,6 +11,8 @@ comments: true
 
 
 ### General
+- `nexial-macro-update.cmd|sh`: Added new cmd file to rename macro name across all scripts. 
+
 #### Fixes:
 - fix email notification when email address isn't specified
 - force email notification to be sent as HTML
