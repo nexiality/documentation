@@ -11,8 +11,6 @@ comments: true
 
 
 ### General
-- `nexial-macro-update.cmd|sh`: Added new cmd file to rename macro name across all scripts. 
-
 #### Fixes:
 - fix email notification when email address isn't specified
 - force email notification to be sent as HTML
@@ -33,7 +31,8 @@ comments: true
 - [project id binding](../userguide/UnderstandingProjectStructure#project.id): use `.meta/project.id` to bind project
   identification across sandboxes (local project directory) instead of using project directory name. The same
   binding now affects cloud storage location to keep output of the same project together.
- 
+ - `nexial-macro-update.cmd|sh`: Added new cmd file to rename macro name across all scripts. 
+
 
 ### [System Variables](../systemvars/index):
 
@@ -53,9 +52,10 @@ comments: true
 
 
 ### [aws.sqs commands](../commands/aws.sqs)
-- [aws &raquo; `receiveMessage(profile,queue,timeout,var)`]: **NEW** command to receive message from a AWS SQS queue.
-- [aws &raquo; `receiveMessages(profile,queue,timeout,var)`]: **NEW** command to receive messages from a AWS SQS queue.
-- [aws &raquo; `sendMessage(profile,queue,var)`]: **NEW** command to send a message from a AWS SQS queue.
+- [aws &raquo; `receiveMessage(profile,queue,var)`]: **NEW** command to receive message from a AWS SQS queue.
+- [aws &raquo; `receiveMessages(profile,queue,var)`]: **NEW** command to receive messages from a AWS SQS queue.
+- [aws &raquo; `sendMessage(profile,queue,message,var)`]: **NEW** command to send a message from a AWS SQS queue.
+- [aws &raquo; `deleteMessage(profile,queue,receiptHandle)`]: **NEW** command to delete a message from a AWS SQS queue.
 
 
 ### [base commands](../commands/base)
