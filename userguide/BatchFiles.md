@@ -214,8 +214,9 @@ calculate elapsed time for the same.
 
 ---------------------------------------------
 
-
 ### nexial-project-inspector.cmd / nexial-project-inspector.sh
+
+The script scans existing artifacts of a project and generate an interactive HTML report.
 
 ---------------------------------------------
 
