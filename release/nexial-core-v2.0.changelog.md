@@ -96,3 +96,8 @@ comments: true
 
 
 ### [xml commands](../commands/xml)
+- [`append(xml,xpath,content,var)`](../commands/xml/append(xml,xpath,content,var)): **NEW** command to append content to an XML document
+- [`prepend(xml,xpath,content,var)`](../commands/xml/prepend(xml,xpath,content,var)): **NEW** command to prepend content to an XML document
+- [`clear(xml,xpath,var)`](../commands/xml/clear(xml,xpath,var)): **NEW** command to clear content in an XML document
+- [`delete(xml,xpath,var)`](../commands/xml/delete(xml,xpath,var)): **NEW** command to delete nodes from an XML document
+- [`replace(xml,xpath,content,var)`](../commands/xml/replace(xml,xpath,content,var)): **NEW** command to replace content in an XML document

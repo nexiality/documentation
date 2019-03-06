@@ -27,6 +27,7 @@ Also consider the following online resources for trying out XPath:
 
 
 ### Available Commands
+- [`append(xml,xpath,content,var)`](append(xml,xpath,content,var))
 - [`assertCorrectness(xml,schema)`](assertCorrectness(xml,schema))
 - [`assertElementCount(xml,xpath,count)`](assertElementCount(xml,xpath,count))
 - [`assertElementNotPresent(xml,xpath)`](assertElementNotPresent(xml,xpath))
@@ -35,7 +36,11 @@ Also consider the following online resources for trying out XPath:
 - [`assertValues(xml,xpath,array,exactOrder)`](assertValues(xml,xpath,array,exactOrder))
 - [`assertWellformed(xml)`](assertWellformed(xml))
 - [`beautify(xml,var)`](beautify(xml,var))
+- [`clear(xml,xpath,var)`](clear(xml,xpath,var))
+- [`delete(xml,xpath,var)`](delete(xml,xpath,var))
 - [`minify(xml,var)`](minify(xml,var))
+- [`prepend(xml,xpath,content,var)`](prepend(xml,xpath,content,var))
+- [`replace(xml,xpath,content,var)`](replace(xml,xpath,content,var))
 - [`storeCount(xml,xpath,var)`](storeCount(xml,xpath,var))
 - [`storeValue(xml,xpath,var)`](storeValue(xml,xpath,var))
 - [`storeValues(xml,xpath,var)`](storeValues(xml,xpath,var))
