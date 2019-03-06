@@ -43,6 +43,68 @@ This built-in function expose the execution-level metadata, both the runtime and
 
 
 ### Example
+`$(execution|script|fullpath)`:<br/>
+Example output: `C:\projects\MyProject\output\20190305_162921\MyFile.20190305_162923.001.xlsx`
+
+
+`$(execution|step|index)`: Returns the index number of the row<br/>
+![](image/$(execution)_01.png)<br/>
+Output: `8`
+
+`$(execution|step|name)`: Identifier of a step in the form of `[file][scenario or worksheet][activity][row number]`
+![](image/$(execution)_02.png)<br/>
+Output: `[MyFile][MyScenario][MyActivity][ROW 8]`
+
+`$(execution|step|script)`:
+![](image/$(execution)_03.png)<br/>
+Example output: `MyFile`<br/>
+`MyFile` is Excel file name/script name
+
+`$(execution|step|scenario)`:<br/>
+![](image/$(execution)_04.png)<br/>
+Example output: `MyScenario`<br/>
+`MyScenario` is the test scenario, or Excel worksheet, name
+
+`$(execution|step|activity)`:<br/>
+![](image/$(execution)_05.png)<br/>
+Example output: `MyActivity`
+`MyActivity` is the activity name
+
+`$(execution|step|iteration)`:<br/>
+![](image/$(execution)_06.png)<br/>
+Example output: `1`<br/>
+By default, each execution starts with iteration 1.
+
+`$(execution|step|command)`:<br/>
+![](image/$(execution)_07.png)<br/>
+Output: `base.verbose(text)`
+
+`$(execution|step|description)`:<br/> 
+![](image/$(execution)_08.png)<br/>
+Output: `print the execution`
+
+Similar information can be retrieved via `$(execution|activity|...)` built-in functions.
+
+`$(execution|activity|name)`:<br/>
+![](image/$(execution)_09.png)<br/>
+Example output: `MyActivity`
+
+`$(execution|activity|script)`:<br/>
+![](image/$(execution)_10.png)<br/>
+Example output: `MyFile`
+
+`$(execution|activity|iteration)`:<br/>
+Example output: `1`
+By default, each execution starts with iteration 1.
+
+`$(execution|activity|scenario)`:<br/>
+Example output: `MyActivity`
+
+Additional information can be retrieved via `$(execution|meta|...)` built-in functions.
+
+`$(execution|meta|nexial)`:<br/>
+Example output: `nexial-core dev_0413`
+
 
 
 ### See Also
