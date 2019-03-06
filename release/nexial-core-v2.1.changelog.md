@@ -13,6 +13,7 @@ comments: true
 ### General
 #### Fixes:
 - code fix to `nexial-project-inspector` when the target project does not contain `project.properties`
+- code fix to `nexial-project-inspector` when the target project does not contain `artifact/bin` directory
 
 #### Improvements:
 
