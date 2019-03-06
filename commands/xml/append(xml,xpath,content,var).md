@@ -11,6 +11,8 @@ comments: true
 This command search against specified `xml` via `xpath`, and append `content` to all matching instances. The final 
 (modified) XML is then stored in a data variable specified as `var`.
 
+{% include_relative xpath_and_content.md %}
+
 
 ### Parameters
 - **xml** - the XML document or file

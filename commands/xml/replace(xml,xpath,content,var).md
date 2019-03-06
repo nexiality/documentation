@@ -8,6 +8,11 @@ comments: true
 
 
 ### Description
+This command search against specified `xml` via `xpath`, and replace `content` against all matching instances. The final 
+(modified) XML is then stored in a data variable specified as `var`. Note that this command replaces the matching 
+XML nodes, not the content of those match nodes.
+
+{% include_relative xpath_and_content.md %}
 
 
 ### Parameters

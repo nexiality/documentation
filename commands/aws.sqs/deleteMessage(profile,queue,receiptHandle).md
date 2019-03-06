@@ -8,7 +8,10 @@ comments: true
 
 
 ### Description
-Delete a message from a SQS queue.
+Delete a message from a SQS `queue` using the specified `profile`. In order to delete a SQS message, the associated
+receipt handle must be specified. See [`receiveMessage(profile,queue,var)`](receiveMessage(profile,queue,var)) or 
+[`receiveMessages(profile,queue,var)`](receiveMessages(profile,queue,var)) to understand how to obtain the appropriate 
+receipt handle.
 
 
 ### Parameters
@@ -21,6 +24,10 @@ Delete a message from a SQS queue.
 
 
 ### Example
+![](image/aws.sqs_02.png)
+
+The above example retrieves a message from the `nexial-test-queue` queue, prints out the message details, and then
+deletes the same message via its `.receiptHandle`.
 
 
 ### See Also

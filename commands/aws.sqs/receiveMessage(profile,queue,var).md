@@ -8,7 +8,13 @@ comments: true
 
 
 ### Description
+The command instructs Nexial to receive a message from an SQS `queue` and store such message object in a data variable
+denoted as `var`.
 
+Depending on the `.aws.waitTimeMs` value, Nexial might not return any messages. In such case, the data variable denoted
+as `var` will be removed to avoid any confusion with previously retrieved messages.
+
+{% include_relative message.md %}
 
 
 ### Parameters
@@ -19,6 +25,13 @@ comments: true
 
 
 ### Example
+![](image/aws.sqs_02.png)
+
+The above example retrieves a message from the `nexial-test-queue` queue, prints out the message details, and then
+deletes the same message via its `.receiptHandle`.
+
+Suppose this message contains an attribute named "create date". To retrieve such information, one would use 
+`${message}.[attributes].[create date]`.
 
 
 ### See Also

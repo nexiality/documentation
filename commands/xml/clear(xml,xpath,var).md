@@ -8,6 +8,8 @@ comments: true
 
 
 ### Description
+This command search against specified `xml` via `xpath`, and clear the content of all matching instances. The final 
+(modified) XML is then stored in a data variable specified as `var`.
 
 
 ### Parameters

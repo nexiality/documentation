@@ -11,8 +11,7 @@ comments: true
 This command search against specified `xml` via `xpath`, and prepend `content` to all matching instances. The final 
 (modified) XML is then stored in a data variable specified as `var`.
 
-{% include_relative eol.md %}
-
+{% include_relative xpath_and_content.md %}
 
 
 ### Parameters
@@ -20,6 +19,7 @@ This command search against specified `xml` via `xpath`, and prepend `content` t
 - **xpath** - the XPATH to specify the target area of impact
 - **content** - the content to prepend, may be text content, attribute value or well formed XML snippet
 - **var** - the variable name to store the beautified content.
+
 
 ### Example
 

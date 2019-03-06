@@ -8,6 +8,8 @@ comments: true
 
 
 ### Description
+This command search against specified `xml` via `xpath`, and delete all matching instances from the enclosing XML 
+document. The final (modified) XML is then stored in a data variable specified as `var`.
 
 
 ### Parameters
