@@ -12,6 +12,7 @@ XML provides transformational operations on a XML document.
 
 
 ### Operations
+- **`append(xpath,content)`** - search against specified `xml` via `xpath`, and append `content` to all matching instances. 
 - **`attribute(xpath,name)`** - retrieves the value of `name` attribute from the element(s) that matched the specified
   `xpath`. If exactly one match is found, this operation returns a [`TEXT`](TEXTexpression) data type. If more than
   one matches are found, a [`LIST`](LISTexpression) data type is returned instead.
@@ -19,10 +20,17 @@ XML provides transformational operations on a XML document.
   match is found, this operation returns a [`TEXT`](TEXTexpression) data type. If more than one matches are found, 
   a [`LIST`](LISTexpression) data type is returned instead.
 - **`beautify`** - "pretty" formatting on current XML document to improve readability.
+- **`clear(xpath)`** - search against specified `xml` via `xpath` and clear content of all matching instances  
 - **`count(xpath)`** - counts the number of elements present at the specified `xpath`.
+- **`delete(xpath)`** - search against specified `xml` via `xpath` and delete xml node of all matching instances  
 - **`extract(xpath)`** - transform current XML document using `xpath`.
+- **`insertAfter(xpath,content)`** - search against specified `xml` via `xpath`, and insert `content` after all matching instances. 
+- **`insertBefore(xpath,content)`** - search against specified `xml` via `xpath`, and insert `content` before all matching instances. 
 - **`minify`** - compressed current XML document which are suitable for effecient data transfer.
+- **`prepend(xpath,content)`** - search against specified `xml` via `xpath`, and prepend `content` to all matching instances. 
 - **`remove(xpath)`** - remove from the source XML the element(s) that matches the specified `xpath`.
+- **`replace(xpath,content)`** - search against specified `xml` via `xpath`, and replace `content` against all matching instances. 
+- **`replaceIn(xpath,content)`** - search against specified `xml` via `xpath`, and replace inside content of all matching instances. 
 - **`save(path,append)`** - save current expression content to `path`. If `path` resolves to an existing file, `append` 
   set as `true` will append current expression content to the said file. `append` is optional and defaults to `false`.
 - **`store(var)`** - save current XML expression to a data variable.  If the specified `var` exists, its value will 

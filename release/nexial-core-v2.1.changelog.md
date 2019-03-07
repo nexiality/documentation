@@ -17,6 +17,15 @@ comments: true
 
 #### Improvements:
 
+#### Nexial Expression
+- [XML &raquo; `append`](../expressions/XMLexpression): **NEW** append content to xml document.
+- [XML &raquo; `prepend`](../expressions/XMLexpression): **NEW** prepend content to xml document.
+- [XML &raquo; `insertAfter`](../expressions/XMLexpression): **NEW** insert content after xml document.
+- [XML &raquo; `insertBefore`](../expressions/XMLexpression): **NEW** insert content after xml document.
+- [XML &raquo; `replace`](../expressions/XMLexpression): **NEW** replace xml node with content from xml document.
+- [XML &raquo; `replaceIn`](../expressions/XMLexpression): **NEW** replace inside xml content of xml document.
+- [XML &raquo; `clear`](../expressions/XMLexpression): **NEW** clear content of xml document.
+- [XML &raquo; `delete`](../expressions/XMLexpression): **NEW** delete node from xml document.
 
 ### [Built-in Function](../functions)
 
@@ -37,3 +46,9 @@ comments: true
 
 
 ### [xml commands](../commands/xml)
+- [`insertAfter(xml,xpath,content,var)`](../commands/xml/insertAfter(xml,xpath,content,var)): **NEW** command to insert content 
+after xml document specified via `xpath`
+- [`insertBefore(xml,xpath,content,var)`](../commands/xml/insertBefore(xml,xpath,content,var)): **NEW** command to insert content 
+before xml document specified via `xpath`
+- [`replaceIn(xml,xpath,content,var)`](../commands/xml/replaceIn(xml,xpath,content,var)): **NEW** command to replace 
+inside content of an XML document specified via `xpath`

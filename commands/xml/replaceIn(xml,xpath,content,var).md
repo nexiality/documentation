@@ -1,6 +1,6 @@
 ---
 layout: default
-title: replace(xml,xpath,content,var)
+title: replaceIn(xml,xpath,content,var)
 parent: xml
 tags: command xml append xpath
 comments: true
@@ -8,12 +8,10 @@ comments: true
 
 
 ### Description
-This command search against specified `xml` via `xpath`, and replace `content` against all matching instances. The final 
-(modified) XML is then stored in a data variable specified as `var`. Note that this command replaces the matching 
-XML nodes, not the content of those match nodes.<br/>
-If `xpath` refers to attribute of `xml`, it will replace name of all matching attributes with specified `content`.
-
-{% include_relative xpath_and_content.md %}
+This command search against specified `xml` via `xpath`, and replace `content` against all matching instances' content. The final 
+(modified) XML is then stored in a data variable specified as `var`. Note that this command replaces content of the matching 
+XML nodes, not the matched nodes. <br>
+If `xpath` refers to attribute of `xml`, it will replace value of all matching attributes with specified `content`.
 
 
 ### Parameters
@@ -30,3 +28,4 @@ If `xpath` refers to attribute of `xml`, it will replace name of all matching at
 - [`clear(xml,xpath,var)`](clear(xml,xpath,var))
 - [`delete(xml,xpath,var)`](delete(xml,xpath,var))
 - [`prepend(xml,xpath,content,var)`](prepend(xml,xpath,content,var))
+- [`replaceIn(xml,xpath,content,var)`](replaceIn(xml,xpath,content,var).md)
