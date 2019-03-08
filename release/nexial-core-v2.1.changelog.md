@@ -14,7 +14,6 @@ comments: true
 #### Fixes:
 - code fix to `nexial-project-inspector` when the target project does not contain `project.properties`
 - code fix to `nexial-project-inspector` when the target project does not contain `artifact/bin` directory
-- code fix to `desktop.editTableCells()` when combo box is not editable(can't type text in combo box)
 
 #### Improvements:
 - adding a bit more project metadata when inspecting project via `nexial-project-inspector`.
@@ -44,10 +43,18 @@ comments: true
   directories other than `artifact/script`.
 
 
+### [desktop commands](../commands/desktop)
+- code fix to [`editTableCells(row,nameValues)`](../commands/desktop/editTableCells(row,nameValues)) when combo box 
+  is not editable (can't type text in combo box).
+
+
 ### [macro commands](../commands/macro)
 
 
 ### [web commands](../commands/web)
+- new System variable - [`nexial.web.scrollIntoView`](../systemvars/index#nexial.web.scrollIntoView) to reduce 
+  additional (and possibly unnecessary) `scrollIntoView` automation prior to interacting with an element. This would be 
+  applicable to "type", "typeKeys", "click" and "double click" commands.
 
 
 ### [xml commands](../commands/xml)
