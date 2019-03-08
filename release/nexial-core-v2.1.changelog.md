@@ -16,6 +16,8 @@ comments: true
 - code fix to `nexial-project-inspector` when the target project does not contain `artifact/bin` directory
 
 #### Improvements:
+- adding a bit more project metadata when inspecting project via `nexial-project-inspector`.
+
 
 #### Nexial Expression
 - [XML &raquo; `append`](../expressions/XMLexpression): **NEW** append content to xml document.
@@ -37,6 +39,8 @@ comments: true
 
 
 ### [base commands](../commands/base)
+- [`macro(file,sheet,name)`](../commands/base/macro(file,sheet,name)): support the reference of macro files from
+  directories other than `artifact/script`.
 
 
 ### [macro commands](../commands/macro)
@@ -46,9 +50,10 @@ comments: true
 
 
 ### [xml commands](../commands/xml)
-- [`insertAfter(xml,xpath,content,var)`](../commands/xml/insertAfter(xml,xpath,content,var)): **NEW** command to insert content 
-after xml document specified via `xpath`
-- [`insertBefore(xml,xpath,content,var)`](../commands/xml/insertBefore(xml,xpath,content,var)): **NEW** command to insert content 
-before xml document specified via `xpath`
+- [`insertAfter(xml,xpath,content,var)`](../commands/xml/insertAfter(xml,xpath,content,var)): **NEW** command to 
+  insert content after xml document specified via `xpath`
+- [`insertBefore(xml,xpath,content,var)`](../commands/xml/insertBefore(xml,xpath,content,var)): **NEW** command to 
+  insert content before xml document specified via `xpath`
 - [`replaceIn(xml,xpath,content,var)`](../commands/xml/replaceIn(xml,xpath,content,var)): **NEW** command to replace 
-inside content of an XML document specified via `xpath`
+  inside content of an XML document specified via `xpath`
+
