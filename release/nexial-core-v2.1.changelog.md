@@ -14,6 +14,7 @@ comments: true
 #### Fixes:
 - code fix to `nexial-project-inspector` when the target project does not contain `project.properties`
 - code fix to `nexial-project-inspector` when the target project does not contain `artifact/bin` directory
+- code fix to `desktop.editTableCells()` when combo box is not editable(can't type text in combo box)
 
 #### Improvements:
 - adding a bit more project metadata when inspecting project via `nexial-project-inspector`.
