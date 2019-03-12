@@ -7,10 +7,10 @@ comments: true
 ---
 
 ### Description
+This command is to save the value of a web form element, such as text box, text area, dropdown, checkbox, radio button 
+and button.  This "value" mentioned here is equivalent to the "value" attribute of the corresponding form element 
+identified via the specified `locator`.
 
-- This command is to save the value of the attribute.
-- In other words this command will save the value of the element into variable if the element attribute contains the value.
-- The command will pass and return the value to be stored into variable or else fail otherwise.
 
 ### Parameters
 
