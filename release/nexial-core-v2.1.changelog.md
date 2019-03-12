@@ -17,6 +17,8 @@ comments: true
 
 #### Improvements:
 - adding a bit more project metadata when inspecting project via `nexial-project-inspector`.
+- support `nexial-macro-update` and `nexial-variable-update` batch files from Project Inspector.
+- shell scripts support commandline arguments that contain spaces.
 
 
 #### Nexial Expression

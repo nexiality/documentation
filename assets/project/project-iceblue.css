@@ -78,20 +78,27 @@ a:hover {
 }
 
 .instruction {
-    font-family: "Trebuchet MS", sans-serif;
-    font-size:   9pt;
-    color:       rgba(50, 50, 50, 0.75);
-    line-height: 1.5em;
+    font-family:   "Trebuchet MS", sans-serif;
+    font-size:     9pt;
+    color:         rgba(50, 50, 50, 0.75);
+    line-height:   1.5em;
+    margin-bottom: 15px;
 }
 
-.instruction .fa-chalkboard-teacher {
-    font-size: 16pt;
-    color:     rgba(60, 100, 130, 0.9);
-    margin:    0 5px -1px 0;
-}
+/*.instruction .fa-chalkboard-teacher {*/
+/*    font-size: 16pt;*/
+/*    color:     rgba(60, 100, 130, 0.9);*/
+/*    margin:    0 5px -1px 0;*/
+/*}*/
 
-.instruction .fa-clipboard {
+.instruction .fa-clipboard, .instruction .fa, .instruction .far, .instruction .fas {
     font-size: 12pt;
+}
+
+.instruction .instruction-text {
+    font-size: 9pt;
+    display:   block;
+    margin:    -18px 10px 3px 20px;
 }
 
 /* specific to project inspector page */
@@ -183,7 +190,7 @@ a:hover {
     box-shadow:  0 10px 10px -5px rgba(40, 40, 40, 0.45);
 }
 
-.project-artifact .label {
+.project-artifact .label, .iteration .label {
     font-weight:      normal;
     font-size:        9pt;
     text-transform:   uppercase;
@@ -235,7 +242,7 @@ a:hover {
     white-space: unset !important;
 }
 
-.btn-clipboard {
+.copy-macro {
     margin:           2px;
     font-size:        12pt;
     border:           none;
@@ -289,18 +296,21 @@ a:hover {
 }
 
 /* data variables */
-.data-container .container-controls {
-    background-color: rgba(180, 200, 220, 0.45);
-    border:           1px inset rgba(150, 180, 200, 0.85);
-    border-radius:    10px 2px 2px 10px;
+.data-container .container-toolbar {
+    font-size:        9pt;
+    line-height:      1.5em;
     display:          inline-block;
     padding:          0 2px 0 10px;
     margin:           -34px 50px 34px 0;
-    box-shadow:       1px 1px 1px rgba(240, 250, 255, 0.85);
+    border-radius:    10px 2px 2px 10px;
+
+    border:           1px inset rgba(150, 180, 200, 0.85);
     background-image: linear-gradient(-180deg, rgba(0, 10, 30, 0.25) 2%, transparent 8%);
+    background-color: rgba(180, 200, 220, 0.45);
+    box-shadow:       1px 1px 1px rgba(240, 250, 255, 0.85);
 }
 
-.data-container .container-controls i {
+.data-container .container-toolbar i {
     border:         none;
     font-size:      7.5pt;
     margin-right:   3px;
@@ -308,15 +318,15 @@ a:hover {
     vertical-align: middle;
 }
 
-.data-container .container-controls i.on {
+.data-container .container-toolbar i.on {
     color: rgba(80, 90, 120, 0.85);
 }
 
-.data-container .container-controls i.off {
+.data-container .container-toolbar i.off {
     color: rgba(100, 100, 100, 0.5);
 }
 
-.data-container .container-controls i:hover {
+.data-container .container-toolbar i:hover {
     box-shadow:       none;
     background-color: transparent;
 }
@@ -432,9 +442,32 @@ a:hover {
     border-radius:    5px;
 }
 
+.data-name i.fa.refactor,
+.data-name i.fas.refactor,
+.data-name i.far.refactor {
+    margin-left: 9px;
+}
+
+.datavar-edit .field label {
+    width: 85px !important;
+}
+
+.datavar-edit .slated .field .as-found,
+.datavar-edit .slated .field input {
+    width: 180px !important;
+}
+
+.datavar-edit .slated, .execute-ui .config {
+    height: 40px !important;
+}
+
+.datavar-edit .proposed-table thead tr th:last-child {
+    width: 100%;
+}
+
 /* macro */
 .macro-file-container {
-    margin-top:    20px;
+    margin-top:    40px;
     margin-bottom: 40px;
 }
 
@@ -474,4 +507,258 @@ a:hover {
 
 .macro-table .expects, .macro-table .produces {
     margin: 0 0 5px 0;
+}
+
+/* refactoring window */
+i.fa.refactor, i.fas.refactor, i.far.refactor {
+    margin:           2px 2px 2px 0;
+    font-size:        11pt;
+    border:           none;
+    background-color: transparent;
+    color:            #333;
+    cursor:           pointer;
+    text-shadow:      none;
+}
+
+.w2ui-popup {
+    opacity: 0.9 !important;
+}
+
+.w2ui-popup .w2ui-popup-title {
+    font-weight:      bold;
+    background-image: linear-gradient(180deg, rgba(90, 135, 215, 0.5) 5px, rgba(255, 255, 255, 0.1) 25px);
+    color:            rgba(80, 100, 120, 1);
+}
+
+.w2ui-popup .w2ui-box .w2ui-popup-body {
+    background-color: #fff;
+}
+
+.refactor-ui, .execute-ui {
+    height:  100%;
+    width:   100%;
+    padding: 10px;
+}
+
+.refactor-ui .control {
+    cursor:        pointer;
+    padding:       5px 3px 2px 3px;
+    border-radius: 5px;
+    border-bottom: 2px solid rgba(100, 120, 140, 1);
+    color:         rgba(80, 100, 120, 1);
+    text-shadow:   0 0 2px rgba(245, 245, 245, 0.75);
+}
+
+.refactor-ui .control:hover {
+    border-bottom: 2px solid rgba(40, 60, 100, 1);
+    color:         rgba(40, 60, 100, 1);
+    text-shadow:   0 0 5px rgba(40, 80, 100, 0.75);
+}
+
+.refactor-ui .control span {
+    font-family: Thonburi, sans-serif;
+    margin-left: 5px;
+}
+
+.refactor-ui .control.disabled {
+    cursor:      no-drop;
+    text-shadow: none;
+    color:       rgba(150, 150, 150, 0.85);
+    border:      none;
+    margin:      3px 15px;
+}
+
+.refactor-ui .control.disabled:hover {
+    color:       rgba(150, 150, 150, 0.85);
+    text-shadow: none;
+}
+
+.refactor-ui .slated, .execute-ui .config {
+    height:           85px;
+    padding:          5px;
+    border-radius:    5px;
+    border:           2px inset rgba(190, 215, 230, 0.25);
+    background-color: rgba(190, 215, 230, 0.25);
+    background-image: linear-gradient(180deg, rgba(120, 140, 160, 0.85) -4px, rgba(190, 215, 230, 0.25) 5px, rgba(190, 215, 230, 0.25) 73px, rgba(120, 140, 160, 0.85) 83px);
+}
+
+.refactor-ui .slated .field, .execute-ui .config .field {
+    padding:    2px;
+    width:      100%;
+    text-align: left;
+}
+
+.refactor-ui .slated .field label, .execute-ui .config .field label {
+    width:   50px;
+    display: inline-block;
+    color:   rgba(0, 0, 0, 0.75);
+}
+
+.refactor-ui .slated .field .as-found, .refactor-ui .slated .field input {
+    width: 220px;
+}
+
+.refactor-ui .slated .field .as-found {
+    display:       inline-block;
+    font-weight:   bold;
+    white-space:   nowrap;
+    text-overflow: ellipsis;
+    overflow:      hidden;
+    margin:        0 0 -3px 0;
+    color:         rgba(20, 30, 40, 0.75);
+}
+
+.refactor-ui .slated .field .divider {
+    padding: 0 5px;
+    color:   rgba(80, 80, 80, 0.5);
+}
+
+.refactor-ui .slated .field input, .execute-ui .config .field input {
+    padding:        2px 4px;
+    height:         20px;
+    border-radius:  5px;
+    vertical-align: baseline;
+    border:         1px solid rgba(90, 110, 130, 0.75);
+}
+
+.refactor-ui .slated .field input[disabled] {
+    cursor:           not-allowed;
+    background-color: rgba(180, 180, 180, 0.25);
+}
+
+.refactor-ui .slated button.proposal-add {
+    border:     none;
+    background: transparent;
+    float:      right;
+    margin:     -25px -3px 0 0;
+}
+
+.refactor-ui .slated button.proposal-add span {
+    font-size:   10px;
+    margin-left: 3px;
+}
+
+.refactor-ui div.proposed {
+    margin: 10px 0 0 0;
+}
+
+.refactor-ui table.proposed-table {
+    height:        265px;
+    overflow:      auto;
+    display:       block;
+    border-radius: 5px;
+    margin:        0 2px;
+    box-shadow:    0 0 3px rgba(80, 100, 120, 0.5);
+}
+
+.refactor-ui table.proposed-table thead th {
+    font-weight:      normal;
+    padding:          2px;
+
+    background-color: rgba(230, 230, 230, 0.15);
+    border:           1px solid rgba(100, 100, 100, 0.15);
+    color:            rgba(0, 0, 0, 0.75);
+}
+
+.refactor-ui table.proposed-table tbody td.include {
+    vertical-align:   baseline;
+    background-color: #fff;
+}
+
+.refactor-ui table.proposed-table tbody td.current {
+    color:          rgba(80, 80, 80, 0.75);
+    text-align:     left;
+    vertical-align: text-top;
+    font-family:    monospace;
+    padding:        0 4px;
+}
+
+.refactor-ui table.proposed-table tbody td.proposed {
+    font-weight:    bold;
+    text-align:     left;
+    height:         30px;
+    vertical-align: text-top;
+    font-family:    monospace;
+    padding:        0 4px;
+}
+
+.refactor-ui div.proposed .proposal-controls {
+    padding:          1px 0 5px 0;
+    margin:           10px -1px 0 -1px;
+    background-image: linear-gradient(180deg, rgba(80, 100, 120, 0.5), rgba(255, 255, 255, 0.15) 11px, rgba(255, 255, 255, 0.15) 15px, rgba(80, 100, 120, 0.5));
+}
+
+.refactor-ui div.proposed .proposal-controls i {
+    margin: 0 15px;
+}
+
+.no-proposal {
+    padding: 10px;
+}
+
+.execute-ui .config {
+    height:           62px !important;
+    background-image: linear-gradient(180deg, rgba(120, 140, 160, 0.85) -5px, rgba(190, 215, 230, 0.25) 10px, rgba(190, 215, 230, 0.25) 48px, rgba(120, 140, 160, 0.85) 65px) !important;
+}
+
+.execute-ui .config .field label {
+    width: 105px;
+}
+
+.execute-ui .config .field input {
+    width: 400px;
+}
+
+.execute-ui .script {
+    width:      100%;
+    text-align: left;
+    padding:    10px 0;
+}
+
+.execute-ui .script .gen-script {
+    width:            100%;
+    height:           230px;
+    border:           2px solid;
+    border-radius:    5px;
+    padding:          5px;
+    background-color: #000;
+    font-family:      Consolas, monospace;
+    white-space:      nowrap;
+    font-size:        12px;
+    color:            #eee;
+    box-shadow:       0 0 15px rgba(0, 0, 0, 0.75);
+}
+
+.execute-ui .script .copy-script {
+    float:   right;
+    margin:  -15px 0 5px 0;
+    display: inline-block;
+    border:  none;
+    color:   rgba(60, 80, 100, 1);
+}
+
+/* how to */
+.howto-container {
+    display: none;
+}
+
+.howto {
+    box-shadow:          0 0 10px 10px inset rgba(255, 255, 255, 1);
+    background-position: -10px -10px;
+    width:               100%;
+    height:              100%;
+    vertical-align:      text-bottom;
+}
+
+.howto .caption {
+    bottom:           10px;
+    width:            100%;
+    text-align:       center;
+    vertical-align:   middle;
+    padding:          5px;
+    background-color: rgba(100, 120, 140, 0.5);
+    border-top:       5px solid rgba(20, 40, 60, 0.15);
+    border-bottom:    5px solid rgba(20, 40, 60, 0.15);
+    font-weight:      bold;
+    position:         absolute;
 }
