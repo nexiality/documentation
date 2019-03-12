@@ -37,9 +37,9 @@ The `${var}.contentLength` syntax returns the length of the payload.
 The `${var}.elapsedTime` syntax returns the number of millisecond between the request sent from Nexial to the intended
 server, and when the response was first received by Nexial in return.
 
-All HTTP response header information can be retrieved via the `${var}.headers[HEADER_NAME]` syntax (assuming response
+All HTTP response header information can be retrieved via the `${var}.headers.[HEADER_NAME]` syntax (assuming response
 is stored to the `var` data variable). For example, to retrieve response content type, we can specify
-`${var}.headers[Content-Type]`. HTTP response headers inherently also include cookie information. But to simplify
+`${var}.headers.[Content-Type]`. HTTP response headers inherently also include cookie information. But to simplify
 your scripting, Nexial provides a more direct access in the form of `${var}.cookies[COOKIE_NAME].value`.
 
 Each cookie contains the following property:
