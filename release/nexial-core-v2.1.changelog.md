@@ -14,22 +14,23 @@ comments: true
 #### Fixes:
 - code fix to `nexial-project-inspector` when the target project does not contain `project.properties`
 - code fix to `nexial-project-inspector` when the target project does not contain `artifact/bin` directory
-
 #### Improvements:
 - adding a bit more project metadata when inspecting project via `nexial-project-inspector`.
 - support `nexial-macro-update` and `nexial-variable-update` batch files from Project Inspector.
 - shell scripts support commandline arguments that contain spaces.
+- slight enhancement to to `nexial-project-inspector` to automatically open HTML after script completes.
 
 
 #### Nexial Expression
 - [XML &raquo; `append`](../expressions/XMLexpression): **NEW** append content to xml document.
-- [XML &raquo; `prepend`](../expressions/XMLexpression): **NEW** prepend content to xml document.
-- [XML &raquo; `insertAfter`](../expressions/XMLexpression): **NEW** insert content after xml document.
-- [XML &raquo; `insertBefore`](../expressions/XMLexpression): **NEW** insert content after xml document.
-- [XML &raquo; `replace`](../expressions/XMLexpression): **NEW** replace xml node with content from xml document.
-- [XML &raquo; `replaceIn`](../expressions/XMLexpression): **NEW** replace inside xml content of xml document.
 - [XML &raquo; `clear`](../expressions/XMLexpression): **NEW** clear content of xml document.
 - [XML &raquo; `delete`](../expressions/XMLexpression): **NEW** delete node from xml document.
+- [XML &raquo; `insertAfter`](../expressions/XMLexpression): **NEW** insert content after xml document.
+- [XML &raquo; `insertBefore`](../expressions/XMLexpression): **NEW** insert content after xml document.
+- [XML &raquo; `prepend`](../expressions/XMLexpression): **NEW** prepend content to xml document.
+- [XML &raquo; `replace`](../expressions/XMLexpression): **NEW** replace xml node with content from xml document.
+- [XML &raquo; `replaceIn`](../expressions/XMLexpression): **NEW** replace inside xml content of xml document.
+
 
 ### [Built-in Function](../functions)
 

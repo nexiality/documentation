@@ -32,7 +32,7 @@ let macroRefactor = {
         fields:             [
             {prop: "file", label: "file", param: "-f", disabled: true},
             {prop: "sheet", label: "sheet", param: "-s", disabled: true},
-            {prop: "name", label: "name", param: "-m", disabled: false},
+            {prop: "name", label: "name", param: "-m", disabled: false, autofocus: true},
         ],
         batch:              "nexial-macro-update",
         convertToParams:    function (/*Object*/proposal) {
@@ -56,7 +56,7 @@ let macroRefactor = {
 let dataRefactor = {
     config:    {
         fields:             [
-            {prop: "variable", label: "data variable", param: "-d", disabled: false}
+            {prop: "variable", label: "data variable", param: "-d", disabled: false, autofocus: true}
         ],
         batch:              "nexial-variable-update",
         convertToParams:    function (/*Object*/proposal) {
@@ -282,7 +282,11 @@ function showDataRefactor(/*HTMLElement*/icon) {
         overflow:  'hidden',
         speed:     '0.3',
         opacity:   '0.5',
-        showClose: true
+        showClose: true,
+        onOpen:    function () {
+            $('input[focus="true"]').focus();
+            $('input[focus="true"]:text:visible:first').focus();
+        }
     });
 }
 
@@ -458,7 +462,11 @@ function showMacroRefactor(/*HTMLElement*/icon) {
         overflow:  'hidden',
         speed:     '0.3',
         opacity:   '0.5',
-        showClose: true
+        showClose: true,
+        onOpen:    function () {
+            $('input[focus="true"]').focus();
+            $('input[focus="true"]:text:visible:first').focus();
+        }
     });
 }
 
@@ -481,12 +489,14 @@ function displaySlatedChanges(/*String*/refactorType) {
 
     let html = '';
     config.fields.forEach(field => {
-        let disabled = field.disabled ? 'disabled="disabled"' : '';
+        let disabled  = field.disabled ? 'disabled="disabled"' : '';
+        let autofocus = field.autofocus ? 'focus="true"' : '';
         html += '<div class="field">' +
                 '<label for="' + field.prop + '">' + field.label + ':</label>' +
                 '<span class="as-found" name="' + field.prop + '">' + current[field.prop] + '</span>' +
                 '<i class="fa fa-angle-double-right divider"></i>' +
-                '<input name="' + field.prop + '" type="text" ' + disabled + ' value="' + current[field.prop] + '">' +
+                '<input name="' + field.prop + '" type="text" ' + disabled + ' ' + autofocus + ' value="' +
+                current[field.prop] + '">' +
                 '</div>';
     });
 
@@ -829,7 +839,7 @@ function convertForNIX(projectHome) {
     let path = (
         projectHome.match(REGEX_WIN_PATH) ? projectHome.replace(REGEX_WIN_PATH, '/$1') : projectHome
     ).replace(/\\/g, '/').replace(/\/\//g, '/');
-    return path.startsWith('/') ? path : '~/' + path;
+    return path.startsWith('/') || path.startsWith('~/') ? path : '~/' + path;
 }
 
 function convertForWindows(projectHome) {
