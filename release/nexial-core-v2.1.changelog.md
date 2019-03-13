@@ -14,6 +14,11 @@ comments: true
 #### Fixes:
 - code fix to `nexial-project-inspector` when the target project does not contain `project.properties`
 - code fix to `nexial-project-inspector` when the target project does not contain `artifact/bin` directory
+- code fix to render correctly (color) the console output for SKIPPED step in 
+  [base &raquo; `repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)) loop. 
+- simplify `nexial.sh` by eliminating the need for a shell script to be generated dynamically.
+- fix error with macro refactoring via `nexial-macro-update.sh`.
+
 #### Improvements:
 - adding a bit more project metadata when inspecting project via `nexial-project-inspector`.
 - support `nexial-macro-update` and `nexial-variable-update` batch files from Project Inspector.
