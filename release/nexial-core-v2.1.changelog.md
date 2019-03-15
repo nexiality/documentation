@@ -17,7 +17,7 @@ comments: true
 - code fix to render correctly (color) the console output for SKIPPED step in 
   [base &raquo; `repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)) loop. 
 - simplify `nexial.sh` by eliminating the need for a shell script to be generated dynamically.
-- fix error with macro refactoring via `nexial-macro-update.sh`.
+- fix error with macro refactoring via [`nexial-macro-update.sh`](../userguide/BatchFiles#nexial-macro-updatecmd--nexial-macro-updatesh).
 
 #### Improvements:
 - adding a bit more project metadata when inspecting project via `nexial-project-inspector`.
@@ -35,12 +35,14 @@ comments: true
 - [XML &raquo; `prepend`](../expressions/XMLexpression): **NEW** prepend content to xml document.
 - [XML &raquo; `replace`](../expressions/XMLexpression): **NEW** replace xml node with content from xml document.
 - [XML &raquo; `replaceIn`](../expressions/XMLexpression): **NEW** replace inside xml content of xml document.
+- [LIST &raquo; `sum`](../expressions/LISTexpression#sum): fix the handling of numbers with different floating points. 
+  Now Nexial should resolve to the largest (or longest) floating points found during the `sum` operation.
 
 
 ### [Built-in Function](../functions)
 
 
-#### Event Notification
+### Event Notification
 
 
 ### [aws.sqs commands](../commands/aws.sqs)
