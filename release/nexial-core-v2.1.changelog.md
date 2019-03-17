@@ -12,18 +12,24 @@ comments: true
 
 ### General
 #### Fixes:
-- code fix to `nexial-project-inspector` when the target project does not contain `project.properties`
-- code fix to `nexial-project-inspector` when the target project does not contain `artifact/bin` directory
 - code fix to render correctly (color) the console output for SKIPPED step in 
   [base &raquo; `repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)) loop. 
 - simplify `nexial.sh` by eliminating the need for a shell script to be generated dynamically.
 - fix error with macro refactoring via [`nexial-macro-update.sh`](../userguide/BatchFiles#nexial-macro-updatecmd--nexial-macro-updatesh).
 
 #### Improvements:
+- shell scripts support commandline arguments that contain spaces.
+
+
+#### Project Inspector
+- code fix to `nexial-project-inspector` when the target project does not contain `project.properties`
+- code fix to `nexial-project-inspector` when the target project does not contain `artifact/bin` directory
 - adding a bit more project metadata when inspecting project via `nexial-project-inspector`.
 - support `nexial-macro-update` and `nexial-variable-update` batch files from Project Inspector.
-- shell scripts support commandline arguments that contain spaces.
 - slight enhancement to to `nexial-project-inspector` to automatically open HTML after script completes.
+- performance improvement on scanning project artifacts via local cache, which is stored in 
+  `$USER_HOME/.nexial/projectCache/$PROJECT_NAME`.
+- minor output adjustment to improve readability
 
 
 #### Nexial Expression
