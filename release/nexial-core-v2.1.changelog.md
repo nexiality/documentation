@@ -72,6 +72,9 @@ comments: true
 - new System variable - [`nexial.web.scrollIntoView`](../systemvars/index#nexial.web.scrollIntoView) to reduce 
   additional (and possibly unnecessary) `scrollIntoView` automation prior to interacting with an element. This would be 
   applicable to "type", "typeKeys", "click" and "double click" commands.
+- code fix for Electron app where not all Selenium/Webdriver features are supported, particularly `actions`.
+- code fix for Electron app where `element.clear()` is not _really_ clearing out input value due to registered event 
+  handler on the application. In such case, Nexial issue hard `BACKSPACE` to compensate the clearing intent.
 
 
 ### [xml commands](../commands/xml)
