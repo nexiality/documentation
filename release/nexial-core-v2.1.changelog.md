@@ -29,7 +29,8 @@ comments: true
 - slight enhancement to to `nexial-project-inspector` to automatically open HTML after script completes.
 - performance improvement on scanning project artifacts via local cache, which is stored in 
   `$USER_HOME/.nexial/projectCache/$PROJECT_NAME`.
-- minor output adjustment to improve readability
+- minor output adjustment to improve readability.
+- improvement on data variable inspection on commands that take on multiple variable parameters.
 
 
 #### Nexial Expression
