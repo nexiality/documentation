@@ -44,7 +44,8 @@ comments: true
 - [XML &raquo; `replaceIn`](../expressions/XMLexpression): **NEW** replace inside xml content of xml document.
 - [LIST &raquo; `sum`](../expressions/LISTexpression#sum): fix the handling of numbers with different floating points. 
   Now Nexial should resolve to the largest (or longest) floating points found during the `sum` operation.
-
+- [LIST &raquo; `replaceItem`](../expressions/LISTexpression#replaceitemsearchforreplacewith): fix to support empty
+  item replacement
 
 ### [Built-in Function](../functions)
 
@@ -75,6 +76,7 @@ comments: true
 - code fix for Electron app where not all Selenium/Webdriver features are supported, particularly `actions`.
 - code fix for Electron app where `element.clear()` is not _really_ clearing out input value due to registered event 
   handler on the application. In such case, Nexial issue hard `BACKSPACE` to compensate the clearing intent.
+- [`rightClick(locator)`](../commands/web/rightClick(locator)): **NEW** command to support right click.
 
 
 ### [xml commands](../commands/xml)
