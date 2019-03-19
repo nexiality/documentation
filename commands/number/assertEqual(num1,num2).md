@@ -1,6 +1,6 @@
 ---
 layout: default
-title: assertEqual(value1,value2)
+title: assertEqual(num1,num2)
 parent: number
 tags: command number
 comments: true

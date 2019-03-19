@@ -26,4 +26,4 @@ Here's an example how to use this command:
 
 
 ### See Also
-- [`assertEqual(value1,value2)`](assertEqual(expected,actual))
+- [`assertEqual(expected,actual)`](assertEqual(expected,actual))

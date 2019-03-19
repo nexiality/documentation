@@ -171,7 +171,7 @@ Here is the list of supported commands separated by their command type:
 
 #### [external]
 - [`runJUnit(className)`](../commands/external/runJUnit(className))
-- [`runProgram(programPathAndParms)`](../commands/external/runProgram(programPathAndParms))
+- [`runProgram(programPathAndParams)`](../commands/external/runProgram(programPathAndParams))
 
 #### [image]
 - [`compare(baseline,actual)`](../commands/image/compare(baseline,actual))
@@ -220,10 +220,10 @@ Here is the list of supported commands separated by their command type:
 - [`storeValues(json,jsonpath,var)`](../commands/json/storeValues(json,jsonpath,var))
 
 #### [mail]
-- [`send(to,subject,body)`](../commands/mail/send(to,subject,body))
+- [`send(profile,to,subject,body)`](../commands/mail/send(profile,to,subject,body))
 
 #### [number]
-- [`assertEqual(value1,value2)`](../commands/number/assertEqual(value1,value2))
+- [`assertEqual(num1,num2)`](../commands/number/assertEqual(num1,num2))
 - [`assertGreater(num1,num2)`](../commands/number/assertGreater(num1,num2))
 - [`assertGreaterOrEqual(num1,num2)`](../commands/number/assertGreaterOrEqual(num1,num2))
 - [`assertLesser(num1,num2)`](../commands/number/assertLesser(num1,num2))
@@ -372,7 +372,7 @@ Here is the list of supported commands separated by their command type:
 - [`saveLocalStorage(var,key)`](../commands/web/saveLocalStorage(var,key))
 - [`saveLocation(var)`](../commands/web/saveLocation(var))
 - [`savePageAs(var,sessionIdName,url)`](../commands/web/savePageAs(var,sessionIdName,url))
-- [`savePageAsFile(sessionIdName,url,fileName)`](../commands/web/savePageAsFile(sessionIdName,url,fileName))
+- [`savePageAsFile(sessionIdName,url,file)`](../commands/web/savePageAsFile(sessionIdName,url,file))
 - [`saveText(var,locator)`](../commands/web/saveText(var,locator))
 - [`saveTextArray(var,locator)`](../commands/web/saveTextArray(var,locator))
 - [`saveTextSubstringAfter(var,locator,delim)`](../commands/web/saveTextSubstringAfter(var,locator,delim))
