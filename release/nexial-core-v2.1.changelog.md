@@ -19,7 +19,7 @@ comments: true
 
 #### Improvements:
 - shell scripts support commandline arguments that contain spaces.
-
+- added execution output html link and more meaningful data to execution result notification mail.
 
 #### Project Inspector
 - code fix to `nexial-project-inspector` when the target project does not contain `project.properties`
