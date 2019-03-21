@@ -30,7 +30,7 @@ redirect_from:
 <!-- - *in progress* [How to generate cache json and moving xpaths to application.json with customized names]() -->
 <!-- - *in progress* [How to use UISpy and do Xpath mapping.]() -->
 <!-- - *in progress* [Managing Login Form, Ribbon and ExplorerBar for Desktop Applications]() -->
-<!-- - *in progress* [On-Screen Feedback for Desktop Automation]() -->
+- [On-Screen Feedback for Desktop Automation](OnScreenFeedbackDesktopApp)
 <!-- - *in progress* [Ribbon icon is clicking the wrong Icon]() -->
 <!-- - *in progress* [What is the correct way to give XPath to the Table component?]() -->
 - [Getting Error While Starting Winium Driver](WiniumStartingError)
@@ -49,6 +49,8 @@ redirect_from:
 - [Script failing on BrowserStack](ScriptFailingonBrowserStack)
 - [Reduce web automation flakiness with wait strategies](ReduceWebAutomationFlakiness)
 - [Improving IE Automation](WebAutomationOnIE)
+- [Fixing chromedriver "DevToolsActivePort" error](ChromeDevToolError)
+
 
 #### External Services
 - [Integrating with Email](IntegratingNexialWithEmail)
