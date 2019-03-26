@@ -98,8 +98,9 @@ comments: true
   handler on the application. In such case, Nexial issue hard `BACKSPACE` to compensate the clearing intent.
 - [`rightClick(locator)`](../commands/web/rightClick(locator)): **NEW** command to support right click.
 - [`nexial.web.clearWithBackspace`](../systemvars/index#nexial.web.clearWithBackspace): **NEW** System variable to 
-  forcefully clear out text input using BACKSPACE keystrokes. Default is `false` (i.e. not enabled).
-
+  forcefully clear out text input using `BACKSPACE` keystrokes. Default is `false` (i.e. not enabled).
+  - improved clearing strategy on text input field by first issuing an `END` keystroke and then issuing the appropriate 
+    number of `BACKSPACE`.
 
 ### [xml commands](../commands/xml)
 - [`insertAfter(xml,xpath,content,var)`](../commands/xml/insertAfter(xml,xpath,content,var)): **NEW** command to 
@@ -108,4 +109,3 @@ comments: true
   insert content before xml document specified via `xpath`
 - [`replaceIn(xml,xpath,content,var)`](../commands/xml/replaceIn(xml,xpath,content,var)): **NEW** command to replace 
   inside content of an XML document specified via `xpath`
-
