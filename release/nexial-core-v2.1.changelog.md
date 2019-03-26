@@ -16,7 +16,11 @@ comments: true
   [base &raquo; `repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)) loop. 
 - simplify `nexial.sh` by eliminating the need for a shell script to be generated dynamically.
 - fix error with macro refactoring via [`nexial-macro-update.sh`](../userguide/BatchFiles#nexial-macro-updatecmd--nexial-macro-updatesh).
-
+- fix error where data variables defined in `project.properties` are not overwritten via 
+  [base &raquo; `save(var,value)`](../commands/base/save(var,value)). As with this fix, only certain System variables 
+  will not be overwritten due to the run time nature of such data variables (e.g. 
+  [`nexial.manageMemory`](../systemvars/index#nexial.manageMemory)).
+ 
 #### Improvements:
 - shell scripts support commandline arguments that contain spaces.
 - added execution output html link and more meaningful data to execution result notification mail.
@@ -46,6 +50,7 @@ comments: true
   Now Nexial should resolve to the largest (or longest) floating points found during the `sum` operation.
 - [LIST &raquo; `replaceItem`](../expressions/LISTexpression#replaceitemsearchforreplacewith): fix to support empty
   item replacement
+
 
 ### [Built-in Function](../functions)
 
