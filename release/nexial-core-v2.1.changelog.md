@@ -77,6 +77,8 @@ comments: true
 - code fix for Electron app where `element.clear()` is not _really_ clearing out input value due to registered event 
   handler on the application. In such case, Nexial issue hard `BACKSPACE` to compensate the clearing intent.
 - [`rightClick(locator)`](../commands/web/rightClick(locator)): **NEW** command to support right click.
+- [`nexial.web.clearWithBackspace`](../systemvars/index#nexial.web.clearWithBackspace): **NEW** System variable to 
+  forcefully clear out text input using BACKSPACE keystrokes. Default is `false` (i.e. not enabled).
 
 
 ### [xml commands](../commands/xml)

@@ -1502,6 +1502,23 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
+            <a name="nexial.web.clearWithBackspace"><code>nexial.web.clearWithBackspace</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            Instruct Nexial to forcefully clear a textbox or textarea input via <code>BACKSPACE</code> key.<br/>
+            <br/>
+            This is not usually needed. However some web application contains fairly persistent and intrusive event
+            handler (or listener) that could circumvent the act of clearing out the corresponding input via the
+            conventional way (i.e. Selenium's <code>WebElement.clear()</code>). Nexial can simulate user behavior by
+            issuing the <code>BACKSPACE</code> keystroke against any existing character found in the target INPUT
+            element. In some instances, this proves to be more effective, albeit possibly slower in performance.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
             <a name="nexial.web.preemptiveAlertCheck"><code>nexial.web.preemptiveAlertCheck</code></a>
         </td>
         <td>boolean</td>
