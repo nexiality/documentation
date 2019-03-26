@@ -173,4 +173,5 @@ applied.
 - [`NUMBER expression`](NUMBERexpression)
 - [`SQL expression`](SQLexpression)
 - [`TEXT expression`](TEXTexpression)
+- [`WEB expression`](WEBexpression)
 - [`XML expression`](XMLexpression)
