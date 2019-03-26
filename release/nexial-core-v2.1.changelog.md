@@ -33,19 +33,34 @@ comments: true
 - improvement on data variable inspection on commands that take on multiple variable parameters.
 
 
-#### Nexial Expression
-- [XML &raquo; `append`](../expressions/XMLexpression): **NEW** append content to xml document.
-- [XML &raquo; `clear`](../expressions/XMLexpression): **NEW** clear content of xml document.
-- [XML &raquo; `delete`](../expressions/XMLexpression): **NEW** delete node from xml document.
-- [XML &raquo; `insertAfter`](../expressions/XMLexpression): **NEW** insert content after xml document.
-- [XML &raquo; `insertBefore`](../expressions/XMLexpression): **NEW** insert content after xml document.
-- [XML &raquo; `prepend`](../expressions/XMLexpression): **NEW** prepend content to xml document.
-- [XML &raquo; `replace`](../expressions/XMLexpression): **NEW** replace xml node with content from xml document.
-- [XML &raquo; `replaceIn`](../expressions/XMLexpression): **NEW** replace inside xml content of xml document.
-- [LIST &raquo; `sum`](../expressions/LISTexpression#sum): fix the handling of numbers with different floating points. 
-  Now Nexial should resolve to the largest (or longest) floating points found during the `sum` operation.
-- [LIST &raquo; `replaceItem`](../expressions/LISTexpression#replaceitemsearchforreplacewith): fix to support empty
-  item replacement
+### Nexial Expression
+- **[XML Expression](../expressions/XMLexpression)**
+    - **`append`**: **NEW** append content to xml document.
+    - **`clear`**: **NEW** clear content of xml document.
+    - **`delete`**: **NEW** delete node from xml document.
+    - **`insertAfter`**: **NEW** insert content after xml document.
+    - **`insertBefore`**: **NEW** insert content after xml document.
+    - **`prepend`**: **NEW** prepend content to xml document.
+    - **`replace`**: **NEW** replace xml node with content from xml document.
+    - **`replaceIn`**: **NEW** replace inside xml content of xml document.
+
+- **[LIST Expression](../expressions/LISTexpression)**
+    - [LIST &raquo; `sum`](../expressions/LISTexpression#sum): fix the handling of numbers with different floating points. 
+      Now Nexial should resolve to the largest (or longest) floating points found during the `sum` operation.
+    - [LIST &raquo; `replaceItem`](../expressions/LISTexpression#replaceitemsearchforreplacewith): fix to support empty
+      item replacement
+
+- **[WEB Expression](../expressions/WEBexpression)**:    **NEW** expression for web automation<br>
+    - **`click(locator)`** : This clicks on element specified via locator.    
+    - **`deselect(locator,option1,option2,option3...)`** : deselects one or multiple options from the listbox.
+    - **`fetchAsCsv(locator1,locator2,locator3...)`** :  stores the values of web elements specified via locators in CSV format
+    - **`select(locator,option1,option2,option3...)`** : This selects one or multiple options from the listbox.
+    - **`selectWindow(locator,winId)`** : This selects the open tab/window as per the `windows id` or by `index`.. 
+    - **`text`** : transforms the associated Web statement(s) result into plain text.
+    - **`type(locator,value)`** : Enters the specified `value` into the first element that matches the specified 
+     `locator`. 
+    - **`typeKeys(locator,value)`** : performs keystroke on the element specified via `locator`. For more information,
+    - **`wait(waitMs)`** :  waits till the desired time(in milli seconds) passed as input parameter `waitMs`
 
 ### [Built-in Function](../functions)
 
