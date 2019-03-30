@@ -24,6 +24,7 @@ comments: true
 #### Improvements:
 - shell scripts support commandline arguments that contain spaces.
 - added execution output html link and more meaningful data to execution result notification mail.
+- support list index reference on data variable. Now `${var}[1]` will return `5` from `0,1,2,3,4,5,6`.
 
 #### Project Inspector
 - code fix to `nexial-project-inspector` when the target project does not contain `project.properties`
@@ -39,32 +40,32 @@ comments: true
 
 ### Nexial Expression
 - **[XML Expression](../expressions/XMLexpression)**
-    - **`append`**: **NEW** append content to xml document.
-    - **`clear`**: **NEW** clear content of xml document.
-    - **`delete`**: **NEW** delete node from xml document.
-    - **`insertAfter`**: **NEW** insert content after xml document.
-    - **`insertBefore`**: **NEW** insert content after xml document.
-    - **`prepend`**: **NEW** prepend content to xml document.
-    - **`replace`**: **NEW** replace xml node with content from xml document.
-    - **`replaceIn`**: **NEW** replace inside xml content of xml document.
+  - **`append`**: **NEW** append content to xml document.
+  - **`clear`**: **NEW** clear content of xml document.
+  - **`delete`**: **NEW** delete node from xml document.
+  - **`insertAfter`**: **NEW** insert content after xml document.
+  - **`insertBefore`**: **NEW** insert content after xml document.
+  - **`prepend`**: **NEW** prepend content to xml document.
+  - **`replace`**: **NEW** replace xml node with content from xml document.
+  - **`replaceIn`**: **NEW** replace inside xml content of xml document.
 
 - **[LIST Expression](../expressions/LISTexpression)**
-    - [LIST &raquo; `sum`](../expressions/LISTexpression#sum): fix the handling of numbers with different floating points. 
-      Now Nexial should resolve to the largest (or longest) floating points found during the `sum` operation.
-    - [LIST &raquo; `replaceItem`](../expressions/LISTexpression#replaceitemsearchforreplacewith): fix to support empty
-      item replacement
+  - [LIST &raquo; `sum`](../expressions/LISTexpression#sum): fix the handling of numbers with different floating points. 
+    Now Nexial should resolve to the largest (or longest) floating points found during the `sum` operation.
+  - [LIST &raquo; `replaceItem`](../expressions/LISTexpression#replaceitemsearchforreplacewith): fix to support empty
+    item replacement
 
 - **[WEB Expression](../expressions/WEBexpression)**:    **NEW** expression for web automation<br>
-    - **`click(locator)`** : This clicks on element specified via locator.    
-    - **`deselect(locator,option1,option2,option3...)`** : deselects one or multiple options from the listbox.
-    - **`fetchAsCsv(locator1,locator2,locator3...)`** :  stores the values of web elements specified via locators in CSV format
-    - **`select(locator,option1,option2,option3...)`** : This selects one or multiple options from the listbox.
-    - **`selectWindow(locator,winId)`** : This selects the open tab/window as per the `windows id` or by `index`.. 
-    - **`text`** : transforms the associated Web statement(s) result into plain text.
-    - **`type(locator,value)`** : Enters the specified `value` into the first element that matches the specified 
-     `locator`. 
-    - **`typeKeys(locator,value)`** : performs keystroke on the element specified via `locator`. For more information,
-    - **`wait(waitMs)`** :  waits till the desired time(in milli seconds) passed as input parameter `waitMs`
+  - **`click(locator)`** : This clicks on element specified via locator.    
+  - **`deselect(locator,option1,option2,option3...)`** : deselects one or multiple options from the listbox.
+  - **`fetchAsCsv(locator1,locator2,locator3...)`** :  stores the values of web elements specified via locators in CSV format
+  - **`select(locator,option1,option2,option3...)`** : This selects one or multiple options from the listbox.
+  - **`selectWindow(locator,winId)`** : This selects the open tab/window as per the `windows id` or by `index`.. 
+  - **`text`** : transforms the associated Web statement(s) result into plain text.
+  - **`type(locator,value)`** : Enters the specified `value` into the first element that matches the specified 
+    `locator`. 
+  - **`typeKeys(locator,value)`** : performs keystroke on the element specified via `locator`. For more information,
+  - **`wait(waitMs)`** :  waits till the desired time(in milli seconds) passed as input parameter `waitMs`
 
 
 ### [Built-in Function](../functions)
