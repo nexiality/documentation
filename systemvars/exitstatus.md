@@ -71,4 +71,4 @@ else
 fi
 ```
 
-For more exit-level output from Nexial, please see [End of Execution](endofexecution).
+For more execution metadata output from Nexial, please see [End of Execution](endofexecution).

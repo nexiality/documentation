@@ -24,7 +24,7 @@ comments: true
 #### Improvements:
 - shell scripts support commandline arguments that contain spaces.
 - added execution output html link and more meaningful data to execution result notification mail.
-- support list index reference on data variable. Now `${var}[1]` will return `5` from `0,1,2,3,4,5,6`.
+- support list index reference on data variable. Now `${var}[1]` will return `5` from `6,5,4,3,2,1,0`.
 
 #### Project Inspector
 - code fix to `nexial-project-inspector` when the target project does not contain `project.properties`

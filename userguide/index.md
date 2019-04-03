@@ -30,6 +30,7 @@ Let's get started!
 - [Execution Event Notification](EventNotification)
 - [Automation Execution Flow](ExecutionFlow)
 - [Real-time Inspection of Data Variables](RealtimeInspectionOfDataVariables)
+- [End of Execution](../systemvars/endofexecution)
 - [Executing Nexial in CI/CD](ExecutingNexialInCICD)
 - [Nexial Execution Dashboard](ExecutionDashboard)
 
