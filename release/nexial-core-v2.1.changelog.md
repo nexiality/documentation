@@ -24,7 +24,7 @@ comments: true
 #### Improvements:
 - shell scripts support commandline arguments that contain spaces.
 - added execution output html link and more meaningful data to execution result notification mail.
-- support list index reference on data variable. Now `${var}[1]` will return `5` from `6,5,4,3,2,1,0`.
+- added preview option(-p) for macro refactor batch file.
 
 #### Project Inspector
 - code fix to `nexial-project-inspector` when the target project does not contain `project.properties`
@@ -67,6 +67,8 @@ comments: true
   - **`typeKeys(locator,value)`** : performs keystroke on the element specified via `locator`. For more information,
   - **`wait(waitMs)`** :  waits till the desired time(in milli seconds) passed as input parameter `waitMs`
 
+- **[NUMBER Expression](../expressions/NUMBERexpression)**:
+    - **`whole`** - renamed `round` operation to `whole`
 
 ### [Built-in Function](../functions)
 
@@ -88,6 +90,11 @@ comments: true
 
 
 ### [macro commands](../commands/macro)
+
+
+### [number commands](../commands/number)
+- `whole(var)` - **NEW** round number as Whole number(Integer)
+- `roundTo(var,closestDigit)` - renamed `round(var,closestDigit)` command to `roundTo(var,closestDigit)`
 
 
 ### [web commands](../commands/web)

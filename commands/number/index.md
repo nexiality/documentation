@@ -23,5 +23,5 @@ The "number" command type represents a series of automation commands regarding n
 - [`increment(var,amount)`](increment(var,amount))
 - [`max(var,array)`](max(var,array))
 - [`min(var,array)`](min(var,array))
-- [`round(var,closestDigit)`](round(var,closestDigit))
-
+- [`round(var,closestDigit)`](roundTo(var,closestDigit))
+- [`whole(var)`](whole(var))

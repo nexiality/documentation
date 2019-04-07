@@ -232,6 +232,7 @@ This script has four command line options:<br/>
 |**`-f`** |**[REQUIRED]** This option is file name of macro from which macro name to be replaced.    |
 |**`-s`** |**[REQUIRED]** This option is worksheet of above macro file.                              |
 |**`-m`** |**[REQUIRED]** This option is the macro name which needs to be replaced across scripts.   |
+|**`-p`** |This option is to preview the results for the macros being updated without affecting any files.|
 
 <br/>
 For example, the following renames the macro `oldMacro1` to `newMacro1`, and `oldMacro2` to `newMacro2`, and so on:<br/>

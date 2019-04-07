@@ -32,7 +32,7 @@ example would yield `-1770.2978788893238`.
 - **`randomDecimal(wholeLength,fractionLength)`** \- generate a random decimal number which contains a whole number of 
   length as specified by `wholeLength`, and decimal number of length as specified by `fractionLength`.
 - **`randomInteger(atLeast,atMost)`** \- generate a random integer number within the range of `atLeast` and `atMost`.
-- **`round`** \- transform current number by rounding it to the closest integer.
+- **`whole`** \- transform current number by rounding it to the closest integer.
 - **`roundTo(closestDigit)`** \- transform current number by rounding it to the `closestDigit`.  The `closestDigit` 
   is used to specify "the closest digit", "the closest tenth", "the closest hundredth", etc.  For example, 
   `[NUMBER(173921.22) => roundTo(1000)]` would yield `174000`. However to retain decimals, one would specify

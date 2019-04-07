@@ -1,6 +1,6 @@
 ---
 layout: default
-title: round(var,closestDigit)
+title: roundTo(var,closestDigit)
 parent: number
 tags: command number
 comments: true
@@ -8,7 +8,7 @@ comments: true
 
 
 ### Description
-This command round the number represented by `var` to the nearest digits (integer) and stores it back to `var`.
+This command round the number represented by `var` to the nearest digits and stores it back to `var`.
 
 
 ### Parameters
@@ -17,10 +17,10 @@ This command round the number represented by `var` to the nearest digits (intege
 
 
 ### Example 
-![script](image/round_01.png)
+![script](image/roundTo_01.png)
 
 **Output**:<br/>
-![output](image/round_02.png)
+![output](image/roundTo_02.png)
 
 
 ### See Also
