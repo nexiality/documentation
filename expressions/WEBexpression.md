@@ -7,7 +7,10 @@ comments: true
 ---
 
 ### Description
-WEB expression allows one to express the processing of one or more Web automation operations.
+WEB expression allows one to express the processing of one or more Web automation operations in pipeline format.
+Web expression must be in following format:<br>
+`[WEB(webResult) => type(locator,value) click(locator)]`<br>
+Here, `webResult` is nothing but the variable which stores outcome of each operation.
 
 ### Working with Execution Result
 Executing series of Web automated operation will result in series of outcomes. So Nexial is designed to capture entire 
@@ -37,7 +40,7 @@ Following is the sample of the Web Execution result:-
   }, {
     operation=click(//*[@id="btnLogi"]),
     result=FAIL,
-    error=No element via locator '//*[@id="btnLogi"]'
+    error=No element via locator '//*[@id="btnLogin"]'
   }]
 }
 ```
@@ -63,3 +66,17 @@ This would retrieve end execution result for series of operations.<br>
 - **`typeKeys(locator,value)`** \- This issues keystroke on the element specified via `locator`. For more information,
   go through [web &raquo; `typeKeys(locator,value)`](../commands/web/typeKeys(locator,value)) 
 - **`wait(waitMs)`** \-  This waits till the desired time(in milli seconds) passed as input parameter `waitMs`.
+
+### Example
+Script:-<br>
+![script](image/WebExpression_01.png)
+
+Output:-<br>
+![](image/WebExpression_02.png)
+
+![](image/WebExpression_03.png)
+
+![](image/WebExpression_04.png)
+
+![](image/WebExpression_05.png)
+
