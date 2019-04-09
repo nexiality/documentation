@@ -26,6 +26,13 @@ If specified `xpath` refers to attribute of `xml`, Nexial will insert new attrib
 - **var** - the variable name to store the beautified content.
 
 ### Example
+Script:-<br>
+![script](image/insertBefore_01.png)
+
+Output:-<br>
+![](image/insertBefore_02.png)
+
+![](image/insertBefore_03.png)
 
 
 ### See Also

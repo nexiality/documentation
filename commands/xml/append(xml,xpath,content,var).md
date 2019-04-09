@@ -21,7 +21,13 @@ This command search against specified `xml` via `xpath`, and append `content` to
 - **var** - the variable name to store the beautified content.
 
 ### Example
+Script:-<br>
+![script](image/append_01.png)
 
+Output:-<br>
+![](image/append_02.png)
+
+![](image/append_03.png)
 
 ### See Also
 - [`append(xml,xpath,content,var)`](append(xml,xpath,content,var))

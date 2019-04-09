@@ -22,7 +22,13 @@ This command search against specified `xml` via `xpath`, and prepend `content` t
 
 
 ### Example
+Script:-<br>
+![script](image/prepend_01.png)
 
+Output:-<br>
+![](image/prepend_02.png)
+
+![](image/prepend_03.png)
 
 ### See Also
 - [`append(xml,xpath,content,var)`](append(xml,xpath,content,var))

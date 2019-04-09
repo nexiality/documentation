@@ -21,7 +21,13 @@ If `xpath` refers to attribute of `xml`, it will replace value of all matching a
 - **var** - the variable name to store the beautified content.
 
 ### Example
+Script:-<br>
+![script](image/replaceIn_01.png)
 
+Output:-<br>
+![](image/replaceIn_02.png)
+
+![](image/replaceIn_03.png)
 
 ### See Also
 - [`append(xml,xpath,content,var)`](append(xml,xpath,content,var))
