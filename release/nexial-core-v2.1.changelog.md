@@ -109,6 +109,8 @@ comments: true
   forcefully clear out text input using `BACKSPACE` keystrokes. Default is `false` (i.e. not enabled).
   - improved clearing strategy on text input field by first issuing an `END` keystroke and then issuing the appropriate 
     number of `BACKSPACE`.
+- [`assertElementsPresent(prefix)`](../commands/web/assertElementsPresent(prefix)): **NEW** command to assert a series
+  of web elements via their respective locators.
 
 ### [xml commands](../commands/xml)
 - [`insertAfter(xml,xpath,content,var)`](../commands/xml/insertAfter(xml,xpath,content,var)): **NEW** command to 
