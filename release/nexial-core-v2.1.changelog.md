@@ -112,6 +112,8 @@ comments: true
     number of `BACKSPACE`.
 - [`assertElementsPresent(prefix)`](../commands/web/assertElementsPresent(prefix)): **NEW** command to assert a series
   of web elements via their respective locators.
+- [`saveValues(var,locator)`](../commands/web/saveValues(var,locator)): **NEW** command to save value of multiple 
+  matching web form elements.
 
 ### [xml commands](../commands/xml)
 - [`insertAfter(xml,xpath,content,var)`](../commands/xml/insertAfter(xml,xpath,content,var)): **NEW** command to 
