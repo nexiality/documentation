@@ -18,15 +18,14 @@ corresponding form elements identified via the specified `locator`.
 
 
 ### Example
-
 Suppose the following page:<br/>
-![](image/saveValues_03.png)
+![](image/saveValues_03.png)<br/>
 
 We can retrieve the "age" value (second columns) like so:<br/>
-![](image/saveValues_02.png)
+![](image/saveValues_02.png)<br/>
 
 Here's the output:<br/>
-![](image/saveValues_01.png)
+![](image/saveValues_01.png)<br/>
 
 
 ### See Also
