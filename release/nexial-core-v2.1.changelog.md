@@ -89,7 +89,8 @@ comments: true
   is not editable (can't type text in combo box).
 
 
-### [macro commands](../commands/macro)
+### [rdbms commands](../commands/rdbms)
+- now supports `CREATE` and `DROP` keywords for SQL execution
 
 
 ### [number commands](../commands/number)
