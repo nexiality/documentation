@@ -1461,8 +1461,9 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a
-            name="nexial.web.pageLoadWaitMs"><code>nexial.web.pageLoadWaitMs</code></a></td>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.web.pageLoadWaitMs"><code>nexial.web.pageLoadWaitMs</code></a>
+        </td>
         <td>integer</td>
         <td>10000</td>
         <td>false</td>
@@ -1541,8 +1542,9 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a
-            name="nexial.ignoreBrowserAlert"><code>nexial.ignoreBrowserAlert</code></a></td>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.ignoreBrowserAlert"><code>nexial.ignoreBrowserAlert</code></a>
+        </td>
         <td>boolean</td>
         <td>false</td>
         <td class="highlight-red">true</td>
@@ -1606,6 +1608,50 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
+            <a name="nexial.web.highlight.style"><code>nexial.web.highlight.style</code></a>
+        </td>
+        <td>text</td>
+        <td><code>background: #faf557</code></td>
+        <td>false</td>
+        <td>
+            The applicable CSS style to the target web element during highlighting. This is only effective when
+            <a href="#nexial.web.highlight"><code>nexial.web.highlight</code></a> is set to <code>true</code>.
+        </td>
+    </tr>
+
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.web.scrollIntoView"><code>nexial.web.scrollIntoView</code></a>
+        </td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>false</td>
+        <td>
+            During web automation, it is possible that the target web element might not be visible on the screen.
+            Perhaps it is below or above the viewing area of the host browser. To help clarify intent, it might be
+            a good idea to bring such web element into view before any automation is carried out upon it.
+
+            When this System variable is set to <code>true</code> (which is the default), Nexial will attempt to adjust
+            the position of target web element (like scrolling the page) such that it would be visible prior to carrying
+            out the automation. However in some cases this preemptive "scrolling" might work against intended use as
+            some web elements might be too big to fit the available view area. In addition, the additional scrolling
+            could be considered unnecessary when automating via headless browser.
+
+            One can set this System variable to <code>false</code> to reduce such scrolling, which can also speed up
+            automation a bit.
+
+            This is applicable to <ul>
+            <li><a href="../commands/web/type(locator,value)"><code>web &raquo; type(locator,value)</code></a></li>
+            <li><a href="../commands/web/typeKeys(locator,value)"><code>web &raquo; typeKeys(locator,value)</code></a></li>
+            <li><a href="../commands/web/click(locator)"><code>web &raquo; click(locator)</code></a></li>
+            <li><a href="../commands/web/doubleClick(locator)"><code>web &raquo; doubleClick(locator)</code></a></li>
+            <li>and all the derivatives of these commands</li>
+            </ul>
+        </td>
+    </tr>
+
+    <tr>
+        <td nowrap="nowrap" class="varname">
             <a name="nexial.web.dragFrom"><code>nexial.web.dragFrom</code></a>
         </td>
         <td>text</td>
@@ -1616,18 +1662,6 @@
             <a href="../commands/web/dragTo(fromLocator,xOffset,yOffset)#nexial.web.dragFrom">
                 <code>web &raquo; dragTo(fromLocator,xOffset,yOffset)</code>
             </a> for more details.
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname">
-            <a name="nexial.web.highlight.style"><code>nexial.web.highlight.style</code></a>
-        </td>
-        <td>text</td>
-        <td><code>background: #faf557</code></td>
-        <td>false</td>
-        <td>
-            The applicable CSS style to the target web element during highlighting. This is only effective when
-            <a href="#nexial.web.highlight"><code>nexial.web.highlight</code></a> is set to <code>true</code>.
         </td>
     </tr>
     <tr>
