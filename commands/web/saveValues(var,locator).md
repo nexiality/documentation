@@ -2,7 +2,7 @@
 layout: default
 title: saveValues(var,locator)
 parent: web
-tags: command web
+tags: command web locator values
 comments: true
 ---
 
@@ -19,13 +19,13 @@ corresponding form elements identified via the specified `locator`.
 
 ### Example
 Suppose the following page:<br/>
-![](image/saveValues_03.png)<br/>
+![](image/saveValues_03.png)
 
 We can retrieve the "age" value (second columns) like so:<br/>
-![](image/saveValues_02.png)<br/>
+![](image/saveValues_02.png)
 
 Here's the output:<br/>
-![](image/saveValues_01.png)<br/>
+![](image/saveValues_01.png)
 
 
 ### See Also
