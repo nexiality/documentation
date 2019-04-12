@@ -9,7 +9,6 @@ comments: true
 ### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-2.1" class="external-link" target="_nexial_link">Release 2.1</a>
 2019-04-??
 
-
 ### General
 #### Fixes:
 - code fix to render correctly (color) the console output for SKIPPED step in 
@@ -37,6 +36,9 @@ comments: true
 - minor output adjustment to improve readability.
 - improvement on data variable inspection on commands that take on multiple variable parameters.
 
+### System Variables
+- [`nexial.io.copyConfig](../systemvars/index#nexial.io.copyConfig): provides modes for copying new file to 
+existing file location.
 
 ### Nexial Expression
 - **[XML Expression](../expressions/XMLexpression)**
@@ -70,33 +72,28 @@ comments: true
 - **[NUMBER Expression](../expressions/NUMBERexpression)**:
     - **`whole`** - renamed `round` operation to `whole`
 
-### [Built-in Function](../functions)
-
-
-### Event Notification
-
-
-### [aws.sqs commands](../commands/aws.sqs)
-
-
 ### [base commands](../commands/base)
 - [`macro(file,sheet,name)`](../commands/base/macro(file,sheet,name)): support the reference of macro files from
   directories other than `artifact/script`.
-
-
+ 
 ### [desktop commands](../commands/desktop)
 - code fix to [`editTableCells(row,nameValues)`](../commands/desktop/editTableCells(row,nameValues)) when combo box 
   is not editable (can't type text in combo box).
 
+### [io commands](../commands/io)
+- [`copyFilesByRegex(sourceDir,regex,target)`](../commands/io/copyFilesByRegex(sourceDir,regex,target)): copy all 
+files from sourceDir matching specified regex recursively to target location.
+- [`moveFilesByRegex(sourceDir,regex,target)`](../commands/io/moveFilesByRegex(sourceDir,regex,target)): move all 
+files from sourceDir matching specified regex recursively to target location.
+- [`deleteFilesByRegex(sourceDir,regex)`](../commands/io/deleteFilesByRegex(sourceDir,regex)): delete all 
+files from sourceDir matching specified regex recursively.
 
 ### [rdbms commands](../commands/rdbms)
 - now supports `CREATE` and `DROP` keywords for SQL execution
 
-
 ### [number commands](../commands/number)
 - `whole(var)` - **NEW** round number as Whole number(Integer)
 - `roundTo(var,closestDigit)` - renamed `round(var,closestDigit)` command to `roundTo(var,closestDigit)`
-
 
 ### [web commands](../commands/web)
 - new System variable - [`nexial.web.scrollIntoView`](../systemvars/index#nexial.web.scrollIntoView) to reduce 
@@ -114,7 +111,6 @@ comments: true
   of web elements via their respective locators.
 - [`saveValues(var,locator)`](../commands/web/saveValues(var,locator)): **NEW** command to save value of multiple 
   matching web form elements.
-
 
 ### [xml commands](../commands/xml)
 - [`insertAfter(xml,xpath,content,var)`](../commands/xml/insertAfter(xml,xpath,content,var)): **NEW** command to 
