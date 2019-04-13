@@ -39,6 +39,11 @@ comments: true
 - improvement on data variable inspection on commands that take on multiple variable parameters.
 
 
+### System Variables
+- [`nexial.io.copyConfig](../systemvars/index#nexial.io.copyConfig): provides modes for copying new file to 
+existing file location.
+
+
 ### Nexial Expression
 - **[XML Expression](../expressions/XMLexpression)**
   - **`append`**: **NEW** append content to xml document.
@@ -81,6 +86,15 @@ comments: true
 ### [desktop commands](../commands/desktop)
 - code fix to [`editTableCells(row,nameValues)`](../commands/desktop/editTableCells(row,nameValues)) when combo box 
   is not editable (can't type text in combo box).
+
+
+### [io commands](../commands/io)
+- [`copyFilesByRegex(sourceDir,regex,target)`](../commands/io/copyFilesByRegex(sourceDir,regex,target)): copy all 
+files from sourceDir matching specified regex recursively to target location.
+- [`moveFilesByRegex(sourceDir,regex,target)`](../commands/io/moveFilesByRegex(sourceDir,regex,target)): move all 
+files from sourceDir matching specified regex recursively to target location.
+- [`deleteFilesByRegex(sourceDir,regex)`](../commands/io/deleteFilesByRegex(sourceDir,regex)): delete all 
+files from sourceDir matching specified regex recursively.
 
 
 ### [rdbms commands](../commands/rdbms)
