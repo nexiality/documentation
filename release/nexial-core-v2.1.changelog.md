@@ -27,12 +27,12 @@ comments: true
 - added preview option(-p) for macro refactor batch file.
 
 
-#### Project Inspector
+### Project Inspector
 - code fix to `nexial-project-inspector` when the target project does not contain `project.properties`
 - code fix to `nexial-project-inspector` when the target project does not contain `artifact/bin` directory
 - adding a bit more project metadata when inspecting project via `nexial-project-inspector`.
 - support `nexial-macro-update` and `nexial-variable-update` batch files from Project Inspector.
-- slight enhancement to to `nexial-project-inspector` to automatically open HTML after script completes.
+- slight enhancement to `nexial-project-inspector` to automatically open HTML after script completes.
 - performance improvement on scanning project artifacts via local cache, which is stored in 
   `$USER_HOME/.nexial/projectCache/$PROJECT_NAME`.
 - minor output adjustment to improve readability.
@@ -40,7 +40,7 @@ comments: true
 
 
 ### System Variables
-- [`nexial.io.copyConfig](../systemvars/index#nexial.io.copyConfig): provides modes for copying new file to 
+- [`nexial.io.copyConfig`](../systemvars/index#nexial.io.copyConfig): provides modes for copying new file to 
 existing file location.
 
 
@@ -102,8 +102,9 @@ files from sourceDir matching specified regex recursively.
 
 
 ### [number commands](../commands/number)
-- `whole(var)` - **NEW** round number as Whole number(Integer)
-- `roundTo(var,closestDigit)` - renamed `round(var,closestDigit)` command to `roundTo(var,closestDigit)`
+- [`whole(var)`](../commands/number/whole(var)) - **NEW** round number as Whole number(Integer)
+- [`roundTo(var,closestDigit)`](../commands/number/roundTo(var,closestDigit)) - renamed `round(var,closestDigit)` 
+  command to `roundTo(var,closestDigit)`
 
 
 ### [web commands](../commands/web)
