@@ -1119,6 +1119,35 @@
             </ul>
         </td>
     </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.io.copyConfig"><code>nexial.io.copyConfig</code></a>
+        </td>
+        <td>text</td>
+        <td>keepOriginal</td>
+        <td>false</td>
+        <td>
+            Control copying of the <b>existing</b> file at the target location via
+            <a href="../commands/io/copyFilesByRegex(sourceDir,regex,target)">io &raquo;
+                <code>copyFilesByRegex(sourceDir,regex,target)</code></a> or
+            <a href="../commands/io/copyFiles(source,target)">io &raquo;
+                <code>copyFiles(source,target)</code></a> or
+            <a href="../commands/io/moveFilesByRegex(sourceDir,regex,target)">io &raquo;
+                <code>moveFilesByRegex(sourceDir,regex,target)</code></a>
+            <a href="../commands/io/moveFiles(source,target)">io &raquo;
+                <code>moveFiles(source,target)</code></a>
+            commands. Possible options are:<br/>
+            <br/>
+            <ul>
+                <li><code>keepOriginal</code> - no change to existing file. `copy` or `move` operation not performed
+                </li>
+                <li><code>backup</code> - take backup of existing file and copy the new file.
+                    Backup file will have name in `FILENAME - [yyyyMMdd_hhmmss] format.
+                </li>
+                <li><code>override</code> - override existing file with new file</li>
+            </ul>
+        </td>
+    </tr>
 
     <tr>
         <td class="highlight-green" colspan="5">

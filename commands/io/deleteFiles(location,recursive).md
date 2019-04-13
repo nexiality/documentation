@@ -13,8 +13,8 @@ recursive occurrence with the same file name.
 
 
 ### Parameters
-- **location** \- the full path of the folder/directory from where files need to be deleted
-- **recursive** \- `true` means to delete all the files and subdirectories of `location`
+- **location** - the full path of the folder/directory from where files need to be deleted
+- **recursive** - `true` means to delete all the files and subdirectories of `location`
 
 
 ### Example

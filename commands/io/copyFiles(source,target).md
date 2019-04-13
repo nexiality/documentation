@@ -10,6 +10,8 @@ comments: true
 ### Description
 This command copies files from one location to other.
 
+{% include _overrides_mode.md %}
+
 
 ### Parameters
 - **source** : Full path of the files to copy
@@ -22,3 +24,7 @@ This command copies files from one location to other.
 
 **Output**:<br/>
 ![output](image/copyFiles_02.png)
+
+
+### See Also
+- [`copyFilesByRegex(sourceDir,regex,target)`](copyFilesByRegex(sourceDir,regex,target))
