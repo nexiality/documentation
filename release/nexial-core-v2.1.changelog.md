@@ -1,13 +1,13 @@
 ---
 layout: default
-title: nexial-core 2.1 (2019-04-??)
+title: nexial-core 2.1 (2019-04-13)
 parent: release
 tags: release nexial-core 2.1
 comments: true
 ---
 
 ### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-2.1" class="external-link" target="_nexial_link">Release 2.1</a>
-2019-04-??
+2019-04-13
 
 
 ### General
@@ -25,6 +25,7 @@ comments: true
 - shell scripts support commandline arguments that contain spaces.
 - added execution output html link and more meaningful data to execution result notification mail.
 - added preview option(-p) for macro refactor batch file.
+
 
 #### Project Inspector
 - code fix to `nexial-project-inspector` when the target project does not contain `project.properties`
@@ -58,7 +59,8 @@ comments: true
 - **[WEB Expression](../expressions/WEBexpression)**:    **NEW** expression for web automation<br>
   - **`click(locator)`** : This clicks on element specified via locator.    
   - **`deselect(locator,option1,option2,option3...)`** : deselects one or multiple options from the listbox.
-  - **`fetchAsCsv(locator1,locator2,locator3...)`** :  stores the values of web elements specified via locators in CSV format
+  - **`fetchAsCsv(locator1,locator2,locator3...)`** :  stores the values of web elements specified via locators in 
+    CSV format
   - **`select(locator,option1,option2,option3...)`** : This selects one or multiple options from the listbox.
   - **`selectWindow(locator,winId)`** : This selects the open tab/window as per the `windows id` or by `index`.. 
   - **`text`** : transforms the associated Web statement(s) result into plain text.
@@ -69,14 +71,6 @@ comments: true
 
 - **[NUMBER Expression](../expressions/NUMBERexpression)**:
     - **`whole`** - renamed `round` operation to `whole`
-
-### [Built-in Function](../functions)
-
-
-### Event Notification
-
-
-### [aws.sqs commands](../commands/aws.sqs)
 
 
 ### [base commands](../commands/base)
