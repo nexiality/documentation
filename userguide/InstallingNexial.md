@@ -8,7 +8,8 @@ comments: true
 
 
 ### Install Java
-1. Check if Java is installed - **Java 1.8 or above required, and 64-bit Java is highly recommended**
+1. Check if Java is installed - **Java 1.8.0_151 or above required, and 64-bit Java is highly recommended**
+   **If possible, consider installing the latest version of Java 1.8 or the latest release of Java.**<br/>
    1. Open console via: <br/>
       **Windows**:  Start | Run | `cmd <ENTER>`<br/> 
       **MacOSX**: Open the Terminal app, or open Spotlight (`CMD-Space`) and then type `terminal <ENTER>`<br/>
