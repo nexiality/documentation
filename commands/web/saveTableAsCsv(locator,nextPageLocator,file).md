@@ -50,4 +50,4 @@ See above
 
 ### See Also
 - [`assertTable(locator,row,column,text)`](assertTable(locator,row,column,text))
-- [`saveDivsAsCsv(headerCellsLoc,rowLocator,cellLocator,nextPageLocator,file)`](saveDivsAsCsv(headerCellsLoc,rowLocator,cellLocator,nextPageLocator,file))
+- [`saveDivsAsCsv(headers,rows,cells,nextPage,file)`](saveDivsAsCsv(headers,rows,cells,nextPage,file))
