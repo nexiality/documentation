@@ -25,6 +25,9 @@ comments: true
 ### Nexial Expression
 - fix the storage of large decimal numbers when using `[NUMBER(...) => ...]` expression. The previous scientific 
   representation has been replaced with plain numeric representation.
+- [`CSV(...) => sortAscending`](../expressions/CSVexpression#sortascendingcolumn) and 
+  [`CSV(...) => sortDescending`](../expressions/CSVexpression#sortdescendingcolumn) now supports both numeric and 
+  textual sorting, depending on the target column data.
 
 
 ### [base commands](../commands/base)
