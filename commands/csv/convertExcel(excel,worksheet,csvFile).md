@@ -6,15 +6,17 @@ tags: command csv
 comments: true
 ---
 
+**DEPRECATED - USE [`fromExcel(excel,worksheet,csvFile)`](fromExcel(excel,worksheet,csvFile)) INSTEAD.**
+
 
 ### Description
-This command converts any worksheet of an Excel file into a CSV file. 
+This command converts a `worksheet` of an `excel` file into a CSV file (denote `csvFile`). 
 
 
 ### Parameters
-- **excel** \- the Excel file to convert
-- **worksheet** \- name of the worksheet to convert
-- **csvFile** \- the destination CSV File
+- **excel** - the Excel file to convert
+- **worksheet** - name of the worksheet to convert
+- **csvFile** - the destination CSV File. If exist, this file will be overwritten
 
 
 ### Example
@@ -26,3 +28,5 @@ This command converts any worksheet of an Excel file into a CSV file. 
 
 
 ### See Also
+- [`fromExcel(excel,worksheet,csvFile)`](fromExcel(excel,worksheet,csvFile))
+- [`toExcel(csvFile,excel,worksheet,startCell)`](toExcel(csvFile,excel,worksheet,startCell))

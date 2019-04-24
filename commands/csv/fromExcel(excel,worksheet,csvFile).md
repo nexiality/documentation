@@ -8,18 +8,18 @@ comments: true
 
 
 ### Description
-This command converts any worksheet of an Excel file into a CSV file. This is the new command name for the 
-now-deprecated [`convertExcel(excel,worksheet,csvFile)`](convertExcel(excel,worksheet,csvFile)) command.
+This command converts any `worksheet` of an `excel` file into a CSV file (denote `csvFile`). This is the new command 
+name for the now-deprecated [`convertExcel(excel,worksheet,csvFile)`](convertExcel(excel,worksheet,csvFile)) command.
 
 
 ### Parameters
 - **excel** - the Excel file to convert
 - **worksheet** - name of the worksheet to convert
-- **csvFile** - the destination CSV File
+- **csvFile** - the destination CSV File. If exist, this file will be overwritten
 
 
 ### Example
 
 
 ### See Also
-- [`convertExcel(excel,worksheet,csvFile)`](convertExcel(excel,worksheet,csvFile))
+- [toExcel(csvFile,excel,worksheet,startCell)](toExcel(csvFile,excel,worksheet,startCell))
