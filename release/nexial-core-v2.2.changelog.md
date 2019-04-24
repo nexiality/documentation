@@ -33,6 +33,10 @@ comments: true
 ### [base commands](../commands/base)
 
 
+### [csv commands](../commands/csv)
+- [CSV &raquo; `toExcel`](../commands/csv/toExcel): **NEW** command to export CSV content into new/existing Excel file.
+
+
 ### [desktop commands](../commands/desktop)
 
 
@@ -46,6 +50,7 @@ comments: true
 
 
 ### [web commands](../commands/web)
+- [`assertElementsPresent(prefix)`](../commands/web/assertElementsPresent(prefix)): improved logging.
 
 
 ### [xml commands](../commands/xml)
