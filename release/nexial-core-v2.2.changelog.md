@@ -14,6 +14,7 @@ comments: true
 #### Fixes
  
 #### Improvements
+- improved the handling of _crypt_ data variable during output generation.
 
 
 ### Project Inspector
