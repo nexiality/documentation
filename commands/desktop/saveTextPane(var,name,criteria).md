@@ -25,13 +25,12 @@ For criteria, here are the possible options:
 - **`limitRows`** - specified the rows (zero-based) to consider for matching - e.g. `limitRows=0,1,2,3,11,12`. When used, all unspecified rows will be skipped.  Use this to improve speed.
 - **`color`** - specified the color as a criteria to match. Used in the form of `red=[0-255],green=[0-255],blue=[0-255]`.  For example, `color=red:255` means match on **RED** text, `color=red:255;green:255` means match on **YELLOW** text. To say **BLACK**, specify `color=red:0;green:0;blue:0`.
 
-  
 
 ### Parameters
-
 - **var** - The variable name to use when storing the match result on the target `TextPane` component
 - **name** - The name (or label) of the `TextPane` component
 - **criteria** - The criteria to use when matching against the text content of the target `TextPane` 
+
 
 ### Example
 **Script**:<br/>
@@ -43,7 +42,9 @@ For criteria, here are the possible options:
 
 If no color is specified, selects the first matched row irrespective of any color.
 
-### See Also
 
+### See Also
 - [`clickTextPane(name,criteria)`](clickTextPane(name,criteria))
 - [`clickTextPaneRow(var,index)`](clickTextPaneRow(var,index))
+- [`saveText(var,name)`](saveText(var,name))
+- [`saveTextByLocator(var,locator)`](saveTextByLocator(var,locator))

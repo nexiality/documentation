@@ -7,15 +7,17 @@ comments: true
 ---
 
 ### Description
+This command instructs Nexial to click on a desktop element matched to the specified `locator`, with the desired 
+positional offset.
 
-- This command is to click on the desired element offset,
-- In other words the click action will be performed the element as per the co-ordinates provided for the element.
-- The click action will perform and pass if the action is successful or else fail otherwise.
 
 ### Parameters
+- **locator** - the locator(xpath) of the target element.
+- **xOffset** - the X coordinate of the element to be clicked on.
+- **yOffset** - the Y coordinate of the element to be clicked on.
 
-- **locator** -  this parameter is the locator(xpath) of the element
-- **xOffset** -  this parameter is the X co-ordinates of the element on which click action need to be performed.
-- **yOffset** -  this parameter is the Y co-ordinates of the element on which click action need to be performed.
 
 ### Example
+- [`clickButton(name)`](clickButton(name))
+- [`clickByLocator(locator)`](clickByLocator(locator))
+- [`clickElementOffset(name,xOffset,yOffset)`](clickElementOffset(name,xOffset,yOffset))

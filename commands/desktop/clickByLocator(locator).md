@@ -19,6 +19,8 @@ comments: true
 
 
 ### See Also
-
--  [`waitForLocator(locator,maxWaitMs)`](waitForLocator(locator,maxWaitMs))
 - [`assertLocatorPresent(locator)`](assertLocatorPresent(locator))
+- [`clickButton(name)`](clickButton(name))
+- [`clickElementOffset(name,xOffset,yOffset)`](clickElementOffset(name,xOffset,yOffset))
+- [`clickOffset(locator,xOffset,yOffset)`](clickOffset(locator,xOffset,yOffset))
+- [`waitForLocator(locator,maxWaitMs)`](waitForLocator(locator,maxWaitMs))

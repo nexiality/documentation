@@ -43,6 +43,11 @@ comments: true
 
 
 ### [desktop commands](../commands/desktop)
+- [clickElementOffset(name,xOffset,yOffset)](../commands/desktop/clickElementOffset(name,xOffset,yOffset)): **NEW** 
+  command to enable clicking on an interactive element (such as textbox or toolbar) with custom `x` an `y` offsets.
+- [saveTextByLocator(var,locator)](../commands/desktop/saveTextByLocator(var,locator)): **NEW** command to save the
+  text content of the specified locator to `var`.
+- [saveText(var,locator)](../commands/desktop/saveText(var,name)): now supports more element types.
 
 
 ### [io commands](../commands/io)
