@@ -29,6 +29,8 @@ comments: true
 - [`CSV(...) => sortAscending`](../expressions/CSVexpression#sortascendingcolumn) and 
   [`CSV(...) => sortDescending`](../expressions/CSVexpression#sortdescendingcolumn) now supports both numeric and 
   textual sorting, depending on the target column data.
+- [EXCEL expression](../expressions/EXCELexpression) now accepts Excel files of any size.
+- [NUMBER expression](../expressions/NUMBERexpression) now supports numbers with currency symbol or thousand separators.
 
 
 ### [base commands](../commands/base)
