@@ -34,6 +34,8 @@ comments: true
 
 
 ### [base commands](../commands/base)
+- [base &raquo; `assertArrayNotContain(array,unexpected)`](../commands/base/assertArrayNotContain(array,unexpected)): 
+  now consider empty array as `SUCCESS`, since such array/list contains nothing.
 
 
 ### [csv commands](../commands/csv)
