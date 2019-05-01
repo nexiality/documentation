@@ -65,6 +65,8 @@ comments: true
 
 ### [web commands](../commands/web)
 - [`assertElementsPresent(prefix)`](../commands/web/assertElementsPresent(prefix)): improved logging.
+- [`assertElementsPresent(prefix)`](../commands/web/assertElementsPresent(prefix)): fix runtime error when not all 
+  the data variables under the same `prefix` has the `.locator` suffix.
 
 
 ### [xml commands](../commands/xml)
