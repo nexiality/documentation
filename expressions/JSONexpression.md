@@ -83,6 +83,73 @@ To manipulate JSON document, check out [`Nexial jsonpath`](../jsonpath) for m
   `replaceWith` is treated as text, the end result of the JSON document in question could become structurally different. 
 - **`save(path,append)`** - save current JSON content to `path`. If `path` resolves to an existing file, `append` 
   set as `true` will append current JSON content to the said file. `append` is optional and defaults to `false`.
+- **`select(jsonpaths)`** - performs multiple JSON path extractions and transforms the result into [CSV](CSVexpression) 
+  with the JSON path as the first column and the corresponding result as the second column. For example,<br/>
+  
+  Suppose we have the following JSON document (_Marketing data_):<br/>
+  ```json
+  [
+    {
+      "id": 1,
+      "first_name": "Jeanette",
+      "last_name": "Penddreth",
+      "email": "jpenddreth0@census.gov",
+      "gender": "Female",
+      "ip_address": "26.58.193.2"
+    },
+    {
+      "id": 2,
+      "first_name": "Giavani",
+      "last_name": "Frediani",
+      "email": "gfrediani1@senate.gov",
+      "gender": "Male",
+      "ip_address": "229.179.4.212"
+    },
+    {
+      "id": 3,
+      "first_name": "Noell",
+      "last_name": "Bea",
+      "email": "nbea2@imageshack.us",
+      "gender": "Female",
+      "ip_address": "180.66.162.255"
+    },
+    {
+      "id": 4,
+      "first_name": "Willard",
+      "last_name": "Valek",
+      "email": "wvalek3@vk.com",
+      "gender": "Male",
+      "ip_address": "67.76.188.26"
+    }
+  ]
+  ```
+
+  And, we want to extract the following information:
+  1. A unique list of last names in ascending order 
+  2. All US government email addresses in descending order
+  3. A count of all female customers
+
+  Using a combination of [JSONPath](../jsonpath/index) and [JSONPath Function](../jsonpath/index#jsonpath-function),
+  we can achieve the above requirement:
+  ```
+  1. last_name => distinct ascending
+  2. email[REGEX:.+\(\.gov|\.us\)] => descending
+  3. [gender=Female] => count
+  ```
+  
+  Now, instead of executing these JSONPaths one-by-one with 
+  [json &raquo; `storeValues(json,jsonpath,var)`](../commands/json/storeValues(json,jsonpath,var)) or
+  `extract(jsonpath)` (see above), we can fulfill all the 3 requirements with 1 `select` operation:
+  
+  ![](image/JSONexpression_03.png)
+
+  The last step utilizes the `select` operation to perform multiple JSONPath extraction (`jsonpaths`). The output
+  is as follows:
+  
+  ![](image/JSONexpression_04.png)
+  
+  Note that any extraction that results in a list of values, such will be enclosed between `[...]`
+
 - **`store(var)`** - save current JSON expression to a data variable.  If the specified `var` exists, its value will 
   be overwritten.  Using this operation, one can put an expression on pause and resume it at a later time.
 - **`text`** - transform a JSON document to its textual representation.  JSON object will be enclosed in `{...}`, 

@@ -91,6 +91,7 @@ Let's see how Nexial's `jsonpath` can be used to answer the first set of queri
 | How many JSON objects under `data2` has a property named as `qrs`? | Use [json &raquo; `storeCount(json,jsonpath,var)`](../commands/json/storeCount(json,jsonpath,var)) where `jsonpath` set as **`data2[qrs]`** or **`data2.qrs`**.|
 
 
+### Rules and Filters
 To generalize, Nexial's `jsonpath` follows these rules:
 1. **Use dot notation (`.`) to express hierarchy**.  For example, **`a.b.c.d`** means:
    - Under a JSON node `"a"`, look for a node named `"b"`,
@@ -166,11 +167,19 @@ Example:
 country[name=USA].state.population => sum
 ```
 
-The above to collect all the values of `population` of each states under USA and sum them up.
+The above sums up the `population` of each US states.
+
+Multiple functions can be specified by delimiting them with a space, in the order of intended operation. For example,
+```
+customer[state=California].last_name => distinct count
+```
+
+The above counts a distinct list of last name of the customers from California.
 
 
-
+### Thoughts...
 In the future, we might consider adopting JSONPath, such as <a href="https://github.com/json-path/JsonPath" 
 class="external-link" target="_nexial_external">https://github.com/json-path/JsonPath</a>, so 
 that we can provide more comprehensive JSON querying capability for more complex test scenarios. Stay tuned...
 
+Thoughts? Comments? Please kindly comment below.
