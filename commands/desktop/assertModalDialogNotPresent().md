@@ -7,14 +7,14 @@ comments: true
 ---
 
 ### Description
+This command is used to assert if the modal dialog box is not present.
 
-This command is used to assert if the modal dialogue box is not present.
 
 ### Parameters
+
 
 ### Example
 
 
 ### See Also
-
 -  [`assertModalDialogPresent()`](assertModalDialogPresent())

@@ -8,10 +8,12 @@ comments: true
 
 
 ### Description
-This command will save the meta data in the `file` as `var`. One can then query this `var` to further the desired 
+This command will save the meta data of the `file` as `var`. One can then query this `var` to further the desired 
 automation. The metadata information available are listed below. One would access them via the 
-`${variable_name}.meta_data_name` syntax. For example, `${filemeta}.[size]` will retrieve the byte size of the target 
+`${var}.meta_data_name` syntax. For example, `${var}.[size]` will retrieve the byte size of the target 
 `file`.
+
+If the specified `file` does not exist, Nexial will FAIL the corresponding step.
 
 #### Available Metadata
 - `[fullpath]` - the fully qualified path information of a file.
@@ -25,9 +27,8 @@ automation. The metadata information available are listed below. One would acces
 - `[isExecutable]` - `true` if the `file` in question is executable by the run-user that executes this Nexial 
   automation. Note that in some Windows OS, readable is equivalent as executable.
 - `[perm]` - a series of 3 boolean values to represent "readable", "writable" and "executable" of a file.
-- `[bytes]` - 
-- `[text]` - 
-
+- `[bytes]` - the file size.
+- `[text]` - the raw content of a file as text.
 
 
 ### Parameters

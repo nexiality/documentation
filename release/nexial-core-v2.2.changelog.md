@@ -15,7 +15,11 @@ comments: true
  
 #### Improvements
 - improved the handling of _crypt_ data variable during output generation.
-
+- enhance the display of execution output (Excel) to aid with readability (each row should now be a bit taller).
+- minor adjustment to the output of the _skipped_ steps where the corresponding "description" field is styled 
+  differently as a visual indication.
+- fixed code so that `${list}.[${index}]` syntax can be supported to access an item in a list data variable.
+- support "crypt" data entered directly into script.
 
 ### Project Inspector
 

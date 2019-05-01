@@ -7,18 +7,23 @@ comments: true
 ---
 
 ### Description
+This command instructs Nexial to clear the modal dialog box presently in display. Such desktop UI construct can often
+be seen as a way to inform its user or confirm user's intention, such as saving or transacting data.
 
-- This command is used to clear the Dialogue Box, that is popped up during working on any form. For e.g., the popups that comes after saving any form.
-- It will return the text displayed in the Dialogue Box.
+As a side effect to clearing the modal dialog box, this command will save the text found in such dialog box as `var`. 
+
+Note that Nexial assumes the modal design principle allows for only 1 modal dialog box. Hence it will handle only 1 such
+UI element, if such exists. Consequently, if dialog box does not exist, this command **WILL NOT** fail and no text will
+be saved to `var`.
+
 
 ### Parameters
+- **var** - the text displayed in the modal dialog box will be saved to this variable.
+- **button** - the button name to click in order to dismiss the dialog box.
 
-- **var** - the text displayed in the dialogue box will be saved to this variable.
-- **button** -  Button name on the Dialogue Box
 
 ### Example
 
 
 ### See Also
-
 -  [`saveModalDialogText(var)`](saveModalDialogText(var))
