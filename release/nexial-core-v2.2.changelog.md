@@ -24,6 +24,12 @@ comments: true
 ### Project Inspector
 
 
+### [Nexial Installer](https://github.com/nexiality/nexial-installer)
+- [v1.4.1](https://github.com/nexiality/nexial-installer/releases/tag/nexial-installer-v1.4.1) released: Added the 
+  setting of permission bits on shell scripts/batch files during installation. This would be most useful to 
+  *NIX/MacOSX users. Windows users wouldn't see any benefit in this case.
+
+
 ### System Variables
 
 
@@ -67,6 +73,8 @@ comments: true
 - [`assertElementsPresent(prefix)`](../commands/web/assertElementsPresent(prefix)): improved logging.
 - [`assertElementsPresent(prefix)`](../commands/web/assertElementsPresent(prefix)): fix runtime error when not all 
   the data variables under the same `prefix` has the `.locator` suffix.
+- [`waitForElementPresent(locator)`](../commands/web/waitForElementPresent(locator)): code fix to "wait" correctly and not exceed 
+  [`nexial.pollWaitMs`](../systemvars/index#nexial.pollWaitMs) value.
 
 
 ### [xml commands](../commands/xml)
