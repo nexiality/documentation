@@ -31,6 +31,9 @@ comments: true
 
 
 ### System Variables
+- [`nexial.scope.isLastIteration`]: is current iteration the last iteration for this script?
+- [`nexial.scope.isFirstIteration`]: is current iteration the first iteration for this script?
+- [`nexial.scope.currentIterationId`]: the iteration ID (corresponds to the column index on the datasheet) of current iteration.
 
 
 ### Nexial Expression
