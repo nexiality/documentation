@@ -1016,6 +1016,18 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
+            <a name="nexial.scope.currentIterationId"><code>nexial.scope.currentIterationId</code></a>
+        </td>
+        <td>integer</td>
+        <td>&nbsp;</td>
+        <td class="highlight-red">true</td>
+        <td>
+            The "id" of the iterations being executed. This is equivalent to the column position of the corresponding
+            iteration in the datasheet.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
             <a name="nexial.scope.lastIteration"><code>nexial.scope.lastIteration</code></a>
         </td>
         <td>integer</td>
@@ -1024,6 +1036,30 @@
         <td>
             The index (1-base) of the last completed iteration. This does not indicate whether the last iteration was
             completed with or without any failure.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.scope.isFirstIteration"><code>nexial.scope.isFirstIteration</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td class="highlight-red">true</td>
+        <td>
+            <code>true</code> to indicate that the current iteration is the first iteration of the corresponding
+            script.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.scope.isLastIteration"><code>nexial.scope.isLastIteration</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td class="highlight-red">true</td>
+        <td>
+            <code>true</code> to indicate that the current iteration is the last iteration of the corresponding
+            script.
         </td>
     </tr>
     <tr>
