@@ -33,7 +33,8 @@ comments: true
 ### System Variables
 - [`nexial.scope.isLastIteration`]: is current iteration the last iteration for this script?
 - [`nexial.scope.isFirstIteration`]: is current iteration the first iteration for this script?
-- [`nexial.scope.currentIterationId`]: the iteration ID (corresponds to the column index on the datasheet) of current iteration.
+- [`nexial.scope.currentIterationId`]: the iteration ID (corresponds to the column index on the datasheet) of current 
+  iteration.
 
 
 ### Nexial Expression
@@ -47,12 +48,15 @@ comments: true
 
 
 ### [base commands](../commands/base)
-- [base &raquo; `assertArrayNotContain(array,unexpected)`](../commands/base/assertArrayNotContain(array,unexpected)): 
+- [`assertArrayNotContain(array,unexpected)`](../commands/base/assertArrayNotContain(array,unexpected)): 
   now consider empty array as `SUCCESS`, since such array/list contains nothing.
+- [`macro(file,sheet,name)`](../commands/base/macro(file,sheet,name)): code update to support use of macro within 
+  repeat-until block.
 
 
 ### [csv commands](../commands/csv)
-- [CSV &raquo; `toExcel`](../commands/csv/toExcel): **NEW** command to export CSV content into new/existing Excel file.
+- [CSV &raquo; `toExcel`](../commands/csv/toExcel(csvFile,excel,worksheet,startCell)): **NEW** command to export CSV 
+  content into new/existing Excel file.
 
 
 ### [desktop commands](../commands/desktop)
@@ -60,7 +64,9 @@ comments: true
   command to enable clicking on an interactive element (such as textbox or toolbar) with custom `x` an `y` offsets.
 - [saveTextByLocator(var,locator)](../commands/desktop/saveTextByLocator(var,locator)): **NEW** command to save the
   text content of the specified locator to `var`.
-- [saveText(var,locator)](../commands/desktop/saveText(var,name)): now supports more element types.
+- [saveTextByLocator(var,locator)](../commands/desktop/saveTextByLocator(var,locator)): now supports more element types.
+- [saveText(var,name)](../commands/desktop/saveText(var,name)): no longer FAIL test step when no text is found in
+  specified desktop element. Instead Nexial will remove the specified `var` when no text is found.
 
 
 ### [io commands](../commands/io)
@@ -76,8 +82,8 @@ comments: true
 - [`assertElementsPresent(prefix)`](../commands/web/assertElementsPresent(prefix)): improved logging.
 - [`assertElementsPresent(prefix)`](../commands/web/assertElementsPresent(prefix)): fix runtime error when not all 
   the data variables under the same `prefix` has the `.locator` suffix.
-- [`waitForElementPresent(locator)`](../commands/web/waitForElementPresent(locator)): code fix to "wait" correctly and not exceed 
-  [`nexial.pollWaitMs`](../systemvars/index#nexial.pollWaitMs) value.
+- [`waitForElementPresent(locator)`](../commands/web/waitForElementPresent(locator)): code fix to "wait" correctly and 
+  not exceed [`nexial.pollWaitMs`](../systemvars/index#nexial.pollWaitMs) value.
 
 
 ### [xml commands](../commands/xml)

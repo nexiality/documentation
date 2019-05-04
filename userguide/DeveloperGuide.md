@@ -59,5 +59,28 @@ ul, ol, dl {
 <br/><br/>
 
 
-#### From `ExecutionThread`
-1. 
+#### From `ExecutionThread.run()`
+1. derived log directory based on `TestProject` instance (in `ExecutionDefinition` instance) and register it to logback
+2. set up an instance of `ExecutionSummary` for the `SCRIPT` execution level
+3. for each iteration specified to the current script:
+   1. create an instance of `ExecutionSummary` at the `ITERATION` execution level
+   2. prepare the script via `ExecutionInputPrep.prep()`:
+      1. determine output script file/path
+      2. copy input script to output
+      3. remove all unused (and unreferenced) worksheet from output script
+      4. run "macro merger":
+         1. scan through all the test steps in each scenario (of current script)
+         2. for each `base.macro()` command reference:
+            1. resolve macro file and macro sheet / can result in IOException due to file/sheet not found
+            2. if specified macro name is not found in resolved macro file/sheet, then no replacement will be done to 
+               the macro command in question.
+            3. for all the resolved macro steps, replace and expand the current test step (which has `base.macro()`)
+               - this will expand the current test step set.
+
+
+
+
+
+
+
+
