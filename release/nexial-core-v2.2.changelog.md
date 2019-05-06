@@ -45,6 +45,7 @@ comments: true
   textual sorting, depending on the target column data.
 - [EXCEL expression](../expressions/EXCELexpression) now accepts Excel files of any size.
 - [NUMBER expression](../expressions/NUMBERexpression) now supports numbers with currency symbol or thousand separators.
+- support the change of method parameter delimiter from the default `,` to the value of `nexial.textDelim`.
 
 
 ### [base commands](../commands/base)
