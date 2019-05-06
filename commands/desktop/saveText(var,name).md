@@ -7,9 +7,14 @@ comments: true
 ---
 
 ### Description
-- This command is to save text of the element into variable.
-- If there is a need to get the value of the field and need for validation for future reference or assertion then 
-this method can be used.
+This command instructs Nexial to save the text of the target element (denoted as `name`) into a variable named as `var`.
+
+Depending on the type of the target element, the capturing of "text" will differ:
+- if the target element is a dropdown (a.k.a. pick list), the selected option will be captured.
+- if the target element is a textbox or textarea (supports multi-line input), the current text input will be captured.
+- if the target element is a label or other non-interactable element, the current displayed text will be captured.
+
+If no text is found, the specified `var` will be removed to avoid any confusion.
 
 
 ### Parameters
