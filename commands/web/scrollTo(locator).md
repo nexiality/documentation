@@ -24,6 +24,11 @@ comments: true
 **Output**:<br/>
 ![](image/scrollTo_02.png)
 
-### See Also
 
+### See Also
+- [`assertScrollbarHNotPresent(locator)`](assertScrollbarHNotPresent(locator))
+- [`assertScrollbarHPresent(locator)`](assertScrollbarHPresent(locator))
+- [`scrollElement(locator,xOffset,yOffset)`](scrollElement(locator,xOffset,yOffset))
 - [`scrollLeft(locator,pixel)`](scrollLeft(locator,pixel))
+- [`scrollPage(xOffset,yOffset)`](scrollPage(xOffset,yOffset))
+- [`scrollRight(locator,pixel)`](scrollRight(locator,pixel))
