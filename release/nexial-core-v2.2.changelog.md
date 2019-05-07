@@ -12,6 +12,7 @@ comments: true
 
 ### General
 #### Fixes
+- code fix to support project.properties that contains key with multiple spaces.
  
 #### Improvements
 - improved the handling of _crypt_ data variable during output generation.
