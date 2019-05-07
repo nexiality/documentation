@@ -49,6 +49,12 @@ comments: true
 - support the change of method parameter delimiter from the default `,` to the value of `nexial.textDelim`.
 
 
+### Built-in Function
+- [`$(date|diff|date1|date2|precision)`](../functions/$(date)): **NEW** function to derive the date-level 
+  difference between 2 dates (assume in standard format, `MM/dd/yyyy HH:mm:ss`). Use `precision` to control the return 
+  value.
+
+
 ### [base commands](../commands/base)
 - [`assertArrayNotContain(array,unexpected)`](../commands/base/assertArrayNotContain(array,unexpected)): 
   now consider empty array as `SUCCESS`, since such array/list contains nothing.

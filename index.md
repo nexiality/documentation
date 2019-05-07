@@ -3,10 +3,25 @@ layout: default
 title: Nexial Automation
 ---
 
+<style>
+#nexial-automation { padding: 5px 0; margin-bottom: 35px; }
 
-## Nexial Automation
+.top-link { font-size: 9pt !important; margin-bottom: 20px; padding: 0 0 0 30px !important; vertical-align: middle; }
+.top-link a { background: none !important; color: #5d8540; font-weight: bold; }
+.top-link img { border: none; box-shadow: none !important; width: 32px; margin: 5px !important; vertical-align: bottom; }
+</style>
 
-#### Test Automation Platform for _Everyone_!
+<h2 id="nexial-automation">
+Nexial Automation
+<span class="top-link">
+<a href="https://github.com/nexiality/nexial-core/releases"><img src="image/download.png">Download</a> &nbsp;&nbsp;
+<a href="https://github.com/nexiality/nexial-core/"><img src="image/github.jpg">Fork to GitHub</a> &nbsp;&nbsp;
+<a href="http://localhost:4000/userguide/InstallingNexial"><img src="image/install-manual-icon.png">Installation Guide</a>
+</span>
+<br/>
+</h2>
+
+#### Test Automation Platform for _Everyone_! 
 
 <img src="image/logo-x.png" alt="Nexial" style="box-shadow:none"/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
