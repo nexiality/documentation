@@ -22,6 +22,7 @@ comments: true
 - fixed code so that `${list}.[${index}]` syntax can be supported to access an item in a list data variable.
 - support "crypt" data entered directly into script.
 
+
 ### Project Inspector
 
 
@@ -78,6 +79,12 @@ comments: true
 
 
 ### [io commands](../commands/io)
+
+
+### [localdb commands](../commands/localdb)
+- **NEW** command type to create, maintain and manipulate a local-only relational database. One can use such facility
+  to collect execution-bound data over multiple executions, or use the SQL capability to manipulate structured data set 
+  of any conceivable size.
 
 
 ### [rdbms commands](../commands/rdbms)
