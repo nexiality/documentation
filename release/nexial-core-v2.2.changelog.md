@@ -90,9 +90,9 @@ comments: true
 - [`waitForElementPresent(locator)`](../commands/web/waitForElementPresent(locator)): code fix to "wait" correctly and 
   not exceed [`nexial.pollWaitMs`](../systemvars/index#nexial.pollWaitMs) value.
 - [`scrollLeft(locator,pixel)`](../commands/web/scrollLeft(locator,pixel)): deprecated in favor of the new 
- [`scrollElement(locator,xOffset,yOffset)`] command
+  [`scrollElement(locator,xOffset,yOffset)`] command
 - [`scrollRight(locator,pixel)`](../commands/web/scrollRight(locator,pixel)): deprecated in favor of the new 
- [`scrollElement(locator,xOffset,yOffset)`] command
+  [`scrollElement(locator,xOffset,yOffset)`] command
 - [`scrollElement(locator,xOffset,yOffset)`](../commands/web/scrollElement(locator,xOffset,yOffset)): **NEW** command 
   to scroll left/right/top/bottom (relatively) on a web element.
 - [`scrollPage(xOffset,yOffset)`](../commands/web/scrollPage(xOffset,yOffset)): **NEW** command to scroll 

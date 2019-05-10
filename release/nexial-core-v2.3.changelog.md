@@ -14,6 +14,7 @@ comments: true
 #### Fixes
  
 #### Improvements
+- omit the creation of hyperlink on path longer than 254 characeter; Excel doesn't support long path.
 
 
 ### [Nexial Installer](https://github.com/nexiality/nexial-installer)
@@ -38,6 +39,11 @@ comments: true
 
 
 ### [localdb commands](../commands/localdb)
+
+
+### [io commands](../commands/io)
+- [`saveMatches(var,path,filePattern)`](../commands/io/saveMatches(var,path,filePattern)): now support muti-criteria 
+  filtering using Nexial Filter syntax on file `name`, `size` and `lastMod`.
 
 
 ### [web commands](../commands/web)
