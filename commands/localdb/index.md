@@ -75,6 +75,10 @@ database file will be created. Purging a database is also straightforward. Nexia
 [`purge(var)`](purge(var) - which simply delete the localdb database file. Addition, Nexial provides commands to 
 perform CRUD operations, data import/export to common structured data set such as JSON, XML, CSV, Excel.
 
+Nexial provides functional parity with the query result between `localdb` commands and `rdbms` commands. See 
+[Working with Execution Result](../../commands/rdbms/index.md#working-with-execution-result) in 
+[`rdbms`](../../commands/rdbms) page to understand what one can do with the query result.
+
 In addition to utilizing Nexial, one can manage the localdb database via a myriad of commercial and free database tools 
 that support SQLite (in alphabetical order):
 
