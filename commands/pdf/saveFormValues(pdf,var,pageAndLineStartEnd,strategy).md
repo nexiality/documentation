@@ -14,11 +14,11 @@ This command saves the form values from the pdf document and store the data in t
 
 
 ### Parameters
-- **pdf** \- the PDF file to validate
-- **var** \- variable name to store the form data
-- **pageAndLineStartEnd** \- identify the starting page number, start line and end line. All the three values to be 
+- **pdf** - the PDF file to validate
+- **var** - variable name to store the form data
+- **pageAndLineStartEnd** - identify the starting page number, start line and end line. All the three values to be 
   given with comma separated
-- **strategy** \- the strategy to read the pdf form. Following strategies are supported to read the data. 
+- **strategy** - the strategy to read the pdf form. Following strategies are supported to read the data. 
 
 |Strategy|Description|
 |---|---|

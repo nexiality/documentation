@@ -13,8 +13,8 @@ names will be saved as a list under the named specified by `var`.
 
 
 ### Parameters
-- **var** \- the variable name to save the matching data variable names.
-- **regex** \- the regular expression to find matching data variable names.
+- **var** - the variable name to save the matching data variable names.
+- **regex** - the regular expression to find matching data variable names.
 
 
 ### Example

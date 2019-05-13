@@ -12,8 +12,8 @@ This command asserts that `num1` is numerically the same or larger than `num2`.
 
 
 ### Parameters
-- **num1** \- number expected to be equal or greater than the second number
-- **num2** \- the second number
+- **num1** - number expected to be equal or greater than the second number
+- **num2** - the second number
 
 
 ### Example

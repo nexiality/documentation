@@ -14,7 +14,7 @@ criteria is described in `jsonpath`.
 
 ### Parameters
 - **json** - the JSON document or file
-- **jsonpath** \- the path to describe the JSON element (or the first element) in question
+- **jsonpath** - the path to describe the JSON element (or the first element) in question
 - **var** - the variable name to store the matching value (or the first matching one)
 
 

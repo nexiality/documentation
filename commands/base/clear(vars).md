@@ -40,7 +40,7 @@ This command is useful in the following scenarios:
 
 
 ### Parameters
-- **vars** \- one or more data variable to be cleared (removed), separated by [`nexial.textDelim`](../../systemvars/index#nexial.textDelim)
+- **vars** - one or more data variable to be cleared (removed), separated by [`nexial.textDelim`](../../systemvars/index#nexial.textDelim)
 
 
 ### Example

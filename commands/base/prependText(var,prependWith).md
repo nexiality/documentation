@@ -18,8 +18,8 @@ saved as text.
 
 
 ### Parameters
-- **var** \- the name of the variable who text value will be prepended
-- **prependWith** \- the text to add to the beginning of the textual value of `var`
+- **var** - the name of the variable who text value will be prepended
+- **prependWith** - the text to add to the beginning of the textual value of `var`
 
 
 ### Example

@@ -29,9 +29,9 @@ Notes:
 
 
 ### Parameters
-- **file** \- the full path of the file upon which the search-and replace routine will be performed.
-- **config** \- the full path of properties file (name/value pair) to use for the search-and-replace routine.
-- **saveAs** \- the full path of the file to save the resulting content.
+- **file** - the full path of the file upon which the search-and replace routine will be performed.
+- **config** - the full path of properties file (name/value pair) to use for the search-and-replace routine.
+- **saveAs** - the full path of the file to save the resulting content.
 
 
 ### Example

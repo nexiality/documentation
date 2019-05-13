@@ -26,4 +26,4 @@ be saved to `var`.
 
 
 ### See Also
--  [`saveModalDialogText(var)`](saveModalDialogText(var))
+- [`saveModalDialogText(var)`](saveModalDialogText(var))

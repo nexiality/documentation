@@ -18,7 +18,7 @@ After completing, press the `Enter` key to resume execution.
 
 
 ### Parameters
-- **instructions** \- The instructions/prompt to display when performing manual actions or tasks
+- **instructions** - The instructions/prompt to display when performing manual actions or tasks
 
 
 ### Example

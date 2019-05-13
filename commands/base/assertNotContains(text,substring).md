@@ -12,7 +12,7 @@ This command asserts that `text` does not contain `substring`.
 
 
 ### Parameters
-- **text** \- this parameter is the actual text
+- **text** - this parameter is the actual text
 - **substring** - the text not expected to be part of `text`
 
 

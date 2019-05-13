@@ -12,8 +12,8 @@ This command asserts the `value` of a cookie specified by `name`.
 
 
 ### Parameters
-- **name** \- the name of the cookie
-- **value** \- the expected value of the cookie.
+- **name** - the name of the cookie
+- **value** - the expected value of the cookie.
 
 
 ### Example

@@ -8,7 +8,7 @@ comments: true
 
 
 ### Description
-This command rename an existing file or directory to a different name (denoted by `newName`).  This command will
+This command rename an existing file or directory to a different name (denoted by `newName`). This command will
 fail if:
 1. The existing file or directory (`target`) does not exists or is inaccessible. 
 2. The new file or directory already exists.

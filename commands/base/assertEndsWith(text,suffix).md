@@ -13,8 +13,8 @@ equivalent (or empty), this command will consider as pass.
 
 
 ### Parameters
-- **text** \- the text to test on.
-- **suffix** \- the specified string of characters to be either the same or found in the end of `text` 
+- **text** - the text to test on.
+- **suffix** - the specified string of characters to be either the same or found in the end of `text` 
 
 
 ### Example

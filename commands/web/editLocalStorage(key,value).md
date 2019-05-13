@@ -12,7 +12,7 @@ comments: true
 
 - This command set (possibly overwrite) the current browser's local storage with the key-value specified.  
 - Existing key will be overwritten.  
-- With no value is specified - denoted as `(empty)` \- then the specified `key` will be removed from the local storage.
+- With no value is specified - denoted as `(empty)` - then the specified `key` will be removed from the local storage.
 
 ### Parameters
 

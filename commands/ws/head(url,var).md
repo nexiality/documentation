@@ -18,8 +18,8 @@ To learn about how to utilize the response returned from the target URL, click [
 
 
 ### Parameters
-- **url** \- the target URL
-- **var** \- the variable to hold the [response](index.html#http-response)
+- **url** - the target URL
+- **var** - the variable to hold the [response](index.html#http-response)
 
 
 ### Example

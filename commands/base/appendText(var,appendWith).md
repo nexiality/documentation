@@ -12,8 +12,8 @@ This command append text denoted by `appendWith` to the end of the text repres
 
 
 ### Parameters
-- **var** \- the variable whose text will be appended by `appendWith`
-- **appendWith** \- the text to append
+- **var** - the variable whose text will be appended by `appendWith`
+- **appendWith** - the text to append
 
 
 ### Example

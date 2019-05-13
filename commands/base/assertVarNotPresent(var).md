@@ -13,7 +13,7 @@ of the variable, not its value (i.e. not `${...}`).
 
 
 ### Parameters
-- **var** \- The name of the variable in question
+- **var** - The name of the variable in question
 
 
 ### Example

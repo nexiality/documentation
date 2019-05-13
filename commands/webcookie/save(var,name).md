@@ -13,7 +13,7 @@ This command saves the cookie (name, value, path, etc.) into variable.
 
 ### Parameters
 - **var** - the variable to store the cookie with name `name`.
-- **name** \- the name of the cookie to save.
+- **name** - the name of the cookie to save.
 
 
 ### Example

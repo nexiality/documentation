@@ -12,8 +12,8 @@ This command will assert if the contents of the files are identical.
 
 
 ### Parameters
-- **file1** \- This parameter is the full path along with file name.
-- **file2**  \- This parameter is the full path along with the file name.
+- **file1** - This parameter is the full path along with file name.
+- **file2**  - This parameter is the full path along with the file name.
 
 
 ### Example
@@ -25,4 +25,4 @@ This command will assert if the contents of the files are identical.
 
 
 ### See Also
--  [`assertNotEqual(file1,file2)`](assertNotEqual(file1,file2))
+- [`assertNotEqual(file1,file2)`](assertNotEqual(file1,file2))

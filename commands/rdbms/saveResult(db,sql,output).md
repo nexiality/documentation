@@ -9,9 +9,9 @@ comments: true
 
 ### Description
 This command is similar to [`runSQL(var,db,sql)`](runSQL(var,db,sql)), except that the query result is saved to 
-`output`.  The output will be in CSV format (comma to delimit fields, and `\n` to delimit record). This can be 
-extremely useful for file comparison or post-query processing dealing with CSV.  In addition to saving query output 
-to file, the metadata of the executed query is also saved to a JSON file corresponding to the specified `output`.  
+`output`. The output will be in CSV format (comma to delimit fields, and `\n` to delimit record). This can be 
+extremely useful for file comparison or post-query processing dealing with CSV. In addition to saving query output 
+to file, the metadata of the executed query is also saved to a JSON file corresponding to the specified `output`. 
 For example,<br/>
 ![](image/saveResult_01.png)
 
@@ -24,8 +24,8 @@ records):<br/>
 
 
 #### Query Metadata
-The content of the query metadata differs by the query specified.  In general, it contains the 
-[`Execution Result`](index) but without the dataset.  For example, the screenshot shows one such JSON containing:
+The content of the query metadata differs by the query specified. In general, it contains the 
+[`Execution Result`](index) but without the dataset. For example, the screenshot shows one such JSON containing:
 
 1. column names
 2. the sql that was executed
@@ -36,16 +36,14 @@ The content of the query metadata differs by the query specified.  In general, 
 ![](image/saveResult_03.png)
 
 
-
 ### Parameters
-- **db** \- the profile from which defines the [`database connectivity details`](index).
-- **sql** \- the query to execute.  Note that if this query does not result in any dataset (such as a UPDATE or 
+- **db** - the profile from which defines the [`database connectivity details`](index).
+- **sql** - the query to execute. Note that if this query does not result in any dataset (such as a UPDATE or 
   INSERT query), then only the result metadata file (JSON) will be generated.
 - **output** - the target file to save the resulting dataset.
 
 
 ### Example
-
 ![](image/saveResult_04.png)
 
 

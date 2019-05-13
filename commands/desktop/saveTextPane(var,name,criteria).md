@@ -18,7 +18,7 @@ In any case, this command is designed to assist you in the interaction with such
 For criteria, here are the possible options:
 
 - **`stopOnMatch`** - if `true`, Nexial will stop further scanning upon the first match.  Use this to improve speed, and when you only want to the first row that matches your criteria.
-- **`contains`** \- search for the row with text that contains `contains`. **`regex` ALWAYS TAKES PRECEDENCE**, so `contains` is disabled when '`regex`' is specified.
+- **`contains`** - search for the row with text that contains `contains`. **`regex` ALWAYS TAKES PRECEDENCE**, so `contains` is disabled when '`regex`' is specified.
 - **`limitMatch`** - if `true`, then only match the characters specified in `contains`. **APPLICABLE ONLY WHEN 'contains' IS SPECIFIED**. Use this to improve speed, but only when the exact text is not important.
 - **`regex`** - specify the regex to match by; takes precedence over "contains" match.
 - **`stopOnEmptyText`** - if `true`, Nexial will stop further scanning when a blank/empty row is found.  Recommend to always set this criteria as true unless finding all the empty rows in a `TextPane` is important. 

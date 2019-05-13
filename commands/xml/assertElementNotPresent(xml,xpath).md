@@ -13,7 +13,7 @@ This command is used to assert that the element is not present in the given xpat
 
 ### Parameters
 - **xml** - the XML content or file
-- **xpath** \- the xpath that describes the element that MUST NOT exists in `xml`
+- **xpath** - the xpath that describes the element that MUST NOT exists in `xml`
 
 
 ### Example

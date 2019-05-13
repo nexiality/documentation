@@ -14,9 +14,9 @@ To learn about how to utilize the response returned from the target URL, click [
 
 
 ### Parameters
-- **url** \- the target URL
-- **queryString** \- query string for the specified URL.  Use `(empty)` to indicate no query string to send
-- **var** \- the variable to hold the [response](index.html#http-response)
+- **url** - the target URL
+- **queryString** - query string for the specified URL.  Use `(empty)` to indicate no query string to send
+- **var** - the variable to hold the [response](index.html#http-response)
 
 
 ### Example

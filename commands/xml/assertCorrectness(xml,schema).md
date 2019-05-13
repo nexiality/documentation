@@ -11,7 +11,7 @@ This command is used to assert the correctness of the xml against the given sche
 
 ### Parameters
 - **xml** - the XML content or file
-- **schema** \- the schema definition (xsd) file to validate against specified `xml`
+- **schema** - the schema definition (xsd) file to validate against specified `xml`
 
 
 ### Example

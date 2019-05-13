@@ -13,7 +13,7 @@ The unit pass the result will be pass or else fail otherwise.
 
 
 ### Parameters
-- **className** \- this parameter is the name of the unit test class name
+- **className** - this parameter is the name of the unit test class name
 
 
 ### Example

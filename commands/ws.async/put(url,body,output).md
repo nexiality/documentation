@@ -17,9 +17,9 @@ This command sends a HTTP PUT request to the given `url` with the given request 
 
 
 ### Parameters
-- **url** \- the target URL
-- **body** \- the payload to send, or `(empty)` if none is to be send
-- **output** \- the file to save the [request and response information](index.html#http-response)
+- **url** - the target URL
+- **body** - the payload to send, or `(empty)` if none is to be send
+- **output** - the file to save the [request and response information](index.html#http-response)
 
 
 ### See Also

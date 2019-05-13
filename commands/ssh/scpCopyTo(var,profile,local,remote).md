@@ -12,10 +12,10 @@ This command SCP a `local` file (fully qualified) to a `remote` file (fully 
 
 
 ### Parameters
-- **var** \- the variable name that references the outcome of this command.
-- **profile** \- the profile that encapsulates the SSH connectivity and security information.
-- **remote** \- the pattern which specifies the folder, file or a pattern of files.
-- **local** \- the directory from which the files should be copied.
+- **var** - the variable name that references the outcome of this command.
+- **profile** - the profile that encapsulates the SSH connectivity and security information.
+- **remote** - the pattern which specifies the folder, file or a pattern of files.
+- **local** - the directory from which the files should be copied.
 
 
 ### Example

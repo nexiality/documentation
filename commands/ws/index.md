@@ -6,13 +6,13 @@ comments: true
 ---
 
 
-`ws` is short for Web Service. For Nexial, this refers to any form of HTTP-based web services (i.e. REST, SOAP, etc.).  
+`ws` is short for Web Service. For Nexial, this refers to any form of HTTP-based web services (i.e. REST, SOAP, etc.). 
 This set of commands provides a set of web service related interactions and validations. The specific of each 
-commands are documented in the designated pages (below).  However there are a few common things to note:
+commands are documented in the designated pages (below). However there are a few common things to note:
 
 ##### [ws &nbsp; `header(name,value)`](header(name,value))
-1. This command affects all subsequent `ws` commands.  The main purpose of this command is to prepare or set up 
-   HTTP header for the web service calls to be invoked.  Hence one can create a series of HTTP header, for example:
+1. This command affects all subsequent `ws` commands. The main purpose of this command is to prepare or set up 
+   HTTP header for the web service calls to be invoked. Hence one can create a series of HTTP header, for example:
    ![](./image/index_01.png)
 
 ##### HTTP Response

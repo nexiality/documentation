@@ -10,7 +10,7 @@ comments: true
 
 **See [`saveTextPane(var,name,criteria)`](saveTextPane(var,name,criteria)) for more details about TextPane and the use of criteria**.
 
-This command clicks on a row of a TextPane from the previously performed [`saveTextPane(var,name,criteria)`](saveTextPane(var,name,criteria)) result, along with the specified index.  If  the result denoted by var only has 1 value, index can be specified as 0.
+This command clicks on a row of a TextPane from the previously performed [`saveTextPane(var,name,criteria)`](saveTextPane(var,name,criteria)) result, along with the specified index. If the result denoted by var only has 1 value, index can be specified as 0.
 
 ### Parameters
 

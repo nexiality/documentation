@@ -12,7 +12,7 @@ This command asserts that cookie with the specified `name` exist for the current
 
 
 ### Parameters
-- **name** \- the cookie name to validate
+- **name** - the cookie name to validate
 
 
 ### Example

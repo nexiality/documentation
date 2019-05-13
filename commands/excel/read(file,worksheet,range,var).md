@@ -14,9 +14,9 @@ and will be saved in the given variable.
 
 ### Parameters
 - **file** - the Excel file to read from
-- **worksheet** \- name of the worksheet to read from
-- **range** \- range of cells to read from, separated by **:**
-- **var** \- variable name to store the cell values read from specified `file`, `worksheet` and `range`.
+- **worksheet** - name of the worksheet to read from
+- **range** - range of cells to read from, separated by **:**
+- **var** - variable name to store the cell values read from specified `file`, `worksheet` and `range`.
 
 
 ### Example

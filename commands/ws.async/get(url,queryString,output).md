@@ -15,9 +15,9 @@ This command sends a GET request to the specified `url`. The response will be sa
 manipulate the response returned from the target URL, visit [HTTP Response](index#http-response).
 
 ### Parameters
-- **url** \- the target URL
-- **queryString** \- query string for the specified URL. Use `(empty)` to indicate no query string to send
-- **output** \- the file to save the [request and response information](index.html#http-response)
+- **url** - the target URL
+- **queryString** - query string for the specified URL. Use `(empty)` to indicate no query string to send
+- **output** - the file to save the [request and response information](index.html#http-response)
 
 
 ### See Also

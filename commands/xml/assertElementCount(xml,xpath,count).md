@@ -13,8 +13,8 @@ This command is used to assert the number of total elements that comes under giv
 
 ### Parameters
 - **xml** - the XML content or file
-- **xpath** \- the xpath that describes the target element(s)
-- **count** \- the expected number of elements matching the specified `xpath`
+- **xpath** - the xpath that describes the target element(s)
+- **count** - the expected number of elements matching the specified `xpath`
 
 
 ### Example

@@ -21,10 +21,10 @@ Having subdirectories inside the directory may give incorrect results.
 
 
 ### Parameters
-- **var** \- the variable name to represent the outcome of this command.
-- **profile** \- the [profile](index#s3profile) added in the data file which contains AWS credentials and connectivity.
-- **local** \- the pattern which specifies the directory, file or a pattern of files.
-- **target**\- the bucket or the bucket folder where to copy the files.
+- **var** - the variable name to represent the outcome of this command.
+- **profile** - the [profile](index#s3profile) added in the data file which contains AWS credentials and connectivity.
+- **local** - the pattern which specifies the directory, file or a pattern of files.
+- **target** - the bucket or the bucket folder where to copy the files.
 
 
 ### Example

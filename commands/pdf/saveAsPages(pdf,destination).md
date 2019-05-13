@@ -13,8 +13,8 @@ a seperated text file in `destination`.
 
 
 ### Parameters
-- **pdf** \- the PDF file to process
-- **destination** \- destination path where the text will be stored
+- **pdf** - the PDF file to process
+- **destination** - destination path where the text will be stored
 
 
 ### Example

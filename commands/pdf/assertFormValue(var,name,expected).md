@@ -14,9 +14,9 @@ This command asserts the form value in the pdf document is as `expected`.
 
 
 ### Parameters
-- **var** \- the variable that stores previously parsed PDF form data
+- **var** - the variable that stores previously parsed PDF form data
 - **name** - the name of the form element to validate
-- **expected** \- the expected value of that form element
+- **expected** - the expected value of that form element
 
 
 ### Example

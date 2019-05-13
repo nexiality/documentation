@@ -18,7 +18,7 @@ via [`nexial.external.output`](../../systemvars/index#nexial.external.output) Sy
 
 
 ### Parameters
-- **programPathAndParams** \- this parameter is the path along with the name of the exe file to be launched
+- **programPathAndParams** - this parameter is the path along with the name of the exe file to be launched
 
 
 ### Example 1

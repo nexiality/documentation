@@ -13,7 +13,7 @@ retrieval of dialog text is not possible, this command will FAIL.
 
 
 ### Parameters
-- **var** \- this parameter is the variable for the text to be stored.
+- **var** - this parameter is the variable for the text to be stored.
 
 
 ### Example

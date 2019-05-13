@@ -50,7 +50,7 @@ comments: true
 
 - This key determines if Nexial should terminate any existing instance of AUT before starting the test automation.
 - At times, it is useful to keep the same instance of AUT running (therefore set **terminatingExisting** to **false**) in order to run a possibly long test script midway.
-- At times, however, it is necessary to (re)start AUT each time when the test script runs (therefore set **terminatingExisting** to **true**) \- esp. when running as part of CI/CD.
+- At times, however, it is necessary to (re)start AUT each time when the test script runs (therefore set **terminatingExisting** to **true**) - esp. when running as part of CI/CD.
 - The default is **false**.
 
 - **workingDirectory:**

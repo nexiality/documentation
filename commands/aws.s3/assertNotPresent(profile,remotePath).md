@@ -13,8 +13,8 @@ Check [here](index#s3profile) for more information regarding `profile`.
 
 
 ### Parameters
-- **profile** \- the [profile](index#s3profile) added in the data file which contains AWS credentials and connectivity
-- **remotePath** \- the pattern which specifies the folder, file or a pattern of files.
+- **profile** - the [profile](index#s3profile) added in the data file which contains AWS credentials and connectivity
+- **remotePath** - the pattern which specifies the folder, file or a pattern of files.
 
 
 ### Example

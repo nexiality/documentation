@@ -13,8 +13,8 @@ This command calculates the average of a series of numbers represented by `array
 
 
 ### Parameters
-- **var** \- the variable to store the average
-- **array** \- the array of numbers for which average need to be calculated
+- **var** - the variable to store the average
+- **array** - the array of numbers for which average need to be calculated
 
 
 ### Example

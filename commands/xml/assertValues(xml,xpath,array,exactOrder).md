@@ -14,7 +14,7 @@ This command is used to assert the values of the xml elements are in the exact o
 ### Parameters
 - **xml** - the XML content or file
 - **xpath** - the xpath to extract value of interested XML elements
-- **array** \- the expected list of values
+- **array** - the expected list of values
 - **exactOrder** - `true` if the extracted values (via `xpath`) is expected to be in the same order as `array`
 
 

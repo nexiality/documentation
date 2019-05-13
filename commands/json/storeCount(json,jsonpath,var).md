@@ -13,8 +13,8 @@ This command stores the number of elements in `json` that match the specified `j
 
 ### Parameters
 - **json** - the JSON document or file
-- **jsonpath** \- the path to describe the JSON element (or the first element) in question
-- **var** \- the variable name to store matching count
+- **jsonpath** - the path to describe the JSON element (or the first element) in question
+- **var** - the variable name to store matching count
 
 
 ### Example

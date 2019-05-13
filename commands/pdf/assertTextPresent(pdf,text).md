@@ -12,8 +12,8 @@ This command asserts the given text is present in `pdf`.
 
 
 ### Parameters
-- **pdf** \- the PDF file to validate
-- **text** \- the text expected to be found in `pdf`
+- **pdf** - the PDF file to validate
+- **text** - the text expected to be found in `pdf`
 
 
 ### Example

@@ -20,8 +20,8 @@ manipulate the response returned from the target URL, visit [HTTP Response](inde
 
 
 ### Parameters
-- **url** \- the target URL
-- **output** \- the file to save the [request and response information](index.html#http-response)
+- **url** - the target URL
+- **output** - the file to save the [request and response information](index.html#http-response)
 
 
 ### See Also

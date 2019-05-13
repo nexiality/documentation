@@ -20,3 +20,4 @@ current execution. In actuality, Nexial simply delete the associated database fi
 
 
 ### See Also
+- [localdb commands](index#available-commands)

@@ -17,10 +17,9 @@ visit [HTTP Response](index#http-response).
 
 
 ### Parameters
-- **url** \- the target URL
-- **body** \- the payload to be sent to target endpoint.  If not required, use `(empty)` to denote no payload to 
-  be sent.
-- **output** \- the file to save the [request and response information](index.html#http-response)
+- **url** - the target URL.
+- **body** - the payload to be sent to target endpoint. If not required, use `(empty)` to denote no payload to be sent.
+- **output** - the file to save the [request and response information](index.html#http-response)
 
 
 ### See Also

@@ -17,4 +17,4 @@ This command is used to assert if the modal dialog box is not present.
 
 
 ### See Also
--  [`assertModalDialogPresent()`](assertModalDialogPresent())
+- [`assertModalDialogPresent()`](assertModalDialogPresent())

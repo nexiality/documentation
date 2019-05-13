@@ -15,8 +15,8 @@ For more information about HTTP status codes, refer to 
 
 
 ### Parameters
-- **var** \- the variable to hold the [response](index.html#http-response) of a completed request
-- **returnCode** \- this is the HTTP Response code (e.g., 200, 500..)
+- **var** - the variable to hold the [response](index.html#http-response) of a completed request
+- **returnCode** - this is the HTTP Response code (e.g., 200, 500..)
 
 
 ### Example

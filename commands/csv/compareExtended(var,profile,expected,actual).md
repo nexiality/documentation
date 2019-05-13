@@ -22,10 +22,10 @@ following strategies:
 - Ability to create reusable configuration for comparison
 
 This command takes 4 parameters:
-- `var` \- the variable to reference the comparison result (see below for possible data extraction)
-- `profile` \- the reference to the configuration of this comparison
-- `expected` \- the file or CSV content that represents the expected content
-- `actual` \- the file or CSV content that represents the actual content
+- `var` - the variable to reference the comparison result (see below for possible data extraction)
+- `profile` - the reference to the configuration of this comparison
+- `expected` - the file or CSV content that represents the expected content
+- `actual` - the file or CSV content that represents the actual content
 
 It is important to note that the `expected` is treated as the "baseline" - meaning, the subject to compare against.  
 In comparison, the `actual` is the "variant", so as speak. 

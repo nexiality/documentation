@@ -16,9 +16,9 @@ been given to MS Office documents so that the working documents (such as `~myFi
 
 
 ### Parameters
-- **var** \- the variable to store the matches
-- **path** \- the target path to be searched.  Note that this command does not search recursively
-- **filePattern** \- the file pattern to match.  To activate regular expression, prefix this parameter with 
+- **var** - the variable to store the matches
+- **path** - the target path to be searched.  Note that this command does not search recursively
+- **filePattern** - the file pattern to match.  To activate regular expression, prefix this parameter with 
   **`REGEX:`**.  For example, `*.json`, `project*.xlsx`, `REGEX:a.{2,5}\-\d{4}\.txt`. 
 
 

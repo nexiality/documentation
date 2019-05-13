@@ -16,8 +16,8 @@ The comparison uses [`nexial.imageTolerance`](../../systemvars/index#nexial.ima
 comparison.
 
 ### Parameters
-- **baseline** \- the full path of the expected image to compare.
-- **actual** \- the full path of the actual image file to compare.
+- **baseline** - the full path of the expected image to compare.
+- **actual** - the full path of the actual image file to compare.
 
 
 ### Example

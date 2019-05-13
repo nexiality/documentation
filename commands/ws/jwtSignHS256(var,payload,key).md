@@ -22,8 +22,8 @@ or a public/private key pair using **RSA**.<br/>
 
 ### Parameters
 - **var** - this parameter is used to assign the returned value.
-- **payload** \- this parameter is the json payload.
-- **key** \- this parameter is the secret key (digital signature key).
+- **payload** - this parameter is the json payload.
+- **key** - this parameter is the secret key (digital signature key).
 
 
 ### Example

@@ -13,8 +13,8 @@ ensure no duplicate contents between files.
 
 
 ### Parameters
-- **file1** \- This parameter is the full path along with file name.
-- **file2**  \- This parameter is the full path along with the file name.
+- **file1** - This parameter is the full path along with file name.
+- **file2**  - This parameter is the full path along with the file name.
 
 
 ### Example

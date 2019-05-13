@@ -17,7 +17,7 @@ application under test.
 
 
 ### Parameters
-- **prompt** \- The prompt to display on console.
+- **prompt** - The prompt to display on console.
 
 
 ### Example

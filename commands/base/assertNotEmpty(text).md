@@ -12,7 +12,7 @@ This command asserts that `text` is not empty - in other word, `text` contains a
 
 
 ### Parameters
-- **text** \- the text that is expected NOT to be empty.
+- **text** - the text that is expected NOT to be empty.
 
 
 ### Example

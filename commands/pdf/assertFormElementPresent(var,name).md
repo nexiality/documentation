@@ -14,8 +14,8 @@ This command asserts the form element is present in the pdf document.
 
 
 ### Parameters
-- **var** \- the variable that stores previously parsed PDF form data
-- **name** \- the form element name to check
+- **var** - the variable that stores previously parsed PDF form data
+- **name** - the form element name to check
 
 
 ### Example

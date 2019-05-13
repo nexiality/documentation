@@ -19,9 +19,9 @@ reached, and message is received, then `var` will be removed from current exec
 
 
 ### Parameters
-- **var** \- the variable to hold the received message
-- **config** \- the configuration specified for the target message destination
-- **waitMs** \- the number of milliseconds to wait before giving up on receiving message from the target message 
+- **var** - the variable to hold the received message
+- **config** - the configuration specified for the target message destination
+- **waitMs** - the number of milliseconds to wait before giving up on receiving message from the target message 
   destination.  Use `-1` or `empty` to signify willing to wait _forever_.
 
 

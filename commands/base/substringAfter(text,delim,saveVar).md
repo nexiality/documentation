@@ -15,9 +15,9 @@ specified via `saveVar`. For example,
 
 
 ### Parameters
-- **text** \- the text to extract from.  Variable expansion is supported via the `${...}` syntax
-- **delim** \- the delimiter to consider, only the first occurrence will be in effect
-- **saveVar** \- the name of the variable to save the substring
+- **text** - the text to extract from. Variable expansion is supported via the `${...}` syntax
+- **delim** - the delimiter to consider, only the first occurrence will be in effect
+- **saveVar** - the name of the variable to save the substring
 
 
 ### Example

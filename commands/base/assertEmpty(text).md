@@ -13,7 +13,7 @@ This command assert if `text` is empty.  It is considered FAIL if `text` is not 
 
 
 ### Parameters
-- **text** \- this parameter is the text to be asserted.
+- **text** - this parameter is the text to be asserted.
 
 
 ### Example

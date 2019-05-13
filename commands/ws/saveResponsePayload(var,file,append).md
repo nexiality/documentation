@@ -12,9 +12,9 @@ This command saves the response payload to a `file`.  Optionally one can append 
 
 
 ### Parameters
-- **var** \- the variable to hold the [response](index.html#http-response)
-- **file** \- this parameter is the path of the file where the response data is intended to save
-- **append** \- `true` if payload data should be appended to the file.
+- **var** - the variable to hold the [response](index.html#http-response)
+- **file** - this parameter is the path of the file where the response data is intended to save
+- **append** - `true` if payload data should be appended to the file.
 
 
 ### Example

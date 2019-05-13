@@ -28,7 +28,7 @@ Currently Nexial provides 3 approaches to increment:
 
 
 ### Parameters
-- **var** \- the data variable whose value is to be incremented  
+- **var** - the data variable whose value is to be incremented  
 - **amount** - the amount of increment to perform
 - **config** - the increment strategy (above) to apply: `ALPHANUM`, `UPPER` or `LOWER`
 

@@ -13,8 +13,8 @@ same as `prefix`, similarly with both `text` and `prefix` are empty.
 
 
 ### Parameters
-- **text** \- the text to be checked
-- **prefix** \- the text that should be in the beginning of `text` or the same as `text`.
+- **text** - the text to be checked
+- **prefix** - the text that should be in the beginning of `text` or the same as `text`.
 
 
 ### Example

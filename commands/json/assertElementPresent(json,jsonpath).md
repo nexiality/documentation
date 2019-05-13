@@ -13,7 +13,7 @@ This command asserts the JSON element as described via `jsonpath` is present in 
 
 ### Parameters
 - **json** - JSON content or file
-- **jsonpath** \- the path to the JSON element in question
+- **jsonpath** - the path to the JSON element in question
 
 
 ### Example

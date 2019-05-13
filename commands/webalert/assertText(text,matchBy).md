@@ -21,8 +21,8 @@ command is executed.
 
 
 ### Parameters
-- **text** \- this parameter is the actual text to be asserted.
-- **matchBy** \- this parameter is to define how the text need to be asserted.
+- **text** - this parameter is the actual text to be asserted.
+- **matchBy** - this parameter is to define how the text need to be asserted.
 
 
 ### Example

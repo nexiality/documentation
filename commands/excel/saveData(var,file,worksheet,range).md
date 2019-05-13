@@ -16,8 +16,8 @@ variable.  The data is stored as a list, where its individual item can be retrie
 ### Parameters
 - **var** - this parameter is used to save the returned value
 - **file** -  this parameter is the source file path
-- **worksheet** \- this parameter is the name of the excel sheet
-- **range** \- this parameter is the range of the cells from which data is to be read. Cell range is to be given
+- **worksheet** - this parameter is the name of the excel sheet
+- **range** - this parameter is the range of the cells from which data is to be read. Cell range is to be given
   in the common Excel address format of **`<Start Cell>:<End Cell>`**.
 
 

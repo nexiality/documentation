@@ -16,10 +16,10 @@ This command is similar as **_post(url,payload,var)_** command. But with soapA
 
 
 ### Parameters
-- **action** \- this parameter is the soapAction url
-- **url** \- the target URL
-- **payload** \- the request payload, or `(empty)` if none required
-- **var** \- the variable to hold the [response](index.html#http-response)
+- **action** - this parameter is the soapAction url
+- **url** - the target URL
+- **payload** - the request payload, or `(empty)` if none required
+- **var** - the variable to hold the [response](index.html#http-response)
 
 
 ### Example

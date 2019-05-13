@@ -14,8 +14,8 @@ This command moves the files from one location to other. The user need to provid
 
 
 ### Parameters
-- **source** \- the source location of the file to be moved
-- **target** \- the target location to move to
+- **source** - the source location of the file to be moved
+- **target** - the target location to move to
 
 
 ### Example

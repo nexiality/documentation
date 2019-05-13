@@ -12,8 +12,8 @@ This command saves the `pdf` content as text file.
 
 
 ### Parameters
-- **pdf** \- the PDF file to process
-- **destination** \- destination path where text to be saved
+- **pdf** - the PDF file to process
+- **destination** - destination path where text to be saved
 
 
 ### Example

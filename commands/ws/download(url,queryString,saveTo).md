@@ -13,9 +13,9 @@ In the given example downloading the image from web using web service url.
 
 
 ### Parameters
-- **url** \- the target URL
-- **queryString** \- query string for the specified URL.  Use `(empty)` to indicate no query string to send
-- **saveTo** \- the location to save the downloaded file
+- **url** - the target URL
+- **queryString** - query string for the specified URL.  Use `(empty)` to indicate no query string to send
+- **saveTo** - the location to save the downloaded file
 
 
 ### Example

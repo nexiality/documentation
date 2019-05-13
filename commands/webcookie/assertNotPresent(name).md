@@ -12,7 +12,7 @@ This command asserts that the specified cookie is not present for current URL.
 
 
 ### Parameters
-- **name** \- the cookie name to assert
+- **name** - the cookie name to assert
 
 
 ### Example

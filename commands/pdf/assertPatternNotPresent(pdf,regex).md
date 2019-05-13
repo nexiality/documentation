@@ -12,8 +12,8 @@ This command asserts the given text pattern (`regex`) is **NOT** present in `pdf
 
 
 ### Parameters
-- **pdf** \- the PDF file to validate
-- **regex** \- regular expression to validate if `pdf` DOES NOT contains expected text pattern
+- **pdf** - the PDF file to validate
+- **regex** - regular expression to validate if `pdf` DOES NOT contains expected text pattern
 
 
 ### Example

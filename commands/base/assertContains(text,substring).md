@@ -13,8 +13,8 @@ either in the beginning, the ending or the middle of `text`.
 
 
 ### Parameters
-- **text** \- the text to be tested
-- **substring** \- the string of characters that should exist within `text`
+- **text** - the text to be tested
+- **substring** - the string of characters that should exist within `text`
 
 
 ### Example

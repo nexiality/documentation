@@ -13,8 +13,8 @@ This command is used to assert the value of the element at the given xpath in th
 
 ### Parameters
 - **xml** - the XML content or file
-- **xpath** \- the xpath to extract value of target element
-- **expected** \- the expected value
+- **xpath** - the xpath to extract value of target element
+- **expected** - the expected value
 
 
 ### Example

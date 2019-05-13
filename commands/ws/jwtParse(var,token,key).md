@@ -12,9 +12,9 @@ This command parses the JWT Token to get the payload with provided digitally sig
 
 
 ### Parameters
-- **var** \- the data variable to hold the parsed JWT Token
-- **token** \- the JWT Token for the content that is to parsed
-- **key** \- JWT secret key
+- **var** - the data variable to hold the parsed JWT Token
+- **token** - the JWT Token for the content that is to parsed
+- **key** - JWT secret key
 
 
 ### Example

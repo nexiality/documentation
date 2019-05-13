@@ -24,8 +24,8 @@ body. Last, the `to` parameter represent the email recipient(s), each separated 
   connectivity.
 - **to** - one or more recipients to receive this email. Multiple addresses are separated by 
   [`nexial.textDelim`](../../systemvars/index#nexial.textDelim).
-- **subject** - the email subject line.  All recipients will receive the same email subject line.
-- **body** - the email body which all recipients will receive.  The content is assumed as HTML.  Also, it is 
+- **subject** - the email subject line. All recipients will receive the same email subject line.
+- **body** - the email body which all recipients will receive.  The content is assumed as HTML. Also, it is 
   possible to use the **[`$(projectfile)`](../../functions/$(projectfile))** built-in variable to pull in email 
   content from a file. Token replacement will be in effect.
 

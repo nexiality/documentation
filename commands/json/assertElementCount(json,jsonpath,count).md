@@ -13,8 +13,8 @@ This command asserts the number of elements in `json` that match the specified `
 
 ### Parameters
 - **json** - the JSON content or JSON file to validate for correctness
-- **jsonpath** \- the jsonpath to reference JSON element of interest (Refer below example for syntax usage)
-- **count** \- the expected count
+- **jsonpath** - the jsonpath to reference JSON element of interest (Refer below example for syntax usage)
+- **count** - the expected count
 
 
 ### Example

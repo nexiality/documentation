@@ -25,7 +25,7 @@ Each field value in the record will go through basic validations:
    * `Blank` - blank
    * `Person Name`
       * common data type for `First Name` and `Last Name`.
-      * accepts at least one or more characters and can be combined with a `space`, `comma`, `dot`, `hyphen` or `apostrophe`.  
+      * accepts at least one or more characters and can be combined with a `space`, `comma`, `dot`, `hyphen` or `apostrophe`.
       * you can also use `First Name` for **First Name** and `Last Name` for **Last Name** to be more specific.
    * `Regex` - syntax `REGEX:<pattern>`
    * `Any` - any <a href="https://en.wikipedia.org/wiki/ASCII#Printable_characters" class="external-link" target="_nexial_link">ASCII printable characters</a>
@@ -78,7 +78,7 @@ statement.
 Map Functions are to apply below functions on all the records on a field and get the value. Which could be later used 
 to validate against any another field in any record. 
 1. `COUNT` - count to calculate the total count of the fields present
-2. `MIN` -  to calculate the MIN amount
+2. `MIN` - to calculate the MIN amount
 3. `MAX` - to calculate the MAX amount
 4. `AGGREGATE` - to calculate the aggregate amount
 5. `AVERAGE` - to calculate the average amount

@@ -18,9 +18,9 @@ enforced in `pdf` content.
 
 
 ### Parameters
-- **pdf** \- the PDF file to validate
-- **textArray** \- the expected list of text
-- **ordered** \- `true` if the order of `textArray` must be present in `pdf` in the same order
+- **pdf** - the PDF file to validate
+- **textArray** - the expected list of text
+- **ordered** - `true` if the order of `textArray` must be present in `pdf` in the same order
 
 
 ### Example

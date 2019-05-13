@@ -13,10 +13,10 @@ This command asserts the array of values in the form are present and in the same
 
 
 ### Parameters
-- **var** \- the variable that stores previously parsed PDF form data
+- **var** - the variable that stores previously parsed PDF form data
 - **name** - the name of the form element to validate
-- **expectedValues** \- expected values
-- **exactOrder** \- `true` if the referenced form values should match the exact order of `expectedValues`.
+- **expectedValues** - expected values
+- **exactOrder** - `true` if the referenced form values should match the exact order of `expectedValues`.
 
 
 ### See Also

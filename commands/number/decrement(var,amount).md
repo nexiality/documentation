@@ -13,8 +13,8 @@ This command decrements the number represented by `var`.  If `var` is not found,
 
 
 ### Parameters
-- **var** \- the variable to increment
-- **amount** \- the amount to increment
+- **var** - the variable to increment
+- **amount** - the amount to increment
 
 
 ### Example

@@ -12,7 +12,7 @@ This command deletes the specified cookie by `name`.
 
 
 ### Parameters
-- **name** \- the name of the cookie to be deleted.
+- **name** - the name of the cookie to be deleted.
 
 
 ### Example

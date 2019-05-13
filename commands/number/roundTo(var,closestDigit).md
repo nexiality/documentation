@@ -12,8 +12,8 @@ This command round the number represented by `var` to the nearest digits and sto
 
 
 ### Parameters
-- **var** \- the value to be rounded.
-- **closestDigit** \- the nearest digit to be rounded.
+- **var** - the value to be rounded.
+- **closestDigit** - the nearest digit to be rounded.
 
 
 ### Example 

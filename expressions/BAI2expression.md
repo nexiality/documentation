@@ -11,7 +11,7 @@ comments: true
 - **BAI2**  is  a  file  format  standard  developed  by  the  Banking  Administration  Institute to  enable  the 
   electronic  exchange  of  banking  data. BAI2 files come to an account holder from a bank.
 - The Nexial expression `BAI2` automates parsing and validating the files with BAI2 file format.
-- Read more about [BAI Standard Specifications](https://www.bai.org/docs/default-source/libraries/site-general-downloads/cash_management_2005.pdf) in PDF. 
+- Read more about <a href="https://www.bai.org/docs/default-source/libraries/site-general-downloads/cash_management_2005.pdf" class="external-link" target="_nexial_link">BAI Standard Specifications (PDF)</a>.
 
 #### BAI2 File Structure
 Record types and field names that needs to be used in the `BAI2` expression:

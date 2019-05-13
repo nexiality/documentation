@@ -12,8 +12,8 @@ This command asserts equality between two numbers
 
 
 ### Parameters
-- **value1** \- expected number
-- **value2** \- actual number to assert against `value`
+- **value1** - expected number
+- **value2** - actual number to assert against `value`
 
 
 ### Example

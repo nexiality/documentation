@@ -56,7 +56,7 @@ E. _The authorization server authenticates the client. It validates the authoriz
    responds back with an access token and, optionally, a refresh token in case an offline access was requested._
 
 This command supports the above authorization code grant flow by automating Step (A) through (E), provided the 
-pertinent information are specified by Nexial users (see Parameter section).  Note that
+pertinent information are specified by Nexial users (see Parameter section). Note that
 
 1. Upon successful OAuth exchange, Nexial will also inject the granted access code into all subsequent HTTP header 
    (as **AUTHORIZATION**). 
@@ -65,12 +65,12 @@ pertinent information are specified by Nexial users (see Parameter section).  N
 
 
 ### Parameters
-- **var** \- the name of the variable to which the OAuth response will be stored.  Nexial user can in turn retrieve 
+- **var** - the name of the variable to which the OAuth response will be stored. Nexial user can in turn retrieve 
   specific values from this variable in the respective Nexial script.
-- **url** \- the URL to which will validate the user-specified authentication details and provide the one-use, 
+- **url** - the URL to which will validate the user-specified authentication details and provide the one-use, 
   time-bound access token.
-- **auth** \- a set of name-value pairs, as specified by the OAuth standards, in order to complete the OAuth 
-  exchange.  Each name-value pair is kept as one line.  As per OAuth standards, below is a list of the 
+- **auth** - a set of name-value pairs, as specified by the OAuth standards, in order to complete the OAuth 
+  exchange. Each name-value pair is kept as one line. As per OAuth standards, below is a list of the 
   required/optional information:  
     - **scope**: (OPTIONAL) It represents the scope of the access request. The access token that is returned by the 
       server has access to only those services mentioned in the scope.
@@ -88,9 +88,8 @@ pertinent information are specified by Nexial users (see Parameter section).  N
 
 
 ### Example
-Below is an example how one can use this command to invoke OAuth exchange.  
-The example below set `nexial.verbose=true` in order to expose additional debugging information.  In practice this is 
-not necessary.<br/>
+Below is an example how one can use this command to invoke OAuth exchange. The example below set `nexial.verbose=true` 
+in order to expose additional debugging information. In practice this is not necessary.<br/>
 ![](image/oauth_01.png)
 
 Note the commands after ws &raquo; `oauth(...)` to illustrate what one could do with `${oauthResponse}` variable.

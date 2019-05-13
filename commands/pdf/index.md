@@ -6,7 +6,7 @@ comments: true
 ---
 
 
-A lot can be said about PDF data model.  Not text extraction - which is just the extracting of textual content from a 
+A lot can be said about PDF data model. Not text extraction - which is just the extracting of textual content from a 
 PDF document - but the extracting of information into a form of data structure. A simple form of data structure is 
 the name-value pair, like:
 
@@ -18,15 +18,15 @@ the name-value pair, like:
 >
 > `hobby=Go places`
 
-The content of a PDF document is not necessarily laid out in a predictable, consistent manner.  Extract such content 
+The content of a PDF document is not necessarily laid out in a predictable, consistent manner. Extract such content 
 into a well-formed structure can be challenging. In fact, at times, it should not be done at all - e.g. a PDF document 
 of a fictional story, _per se_.
 
-This is one of the main reason why we designed different PDF-related commands in Nexial.  For free-flowing textual 
+This is one of the main reason why we designed different PDF-related commands in Nexial. For free-flowing textual 
 content, commands like [**`assertPatternPresent(pdf,regex)`**](assertPatternPresent(pdf,regex)), 
 [**`assertTextPresent(pdf,text)`**](assertTextPresent(pdf,text)), [**`count(pdf,text,var)`**](count(pdf,text,var)), 
 [**`saveAsText(pdf,destination)`**](saveAsText(pdf,destination)), 
-[**`saveAsPages(pdf,destination)`**](saveAsPages(pdf,destination)) are created to handle it.  For more structured 
+[**`saveAsPages(pdf,destination)`**](saveAsPages(pdf,destination)) are created to handle it. For more structured 
 content, such as a form or a report, then we can use commands like 
 [**`saveFormValues(pdf,var,pageAndLineStartEnd,strategy)`**](saveFormValues(pdf,var,pageAndLineStartEnd,strategy)), 
 [**`assertFormValue(var,name,expected)`**](assertFormValue(var,name,expected)). 
@@ -35,9 +35,9 @@ content, such as a form or a report, then we can use commands like 
 
 ### PDF Form Data Extraction
 To extract data structure out of a PDF document, one would need to consider the appropriate extraction strategy to 
-apply.  Such strategy must also be appropriately scoped to a well-defined portion of the document, since any given PDF 
-might contain multiple types of data structure or layout.  In Nexial, we have defined a few commonly used extraction 
-strategies.  One may use one of these strategies as is, or creating a new strategy by basing it on an existing one.
+apply. Such strategy must also be appropriately scoped to a well-defined portion of the document, since any given PDF 
+might contain multiple types of data structure or layout. In Nexial, we have defined a few commonly used extraction 
+strategies. One may use one of these strategies as is, or creating a new strategy by basing it on an existing one.
 
 Here are the default extraction strategies:
 `KEY REGEX`: **`^([0-9A-Za-z\\\/\ \.\,\"\'\(\)\[\]\#\-]+)\:?\s*$`**

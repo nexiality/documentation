@@ -20,9 +20,9 @@ To learn about how to utilize the response returned from the target URL, click [
 
 
 ### Parameters
-- **url** \- the target URL
-- **body** \- the payload to send, or `(empty)` if none is to be send
-- **var** \- the variable to hold the [response](index.html#http-response)
+- **url** - the target URL
+- **body** - the payload to send, or `(empty)` if none is to be send
+- **var** - the variable to hold the [response](index.html#http-response)
 
 
 ### Example

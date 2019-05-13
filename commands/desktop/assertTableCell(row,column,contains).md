@@ -8,7 +8,7 @@ comments: true
 
 ### Description
 
-- This command is to validate the result of a particular  cell under data grid.
+- This command is to validate the result of a particular cell under data grid.
 - In other words after performing successful search where data is retrieved and need to validate data in row for a particular column then this command can be used.
 - if the Cell contains the expected values the assert will pass or fail otherwise.
 

@@ -14,8 +14,8 @@ comments: true
 
 
 ### Parameters
-- **zipFile** \- this parameter is the zip file with location.
-- **target** \- this parameter is target location of the file to be unzipped.
+- **zipFile** - this parameter is the zip file with location.
+- **target** - this parameter is target location of the file to be unzipped.
 
 
 ### Example

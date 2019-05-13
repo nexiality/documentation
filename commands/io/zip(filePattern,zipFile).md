@@ -12,8 +12,8 @@ This command is to zip all files or folder, based on specified `filePattern`.
 
 
 ### Parameters
-- **filePattern** \- this parameter is the files or folder which need to be zipped
-- **zipFile** \- this parameter is the location of file where zip file need to be created
+- **filePattern** - this parameter is the files or folder which need to be zipped
+- **zipFile** - this parameter is the location of file where zip file need to be created
 
 
 ### Example

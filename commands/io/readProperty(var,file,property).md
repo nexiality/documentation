@@ -13,9 +13,9 @@ value in a data variable denoted as `var.
     
 
 ### Parameters
-- **var** \- the variable name to store the property value found by the command
-- **file** \- the full path and name of the file from where the property value is to be retrieved
-- **property** \- the property name whose value is to be retrieved
+- **var** - the variable name to store the property value found by the command
+- **file** - the full path and name of the file from where the property value is to be retrieved
+- **property** - the property name whose value is to be retrieved
 
 
 ### Example

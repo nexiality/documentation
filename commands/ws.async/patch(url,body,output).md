@@ -17,9 +17,9 @@ visit [HTTP Response](index#http-response).
 
 
 ### Parameters
-- **url** \- the target URL
-- **body** \- the request payload, or `(empty)` if none needed
-- **output** \- the file to save the [request and response information](index.html#http-response)
+- **url** - the target URL
+- **body** - the request payload, or `(empty)` if none needed
+- **output** - the file to save the [request and response information](index.html#http-response)
 
 
 ### See Also

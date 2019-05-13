@@ -13,7 +13,7 @@ This command asserts the correctness of the json file against the specific schem
 
 ### Parameters
 - **json** - the JSON content or JSON file to validate for correctness
-- **schema** \- json schema file for document correctness validation
+- **schema** - json schema file for document correctness validation
 
 
 ### Example

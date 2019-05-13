@@ -11,7 +11,7 @@ comments: true
 - This command is to run the sql statement against the database. In other words using this command the sql statement 
   can be execute and retrieved data can be used for verification.
 - The command will connect to the database and execute sql statement as per connection strings and credential provided.
-- If command is successful the result will pass or will  fail otherwise.
+- If command is successful the result will pass or will fail otherwise.
 - Output of the result stored in variable can be read with the attribute as:
   - **`rowCount`** - the number of selected or affected rows.
   - **`sql`** - the SQL query used when executing this command.
@@ -36,7 +36,7 @@ comments: true
 
 
 **Below are the example to extract attributes from variables returned by the command.**
-- **rowCount**:  this attribute will provide the total row count of the from the sql query executed.  
+- **rowCount**: this attribute will provide the total row count of the from the sql query executed.  
   Script:  <br/>
   ![](image/runSQL_3.png)  
 
@@ -50,7 +50,7 @@ comments: true
   Output:  <br/>
   ![](image/runSQL_6.png)  
 
-- **startTime** \- this attribute of the result set will provide startTime of the sql query executed  
+- **startTime** - this attribute of the result set will provide startTime of the sql query executed  
   Script:  <br/>
   ![](image/runSQL_7.png)  
 
@@ -72,7 +72,7 @@ comments: true
   Output:  <br/>
   ![](image/runSQL_12.png)  
 
-- **data**: this attribute contains the result due to execution of the specified SQL query.  One may use it in the 
+- **data**: this attribute contains the result due to execution of the specified SQL query. One may use it in the 
   form of `.data[row].column_name` such as:
   - `${result}.data[0].columnA` - reference the data in column `columnA` of the first row (zero-based).
   - `${result}.data[3].officeLocation` - reference the data in column `officeLocation` in the 4th row (zero-based).

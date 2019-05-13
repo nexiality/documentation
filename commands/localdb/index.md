@@ -11,7 +11,8 @@ comments: true
 ## Introduction
 What is _localdb_, you asked. Well, it's exactly what it sounds like - a local database!
 
-More specifically, it is an embedded database, powered by the popular & awesome [SQLite](https://www.sqlite.org), 
+More specifically, it is an embedded database, powered by the popular & awesome 
+<a href="https://www.sqlite.org" class="external-link" target="_nexial_link">SQLite</a>, 
 inside Nexial. One can manage and manipulate relational records directly via Nexial automation. As an embedded database,
 the management overhead is nearly non-existence and its access is strictly localized (good for security). Embedded
 database also means that there isn't any data throughput concern since there is no network impact. But one may ask, 
@@ -70,48 +71,59 @@ As an embedded database, Nexial has a predefined location for the "localdb" file
 environment, each user would have his/her own instance of the database file.
 
 There is no need to initialize the database instance or perform any one-time set up. As soon as a 
-[DDL](https://en.wikipedia.org/wiki/Data_definition_language) such as `CREATE TABLE` is executed, the appropriate 
-database file will be created. Purging a database is also straightforward. Nexial provides a convenient command - 
-[`purge(var)`](purge(var) - which simply delete the localdb database file. Addition, Nexial provides commands to 
-perform CRUD operations, data import/export to common structured data set such as JSON, XML, CSV, Excel.
+<a href="https://en.wikipedia.org/wiki/Data_definition_language" class="external-link" target="_nexial_link">DDL</a> 
+such as `CREATE TABLE` is executed, the appropriate database file will be created. Purging a database is also 
+straightforward. Nexial provides a convenient command - [`purge(var)`](purge(var)) - which simply delete the localdb 
+database file. Addition, Nexial provides commands to perform CRUD operations, data import/export to common structured 
+data set such as JSON, XML, CSV, Excel.
 
-Nexial provides functional parity with the query result between `localdb` commands and `rdbms` commands. See 
-[Working with Execution Result](../../commands/rdbms/index#working-with-execution-result) in 
-[`rdbms`](../../commands/rdbms) page to understand what one can do with the query result.
+Nexial provides functional parity with the query result between `localdb` commands and [`rdbms`](../rdbms) commands. 
+This means that one can use the same techniques in `rdbms` commands as with `localdb` when dealing with resultset. 
+For example, to retrieve the resultset from a [`rdbms.runSQL(var,db,sql)`](../rdbms/runSQL(var,db,sql)) command, one
+could use the following syntax:
+
+![](image/index_01.png)
+
+With `'localdb` commands, the syntax to retrieve data from a resultset is identical:
+
+![](image/index_02.png)
+
+See [Working with Execution Result](../rdbms/index#working-with-execution-result) in [`rdbms`](../rdbms) page to 
+understand what one can do with the query result.
 
 In addition to utilizing Nexial, one can manage the localdb database via a myriad of commercial and free database tools 
 that support SQLite (in alphabetical order):
 
 #### Commercial Tools
-- [Aqua Data Studio for SQLite](https://www.aquafold.com/aquadatastudio)
-- [DBTools](http://www.dbtools.com.br/EN/) (trial version available)
-- [JetBrains DataGrip](https://www.jetbrains.com/datagrip/features/)
-- [Navicat for SQLite](https://www.navicat.com/en/products/navicat-for-sqlite) (trial version available)
-- [RazorSQL SQLite GUI](https://www.razorsql.com/landing/sqlite_gui.html)
-- [SQLiteManager](https://www.sqlabs.com/sqlitemanager.php)
-- [SQLVue](http://www.logicalvue.com/sqlvue/)
+- <a href="https://www.aquafold.com/aquadatastudio" class="external-link" target="_nexial_link">Aqua Data Studio for SQLite</a>
+- <a href="http://www.dbtools.com.br/EN/" class="external-link" target="_nexial_link">DBTools</a> (trial version available)
+- <a href="https://www.jetbrains.com/datagrip/features/" class="external-link" target="_nexial_link">JetBrains DataGrip</a>
+- <a href="https://www.navicat.com/en/products/navicat-for-sqlite" class="external-link" target="_nexial_link">Navicat for SQLite</a> (trial version available)
+- <a href="https://www.razorsql.com/landing/sqlite_gui.html" class="external-link" target="_nexial_link">RazorSQL SQLite GUI</a>
+- <a href="https://www.sqlabs.com/sqlitemanager.php" class="external-link" target="_nexial_link">SQLiteManager</a>
+- <a href="http://www.logicalvue.com/sqlvue/" class="external-link" target="_nexial_link">SQLVue</a>
 
 #### Free/Open Source Tools
-- [DBeaver, Community](https://dbeaver.io/) (enterprise edition available)
-- [DbVisualizer, Basic](https://www.dbvis.com/) (pro version available)
-- [DB Browser for SQLite](https://sqlitebrowser.org/)
-- [SQLiteExpert](http://www.sqliteexpert.com/) (pro version available)
-- [SQLite Studio](https://sqlitestudio.pl/)
-- [SQLite Manager, a Firefox Add-On](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager-webext/?src=search)
-- [TablePlus](https://tableplus.io/) (commercial license available)
+- <a href="https://dbeaver.io/" class="external-link" target="_nexial_link">DBeaver, Community</a> (enterprise edition available)
+- <a href="https://www.dbvis.com/" class="external-link" target="_nexial_link">DbVisualizer, Basic</a> (pro version available)
+- <a href="https://sqlitebrowser.org/" class="external-link" target="_nexial_link">DB Browser for SQLite</a>
+- <a href="http://www.sqliteexpert.com/" class="external-link" target="_nexial_link">SQLiteExpert</a> (pro version available)
+- <a href="https://sqlitestudio.pl/" class="external-link" target="_nexial_link">SQLite Studio</a>
+- <a href="https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager-webext/" class="external-link" target="_nexial_link">SQLite Manager, a Firefox Add-On</a>
+- <a href="https://tableplus.io/" class="external-link" target="_nexial_link">TablePlus</a> (commercial license available)
 
 
 ## SQLite References
 Here are some useful links and references about SQLite:<br/>
 <img src="image/sqlite_logo.png" style="box-shadow:none; width:350px; clear:both; float:left; margin:20px 35px 35px 0;">
-- [SQLite on Wikipedia](https://en.wikipedia.org/wiki/SQLite)
-- [SQL as understood by SQLite](https://www.sqlite.org/lang.html)
-- [SQLite Core Functions](https://www.sqlite.org/lang_corefunc.html)
-- [SQLite Aggregate Functions](https://www.sqlite.org/lang_aggfunc.html)
-- [SQLite Date and Time Functions](https://www.sqlite.org/lang_datefunc.html)
-- [SQL Features That SQLite Does Not Implement](https://sqlite.org/omitted.html)
-- [SQLite Tutorial by sqlitetutorial.net](http://www.sqlitetutorial.net/)
-- [SQLite Tutorial by QuackIt](https://www.quackit.com/sqlite/tutorial/)
+- <a href="https://en.wikipedia.org/wiki/SQLite" class="external-link" target="_nexial_link">SQLite on Wikipedia</a>
+- <a href="https://www.sqlite.org/lang.html" class="external-link" target="_nexial_link">SQL as understood by SQLite</a>
+- <a href="https://www.sqlite.org/lang_corefunc.html" class="external-link" target="_nexial_link">SQLite Core Functions</a>
+- <a href="https://www.sqlite.org/lang_aggfunc.html" class="external-link" target="_nexial_link">SQLite Aggregate Functions</a>
+- <a href="https://www.sqlite.org/lang_datefunc.html" class="external-link" target="_nexial_link">SQLite Date and Time Functions</a>
+- <a href="https://sqlite.org/omitted.html" class="external-link" target="_nexial_link">SQL Features That SQLite Does Not Implement</>
+- <a href="http://www.sqlitetutorial.net/" class="external-link" target="_nexial_link">SQLite Tutorial by sqlitetutorial.net</a>
+- <a href="https://www.quackit.com/sqlite/tutorial/" class="external-link" target="_nexial_link">SQLite Tutorial by QuackIt</a>
 
 
 ## Available Commands
@@ -120,4 +132,4 @@ Here are some useful links and references about SQLite:<br/>
 - [`exportCSV(sql,output)`](exportCSV(sql,output))
 - [`importRecords(var,sourceDb,sql,table)`](importRecords(var,sourceDb,sql,table))
 - [`purge(var)`](purge(var))
-- [`runSQLs(var,db,sqls)`](runSQLs(var,db,sqls))
+- [`runSQLs(var,sqls)`](runSQLs(var,sqls))

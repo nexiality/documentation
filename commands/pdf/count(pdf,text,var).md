@@ -12,9 +12,9 @@ This command counts the number of occurrences of `text` in `pdf`. The result cou
 
 
 ### Parameters
-- **pdf** \- the PDF file to validate
-- **text** \- the text to count
-- **var** \- variable to store the count of `text` in `pdf`
+- **pdf** - the PDF file to validate
+- **text** - the text to count
+- **var** - variable to store the count of `text` in `pdf`
 
 
 ### Example

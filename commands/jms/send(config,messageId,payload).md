@@ -22,10 +22,10 @@ XML.
 
 
 ### Parameters
-- **config** \- the configuration specified for the target message destination
-- **messageId** \- an unique ID for the intended message.  In most cases, using the 
+- **config** - the configuration specified for the target message destination
+- **messageId** - an unique ID for the intended message.  In most cases, using the 
   [$(random|integer)](../../functions/$(random)) built-in command or timestamp should suffice.
-- **payload** \- the message content to sent.
+- **payload** - the message content to sent.
 
 
 ### Example

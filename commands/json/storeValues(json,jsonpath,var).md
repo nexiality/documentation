@@ -13,7 +13,7 @@ This command stores the list of value of elements in `json` that matches `jsonpa
 
 ### Parameters
 - **json** - the JSON document or file
-- **jsonpath** \- the path to describe the JSON element (or the first element) in question
+- **jsonpath** - the path to describe the JSON element (or the first element) in question
 - **var** - the variable name to store the list of matched values  
 
 

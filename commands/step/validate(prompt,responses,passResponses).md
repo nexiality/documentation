@@ -18,9 +18,9 @@ The screenshot below is an example that shows the `prompt` and a set of possible
 
 
 ### Parameters
-- **prompt** \- The prompt to the intended validation
-- **responses** \- Comma-separated list of possible responses
-- **passResponses** \- Comma-separated list of "PASS" responses.  Note that these responses must be found in `responses` 
+- **prompt** - The prompt to the intended validation
+- **responses** - Comma-separated list of possible responses
+- **passResponses** - Comma-separated list of "PASS" responses.  Note that these responses must be found in `responses` 
   as well.  If user's response does not match one of these `passResponses`, the command is considered as FAIL
 
 

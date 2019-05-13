@@ -13,8 +13,8 @@ representation, character by character.
 
 
 ### Parameters
-- **value1** \- the first text to compare
-- **value2** \- the second text to compare
+- **value1** - the first text to compare
+- **value2** - the second text to compare
 
 
 ### Example

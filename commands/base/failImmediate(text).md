@@ -16,7 +16,7 @@ landing of certain unfavorable condition such that the continuation of such exec
 be irrelevant, unstable or contradictory to the intent of the test.
 
 ### Parameters
-- **text** \- information/reason for the immediate fail.
+- **text** - information/reason for the immediate fail.
 
 
 ### Example

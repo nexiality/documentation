@@ -12,8 +12,8 @@ This command store the lowest number found in `array` in `var`.
 
 
 ### Parameters
-- **var** \- the variable to store the value returned by the command
-- **array** \- the array of numbers
+- **var** - the variable to store the value returned by the command
+- **array** - the array of numbers
 
 
 ### Example

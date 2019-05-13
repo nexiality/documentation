@@ -18,9 +18,9 @@ Another example is `my_bucket/my_folder/*-*`, where all the files containing `-`
 
 
 ### Parameters
-- **var** \- the variable name to represent the outcome of this command.
-- **profile** \- the [profile](index#s3profile) added in the data file which contains AWS credentials and connectivity.
-- **remotePath** \- the pattern which specifies the folder, file or a pattern of files.
+- **var** - the variable name to represent the outcome of this command.
+- **profile** - the [profile](index#s3profile) added in the data file which contains AWS credentials and connectivity.
+- **remotePath** - the pattern which specifies the folder, file or a pattern of files.
 
 
 ### Example
