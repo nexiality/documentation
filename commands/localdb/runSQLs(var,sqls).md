@@ -23,6 +23,7 @@ other. See [RDMBS &raquo; `runSQLs(var,db,sqls)`](../rdbms/runSQLs(var,db,sqls))
 
 
 ### See Also
-- [`runSQL(var,db,sql)`](runSQL(var,db,sql))
-- [`runFile(var,db,file)`](runFile(var,db,file))
+- [`exportCSV(sql,output)`](exportCSV(sql,output))
+- [`importRecords(var,sourceDb,sql,table)`](importRecords(var,sourceDb,sql,table))
 - [localdb commands](index#available-commands)
+- [RDBMS &raquo; `runSQLs(var,db,sql)`](../rdbms/runSQLs(var,db,sql))

@@ -32,6 +32,6 @@ source query result. To ensure precision, it would be advisable to create the de
 
 
 ### See Also
-- [`runSQL(var,db,sql)`](runSQL(var,db,sql))
-- [`runFile(var,db,file)`](runFile(var,db,file))
+- [`cloneTable(var,source,target)`](cloneTable(var,source,target))
+- [`exportCSV(sql,output)`](exportCSV(sql,output))
 - [localdb commands](index#available-commands)

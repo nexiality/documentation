@@ -20,4 +20,5 @@ current execution. In actuality, Nexial simply delete the associated database fi
 
 
 ### See Also
+- [`dropTables(var,tables)`](dropTables(var,tables))
 - [localdb commands](index#available-commands)

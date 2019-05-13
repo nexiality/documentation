@@ -33,6 +33,6 @@ commands are very similar.
 
 
 ### See Also
-- [`runSQL(var,db,sql)`](runSQL(var,db,sql))
-- [`runFile(var,db,file)`](runFile(var,db,file))
+- [`cloneTable(var,source,target)`](cloneTable(var,source,target))
+- [`purge(var`)](purge(var))
 - [localdb commands](index#available-commands)

@@ -37,6 +37,7 @@ details and examples.
 
 
 ### See Also
-- [`runSQL(var,db,sql)`](runSQL(var,db,sql))
-- [`runFile(var,db,file)`](runFile(var,db,file))
+- [`cloneTable(var,source,target)`](cloneTable(var,source,target))
+- [`dropTables(var,tables)`](dropTables(var,tables))
+- [`importRecords(var,sourceDb,sql,table)`](importRecords(var,sourceDb,sql,table))
 - [localdb commands](index#available-commands)

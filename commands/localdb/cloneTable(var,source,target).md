@@ -39,6 +39,7 @@ important to you, please kindly file a
 
 
 ### See Also
-- [`runSQL(var,db,sql)`](runSQL(var,db,sql))
-- [`runFile(var,db,file)`](runFile(var,db,file))
+- [`cloneTable(var,source,target)`](cloneTable(var,source,target))
+- [`dropTables(var,tables)`](dropTables(var,tables))
+- [`exportCSV(sql,output)`](exportCSV(sql,output))
 - [localdb commands](index#available-commands)
