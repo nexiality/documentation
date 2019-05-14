@@ -81,6 +81,7 @@ comments: true
 - **NEW** command type to create, maintain and manipulate a local-only relational database. One can use such facility
   to collect execution-bound data over multiple executions, or use the SQL capability to manipulate structured data set 
   of any conceivable size.
+- minor adjustments to the generated SQL and console output.
 
 
 ### [web commands](../commands/web)
