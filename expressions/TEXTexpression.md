@@ -17,6 +17,10 @@ comments: true
 - **`appendIfMissing(appendWith)`** - add `appendWith` to the end of current text ONLY if `appendWith` is currently 
   not at the end of text.
 - **`base64decode`** - base64 decode text.
+- **`base64decodeThenSave(file,append)`**, or **`base64decode-then-save(file,append)`** - base64 decode current `TEXT` 
+  content and saving the decoded bytes to `file`. This operation assumes that current `TEXT` content is base64 encoded,
+  and that the decoded content is binary (e.g. Excel, PDF or Image file). Use `append` to append the decoded content to 
+  an existing file.
 - **`base64encode`** - base64 encode text.
 - **`before(criteria)`** - retain the portion of text before the specified `criteria`.
 - **`between(start,end)`** - retain the portion of text that is between the specified `start` and `end` text.
