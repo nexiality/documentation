@@ -26,6 +26,9 @@ comments: true
 
 
 ### Nexial Expression
+- [TEXT &raquo; `base64decodeThenSave(file,append)`] or [TEXT &raquo; `base64decode-then-save(file,append)`]: **NEW** 
+  operation to perform BASE64 decoding on current TEXT content and then saving the decoded content to `file`. This is
+  useful when the decoded content is expected to be binary data. 
 
 
 ### Built-in Function
