@@ -48,10 +48,13 @@ comments: true
   table, both structure and data, to another table in the same localdb schema
 - [`dropTables(var,tables)`](../commands/localdb/dropTables(var,tables)): **NEW** command to drop (remove) one or more 
   tables in the localdb schema
-- [`exportCSV(sql,output)`](../commands/localdb/exportCSV(sql,output)): **NEW** command
+- [`exportCSV(sql,output)`](../commands/localdb/exportCSV(sql,output)): **NEW** command to export query result to CSV file
 - [`exportEXCEL(sql,output,sheet,start)`](../commands/localdb/exportEXCEL(sql,output,sheet,start)): **NEW** command
-- [`exportJSON(sql,output,header)`](../commands/localdb/exportJSON(sql,output,header)): **NEW** command
-- [`exportXML(sql,output,root,row,cell)`](../commands/localdb/exportXML(sql,output,root,row,cell)): **NEW** command
+   to export query result to EXCEL file
+- [`exportJSON(sql,output,header)`](../commands/localdb/exportJSON(sql,output,header)): **NEW** command  to export 
+  query result to JSON file
+- [`exportXML(sql,output,root,row,cell)`](../commands/localdb/exportXML(sql,output,root,row,cell)): **NEW** command to 
+  export query result to XML file
 - [`importCSV(var,csv,table)`](../commands/localdb/importCSV(var,csv,table)): **NEW** command to import CSV data to 
   localdb
 - [`importEXCEL(var,excel,sheet,ranges,table)`](../commands/localdb/importEXCEL(var,excel,sheet,ranges,table)): **NEW** 
