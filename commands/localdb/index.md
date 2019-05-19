@@ -121,6 +121,7 @@ Here are some useful links and references about SQLite:<br/>
 - <a href="https://www.sqlite.org/lang_corefunc.html" class="external-link" target="_nexial_link">SQLite Core Functions</a>
 - <a href="https://www.sqlite.org/lang_aggfunc.html" class="external-link" target="_nexial_link">SQLite Aggregate Functions</a>
 - <a href="https://www.sqlite.org/lang_datefunc.html" class="external-link" target="_nexial_link">SQLite Date and Time Functions</a>
+- <a href="https://www.sqlite.org/fts5.html" class="external-link" target="_nexial_link">SQLite FTS5 (full-text search) extension</a>
 - <a href="https://sqlite.org/omitted.html" class="external-link" target="_nexial_link">SQL Features That SQLite Does Not Implement</>
 - <a href="http://www.sqlitetutorial.net/" class="external-link" target="_nexial_link">SQLite Tutorial by sqlitetutorial.net</a>
 - <a href="https://www.quackit.com/sqlite/tutorial/" class="external-link" target="_nexial_link">SQLite Tutorial by QuackIt</a>
@@ -130,6 +131,11 @@ Here are some useful links and references about SQLite:<br/>
 - [`cloneTable(var,source,target)`](cloneTable(var,source,target))
 - [`dropTables(var,tables)`](dropTables(var,tables))
 - [`exportCSV(sql,output)`](exportCSV(sql,output))
+- [`exportEXCEL(sql,output,sheet,start)`](exportEXCEL(sql,output,sheet,start))
+- [`exportJSON(sql,output,header)`](exportJSON(sql,output,header))
+- [`exportXML(sql,output,root,row,cell)`](exportXML(sql,output,root,row,cell))
+- [`importCSV(var,csv,table)`](importCSV(var,csv,table))
+- [`importEXCEL(var,excel,sheet,ranges,table)`](importEXCEL(var,excel,sheet,ranges,table))
 - [`importRecords(var,sourceDb,sql,table)`](importRecords(var,sourceDb,sql,table))
 - [`purge(var)`](purge(var))
 - [`runSQLs(var,sqls)`](runSQLs(var,sqls))

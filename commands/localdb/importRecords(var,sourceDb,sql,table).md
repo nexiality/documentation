@@ -32,6 +32,7 @@ source query result. To ensure precision, it would be advisable to create the de
 
 
 ### See Also
-- [`cloneTable(var,source,target)`](cloneTable(var,source,target))
-- [`exportCSV(sql,output)`](exportCSV(sql,output))
 - [localdb commands](index#available-commands)
+- [`cloneTable(var,source,target)`](cloneTable(var,source,target))
+- [`importCSV(var,csv,table)`](importCSV(var,csv,table))
+- [`importEXCEL(var,excel,sheet,ranges,table)`](importEXCEL(var,excel,sheet,ranges,table))
