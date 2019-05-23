@@ -161,6 +161,24 @@
         </td>
     </tr>
     <tr>
+        <td nowrap="nowrap" class="varname"><a name="nexial.quiet"><code>nexial.quiet</code></a></td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            A.K.A. the <i>quiet mode</i>.<br/>
+            Set this System variable to <code>true</code> to drastically reduce the amount of console logging during
+            execution. Most notably, the <code>PASS</code> or <code>FAIL</code> logs will be omitted when
+            <i>quiet mode</i> is enabled. The
+            <a href="../commands/base/verbose(text)">base &raquo; <code>verbose(text)</code></a> will still be logged
+            to console, along with start of each step. However, log file (stored to <code>${syspath|log|fullpath)</code>)
+            will not be affected by this System variable.<br/>
+            <br/>
+            The <i>quiet mode</i> only affects console logging, and is most useful when the reduction of such ease one's
+            attempt to follow the execution flow.
+        </td>
+    </tr>
+    <tr>
         <td nowrap="nowrap" class="varname"><a name="nexial.elapsedTimeSLA"><code>nexial.elapsedTimeSLA</code></a></td>
         <td>millisecond</td>
         <td>&nbsp;</td>

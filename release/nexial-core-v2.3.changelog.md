@@ -23,6 +23,8 @@ comments: true
 
 
 ### System Variables
+- [`nexial.quiet`](../systemvars/index#nexial.quiet): **NEW** System variable to drastically reduce console logging. 
+  Default is false.
 
 
 ### Nexial Expression
@@ -34,7 +36,18 @@ comments: true
 ### Built-in Function
 
 
+### [aws.sqs commands](../commands/aws.sqs)
+- [`receiveMessage(profile,queue,var)`](../commands/aws.sqs/receiveMessage(profile,queue,var)): no message received no 
+  longer result in a FAIL to the corresponding step.
+- [`receiveMessages(profile,queue,var)`](../commands/aws.sqs/receiveMessages(profile,queue,var)): no message received 
+  no longer result in a FAIL to the corresponding step.
+- [`purgeQueue(profile,queue,var)`](../commands/aws.sqs/purgeQueue(profile,queue,var)): **NEW** command to clear out 
+  all messages in target SQS queue.
+
+
 ### [base commands](../commands/base)
+- [`repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)): additional logging to indicate the
+  start of each loop.
 
 
 ### [csv commands](../commands/csv)

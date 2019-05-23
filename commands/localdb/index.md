@@ -122,7 +122,7 @@ Here are some useful links and references about SQLite:<br/>
 - <a href="https://www.sqlite.org/lang_aggfunc.html" class="external-link" target="_nexial_link">SQLite Aggregate Functions</a>
 - <a href="https://www.sqlite.org/lang_datefunc.html" class="external-link" target="_nexial_link">SQLite Date and Time Functions</a>
 - <a href="https://www.sqlite.org/fts5.html" class="external-link" target="_nexial_link">SQLite FTS5 (full-text search) extension</a>
-- <a href="https://sqlite.org/omitted.html" class="external-link" target="_nexial_link">SQL Features That SQLite Does Not Implement</>
+- <a href="https://sqlite.org/omitted.html" class="external-link" target="_nexial_link">SQL Features That SQLite Does Not Implement</a>
 - <a href="http://www.sqlitetutorial.net/" class="external-link" target="_nexial_link">SQLite Tutorial by sqlitetutorial.net</a>
 - <a href="https://www.quackit.com/sqlite/tutorial/" class="external-link" target="_nexial_link">SQLite Tutorial by QuackIt</a>
 
