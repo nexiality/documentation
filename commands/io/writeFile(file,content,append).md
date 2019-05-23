@@ -8,7 +8,7 @@ comments: true
 
 
 ### Description
-Like [`writeFileAsIs(file,content,append)`](writeFile(file,content,append)), this command writes `content` to `file`, 
+Like [`writeFileAsIs(file,content,append)`](writeFileAsIs(file,content,append)), this command writes `content` to `file`, 
 with an optional flag to `append` to existing content. However, this command will also perform data variable 
 substitution during the file-write operation. This means that if `content` contains any `${...}`, 
 `[(EXPRESSION) => ...]`. `$(...)` text, such text will be replaced with the value known during the execution. 
