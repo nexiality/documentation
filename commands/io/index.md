@@ -33,7 +33,7 @@ The "io" command type represents a series of automation commands regarding io op
 - [`searchAndReplace(file,config,saveAs)`](searchAndReplace(file,config,saveAs))
 - [`unzip(zipFile,target)`](unzip(zipFile,target))
 - [`validate(var,profile,inputFile)`](validate(var,profile,inputFile))
-- [`writeBase64decode(encodedSource,decodedTarget)`](writeBase64decode(encodedSource,decodedTarget))
+- [`writeBase64decode(encodedSource,decodedTarget,append)`](writeBase64decode(encodedSource,decodedTarget,append))
 - [`writeFile(file,content,append)`](writeFile(file,content,append))
 - [`writeFileAsIs(file,content,append)`](writeFile(file,content,append))
 - [`writeProperty(file,property,value)`](writeProperty(file,property,value))

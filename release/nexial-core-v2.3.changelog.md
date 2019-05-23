@@ -81,8 +81,10 @@ comments: true
 ### [io commands](../commands/io)
 - [`saveMatches(var,path,filePattern)`](../commands/io/saveMatches(var,path,filePattern)): now support muti-criteria 
   filtering using Nexial Filter syntax on file `name`, `size` and `lastMod`.
-- [`writeBase64decode(encodedSource,decodedTarget`](../commands/io/writeBase64decode(encodedSource,decodedTarget)): 
+- [`writeBase64decode(encodedSource,decodedTarget,append)`](../commands/io/writeBase64decode(encodedSource,decodedTarget,append)): 
   **NEW** command to write decoded content to file as binary.
+- [`writeBase64decode(encodedSource,decodedTarget,append)`](../commands/io/writeBase64decode(encodedSource,decodedTarget,append)): 
+  fix to write file correctly; added `append` parameter 
 
 
 ### [web commands](../commands/web)
