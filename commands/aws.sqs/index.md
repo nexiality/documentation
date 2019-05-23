@@ -34,7 +34,6 @@ Shown above, `MyProfile` will be used as a "profile" throughout the "aws.sqs" co
    key and secret key information.
 2. It is possible to create multiple profiles and use them selectively during execution.
 
-
 The "aws.sqs" command type represents a series of commands regarding AWS SQS.
 
 
@@ -43,3 +42,4 @@ The "aws.sqs" command type represents a series of commands regarding AWS SQS.
 - [`receiveMessage(profile,queue,var)`](receiveMessage(profile,queue,var))
 - [`receiveMessages(profile,queue,var)`](receiveMessages(profile,queue,var))
 - [`sendMessage(profile,queue,message,var)`](sendMessage(profile,queue,message,var))
+- [`purgeQueue(profile,queue,var)`](purgeQueue(profile,queue,var))
