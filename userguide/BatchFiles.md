@@ -240,3 +240,23 @@ For example, the following renames the macro `oldMacro1` to `newMacro1`, and `ol
 `nexial-variable-update.cmd -t searchPath -mf macroFile -ms macrosheet -mn oldMacro1=newMacro1,oldMacro2=newMacro2` 
 
 ---------------------------------------------
+
+### nexial-artifact-repair.cmd / nexial-artifact-repair.sh
+
+This script repairs the artifacts by removing unnecessary, non-existing url links, comments from original file.
+This is mostly useful when excel file has unnecessary links of another file which is not existing and also asks to update link
+everytime user open that excel but unable to update. This batch file only supports Nexial excel files e.g. script, plan, data, macro files.
+If preview location(`-d`) is not provided, it will take backup of original file and override original with repaired one.<br/>
+This script has following command line options:<br/> 
+
+|options  |explanation                                                                                          |
+|---------|-----------------------------------------------------------------------------------------------------|
+|**`-t`** |**[REQUIRED]** This option is path of project/starting location or file of repairing artifact.       |
+|**`-d`** |**[OPTIONAL]** This option is destination to preview repaired files without affecting original file. |
+
+<br/>
+For example, the following repair all files from `searchpath` and store at destinationPath.
+
+`nexial-artifact-repair.cmd -t searchPath -d destinationPath
+
+---------------------------------------------

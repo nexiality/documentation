@@ -11,6 +11,8 @@ comments: true
 
 
 ### General
+- `nexial-artifact-repair.cmd|sh`: **NEW** Nexial utility batch file to repair excel file(remove unnecessary links and comments).  
+
 #### Fixes
 - fixed error when dynamic data cannot be resolved during the initialization of an execution. This fix stabilize the 
   execution.
