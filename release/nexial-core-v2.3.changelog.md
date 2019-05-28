@@ -11,7 +11,6 @@ comments: true
 
 
 ### General
-- `nexial-artifact-repair.cmd|sh`: **NEW** Nexial utility batch file to repair excel file(remove unnecessary links and comments).  
 
 #### Fixes
 - fixed error when dynamic data cannot be resolved during the initialization of an execution. This fix stabilize the 
@@ -19,20 +18,41 @@ comments: true
 
 #### Improvements
 - omit the creation of hyperlink on path longer than 254 characters; Excel doesn't support long path.
+- updated to Kotlin 1.3.31, Spring 5, SpringBoot 2.1.4 - improved stability and performance.
+- [`nexial-artifact-repair.cmd|sh`](../userguide/BatchFiles#nexial-artifact-repaircmd--nexial-artifact-repairsh): 
+  **NEW** Nexial utility batch file to repair excel file (remove unnecessary links and comments).
+- minor update to MacOSX/*NIX script to that focus will stay on terminal when Nexial execution commences.
+- [`nexial-var-update.cmd|sh`](../userguide/BatchFiles##nexial-variable-updatecmd--nexial-variable-updatesh): 
+  now support batch files and minor improvement to console output.
 
 
 ### [Nexial Installer](https://github.com/nexiality/nexial-installer)
+- released 1.4.2 for minor fix script permission to MacOS/*NIX installation.
 
 
 ### System Variables
 - [`nexial.quiet`](../systemvars/index#nexial.quiet): **NEW** System variable to drastically reduce console logging. 
   Default is false.
+- [`nexial.csv.maxColumns`](../systemvars/index#nexial.csv.maxColumns): **NEW** System variable to alter default max.
+  number of columns to allow during the parsing of a CSV file. Applicable to 
+  [CSV expression](../expressions/CSVexpression#parseconfig) and [`CSV`](../commands/csv) commands.
+- [`nexial.csv.maxColumnWidth`](../systemvars/index#nexial.csv.maxColumnWidth): **NEW** System variable to alter default 
+  max. number of characters allowed per column during the parsing of a CSV file. Applicable to 
+  [CSV expression](../expressions/CSVexpression#parseconfig) and [`CSV`](../commands/csv) commands.
 
 
 ### Nexial Expression
-- [TEXT &raquo; `base64decodeThenSave(file,append)`] or [TEXT &raquo; `base64decode-then-save(file,append)`]: **NEW** 
-  operation to perform BASE64 decoding on current TEXT content and then saving the decoded content to `file`. This is
-  useful when the decoded content is expected to be binary data. 
+- [TEXT &raquo; `base64decodeThenSave(file,append)`] or [TEXT &raquo; `base64decode-then-save(file,append)`](../expressions/TEXTexpression): 
+  **NEW** operation to perform BASE64 decoding on current TEXT content and then saving the decoded content to `file`. 
+  This is useful when the decoded content is expected to be binary data. 
+- [`LIST`](../expressions/LISTexpression): now supports array/list data variables, such as those derived from
+  [web &raquo; `saveTextArray(var,locator)`](../commands/web/saveTextArray(var,locator)), 
+  [base &raquo; `split(text,delim,saveVar)`](../commands/base/split(text,delim,saveVar)) or the alike.
+
+
+### Nexial Filter
+- [` has file-size`](../flowcontrols/filter#description): **NEW** filter on file size (and inherently file availability)
+- [` is readable-path`](../flowcontrols/filter#description): **NEW** filter on valid directory.
 
 
 ### Built-in Function

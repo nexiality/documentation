@@ -1202,6 +1202,32 @@
             </ul>
         </td>
     </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.csv.maxColumns"><code>nexial.csv.maxColumns</code></a>
+        </td>
+        <td>number</td>
+        <td>512</td>
+        <td>false</td>
+        <td>
+            Specify the maximum number of columns a CSV file/content can contain. This is used during the parsing
+            or construction of CSV data structure via the <a href="../commands/csv"><code>csv</code> command</a> or
+            via <a href="../expressions/CSVexpression"><code>CSV expression</code></a>. The default value is 512.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.csv.maxColumnWidth"><code>nexial.csv.maxColumnWidth</code></a>
+        </td>
+        <td>number</td>
+        <td>512</td>
+        <td>false</td>
+        <td>
+            Specify the maximum number of character a column of a CSV file/content can contain. This is used during the
+            parsing or construction of CSV data structure via the <a href="../commands/csv"><code>csv</code> command</a>
+            or via <a href="../expressions/CSVexpression"><code>CSV expression</code></a>. The default value is 4096.
+        </td>
+    </tr>
 
     <tr>
         <td class="highlight-green" colspan="5">
@@ -1552,7 +1578,7 @@
         <td>false</td>
         <td>
             Sets the amount of time (in millisecond) to wait for a page load to complete before considering the page
-            load event (such as <a href="../commands/web/open(url)">web &raquo; <code>open(url</code></a>) is
+            load event (such as <a href="../commands/web/open(url)">web &raquo; <code>open(url)</code></a> is
             considered as FAIL. If the timeout is negative, page loads can be indefinite.
         </td>
     </tr>

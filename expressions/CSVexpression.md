@@ -274,6 +274,10 @@ these SSN are not the same.
     CSV file. Note that changing this value will have both memory footprint and performance implication. This setting
     is usually not needed.
     
+  - **`maxColumnWidth`** - instruct Nexial to allocate beyond the default max column width (4096) in order to process 
+    column(s) with lots of characters. Note that changing this value will have both memory footprint and performance 
+    implication. This setting is usually not needed.
+    
   - **`trim`** - instruct Nexial to retain or trim of any leading and/or trailing whitespaces per parsed value. By 
     default, Nexial will trim each parsed value so ` California ` would be stored as `California` - the `trim` option is
     by default `true`. But at times it is critical to retain all the data found from its original sources. As such, one
