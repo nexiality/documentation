@@ -15,6 +15,7 @@ comments: true
 #### Fixes
 - fixed error when dynamic data cannot be resolved during the initialization of an execution. This fix stabilize the 
   execution.
+- fixed an parsing error to consider other character sequences that look like a Nexial Expression.
 
 #### Improvements
 - omit the creation of hyperlink on path longer than 254 characters; Excel doesn't support long path.
