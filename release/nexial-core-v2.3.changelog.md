@@ -27,6 +27,7 @@ comments: true
 - [`nexial-var-update.cmd|sh`](../userguide/BatchFiles##nexial-variable-updatecmd--nexial-variable-updatesh): 
   now support batch files and minor improvement to console output.
 - more informative error messages when invalid or out-of-bound array index is referenced.
+- console log hygiene; minor reduction of duplicated logs
 
 
 ### [Nexial Installer](https://github.com/nexiality/nexial-installer)
@@ -119,5 +120,7 @@ comments: true
 ### [web commands](../commands/web)
 - [`saveTableAsCsv(locator,nextPageLocator,file)`](../commands/web/saveTableAsCsv(locator,nextPageLocator,file)): fix 
   data collection logic to consider boh `TD` and `TH` data found under a `TBODY` container.
-  
-
+- [`assertTextNotContains(locator,text)`](../commands/web/assertTextNotContains(locator,text)): assert that the 
+  text represented via `locator` does **NOT** contain `text`.
+- fixed the resolution of window/tab when an existing window/tab is closed or removed.  
+- [`open(url)`](../commands/web/open(url)): now supports local file (must be fully qualified).

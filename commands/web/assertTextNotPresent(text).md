@@ -26,11 +26,13 @@ Note:
 **Output**:<br/>
 ![](image/assertText_02.png)
 
+
 ### See Also
 - [`assertNotText(locator,text)`](assertNotText(locator,text))
 - [`assertText(locator,text)`](assertText(locator,text))
 - [`assertTextContains(locator,text)`](assertTextContains(locator,text))
 - [`assertTextMatches(text,minMatch,scrollTo)`](assertTextMatches(text,minMatch,scrollTo))
+- [`assertTextNotContains(locator,text)`](assertTextNotContains(locator,text))
 - [`assertTextPresent(text)`](assertTextPresent(text))
 - [`verifyContainText(locator,text)`](verifyContainText(locator,text))
 - [`verifyText(locator,text)`](verifyText(locator,text).html)

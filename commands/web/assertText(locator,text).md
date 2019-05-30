@@ -24,7 +24,12 @@ comments: true
 **Output**:<br/>
 ![](image/assertText_02.png)
 
-### See Also
 
-- [`web`](index.html)
+### See Also
+- [`assertNotText(locator,text)`](assertNotText(locator,text))
+- [`assertTextContains(locator,text)`](assertTextContains(locator,text))
+- [`assertTextMatches(text,minMatch,scrollTo)`](assertTextMatches(text,minMatch,scrollTo))
+- [`assertTextNotContains(locator,text)`](assertTextNotContains(locator,text))
+- [`assertTextNotPresent(text)`](assertTextNotPresent(text))
+- [`assertTextPresent(text)`](assertTextPresent(text))
 - [`verifyText(locator,text)`](verifyText(locator,text).html)

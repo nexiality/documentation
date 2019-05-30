@@ -12,7 +12,7 @@ This command asserts that the specified `text` is found in the specified element
 
 ### Parameters
 - **locator** - this parameter if the xpath of the element.
-- **textScript** - this parameter is the text to be found in element.
+- **text** - this parameter is the text to be found in element.
 
 
 ### Example
@@ -24,3 +24,9 @@ This command asserts that the specified `text` is found in the specified element
 
 
 ### See Also
+- [`assertNotText(locator,text)`](assertNotText(locator,text))
+- [`assertText(locator,text)`](assertText(locator,text))
+- [`assertTextMatches(text,minMatch,scrollTo)`](assertTextMatches(text,minMatch,scrollTo))
+- [`assertTextNotContains(locator,text)`](assertTextNotContains(locator,text))
+- [`assertTextNotPresent(text)`](assertTextNotPresent(text))
+- [`assertTextPresent(text)`](assertTextPresent(text))
