@@ -16,6 +16,7 @@ comments: true
 - fixed error when dynamic data cannot be resolved during the initialization of an execution. This fix stabilize the 
   execution.
 - fixed an parsing error to consider other character sequences that look like a Nexial Expression.
+- add execute permission to `nexial-artifact-repair.sh` script.
 
 #### Improvements
 - omit the creation of hyperlink on path longer than 254 characters; Excel doesn't support long path.
@@ -25,6 +26,7 @@ comments: true
 - minor update to MacOSX/*NIX script to that focus will stay on terminal when Nexial execution commences.
 - [`nexial-var-update.cmd|sh`](../userguide/BatchFiles##nexial-variable-updatecmd--nexial-variable-updatesh): 
   now support batch files and minor improvement to console output.
+- more informative error messages when invalid or out-of-bound array index is referenced.
 
 
 ### [Nexial Installer](https://github.com/nexiality/nexial-installer)
@@ -74,6 +76,8 @@ comments: true
 
 
 ### [csv commands](../commands/csv)
+- [`fromExcel(excel,worksheet,csvFile)`](../commands/csv/fromExcel(excel,worksheet,csvFile)): fix coding error that 
+  caused empty Excel cells not to be converted to empty CSV cells.
 
 
 ### [desktop commands](../commands/desktop)
@@ -108,6 +112,8 @@ comments: true
   **NEW** command to write decoded content to file as binary.
 - [`writeBase64decode(encodedSource,decodedTarget,append)`](../commands/io/writeBase64decode(encodedSource,decodedTarget,append)): 
   fix to write file correctly; added `append` parameter 
+- [`writeBase64decode(encodedSource,decodedTarget,append)`](../commands/io/writeBase64decode(encodedSource,decodedTarget,append)): 
+  no longer require `encodedSource` to be a valid file.
 
 
 ### [web commands](../commands/web)
