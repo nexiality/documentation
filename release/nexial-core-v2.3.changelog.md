@@ -81,6 +81,10 @@ comments: true
   caused empty Excel cells not to be converted to empty CSV cells.
 
 
+### [external commands](../commands/external)
+- support the console display while external program is actively executing via `nexial.external.console` (default is `false`).
+
+
 ### [desktop commands](../commands/desktop)
 
 
