@@ -17,6 +17,8 @@ comments: true
   execution.
 - fixed an parsing error to consider other character sequences that look like a Nexial Expression.
 - add execute permission to `nexial-artifact-repair.sh` script.
+- fixed excel file corruption after repairing file with `nexial-artifact-repair.cmd|sh` when there is data in last cell. 
+  Added 10000 as a maximum row and column limit to read and write data of excel.
 
 #### Improvements
 - omit the creation of hyperlink on path longer than 254 characters; Excel doesn't support long path.

@@ -248,6 +248,7 @@ This is mostly useful when excel file has unnecessary links of another file whic
 everytime user open that excel but unable to update. This batch file only supports Nexial excel files e.g. script, plan, data, macro files.
 If preview location(`-d`) is not provided, it will take backup of original file and override original with repaired one.<br/>
 This script has following command line options:<br/> 
+**Note:** Maximum row and column limit to read/write data is set to `10000`.
 
 |options  |explanation                                                                                          |
 |---------|-----------------------------------------------------------------------------------------------------|
