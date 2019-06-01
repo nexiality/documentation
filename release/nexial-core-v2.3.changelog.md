@@ -85,6 +85,7 @@ comments: true
 
 ### [external commands](../commands/external)
 - support the console display while external program is actively executing via `nexial.external.console` (default is `false`).
+- [`tail(id,file)`](../commands/external/tail(id,file)): simulate the *NIX tail command.
 
 
 ### [desktop commands](../commands/desktop)

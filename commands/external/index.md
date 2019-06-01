@@ -14,3 +14,4 @@ external programs (executable, scripts, etc.):
 - [`runJUnit(className)`](runJUnit(className))
 - [`runProgram(programPathAndParams)`](runProgram(programPathAndParams))
 - [`runProgramNoWait(programPathAndParams)`](runProgramNoWait(programPathAndParams))
+- [`tail(id,file)`](tail(id,file))
