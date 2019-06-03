@@ -1,17 +1,15 @@
 ---
 layout: default
-title: nexial-core 2.3 (2019-06-??)
+title: nexial-core 2.3 (2019-06-03)
 parent: release
 tags: release nexial-core 2.3
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-2.3" class="external-link" target="_nexial_link">Release 2.3</a>
-2019-06-??
-
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v2.3_0518" class="external-link" target="_nexial_link">Release 2.3</a>
+2019-06-03
 
 ### General
-
 #### Fixes
 - fixed error when dynamic data cannot be resolved during the initialization of an execution. This fix stabilize the 
   execution.
@@ -31,10 +29,8 @@ comments: true
 - more informative error messages when invalid or out-of-bound array index is referenced.
 - console log hygiene; minor reduction of duplicated logs
 
-
 ### [Nexial Installer](https://github.com/nexiality/nexial-installer)
 - released 1.4.2 for minor fix script permission to MacOS/*NIX installation.
-
 
 ### System Variables
 - [`nexial.quiet`](../systemvars/index#nexial.quiet): **NEW** System variable to drastically reduce console logging. 
@@ -46,7 +42,6 @@ comments: true
   max. number of characters allowed per column during the parsing of a CSV file. Applicable to 
   [CSV expression](../expressions/CSVexpression#parseconfig) and [`CSV`](../commands/csv) commands.
 
-
 ### Nexial Expression
 - [TEXT &raquo; `base64decodeThenSave(file,append)`] or [TEXT &raquo; `base64decode-then-save(file,append)`](../expressions/TEXTexpression): 
   **NEW** operation to perform BASE64 decoding on current TEXT content and then saving the decoded content to `file`. 
@@ -55,14 +50,9 @@ comments: true
   [web &raquo; `saveTextArray(var,locator)`](../commands/web/saveTextArray(var,locator)), 
   [base &raquo; `split(text,delim,saveVar)`](../commands/base/split(text,delim,saveVar)) or the alike.
 
-
 ### Nexial Filter
 - [` has file-size`](../flowcontrols/filter#description): **NEW** filter on file size (and inherently file availability)
 - [` is readable-path`](../flowcontrols/filter#description): **NEW** filter on valid directory.
-
-
-### Built-in Function
-
 
 ### [aws.sqs commands](../commands/aws.sqs)
 - [`receiveMessage(profile,queue,var)`](../commands/aws.sqs/receiveMessage(profile,queue,var)): no message received no 
@@ -72,11 +62,9 @@ comments: true
 - [`purgeQueue(profile,queue,var)`](../commands/aws.sqs/purgeQueue(profile,queue,var)): **NEW** command to clear out 
   all messages in target SQS queue.
 
-
 ### [base commands](../commands/base)
 - [`repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)): additional logging to indicate the
   start of each loop.
-
 
 ### [csv commands](../commands/csv)
 - [`fromExcel(excel,worksheet,csvFile)`](../commands/csv/fromExcel(excel,worksheet,csvFile)): fix coding error that 
@@ -86,14 +74,9 @@ comments: true
 - [`fromExcel(excel,worksheet,csvFile)`](../commands/csv/fromExcel(excel,worksheet,csvFile)): fix to consider 
   `nexial.textDelim` as CSV cell delimiter.
 
-
 ### [external commands](../commands/external)
 - support the console display while external program is actively executing via `nexial.external.console` (default is `false`).
 - [`tail(id,file)`](../commands/external/tail(id,file)): simulate the *NIX tail command.
-
-
-### [desktop commands](../commands/desktop)
-
 
 ### [localdb commands](../commands/localdb)
 - [`cloneTable(var,source,target)`](../commands/localdb/cloneTable(var,source,target)): **NEW** command to clone one
@@ -116,7 +99,6 @@ comments: true
 - [`purge(var)`](../commands/localdb/purge(var)): **NEW** command to purge the entire localdb database
 - [`runSQLs(var,sqls)`](../commands/localdb/runSQLs(var,sqls)): **NEW** command to execute SQL queries against localdb
 
-
 ### [io commands](../commands/io)
 - [`saveMatches(var,path,filePattern)`](../commands/io/saveMatches(var,path,filePattern)): now support muti-criteria 
   filtering using Nexial Filter syntax on file `name`, `size` and `lastMod`.
@@ -126,7 +108,6 @@ comments: true
   fix to write file correctly; added `append` parameter 
 - [`writeBase64decode(encodedSource,decodedTarget,append)`](../commands/io/writeBase64decode(encodedSource,decodedTarget,append)): 
   no longer require `encodedSource` to be a valid file.
-
 
 ### [web commands](../commands/web)
 - [`saveTableAsCsv(locator,nextPageLocator,file)`](../commands/web/saveTableAsCsv(locator,nextPageLocator,file)): fix 
