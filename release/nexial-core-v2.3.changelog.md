@@ -81,6 +81,10 @@ comments: true
 ### [csv commands](../commands/csv)
 - [`fromExcel(excel,worksheet,csvFile)`](../commands/csv/fromExcel(excel,worksheet,csvFile)): fix coding error that 
   caused empty Excel cells not to be converted to empty CSV cells.
+- [`fromExcel(excel,worksheet,csvFile)`](../commands/csv/fromExcel(excel,worksheet,csvFile)): fix to now consider
+  surround text with comma with double quotes, thus making such data "CSV safe".
+- [`fromExcel(excel,worksheet,csvFile)`](../commands/csv/fromExcel(excel,worksheet,csvFile)): fix to consider 
+  `nexial.textDelim` as CSV cell delimiter.
 
 
 ### [external commands](../commands/external)
