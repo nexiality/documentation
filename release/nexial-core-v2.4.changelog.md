@@ -31,6 +31,8 @@ comments: true
 
 
 ### [base commands](../commands/base)
+- [`assertArrayEqual(array1,array2,exactOrder)`](../commands/base/assertArrayEqual(array1,array2,exactOrder)): minor
+  improvement on console message to reflect the result of the said assertion.
 
 
 ### [csv commands](../commands/csv)
