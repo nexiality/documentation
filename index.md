@@ -16,7 +16,7 @@ Nexial Automation
 <span class="top-link">
 <a href="https://github.com/nexiality/nexial-core/releases"><img src="image/download.png">Download</a> &nbsp;&nbsp;
 <a href="https://github.com/nexiality/nexial-core/"><img src="image/github.jpg">Fork to GitHub</a> &nbsp;&nbsp;
-<a href="http://localhost:4000/userguide/InstallingNexial"><img src="image/install-manual-icon.png">Installation Guide</a>
+<a href="https://nexiality.github.io/documentation/userguide/InstallingNexial"><img src="image/install-manual-icon.png">Installation Guide</a>
 </span>
 <br/>
 </h2>
