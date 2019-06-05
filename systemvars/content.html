@@ -1490,9 +1490,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname">
-            <a name="nexial.web.logElectron"><code>nexial.web.logElectron</code></a>
-        </td>
+        <td nowrap="nowrap" class="varname"><a name="nexial.browser.logElectron"><code>nexial.browser.logElectron</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
@@ -1509,8 +1507,25 @@
         </td>
     </tr>
     <tr>
+        <td nowrap="nowrap" class="varname"><a name="nexial.browser.logElectronVerbose"><code>nexial.browser.logElectronVerbose</code></a></td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            <b>ONLY APPLICABLE WHEN <code>nexial.browser.logElectron</code> IS SET TO <code>true</code></b><br/>
+            <br/>
+
+            Enable/Disable verbose webdriver logging when automating against an Electron application. By default, this
+            System variable is <code>false</code>.<br/>
+            <br/>
+
+            While not usually needed, turning on verbose mode might be useful towards troubleshooting and debugging
+            intercommunication issues between webdriver and AUT.
+        </td>
+    </tr>
+    <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.web.logChrome"><code>nexial.web.logChrome</code></a>
+            <a name="nexial.browser.logChrome"><code>nexial.browser.logChrome</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>

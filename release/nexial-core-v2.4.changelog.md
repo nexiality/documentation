@@ -49,4 +49,11 @@ comments: true
 
 ### [web commands](../commands/web)
 - stabilize available open window/tab while attempting to select one of them via its index.
-
+- support enabling of chrome remote port (aka DevToolsActivePort) via new System variable 
+  [`nexial.browser.chrome.remote.port`](../systemvars/index#nexial.browser.chrome.remote.port). By default, this System 
+  variable is not enabled. The default Chrome's DevToolsActivePort is `12209` or `9555`. This is needed when automating 
+  Electron application via chromedriver 4.x or above (set port to `12209`).
+- enable external chromedriver logging for chrome and electron automation via System variable 
+  [`nexial.browser.logChrome`](../systemvars/index#nexial.browser.logChrome), 
+  [`nexial.browser.logElectron`](../systemvars/index#nexial.browser.logElectron), and 
+  [`nexial.browser.logElectronVerbose`](../systemvars/index#nexial.browser.logElectronVerbose).
