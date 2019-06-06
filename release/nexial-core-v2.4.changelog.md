@@ -14,6 +14,7 @@ comments: true
 - code fix to avoid modifying System properties while simultaneously reading such properties.
 
 #### Improvements
+- removed `java.awt.headless=true` from .commons.sh in order to support Robot-based type key
 
 
 ### [Nexial Installer](https://github.com/nexiality/nexial-installer)
@@ -37,6 +38,11 @@ comments: true
 
 ### [csv commands](../commands/csv)
 
+
+### [desktop commands](../commands/desktop)
+- [`typeKeys`](../commands/desktop/typeKeys(os,keystrokes)): **NEW** command to automate a series of `keystrokes` to 
+  the current execution environment.
+  
 
 ### [external commands](../commands/external)
 

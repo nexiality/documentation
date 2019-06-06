@@ -96,6 +96,7 @@ If you are new to desktop automation via Nexial, please first familiarize yourse
 - [`typeAppendTextArea(name,text1,text2,text3,text4)`](typeAppendTextArea(name,text1,text2,text3,text4))
 - [`typeAppendTextBox(name,text1,text2,text3,text4)`](typeAppendTextBox(name,text1,text2,text3,text4))
 - [`typeByLocator(locator,text)`](typeByLocator(locator,text))
+- [`typeKeys(os,keystrokes)`](typeKeys(os,keystrokes))
 - [`typeTextArea(name,text1,text2,text3,text4)`](typeTextArea(name,text1,text2,text3,text4))
 - [`typeTextBox(name,text1,text2,text3,text4)`](typeTextBox(name,text1,text2,text3,text4))
 - [`useApp(appId)`](useApp(appId))
