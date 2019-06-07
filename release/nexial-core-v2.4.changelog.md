@@ -12,6 +12,9 @@ comments: true
 ### General
 #### Fixes
 - code fix to avoid modifying System properties while simultaneously reading such properties.
+- [`nexial-project.cmd`](../userguide/BatchFiles#nexial-projectcmd--nexial-projectsh): fixed the `ECHO is off.` error.
+- [`nexial-artifact-repair.cmd|sh`](../userguide/BatchFiles#nexial-artifact-repaircmd--nexial-artifact-repairsh): 
+  fixed invalid package reference.
 
 #### Improvements
 - removed `java.awt.headless=true` from .commons.sh in order to support Robot-based type key
