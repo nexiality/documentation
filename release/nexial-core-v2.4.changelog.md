@@ -63,3 +63,5 @@ comments: true
   [`nexial.browser.logChrome`](../systemvars/index#nexial.browser.logChrome), 
   [`nexial.browser.logElectron`](../systemvars/index#nexial.browser.logElectron), and 
   [`nexial.browser.logElectronVerbose`](../systemvars/index#nexial.browser.logElectronVerbose).
+- use ChromeDriverService so that chrome driver can reuse same port for driver-browser communication. This helps to 
+  stabilize chrome browser automation.
