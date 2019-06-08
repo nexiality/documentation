@@ -17,12 +17,20 @@ comments: true
   fixed invalid package reference.
 
 #### Improvements
-- removed `java.awt.headless=true` from .commons.sh in order to support Robot-based type key
+- removed `java.awt.headless=true` from .commons.cmd|ssh in order to support Robot-based type key
 
 
 ### [Nexial Installer](https://github.com/nexiality/nexial-installer)
 
+
 ### System Variables
+- **[`nexial.scope.mailTo`] HAS BEEN REMOVED AND REPLACED BY [`nexial.mailTo`](../systemvars/index#nexial.mailTo)**
+- [`nexial.mailSubject`](../systemvars/index#nexial.mailSubject): **NEW** System variable to custom email subject for
+  post-execution email notification
+- [`nexial.mailHeader`](../systemvars/index#nexial.mailHeader): **NEW** System variable to custom "header" content for
+  post-execution email notification
+- [`nexial.mailFooter`](../systemvars/index#nexial.mailFooter): **NEW** System variable to custom "footer" content for
+  post-execution email notification
 
 
 ### Nexial Expression
