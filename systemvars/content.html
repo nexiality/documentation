@@ -332,34 +332,35 @@
             Enable email notification at the end of an execution. By default this is not enabled as using email to
             communicate execution status carries a variety of possible side issues. Nonetheless, email notification is
             supported in Nexial. Such email provides summary information for a given execution and it looks like the
-            following:
-            <br/><br/>
+            following:<br/>
+            <img src="image/systemvar_post_exec_default.png"/><br/>
+            <br/>
 
-            <img src="image/systemvar_post_exec_default.png"/>
-            <br/><br/>
+            Note that the "Reference" column reflects the <a href="#nexial.scriptRef"><code>nexial.scriptRef.*</code></a>
+            values defined for each script/iteration.<br/>
+            <br/>
 
             Here are the steps:
             <ol>
                 <li>Enable this system variable</li>
                 <li>Define the mail server connectivity details:
                     <ul>
-                        <li>nexial.mail.smtp.host=&lt;the hostname or DNS name of your mail server&gt;</li>
-                        <li>nexial.mail.smtp.port=25 (or whatever the configured SMTP port is)</li>
-                        <li>nexial.mail.smtp.from=&lt;the FROM email address&gt;</li>
-                        <li>nexial.mail.smtp.auth=true|false</li>
-                        <li>nexial.mail.smtp.username=&lt;username only needed if nexial.mail.smtp.auth is set to true&gt;</li>
-                        <li>nexial.mail.smtp.password=&lt;password only needed if nexial.mail.smtp.auth is set to true&gt;</li>
+                        <li><code>nexial.mail.smtp.host</code>=&lt;the hostname or DNS name of your mail server&gt;</li>
+                        <li><code>nexial.mail.smtp.port</code>=25 (or whatever the configured SMTP port is)</li>
+                        <li><code>nexial.mail.smtp.from</code>=&lt;the FROM email address&gt;</li>
+                        <li><code>nexial.mail.smtp.auth</code>=true|false</li>
+                        <li><code>nexial.mail.smtp.username</code>=&lt;username only needed if nexial.mail.smtp.auth is set to true&gt;</li>
+                        <li><code>nexial.mail.smtp.password</code>=&lt;password only needed if nexial.mail.smtp.auth is set to true&gt;</li>
                     </ul>
                 </li>
                 <li>Define the recipient email or list via the <a href="#nexial.mailTo"><code>nexial.mailTo</code></a>
                     system variable.</li>
             </ol>
 
-            All these settings (except for <code>nexial.mailTo</code>) can be added via command line (i.e.
-            <code>-D...</code> or <code>-override</code> flag),
-            <a href="../userguide/UnderstandingProjectStructure#projectproperties"><code>project.properties</code></a>
-            or the appropriate data file. For example, from command line:
-            <br/><br/>
+            All these settings can be added via command line (i.e. <code>JAVA_OPT=-D...</code> or <code>-override</code>
+            flag), <a href="../userguide/UnderstandingProjectStructure#projectproperties"><code>project.properties</code></a>
+            or the appropriate data file. For example, from command line:<br/>
+            <br/>
 
             <pre>nexial.sh -script ... ... \
             -override nexial.enableEmail=true \
@@ -375,8 +376,9 @@
         <td>false</td>
         <td>
             <b>NOTE: <a href="#nexial.enableEmail"><code>nexial.enableEmail</code></a> MUST BE SET TO
-                <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b>
-            <br/><br/>
+                <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b><br/>
+            <br/>
+
             A comma-separated list of email addresses to receive Nexial's email notification at the end of an execution.
             <br/>
             Note that this System variable, along with <code>nexial.enableEmail</code> are both required for Nexial
@@ -390,23 +392,22 @@
         <td>false</td>
         <td>
             <b>NOTE: <a href="#nexial.enableEmail"><code>nexial.enableEmail</code></a> MUST BE SET TO
-                <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b>
-            <br/><br/>
+                <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b><br/>
+            <br/>
 
             Customized/optional mail subject instead of the default one. The inclusion of data variable,
             <a href="../expressions">Nexial Expression</a> and <a href="../functions">built-in function</a> is possible
             to achieve a highly dynamic and expressive email subject. However this might not resolve to the desired
-            value since this System variable is resolved in the beginning of the execution, not the end.
-            <br/><br/>
-
-            Note that Nexial's post-execution email subject will <b>STILL</b> be prefixed with <code>[nexial]</code> to
-            indicate the source of such email - i.e. <code>[nexial] your customized subject ...</code>
-            <br/><br/>
-
-            For example,
+            value since this System variable is resolved in the beginning of the execution, not the end.<br/>
             <br/>
 
-            <img src="image/systemvar_post_exec.png"/>
+            Note that Nexial's post-execution email subject will <b>STILL</b> be prefixed with <code>[nexial]</code> to
+            indicate the source of such email - i.e. <code>[nexial] your customized subject ...</code><br/>
+            <br/>
+
+            For example,<br/>
+            <img src="image/systemvar_35.png"/><br/>
+            <img src="image/systemvar_post_exec.png"/><br/>
         </td>
     </tr>
     <tr>
@@ -427,10 +428,9 @@
             <br/><br/>
 
             This can be useful towards including a custom-crafted "header" message to provide additional context of
-            the execution. For example,
-            <br/>
-
-            <img src="image/systemvar_post_exec.png"/>
+            the execution. For example,<br/>
+            <img src="image/systemvar_36.png"/><br/>
+            <img src="image/systemvar_post_exec.png"/><br/>
         </td>
     </tr>
     <tr>
@@ -451,10 +451,9 @@
             <br/><br/>
 
             This can be useful towards including a custom-crafted "footer" message to provide additional context of
-            the execution. For example,
-            <br/>
-
-            <img src="image/systemvar_post_exec.png"/>
+            the execution. For example,<br/>
+            <img src="image/systemvar_37.png"/><br/>
+            <img src="image/systemvar_post_exec.png"/><br/>
         </td>
     </tr>
 
