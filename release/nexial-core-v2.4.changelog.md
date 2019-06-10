@@ -15,6 +15,8 @@ comments: true
 - [`nexial-project.cmd`](../userguide/BatchFiles#nexial-projectcmd--nexial-projectsh): fixed the `ECHO is off.` error.
 - [`nexial-artifact-repair.cmd|sh`](../userguide/BatchFiles#nexial-artifact-repaircmd--nexial-artifact-repairsh): 
   fixed invalid package reference.
+- [`nexial-artifact-repair.cmd|sh`](../userguide/BatchFiles#nexial-artifact-repaircmd--nexial-artifact-repairsh):
+  fixed formatting issue in data and script files.  
 
 #### Improvements
 - removed `java.awt.headless=true` from .commons.cmd|ssh in order to support Robot-based type key
