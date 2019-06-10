@@ -18,6 +18,7 @@ comments: true
 
 #### Improvements
 - removed `java.awt.headless=true` from .commons.cmd|ssh in order to support Robot-based type key
+- enhanced to support the rendering of multi-line or wrapped text in execution output (Excel).
 
 
 ### [Nexial Installer](https://github.com/nexiality/nexial-installer)
