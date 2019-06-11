@@ -8,12 +8,14 @@ comments: true
 
 
 ### Description
-This command compares 2 images (`baseline` and `actual`), and if the two images are different, then the resulted 
-difference is highlighted with Rectangle in a new image in output folder and link is given in the screenshot column as `image diff` 
-with FAIL for this command.<br>
-Color for highlighting difference can be specified by [`nexial.imageDiffColor`](../../systemvars/index#nexial.imageDiffColor).<br>
-The comparison uses [`nexial.imageTolerance`](../../systemvars/index#nexial.imageTolerance)` as variance for the 
-comparison.
+This command compares 2 images (`baseline` and `actual`). If the two images are different, the difference is highlighted 
+(as rectangular borders) in a new image saved to the output folder. A link will be provided to this "diff" image in the 
+corresponding screenshot column as `image diff` and this associated step marked as FAIL.
+
+Color for highlighting difference can be modified via [`nexial.imageDiffColor`](../../systemvars/index#nexial.imageDiffColor).
+
+The comparison uses [`nexial.imageTolerance`](../../systemvars/index#nexial.imageTolerance) as variance.
+
 
 ### Parameters
 - **baseline** - the full path of the expected image to compare.
