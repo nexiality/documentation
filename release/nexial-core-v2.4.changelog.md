@@ -21,7 +21,7 @@ comments: true
 #### Improvements
 - removed `java.awt.headless=true` from .commons.cmd|ssh in order to support Robot-based type key
 - enhanced to support the rendering of multi-line or wrapped text in execution output (Excel).
-
+- execution output color update for description column; now *NOT* as similar as a FAIL step
 
 ### [Nexial Installer](https://github.com/nexiality/nexial-installer)
 
@@ -37,6 +37,7 @@ comments: true
 
 
 ### Nexial Expression
+- [NUMBER expression](../expressions/NUMBERexpression): handle number with other symbols such as comma and dollar sign
 
 
 ### Nexial Filter
