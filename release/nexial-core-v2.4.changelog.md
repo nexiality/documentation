@@ -17,7 +17,7 @@ comments: true
   fixed invalid package reference.
 - [`nexial-artifact-repair.cmd|sh`](../userguide/BatchFiles#nexial-artifact-repaircmd--nexial-artifact-repairsh):
   fixed formatting issue in data and script files.  
-- Fixed issue of opening output excel/execution report after execution even if `nexial.openResult` or 
+- Fixed issue of opening an output excel/execution report after execution even if `nexial.openResult` or 
  `nexial.openExecutionReport` is `false`.
 
 #### Improvements
