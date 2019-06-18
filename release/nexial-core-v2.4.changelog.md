@@ -9,6 +9,7 @@ comments: true
 ### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v2.4_???" class="external-link" target="_nexial_link">Release 2.4</a>
 2019-07-??
 
+
 ### General
 #### Fixes
 - code fix to avoid modifying System properties while simultaneously reading such properties.
@@ -19,6 +20,7 @@ comments: true
   fixed formatting issue in data and script files.  
 - Fixed issue of opening an output excel/execution report after execution even if `nexial.openResult` or 
  `nexial.openExecutionReport` is `false`.
+- enforce no text-wrap on param values of a Nexial output
 
 #### Improvements
 - removed `java.awt.headless=true` from .commons.cmd|ssh in order to support Robot-based type key
@@ -82,3 +84,18 @@ comments: true
   [`nexial.browser.logElectronVerbose`](../systemvars/index#nexial.browser.logElectronVerbose).
 - use ChromeDriverService so that chrome driver can reuse same port for driver-browser communication. This helps to 
   stabilize chrome browser automation.
+
+
+### [xml commands](../commands/xml)
+- [`assertSoap(wsdl,xml)`](../commands/xml/assertSoap(wsdl,xml)): **NEW** command to validate SOAP `xml` against the 
+  schema defined in `wsdl`
+- [`assertSoapFaultCode(expected,xml)`](../commands/xml/assertSoapFaultCode(expected,xml)): **NEW** command to assert 
+  the "fault code" in SOAP fault `xml. 
+- [`assertSoapFaultString(expected,xml)`](../commands/xml/assertSoapFaultString(expected,xml)): **NEW** command to 
+  assert the "fault text" in SOAP fault `xml. 
+- [`storeSoapFaultCode(var,xml)`](../commands/xml/storeSoapFaultCode(var,xml)): **NEW** command to extract and store 
+  "fault code" in SOAP fault `xml`. 
+- [`storeSoapFaultString(var,xml)`](../commands/xml/storeSoapFaultString(var,xml)): **NEW** command to extract and 
+  store "fault text" in SOAP fault `xml`. 
+- [`assertCorrectness(xml,schema)`](../commands/xml/assertCorrectness(xml,schema)): enhance command to support automatic 
+  conformance retries over multiple schemas.

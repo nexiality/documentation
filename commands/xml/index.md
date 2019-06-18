@@ -6,7 +6,8 @@ comments: true
 ---
 
 
-The "xml" command type represents a series of automation commands regarding XML file and XML content.
+The "xml" command type represents a series of automation commands regarding XML file and XML content. There are also a
+few command specifically targeted towards <a href="https://en.wikipedia.org/wiki/SOAP" class="external-link" target="_nexial_link">SOAP</a>.
 
 There are lots of tutorial and learning material on the 'Net regarding XPath. Here are some that might
 be helpful:
@@ -32,6 +33,9 @@ Also consider the following online resources for trying out XPath:
 - [`assertElementCount(xml,xpath,count)`](assertElementCount(xml,xpath,count))
 - [`assertElementNotPresent(xml,xpath)`](assertElementNotPresent(xml,xpath))
 - [`assertElementPresent(xml,xpath)`](assertElementPresent(xml,xpath))
+- [`assertSoap(wsdl,xml)`](assertSoap(wsdl,xml))
+- [`assertSoapFaultCode(expected,xml)`](assertSoapFaultCode(expected,xml))
+- [`assertSoapFaultString(expected,xml)`](assertSoapFaultString(expected,xml))
 - [`assertValue(xml,xpath,expected)`](assertValue(xml,xpath,expected))
 - [`assertValues(xml,xpath,array,exactOrder)`](assertValues(xml,xpath,array,exactOrder))
 - [`assertWellformed(xml)`](assertWellformed(xml))
@@ -45,5 +49,7 @@ Also consider the following online resources for trying out XPath:
 - [`replace(xml,xpath,content,var)`](replace(xml,xpath,content,var))
 - [`replaceIn(xml,xpath,content,var)`](replaceIn(xml,xpath,content,var))
 - [`storeCount(xml,xpath,var)`](storeCount(xml,xpath,var))
+- [`storeSoapFaultCode(var,xml)`](storeSoapFaultCode(var,xml))
+- [`storeSoapFaultString(var,xml)`](storeSoapFaultString(var,xml))
 - [`storeValue(xml,xpath,var)`](storeValue(xml,xpath,var))
 - [`storeValues(xml,xpath,var)`](storeValues(xml,xpath,var))
