@@ -73,11 +73,14 @@ comments: true
 
 ### [image commands](../commands/image)
 - [saveDiff(var,baseline,actual)](../commands/image/saveDiff(var,baseline,actual)): **NEW** command to compare images
- and store its metadata to var.
-- [crop(image,dimension,saveTo)](../commands/image/crop(image,dimension,saveTo)): Supports Asterisk(`*`) for width and height if image width or height is unknown 
-- [resize(image,width,height,saveTo)](../commands/image/resize(image,width,height,saveTo)): Supports Asterisk(`*`) for width and height if image width or height is unknown
+  and store its metadata to var.
+- [crop(image,dimension,saveTo)](../commands/image/crop(image,dimension,saveTo)): Supports Asterisk(`*`) for width and 
+  height if image width or height is unknown 
+- [resize(image,width,height,saveTo)](../commands/image/resize(image,width,height,saveTo)): Supports Asterisk(`*`) for 
+  width and height if image width or height is unknown
 - [compare(baseline,actual)](../commands/image/compare(baseline,actual)): **DEPRECATED** command use 
-    [saveDiff(var,baseline,actual)](../commands/image/saveDiff(var,baseline,actual)) instead
+  [saveDiff(var,baseline,actual)](../commands/image/saveDiff(var,baseline,actual)) instead
+
 
 ### [web commands](../commands/web)
 - stabilize available open window/tab while attempting to select one of them via its index.
@@ -106,3 +109,5 @@ comments: true
   store "fault text" in SOAP fault `xml`. 
 - [`assertCorrectness(xml,schema)`](../commands/xml/assertCorrectness(xml,schema)): enhance command to support automatic 
   conformance retries over multiple schemas.
+- [`assertSoap(wsdl,xml)`](../commands/xml/assertSoap(wsdl,xml)): fix to handle multiple and possibly conflicting 
+  namespace(s) within one XSD embedded in a WSDL. Also some code optimization.
