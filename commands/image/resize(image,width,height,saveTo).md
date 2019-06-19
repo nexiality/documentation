@@ -15,8 +15,8 @@ greater than the original `image` (enlarge).
 
 ### Parameters
 - **image** - the full path of the image to resize
-- **width** - the width to resize to
-- **height** - the height to resize to
+- **width** - the width to resize to. Nexial supports `*`(Asterisks) if width is unknown.
+- **height** - the height to resize to. Nexial supports `*`(Asterisks) if height is unknown.
 - **saveTo** - the full path of the resized image.
 
 ### Example

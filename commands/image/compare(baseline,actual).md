@@ -6,11 +6,12 @@ tags: command image
 comments: true
 ---
 
+**DEPRECATED - USE [`saveDiff(var,baseline,actual)`](saveDiff(var,baseline,actual)) INSTEAD.**
 
 ### Description
 This command compares 2 images (`baseline` and `actual`). If the two images are different, the difference is highlighted 
 (as rectangular borders) in a new image saved to the output folder. A link will be provided to this "diff" image in the 
-corresponding screenshot column as `image diff` and this associated step marked as FAIL.
+corresponding screenshot column as `comparison` and this associated step marked as FAIL.
 
 Color for highlighting difference can be modified via [`nexial.imageDiffColor`](../../systemvars/index#nexial.imageDiffColor).
 
@@ -33,3 +34,6 @@ See [`nexial.lastScreenshot`](../../systemvars/index#nexial.lastScreenshot) fo
 
 If there are errors, the result will reflect the violation against the defined tolerance:<br/>
 ![output2](image/compare_03.png)
+
+#### See Also
+[saveDiff(var,baseline,actual)](saveDiff(var,baseline,actual))
