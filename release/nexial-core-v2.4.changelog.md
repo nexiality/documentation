@@ -21,6 +21,7 @@ comments: true
 - Fixed issue of opening an output excel/execution report after execution even if `nexial.openResult` or 
  `nexial.openExecutionReport` is `false`.
 - enforce no text-wrap on param values of a Nexial output
+- perform data variable substitutions for external resources such as file.
 
 #### Improvements
 - removed `java.awt.headless=true` from .commons.cmd|ssh in order to support Robot-based type key
@@ -112,3 +113,5 @@ comments: true
   conformance retries over multiple schemas.
 - [`assertSoap(wsdl,xml)`](../commands/xml/assertSoap(wsdl,xml)): fix to handle multiple and possibly conflicting 
   namespace(s) within one XSD embedded in a WSDL. Also some code optimization.
+- [`assertSoap(wsdl,xml)`](../commands/xml/assertSoap(wsdl,xml)): allow for empty `<detail>` node in SOAP Fault xml 
+  validation. Such condition will result in the corresponding step to **SKIP** 
