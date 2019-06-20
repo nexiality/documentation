@@ -26,6 +26,7 @@ comments: true
 - removed `java.awt.headless=true` from .commons.cmd|ssh in order to support Robot-based type key
 - enhanced to support the rendering of multi-line or wrapped text in execution output (Excel).
 - execution output color update for description column; now *NOT* as similar as a FAIL step
+- minor console output enhancement to highlight (in blue) any execution abort messages and reasons.
 
 ### [Nexial Installer](https://github.com/nexiality/nexial-installer)
 
