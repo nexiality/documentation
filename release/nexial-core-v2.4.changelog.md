@@ -28,6 +28,7 @@ comments: true
 - enhanced to support the rendering of multi-line or wrapped text in execution output (Excel).
 - execution output color update for description column; now *NOT* as similar as a FAIL step
 - minor console output enhancement to highlight (in blue) any execution abort messages and reasons.
+- correct abort-related messaging to clarify execution flow and intent.
 
 ### [Nexial Installer](https://github.com/nexiality/nexial-installer)
 
