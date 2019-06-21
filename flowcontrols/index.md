@@ -79,6 +79,13 @@ Example:<br/>
 ![script3](image/flowcontrols_04.png)
 
 
+There is a variation to this. If `EndLoopIf()` flow control is used within a 
+[base &raquo; `repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)) section, then only the 
+enclosing repeat-until loop will terminate. Nexial will proceed to the next step after the affected repeat-until loop
+is terminated. Similar to the impact on iteration, the use of `EndLoopIf()` within a repeat-until loop will not 
+increment failture count for the corresponding test scenario.
+
+
 ### EndIf(condition)
 This flow control is different from `EndLoopIf()` in that the activation of this will end the entire test execution.  
 All remaining test steps, test cases and test scenarios will not be executed.

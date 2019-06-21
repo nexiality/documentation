@@ -49,6 +49,12 @@ comments: true
 ### Nexial Filter
 
 
+### Flow Control
+- [`EndLoopIf()`](../flowcontrols/index#endloopifcondition): Now supported early termination of a repeat-until loop
+  without aborting the corresponding scenario.
+- code fix: now Nexial favors "fail-immediate" over "fail-fast".
+
+
 ### [aws.sqs commands](../commands/aws.sqs)
 
 
