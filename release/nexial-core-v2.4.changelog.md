@@ -105,6 +105,9 @@ comments: true
   [`nexial.browser.logElectronVerbose`](../systemvars/index#nexial.browser.logElectronVerbose).
 - use ChromeDriverService so that chrome driver can reuse same port for driver-browser communication. This helps to 
   stabilize chrome browser automation.
+- [`click(locator)`](../commands/web/click(locator)): honors 
+  [`nexial.browser.forceJSClick`](../systemvars/index#nexial.browser.forceJSClick) when found during execution. This 
+  allows user more controls on how a web element should be clicked.
 
 
 ### [xml commands](../commands/xml)
