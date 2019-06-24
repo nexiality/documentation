@@ -237,7 +237,7 @@ This script has four command line options:<br/>
 <br/>
 For example, the following renames the macro `oldMacro1` to `newMacro1`, and `oldMacro2` to `newMacro2`, and so on:<br/>
 
-`nexial-variable-update.cmd -t searchPath -mf macroFile -ms macrosheet -mn oldMacro1=newMacro1,oldMacro2=newMacro2` 
+`nexial-variable-update.cmd -t searchPath -f macroFile -s macrosheet -m oldMacro1=newMacro1,oldMacro2=newMacro2`
 
 ---------------------------------------------
 

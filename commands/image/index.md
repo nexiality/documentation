@@ -16,3 +16,4 @@ like comparison, conversion and resizing:
 - [`convert(source,format,saveTo)`](convert(source,format,saveTo))
 - [`crop(image,dimension,saveTo)`](crop(image,dimension,saveTo))
 - [`resize(image,width,height,saveTo)`](resize(image,width,height,saveTo))
+- [`saveDiff(var,baseline,actual)`](saveDiff(var,baseline,actual))
