@@ -53,6 +53,8 @@ comments: true
 ### Flow Control
 - [`EndLoopIf()`](../flowcontrols/index#endloopifcondition): Now supported early termination of a repeat-until loop
   without aborting the corresponding scenario.
+- [`EndLoopIf()`](../flowcontrols/index#endloopifcondition): fix code to break repeat-until loop without breaking the 
+  enclosing iteration, and vice-versa.
 - code fix: now Nexial favors "fail-immediate" over "fail-fast".
 
 
