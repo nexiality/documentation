@@ -272,6 +272,7 @@ available commands.
 - [`checkAll(locator)`](checkAll(locator))
 - [`clearLocalStorage()`](clearLocalStorage())
 - [`click(locator)`](click(locator))
+- [`clickAll(locator)`](clickAll(locator))
 - [`clickAndWait(locator,waitMs)`](clickAndWait(locator,waitMs)) 
 - [`clickByLabel(label)`](clickByLabel(label)) 
 - [`clickByLabelAndWait(label,waitMs)`](clickByLabelAndWait(label,waitMs)) 

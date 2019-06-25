@@ -108,6 +108,9 @@ comments: true
 - [`click(locator)`](../commands/web/click(locator)): honors 
   [`nexial.browser.forceJSClick`](../systemvars/index#nexial.browser.forceJSClick) when found during execution. This 
   allows user more controls on how a web element should be clicked.
+- [`clickAll(locator)`](../commands/web/clickAll(locator)): **NEW** command to click on all web elements matching 
+  `locator`. This is useful to support the more modern web applications that use `<DIV>` elements to disguise as 
+  dropdown options.
 
 
 ### [xml commands](../commands/xml)
