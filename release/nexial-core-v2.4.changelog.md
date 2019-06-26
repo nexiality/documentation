@@ -93,6 +93,10 @@ comments: true
   [saveDiff(var,baseline,actual)](../commands/image/saveDiff(var,baseline,actual)) instead
 
 
+### [json commands](../commands/json)
+- [`compact`](../commands/json/compact()): **NEW** command to compact JSON by removing null, empty text and empty nodes.
+
+
 ### [web commands](../commands/web)
 - stabilize available open window/tab while attempting to select one of them via its index.
 - support enabling of chrome remote port (aka DevToolsActivePort) via new System variable 

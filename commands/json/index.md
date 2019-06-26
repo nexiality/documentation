@@ -26,6 +26,7 @@ structure-aware specification to communicate the intent - something akins to XPa
 - [`assertValues(json,jsonpath,array,exactOrder)`](assertValues(json,jsonpath,array,exactOrder))
 - [`assertWellformed(json)`](assertWellformed(json))
 - [`beautify(json,var)`](beautify(json,var))
+- [`compact(var,json,removeEmpty)`](compact(var,json,removeEmpty))
 - [`minify(json,var)`](minify(json,var))
 - [`storeCount(json,jsonpath,var)`](storeCount(json,jsonpath,var))
 - [`storeValue(json,jsonpath,var)`](storeValue(json,jsonpath,var))
