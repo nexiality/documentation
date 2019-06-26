@@ -67,6 +67,8 @@ comments: true
 
 
 ### [csv commands](../commands/csv)
+- [`compareExtended(var,profile,expected,actual)`](../commands/csv/compareExtended(var,profile,expected,actual)):
+  enhanced with configuration option to compare some fields as number, compare case-insensitively or before-compare trim.
 
 
 ### [desktop commands](../commands/desktop)
@@ -81,6 +83,7 @@ comments: true
 
 
 ### [io commands](../commands/io)
+
 
 ### [image commands](../commands/image)
 - [saveDiff(var,baseline,actual)](../commands/image/saveDiff(var,baseline,actual)): **NEW** command to compare images

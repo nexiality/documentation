@@ -76,13 +76,13 @@ Here are the list of possible configuration (assuming the `profile` is `MyFil
 		One can specify all the columns to ensure proper matching. If the <code>MyFiles.compareExt.match.[FIELD]</code> 
 		configuration is used then those not specified will be omitted for comparison. If both files contains the exact 
 		same headers, such configuration can be omitted entirely.
-		</td>
+	</td>
 </tr>
 <tr>
 	<td><code>MyFiles.compareExt.ignore</code></td>
 	<td>The column(s) to ignore for comparison.</td>
 	<td>
-		Specifying the column(s) to ignore during field-by-field matching.  Multiple columns are seperated by
+		Specifying the column(s) to ignore during field-by-field matching.  Multiple columns are separated by
 		<a href="../../systemvars/index#nexial.textDelim"><code>${nexial.textDelim}</code></a>.  The columns are
 		based on those specified in the expected file.  If a "ignore" column is mapped to a different column on the 
 		actual field (via the <code>...compareExt.match....</code> configuration), then the mapped column of the actual 
@@ -93,7 +93,44 @@ Here are the list of possible configuration (assuming the `profile` is `MyFil
 		comparison result.  This means that one can specify a column to be ignored for comparison, but use the same
 		column in the comparison report (see <a href="#compareextended-result">compareExtended result</a> below) 
 		via the <code>[profile].compareExt.output.display</code> configuration (see below). 
-		</td>
+    </td>
+</tr>
+<tr>
+	<td><code>MyFiles.compareExt.matchAsNumber</code></td>
+	<td>The column(s) to compare number.</td>
+	<td>
+		Specifying the column(s) that should be compared as numbers. Multiple columns are separated by
+		<a href="../../systemvars/index#nexial.textDelim"><code>${nexial.textDelim}</code></a>.  The columns are
+		based on those specified in the expected file.<br/>
+		<br/>
+		Note that if the value in the specified fields - either the ones in the expected file or the corresponding ones 
+		in the actual files - cannot be parsed as number, then the default text-based comparison will be used instead. 
+    </td>
+</tr>
+<tr>
+	<td><code>MyFiles.compareExt.matchCaseInsensitive</code></td>
+	<td>The column(s) to compare case-insensitively.</td>
+	<td>
+		Specifying the column(s) that should be compared as text case-insensitively. Multiple columns are separated by
+		<a href="../../systemvars/index#nexial.textDelim"><code>${nexial.textDelim}</code></a>.  The columns are
+		based on those specified in the expected file.<br/>
+		<br/>
+		Note that one may combine this configuration with <code>...compareExt.matchAutoTrim</code> so that text
+		comparison can be conducted after the field values are trimmed <b>AND</b> compared case-insensitively.
+    </td>
+</tr>
+<tr>
+	<td><code>MyFiles.compareExt.matchAutoTrim</code></td>
+	<td>The column(s) to trim before comparison.</td>
+	<td>
+		Specifying the column(s) that should be trimmed (both beginning and end of field value) before comparison. 
+		Multiple columns are separated by
+		<a href="../../systemvars/index#nexial.textDelim"><code>${nexial.textDelim}</code></a>.  The columns are
+		based on those specified in the expected file.<br/>
+		<br/>
+		Note that one may combine this configuration with <code>...compareExt.matchCaseInsensitive</code> so that text
+		comparison can be conducted after the field values are trimmed <b>AND</b> compared case-insensitively.
+    </td>
 </tr>
 <tr>
 	<td><code>MyFiles.compareExt.output.display</code></td>
