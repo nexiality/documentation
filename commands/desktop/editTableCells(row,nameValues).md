@@ -31,7 +31,6 @@ The cell/value is separate by `=`, and each pair is separated by either a newlin
 
 Function Keys and literal value cannot be combined and sent as a column value with single command.
 
-
 **Note:**
 1. Both column name and value are case-sensitive. 
 2. Either use [`nexial.textDelim`](../../systemvars/index) or newline as the pair delimiter to separate the cell/value 
@@ -51,7 +50,8 @@ Function Keys and literal value cannot be combined and sent as a column value wi
 7. Prior to executing this command, the appropriate `desktop.useForm(name)` and `desktop.useTable(name)` should be 
    invoked.
 
-### Parameters
+
+### Parameters
 - **row** - this parameter is to specify the row number
 - **nameValues** - is a set of cell-value pairs. See above for details
 

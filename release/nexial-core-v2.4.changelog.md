@@ -44,7 +44,10 @@ comments: true
 
 
 ### Nexial Expression
-- [NUMBER expression](../expressions/NUMBERexpression): handle number with other symbols such as comma and dollar sign
+- [NUMBER expression](../expressions/NUMBERexpression): handle number with other symbols such as comma and dollar sign.
+- [JSON expression](../expressions/JSONexpression): **NEW** operation 
+  [`compact(removeEmpty)`](../expressions/JSONexpression#compactremoveempty), which is functionally equivalent to
+  [JSON &raquo; `compact(var,json,removeEmpty)`](../commands/json/compact(var,json,removeEmpty)).
 
 
 ### Nexial Filter
@@ -120,7 +123,8 @@ comments: true
 - [`clickAll(locator)`](../commands/web/clickAll(locator)): **NEW** command to click on all web elements matching 
   `locator`. This is useful to support the more modern web applications that use `<DIV>` elements to disguise as 
   dropdown options.
-
+- for electron auomation, automatically add chrome remote debugging port to `12209` if the System variable 
+  `nexial.browser.chrome.remote.port` is not found.
 
 ### [xml commands](../commands/xml)
 - [`assertSoap(wsdl,xml)`](../commands/xml/assertSoap(wsdl,xml)): **NEW** command to validate SOAP `xml` against the 
