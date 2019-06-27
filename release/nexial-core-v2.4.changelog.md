@@ -69,6 +69,8 @@ comments: true
 ### [csv commands](../commands/csv)
 - [`compareExtended(var,profile,expected,actual)`](../commands/csv/compareExtended(var,profile,expected,actual)):
   enhanced with configuration option to compare some fields as number, compare case-insensitively or before-compare trim.
+- [`compareExtended(var,profile,expected,actual)`](../commands/csv/compareExtended(var,profile,expected,actual)):
+  enhanced to support numeric conversion of quoted text (e.g. `"1.05"`). 
 
 
 ### [desktop commands](../commands/desktop)
