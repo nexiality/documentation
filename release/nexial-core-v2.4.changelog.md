@@ -139,3 +139,4 @@ comments: true
   namespace(s) within one XSD embedded in a WSDL. Also some code optimization.
 - [`assertSoap(wsdl,xml)`](../commands/xml/assertSoap(wsdl,xml)): allow for empty `<detail>` node in SOAP Fault xml 
   validation. Such condition will result in the corresponding step to **SKIP** 
+- [`assertSoap(wsdl,xml)`](../commands/xml/assertSoap(wsdl,xml)): code fix to read/parse same XML against multiple XSD.
