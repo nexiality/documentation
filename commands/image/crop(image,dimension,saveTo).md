@@ -9,15 +9,21 @@ comments: true
 
 ### Description
 This command crops an image, whose location is denoted by `image`, and save it to another location denoted as 
-`saveTo`. The parameter dimension represents the starting point (aka {`x,y}`), the width and the height to crop. 
-These 4 values are separated by [`nexial.textDelim`](../../systemvars/index#nexial.textDelim), must be positive 
-integers and must be represent an area within the bounds of `image`.<br>
-Nexial supports `*`(Asterisks) in place of width and height in dimension parameter if width or height of image is unknown.<br>
-Following are the ways to represent dimensions assuming [`nexial.textDelim`](../../systemvars/index#nexial.textDelim) is `comma(,)`:-
-1. `10,10,100,200` - crop image with starting point as (10,10) and width of 100 and height of 200.
-2. `10,10,100,*` - crop image with starting point as (10,10) and width of 100 and till the height of image. 
-3. `10,10,*,200` - crop image with starting point as (10,10) and height of 200 and till the width of image. 
-4. `10,10,*,*` - crop image with starting point as (10,10) and till the width and height of image. 
+`saveTo`. The parameter dimension represents the starting position (a.k.a. the x/y point), the width and the height to 
+crop. These 4 values are separated by [`nexial.textDelim`](../../systemvars/index#nexial.textDelim). They must be 
+positive integers and must be represent an area within the bounds of the `image`.
+
+Nexial supports the use of `*` (asterisks) in place of width and/or height, if width or height of image is unknown or 
+if the intention is to crop "as much as possible".
+
+Following are the ways to represent dimensions assuming [`nexial.textDelim`](../../systemvars/index#nexial.textDelim) 
+is comma (`,`):
+1. `10,10,100,200` - crop image from position (10,10) for a width of 100 pixel and a height of 200 pixel.
+2. `10,10,100,*` - crop image from position (10,10) for a width of 100 pixel until bottom of the image (height - 10). 
+3. `10,10,*,200` - crop image with starting point as (10,10) for a height of 200 pixel until the right side of the 
+   image (width - 10).
+4. `10,10,*,*` - crop image from position (10,10) for the remaining width and height of the image (width - 10, 
+   height -1 0). 
 
 ### Parameters
 - **image** - the full path of the image to crop
@@ -25,17 +31,18 @@ Following are the ways to represent dimensions assuming [`nexial.textDelim`](../
   These values are separated by [`nexial.textDelim`](../../systemvars/index#nexial.textDelim).
 - **saveTo** - the full path of the cropped image
 
+
 ### Example
-Script:-<br>
+Script:<br/>
 ![SCRIPT](image/crop_01.png)
 
-Output:-<br>
+Output:<br/>
 ![output](image/crop_02.png)
 
-**Original Image**:-<br>
-![image1](image/crop_03.png)<br>
-
----------------------------------------------
+**Original Image**:<br/>
+<img src="image/crop_03.png" style="border-radius:unset;box-shadow:none"/>
+<br/>
 
 **Cropped Image**:-<br>
-![image2](image/crop_04.png)
+<img src="image/crop_04.png" style="border-radius:unset;box-shadow:none"/>
+<br/>

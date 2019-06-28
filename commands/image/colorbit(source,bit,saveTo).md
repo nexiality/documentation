@@ -25,10 +25,10 @@ Output:<br>
 
 Following are images after downgrading colorbit:-
 
-|Original Image(24 bit)|8 bit|
-|------|-----|
+|Original Image (24 bit) |8 bit|
+|------------------------|-----|
 |![](image/colorbit_03.png)|![](image/colorbit_04.png)|
 
-|4 bit|2 bit|
+|4 bit |2 bit|
 |------|-----|
 |![](image/colorbit_05.png)|![](image/colorbit_06.png)|
