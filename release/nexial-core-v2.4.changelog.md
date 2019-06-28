@@ -22,6 +22,7 @@ comments: true
  `nexial.openExecutionReport` is `false`.
 - enforce no text-wrap on param values of a Nexial output
 - perform data variable substitutions for external resources such as file.
+- removed wrong deprecated logs from `desktop.useTable()`
 
 #### Improvements
 - removed `java.awt.headless=true` from .commons.cmd|ssh in order to support Robot-based type key
@@ -29,6 +30,10 @@ comments: true
 - execution output color update for description column; now *NOT* as similar as a FAIL step
 - minor console output enhancement to highlight (in blue) any execution abort messages and reasons.
 - correct abort-related messaging to clarify execution flow and intent.
+- splitting scripts in `execution_output.html` by plan file and sheet name if run as Plan.
+- also added `scenario passed` in `execution_output.html` and `email_notification.html` to capture total scenario passed
+  for iteration, script and execution.
+- handled special character which belong to MS windows character set but not ISO Latin causing problems in HTML.
 
 ### [Nexial Installer](https://github.com/nexiality/nexial-installer)
 
@@ -143,4 +148,3 @@ comments: true
   namespace(s) within one XSD embedded in a WSDL. Also some code optimization.
 - [`assertSoap(wsdl,xml)`](../commands/xml/assertSoap(wsdl,xml)): allow for empty `<detail>` node in SOAP Fault xml 
   validation. Such condition will result in the corresponding step to **SKIP** 
-- [`assertSoap(wsdl,xml)`](../commands/xml/assertSoap(wsdl,xml)): code fix to read/parse same XML against multiple XSD.

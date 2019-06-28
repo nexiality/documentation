@@ -11,7 +11,7 @@ a {
     font-weight:     bold;
     text-decoration: none;
     background:      rgba(50, 100, 60, 0.1) url(https://nexiality.github.io/documentation/image/link.png) no-repeat 2px 2px;
-    padding:         2px 5px 3px 18px;
+    padding:         2px 5px 3px 22px;
     border-radius:   5px;
 }
 
@@ -98,11 +98,11 @@ a:hover {
 
 .showhide {
     position:                   relative;
-    font-size:                  18px;
+    font-size:                  14px;
     float:                      right;
     top:                        -10px;
     right:                      -10px;
-    padding:                    2px 6px;
+    padding:                    4px 3px;
     border-top-right-radius:    10px;
     border-bottom-right-radius: 10px;
     background-color:           rgba(150, 160, 171, 0.75);
@@ -209,7 +209,7 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
 
 .exec-summary-header .label-small { width: auto; }
 
-.exec-summary-header table th:last-child { padding-right: 68px; }
+.exec-summary-header table th:last-child { padding-right: 54px; }
 
 .exec-summary {
     clear:     both;
@@ -222,6 +222,12 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
     margin:                    0 5px 0 0;
     border-top-left-radius:    0;
     border-bottom-left-radius: 0;
+}
+
+.exec-summary .value-plan {
+    padding-top:    20px;
+    padding-bottom: 10px;
+    font-size:      15px;
 }
 
 .planStep .showhide {
@@ -319,13 +325,17 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
 
 .label-datetime, .value-datetime { min-width: 150px; width: 150px; }
 
+.label-scenarioPassed, .value-scenarioPassed { min-width: 100px; width: 100px; text-align: center !important; }
+
 .label-time, .value-time { min-width: 70px; width: 70px; }
 
 .label-datetime, .label-time, .value-datetime, .value-time { text-align: center !important; }
 
-.label-num, .value-num { text-align: right !important; }
+.label-num, .value-num, .label-percent, .value-percent  { text-align: right !important; }
 
-.label-num, .value-num { min-width: 70px; width: 70px; max-width: 70px; white-space: nowrap; }
+.label-num, .value-num { min-width: 40px; width: 40px; max-width: 50px; white-space: nowrap; }
+
+.label-percent, .value-percent { min-width: 55px; width: 55px; max-width: 55px; white-space: nowrap; }
 
 .label-title, .value-title {
     text-wrap: none !important;
