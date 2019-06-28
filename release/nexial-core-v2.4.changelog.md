@@ -73,6 +73,8 @@ comments: true
 ### [base commands](../commands/base)
 - [`assertArrayEqual(array1,array2,exactOrder)`](../commands/base/assertArrayEqual(array1,array2,exactOrder)): minor
   improvement on console message to reflect the result of the said assertion.
+- [`startRecording()`](../commands/base/startRecording()): prevent recording to commence if previous recording cannot 
+  be stopped.
 
 
 ### [csv commands](../commands/csv)
@@ -80,6 +82,8 @@ comments: true
   enhanced with configuration option to compare some fields as number, compare case-insensitively or before-compare trim.
 - [`compareExtended(var,profile,expected,actual)`](../commands/csv/compareExtended(var,profile,expected,actual)):
   enhanced to support numeric conversion of quoted text (e.g. `"1.05"`). 
+- [`compareExtended(var,profile,expected,actual)`](../commands/csv/compareExtended(var,profile,expected,actual)): minor
+  improvement to reduce runtime exceptions. Also enforce `...compareExt.output.display` as required.
 
 
 ### [desktop commands](../commands/desktop)

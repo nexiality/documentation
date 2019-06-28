@@ -50,6 +50,7 @@ Here are the list of possible configuration (assuming the `profile` is `MyFil
 	<td><code>MyFiles.compareExt.expected.identity</code></td>
 	<td>"ID" column name(s) of the <code>expected</code> file.</td>
 	<td>
+	    <b>REQUIRED</b><br/>
 		The "ID" columns are used in 2 ways:<br/><br/>
 		<ol>
 			<li><u>Fast matching</u> - if the "ID" columns of an <code>expected</code> row is not matching that of the <code>actual</code> row, then the comparison for that row is considered as FAILED and Nexial will move to compare the next row.</li>
@@ -60,7 +61,7 @@ Here are the list of possible configuration (assuming the `profile` is `MyFil
 <tr>
 	<td><code>MyFiles.compareExt.actual.identity</code></td>
 	<td>"ID" column name(s) of the <code>actual</code> file.</td>
-	<td>see above.</td>
+	<td><b>REQUIRED</b><br/>see above.</td>
 </tr>
 <tr>
 	<td><code>MyFiles.compareExt.identity.delim</code></td>
@@ -134,11 +135,13 @@ Here are the list of possible configuration (assuming the `profile` is `MyFil
 </tr>
 <tr>
 	<td><code>MyFiles.compareExt.output.display</code></td>
-	<td>The column(s) - the <code>expected</code>file's perspective - to display as part of output.</td>
-	<td>Use this configuration to include or omit certain fields. Not all fields are used for matching. If the 
-	<code>MyFiles.compareExt.match.[FIELD]</code> configuration is used then those not specified will be omitted for 
-	comparison. However such omitted fields can still be used for output purpose - via this configuration. Furthermore, 
-	it is possible to alter the order of these columns in the output.
+	<td>The column(s) - the <code>expected</code> file's perspective - to display as part of output.</td>
+	<td>
+		<b>REQUIRED</b><br/>
+        Use this configuration to include or omit certain fields. Not all fields are used for matching. If the 
+	    <code>MyFiles.compareExt.match.[FIELD]</code> configuration is used then those not specified will be omitted for 
+	    comparison. However such omitted fields can still be used for output purpose - via this configuration. 
+	    Furthermore, it is possible to alter the order of these columns in the output.
 	</td>
 </tr>
 <tr>
