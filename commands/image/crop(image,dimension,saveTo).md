@@ -33,7 +33,9 @@ Output:-<br>
 ![output](image/crop_02.png)
 
 **Original Image**:-<br>
-![image1](image/crop_03.png)
------------------------
+![image1](image/crop_03.png)<br>
+
+---------------------------------------------
+
 **Cropped Image**:-<br>
 ![image2](image/crop_04.png)
