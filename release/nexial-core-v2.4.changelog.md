@@ -35,6 +35,7 @@ comments: true
   for iteration, script and execution.
 - handled special character which belong to MS windows character set but not ISO Latin causing problems in HTML.
 
+
 ### [Nexial Installer](https://github.com/nexiality/nexial-installer)
 
 
@@ -128,8 +129,9 @@ comments: true
 - [`clickAll(locator)`](../commands/web/clickAll(locator)): **NEW** command to click on all web elements matching 
   `locator`. This is useful to support the more modern web applications that use `<DIV>` elements to disguise as 
   dropdown options.
-- for electron auomation, automatically add chrome remote debugging port to `12209` if the System variable 
+- for electron automation, automatically add chrome remote debugging port to `12209` if the System variable 
   `nexial.browser.chrome.remote.port` is not found.
+
 
 ### [xml commands](../commands/xml)
 - [`assertSoap(wsdl,xml)`](../commands/xml/assertSoap(wsdl,xml)): **NEW** command to validate SOAP `xml` against the 
@@ -148,3 +150,4 @@ comments: true
   namespace(s) within one XSD embedded in a WSDL. Also some code optimization.
 - [`assertSoap(wsdl,xml)`](../commands/xml/assertSoap(wsdl,xml)): allow for empty `<detail>` node in SOAP Fault xml 
   validation. Such condition will result in the corresponding step to **SKIP** 
+- [`assertSoap(wsdl,xml)`](../commands/xml/assertSoap(wsdl,xml)): code fix to read/parse same XML against multiple XSD.
