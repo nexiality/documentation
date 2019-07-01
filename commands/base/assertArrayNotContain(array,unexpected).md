@@ -10,8 +10,8 @@ comments: true
 ### Description
 This command asserts that all the items in `unexpected` DO NOT exist in `array`. The parameter `unexpected` can either 
 be a single item or multiple items separated by [`nexial.textDelim`](../systemvars/index#nexial.textDelim), as the case 
-for `array`.  The items in `unexpected`, should there be multiple, may contain duplicates - Nexial will resolve such 
-issues behind the scene.  However the assertion is performed upon each item in `array` **case-sensitively**.
+for `array`.  If the items in `unexpected` contains duplicates - Nexial will resolve such issues behind the scene.  
+However the assertion is performed upon each item in `array` **case-sensitively**.
 
 
 ### Parameters

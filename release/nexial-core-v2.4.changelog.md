@@ -75,6 +75,8 @@ comments: true
   improvement on console message to reflect the result of the said assertion.
 - [`startRecording()`](../commands/base/startRecording()): prevent recording to commence if previous recording cannot 
   be stopped.
+- [`assertArrayNotContain(array,unexpected)`](../commands/base/assertArrayNotContain(array,unexpected)): support 
+  assertion against null/empty `array`.
 
 
 ### [csv commands](../commands/csv)
