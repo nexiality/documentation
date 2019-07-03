@@ -30,9 +30,10 @@ comments: true
 - execution output color update for description column; now *NOT* as similar as a FAIL step
 - minor console output enhancement to highlight (in blue) any execution abort messages and reasons.
 - correct abort-related messaging to clarify execution flow and intent.
-- splitting scripts in `execution_output.html` by plan file and sheet name if run as Plan.
-- also added `scenario passed` in `execution_output.html` and `email_notification.html` to capture total scenario passed
-  for iteration, script and execution.
+- The `execution_output.html`, each plan file is now clearly separated into different section.
+  - also added `scenario passed` in `execution_output.html` and `email_notification.html` to capture total scenario 
+    passed for iteration, script and execution.
+  - minor stylesheet updates to give more room for the display of scenario and activity names.
 - handled special character which belong to MS windows character set but not ISO Latin causing problems in HTML.
 
 
@@ -54,6 +55,8 @@ comments: true
 - [JSON expression](../expressions/JSONexpression): **NEW** operation 
   [`compact(removeEmpty)`](../expressions/JSONexpression#compactremoveempty), which is functionally equivalent to
   [JSON &raquo; `compact(var,json,removeEmpty)`](../commands/json/compact(var,json,removeEmpty)).
+- [TEXT &raquo; `replace(searchFor,replaceWith)`](../expressions/TEXTexpression#replacesearchforreplacewith): support
+  the replacement of empty text.
 
 
 ### Nexial Filter
@@ -100,6 +103,15 @@ comments: true
 
 
 ### [io commands](../commands/io)
+- [`writeFile(file,content,append)`](../commands/io/writeFile(file,content,append)): support `content` as a HTTP 
+  resource, in addition to file and direct content.
+- [`writeFileAsIs(file,content,append)`](../commands/io/writeFileAsIs(file,content,append)): support `content` as a HTTP 
+  resource, in addition to file and direct content.
+- [`compare(expected,actual,failFast)`](../commands/io/compare(expected,actual,failFast)): supports comparison report
+  render as HTML.
+  - default CSS for the HTML comparison report available at https://nexiality.github.io/documentation/assets/report/io-compare-report.css
+- [`compare(expected,actual,failFast)`](../commands/io/compare(expected,actual,failFast)): support `expected` and 
+  `actual` as a HTTP resource, in addition to file and direct content.
 
 
 ### [image commands](../commands/image)

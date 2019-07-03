@@ -1194,9 +1194,9 @@
         <td>true</td>
         <td>false</td>
         <td>
-            If true, content comparison will produce a text-based comparison report at the end. The report is stored in
-            the output directory (along with other test output) or in the cloud (if <code>nexial.outputToCloud</code> is
-            true) and will be downloadable via the test output:<br/>
+            If <code>true</code> (default), content comparison will produce a text-based comparison report at the end.
+            The report is stored in the output directory (along with other test output) or in the cloud
+            (if <code>nexial.outputToCloud</code> is true) and will be downloadable via the execution output:<br/>
             <img src="image/systemvar_18.jpg" class="resize" alt="nexial.compare.textReport example"/>
             <br/>
             By default, this system variable is <code>true</code>. See
@@ -1212,9 +1212,27 @@
         <td>false</td>
         <td>false</td>
         <td>
-            If true, content comparison will produce a JSON-based comparison report at the end. The report is stored in
-            the output directory (along with other test output) or in the cloud (if <code>nexial.outputToCloud</code> is
-            true) and will be downloadable ia the test output:<br/>
+            If <code>true</code>, content comparison will produce a JSON-based comparison report at the end. The report
+            is stored in the output directory (along with other test output) or in the cloud (if
+            <code>nexial.outputToCloud</code> is true) and will be downloadable ia the execution output:<br/>
+            <img src="image/systemvar_19.jpg" class="resize" alt="nexial.compare.jsonReport example"/>
+            <br/>
+            By default, this system variable is <code>false</code>. See
+            <a href="../commands/io/compare(expected,actual,failFast)">io &raquo; <code>compare(expected,actual,failFast)</code></a>
+            for details.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.compare.htmlReport"><code>nexial.compare.htmlReport</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            If <code>true</code>, content comparison will produce a HTML comparison report at the end. The report is
+            stored in the output directory (along with other test output) or in the cloud (if
+            <code>nexial.outputToCloud</code> is true) and will be downloadable ia the execution output:<br/>
             <img src="image/systemvar_19.jpg" class="resize" alt="nexial.compare.jsonReport example"/>
             <br/>
             By default, this system variable is <code>false</code>. See

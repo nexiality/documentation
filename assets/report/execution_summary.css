@@ -41,12 +41,12 @@ a:hover {
 }
 
 .result-controls {
-    margin:              3px 0 15px 0;
-    padding:             5px 0px 10px 10px;
-    color:               rgba(100, 100, 100, 1);
-    float:               right;
-    -webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
-    clear:               both;
+    margin:      3px 0 15px 0;
+    padding:     5px 0 10px 10px;
+    color:       rgba(100, 100, 100, 1);
+    float:       right;
+    user-select: none;
+    clear:       both;
 }
 
 .result-controls i {
@@ -98,7 +98,7 @@ a:hover {
 
 .showhide {
     position:                   relative;
-    font-size:                  14px;
+    font-size:                  15px;
     float:                      right;
     top:                        -10px;
     right:                      -10px;
@@ -323,31 +323,27 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
     overflow:         hidden;
 }
 
-.label-datetime, .value-datetime { min-width: 150px; width: 150px; }
+.label-scenarioPassed, .value-scenarioPassed { width: 97px; text-align: center !important; }
 
-.label-scenarioPassed, .value-scenarioPassed { min-width: 100px; width: 100px; text-align: center !important; }
+.label-datetime, .value-datetime { width: 135px; white-space: nowrap; }
 
-.label-time, .value-time { min-width: 70px; width: 70px; }
+.label-time, .value-time { width: 58px; white-space: nowrap; }
 
 .label-datetime, .label-time, .value-datetime, .value-time { text-align: center !important; }
 
-.label-num, .value-num, .label-percent, .value-percent  { text-align: right !important; }
+.label-num, .value-num, .label-percent, .value-percent { text-align: right !important; }
 
-.label-num, .value-num { min-width: 40px; width: 40px; max-width: 50px; white-space: nowrap; }
+.label-num, .value-num { width: 35px; white-space: nowrap; }
 
-.label-percent, .value-percent { min-width: 55px; width: 55px; max-width: 55px; white-space: nowrap; }
+.label-percent, .value-percent { width: 55px; white-space: nowrap; }
 
-.label-title, .value-title {
-    text-wrap: none !important;
-    min-width: 250px;
-    width:     250px;
-}
+.label-title, .value-title { text-wrap: none !important; width: 250px; white-space: nowrap; }
 
 .value-title { font-weight: bold; }
 
-.plan-step-summary .value-title, .exec-summary-header .label-title { min-width: 355px; width: 355px; }
+.plan-step-summary .value-title, .exec-summary-header .label-title { width: 355px; }
 
-.label-iteration, .value-iteration { min-width: 60px; width: 60px; text-align: center !important; }
+.label-iteration, .value-iteration { width: 60px; text-align: center !important; }
 
 .value-scriptRef, .value-scenarioRef {
     font-weight:      normal;
