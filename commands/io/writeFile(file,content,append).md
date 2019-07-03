@@ -15,8 +15,9 @@ substitution during the file-write operation. This means that if `content` conta
 The [`writeFileAsIs(file,content,append)`](writeFileAsIs(file,content,append)), on the other hand, will not perform
 data variable substitution during its file-write operation.
 
-The `content` parameter may be a fully qualified file path or text content. Nexial will resolve this variation 
-internally. Use the `append` parameter to either overwrite (if `file` exists) or append content.
+The `content` parameter may be a fully qualified file path, a http/https web resource, or text content. Nexial will 
+resolve the content reference internally. Use the `append` parameter to either overwrite (if `file` exists) or append 
+content.
 
 {% include_relative eol.md %}
 

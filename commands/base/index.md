@@ -30,6 +30,7 @@ The "base" command type represents a series of common automation commands:
 - [`failImmediate(text)`](failImmediate(text))
 - [`incrementChar(var,amount,config)`](incrementChar(var,amount,config))
 - [`macro(file,sheet,name)`](macro(file,sheet,name))
+- [`outputToCloud(resource)`](outputToCloud(resource))
 - [`prependText(var,prependWith)`](prependText(var,prependWith))
 - [`repeatUntil(steps,maxWaitMs)`](repeatUntil(steps,maxWaitMs))
 - [`save(var,value)`](save(var,value))

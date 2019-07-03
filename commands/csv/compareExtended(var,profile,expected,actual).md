@@ -182,49 +182,100 @@ the comparison result (referenced by the specified `var` variable):
 
 For example, assuming that the `var` is specified as `result`:
 - To retrieve the number of mismatched rows - <code>${result}.<b>failCount</b></code>
+
 - To find the rate of matches - <code>[<b>NUMBER</b>(${result}.<b>successRate</b>) -> multiple(100) roundTo(00.00)]%</code>
   - Note that we are using [Nexial Expression](../../expressions/) in the example above to convert a rate of 0 to 1 to 
     a percentage value.
+
 - To list the identities of the mismatched records - <code>${result}.failIdentities</code>
+
 - To generate a report, in CSV format, of the mismatched records - <code>${result}.reportAsCSV</code>
   ![csv](image/compareExtended_03.png) 
   - Note that `MISMATCHED FIELD` is controlled via the `profile.compareExt.output.MISMATCHED` configuration (see above).
   - Note that `FROM_DATABASE` represents the mismatched field from the `expected` file, and is controlled via the `profile.compareExt.output.EXPECTED` configuration (see above).
   - Note that `FROM_EXTERNAL` represents the mismatched field from the `actual` file, and is controlled via the `profile.compareExt.output.ACTUAL` configuration (see above).
-- To generate a report, in HTML format, of the mismatched records - `${result}.reportAsHTML`  
-  ![html](image/compareExtended_04.png) 
+
+- To generate a comparison report in HTML format, use `${result}.reportAsHTML`<br/>
+  <img src="image/compareExtended_04.png" style="box-shadow:none;border-radius:unset"/><br/>
+
   The same HTML can be better rendered via external stylesheet.  The table DOM has a style class of 
-  `compare-extended-result-table`.  For example, with the following stylesheet:
+  `compare-extended-result-table` like so:
   
+  ```html
+  <table class="compare-extended-result-table">
+  <thead>
+    <tr>
+      <th>KEY_COLUMN</th>
+      <th>SECTION_ID</th>
+      ... ...
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      ... ... ...
+  </tr>
+  </tbody>
+  </table>
+  ``` 
+
+  As such, one can include a stylesheet to create a more appealing presentation for the same HTML report. 
+  For example, with the following stylesheet:
+
   ```css
-  table.compare-extended-result-table {  
-   font-size: 10pt;  
-   color: #333;  
-   font-family: monospace;  
-   padding: 5px;  
-   border: 1px solid #888;  
-   border-radius: 15px;  
-   box-shadow: 5px 1px 10px #555;  
+  table.compare-extended-result-table {
+      font-size:     10pt;
+      color:         #333;
+      font-family:   monospace;
+      padding:       5px;
+      border:        1px solid #888;
+      border-radius: 5px;
+      box-shadow:    5px 1px 10px #555;
   }
   
-  table.compare-extended-result-table thead tr th {  
-   font-weight: bold;  
-   font-family: sans-serif;  
-   text-align: left;  
-   text-shadow: 1px 1px 3px #888;  
-   color: #358;  
-   padding: 0 5px;  
+  table.compare-extended-result-table thead tr th {
+      font-weight: bold;
+      font-family: sans-serif;
+      text-align:  left;
+      text-shadow: 1px 1px 3px #888;
+      color:       #358;
+      padding:     0 5px;
   }
   
-  table.compare-extended-result-table tbody tr td {  
-   border-bottom: 1px solid #ccc;  
-   padding: 2px 5px;  
-   margin-right: 2px;  
+  table.compare-extended-result-table tbody tr td {
+      border-bottom: 1px solid #ddd;
+      padding:       2px 5px;
+      margin-right:  2px;
   }
   ```
   
-  One can possibly render the same HTML as:  
-  ![html-nice](image/compareExtended_05.png)
+  One can possibly render the same HTML as:<br/>
+  <img src="image/compareExtended_05.png" style="box-shadow:none;border-radius:unset"/>
+
+  The above stylesheet is available here - 
+  [https://nexiality.github.io/documentation/assets/report/csv-compareExtended-report.css](https://nexiality.github.io/documentation/assets/report/csv-compareExtended-report.css)
+  One can embedded this stylesheet (or another one) with the generated HTML comparison report like this:
+  
+  ```html
+  <html>
+  <head>
+  <link rel="stylesheet" href="https://nexiality.github.io/documentation/assets/report/csv-compareExtended-report.css"/>
+  <title>CompareExtended Report - powered by Nexial Automation</title>
+  <style>
+  /* add additional stylesheet here, as per your liking */
+  body { font-family: Calibri, serif; font-size: 10pt; background-color: #fff; }
+  </style>
+  </head>
+  <body>
+  ... ...
+    *** INSERT THE GENERATED HTML COMPARISION REPORT HERE ***
+  ... ...
+  </body>
+  </html>
+  ```
+
+Note: to generate the HTML (like the one above) dynamically, one can consider using the 
+[io &raquo; `writeFile(file,content,append)`](../io/writeFile(file,content,append)) command. By setting `append` as `true`, the HTML
+content can be "build up" over multiple commands.
 
 
 ### Parameters

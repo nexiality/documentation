@@ -1,13 +1,13 @@
 ---
 layout: default
-title: nexial-core 2.4 (2019-07-??)
+title: nexial-core 2.4 (2019-07-03)
 parent: release
 tags: release nexial-core 2.4
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v2.4_???" class="external-link" target="_nexial_link">Release 2.4</a>
-2019-07-??
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v2.4_567" class="external-link" target="_nexial_link">Release 2.4</a>
+2019-07-03
 
 
 ### General
@@ -80,6 +80,8 @@ comments: true
   be stopped.
 - [`assertArrayNotContain(array,unexpected)`](../commands/base/assertArrayNotContain(array,unexpected)): support 
   assertion against null/empty `array`.
+- [`outputToCloud(resource)`](../commands/base/outputToCloud(resource)): support the transferring of output artifact
+  to the cloud.
 
 
 ### [csv commands](../commands/csv)
