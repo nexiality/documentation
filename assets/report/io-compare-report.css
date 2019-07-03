@@ -1,19 +1,3 @@
-/*
- * Copyright 2012-2018 the original author or authors.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 body {
     font-family:      Calibri, serif;
     font-size:        10pt;
@@ -22,18 +6,11 @@ body {
 
 .compare-result { padding: 10px 2px; }
 
-.compare-result-stats {
-    padding: 5px;
-}
+.compare-result-stats { padding: 5px; }
 
-.compare-result-stats th.stats-type {
-    vertical-align: top;
-}
+.compare-result-stats th.stats-type { vertical-align: top; }
 
-.compare-result-stats th {
-    padding:    3px;
-    text-align: left;
-}
+.compare-result-stats th { padding: 3px; text-align: left; }
 
 .compare-result-stats td {
     font-family: monospace;
@@ -45,7 +22,7 @@ body {
     background:    rgba(200, 210, 215, 0.25);
     padding:       10px;
     border:        1px solid rgba(200, 210, 215, 0.5);
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 5px;
     box-shadow:    5px 5px 10px -2px rgba(40, 40, 40, 0.75);
 }
 
@@ -55,20 +32,17 @@ body {
     box-shadow: 0 4px 5px #888;
 }
 
-.compare-result-table thead th {
-    padding:    5px 10px;
-    box-shadow: 0 -2px 5px #baaa;
-}
+.compare-result-table thead th { padding: 5px 10px; box-shadow: 0 -2px 5px #aaa; }
 
-.compare-result-analysis {
-    vertical-align: top !important;
-    padding-right:  10px;
-}
+.compare-result-row-even { background-color: #fff; }
 
-.compare-result-table th, .compare-result-table td {
-    vertical-align: middle;
-    text-align:     left;
-}
+.compare-result-row-odd { background-color: #f5f5f5; }
+
+.compare-result-analysis { vertical-align: top !important; padding-right: 10px; }
+
+.compare-result-matched { background: rgba(150, 255, 150, 0.25); color: #080; }
+
+.compare-result-table th, .compare-result-table td { vertical-align: middle; text-align: left; }
 
 .compare-result-expected, .compare-result-actual {
     text-align:  center !important;
@@ -77,9 +51,7 @@ body {
     padding:     3px;
 }
 
-.compare-result-expected-line, .compare-result-actual-line {
-    padding-right: 10px;
-}
+.compare-result-expected-line, .compare-result-actual-line { padding-right: 10px; }
 
 .compare-result-expected, .compare-result-expected-line, .compare-result-expected-content {
     background: rgba(250, 250, 200, 0.5);
@@ -89,18 +61,16 @@ body {
     background: rgba(200, 230, 250, 0.5);
 }
 
-.compare-result-expected-line, .compare-result-actual-line {
-    text-align: right !important;
-}
+.compare-result-expected-line, .compare-result-actual-line { text-align: right !important; }
 
 .compare-result-expected {
-    color:      #880;
+    color:      #550;
     border:     1px inset rgba(180, 180, 150, 0.5) !important;
     background: rgba(220, 220, 180, 0.75);
 }
 
 .compare-result-actual {
-    color:      #08a;
+    color:      #058;
     border:     1px inset rgba(140, 180, 200, 0.5) !important;
     background: rgba(160, 210, 220, 0.75);
 }
