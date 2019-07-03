@@ -25,7 +25,7 @@ comments: true
 - removed wrong deprecated logs from `desktop.useTable()`
 
 #### Improvements
-- removed `java.awt.headless=true` from .commons.cmd|ssh in order to support Robot-based type key
+- removed `java.awt.headless=true` from .commons.cmd and .commons.ssh in order to support Robot-based type key
 - enhanced to support the rendering of multi-line or wrapped text in execution output (Excel).
 - execution output color update for description column; now *NOT* as similar as a FAIL step
 - minor console output enhancement to highlight (in blue) any execution abort messages and reasons.
@@ -35,9 +35,6 @@ comments: true
     passed for iteration, script and execution.
   - minor stylesheet updates to give more room for the display of scenario and activity names.
 - handled special character which belong to MS windows character set but not ISO Latin causing problems in HTML.
-
-
-### [Nexial Installer](https://github.com/nexiality/nexial-installer)
 
 
 ### System Variables
@@ -59,18 +56,12 @@ comments: true
   the replacement of empty text.
 
 
-### Nexial Filter
-
-
 ### Flow Control
 - [`EndLoopIf()`](../flowcontrols/index#endloopifcondition): Now supported early termination of a repeat-until loop
   without aborting the corresponding scenario.
 - [`EndLoopIf()`](../flowcontrols/index#endloopifcondition): fix code to break repeat-until loop without breaking the 
   enclosing iteration, and vice-versa.
 - code fix: now Nexial favors "fail-immediate" over "fail-fast".
-
-
-### [aws.sqs commands](../commands/aws.sqs)
 
 
 ### [base commands](../commands/base)
@@ -80,8 +71,8 @@ comments: true
   be stopped.
 - [`assertArrayNotContain(array,unexpected)`](../commands/base/assertArrayNotContain(array,unexpected)): support 
   assertion against null/empty `array`.
-- [`outputToCloud(resource)`](../commands/base/outputToCloud(resource)): support the transferring of output artifact
-  to the cloud.
+- [`outputToCloud(resource)`](../commands/base/outputToCloud(resource)): **NEW** command to support the transferring of 
+  output artifact to the cloud.
 
 
 ### [csv commands](../commands/csv)
@@ -96,12 +87,6 @@ comments: true
 ### [desktop commands](../commands/desktop)
 - [`typeKeys`](../commands/desktop/typeKeys(os,keystrokes)): **NEW** command to automate a series of `keystrokes` to 
   the current execution environment.
-  
-
-### [external commands](../commands/external)
-
-
-### [localdb commands](../commands/localdb)
 
 
 ### [io commands](../commands/io)
@@ -128,7 +113,8 @@ comments: true
 
 
 ### [json commands](../commands/json)
-- [`compact`](../commands/json/compact()): **NEW** command to compact JSON by removing null, empty text and empty nodes.
+- [`compact(var,json,removeEmpty)`](../commands/json/compact(var,json,removeEmpty)): **NEW** command to compact JSON by 
+  removing null, empty text and empty nodes.
 
 
 ### [web commands](../commands/web)
