@@ -12,6 +12,7 @@ comments: true
 
 ### General
 #### Fixes
+- clarify error message when screenshot cannot be taken.
 
 #### Improvements
 
@@ -34,6 +35,9 @@ comments: true
 ### [desktop commands](../commands/desktop)
 - [`typeKeys(locator,value)`](../commands/desktop/typeKeys(os,keystrokes)): fixed the simulation of certain "symbol" 
   keystrokes. This enables the typing of fully qualified file path that contains slashes (`\` or `/`) and colons (`:`).
+- ensure Winium driver and `notifu.exe` are not executed in non-Windows environment.
+- [`typeKeys(os,keystrokes)`](../commands/desktop/typeKeys(os,keystrokes)): support UPPERCASE typing.
+- [`typeKeys(os,keystrokes)`](../commands/desktop/typeKeys(os,keystrokes)): support non-alphanumeric symbol typing.
 
 
 ### [io commands](../commands/io)
