@@ -25,6 +25,7 @@ be helpful:
 Also consider the following online resources for trying out XPath:
 - <a href="https://www.webtoolkitonline.com/xml-xpath-tester.html" class="external-link" target="_nexial_target">https://www.webtoolkitonline.com/xml-xpath-tester.html</a>
 - <a href="http://xpather.com/" class="external-link" target="_nexial_target">http://xpather.com/</a>
+- <a href="https://extendsclass.com/xpath-tester.html" class="external-link" target="_nexial_target">https://extendsclass.com/xpath-tester.html</a>
 
 
 ### Available Commands
