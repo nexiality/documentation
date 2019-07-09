@@ -13,6 +13,7 @@ comments: true
 ### General
 #### Fixes
 - clarify error message when screenshot cannot be taken.
+- clarify error message when Nexial Expression cannot be properly evaluated due to data error.
 
 #### Improvements
 
@@ -38,6 +39,8 @@ comments: true
 - ensure Winium driver and `notifu.exe` are not executed in non-Windows environment.
 - [`typeKeys(os,keystrokes)`](../commands/desktop/typeKeys(os,keystrokes)): support UPPERCASE typing.
 - [`typeKeys(os,keystrokes)`](../commands/desktop/typeKeys(os,keystrokes)): support non-alphanumeric symbol typing.
+- [`typeKeys(os,keystrokes)`](../commands/desktop/typeKeys(os,keystrokes)): _EXPERIMENTAL_ speeding up key-typing by
+  removing any between-keys delay and waits.
 
 
 ### [io commands](../commands/io)
@@ -50,6 +53,10 @@ comments: true
 
 
 ### [web commands](../commands/web)
+- [`saveText(var,locator)`](../commands/web/saveText(var,locator)): clarify output message when no text is saved due 
+  to invalid or missing locator.
+- Selenium-backed error messages are shorten to just the first line when possible to streamline error messages.
+
 
 
 ### [xml commands](../commands/xml)
