@@ -14,8 +14,12 @@ comments: true
 #### Fixes
 - clarify error message when screenshot cannot be taken.
 - clarify error message when Nexial Expression cannot be properly evaluated due to data error.
+- reduce duplicated error messages to streamline console logging.
+- avoid console pause when executing in zero-touch environment (like unit testing or Jenkins)
+
 
 #### Improvements
+- add jenkins env. variables in execution summary
 
 
 ### [System Variables](../systemvars/)
