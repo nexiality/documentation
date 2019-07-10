@@ -45,7 +45,11 @@ comments: true
 - [`typeKeys(os,keystrokes)`](../commands/desktop/typeKeys(os,keystrokes)): support non-alphanumeric symbol typing.
 - [`typeKeys(os,keystrokes)`](../commands/desktop/typeKeys(os,keystrokes)): _EXPERIMENTAL_ speeding up key-typing by
   removing any between-keys delay and waits.
-
+- [`mouseWheel(amount,modifiers,x,y)`](../commands/desktop/mouseWheel(amount,modifiers,x,y)): **NEW** command to 
+  simulate mouse wheel movement. `amount` as negative value means to scroll _backwards_.
+- [`clickScreen(button,modifiers,x,y)`](../commands/desktop/clickScreen(button,modifiers,x,y)): **NEW** command to
+  simulate mouse click based on current screen (not AUT).
+  
 
 ### [io commands](../commands/io)
 
