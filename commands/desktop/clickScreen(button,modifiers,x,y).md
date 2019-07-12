@@ -15,17 +15,20 @@ browser-specific WebDriver. However the click event generated via this command i
 thus possible to use this command to click anywhere on the current primary screen/monitor.
 
 The possible value for `button` would be:
-1. left -- For left-click. This is commonly the mouse button use for clicks.
-2. right -- For right-click. This would usually trigger the display of context menu.
-3. middle -- For middle-click.
+1. `left` -- For left-click. This is commonly the mouse button use for clicks.
+2. `right` -- For right-click. This would usually trigger the display of context menu.
+3. `middle` -- For middle-click.
 
-Use the `modifiers` to add "control" keys as part of the click. The possible `modifiers` are:
+Use the `modifiers` to add "control" keys as part of the click. Nexial will press down the specified keys while the 
+intended click event is commencing, and release the same keys (in reverse order) when the click event is complete. 
+The possible `modifiers` are:
 - `{SHIFT}`
 - `{CONTROL}`
 - `{ALT}`
 - `{COMMAND}` or `{CMD}`
 - `{WIN}` or `{WINDOW}`
 - `{COMMAND}` or `{CMD}`
+- `(empty)` if no modifier key is needed.
 
 For parameter `x`, it is possible to specify the x-position in pixel or use of the following:
 - `middle` or `center` - the middle of the screen, lengthwise

@@ -20,7 +20,7 @@ comments: true
 
 #### Improvements
 - add jenkins env. variables in execution summary
-- create backup screen capture capability in case we can't capture screen via WebDrivr of Winiun driver
+- create alternative screen capture capability in case we can't capture screen via WebDriver of Winium driver
 
 
 ### [System Variables](../systemvars/)
@@ -50,8 +50,11 @@ comments: true
   simulate mouse wheel movement. `amount` as negative value means to scroll _backwards_.
 - [`clickScreen(button,modifiers,x,y)`](../commands/desktop/clickScreen(button,modifiers,x,y)): **NEW** command to
   simulate mouse click based on current screen (not AUT).
-- [`clickScreen(button,modifiers,x,y)`](../commands/desktop/clickScreen(button,modifiers,x,y)): support English words for `x` and `y`
-
+- [`clickScreen(button,modifiers,x,y)`](../commands/desktop/clickScreen(button,modifiers,x,y)): support simple 
+  "position" words for `x` and `y`.
+- [`mouseWheel(amount,modifiers,x,y)`](../commands/desktop/mouseWheel(amount,modifiers,x,y)): support simple "position" 
+  words for `x` and `y`.
+- [`mouseWheel(amount,modifiers,x,y)`](../commands/desktop/mouseWheel(amount,modifiers,x,y)): restrict to Windows for now.
   
 
 ### [io commands](../commands/io)
