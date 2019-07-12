@@ -16,10 +16,11 @@ comments: true
 - clarify error message when Nexial Expression cannot be properly evaluated due to data error.
 - reduce duplicated error messages to streamline console logging.
 - avoid console pause when executing in zero-touch environment (like unit testing or Jenkins)
-
+- capture screenshot image file as `nexial.lastScreenshot` for `desktop` commands
 
 #### Improvements
 - add jenkins env. variables in execution summary
+- create backup screen capture capability in case we can't capture screen via WebDrivr of Winiun driver
 
 
 ### [System Variables](../systemvars/)
@@ -49,6 +50,8 @@ comments: true
   simulate mouse wheel movement. `amount` as negative value means to scroll _backwards_.
 - [`clickScreen(button,modifiers,x,y)`](../commands/desktop/clickScreen(button,modifiers,x,y)): **NEW** command to
   simulate mouse click based on current screen (not AUT).
+- [`clickScreen(button,modifiers,x,y)`](../commands/desktop/clickScreen(button,modifiers,x,y)): support English words for `x` and `y`
+
   
 
 ### [io commands](../commands/io)
