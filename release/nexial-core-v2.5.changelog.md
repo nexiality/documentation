@@ -39,7 +39,7 @@ comments: true
 
 
 ### [desktop commands](../commands/desktop)
-- [`typeKeys(locator,value)`](../commands/desktop/typeKeys(os,keystrokes)): fixed the simulation of certain "symbol" 
+- [`typeKeys(os,keystrokes)`](../commands/desktop/typeKeys(os,keystrokes)): fixed the simulation of certain "symbol" 
   keystrokes. This enables the typing of fully qualified file path that contains slashes (`\` or `/`) and colons (`:`).
 - ensure Winium driver and `notifu.exe` are not executed in non-Windows environment.
 - [`typeKeys(os,keystrokes)`](../commands/desktop/typeKeys(os,keystrokes)): support UPPERCASE typing.
@@ -55,7 +55,8 @@ comments: true
 - [`mouseWheel(amount,modifiers,x,y)`](../commands/desktop/mouseWheel(amount,modifiers,x,y)): support simple "position" 
   words for `x` and `y`.
 - [`mouseWheel(amount,modifiers,x,y)`](../commands/desktop/mouseWheel(amount,modifiers,x,y)): restrict to Windows for now.
-  
+- [`typeKeys(os,keystrokes)`](../commands/desktop/typeKeys(os,keystrokes)): support the use of `*` for `os`.
+
 
 ### [io commands](../commands/io)
 

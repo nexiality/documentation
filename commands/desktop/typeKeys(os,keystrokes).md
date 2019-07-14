@@ -22,6 +22,7 @@ The supported operating systems are (case-insensitive):
 - `Windows`
 - `Mac` or `MacOSX`
 - `Linux`
+- `*` (special case: specified keystrokes supported by all OS)
 
 Use [`nexial.textDelim`](../../systemvars/index#nexial.textDelim) to indicate the support for multiple operating 
 systems. For example the following means that these `keystrokes` are supported by Linux and Windows:
