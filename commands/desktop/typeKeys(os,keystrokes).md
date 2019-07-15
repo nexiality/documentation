@@ -30,8 +30,7 @@ systems. For example the following means that these `keystrokes` are supported b
 ![](image/typeKeys_02.png)
 
 The command supports all common PC-104 and Mac keyboard keys. Modifiers and function keys are enclosed within `{...}` 
-(see below). Regular keys can be expressed as is. However all alphabets are treated as lowercase. To enforce the use
-of uppercase, use either `{SHIFT}` or `{CAPSLOCK}` keys.
+(see below). Regular keys can be expressed as is. 
 
 ##### Modifiers
 - `{SHIFT}`
