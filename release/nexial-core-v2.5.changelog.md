@@ -12,11 +12,12 @@ comments: true
 
 ### General
 #### Fixes
-- clarify error message when screenshot cannot be taken.
-- clarify error message when Nexial Expression cannot be properly evaluated due to data error.
-- reduce duplicated error messages to streamline console logging.
+- clarify error message when screenshot cannot be taken
+- clarify error message when Nexial Expression cannot be properly evaluated due to data error
+- reduce duplicated error messages to streamline console logging
 - avoid console pause when executing in zero-touch environment (like unit testing or Jenkins)
 - capture screenshot image file as `nexial.lastScreenshot` for `desktop` commands
+- support relative path for script or plan specified in custom scripts/batch files.
 
 #### Improvements
 - add jenkins env. variables in execution summary
@@ -33,6 +34,8 @@ comments: true
 
 
 ### [base commands](../commands/base)
+- console output changes/improvements over multiple assert commands. Now FAILed assertion will display multi-line 
+  output that should be easier to decipher.
 
 
 ### [csv commands](../commands/csv)
