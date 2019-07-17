@@ -18,6 +18,7 @@ comments: true
 - avoid console pause when executing in zero-touch environment (like unit testing or Jenkins)
 - capture screenshot image file as `nexial.lastScreenshot` for `desktop` commands
 - support relative path for script or plan specified in custom scripts/batch files.
+- Fixed variable list indexing issue for the files.
 
 #### Improvements
 - add jenkins env. variables in execution summary
