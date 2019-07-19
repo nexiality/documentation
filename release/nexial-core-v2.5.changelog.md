@@ -75,7 +75,10 @@ comments: true
 - [`saveText(var,locator)`](../commands/web/saveText(var,locator)): clarify output message when no text is saved due 
   to invalid or missing locator.
 - Selenium-backed error messages are shorten to just the first line when possible to streamline error messages.
-
+- honor [`nexial.delayBrowser`](../systemvars/index#nexial.delayBrowser) between plan steps so that Nexial won't 
+  inadvertently load webdriver before necessarily.
+- support screen capturing using native approach so that we can capture JavaScript dialog/popup or other native dialogs 
+  (such as "Open File" and "Save As"). This is also the screen capturing alternative when the specific WebDriver fails.
 
 
 ### [xml commands](../commands/xml)
