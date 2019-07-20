@@ -7,35 +7,38 @@ comments: true
 ---
 
 ### Nexial Installer
-1. Click the following link to begin the process of downloading the Nexial installer: <a href="https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.2/nexial-installer-1.4.2.zip" class="external-link" target="_nexial_link">Nexial Installer</a>.
+1. Click the following link to begin the process of downloading the Nexial installer: 
+   <a href="https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.2/nexial-installer-1.4.2.zip" class="external-link" target="_nexial_link">Nexial Installer</a>.
    
-   1. To keep things more structured, we will create a new directory for our installation process: <br> 
+   1. To keep things more structured, we will create a new directory for our installation process: <br/> 
    Navigate to your Local Disk and create a new folder called "projects".
-   <br>
+   <br/>
    ![C_drive](image/Installer_01.png)
    <br/>
    
    2. Next, locate the nexial-installer.zip file in your Downloads folder.
-   <br>
+   <br/>
    ![nexial.zip](image/Installer_02.png)
    <br/>
    
    3. Unzip the nexial-installer.zip file into the C:\projects\ directory that you just created.
-   <br>
+   <br/>
    ![unzip.gif](image/Installer_03.gif)
    <br/>
    
-   4. Navigate to the C:\projects\ directory and double click on the newly created "nexial-installer" folder then double click the "bin" folder
-   <br>
+   4. Navigate to the C:\projects\ directory and double click on the newly created "nexial-installer" folder then 
+   double click the "bin" folder
+   <br/>
    ![navigate.gif](image/Installer_04.gif)
    <br/>
 	
    5. Double click the "install-latest.cmd" file (**NOT** the "install-latest.sh" file).
-   <br>
+   <br/>
    ![install-latest](image/Installer_05.png)
    <br/>
    
-   6. Let the command prompt run; this may take a while. When it finishes, it should close itself and you now have Nexial installed onto your computer!
+   6. Let the command prompt run; this may take a while. When it finishes, it should close itself and you now have 
+   Nexial installed onto your computer!
    
    For troublshooting or any other issues read the following steps:
 
