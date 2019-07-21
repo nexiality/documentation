@@ -7,18 +7,24 @@ comments: true
 ---
 
 
-### Setting up Your First Project
+### Creating Your First Project
 1. Create Project Structure
    
-   1. Open console and point to `bin` directory under the Nexial installation directory.<br/>
-      ![nexial_bin](image/InstallingNexial_07.png) 
+   1. Open the command prompt and change the current directory to the `bin` directory under the Nexial installation directory.<br/>
    
-   2. Invoke the project creator script - `nexial-project.cmd MyFirstProject`
+		a. To do this, enter "cd .." until it only displays "C:\\>"
+		
+		b. Once in the C drive, enter "cd projects\nexial-core\bin"
+		<br>
+      ![setting_up.gif](image/SettingUp_01.gif)
+   
+   2. From here, enter "nexial-project.cmd MyFirstProject"
+
+   3. If everything works, then you should see the message "`creating project home at ...`" and "`DONE`"
+   <br>
       ![nexial-project](image/InstallingNexial_08.png)
    
-   3. If everything works, then you should see the message "`creating project home at ...`" and "`DONE"`
-   
-   4. You should see the following directory create, along with various files in it:<br/>
+   4. You should see the following directory created, along with various files in it:<br/>
       ![script_dir](image/InstallingNexial_09.png)
    
    5. To gain better understanding of the project structure, check out 
@@ -31,12 +37,11 @@ comments: true
 
 
 ### Running your first test automation
-##### "Hello World" of Nexial automation
-1. Open `C:\projects\MyFirstProject\artifact\script\MyFirstProject.xlsx` \- we refer to this Excel file as the 
-   _test script_ or the _automation script_. By [convention](UnderstandingProjectStructure) all Excel files under the 
-   `artifact/script` directory are considered as automation scripts.
+##### The "Hello World" of Nexial automation
+1. Open `C:\projects\MyFirstProject\artifact\script\MyFirstProject.xlsx` \- we refer to this Excel file as the _test script_ or the _automation
+ script_. By [convention](UnderstandingProjectStructure) all Excel files under the `artifact/script` directory are considered as automation scripts.
 
-2. Start first test case by typing in the following:<br/>
+2. Start the first test case by typing in the following:<br/>
    ![testcase](image/InstallingNexial_10.png)
 
 3. Enter the next 3 columns with the `base|verbose(text) command`:<br/>

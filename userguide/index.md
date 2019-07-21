@@ -19,6 +19,7 @@ Let's get started!
 - [Introduction and FAQ](IntroductionAndFAQ)
 - [Installing Nexial](InstallingNexial)
 - [Update Nexial](UpdateNexial)
+- [Setting Up Your First Project](SettingUpYourFirstProject)
 - [Understanding Nexial Test Artifact](UnderstandingExcelTemplates)
 - [Understanding Project Structure](UnderstandingProjectStructure)
 - [Data Management](DataManagement)
