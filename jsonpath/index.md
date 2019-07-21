@@ -90,6 +90,7 @@ Let's see how Nexial's `jsonpath` can be used to answer the first set of queri
 | How many items are in the `data1` array?                           | Use [json &raquo; `storeCount(json,jsonpath,var)`](../commands/json/storeCount(json,jsonpath,var)) with `jsonpath` set as **`data1`**. <br/>To assess specific items in `data1`, use **`data1.[<index>]`**, where `<index>` is the zero-based position of the target item.|
 | How many JSON objects under `data2` has a property named as `qrs`? | Use [json &raquo; `storeCount(json,jsonpath,var)`](../commands/json/storeCount(json,jsonpath,var)) where `jsonpath` set as **`data2[qrs]`** or **`data2.qrs`**.|
 
+<br/>
 
 ### Rules and Filters
 To generalize, Nexial's `jsonpath` follows these rules:

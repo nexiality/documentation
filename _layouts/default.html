@@ -38,6 +38,15 @@
 
     <script>
     function adjustPosition() { if (document.location.href.indexOf('#') != -1) { window.scrollBy(0, -200); } }
+
+    jQuery(document).ready(function() {
+        jQuery('.tabs .tab-links a').on('click', function(e) {
+            let currentAttrValue = jQuery(this).attr('href');
+            jQuery('.tabs ' + currentAttrValue).slideDown(500).siblings().slideUp(500);
+            jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+            e.preventDefault();
+        });
+    });
     </script>
 </head>
 

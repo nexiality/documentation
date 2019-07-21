@@ -6,43 +6,64 @@ tags: installation install nexial userguide
 comments: true
 ---
 
-### Nexial Installer
-1. Before we begin, an updated version of Java and Excel is required to run Nexial. The minimum requirements are **Java 1.8 or higher** as well as **Excel 2007/2010 or above**
+### Using Nexial Installer
+**Note**: Nexial requires Java 1.8.0_151 or above and Excel 2007/2010 or above. Scroll down for additional installation 
+and setup instructions. 
 
-   1. To keep things more structured, we will create a new directory for our installation process: <br/> 
-   Navigate to your Local Disk and create a new folder called "projects".
-   <br/>
-   ![C_drive](image/Installer_01.png)
-   <br/>
-   
-   2. Click the following link to begin downloading the Nexial installer: 
-   <a href="https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.2/nexial-installer-1.4.2.zip" class="external-link" target="_nexial_link">Nexial Installer</a>.
-   
-   3. Next, locate the nexial-installer.zip file in your Downloads folder.
-   <br/>
-   ![nexial.zip](image/Installer_02.png)
-   <br/>
-   
-   4. Unzip the nexial-installer.zip file into the C:\projects\ directory that you just created.
-   <br/>
-   ![unzip.gif](image/Installer_03.gif)
-   <br/>
-   
-   5. Navigate to the C:\projects\ directory and double click on the newly created "nexial-installer" folder then 
-   double click the "bin" folder
-   <br/>
-   ![navigate.gif](image/Installer_04.gif)
-   <br/>
-	
-   6. Double click the "install-latest.cmd" file (**NOT** the "install-latest.sh" file).
-   <br/>
-   ![install-latest](image/Installer_05.png)
-   <br/>
-   
-   7. Let the command prompt run; this may take a while. When it finishes, it should close itself and you now have 
-   Nexial installed onto your computer!
-   
-   For troublshooting or any other issues read the following steps:
+<div class="tabs">
+    <ul class="tab-links">
+        <li class="active"><a href="#tab1">Windows</a></li>
+        <li><a href="#tab2">Mac OSX</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="tab1" class="tab active">
+        <ol>
+            <li>
+                To keep things more structured, we will create a new directory for our installation process: <br/> 
+                Navigate to your local hard drive and create a new folder called **projects** (i.e. `C:\projects`).
+                <br/>
+                <img src="image/Installer_01.png"/>
+            </li>
+            <li>
+                Click the following link to begin downloading the Nexial installer: 
+                <a href="https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.2/nexial-installer-1.4.2.zip" class="external-link" target="_nexial_link">Nexial Installer</a>.
+            </li>            
+            <li>
+                Next, locate the downloaded zip file in your Downloads folder.
+                <br/>
+                <img src="image/Installer_02.png"/>
+            </li>            
+            <li>
+                Unzip the <code>nexial-installer.zip</code> file into the <code>C:\projects\</code> directory that you 
+                just created.
+                <br/>
+                <img src="image/Installer_03.gif"/>
+            </li>            
+            <li>
+                Navigate to the <code>C:\projects\</code> directory and double click on the newly created 
+                <code>nexial-installer</code> folder then double click the <code>bin</code> folder
+                <br/>
+                <img src="image/Installer_04.gif"/>
+            </li>            
+            <li>
+                Double click <code>install-latest.cmd</code> file (<b>NOT</b> the <code>install-latest.sh</code> file).
+                <br/>
+                <img src="image/Installer_05.png"/>
+            </li>            
+            <li>
+                Let the command prompt run; this may take a while. When it finishes, it should close itself and you 
+                now have the latest Nexial installed onto your computer!
+            </li>
+        </ol>
+        </div>
+        <div id="tab2" class="tab">
+        </div>
+    </div>
+</div>
+<br/>
+<br/>
+
+For troubleshooting or any other issues read the following steps:
 
 
 ### Install Java

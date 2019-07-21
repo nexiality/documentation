@@ -6,6 +6,7 @@
 body {
   color:       #2d2d2d;
   text-shadow: none;
+  background:  none !important;
 }
 
 header {
@@ -57,10 +58,11 @@ h3.pageTitle {
   font-size:    18pt;
   font-weight:  bold;
   color:        #5d8540;
-  background:   rgba(250, 255, 250, 0.75);
+  background:   rgba(240, 255, 205, 0.35);
   padding:      5px 5px 5px 25px;
   word-spacing: 0.25em;
   border-left:  20px solid #5d8540;
+  box-shadow:   5px 5px 8px -1px rgba(50, 80, 0, 0.75);
 }
 
 .quick_links_dropdown {
@@ -99,12 +101,11 @@ th {
 }
 
 td {
-  background-color: rgba(250, 250, 250, 0.9);
-  border:           1px solid #dbdbdb;
-  padding:          5px;
-  text-align:       left;
-  vertical-align:   top;
-  text-shadow:      none;
+  border:         1px solid #dbdbdb;
+  padding:        5px;
+  text-align:     left;
+  vertical-align: top;
+  text-shadow:    none;
 }
 
 audio {
@@ -133,11 +134,15 @@ blockquote {
   max-width: none !important;
 }
 
+#container {
+  background: none !important;
+}
+
 #container .inner img {
-  max-width:     none !important;
-  box-shadow:    2px 2px 15px #555;
-  margin:        5px 0;
-  border-radius: 10px;
+  max-width:  none !important;
+  box-shadow: 2px 2px 5px -1px #555;
+  margin:     5px 3px 5px 0;
+  //border-radius: 10px;
 }
 
 #downloads {
@@ -202,15 +207,13 @@ span.breadcrumb {
 .quick_links a.quick_link:hover {
   background-color: rgba(200, 200, 180, 0.15) !important;
   border:           2px solid rgba(100, 100, 100, 0.3) !important;
-  text-shadow:      1px 1px 15px #555 !important;
-  color:            #eee;
+  text-shadow:      1px 1px 15px #333 !important;
   box-shadow:       0 0 2px rgba(250, 250, 250, 0.75);
 }
 
 a {
   color:            rgba(40, 90, 50, 0.9);
-  background-color: rgba(180, 220, 180, 0.35) !important;
-  //font-weight:      bold !important;
+  background-color: rgba(200, 240, 180, 0.5) !important;
   padding:          2px 2px;
 }
 
@@ -220,7 +223,7 @@ a:hover {
 }
 
 a code {
-  color:           rgba(50, 100, 60, 0.9);
+  color:           rgba(50, 80, 50, 0.9);
   border:          none;
   text-shadow:     none;
   padding:         2px 4px 2px 18px;
@@ -248,11 +251,11 @@ span.command {
 }
 
 a.external-link {
-  padding:               1px 4px 1px 18px;
-  background:            rgba(100, 100, 100, 0.65) url(../../image/external_link.png) no-repeat !important;
-  color:                 #dda !important;
-  background-position-x: 2px !important;
-  background-position-y: 1px !important;
+  padding:               1px 5px 1px 20px;
+  background:            rgba(60, 60, 60, 0.75) url(../../image/external_link.png) no-repeat !important;
+  color:                 #eea !important;
+  background-position-x: 3px !important;
+  background-position-y: 2px !important;
   font-weight:           normal !important;
   text-shadow:           none;
 }
@@ -317,7 +320,7 @@ div.search-form form input#tipue_search_input {
     height:          auto;
     white-space:     nowrap;
     background-size: 1px 90px !important;
-    background:      transparent url("../images/header-bg.png") repeat-x;
+    //background:      transparent url("../images/header-bg.png") repeat-x;
   }
 
   header h1 {
@@ -504,7 +507,7 @@ div.sponsor {
   width:            450px;
   vertical-align:   middle;
   background-color: rgba(250, 250, 230, 0.45);
-  box-shadow:       0 0 35px rgba(250, 250, 230, 0.75);
+  box-shadow:       0 0 35px rgba(200, 200, 200, 0.95);
 }
 
 div.sponsor .description {
@@ -519,4 +522,79 @@ pre.explain {
   font-family:      "Marker Felt", "Comic Sans MS", sans-serif;
   background-color: rgba(250, 250, 250, 0.8);
   color:            #330;
+}
+
+/*----- Tabs -----*/
+.tabs {
+  width:   100%;
+  display: inline-block;
+}
+
+/*----- Tab Links -----*/
+.tabs .tab-links {
+  background:    rgba(90, 115, 75, 0.8);
+  box-shadow:    0 5px 3px 1px rgba(0, 0, 0, 0.75);
+  padding:       15px 0 0;
+  margin-bottom: 0;
+}
+
+.tabs .tab-links:after {
+  display: block;
+  clear:   both;
+  content: '';
+}
+
+.tabs .tab-links li {
+  margin:     0 10px;
+  padding:    0 !important;
+  float:      left;
+  list-style: none;
+}
+
+.tabs .tab-links a {
+  background:    rgba(140, 200, 40, 0.55) !important;
+  color:         #f0f0f0;
+  box-shadow:    3px 0 2px -1px #151;
+  display:       inline-block;
+  padding:       9px 15px;
+  border-radius: 3px 3px 0 0;
+  font-size:     16px;
+  font-weight:   600;
+  transition:    all linear 0.15s;
+}
+
+.tabs .tab-links a:hover {
+  background:      rgba(200, 255, 50, 0.95) !important;
+  //background:      #a7cce5 !important;
+  text-decoration: none;
+  color:           #555;
+}
+
+.tabs .tab-links .tab { display: none; }
+
+.tabs .tab-links .active {
+  display:       block;
+  border-bottom: 5px solid #000;
+  margin-bottom: -5px;
+}
+
+.tabs .tab-links .active a, .tabs .tab-links .active a:hover {
+  background:  rgba(200, 255, 50, 0.95) !important;
+  box-shadow:  2px 0 15px #ff9 !important;
+  color:       #4c6c4c;
+  text-shadow: 1px 1px 1px #ff9;
+}
+
+/*----- Content of Tabs -----*/
+.tabs .tab-content {
+  padding:       30px 20px;
+  border-radius: 0 0 3px 3px;
+  box-shadow:    1px 2px 5px rgba(0, 0, 0, 0.75);
+  background:    #fff;
+  min-height:    150px;
+  margin-top:    2px;
+}
+
+.tabs .tab-content li {
+  margin-bottom: 15px;
 }

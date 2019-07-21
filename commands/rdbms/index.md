@@ -109,10 +109,10 @@ of wrapper - one for SELECT statements and the other one for INSERT/UPDATE/DELET
 
 ![metadata](image/index_04.png)![metadata2](image/index_05.png)
 
-To reference the specific execution result, one would use the dot notation (`.`) like this: `${result}.sql` . This 
+To reference the specific execution result, one would use the dot notation (`.`) like this: `${result}.sql`. This 
 would retrieve the SQL statement associated to this execution.  Of course one could assign a different variable name 
 other than `result`. 
-- `${...}.sql` - retrieves the SQL statement executed to derive this execution result.
+- `${...}.sql` - retrieves the SQL statement executed to derive this execution result
 - `${...}.startTime` - retrieves the time when this SQL was executed, in 
   <a href="https://en.wikipedia.org/wiki/Unix_time" class="external-link" target="_nexial_link">epoch</a> format. 
   Considering using the [`date`](../../functions/$(date)) built-in function to convert the timestamp value into a 
@@ -122,25 +122,25 @@ other than `result`.
    is usually used when executing a INSERT, DELETE or UPDATE statement. 
 - `${...}.error` - retrieves the error message as a result of executing the associated SQL statement. 
 - `${...}.data` - retrieves the resultset or dataset; usually only contains data for SELECT statements. To retrieve 
-  portion of the dataset, 
+  portion of the dataset,
   - use `${...}.data[1]` notation to retrieve a row of data (row index is zero-based)
-  - use `${...}.data[1].column-name` notation to retrieve the value of a specific cell. 
+  - use `${...}.data[1].column-name` notation to retrieve the value of a specific cell
 - `${...}.cells[COLUMN_NAME]`
-  - ONLY APPLICABLE TO SELECTs. 
+  - ONLY APPLICABLE TO SELECTs
   - Retrieves data column-wise so that the values of the matching column (as specified via `COLUMN_NAME`) are 
-    retrieved, in the order of the rows returned from the query execution, as a list.
-  - For example, suppose a query returns a data set like this:  <br/>
+    retrieved, in the order of the rows returned from the query execution, as a list
+  - For example, suppose a query returns a data set like this:<br/>
     ![resultset](image/index_06.png)  
 
-    If this resultset is encapsulated in a variable named as `${result}`, then <br/>  
+    If this resultset is encapsulated in a variable named as `${result}`, then <br/>
     ![script3](image/index_07.png)
     
     would produce the following:<br/>
     ![](image/index_08.png)
-  - Note that some database vendors adhered to case sensitivity for column names.
-- `${...}.columns` - retrieves the column names of the resultset. 
-- `${...}.columnCount` - retrieves the number of columns in the resultset.
-- `${...}.rolledBack` - `true` or `false` to indicate whether the execution had resulted in a transaction rollback.
+  - Note that some database vendors adhered to case sensitivity for column names
+- `${...}.columns` - retrieves the column names of the resultset
+- `${...}.columnCount` - retrieves the number of columns in the resultset
+- `${...}.rolledBack` - `true` or `false` to indicate whether the execution had resulted in a transaction rollback
 
 Note that many database vendors (and the corresponding database drivers) adhere to case-sensitivity so that column 
 'Address' is considered NOT THE SAME as 'address' or 'ADDRESS'.
