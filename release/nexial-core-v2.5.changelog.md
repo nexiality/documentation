@@ -19,6 +19,8 @@ comments: true
 - capture screenshot image file as `nexial.lastScreenshot` for `desktop` commands
 - support relative path for script or plan specified in custom scripts/batch files.
 - Fixed variable list indexing issue for the files.
+- Fixed exception found when capturing screenshot within a 
+  [base &raquo; `repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)) loop.
 
 #### Improvements
 - add jenkins env. variables in execution summary
