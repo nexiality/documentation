@@ -17,7 +17,6 @@ comments: true
 - reduce duplicated error messages to streamline console logging
 - avoid console pause when executing in zero-touch environment (like unit testing or Jenkins)
 - capture screenshot image file as `nexial.lastScreenshot` for `desktop` commands
-- support relative path for script or plan specified in custom scripts/batch files.
 - Fixed variable list indexing issue for the files.
 - Fixed exception found when capturing screenshot within a 
   [base &raquo; `repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)) loop.
@@ -25,6 +24,7 @@ comments: true
 #### Improvements
 - add jenkins env. variables in execution summary
 - create alternative screen capture capability in case we can't capture screen via WebDriver of Winium driver
+- add `artifact/bin` as part of creating a project structure via `nexial-project` script.
 
 
 ### [System Variables](../systemvars/)
@@ -71,6 +71,10 @@ comments: true
 
 
 ### [json commands](../commands/json)
+
+
+### [ws commands](../commands/ws)
+- fix URL by replacing special characters (like space and `&`) with the appropriate encoding.
 
 
 ### [web commands](../commands/web)
