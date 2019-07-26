@@ -20,6 +20,7 @@ comments: true
 - Fixed variable list indexing issue for the files.
 - Fixed exception found when capturing screenshot within a 
   [base &raquo; `repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)) loop.
+- reduce duplicate 3rd-party libraries.
 
 #### Improvements
 - add jenkins env. variables in execution summary
@@ -34,6 +35,7 @@ comments: true
 
 
 ### [Flow Control](../flowcontrols)
+- [`has file-size`](../flowcontrols/filter#description): now support non-existent file via `has file-size 0` syntax.
 
 
 ### [base commands](../commands/base)
