@@ -6,9 +6,9 @@ tags: installation install nexial userguide
 comments: true
 ---
 
-### Using Nexial Installer
+### Using The Nexial Installer
 **Note**: Nexial requires Java 1.8.0_151 or above and Excel 2007/2010 or above. Scroll down for additional installation 
-and setup instructions. 
+and setup instructions. test
 
 <div class="tabs">
     <ul class="tab-links">
@@ -67,12 +67,26 @@ For troubleshooting or any other issues read the following steps:
 
 
 ### Install Java
+
 1. Check if Java is installed - **Java 1.8.0_151 or above required, and 64-bit Java is highly recommended**
    **If possible, consider installing the latest version of Java 1.8 or the latest release of Java.**<br/>
-   
-   1. Open console via: <br/>
-      **Windows**:  Start | Run | `cmd <ENTER>`<br/> 
-      **MacOSX**: Open the Terminal app, or open Spotlight (`CMD-Space`) and then type `terminal <ENTER>`<br/>
+   <div class="tabs">
+    <ul class="tab-links">
+        <li class="active"><a href="#tab3">Windows</a></li>
+        <li><a href="#tab4">Mac OSX</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="tab3" class="tab active">
+			   1. Open console via: <br/>
+				  Start | Run | type in <b>"cmd"</b> and press <b>&lt;ENTER&gt;</b><br/> 
+        </div>
+        <div id="tab4" class="tab">
+			    Open the Terminal app, or open Spotlight (CMD-Space) and then type, <b>"terminal"</b> and press <b>&lt;ENTER&gt;</b><br/>
+      then type, <b>"java -version"</b> and press <b>&lt;ENTER&gt;</b>
+
+<br/>
+<br/>
+      Open the Terminal app, or open Spotlight (`CMD-Space`) and then type `terminal <ENTER>`<br/>
       `java -version <ENTER>`
 	  
    3. If you get something like the following, please follow Step 2 down below (Download Java):<br/>
