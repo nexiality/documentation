@@ -96,6 +96,75 @@ value), JSON object or JSON array.
 
 -----
 
+##### **`keys(jsonpath)`**
+Extract the immediate keys of the resolved JSON object matching the specified [`jsonpath`](../jsonpath). This operation
+first reduces the current JSON document to its fragment that match the specified [`jsonpath`](../jsonpath). Then if the 
+resolved JSON fragment is a valid JSON object, it returns a list of the immediate keys (meaning current level only) to 
+such JSON fragment. If the specified [`jsonpath`](../jsonpath) does not resolve to a JSON object (such as JSON array or 
+single value), then this operation resolves to an empty list. Either way this operation transform the current `JSON`
+data type to a [`LIST`](LISTexpression) data type.
+
+For example, suppose we have the following JSON document assigned to a data variable named `json`:
+```json
+{
+  "shipping_address": [
+    {
+      "street_address": "1600 Pennsylvania Avenue NW",
+      "city": "Washington",
+      "state": "DC",
+      "labels": [
+        "east coast",
+        {
+          "residents": [
+            { "name": "Mr. President", "gender": "M" },
+            { "name": "Mrs. President", "gender": "F" },
+            { "name": "First Dog", "gender": "F" },
+            null
+          ]
+        },
+        null,
+        "gated"
+      ]
+    },
+    {
+      "country": "USA",
+      "street_address": "1733 Washington Avenue",
+      "city": "Glenoak",
+      "state": "CA"
+    }
+  ],
+  "billing_address": {
+    "address1": "1st Street SE",
+    "address2": null,
+    "city": "Seeti",
+    "county": "Abrehiban",
+    "state": "DC",
+    "zipcode": "10541",
+    "country": "USA"
+  },
+  "tags": [ "electronics", "hi-tech", "android" ]
+}
+```
+
+Here are some possible use of this operations:
+
+| expression                                                    | result            | comments                         |
+|:--------------------------------------------------------------|:------------------|:---------------------------------|
+|`[JSON(${json}) => keys(shipping_address.labels.residents[2])]`|`LIST(name,gender)`|keys of the 3rd JSON fragment under `residents`|
+|`[JSON(${json}) => keys(shipping_address.labels.residents[3])]`|`LIST()`           |keys of the 4th JSON fragment under `residents`, which has no keys|
+|`[JSON(${json}) => keys(shipping_address.labels[1])]`          |`LIST(residents)`  |keys of the 2nd JSON fragment under `labels`|
+|`[JSON(${json}) => keys(shipping_address[1])]`                 |`LIST(country,street_address,city,state)`|keys of the 2nd JSON fragment under `shipping_address`|
+|`[JSON(${json}) => keys(billing_address)]`                     |`LIST(address1,address2,city,county,state,zipcode,country)`|keys of `billing_address` JSON fragment|
+
+**Note**:
+1. The resolved JSON keys do not necessarily render in the same order as found in the originating JSON document. You may 
+   want to consider [LIST &raquo; `ascending`](LISTexpression#ascending) or 
+   [LIST &raquo; `descending`](LISTexpression#descending) to re-order the keys.
+2. The same functionality is also available as a command - 
+   [json &raquo; `storeKeys(json,jsonpath,var)`](../commands/json/storeKeys(json,jsonpath,var))
+
+-----
+
 ##### **`list`**
 Transform a JSON Array or text to a [`LIST`](LISTexpression). Works best with JSON Array that contains single text 
 value (e.g. `["apple","orange","banana"]`). Does not work with a JSON object.

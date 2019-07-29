@@ -32,6 +32,8 @@ comments: true
 
 
 ### [Nexial Expression](../expressions)
+- [JSON &raquo; `keys(jsonpath)`](../expressions/JSONexpression#keysjsonpath): extract immediate keys of resolved JSON 
+  fragment based on `jsonpath`.
 
 
 ### [Flow Control](../flowcontrols)
@@ -73,6 +75,8 @@ comments: true
 
 
 ### [json commands](../commands/json)
+- [`storeKeys(json,jsonpath,var)`](../commands/json/storeKeys(json,jsonpath,var)): extract immediate keys of resolved 
+  JSON fragment based on `jsonpath`.
 
 
 ### [ws commands](../commands/ws)
