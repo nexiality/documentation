@@ -91,6 +91,9 @@ comments: true
   inadvertently load webdriver before necessarily.
 - support screen capturing using native approach so that we can capture JavaScript dialog/popup or other native dialogs 
   (such as "Open File" and "Save As"). This is also the screen capturing alternative when the specific WebDriver fails.
-
+- [`select(locator,text)`](../commands/web/select(locator,text)):- supports selecting `empty` text. Also `text` as `{ALL}` 
+  to `select` all options in case of `multi-select.`
+- [`deselect(locator,text)`](../commands/web/deselect(locator,text)):- supports `text` as `{ALL}` to `deselect` all 
+  selected options in case of `multi-select.`
 
 ### [xml commands](../commands/xml)

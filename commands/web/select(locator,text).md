@@ -29,16 +29,15 @@ To select both "Andean flamingo" and "Chilean flamingo", one would specify `text
   selection, then only the first one will be selected.
 - If the regex-based identification yielded no matches, then `text` will be retried as exact match. This means Nexial
   will look for a `OPTION` element under the target `SELECT` element that contains the text `REGEX:...`.
-- If `text` is `(empty)` and the target `SELECT` element supports multi-select, then ALL its `OPTION` elements will be
-  deselected.
 - The `REGEX:` capability works for both [`select(locator,text)`](select(locator,text)) and 
   [`deselect(locator,text)`](deselect(locator,text)) command.
-
+- If `text` is `{ALL}` and the target `SELECT` element supports **multi-select**, then `ALL` its `OPTION` elements will be
+  **selected.**
 
 ### Parameters
 - **locator** - the locator of the `SELECT` element.
-- **text** - the text to be selected on the `SELECT` element.
-
+- **text** - the text to be selected on the `SELECT` element. As said earlier, it supports `Regex:` capability 
+            as well as `{ALL}` to select all options.
 
 ### Example
 **Script**:<br/>
@@ -47,6 +46,12 @@ To select both "Andean flamingo" and "Chilean flamingo", one would specify `text
 **Output**:<br/>
 ![](image/select_02.png)
 
+**Select all the option(multi-select)**:<br/>
+**Script**:<br/>
+![](image/select_05.png)
+
+**After selection**:<br/>
+![](image/select_06.png)
 
 ### See Also
 - [`deselect(locator,text)`](deselect(locator,text))
