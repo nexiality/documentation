@@ -56,7 +56,7 @@ and setup instructions. test
             </li>
         </ol>
         </div>
-        <div id="tab2" class="tab" style= "Display:none;">
+        <div id="tab2" class="tab" style= "display:none;">
         <ol>
             <li>
             </li>
@@ -82,58 +82,63 @@ For troubleshooting or any other issues read the following steps:
         <div id="tab3" class="tab active">
         <ol>
             <li>
-			   Open the console by first pressing the Start menu. Next, press Run and type in <b>"cmd"</b> and press <b>&lt;ENTER&gt;</b><br/>
+			   Open the console by first pressing the Start menu. Next, press Run and type in <b>"cmd"</b> and press 
+			   <b>&lt;ENTER&gt;</b><br/>
             </li>
 			<li>
-			Type, <b>"java -version"</b> and press <b>&lt;ENTER&gt;</b><br/>
-			If you get something like the following, please follow Step 2 down below (Download Java):<br/>
-            <img src="image/InstallingNexial_01.png"/>
+			    Type, <b>"java -version"</b> and press <b>&lt;ENTER&gt;</b><br/>
+			    If you get something like the following, please follow Step 2 down below (Download Java):<br/>
+                <img src="image/InstallingNexial_01.png"/>
 			</li>
 			<li>
-			If you are not getting the above message, check that the version of Java installed is 1.8<br/>
-			or above. For example,<br/>
-			<img src="image/InstallingNexial_02.png"/><br/>
-			Below is a snapshot of an outdated Java installation (1.6.0.45).
-			<img src="image/InstallingNexial_02a.png"/><br/>
-			If the version of your Java installation
-			is not <b>1.8.x</b>, then please consider a reinstallation or upgrade to the latest version of 
-			<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" class="external-link" target="_nexial_link">Nexial Installer</a>.<br/>
+			    If you are not getting the above message, check that the version of Java installed is 1.8 or above. 
+			    For example,<br/>
+			    <img src="image/InstallingNexial_02.png"/><br/>
+			    Below is a snapshot of an outdated Java installation (1.6.0.45).
+			    <img src="image/InstallingNexial_02a.png"/><br/>
+			    If the version of your Java installation is not <b>1.8.x</b>, then please consider a reinstallation or 
+			    upgrade to the latest version of 
+			    <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" class="external-link" target="_nexial_link">Java 1.8</a>.<br/>
 			</li>
 			<li>
-			If the version of Java installed is <b>1.8</b> or above, skip to the next section (Check Excel Version), otherwise if the 
-      version of Java installed is less than <b>1.8</b>, proceed to Step 2 down below (Download Java).
+			    If the version of Java installed is <b>1.8</b> or above, skip to the next section (Check Excel Version), 
+			    otherwise if the version of Java installed is less than <b>1.8</b>, proceed to Step 2 down below 
+			    (Download Java).
 			</li>
         </ol>
         </div>
-        <div id="tab4" class="tab" style= "Display:none;">
+        <div id="tab4" class="tab" style= "display:none;">
         <ol>
             <li>
-			   Open the Terminal app, or open Spotlight (CMD-Space) and then type, <b>"terminal"</b> and press <b>&lt;ENTER&gt;</b><br/>
+			   Open the Terminal app, or open Spotlight (CMD-Space) and then type, <b>"terminal"</b> and press 
+			   <b>&lt;ENTER&gt;</b><br/>
             </li>
 			<li>
-			Type, <b>"java -version"</b> and press <b>&lt;ENTER&gt;</b><br/>
-			If you get something like the following, please follow Step 2 down below (Download Java):<br/>
-            <img src="image/InstallingNexial_01.png"/>
+			    Type, <b>"java -version"</b> and press <b>&lt;ENTER&gt;</b><br/>
+			    If you get something like the following, please follow Step 2 down below (Download Java):<br/>
+                <img src="image/InstallingNexial_01.png"/>
 			</li>
 			<li>
-			If you are not getting the above message, check that the version of Java installed is 1.8<br/>
-			or above. For example,<br/>
-			<img src="image/InstallingNexial_02.png"/><br/>
-			Below is a snapshot of an outdated Java installation (1.6.0.45).
-			<img src="image/InstallingNexial_02a.png"/><br/>
-			If the version of your Java installation
-			is not <b>1.8.x</b>, then please consider a reinstallation or upgrade to the latest version of 
-			<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" class="external-link" target="_nexial_link">Nexial Installer</a>.<br/>
+			    If you are not getting the above message, check that the version of Java installed is 1.8 or above. 
+			    For example,<br/>
+			    <img src="image/InstallingNexial_02.png"/><br/>
+			    Below is a snapshot of an outdated Java installation (1.6.0.45).
+			    <img src="image/InstallingNexial_02a.png"/><br/>
+			    If the version of your Java installation is not <b>1.8.x</b>, then please consider a reinstallation or 
+			    upgrade to the latest version of 
+			    <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" class="external-link" target="_nexial_link">Java 1.8</a>.<br/>
 			</li>
 			<li>
-			If the version of Java installed is <b>1.8</b> or above, skip to the next section (Check Excel Version), otherwise if the 
-      version of Java installed is less than <b>1.8</b>, proceed to Step 2 down below (Download Java).
+			    If the version of Java installed is <b>1.8</b> or above, skip to the next section (Check Excel Version), 
+			    otherwise if the version of Java installed is less than <b>1.8</b>, proceed to Step 2 down below 
+			    (Download Java).
 			</li>
         </ol>
         </div>
     </div>
 </div>
 <br/>
+
 
 2. Download Java
 
