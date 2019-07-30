@@ -56,53 +56,84 @@ and setup instructions. test
             </li>
         </ol>
         </div>
-        <div id="tab2" class="tab">
+        <div id="tab2" class="tab" style= "Display:none;">
+        <ol>
+            <li>
+            </li>
+        </ol>
         </div>
     </div>
 </div>
 <br/>
-<br/>
 
 For troubleshooting or any other issues read the following steps:
-
 
 ### Install Java
 
 1. Check if Java is installed - **Java 1.8.0_151 or above required, and 64-bit Java is highly recommended**
    **If possible, consider installing the latest version of Java 1.8 or the latest release of Java.**<br/>
-   <div class="tabs">
+   
+<div class="tabs">
     <ul class="tab-links">
         <li class="active"><a href="#tab3">Windows</a></li>
         <li><a href="#tab4">Mac OSX</a></li>
     </ul>
     <div class="tab-content">
         <div id="tab3" class="tab active">
-			   1. Open console via: <br/>
-				  Start | Run | type in <b>"cmd"</b> and press <b>&lt;ENTER&gt;</b><br/> 
+        <ol>
+            <li>
+			   Open the console by first pressing the Start menu. Next, press Run and type in <b>"cmd"</b> and press <b>&lt;ENTER&gt;</b><br/>
+            </li>
+			<li>
+			Type, <b>"java -version"</b> and press <b>&lt;ENTER&gt;</b><br/>
+			If you get something like the following, please follow Step 2 down below (Download Java):<br/>
+            <img src="image/InstallingNexial_01.png"/>
+			</li>
+			<li>
+			If you are not getting the above message, check that the version of Java installed is 1.8<br/>
+			or above. For example,<br/>
+			<img src="image/InstallingNexial_02.png"/><br/>
+			Below is a snapshot of an outdated Java installation (1.6.0.45).
+			<img src="image/InstallingNexial_02a.png"/><br/>
+			If the version of your Java installation
+			is not <b>1.8.x</b>, then please consider a reinstallation or upgrade to the latest version of 
+			<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" class="external-link" target="_nexial_link">Nexial Installer</a>.<br/>
+			</li>
+			<li>
+			If the version of Java installed is <b>1.8</b> or above, skip to the next section (Check Excel Version), otherwise if the 
+      version of Java installed is less than <b>1.8</b>, proceed to Step 2 down below (Download Java).
+			</li>
+        </ol>
         </div>
-        <div id="tab4" class="tab">
-			    Open the Terminal app, or open Spotlight (CMD-Space) and then type, <b>"terminal"</b> and press <b>&lt;ENTER&gt;</b><br/>
-      then type, <b>"java -version"</b> and press <b>&lt;ENTER&gt;</b>
-
+        <div id="tab4" class="tab" style= "Display:none;">
+        <ol>
+            <li>
+			   Open the Terminal app, or open Spotlight (CMD-Space) and then type, <b>"terminal"</b> and press <b>&lt;ENTER&gt;</b><br/>
+            </li>
+			<li>
+			Type, <b>"java -version"</b> and press <b>&lt;ENTER&gt;</b><br/>
+			If you get something like the following, please follow Step 2 down below (Download Java):<br/>
+            <img src="image/InstallingNexial_01.png"/>
+			</li>
+			<li>
+			If you are not getting the above message, check that the version of Java installed is 1.8<br/>
+			or above. For example,<br/>
+			<img src="image/InstallingNexial_02.png"/><br/>
+			Below is a snapshot of an outdated Java installation (1.6.0.45).
+			<img src="image/InstallingNexial_02a.png"/><br/>
+			If the version of your Java installation
+			is not <b>1.8.x</b>, then please consider a reinstallation or upgrade to the latest version of 
+			<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" class="external-link" target="_nexial_link">Nexial Installer</a>.<br/>
+			</li>
+			<li>
+			If the version of Java installed is <b>1.8</b> or above, skip to the next section (Check Excel Version), otherwise if the 
+      version of Java installed is less than <b>1.8</b>, proceed to Step 2 down below (Download Java).
+			</li>
+        </ol>
+        </div>
+    </div>
+</div>
 <br/>
-<br/>
-      Open the Terminal app, or open Spotlight (`CMD-Space`) and then type `terminal <ENTER>`<br/>
-      `java -version <ENTER>`
-	  
-   3. If you get something like the following, please follow Step 2 down below (Download Java):<br/>
-      ![no_java](image/InstallingNexial_01.png)
-	  
-   4. If you are not getting the above message, check that the version of Java installed is 1.8<br/>
-      or above. For example,<br/>
-      ![java_18](image/InstallingNexial_02.png)<br/>
-      Below is a snapshot of an outdated Java installation (1.6.0.45). If the version of your Java installation
-      is not `1.8.x`, then please consider a reinstallation or upgrade to the latest version of 
-      <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" class="external-link" target="_nexial_link">Java 1.8</a>.
-      <br/>
-      ![java_16](image/InstallingNexial_02a.png)
-	  
-   5. If the version of Java installed is **1.8** or above, skip to the next section (Check Excel Version), otherwise if the 
-      version of Java installed is less than **1.8**, proceed to Step 2 down below (Download Java).
 
 2. Download Java
 
@@ -117,7 +148,7 @@ For troubleshooting or any other issues read the following steps:
    4. Select the appropriate download file suitable for your workstation. It is recommended to select the **64bit version**
       for better performance and efficient memory management.
 
-2. Installing Java
+3. Installing Java
    
    1. **For Windows only: IT IS HIGHLY RECOMMENDED TO INSTALL JAVA IN A DIRECTORY THAT DOES NOT CONTAIN SPACES**
       **Windows**: double-click on the downloaded installer. Follow the instructions of the installer. It is
@@ -132,7 +163,7 @@ For troubleshooting or any other issues read the following steps:
       visit 
       <a href="https://java.com/en/download/help/mac_install.xml" class="external-link" target="_nexial_link">https://java.com/en/download/help/mac_install.xml</a>
 
-3. Check `PATH`, `JAVA_HOME`, `JRE_HOME`
+4. Check `PATH`, `JAVA_HOME`, `JRE_HOME`
    Windows:
    
    1. Click on the Start menu then click on "Run" and (or if on **Windows 10**, in the search bar) enter: "sysdm.cpl" then press `<ENTER>`. Click the "Advanced" tab then click the "Environment Variables..." button at the bottom <br/>
