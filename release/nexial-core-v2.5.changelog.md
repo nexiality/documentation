@@ -38,6 +38,8 @@ comments: true
 
 ### [Flow Control](../flowcontrols)
 - [`has file-size`](../flowcontrols/filter#description): now support non-existent file via `has file-size 0` syntax.
+- [`not contain`](../flowcontrols/filter.#description): handle text delimiter being used as control.
+- [`contain`](../flowcontrols/filter.#description): handle text delimiter being used as control.
 
 
 ### [base commands](../commands/base)
@@ -95,5 +97,6 @@ comments: true
   to `select` all options in case of `multi-select.`
 - [`deselect(locator,text)`](../commands/web/deselect(locator,text)):- supports `text` as `{ALL}` to `deselect` all 
   selected options in case of `multi-select.`
+
 
 ### [xml commands](../commands/xml)
