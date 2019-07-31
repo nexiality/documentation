@@ -17,50 +17,95 @@ and setup instructions. test
     </ul>
     <div class="tab-content">
         <div id="tab1" class="tab active">
-        <ol>
-            <li>
-                To keep things more structured, we will create a new directory for our installation process: <br/> 
-                Navigate to your local hard drive and create a new folder called **projects** (i.e. `C:\projects`).
-                <br/>
-                <img src="image/Installer_01.png"/>
-            </li>
-            <li>
-                Click the following link to begin downloading the Nexial installer: 
-                <a href="https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.2/nexial-installer-1.4.2.zip" class="external-link" target="_nexial_link">Nexial Installer</a>.
-            </li>            
-            <li>
-                Next, locate the downloaded zip file in your Downloads folder.
-                <br/>
-                <img src="image/Installer_02.png"/>
-            </li>            
-            <li>
-                Unzip the <code>nexial-installer.zip</code> file into the <code>C:\projects\</code> directory that you 
-                just created.
-                <br/>
-                <img src="image/Installer_03.gif"/>
-            </li>            
-            <li>
-                Navigate to the <code>C:\projects\</code> directory and double click on the newly created 
-                <code>nexial-installer</code> folder then double click the <code>bin</code> folder
-                <br/>
-                <img src="image/Installer_04.gif"/>
-            </li>            
-            <li>
-                Double click <code>install-latest.cmd</code> file (<b>NOT</b> the <code>install-latest.sh</code> file).
-                <br/>
-                <img src="image/Installer_05.png"/>
-            </li>            
-            <li>
-                Let the command prompt run; this may take a while. When it finishes, it should close itself and you 
-                now have the latest Nexial installed onto your computer!
-            </li>
-        </ol>
+            <ol>
+                <li>
+                    To keep things more structured, we will create a new directory for our installation process: <br/> 
+                    Navigate to your local hard drive and create a new folder called **projects** (i.e. 
+                    <code>C:\projects</code>).<br/>
+                    <img src="image/Installer_01.png"/>
+                </li>
+                <li>
+                    Click the following link to begin downloading the Nexial installer: 
+                    <a href="https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.2/nexial-installer-1.4.2.zip" class="external-link" target="_nexial_link">Nexial Installer</a>.
+                </li>            
+                <li>
+                    Next, locate the downloaded zip file in your Downloads folder.
+                    <br/>
+                    <img src="image/Installer_02.png"/>
+                </li>            
+                <li>
+                    Unzip the <code>nexial-installer.zip</code> file into the <code>C:\projects\</code> directory that 
+                    you just created.<br/>
+                    <img src="image/Installer_03.gif"/>
+                </li>            
+                <li>
+                    Navigate to the <code>C:\projects\</code> directory and double click on the newly created 
+                    <code>nexial-installer</code> folder then double click the <code>bin</code> folder:<br/>
+                    <img src="image/Installer_04.gif"/>
+                </li>            
+                <li>
+                    Double click <code>install-latest.cmd</code> file (<b>NOT</b> the <code>install-latest.sh</code> 
+                    file).<br/>
+                    <img src="image/Installer_05.png"/>
+                </li>            
+                <li>
+                    Let the command prompt run; this may take a while. When it finishes, it should close itself and you 
+                    now have the latest Nexial installed onto your computer!
+                </li>
+            </ol>
         </div>
         <div id="tab2" class="tab" style= "display:none;">
-        <ol>
-            <li>
-            </li>
-        </ol>
+            Create a new directory under your HOME directory named <code>projects</code>. Both Nexial (the 
+            automation platform) and Nexial Installer will be installed individually under this directory.<br/>
+            <ol>
+                <li>
+                    Open Finder:<br/>
+                    <img src="image/InstallingNexial_01.mac.png"/>
+                </li>
+                <li>
+                    Navigate to your HOME directory via shortcut <code>COMMAND-SHIFT-G</code>, then type in <code>~/</code>:<br/>
+                    <img src="image/InstallingNexial_02.mac.png"/>
+                </li>
+                <li>
+                    Create a new directory via shortcut <code>CONTROL-SHIFT-n</code>, then type in <code>projects</code>:<br/>
+                    <img src="image/InstallingNexial_03.mac.png"/>
+                </li>
+                <li>
+                    Click the following link to begin downloading the Nexial installer:
+                    <a href="https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.2/nexial-installer-1.4.2.zip" class="external-link" target="_nexial_link">Nexial Installer</a><br/>
+                    <br/>
+                    By default, it will be downloaded to the <code>Downloads</code> directory. Move this file to the 
+                    newly created <code>projects</code> directory:<br/>
+                    <img src="image/InstallingNexial_04.mac.png"/>
+                </li>            
+                <li>
+                    Rename the Nexial Installer zip by removing its version number from the zip file. That way, it will
+                    unzip to a directory named as <code>nexial-installer</code> (instead of <code>nexial-installer-1.4.2</code>):<br/>
+                    <img src="image/InstallingNexial_05.mac.png"/><br/>
+                    <img src="image/InstallingNexial_06.mac.png"/><br/>
+                </li>
+                <li>
+                    Double-click on <code>nexial-installer.zip</code> to start unzipping this file. This will unzip 
+                    <code>nexial-installer.zip</code> to a directory named as <code>nexial-installer</code>:<br/>
+                    <img src="image/InstallingNexial_07.mac.png"/>
+                    <br/>
+                    Note that the unzip directory contains a <code>bin</code> and a <code>lib</code> directory.
+                </li>
+                <li>
+                    Right-click on <code>nexial-installer/bin/installer-latest.sh</code> (<b>NOT 
+                    <code>installer-latest.cmd</code></b>). Choose either <code>Terminal.app</code> or 
+                    <code>iTerm.app</code>:<br/>
+                    <img src="image/InstallingNexial_08.mac.png"/>
+                </li>
+                <li>
+                    Nexial installation will commence:<br/>
+                    <img src="image/InstallingNexial_09.mac.png"/><br/>
+                    <br/>
+                    Give it a few minutes or so, Nexial installation will complete and you will have yourself the 
+                    latest Nexial installed on your computer!<br/>
+                    <img src="image/InstallingNexial_10.mac.png"/>
+                </li>
+            </ol>
         </div>
     </div>
 </div>
