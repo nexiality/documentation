@@ -70,7 +70,7 @@ For troubleshooting or any other issues read the following steps:
 
 ### Install Java
 
-1. Check if Java is installed - **Java 1.8.0_151 or above required, and 64-bit Java is highly recommended**
+Check if Java is installed - **Java 1.8.0_151 or above required, and 64-bit Java is highly recommended**
    **If possible, consider installing the latest version of Java 1.8 or the latest release of Java.**<br/>
    
 <div class="tabs">
@@ -130,7 +130,7 @@ For troubleshooting or any other issues read the following steps:
 			</li>
 			<li>
 			    If the version of Java installed is <b>1.8</b> or above, skip to the next section (Check Excel Version), 
-			    otherwise if the version of Java installed is less than <b>1.8</b>, proceed to Step 2 down below 
+			    otherwise if the version of Java installed is less than <b>1.8</b>, proceed to the next step down below 
 			    (Download Java).
 			</li>
         </ol>
@@ -144,25 +144,25 @@ For troubleshooting or any other issues read the following steps:
 
    1. Click the following link: <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" class="external-link" target="_nexial_link">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>
    
-   2. Click on the Download button just below JDK.<br/>
-      ![download_jdk](image/InstallingNexial_03.png)
+   2. Click on the Download button.<br/>
+      ![download_jdk](image/InstallingJava_01.png)
    
-   3. Click on **Accept License Agreement**.<br/>
-      ![accept_license](image/InstallingNexial_04.png)
+   3. Scroll down to the bottom of the page and click **Accept License Agreement**.<br/>
+      ![accept_license](image/InstallingJava_02.png)
    
-   4. Select the appropriate download file suitable for your workstation. It is recommended to select the **64bit version**
+   4. Select the appropriate download file suitable for your operating system. It is recommended to select the **64bit version**
       for better performance and efficient memory management.
 
 3. Installing Java
    
-   1. **For Windows only: IT IS HIGHLY RECOMMENDED TO INSTALL JAVA IN A DIRECTORY THAT DOES NOT CONTAIN SPACES**
+   1. **For Windows only: IT IS HIGHLY RECOMMENDED TO INSTALL JAVA IN A DIRECTORY THAT DOES NOT CONTAIN SPACES**<br/>
       **Windows**: double-click on the downloaded installer. Follow the instructions of the installer. It is
       _**highly recommended**_ to install Java in a directory that does not contain any spaces. For example, 
       `C:\tools\jdk1.8`.  
        
-      - By default, Java is installed to either `C:\Program Files\Java\jdk...` or 
+		- By default, Java is installed to either `C:\Program Files\Java\jdk...` or 
         `C:\Program Files (x86)\Java\jdk...`.   
-      - For more hep, visit <a href="https://java.com/en/download/help/download_options.xml#windows" class="external-link" target="_nexial_link">https://java.com/en/download/help/download_options.xml#windows</a>
+		- For more help, visit <a href="https://java.com/en/download/help/download_options.xml#windows" class="external-link" target="_nexial_link">https://java.com/en/download/help/download_options.xml#windows</a>
        
       **MacOSX**: double-click on the downloaded installer.  Follow the instructions of the installer.  For more help, 
       visit 
