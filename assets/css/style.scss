@@ -533,15 +533,31 @@ pre.explain {
 /*----- Tab Links -----*/
 .tabs .tab-links {
   background:    rgba(90, 115, 75, 0.8);
-  box-shadow:    0 5px 3px 1px rgba(0, 0, 0, 0.75);
+  box-shadow:    3px 5px 4px 1px rgba(0, 0, 0, 0.65);
+  border-left:   20px solid rgba(90, 115, 75, 0.9);
   padding:       15px 0 0;
   margin-bottom: 0;
+}
+
+.tabs .tab-links:hover {
+  cursor: pointer;
 }
 
 .tabs .tab-links:after {
   display: block;
   clear:   both;
   content: '';
+}
+
+.tabs-collapsed {
+  border-left:           20px solid rgba(255, 255, 255, 0.35) !important;
+  background-image:      url(/image/expand_down.png) !important;
+  background-repeat:     no-repeat !important;
+  background-size:       23px !important;
+  background-position-y: 38px !important;
+  background-position-x: -22px !important;
+  background-blend-mode: luminosity !important;
+  box-shadow:            none !important;
 }
 
 .tabs .tab-links li {
@@ -552,20 +568,25 @@ pre.explain {
 }
 
 .tabs .tab-links a {
-  background:    rgba(140, 200, 40, 0.55) !important;
-  color:         #f0f0f0;
-  box-shadow:    3px 0 2px -1px #151;
-  display:       inline-block;
-  padding:       9px 15px;
-  border-radius: 3px 3px 0 0;
-  font-size:     16px;
-  font-weight:   600;
-  transition:    all linear 0.15s;
+  background:            rgba(140, 200, 40, 0.55) !important;
+  color:                 #f0f0f0;
+  box-shadow:            3px 0 2px -1px #151;
+  display:               inline-block;
+  padding:               9px 15px;
+  border-radius:         3px 3px 0 0;
+  font-size:             16px;
+  font-weight:           600;
+  transition:            all linear 0.15s;
+
+  -moz-user-select:      none;
+  -ms-user-select:       none;
+  -khtml-user-select:    none;
+  -webkit-user-select:   none;
+  -webkit-touch-callout: none;
 }
 
 .tabs .tab-links a:hover {
   background:      rgba(200, 255, 50, 0.95) !important;
-  //background:      #a7cce5 !important;
   text-decoration: none;
   color:           #555;
 }
@@ -589,10 +610,11 @@ pre.explain {
 .tabs .tab-content {
   padding:       30px 20px;
   border-radius: 0 0 3px 3px;
-  box-shadow:    1px 2px 5px rgba(0, 0, 0, 0.75);
+  box-shadow:    3px 5px 5px 1px rgba(0, 0, 0, 0.5);
   background:    #fff;
   min-height:    150px;
   margin-top:    2px;
+  display:       none;
 }
 
 .tabs .tab-content li {

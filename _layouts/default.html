@@ -7,7 +7,7 @@
     <META NAME="Classification" CONTENT="Nexial - test automation platform with the main motivation to provide a set of capabilities to automate software testing. Main capabilities: Test automation for everyone - no coding experience required (but supported), simple and valuable to all project participants; Keyword-driven via simple/familiar spreadsheet interface; Hybrid approach to support keyword-based tests and program/script -based tests; Local and remote (Jenkins, BrowserStack) support; Integration to existing collaboration tools such as JIRA and Confluence; Supports various application architecture, includes web (browser), desktop, API/REST/SOAP, database, batch, ssh; Extensive and flexible test management; Data management and data generation; Supports FRIP (functional, regression, integration, performance testing)">
     <meta name="Description" content="The test automation platform for everyone! A hybrid, codeless approach towards test automation that supports both agile and traditional product development methodologies and promotes collaboration across the entire team. Collaborate, Integrate, Automate! ">
     <META NAME="distribution" CONTENT="Global">
-    <meta name="Keywords" content="automation nexial nexiality nexialist test collaborate integrate automate platform codeless hybrid testing scripting regression functional">
+    <meta name="Keywords" content="automation nexial nexiality nexialist test collaborate integrate automate platform codeless hybrid testing scripting regression functional QA quality engineering">
     <META NAME="Language" CONTENT="English">
     <meta name="revisit-after" content="5 days">
     <meta name="robots" content="index, follow">
@@ -37,14 +37,30 @@
     {% endif %}
 
     <script>
-    function adjustPosition() { if (document.location.href.indexOf('#') != -1) { window.scrollBy(0, -200); } }
+    function adjustPosition() { if (document.location.href.indexOf('#') !== -1) { window.scrollBy(0, -200); } }
 
     jQuery(document).ready(function() {
+        jQuery('.tabs .tab-links').on('click', function (e) {
+            let _this = jQuery(this);
+            _this.parent().find('.tab-content').toggle(250, function () {
+                if (_this.hasClass('tabs-collapsed')) {
+                    _this.removeClass('tabs-collapsed');
+                } else {
+                    _this.addClass('tabs-collapsed');
+                }
+            });
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            e.stopPropagation();
+        });
+
         jQuery('.tabs .tab-links a').on('click', function(e) {
             let currentAttrValue = jQuery(this).attr('href');
-            jQuery('.tabs ' + currentAttrValue).slideDown(500).siblings().slideUp(500);
+            jQuery('.tabs ' + currentAttrValue).slideDown(250).siblings().slideUp(250);
             jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
             e.preventDefault();
+            e.stopImmediatePropagation();
+            e.stopPropagation();
         });
     });
     </script>
