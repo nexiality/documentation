@@ -81,6 +81,11 @@ comments: true
   JSON fragment based on `jsonpath`.
 
 
+### [localdb commands](../commands/localdb)
+- [`importCSV(var,csv,table)`](../commands/localdb/importCSV(var,csv,table)): supports scenarios where table structure 
+  and the CSV file to import are not equivalent. Also support the use of default value as defined for the target table.
+
+
 ### [ws commands](../commands/ws)
 - fix URL by replacing special characters (like space and `&`) with the appropriate encoding.
 
