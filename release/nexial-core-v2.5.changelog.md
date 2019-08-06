@@ -42,6 +42,8 @@ comments: true
 - [`has file-size`](../flowcontrols/filter#description): now support non-existent file via `has file-size 0` syntax.
 - [`not contain`](../flowcontrols/filter.#description): handle text delimiter being used as control.
 - [`contain`](../flowcontrols/filter.#description): handle text delimiter being used as control.
+- support open and close brackets `(` and `)` in the flow control filter conditions.
+   e.g. `SkipIf(${var} match ^(nexial|Nexial)$)`
 
 
 ### [base commands](../commands/base)
