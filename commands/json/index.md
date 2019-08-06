@@ -29,5 +29,6 @@ structure-aware specification to communicate the intent - something akins to XPa
 - [`compact(var,json,removeEmpty)`](compact(var,json,removeEmpty))
 - [`minify(json,var)`](minify(json,var))
 - [`storeCount(json,jsonpath,var)`](storeCount(json,jsonpath,var))
+- [`storeKeys(json,jsonpath,var)`](storeKeys(json,jsonpath,var))
 - [`storeValue(json,jsonpath,var)`](storeValue(json,jsonpath,var))
 - [`storeValues(json,jsonpath,var)`](storeValues(json,jsonpath,var))
