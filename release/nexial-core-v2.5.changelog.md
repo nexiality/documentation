@@ -21,11 +21,13 @@ comments: true
 - Fixed exception found when capturing screenshot within a 
   [base &raquo; `repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)) loop.
 - reduce duplicate 3rd-party libraries.
+- fixed `nexial-project.sh|cmd` to handle "ECHO is off" issue.
 
 #### Improvements
 - add jenkins env. variables in execution summary
 - create alternative screen capture capability in case we can't capture screen via WebDriver of Winium driver
 - add `artifact/bin` as part of creating a project structure via `nexial-project` script.
+- enhanced `nexial-project.sh|cmd` so that user can override with a project id of his/her choice.
 
 
 ### [System Variables](../systemvars/)
