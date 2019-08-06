@@ -22,6 +22,7 @@ comments: true
   [base &raquo; `repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)) loop.
 - reduce duplicate 3rd-party libraries.
 - fixed `nexial-project.sh|cmd` to handle "ECHO is off" issue.
+- Nexial now defects "bad" project id in `.meta/project.id` file.  Updated with fix instruction.
 
 #### Improvements
 - add jenkins env. variables in execution summary
