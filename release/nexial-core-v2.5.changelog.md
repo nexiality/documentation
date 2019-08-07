@@ -13,21 +13,21 @@ comments: true
 ### General
 #### Fixes
 - Multiple fixes to clarify error messages: 
-  - when screenshot cannot be taken due to underlying WebDriver being unavailable
-  - when Nexial Expression cannot be properly evaluated due to data error
-  - duplicated error messages reduced
-- avoid console pause when executing in zero-touch environment (like unit testing or Jenkins)
+  - when screenshot cannot be taken due to underlying WebDriver being unavailable.
+  - when Nexial Expression cannot be properly evaluated due to data error.
+  - duplicated error messages reduced.
+- avoid console pause when executing in zero-touch environment (like unit testing or Jenkins).
 - Fixed variable list indexing issue for the files.
 - reduce duplicate 3rd-party libraries.
 - [`nexial-project.sh|cmd`](../userguide/BatchFiles#nexial-projectcmd--nexial-projectsh):
   - fixed the "ECHO is off" issue.
-  - Nexial now defects "bad" project id in `.meta/project.id` file.  Updated with fix instruction.
+  - Nexial now detects "bad" project id in `.meta/project.id` file with fix instruction.
   - user can now override with a project id of his/her choice.
   - create `artifact/bin` directory when generating project structure.
 
 #### Improvements
-- add jenkins env. variables in execution summary
-- create alternative screen capture capability in case we can't capture screen via WebDriver of Winium driver
+- add Jenkins environment variables in execution summary.
+- create alternative screen capture capability in case we can't capture screen via WebDriver of Winium driver.
 - increased more formatted rows in `nexial-script.xlsx` and `nexial-macro.xlsx` template files to 
   support the use of `nexial-artifact-repair.cmd|sh` against damaged XLSX files that are larger in size.
 
@@ -89,7 +89,7 @@ comments: true
 
 
 ### [number commands](../commands/number)
-- [`whole(var`](../commands/number/whole(var)): code fix so that fractional number is properly converted to whole number.
+- [`whole(var)`](../commands/number/whole(var)): code fix so that fractional number is properly converted to whole number.
 
 
 ### [ws commands](../commands/ws)
@@ -101,10 +101,10 @@ comments: true
   to invalid or missing locator.
 - Selenium-backed error messages are shorten to just the first line when possible to streamline error messages.
 - honor [`nexial.delayBrowser`](../systemvars/index#nexial.delayBrowser) between plan steps so that Nexial won't 
-  inadvertently load webdriver before necessarily.
+  inadvertently load WebDriver before it is necessary.
 - support screen capturing using native approach so that we can capture JavaScript dialog/popup or other native dialogs 
   (such as "Open File" and "Save As"). This is also the screen capturing alternative when the specific WebDriver fails.
-- [`select(locator,text)`](../commands/web/select(locator,text)):- supports selecting `empty` text. Also `text` as `{ALL}` 
-  to `select` all options in case of `multi-select.`
-- [`deselect(locator,text)`](../commands/web/deselect(locator,text)):- supports `text` as `{ALL}` to `deselect` all 
-  selected options in case of `multi-select.`
+- [`select(locator,text)`](../commands/web/select(locator,text)): supports selecting `empty` text. Also `text` as 
+  `{ALL}` to `select` all options for a multi-select `<SELECT>` element.
+- [`deselect(locator,text)`](../commands/web/deselect(locator,text)): supports `text` as `{ALL}` to `deselect` all 
+  selected options for a multi-select `<SELECT>` element.
