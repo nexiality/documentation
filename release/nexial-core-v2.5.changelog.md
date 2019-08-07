@@ -29,6 +29,7 @@ comments: true
 - create alternative screen capture capability in case we can't capture screen via WebDriver of Winium driver
 - add `artifact/bin` as part of creating a project structure via `nexial-project` script.
 - enhanced `nexial-project.sh|cmd` so that user can override with a project id of his/her choice.
+- increased more formatted rows in `nexial-script.xlsx` and `nexial-macro.xlsx` template file to support `nexial-artifact-repair.cmd|sh`.
 
 
 ### [System Variables](../systemvars/)
@@ -42,6 +43,7 @@ comments: true
   `search` with `replace`.
 - [NUMBER &raquo; whole](../expressions/NUMBERexpression#whole): code fix so that fractional numbers are properly 
   converted to whole numbers.
+- fixed issue of expressions with multiple closed square bracket.
 
 
 ### [Flow Control](../flowcontrols)
