@@ -37,6 +37,11 @@ comments: true
 ### [Nexial Expression](../expressions)
 - [JSON &raquo; `keys(jsonpath)`](../expressions/JSONexpression#keysjsonpath): extract immediate keys of resolved JSON 
   fragment based on `jsonpath`.
+- [EXCEL &raquo; `replace(search,replace)`](../expressions/EXCELexpression#replacesearchreplace): Of all the cells 
+  captured through [`read(sheet,range)`](../expressions/EXCELexpression#readsheetrange), replace all instances of 
+  `search` with `replace`.
+- [NUMBER &raquo; whole](../expressions/NUMBERexpression#whole): code fix so that fractional numbers are properly 
+  converted to whole numbers.
 
 
 ### [Flow Control](../flowcontrols)
@@ -89,6 +94,10 @@ comments: true
 ### [localdb commands](../commands/localdb)
 - [`importCSV(var,csv,table)`](../commands/localdb/importCSV(var,csv,table)): supports scenarios where table structure 
   and the CSV file to import are not equivalent. Also support the use of default value as defined for the target table.
+
+
+### [number commands](../commands/number)
+- [`whole(var`](../commands/number/whole(var)): code fix so that fractional number is properly converted to whole number.
 
 
 ### [ws commands](../commands/ws)

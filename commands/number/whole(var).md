@@ -8,10 +8,12 @@ comments: true
 
 
 ### Description
-This command round the number represented by `var` as a whole number(integer) and stores it back to `var`.
+This command round the number represented by `var` as a whole number (integer) and stores it back to `var`.
+
 
 ### Parameters
 - **var** - the value to be rounded as the whole number i.e. integer.
+
 
 ### Example 
 ![script](image/whole_01.png)
