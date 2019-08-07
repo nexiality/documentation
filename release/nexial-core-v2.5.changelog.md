@@ -1,38 +1,35 @@
 ---
 layout: default
-title: nexial-core 2.5 (2019-08-??)
+title: nexial-core 2.5 (2019-08-07)
 parent: release
 tags: release nexial-core 2.5
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v2.4_???" class="external-link" target="_nexial_link">Release 2.5</a>
-2019-08-??
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v2.5_599" class="external-link" target="_nexial_link">Release 2.5</a>
+2019-08-07
 
 
 ### General
 #### Fixes
-- clarify error message when screenshot cannot be taken
-- clarify error message when Nexial Expression cannot be properly evaluated due to data error
-- reduce duplicated error messages to streamline console logging
+- Multiple fixes to clarify error messages: 
+  - when screenshot cannot be taken due to underlying WebDriver being unavailable
+  - when Nexial Expression cannot be properly evaluated due to data error
+  - duplicated error messages reduced
 - avoid console pause when executing in zero-touch environment (like unit testing or Jenkins)
-- capture screenshot image file as `nexial.lastScreenshot` for `desktop` commands
 - Fixed variable list indexing issue for the files.
-- Fixed exception found when capturing screenshot within a 
-  [base &raquo; `repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)) loop.
 - reduce duplicate 3rd-party libraries.
-- fixed `nexial-project.sh|cmd` to handle "ECHO is off" issue.
-- Nexial now defects "bad" project id in `.meta/project.id` file.  Updated with fix instruction.
+- [`nexial-project.sh|cmd`](../userguide/BatchFiles#nexial-projectcmd--nexial-projectsh):
+  - fixed the "ECHO is off" issue.
+  - Nexial now defects "bad" project id in `.meta/project.id` file.  Updated with fix instruction.
+  - user can now override with a project id of his/her choice.
+  - create `artifact/bin` directory when generating project structure.
 
 #### Improvements
 - add jenkins env. variables in execution summary
 - create alternative screen capture capability in case we can't capture screen via WebDriver of Winium driver
-- add `artifact/bin` as part of creating a project structure via `nexial-project` script.
-- enhanced `nexial-project.sh|cmd` so that user can override with a project id of his/her choice.
-- increased more formatted rows in `nexial-script.xlsx` and `nexial-macro.xlsx` template file to support `nexial-artifact-repair.cmd|sh`.
-
-
-### [System Variables](../systemvars/)
+- increased more formatted rows in `nexial-script.xlsx` and `nexial-macro.xlsx` template files to 
+  support the use of `nexial-artifact-repair.cmd|sh` against damaged XLSX files that are larger in size.
 
 
 ### [Nexial Expression](../expressions)
@@ -50,42 +47,35 @@ comments: true
 - [`has file-size`](../flowcontrols/filter#description): now support non-existent file via `has file-size 0` syntax.
 - [`not contain`](../flowcontrols/filter.#description): handle text delimiter being used as control.
 - [`contain`](../flowcontrols/filter.#description): handle text delimiter being used as control.
-- support open and close brackets `(` and `)` in the flow control filter conditions.
-   e.g. `SkipIf(${var} match ^(nexial|Nexial)$)`
+- support open and close brackets `(` and `)` in the flow control filter conditions. For e.g. 
+  `SkipIf(${var} match ^(nexial|Nexial)$)`.
 
 
 ### [base commands](../commands/base)
 - console output changes/improvements over multiple assert commands. Now FAILed assertion will display multi-line 
   output that should be easier to decipher.
-
-
-### [csv commands](../commands/csv)
+- [base &raquo; `repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)): Fixed the error thrown 
+  when capturing screenshot within a loop.
 
 
 ### [desktop commands](../commands/desktop)
-- [`typeKeys(os,keystrokes)`](../commands/desktop/typeKeys(os,keystrokes)): fixed the simulation of certain "symbol" 
-  keystrokes. This enables the typing of fully qualified file path that contains slashes (`\` or `/`) and colons (`:`).
+- [`typeKeys(os,keystrokes)`](../commands/desktop/typeKeys(os,keystrokes)): 
+  - fixed the simulation of certain "symbol" keystrokes. This enables the typing of fully qualified file path that 
+    contains slashes (`\` or `/`) and colons (`:`).
+  - support the use of `*` for `os` (meaning any OS).
+  - support UPPERCASE and non-alphanumeric symbol typing.
+  - _EXPERIMENTAL_ speeding up key-typing by removing any between-keys delay and waits.
+- [`mouseWheel(amount,modifiers,x,y)`](../commands/desktop/mouseWheel(amount,modifiers,x,y)): 
+  - **NEW** command to simulate mouse wheel movement. `amount` as negative value means to scroll _backwards_.
+  - support simple "position" words for `x` and `y` such as `middle`, `left`, `right`, `top` and `bottom`.
+  - restricted to Windows for now.
+- [`clickScreen(button,modifiers,x,y)`](../commands/desktop/clickScreen(button,modifiers,x,y)): 
+  - **NEW** command to simulate mouse click based on current screen (not AUT).
+  - support simple "position" words for `x` and `y` such as `middle`, `left`, `right`, `top` and `bottom`.
 - ensure Winium driver and `notifu.exe` are not executed in non-Windows environment.
-- [`typeKeys(os,keystrokes)`](../commands/desktop/typeKeys(os,keystrokes)): support UPPERCASE typing.
-- [`typeKeys(os,keystrokes)`](../commands/desktop/typeKeys(os,keystrokes)): support non-alphanumeric symbol typing.
-- [`typeKeys(os,keystrokes)`](../commands/desktop/typeKeys(os,keystrokes)): _EXPERIMENTAL_ speeding up key-typing by
-  removing any between-keys delay and waits.
-- [`mouseWheel(amount,modifiers,x,y)`](../commands/desktop/mouseWheel(amount,modifiers,x,y)): **NEW** command to 
-  simulate mouse wheel movement. `amount` as negative value means to scroll _backwards_.
-- [`clickScreen(button,modifiers,x,y)`](../commands/desktop/clickScreen(button,modifiers,x,y)): **NEW** command to
-  simulate mouse click based on current screen (not AUT).
-- [`clickScreen(button,modifiers,x,y)`](../commands/desktop/clickScreen(button,modifiers,x,y)): support simple 
-  "position" words for `x` and `y`.
-- [`mouseWheel(amount,modifiers,x,y)`](../commands/desktop/mouseWheel(amount,modifiers,x,y)): support simple "position" 
-  words for `x` and `y`.
-- [`mouseWheel(amount,modifiers,x,y)`](../commands/desktop/mouseWheel(amount,modifiers,x,y)): restrict to Windows for now.
-- [`typeKeys(os,keystrokes)`](../commands/desktop/typeKeys(os,keystrokes)): support the use of `*` for `os`.
-
-
-### [io commands](../commands/io)
-
-
-### [image commands](../commands/image)
+- screenshots captured during the use of `desktop` commands are now assigned to the system variable 
+  [`nexial.lastScreenshot`](../systemvars/index#nexial.lastScreenshot), thus maintain consistency with screenshots 
+  captured during the use of `web` commands, and to provide additional automation via such system variable.
 
 
 ### [json commands](../commands/json)
@@ -118,6 +108,3 @@ comments: true
   to `select` all options in case of `multi-select.`
 - [`deselect(locator,text)`](../commands/web/deselect(locator,text)):- supports `text` as `{ALL}` to `deselect` all 
   selected options in case of `multi-select.`
-
-
-### [xml commands](../commands/xml)
