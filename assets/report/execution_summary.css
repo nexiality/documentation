@@ -337,7 +337,7 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
 
 .label-percent, .value-percent { width: 55px; white-space: nowrap; }
 
-.label-title, .value-title { text-wrap: none !important; width: 250px; white-space: nowrap; }
+.label-title, .value-title { text-wrap: none !important; width: 250px; word-break: break-word; }
 
 .value-title { font-weight: bold; }
 
