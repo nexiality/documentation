@@ -29,7 +29,7 @@ Check if Java is installed - **Java 1.8.0_151 or above required, and 64-bit Jav
             </li>
 			<li>
 			    From the console, type <b>java -version</b> and press <b>&lt;ENTER&gt;</b><br/>
-			    If you get something like the following, please follow next step (Step 3) below to download and install 
+			    If you get something like the following, please follow the next step (Step 3) below to download and install 
 			    Java:<br/>
                 <img src="image/InstallingNexial_01.png"/><br/>
                 If you are not getting the above message, check that the version of Java installed is 1.8.0_151 or 
@@ -65,7 +65,7 @@ Check if Java is installed - **Java 1.8.0_151 or above required, and 64-bit Jav
             </li>
 			<li>
 			    From the console, type <b>java -version</b> and press <b>&lt;ENTER&gt;</b><br/>
-			    If you get something like the following, please follow next step (Step 3) below to download and install 
+			    If you get something like the following, please follow the next step (Step 3) below to download and install 
 			    Java:<br/>
                 <img src="image/InstallingNexial_01.png"/><br/>
 			    If you are not getting the above message, check that the version of Java installed is 1.8.0_151 or 
@@ -206,47 +206,6 @@ your system, please follow the section above.
 <br/>
 
 For troubleshooting or any other issues read the following steps:
-
-
-
-3. Installing Java
-   
-   1. **For Windows only: IT IS HIGHLY RECOMMENDED TO INSTALL JAVA IN A DIRECTORY THAT DOES NOT CONTAIN SPACES**<br/>
-      **Windows**: double-click on the downloaded installer. Follow the instructions of the installer. It is
-      _**highly recommended**_ to install Java in a directory that does not contain any spaces. For example, 
-      `C:\tools\jdk1.8`.  
-       
-		- By default, Java is installed to either `C:\Program Files\Java\jdk...` or 
-        `C:\Program Files (x86)\Java\jdk...`.   
-		- For more help, visit <a href="https://java.com/en/download/help/download_options.xml#windows" class="external-link" target="_nexial_link">https://java.com/en/download/help/download_options.xml#windows</a>
-       
-      **MacOSX**: double-click on the downloaded installer.  Follow the instructions of the installer.  For more help, 
-      visit 
-      <a href="https://java.com/en/download/help/mac_install.xml" class="external-link" target="_nexial_link">https://java.com/en/download/help/mac_install.xml</a>
-
-4. Check `PATH`, `JAVA_HOME`, `JRE_HOME`
-   Windows:
-   
-   1. Press Windows key and the letter <code>R</code> (<code>Win+R</code>) at the same time, enter: "sysdm.cpl" then 
-   press `<ENTER>`. Click the "Advanced" tab then click the "Environment Variables..." button at the bottom <br/>
-   
-   ![sysdm](image/InstallingNexial_05.png) 
-   
-   2. Under System variable, search for a variable named `Path`.
-   
-   3. Ensure that the `bin\` directory of the installed Java is part of the value of `PATH`.  
-      Preferably it should be the first entry of its value.  For example:<br/>
-      ![sysdm_path](image/InstallingNexial_06.png) 
-   
-   4. Similarly search for a variable named `JAVA_HOME`.  If not found, click `New...` button to create one. Its value 
-      should be that of the installed directory of Java.
-      <b>NEED SCREENSHOT</b>
-   
-   5. Similarly search for a variable named `JRE_HOME`.  If not found, there is no need to create it. If found, check 
-      that it has the same value as `JAVA_HOME`.
-      <b>NEED SCREENSHOT</b>
-   
-   6. These changes will *NOT* take effect on any opened console. Either open new console or restart existing ones.
 
 
 ### Check Excel Version
