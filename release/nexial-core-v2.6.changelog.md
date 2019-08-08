@@ -14,6 +14,7 @@ comments: true
 #### Fixes
 
 #### Improvements
+- support “range” for activity in [`Interactive`](../interactive) Mode
 
 
 ### [Nexial Expression](../expressions)
