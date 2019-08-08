@@ -117,7 +117,7 @@ your system, please follow the section above.
                     <img src="image/Installer_01.png"/>
                 </li>
                 <li>
-                    Click the following link to begin downloading the Nexial installer: 
+                    Click the following link to begin downloading the Nexial installer:
                     <a href="https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.2/nexial-installer-1.4.2.zip" class="external-link" target="_nexial_link">Nexial Installer</a>.
                 </li>            
                 <li>
@@ -213,14 +213,14 @@ Nexial requires Excel 2007/2010 or above. It requires the use of XLSX format (ol
 
 
 ### Checking Browser Availability and Version
-1. **Internet Explorer** - Nexial at this time only supports Internet Explorer 9 or above.  In the future we might 
-   consider older versions of Internet Explorer.  Nexial however will support either 32 or 64 bit.
+1. **Internet Explorer** - Nexial at this time only supports Internet Explorer 9 or above. In the future we might 
+   consider older versions of Internet Explorer. Nexial however will support either 32 or 64 bit.
 
 2. **Firefox** - as stated on Selenium's website: "..._Support for Firefox is the latest release, the previous 
-   release, the latest ESR release and the previous ESR release..._"  However there is a high likelihood that older 
-   versions of Firefox will work as well.  Support from Nexial team is provided on a case-by-case basis.
+   release, the latest ESR release and the previous ESR release..._" However there is a high likelihood that older 
+   versions of Firefox will work as well. Support from Nexial team is provided on a case-by-case basis.
 
-3. **Chrome** - latest and almost all recent versions are supported.  Older version can be supported via using the 
+3. **Chrome** - latest and almost all recent versions are supported. Older version can be supported via using the 
    corresponding 
    <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" class="external-link" target="_nexial_link">older versions of chrome driver</a>.
 
