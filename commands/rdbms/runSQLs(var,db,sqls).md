@@ -12,7 +12,7 @@ comments: true
   multiple sql statements can be execute and retrieved data can be used for verification.
 - The command will connect to the database and execute sql statements as per connection strings and credential provided.
 - If command is successful the result will pass or will fail otherwise.
-- Output of the result stored in variable can be read with attributes `.rowcount`, `.sql`, `.startTime`, 
+- Output of the result stored in variable can be read with attributes `.rowCount`, `.sql`, `.startTime`, 
   `.elapsedTime`, `.columns`, `.data` for each query.  
 
 

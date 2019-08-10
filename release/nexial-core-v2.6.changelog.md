@@ -52,4 +52,11 @@ comments: true
 
 
 ### [web commands](../commands/web)
-
+- [`saveTableAsCsv(locator,nextPageLocator,file)`](../commands/web/saveTableAsCsv(locator,nextPageLocator,file)):
+  automatically replace newline, carriage return and tab character with a space so that the generated CSV would be
+  usable. Use [`nexial.web.csv.trim`](../systemvars/index#nexial.web.csv.trim) to trim leading and trailing spaces of 
+  each cell.
+- [`saveDivsAsCsv(headers,rows,cells,nextPage,file)`](../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)):
+  automatically replace newline, carriage return and tab character with a space so that the generated CSV would be
+  usable. Use [`nexial.web.csv.trim`](../systemvars/index#nexial.web.csv.trim) to trim leading and trailing spaces of 
+  each cell.
