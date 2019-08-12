@@ -60,3 +60,5 @@ comments: true
   automatically replace newline, carriage return and tab character with a space so that the generated CSV would be
   usable. Use [`nexial.web.csv.trim`](../systemvars/index#nexial.web.csv.trim) to trim leading and trailing spaces of 
   each cell.
+- System variable [`nexial.screenshotAsDesktop`](../systemvars/index#nexial.screenshotAsDesktop): **NEW** System
+  variable to allow for desktop screen capturing instead of browser-scoped screen capturing.

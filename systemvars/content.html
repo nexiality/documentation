@@ -685,6 +685,26 @@
         </td>
     </tr>
     <tr>
+        <td nowrap="nowrap" class="varname">
+            <a name="nexial.screenshotAsDesktop"><code>nexial.screenshotAsDesktop</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            When running <a href="../commands/web"><code>web</code> commands</a>, the norm has been using the underlying
+            WebDriver's screen capturing capability. However in some situation, it might be beneficial or perhaps
+            necessary to screen capture the entire "desktop" instead. For one, WebDriver's screen capture will not be
+            able to capture any native desktop rendering, such as a "file chooser" dialog often seen during a file
+            upload process:<br/>
+            <img src="image/systemvar_38.png"/><br/>
+
+            By setting this System variable as <code>true</code> (default is <code>false</code>), Nexial will capture
+            the entire desktop instead of what the browser renders. Note that desktop screen capturing <i>usually</i>
+            only capture the primary screen (a.k.a. Screen 1).
+        </td>
+    </tr>
+    <tr>
         <td nowrap="nowrap" class="varname"><a name="nexial.lastScreenshot"><code>nexial.lastScreenshot</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
