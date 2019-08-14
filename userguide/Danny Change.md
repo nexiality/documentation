@@ -191,6 +191,10 @@ your system, please follow the section above.
                     <code>iTerm.app</code>:<br/>
                     <img src="image/InstallingNexial_08.mac.png"/>
                 </li>
+				<li>
+					If the terminal app does not show up on the list, click "other," then in the drop down menu labeled "Enable:" select "All Applications". From here, navigate through
+					the Applications folder then enter the Utilities folder and select the Terminal application.
+				</li>
                 <li>
                     Nexial installation will commence:<br/>
                     <img src="image/InstallingNexial_09.mac.png"/><br/>
