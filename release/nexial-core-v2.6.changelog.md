@@ -70,7 +70,7 @@ comments: true
   - Use [`nexial.web.saveGrid.data.input`](../systemvars/index#nexial.web.saveGrid.data.input) to determine what
     metadata of a form input element in the data section to save to CSV. Possible choices: `name`, `type`, `value`, 
     `id`, `state`. 
-  - Use [`nexial.web.saveGrid.data.image`](../systemvars/index#nexial.web.saveGrid.data.image) to determine what metadata of an image 
-    element in the data section to save to CSV. Possible choices: `type`, `alt`, `id`, `filename`.
+  - Use [`nexial.web.saveGrid.data.image`](../systemvars/index#nexial.web.saveGrid.data.image) to determine what 
+    metadata of an image element in the data section to save to CSV. Possible choices: `type`, `alt`, `id`, `filename`.
 - System variable [`nexial.screenshotAsDesktop`](../systemvars/index#nexial.screenshotAsDesktop): **NEW** System
   variable to allow for desktop screen capturing instead of browser-scoped screen capturing.

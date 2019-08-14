@@ -36,7 +36,15 @@ collect all the data. Below is a sample of the CSV file generated via this comma
 Note that:
 - `nextPageLocator` is optional. Specifying it as `(empty)` or `(blank)` would disable any pagination automation.
 - Nexial will not attempt to "rewind" the pagination back to the initial or first page.
-
+- There are a number of System variables that may affect how data is collected into CSV:
+  - [`nexial.web.saveGrid.deepScan`](../../systemvars/index#nexial.web.saveGrid.deepScan)
+  - [`nexial.web.saveGrid.header.input`](../../systemvars/index#nexial.web.saveGrid.header.input)
+  - [`nexial.web.saveGrid.header.image`](../../systemvars/index#nexial.web.saveGrid.header.image)
+  - [`nexial.web.saveGrid.data.input`](../../systemvars/index#nexial.web.saveGrid.data.input)
+  - [`nexial.web.saveGrid.data.image`](../../systemvars/index#nexial.web.saveGrid.data.image)
+  - [`nexial.web.saveGrid.data.trim`](../../systemvars/index#nexial.web.saveGrid.data.trim)
+  - [`nexial.web.saveGrid.end.trim`](../../systemvars/index#nexial.web.saveGrid.end.trim)
+  
 
 ### Parameters
 - **locator** - locator of the target table component.

@@ -1,33 +1,56 @@
 <style xmlns="http://www.w3.org/1999/html">
-    table.sysvar { width: 1250px; text-align: left; vertical-align: top; }
+  b { font-weight: bold; }
 
-    table.sysvar th { padding: 5px; border: 1px #aaa solid; }
+  body { font-family: Arial, Verdana, Tahoma, sans-serif; }
 
-    table.sysvar td { padding: 5px; border: 1px #ddd solid; text-align: left; vertical-align: top; }
+  table.sysvar { width: 1250px; text-align: left; vertical-align: top; }
 
-    table.sysvar img.resize { width: 960px; }
+  table.sysvar th { padding: 5px; border: 1px #aaa solid; }
 
-    table.sysvar td.varname code {
-        background: rgba(250, 250, 250, 0.9) !important;
-        border:     none !important;
-        color:      #000;
-        padding:    3px;
-        margin:     -2px;
-    }
+  table.sysvar td { padding: 5px; border: 1px #ddd solid; text-align: left; vertical-align: top; }
 
-    table.sysvar img { margin: 8px 0; }
+  table.sysvar img.resize { width: 960px; }
 
-    table.sysvar blockquote { font-size: 1em; }
+  table.sysvar td.varname code {
+    background: rgba(250, 250, 250, 0.9) !important;
+    border:     none !important;
+    color:      #000;
+    padding:    3px;
+    margin:     -2px;
+  }
 
-    table.sysvar a code { background-color: transparent; border: none; font-weight: normal; }
+  table.sysvar img { margin: 8px 0; }
 
-    .highlight-red { background-color: #ffe7e7; }
+  table.sysvar blockquote { font-size: 1em; }
 
-    .highlight-green { border-color: rgb(221, 221, 221); padding: 7px 10px; background-color: rgb(221, 250, 222); }
+  table.sysvar a code { background-color: transparent; border: none; font-weight: normal; }
 
-    .highlight-green span { color: rgb(0, 128, 0); font-weight: bold; }
+  .highlight-red { background-color: #ffe7e7; }
 
-    .highlight-yellow { border-color: rgb(221, 221, 221); padding: 7px 10px; background-color: rgb(255, 255, 221); }
+  .highlight-section {
+    border-color:     rgb(150, 150, 150) !important;
+    padding:          7px 10px !important;
+    background-color: rgba(150, 170, 180, 0.75);
+    box-shadow:       0 5px 5px -2px rgba(80, 80, 80, 0.75);
+    color:            #356;
+    font-weight:      bold;
+    text-shadow:      1px 1px 0 #eee;
+  }
+
+  .highlight-section a {
+    color:            rgba(235, 245, 255, 1) !important;
+    background-color: rgba(0, 0, 0, 0.25) !important;
+    text-shadow:      1px 1px 1px rgba(40, 40, 40, 1);
+    border:           1px inset rgba(255, 255, 255, 0.5);
+    padding:          1px 4px 3px;
+  }
+
+  .highlight-section a code {
+    color:       rgba(235, 245, 255, 1) !important;
+    text-shadow: 1px 1px 1px rgba(40, 40, 40, 1);
+  }
+
+  .highlight-yellow { border-color: rgb(221, 221, 221); padding: 7px 10px; background-color: rgb(255, 255, 221); }
 </style>
 
 <p>
@@ -52,14 +75,15 @@
 
     The above specifies for 4GB of memory for Nexial.
 </p>
+
 <p>
     For more details about the exit status that Nexial emits at the end of execution, or a set of standard output
     at the end of execution, please click on the links below.
-<ul>
+
     <li><a href="exitstatus"><b>Exit Status</b></a></li>
     <li><a href="endofexecution"><b>End of Execution</b></a></li>
-</ul>
 </p>
+
 <p>
     Below are a list of configurable system variables. During the test execution, Nexial may generates one or more
     variables which maybe incorporated as part of your test script.
@@ -70,7 +94,7 @@
     <a href="#standard-system-properties">Standard System Properties</a>.
 </p>
 
-<table class="sysvar" cellspacing="0" cellpadding="3">
+<table class="sysvar">
     <tbody>
     <tr>
         <th nowrap="nowrap">configuration</th>
@@ -80,7 +104,7 @@
         <th nowrap="nowrap">description</th>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.executionType"><code>nexial.executionType</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.executionType"><code>nexial.executionType</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="highlight-red">true</td>
@@ -94,7 +118,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.runID"><code>nexial.runID</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.runID"><code>nexial.runID</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="highlight-red">true</td>
@@ -104,7 +128,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.runID.prefix"><code>nexial.runID.prefix</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.runID.prefix"><code>nexial.runID.prefix</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="highlight-red">true</td>
@@ -115,31 +139,31 @@
             <br/>
             The purpose of using a <em>prefix</em> has manifolds. Read on...<br/>
             <br/>
+
             <u><strong>Organize your output better</strong></u><br/>
             Surely you can see how this:<br/>
             <img src="image/systemvar_01.jpg" alt="nexial.runID.prefix example"/><br/>
             ... is more organized and informative than:<br/>
             <img src="image/systemvar_02.jpg" alt="nexial.runID.prefix example"/><br/>
-            <u><strong>Create multiple summarization of your execution output</strong></u><br/>
-            Using the prefix, we can render multiple execution summary output (HTML) so that output of the same prefix
-            can be summarized together. For example,<br/>
+            <br/>
+
+            <u><strong>Create dashboard of your executions</strong></u><br/>
+            Using the same prefix, we can collect a series of execution to be summarized together. For example,<br/>
             <img src="image/systemvar_03.jpg" class="resize" alt="nexial.runID.prefix example"/><br/>
-            Using the above summarization, one can track the change in execution over time - total steps, pass % and
+            Using the above summary, one can track the change in execution over time - total steps, pass % and
             execution duration.<br/>
             <br/>
             <u><strong>NOTE: this System variable MUST be specified during execution. Specifying it in a data file will
                 have no effect</strong></u>. For example,<br/>
-            <br/>
-            <blockquote>
-                set JAVA_OPT=<span style="color: rgb(255, 0, 0);font-weight:bold">-Dnexial.runID.prefix=Sprint14 -Dnexial.outputToCloud=true</span><br/>
-                ... ...<br/>
-                nexial.cmd -plan ... ...<br/>
-            </blockquote>
+
+            <pre>nexial.cmd -plan ...
+            <span style="font-weight:bold">-Dnexial.runID.prefix=Sprint14
+            -Dnexial.outputToCloud=true</span></pre>
         </td>
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.lenientStringCompare"><code>nexial.lenientStringCompare</code></a>
+            <a id="nexial.lenientStringCompare"><code>nexial.lenientStringCompare</code></a>
         </td>
         <td>boolean</td>
         <td>true</td>
@@ -151,7 +175,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.verbose"><code>nexial.verbose</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.verbose"><code>nexial.verbose</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
@@ -161,7 +185,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.quiet"><code>nexial.quiet</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.quiet"><code>nexial.quiet</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
@@ -179,7 +203,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.elapsedTimeSLA"><code>nexial.elapsedTimeSLA</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.elapsedTimeSLA"><code>nexial.elapsedTimeSLA</code></a></td>
         <td>millisecond</td>
         <td>&nbsp;</td>
         <td>false&nbsp;</td>
@@ -192,7 +216,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.delayBetweenStepsMs"><code>nexial.delayBetweenStepsMs</code></a>
+            <a id="nexial.delayBetweenStepsMs"><code>nexial.delayBetweenStepsMs</code></a>
         </td>
         <td>millisecond</td>
         <td>600</td>
@@ -200,7 +224,7 @@
         <td>The wait time between test steps, in milliseconds.</td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.textDelim"><code>nexial.textDelim</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.textDelim"><code>nexial.textDelim</code></a></td>
         <td>text</td>
         <td><code>,</code></td>
         <td>false</td>
@@ -215,7 +239,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.nullValue"><code>nexial.nullValue</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.nullValue"><code>nexial.nullValue</code></a></td>
         <td>text</td>
         <td><code>(null)</code></td>
         <td>false</td>
@@ -232,7 +256,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.var.ignored"><code>nexial.var.ignored</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.var.ignored"><code>nexial.var.ignored</code></a></td>
         <td>text / list</td>
         <td></td>
         <td>false</td>
@@ -258,7 +282,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.var.defaultAsIs"><code>nexial.var.defaultAsIs</code></a>
+            <a id="nexial.var.defaultAsIs"><code>nexial.var.defaultAsIs</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -278,7 +302,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.outputToCloud"><code>nexial.outputToCloud</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.outputToCloud"><code>nexial.outputToCloud</code></a></td>
         <td>boolean</td>
         <td>true</td>
         <td>false</td>
@@ -287,11 +311,11 @@
             be retrieved remotely. When such configuration is turned on, the console log will indicate as such:<br/>
             <img src="image/systemvar_04.jpg" class="resize" alt="nexial.outputToCloud example"/><br/>
             <br/>
+
             Note that cloud storage support is not enabled by default (it's not free). One can enable such capability
             by adding the following configuration for S3 connectivity (in addition to setting
             <code>nexial.outputToCloud</code> as <code>true</code>:<br/>
-            <br/>
-            <table cellpadding="0" cellspacing="0">
+            <table>
                 <tbody>
                 <tr>
                     <th align="left">nexial.otc.region</th>
@@ -324,183 +348,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.enableEmail"><code>nexial.enableEmail</code></a></td>
-        <td>boolean</td>
-        <td>false</td>
-        <td>false</td>
-        <td>
-            Enable email notification at the end of an execution. By default this is not enabled as using email to
-            communicate execution status carries a variety of possible side issues. Nonetheless, email notification is
-            supported in Nexial. Such email provides summary information for a given execution and it looks like the
-            following:<br/>
-            <img src="image/systemvar_post_exec_default.png"/><br/>
-            <br/>
-
-            Note that the "Reference" column reflects the <a href="#nexial.scriptRef"><code>nexial.scriptRef.*</code></a>
-            values defined for each script/iteration.<br/>
-            <br/>
-
-            Here are the steps:
-            <ol>
-                <li>Enable this system variable</li>
-                <li>Define the mail server connectivity details:
-                    <ul>
-                        <li><code>nexial.mail.smtp.host</code>=&lt;the hostname or DNS name of your mail server&gt;</li>
-                        <li><code>nexial.mail.smtp.port</code>=25 (or whatever the configured SMTP port is)</li>
-                        <li><code>nexial.mail.smtp.from</code>=&lt;the FROM email address&gt;</li>
-                        <li><code>nexial.mail.smtp.auth</code>=true|false</li>
-                        <li><code>nexial.mail.smtp.username</code>=&lt;username only needed if nexial.mail.smtp.auth is set to true&gt;</li>
-                        <li><code>nexial.mail.smtp.password</code>=&lt;password only needed if nexial.mail.smtp.auth is set to true&gt;</li>
-                    </ul>
-                </li>
-                <li>Define the recipient email or list via the <a href="#nexial.mailTo"><code>nexial.mailTo</code></a>
-                    system variable.</li>
-            </ol>
-
-            All these settings can be added via command line (i.e. <code>JAVA_OPT=-D...</code> or <code>-override</code>
-            flag), <a href="../userguide/UnderstandingProjectStructure#projectproperties"><code>project.properties</code></a>
-            or the appropriate data file. For example, from command line:<br/>
-            <br/>
-
-            <pre>nexial.sh -script ... ... \
-            -override nexial.enableEmail=true \
-            -override nexial.mail.smtp.host=mail.mycompany.com \
-            -override nexial.mail.smtp.auth=false \
-            -override nexial.mailTo=me_and_myself@mycompany.com</pre>
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.mailTo"><code>nexial.mailTo</code></a></td>
-        <td>text</td>
-        <td></td>
-        <td>false</td>
-        <td>
-            <b>NOTE: <a href="#nexial.enableEmail"><code>nexial.enableEmail</code></a> MUST BE SET TO
-                <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b><br/>
-            <br/>
-
-            A comma-separated list of email addresses to receive Nexial's email notification at the end of an execution.
-            <br/>
-            Note that this System variable, along with <code>nexial.enableEmail</code> are both required for Nexial
-            to send out post-execution email notification.
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.mailSubject"><code>nexial.mailSubject</code></a></td>
-        <td>text</td>
-        <td></td>
-        <td>false</td>
-        <td>
-            <b>NOTE: <a href="#nexial.enableEmail"><code>nexial.enableEmail</code></a> MUST BE SET TO
-                <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b><br/>
-            <br/>
-
-            Customized/optional mail subject instead of the default one. The inclusion of data variable,
-            <a href="../expressions">Nexial Expression</a> and <a href="../functions">built-in function</a> is possible
-            to achieve a highly dynamic and expressive email subject. However this might not resolve to the desired
-            value since this System variable is resolved in the beginning of the execution, not the end.<br/>
-            <br/>
-
-            Note that Nexial's post-execution email subject will <b>STILL</b> be prefixed with <code>[nexial]</code> to
-            indicate the source of such email - i.e. <code>[nexial] your customized subject ...</code><br/>
-            <br/>
-
-            For example,<br/>
-            <img src="image/systemvar_35.png"/><br/>
-            <img src="image/systemvar_post_exec.png"/><br/>
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.mailHeader"><code>nexial.mailHeader</code></a></td>
-        <td>text</td>
-        <td></td>
-        <td>false</td>
-        <td>
-            <b>NOTE: <a href="#nexial.enableEmail"><code>nexial.enableEmail</code></a> MUST BE SET TO
-                <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b>
-            <br/><br/>
-
-            Customized/optional "header" message to be included in Nexial's post-execution email notification. The
-            inclusion of data variable, <a href="../expressions">Nexial Expression</a> and
-            <a href="../functions">built-in function</a> is possible - as well as the use of HTML. However this might
-            not always resolve to the desired value since this System variable is resolved in the beginning of the
-            execution, not the end.
-            <br/><br/>
-
-            This can be useful towards including a custom-crafted "header" message to provide additional context of
-            the execution. For example,<br/>
-            <img src="image/systemvar_36.png"/><br/>
-            <img src="image/systemvar_post_exec.png"/><br/>
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.mailFooter"><code>nexial.mailFooter</code></a></td>
-        <td>text</td>
-        <td></td>
-        <td>false</td>
-        <td>
-            <b>NOTE: <a href="#nexial.enableEmail"><code>nexial.enableEmail</code></a> MUST BE SET TO
-                <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b>
-            <br/><br/>
-
-            Customized/optional "footer" message to be included in Nexial's post-execution email notification. The
-            inclusion of data variable, <a href="../expressions">Nexial Expression</a> and
-            <a href="../functions">built-in function</a> is possible - as well as the use of HTML. However this might
-            not always resolve to the desired value since this System variable is resolved in the beginning of the
-            execution, not the end.
-            <br/><br/>
-
-            This can be useful towards including a custom-crafted "footer" message to provide additional context of
-            the execution. For example,<br/>
-            <img src="image/systemvar_37.png"/><br/>
-            <img src="image/systemvar_post_exec.png"/><br/>
-        </td>
-    </tr>
-
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.assistantMode"><code>nexial.assistantMode</code></a></td>
-        <td>boolean</td>
-        <td>false</td>
-        <td>false</td>
-        <td>
-            <i>DEPRECATED SYSTEM VARIABLE NAME.
-                PLEASE SEE <a href="#nexial.openResult"><code>nexial.openResult</code></a> INSTEAD.</i>
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.openResult"><code>nexial.openResult</code></a></td>
-        <td>boolean</td>
-        <td>false</td>
-        <td>false</td>
-        <td>
-            Determine if Nexial should automatically open the output in Excel after each iteration. This could be a
-            time saver since one would not have to manually search for the output file.<br/>
-            <br/>
-            This configuration is forcefully turned off during remote execution.
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname">
-            <a name="nexial.spreadsheet.program"><code>nexial.spreadsheet.program</code></a>
-        </td>
-        <td>text</td>
-        <td>excel</td>
-        <td class="highlight-red">true</td>
-        <td>
-            Configure the full path, including the executable name, of the program to use when opening Nexial output at
-            the end of an execution run. This is only applicable when <code>nexial.openResult</code> is enabled. By
-            default, Nexial will invoke Microsoft Excel to open the execution output in context.<br/>
-            <br/>
-            However, should you choose to use another program, such as WPS, specify this variable in your data sheet.
-            For example,<br/>
-            <img src="image/systemvar_05.png" class="resize" alt="nexial.spreadsheet.program example"/><br/>
-            Alternatively, one can simply specify <code>wps</code>, which will enable Nexial to automatically resolve
-            the correct location of WPS (latest version preferred). For example,<br/>
-            <img src="image/systemvar_06.png" style="width:360px" alt="nexial.spreadsheet.program example"/>
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.scriptRef"><code>nexial.scriptRef.&ast;</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.scriptRef"><code>nexial.scriptRef.&ast;</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -509,6 +357,8 @@
             create reference information, which may change over iteration, to improve the readability of the execution
             output. For example,<br/>
             <img src="image/systemvar_07.png" alt="nexial.scriptRef example"/><br/>
+            <br/>
+
             Adding these information - while one may reference them within script - do not necessarily change the
             execution or behavior of related script(s). However, the output would look something like this:<br/>
             <img src="image/systemvar_08.png" alt="nexial.scriptRef example"/><br/>
@@ -521,7 +371,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.scenarioRef"><code>nexial.scenarioRef.&ast;</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.scenarioRef"><code>nexial.scenarioRef.&ast;</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -540,7 +390,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.stepByStep"><code>nexial.stepByStep</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.stepByStep"><code>nexial.stepByStep</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
@@ -550,7 +400,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.inspectOnPause"><code>nexial.inspectOnPause</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.inspectOnPause"><code>nexial.inspectOnPause</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
@@ -561,7 +411,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.pauseOnError"><code>nexial.pauseOnError</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.pauseOnError"><code>nexial.pauseOnError</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
@@ -581,7 +431,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.failFast"><code>nexial.failFast</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.failFast"><code>nexial.failFast</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
@@ -595,7 +445,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.resetFailFast"><code>nexial.resetFailFast</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.resetFailFast"><code>nexial.resetFailFast</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
@@ -615,14 +465,14 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.failImmediate"><code>nexial.failImmediate</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.failImmediate"><code>nexial.failImmediate</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
         <td>
             Determine if Nexial should terminate execution at the next failure. This configuration can be useful to
             signify the intent of "<em>after this point, failure will not be tolerated</em>". For example,<br/>
-            <table cellspacing="0" cellpadding="3">
+            <table>
                 <thead>
                 <tr>
                     <th>steps</th>
@@ -660,7 +510,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.printErrorDetails"><code>nexial.printErrorDetails</code></a>
+            <a id="nexial.printErrorDetails"><code>nexial.printErrorDetails</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -674,7 +524,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.screenshotOnError"><code>nexial.screenshotOnError</code></a>
+            <a id="nexial.screenshotOnError"><code>nexial.screenshotOnError</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -686,7 +536,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.screenshotAsDesktop"><code>nexial.screenshotAsDesktop</code></a>
+            <a id="nexial.screenshotAsDesktop"><code>nexial.screenshotAsDesktop</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -705,14 +555,14 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.lastScreenshot"><code>nexial.lastScreenshot</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.lastScreenshot"><code>nexial.lastScreenshot</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="highlight-red">true</td>
         <td>The file name of the last screenshot taken.</td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.lastOutcome"><code>nexial.lastOutcome</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.lastOutcome"><code>nexial.lastOutcome</code></a></td>
         <td>boolean</td>
         <td>&nbsp;</td>
         <td class="highlight-red">true</td>
@@ -726,7 +576,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.lastPlanStep"><code>nexial.lastPlanStep</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.lastPlanStep"><code>nexial.lastPlanStep</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
@@ -739,7 +589,7 @@
     </tr>
 
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.lastOutputLink"><code>nexial.lastOutputLink</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.lastOutputLink"><code>nexial.lastOutputLink</code></a></td>
         <td>text</td>
         <td></td>
         <td class="highlight-red">true</td>
@@ -770,35 +620,8 @@
             experience since one could utilize the same output link as part of the execution.
         </td>
     </tr>
-
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.manageMemory"><code>nexial.manageMemory</code></a></td>
-        <td>boolean</td>
-        <td>false</td>
-        <td class="highlight-red">true</td>
-        <td>
-            <strong>MUST BE SET AS A ENVIRONMENT VARIABLE VIA THE STANDARD <code>-D</code> ARGUMENT.</strong><br/>
-            To turn on this variable, one must set the <code>-D</code> environment variable prior to executing a test
-            run. For example:<br/>
-            <p style="margin: 10px 0 0 30px; padding:0;">
-                [on Windows]:<br/>
-                <img src="image/systemvar_13.png" alt="nexial.manageMemory example"/><br/>
-                <br/>
-                [on OSX]:<br/>
-                <img src="image/systemvar_14.png" width="530" alt="nexial.manageMemory example"/><br/>
-            </p>
-            The purpose of this environment variable is to instruct Nexial to enable aggressive memory management. When
-            enabled (<code>nexial.manageMemory=true</code>), Nexial will conduct garbage collection (GC) to reclaim any
-            unused heap memory after the completion of each test script execution. You will see something similar as
-            the following, which show that GC was executed and the memory footprint changes between the GC.<br/>
-            <img src="image/systemvar_15.jpg" class="resize" alt="nexial.manageMemory example"/><br/>
-            At the end of the entire execution, Nexial also print out a summary of the memory usage between different
-            test scenarios:<br/>
-            <img src="image/systemvar_16.jpg" class="resize" alt="nexial.manageMemory example"/>
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.failAfter"><code>nexial.failAfter</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.failAfter"><code>nexial.failAfter</code></a></td>
         <td>integer</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -819,7 +642,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.minExecSuccessRate"><code>nexial.minExecSuccessRate</code></a>
+            <a id="nexial.minExecSuccessRate"><code>nexial.minExecSuccessRate</code></a>
         </td>
         <td>decimal</td>
         <td>100</td>
@@ -829,34 +652,35 @@
             to time, success isn't always that straightforward. There might be valid and one-off reason as to why the
             criteria of SUCCESS would be more lenient. Using this system property, one can tune the minimum rate of
             PASS(es) in order for an execution to be considered as SUCCESS. An SUCCESS will in turn yield a
-            <a href="exitcodes.html">exit status</a> of <code>0</code>, which is the equivalent in scripting of
+            <a href="exitcodes">exit status</a> of <code>0</code>, which is the equivalent in scripting of
             "<i>everything's fine, proceed on!</i>". This can be very useful (and indeed necessary) for CI/CD
             environment, or when a Nexial execution is part of a bigger scripting effort.<br/>
             <br/>
+
             By default, this system variable has a value of <code>100</code> (as in 100%). Specifying a number lower
             than 100, such as <code>95.51</code> to fine tune the criteria for a SUCCESS<i>ful</i> execution.
-            Misconfigured value (less than 0 or greater than 100) will be ignored.<br/>
+            Mis-configured value (less than 0 or greater than 100) will be ignored.<br/>
             <br/>
+
             <strong>NOTE</strong>: this system variable is <strong>NOT</strong> read from data file, and
             <strong><u>MUST</u> </strong>be specified via command line. For example,<br/>
-            <blockquote style="margin: 10px 0 0 19px; border-left-color: rgb(46, 61, 84); padding: 10px 20px;">
-                <code>set JAVA_OPT=-Dnexial.minExecSuccessRate=97.55 -Dnexial.openResult=true</code>
-                <code>... ...</code>
-                <code>nexial.cmd -plan C:\projects\... ... ...</code>
-            </blockquote>
-            <br/>
+
+            <pre>nexial.cmd -plan ...<b>
+            -override nexial.minExecSuccessRate=97.55
+            -override nexial.openResult=true</b></pre>
+
             At the end of an execution, one may observe a printout of the SUCCESS evaluation due to this system
-            variable.
-            For example,<br/>
+            variable. For example,<br/>
             <img src="image/systemvar_17.jpg" class="resize" alt="nexial.minExecSuccessRate example"/>
             <br/>
-            See <a href="exitcodes.html">Exit Codes</a> and <a href="endofexecution.html">End of Execution</a>
+
+            See <a href="exitcodes">Exit Codes</a> and <a href="endofexecution">End of Execution</a>
             for more details about this topic.
         </td>
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.executionCount"><code>nexial.executionCount</code></a>
+            <a id="nexial.executionCount"><code>nexial.executionCount</code></a>
         </td>
         <td>integer</td>
         <td></td>
@@ -869,7 +693,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.executionPassCount"><code>nexial.executionPassCount</code></a>
+            <a id="nexial.executionPassCount"><code>nexial.executionPassCount</code></a>
         </td>
         <td>integer</td>
         <td></td>
@@ -882,7 +706,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.executionFailCount"><code>nexial.executionFailCount</code></a>
+            <a id="nexial.executionFailCount"><code>nexial.executionFailCount</code></a>
         </td>
         <td>integer</td>
         <td></td>
@@ -895,7 +719,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.executionSkipCount"><code>nexial.executionSkipCount</code></a>
+            <a id="nexial.executionSkipCount"><code>nexial.executionSkipCount</code></a>
         </td>
         <td>integer</td>
         <td></td>
@@ -907,8 +731,104 @@
         </td>
     </tr>
     <tr>
+      <td nowrap="nowrap" class="varname">
+        <a id="nexial.currentActivity"><code>nexial.currentActivity</code></a>
+      </td>
+      <td>text</td>
+      <td>&nbsp;</td>
+      <td>true</td>
+      <td>
+        This system variable is to indicate the Activity currently in Execution. It will only show activity name
+        currently executing.
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname">
+        <a id="nexial.currentScenario"><code>nexial.currentScenario</code></a>
+      </td>
+      <td>text</td>
+      <td>&nbsp;</td>
+      <td>true</td>
+      <td>
+        This system variable is to indicate the Scenario currently in Execution. It will only show scenario name
+        currently executing.
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname"><a id="nexial.manageMemory"><code>nexial.manageMemory</code></a></td>
+      <td>boolean</td>
+      <td>false</td>
+      <td class="highlight-red">true</td>
+      <td>
+        <strong>MUST BE SET AS A ENVIRONMENT VARIABLE VIA THE STANDARD <code>-D</code> ARGUMENT.</strong><br/>
+        To turn on this variable, one must set the <code>-D</code> environment variable prior to executing a test
+        run. For example:<br/>
+        <p style="margin: 10px 0 0 30px; padding:0;">
+          [on Windows]:<br/>
+          <img src="image/systemvar_13.png" alt="nexial.manageMemory example"/><br/>
+          <br/>
+          [on OSX]:<br/>
+          <img src="image/systemvar_14.png" width="530" alt="nexial.manageMemory example"/><br/>
+        </p>
+        The purpose of this environment variable is to instruct Nexial to enable aggressive memory management. When
+        enabled (<code>nexial.manageMemory=true</code>), Nexial will conduct garbage collection (GC) to reclaim any
+        unused heap memory after the completion of each test script execution. You will see something similar as
+        the following, which show that GC was executed and the memory footprint changes between the GC.<br/>
+        <img src="image/systemvar_15.jpg" class="resize" alt="nexial.manageMemory example"/><br/>
+        At the end of the entire execution, Nexial also print out a summary of the memory usage between different
+        test scenarios:<br/>
+        <img src="image/systemvar_16.jpg" class="resize" alt="nexial.manageMemory example"/>
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname"><a id="nexial.assistantMode"><code>nexial.assistantMode</code></a></td>
+      <td>boolean</td>
+      <td>false</td>
+      <td>false</td>
+      <td>
+        <i>DEPRECATED SYSTEM VARIABLE NAME.
+          PLEASE SEE <a href="#nexial.openResult"><code>nexial.openResult</code></a> INSTEAD.</i>
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname"><a id="nexial.openResult"><code>nexial.openResult</code></a></td>
+      <td>boolean</td>
+      <td>false</td>
+      <td>false</td>
+      <td>
+        Determine if Nexial should automatically open the output in Excel after each iteration. This could be a
+        time saver since one would not have to manually search for the output file.<br/>
+        <br/>
+        This configuration is forcefully turned off during remote execution.
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname">
+        <a id="nexial.spreadsheet.program"><code>nexial.spreadsheet.program</code></a>
+      </td>
+      <td>text</td>
+      <td>excel</td>
+      <td class="highlight-red">true</td>
+      <td>
+        Configure the full path, including the executable name, of the program to use when opening Nexial output at
+        the end of an execution run. This is only applicable when <code>nexial.openResult</code> is enabled. By
+        default, Nexial will invoke Microsoft Excel to open the execution output in context.<br/>
+        <br/>
+        However, should you choose to use another program, such as WPS, specify this variable in your data sheet.
+        For example,<br/>
+        <img src="image/systemvar_05.png" class="resize" alt="nexial.spreadsheet.program example"/><br/>
+        Alternatively, one can simply specify <code>wps</code>, which will enable Nexial to automatically resolve
+        the correct location of WPS (latest version preferred). For example,<br/>
+        <img src="image/systemvar_06.png" style="width:360px" alt="nexial.spreadsheet.program example"/>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="highlight-section" colspan="5"><span>For screen recording only.</span></td>
+    </tr>
+    <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.recordingEnabled"><code>nexial.recordingEnabled</code></a>
+            <a id="nexial.recordingEnabled"><code>nexial.recordingEnabled</code></a>
         </td>
         <td>boolean</td>
         <td>true</td>
@@ -925,64 +845,196 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.screenRecorder"><code>nexial.screenRecorder</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.screenRecorder"><code>nexial.screenRecorder</code></a></td>
         <td>text</td>
         <td>mp4</td>
         <td class="highlight-red">true</td>
         <td>
             Determine format of the recording file need to be created. Currently supported screen recording files to be
             <code>mp4</code> (default) or <code>avi</code><br/>
-            <div>
-                Specify recorder type to <strong><code>mp4</code></strong>:<br/>
-                <span style="color: rgb(128, 128, 128);"><code>set JAVA_OPT=-Dnexial.screenRecorder=mp4</code></span>
-                <br/>
-                <br/>
-                Specify recorder type to <strong><code>avi</code></strong>:<br/>
-                <span style="color: rgb(128, 128, 128);"><code>set JAVA_OPT=-Dnexial.screenRecorder=avi</code></span>
-            </div>
-            <br/>
-            <strong>NOTE</strong>: by default if no system variable defined, screen recording is created as
-            <strong>mp4</strong>
         </td>
+    </tr>
+
+    <tr>
+      <td class="highlight-section" colspan="5"><span>For email notification only.</span></td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname"><a id="nexial.enableEmail"><code>nexial.enableEmail</code></a></td>
+      <td>boolean</td>
+      <td>false</td>
+      <td>false</td>
+      <td>
+        Enable email notification at the end of an execution. By default this is not enabled as using email to
+        communicate execution status carries a variety of possible side issues. Nonetheless, email notification is
+        supported in Nexial. Such email provides summary information for a given execution and it looks like the
+        following:<br/>
+        <img src="image/systemvar_post_exec_default.png"/><br/>
+        <br/>
+
+        Note that the "Reference" column reflects the <a href="#nexial.scriptRef"><code>nexial.scriptRef.*</code></a>
+        values defined for each script/iteration.<br/>
+        <br/>
+
+        Here are the steps:
+        <ol>
+          <li>Enable this system variable</li>
+          <li>Define the mail server connectivity details:
+            <ul>
+              <li><code>nexial.mail.smtp.host</code> - the hostname or DNS name of your mail server</li>
+              <li><code>nexial.mail.smtp.port</code> - <code>25</code> (or whatever the configured SMTP port)</li>
+              <li><code>nexial.mail.smtp.from</code> - the FROM email address</li>
+              <li><code>nexial.mail.smtp.auth</code> - <code>true|false</code></li>
+              <li><code>nexial.mail.smtp.username</code> - username only needed if <code>nexial.mail.smtp.auth</code> is set to <code>true</code></li>
+              <li><code>nexial.mail.smtp.password</code> - password only needed if <code>nexial.mail.smtp.auth</code> is set to <code>true</code></li>
+            </ul>
+          </li>
+          <li>Define the recipient email or list via the <a href="#nexial.mailTo"><code>nexial.mailTo</code></a>
+            System variable.</li>
+        </ol>
+
+        All these settings can be added via command line (i.e. <code>JAVA_OPT=-D...</code> or <code>-override</code>
+        flag), <a href="../userguide/UnderstandingProjectStructure#projectproperties"><code>project.properties</code></a>
+        or the appropriate data file. For example, from command line:<br/>
+        <br/>
+
+        <pre>nexial.sh -script ... ... \
+          -override nexial.enableEmail=true \
+          -override nexial.mail.smtp.host=mail.mycompany.com \
+          -override nexial.mail.smtp.auth=false \
+          -override nexial.mailTo=me_and_myself@mycompany.com</pre>
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname"><a id="nexial.mailTo"><code>nexial.mailTo</code></a></td>
+      <td>text</td>
+      <td></td>
+      <td>false</td>
+      <td>
+        <b>NOTE: <a href="#nexial.enableEmail"><code>nexial.enableEmail</code></a> MUST BE SET TO
+          <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b><br/>
+        <br/>
+
+        A comma-separated list of email addresses to receive Nexial's email notification at the end of an execution.
+        <br/>
+        Note that this System variable, along with <code>nexial.enableEmail</code> are both required for Nexial
+        to send out post-execution email notification.
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname"><a id="nexial.mailSubject"><code>nexial.mailSubject</code></a></td>
+      <td>text</td>
+      <td></td>
+      <td>false</td>
+      <td>
+        <b>NOTE: <a href="#nexial.enableEmail"><code>nexial.enableEmail</code></a> MUST BE SET TO
+          <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b><br/>
+        <br/>
+
+        Customized/optional mail subject instead of the default one. The inclusion of data variable,
+        <a href="../expressions">Nexial Expression</a> and <a href="../functions">built-in function</a> is possible
+        to achieve a highly dynamic and expressive email subject. However this might not resolve to the desired
+        value since this System variable is resolved in the beginning of the execution, not the end.<br/>
+        <br/>
+
+        Note that Nexial's post-execution email subject will <b>STILL</b> be prefixed with <code>[nexial]</code> to
+        indicate the source of such email - i.e. <code>[nexial] your customized subject ...</code><br/>
+        <br/>
+
+        For example,<br/>
+        <img src="image/systemvar_35.png"/><br/>
+        <img src="image/systemvar_post_exec.png"/><br/>
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname"><a id="nexial.mailHeader"><code>nexial.mailHeader</code></a></td>
+      <td>text</td>
+      <td></td>
+      <td>false</td>
+      <td>
+        <b>NOTE: <a href="#nexial.enableEmail"><code>nexial.enableEmail</code></a> MUST BE SET TO
+          <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b>
+        <br/><br/>
+
+        Customized/optional "header" message to be included in Nexial's post-execution email notification. The
+        inclusion of data variable, <a href="../expressions">Nexial Expression</a> and
+        <a href="../functions">built-in function</a> is possible - as well as the use of HTML. However this might
+        not always resolve to the desired value since this System variable is resolved in the beginning of the
+        execution, not the end.
+        <br/><br/>
+
+        This can be useful towards including a custom-crafted "header" message to provide additional context of
+        the execution. For example,<br/>
+        <img src="image/systemvar_36.png"/><br/>
+        <img src="image/systemvar_post_exec.png"/><br/>
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname"><a id="nexial.mailFooter"><code>nexial.mailFooter</code></a></td>
+      <td>text</td>
+      <td></td>
+      <td>false</td>
+      <td>
+        <b>NOTE: <a href="#nexial.enableEmail"><code>nexial.enableEmail</code></a> MUST BE SET TO
+          <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b>
+        <br/><br/>
+
+        Customized/optional "footer" message to be included in Nexial's post-execution email notification. The
+        inclusion of data variable, <a href="../expressions">Nexial Expression</a> and
+        <a href="../functions">built-in function</a> is possible - as well as the use of HTML. However this might
+        not always resolve to the desired value since this System variable is resolved in the beginning of the
+        execution, not the end.
+        <br/><br/>
+
+        This can be useful towards including a custom-crafted "footer" message to provide additional context of
+        the execution. For example,<br/>
+        <img src="image/systemvar_37.png"/><br/>
+        <img src="image/systemvar_post_exec.png"/><br/>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="highlight-section" colspan="5">
+        <span>For intra-step <a href="../flowcontrols/timeTracking">time tracking</a> only.</span>
+      </td>
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.timetrack.trackExecution"><code>nexial.timetrack.trackExecution</code></a>
+            <a id="nexial.timetrack.trackExecution"><code>nexial.timetrack.trackExecution</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
         <td>
             This system variable is specified to track time taken for entire execution to complete. The time tracking
-            logs generated by this variable are stored alongside timetracking logs for test steps.
+            logs generated by this variable are stored alongside time-tracking logs for test steps.
             For more information, see <a href="../flowcontrols/timeTracking"><code>Time Tracking</code></a>
             Label for this will be run id which is in timestamp format and remark will be <code>Execution ended</code>.
         </td>
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.timetrack.trackScript"><code>nexial.timetrack.trackScript</code></a>
+            <a id="nexial.timetrack.trackScript"><code>nexial.timetrack.trackScript</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
         <td>
             This system variable is specified to track time taken for each script to complete. The time tracking logs
-            generated by this variable are stored alongside timetracking logs for test steps. For more information,
+            generated by this variable are stored alongside time-tracking logs for test steps. For more information,
             see <a href="../flowcontrols/timeTracking"><code>Time Tracking</code></a>. Label for this will be script
             name and remark will be <code>Script ended</code>.
         </td>
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.timetrack.trackIteration"><code>nexial.timetrack.trackIteration</code></a>
+            <a id="nexial.timetrack.trackIteration"><code>nexial.timetrack.trackIteration</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
         <td>
             This system variable is specified to track time taken for each iteration to complete. The time tracking logs
-            generated by this variable are stored alongside timetracking logs for test steps.
+            generated by this variable are stored alongside time-tracking logs for test steps.
             For more information on time tracking, see
             <a href="../flowcontrols/timeTracking"><code>Time Tracking</code></a>. Label for this will be in the form of
             <code>scriptName#currentIteration</code> and the remark will be <code>Iteration ended</code>.
@@ -990,21 +1042,21 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.timetrack.trackScenario"><code>nexial.timetrack.trackScenario</code></a>
+            <a id="nexial.timetrack.trackScenario"><code>nexial.timetrack.trackScenario</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
         <td>false</td>
         <td>
             This system variable is specified to track time taken for each scenario to complete. The tracking logs
-            generated by this variable are stored alongside timetracking logs for test steps.
+            generated by this variable are stored alongside time-tracking logs for test steps.
             For more information on time tracking, see <a href="../flowcontrols/timeTracking"><code>Time Tracking</code></a>
             Label for this will be scriptName#scenario and remark will be <code>Scenario ended</code>.
         </td>
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.timetrack.format"><code>nexial.timetrack.format</code></a>
+            <a id="nexial.timetrack.format"><code>nexial.timetrack.format</code></a>
         </td>
         <td>text</td>
         <td>&nbsp;</td>
@@ -1015,33 +1067,13 @@
             For more information on time tracking, see <a href="../flowcontrols/timeTracking"><code>Time Tracking</code></a>
         </td>
     </tr>
+
     <tr>
-        <td nowrap="nowrap" class="varname">
-            <a name="nexial.currentActivity"><code>nexial.currentActivity</code></a>
-        </td>
-        <td>text</td>
-        <td>&nbsp;</td>
-        <td>true</td>
-        <td>
-            This system variable is to indicate the Activity currently in Execution. It will only show activity name
-            currently executing.
-        </td>
+      <td class="highlight-section" colspan="5"><span>For <a href="../expressions">Nexial Expression</a> only.</span></td>
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.currentScenario"><code>nexial.currentScenario</code></a>
-        </td>
-        <td>text</td>
-        <td>&nbsp;</td>
-        <td>true</td>
-        <td>
-            This system variable is to indicate the Scenario currently in Execution. It will only show scenario name
-            currently executing.
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname">
-            <a name="nexial.expression.OpenFileAsIs"><code>nexial.expression.OpenFileAsIs</code></a>
+            <a id="nexial.expression.OpenFileAsIs"><code>nexial.expression.OpenFileAsIs</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -1058,7 +1090,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.expression.resolveURL"><code>nexial.expression.resolveURL</code></a>
+            <a id="nexial.expression.resolveURL"><code>nexial.expression.resolveURL</code></a>
         </td>
         <td>boolean</td>
         <td>true</td>
@@ -1074,12 +1106,13 @@
             By default, this System variable is set to <code>true</code>.
         </td>
     </tr>
+
     <tr>
-        <td class="highlight-green" colspan="5"><span>For iteration-based testing only.</span></td>
+        <td class="highlight-section" colspan="5"><span>For iteration-based testing only.</span></td>
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.scope.iteration"><code>nexial.scope.iteration</code></a>
+            <a id="nexial.scope.iteration"><code>nexial.scope.iteration</code></a>
         </td>
         <td>ranges</td>
         <td>1</td>
@@ -1087,7 +1120,7 @@
         <td>
             Specify the iteration or iteration range to execute. This can expressed as number (each represent the
             iteration index) or a number range. For example,<br/>
-            <table cellspacing="0" cellpadding="3">
+            <table>
                 <thead>
                 <tr>
                     <th><code>nexial.scope.iteration</code></th>
@@ -1132,7 +1165,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.scope.fallbackToPrevious"><code>nexial.scope.fallbackToPrevious</code></a>
+            <a id="nexial.scope.fallbackToPrevious"><code>nexial.scope.fallbackToPrevious</code></a>
         </td>
         <td>boolean</td>
         <td>true</td>
@@ -1145,7 +1178,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.scope.currentIteration"><code>nexial.scope.currentIteration</code></a>
+            <a id="nexial.scope.currentIteration"><code>nexial.scope.currentIteration</code></a>
         </td>
         <td>integer</td>
         <td>&nbsp;</td>
@@ -1157,7 +1190,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.scope.currentIterationId"><code>nexial.scope.currentIterationId</code></a>
+            <a id="nexial.scope.currentIterationId"><code>nexial.scope.currentIterationId</code></a>
         </td>
         <td>integer</td>
         <td>&nbsp;</td>
@@ -1169,7 +1202,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.scope.lastIteration"><code>nexial.scope.lastIteration</code></a>
+            <a id="nexial.scope.lastIteration"><code>nexial.scope.lastIteration</code></a>
         </td>
         <td>integer</td>
         <td>&nbsp;</td>
@@ -1181,7 +1214,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.scope.isFirstIteration"><code>nexial.scope.isFirstIteration</code></a>
+            <a id="nexial.scope.isFirstIteration"><code>nexial.scope.isFirstIteration</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -1193,7 +1226,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.scope.isLastIteration"><code>nexial.scope.isLastIteration</code></a>
+            <a id="nexial.scope.isLastIteration"><code>nexial.scope.isLastIteration</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -1205,15 +1238,15 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.scope.refetchDataFile"><code>nexial.scope.refetchDataFile</code></a>
+            <a id="nexial.scope.refetchDataFile"><code>nexial.scope.refetchDataFile</code></a>
         </td>
         <td>integer</td>
         <td>&nbsp;</td>
         <td class="highlight-red">true</td>
         <td>
             Determine whether Nexial should re-read the target data file per iteration or not. Sometimes it is
-            beneficial to refetch the target data file between iteration in case its content has been modified during
-            preceeding iteration. This is the default behavior.
+            beneficial to re-fetch the target data file between iteration in case its content has been modified during
+            preceding iteration. This is the default behavior.
             <br/>
             However, at times one might have the intention not to do so in order to preserve the changes made to data
             variables from one iteration to the next. In such case, one should set
@@ -1221,12 +1254,16 @@
         </td>
     </tr>
     <tr>
-        <td class="highlight-green" colspan="5">
-            <span>For <code>io</code> or <code>csv</code> content comparison only.</span></td>
+        <td class="highlight-section" colspan="5">
+            <span>
+              For <a href="../commands/io"><code>io</code></a> or <a href="../commands/csv"><code>csv</code></a>
+              content comparison only.
+            </span>
+        </td>
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.compare.textReport"><code>nexial.compare.textReport</code></a>
+            <a id="nexial.compare.textReport"><code>nexial.compare.textReport</code></a>
         </td>
         <td>boolean</td>
         <td>true</td>
@@ -1244,7 +1281,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.compare.jsonReport"><code>nexial.compare.jsonReport</code></a>
+            <a id="nexial.compare.jsonReport"><code>nexial.compare.jsonReport</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -1262,7 +1299,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.compare.htmlReport"><code>nexial.compare.htmlReport</code></a>
+            <a id="nexial.compare.htmlReport"><code>nexial.compare.htmlReport</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -1280,7 +1317,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.compare.reportMatch"><code>nexial.compare.reportMatch</code></a>
+            <a id="nexial.compare.reportMatch"><code>nexial.compare.reportMatch</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -1294,7 +1331,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.io.eolConfig"><code>nexial.io.eolConfig</code></a>
+            <a id="nexial.io.eolConfig"><code>nexial.io.eolConfig</code></a>
         </td>
         <td>text</td>
         <td>platform</td>
@@ -1316,7 +1353,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.io.copyConfig"><code>nexial.io.copyConfig</code></a>
+            <a id="nexial.io.copyConfig"><code>nexial.io.copyConfig</code></a>
         </td>
         <td>text</td>
         <td>keepOriginal</td>
@@ -1345,7 +1382,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.csv.maxColumns"><code>nexial.csv.maxColumns</code></a>
+            <a id="nexial.csv.maxColumns"><code>nexial.csv.maxColumns</code></a>
         </td>
         <td>number</td>
         <td>512</td>
@@ -1358,7 +1395,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.csv.maxColumnWidth"><code>nexial.csv.maxColumnWidth</code></a>
+            <a id="nexial.csv.maxColumnWidth"><code>nexial.csv.maxColumnWidth</code></a>
         </td>
         <td>number</td>
         <td>512</td>
@@ -1371,13 +1408,11 @@
     </tr>
 
     <tr>
-        <td class="highlight-green" colspan="5">
-            <span>For <code>JSON</code></a> testing only. </span>
-        </td>
+        <td class="highlight-section" colspan="5"><span>For JSON testing only. </span></td>
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.json.treatJsonAsIs"><code>nexial.json.treatJsonAsIs</code></a>
+            <a id="nexial.json.treatJsonAsIs"><code>nexial.json.treatJsonAsIs</code></a>
         </td>
         <td>boolean</td>
         <td>true</td>
@@ -1402,7 +1437,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.json.lastCompareResults"><code>nexial.json.lastCompareResults</code></a>
+            <a id="nexial.json.lastCompareResults"><code>nexial.json.lastCompareResults</code></a>
         </td>
         <td>json</td>
         <td></td>
@@ -1426,13 +1461,13 @@
     </tr>
 
     <tr>
-        <td class="highlight-green" colspan="5">
+        <td class="highlight-section" colspan="5">
             <span>For <a href="../commands/external/"><code>external</code></a> testing only. </span>
         </td>
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.external.output"><code>nexial.external.output</code></a>
+            <a id="nexial.external.output"><code>nexial.external.output</code></a>
         </td>
         <td>text</td>
         <td></td>
@@ -1451,7 +1486,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.external.console"><code>nexial.external.console</code></a>
+            <a id="nexial.external.console"><code>nexial.external.console</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -1464,10 +1499,10 @@
     </tr>
 
     <tr>
-        <td class="highlight-green" colspan="5"><span>For browser-based testing only. </span></td>
+        <td class="highlight-section" colspan="5"><span>For browser-based testing only. </span></td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.browser"><code>nexial.browser</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.browser"><code>nexial.browser</code></a></td>
         <td>text</td>
         <td>firefox</td>
         <td>false</td>
@@ -1492,8 +1527,42 @@
         </td>
     </tr>
     <tr>
+      <td nowrap="nowrap" class="varname">
+        <a id="nexial.delayBrowser"><code>nexial.delayBrowser</code></a>
+      </td>
+      <td>boolean</td>
+      <td>false</td>
+      <td class="highlight-red">true</td>
+      <td>
+        Delay the initialization of web browser until the first command of
+        <a href="../commands/web/open(url)">web &raquo; <code>open()</code></a> is invoked.
+        Generally one would not need to worry about this. Change this <strong>ONLY IF YOU KNOW WHAT YOU ARE
+        DOING!</strong>
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname">
+        <a id="nexial.browser.incognito"><code>nexial.browser.incognito</code></a>
+      </td>
+      <td>boolean</td>
+      <td>true</td>
+      <td class="highlight-red">true</td>
+      <td>
+        Determine if the target browser should be initialized by Nexial in incognito/private mode. The common
+        practice is to <u>ALWAYS</u> run browser in such mode to avoid residual side-effects to the browser between
+        tests. The default is <strong><code>true</code></strong>.<br/>
+        <br/>
+        <strong>
+          Due to a
+          <a href="https://bugs.chromium.org/p/chromedriver/issues/detail?id=504" class="external-link"
+             target="_nexial_external">known/unresolved issue with chrome</a>, if your tests requires resizing
+          or maximizing target browser, the recommendation is to set this variable to <code>false</code>.
+        </strong>
+      </td>
+    </tr>
+    <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.browser.windowSize"><code>nexial.browser.windowSize</code></a>
+            <a id="nexial.browser.windowSize"><code>nexial.browser.windowSize</code></a>
         </td>
         <td>text</td>
         <td>&nbsp;</td>
@@ -1523,8 +1592,101 @@
         </td>
     </tr>
     <tr>
+      <td nowrap="nowrap" class="varname">
+        <a id="nexial.enforcePageSourceStability"><code>nexial.enforcePageSourceStability</code></a>
+      </td>
+      <td>boolean</td>
+      <td>true</td>
+      <td>false</td>
+      <td>
+        Determine the browser page stability during test execution. Generally most of the modern web applications
+        are rich in interactivity which require some background proceed to be completed when page gets loaded. But
+        older or simpler web applications do not have such requirement. For such case, one can use this system
+        variable to speed up test automation.<br/>
+        <br/>
+        By default the value is set to <code>true</code> and will ensure that the web page in question is stabilized
+        before proceeding to next command. If this system variable is set to <code>false</code>, this enforcement
+        will be omitted. For example:<br/>
+        <img src="image/systemvar_23.png" alt="nexial.enforcePageSourceStability example"/>
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname">
+        <a id="nexial.browser.postCloseWaitMs"><code>nexial.browser.postCloseWaitMs</code></a>
+      </td>
+      <td>integer</td>
+      <td>3000</td>
+      <td>false</td>
+      <td>
+        Time allotted, in millisecond, to allow the system is settled down and process any <em>clean up</em> after a
+        browser instance is closed. The default for this is <code>3000</code>, which means the execution of
+        <a href="../commands/web/close()">web &raquo; <code>close()</code></a> will add 3 seconds by default to the
+        overall execution time.
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname"><a id="nexial.pollWaitMs"><code>nexial.pollWaitMs</code></a></td>
+      <td>milliseconds</td>
+      <td>30000</td>
+      <td class="highlight-red">true</td>
+      <td>
+        The time to wait for the impact caused by an action (such as click) to subside. In modern web-based
+        application, esp. those implemented with AJAX, not all the resulting elements (DOM, resource, etc.) are
+        available at the same time. As the browser concurrently downloads and renders each component, the position
+        and hierarchical order of these components might change as well. One should consider this configuration as a
+        "max wait time" – meaning that if the rendered content has settled or expected element is reachable prior
+        to this time, then Nexial will stop waiting and resume execution.<br/><br/>
+
+        Note that as per WebDriver specification, the poll wait time is only set once per initial use of a browser-
+        specific webdriver instance.
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname"><a id="nexial.uiRenderWaitMs"><code>nexial.uiRenderWaitMs</code></a></td>
+      <td>milliseconds</td>
+      <td>3000</td>
+      <td>false</td>
+      <td>
+        The number of milliseconds to wait before taking a screenshot on current browser. This would allow the
+        UI elements to "<em>settle down</em>".
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname"><a id="nexial.waitSpeed"><code>nexial.waitSpeed</code></a></td>
+      <td>integer</td>
+      <td>3</td>
+      <td>false</td>
+      <td>
+        Determine how much time to wait for a dynamic page/response to stabilize before proceeding to next test
+        step. This is set at a 400ms increment.
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname">
+        <a id="nexial.web.pageLoadWaitMs"><code>nexial.web.pageLoadWaitMs</code></a>
+      </td>
+      <td>integer</td>
+      <td>10000</td>
+      <td>false</td>
+      <td>
+        Sets the amount of time (in millisecond) to wait for a page load to complete before considering the page
+        load event (such as <a href="../commands/web/open(url)">web &raquo; <code>open(url)</code></a> is
+        considered as FAIL. If the timeout is negative, page loads can be indefinite.
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname"><a id="nexial.web.alwaysWait"><code>nexial.web.alwaysWait</code></a></td>
+      <td>boolean</td>
+      <td>false</td>
+      <td>false</td>
+      <td>
+        Enable auto-continuation mode so that browser will wait for requested element with 10 ms poll. This
+        technique can help reduce the use of implicit or explicit wait.
+      </td>
+    </tr>
+    <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.browser.forceJSClick"><code>nexial.browser.forceJSClick</code></a>
+            <a id="nexial.browser.forceJSClick"><code>nexial.browser.forceJSClick</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -1544,227 +1706,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.browser.postCloseWaitMs"><code>nexial.browser.postCloseWaitMs</code></a>
-        </td>
-        <td>integer</td>
-        <td>3000</td>
-        <td>false</td>
-        <td>
-            Time allotted, in millisecond, to allow the system is settled down and process any <em>clean up</em> after a
-            browser instance is closed. The default for this is <code>3000</code>, which means the execution of
-            <a href="../commands/web/close()">web &raquo; <code>close()</code></a> will add 3 seconds by default to the
-            overall execution time.
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname">
-            <a name="nexial.browser.incognito"><code>nexial.browser.incognito</code></a>
-        </td>
-        <td>boolean</td>
-        <td>true</td>
-        <td class="highlight-red">true</td>
-        <td>
-            Determine if the target browser should be initialized by Nexial in incognito/private mode. The common
-            practice is to <u>ALWAYS</u> run browser in such mode to avoid residual side-effects to the browser between
-            tests. The default is <strong><code>true</code></strong>.<br/>
-            <br/>
-            <strong>
-                Due to a
-                <a href="https://bugs.chromium.org/p/chromedriver/issues/detail?id=504" class="external-link"
-                   target="_nexial_external">known/unresolved issue with chrome</a>, if your tests requires resizing
-                or maximizing target browser, the recommendation is to set this variable to <code>false</code>.
-            </strong>
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname">
-            <a name="nexial.browser.ie.requireWindowFocus"><code>nexial.browser.ie.requireWindowFocus</code></a>
-        </td>
-        <td>boolean</td>
-        <td>false</td>
-        <td class="highlight-red">true</td>
-        <td>
-            <strong>Applicable only for Internet Explorer Browser.</strong><br/>
-            <ul>
-                <li>Specify IE browser window focus before performing any user interaction operations (mouse or keyboard
-                    events).
-                </li>
-                <li>This capability is false by default, but delivers much more accurate native events interactions.
-                </li>
-                <li>But for any user Interaction testing (mouse hovering etc), it is recommended to set this variable to
-                    <code>true</code> using working with IE Browser.
-                </li>
-            </ul>
-            <img src="image/systemvar_22.png" alt="nexial.browser.ie.requireWindowFocus example"/>
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname">
-            <a name="nexial.safari.useTechPreview"><code>nexial.browser.safari.useTechPreview</code></a>
-        </td>
-        <td>boolean</td>
-        <td>false</td>
-        <td class="highlight-red">true</td>
-        <td>
-            <strong>Applicable only when <code>nexial.browser</code> is set to <code>safari</code>.</strong><br/>
-            Instruct Nexial to use the
-            <a href="https://developer.apple.com/safari/technology-preview/" class="external-link"
-               target="_nexial_external">Safari Technology Preview</a> if this system variable is set to
-            <code>true</code>, otherwise use the release version of Safari (default). Set this system variable to
-            <code>true</code> <strong>ONLY</strong> the executing host has
-            <a href="https://developer.apple.com/safari/technology-preview/" class="external-link"
-               target="_nexial_external">Safari Technology Preview</a> properly installed.
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname">
-            <a name="nexial.delayBrowser"><code>nexial.delayBrowser</code></a>
-        </td>
-        <td>boolean</td>
-        <td>false</td>
-        <td class="highlight-red">true</td>
-        <td>
-            Delay the initialization of web browser until the first command of
-            <a href="../commands/web/open(url)">web &raquo; <code>open()</code></a> is invoked.
-            Generally one would not need to worry about this. Change this <strong>ONLY IF YOU KNOW WHAT YOU ARE
-            DOING!</strong>
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.browser.logElectron"><code>nexial.browser.logElectron</code></a></td>
-        <td>boolean</td>
-        <td>false</td>
-        <td>false</td>
-        <td>
-            Enable/Disable webdriver logging when automating against an Electron application. The
-            <code>nexial.browser</code> System variable must be set to <code>electron</code>. When enabled, Nexial will
-            create under the <code>log</code> directory of the execution output directory a log file named as
-            <code>electron-[application].log</code>, where <code>[application]</code> is the name of the application
-            under test. This file will contain the webdriver logs during automation, and will be linked in the
-            <code>#summary</code> tab of the execution report (.xlsx) under the <code>logs</code> section.<br/>
-
-            While not usually needed, webdriver log contain be very useful towards troubleshooting and debugging
-            intercommunication issues between webdriver and AUT.
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.browser.logElectronVerbose"><code>nexial.browser.logElectronVerbose</code></a></td>
-        <td>boolean</td>
-        <td>false</td>
-        <td>false</td>
-        <td>
-            <b>ONLY APPLICABLE WHEN <code>nexial.browser.logElectron</code> IS SET TO <code>true</code></b><br/>
-            <br/>
-
-            Enable/Disable verbose webdriver logging when automating against an Electron application. By default, this
-            System variable is <code>false</code>.<br/>
-            <br/>
-
-            While not usually needed, turning on verbose mode might be useful towards troubleshooting and debugging
-            intercommunication issues between webdriver and AUT.
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname">
-            <a name="nexial.browser.logChrome"><code>nexial.browser.logChrome</code></a>
-        </td>
-        <td>boolean</td>
-        <td>false</td>
-        <td>false</td>
-        <td>
-            Enable/Disable webdriver logging when automating against Chrome browser. The <code>nexial.browser</code>
-            System variable must be set to <code>chrome</code> or <code>chrome-headless</code>. When enabled, Nexial
-            will create under the <code>log</code> directory of the execution output directory a log file named as
-            <code>chrome-browser.log</code>. This file will contain the webdriver logs during automation, and will be
-            linked in the <code>#summary</code> tab of the execution report (.xlsx) under the <code>logs</code>
-            section.<br/>
-
-            While not usually needed, webdriver log contain be very useful towards troubleshooting and debugging
-            intercommunication issues between webdriver and the Chrome browser.
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname">
-            <a name="nexial.enforcePageSourceStability"><code>nexial.enforcePageSourceStability</code></a>
-        </td>
-        <td>boolean</td>
-        <td>true</td>
-        <td>false</td>
-        <td>
-            Determine the browser page stability during test execution. Generally most of the modern web applications
-            are rich in interactivity which require some background proceed to be completed when page gets loaded. But
-            older or simpler web applications do not have such requirement. For such case, one can use this system
-            variable to speed up test automation.<br/>
-            <br/>
-            By default the value is set to <code>true</code> and will ensure that the web page in question is stabilized
-            before proceeding to next command. If this system variable is set to <code>false</code>, this enforcement
-            will be omitted. For example:<br/>
-            <img src="image/systemvar_23.png" alt="nexial.enforcePageSourceStability example"/>
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.pollWaitMs"><code>nexial.pollWaitMs</code></a></td>
-        <td>milliseconds</td>
-        <td>30000</td>
-        <td class="highlight-red">true</td>
-        <td>
-            The time to wait for the impact caused by an action (such as click) to subside. In modern web-based
-            application, esp. those implemented with AJAX, not all the resulting elements (DOM, resource, etc.) are
-            available at the same time. As the browser concurrently downloads and renders each component, the position
-            and hierarchical order of these components might change as well. One should consider this configuration as a
-            "max wait time" – meaning that if the rendered content has settled or expected element is reachable prior
-            to this time, then Nexial will stop waiting and resume execution.<br/><br/>
-
-            Note that as per WebDriver specification, the poll wait time is only set once per initial use of a browser-
-            specific webdriver instance.
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.uiRenderWaitMs"><code>nexial.uiRenderWaitMs</code></a></td>
-        <td>milliseconds</td>
-        <td>3000</td>
-        <td>false</td>
-        <td>
-            The number of milliseconds to wait before taking a screenshot on current browser. This would allow the
-            UI elements to "<em>settle down</em>".
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.waitSpeed"><code>nexial.waitSpeed</code></a></td>
-        <td>integer</td>
-        <td>3</td>
-        <td>false</td>
-        <td>
-            Determine how much time to wait for a dynamic page/response to stabilize before proceeding to next test
-            step. This is set at a 400ms increment.
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname">
-            <a name="nexial.web.pageLoadWaitMs"><code>nexial.web.pageLoadWaitMs</code></a>
-        </td>
-        <td>integer</td>
-        <td>10000</td>
-        <td>false</td>
-        <td>
-            Sets the amount of time (in millisecond) to wait for a page load to complete before considering the page
-            load event (such as <a href="../commands/web/open(url)">web &raquo; <code>open(url)</code></a> is
-            considered as FAIL. If the timeout is negative, page loads can be indefinite.
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.web.alwaysWait"><code>nexial.web.alwaysWait</code></a></td>
-        <td>boolean</td>
-        <td>false</td>
-        <td>false</td>
-        <td>
-            Enable auto-continuation mode so that browser will wait for requested element with 10 ms poll. This
-            technique can help reduce the use of implicit or explicit wait.
-        </td>
-    </tr>
-    <tr>
-        <td nowrap="nowrap" class="varname">
-            <a name="nexial.web.unfocusAfterType"><code>nexial.web.unfocusAfterType</code></a>
+            <a id="nexial.web.unfocusAfterType"><code>nexial.web.unfocusAfterType</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -1782,7 +1724,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.web.clearWithBackspace"><code>nexial.web.clearWithBackspace</code></a>
+            <a id="nexial.web.clearWithBackspace"><code>nexial.web.clearWithBackspace</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -1799,7 +1741,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.web.preemptiveAlertCheck"><code>nexial.web.preemptiveAlertCheck</code></a>
+            <a id="nexial.web.preemptiveAlertCheck"><code>nexial.web.preemptiveAlertCheck</code></a>
         </td>
         <td>boolean</td>
         <td>true</td>
@@ -1822,7 +1764,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.ignoreBrowserAlert"><code>nexial.ignoreBrowserAlert</code></a>
+            <a id="nexial.ignoreBrowserAlert"><code>nexial.ignoreBrowserAlert</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -1833,7 +1775,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.lastAlertText"><code>nexial.lastAlertText</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.lastAlertText"><code>nexial.lastAlertText</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="highlight-red">true</td>
@@ -1845,7 +1787,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.web.highlight"><code>nexial.web.highlight</code></a>
+            <a id="nexial.web.highlight"><code>nexial.web.highlight</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -1869,7 +1811,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.web.highlight.waitMs"><code>nexial.web.highlight.waitMs</code></a>
+            <a id="nexial.web.highlight.waitMs"><code>nexial.web.highlight.waitMs</code></a>
         </td>
         <td>integer</td>
         <td>250</td>
@@ -1887,7 +1829,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.web.highlight.style"><code>nexial.web.highlight.style</code></a>
+            <a id="nexial.web.highlight.style"><code>nexial.web.highlight.style</code></a>
         </td>
         <td>text</td>
         <td><code>background: #faf557</code></td>
@@ -1897,10 +1839,9 @@
             <a href="#nexial.web.highlight"><code>nexial.web.highlight</code></a> is set to <code>true</code>.
         </td>
     </tr>
-
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.web.scrollIntoView"><code>nexial.web.scrollIntoView</code></a>
+            <a id="nexial.web.scrollIntoView"><code>nexial.web.scrollIntoView</code></a>
         </td>
         <td>boolean</td>
         <td>true</td>
@@ -1928,10 +1869,9 @@
             </ul>
         </td>
     </tr>
-
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.web.dragFrom"><code>nexial.web.dragFrom</code></a>
+            <a id="nexial.web.dragFrom"><code>nexial.web.dragFrom</code></a>
         </td>
         <td>text</td>
         <td>middle</td>
@@ -1943,8 +1883,491 @@
             </a> for more details.
         </td>
     </tr>
+
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.forceIE32"><code>nexial.forceIE32</code></a></td>
+        <td class="highlight-section" colspan="5">
+            <span>For <a href="../commands/web">web</a> &raquo; <code>save...AsCsv()</code> commands only.</span>
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.web.saveGrid.deepScan"><code>nexial.web.saveGrid.deepScan</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            <b>
+                ONLY APPLICABLE TO THE FOLLOWING COMMANDS:
+                <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a></li>
+                <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a></li>
+            </b>
+
+            When Nexial is capturing data grid into a CSV file (via one of the commands above), it does so by scanning
+            for the text rendering of each data cell. By default, only data cell (<code>&lt;th></code>,
+            <code>&lt;td></code>, or <code>&lt;div></code>) with text content will be captured into CSV. Data cell
+            with web elements such as checkbox, drop down list (a.k.a. pick list), text box, image, etc. are thus
+            ignored.<br/>
+            <br/>
+            By setting this System variable to <code>true</code> (default is <code>false</code>), Nexial will activate
+            additional scanning of these non-text web elements and capture the corresponding metadata into CSV.
+            Precisely which metadata to capture will be determine by the additional System variables:
+            <ul>
+                <li><code>nexial.web.saveGrid.header.input</code></li>
+                <li><code>nexial.web.saveGrid.header.image</code></li>
+                <li><code>nexial.web.saveGrid.data.input</code></li>
+                <li><code>nexial.web.saveGrid.data.image</code></li>
+            </ul>
+
+            Note that activating "deep scan" will have performance implication. Depending on size and the variety of
+            web element found in the target data grid, one could experience a 10% - 45% performance degradation. The
+            larger the data grid (multiple paginated pages or 20+ columns, for example), the more significant
+            the performance differences will be. However it should be noted that the impact is localized to the commands
+            that capture data grid to CSV file.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.web.saveGrid.header.input"><code>nexial.web.saveGrid.header.input</code></a>
+        </td>
+        <td>text</td>
+        <td><code>name</code></td>
+        <td>false</td>
+        <td>
+            <b>
+                ONLY APPLICABLE TO THE FOLLOWING COMMANDS:
+                <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a></li>
+                <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a></li>
+            </b>
+            <br/>
+
+            <b>
+                Note that <code>nexial.web.saveGrid.deepScan</code> must be set to <code>true</code> in order for System
+                variable to take effect.
+            </b>
+            <br/>
+            <br/>
+
+            When "deep scan" is activated (see <a href="#nexial.web.saveGrid.deepScan">nexial.web.saveGrid.deepScan</a>),
+            one can determine what Nexial should capture when it encounters HTML form element such as:
+            <ul>
+                <li>check box</li>
+                <li>radio button</li>
+                <li>text box</li>
+                <li>text area (for multi-line editing)</li>
+                <li>button</li>
+                <li>dropdown list (a.k.a. pick list)</li>
+            </ul>
+
+            Depends on the value assigned to this System variable, Nexial will capture the corresponding metadata as its
+            CSV value when executing the web &raquo; <code>save...AsCSV()</code> commands. By default value for this
+            System is <code>name</code>.<br/>
+            <br/>
+
+            Possible choices are:
+            <table>
+                <thead>
+                <tr>
+                    <th nowrap="nowrap">configured value</th>
+                    <th>explanation</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>name</td>
+                    <td>
+                        Capture the value to the <a href="https://www.w3schools.com/tags/att_name.asp" class="external-link" target="_nexial_external">"name"</a>
+                        attribute of the web element in question. If this web element does have "name" attribute
+                        defined, an empty string will be used instead.
+                    </td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>
+                        Capture the type of web element in question. For HTML form input:
+                        <li>check box - <code>checkbox</code></li>
+                        <li>radio button - <code>radio</code></li>
+                        <li>text box - <code>text</code></li>
+                        <li>text area (for multi-line editing) - <code>textarea</code></li>
+                        <li>button - <code>button</code> or <code>submit</code> or <code>reset</code></li>
+                        <li>dropdown list (a.k.a. pick list) - <code>select-single</code> or <code>select-multiple</code></li>
+                        <li>file upload - <code>file</code></li>
+                    </td>
+                </tr>
+                <tr>
+                    <td>value</td>
+                    <td>
+                        Capture the value of the <a href="https://www.w3schools.com/tags/att_input_value.asp" class="external-link" target="_nexial_external">"value"</a>
+                        attribute of the web element in question. If this web element does have "value" attribute
+                        defined, an empty string will be used instead.
+                    </td>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>
+                        Capture the value of the <a href="https://www.w3schools.com/tags/att_id.asp" class="external-link" target="_nexial_external">"id"</a>
+                        attribute of the web element in question. If this web element does have "id" attribute defined,
+                        an empty string will be used instead.
+                    </td>
+                </tr>
+                <tr>
+                    <td>state</td>
+                    <td>
+                        Capture the "state" of the web element in question, as close to its visual presentation as
+                        possible.
+                        <li>check box - either <code>checked</code> or <code>unchecked</code></li>
+                        <li>radio button - either <code>selected</code> or <code>unselected</code></li>
+                        <li>text box - same as "value"</li>
+                        <li>text area (for multi-line editing) - same as "value"</li>
+                        <li>button - same as "value"</li>
+                        <li>dropdown list (a.k.a. pick list) - a list of selected options separated by <a href="index#nexial.textDelim">nexial.textDelim</a></li>
+                        <li>file upload - empty string</li>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.web.saveGrid.header.image"><code>nexial.web.saveGrid.header.image</code></a>
+        </td>
+        <td>text</td>
+        <td><code>type</code></td>
+        <td>false</td>
+        <td>
+            <b>
+                ONLY APPLICABLE TO THE FOLLOWING COMMANDS:
+                <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a></li>
+                <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a></li>
+            </b>
+            <br/>
+
+            <b>
+                Note that <code>nexial.web.saveGrid.deepScan</code> must be set to <code>true</code> in order for System
+                variable to take effect.
+            </b>
+            <br/>
+
+            For image element it will be <code>image</code>.
+
+            Possible choices are:
+            <table>
+                <thead>
+                <tr>
+                    <th nowrap="nowrap">configured value</th>
+                    <th>explanation</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>name</td>
+                    <td>
+                        Capture the value to the <a href="https://www.w3schools.com/tags/att_name.asp" class="external-link" target="_nexial_external">"name"</a>
+                        attribute of the web element in question. If this web element does have "name" attribute
+                        defined, an empty string will be used instead.
+                    </td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td><code>image</code></td>
+                </tr>
+                <tr>
+                    <td>alt</td>
+                    <td>
+                        Capture the value of the <a href="https://www.w3schools.com/tags/att_img_alt.asp" class="external-link" target="_nexial_external">"alt"</a>
+                        attribute of the image element in question. If this image element does have "alt" attribute
+                        defined, an empty string will be used instead.
+                    </td>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>
+                        Capture the value of the <a href="https://www.w3schools.com/tags/att_id.asp" class="external-link" target="_nexial_external">"id"</a>
+                        attribute of the image element in question. If this image element does have "id" attribute
+                        defined, an empty string will be used instead.
+                    </td>
+                </tr>
+                <tr>
+                    <td>filename</td>
+                    <td>
+                        Capture the file name of the image element in question. Note that this is not the fully
+                        qualified resource locator (i.e. URL), but simply the file name with extension.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.web.saveGrid.data.input"><code>nexial.web.saveGrid.data.input</code></a>
+        </td>
+        <td>text</td>
+        <td><code>state</code></td>
+        <td>false</td>
+        <td>
+            <b>
+                ONLY APPLICABLE TO THE FOLLOWING COMMANDS:
+                <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a></li>
+                <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a></li>
+            </b>
+            <br/>
+
+            <b>
+                Note that <code>nexial.web.saveGrid.deepScan</code> must be set to <code>true</code> in order for System
+                variable to take effect.
+            </b>
+            <br/>
+
+            Possible choices are:
+            <table>
+                <thead>
+                <tr>
+                    <th nowrap="nowrap">configured value</th>
+                    <th>explanation</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>name</td>
+                    <td>
+                        Capture the value to the <a href="https://www.w3schools.com/tags/att_name.asp" class="external-link" target="_nexial_external">"name"</a>
+                        attribute of the web element in question. If this web element does have "name" attribute
+                        defined, an empty string will be used instead.
+                    </td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>
+                        Capture the type of web element in question. For HTML form input:
+                        <li>check box - <code>checkbox</code></li>
+                        <li>radio button - <code>radio</code></li>
+                        <li>text box - <code>text</code></li>
+                        <li>text area (for multi-line editing) - <code>textarea</code></li>
+                        <li>button - <code>button</code> or <code>submit</code> or <code>reset</code></li>
+                        <li>dropdown list (a.k.a. pick list) - <code>select-single</code> or <code>select-multiple</code></li>
+                        <li>file upload - <code>file</code></li>
+                    </td>
+                </tr>
+                <tr>
+                    <td>value</td>
+                    <td>
+                        Capture the value of the <a href="https://www.w3schools.com/tags/att_input_value.asp" class="external-link" target="_nexial_external">"value"</a>
+                        attribute of the web element in question. If this web element does have "value" attribute
+                        defined, an empty string will be used instead.
+                    </td>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>
+                        Capture the value of the <a href="https://www.w3schools.com/tags/att_id.asp" class="external-link" target="_nexial_external">"id"</a>
+                        attribute of the web element in question. If this web element does have "id" attribute defined,
+                        an empty string will be used instead.
+                    </td>
+                </tr>
+                <tr>
+                    <td>state</td>
+                    <td>
+                        Capture the "state" of the web element in question, as close to its visual presentation as
+                        possible.
+                        <li>check box - either <code>checked</code> or <code>unchecked</code></li>
+                        <li>radio button - either <code>selected</code> or <code>unselected</code></li>
+                        <li>text box - same as "value"</li>
+                        <li>text area (for multi-line editing) - same as "value"</li>
+                        <li>button - same as "value"</li>
+                        <li>dropdown list (a.k.a. pick list) - a list of selected options separated by <a href="index#nexial.textDelim">nexial.textDelim</a></li>
+                        <li>file upload - empty string</li>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.web.saveGrid.data.image"><code>nexial.web.saveGrid.data.image</code></a>
+        </td>
+        <td>text</td>
+        <td><code>type</code></td>
+        <td>false</td>
+        <td>
+            <b>
+                ONLY APPLICABLE TO THE FOLLOWING COMMANDS:
+                <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a></li>
+                <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a></li>
+            </b>
+            <br/>
+
+            <b>
+                Note that <code>nexial.web.saveGrid.deepScan</code> must be set to <code>true</code> in order for System
+                variable to take effect.
+            </b>
+            <br/>
+
+            Possible choices are:
+            <table>
+                <thead>
+                <tr>
+                    <th nowrap="nowrap">configured value</th>
+                    <th>explanation</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>name</td>
+                    <td>
+                        Capture the value to the <a href="https://www.w3schools.com/tags/att_name.asp" class="external-link" target="_nexial_external">"name"</a>
+                        attribute of the web element in question. If this web element does have "name" attribute
+                        defined, an empty string will be used instead.
+                    </td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td><code>image</code></td>
+                </tr>
+                <tr>
+                    <td>alt</td>
+                    <td>
+                        Capture the value of the <a href="https://www.w3schools.com/tags/att_img_alt.asp" class="external-link" target="_nexial_external">"alt"</a>
+                        attribute of the image element in question. If this image element does have "alt" attribute
+                        defined, an empty string will be used instead.
+                    </td>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>
+                        Capture the value of the <a href="https://www.w3schools.com/tags/att_id.asp" class="external-link" target="_nexial_external">"id"</a>
+                        attribute of the image element in question. If this image element does have "id" attribute
+                        defined, an empty string will be used instead.
+                    </td>
+                </tr>
+                <tr>
+                    <td>filename</td>
+                    <td>
+                        Capture the file name of the image element in question. Note that this is not the fully
+                        qualified resource locator (i.e. URL), but simply the file name with extension.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.web.saveGrid.data.trim"><code>nexial.web.saveGrid.data.trim</code></a>
+        </td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>false</td>
+        <td>
+            <b>
+                ONLY APPLICABLE TO THE FOLLOWING COMMANDS:
+                <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a></li>
+                <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a></li>
+            </b>
+            <br/>
+
+            Determine if the captured data should be trimmed before saving to CSV file. Default is <code>true</code>.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.web.saveGrid.end.trim"><code>nexial.web.saveGrid.end.trim</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            <b>
+                ONLY APPLICABLE TO THE FOLLOWING COMMANDS:
+                <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a></li>
+                <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a></li>
+            </b>
+            <br/>
+
+            Determine if the CSV file should be ended with a line feed or not. This can help to shape the CSV file to
+            ease the analytical or comparison work to follow. The default is <code>false</code>, which means that a
+            line feed will be added to the end of the CSV file.
+        </td>
+    </tr>
+
+    <tr>
+      <td class="highlight-section" colspan="5"><span>Browser-specific configuration.</span></td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname">
+        <a id="nexial.safari.useTechPreview"><code>nexial.browser.safari.useTechPreview</code></a>
+      </td>
+      <td>boolean</td>
+      <td>false</td>
+      <td class="highlight-red">true</td>
+      <td>
+        <strong>Applicable only when <code>nexial.browser</code> is set to <code>safari</code>.</strong><br/>
+        Instruct Nexial to use the
+        <a href="https://developer.apple.com/safari/technology-preview/" class="external-link"
+           target="_nexial_external">Safari Technology Preview</a> if this system variable is set to
+        <code>true</code>, otherwise use the release version of Safari (default). Set this system variable to
+        <code>true</code> <strong>ONLY</strong> the executing host has
+        <a href="https://developer.apple.com/safari/technology-preview/" class="external-link"
+           target="_nexial_external">Safari Technology Preview</a> properly installed.
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname"><a id="nexial.browser.logElectron"><code>nexial.browser.logElectron</code></a></td>
+      <td>boolean</td>
+      <td>false</td>
+      <td>false</td>
+      <td>
+        Enable/Disable webdriver logging when automating against an Electron application. The
+        <code>nexial.browser</code> System variable must be set to <code>electron</code>. When enabled, Nexial will
+        create under the <code>log</code> directory of the execution output directory a log file named as
+        <code>electron-[application].log</code>, where <code>[application]</code> is the name of the application
+        under test. This file will contain the webdriver logs during automation, and will be linked in the
+        <code>#summary</code> tab of the execution report (.xlsx) under the <code>logs</code> section.<br/>
+
+        While not usually needed, webdriver log contain be very useful towards troubleshooting and debugging
+        intercommunication issues between webdriver and AUT.
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname"><a id="nexial.browser.logElectronVerbose"><code>nexial.browser.logElectronVerbose</code></a></td>
+      <td>boolean</td>
+      <td>false</td>
+      <td>false</td>
+      <td>
+        <b>ONLY APPLICABLE WHEN <code>nexial.browser.logElectron</code> IS SET TO <code>true</code></b><br/>
+        <br/>
+
+        Enable/Disable verbose webdriver logging when automating against an Electron application. By default, this
+        System variable is <code>false</code>.<br/>
+        <br/>
+
+        While not usually needed, turning on verbose mode might be useful towards troubleshooting and debugging
+        intercommunication issues between webdriver and AUT.
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname">
+        <a id="nexial.browser.logChrome"><code>nexial.browser.logChrome</code></a>
+      </td>
+      <td>boolean</td>
+      <td>false</td>
+      <td>false</td>
+      <td>
+        Enable/Disable webdriver logging when automating against Chrome browser. The <code>nexial.browser</code>
+        System variable must be set to <code>chrome</code> or <code>chrome-headless</code>. When enabled, Nexial
+        will create under the <code>log</code> directory of the execution output directory a log file named as
+        <code>chrome-browser.log</code>. This file will contain the webdriver logs during automation, and will be
+        linked in the <code>#summary</code> tab of the execution report (.xlsx) under the <code>logs</code>
+        section.<br/>
+
+        While not usually needed, webdriver log contain be very useful towards troubleshooting and debugging
+        intercommunication issues between webdriver and the Chrome browser.
+      </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a id="nexial.forceIE32"><code>nexial.forceIE32</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td class="highlight-red">true</td>
@@ -1975,7 +2398,29 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="webdriver.ie.driver"><code>webdriver.ie.driver</code></a></td>
+      <td nowrap="nowrap" class="varname">
+        <a id="nexial.browser.ie.requireWindowFocus"><code>nexial.browser.ie.requireWindowFocus</code></a>
+      </td>
+      <td>boolean</td>
+      <td>false</td>
+      <td class="highlight-red">true</td>
+      <td>
+        <strong>Applicable only for Internet Explorer Browser.</strong><br/>
+        <ul>
+          <li>Specify IE browser window focus before performing any user interaction operations (mouse or keyboard
+            events).
+          </li>
+          <li>This capability is false by default, but delivers much more accurate native events interactions.
+          </li>
+          <li>But for any user Interaction testing (mouse hovering etc), it is recommended to set this variable to
+            <code>true</code> using working with IE Browser.
+          </li>
+        </ul>
+        <img src="image/systemvar_22.png" alt="nexial.browser.ie.requireWindowFocus example"/>
+      </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname"><a id="webdriver.ie.driver"><code>webdriver.ie.driver</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="highlight-red">true</td>
@@ -1996,7 +2441,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="webdriver.ie.driver.loglevel"><code>webdriver.ie.driver.loglevel</code></a>
+            <a id="webdriver.ie.driver.loglevel"><code>webdriver.ie.driver.loglevel</code></a>
         </td>
         <td>text</td>
         <td>FATAL</td>
@@ -2018,7 +2463,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="webdriver.ie.driver.logfile"><code>webdriver.ie.driver.logfile</code></a>
+            <a id="webdriver.ie.driver.logfile"><code>webdriver.ie.driver.logfile</code></a>
         </td>
         <td>text</td>
         <td>&nbsp;</td>
@@ -2037,7 +2482,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="webdriver.ie.driver.silent"><code>webdriver.ie.driver.silent</code></a>
+            <a id="webdriver.ie.driver.silent"><code>webdriver.ie.driver.silent</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -2055,13 +2500,14 @@
             Further changes to this system variable during execution would have no impact to the execution.
         </td>
     </tr>
+
     <tr>
-        <td class="highlight-green" colspan="5">
-            <span>For image-based testing (<code>image</code> commands) only.</span>
+        <td class="highlight-section" colspan="5">
+            <span>For image-based testing (<a href="../commands/image"><code>image</code></a> commands) only.</span>
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.imageTolerance"><code>nexial.imageTolerance</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.imageTolerance"><code>nexial.imageTolerance</code></a></td>
         <td>decimal</td>
         <td>0</td>
         <td>false</td>
@@ -2071,7 +2517,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.imageDiffColor"><code>nexial.imageDiffColor</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.imageDiffColor"><code>nexial.imageDiffColor</code></a></td>
         <td>string</td>
         <td>red</td>
         <td>false</td>
@@ -2082,11 +2528,13 @@
         </td>
     </tr>
     <tr>
-        <td class="highlight-green" colspan="5"><span>For <code>ws</code> commands only.</span></td>
+        <td class="highlight-section" colspan="5">
+          <span>For <a href="../commands/ws"><code>ws</code></a> commands only.</span>
+        </td>
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.ws.connectionTimeout"><code>nexial.ws.connectionTimeout</code></a>
+            <a id="nexial.ws.connectionTimeout"><code>nexial.ws.connectionTimeout</code></a>
         </td>
         <td>milliseconds</td>
         <td>300000</td>
@@ -2097,7 +2545,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.ws.readTimeout"><code>nexial.ws.readTimeout</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.ws.readTimeout"><code>nexial.ws.readTimeout</code></a></td>
         <td>milliseconds</td>
         <td>300000</td>
         <td>false</td>
@@ -2116,7 +2564,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.ws.enabledExpectContinue"><code>nexial.ws.enabledExpectContinue</code></a>
+            <a id="nexial.ws.enabledExpectContinue"><code>nexial.ws.enabledExpectContinue</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -2139,7 +2587,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.ws.allowCircularRedirects"><code>nexial.ws.allowCircularRedirects</code></a>
+            <a id="nexial.ws.allowCircularRedirects"><code>nexial.ws.allowCircularRedirects</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -2153,7 +2601,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.ws.allowRelativeRedirects"><code>nexial.ws.allowRelativeRedirects</code></a>
+            <a id="nexial.ws.allowRelativeRedirects"><code>nexial.ws.allowRelativeRedirects</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -2168,7 +2616,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.ws.requestPayloadCompact"><code>nexial.ws.requestPayloadCompact</code></a>
+            <a id="nexial.ws.requestPayloadCompact"><code>nexial.ws.requestPayloadCompact</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -2179,7 +2627,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.ws.header"><code>nexial.ws.header.&ast;</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.ws.header"><code>nexial.ws.header.&ast;</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -2212,7 +2660,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.ws.digest.user"><code>nexial.ws.digest.user</code></a>
+            <a id="nexial.ws.digest.user"><code>nexial.ws.digest.user</code></a>
         </td>
         <td>text</td>
         <td>&nbsp;</td>
@@ -2231,7 +2679,7 @@
         <td>false</td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.ws.digest.realm"><code>nexial.ws.digest.realm</code></a>
+        <td nowrap="nowrap" class="varname"><a id="nexial.ws.digest.realm"><code>nexial.ws.digest.realm</code></a>
         </td>
         <td>text</td>
         <td>&nbsp;</td>
@@ -2239,14 +2687,14 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.ws.digest.nonce"><code>nexial.ws.digest.nonce</code></a>
+            <a id="nexial.ws.digest.nonce"><code>nexial.ws.digest.nonce</code></a>
         </td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.ws.basic.user"><code>nexial.ws.basic.user</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.ws.basic.user"><code>nexial.ws.basic.user</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -2258,19 +2706,19 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.ws.basic.password"><code>nexial.ws.basic.password</code></a>
+            <a id="nexial.ws.basic.password"><code>nexial.ws.basic.password</code></a>
         </td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
     </tr>
     <tr>
-        <td class="highlight-green" colspan="5"><span>For <a href="../commands/ws.async"><code>ws.async</code></a> commands only.</span>
+        <td class="highlight-section" colspan="5"><span>For <a href="../commands/ws.async"><code>ws.async</code></a> commands only.</span>
         </td>
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.ws.async.shutdownWaitMs"><code>nexial.ws.async.shutdownWaitMs</code></a>
+            <a id="nexial.ws.async.shutdownWaitMs"><code>nexial.ws.async.shutdownWaitMs</code></a>
         </td>
         <td>millisecond</td>
         <td>180000</td>
@@ -2283,12 +2731,13 @@
         </td>
     </tr>
     <tr>
-        <td class="highlight-green" colspan="5">
-            <span>For desktop-based (<code>desktop</code> commands) testing only.</span></td>
+        <td class="highlight-section" colspan="5">
+            <span>For desktop-based (<a href="../commands/desktop"><code>desktop</code></a> commands) testing only.</span>
+        </td>
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.desktopNotifyWaitMs"><code>nexial.desktopNotifyWaitMs</code></a>
+            <a id="nexial.desktopNotifyWaitMs"><code>nexial.desktopNotifyWaitMs</code></a>
         </td>
         <td>millisecond</td>
         <td>3000</td>
@@ -2302,7 +2751,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.desktop.fullScreenCapture"><code>nexial.desktop.fullScreenCapture</code></a>
+            <a id="nexial.desktop.fullScreenCapture"><code>nexial.desktop.fullScreenCapture</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -2318,7 +2767,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.desktop.table.clickBeforeEdit"><code>nexial.desktop.table.clickBeforeEdit</code></a>
+            <a id="nexial.desktop.table.clickBeforeEdit"><code>nexial.desktop.table.clickBeforeEdit</code></a>
         </td>
         <td>boolean</td>
         <td>true</td>
@@ -2337,7 +2786,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.desktop.dialogLookup"><code>nexial.desktop.dialogLookup</code></a>
+            <a id="nexial.desktop.dialogLookup"><code>nexial.desktop.dialogLookup</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -2363,7 +2812,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.winiumPort"><code>nexial.winiumPort</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.winiumPort"><code>nexial.winiumPort</code></a></td>
         <td>number</td>
         <td>&nbsp;</td>
         <td class="highlight-red">true</td>
@@ -2374,7 +2823,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="nexial.winiumSoloMode"><code>nexial.winiumSoloMode</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="nexial.winiumSoloMode"><code>nexial.winiumSoloMode</code></a></td>
         <td>boolean</td>
         <td>true</td>
         <td>false</td>
@@ -2397,12 +2846,13 @@
         </td>
     </tr>
     <tr>
-        <td class="highlight-green" colspan="5"><span>For database (<code>rdbms</code> commands) testing only.</span>
+        <td class="highlight-section" colspan="5">
+          <span>For database (<a href="../commands/rdbms"><code>rdbms</code></a> commands) testing only.</span>
         </td>
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.rdbms.packSingleRow"><code>nexial.rdbms.packSingleRow</code></a>
+            <a id="nexial.rdbms.packSingleRow"><code>nexial.rdbms.packSingleRow</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -2447,42 +2897,42 @@
         <th nowrap="nowrap">example</th>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="file.separator"><code>file.separator</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="file.separator"><code>file.separator</code></a></td>
         <td>The character used to separate files and directory. On Windows, this is usually <code>\</code>. On *NIX and
             OSX, this would be <code>/</code></td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="java.home"><code>java.home</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="java.home"><code>java.home</code></a></td>
         <td>Where the current Java runtime is installed</td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="java.io.tmpdir"><code>java.io.tmpdir</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="java.io.tmpdir"><code>java.io.tmpdir</code></a></td>
         <td>Current temp directory. The actual directory differs from host to host, depending on how each machine is set
             up
         </td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="java.version"><code>java.version</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="java.version"><code>java.version</code></a></td>
         <td>The version of the current Java runtime, include the minor and patch number</td>
         <td><code>1.8.0_152</code></td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="line.separator"><code>line.separator</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="line.separator"><code>line.separator</code></a></td>
         <td>The character(s) used as line separator. On Windows this is commonly implemented as the \r\n, while in *NIX
             and OSX it's the \n character
         </td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="os.arch"><code>os.arch</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="os.arch"><code>os.arch</code></a></td>
         <td>The operating system architecture of the current host</td>
         <td><code>x86_64</code></td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="os.name"><code>os.name</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="os.name"><code>os.name</code></a></td>
         <td>The short name of the current operating system</td>
         <td>
             <code>Mac OS X</code><br/>
@@ -2490,22 +2940,22 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="os.version"><code>os.version</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="os.version"><code>os.version</code></a></td>
         <td>The operating system version</td>
         <td><code>10.12.6</code></td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="os.hostname"><code>os.hostname</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="os.hostname"><code>os.hostname</code></a></td>
         <td>The machine name of this current host</td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="user.country"><code>user.country</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="user.country"><code>user.country</code></a></td>
         <td>The country or region code of the user that executed Nexial</td>
         <td><code>US</code></td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="user.dir"><code>user.dir</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="user.dir"><code>user.dir</code></a></td>
         <td>a.k.a. Current working directory<br/>
             This is the directory where Nexial - ultimately Java - was run. In most cases this would be
             <code>${NEXIAL_HOME}/bin</code>
@@ -2513,7 +2963,7 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="user.home"><code>user.home</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="user.home"><code>user.home</code></a></td>
         <td>User home directory</td>
         <td>
             <code>C:\Users\Administrator</code><br/>
@@ -2521,17 +2971,17 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="user.language"><code>user.language</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="user.language"><code>user.language</code></a></td>
         <td>The language code of the user that executed Nexial</td>
         <td><code>en</code></td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="user.name"><code>user.name</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="user.name"><code>user.name</code></a></td>
         <td>The user ID of the user that executed Nexial.</td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="user.timezone"><code>user.timezone</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="user.timezone"><code>user.timezone</code></a></td>
         <td>The timezone of the operation system that executed Nexial</td>
         <td><code>America/Los_Angeles</code></td>
     </tr>
@@ -2573,7 +3023,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.browserstack.username"><code>nexial.browserstack.username</code></a>
+            <a id="nexial.browserstack.username"><code>nexial.browserstack.username</code></a>
         </td>
         <td>text</td>
         <td>&nbsp;</td>
@@ -2586,7 +3036,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.browserstack.automatekey"><code>nexial.browserstack.automatekey</code></a>
+            <a id="nexial.browserstack.automatekey"><code>nexial.browserstack.automatekey</code></a>
         </td>
         <td>text</td>
         <td>&nbsp;</td>
@@ -2599,7 +3049,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.browserstack.browser"><code>nexial.browserstack.browser</code></a>
+            <a id="nexial.browserstack.browser"><code>nexial.browserstack.browser</code></a>
         </td>
         <td>text</td>
         <td>chrome</td>
@@ -2614,7 +3064,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.browserstack.browser.version"><code>nexial.browserstack.browser.version</code></a>
+            <a id="nexial.browserstack.browser.version"><code>nexial.browserstack.browser.version</code></a>
         </td>
         <td>text</td>
         <td>latest stable</td>
@@ -2628,7 +3078,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.browserstack.debug"><code>nexial.browserstack.debug</code></a>
+            <a id="nexial.browserstack.debug"><code>nexial.browserstack.debug</code></a>
         </td>
         <td>boolean</td>
         <td>true</td>
@@ -2640,7 +3090,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.browserstack.resolution"><code>nexial.browserstack.resolution</code></a>
+            <a id="nexial.browserstack.resolution"><code>nexial.browserstack.resolution</code></a>
         </td>
         <td>text</td>
         <td>1024x768</td>
@@ -2662,7 +3112,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.browserstack.app.buildnumber"><code>nexial.browserstack.app.buildnumber</code></a>
+            <a id="nexial.browserstack.app.buildnumber"><code>nexial.browserstack.app.buildnumber</code></a>
         </td>
         <td>text</td>
         <td>&nbsp;</td>
@@ -2673,7 +3123,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.browserstack.enablelocal"><code>nexial.browserstack.enablelocal</code></a>
+            <a id="nexial.browserstack.enablelocal"><code>nexial.browserstack.enablelocal</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -2685,7 +3135,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.browserstack.os"><code>nexial.browserstack.os</code></a>
+            <a id="nexial.browserstack.os"><code>nexial.browserstack.os</code></a>
         </td>
         <td>text</td>
         <td>&nbsp;</td>
@@ -2696,7 +3146,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.browserstack.os.version"><code>nexial.browserstack.os.version</code></a>
+            <a id="nexial.browserstack.os.version"><code>nexial.browserstack.os.version</code></a>
         </td>
         <td>text</td>
         <td>&nbsp;</td>
@@ -2711,7 +3161,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="nexial.browserstack.captureCrash"><code>nexial.browserstack.captureCrash</code></a>
+            <a id="nexial.browserstack.captureCrash"><code>nexial.browserstack.captureCrash</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -2720,7 +3170,7 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
-            <a name="browserstack.*"><code>browserstack.*</code></a>
+            <a id="browserstack.*"><code>browserstack.*</code></a>
         </td>
         <td>*&nbsp;</td>
         <td>&nbsp;</td>
@@ -2758,7 +3208,7 @@
         <th nowrap="nowrap">description</th>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="cbt.username"><code>cbt.username</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="cbt.username"><code>cbt.username</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -2769,7 +3219,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="cbt.authkey"><code>cbt.authkey</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="cbt.authkey"><code>cbt.authkey</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -2780,7 +3230,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="cbt.browserName"><code>cbt.browserName</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="cbt.browserName"><code>cbt.browserName</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -2793,7 +3243,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="cbt.screenResolution"><code>cbt.screenResolution</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="cbt.screenResolution"><code>cbt.screenResolution</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -2803,7 +3253,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="cbt.version"><code>cbt.version</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="cbt.version"><code>cbt.version</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -2813,7 +3263,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="cbt.platform"><code>cbt.platform</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="cbt.platform"><code>cbt.platform</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -2823,7 +3273,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="cbt.deviceName"><code>cbt.deviceName</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="cbt.deviceName"><code>cbt.deviceName</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -2833,7 +3283,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="cbt.deviceOrientation"><code>cbt.deviceOrientation</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="cbt.deviceOrientation"><code>cbt.deviceOrientation</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -2843,7 +3293,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="cbt.build"><code>cbt.build</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="cbt.build"><code>cbt.build</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -2852,7 +3302,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="cbt.name"><code>cbt.name</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="cbt.name"><code>cbt.name</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -2861,7 +3311,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="cbt.record_video"><code>cbt.record_video</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="cbt.record_video"><code>cbt.record_video</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -2871,7 +3321,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="cbt.record_network"><code>cbt.record_network</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="cbt.record_network"><code>cbt.record_network</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -2880,7 +3330,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="cbt.max_duration"><code>cbt.max_duration</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="cbt.max_duration"><code>cbt.max_duration</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
@@ -2890,7 +3340,7 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname"><a name="cbt.timezone"><code>cbt.timezone</code></a></td>
+        <td nowrap="nowrap" class="varname"><a id="cbt.timezone"><code>cbt.timezone</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td>false</td>
