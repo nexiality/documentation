@@ -7,23 +7,23 @@ comments: true
 ---
 
 ### Description
+This command will select all `<OPTION>` elements from a `<SELECT>` element (i.e. combo box) denoted by 
+`locator`. If the `locator` does not resolve to a valid `<SELECT>` element or no `<OPTION>` elements found, then this 
+will result in a FAIL result. If the resolved `<SELECT>` element is found but does not support multi-select, then
 
-- This command is to select multiple Items from the list-box.
-- In other words this command will select multiple items from select element and pass the command or else will fail otherwise.
 
 ### Parameters
+- **locator** - the locator of the `<SELECT>` element (e.g list box or combo box)
 
-- **locator** - this parameter is the locator of the element e.g like list box, combo box etc.
 
 ### Example
-
 **Script**:<br/>
 ![](image/selectMultiOptions_01.png)
 
 **Output**:<br/>
 ![](image/selectMultiOptions_02.png)
 
-### See Also
 
+### See Also
 - [`selectMulti(locator,array)`](selectMulti(locator,array))
 - [`deselectMulti(locator,array)`](deselectMulti(locator,array))

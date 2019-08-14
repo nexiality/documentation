@@ -52,13 +52,25 @@ comments: true
 
 
 ### [web commands](../commands/web)
-- [`saveTableAsCsv(locator,nextPageLocator,file)`](../commands/web/saveTableAsCsv(locator,nextPageLocator,file)):
-  automatically replace newline, carriage return and tab character with a space so that the generated CSV would be
-  usable. Use [`nexial.web.csv.trim`](../systemvars/index#nexial.web.csv.trim) to trim leading and trailing spaces of 
-  each cell.
-- [`saveDivsAsCsv(headers,rows,cells,nextPage,file)`](../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)):
-  automatically replace newline, carriage return and tab character with a space so that the generated CSV would be
-  usable. Use [`nexial.web.csv.trim`](../systemvars/index#nexial.web.csv.trim) to trim leading and trailing spaces of 
-  each cell.
+- [`saveTableAsCsv(locator,nextPageLocator,file)`](../commands/web/saveTableAsCsv(locator,nextPageLocator,file)) and
+  [`saveDivsAsCsv(headers,rows,cells,nextPage,file)`](../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)):
+  - automatically replace newline, carriage return and tab character with a space so that the generated CSV would be
+    usable.
+  - Use [`nexial.web.saveGrid.data.trim`](../systemvars/index#nexial.web.saveGrid.data.trim) to trim leading and 
+  trailing spaces of each cell.
+  - Use [`nexial.web.saveGrid.end.trim`](../systemvars/index#nexial.web.saveGrid.data.trim) to remove the trailing
+    line feed at the end of the CSV file.
+  - Use [`nexial.web.saveGrid.deepScan`](../systemvars/index#nexial.web.saveGrid.deepScan) to control how Nexial should
+    handle form input and image elements found in target `<TABLE>` or `<DIV>` elements. 
+  - Use [`nexial.web.saveGrid.header.input`](../systemvars/index#nexial.web.saveGrid.header.input) to determine what
+    metadata of a form input element in the header to save to CSV. Possible choices: `name`, `type`, `value`, `id`, 
+    `state`. 
+  - Use [`nexial.web.saveGrid.header.image`](../systemvars/index#nexial.web.saveGrid.header.image) to determine what
+    metadata of an image element in the header to save to CSV. Possible choices: `type`, `alt`, `id`, `filename`. 
+  - Use [`nexial.web.saveGrid.data.input`](../systemvars/index#nexial.web.saveGrid.data.input) to determine what
+    metadata of a form input element in the data section to save to CSV. Possible choices: `name`, `type`, `value`, 
+    `id`, `state`. 
+  - Use [`nexial.web.saveGrid.data.image`](../systemvars/index#nexial.web.saveGrid.data.image) to determine what metadata of an image 
+    element in the data section to save to CSV. Possible choices: `type`, `alt`, `id`, `filename`.
 - System variable [`nexial.screenshotAsDesktop`](../systemvars/index#nexial.screenshotAsDesktop): **NEW** System
   variable to allow for desktop screen capturing instead of browser-scoped screen capturing.
