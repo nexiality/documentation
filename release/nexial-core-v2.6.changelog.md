@@ -43,6 +43,8 @@ comments: true
 
 
 ### [localdb commands](../commands/localdb)
+- [`importCSV(var,csv,table)`](../commands/localdb/importCSV(var,csv,table)): code fix to support columns with spaces 
+  or commas
 
 
 ### [number commands](../commands/number)
@@ -74,3 +76,5 @@ comments: true
     metadata of an image element in the data section to save to CSV. Possible choices: `type`, `alt`, `id`, `filename`.
 - System variable [`nexial.screenshotAsDesktop`](../systemvars/index#nexial.screenshotAsDesktop): **NEW** System
   variable to allow for desktop screen capturing instead of browser-scoped screen capturing.
+- [`saveDivsAsCsv(headers,rows,cells,nextPage,file)`](../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)):
+  support non-XPATH locators.
