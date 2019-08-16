@@ -78,3 +78,9 @@ comments: true
   variable to allow for desktop screen capturing instead of browser-scoped screen capturing.
 - [`saveDivsAsCsv(headers,rows,cells,nextPage,file)`](../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)):
   support non-XPATH locators.
+- [`updateAttribute(locator,attrName,value)`](../commands/web/updateAttribute(locator,attrName,value)): support to 
+  update the attribute of an element with given value for a specified locator. 
+- [`assertMultiSelect(locator)`](../commands/web/assertMultiSelect(locator)): use to assert the select element support 
+  multiple select options.
+- [`assertSingleSelect(locator)`](../commands/web/assertSingleSelect(locator)): use to assert the select element 
+  support single select option.
