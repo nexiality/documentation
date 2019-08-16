@@ -7,20 +7,20 @@ comments: true
 ---
 
 ### Description
-This command asserts the select element support single select options.
+This command asserts the dropdown element (i.e. `<SELECT>`) as denoted by `locator` is limited to single selection.
 
 
 ### Parameters
-- **locator** - locator of the target select element.
+- **locator** - locator of the target dropdown element.
 
 
 ### Example
 **Script**:<br/>
-![](image/assertSingleSelect.png).
+![](image/assertSingleSelect.png)
 
 **Output**:<br/>
-![](image/assertSingleSelect-output.png).
+![](image/assertSingleSelect-output.png)
 
 
 ### See Also
-- [`assertMultiSelect(locator)`](assertMultiSelect(locator).html).
+- [`assertMultiSelect(locator)`](assertMultiSelect(locator).html)

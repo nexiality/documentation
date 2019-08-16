@@ -41,3 +41,4 @@ Now the data variable `myVar` would contain the value `Jim,John,James,Joe,Jumbot
 - [`assertAttributeNotPresent(locator,attrName)`](assertAttributeNotPresent(locator,attrName))
 - [`assertAttributePresent(locator,attrName)`](assertAttributePresent(locator,attrName))
 - [`saveAttribute(var,locator,attrName)`](saveAttribute(var,locator,attrName))
+- [`updateAttribute(locator,attrName,value)`](updateAttribute(locator,attrName,value))

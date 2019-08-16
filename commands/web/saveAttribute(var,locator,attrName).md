@@ -42,3 +42,4 @@ Now the data variable `myVar` would contain the value `company.person.name`.
 - [`assertAttributeNotPresent(locator,attrName)`](assertAttributeNotPresent(locator,attrName))
 - [`assertAttributePresent(locator,attrName)`](assertAttributePresent(locator,attrName))
 - [`saveAttributeList(var,locator,attrName)`](saveAttributeList(var,locator,attrName))
+- [`updateAttribute(locator,attrName,value)`](updateAttribute(locator,attrName,value))
