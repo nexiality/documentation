@@ -1,6 +1,6 @@
 ---
 layout: default
-title: updateAttribute(locator,attribute,value)
+title: updateAttribute(locator,attrName,value)
 parent: web
 tags: command web
 comments: true
