@@ -12,6 +12,9 @@ comments: true
 
 ### General
 #### Fixes
+- [`nexial.lastScreenshot`](../systemvars/index#nexial.lastScreenshot): now resolve to the fully qualified path 
+  (not just the filename as previously the case). Also, this System variable will resolve to the appropriate URL if 
+  [`nexial.outputToCloud`](../systemvars/index#nexial.outputToCloud) is set to `true`.
 
 #### Improvements
 
@@ -39,6 +42,24 @@ comments: true
 ### [desktop commands](../commands/desktop)
 
 
+### [image commands](../commands/image)
+- [`colorbit(source,bit,saveTo)`](../commands/image/colorbit(source,bit,saveTo)): now support `source` as URL. Nexial 
+  will automatically download image content and save it to temporary location (System/OS -specific). Use `saveTo` to 
+  determine the location of the processed file.
+- [`convert(source,format,saveTo)`](../commands/image/convert(source,format,saveTo)): now support `source` as URL. 
+  Nexial will automatically download image content and save it to temporary location (System/OS -specific). Use 
+  `saveTo` to determine the location of the processed file.
+- [`crop(image,dimension,saveTo)`](../commands/image/crop(image,dimension,saveTo)): now support `image` as URL. 
+  Nexial will automatically download image content and save it to temporary location (System/OS -specific). Use 
+  `saveTo` to determine the location of the processed file.
+- [`resize(image,width,height,saveTo)`](../commands/image/resize(image,width,height,saveTo)): now support `image` as 
+  URL. Nexial will automatically download image content and save it to temporary location (System/OS -specific). Use 
+  `saveTo` to determine the location of the processed file.
+- [`saveDiff(var,baseline,actual)`](../commands/image/saveDiff(var,baseline,actual)): now support both `baseline` and 
+  `actual` as URL. Nexial will automatically download image content and save it to temporary location (System/OS 
+  -specific). Use `saveTo` to determine the location of the processed file.
+
+
 ### [json commands](../commands/json)
 
 
@@ -59,7 +80,7 @@ comments: true
   - automatically replace newline, carriage return and tab character with a space so that the generated CSV would be
     usable.
   - Use [`nexial.web.saveGrid.data.trim`](../systemvars/index#nexial.web.saveGrid.data.trim) to trim leading and 
-  trailing spaces of each cell.
+    trailing spaces of each cell.
   - Use [`nexial.web.saveGrid.end.trim`](../systemvars/index#nexial.web.saveGrid.data.trim) to remove the trailing
     line feed at the end of the CSV file.
   - Use [`nexial.web.saveGrid.deepScan`](../systemvars/index#nexial.web.saveGrid.deepScan) to control how Nexial should

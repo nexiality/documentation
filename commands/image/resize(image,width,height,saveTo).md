@@ -12,6 +12,9 @@ This command resizes an image, with full path denoted by `image`, to another si
 and saves it to another file denoted by `saveTo`. Both `width`and `height` must be positive integers and may be 
 greater than the original `image` (enlarge).
 
+Nexial supports `image` as URL (instead of fully qualified path). Nexial will automatically download image content and 
+save it to temporary location (System/OS -specific). Use `saveTo` to determine the location of the processed file.
+
 
 ### Parameters
 - **image** - the full path of the image to resize
@@ -20,3 +23,7 @@ greater than the original `image` (enlarge).
 - **saveTo** - the full path of the resized image.
 
 ### Example
+
+
+### See Also
+- [`crop(image,dimension,saveTo)`](crop(image,dimension,saveTo))

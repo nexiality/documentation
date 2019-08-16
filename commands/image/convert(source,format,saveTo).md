@@ -22,6 +22,9 @@ following:
 
 Even though the target file ends with `.jpg`, this command should still carry out a "`png-to-bmp`" conversion.
 
+Nexial supports `image` as URL (instead of fully qualified path). Nexial will automatically download image content and 
+save it to temporary location (System/OS -specific). Use `saveTo` to determine the location of the processed file.
+
 
 ### Parameters
 - **source** - full path of the image file to convert. Consider using [`$(syspath)`](../../functions/$(syspath)), 
@@ -31,3 +34,8 @@ Even though the target file ends with `.jpg`, this command should still carry o
 
 
 ### Example
+- [`colorbit(source,bit,saveTo)`](colorbit(source,bit,saveTo))
+
+
+### See Also
+- [`colorbit(source,bit,saveTo)`](colorbit(source,bit,saveTo))

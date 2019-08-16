@@ -559,7 +559,12 @@
         <td>text</td>
         <td>&nbsp;</td>
         <td class="highlight-red">true</td>
-        <td>The file name of the last screenshot taken.</td>
+        <td>
+            The fully qualified path of the last screenshot taken (meaning that the "screenshot" column in the test
+            script is marked with <code>x</code>). If
+            <a href="#nexial.outputToCloud"><code>nexial.outputToCloud</code></a> is set to <code>true</code>, this
+            System variable will return the equivalent URL instead.
+        </td>
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname"><a id="nexial.lastOutcome"><code>nexial.lastOutcome</code></a></td>

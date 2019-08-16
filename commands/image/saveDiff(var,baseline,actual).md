@@ -13,9 +13,14 @@ specified as `var`. If the two images are different, the difference is highlight
 image saved to the output folder. A link will be provided to this "diff" image in the corresponding screenshot column 
 as `comparison` and this associated step marked as FAIL.
 
+Nexial supports both `baseline` and `actual` as URL (instead of fully qualified path). Nexial will automatically 
+download image content and save it to temporary location (System/OS -specific). However the "diff" image will be saved
+to output directory or to the cloud if [`nexial.outputToCloud`](../../systemvars/index#nexial.outputToCloud) to `true`.
+
 Color for highlighting difference can be modified via [`nexial.imageDiffColor`](../../systemvars/index#nexial.imageDiffColor).
 
 The comparison uses [`nexial.imageTolerance`](../../systemvars/index#nexial.imageTolerance) as variance.
+
 
 ### Parameters
 - **var** - the variable name to store the image comparison metadata.
@@ -74,6 +79,7 @@ This would retrieve difference count in the image.<br>
 referencing difference object. For example `${imageCompareData}.differences[0].dimension`
 and `${imageCompareData}.largest.dimension` Both will return `65,11,409,39`
 
+
 ### Example
 Here's an example of comparing a captured screenshot against a predefined baseline image:<br/>
 ![script](image/saveDiff_01.png)
@@ -85,3 +91,4 @@ See [`nexial.lastScreenshot`](../../systemvars/index#nexial.lastScreenshot) fo
 
 To see particular difference as a image, user can provide dimensions using comparison metadata like following:-
 ![](image/saveDiff_03.png)
+

@@ -25,6 +25,10 @@ is comma (`,`):
 4. `10,10,*,*` - crop image from position (10,10) for the remaining width and height of the image (width - 10, 
    height -1 0). 
 
+Nexial supports `image` as URL (instead of fully qualified path). Nexial will automatically download image content and 
+save it to temporary location (System/OS -specific). Use `saveTo` to determine the location of the processed file.
+
+
 ### Parameters
 - **image** - the full path of the image to crop
 - **dimension** - the x position, y position, width in pixel, and height in pixel of the intended crop area. 
@@ -46,3 +50,7 @@ Output:<br/>
 **Cropped Image**:-<br>
 <img src="image/crop_04.png" style="border-radius:unset;box-shadow:none"/>
 <br/>
+
+
+### See Also
+- [`resize(image,width,height,saveTo)`](resize(image,width,height,saveTo))
