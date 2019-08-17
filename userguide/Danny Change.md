@@ -226,4 +226,4 @@ Nexial requires Excel 2007/2010 or above. It requires the use of XLSX format (ol
    corresponding 
    <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" class="external-link" target="_nexial_link">older versions of chrome driver</a>.
 
-4. **Safari** - version 9 or above is supported, with the latest most likely to be most stable.
+4. **Safari** - version 9 or above is supported, with the latest most likely to be most stable in terms of support.

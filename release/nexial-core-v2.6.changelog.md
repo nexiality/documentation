@@ -37,6 +37,13 @@ comments: true
 ### [base commands](../commands/base)
 - [`outputToCloud(resource)`](../commands/base/outputToCloud(resource)): fix path resolution to S3 so that the target 
   location mimics local directory structure
+- [`nexial.assert.lenient`](../systemvars/index#nexial.assert.lenient): join multiple lines into one before text 
+  assertion. Default is `true`.
+- [`nexial.assert.asNumber`](../systemvars/index#nexial.assert.asNumber): assert text numerically so that `1` is the 
+  same as `1.0`. Default is `true`.
+- [`nexial.assert.useTrim`](../systemvars/index#nexial.assert.useTrim): trim text before assertion. Default is `false`.
+- [`nexial.assert.caseInsensitive`](../systemvars/index#nexial.assert.caseInsensitive): assert text case-insensitively. 
+  Default is `false`.
 
 
 ### [desktop commands](../commands/desktop)
@@ -95,6 +102,7 @@ comments: true
     `id`, `state`. 
   - Use [`nexial.web.saveGrid.data.image`](../systemvars/index#nexial.web.saveGrid.data.image) to determine what 
     metadata of an image element in the data section to save to CSV. Possible choices: `type`, `alt`, `id`, `filename`.
+  - code fix to properly handle data cell that contains a mix of cell text and form element.
 - System variable [`nexial.screenshotAsDesktop`](../systemvars/index#nexial.screenshotAsDesktop): **NEW** System
   variable to allow for desktop screen capturing instead of browser-scoped screen capturing.
 - [`saveDivsAsCsv(headers,rows,cells,nextPage,file)`](../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)):

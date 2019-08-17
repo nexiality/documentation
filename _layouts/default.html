@@ -36,34 +36,7 @@
     {% include analytics.html %}
     {% endif %}
 
-    <script>
-    function adjustPosition() { if (document.location.href.indexOf('#') !== -1) { window.scrollBy(0, -200); } }
-
-    jQuery(document).ready(function() {
-        jQuery('.tabs .tab-links').on('click', function (e) {
-            let _this = jQuery(this);
-            _this.parent().find('.tab-content').toggle(250, function () {
-                if (_this.hasClass('tabs-collapsed')) {
-                    _this.removeClass('tabs-collapsed');
-                } else {
-                    _this.addClass('tabs-collapsed');
-                }
-            });
-            e.preventDefault();
-            e.stopImmediatePropagation();
-            e.stopPropagation();
-        });
-
-        jQuery('.tabs .tab-links a').on('click', function(e) {
-            let currentAttrValue = jQuery(this).attr('href');
-            jQuery('.tabs ' + currentAttrValue).slideDown(250).siblings().slideUp(250);
-            jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
-            e.preventDefault();
-            e.stopImmediatePropagation();
-            e.stopPropagation();
-        });
-    });
-    </script>
+    <script src='{{ "/assets/navigation.js" | relative_url }}'></script>
 </head>
 
 <body onload="adjustPosition()">

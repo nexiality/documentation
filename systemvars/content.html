@@ -162,19 +162,6 @@
         </td>
     </tr>
     <tr>
-        <td nowrap="nowrap" class="varname">
-            <a id="nexial.lenientStringCompare"><code>nexial.lenientStringCompare</code></a>
-        </td>
-        <td>boolean</td>
-        <td>true</td>
-        <td>false</td>
-        <td>
-            Determine if string comparison should be "<em>forgiving"</em> by converting newline and carriage return
-            characters to space BEFORE comparison starts. This is generally needed for Internet Explorer based
-            automation. It is usually safe to leave this at default value.
-        </td>
-    </tr>
-    <tr>
         <td nowrap="nowrap" class="varname"><a id="nexial.verbose"><code>nexial.verbose</code></a></td>
         <td>boolean</td>
         <td>false</td>
@@ -825,6 +812,61 @@
         Alternatively, one can simply specify <code>wps</code>, which will enable Nexial to automatically resolve
         the correct location of WPS (latest version preferred). For example,<br/>
         <img src="image/systemvar_06.png" style="width:360px" alt="nexial.spreadsheet.program example"/>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="highlight-section" colspan="5"><span>For text-based assertion only.</span></td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname">
+        <a id="nexial.textMatch.lenient"><code>nexial.assert.lenient</code></a>
+      </td>
+      <td>boolean</td>
+      <td>true</td>
+      <td>false</td>
+      <td>
+        Determine if string comparison should be "<em>forgiving"</em> by converting newline and carriage return
+        characters to space BEFORE comparison starts. This is generally needed for Internet Explorer based
+        automation. It is usually safe to leave this at default value.
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname">
+        <a id="nexial.textMatch.asNumber"><code>nexial.assert.asNumber</code></a>
+      </td>
+      <td>boolean</td>
+      <td>true</td>
+      <td>false</td>
+      <td>
+          Perform text assertion by first converting both the expected and actual text to number - if they are in fact
+          numbers. As such, <code>1</code> would be treated the same as <code>1.0</code>.<br/>
+          <br/>
+          Note that setting this System variable to <code>true</code> (default) does not render any text into a number.
+          Only those of valid numeric form (decimals ok) will be converted into numbers.
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname">
+        <a id="nexial.textMatch.useTrim"><code>nexial.assert.useTrim</code></a>
+      </td>
+      <td>boolean</td>
+      <td></td>
+      <td>false</td>
+      <td>
+          Perform text assertion by first trimming (both leading and trailing) spaces from text. Default is
+          <code>false</code> (no trimming).
+      </td>
+    </tr>
+    <tr>
+      <td nowrap="nowrap" class="varname">
+        <a id="nexial.textMatch.caseInsensitive"><code>nexial.assert.caseInsensitive</code></a>
+      </td>
+      <td>boolean</td>
+      <td></td>
+      <td>false</td>
+      <td>
+          Perform text assertion case-insensitively. Default is <code>false</code>.
       </td>
     </tr>
 
