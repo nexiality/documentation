@@ -207,9 +207,6 @@ your system, please follow the section above.
 </div>
 <br/>
 
-For troubleshooting or any other issues read the following steps:
-
-
 ### Check Excel Version
 Nexial requires Excel 2007/2010 or above. It requires the use of XLSX format (old XLS format not supported).
 
@@ -228,4 +225,6 @@ Nexial requires Excel 2007/2010 or above. It requires the use of XLSX format (ol
 
 4. **Safari** - version 9 or above is supported, with the latest most likely to be most stable in terms of support.
 
-
+### Starting Your First Project
+Now that you have Nexial installed, we can create our first Nexial Project!<br/>
+Click [here](SettingUpYourFirstProject) for a guide on starting your first Nexial Test Automation.
