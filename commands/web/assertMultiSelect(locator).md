@@ -9,18 +9,16 @@ comments: true
 ### Description
 This command asserts the dropdown element (i.e. `<SELECT>`) as denoted by `locator` allows for multi-selection.
 
-
 ### Parameters
 - **locator** - locator of the target select element.
 
-
 ### Example
 **Script**:<br/>
-![](image/assertMultiSelect.png)
+![](image/assertMultiSelect_01.png)
 
 **Output**:<br/>
-![](image/assertMultiSelect-output.png)
+![](image/assertMultiSelect_02.png)
 
 
 ### See Also
-- [`assertSingleSelect(locator)`](assertSingleSelect(locator).html)
+- [`assertSingleSelect(locator)`](assertSingleSelect(locator))

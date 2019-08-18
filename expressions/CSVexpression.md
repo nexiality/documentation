@@ -19,7 +19,7 @@ As popular as CSV has been since 
 <a href="https://tools.ietf.org/html/rfc4180" class="external-link" target="_nexial_link">RFC 4180</a>, 
 which is a proposal and a formalization of CSV as a specification, but not yet accepted as specification.  As such, 
 there are many, and some subtle, variations out there and many are staunchly supported by technology communities and 
-companies alike.  The most popular varieties of CVS would be:
+companies alike. The most popular varieties of CSV would be:
 
 - **Excel CSV** - the CSV format produced by Microsoft Excel when using its Export functionality.  In essence, such 
 CSV file format:
@@ -28,7 +28,7 @@ CSV file format:
 	 - uses carriage return (`\r\n`) as record separator
 	 - regard empty lines as an empty records
 	 - allow subsequent lines to be longer than the first line (usually represents the header columns)        
-- **RFC 4180** - the proposed CSV file submitted to IETF.  Essentially, this CVS file format:  
+- **RFC 4180** - the proposed CSV file submitted to IETF. Essentially, this CSV file format:  
   - uses comma as delimiter
   - uses double quote for non-numeric value
   - uses carriage return (`\r\n`) as record separator
@@ -102,7 +102,7 @@ See `parse()` below for more details.
 - `conditions` follows the syntax as laid out in [Nexial Filter](../flowcontrols/filter). 
 
 #### groupCount(columns)
-- create a new CVS using the specified column(s) and a new column (last column) as the 
+- create a new CSV using the specified column(s) and a new column (last column) as the 
   count of occurrences.  Multiple columns are separated by comma (`,`).  The newly formed CSV will named the last 
   column (the count) as `Count`.  
   
@@ -339,7 +339,7 @@ these SSN are not the same.
 #### replaceColumnRegex(searchFor,replaceWith,columnNameOrIndex)
 - For the specified column (by name or by position), search for `searchFor` regular expression and replace matches 
   by `replaceWith`. Regex group supported.  For example, 
-  `[CSV(${...}) => parse(...) replaceColumnRegex((\d+)(\d\d),$1.$2,1)]` would search in the 2nd column of the CVS for
+  `[CSV(${...}) => parse(...) replaceColumnRegex((\d+)(\d\d),$1.$2,1)]` would search in the 2nd column of the CSV for
   a match against the pattern "a series of at least 3 consecutive digits" and replace it with the same digits with a
   decimal point place just before the second-to-last digit.  In other words, `12345` would become `123.45`.
 
