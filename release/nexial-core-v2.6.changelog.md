@@ -113,3 +113,5 @@ comments: true
   multiple select options.
 - [`assertSingleSelect(locator)`](../commands/web/assertSingleSelect(locator)): use to assert the select element 
   support single select option.
+- [`saveISTDivsAsCsv`]: **NEW** command to export data from an Infinite Scroll Table (IST) to CSV. This is initial 
+  implementation and further testing is yet to complete. Documentation forthcoming.
