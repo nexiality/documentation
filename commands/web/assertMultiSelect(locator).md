@@ -10,7 +10,7 @@ comments: true
 This command asserts the dropdown element (i.e. `<SELECT>`) as denoted by `locator` allows for multi-selection.
 
 ### Parameters
-- **locator** - locator of the target select element.
+- **locator** - locator of the target dropdown element.
 
 ### Example
 **Script**:<br/>
