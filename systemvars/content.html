@@ -2841,6 +2841,30 @@
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname">
+            <a id="nexial.desktop.useTypeKeys"><code>nexial.desktop.useTypeKeys</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            When entering the text into textBox or textArea desktop element with shortcut keys,
+            Nexial converts winium shortcut keys to native input keys internally and execute
+            command thereafter. In other words, desktop command will behave as <code>desktop.typeKeys()</code> command.
+            Following are desktop commands which supports this:
+            <ul>
+                <li>sendKeysToTextBox(name,text1,text2,text3,text4)</li>
+                <li>typeTextBox(name,text1,text2,text3,text4)</li>
+                <li>typeAppendTextBox(name,text1,text2,text3,text4)</li>
+                <li>typeTextArea(name,text1,text2,text3,text4)</li>
+                <li>typeAppendTextArea(name,text1,text2,text3,text4)</li>
+            </ul>
+
+            To achieve above condition, one can turn on the default behavior:<br/><br/>
+            <code>nexial.desktop.useTypeKeys</code> | <code>true</code>
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
             <a id="nexial.desktop.dialogLookup"><code>nexial.desktop.dialogLookup</code></a>
         </td>
         <td>boolean</td>
