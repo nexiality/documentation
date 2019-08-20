@@ -17,6 +17,8 @@ comments: true
   [`nexial.outputToCloud`](../systemvars/index#nexial.outputToCloud) is set to `true`.
 
 #### Improvements
+- [`nexial.lastElapsedTime`](../systemvars/index#nexial.lastElapsedTime): record the elapsed time (in ms) for the last
+  executed step (regardless of its PASS or FAIL status).
 
 
 ### [Nexial Interactive](../interactive)
