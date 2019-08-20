@@ -51,7 +51,7 @@ comments: true
 ### [desktop commands](../commands/desktop)
 - [`assertElementNotPresent(name)`](../commands/desktop/assertElementNotPresent(name)): Assert absence of given desktop element.
 - [`nexial.desktop.useTypeKeys`](../systemvars/index#nexial.desktop.useTypeKeys): convert winium shortcut keys to 
-  native keys.
+  native keys. All desktop's typeTextBox and typeTextArea command overridden by `desktop.typeKeys()` internally.
 
 ### [image commands](../commands/image)
 - [`colorbit(source,bit,saveTo)`](../commands/image/colorbit(source,bit,saveTo)): now support `source` as URL. Nexial 
