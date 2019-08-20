@@ -2847,20 +2847,30 @@
         <td>false</td>
         <td>false</td>
         <td>
-            When entering the text into textBox or textArea desktop element with shortcut keys,
-            Nexial converts winium shortcut keys to native input keys internally and execute
-            command thereafter. In other words, desktop command will behave as <code>desktop.typeKeys()</code> command.
-            Following are desktop commands which supports this:
+            This System variable applies to the following commands:
             <ul>
-                <li>sendKeysToTextBox(name,text1,text2,text3,text4)</li>
-                <li>typeTextBox(name,text1,text2,text3,text4)</li>
-                <li>typeAppendTextBox(name,text1,text2,text3,text4)</li>
-                <li>typeTextArea(name,text1,text2,text3,text4)</li>
-                <li>typeAppendTextArea(name,text1,text2,text3,text4)</li>
+                <li><a href="../commands/desktop/sendKeysToTextBox(name,text1,text2,text3,text4)">desktop &raquo;
+                    <code>sendKeysToTextBox(name,text1,text2,text3,text4)</code></a></li>
+                <li><a href="../commands/desktop/typeTextBox(name,text1,text2,text3,text4)">desktop &raquo;
+                    <code>typeTextBox(name,text1,text2,text3,text4)</code></a></li>
+                <li><a href="../commands/desktop/typeAppendTextBox(name,text1,text2,text3,text4)">desktop &raquo;
+                    <code>typeAppendTextBox(name,text1,text2,text3,text4)</code></a></li>
+                <li><a href="../commands/desktop/typeTextArea(name,text1,text2,text3,text4)">desktop &raquo;
+                    <code>typeTextArea(name,text1,text2,text3,text4)</code></a></li>
+                <li><a href="../commands/desktop/typeAppendTextArea(name,text1,text2,text3,text4)">desktop &raquo;
+                    <code>typeAppendTextArea(name,text1,text2,text3,text4)</code></a></li>
             </ul>
 
-            To achieve above condition, one can turn on the default behavior:<br/><br/>
-            <code>nexial.desktop.useTypeKeys</code> | <code>true</code>
+            By default, Nexial automates the entering of text into a text box or text area element via a desktop driver
+            (winium). This works in almost all cases, but there are situations where such strategy is not favorable.
+            One such situation would be a change in underlying operating system or regional setting (keyboard) which
+            isn't supported by the desktop driver. As such, one can override the default strategy with an OS-native
+            keystroke simulation mechanism by setting this System variable as <code>true</code>
+            (default is <code>false</code>).<br/>
+            <br/>
+            When this System variable is set to <code>true</code>, Nexial converts the text input parameters to
+            "keystrokes". Functionally this would be equivalent to
+            <a href="../commands/desktop/typeKeys(os,keystrokes)">web &raquo; <code>typeKeys(os,keystrokes)</code></a>.
         </td>
     </tr>
     <tr>
