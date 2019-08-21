@@ -19,6 +19,9 @@ comments: true
 #### Improvements
 - [`nexial.lastElapsedTime`](../systemvars/index#nexial.lastElapsedTime): record the elapsed time (in ms) for the last
   executed step (regardless of its PASS or FAIL status).
+- [`nexial.outputToCloud`](../systemvars/index#nexial.outputToCloud): now support other file-based resources so that
+  when `nexial.outputToCloud` is set to true, file-based resources will be pushed to the Cloud automatically (and its 
+  link on the output will be updated as well.)
 
 
 ### [Nexial Interactive](../interactive)
@@ -85,6 +88,7 @@ comments: true
 
 
 ### [ws commands](../commands/ws)
+- fixed: handle url that contains "percent-encoding" by avoiding double-encoding error.
 
 
 ### [web commands](../commands/web)
@@ -119,7 +123,8 @@ comments: true
   multiple select options.
 - [`assertSingleSelect(locator)`](../commands/web/assertSingleSelect(locator)): use to assert the select element 
   support single select option.
-- [`saveISTDivsAsCsv`]: **NEW** command to export data from an Infinite Scroll Table (IST) to CSV. This is initial 
-  implementation and further testing is yet to complete. Documentation forthcoming.
-- [`saveISTDivsAsCsv`]: improved on scanning and data collection logic. Now works reliably over 500 rows of infinite
-  scroll table.
+- [`saveISTDivsAsCsv`]: 
+  - **NEW** command to export data from an Infinite Scroll Table (IST) to CSV. This is initial implementation and 
+    further testing is yet to complete. Documentation forthcoming.
+  - improved on scanning and data collection logic. Now works reliably over 500 rows of infinite scroll table.
+  - improved on usability by allowing for configurable "waitBetweenScroll" value.
