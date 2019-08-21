@@ -121,3 +121,5 @@ comments: true
   support single select option.
 - [`saveISTDivsAsCsv`]: **NEW** command to export data from an Infinite Scroll Table (IST) to CSV. This is initial 
   implementation and further testing is yet to complete. Documentation forthcoming.
+- [`saveISTDivsAsCsv`]: improved on scanning and data collection logic. Now works reliably over 500 rows of infinite
+  scroll table.
