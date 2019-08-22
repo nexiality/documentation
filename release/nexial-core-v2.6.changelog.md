@@ -15,6 +15,7 @@ comments: true
 - [`nexial.lastScreenshot`](../systemvars/index#nexial.lastScreenshot): now resolve to the fully qualified path 
   (not just the filename as previously the case). Also, this System variable will resolve to the appropriate URL if 
   [`nexial.outputToCloud`](../systemvars/index#nexial.outputToCloud) is set to `true`.
+- Fixed `concurrentModificationException` while shutdown the winium driver.
 
 #### Improvements
 - [`nexial.lastElapsedTime`](../systemvars/index#nexial.lastElapsedTime): record the elapsed time (in ms) for the last
