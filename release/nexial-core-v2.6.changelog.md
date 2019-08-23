@@ -29,12 +29,19 @@ comments: true
 - support "range" specification for activity
 
 
+### [Built-in Functions](../functions)
+- [$(array)](../functions/$(array)): fixed previous erroneous parsing where surrounding `{...}` and `[...]` characters 
+  are removed necessarily.
+
+
 ### [Nexial Expression](../expressions)
 - for TEXT expression, a new System variable, [`nexial.expression.resolveUrl`](../systemvars/index#nexial.expression.resolveUrl),
   is defined to disable the automatic content resolution of HTTP-based resource.
 - [`CSV &raquo; parse(config)`](../expressions/CSVexpression#parseconfig): use 
   [`nexial.textDelim`](../systemvars/index#nexial.textDelim) as CSV delimiter when none is explicitly specified.
 - [`CSV &raquo; merge(var,keycolumn)`](../expressions/CSVexpression#mergevarkeycolumn): avoid merging empty or blank rows.
+- [LIST expression](../expressions/LISTexpression): fixed previous erroneous parsing where surrounding `{...}` and 
+  `[...]` characters are removed necessarily.
 
 
 ### [Flow Control](../flowcontrols)
