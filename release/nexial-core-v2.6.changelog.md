@@ -90,7 +90,7 @@ comments: true
 ### [localdb commands](../commands/localdb)
 - [`importCSV(var,csv,table)`](../commands/localdb/importCSV(var,csv,table)): code fix to support columns with spaces 
   or commas
-
+  - also fixed to support `(` and `)` characters in column name.
 
 ### [number commands](../commands/number)
 
@@ -136,3 +136,5 @@ comments: true
     further testing is yet to complete. Documentation forthcoming.
   - improved on scanning and data collection logic. Now works reliably over 500 rows of infinite scroll table.
   - improved on usability by allowing for configurable "waitBetweenScroll" value.
+- [`saveInfiniteTableAsCsv`]: **NEW** command to harvest data from a Infinite Scrolling Table as CSV
+- [`saveInfiniteTableAsCsv`] and [`saveInfiniteDivsAsCsv`]: supports long running headers that are rendered off-screen
