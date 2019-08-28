@@ -363,6 +363,7 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
     text-overflow:  ellipsis;
     overflow:       hidden;
     vertical-align: text-top;
+    min-width:      71px;
 }
 
 .value-ref {
