@@ -47,6 +47,11 @@ comments: true
 ### [Flow Control](../flowcontrols)
 
 
+### [aws.vision commands](../commands/aws.vision)
+- [`saveText(profile,image,var)`](../commands/aws.vision/saveText(profile,image,var)): **NEW** command to extract text
+  from an image file. Supports JPG, PNG and GIF at this time. No animated GIF support for now.
+
+
 ### [base commands](../commands/base)
 - [`outputToCloud(resource)`](../commands/base/outputToCloud(resource)): fix path resolution to S3 so that the target 
   location mimics local directory structure
@@ -138,3 +143,6 @@ comments: true
   - improved on usability by allowing for configurable "waitBetweenScroll" value.
 - [`saveInfiniteTableAsCsv`]: **NEW** command to harvest data from a Infinite Scrolling Table as CSV
 - [`saveInfiniteTableAsCsv`] and [`saveInfiniteDivsAsCsv`]: supports long running headers that are rendered off-screen
+- [`screenshot(file,locator`](../commands/web/screenshot(file,locator)): **NEW** command to capture the graphical 
+  rendering of a Web element based on specified `locator`.
+
