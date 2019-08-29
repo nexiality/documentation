@@ -61,6 +61,17 @@ To specify the location of a cell, simply use the format: `[column letter][row 
 
 -----
 
+#### firstCell(column,regex,maxRow)
+- find the first cell in the specified `column` that satisfies `regex` and transform it to a 
+  [TEXT expression](TEXTexpression). The `column` parameter is expected to be in the form of `A`, `B`, `C`, etc. - 
+  mimicking how columns are represented in Excel. The `regex` parameter act as a filter to find the first matching
+  cell. The `maxRow` is required to ensure that Nexial performs sufficient (but not burdensome) scanning of available
+  rows.
+
+  Note that this operation **MUST** be preceeded with a call to [`read(sheet,range)`](#readsheetrange).
+  
+-----
+
 #### json(firstRowAsHeader)
 - transform current EXCEL content into **[`JSON`](JSONexpression)**. This operation provides 2 forms of transformations.
   When `firstRowAsHeader` is set to `false`, the current EXCEL content is converted into a JSON array containing one or 

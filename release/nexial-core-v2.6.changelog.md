@@ -42,6 +42,8 @@ comments: true
 - [`CSV &raquo; merge(var,keycolumn)`](../expressions/CSVexpression#mergevarkeycolumn): avoid merging empty or blank rows.
 - [LIST expression](../expressions/LISTexpression): fixed previous erroneous parsing where surrounding `{...}` and 
   `[...]` characters are removed necessarily.
+- [EXCEL &raquo; `firstCell(column,regex,maxRow)`](../expressions/EXCELexpression#firstcellcolumnregexmaxrow): **NEW** 
+  operation to find the first cell in the specified `column` that satisfies `regex`.
 
 
 ### [Flow Control](../flowcontrols)
