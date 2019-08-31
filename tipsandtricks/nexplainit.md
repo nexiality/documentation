@@ -27,7 +27,7 @@ Nexial. Better content will certainly benefit the existing Nexial community as w
 is where _you_ come in...
 
 <div style="color: #fff !important; background-color: rgba(90, 115, 75, 0.9); padding: 20px; font-size: 16pt;">
-Help us create <u><i>awesome</i></u> Nexial tutorials - and, this is a contest!<br/>
+Help us create <u><i>awesome</i></u> Nexial tutorials - and, yes this is a contest!<br/>
 <span style="font-family: monospace; color:#ccc; font-size: 12pt;">(translation: prizes)</span>
 </div>
 <br/>
@@ -72,8 +72,9 @@ I'm glad you ask! Here's how:
         - [https://www.fantasynamegenerators.com/squad-names.php](https://www.fantasynamegenerators.com/squad-names.php)
         - [https://www.mountaingoatsoftware.com/blog/an-agile-team-name-generator](https://www.mountaingoatsoftware.com/blog/an-agile-team-name-generator)
     3. **Topic** - Anything Nexial. Be original, be fun, be epic!
-2. Submit to enter the contest - 
+2. [Submit to enter the contest](https://forms.office.com/Pages/ResponsePage.aspx?id=AuXxB9rBW0685F0MpWltyvSHhJPZXqNHr8QokAGgb3dUQVpEUVpWRDgyTERJQzlEV0VHR0pGT003Ni4u)
     - **This contest is open to all EP employees and contractors (including offshore)**
+    - **Please login with your EP network ID**
     - The contest is open for submission NOW
 3. Start creating your tutorial
     - For screencast and video, please upload through YouTube (as unlisted video). Here are some links to help:
@@ -84,7 +85,7 @@ I'm glad you ask! Here's how:
         - [https://www.youtube.com/watch?v=Go_HDCANWf8](https://www.youtube.com/watch?v=Go_HDCANWf8)
         - [https://support.google.com/youtube/answer/157177](https://support.google.com/youtube/answer/157177?co=GENIE.Platform%3DDesktop&hl=en)
     - For step-by-step tutorial, please create private post on Confluence
-4. After you have completed your tutorial, submit your masterpiece to - 
+4. After you have completed your tutorial, submit your masterpiece to [TBD]
     - the last day to submit your tutorial is **October 4th 2019**!
 
 5. Everyone will get to vote! The top 3 tutorials will be handsomely awards. :-)
@@ -101,10 +102,9 @@ Rules:
 
 
 ## Here we go!
-You still reading this?! Let's go!
+You still reading this?! C'mon, you've got some _nexplainin'_ to do. Let's go!
 
 
 ## Additional Information
-I'm here to help and I'm on slack, like, too much. Find me at http://nexiality.slack.com (under `automike`).
-
+I'm here to help. Find me on Slack at http://nexiality.slack.com (`@automike`).
 
