@@ -23,6 +23,7 @@ comments: true
 - [`nexial.outputToCloud`](../systemvars/index#nexial.outputToCloud): now support other file-based resources so that
   when `nexial.outputToCloud` is set to true, file-based resources will be pushed to the Cloud automatically (and its 
   link on the output will be updated as well.)
+- Added new column for plan detail and more summerized result in email notification html.
 
 
 ### [Nexial Interactive](../interactive)
@@ -31,7 +32,8 @@ comments: true
 
 ### [Built-in Functions](../functions)
 - [$(array)](../functions/$(array)): fixed previous erroneous parsing where surrounding `{...}` and `[...]` characters 
-  are removed necessarily.
+  are removed necessarily.<br/>
+- [$(array)](../functions/$(array)): fixed ascending and descending sorting of numbers.
 
 
 ### [Nexial Expression](../expressions)
@@ -44,7 +46,8 @@ comments: true
   `[...]` characters are removed necessarily.
 - [EXCEL &raquo; `firstCell(column,regex,maxRow)`](../expressions/EXCELexpression#firstcellcolumnregexmaxrow): **NEW** 
   operation to find the first cell in the specified `column` that satisfies `regex`.
-
+- [LIST &raquo; `ascending` and LIST &raquo; `descending`](../expressions/LISTexpression):
+  fixed ascending and descending sorting of list of numbers.
 
 ### [Flow Control](../flowcontrols)
 
