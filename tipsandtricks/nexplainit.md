@@ -64,15 +64,14 @@ strengthens the community from within. And, _did I mention there're prizes_...?
 I'm glad you ask! Here's how:
 1. Decide:
    1. **Who** - You could venture on your own or join forces with someone. A team must not be more than 3 people.
-   2. **Name** - It can be anything! Nothing offensive or deragatory.
+   2. **Name** - Your team name can be anything you like! Nothing offensive or derogatory, please.
    3. **Topic** - Anything Nexial. Be original, be fun, be epic!
 2. [Submit to enter the contest](https://forms.office.com/Pages/ResponsePage.aspx?id=AuXxB9rBW0685F0MpWltyvSHhJPZXqNHr8QokAGgb3dUQVpEUVpWRDgyTERJQzlEV0VHR0pGT003Ni4u)
-   - **This contest is open to all EP employees and contractors (including offshore)**
-   - **Please login with your EP network ID**
-   - The contest is open for submission NOW!
+   - **This contest is open to all EP employees and contractors (including offshore)! Login with your EP network ID.**
+   - The contest is open for submission **NOW**!
 3. Start creating your tutorial
-   - For screencast and video, please upload through YouTube as unlisted video.
-   - For step-by-step tutorial, please create private post on Confluence
+   - For screencast and video, please upload through YouTube as unlisted video (howto links below).
+   - For step-by-step tutorial, please create private post on [Confluence](https://confluence.ep.com).
 4. After you have completed your tutorial, submit your masterpiece to [TBD]
    - the last day to submit your tutorial is **October 4th 2019**!
 
@@ -86,7 +85,7 @@ Rules:
 - All tutorials **MUST NOT** use any EP products or applications as its target application. Since we are publishing
   these tutorials publicly, we need to be mindful of this.
 - All screencast or video submission must not be more than 10 minutes long.
-- Your tutorial topic might be the same as someone else's. But it's up to you to make yours more interesting.
+- Your tutorial topic could be the same as someone else's. But it's up to you to make yours more interesting.
 - All submissions, whether selected as top 3 or not, will be upload to Nexial website. That way everyone can benefit
   from your effort!
 
@@ -98,40 +97,40 @@ Here are some resource links that might help you:
 
 #### Free screen recorder software
 For Windows
-- [SnagIt](https://www.techsmith.com/screen-capture.html) (not free, but you probably have it)
-    - [How to Record Your Screen](https://www.techsmith.com/tutorial-snagit-recording-video.html)
-- [Camtasia](https://www.techsmith.com/video-editor.html)
-- [FlashBack Express](https://www.flashbackrecorder.com/express/)
-- [Atomi ActivePresenter](https://atomisystems.com/download/)
-- [filmoraScrn](https://filmora.wondershare.com/screen-recorder/)
+  - [SnagIt](https://www.techsmith.com/screen-capture.html) (not free, but you probably have it)
+     - [How to Record Your Screen](https://www.techsmith.com/tutorial-snagit-recording-video.html)
+  - [Camtasia](https://www.techsmith.com/video-editor.html)
+  - [FlashBack Express](https://www.flashbackrecorder.com/express/)
+  - [Atomi ActivePresenter](https://atomisystems.com/download/)
+  - [filmoraScrn](https://filmora.wondershare.com/screen-recorder/)
 
 For MacOS
-- [QuickTime Player](https://support.apple.com/en-us/HT201288)
-- [monosnap](https://monosnap.com)
-- [Jing](https://www.techsmith.com/jing.html)
-- [Apowersoft Screen Recorder](https://itunes.apple.com/us/app/apowersoft-screen-recorder/id1030681467?mt=12&uo=8&at=10lryA)
-- [SnagIt](https://www.techsmith.com/screen-capture.html) (not free, but you probably have it)
+  - [QuickTime Player](https://support.apple.com/en-us/HT201288)
+  - [monosnap](https://monosnap.com)
+  - [Jing](https://www.techsmith.com/jing.html)
+  - [Apowersoft Screen Recorder](https://itunes.apple.com/us/app/apowersoft-screen-recorder/id1030681467?mt=12&uo=8&at=10lryA)
+  - [SnagIt](https://www.techsmith.com/screen-capture.html) (not free, but you probably have it)
     - [How to Record Your Screen](https://www.techsmith.com/tutorial-snagit-recording-video.html)
-- [filmoraScrn](https://filmora.wondershare.com/screen-recorder/)
+  - [filmoraScrn](https://filmora.wondershare.com/screen-recorder/)
 
 #### Need help with uploading on YouTube?
-- [https://support.google.com/youtube/answer/57407](https://support.google.com/youtube/answer/57407?co=GENIE.Platform%3DDesktop&hl=en)
-- [https://www.wikihow.com/Upload-a-Video-to-YouTube](https://www.wikihow.com/Upload-a-Video-to-YouTube)
-- [https://www.youtube.com/watch?v=43Nvd12yqxU](https://www.youtube.com/watch?v=43Nvd12yqxU)
-- [https://creatoracademy.youtube.com/page/lesson/editing](https://creatoracademy.youtube.com/page/lesson/editing)
-- [https://www.youtube.com/watch?v=Go_HDCANWf8](https://www.youtube.com/watch?v=Go_HDCANWf8)
-- [https://support.google.com/youtube/answer/157177](https://support.google.com/youtube/answer/157177?co=GENIE.Platform%3DDesktop&hl=en)
+  - [https://support.google.com/youtube/answer/57407](https://support.google.com/youtube/answer/57407?co=GENIE.Platform%3DDesktop&hl=en)
+  - [https://www.wikihow.com/Upload-a-Video-to-YouTube](https://www.wikihow.com/Upload-a-Video-to-YouTube)
+  - [https://www.youtube.com/watch?v=43Nvd12yqxU](https://www.youtube.com/watch?v=43Nvd12yqxU)
+  - [https://creatoracademy.youtube.com/page/lesson/editing](https://creatoracademy.youtube.com/page/lesson/editing)
+  - [https://www.youtube.com/watch?v=Go_HDCANWf8](https://www.youtube.com/watch?v=Go_HDCANWf8)
+  - [https://support.google.com/youtube/answer/157177](https://support.google.com/youtube/answer/157177?co=GENIE.Platform%3DDesktop&hl=en)
 
 #### Team Name
 In case you need some ideas for team name, here are a few fun name generators to help:
-- [https://www.wordlab.com/name-generators/team-name-generator/](https://www.wordlab.com/name-generators/team-name-generator/)
-- [http://www.leadershipgeeks.com/cool-team-names/](http://www.leadershipgeeks.com/cool-team-names/#cool)
-- [https://www.fantasynamegenerators.com/squad-names.php](https://www.fantasynamegenerators.com/squad-names.php)
-- [https://www.mountaingoatsoftware.com/blog/an-agile-team-name-generator](https://www.mountaingoatsoftware.com/blog/an-agile-team-name-generator)
+  - [https://www.wordlab.com/name-generators/team-name-generator/](https://www.wordlab.com/name-generators/team-name-generator/)
+  - [http://www.leadershipgeeks.com/cool-team-names/](http://www.leadershipgeeks.com/cool-team-names/#cool)
+  - [https://www.fantasynamegenerators.com/squad-names.php](https://www.fantasynamegenerators.com/squad-names.php)
+  - [https://www.mountaingoatsoftware.com/blog/an-agile-team-name-generator](https://www.mountaingoatsoftware.com/blog/an-agile-team-name-generator)
         
 
 ## Here we go!
-You still reading this?! C'mon, you've got some _nexplainin'_ to do. Let's go!
+You still reading this?! C'mon, let's go! You've got some _nexplainin'_ to do!
 
 -----
 
