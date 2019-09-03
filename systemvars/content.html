@@ -1499,10 +1499,8 @@
         <td class="highlight-red">true</td>
         <td>
             <b>For <a href="../commands/json/assertEqual(expected,actual)">json &raquo;
-                <code>assertEqual(expectedJson,actualJson)</code></a> only.</b>
+                <code>assertEqual(expectedJson,actualJson)</code></a> only.</b><br/>
             <br/>
-            <br/>
-
             Invoking <a href="../commands/json/assertEqual(expected,actual)">json &raquo;
             <code>assertEqual(expectedJson,actualJson)</code></a> could reveal the structural differences between
             the "expected" and "actual" JSON documents. Such differences are stored in yet another JSON document so that
@@ -1511,7 +1509,80 @@
             <br/>
             Note that one might want to consider using
             <a href="#nexial.lastOutputLink"><code>nexial.lastOutputLink</code></a> to retrieve the file that
-            contains the "diff" JSON document.
+            contains the "diff" JSON document.<br/>
+            <br/>
+            See <a href="#nexial.json.compareResultsAsJSON"><code>nexial.json.compareResultsAsJSON</code></a>,
+            <a href="#nexial.json.compareResultsAsCSV"><code>nexial.json.compareResultsAsCSV</code></a> and
+            <a href="#nexial.json.compareResultsAsHTML"><code>nexial.json.compareResultsAsHTML</code></a> for
+            report format. These report output optional are not mutually exclusive.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.json.compareResultsAsJSON"><code>nexial.json.compareResultsAsJSON</code></a>
+        </td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>false</td>
+        <td>
+            <b>For <a href="../commands/json/assertEqual(expected,actual)">json &raquo;
+                <code>assertEqual(expectedJson,actualJson)</code></a> only.</b><br/>
+            <br/>
+            Used to instruct Nexial on the report format of the comparison result (differences between
+            <code>expected</code> and <code>actual</code>). By default, Nexial will generate the comparison result
+            as a JSON document, and link such file in the execution output. One may alter this System variable to
+            disable such default.<br/>
+            <br/>
+            See <a href="#nexial.json.compareResultsAsCSV"><code>nexial.json.compareResultsAsCSV</code></a> and
+            <a href="#nexial.json.compareResultsAsHTML"><code>nexial.json.compareResultsAsHTML</code></a> for other
+            report format. These report output optional are not mutually exclusive.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.json.compareResultsAsCSV"><code>nexial.json.compareResultsAsCSV</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            <b>For <a href="../commands/json/assertEqual(expected,actual)">json &raquo;
+                <code>assertEqual(expectedJson,actualJson)</code></a> only.</b><br/>
+            <br/>
+            Used to instruct Nexial on the report format of the comparison result (differences between
+            <code>expected</code> and <code>actual</code>). By default, Nexial will generate the comparison result
+            as a JSON document, and link such file in the execution output. One may alter this System variable to
+            disable such default and generate the comparison result as CSV instead.<br/>
+            <br/>
+            See <a href="#nexial.json.compareResultsAsJSON"><code>nexial.json.compareResultsAsJSON</code></a> and
+            <a href="#nexial.json.compareResultsAsHTML"><code>nexial.json.compareResultsAsHTML</code></a> for
+            report format. These report output optional are not mutually exclusive.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.json.compareResultsAsHTML"><code>nexial.json.compareResultsAsHTML</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            <b>For <a href="../commands/json/assertEqual(expected,actual)">json &raquo;
+                <code>assertEqual(expectedJson,actualJson)</code></a> only.</b><br/>
+            <br/>
+            Used to instruct Nexial on the report format of the comparison result (differences between
+            <code>expected</code> and <code>actual</code>). By default, Nexial will generate the comparison result
+            as a JSON document, and link such file in the execution output. One may alter this System variable to
+            disable such default and generate the comparison result as HTML instead.<br/>
+            <br/>
+            Note that the generated HTML is a basic HTML table where such table is assigned a style class named
+            <code>compare-result-table</code>. One may choose to decorate this table by add CSS stylsheets to
+            <code>table.compare-result-table</code>. See <a href="../commands/json/assertEqual(expected,actual)">json
+            &raquo;<code>assertEqual(expectedJson,actualJson)</code></a> for examples.<br/>
+            <br/>
+            See <a href="#nexial.json.compareResultsAsJSON"><code>nexial.json.compareResultsAsJSON</code></a> and
+            <a href="#nexial.json.compareResultsAsCSV"><code>nexial.json.compareResultsAsCSV</code></a> for
+            report format. These report output optional are not mutually exclusive.
         </td>
     </tr>
 

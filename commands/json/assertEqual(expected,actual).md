@@ -53,14 +53,21 @@ the logical connotation thereof. However with JSON array, the order of its child
 If the above JSON arrays each represents a winner list, the first array would mean "1st place: Johnny, 2nd place: 
 Sammy, 3rd place: Mark", and the second array: "1st place: Sammy, 2nd place: Mark, 3rd place: Johnny". _BIG DIFFERENCE..._
 
-This command will treat child node order of a JSON array with significance. The above 2 JSON documents will not be
+This command will treat child node order of a JSON array with significance. The above 2 JSON documents will **not** be
 considered as logically equivalent.
 
 Should this command finds any differences between `expected` and `actual`, 3 consequences can be expected:
 1. This command will result in a FAIL.
-2. The comparison result will be made available as another JSON document and linked to the execution output.
-3. System variable, `nexial.json.lastCompareResults`, will be assigned the same JSON document as #2. One may use this
-   variable for further automation or processing.
+2. The comparison report will be made available as another JSON document and linked to the execution output.
+3. System variable, [`nexial.json.lastCompareResults`](../../systemvars/index#nexial.json.lastCompareResults), will be 
+   assigned this comparison report (#2). One may use this System variable for further automation or processing.
+
+Subsequently, it is possible to generate the comparison report in other formats. JSON is the default format and is 
+determined via the [`nexial.json.compareResultsAsJSON`](../../systemvars/index#nexial.json.compareResultsAsJSON)
+System variable. Alternatively one can opt to generate CSV report (via 
+[`nexial.json.compareResultsAsCSV`](../../systemvars/index#nexial.json.compareResultsAsCSV)) or HTML report 
+(via [`nexial.json.compareResultsAsHTML`](../../systemvars/index#nexial.json.compareResultsAsHTML)) as well. These
+report options are not mutually exclusive.
 
 
 ### Parameters
@@ -90,6 +97,57 @@ JSON document_".
 As a JSON document, we can query the comparison report for more specific details via the [json commands](../json/index)
 and [JSON Path](../../jsonpath), which is shown below from row 7 through 25. 
 ![](image/assertEqual_04.png)
+
+As stated earlier, one can also opt to generate the comparison report as CSV or HTML. Here's an another example:
+
+![](image/assertEqual_06.png)
+
+In this example, we have set both [`nexial.json.compareResultsAsCSV`](../../systemvars/index#nexial.json.compareResultsAsCSV) 
+and [`nexial.json.compareResultsAsHTML`](../../systemvars/index#nexial.json.compareResultsAsHTML) to `true`. After the 
+`assertEqual(expected,actual)` command is executed, we can use the 
+[`nexial.lastOutputLink`](../../systemvars/index.md#nexial.lastOutputLink) to retrieve the exact location of the
+generated output. Since all 3 report types are set to `true`, there would be 3 files generated, in very similar format:
+
+`<output_location>/<execution_output_xlsx>_<scenario>_A<step_row>_<output_index>.<extension>`
+
+Having the location to this file is useful because now we can further enhance the generated HTML with our own CSS. 
+Suppose we have the following CSS in the `data` directory:
+```css
+
+table.compare-result-table {
+    font-family:    Tahoma, sans-serif;
+    padding:        5px;
+    margin:         15px 5px;
+    border-spacing: 0;
+}
+
+table.compare-result-table thead th {
+    background-color: #888;
+    padding:          5px;
+    text-align:       left;
+    color:            #eee;
+    box-shadow:       0px 4px 5px rgba(80, 80, 80, 0.5);
+}
+
+.compare-result-table tbody td {
+    white-space:    pre-wrap;
+    padding:        5px;
+    border-bottom:  1px #bbb solid;
+    vertical-align: text-top;
+}
+```
+
+We can prepend this CSS to the generated HTML report, like so:
+
+![](image/assertEqual_07.png)
+ 
+The execution output shows links to the generated reports:
+
+![](image/assertEqual_08.png)
+
+Since the HTML has been "enhanced", when we click on the "html report" link, we'll see a more visually appealing HTML:
+
+![](image/assertEqual_09.png)
 
 
 ### See Also

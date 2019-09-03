@@ -32,7 +32,7 @@ comments: true
 
 ### [Built-in Functions](../functions)
 - [$(array)](../functions/$(array)): fixed previous erroneous parsing where surrounding `{...}` and `[...]` characters 
-  are removed necessarily.<br/>
+  are removed necessarily.
 - [$(array)](../functions/$(array)): fixed ascending and descending sorting of numbers.
 
 
@@ -46,8 +46,9 @@ comments: true
   `[...]` characters are removed necessarily.
 - [EXCEL &raquo; `firstCell(column,regex,maxRow)`](../expressions/EXCELexpression#firstcellcolumnregexmaxrow): **NEW** 
   operation to find the first cell in the specified `column` that satisfies `regex`.
-- [LIST &raquo; `ascending` and LIST &raquo; `descending`](../expressions/LISTexpression):
-  fixed ascending and descending sorting of list of numbers.
+- [LIST &raquo; `ascending` and LIST &raquo; `descending`](../expressions/LISTexpression): fixed ascending and 
+  descending sorting of list of numbers.
+
 
 ### [Flow Control](../flowcontrols)
 
@@ -70,7 +71,8 @@ comments: true
 
 
 ### [desktop commands](../commands/desktop)
-- [`assertElementNotPresent(name)`](../commands/desktop/assertElementNotPresent(name)): Assert absence of given desktop element.
+- [`assertElementNotPresent(name)`](../commands/desktop/assertElementNotPresent(name)): Assert absence of given desktop 
+  element.
 - [`nexial.desktop.useTypeKeys`](../systemvars/index#nexial.desktop.useTypeKeys): convert winium shortcut keys to 
   native keystrokes so that the `typeTextBox(...)` and `typeTextArea(...)` commands can be implemented via 
   [`typeKeys(os,keystrokes)`](../commands/desktop/typeKeys(os,keystrokes)) internally.
@@ -95,12 +97,23 @@ comments: true
 
 
 ### [json commands](../commands/json)
+- [`assertEquals(expected,actual)`](../commands/json/assertEqual(expected,actual)): fixed inefficient and confusing
+  comparison logic when `expected` and `actual` do not have the same nodes or node names.
+- [`assertEquals(expected,actual)`](../commands/json/assertEqual(expected,actual)): add new System variable to support
+  CSV and HTML report format:
+  - [`nexial.json.compareResultsAsJSON`](../systemvars/index#compareResultsAsJSON): `true` (default) to generate 
+    comparison result as JSON.
+  - [`nexial.json.compareResultsAsCSV`](../systemvars/index#compareResultsAsCSV): `true` (default is `false`) to 
+    generate comparison result as CSV.
+  - [`nexial.json.compareResultsAsHTML`](../systemvars/index#compareResultsAsHTML): `true` (default is `false`) to 
+    generate comparison result as HTML.
 
 
 ### [localdb commands](../commands/localdb)
 - [`importCSV(var,csv,table)`](../commands/localdb/importCSV(var,csv,table)): code fix to support columns with spaces 
   or commas
   - also fixed to support `(` and `)` characters in column name.
+
 
 ### [number commands](../commands/number)
 
