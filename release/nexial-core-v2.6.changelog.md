@@ -31,9 +31,9 @@ comments: true
 
 
 ### [Built-in Functions](../functions)
-- [$(array)](../functions/$(array)): fixed previous erroneous parsing where surrounding `{...}` and `[...]` characters 
+- [`$(array)`](../functions/$(array)): fixed previous erroneous parsing where surrounding `{...}` and `[...]` characters 
   are removed necessarily.
-- [$(array)](../functions/$(array)): fixed ascending and descending sorting of numbers.
+- [`$(array)`](../functions/$(array)): fixed ascending and descending sorting of numbers.
 
 
 ### [Nexial Expression](../expressions)
