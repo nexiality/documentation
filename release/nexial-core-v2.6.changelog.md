@@ -24,6 +24,9 @@ comments: true
   when `nexial.outputToCloud` is set to true, file-based resources will be pushed to the Cloud automatically (and its 
   link on the output will be updated as well.)
 - Added new column for plan detail and more summerized result in email notification html.
+- minor updates to [`nexial-project`](../userguide/BatchFiles#nexial-projectcmd--nexial-projectsh) batch files to reduce
+  output
+- minor improvement to trim directory name before validating its existence or usefulness.
 
 
 ### [Nexial Interactive](../interactive)
@@ -56,6 +59,8 @@ comments: true
 ### [aws.vision commands](../commands/aws.vision)
 - [`saveText(profile,image,var)`](../commands/aws.vision/saveText(profile,image,var)): **NEW** command to extract text
   from an image file. Supports JPG, PNG and GIF at this time. No animated GIF support for now.
+  - support 'system' profile to simplify scripting for users using team-wide or company-wide 
+    [setup](../userguide/BatchFiles#nexial-setupcmd--nexial-setupsh)
 
 
 ### [base commands](../commands/base)
