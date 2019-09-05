@@ -39,7 +39,7 @@ Here is the list of supported commands separated by their command type:
 - [`assertEmpty(text)`](../commands/base/assertEmpty(text))
 - [`assertEndsWith(text,suffix)`](../commands/base/assertEndsWith(text,suffix))
 - [`assertEqual(expected,actual)`](../commands/base/assertEqual(expected,actual))
-- [`assertNotContains(text,substring)`](../commands/base/assertNotContains(text,substring))
+- [`assertNotContain(text,substring)`](../commands/base/assertNotContain(text,substring))
 - [`assertNotEmpty(text)`](../commands/base/assertNotEmpty(text))
 - [`assertNotEqual(value1,value2)`](../commands/base/assertNotEqual(value1,value2))
 - [`assertStartsWith(text,prefix)`](../commands/base/assertStartsWith(text,prefix))

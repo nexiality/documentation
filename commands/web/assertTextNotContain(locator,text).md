@@ -1,6 +1,6 @@
 ---
 layout: default
-title: assertTextNotContains(locator,text)
+title: assertTextNotContain(locator,text)
 parent: web
 tags: command web
 comments: true

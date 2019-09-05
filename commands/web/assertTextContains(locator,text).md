@@ -27,6 +27,6 @@ This command asserts that the specified `text` is found in the specified element
 - [`assertNotText(locator,text)`](assertNotText(locator,text))
 - [`assertText(locator,text)`](assertText(locator,text))
 - [`assertTextMatches(text,minMatch,scrollTo)`](assertTextMatches(text,minMatch,scrollTo))
-- [`assertTextNotContains(locator,text)`](assertTextNotContains(locator,text))
+- [`assertTextNotContain(locator,text)`](assertTextNotContain(locator,text))
 - [`assertTextNotPresent(text)`](assertTextNotPresent(text))
 - [`assertTextPresent(text)`](assertTextPresent(text))

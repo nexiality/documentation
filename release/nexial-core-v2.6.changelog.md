@@ -73,7 +73,8 @@ comments: true
 - [`nexial.assert.useTrim`](../systemvars/index#nexial.assert.useTrim): trim text before assertion. Default is `false`.
 - [`nexial.assert.caseInsensitive`](../systemvars/index#nexial.assert.caseInsensitive): assert text case-insensitively. 
   Default is `false`.
-
+- [`assertNotContain(text,substring)`](../commands/base/assertNotContain(text,substring)):
+  - renamed from `assertNotContains(text,substring)` (grammatically displeasing)
 
 ### [desktop commands](../commands/desktop)
 - [`assertElementNotPresent(name)`](../commands/desktop/assertElementNotPresent(name)): Assert absence of given desktop 
@@ -118,9 +119,6 @@ comments: true
 - [`importCSV(var,csv,table)`](../commands/localdb/importCSV(var,csv,table)): code fix to support columns with spaces 
   or commas
   - also fixed to support `(` and `)` characters in column name.
-
-
-### [number commands](../commands/number)
 
 
 ### [ws commands](../commands/ws)
@@ -168,4 +166,10 @@ comments: true
 - [`saveInfiniteTableAsCsv`] and [`saveInfiniteDivsAsCsv`]: supports long running headers that are rendered off-screen
 - [`screenshot(file,locator`](../commands/web/screenshot(file,locator)): **NEW** command to capture the graphical 
   rendering of a Web element based on specified `locator`.
-
+- [`assertAttributeContains(locator,attrName,contains)`](../commands/web/assertAttributeContains(locator,attrName,contains)):
+  - support `REGEX:` in `contains` to trigger regular expression matching.
+- [`assertAttributeNotContain(locator,attrName,contains)`](../commands/web/assertAttributeNotContain(locator,attrName,contains)):
+  - renamed from `assertAttributeNotContains(locator,attrName,contains)` (grammatically displeasing)
+  - support `REGEX:` in `contains` to trigger regular expression matching.
+- [`assertTextNotContain(locator,text)`](../commands/web/assertTextNotContain(locator,text)):
+  - renamed from `assertTextNotContains(locator,text)` (grammatically displeasing)

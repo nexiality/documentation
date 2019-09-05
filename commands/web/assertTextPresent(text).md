@@ -27,7 +27,7 @@ This command asserts if the defined `text` is present on current page.
 - [`assertText(locator,text)`](assertText(locator,text))
 - [`assertTextContains(locator,text)`](assertTextContains(locator,text))
 - [`assertTextMatches(text,minMatch,scrollTo)`](assertTextMatches(text,minMatch,scrollTo))
-- [`assertTextNotContains(locator,text)`](assertTextNotContains(locator,text))
+- [`assertTextNotContain(locator,text)`](assertTextNotContain(locator,text))
 - [`assertTextNotPresent(text)`](assertTextNotPresent(text))
 - [`assertTextPresent(text)`](assertTextPresent(text))
 - [`verifyContainText(locator,text)`](verifyContainText(locator,text))

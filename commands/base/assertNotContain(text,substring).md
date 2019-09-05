@@ -1,6 +1,6 @@
 ---
 layout: default
-title: assertNotContains(text,substring)
+title: assertNotContain(text,substring)
 parent: base
 tags: command base
 comments: true
