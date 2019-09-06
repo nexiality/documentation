@@ -21,6 +21,9 @@ Color for highlighting difference can be modified via [`nexial.imageDiffColor`](
 
 The comparison uses [`nexial.imageTolerance`](../../systemvars/index#nexial.imageTolerance) as variance.
 
+**Note:**
+- To trim off images before comparing, use [`nexial.image.trimBeforeDiff`](../../systemvars/index#nexial.image.trimBeforeDiff)<br/>
+- Color for trimming can be modified vai [`nexial.image.trimColor`](../../systemvars/index#nexial.image.trimColor)
 
 ### Parameters
 - **var** - the variable name to store the image comparison metadata.

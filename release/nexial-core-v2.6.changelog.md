@@ -102,10 +102,10 @@ comments: true
   -specific). Use `saveTo` to determine the location of the processed file.
 - [`saveDiff(var,baseline,actual)`](../commands/image/saveDiff(var,baseline,actual)): added new System variable to 
    support trimming off empty spaces from images before comparing.
-   - [`nexial.image.trimBeforeDiff`](../systemvars/index#trimBeforeDiff): `true` (default is `false`) to trim off spaces
-      before comparing. 
-   - [`nexial.image.trimColor`](../systemvars/index#trimColor): empty space color to trim off. (default is `white`).
-      Available colors for trimming are `red`, `yellow`, `blue`, `green`, `black`, `white`.
+   - [`nexial.image.trimBeforeDiff`](../systemvars/index#nexial.image.trimBeforeDiff): `true` (default is `false`)
+      to trim off spaces before comparing. 
+   - [`nexial.image.trimColor`](../systemvars/index#nexial.image.trimColor): empty space color to trim off. 
+     (default is `white`). Available colors for trimming are `red`, `yellow`, `blue`, `green`, `black`, `white`.
 
 
 ### [json commands](../commands/json)
