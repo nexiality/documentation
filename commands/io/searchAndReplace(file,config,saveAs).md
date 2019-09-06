@@ -35,6 +35,17 @@ Notes:
 
 
 ### Example
+**Script**:<br/>
+![script](image/searchAndReplace_01.png)<br/>
+
+**Input File : Input.txt**<br/>
+![input](image/searchAndReplace_02.png)<br/>
+
+**Configuration File : config.txt**<br/>
+![config](image/searchAndReplace_03.png)<br/>
+`Search` and `replace` are the words in the document that are replaced by `find` and `modify` based on the configuration file.<br/><br/>
+**Output File : Output.txt**<br/>
+![output](image/searchAndReplace_04.png)
 
 
 ### See Also

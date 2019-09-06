@@ -11,7 +11,7 @@ comments: true
 This command parse `json` into a minified version of the same, and stored the compressed content as `var`. Logically and
 structurally speaking the content of `var` should be the same as that of `json`.
 
-For example, suppose the following JSON document (excerpt from <a href="https://json.org/example.html" class="external-link" target="nexial_link">https://json.org/example.html</a>):
+For example, suppose the following JSON document `Glossary.json` (excerpt from <a href="https://json.org/example.html" class="external-link" target="nexial_link">https://json.org/example.html</a>):
 ```json
 {
   "glossary": {
@@ -52,6 +52,8 @@ This command will compressed all the empty spaces and line separators:
 
 
 ### Example
+**Script**:<br/>
+![script](image/minify_01.png)
 
 
 ### See Also

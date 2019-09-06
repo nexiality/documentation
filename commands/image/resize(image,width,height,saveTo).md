@@ -23,7 +23,17 @@ save it to temporary location (System/OS -specific). Use `saveTo` to determine t
 - **saveTo** - the full path of the resized image.
 
 ### Example
+Script:<br/>
+![script](image/resize_01.png)<br/>
 
+Output:<br/>
+![output](image/resize_02.png)<br/>
+
+Following are images :-
+
+|Original Image          |Resized Image           |
+|------------------------|------------------------|
+|![](image/resize_03.png)|![](image/resize_04.png)|
 
 ### See Also
 - [`crop(image,dimension,saveTo)`](crop(image,dimension,saveTo))

@@ -15,13 +15,13 @@ at a relatively fewer lines of interest (which takes time and compute resource),
 cut down the processing time. As a side effect, this command will produce a file - i.e. `target` - which contains 
 only the _lines_ of interest. For example,
 
-`source` (shown only the first 50 lines)<br/>
+`source.txt` (shown only the first 50 lines)<br/>
 ![](image/filter_01.png)
 
 `matchPattern` (line contains 'qu')<br/>
 ![](image/filter_02.png)
 
-`target` (17 lines found with 'qu')<br/>
+`target.txt` (17 lines found with 'qu')<br/>
 ![](image/filter_03.png)
 
 
@@ -32,4 +32,5 @@ only the _lines_ of interest. For example,
 
 
 ### Example
-see above
+**Script**:<br/>
+![script](image/filter_04.png)

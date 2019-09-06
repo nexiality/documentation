@@ -14,7 +14,7 @@ node with only empty text (like `{ "name": "" }`). Set it to `true` to do so.
 
 Note that this command *also* minify the JSON, as a way to further "compact" it.
 
-Here are a few examples. Suppose the following JSON:
+For example, suppose the following JSON document `config.json`. Suppose the following JSON:
 ```json
 {
   "config": {
@@ -81,7 +81,8 @@ it is also compacted away (removed).
 
 
 ### Example
-
+**Script**:<br/>
+![script](image/compact_01.png)
 
 ### See Also
 - [`beautify(json,var)`](beautify(json,var))

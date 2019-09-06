@@ -26,7 +26,14 @@ command console, or a file within such directory is currently opened by another 
 
 
 ### Example
+**Script**:<br/>
+![script](image/rename_01.png)<br/>
 
+**Output**:<br/>
+![output](image/rename_02.png)<br/>
+
+After execution, folder name `Data` is changed to `UpdatedData`.<br/>
+![output](image/rename_03.png)
 
 ### See Also
 - [`copyFiles(source,target)`](copyFiles(source,target))
