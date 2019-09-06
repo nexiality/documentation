@@ -18,7 +18,11 @@ names will be saved as a list under the named specified by `var`.
 
 
 ### Example
-
+![data](image/saveVariablesByPrefix_01.png)<br/>
+**Script:**<br/>
+![script](image/saveVariablesByPrefix_02.png)<br/>
+**Output:**<br/>
+![output](image/saveVariablesByPrefix_03.png)
 
 ### See Also
 - [`saveVariablesByRegex(var,regex)`](saveVariablesByRegex(var,regex))

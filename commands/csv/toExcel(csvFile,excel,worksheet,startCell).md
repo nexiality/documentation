@@ -24,7 +24,13 @@ content will be overridden by the specified CSV content.
 
 
 ### Example
+**Source CSV file : CountyDetails.csv**<br/>
+![sourceCsv](image/toExcel_01.png)
 
+**Script**<br/>
+![script](image/toExcel_02.png)<br/>
+<br>**Output : CountyDetails.xlsx**<br/>
+![outputExcel](image/toExcel_03.png)
 
 ### See Also
 - [`fromExcel(excel,worksheet,csvFile)`](fromExcel(excel,worksheet,csvFile))

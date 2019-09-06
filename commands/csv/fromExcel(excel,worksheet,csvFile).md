@@ -19,7 +19,14 @@ name for the now-deprecated [`convertExcel(excel,worksheet,csvFile)`](convertExc
 
 
 ### Example
+**SampleData.xlsx**<br/>
+![excelFile](image/fromExcel_01.png)<br/>
+- We need the 'SalesOrders' in CSV format.<br/>
 
+**Script:**<br/>
+![script](image/fromExcel_02.png)<br/>
+**Output.csv**<br/>
+![outputCSV](image/fromExcel_03.png)
 
 ### See Also
 - [`toExcel(csvFile,excel,worksheet,startCell)`](toExcel(csvFile,excel,worksheet,startCell))

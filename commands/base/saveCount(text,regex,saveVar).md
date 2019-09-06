@@ -14,13 +14,19 @@ specified as `saveVar`.
 
 
 ### Parameters
-- ****text** - **the text (can be referenced via `${...}` syntax) that will be evaluated.
+- **text** - the text (can be referenced via `${...}` syntax) that will be evaluated.
 - **regex** - the regular expression use to evaluate against `text`.
 - **saveVar** - the variable name to which the matched portion of `text` will be saved. If no match is found, then 
   nothing will be saved and `saveVar` will be removed.
 
 
 ### Example
+Here, we count the number of words which start with a capital letter <br>
+<br>**Script:**<br/>
+![script](image/saveCount_01.png)
+<br><br>
+**Output:**<br/>
+![output file](image/saveCount_02.png)
 
 
 ### See Also

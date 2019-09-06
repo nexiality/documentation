@@ -28,6 +28,7 @@ Note that `encodedSource` may be represented as a file. Nexial will resolve the 
 
 
 ### Example
+- See [`base64`](base64(var,file)) command.
 
 
 ### See Also
