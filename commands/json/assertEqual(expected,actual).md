@@ -112,8 +112,8 @@ generated output. Since all 3 report types are set to `true`, there would be 3 f
 
 Having the location to this file is useful because now we can further enhance the generated HTML with our own CSS. 
 Suppose we have the following CSS in the `data` directory:
-```css
 
+```css
 table.compare-result-table {
     font-family:    Tahoma, sans-serif;
     padding:        5px;
@@ -135,6 +135,11 @@ table.compare-result-table thead th {
     border-bottom:  1px #bbb solid;
     vertical-align: text-top;
 }
+
+.compare-result-table tbody td span.diff-highlight {
+    background: #000 !important;
+    color: #fff;
+}
 ```
 
 We can prepend this CSS to the generated HTML report, like so:
@@ -148,6 +153,10 @@ The execution output shows links to the generated reports:
 Since the HTML has been "enhanced", when we click on the "html report" link, we'll see a more visually appealing HTML:
 
 ![](image/assertEqual_09.png)
+
+As a contrast, here's how the same HTML looks like by default (i.e. without additional CSS enhnacements):
+
+![](image/assertEqual_10.png)
 
 
 ### See Also

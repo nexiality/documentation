@@ -113,12 +113,12 @@ comments: true
   comparison logic when `expected` and `actual` do not have the same nodes or node names.
 - [`assertEquals(expected,actual)`](../commands/json/assertEqual(expected,actual)): add new System variable to support
   CSV and HTML report format:
-  - [`nexial.json.compareResultsAsJSON`](../systemvars/index#nexial.json.compareResultsAsJSON): `true` (default) to generate 
-    comparison result as JSON.
+  - [`nexial.json.compareResultsAsJSON`](../systemvars/index#nexial.json.compareResultsAsJSON): `true` (default) to 
+    generate comparison result as JSON.
   - [`nexial.json.compareResultsAsCSV`](../systemvars/index#nexial.json.compareResultsAsCSV): `true` (default is `false`)
     to generate comparison result as CSV.
-  - [`nexial.json.compareResultsAsHTML`](../systemvars/index#nexial.json.compareResultsAsHTML): `true` (default is `false`)
-    to generate comparison result as HTML.
+  - [`nexial.json.compareResultsAsHTML`](../systemvars/index#nexial.json.compareResultsAsHTML): `true` 
+    (default is `false`) to generate comparison result as HTML.
 
 
 ### [localdb commands](../commands/localdb)
@@ -163,7 +163,7 @@ comments: true
   multiple select options.
 - [`assertSingleSelect(locator)`](../commands/web/assertSingleSelect(locator)): use to assert the select element 
   support single select option.
-- [`saveISTDivsAsCsv`]: 
+- [`saveInifiniteDivsAsCsv`]: 
   - **NEW** command to export data from an Infinite Scroll Table (IST) to CSV. This is initial implementation and 
     further testing is yet to complete. Documentation forthcoming.
   - improved on scanning and data collection logic. Now works reliably over 500 rows of infinite scroll table.
@@ -172,6 +172,7 @@ comments: true
 - [`saveInfiniteTableAsCsv`] and [`saveInfiniteDivsAsCsv`]: supports long running headers that are rendered off-screen
 - [`screenshot(file,locator`](../commands/web/screenshot(file,locator)): **NEW** command to capture the graphical 
   rendering of a Web element based on specified `locator`.
+  - automatically upload screenshot to cloud.
 - [`assertAttributeContains(locator,attrName,contains)`](../commands/web/assertAttributeContains(locator,attrName,contains)):
   - support `REGEX:` in `contains` to trigger regular expression matching.
 - [`assertAttributeNotContain(locator,attrName,contains)`](../commands/web/assertAttributeNotContain(locator,attrName,contains)):

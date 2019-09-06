@@ -24,13 +24,16 @@ content will be overridden by the specified CSV content.
 
 
 ### Example
-**Source CSV file : CountyDetails.csv**<br/>
+Suppose we want to import the following CSV - `example_3.csv` - to Excel:<br/>
 ![sourceCsv](image/toExcel_01.png)
 
 **Script**<br/>
-![script](image/toExcel_02.png)<br/>
-<br>**Output : CountyDetails.xlsx**<br/>
+The script shows that we are import this CSV file to the "DemoSheet" worksheet, starting at position D10.
+![script](image/toExcel_02.png)
+
+**Output : CountyDetails.xlsx**<br/>
 ![outputExcel](image/toExcel_03.png)
+
 
 ### See Also
 - [`fromExcel(excel,worksheet,csvFile)`](fromExcel(excel,worksheet,csvFile))

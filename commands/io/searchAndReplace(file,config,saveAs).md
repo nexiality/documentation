@@ -35,17 +35,20 @@ Notes:
 
 
 ### Example
+**Input.txt**:<br/>
+![input](image/searchAndReplace_02.png)
+
+**config.txt**:<br/>
+This is the configuration for the search-and-replace routine.<br/>
+![config](image/searchAndReplace_03.png)
+
 **Script**:<br/>
-![script](image/searchAndReplace_01.png)<br/>
+![script](image/searchAndReplace_01.png)
 
-**Input File : Input.txt**<br/>
-![input](image/searchAndReplace_02.png)<br/>
-
-**Configuration File : config.txt**<br/>
-![config](image/searchAndReplace_03.png)<br/>
-`Search` and `replace` are the words in the document that are replaced by `find` and `modify` based on the configuration file.<br/><br/>
 **Output File : Output.txt**<br/>
+The words `search` and `replace` in `Input.txt` are replaced by `find` and `modify` respectively.
 ![output](image/searchAndReplace_04.png)
 
 
 ### See Also
+- [`filter(source,target,matchPattern)`](filter(source,target,matchPattern))

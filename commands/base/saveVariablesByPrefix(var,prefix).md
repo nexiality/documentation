@@ -18,11 +18,16 @@ names will be saved as a list under the named specified by `var`.
 
 
 ### Example
-![data](image/saveVariablesByPrefix_01.png)<br/>
+Suppose we have the following data variables:<br/>
+![data](image/saveVariablesByPrefix_01.png)
+
 **Script:**<br/>
-![script](image/saveVariablesByPrefix_02.png)<br/>
+![script](image/saveVariablesByPrefix_02.png)
+
 **Output:**<br/>
+Observe that the extracted variable names as a list.
 ![output](image/saveVariablesByPrefix_03.png)
+
 
 ### See Also
 - [`saveVariablesByRegex(var,regex)`](saveVariablesByRegex(var,regex))

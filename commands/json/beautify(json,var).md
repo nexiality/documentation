@@ -58,4 +58,5 @@ This command will beautify/reformat the JSON content as follows:
 ![script](image/beautify_01.png)
 
 ### See Also
+- [`compact(var,json,removeEmpty)`](compact(var,json,removeEmpty))
 - [`minify(json,var)`](minify(json,var))

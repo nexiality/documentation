@@ -19,9 +19,11 @@ names will be saved as a list under the named specified by `var`.
 
 ### Example
 **Script:**<br/>
-![script](image/saveVariablesByRegex_01.png)<br/>
+![script](image/saveVariablesByRegex_01.png)
+
 **Output:**<br/>
-![output log](image/saveVariablesByRegex_02.png)<br/>
+Observe that the extracted variable names as a list.
+![output log](image/saveVariablesByRegex_02.png)
 
 ### See Also
 - [`saveVariablesByPrefix(var,prefix)`](saveVariablesByPrefix(var,prefix))

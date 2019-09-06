@@ -14,7 +14,7 @@ node with only empty text (like `{ "name": "" }`). Set it to `true` to do so.
 
 Note that this command *also* minify the JSON, as a way to further "compact" it.
 
-For example, suppose the following JSON document `config.json`. Suppose the following JSON:
+For example, suppose we have the following JSON document named `config.json`:
 ```json
 {
   "config": {
@@ -49,7 +49,7 @@ better visualization):
 }
 ```
 
-(Note that in actuality the above JSON will also be [`minify(json,var)`](minify(json,var)).)
+(Note that in actuality Nexial [`minify(json,var)`](minify(json,var)) the above JSON.)
 
 Observe that the `location2` and `config` nodes have been removed. These nodes do not have any content hence were 
 compacted away. The node `dataListing` was an array with some empty text, a null and a empty node. Since `removeEmpty`
@@ -83,6 +83,7 @@ it is also compacted away (removed).
 ### Example
 **Script**:<br/>
 ![script](image/compact_01.png)
+
 
 ### See Also
 - [`beautify(json,var)`](beautify(json,var))

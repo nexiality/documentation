@@ -8,10 +8,10 @@ comments: true
 
 ### Description
 This command automatically collects cell data found a HTML table, as represented by `locator`, and save them as CSV 
-into `file`. If the target table contains a header row, which is usually composed through the `<thead><tr><th>...` or 
-`<tr><th>...` construct, it will be collected as the header of the CSV file as well. As with most CSV-related features
-in Nexial, the field delimiter is determined via the [`nexial.textDelim`](../../systemvars/index#nexial.textDelim) 
-System variable.
+into `file`. If the target table contains a header row, which is usually composed through the 
+`<thead><tr><th>...</th></tr></thead>` or `<tr><th>...</th></tr>` construct, it will be collected as the header of the 
+CSV file as well. As with most CSV-related features in Nexial, the field delimiter is determined via the 
+[`nexial.textDelim`](../../systemvars/index#nexial.textDelim) System variable.
 
 It is not uncommon for a HTML table to contain more than one "page" worth of data, and additional "pages" of data are 
 accessed via a designated web element (button, anchor, etc.). This technique is commonly known as pagination.  By 
@@ -29,22 +29,18 @@ In this case, the highlighted control (`>`) would be the `nextPageLocator`, whic
 `//button[contains(@class,'mat-paginator-navigation-next')]` or `class=mat-paginator-navigation-next`.
 
 By specifying the appropriate `nextPageLocator`, this command will automatically forward through the subsequent pages to
-collect all the data. Below is a sample of the CSV file generated via this command:<br/>
+collect all the data. Nexial will auto-forward through all the pages until the specified `nextPageLocator` no longer 
+resolve to a Web element, or the resolved Web element is no longer active (i.e. disabled). Below is a sample of the CSV 
+file generated via this command - note that all 20 rows are collected through a single command:<br/>
 
 ![](image/saveTableAsCsv_02.png)
 
 Note that:
-- `nextPageLocator` is optional. Specifying it as `(empty)` or `(blank)` would disable any pagination automation.
+- The `nextPageLocator` is optional. Specifying it as `(empty)` or `(blank)` would disable any pagination automation.
 - Nexial will not attempt to "rewind" the pagination back to the initial or first page.
-- There are a number of System variables that may affect how data is collected into CSV:
-  - [`nexial.web.saveGrid.deepScan`](../../systemvars/index#nexial.web.saveGrid.deepScan)
-  - [`nexial.web.saveGrid.header.input`](../../systemvars/index#nexial.web.saveGrid.header.input)
-  - [`nexial.web.saveGrid.header.image`](../../systemvars/index#nexial.web.saveGrid.header.image)
-  - [`nexial.web.saveGrid.data.input`](../../systemvars/index#nexial.web.saveGrid.data.input)
-  - [`nexial.web.saveGrid.data.image`](../../systemvars/index#nexial.web.saveGrid.data.image)
-  - [`nexial.web.saveGrid.data.trim`](../../systemvars/index#nexial.web.saveGrid.data.trim)
-  - [`nexial.web.saveGrid.end.trim`](../../systemvars/index#nexial.web.saveGrid.end.trim)
-  
+
+{% include _deepscan.md %}
+
 
 ### Parameters
 - **locator** - locator of the target table component.
@@ -57,5 +53,6 @@ See above
 
 
 ### See Also
-- [`assertTable(locator,row,column,text)`](assertTable(locator,row,column,text))
 - [`saveDivsAsCsv(headers,rows,cells,nextPage,file)`](saveDivsAsCsv(headers,rows,cells,nextPage,file))
+- [`saveInfiniteDivsAsCsv(config,file)`](saveInfiniteDivsAsCsv(config,file))
+- [`saveInfiniteTableAsCsv(config,file)`](saveInfiniteTableAsCsv(config,file))

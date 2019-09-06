@@ -19,19 +19,25 @@ read in the respective binary form, thus allowing the base64 encoding to be file
 
 
 ### Example
-**Source Text File**<br/>
-![source](image/base64_01.png)<br/>
+**SampleText.txt**<br/>
+![source](image/base64_01.png)
+
 **Script:**
-- **Step 1**:- Using the base64 command to encode the source text file and store the base64 sequence in a variable.<br/>
-- **Step 2**:- Using the [`writeBase64decode`](writeBase64decode(encodedSource,decodedTarget,append)) command to decode the 
-  base64 sequence and create an output file.<br/>
-- **Step 3**:- Using the [`compare`](compare(expected,actual,failFast)) command to compare the source and output files.<br/><br/>
-![script](image/base64_02.png)<br/>
+- **Step 1**: Using this `base64(var,file)` command to encode the text file and store the resulting base64 sequence in 
+  `byteContent`.
+- **Step 2**: Using the [`writeBase64decode`](writeBase64decode(encodedSource,decodedTarget,append)) command to 
+  decode the base64 sequence and write it to `SampleTextOutput.txt`.
+- **Step 3**: Using the [`compare`](compare(expected,actual,failFast)) command to compare the source and output files.<br/>
+![script](image/base64_02.png)
 
 **Output:**<br/>
-![output](image/base64_03.png)<br/>
+![output](image/base64_03.png)
+
 **Comparison Result:**<br/>
+The source and output file are identical.
 ![log report](image/base64_04.png)
+
 
 ### See Also
 - [`base64encode`](../../expressions/TEXTexpression)
+- [`writeBase64decode(encodedSource,decodedTarget,append)`](writeBase64decode(encodedSource,decodedTarget,append))
