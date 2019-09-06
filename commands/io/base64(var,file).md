@@ -29,9 +29,9 @@ read in the respective binary form, thus allowing the base64 encoding to be file
 ![script](image/base64_02.png)<br/>
 
 **Output:**<br/>
-![output](image/base64_04.png)<br/>
+![output](image/base64_03.png)<br/>
 **Comparison Result:**<br/>
-![log report](image/base64_05.png)
+![log report](image/base64_04.png)
 
 ### See Also
 - [`base64encode`](../../expressions/TEXTexpression)
