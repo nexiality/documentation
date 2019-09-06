@@ -113,12 +113,12 @@ comments: true
   comparison logic when `expected` and `actual` do not have the same nodes or node names.
 - [`assertEquals(expected,actual)`](../commands/json/assertEqual(expected,actual)): add new System variable to support
   CSV and HTML report format:
-  - [`nexial.json.compareResultsAsJSON`](../systemvars/index#compareResultsAsJSON): `true` (default) to generate 
+  - [`nexial.json.compareResultsAsJSON`](../systemvars/index#nexial.json.compareResultsAsJSON): `true` (default) to generate 
     comparison result as JSON.
-  - [`nexial.json.compareResultsAsCSV`](../systemvars/index#compareResultsAsCSV): `true` (default is `false`) to 
-    generate comparison result as CSV.
-  - [`nexial.json.compareResultsAsHTML`](../systemvars/index#compareResultsAsHTML): `true` (default is `false`) to 
-    generate comparison result as HTML.
+  - [`nexial.json.compareResultsAsCSV`](../systemvars/index#nexial.json.compareResultsAsCSV): `true` (default is `false`)
+    to generate comparison result as CSV.
+  - [`nexial.json.compareResultsAsHTML`](../systemvars/index#nexial.json.compareResultsAsHTML): `true` (default is `false`)
+    to generate comparison result as HTML.
 
 
 ### [localdb commands](../commands/localdb)
