@@ -6,7 +6,7 @@ tags: release nexial-core 1.8
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-1.8" class="external-link" target="_nexial_link">Release 1.8</a>
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v1.8_0369" class="external-link" target="_nexial_link">Release 1.8</a>
 2019-01-04
 
 

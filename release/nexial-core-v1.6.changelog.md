@@ -6,7 +6,7 @@ tags: release nexial-core 1.6
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-1.6" class="external-link" target="_nexial_link">Release 1.6</a>
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v1.6_0260" class="external-link" target="_nexial_link">Release 1.6</a>
 2018-10-08
 
 

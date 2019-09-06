@@ -6,7 +6,7 @@ tags: release nexial-core 1.9
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-1.9" class="external-link" target="_nexial_link">Release 1.9</a>
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v1.9_0399" class="external-link" target="_nexial_link">Release 1.9</a>
 2019-02-04
 
 

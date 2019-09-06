@@ -6,7 +6,7 @@ tags: release nexial-core 1.7
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-1.7" class="external-link" target="_nexial_link">Release 1.7</a>
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v1.7_0318" class="external-link" target="_nexial_link">Release 1.7</a>
 2018-11-13
 
 

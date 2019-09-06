@@ -6,7 +6,7 @@ tags: release nexial-core 2.5
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v2.5_599" class="external-link" target="_nexial_link">Release 2.5</a>
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v2.5_0599" class="external-link" target="_nexial_link">Release 2.5</a>
 2019-08-07
 
 
