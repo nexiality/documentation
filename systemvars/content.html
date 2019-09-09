@@ -2440,6 +2440,23 @@
       </td>
     </tr>
     <tr>
+      <td nowrap="nowrap" class="varname">
+          <a id="nexial.browser.electron.forceTerminate"><code>nexial.browser.electron.forceTerminate</code></a>
+      </td>
+      <td>boolean</td>
+      <td>false</td>
+      <td>false</td>
+      <td>
+          <b>For Electron application only</b>
+
+          For electron application, it is possible to forcefully terminating the application (AUT) when
+          <li><a href="../commands/web/closeAll()">web &raquo; <code>closeAll()</code></a></li> is invoked or when the
+          underlying `chromedriver` is shutting down.. Depending on the target application, it may be necessary to do
+          so in order to ensure all previously in-use resources are released for future use. To forcefully terminate
+          the target application, set the System variable to <code>true</code> (default is <code>false</code>).
+      </td>
+    </tr>
+    <tr>
       <td nowrap="nowrap" class="varname"><a id="nexial.browser.logElectron"><code>nexial.browser.logElectron</code></a></td>
       <td>boolean</td>
       <td>false</td>
@@ -3535,4 +3552,3 @@
 </table>
 
 <br/>
-<hr/>

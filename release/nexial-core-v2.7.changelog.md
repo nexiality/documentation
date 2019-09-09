@@ -25,12 +25,18 @@ comments: true
 
 
 ### [Nexial Expression](../expressions)
+- fix code to support negative number parsing
 
 
 ### [aws.vision commands](../commands/aws.vision)
 
 
 ### [base commands](../commands/base)
+
+
+### [csv commands](../commands/csv)
+- [`compareExtended`](../commands/csv/compareExtended(var,profile,expected,actual)): fix code to support negative 
+  number parsing
 
 
 ### [desktop commands](../commands/desktop)
@@ -49,3 +55,9 @@ comments: true
 
 
 ### [web commands](../commands/web)
+- [web &raquo; `closeAll`](../commands/web/closeAll()): A **NEW** System variable  
+  [`nexial.browser.electron.forceTerminate`](../systemvars/index#nexial.browser.electron.forceTerminate) to forcefully 
+  terminate the AUT executable - i.e. the electron application as specified via 
+  [`nexial.browser.electron.appLocation`](../systemvars/index#nexial.browser.electron.appLocation) - after the 
+  underlying chromedriver shuts down or when [web &raquo; `closeAll`](../commands/web/closeAll()) is invoked.
+
