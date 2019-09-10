@@ -19,8 +19,15 @@ a guarantee to terminate or abandon web sessions.  Check [`webcookie`](../webcoo
 regarding cookies.
 
 
+#### For Electron Applications Only
+For electron application, it is possible to forcefully terminating the application (AUT) when this command is invoked.
+Depending on the target application, it may be necessary to do so in order to ensure all previously in-use resources
+are released for future use. To forcefully terminate the target application, set the System variable
+[`nexial.browser.electron.forceTerminate`](../../systemvars/index#nexial.browser.electron.forceTerminate) to `true` 
+(default is `false`)
+
+
 ### Parameters
-- NONE
 
 
 ### Example
