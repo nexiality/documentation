@@ -8,7 +8,8 @@ redirect_from:
   - /expressions
 ---
 
-
+##### ... jump to [Available Expressions](#available-expressions)
+<br/>
 ![](image/index_01.jpg)<br/>
 Every so often, one would find oneself, as part of automation, the need to take _a thing and turn it into something 
 else_.  This is common when dealing with multiple interfaces or dealing with service-oriented testing.  The need to 
@@ -27,8 +28,7 @@ transform, or to manipulate, data can be handled in multiple ways:
 The design intent of Nexial expression is to create a fluent approach towards transforming information, be it a form 
 of input or output, that provide a consistent user experience and a rich, expressive platform to manipulate information 
 on-the-fly.  Simply put, it's a way (and hopefully a simpler way) to express the transformation of information 
-embedded within a single command execution. Expression can be "type-aware", "data-transformative" and can be 
-nested/chained.
+embedded within a single command execution. Nexial Expression is "type-aware", "nestable" and "data-transformational".
 
 
 ### Formal Notation

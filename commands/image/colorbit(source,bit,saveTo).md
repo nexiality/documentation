@@ -22,10 +22,10 @@ save it to temporary location (System/OS -specific). Use `saveTo` to determine t
 
 
 ### Example
-Script:<br>
+Script:<br/>
 ![script](image/colorbit_01.png)
 
-Output:<br>
+Output:<br/>
 ![output](image/colorbit_02.png)
 
 Following are images after downgrading colorbit:-

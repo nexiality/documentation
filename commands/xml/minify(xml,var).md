@@ -36,12 +36,14 @@ Note:- If XML prolog is missing, it will add default XML prolog as `<?xml versio
 - **xml** - the XML document or file
 - **var** - the variable name to store the compressed content.
 
+
 ### Example
-Script-<br>
+Script:<br/>
 ![](image/minify(xml,var)_01.png)
 
-Output-<br>
+Output:<br/>
 ![](image/minify(xml,var)_02.png)
+
 
 ### See Also
 - [`beautify(xml,var)`](beautify(xml,var)))

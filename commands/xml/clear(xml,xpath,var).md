@@ -17,12 +17,14 @@ This command search against specified `xml` via `xpath`, and clear the content o
 - **xpath** - the XPATH to specify the target area of impact
 - **var** - the variable name to store the beautified content.
 
+
 ### Example
-Script:-<br>
+Script:<br/>
 ![script](image/clear_01.png)
 
-Output:-<br>
+Output:<br/>
 ![](image/clear_02.png)
+
 
 ### See Also
 - [`append(xml,xpath,content,var)`](append(xml,xpath,content,var))

@@ -61,7 +61,7 @@ existing file location.
   - [LIST &raquo; `replaceItem`](../expressions/LISTexpression#replaceitemsearchforreplacewith): fix to support empty
     item replacement
 
-- **[WEB Expression](../expressions/WEBexpression)**:    **NEW** expression for web automation<br>
+- **[WEB Expression](../expressions/WEBexpression)**:    **NEW** expression for web automation<br/>
   - **`click(locator)`** : This clicks on element specified via locator.    
   - **`deselect(locator,option1,option2,option3...)`** : deselects one or multiple options from the listbox.
   - **`fetchAsCsv(locator1,locator2,locator3...)`** :  stores the values of web elements specified via locators in 

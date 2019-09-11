@@ -64,7 +64,7 @@ In addition to the above, one may also access the individual execution report (s
             src="<YOUR_S3_LOCATION_AS_URL>/executionsummary.html?project=INSERT_YOUR_PROJECT_NAME_HERE">
     </iframe>
     ```
-    **replace src url with your `executionsummary.html` url**<br>
+    **replace src url with your `executionsummary.html` url**<br/>
     **replace `INSERT_YOUR_PROJECT_NAME_HERE` with your project name**<br/>
 	   **replace `<YOUR_S3_LOCATION_AS_URL>` with your project name**<br/>
         

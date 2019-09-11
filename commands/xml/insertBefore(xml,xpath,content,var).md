@@ -25,11 +25,12 @@ If specified `xpath` refers to attribute of `xml`, Nexial will insert new attrib
 - **content** - the content to insert before, may be text content, attribute value or well formed XML snippet
 - **var** - the variable name to store the beautified content.
 
+
 ### Example
-Script:-<br>
+Script:<br/>
 ![script](image/insertBefore_01.png)
 
-Output:-<br>
+Output:<br/>
 ![](image/insertBefore_02.png)
 
 ![](image/insertBefore_03.png)

@@ -37,10 +37,10 @@ Note:- If XML prolog is missing, it will add default XML prolog as `<?xml versio
 - **var** - the variable name to store the beautified content.
 
 ### Example
-Script-<br>
+Script:<br/>
 ![](image/beautify(xml,var)_01.png)
 
-Output-<br>
+Output:<br/>
 ![](image/beautify(xml,var)_02.png)
 
 ### See Also

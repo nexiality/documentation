@@ -23,14 +23,14 @@ This command thus requires the following locators in order to effectively and ac
 data grid:
 
 - `headers`: the **locator** that represents all instances of "header cells" (NOTE: not the "row" that houses the 
-  headers).
+  headers). If no header is available, use `(null)`, `(empty)` or `(blank)` instead.
 - `rows`: the **locator** that represents each of the data rows.
 - `cells`: the **relative locator** that represents all the cells within one row. This locator will be applied within 
   the hierarchy of a "row" instance, which is based on the `rows` locator.
 - `nextPage`: the **locator** that would activate the subsequent page view of the same data grid. This parameter is 
-  optional as not all data grid supports the use of pagination. If pagination is not implemented, use `(empty)` or 
-  `(blank)` for this parameter. If `nextPage` locator is provided, Nexial will automatically "forward" to the next page 
-  view when the data of the current page is collected. 
+  optional as not all data grid supports the use of pagination. If pagination is not implemented, use `(null)`, 
+  `(empty)` or `(blank)` for this parameter. If `nextPage` locator is provided, Nexial will automatically "forward" to 
+  the next page view when the data of the current page is collected. 
 - `file`: the fully qualified path for the CSV output.
 
 The CSV output will be constructed using field delimiter as defined by 

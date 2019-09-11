@@ -26,6 +26,7 @@ comments: true
 
 ### [Nexial Expression](../expressions)
 - fix code to support negative number parsing
+- [TEXT expression]: code fix to handle escaped delimiter (meaning same character as [`nexial.textDelim`](../systemvars/index#nexial.textDelim))
 
 
 ### [aws.vision commands](../commands/aws.vision)
@@ -60,4 +61,12 @@ comments: true
   terminate the AUT executable - i.e. the electron application as specified via 
   [`nexial.browser.electron.appLocation`](../systemvars/index#nexial.browser.electron.appLocation) - after the 
   underlying chromedriver shuts down or when [web &raquo; `closeAll`](../commands/web/closeAll()) is invoked.
+- [`saveDivsAsCsv(headers,rows,cells,nextPage,file)`](../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)):
+  enable the use of `(null)`, `(empty)` or `(blank)` for `headers` and `nextPage` to omit the use of these parameters.
+- [`saveTableAsCsv(locator,nextPageLocator,file)`](../commands/web/saveTableAsCsv(locator,nextPageLocator,file)):
+  enable the use of `(null)`, `(empty)` or `(blank)` for `nextPage` to omit the use of this parameter.
+- [`saveInfiniteDivsAsCsv(config,file)`](../commands/web/saveInfiniteDivsAsCsv(config,file)):
+  enable the use of `(null)`, `(empty)` or `(blank)` for `header-cell` to omit the use of this `config`.
+- [`saveInfiniteTableAsCsv(config,file)`](../commands/web/saveInfiniteTableAsCsv(config,file)):
+  enable the use of `(null)`, `(empty)` or `(blank)` for `header-cell` to omit the use of this `config`.
 

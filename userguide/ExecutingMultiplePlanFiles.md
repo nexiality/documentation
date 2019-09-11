@@ -12,11 +12,11 @@ plan files containing multiple scripts. This will make life easier for a team to
 
 ### Execute multiple plan files
 To execute multiple plan files, run the same command which is used to run one plan that is **nexial.cmd -plan \<plan file1>,
-\<plan file2>,\<plan file3>**. Make sure that plan file names must be **comma(,)** separated.<br>
+\<plan file2>,\<plan file3>**. Make sure that plan file names must be **comma(,)** separated.<br/>
  
 Let's have a look at example.
 If you want run two test plans demo and demo1 residing in same folder, run these two plan files like **nexial.cmd -plan 
-C:\projects\demo\artifact\plan\demo.xlsx,C:\projects\demo\artifact\plan\demo1.xlsx**. See the image.<br>
+C:\projects\demo\artifact\plan\demo.xlsx,C:\projects\demo\artifact\plan\demo1.xlsx**. See the image.<br/>
 ![](image/ExecutingMultiplePlanFiles_01.png)
 
 ### Insights of execution with multiple plans

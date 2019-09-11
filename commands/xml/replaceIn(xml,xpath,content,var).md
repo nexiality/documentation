@@ -10,7 +10,7 @@ comments: true
 ### Description
 This command search against specified `xml` via `xpath`, and replace `content` against all matching instances' content. The final 
 (modified) XML is then stored in a data variable specified as `var`. Note that this command replaces content of the matching 
-XML nodes, not the matched nodes. <br>
+XML nodes, not the matched nodes. <br/>
 If `xpath` refers to attribute of `xml`, it will replace value of all matching attributes with specified `content`.
 
 
@@ -20,11 +20,12 @@ If `xpath` refers to attribute of `xml`, it will replace value of all matching a
 - **content** - the content to replace, may be text content, attribute value or well formed XML snippet
 - **var** - the variable name to store the beautified content.
 
+
 ### Example
-Script:-<br>
+Script:<br/>
 ![script](image/replaceIn_01.png)
 
-Output:-<br>
+Output:<br/>
 ![](image/replaceIn_02.png)
 
 ![](image/replaceIn_03.png)

@@ -20,14 +20,16 @@ This command search against specified `xml` via `xpath`, and append `content` to
 - **content** - the content to append, may be text content, attribute value or well formed XML snippet
 - **var** - the variable name to store the beautified content.
 
+
 ### Example
-Script:-<br>
+Script:<br/>
 ![script](image/append_01.png)
 
-Output:-<br>
+Output:<br/>
 ![](image/append_02.png)
 
 ![](image/append_03.png)
+
 
 ### See Also
 - [`append(xml,xpath,content,var)`](append(xml,xpath,content,var))

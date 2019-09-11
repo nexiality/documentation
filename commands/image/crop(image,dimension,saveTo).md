@@ -47,7 +47,7 @@ Output:<br/>
 <img src="image/crop_03.png" style="border-radius:unset;box-shadow:none"/>
 <br/>
 
-**Cropped Image**:-<br>
+**Cropped Image**:<br/>
 <img src="image/crop_04.png" style="border-radius:unset;box-shadow:none"/>
 <br/>
 

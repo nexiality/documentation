@@ -20,18 +20,18 @@ Creating Project Structure
 				Open the command prompt and change the current directory to the "bin" directory under the Nexial installation directory.<br/>
 				a. To do this, enter "cd .." until it only displays "C:\\>"<br/>
 				b. Once in the C drive, enter "cd projects\nexial-core\bin"
-				<br><img src="image/SettingUp_01.gif"/>
+				<br/><img src="image/SettingUp_01.gif"/>
             </li>
 			<li>
 			    From here, enter "nexial-project.cmd MyFirstProject"
 			</li>
 			<li>
 			    If everything works, then you should see the message "creating project home at ..." and "DONE"
-				<br><img src="image/InstallingNexial_08.png"/>
+				<br/><img src="image/InstallingNexial_08.png"/>
 			</li>
 			<li>
 			    You should see the following directory created, along with various files in it:<br/>
-				<br><img src="image/InstallingNexial_09.png"/>
+				<br/><img src="image/InstallingNexial_09.png"/>
 			</li>
         </ol>
 		Do not close the command prompt as you will need this later.
