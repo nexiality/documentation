@@ -8,13 +8,28 @@ comments: true
 
 
 ### Description
-This command is to execute the desired program or script, which is expected to be available on the test machine. If the
+This command is to execute the desired program or script, which is expected to be available on the test harness. If the
 specified program or script is not found, this command will consider such condition as **FAIL**.
 
 One can consider using this command as a technique to incorporate existing tests that are developed via a different
-toolset, or to update client application via silent installation.  The standard output of the specified program or
+toolset or to update target application via silent installation.  The standard output of the specified program or
 script will be saved to the output directory, and made available on the output file. This output file can be derived 
-via [`nexial.external.output`](../../systemvars/index#nexial.external.output) System variable.
+via [`nexial.external.output`](../../systemvars/index#nexial.external.output) System variable. The same output
+file - which will be a combination of standard out and standard error - will be made available as a link in the 
+output file as well (see screenshot in the Example section below).
+
+Nexial supports the execution of parameterized commands over sub-shell (`cmd.exe` for Windows, `sh` or `bash` for 
+*NIX and MacOSX) via the use of single quotes. For example:
+
+```
+/bin/bash -c '~/tools/AwesomeTool*/bin/MyTool.sh param1 param2 param3'
+```
+
+By using the `'...'` syntax, Nexial will pass the parameterized command wrapped within the single quotes to the 
+sub-shell (in this case, `bin/bash`) to interpret. The `bash` program will in turn expand its input and then execute it 
+within its command space. This provides the capability to expand out `~/tools/AwesomeTool*/bin/MyTool.sh` to its 
+proper/physical path before executing it. This is a great way to execute commands where its exact location cannot be 
+determined at the time of automation.
 
 
 ### Parameters

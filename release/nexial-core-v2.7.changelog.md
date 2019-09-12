@@ -26,7 +26,15 @@ comments: true
 
 ### [Nexial Expression](../expressions)
 - fix code to support negative number parsing
-- [TEXT expression]: code fix to handle escaped delimiter (meaning same character as [`nexial.textDelim`](../systemvars/index#nexial.textDelim))
+- [TEXT expression](../expressions/TEXTexpression): code fix to handle escaped delimiter (meaning same character as 
+  [`nexial.textDelim`](../systemvars/index#nexial.textDelim))
+- [`nexial.expression.resolveUrl`](../systemvars/index#nexial.expression.resolveUrl): change its default value to
+  `false` to minimize impact to existing automation. This will impact some (likely small subset) of automation that
+  utilize [TEXT expression](../expressions/TEXTexpression) to automate the fetching of HTTP-based resources.
+- [TEXT &raquo; `xml`](../expressions/TEXTexpression#xml): **NEW** operation to transform a 
+  [TEXT expression](../expressions/TEXTexpression) to a [XML expression](../expressions/XMLexpression).
+- [TEXT &raquo; `json`](../expressions/TEXTexpression#json): **NEW** operation to transform a 
+  [TEXT expression](../expressions/TEXTexpression) to a [JSON expression](../expressions/JSONexpression).
 
 
 ### [aws.vision commands](../commands/aws.vision)
@@ -41,6 +49,15 @@ comments: true
 
 
 ### [desktop commands](../commands/desktop)
+
+
+### [external commands](../commands/external)
+- [`runProgram(programPathAndParams)`](../commands/external/runProgram(programPathAndParams)): support the execution 
+  of sub-shell with parameterized commands (*NIX and Mac only). The parameterized command should be wrapped with single 
+  quotes.
+- [`runProgramNoWait(programPathAndParams)`](../commands/external/runProgramNoWait(programPathAndParams)): support 
+  the execution of sub-shell with parameterized commands (*NIX and Mac only). The parameterized command should be 
+  wrapped with single quotes.
 
 
 ### [image commands](../commands/image)
