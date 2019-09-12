@@ -17,7 +17,7 @@ Not to be confused with another built-in function, $(date), which can be used to
 {% include_relative _dateformat.md %}
 
 In cases where only year and quarter information should be considered, use `y`for year and `q` for quarter information. 
-For example, `${sysdate|lastQtr|yyyy-q}` will render the last quarter in the format of "4_digit_year-quarter".
+For example, `$(sysdate|lastQtr|yyyy-q)` will render the last quarter in the format of "4_digit_year-quarter".
 
 
 ### Available Functions
