@@ -88,8 +88,8 @@ Read more about pre-configured emails and conditional notifications on the [Even
        </li><br/>
     <li>Define the recipient email or comma separated list of recipients via the <a href="../systemvars/#nexial.mailTo"> 
     nexial.mailTo</a> System variable.</li><br/>
-    <li>[<code>OPTIONAL</code>] Use <a href="../systemvars/#nexial.mailSubject"> nexial.mailSubject</a>, <a href="../systemvars/
-    #nexial.mailHeader"> nexial.mailHeader</a> and <a href="../systemvars/#nexial.mailFooter"> nexial.mailFooter</a>
+    <li>[<code>OPTIONAL</code>] Use <a href="../systemvars/#nexial.mailSubject"> nexial.mailSubject</a>, <a href="../systemvars/#nexial.mailHeader"> nexial.mailHeader</a> 
+    and <a href="../systemvars/#nexial.mailFooter"> nexial.mailFooter</a>
     system variables to add subject, header and footer to the email respectively.
     </li><br/>
     <img src="image/EmailNotifications_04.png" /><br/>
