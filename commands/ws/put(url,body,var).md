@@ -8,7 +8,8 @@ comments: true
 
 
 ### Description
-This command sends a HTTP PUT request to the given `url` with the given request `body`.
+This command sends a HTTP PUT request to the given `url` with the given request `body`. The 
+[response](index#http-response) is captured and stored as `var`.
 
 To learn about how to utilize the response returned from the target URL, click [here](index.html#http-response).
 

@@ -32,13 +32,11 @@ Read more about pre-configured emails and conditional notifications on the [Even
 ![Email Notification](image/EmailNotifications_01.png)<br/>
 
 
-### Configuring Data Variables
+### Configuring Email Connectivity
 <ol>
     <li>Use the system variable <a href="../systemvars/#nexial.enableEmail">nexial.enableEmail </a>and set it to <code>
     true</code></li><br/>
-    <li>
-    Define the mail server connectivity details in the data file according to your email service.<br/>
-    <br/>
+    <li>Define the mail server connectivity details in the data file according to your email service.<br/>
         <div class="tabs">
             <ul class="tab-links tabs-collapsed">
                 <li class="active"><a href="#tab3">SMTP Service</a></li>
@@ -46,30 +44,28 @@ Read more about pre-configured emails and conditional notifications on the [Even
             </ul>
             <div class="tab-content">
                 <div id="tab3" class="tab active">
-                <b>Nexial uses the following variables to specify connection details:</b><br/>
+                <b>Nexial uses the following System variables to specify SMTP connection details:</b><br/>
                 <br/>
                 <ol>
                     <li><code>nexial.mail.smtp.host</code> - the hostname or DNS name of your mail server.</li>
                     <li><code>nexial.mail.smtp.port</code> - <code>25</code> (or whatever the configured SMTP port).</li>
                     <li><code>nexial.mail.smtp.from</code> - sender's email address.</li>
-                    <li><code>nexial.mail.smtp.auth</code> - <code>true|false</code>.</li>
+                    <li><code>nexial.mail.smtp.auth</code> - <code>true</code> or <code>false</code>.</li>
                     <li><code>nexial.mail.smtp.username</code> - username only needed if <code>nexial.mail.smtp.auth</code> 
                     is set to <code>true</code>.</li>
                     <li><code>nexial.mail.smtp.password</code> - username only needed if <code>nexial.mail.smtp.auth</code> 
                     is set to <code>true</code>.</li>                                                                         
-                </ol><br/>
-                Add these variables to your project's data file.<br/>
-                <br/>
-                <b>Example:</b><br/>
+                </ol>
+                Example on adding these variables to a data file.:<br/>
                 <img src="image/EmailNotifications_02.png" /><br/>
                 <br/>
-                <b>Note:</b> <code>nexial.mail.smtp.starttls.enable</code> is required to be <code>true.</code> when
+                <b>Note:</b> <code>nexial.mail.smtp.starttls.enable</code> is required to be <code>true</code> when
                 Gmail is used as the email service.            
                 </div>
                 <div id="tab4" class="tab" style= "display:none;">
                 <p>SES, or Simple Email Service, is a cloud service provided by Amazon AWS. One can utilize such service 
                 to send, receive and manage email activities in the cloud. Currently Nexial supports the use of SES for
-                sending email to one or more recipients.</p><br/>
+                sending email to one or more recipients.</p>
                 Nexial uses the following variables to specify AWS connection details:<br/>
                 <br/>
                 <ol>
@@ -78,28 +74,26 @@ Read more about pre-configured emails and conditional notifications on the [Even
                 <li><code>nexial-mailer.aws.region</code> - The target region to connect to.</li>
                 <li><code>nexial-mailer.aws.secretKey</code> - The secret key valid for the target AWS service.</li>
                 </ol><br/>
-                Add these variables to your project's data file.<br/>
-                <br/>
-                <b>Example:</b><br/>
+                Example on adding these variables to your project's data file.<br/>
                 <img src="image/EmailNotifications_03.png" />
                 </div>
             </div>
         </div>
-       </li><br/>
+    </li><br/>
     <li>Define the recipient email or comma separated list of recipients via the <a href="../systemvars/#nexial.mailTo"> 
     nexial.mailTo</a> System variable.</li><br/>
-    <li>[<code>OPTIONAL</code>] Use <a href="../systemvars/#nexial.mailSubject"> nexial.mailSubject</a>, <a href="../systemvars/#nexial.mailHeader"> nexial.mailHeader</a> 
-    and <a href="../systemvars/#nexial.mailFooter"> nexial.mailFooter</a>
-    system variables to add subject, header and footer to the email respectively.
-    </li><br/>
-    <img src="image/EmailNotifications_04.png" /><br/>
+    <li>(optional) Use <a href="../systemvars/#nexial.mailSubject">nexial.mailSubject</a>, 
+    <a href="../systemvars/#nexial.mailHeader">nexial.mailHeader</a> and 
+    <a href="../systemvars/#nexial.mailFooter">nexial.mailFooter</a> System variables to add subject, header and footer 
+    to the email respectively.<br/>
+    <img src="image/EmailNotifications_04.png"/></li>
     <br/>
-</ol>    
+</ol>
 
-- **Email Notification with header, footer and subject:**<br/>
+### **Email Notification with header, footer and subject:**<br/>
 ![Email Notification](image/EmailNotifications_05.png)<br/>
 
 
-### See Also<br/>
+### See Also
 - [commands &raquo; `mail`](../commands/mail)
 - [tipsandtricks &raquo; `IntegratingNexialWithEmail`](../tipsandtricks/IntegratingNexialWithEmail)
