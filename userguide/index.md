@@ -28,6 +28,7 @@ Let's get started!
 - [Execution Flow Control](../flowcontrols/index)
 - [Nexial Filter](../flowcontrols/filter)
 - [Nexial Expression](../expressions/index)
+- [Email Notifications](EmailNotifications)
 - [Execution Event Notification](EventNotification)
 - [Automation Execution Flow](ExecutionFlow)
 - [Real-time Inspection of Data Variables](RealtimeInspectionOfDataVariables)
