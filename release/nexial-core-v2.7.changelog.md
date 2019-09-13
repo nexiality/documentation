@@ -61,7 +61,9 @@ comments: true
 
 
 ### [image commands](../commands/image)
-
+- [`nexial.image.trimColor`](../systemvars/index#nexial.image.trimColor):  Now supports RGB color code instead of color
+  names.
+ 
 
 ### [json commands](../commands/json)
 
