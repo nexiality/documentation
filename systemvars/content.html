@@ -218,6 +218,7 @@
         <td>false</td>
         <td>The wait time between test steps, in milliseconds.</td>
     </tr>
+
     <tr>
         <td nowrap="nowrap" class="varname"><a id="nexial.textDelim"><code>nexial.textDelim</code></a></td>
         <td>text</td>
@@ -233,6 +234,31 @@
             the flexibility needed to transform a single text string into an array of text.
         </td>
     </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.resolveTextAsURL"><code>nexial.resolveTextAsURL</code></a></td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            When set to <code>true</code>, this System variable instructs Nexial to make the attempt of resolving the
+            text parameter of a command or expression - where appropriate - as a valid URL. If such resolution is
+            attained, Nexial automatically substitute such text parameter with the content behind such URL (HTTP GET).
+            <br/>
+            <br/>
+            This can simplify the automation tasks at hand, esp. when there are multiple URL-backed content, or if the
+            URL is dynamically generated. By default, this System variable is set to <code>false</code> to avoid any
+            undesired surprises.<br/>
+            <br/>
+            Currently this System variable, and the underlying feature, is applied to
+            <a href="../expressions/TEXTexpression" class="external-link" target="_nexial_link">TEXT Expression</a> and
+            <a href="../commands/ws"><code>ws</code> commands</a>, with other areas of Nexial soon to follow.<br/>
+            <br/>
+            Note that this System variable supersede the now-deprecated
+            <a href="#nexial.expression.resolveURL"><code>nexial.expression.resolveURL</code></a> System variable.
+        </td>
+    </tr>
+
     <tr>
         <td nowrap="nowrap" class="varname"><a id="nexial.nullValue"><code>nexial.nullValue</code></a></td>
         <td>text</td>
@@ -1151,14 +1177,8 @@
         <td>true</td>
         <td>false</td>
         <td>
-            When using <a href="../expressions/TEXTexpression" class="external-link" target="_nexial_link">TEXT Expression</a>,
-            it is possible to specify the content of an external resource (HTTP URL). By default, Nexial will resolve
-            the content of such external resource by issuing a GET request against the specified URL. This simplifies
-            the task of automation. However at times, this is not the desired behavior. Set this System variable to
-            <code>false</code> will disable the automatic content resolution and retain the specified text as is.
-            <br/>
-            <br/>
-            By default, this System variable is set to <code>true</code>.
+            <i>DEPRECATED SYSTEM VARIABLE NAME.
+                PLEASE SEE <a href="#nexial.resolveTextAsURL"><code>nexial.resolveTextAsURL</code></a> INSTEAD.</i>
         </td>
     </tr>
 

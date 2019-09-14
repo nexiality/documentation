@@ -18,6 +18,15 @@ comments: true
 - added checks to ensure that read-only variables aren't overwritten via commands affect data variables
 
 
+### [System Variable](../systemvars)
+- [`nexial.resolveTextAsURL`](../systemvars/index#nexial.resolveTextAsURL): **NEW** System variable to detect if a text 
+  parameter is a valid URL and if so, to download the content of that URL (GET) automatically. This supersede the 
+  now-deprecated System variable [`nexial.expression.resolveURL`](../systemvars/index#nexial.expression.resolveURL) and
+  applies beyond [TEXT expression](../expressions/TEXTexpression) to areas such as [`ws`](../commands/ws), [`csv`], 
+  [`io`], [`json`], [`web` >> `executeScript(var,script)`] and [`xml`] commands. The default for this System variable 
+  is `false`.
+
+
 ### [Nexial Interactive](../interactive)
 
 
@@ -88,4 +97,5 @@ comments: true
   enable the use of `(null)`, `(empty)` or `(blank)` for `header-cell` to omit the use of this `config`.
 - [`saveInfiniteTableAsCsv(config,file)`](../commands/web/saveInfiniteTableAsCsv(config,file)):
   enable the use of `(null)`, `(empty)` or `(blank)` for `header-cell` to omit the use of this `config`.
-
+- [`nexial.web.highlight`](../systemvars/index#nexial.web.highlight): fixed error when target element doesn't have any 
+  `style` attribute
