@@ -258,7 +258,29 @@
             <a href="#nexial.expression.resolveURL"><code>nexial.expression.resolveURL</code></a> System variable.
         </td>
     </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.resolveTextAsIs"><code>nexial.resolveTextAsIs</code></a></td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            When a parameter points to a local file (fully qualified path), Nexial will by default performs the following:
+            <ol>
+                <li>Follow such file and read in its content to represent the corresponding data variable or parameter</li>
+                <li>Perform data variable substitution if any data variable is found in the text content of the file above</li>
+            </ol>
+            <br/>
+            The above is the default behavior, and most likely the desired behavior<br/>
+            <br/>
+            However, at times one might want to avoid such automation (i.e. data variable substitution). To disable
+            Step #2 (data variable substitution), one would set the value of this System variable to
+            <code>true</code>.
 
+            Note that this System variable supersede the now-deprecated
+            <a href="#nexial.expression.OpenFileAsIs"><code>nexial.expression.OpenFileAsIs</code></a> System variable.
+        </td>
+    </tr>
     <tr>
         <td nowrap="nowrap" class="varname"><a id="nexial.nullValue"><code>nexial.nullValue</code></a></td>
         <td>text</td>
@@ -1160,13 +1182,8 @@
         <td>false</td>
         <td>false</td>
         <td>
-            When using Nexial Expression, it is possible to specify the content of an external file rather than deriving
-            text content via a data variable. However by default, Nexial will read the specified text file with intent
-            to substitute any found data variables with the corresponding values during the time of reading such file.
-            While this is often desirable, at times one might want to avoiding such integrated automation.
-            <br/>
-            <br/>
-            To instruct Nexial not to perform data variable substitution, set this System variable to <code>true</code>.
+            <i>DEPRECATED SYSTEM VARIABLE NAME.
+                PLEASE SEE <a href="#nexial.resolveTextAsIs"><code>nexial.resolveTextAsIs</code></a> INSTEAD.</i>
         </td>
     </tr>
     <tr>
@@ -2834,6 +2851,31 @@
         <td>
             Determine if request query string or request body should be trimmed (beginning and ending spaces removed)
             prior to it being sent to target URI.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.ws.requestPayloadAsRaw"><code>nexial.ws.requestPayloadAsRaw</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            This System variable is applicable when the corresponding request body is expressed as a fully qualified file
+            path. Nexial has the capability to use such file content in binary form such as the case for images or PDF,
+            or as UTF-8 text form such as JSON, XML or plain text. By default, Nexial will determine the file content
+            type based on preceding HTTP header (set via <a href="../commands/ws/head(url,var)">ws &raquo;
+            <code>header(naem,value)</code></a> command). One may override this default behavior to enforce a specific
+            file type treatment via this System variable. Setting it to <code>true</code> means that Nexial should set
+            up request payload content as binary (meaning charset or character encoding).<br/>
+            <br/>
+            Note that by setting this System variable to <code>true</code>, Nexial will:
+            <ol>
+                <li>Not perform any data variable substitution</li>
+                <li>Ignore the value of
+                    <a href="#nexial.ws.requestPayloadCompact"></a><code>nexial.ws.requestPayloadCompact</code></a>
+                </li>
+            </ol>
         </td>
     </tr>
     <tr>

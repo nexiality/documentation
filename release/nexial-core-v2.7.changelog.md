@@ -20,12 +20,17 @@ comments: true
 
 ### [System Variable](../systemvars)
 - [`nexial.resolveTextAsURL`](../systemvars/index#nexial.resolveTextAsURL): **NEW** System variable to detect if a text 
-  parameter is a valid URL and if so, to download the content of that URL (GET) automatically. This supersede the 
+  parameter is a valid URL and if so, to download the content of that URL (GET) automatically. This supersedes the 
   now-deprecated System variable [`nexial.expression.resolveURL`](../systemvars/index#nexial.expression.resolveURL) and
-  applies beyond [TEXT expression](../expressions/TEXTexpression) to areas such as [`ws`](../commands/ws), [`csv`], 
-  [`io`], [`json`], [`web` >> `executeScript(var,script)`] and [`xml`] commands. The default for this System variable 
-  is `false`.
-
+  applies beyond [TEXT expression](../expressions/TEXTexpression) to areas such as [`ws`](../commands/ws), 
+  [`csv`](../commands/csv), [`io`](../commands/io), [`json`](../commands/json), 
+  [`web` >> `executeScript(var,script)`](../commands/web/executeScript(var,script)) and [`xml`](../commands/xml) 
+  commands. The default for this System variable is `false`.
+- [`nexial.resolveTextAsIs`](../systemvars/index#nexial.resolveTextAsIs): **NEW** System variable to disable the 
+  automatic data variable substitution on the text file it reads. Default value is `false` - this means Nexial by default
+  will automatically perform data variable substitution after it reads in the text file. This System variable supersedes
+  the now-deprecated [`nexial.expression.OpenFileAsIs`](../systemvars/index#nexial.expression.OpenFileAsIs) System
+  variable since it is no longer limited to [Expression](../expressions) only.
 
 ### [Nexial Interactive](../interactive)
 
@@ -81,6 +86,8 @@ comments: true
 
 
 ### [ws commands](../commands/ws)
+- [`nexial.ws.requestPayloadAsRaw`](../systemvars/index#nexial.ws.equestPayloadAsRaw): **NEW** System variable to 
+  treat request payload as binary content.
 
 
 ### [web commands](../commands/web)

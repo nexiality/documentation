@@ -12,6 +12,8 @@ This command is used to send a HTTP PATCH request to the given endpoint url with
 
 To learn about how to utilize the response returned from the target URL, click [here](index.html#http-response).
 
+{% include_relative _file.md %}
+
 
 ### Parameters
 - **url** - the target URL

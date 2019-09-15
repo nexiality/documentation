@@ -18,6 +18,8 @@ file with the below shown keywords.
 
 To learn about how to utilize the response returned from the target URL, click [here](index.html#http-response).
 
+{% include_relative _file.md %}
+
 
 ### Parameters
 - **url** - the target URL
