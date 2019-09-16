@@ -31,9 +31,43 @@ they ought to be treated as "noise" since they do not represent difference in th
 simple approach to remove such "noise" by trimming them off prior to image comparison. To do so, set the 
 [`nexial.image.trimBeforeDiff`](../../systemvars/index#nexial.image.trimBeforeDiff) System variable to `true`. One can
 control what color to trim off via the [`nexial.image.trimColor`](../../systemvars/index#nexial.image.trimColor) System
-variable.
+variable. Example of image trimming using `nexial.image.trimBeforeDiff` system variable is as follows: 
 
-
+  |Baseline Image            |Actual Image               |
+  |------------------------  |--------------------------|
+  |![](image/saveDiff_04.png)|![](image/saveDiff_05.png)|
+  
+  Dimensions of baseline image is `373x49` and actual image is `289x29`. For comparing Baseline and actual image noise 
+  must be trimmed, and in the above example background of Citron color(![color](image/saveDiff_11.png)) acts as a noise. RGB color code of Citron is 
+  `201,201,148` which must be trimmed from all four sides.
+  <br/> 
+  **Script**:<br/>
+  ![script](image/saveDiff_06.png)
+  
+  **Output of both Pass and Fail condition of this command:** 
+  <div class="tabs" style="width:140%">
+                              <ul class="tab-links tabs-collapsed">
+                                  <li class="active" ><a href="#tab1"> nexial.image.trimBeforeDiff = true</a></li>
+                                  <li ><a href="#tab2"> nexial.image.trimBeforeDiff = false</a></li>   
+                              </ul>
+                              <div class="tab-content"> 
+                                  <div id="tab1" class="tab">
+                                  This will trim off spaces of the color mentioned in the <code>nexial.image.trimColor.</code><br/> 
+                                       <b>Data file:</b><br/>
+                                       <img src="image/saveDiff_07.png"/><br/>
+                                       <b>Output:</b><br/>
+                                       <img src="image/saveDiff_08.png"/><br/>  
+                                  </div> 
+                                  <div id="tab2" class="tab" style= "display:none;">
+                                        <b>Data file:</b><br/>
+                                        <img src="image/saveDiff_09.png"/><br/>
+                                        <b>Output:</b><br/>
+                                        <img src="image/saveDiff_10.png"/><br/>
+                                  </div> 
+                              </div>
+                        </div> 
+                        
+  
 #### Working with Image Comparison Meta
 As stated earlier, comparison metadata is stored to variable specified as `var`. Following are the metadata fields:
 1. **expected**: the file path of predefined `baseline` image.
@@ -44,6 +78,7 @@ As stated earlier, comparison metadata is stored to variable specified as `var`.
 6. **differences**: list of differences in the image.
 7. **smallest**: smallest difference in the image.
 8. **largest**: largest difference in the image.
+9. **trimmed**: image is trimmed before comparison then it returns `true` else `false`.
 
 The difference mentioned here is the area where the difference between `baseline` and `actual` is detected. Here is an 
 example of such metadata:
@@ -62,6 +97,7 @@ example of such metadata:
             { x=65, y=11, width=409, height=39, }
             { x=1020, y=25, width=37, height=13, }
         ]
+         trimmed=true
     }
 }
 ```
@@ -71,7 +107,7 @@ variable named `imageCompareMeta`, `${imageCompareMeta}.count` would return the 
 `${imageCompareData}.differences[0].dimension` and `${imageCompareData}.largest.dimension` return `65,11,409,39`. One 
 can obtain a specific difference area as an image by [cropping](crop(image,dimension,saveTo)) it out of the "diff" 
 image. The `.dimension` field can help in this regard. For example, `${imageCompareMeta}.largest.dimension` would 
-provide the area information needed for cropping the largest portion of differences between 2 images. 
+provide the area information needed for cropping the largest portion of differences between 2 images.
 
 
 ### Parameters
