@@ -46,27 +46,26 @@ variable. Example of image trimming using `nexial.image.trimBeforeDiff` system v
   
   **Output of both Pass and Fail condition of this command:** 
   <div class="tabs" style="width:140%">
-                              <ul class="tab-links tabs-collapsed">
-                                  <li class="active" ><a href="#tab1"> nexial.image.trimBeforeDiff = true</a></li>
-                                  <li ><a href="#tab2"> nexial.image.trimBeforeDiff = false</a></li>   
-                              </ul>
-                              <div class="tab-content"> 
-                                  <div id="tab1" class="tab">
-                                  This will trim off spaces of the color mentioned in the <code>nexial.image.trimColor.</code><br/> 
-                                       <b>Data file:</b><br/>
-                                       <img src="image/saveDiff_07.png"/><br/>
-                                       <b>Output:</b><br/>
-                                       <img src="image/saveDiff_08.png"/><br/>  
-                                  </div> 
-                                  <div id="tab2" class="tab" style= "display:none;">
-                                        <b>Data file:</b><br/>
-                                        <img src="image/saveDiff_09.png"/><br/>
-                                        <b>Output:</b><br/>
-                                        <img src="image/saveDiff_10.png"/><br/>
-                                  </div> 
-                              </div>
-                        </div> 
-                        
+      <ul class="tab-links tabs-collapsed">
+          <li class="active" ><a href="#tab1"> nexial.image.trimBeforeDiff = true</a></li>
+          <li ><a href="#tab2"> nexial.image.trimBeforeDiff = false</a></li>   
+      </ul>
+      <div class="tab-content"> 
+          <div id="tab1" class="tab">
+          This will trim off spaces of the color mentioned in the <code>nexial.image.trimColor.</code><br/> 
+               <b>Data file:</b><br/>
+               <img src="image/saveDiff_07.png"/><br/>
+               <b>Output:</b><br/>
+               <img src="image/saveDiff_08.png"/><br/>  
+          </div> 
+          <div id="tab2" class="tab" style= "display:none;">
+                <b>Data file:</b><br/>
+                <img src="image/saveDiff_09.png"/><br/>
+                <b>Output:</b><br/>
+                <img src="image/saveDiff_10.png"/><br/>
+          </div> 
+      </div>
+  </div><br/>
   
 #### Working with Image Comparison Meta
 As stated earlier, comparison metadata is stored to variable specified as `var`. Following are the metadata fields:
