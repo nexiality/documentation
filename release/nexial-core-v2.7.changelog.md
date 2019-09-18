@@ -49,6 +49,11 @@ comments: true
   [TEXT expression](../expressions/TEXTexpression) to a [XML expression](../expressions/XMLexpression).
 - [TEXT &raquo; `json`](../expressions/TEXTexpression#json): **NEW** operation to transform a 
   [TEXT expression](../expressions/TEXTexpression) to a [JSON expression](../expressions/JSONexpression).
+- [CSV &raquo; `replaceColumnRegex(searchFor,replaceWith,columnNameOrIndices`](../expressions/CSVexpression#replacecolumnregexsearchforreplacewithcolumnnameorindices):
+  - the parameter `columnNameOrIndices` now can be expressed as `*` to indicate **ALL** columns.
+  - fixed error when working on a file with columns wrapped in double quotes.
+- [CSV &raquo; `saveRowData(rowIndex)`](../expressions/CSVexpression.md#saveRowData(rowIndex)): save a row of CSV data
+  as data variable by using the corresponding CSV header name as data variable name.
 
 
 ### [aws.vision commands](../commands/aws.vision)

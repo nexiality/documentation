@@ -369,6 +369,9 @@ parsed. The configuration will be specified in the form of
 Remove the entire column qualified via namesOrIndices parameter, which can be a list of column names or column 
 positions (zero-based). Multiple columns are separated by comma (`,`).
 
+The parameter `columnNameOrIndices` may be expressed as `*` to indicate **ALL** columns. As such, Nexial would remove all 
+columns of the target CSV.
+
 -----
 
 #### removeRows(conditions)
@@ -418,18 +421,24 @@ Mass-generate a series of text based on the fusing of CSV data and a designated 
 
 -----
 
-#### replaceColumnRegex(searchFor,replaceWith,columnNameOrIndex)
+#### replaceColumnRegex(searchFor,replaceWith,columnNameOrIndices)
 For the specified column (by name or by position), search for `searchFor` regular expression and replace matches by 
 `replaceWith`. Regex group supported. For example, `[CSV(${...}) => parse(...) replaceColumnRegex((\d+)(\d\d),$1.$2,1)]` 
 would search in the 2nd column of the CSV for a match against the pattern "a series of at least 3 consecutive digits" 
 and replace it with the same digits with a decimal point place just before the second-to-last digit. In other words, 
 `12345` would become `123.45`.
 
+The parameter `columnNameOrIndices` may be expressed as `*` to indicate **ALL** columns. As such, Nexial would apply the
+intended search-and-replace routine against all columns of the target CSV.
+
 -----
 
 #### retainColumns(columnNamesOrIndices)
 Retain only the specified columns (by name or by position, separated by commas) in a CSV. Think of this operation as 
-the opposite of `removeColumns(namesOrIndices)`. Any misreferenced columns will be ignored.
+the opposite of `removeColumns(namesOrIndices)`. Any incorrectly referenced columns will be ignored.
+
+The parameter `columnNameOrIndices` may be expressed as `*` to indicate **ALL** columns. As such, Nexial would 
+essentially perform a "no-op" since all the columns would be retained.
 
 -----
 
@@ -454,6 +463,13 @@ Remove all empty rows from current CSV content. This could either be blank lines
 #### save(file)
 Save current CSV content to `path`. If `path` resolves to an existing file, `append` set as `true` will append current 
 CSV content to the said file. `append` is optional and defaults to `false`.
+
+-----
+
+#### saveRowData(rowIndex)
+Save the row data corresponding to the specified `rowIndex` as data variable. The corresponding header names are treated
+as data variable names. Note that this operation can only be operated on CSV data that are [parsed](#parseconfig) with 
+header.
 
 -----
 
