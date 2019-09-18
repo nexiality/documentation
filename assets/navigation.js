@@ -12,6 +12,28 @@ function toggleTabContent(tabLink) {
   });
 }
 
+function scrollToOperation(/*HTMLElement*/select) {
+  if (!select || !select.selectedIndex) { return; }
+
+  var selected = select.options[select.selectedIndex];
+  if (!selected) { return; }
+
+  var hash = selected.getAttribute('hash');
+  if (!hash) { return; }
+
+  location.hash = hash;
+  window.scrollBy(0, -200);
+}
+
+function newOperationSelect() {
+  var operationsSelect = '<select class="operations" onchange="scrollToOperation(this);"><option>Operations</option>';
+  jQuery('#operations ~ h4').each(function (index, item) {
+    operationsSelect += '<option hash="#' + jQuery(item).attr('id') + '">' + jQuery(item).text() + '</option>';
+  });
+  operationsSelect += '</select>';
+  jQuery('div.breadcrumb').append(operationsSelect);
+}
+
 jQuery(document).ready(function () {
   jQuery('.tabs .tab-links').on('click', function (e) {
     toggleTabContent(jQuery(this));
@@ -22,7 +44,7 @@ jQuery(document).ready(function () {
   });
 
   jQuery('.tabs .tab-links a').on('click', function (e) {
-    let li = jQuery(this).parent('li');
+    let li      = jQuery(this).parent('li');
     let tabLink = li.parent();
 
     if (li.hasClass('active')) {

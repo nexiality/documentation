@@ -182,6 +182,18 @@ span.breadcrumb {
   text-shadow:      1px 1px 1px #ff9;
 }
 
+select.operations {
+  background-color: rgba(245, 255, 205, 0.65);
+  height:           38px;
+  margin:           -5px 0 -8px 25px;
+  position:         relative;
+  border:           none;
+  color:            #352;
+  padding:          12px 8px 10px;
+  box-shadow:       0 0 5px 5px rgba(100, 100, 100, 0.5);
+  text-shadow:      1px 1px 1px #eee;
+}
+
 .quick_links {
   clear:  both;
   margin: 20px 0;

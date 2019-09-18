@@ -6,7 +6,6 @@ tags: command expressions
 comments: true
 ---
 
-
 ## Description
 <a href="https://en.wikipedia.org/wiki/Comma-separated_values" class="external-link" target="_nexial_link">CSV, or Comma-Separated Values</a>, 
 is text-based file format to store tabular data.  In many ways this file format can be viewed as a simplified, 
@@ -51,7 +50,7 @@ An CSV expression can be initiated in various ways:
 
 |syntax                        |explanation                                                                            |
 |------------------------------|---------------------------------------------------------------------------------------|
-|`[CSV(file) => ...]`          |Initiate a CSV expression via an external file.<br/><br/>This file can be expressed via a variable (syntax: `${var_points_to_my_csv_file}`), <br/>or as the fully qualified path (e.g. `C:\my_files\data.csv`). Such expression will read<br/>in the entire content of the specified CSV file. Note that the specified file is considered as<br/>"disconnected", meaning that changes to the CSV content will not automatically/directly affect<br/>the CSV file until a **`save()`** operation is issued.|
+|`[CSV(file) => ...]`           |Initiate a CSV expression via an external file.<br/><br/>This file can be expressed via a variable (syntax: `${var_points_to_my_csv_file}`), <br/>or as the fully qualified path (e.g. `C:\my_files\data.csv`). Such expression will read<br/>in the entire content of the specified CSV file. Note that the specified file is considered as<br/>"disconnected", meaning that changes to the CSV content will not automatically/directly affect<br/>the CSV file until a **`save()`** operation is issued.|
 |`[CSV(${csv_content}) => ...]`|Initiate a CSV expression via CSV content (expressed as text).<br/><br/>The content can be expressed via a variable (syntax: `${csv_content}`).|
 |`[CSV(var) => ...]`           |Continue a previously initiated CSV expression denoted by `var`.<br/><br/>Note that var **`does not`** follow the `${...}` syntax. Simply specify the variable name<br/>to instruct Nexial to resume a previously initiated CSV expression (that was saved via the<br/>**`store()`** operation). See **`store()`** operation below for more details.|
 
@@ -563,3 +562,5 @@ As shown above, the column names are missing and default node names are applied.
   ![](image/csv_26.jpg)
 
 ---
+
+<script>jQuery(document).ready(function () { newOperationSelect(); });</script>
