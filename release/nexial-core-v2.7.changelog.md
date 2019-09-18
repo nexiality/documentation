@@ -33,6 +33,7 @@ comments: true
   variable since it is no longer limited to [Expression](../expressions) only.
 
 ### [Nexial Interactive](../interactive)
+- [Inspection](../interactive/index#inspection) now supports `SAVE(var)` and `CLEAR(vars)` functionality.
 
 
 ### [Built-in Functions](../functions)

@@ -68,6 +68,7 @@ background) to control current session.
   ![](image/ni_help.png)
 - Use `Q` to quit Nexial Interactive.
 
+#### Inspection
 Note that the main objective of Nexial Interactive is to execute a subset of the automation script, possibly repeatedly,
 so that we can better understand the target application, the automation objective, or the Nexial capability. For such
 reasons, Nexial Interactive does not support test plan or multiple scenarios. The common pattern is to focus on a block 
@@ -77,6 +78,26 @@ similar to [`nexial.inspectOnPause`](../systemvars/index#nexial.inspectOnPause))
 variables, [built-in functions](../functions) and [Nexial expressions](../expressions).<br/>
 
 ![](image/ni_inspect.png)
+
+In addition to inspecting existing data variables and System variables, one may also invoke Nexial 
+[built-in functions](../functions) and [Nexial Expression](../expressions), or the combination of both. Furthermore,
+one may create, modify or clear a data variable on-the-fly:
+```
+> inspect: SAVE(myData) = [LIST(1,2,3,4,5,6,7,8,9,10) => sum]
+11:15:15.786 >> LIST    => sum                   NUMBER(55)
+11:15:15.787 >> creating data variable [a] to [55]
+
+> inspect: CLEAR(b,a,nexial.runID)
+11:14:27.730 >> removing data variable [b, a, nexial.runID]
+11:14:27.731 >> The following data variable(s) are READ ONLY and ignored: nexial.runID
+11:14:27.731 >> The following data variable(s) are removed from execution: a
+```
+
+Using `SAVE(var)` syntax in Inspection allows one to create or override a data variable. The value such data variable
+may be literal or derived from built-in functions or Nexial Expression.
+
+Using `CLEAR(var1,var2,...)` syntax allows one to clear one or more data variables. Notice that certain System variables
+are considered read-only and cannot be cleared (see above).
 
 
 ### Limitation
