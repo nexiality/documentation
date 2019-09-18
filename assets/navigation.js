@@ -27,7 +27,7 @@ function scrollToOperation(/*HTMLElement*/select) {
 
 function newOperationSelect() {
   var operationsSelect = '<select class="operations" onchange="scrollToOperation(this);"><option>Operations</option>';
-  jQuery('#operations ~ h4').each(function (index, item) {
+  jQuery('#operations ~ h4, #available-functions ~ h4').each(function (index, item) {
     operationsSelect += '<option hash="#' + jQuery(item).attr('id') + '">' + jQuery(item).text() + '</option>';
   });
   operationsSelect += '</select>';
