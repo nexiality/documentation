@@ -13,6 +13,8 @@ comments: true
 ### General
 #### Fixes
 - fixed code to support intra-execution changes of `nexial.scriptRef.*` data variables.
+- after importing desktop recording file to cloud ([`nexial.outputToCloud`](../systemvars/index#nexial.outputToCloud) 
+  is set to `true`), Nexial will remove local video file to help keep local diskspace under control.
 
 #### Improvements
 - added checks to ensure that read-only variables aren't overwritten via commands affect data variables
@@ -32,8 +34,12 @@ comments: true
   the now-deprecated [`nexial.expression.OpenFileAsIs`](../systemvars/index#nexial.expression.OpenFileAsIs) System
   variable since it is no longer limited to [Expression](../expressions) only.
 
+
 ### [Nexial Interactive](../interactive)
 - [Inspection](../interactive/index#inspection) now supports `SAVE(var)` and `CLEAR(vars)` functionality.
+- support desktop recording from within Interactive session.
+- Inspection supports the clearing of all user data variables (`CLEAR(*)`)
+- new option to reload both data file and `project.properties` (option `L`)
 
 
 ### [Built-in Functions](../functions)
@@ -61,6 +67,8 @@ comments: true
 
 
 ### [base commands](../commands/base)
+- [`stopRecording`](../commands/base/stopRecording()): after video file is saved either to local path or cloud, its 
+  location is exposed as [`nexial.lastOutputLink`](../systemvars/index#nexial.lastOutputLink).
 
 
 ### [csv commands](../commands/csv)
