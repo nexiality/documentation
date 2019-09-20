@@ -83,7 +83,7 @@ assigned script, the assigned scenario and the assigned activities/steps to
 <a href="javascript:void(0);" onclick="scrollToTab('execute_tab','options-and-actions')">execute</a>. The second half 
 are the available options and actions to control the current Nexial Interactive session - these options and actions are 
 the characters highlighted with white background. Click one of the tabs below to see more details on these options and 
-actions:
+actions.
 
 
 ## Options and Actions
@@ -427,7 +427,7 @@ All option and action keys are **NOT** case-sensitive.
 <br/>
 
 
-### Limitation
+## Limitation
 This is the first release of Nexial Interactive. As time permits and if requests should be made, we will enhance 
 Nexial Interactive with more learning goodness. Currently, here are the enhancement candidates that we are considering 
 for Nexial Interactive. No timeline has been committed as of yet.
@@ -444,7 +444,7 @@ Also, please note the following limitations:
   and probably never will be - equivalent to a true debugger like those modern-day IDEs.
 
 
-### Feedback
+## Feedback
 We love to hear your feedback! Give it a try and 
 <a href="https://github.com/nexiality/nexial-core/issues/new/choose" class="external-link" target="_nexial_link">let us know</a> 
 what you think!
