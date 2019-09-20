@@ -185,13 +185,15 @@ span.breadcrumb {
 select.operations {
   background-color: rgba(245, 255, 205, 0.65);
   height:           38px;
-  margin:           -5px 0 -8px 25px;
+  margin:           -10px 0 -10px 25px;
   position:         relative;
   border:           none;
-  color:            #352;
-  padding:          12px 8px 10px;
+  color:            #333;
   box-shadow:       0 0 5px 5px rgba(100, 100, 100, 0.5);
   text-shadow:      1px 1px 1px #eee;
+  font-family:      monospace;
+  font-size:        11pt;
+  top:              -3px;
 }
 
 .quick_links {
