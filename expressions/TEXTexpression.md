@@ -233,3 +233,8 @@ Date file:<br/>
 
 **Output**:<br/>
 ![](image/TEXTexpression_07.png)
+
+-----
+
+<script>jQuery(document).ready(function () { newOperationSelect(); });</script>
+

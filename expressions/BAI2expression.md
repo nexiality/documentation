@@ -32,57 +32,84 @@ BAI2 Sample File<br/>
 
 ### Operations
 
-- **`csv`** - convert the file content to csv data type.
-- **`errors`** - list out all the errors found during file validation.
-- **`field(recordType,name)`** - list out all the values of a specific field of a specific record type.
-- **`filter(recordType,condition)`** - filter all the matched records with given condition.
-- **`save(path)`** - saves the content to given file path. File path is to be specified including file name.  
-- **`store(var)`** - stores the content to given variable name in memory. This variable name can be used in consecutive steps. 
+#### `csv`
+Convert the file content to CSV data type.
 
-### Example
-
-Sample BAI2 file used for examples:<br/>
-![](image/BAI2_01.png) 
-
-Example 1 - filter all the `Group` blocks with `Group Status` as 1<br/>
-**Script:**<br/>
-![](image/BAI2_02.png)
-
-**Output:**<br/>
-![](image/BAI2_03.png)
-
-Example 2 - list all the `Bank Customer Account` field values in the filtered groups<br/>
-**Script:**<br/>
-![](image/BAI2_04.png)
-
-**Output:**<br/>
-![](image/BAI2_05.png)
-
-Example 3 - sum all the `Group Total Amount` values from each `Group Trailer` record and assert with `File Total Amount` value from `File Trailer` record<br/>
-**Script:**<br/>
-![](image/BAI2_06.png)
-
-**Output:**<br/>
-![](image/BAI2_07.png)
-
-Example 4 - filter all the `Transaction` records in the file and list out all the `Transaction Amount` values<br/>
-**Script:**<br/>
-![](image/BAI2_08.png)
-
-**Output:**<br/>
-![](image/BAI2_09.png)
-
-Example 5 - filter all the `Transaction` records in the file and convert into `csv` data type<br/>
-**Script:**<br/>
+**Example**<br/>
+Filter all the `Transaction` records in the file and convert into `csv` data type<br/>
+Script<br/>
 ![](image/BAI2_10.png)
 
-**Output:**<br/>
+Output**<br/>
 ![](image/BAI2_11.png)
 
-Example 6: filter all the `Group` blocks in the file and `save` the output to a file.<br/>
-**Script:**<br/>
+-----
+
+#### `errors`
+List out all the errors found during file validation.
+
+-----
+
+#### `field(recordType,name)`
+List out all the values of a specific field of a specific record type.<br/>
+
+**Example**<br/>
+Sum all the `Group Total Amount` values from each `Group Trailer` record and assert with `File Total Amount` value from `File Trailer` record<br/>
+Script<br/>
+![](image/BAI2_06.png)
+
+Output<br/>
+![](image/BAI2_07.png)
+
+-----
+
+#### `filter(recordType,condition)`
+Filter all the matched records with given condition.
+
+**Example**<br/>
+Filter all the `Group` blocks with `Group Status` as 1<br/>
+Script<br/>
+![](image/BAI2_02.png)
+
+Output<br/>
+![](image/BAI2_03.png)
+
+List all the `Bank Customer Account` field values in the filtered groups<br/>
+Script<br/>
+![](image/BAI2_04.png)
+
+Output<br/>
+![](image/BAI2_05.png)
+
+-----
+
+#### `save(path)`
+Saves the content to given file path. File path is to be specified including file name.
+
+**Example**<br/>
+Filter all the `Group` blocks in the file and `save` the output to a file.<br/>
+Script<br/>
 ![](image/BAI2_12.png)
 
-**Output:**<br/>
+Output<br/>
 Output with filtered `Group` blocks are saved to given file `path`:<br/>
 ![](image/BAI2_13.png)
+
+-----
+
+#### `store(var)`
+Stores the content to given variable name in memory. This variable name can be used in consecutive steps.
+
+**Example**<br/>
+Filter all the `Transaction` records in the file and list out all the `Transaction Amount` values<br/>
+Script<br/>
+![](image/BAI2_08.png)
+
+Output<br/>
+![](image/BAI2_09.png)
+
+-----
+
+<script>jQuery(document).ready(function () { newOperationSelect(); });</script>
+
+

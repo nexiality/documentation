@@ -26,33 +26,156 @@ By default, [`nexial.textDelim`](../systemvars/index#nexial.textDelim) has the
 
 
 ### Available Functions
-- **`$(array|append|myarray|item)`** - add an element (`item`) to the beginning of the target array (`myarray`), and 
-  then render the resulting array.
-- **`$(array|ascending|myarray)`** - renders the target array (`myarray`) in ascending order.  The order is determined 
-  lexicographically via the ASCII values of the array elements.
-- **`$(array|descending|myarray)`** - renders the target array (`myarray`) in descending order.  The order is determined 
-  lexicographically via the ASCII values of the array elements.
-- **`$(array|distinct|myarray)`** - renders the target array (`myarray`) by removing duplicated elements.
-- **`$(array|index|myarray|item)`** - renders the position within the target array (`myarray`) where the first 
-  occurrence of a specified element (`item`) is found.  For example, `$(array|index|Apple,Orange,Banana|Orange)` would 
-  return `1`.  Note that Nexial is zero-based.
-- **`$(array|insert|myarray|index|item)`** - add an element (`item`) into the target array (`myarray`), at the specified 
-  position (`index`), and then render the resulting array.
-- **`$(array|item|myarray|index)`** - renders the element (`item`) of the specified position (`index`, zero-based) in 
-  the target array (`myarray`).  For example, `$(array|item|Salt,Pepper,Sugar,Cheese|3)` would render `Cheese`. 
-- **`$(array|length|myarray)`** - renders the length of the target array (`myarray`).  An empty array would render `0`.
-- **`$(array|prepend|myarray|item)`** - add an element (`item`) to the end of the target array (`myarray`), and then 
-  render the resulting array.
-- **`$(array|remove|myarray|index)`** - remove an element (`item`) from the array (`myarray`), at the specified 
-  position (`index`), and then render the resulting array.
-- **`$(array|reverse|myarray)`** - renders the array (`myarray`) in its reversed order.
-- **`$(array|subarray|myarray|start|end)`** - renders a portion of the target array (`myarray`), based on the 
-  specified `start` and `end` positions.
 
+#### `$(array|append|myarray|item)`
+Add an element (`item`) to the beginning of the target array (`myarray`), and then render the resulting array.
 
-### Example
-Here are some examples on how to use this built-in function:<br/>
-![script](image/$(array)_03.png)
+**Example**<br/>
+Script<br/>
+![](image/$(array)_03.png)
 
-... and the **output**:<br/>
-![output](image/$(array)_04.png)
+Output<br/>
+![](image/$(array)_04.png)
+
+-----
+
+#### `$(array|ascending|myarray)`
+Renders the target array (`myarray`) in ascending order. The order is determined lexicographically via the ASCII values 
+of the array elements.
+
+**Example**<br/>
+Script<br/>
+![](image/$(array)_05.png)
+
+Output<br/>
+![](image/$(array)_06.png)
+
+-----
+
+#### `$(array|descending|myarray)`
+Renders the target array (`myarray`) in descending order. The order is determined lexicographically via the ASCII values 
+of the array elements.
+
+**Example**<br/>
+Script<br/>
+![](image/$(array)_07.png)
+
+Output<br/>
+![](image/$(array)_08.png)
+
+-----
+
+#### `$(array|distinct|myarray)`
+Renders the target array (`myarray`) by removing duplicated elements.
+
+**Example**<br/>
+Script<br/>
+![](image/$(array)_09.png)
+
+Output<br/>
+![](image/$(array)_10.png)
+
+-----
+
+#### `$(array|index|myarray|item)`
+Renders the position within the target array (`myarray`) where the first occurrence of a specified element (`item`) is 
+found.  For example, `$(array|index|Apple,Orange,Banana|Orange)` would return `1`.  
+Note that Nexial is zero-based.
+
+**Example**<br/>
+Script<br/>
+![](image/$(array)_11.png)
+
+Output<br/>
+![](image/$(array)_12.png)
+
+-----
+
+#### `$(array|insert|myarray|index|item)`
+Add an element (`item`) into the target array (`myarray`), at the specified position (`index`), and then render the 
+resulting array.
+
+**Example**<br/>
+Script<br/>
+![](image/$(array)_13.png)
+
+Output<br/>
+![](image/$(array)_14.png)
+
+-----
+
+#### `$(array|item|myarray|index)`
+Renders the element (`item`) of the specified position (`index`, zero-based) in the target array (`myarray`).  
+For example, `$(array|item|Salt,Pepper,Sugar,Cheese|3)` would render `Cheese`. 
+
+**Example**<br/>
+Script<br/>
+![](image/$(array)_15.png)
+
+Output<br/>
+![](image/$(array)_16.png)
+
+-----
+
+#### `$(array|length|myarray)`
+Renders the length of the target array (`myarray`).  An empty array would render `0`.
+
+**Example**<br/>
+Script<br/>
+![](image/$(array)_17.png)
+
+Output<br/>
+![](image/$(array)_18.png)
+
+-----
+
+#### `$(array|prepend|myarray|item)`
+Add an element (`item`) to the end of the target array (`myarray`), and then render the resulting array.
+
+**Example**<br/>
+Script<br/>
+![](image/$(array)_19.png)
+
+Output<br/>
+![](image/$(array)_20.png)
+
+-----
+
+#### `$(array|remove|myarray|index)`
+Remove an element (`item`) from the array (`myarray`), at the specified position (`index`), and then render the 
+resulting array.
+
+**Example**<br/>
+Script<br/>
+![](image/$(array)_21.png)
+
+Output<br/>
+![](image/$(array)_22.png)
+
+-----
+
+#### `$(array|reverse|myarray)`
+Renders the array (`myarray`) in its reversed order.
+
+**Example**<br/>
+Script<br/>
+![](image/$(array)_23.png)
+
+Output<br/>
+![](image/$(array)_24.png)
+
+-----
+
+#### `$(array|subarray|myarray|start|end)`
+Renders a portion of the target array (`myarray`), based on the specified `start` and `end` positions.
+
+**Example**<br/>
+Script<br/>
+![](image/$(array)_25.png)
+
+Output<br/>
+![](image/$(array)_26.png)
+ 
+-----
+
+<script>jQuery(document).ready(function () { newOperationSelect(); });</script>

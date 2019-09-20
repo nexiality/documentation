@@ -23,58 +23,58 @@ example would yield `-1770.2978788893238`.
 
 ### Operations
 
-##### **`add(numbers)`**
+#### **`add(numbers)`**
 add one or more numbers to current number.
 
 -----
 
-##### **`ceiling`**
+#### **`ceiling`**
 round **`up`** current number.
 
 -----
 
-##### **`divide(numbers)`**
+#### **`divide(numbers)`**
 divide one or more numbers from current number, in the order specified.
 
 -----
 
-##### **`floor`**
+#### **`floor`**
 round **`down`** current number.
 
 -----
 
-##### **`minus(numbers)`**
+#### **`minus(numbers)`**
 subtract one or more numbers from current number, in the order specified.
 
 -----
 
-##### **`multiply(numbers)`**
+#### **`multiply(numbers)`**
 multiple one or more numbers to current number, in the order specified.
 
 -----
 
-##### **`randomDigits(length)`** 
+#### **`randomDigits(length)`** 
 generate a random string of digits of the specified `length`.
 
 -----
 
-##### **`randomDecimal(wholeLength,fractionLength)`**
+#### **`randomDecimal(wholeLength,fractionLength)`**
 generate a random decimal number which contains a whole number of length as specified by `wholeLength`, and decimal 
 number of length as specified by `fractionLength`.
 
 -----
 
-##### **`randomInteger(atLeast,atMost)`**
+#### **`randomInteger(atLeast,atMost)`**
 generate a random integer number within the range of `atLeast` and `atMost`.
 
 -----
 
-##### **`whole`**
+#### **`whole`**
 transform current number to a whole number (integer) by dropping any existing decimal value.
 
 -----
 
-##### **`roundTo(closestDigit)`**
+#### **`roundTo(closestDigit)`**
 transform current number by rounding it to the `closestDigit`. The `closestDigit` is used to specify "the closest 
 digit", "the closest tenth", "the closest hundredth", etc.  For example,  `[NUMBER(173921.22) => roundTo(1000)]` would 
 yield `174000`. However to retain decimals, one would specify `0.` followed by number of desired decimal places instead. 
@@ -82,17 +82,16 @@ yield `174000`. However to retain decimals, one would specify `0.` followed by 
 
 -----
 
-##### **`store(var)`**
+#### **`store(var)`**
 save current NUMBER expression to a data variable.  If the specified `var` exists, its value will be overwritten. 
 Using this operation, one can put an expression on pause and resume it at a later time.
 
 -----
 
-##### **`text`**
+#### **`text`**
 transform current number to text
 
 -----
-
 
 ### Example
 **Script**:<br/>
@@ -100,3 +99,8 @@ transform current number to text
 
 **Output**:<br/>
 ![output](image/NUMBERexpression_02.png)
+
+-----
+
+<script>jQuery(document).ready(function () { newOperationSelect(); });</script>
+

@@ -35,6 +35,7 @@ To specify the location of a cell, simply use the format: `[column letter][row 
 
 
 ### Operations
+
 #### clear(range)
 Clear off any existing value from the cells found in the range specified by `range`.  After clearing off any existing 
 value from the target cells, cell values are recaptured (via  **[`read(sheet,range)`](#read(sheet,range))**) again to 
@@ -174,3 +175,7 @@ The content of excel file stored at location `C:\projects\xyz.xlsx` is:
 
 **Output**:<br/>
 ![Output](image/EXCELexpression_06.png)
+
+-----
+
+<script>jQuery(document).ready(function () { newOperationSelect(); });</script>

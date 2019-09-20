@@ -51,26 +51,57 @@ return first operation result as `PASS` or `FAIL`. One can use a different varia
 
 
 ### Operations
-- **`click(locator)`** - This clicks on element specified via locator. If one wants to perform operation `clickByLabel`, 
-  provided label as input must be with prefix `text=`. So for example, if locator is `text=LOGIN`, this clicks on the 
-  element having label `LOGIN`.    
-- **`deselect(locator,option1,option2,option3...)`** - This automates deselection of one or multiple `OPTION` elements 
-  from `select` element identified via locator. If multiple `OPTION` elements specified, it deselects multiple options 
-  from the list-box (i.e. `<select multiple ...>`).
-- **`fetchAsCsv(locator1,locator2,locator3...)`** - This stores the values of web elements specified via locators 
-  to [CSV](CSVexpression) format with the headers `locator` and `value`.
-- **`select(locator,option1,option2,option3...)`** - This automates selection of one or multiple `OPTION` elements 
-  from `select` element identified via locator. If multiple `OPTION` elements specified, it selects multiple options 
-  from the list-box (i.e. `<select multiple ...>`).
-- **`selectWindow(locator,winId)`** - This selects the open tab/window as per the `windows id` or by `index` 
-  determined by the order when corresponding tab/window is opened.
-- **`text`** - transforms the associated Web statement(s) result into plain text.
-- **`type(locator,value)`** - This enters the specified `value` into the first element that matches the specified 
- `locator`. 
-- **`typeKeys(locator,value)`** - This issues keystroke on the element specified via `locator`. For more information,
-  go through [web &raquo; `typeKeys(locator,value)`](../commands/web/typeKeys(locator,value)) 
-- **`wait(waitMs)`** - This waits till the desired time(in milli seconds) passed as input parameter `waitMs`.
 
+#### `click(locator)`
+This clicks on element specified via locator. If one wants to perform operation `clickByLabel`, provided label as input 
+must be with prefix `text=`. So for example, if locator is `text=LOGIN`, this clicks on the element having label `LOGIN`.
+
+-----
+
+#### `deselect(locator,option1,option2,option3...)`
+This automates deselection of one or multiple `OPTION` elements from `select` element identified via locator. If 
+multiple `OPTION` elements specified, it deselects multiple options from the list-box (i.e. `<select multiple ...>`).
+
+-----
+
+#### `fetchAsCsv(locator1,locator2,locator3...)`
+This stores the values of web elements specified via locators to [CSV](CSVexpression) format with the headers `locator` 
+and `value`.
+
+-----
+
+#### `select(locator,option1,option2,option3...)`
+This automates selection of one or multiple `OPTION` elements from `select` element identified via locator. If multiple 
+`OPTION` elements specified, it selects multiple options from the list-box (i.e. `<select multiple ...>`).
+
+-----
+
+#### `selectWindow(locator,winId)`
+This selects the open tab/window as per the `windows id` or by `index` determined by the order when corresponding 
+tab/window is opened.
+
+-----
+
+#### `text`
+Transforms the associated Web statement(s) result into plain text.
+
+-----
+
+#### `type(locator,value)`
+This enters the specified `value` into the first element that matches the specified `locator`. 
+
+-----
+
+#### `typeKeys(locator,value)`
+This issues keystroke on the element specified via `locator`. For more information, go 
+through [web &raquo; `typeKeys(locator,value)`](../commands/web/typeKeys(locator,value)) 
+
+-----
+
+#### `wait(waitMs)`
+This waits till the desired time(in milli seconds) passed as input parameter `waitMs`.
+
+-----
 
 ### Example
 Script:<br/>
@@ -84,3 +115,7 @@ Output:<br/>
 ![](image/WebExpression_04.png)
 
 ![](image/WebExpression_05.png)
+
+-----
+
+<script>jQuery(document).ready(function () { newOperationSelect(); });</script>

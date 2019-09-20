@@ -18,19 +18,58 @@ and values.  Here are some examples:
 
 
 ### Operations
-- **`comment`** - returns the comment from the INI configuration data
-- **`merge(mergeFileOrContent)`** - merges the content to the INI data
-- **`newComment(comment)`** - adds the given comment to the INI data
-- **`remove(section,key)`** - removes the key from the given section and returns the INI data
-- **`save(filepath)`** - saves the INI data to the given file path
-- **`set(section,key,value)`** - sets the key and value in the given section. If section is not available, creates 
-  the section and sets the key and value.
-- **`store(var)`** - save current INI expression to a data variable.  If the specified `var` exists, its value will 
-  be overwritten.  Using this operation, one can put an expression on pause and resume it at a later time.
-- **`text`** - returns the content of the INI data as text
-- **`value(section,key)`** - gets the value of corresponding key from the given section
-- **`values(section)`** - gets all the values available in the given section
 
+#### `comment`
+Returns the comment from the INI configuration data
+
+-----
+
+#### `merge(mergeFileOrContent`
+Merges the content of the INI data
+
+-----
+
+#### `newComment(comment)`
+Adds the given comment to the INI data
+
+-----
+
+#### `remove(section,key)`
+Removes the key from the given section and returns the INI data
+
+-----
+
+#### `save(filepath)`
+Saves the INI data to the given file path
+
+-----
+
+#### `set(section,key,value)`
+Sets the key and value in the given section. If section is not available, creates 
+the section and sets the key and value.
+
+-----
+
+#### `store(var)`
+Save current INI expression to a data variable.  If the specified `var` exists, its value will 
+be overwritten.  Using this operation, one can put an expression on pause and resume it at a later time.
+
+-----
+
+#### `text`
+Returns the content of the INI data as text
+
+-----
+
+#### `value(section,key)`
+Gets the value of corresponding key from the given section
+
+-----
+
+#### `values(section)`
+Gets all the values available in the given section
+
+-----
 
 ### Example
 **Script**:<br/>
@@ -38,3 +77,7 @@ and values.  Here are some examples:
 
 **Output**:<br/>
 ![output](image/INIexpression_04.png)
+
+-----
+
+<script>jQuery(document).ready(function () { newOperationSelect(); });</script>

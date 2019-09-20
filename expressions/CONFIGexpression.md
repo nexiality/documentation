@@ -27,31 +27,99 @@ Also:
 
   
 ### Operations
-- **keys()** \- returns all the key names as [LIST](LISTexpression).
-- **remove(key)** \- removes the `key` and returns the updated CONFIG data.
-- **save(filePath)** \- saves the current state of this CONFIG as a "properties" file to `filePath`.
-- **set(key, value)** \- sets `value` to the given `key` and returns the updated CONFIG data.
-- **store(var)** \- save current CONFIG expression to a data variable.  If the specified `var` exists, its value will 
-  be overwritten.  Using this operation, one can put an expression on pause and resume it at a later time.
-- **text()** \- returns the content of the CONFIG data as text.
-- **value(key)** - returns the corresponding value as text.
+
+- Let's consider we have a properties file in the data directory, as in 
+  **`C:\Projects\MyFirstProject\artifact\data\file.properties`**.<br/>
+  ![](image/CONFIGexpression_01.png)
 
 
-### Examples
-For this example, let's consider we have a properties file in the data directory, as in 
-**`C:\Projects\MyFirstProject\artifact\data\file.properties`**.<br/>
-![](image/CONFIGexpression_01.png)
+#### `keys()`
+Returns all the key names as [LIST](LISTexpression).
 
-**Script**:<br/>
-Here the script will read some property keys from the target properties file, remove and update some keys, and finally
-save the changes to another properties file (`x.properties`)<br/>
+**Example**<br/>
+Script<br/>
 ![](image/CONFIGexpression_02.png)
 
-**Output**:<br/>
+Output<br/>
 ![](image/CONFIGexpression_03.png)
 
+-----
+
+#### `remove(key)`
+removes the `key` and returns the updated CONFIG data.
+
+**Example**<br/>
+Script<br/>
 ![](image/CONFIGexpression_04.png)
 
-The generated `x.properties` looks like this:<br/>
+Output<br/>
 ![](image/CONFIGexpression_05.png)
+
+-----
+
+#### `save(filePath)`
+saves the current state of this CONFIG as a "properties" file to `filePath`.
+
+**Example**<br/>
+Script<br/>
+![](image/CONFIGexpression_06.png)
+
+Output<br/>
+![](image/CONFIGexpression_07.png)
+
+-----
+
+#### `set(key, value)`
+sets `value` to the given `key` and returns the updated CONFIG data.
+
+**Example**<br/>
+Script<br/>
+![](image/CONFIGexpression_08.png)
+
+Output<br/>
+![](image/CONFIGexpression_09.png)
+
+out.properties<br/>
+![](image/CONFIGexpression_16.png)
+
+-----
+
+#### `store(var`
+save current CONFIG expression to a data variable.  If the specified `var` exists, its value will be overwritten. 
+Using this operation, one can put an expression on pause and resume it at a later time.
+
+**Example**<br/>
+Script<br/>
+![](image/CONFIGexpression_10.png)
+
+Output<br/>
+![](image/CONFIGexpression_11.png)
+
+-----
+
+#### `text()`
+returns the content of the CONFIG data as text.
+
+**Example**<br/>
+Script<br/>
+![](image/CONFIGexpression_12.png)
+
+Output<br/>
+![](image/CONFIGexpression_13.png)
+
+-----
+
+#### `value(key)`
+returns the corresponding value as text.
+
+**Example**<br/>
+Script<br/>
+![](image/CONFIGexpression_14.png)
+
+Output<br/>
+![](image/CONFIGexpression_15.png)
+
+-----
+
+<script>jQuery(document).ready(function () { newOperationSelect(); });</script>
 

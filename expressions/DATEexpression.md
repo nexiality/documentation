@@ -26,38 +26,203 @@ by specifying a **DATE** instance with one of the following:
 
 
 ### Operations
-- **addDay(days)** \- add `days` to the current _day_ part of the date instance.
-- **addHour(hours)** \- add `hours` to the current _hour_ part of the date instance.  Note that the value represents 
-  the 24-hour system (i.e. 22 means 10 p.m.).
-- **addMinute(minutes)** \- add `minutes` to the current _minute_ part of the date instance.
-- **addMonth(months)** \- add months to the current _month_ part of the date instance.
-- **addSecond(second)** \- add `seconds` to the current _second_ part of the date instance.
-- **addYear(years)** \- add `years` to the current _year_ part of the date instance.
-- **format(targetFormat)** \- transform the same date instance into another textual form, using the specified 
-  `targetFormat`. Use <a href="https://en.wikipedia.org/wiki/Unix_time" class="external-link" target="_nexial_external"><code>epoch</code></a> 
-  to format date as timestamp. Use `informal` to format date in colloquial, non-exact manner that mimic human 
-  conversation. For example, `informal` format would output `about a minute ago` instead of `00:00:57`, or 
-  `about a month and a half ago` rather than `2018/08/24 00:01:32`. The `informal` format is suitable to use in 
-  conjunction with the [sound &raquo; `speak(text)`](../commands/sound/speak(text)) command.
-- **setDay(days)** \- set the `day` part of the date instance.
-- **setDOW(days)** \- set the `day of the week` part of the date instance.  Use the numeric value mapped to the day 
-  of the week: `1=SUNDAY, 2=MONDAY, 3=TUESDAY, 4=WEDNESDAY, 5=THURSDAY, 6=FRIDAY, 7=SATURDAY`.
-- **setHour(hours)** \- set the `hour` part of the date instance.  Note that the value represents the 24-hour system 
-  (i.e. 22 means 10 p.m.).
-- **setMinute(minutes)** \- set the `minute` part of the date instance.
-- **setMonth(months)** \- set the `month` part of the date instance.
-- **setSecond(seconds)** \- set the `second` part of the date instance.
-- **setYear(years)** \- set the `year` part of the date instance.
-- **store(var)** \- save current DATE expression to a data variable.  If the specified `var` exists, its value will 
-  be overwritten.  Using this operation, one can put an expression on pause and resume it at a later time.
-- **text** \- transform the date instance to its textual form, which would most likely be the way it was initially 
-  specified.
 
+#### `addDay(days)`
+Add `days` to the current _day_ part of the date instance.
 
-### Example
-**Script**:<br/>
-![script](image/DATEexpression_01.png)
+**Example**<br/>
+Script<br/>
+![](image/DATEexpression_01.png)
 
-**Output**:<br/>
-![output](image/DATEexpression_02.png)
+Output<br/>
+![](image/DATEexpression_02.png)
 
+-----
+
+#### `addHour(hours)`
+Add `hours` to the current _hour_ part of the date instance.  Note that the value represents 
+
+**Example**<br/>
+Script<br/>
+![](image/DATEexpression_03.png)
+
+Output<br/>
+![](image/DATEexpression_04.png)
+
+-----
+
+#### `addMinute(minutes)`
+Add minutes to the current minute part of the date instance.
+
+**Example**<br/>
+Script<br/>
+![](image/DATEexpression_05.png)
+
+Output<br/>
+![](image/DATEexpression_06.png)
+
+-----
+
+#### `addMonth(months)`
+Add months to the current month part of the date instance.
+
+**Example**<br/>
+Script<br/>
+![](image/DATEexpression_07.png)
+
+Output<br/>
+![](image/DATEexpression_08.png)
+
+-----
+
+#### `addSecond(second)`
+Add seconds to the current second part of the date instance.
+
+**Example**<br/>
+Script<br/>
+![](image/DATEexpression_09.png)
+
+Output<br/>
+![](image/DATEexpression_10.png)
+
+-----
+
+#### `addYear(years)`
+Add years to the current year part of the date instance.
+
+**Example**<br/>
+Script<br/>
+![](image/DATEexpression_11.png)
+
+Output<br/>
+![](image/DATEexpression_12.png)
+
+-----
+
+#### `format(targetFormat)`
+Transform the same date instance into another textual form, using the specified  targetFormat. 
+Use epoch to format date as timestamp. Use informal to format date in colloquial, non-exact manner that mimic human 
+conversation. For example, informal format would output about a minute ago instead of 00:00:57, or about a month and a 
+half ago rather than 2018/08/24 00:01:32. The informal format is suitable to use in conjunction with the 
+sound » speak(text) command.
+
+**Example**<br/>
+Script<br/>
+![](image/DATEexpression_13.png)
+
+Output<br/>
+![](image/DATEexpression_14.png)
+
+-----
+
+#### `setDay(days)`
+Set the day part of the date instance.
+
+**Example**<br/>
+Script<br/>
+![](image/DATEexpression_15.png)
+
+Output<br/>
+![](image/DATEexpression_16.png)
+
+-----
+
+#### `setDOW(days)`
+Set the day of the week part of the date instance.  Use the numeric value mapped to the day of the week: 1=SUNDAY, 
+2=MONDAY, 3=TUESDAY, 4=WEDNESDAY, 5=THURSDAY, 6=FRIDAY, 7=SATURDAY.
+
+**Example**<br/>
+Script<br/>
+![](image/DATEexpression_17.png)
+
+Output<br/>
+![](image/DATEexpression_18.png)
+
+-----
+
+#### `setHour(hours)`
+Set the hour part of the date instance.  Note that the value represents the 24-hour system (i.e. 22 means 10 p.m.).
+
+**Example**<br/>
+Script<br/>
+![](image/DATEexpression_19.png)
+
+Output<br/>
+![](image/DATEexpression_20.png)
+
+-----
+
+#### `setMinute(minutes)`
+Set the minute part of the date instance.
+ 
+**Example**<br/>
+Script<br/>
+![](image/DATEexpression_21.png)
+
+Output<br/>
+![](image/DATEexpression_22.png)
+
+-----
+
+#### `setMonth(months)`
+Set the month part of the date instance.
+
+**Example**<br/>
+Script<br/>
+![](image/DATEexpression_23.png)
+
+Output<br/>
+![](image/DATEexpression_24.png)
+
+-----
+
+#### `setSecond(seconds)`
+Set the second part of the date instance.
+
+**Example**<br/>
+Script<br/>
+![](image/DATEexpression_25.png)
+
+Output<br/>
+![](image/DATEexpression_26.png)
+
+-----
+
+#### `setYear(years)`
+Set the year part of the date instance.
+
+**Example**<br/>
+Script<br/>
+![](image/DATEexpression_27.png)
+
+Output<br/>
+![](image/DATEexpression_28.png)
+
+-----
+
+#### `store(var)`
+Save current DATE expression to a data variable.  If the specified var exists, its value will be overwritten. 
+Using this operation, one can put an expression on pause and resume it at a later time.
+
+**Example**<br/>
+Script<br/>
+![](image/DATEexpression_29.png)
+
+Output<br/>
+![](image/DATEexpression_30.png)
+
+-----
+
+#### `text`
+Transform the date instance to its textual form, which would most likely be the way it was initially specified.
+
+**Example**<br/>
+Script<br/>
+![](image/DATEexpression_31.png)
+
+Output<br/>
+![](image/DATEexpression_32.png)
+
+-----
+
+<script>jQuery(document).ready(function () { newOperationSelect(); });</script>

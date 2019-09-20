@@ -21,34 +21,145 @@ For example, `$(sysdate|lastQtr|yyyy-q)` will render the last quarter in the for
 
 
 ### Available Functions
-- **`$(sysdate|now|format)`** \- render the current date/time using the specified `format`. For formatting timestamp,
-  use the format like this: **`$(sysdate|now|epoch)`**.
-- **`$(sysdate|today|format)`** \- same as `$(sysdate|now|format)`, kept alive for backward compatibility.
-- **`$(sysdate|yesterday|format)`** \- render yesterday (more precisely, exactly 24 hours ago) using the specified 
-  format.
-- **`$(sysdate|tomorrow|format)`** \- render tomorrow (more precisely, exactly 24 hours later) using the specified 
-  format.  
-- **`$(sysdate|currentQtr|format)`** \- render the current quarter using the specified `format`.  Only year and quarter 
-  information would be rendered here.
-- **`$(sysdate|lastQtr|format)`** \- render the last quarter using the specified `format`.  Only year and quarter 
-  information would be rendered here.
-- **`$(sysdate|nextQtr|format)`** \- render the next quarter using the specified `format`.  Only year and quarter 
-  information would be rendered here.  
-- **`$(sysdate|firstDOM|format)`** \- render the first day of the month using specified `format`.  For formatting
-  timestamp, use the format like this: **`$(sysdate|firstDOM|epoch)`**.
-- **`$(sysdate|lastDOM|format)`** \- render the last day of the month using specified `format`.  
-- **`$(sysdate|firstDOW|format)`** \- render the first day of the week using specified `format`. 
-- **`$(sysdate|lastDOW|format)`** \- render the last day of the week using specified `format`. 
 
+#### `$(sysdate|now|format)`
+Render the current date/time using the specified `format`. For formatting timestamp, use the format like 
+this: **`$(sysdate|now|epoch)`**.
 
-### Example
-Below is a sample test script that uses the `$(sysdate)` function (highlighted in **red**).<br/>
-![script](image/$(sysdate)_01.png)
+**Example**<br/>
+Script<br/>
+![](image/$(sysdate)_01.png)<br/>
+![](image/$(sysdate)_03.png)
 
-The output of this script looks something like this:<br/>
-![output](image/$(sysdate)_02.png)
+Output<br/>
+![](image/$(sysdate)_02.png)
+![](image/$(sysdate)_04.png)  
+  
+-----
 
+#### `$(sysdate|today|format)`
+same as `$(sysdate|now|format)`, kept alive for backward compatibility.
+
+**Example**<br/>
+- Script<br/>
+![](image/$(sysdate)_05.png)
+- Output<br/>
+![](image/$(sysdate)_06.png)
+
+-----
+
+#### `$(sysdate|yesterday|format)`
+Render yesterday (more precisely, exactly 24 hours ago) using the specified 
+format.
+
+**Example**
+- Script<br/>
+![](image/$(sysdate)_07.png)
+- Output<br/>
+![](image/$(sysdate)_08.png)
+
+-----
+
+#### `$(sysdate|tomorrow|format)`
+Render tomorrow (more precisely, exactly 24 hours later) using the specified format.  
+
+**Example**
+- Script<br/>
+![](image/$(sysdate)_09.png)
+- Output<br/>
+![](image/$(sysdate)_10.png)
+
+-----
+
+#### `$(sysdate|currentQtr|format)`
+Render the current quarter using the specified `format`.  Only year and quarter information would be rendered here.
+
+**Example**<br/>
+Script<br/>
+![](image/$(sysdate)_11.png)
+
+Output<br/>
+![](image/$(sysdate)_12.png)
+
+-----
+
+#### `$(sysdate|lastQtr|format)`
+Render the last quarter using the specified `format`.  Only year and quarter information would be rendered here.
+
+**Example**<br/>
+Script<br/>
+![](image/$(sysdate)_13.png)
+
+Output<br/>
+![](image/$(sysdate)_14.png)
+
+-----
+
+#### `$(sysdate|nextQtr|format)`
+Render the next quarter using the specified `format`.  Only year and quarter information would be rendered here.
+
+**Example**<br/>
+Script<br/>
+![](image/$(sysdate)_15.png)
+
+Output<br/>
+![](image/$(sysdate)_16.png)
+
+-----
+
+#### `$(sysdate|firstDOM|format)`
+Render the first day of the month using specified `format`.  For formatting timestamp, use the format like 
+this: **`$(sysdate|firstDOM|epoch)`**.
+
+**Example**<br/>
+Script<br/>
+![](image/$(sysdate)_17.png)
+
+Output<br/>
+![](image/$(sysdate)_18.png)
+
+-----
+
+#### `$(sysdate|lastDOM|format)`
+render the last day of the month using specified `format`.
+
+**Example**<br/>
+Script<br/>
+![](image/$(sysdate)_19.png)
+
+Output<br/>
+![](image/$(sysdate)_20.png)
+
+-----
+
+#### `$(sysdate|firstDOW|format)`
+render the first day of the week using specified `format`.
+
+**Example**<br/>
+Script<br/>
+![](image/$(sysdate)_21.png)
+
+Output<br/>
+![](image/$(sysdate)_22.png)
+
+-----
+
+#### `$(sysdate|lastDOW|format)`
+render the last day of the week using specified `format`.
+
+**Example**<br/>
+Script<br/>
+![](image/$(sysdate)_23.png)
+
+Output<br/>
+![](image/$(sysdate)_24.png)
+
+-----
 
 ### See Also
 - [`$(format)`]($(format)) 
 - [`$(date)`]($(date))
+
+-----
+
+<script>jQuery(document).ready(function () { newOperationSelect(); });</script>

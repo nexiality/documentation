@@ -62,7 +62,7 @@ To manipulate JSON document, check out [`Nexial jsonpath`](../jsonpath) for m
 
 ### Operations
 
-##### **`addOrReplace(jsonpath,input)`**
+#### **`addOrReplace(jsonpath,input)`**
 Reference a specific position or element in current JSON via `jsonpath`, and then add or replace it with `input`. 
 The end result would be the modified JSON document/array. Refer to 
 [json &raquo; `addOrReplace(json,jsonpath,input,var)`](../commands/json/addOrReplace(json,jsonpath,input,var)#rules) 
@@ -70,12 +70,12 @@ for additional details and the rules of adding or replacing element in an existi
 
 -----
 
-##### **`beautify`**
+#### **`beautify`**
 "pretty" formatting on current JSON document to improve readability.
 
 -----
 
-##### **`compact(removeEmpty)`**
+#### **`compact(removeEmpty)`**
 Remove all null or empty (i.e. empty string) elements from current JSON. When `removeEmpty` is set to `true`, this 
 operation will remove any node with only empty text (like `{ "name": "" }`). This operation is functionally equivalent
 to the [JSON &raquo; `compact(var,json,removeEmpty)`](../commands/json/compact(var,json,removeEmpty)) command. Check
@@ -83,20 +83,20 @@ the command page for more details and examples.
 
 -----
 
-##### **`count(jsonpath)`**
+#### **`count(jsonpath)`**
 Counts the number of nodes present that matched with specified `jsonpath`. This effectively also transforms the current
 expression to [NUMBER](NUMBERexpression).
 
 -----
 
-##### **`extract(jsonpath)`**
+#### **`extract(jsonpath)`**
 Extract a portion of the JSON document based on the specified [`jsonpath`](../jsonpath). Depending on the JSON in 
 question and the specified JSON path, the result could either be `null` (none matched), text (matched to a textual 
 value), JSON object or JSON array.
 
 -----
 
-##### **`keys(jsonpath)`**
+#### **`keys(jsonpath)`**
 Extract the immediate keys of the resolved JSON object matching the specified [`jsonpath`](../jsonpath). This operation
 first reduces the current JSON document to its fragment that match the specified [`jsonpath`](../jsonpath). Then if the 
 resolved JSON fragment is a valid JSON object, it returns a list of the immediate keys (meaning current level only) to 
@@ -165,27 +165,29 @@ Here are some possible use of this operations:
 
 -----
 
-##### **`list`**
+#### **`list`**
 Transform a JSON Array or text to a [`LIST`](LISTexpression). Works best with JSON Array that contains single text 
 value (e.g. `["apple","orange","banana"]`). Does not work with a JSON object.
 
 -----
 
-##### **`minify`** - compressed current JSON document; suitable for efficient data transfer.
+#### **`minify`**
+Compressed current JSON document; suitable for efficient data transfer.
 
 -----
 
-##### **`pack`** - remove any `null` JSON node (essentially JSON node without value); akin to _compacting_ a document. 
+#### **`pack`** 
+Remove any `null` JSON node (essentially JSON node without value); akin to _compacting_ a document. 
   Consequently, this operation also "beautifies" the current JSON document.
 
 -----
 
-##### **`remove(jsonpath)`**
+#### **`remove(jsonpath)`**
 Deletes JSON nodes that matched to the specified `jsonpath`.
 
 -----
 
-##### **`replace(jsonpath,replaceWith)`**
+#### **`replace(jsonpath,replaceWith)`**
 Replace the first match of the JSON in question based on the specified `jsonpath` with the specified `replaceWith`.  
 Depending on the JSON in question and the specified JSON path, the match could either be `null` (none matched), text 
 (matched to a textual value), JSON object or JSON array.  Since `replaceWith` is treated as text, the end result of 
@@ -193,13 +195,13 @@ the JSON document in question could become structurally different. 
 
 -----
 
-##### **`save(path,append)`**
+#### **`save(path,append)`**
 Save current JSON content to `path`. If `path` resolves to an existing file, `append` set as `true` will append 
 current JSON content to the said file. `append` is optional and defaults to `false`.
 
 -----
 
-##### **`select(jsonpaths)`**
+#### **`select(jsonpaths)`**
 Performs multiple JSON path extractions and transforms the result into [CSV](CSVexpression) with the JSON path as the 
 first column and the corresponding result as the second column. For example, suppose we have the following JSON document
 (_Marketing data_):<br/>
@@ -269,13 +271,13 @@ Note that any extraction that results in a list of values, such will be enclosed
 
 -----
 
-##### **`store(var)`**
+#### **`store(var)`**
 Save current JSON expression to a data variable. If the specified `var` exists, its value will be overwritten. 
 Using this operation, one can put an expression on pause and resume it at a later time.
 
 -----
 
-##### **`text`**
+#### **`text`**
 Transform a JSON document to its textual representation. JSON object will be enclosed in `{...}`, JSON array in `[...]`, 
 and all else in its native textual representation.
 
@@ -287,3 +289,6 @@ and all else in its native textual representation.
 **Output**:<br/>
 ![output](image/JSONexpression_02.png)
 
+-----
+
+<script>jQuery(document).ready(function () { newOperationSelect(); });</script>

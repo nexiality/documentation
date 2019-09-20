@@ -120,3 +120,6 @@ of the matched elements with the specified `content`. `content` may be text or X
 the content of the target elements are effectively removed. 
 
 -----
+
+<script>jQuery(document).ready(function () { newOperationSelect(); });</script>
+
