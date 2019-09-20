@@ -65,7 +65,7 @@ Script<br/>
 ![](image/CONFIGexpression_06.png)
 
 Output<br/>
-![](image/CONFIGexpression_07.png)
+![](image/CONFIGexpression_06.png)
 
 -----
 
