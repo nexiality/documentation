@@ -448,7 +448,3 @@ Also, please note the following limitations:
 We love to hear your feedback! Give it a try and 
 <a href="https://github.com/nexiality/nexial-core/issues/new/choose" class="external-link" target="_nexial_link">let us know</a> 
 what you think!
-
-<script>
-jQuery(document).ready(function () { $('#open_script_tab')[0].click(); });
-</script>
