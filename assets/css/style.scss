@@ -332,7 +332,6 @@ div.search-form form input#tipue_search_input {
     height:          auto;
     white-space:     nowrap;
     background-size: 1px 90px !important;
-    //background:      transparent url("../images/header-bg.png") repeat-x;
   }
 
   header h1 {
@@ -582,7 +581,7 @@ pre.explain {
 .tabs .tab-links a {
   background:            rgba(140, 200, 40, 0.55) !important;
   color:                 #f0f0f0;
-  box-shadow:            3px 0 2px -1px #151;
+  box-shadow:            3px -2px 2px -1px #151;
   display:               inline-block;
   padding:               9px 15px;
   border-radius:         3px 3px 0 0;
@@ -600,7 +599,7 @@ pre.explain {
 .tabs .tab-links a:hover {
   background:      rgba(200, 255, 50, 0.95) !important;
   text-decoration: none;
-  color:           #555;
+  color:           #242;
 }
 
 .tabs .tab-links .tab { display: none; }
@@ -614,7 +613,7 @@ pre.explain {
 .tabs .tab-links .active a, .tabs .tab-links .active a:hover {
   background:  rgba(200, 255, 50, 0.95) !important;
   box-shadow:  2px 0 15px #ff9 !important;
-  color:       #4c6c4c;
+  color:       #242;
   text-shadow: 1px 1px 1px #ff9;
 }
 
