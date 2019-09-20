@@ -12,6 +12,11 @@ function toggleTabContent(tabLink) {
   });
 }
 
+function scrollToHash(/*String*/hash) {
+  location.hash = hash;
+  window.scrollBy(0, -200);
+}
+
 function scrollToOperation(/*HTMLElement*/select) {
   if (!select || !select.selectedIndex) { return; }
 
@@ -21,8 +26,13 @@ function scrollToOperation(/*HTMLElement*/select) {
   var hash = selected.getAttribute('hash');
   if (!hash) { return; }
 
-  location.hash = hash;
-  window.scrollBy(0, -200);
+  scrollToHash(hash);
+}
+
+function scrollToTab(/*String*/tabId,/*String*/hash) {
+  location.hash = "#_";
+  scrollToHash(hash);
+  jQuery('#' + tabId).click();
 }
 
 function newOperationSelect() {

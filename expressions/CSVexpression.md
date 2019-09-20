@@ -460,7 +460,7 @@ Remove all empty rows from current CSV content. This could either be blank lines
 
 -----
 
-#### save(file)
+#### save(file,append)
 Save current CSV content to `path`. If `path` resolves to an existing file, `append` set as `true` will append current 
 CSV content to the said file. `append` is optional and defaults to `false`.
 
