@@ -390,6 +390,33 @@ means remove a row if any of its fields contains `USA`.
 
 The `conditions` parameter follows the syntax as laid out in [Nexial Filter](../flowcontrols/filter).
 
+Alternatively, one can also remove one or more rows based on the rows' index. Row index is 0-based. For example, 
+suppose we have the following CSV file:
+```csv
+User Name,First Name,Last Name,Display Name,Job Title
+chris@contoso.com,Chris,Green,Chris Green,Manager
+ben@contoso.com,Ben,Andrews,Ben Andrews,Director
+david@contoso.com,David,Longmuir,David Longmuir,Vice President
+cynthia@contoso.com,Cynthia,Carey,Cynthia Carey,Senior Director
+melissa@contoso.com,Melissa,MacBeth,Melissa MacBeth,Supervisor
+```
+
+`[CSV(${csv}) => parse(header=true) removeRows(3,2,0) text]` would yeild:
+```csv
+User Name,First Name,Last Name,Display Name,Job Title
+ben@contoso.com,Ben,Andrews,Ben Andrews,Director
+melissa@contoso.com,Melissa,MacBeth,Melissa MacBeth,Supervisor
+```
+
+However, `[CSV(${csv}) => parse(header=false) removeRows(3,2,0) text]` would yeild:
+```csv
+chris@contoso.com,Chris,Green,Chris Green,Manager
+cynthia@contoso.com,Cynthia,Carey,Cynthia Carey,Senior Director
+melissa@contoso.com,Melissa,MacBeth,Melissa MacBeth,Supervisor
+```
+
+Note that CSV parsed without header would yield the first line as row `0`.
+
 -----
 
 #### renameColumn(find,replace)

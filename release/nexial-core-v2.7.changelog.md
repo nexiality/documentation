@@ -15,6 +15,9 @@ comments: true
 - fixed code to support intra-execution changes of `nexial.scriptRef.*` data variables.
 - after importing desktop recording file to cloud ([`nexial.outputToCloud`](../systemvars/index#nexial.outputToCloud) 
   is set to `true`), Nexial will remove local video file to help keep local diskspace under control.
+- fixed code to support the creation and changes to System variables that are related to email notification during 
+  execution. Previous code only read in these System variables the start of an execution. The impacted System variables 
+  are namely `nexial.mailHeader`, `nexial.mailFooter`, `nexial.mailSubject`, `nexial.mailTo`, `nexial.enableEmail`.
 
 #### Improvements
 - added checks to ensure that read-only variables aren't overwritten via commands affect data variables
@@ -59,8 +62,11 @@ comments: true
 - [CSV &raquo; `replaceColumnRegex(searchFor,replaceWith,columnNameOrIndices`](../expressions/CSVexpression#replacecolumnregexsearchforreplacewithcolumnnameorindices):
   - the parameter `columnNameOrIndices` now can be expressed as `*` to indicate **ALL** columns.
   - fixed error when working on a file with columns wrapped in double quotes.
-- [CSV &raquo; `saveRowData(rowIndex)`](../expressions/CSVexpression.md#saveRowData(rowIndex)): save a row of CSV data
+- [CSV &raquo; `saveRowData(rowIndex)`](../expressions/CSVexpression#saveRowData(rowIndex)): save a row of CSV data
   as data variable by using the corresponding CSV header name as data variable name.
+- [CSV &raquo; `removeRows(conditions)`](../expressions/CSVexpression#removerowsconditions): now supports the 
+  removal of one or more rows based on row index. Note that row index is 0-based and for CSV that is 
+  [parsed](../expressions/CSVexpression#parseconfig) with `header=true`, row 0 is the row **AFTER** the header.
 
 
 ### [aws.vision commands](../commands/aws.vision)
