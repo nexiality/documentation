@@ -76,7 +76,7 @@ To see Nexial in action, watch this short demo showcasing how Nexial
 
 ---------------------------------------------
 
-For better understanding of Nexial, check out the **[Introduction](userguide/IntroductionAndFAQ)** page.
+For a better understanding of Nexial, check out the **[Introduction](userguide/IntroductionAndFAQ)** page.
 
 ---------------------------------------------
 

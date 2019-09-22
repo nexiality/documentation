@@ -129,7 +129,7 @@
                 not every element might be assigned an ID, much less meaningful ones. Hence the success of using this
                 approach is largely dependent on the developer, and to some extent the collaboration between engineers.
                 Another issue is that, while ID should be unique on the same web page, many browsers allow violation of
-                this rule such that a ID-based locator might match more than 1 element. Such anomaly occurs more
+                this rule such that an ID-based locator might match more than 1 element. Such anomaly occurs more
                 frequently with generated ID stemmed from JavaScript front-end framework, the likes of React, Angular,
                 Dojo, etc.
             </p>
@@ -150,7 +150,7 @@
         </td>
         <td class="pros">
             <ul>
-                <li>Works well with web form or simpler web application</li>
+                <li>Works well with forms or simpler web applications</li>
             </ul>
         </td>
         <td class="cons">
@@ -165,7 +165,7 @@
             <p>
                 This strategy is similar to that of ID (above), with the exception that the target attribute is
                 <code>"name"</code> instead of <code>"id"</code>. The <code>name</code> attribute is commonly found
-                with form elements such as textbox, select (dropdown), check box, radio box, buttons and text area
+                with form elements such as textbox, select (dropdown), checkbox, radio box, buttons and text area
                 (like textbox, but supports multi-line input). Consider the following web snippet and its HTML:<br/>
             <div style="line-height:30px;margin-bottom: 5px;">
                 <form id="login_form" method="post" action="..." onsubmit="return false;" style="padding:8px">
@@ -191,7 +191,7 @@
             <p>
                 By specification, the <code>name</code> attribute is not expected to be unique within the same web page.
                 At times one may use this to one's advantage. For example, a select (dropdown) element that contains
-                a list of 50 items can be reference by one single <code>name=...</code> locator.
+                a list of 50 items can be referred by one single <code>name=...</code> locator.
             </p>
         </td>
     </tr>
@@ -246,12 +246,12 @@
                 considered.
             </p>
             <p>
-                Not all web applications uses the &lt;A&gt; tag to represent its navigation (inasmuch as this is the
-                recommended approach by all major search and SEO engines to improve search hits). If a web application
-                opted to use another tag, such as &lt;DIV&gt; tag, then this locator strategy would not work.
+                Not all web applications use the &lt;A&gt; tag to represent its navigation (this is the recommended approach
+                by all major search and SEO engines to improve search hits). If a web application opted to use another
+                tag, such as &lt;DIV&gt; tag, then this locator strategy would not work.
             </p>
             <p>
-                Lastly, some browsers treat line breaks in link text differently. Notably older versions of IE would
+                Lastly, some browsers treat line breaks in link text differently. Notably, older versions of IE would
                 add extra spaces where the link breaks are found. The link-based locator assumes <b>EXACT</b> match on
                 the link text.
             </p>
@@ -284,8 +284,8 @@
             <p>
                 This is another simple way to located element(s) on a web page. The idea is to filter to element(s) of
                 the same "tag" so that interactions can be made to all the elements of the same tag. There is no
-                hierarchy support so only 1 tag can be referenced at one time. Obviously this is designed for simplistic
-                use cases where tags are not used by overlapping purposes.
+                hierarchy support so only 1 tag can be referenced at one time. This is designed for simplistic use cases
+                where tags are not used by overlapping purposes.
             </p>
         </td>
     </tr>
@@ -314,9 +314,9 @@
         <td class="explain" colspan="4">
             <p>
                 This type of locator matches elements with an attribute named as <code>class</code> that contains the
-                specified value. One should recognize that this type of locator is really just a simplification of the
-                CSS selector based locator (next). The CSS selector based locator is much more powerful and offers a
-                wide range of capabilities to selecting web elements.
+                specified value. One should recognize that this type of locator is just a simplification of the CSS
+                selector based locator (next). The CSS selector based locator is much more powerful and offers a wide
+                range of capabilities for selecting web elements.
             </p>
             <p>
                 This type of locator focused on the style class(es) set to web element. While only 1 style class can be
@@ -331,18 +331,18 @@
             In this case,<br/>
             <ul>
                 <li>The locator <code>class=style1</code> would match all 5 elements.</li>
-                <li>The locator <code>class=style2</code> would match the 2nd, 4th and 5th elements.</li>
+                <li>The locator <code>class=style2</code> would match the 2nd, 4th, and 5th elements.</li>
                 <li>The locator <code>class=style3</code> would match the 3rd and 5th elements.</li>
                 <li>The locator <code>class=style1 style2</code> would NOT match any element since it is not a valid
                     class-based locator.
                 </li>
             </ul>
-            The reason that the last locator would not match any element is because each style class are treated as
-            individual entity and are matched as such. To match multiple style classes, one would need to consider the
+            The reason that the last locator would not match any element is that each style class is treated as
+            independent entity and is matched as such. To match multiple style classes, one would need to consider the
             use of CSS selector based locator (next).
             </p>
             <p>
-                This type of locator is simple, highly readable and easy to maintain. However it only deals with one
+                This type of locator is simple, highly readable and easy to maintain. However, it only deals with one
                 style class at a time and does not consider other HTML attributes.
             </p>
         </td>
@@ -396,7 +396,7 @@
                     <li>String matches: equals (<code>=</code>), start with (<code>^=</code>), ends with
                         (<code>$=</code>), contains (<code>*=</code>)</li>
                     <li>Inward hierarchy: descendant, direct child (<code>&gt;</code>), first child
-                        (<code>:first-child</code>), last child (<code>:last-child</code>), nth child
+                        (<code>:first-child</code>), last child (<code>:last-child</code>), <i>n</i>th child
                         (<code>:nth-child(n)</code>)</li>
                     <li>Outward hierarchy: immediate after (<code>+</code>), before (<code>~</code>).</li>
                     <li>Pseudo Class: active element (<code>:active</code>), enabled (<code>:enabled</code>), disabled
@@ -455,7 +455,7 @@
     <tr>
         <td class="explain" colspan="4">
             <p>
-                XPATH is a W3C standard to reference nodes and fragment of a XML/xHTML document. It has sufficiently
+                XPATH is a W3C standard to reference nodes and fragments of an XML/xHTML document. It has sufficiently
                 descriptive syntax for precise element referencing while not bound to the underlying DOM structure. It
                 is commonly known as an effective alternative where <code>id</code>, <code>name</code> or similar
                 attributes are not available on the target web element(s). This is because XPath is flexible enough to
@@ -475,8 +475,7 @@
                 up as technical debts! What further the complication is the interoperability of these XPath across
                 browsers. There is to date no feature parity amongst the popular browsers in terms of XPath
                 implementation (particularly with IE). This adds additional burden in designing cross-browser XPath.
-                In addition, XPATH based locators are not the most ideal locator for performance (again, particularly
-                with IE).
+                Also, XPATH based locators are not the most ideal locator for performance (again, particularly with IE).
             </p>
             <p>
                 There are lots of tutorial and learning material on the 'Net regarding XPath. Here are some that might
@@ -491,7 +490,7 @@
                 <li><a href="https://en.wikipedia.org/wiki/XPath" class="external-link" target="_nexial_link">
                     wikipedia - XPath</a></li>
                 <li><a href="https://automatetheplanet.com/underrated-webdriver-locator-xpath/" class="external-link"
-                       target="_nexial_target">automatetheplanet - Most Underated WebDriver Locator - XPath</a></li>
+                       target="_nexial_target">automatetheplanet - Most Underrated WebDriver Locator - XPath</a></li>
                 <li><a href="http://toolsqa.com/selenium-webdriver/choosing-effective-xpath/" class="external-link"
                        target="_nexial_target">toolsqa - Choosing Effective XPaths</a></li>
                 <li><a href="https://devhints.io/xpath" class="external-link" target="_nexial_target">

@@ -13,7 +13,7 @@ Every so often, one would find oneself, as part of automation, the need to take 
 else_.  This is common when dealing with multiple interfaces or dealing with service-oriented testing.  The need to 
 transform, or to manipulate, data can be handled in multiple ways:
 
-1. **[`Nexial commands`](../commands/index)** - specific to the intrinsic data type.  As a command, it cannot 
+1. **[`Nexial commands`](../commands/index)** - specific to the intrinsic data type.  As a command, it cannot be
    combined in multiplicity (meaning: do multiple transformation in one command).
 2. **[`Nexial built-in functions`](../functions)** - specific to the intrinsic data type, can be nested to perform 
    multiple transformations within one command.  But the nesting can make your script less readable and more difficult 
@@ -33,10 +33,10 @@ embedded within a single command execution. Nexial Expression is "type-aware", "
 For you geeks out there, here's Nexial expression in pseudo-notation form:<br/>
 > `{text}* [{DATA TYPE}(DATA VALUE) => operation(parameters?)...]{text}*`
 
-- **`DATA TYPE`** is a all-caps reserved word to express the intended data type for a given set of information.  
+- **`DATA TYPE`** is an all-caps reserved word to express the intended data type for a given set of information.  
   For example, `TEXT(Hello World)` means `Hello World` treated as `TEXT`. `JSON({...})` means the specified content 
   is treated as a JSON document. 
-- **`DATA VALUE`** would be the value in reference from which the transformation would be carried out.  This can be
+- **`DATA VALUE`** would be the value about which the transformation would be carried out.  This can be
   expressed either as literal or data variable (in `${..}` syntax).
 - **`operation`** is one or more transformation "instructions" to be carried out on the given data.  Note that the 
   reference data might be _morphed_ into a different type (e.g. `TEXT` becomes `NUMBER`, or `JSON`becomes `LIST`) as 
@@ -46,9 +46,8 @@ For you geeks out there, here's Nexial expression in pseudo-notation form:<br/>
 ### Nexial in Action
 Let's take an example to see how Nexial expression works.
 
-Suppose we have a SQL query that will return the SSN of a user in the form of `xxx-xx-xxxx`, but for the purpose of 
-UI automation we need the same SSN in the form of `xxxxxxxxx`(without dashes).  Using Nexial expression, one could 
-approach it this way:
+Suppose we have a SQL query that will return the SSN of a user in the form of `xxx-xx-xxxx`, but for UI automation we 
+need the same SSN in the form of `xxxxxxxxx`(without dashes).  Using Nexial expression, one could approach it this way:
 
 ![](image/index_01.png)
 
@@ -66,7 +65,7 @@ more readable than Nexial built-in function.
 
 Now let's try our hand at a more complex example:
 
-Suppose we have to retrieve an unique and sorted list of US states where John Smith had worked in 2016.  The API, 
+Suppose we have to retrieve a unique and sorted list of US states where John Smith had worked in 2016.  The API, 
 however, would only return such information unfiltered, unsorted and may contain multiple years:
 
 ```json
@@ -127,7 +126,7 @@ it easier for its reader to derive the intent more effectively.  Here's the sam
 
 With Nexial expression, one would decipher its intent as one scans the expression in the **left-to-right** fashion: 
 "**extract** via `work_history` array, convert to a **list**, make the list **distinct**, sort it in **ascending** 
-order, **remove** double-quotes, **replace** comma with _comma-plus-space_".  Notice also that there are a few nicety 
+order, **remove** double-quotes, **replace** comma with _comma-plus-space_".  Notice also that there are a few niceties 
 added:
 
 - The previous 2 commands are merged into 1, with Nexial expression
