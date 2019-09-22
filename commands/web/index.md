@@ -5,6 +5,8 @@ tags: command web browser firefox chrome ie edge safari electron
 comments: true
 ---
 
+<div class="pageLink" onclick="scrollToHash('available-commands')">Available Commands</div>
+
 Nexial supports browser automation via the popular 
 <a href="https://en.wikipedia.org/wiki/Selenium_(software)" class="external-link" target="_nexial_link">Selenium<a/>/
 <a href="https://www.seleniumhq.org/docs/03_webdriver.jsp" class="external-link" target="_nexial_link">WebDriver</a>

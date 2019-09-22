@@ -13,8 +13,14 @@ function toggleTabContent(tabLink) {
 }
 
 function scrollToHash(/*String*/hash) {
+  location.hash = "#_";
   location.hash = hash;
   window.scrollBy(0, -200);
+}
+
+function scrollToTop() {
+  location.hash = "";
+  window.scrollTo(0, 0);
 }
 
 function scrollToOperation(/*HTMLElement*/select) {
@@ -30,7 +36,6 @@ function scrollToOperation(/*HTMLElement*/select) {
 }
 
 function scrollToTab(/*String*/tabId,/*String*/hash) {
-  location.hash = "#_";
   scrollToHash(hash);
   jQuery('#' + tabId).click();
 }
@@ -71,4 +76,21 @@ jQuery(document).ready(function () {
     e.stopImmediatePropagation();
     e.stopPropagation();
   });
+
+  /*
+   <div class="pageLinks">
+   <div class="pageLink" onclick="scrollToHash('available-expressions')">What is Nexial Expression?</div>
+   </div>
+   */
+  var html = '<div class="backToTop" onclick="scrollToTop()">&nbsp;</div>';
+  var sections = jQuery('h3:not(.pageTitle)');
+  if (sections && sections.length > 0) {
+    html += '<div class="pageLinks">';
+    sections.each(function(index,elem) {
+      html += '<div class="pageLink" onclick="scrollToHash(\'' + elem.getAttribute('id') + '\')">' + $(elem).text() + '</div>';
+    });
+    html += '</div>';
+  }
+
+  jQuery('h3.pageTitle').after(html);
 });

@@ -65,6 +65,87 @@ h3.pageTitle {
   box-shadow:   5px 5px 8px -1px rgba(50, 80, 0, 0.75);
 }
 
+.backToTop {
+  position:            fixed;
+  background-image:    url(/image/arrow_up.png);
+  width:               34px;
+  height:              34px;
+  bottom:              15px;
+  left:                8px;
+  cursor:              pointer;
+  background-color:    rgba(120, 120, 120, 0.35);
+  background-repeat:   no-repeat;
+  background-size:     30px;
+  background-position: center;
+  border-radius:       25px;
+  box-shadow:          0 0 5px 1px rgba(0, 0, 0, 0.75);
+}
+
+.backToTop:hover {
+  background-color: transparent;
+  box-shadow:       0 0 7px 4px #352;
+}
+
+.pageLinks {
+  position: relative;
+  top:      -33px;
+  left:     20px;
+  display:  inline-block;
+}
+
+.pageLink {
+  background-color: rgba(200, 255, 50, 0.95);
+  font-size:        11pt;
+  display:          inline-block;
+  color:            #574;
+  padding:          3px 6px 3px 6px;
+  border-radius:    0 0 5px 5px;
+  box-shadow:       2px 3px 5px 1px #5d8540;
+  text-shadow:      1px 1px 1px #ff9;
+  cursor:           pointer;
+  float:            left;
+  margin:           4px 10px 0 0;
+}
+
+.pageLink:hover {
+  color:            #ffe;
+  background-color: rgba(140, 200, 40, 0.95);
+  text-shadow:      none;
+}
+
+h3#operations ~ h4 {
+  padding:          12px 5px 10px 20px;
+  margin:           8px 0 8px 0;
+  font-size:        16px;
+  font-weight:      bold;
+  color:            #303030;
+  text-shadow:      1px 1px 1px rgba(255, 255, 255, 0.5) !important;
+  background-image: linear-gradient(50deg, rgba(80, 100, 60, 0.5) 2px, rgba(80, 100, 60, 0.3) 15px, rgba(255, 255, 255, 0.2) 100px);
+  box-shadow:       -2px 5px 5px -4px rgba(0, 20, 0, 0.75);
+  border-radius:    50px 50px 0 5px;
+  border-bottom:    1px outset rgba(0, 0, 0, 0.5);
+}
+
+h3#operations ~ h4 > code {
+  background: none;
+  border:     none;
+}
+
+h3#operations ~ h4 ~ p,
+h3#operations ~ h4 ~ ol,
+h3#operations ~ h4 ~ ul,
+h3#operations ~ h4 ~ table,
+h3#operations ~ h4 ~ pre {
+  margin-left: 20px
+}
+
+h3#operations ~ p > code {
+  padding:          1px 2px;
+  background-color: #f9f9f9;
+  border:           solid 1px #e0e0e0;
+  color:            #000;
+}
+
 .quick_links_dropdown {
   position:         fixed;
   top:              50px;
@@ -633,3 +714,4 @@ pre.explain {
 .tabs .tab-content li {
   margin-bottom: 15px;
 }
+

@@ -8,8 +8,6 @@ redirect_from:
   - /expressions
 ---
 
-##### ... jump to [Available Expressions](#available-expressions)
-<br/>
 ![](image/index_01.jpg)<br/>
 Every so often, one would find oneself, as part of automation, the need to take _a thing and turn it into something 
 else_.  This is common when dealing with multiple interfaces or dealing with service-oriented testing.  The need to 

@@ -72,8 +72,8 @@ Render CSV content into a ASCII-based table. Also known/usable as 'ascii-table'.
 
 -----
 
-#### `column(column_name_or_index)`
-Get all the data belonging to the same column as a **[`LIST`](LISTexpression)**. For CSV without header information, 
+#### `column(columnNameOrIndex)`
+Get all the data belonging to the same column as a [`LIST`](LISTexpression). For CSV without header information, 
 use column index (0-based). 
 
 -----
@@ -84,7 +84,7 @@ Number of columns to the current state of the CSV content.
 -----
 
 #### `config` 
-Convert CSV content into [CONFIG](CONFIGexpression) instance.
+Convert CSV content into [`CONFIG`](CONFIGexpression) instance.
 
 -----
 
@@ -109,11 +109,10 @@ evaluated on the columns based their respective name or index. The condition fol
 -----
 
 #### `filter(conditions)`
-Keep only the rows that matches the specified [conditions](../flowcontrols/filter#specification). These conditions are 
-evaluated on the columns based their respective name or index. The condition follows the syntax as laid out above. One 
+Keep only the rows that matches the specified [conditions](../flowcontrols/filter#specification). These 
+[conditions](../flowcontrols/filter#specification) are evaluated on the columns based their respective name or index. One 
 can use the reserved word `[ANY FIELD]` to target any field. For example, `filter([ANY FIELD] contain USA)` means 
 filter a row if any of its fields contains `USA`.
-- `conditions` follows the syntax as laid out in [Nexial Filter](../flowcontrols/filter). 
 
 -----
 
@@ -124,20 +123,17 @@ columns are separated by comma (`,`). The newly formed CSV will named the last c
 Let's see an example. Suppose we have a [CSV file of various sales information](CSV_sample1.csv), like this:<br/>
 ![sample csv](image/csv_27.png)<br/>
 
-To create a CSV file that would count up the occurrences of different `Country`, we can do something like this:
-
+To create a CSV file that would count up the occurrences of different `Country`, we can do something like this:<br/>
 `[CSV(${sample_csv}) => parse(header=true) group-count(Country) text]`
 
-The above would: (1) parse the CSV file denoted as `${sample_csv}` and perform a "group count" on the column 
-`Country`. The end CSV file looks something like this:<br/>
-
+The above would parse the CSV file denoted as `${sample_csv}` and perform a "group count" on the column `Country`. 
+The final CSV file looks something like this:<br/>
 ![](image/csv_28.png)
 
-You can download the same CSV file [here](CSV_groupCount1.csv)<br/>
+You can download the same CSV file [here](CSV_groupCount1.csv).
 
 It is possible to include multiple columns for grouping, such as `groupCount(Country,State)`, which would yield 
-results like this:
-
+results like this:<br/>
 ![](image/csv_29.png)
 
 -----
@@ -153,14 +149,12 @@ values are in the same group. Then find the corresponding Column B (assuming num
 thereof by the associated group".
 
 Let's look at an example. Suppose we have a [CSV file of various sales information](CSV_sample1.csv):<br/>
-![sample csv](image/csv_27.png)<br/>
+![sample csv](image/csv_27.png)
 
 We can group by `Country` and sum the corresponding `Price` column, like this:<br/>
-
 `[CSV(${sample_csv}) => parse(header=true) group-sum(Country,Price) text]`
 
 The result CSV would look something like this:<br/>
-
 ![](image/csv_30.png)<br/>
 
 As show, the data in `Country` is grouped together and the corresponding `Price` summed by under the column named 
@@ -195,14 +189,15 @@ like this:<br/>
 #### json
 Convert current state of the CSV content to a JSON document.Technically speaking, it's a JSON array (to represent rows) 
 with multiple JSON document (each for one row).The CSV content in question may be one or more rows, with or without 
-headers. For example, here's the transformation from one CSV document (with header) to a JSON:
+headers. Below are some examples of the transformation from different CSV document to JSON:
 
-![](image/csv_01.jpg) ![](image/csv_02.jpg)
+| example            | CSV                                                   | JSON                                                  |
+|+-------------------|+------------------------------------------------------|+------------------------------------------------------|
+|CSV with header     | <img style="box-shadow:none" src="image/csv_01.jpg"/> | <img style="box-shadow:none" src="image/csv_02.jpg"/> |
+|CSV without header  | <img style="box-shadow:none" src="image/csv_03.jpg"/> | <img style="box-shadow:none" src="image/csv_04.jpg"/> |
+|+-------------------|+------------------------------------------------------|+------------------------------------------------------|
 
-In contrast, here's another CSV document (without header) and the transformation to JSON:
-
-![](image/csv_03.jpg) ![](image/csv_04.jpg)
-
+<br/>
 As shown above, CSV with header produces JSON with names (node names), and CSV without header produces JSON array of 
 array without name/label references.
 
@@ -218,130 +213,132 @@ Merge the CSV data represented by `var` into existing CSV content. The `keyColum
 the 2 CSV content in such a way that the record of the same key are merged together. In general, there are 3 uses of 
 this operation:
 
-- **merge two CSV files that have no header** - in such case, records will be merged line-by-line with no regard 
-  to the data value. For example:<br/>
+1. **merge two CSV files that have no header**<br/>
+   In this case, records will be merged line-by-line with no regard to the data value. For example:<br/>
 ```text
 [CSV( ${csv file to merge from} ) => parse store(merge_from)]
 ... ...
 [CSV( ${csv file to merge into} ) => parse(header=false) merge(merge_from,\(empty\)) 
-                                       store(merge_into)]
+                                        store(merge_into)]
 ```
     <table border="1" cellspacing="0" cellpadding="5">
     <thead>
     <tr>
-        <th>file</th>
+        <th>data variable</th>
         <th>snapshot</th>
     </tr>
     </thead>
     <tbody>
     <tr>
         <td><code>csv file to merge into</code></td>
-        <td><img src="image/csv_05.jpg" style="box-shadow: none"/></td>
+        <td><img src="image/csv_05.jpg" style="box-shadow:none;margin:0"/></td>
     </tr>
     <tr>
         <td><code>csv file to merge from</code></td>
-        <td><img src="image/csv_06.jpg" style="box-shadow: none"/></td>
+        <td><img src="image/csv_06.jpg" style="box-shadow:none;margin:0"/></td>
     </tr>
     <tr>
-        <td><code>csv file to merge into</code> (<b>AFTER</b> merge)</td>
-        <td><img src="image/csv_07.jpg" style="box-shadow: none"/></td>
+        <td><code>merge into</code> (<b>AFTER</b> merge)</td>
+        <td><img src="image/csv_07.jpg" style="box-shadow:none;margin:0"/></td>
     </tr>
     </tbody>
     </table>
     <br/>
-  Note that in this example **`\(empty\)`** as the `keyColumn` signifies that no shared column is between these 
-  2 CSV files.
+   Note that in this example **`\(empty\)`** as the `keyColumn` signifies that no shared column is between these 2 CSV 
+   files.
 
-- **merge two CSV files that have headers, but without keyColumn** - in this case, `header` exists in both CSV file, 
-  but they do not share any common column from the merge can be based on. For example:<br/>
+2. **merge two CSV files that have headers, but without keyColumn**<br/>
+   In this case, `header` exists in both CSV file, but they do not share any common column from the merge can be based 
+   on. For example:<br/>
 ```text
 [CSV( ${csv file to merge from} ) => parse(header=true) store(merge_from)]
 ... ...
 [CSV( ${csv file to merge into} ) => parse(header=true) merge(merge_from,\(empty\)) 
-                                       store(merge_into)]
+                                        store(merge_into)]
 ```
     <table border="1" cellspacing="0" cellpadding="5">
     <thead>
     <tr>
-        <th>file</th>
+        <th>data variable</th>
         <th>snapshot</th>
     </tr>
     </thead>
     <tbody>
     <tr>
         <td><code>csv file to merge into</code></td>
-        <td><img src="image/csv_08.jpg" style="box-shadow: none"/></td>
+        <td><img src="image/csv_08.jpg" style="box-shadow:none;margin:0"/></td>
     </tr>
     <tr>
         <td><code>csv file to merge from</code></td>
-        <td><img src="image/csv_09.jpg" style="box-shadow: none"/></td>
+        <td><img src="image/csv_09.jpg" style="box-shadow:none;margin:0"/></td>
     </tr>
     <tr>
-        <td><code>csv file to merge into</code> (<b>AFTER</b> merge)</td>
-        <td><img src="image/csv_10.jpg" style="box-shadow: none"/></td>
+        <td><code>merge into</code> (<b>AFTER</b> merge)</td>
+        <td><img src="image/csv_10.jpg" style="box-shadow:none;margin:0"/></td>
     </tr>
     </tbody>
     </table>
     <br/>
-  Note that passing **`\(empty\)`** is required as the keyColumn to signify that no shared column is between these 2 
-  CSV file.
+   Note that passing **`\(empty\)`** is required as the keyColumn to signify that no shared column is between these 2 
+   CSV file.
 
-- **merge two CSV files that have headers and share the same `keyColumn`**
-  - in this case, header exists for both CSV data and they also share (at least) one common column whereby merge can 
-    use it to align the records. For example,<br/>
+3. **merge two CSV files that have headers and share the same `keyColumn`**<br/>
+   In this case, header exists for both CSV data and they also share (at least) one common column whereby merge can use 
+   it to align the records. For example,<br/>
 ```text
 [CSV( ${csv file to merge from} ) => parse(header=true) store(merge_from)]
 ... ...
 [CSV( ${csv file to merge into} ) => parse(header=true) merge(merge_from,SSN) 
-                                       store(merge_into)]
+                                        store(merge_into)]
 ```
     <table border="1" cellspacing="0" cellpadding="5">
     <thead>
     <tr>
-        <th>file</th>
+        <th>data variable</th>
         <th>snapshot</th>
     </tr>
     </thead>
     <tbody>
     <tr>
         <td><code>csv file to merge into</code></td>
-        <td><img src="image/csv_11.jpg" style="box-shadow: none"/></td>
+        <td><img src="image/csv_11.jpg" style="box-shadow:none;margin:0"/></td>
     </tr>
     <tr>
         <td><code>csv file to merge from</code></td>
-        <td><img src="image/csv_12.jpg" style="box-shadow: none"/></td>
+        <td><img src="image/csv_12.jpg" style="box-shadow:none;margin:0"/></td>
     </tr>
     <tr>
-        <td><code>csv file to merge into</code> (<b>AFTER</b> merge)</td>
-        <td><img src="image/csv_13.jpg" style="box-shadow: none"/></td>
+        <td><code>merge into</code> (<b>AFTER</b> merge)</td>
+        <td><img src="image/csv_13.jpg" style="box-shadow:none;margin:0"/></td>
     </tr>
     </tbody>
     </table>
     <br/>
-  Notice that the merged CSV is matching up the First Name and Last Name based on `SSN`, even though the order of these 
-  `SSN` are not the same.
+   Notice that the merged CSV is matching up the First Name and Last Name based on `SSN`, even though the order of these 
+   `SSN` are not the same.
 
 -----
 
 #### parse(config)
 (Re)Parse current CSV data with consideration towards the specified configurations. By default, Nexial uses the Excel 
-CSV (see above) as the file format to parse a CSV file. Using this operation, one can change the way a CSV file is 
-parsed. The configuration will be specified in the form of 
-`name=value|name=value|name=value|...` or `name=value,name=value,name=value,...`pairs.
+CSV (see [above](#description)) as the file format to parse a CSV file. Using this operation, one can change the way a 
+CSV file is parsed. The `config` will be specified in the form of:
+1. `name=value|name=value|name=value|...`
+2. `name=value,name=value,name=value,...`
 
   - **`delim`** - the character (single) to use as separator between field values. For example, `delim=\,` would use 
-    comma as delimiter, `delim=;` would use semi-colon as delimiter. Default is comma.
-    - Nexial also support auto-detection of delimiter, so you can omit `delim` to simplify your automation. 
+    comma as delimiter, `delim=;` would use semi-colon as delimiter. Default is comma (`,`). Nexial also support 
+    auto-detection of delimiter, so you can omit `delim` to simplify your automation. 
 
   - **`quote`** - the character (single) to use to wrap non-numeric (such as text) values. Default is double quote.
-    `quote='` would force Nexial to consider single quote as the "wrapping" for non-numeric values.
-    - Nexial also supports auto-detection of value quoting, so you ca omit quote to simplify your automation.
+    `quote='` would force Nexial to consider single quote as the "wrapping" for non-numeric values. Nexial also 
+    supports auto-detection of value quoting, so you ca omit quote to simplify your automation.
 
   - **`header`** - true or false to signify if the first line should be treated as column names. If `header=false`, 
     then field values can only be referenced by index (zero-based). Default is `false`.
 
-  - **`recordDelim`** - determine the character(s) between 2 records. Default is carriage return (`\r\n`).
-    - Nexial supports auto-detection of line delimiter, so you can omit `recordDelim` to simplify your automation.
+  - **`recordDelim`** - determine the character(s) between 2 records. Default is carriage return (`\r\n`). Nexial 
+  supports auto-detection of line delimiter, so you can omit `recordDelim` to simplify your automation.
 
   - **`maxColumns`** - instruct Nexial to allocate beyond the default max columns (512) in order to process very wide
     CSV file. Note that changing this value will have both memory footprint and performance implication. This setting
@@ -356,12 +353,12 @@ parsed. The configuration will be specified in the form of
     by default `true`. But at times it is critical to retain all the data found from its original sources. As such, one
     can specify `trim=false` to retain leading/trailing whitespaces. 
     
-  - Example: `[CSV(text) => parse(delim=\,|header=true|recordDelim=\r\n) text]` reads:
-    - convert text into a CSV component, using the default Excel CSV format.
-    - re-parse the same text but this time using **comma as the field delimiter**, the 
-      **carriage return (DOS) as the record/row delimiter** and treat the **first line as the header**. Note that 
-      comma needs to be escape since it is also used as a parameter separator. Hence `delim=\,`.
-    - convert the CSV component into text.
+For example: `[CSV(text) => parse(delim=\,|header=true|recordDelim=\r\n) text]` would read:
+1. convert text into a CSV component, using the default Excel CSV format.
+2. re-parse the same text but this time using **comma as the field delimiter**, the 
+  **carriage return (DOS) as the record/row delimiter** and treat the **first line as the header**. Note that 
+  comma needs to be escape since it is also used as a parameter separator. Hence `delim=\,`.
+3. convert the CSV component into text.
 
 -----
 
@@ -376,13 +373,11 @@ columns of the target CSV.
 
 #### removeRows(conditions)
 Remove all rows that meet the specified [conditions](../flowcontrols/filter#specification). For example, consider the 
-following CSV file:
-
+following CSV file:<br/>
 ![](image/csv_14.jpg)
 
 **`[CSV(csv_file) => removeRows(city = Scottsdale|raisedAmt < 200000)]`** would remove all the rows where city is 
-`Scottsdale` and `raisedAmt` is less than `200000`. The result should look like this:
-
+`Scottsdale` and `raisedAmt` is less than `200000`. The result should look like this:<br/>
 ![](image/csv_15.jpg)
 
 One can use the reserved word `[ANY FIELD]` to target any field. For example, `removeRows([ANY FIELD] contain USA)` 
@@ -401,14 +396,14 @@ cynthia@contoso.com,Cynthia,Carey,Cynthia Carey,Senior Director
 melissa@contoso.com,Melissa,MacBeth,Melissa MacBeth,Supervisor
 ```
 
-`[CSV(${csv}) => parse(header=true) removeRows(3,2,0) text]` would yeild:
+`[CSV(${csv}) => parse(header=true) removeRows(3,2,0) text]` would yield:
 ```csv
 User Name,First Name,Last Name,Display Name,Job Title
 ben@contoso.com,Ben,Andrews,Ben Andrews,Director
 melissa@contoso.com,Melissa,MacBeth,Melissa MacBeth,Supervisor
 ```
 
-However, `[CSV(${csv}) => parse(header=false) removeRows(3,2,0) text]` would yeild:
+However, `[CSV(${csv}) => parse(header=false) removeRows(3,2,0) text]` would yield:
 ```csv
 chris@contoso.com,Chris,Green,Chris Green,Manager
 cynthia@contoso.com,Cynthia,Carey,Cynthia Carey,Senior Director
@@ -425,26 +420,21 @@ Rename a column, as defined by `find`, with new value as defined by `replace`.
 -----
 
 #### render(template)
-Mass-generate a series of text based on the fusing of CSV data and a designated "template".  Suppose:
+Generate text based on the infusing of CSV data and a designated "template".  Suppose:
+1. We have a CSV file with the following content:<br/>
+<img style="box-shadow:none;margin:0" src="image/csv_16.jpg"/>
 
-  1. we have a CSV file with the following content:<br/>
-  ![](image/csv_16.jpg)
+2. We want to convert it (in reality, expand) to lines of text where each line represents one single record "merged", 
+   like:
+   <pre>Here is <b>Tempe, AZ office</b>, which is located in <b>51 w 3rd st #105, Tempe AZ 85182 USA</b>, we call ourselves <b>PHX</b>.</pre>
 
-  2. we want to convert (and in reality, expand) to lines of text where each line represents one single record 
-     "merged", like<br/>
-     
-     <code>Here is <b>Tempe, AZ office</b>, which is located in <b>51 w 3rd st #105, Tempe AZ 85182 USA</b>, we call 
-     ourselves <b>PHX</b>.</code>
+THEN we can use the following as the "template":
+<pre>Here is <b>${description}</b>, which is located in <b>${fullAddress}</b>, we call ourselves <b>${code}</b>.</pre>
 
-  THEN we can use the following as the "template":<br/>
-    <code>Here is <b>${description}</b>, which is located in <b>${fullAddress}</b>, we call ourselves 
-    <b>${code}</b>.</code>
-
-  HENCE the expression `[CSV(${file}) => parse(...) render(${template})]` would yield:<br/>
-    ![](image/csv_17.jpg)
-
-  Nexial works behind the scene to replace each token (data variable) found in the template with record data found in 
-  each CSV record. For as many records as there are, Nexial will perform the same "merge" to produce many lines of text.
+HENCE the expression `[CSV(${file}) => parse(...) render(${template})]` would yield:<br/>
+<img style="box-shadow:none;margin:0" src="image/csv_17.jpg"/>
+Nexial works behind the scene to replace each token (data variable) found in the template with record data found in 
+each CSV record. For as many records as there are, Nexial will perform the same "merge" to produce many lines of text.
 
 -----
 
@@ -547,12 +537,10 @@ shown below:
 For example, **`[CSV(csv_file) => XML( , , )]`** would transform a CSV file to a XML document where the root node is 
 rows, the next level node name is row and each of its element is named as cell. 
 
-The CSV content in question may be one or more rows, with or without headers. For example, here's the transformation 
-from one CSV document (with header) to a XML document (for example, **`[CSV(csv_file) => XML(team,members,member)]`**):
-
-  ![](image/csv_18.jpg)
-
-  ![](image/csv_19.jpg)
+The CSV content in question may be one or more rows, with or without headers. Here is an example of transforming from 
+one CSV document (with header) to a XML document (for example, **`[CSV(csv_file) => XML(team,members,member)]`**):<br/>
+<img style="box-shadow:none;margin:0" src="image/csv_18.jpg"/><br/>
+<img style="box-shadow:none;margin:0" src="image/csv_19.jpg"/>
 
 The generated XML document has 'team' has the `root` node name (which represent all rows), 'members' as the node name 
 that encapsulate each row and 'member' as the node name that represents each cell. In addition, an attribute is 
@@ -560,10 +548,10 @@ generated to reference the column name (e.g., User Name, Address, etc.) and anot
 generate to represent the column position of each cell value.
 
 In contrast, transforming a CSV content without header to a XML document would look a bit differently. Below is 
-an example (using **`[CSV(csv_file) => XML( , , ,)]`**):
+an example of using **`[CSV(csv_file) => XML( , , ,)]`**:
 
-  ![](image/csv_20.jpg) ![](image/csv_21.jpg)
-     
+<img style="box-shadow:none;margin:0" src="image/csv_20.jpg"/><br/>
+<img style="box-shadow:none;margin:0" src="image/csv_21.jpg"/><br/>
 As shown above, the column names are missing and default node names are applied.
 
 ---
@@ -573,36 +561,34 @@ As shown above, the column names are missing and default node names are applied.
 **Example 1: Using filter to limit the rows of a CSV file.**
 - For more details about initializing a CSV structure, please read the section on 
   [Initiate CSV expression](CSVexpression#different-ways-to-initiate-csv-expression).
-
 - For more details about filter condition, please read [Nexial Filter](../flowcontrols/filter).
 
-  Suppose a file named expression-example1.csv exists in the artifact/data directory with the following content:<br/>	   
-  ![](image/csv_22.jpg)
+Suppose a file named expression-example1.csv exists in the artifact/data directory with the following content:	   
+<img style="box-shadow:none;margin:0" src="image/csv_22.jpg"/>
 
-  We can use the filter() operation to limit the rows of this CSV file. Here are 3 examples of filter applied to 
-  the same file:<br/>
-  ![](image/csv_23.jpg)
+We can use the `filter()` operation to limit the rows of this CSV file. Here are 3 examples of filter applied to the same 
+file:
+<img style="box-shadow:none;margin:0" src="image/csv_23.jpg"/>
 
-  You'll note that the [`parse(config)`](#parse(config)) operation is only invoked one (2nd line). Using the 
-  [`store(var)`](#store(var)) operation, we can reuse the CSV structure (in 3rd and 4th line). In this example, we 
-  assigned `myCSV` to the parsed CSV structure in line 2.
-  - The first filter operation limits to rows where the column `First Name` is exactly `David`. In this case, there 
-    should only be 1 row (row 3 of the input CSV file) matched.
-  - The second filter operation limits to rows where the column Mobile Phone contains `-6641` **AND** the column `Fax` 
-    ends with `9825`. The row 1 of input CSV file contains `123-555-6641` in its `Mobile Phone` column - this is the 
-    only match for the first condition. However this same line does not match the second condition (`Fax` ends with 
-    `9825`). Hence this filter yields no rows matched.
-  - The third filter operations limits to rows where **any field** ends with `3`. As such we see that row 3 of the 
-    input CSV file is a match since its `Office Phone` ends with 3 and its Fax ends with 3 (either match would 
-    suffice). Other than that there isn't another match.
+Note that the [`parse(config)`](#parse(config)) operation is only invoked one (2nd line). Using the 
+[`store(var)`](#store(var)) operation, we can reuse the CSV structure (in 3rd and 4th line). In this example, we 
+assigned `myCSV` to the parsed CSV structure in line 2.
+- The first filter operation limits to rows where the column `First Name` is exactly `David`. In this case, there 
+  should only be 1 row (row 3 of the input CSV file) matched.
+- The second filter operation limits to rows where the column Mobile Phone contains `-6641` **AND** the column `Fax` 
+  ends with `9825`. The row 1 of input CSV file contains `123-555-6641` in its `Mobile Phone` column - this is the 
+  only match for the first condition. However this same line does not match the second condition (`Fax` ends with 
+  `9825`). Hence this filter yields no rows matched.
+- The third filter operations limits to rows where **any field** ends with `3`. As such we see that row 3 of the 
+  input CSV file is a match since its `Office Phone` ends with 3 and its Fax ends with 3 (either match would suffice). 
+  Other than that there isn't another match.
 
-  Here's the output that depicts the same analysis above:<br/>
-  ![](image/csv_24.jpg)
+Here's the output that depicts the same analysis above:
+<img style="box-shadow:none;margin:0" src="image/csv_24.jpg"/>
 
-  `filter2.txt` is empty, as expected. Here's the content of `filter1.txt` and `filter3.txt`, respectively.<br/>
-  ![](image/csv_25.jpg) 
-
-  ![](image/csv_26.jpg)
+`filter2.txt` is empty, as expected. Here's the content of `filter1.txt` and `filter3.txt`, respectively.
+<img style="box-shadow:none;margin:0" src="image/csv_25.jpg"/><br/>
+<img style="box-shadow:none;margin:0" src="image/csv_26.jpg"/>
 
 ---
 
