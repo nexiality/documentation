@@ -58,7 +58,7 @@ h3.pageTitle {
   font-size:    18pt;
   font-weight:  bold;
   color:        #5d8540;
-  background:   rgba(240, 255, 205, 0.35);
+  background:   rgba(220, 225, 190, 0.55);
   padding:      5px 5px 5px 25px;
   word-spacing: 0.25em;
   border-left:  20px solid #5d8540;
@@ -68,22 +68,23 @@ h3.pageTitle {
 .backToTop {
   position:            fixed;
   background-image:    url(../../image/arrow_up.png);
-  width:               34px;
-  height:              34px;
-  bottom:              15px;
-  left:                8px;
+  width:               35px;
+  height:              30px;
+  bottom:              10px;
+  right:               0;
   cursor:              pointer;
-  background-color:    rgba(120, 120, 120, 0.35);
+  background-color:    rgba(180, 235, 180, 0.45);
   background-repeat:   no-repeat;
-  background-size:     30px;
-  background-position: center;
-  border-radius:       25px;
-  box-shadow:          0 0 5px 1px rgba(0, 0, 0, 0.75);
+  background-size:     26px;
+  background-position: 3px 2px;
+  border-radius:       20px 0 0 20px;
+  border:              2px solid rgba(100, 130, 80, 0.5);
+  border-right:        none;
 }
 
 .backToTop:hover {
   background-color: transparent;
-  box-shadow:       0 0 7px 4px #352;
+  box-shadow:       0 0 5px 0 #685;
 }
 
 .pageLinks {
@@ -402,16 +403,13 @@ div.search-form form input#tipue_search_input {
 
 @media screen and (min-height: 0) and (max-height: 680px), screen and (min-width: 0) and (max-width: 600px) {
   header {
-    padding-top:     1px;
-    padding-bottom:  0;
-    padding-left:    5px;
-    margin-top:      auto;
-    box-shadow:      none;
-    position:        relative;
-    width:           100%;
-    height:          auto;
-    white-space:     nowrap;
-    background-size: 1px 90px !important;
+    padding-top:    1px;
+    padding-bottom: 0;
+    padding-left:   5px;
+    position:       relative;
+    width:          100%;
+    height:         auto;
+    white-space:    nowrap;
   }
 
   header h1 {
@@ -419,13 +417,23 @@ div.search-form form input#tipue_search_input {
   }
 
   header h2 {
-    font-size: 11pt;
+    font-size: 12pt;
+  }
+
+  .quick_links_dropdown {
+    position:   relative;
+    top:        -68px;
+    float:      right;
+    width:      auto;
+    height:     35px;
+    box-shadow: none;
+    font-size:  12px;
   }
 
   div.breadcrumb {
-    margin-top: -18px;
+    margin-top: -15px;
     height:     24px;
-    padding:    0 3px 5px 3px;
+    padding:    0 0 7px 5px;
   }
 
   a.breadcrumb {
@@ -444,21 +452,25 @@ div.search-form form input#tipue_search_input {
 
   .inner {
     margin:      0 5px !important;
-    padding-top: 10px;
+    padding-top: 0;
+    width:       auto !important;
+    clear:       both;
   }
 
   h3.pageTitle {
-    margin: 0 0 30px;
+    margin:       0 0 30px 0;
+    word-spacing: inherit;
   }
 
   div.search-form {
-    background: none;
-    position:   relative;
     top:        0;
-    float:      none;
-    margin:     30px 0;
+    margin:     0 10px 0 0;
+    font-size:  12pt;
+    clear:      both;
+    background: none;
+    padding:    0;
     box-shadow: none;
-    font-size:  14pt;
+    border:     1px solid #ddd;
   }
 
   #tipue_search_content {
