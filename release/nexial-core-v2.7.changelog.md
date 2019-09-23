@@ -46,6 +46,8 @@ comments: true
 
 
 ### [Built-in Functions](../functions)
+- [`$(date|setDOW|date|day)`](../functions/$(date).md#datesetdowdateday): added boundary checks to ensure meaningful 
+  `day` value. Only 0 through 7 is allowed for the `day` parameter. 
 
 
 ### [Nexial Expression](../expressions)
