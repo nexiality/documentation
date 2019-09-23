@@ -113,7 +113,7 @@ h3.pageTitle {
   text-shadow:      none;
 }
 
-h3#operations ~ h4 {
+h3#operations ~ h4, h3#available-functions ~ h4 {
   padding:          12px 5px 10px 20px;
   margin:           8px 0 8px 0;
   font-size:        16px;
@@ -126,20 +126,17 @@ h3#operations ~ h4 {
   border-bottom:    1px outset rgba(0, 0, 0, 0.5);
 }
 
-h3#operations ~ h4 > code {
+h3#operations ~ h4 > code, h3#available-functions ~ h4 > code {
   background: none;
   border:     none;
 }
 
-h3#operations ~ h4 ~ p,
-h3#operations ~ h4 ~ ol,
-h3#operations ~ h4 ~ ul,
-h3#operations ~ h4 ~ table,
-h3#operations ~ h4 ~ pre {
+h3#operations ~ h4 ~ p, h3#operations ~ h4 ~ ol, h3#operations ~ h4 ~ ul, h3#operations ~ h4 ~ table, h3#operations ~ h4 ~ pre,
+h3#available-functions ~ h4 ~ p, h3#available-functions ~ h4 ~ ol, h3#available-functions ~ h4 ~ ul, h3#available-functions ~ h4 ~ table, h3#available-functions ~ h4 ~ pre {
   margin-left: 20px
 }
 
-h3#operations ~ p > code {
+h3#operations ~ p > code, h3#available-functions ~ p > code {
   padding:          1px 2px;
   background-color: #f9f9f9;
   border:           solid 1px #e0e0e0;
