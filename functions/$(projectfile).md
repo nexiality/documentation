@@ -19,9 +19,9 @@ For example,<br/>
 
 
 ### Available Functions
-- **`$(project|text|...)`** \- retrieve the content of a project file.  Assumes that the target file has "text" 
-  content (not binary).
 
+#### `$(project|text|...)`
+Retrieve the content of a project file.  Assumes that the target file has "text" content (not binary).
 
 ### Example
 Suppose we have the following test **Script**:<br/>
@@ -34,8 +34,11 @@ built-in function is used again for file content comparison.
 Here's the **output**:<br/>
 ![output](image/$(projectfile)_02.png)
 
-Notice that the output at row 7 is the same as the "text" property printed on row 8. 
+Notice that the output at row 7 is the same as the "text" property printed on row 9. 
 
+-----
 
 ### See Also
 - [`$(syspath)`]($(syspath))
+
+<script>jQuery(document).ready(function () { newOperationSelect(); });</script>
