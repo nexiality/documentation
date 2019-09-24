@@ -784,7 +784,7 @@
       </td>
       <td>text</td>
       <td>&nbsp;</td>
-      <td>true</td>
+        <td class="highlight-red">true</td>
       <td>
         This system variable is to indicate the Activity currently in Execution. It will only show activity name
         currently executing.
@@ -796,12 +796,50 @@
       </td>
       <td>text</td>
       <td>&nbsp;</td>
-      <td>true</td>
+        <td class="highlight-red">true</td>
       <td>
         This system variable is to indicate the Scenario currently in Execution. It will only show scenario name
         currently executing.
       </td>
     </tr>
+
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.summary.header"><code>nexial.summary.header</code></a>
+        </td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td class="highlight-red">true</td>
+        <td>
+            Allow one to customize "header" content in the execution summary generated at the end of a Nexial execution.
+            <br/>
+            <br/>
+            One could define this System variable like the following:<br/>
+            <img src="image/execution-summary-settings.png"/><br/>
+            <br/>
+            The generated execution summary would now contain the customized "header":<br/>
+            <img src="image/execution-summary-header.png"/><br/>
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.summary.footer"><code>nexial.summary.footer</code></a>
+        </td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td class="highlight-red">true</td>
+        <td>
+            Allow one to customize "footer" content in the execution summary generated at the end of a Nexial execution.
+            <br/>
+            <br/>
+            One could define this System variable like the following:<br/>
+            <img src="image/execution-summary-settings.png"/><br/>
+            <br/>
+            The generated execution summary would now contain the customized "footer":<br/>
+            <img src="image/execution-summary-footer.png"/><br/>
+        </td>
+    </tr>
+
     <tr>
       <td nowrap="nowrap" class="varname"><a id="nexial.manageMemory"><code>nexial.manageMemory</code></a></td>
       <td>boolean</td>
@@ -822,10 +860,10 @@
         enabled (<code>nexial.manageMemory=true</code>), Nexial will conduct garbage collection (GC) to reclaim any
         unused heap memory after the completion of each test script execution. You will see something similar as
         the following, which show that GC was executed and the memory footprint changes between the GC.<br/>
-        <img src="image/systemvar_15.jpg" class="resize" alt="nexial.manageMemory example"/><br/>
+        <img src="image/systemvar_15.jpg" class="resize" alt="nexial.manageMemory example" style="box-shadow:none;"/><br/>
         At the end of the entire execution, Nexial also print out a summary of the memory usage between different
         test scenarios:<br/>
-        <img src="image/systemvar_16.jpg" class="resize" alt="nexial.manageMemory example"/>
+        <img src="image/systemvar_16.jpg" class="resize" alt="nexial.manageMemory example" style="box-shadow:none;"/>
       </td>
     </tr>
     <tr>

@@ -29,7 +29,7 @@ The "io" command type represents a series of automation commands regarding io op
 - [`rename(target,newName)`](rename(target,newName))
 - [`saveDiff(var,expected,actual)`](saveDiff(var,expected,actual))
 - [`saveFileMeta(var,file)`](saveFileMeta(var,file))
-- [`saveMatches(var,path,filePattern)`](saveMatches(var,path,filePattern))
+- [`saveMatches(var,path,fileFilter,textFilter)`](saveMatches(var,path,fileFilter,textFilter))
 - [`searchAndReplace(file,config,saveAs)`](searchAndReplace(file,config,saveAs))
 - [`unzip(zipFile,target)`](unzip(zipFile,target))
 - [`validate(var,profile,inputFile)`](validate(var,profile,inputFile))
