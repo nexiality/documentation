@@ -42,7 +42,7 @@ comments: true
 - [Inspection](../interactive/index#inspection) now supports `SAVE(var)` and `CLEAR(vars)` functionality.
 - support desktop recording from within Interactive session.
 - Inspection supports the clearing of all user data variables (`CLEAR(*)`)
-- new option to reload both data file and `project.properties` (option `L`)
+- new option to reload script file, data file and `project.properties` (option `L`)
 
 
 ### [Built-in Functions](../functions)
@@ -100,6 +100,13 @@ comments: true
 - [`nexial.image.trimColor`](../systemvars/index#nexial.image.trimColor):  Now supports RGB color code instead of color
   names.
  
+
+### [io commands](../commands/io)
+- [`saveMatches(var,path,fileFilter,textFilter)`](../commands/io/saveMatches(var,path,fileFilter,textFilter)):
+  WAS `saveMatches(var,path,filePattern)`. This command has been enhanced to support content-level filtering (REGEX-based)
+  so that in addition to filtering by file name, last modified date and file size, one can also filter files by its content 
+  (support all text file, PDF and XLSX). This command now also support recursively scanning.
+
 
 ### [json commands](../commands/json)
 

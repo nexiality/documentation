@@ -111,7 +111,7 @@ All option and action keys are **NOT** case-sensitive.
         <li><a href="#tab9" id="reload_script_tab"><code>7</code> reload assigned test script</a></li>
         <li><a href="#tab10" id="reload_data_tab"><code>8</code> reload assigned data file</a></li>
         <li><a href="#tab11" id="reload_prop_tab"><code>9</code> reload project.properties</a></li>
-        <li><a href="#tab12" id="reload_data_prop_tab">re<code>L</code>oad data file and project.properties</a></li>
+        <li><a href="#tab12" id="reload_data_prop_tab">re<code>L</code>oad script and data file</a></li>
         <li><a href="#tab13" id="recoding_tab">desktop re<code>C</code>ording</a></li>
         <li><a href="#tab14" id="reload_tab"><code>R</code>eload menu</a></li>
         <li><a href="#tab15" id="execute_tab">e<code>X</code>ecute</a></li>
@@ -291,13 +291,13 @@ All option and action keys are **NOT** case-sensitive.
             except those defined in command-line <code>-override</code>.
         </div>
         <div id="tab12" class="tab">
-            Use <code>L</code> to reload both the assigned data file and the current project's 
+            Use <code>L</code> to reload the assigned test script, data file and the current project's 
             <code>project.properties</code> file.<br/>
             <br/>
-            See the <a href="javascript:void(0);" onclick="scrollToTab('reload_data_tab','options-and-actions')">
-            <code>7</code> reload assigned test script</a> and 
-            <a href="javascript:void(0);" onclick="scrollToTab('reload_prop_tab','options-and-actions')"><code>8</code> 
-            reload assigned data file</a> tabs for more details.
+            For more details, see:<br/>
+            <li><a href="javascript:void(0);" onclick="scrollToTab('reload_script_tab','options-and-actions')"><code>7</code> reload assigned test script</a></li> 
+            <li><a href="javascript:void(0);" onclick="scrollToTab('reload_data_tab','options-and-actions')"><code>8</code> reload assigned data file</a></li>
+            <li><a href="javascript:void(0);" onclick="scrollToTab('reload_prop_tab','options-and-actions')"><code>9</code> reload project.properties file</a></li>
         </div>
         <div id="tab13" class="tab">
             Use <code>C</code> to toggle desktop recording during current Nexial Interactive session<br/>
