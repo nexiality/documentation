@@ -36,6 +36,10 @@ comments: true
   will automatically perform data variable substitution after it reads in the text file. This System variable supersedes
   the now-deprecated [`nexial.expression.OpenFileAsIs`](../systemvars/index#nexial.expression.OpenFileAsIs) System
   variable since it is no longer limited to [Expression](../expressions) only.
+- [`nexial.summary.header`](../systemvars/index#nexial.summary.header): **NEW** System variable to allow user to add 
+  customized header (HTML) to execution summary.
+- [`nexial.summary.footer`](../systemvars/index#nexial.summary.footer): **NEW** System variable to allow user to add 
+  customized footer (HTML) to execution summary.
 
 
 ### [Nexial Interactive](../interactive)
