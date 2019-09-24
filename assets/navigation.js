@@ -40,14 +40,19 @@ function scrollToTab(/*String*/tabId,/*String*/hash) {
   jQuery('#' + tabId).click();
 }
 
-function newOperationSelect() {
-  var operationsSelect = '<select class="operations" onchange="scrollToOperation(this);"><option>Operations</option>';
-  jQuery('#operations ~ h4, #available-functions ~ h4').each(function (index, item) {
+function newQuickLinkSelect(/*String*/selector, /*String*/initialLabel) {
+  var operationsSelect = '<select class="operations" onchange="scrollToOperation(this);">' +
+                         '<option>' + initialLabel + '</option>';
+  jQuery(selector).each(function (index, item) {
     operationsSelect += '<option hash="#' + jQuery(item).attr('id') + '">' + jQuery(item).text() + '</option>';
   });
   operationsSelect += '</select>';
   jQuery('div.breadcrumb').append(operationsSelect);
 }
+
+function newOperationSelect() { newQuickLinkSelect('#operations ~ h4, #available-functions ~ h4', 'Operations'); }
+
+function newSystemVariableSelect() { newQuickLinkSelect('.varname > a', 'System Variables'); }
 
 jQuery(document).ready(function () {
   jQuery('.tabs .tab-links').on('click', function (e) {
@@ -82,12 +87,13 @@ jQuery(document).ready(function () {
    <div class="pageLink" onclick="scrollToHash('available-expressions')">What is Nexial Expression?</div>
    </div>
    */
-  var html = '<div class="backToTop" onclick="scrollToTop()">&nbsp;</div>';
+  var html     = '<div class="backToTop" onclick="scrollToTop()">&nbsp;</div>';
   var sections = jQuery('h3:not(.pageTitle)');
   if (sections && sections.length > 0) {
     html += '<div class="pageLinks">';
-    sections.each(function(index,elem) {
-      html += '<div class="pageLink" onclick="scrollToHash(\'' + elem.getAttribute('id') + '\')">' + $(elem).text() + '</div>';
+    sections.each(function (index, elem) {
+      html += '<div class="pageLink" onclick="scrollToHash(\'' + elem.getAttribute('id') + '\')">' + $(elem).text() +
+              '</div>';
     });
     html += '</div>';
   }

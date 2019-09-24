@@ -9,3 +9,5 @@ redirect_from:
 ---
 
 {% include_relative content.html %}
+
+<script>jQuery(document).ready(function () { newSystemVariableSelect(); });</script>
