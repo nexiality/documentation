@@ -57,7 +57,7 @@ Below is the general directory/file structure of a standard Nexial automation pr
 2. The `artifact` directory contains 3 sub-directories: `data`, `plan`, `script`. These are the directories are used 
    to store test data, test plan and test scripts respectively.
 
-   1. `artifact/script` - this directory will store your test scripts.  The script files may be named to your 
+   1. `artifact/script`<a name="artifact/script"></a> - this directory will store your test scripts.  The script files may be named to your 
    likings.  Generally the file name would reflect the overall functionality targeted for automation. Note that this is
    different than the naming recommendation for the worksheets within each test script. Each worksheet should reflect
    a test scenario, such as "User Login", "Search for Best Deal", "Import Client Data" and "Complete Order". The 
@@ -68,7 +68,7 @@ Below is the general directory/file structure of a standard Nexial automation pr
    `description` section of respective sections, as such test object and user acceptance criteria.<br/><br/> 
    The [macro library files](../commands/base/macro(file,sheet,name)) are stored in this location as well.
 
-   2. `artifact/data` - this directory will store your test data.  By default the data file is expected to be named in
+   2. `artifact/data` <a name="artifact/data"></a>- this directory will store your test data.  By default the data file is expected to be named in
    correspondent to the test script: `<TEST SCRIPT NAME>.data.xlsx`.  But this convention can be overridden during
    execution via the `-data` flag to [`nexial.[cmd|sh]` script](BatchFiles#nexialcmd--nexialsh). Similar to test 
    scripts, each data file would contain one or many data sheets (worksheets) that correspond to the test scenarios. 
@@ -76,7 +76,7 @@ Below is the general directory/file structure of a standard Nexial automation pr
    [`nexial.[cmd|sh]` script](BatchFiles#nexialcmd--nexialsh).
    In general, other data files such as SQL, JSON, test data files (text) are stored in this location as well.
 
-   3. `artifact/plan` - this directory will store all the test plan.  Each test plan may contain one or more test 
+   3. `artifact/plan` <a name="artifact/plan"></a>- this directory will store all the test plan.  Each test plan may contain one or more test 
    scripts and data files.  It may contain test scripts and data files from a different project as well. For test 
    artifacts of the same project, and the standard convention is followed, they can be referenced simply by the file
    name. In other words, test scripts are assumed to be found in `artifact/script` directory and data files are

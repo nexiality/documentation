@@ -13,7 +13,8 @@ test data, etc. By using this function, one can keep the test project more porta
 qualified path, such as `C:\projects\MyProject` or 
 `/Users/user123/projects/MyApplication/artifact/script/TEST-1234.xlsx`, one can specify `$(syspath|project|fullpath)` 
 or `$(syspath|script|fullpath)/TEST-1234.xlsx` instead. During execution, Nexial will resolve the appropriate 
-physical path, thus your script is guarded against location or even OS changes.
+physical path, thus your script is guarded against location or even OS changes.For using this built-in function a proper
+[`Nexial Project Structure`](../../userguide/UnderstandingProjectStructure) must be followed.
 
 For each of the following options, one can add a second parameter as followed:
 - **name** - the (directory) name of the target location
@@ -22,21 +23,110 @@ For each of the following options, one can add a second parameter as followed:
 
 
 ### Available Functions
-- **`$(syspath|project|...)`** - the location of the target project.
-- **`$(syspath|script|...)`** - the standard location where Nexial scripts (Excel) are stored. This is usually the 
-  `artifact/script` directory under the target project.
-- **`$(syspath|data|...)`** - the standard location where Nexial test data (Excel) are stored. This is usually the 
-  `artifact/data`  directory under the target project, but can be overridden via the `-data` command line argument.
-- **`$(syspath|plan|...)`** - the standard location where Nexial plans (Excel) are stored. This is usually the
-  `artifact/plan` directory under the target project.
-- **`$(syspath|out|...)`** - the output directory for the current execution. This would be a directory named `output` 
+
+#### `$(syspath|project|...)`
+The location of the target project.
+
+**Example**<br/>
+Script:<br/>
+![script](image/$(syspath)_01.png)
+
+Output:<br/>
+![output](image/$(syspath)_02.png)
+
+-----
+
+#### `$(syspath|script|...)`
+The standard location where Nexial scripts (Excel) are stored. This is usually the 
+  [`artifact/script`](../../userguide/UnderstandingProjectStructure/index#artifact/script) directory under the target project.
+        
+**Example**<br/>
+Script:<br/>
+![script](image/$(syspath)_03.png)
+
+Output:<br/>
+![output](image/$(syspath)_04.png)
+
+-----
+
+#### `$(syspath|data|...)` 
+The standard location where Nexial test data (Excel) are stored. This is usually the 
+  [`artifact/data`](../../userguide/UnderstandingProjectStructure/index#artifact/data) directory under the target project, but can be overridden via the `-data` command line argument.
+    
+**Example**<br/>
+Script:<br/>
+![script](image/$(syspath)_05.png)
+
+Output:<br/>
+![output](image/$(syspath)_06.png)
+
+-----
+ 
+#### `$(syspath|plan|...)`
+The standard location where Nexial plans (Excel) are stored. This is usually the
+  [`artifact/plan`](../../userguide/UnderstandingProjectStructure/index#artifact/plan) directory under the target project.
+    
+**Example**<br/>
+Script:<br/>
+![script](image/$(syspath)_07.png)
+
+Output:<br/>
+![output](image/$(syspath)_08.png)
+
+-----
+ 
+#### `$(syspath|out|...)`
+The output directory for the current execution. This would be a directory named [`output`](../../userguide/UnderstandingProjectStructure/index#output) 
   under the target project, or whatever specified via the `-output` command line argument.
-- **`$(syspath|screenshot|...)`** - the standard location where screen captures are stored. This is usually a 
+    
+**Example**<br/>
+Script:<br/>
+![script](image/$(syspath)_09.png)
+
+Output:<br/>
+![output](image/$(syspath)_10.png)
+
+-----
+
+#### `$(syspath|screenshot|...)`
+The standard location where screen captures are stored. This is usually a 
   directory named  `captures` under the output directory.
-- **`$(syspath|log|...)`** - the standard location where logs are being kept. This is usually a directory named 
+    
+**Example**<br/>
+Script:<br/>
+![script](image/$(syspath)_11.png)
+
+Output:<br/>
+![output](image/$(syspath)_12.png)
+
+-----
+
+#### `$(syspath|log|...)`
+The standard location where logs are being kept. This is usually a directory named 
   `logs` under the output directory.
-- **`$(syspath|temp|...)`** - the standard temporary storage location as defined via `java.io.tempdir` environment 
+    
+**Example**<br/>
+Script:<br/>
+![script](image/$(syspath)_13.png)
+
+Output:<br/>
+![output](image/$(syspath)_14.png)
+
+-----
+
+#### `$(syspath|temp|...)`
+The standard temporary storage location as defined via `java.io.tempdir` environment 
   variable, which is often mapped to the `%TEMP%` or `$TMP` system variable.
+    
+**Example**<br/>
+Script:<br/>
+![script](image/$(syspath)_15.png)
+
+Output:<br/>
+![output](image/$(syspath)_16.png)
+
+-----
+
 
 For each of these functions, one would add a secondary parameter as listed in the **Description** section. For 
 example,
@@ -44,13 +134,6 @@ example,
 - `$(syspath|out|base)` would render the parent directory (full path) of the output directory
 - `$(syspath|temp|fullpath)` would render the full path of the temp. directory
 
-
-### Example
-Here are some examples of using this built-in function:<br/>
-![script](image/$(syspath)_01.png)
-
-... and the **output**:<br/>
-![output](image/$(syspath)_02.png)
 
 **Note**: When this function needs to be used around the text that may contain path separator `/`, for e.g. `XML`
 or `HTML` ending tags like `<file>$(syspath|data|fullpath)/mydata.txt</file>`, in such a case, it is recommended to
@@ -61,3 +144,5 @@ and then in the target text as `<file>${mydatafile}</file>`.
 
 ### See Also
 - [`$(projectfile)`]($(projectfile))
+
+<script>jQuery(document).ready(function () { newOperationSelect(); });</script>
