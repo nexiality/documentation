@@ -26,7 +26,7 @@ through Nexial Interactive hopefully fosters a more engaging and intuitive way t
 - learn about an existing automation script/suite
 
 
-## Capabilities
+### Capabilities
 Currently Nexial Interactive comes with the following capabilities:
 - <a href="javascript:void(0);" onclick="scrollToTab('assign_script_tab','options-and-actions')">(re)assign</a> and 
   <a href="javascript:void(0);" onclick="scrollToTab('reload_script_tab','options-and-actions')">(re)load test script</a>
@@ -48,7 +48,7 @@ of steps (of one scenario, naturally), work through the __"experiment-observe-re
 block of steps. One can (re)assign the number of steps or scenario between execution. 
 
 
-## Try it yourself
+### Try it yourself
 To activate Nexial Interactive, simply add the `-interactive` flag to your Nexial execution command line argument. One 
 may include `-scenario ...` and `-data ...` command line argument - they are optional.<br/>
 
@@ -86,7 +86,7 @@ the characters highlighted with white background. Click one of the tabs below to
 actions.
 
 
-## Options and Actions
+### Options and Actions
 All option and action keys are **NOT** case-sensitive.
 <style>
 .interactive .tabs-collapsed { background-position-y: 160px !important; }
@@ -427,7 +427,7 @@ All option and action keys are **NOT** case-sensitive.
 <br/>
 
 
-## Limitation
+### Limitation
 This is the first release of Nexial Interactive. As time permits and if requests should be made, we will enhance 
 Nexial Interactive with more learning goodness. Currently, here are the enhancement candidates that we are considering 
 for Nexial Interactive. No timeline has been committed as of yet.
@@ -444,7 +444,7 @@ Also, please note the following limitations:
   and probably never will be - equivalent to a true debugger like those modern-day IDEs.
 
 
-## Feedback
+### Feedback
 We love to hear your feedback! Give it a try and 
 <a href="https://github.com/nexiality/nexial-core/issues/new/choose" class="external-link" target="_nexial_link">let us know</a> 
 what you think!
