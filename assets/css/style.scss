@@ -127,7 +127,7 @@ h3#operations ~ h4, h3#available-functions ~ h4 {
   border-bottom:    1px outset rgba(0, 0, 0, 0.5);
 }
 
-h3#operations ~ h4 > code, h3#available-functions ~ h4 > code {
+h3#operations ~ h4 code, h3#available-functions ~ h4 code {
   background: none;
   border:     none;
 }
