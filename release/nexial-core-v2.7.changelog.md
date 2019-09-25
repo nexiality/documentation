@@ -18,6 +18,7 @@ comments: true
 - fixed code to support the creation and changes to System variables that are related to email notification during 
   execution. Previous code only read in these System variables the start of an execution. The impacted System variables 
   are namely `nexial.mailHeader`, `nexial.mailFooter`, `nexial.mailSubject`, `nexial.mailTo`, `nexial.enableEmail`.
+- fixed execution summary HTML template when custom header or footer is not found.
 
 #### Improvements
 - added checks to ensure that read-only variables aren't overwritten via commands affect data variables
