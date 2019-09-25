@@ -74,6 +74,7 @@ comments: true
 - [CSV &raquo; `removeRows(conditions)`](../expressions/CSVexpression#removerowsconditions): now supports the 
   removal of one or more rows based on row index. Note that row index is 0-based and for CSV that is 
   [parsed](../expressions/CSVexpression#parseconfig) with `header=true`, row 0 is the row **AFTER** the header.
+- [CSV expression](../expressions/CSVexpression): fix issue dealing with content that contains delimiter or double quotes.
 
 
 ### [aws.vision commands](../commands/aws.vision)
