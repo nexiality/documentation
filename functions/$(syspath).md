@@ -38,7 +38,7 @@ Output:<br/>
 
 #### `$(syspath|script|...)`
 The standard location where Nexial scripts (Excel) are stored. This is usually the 
-  [`artifact/script`](../userguide/UnderstandingProjectStructure/index#artifact/script) directory under the target project.
+  [`artifact/script`](../userguide/UnderstandingProjectStructure#artifact/script) directory under the target project.
         
 **Example**<br/>
 Script:<br/>
@@ -51,7 +51,8 @@ Output:<br/>
 
 #### `$(syspath|data|...)` 
 The standard location where Nexial test data (Excel) are stored. This is usually the 
-  [`artifact/data`](../userguide/UnderstandingProjectStructure/index#artifact/data) directory under the target project, but can be overridden via the `-data` command line argument.
+[`artifact/data`](../userguide/UnderstandingProjectStructure#artifact/data) directory under the target project, but 
+can be overridden via the `-data` command line argument.
     
 **Example**<br/>
 Script:<br/>
@@ -64,7 +65,7 @@ Output:<br/>
  
 #### `$(syspath|plan|...)`
 The standard location where Nexial plans (Excel) are stored. This is usually the
-  [`artifact/plan`](../userguide/UnderstandingProjectStructure/index#artifact/plan) directory under the target project.
+[`artifact/plan`](../userguide/UnderstandingProjectStructure#artifact/plan) directory under the target project.
     
 **Example**<br/>
 Script:<br/>
@@ -76,8 +77,9 @@ Output:<br/>
 -----
  
 #### `$(syspath|out|...)`
-The output directory for the current execution. This would be a directory named [`output`](../userguide/UnderstandingProjectStructure/index#output) 
-  under the target project, or whatever specified via the `-output` command line argument.
+The output directory for the current execution. This would be a directory named 
+[`output`](../userguide/UnderstandingProjectStructure#output) under the target project, or whatever specified via
+the `-output` command line argument.
     
 **Example**<br/>
 Script:<br/>
@@ -89,8 +91,8 @@ Output:<br/>
 -----
 
 #### `$(syspath|screenshot|...)`
-The standard location where screen captures are stored. This is usually a 
-  directory named  `captures` under the output directory.
+The standard location where screen captures are stored. This is usually a directory named  `captures` under the 
+output directory.
     
 **Example**<br/>
 Script:<br/>
@@ -102,8 +104,7 @@ Output:<br/>
 -----
 
 #### `$(syspath|log|...)`
-The standard location where logs are being kept. This is usually a directory named 
-  `logs` under the output directory.
+The standard location where logs are being kept. This is usually a directory named `logs` under the output directory.
     
 **Example**<br/>
 Script:<br/>
@@ -115,8 +116,8 @@ Output:<br/>
 -----
 
 #### `$(syspath|temp|...)`
-The standard temporary storage location as defined via `java.io.tempdir` environment 
-  variable, which is often mapped to the `%TEMP%` or `$TMP` system variable.
+The standard temporary storage location as defined via `java.io.tempdir` environment variable, which is often 
+mapped to the `%TEMP%` or `$TMP` system variable.
     
 **Example**<br/>
 Script:<br/>
