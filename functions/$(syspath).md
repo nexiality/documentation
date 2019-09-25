@@ -14,7 +14,7 @@ qualified path, such as `C:\projects\MyProject` or 
 `/Users/user123/projects/MyApplication/artifact/script/TEST-1234.xlsx`, one can specify `$(syspath|project|fullpath)` 
 or `$(syspath|script|fullpath)/TEST-1234.xlsx` instead. During execution, Nexial will resolve the appropriate 
 physical path, thus your script is guarded against location or even OS changes.For using this built-in function a proper
-[`Nexial Project Structure`](../../userguide/UnderstandingProjectStructure) must be followed.
+[`Nexial Project Structure`](../userguide/UnderstandingProjectStructure) must be followed.
 
 For each of the following options, one can add a second parameter as followed:
 - **name** - the (directory) name of the target location
@@ -38,7 +38,7 @@ Output:<br/>
 
 #### `$(syspath|script|...)`
 The standard location where Nexial scripts (Excel) are stored. This is usually the 
-  [`artifact/script`](../../userguide/UnderstandingProjectStructure/index#artifact/script) directory under the target project.
+  [`artifact/script`](../userguide/UnderstandingProjectStructure/index#artifact/script) directory under the target project.
         
 **Example**<br/>
 Script:<br/>
@@ -51,7 +51,7 @@ Output:<br/>
 
 #### `$(syspath|data|...)` 
 The standard location where Nexial test data (Excel) are stored. This is usually the 
-  [`artifact/data`](../../userguide/UnderstandingProjectStructure/index#artifact/data) directory under the target project, but can be overridden via the `-data` command line argument.
+  [`artifact/data`](../userguide/UnderstandingProjectStructure/index#artifact/data) directory under the target project, but can be overridden via the `-data` command line argument.
     
 **Example**<br/>
 Script:<br/>
@@ -64,7 +64,7 @@ Output:<br/>
  
 #### `$(syspath|plan|...)`
 The standard location where Nexial plans (Excel) are stored. This is usually the
-  [`artifact/plan`](../../userguide/UnderstandingProjectStructure/index#artifact/plan) directory under the target project.
+  [`artifact/plan`](../userguide/UnderstandingProjectStructure/index#artifact/plan) directory under the target project.
     
 **Example**<br/>
 Script:<br/>
@@ -76,7 +76,7 @@ Output:<br/>
 -----
  
 #### `$(syspath|out|...)`
-The output directory for the current execution. This would be a directory named [`output`](../../userguide/UnderstandingProjectStructure/index#output) 
+The output directory for the current execution. This would be a directory named [`output`](../userguide/UnderstandingProjectStructure/index#output) 
   under the target project, or whatever specified via the `-output` command line argument.
     
 **Example**<br/>
