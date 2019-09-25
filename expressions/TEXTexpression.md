@@ -32,7 +32,8 @@ BASE64 decode text.
 
 -----
 
-#### **`base64decodeThenSave(file,append)`**, or **`base64decode-then-save(file,append)`**
+#### **`base64decodeThenSave(file,append)`**
+Or, **`base64decode-then-save(file,append)`**. 
 BASE64 decode current `TEXT` content and saving the decoded bytes to `file`. This operation assumes that current `TEXT` 
 content is BASE64 encoded, and that the decoded content is binary (e.g. Excel, PDF or Image file). Use `append` to 
 append the decoded content to an existing file.
@@ -140,7 +141,8 @@ Remove character(s) that matches `regex`.
 
 -----
 
-#### **`removeStart(start)`** / **`remove-start(start)`**
+#### **`removeStart(start)`**
+Or **`remove-start(start)`**
 Remove starting character sequence (substring) of text that matches `start`.
 
 -----
