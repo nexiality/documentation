@@ -1,0 +1,1 @@
+We can use this function to expose execution metadata as part of [Event Notification](../userguide/EventNotification). This can provide helpful information towards troubleshooting.
