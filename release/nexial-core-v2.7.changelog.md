@@ -22,6 +22,7 @@ comments: true
 
 #### Improvements
 - added checks to ensure that read-only variables aren't overwritten via commands affect data variables
+- added plan description in email notification html for plan execution.
 
 
 ### [System Variable](../systemvars)
