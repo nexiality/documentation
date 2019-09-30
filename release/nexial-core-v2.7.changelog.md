@@ -78,6 +78,8 @@ comments: true
 - [CSV expression](../expressions/CSVexpression): fix issue dealing with content that contains delimiter or double quotes.
 - [CSV >> `parse(config)`](../expressions/CSVexpression#parseconfig): **NEW** config - `keepQuote` - to keep or remove
   quote after parsing. This only apply to column values where the quote is not needed (such as those without delimiter).
+- [CSV >> `surround(parameters)`](../expressions/CSVexpression#surroundparameters): **NEW** operation to surround all
+  target columns with specified character(s). 
 
 
 ### [aws.vision commands](../commands/aws.vision)

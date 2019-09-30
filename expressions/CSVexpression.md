@@ -351,8 +351,13 @@ CSV file is parsed. The `config` will be specified in the form of:
   - **`trim`** - instruct Nexial to retain or trim of any leading and/or trailing whitespaces per parsed value. By 
     default, Nexial will trim each parsed value so ` California ` would be stored as `California` - the `trim` option is
     by default `true`. But at times it is critical to retain all the data found from its original sources. As such, one
-    can specify `trim=false` to retain leading/trailing whitespaces. 
-    
+    can specify `trim=false` to retain leading/trailing whitespaces.
+
+  - **`keepQuote`** - instruct Nexial to retain the double quotes around the column data even if they are not necessary. 
+    By default Nexial will remove the double quotes around the data of a field unless they are deemed necessary such as
+    the case for `"Johnson, Pete"` or `"San \"May-Eye\"'s Spot"`. By setting `keepQuote` as `true`, Nexial will retain
+    the double quotes as found on the initial CSV data.
+
 For example: `[CSV(text) => parse(delim=\,|header=true|recordDelim=\r\n) text]` would read:
 1. convert text into a CSV component, using the default Excel CSV format.
 2. re-parse the same text but this time using **comma as the field delimiter**, the 
@@ -509,6 +514,78 @@ Sort the entire CSV content by the specified column, in descending order. Note t
 #### store(var)
 Save current CSV expression (including content) to a data variable. If the specified var exists, its value will be 
 overwritten. Using this operation, one can put an expression on pause and resume it at a later time.
+
+-----
+
+#### surround(parameters)
+Surround the data of all target columns with specified character(s). The `parameters` has 2 parts: 
+1. The character(s) to use to surround the column data, such as `"`, `'` or `:: `. The specified character(s) will be 
+   added to the beginning and end of the matching column. Note that if the target column data is already surrounded with
+   the specified characters, Nexial will ignore such column.
+2. The target columns to be affected. These can be specified either by column position (0-based) or column names (must 
+   be parsed via `parse(header=true)`). If all columns are targeted, one may use `*` to represent all columns.
+
+The result of this operation will yield [TEXT](TEXTexpression) data.
+
+**Examples**
+
+Consider the following CSV file:
+```csv
+SSN,Name,Position,Age
+123456789,James,Accountant,41
+234567890,Jim,Educator,42
+345678901,"Johnson, Adam",Inspector General,33
+456789012,Jenny,Cashier,23
+567890123,Jon,Manager,41
+```
+
+- **Example 1**: `[CSV(${csv}) => parse(header=true) surround(",1,2)]` yields:
+```csv
+SSN,Name,Position,Age
+123456789,"James","Accountant",41
+234567890,"Jim","Educator",42
+345678901,"Johnson, Adam","Inspector General",33
+456789012,"Jenny","Cashier",23
+567890123,"Jon","Manager",41
+```
+Since column positioning is 0-based, `1,2` means second and third column. Nexial is not surrounding `"Johnson, Admin"` 
+with double quote since it is surrounded by double quote.
+
+- **Example 2**: `[CSV(${csv}) => parse(header=true) surround(',Name,Age)]` yields:
+```csv
+SSN,Name,Position,Age
+123456789,'James',Accountant,41
+234567890,'Jim',Educator,'42'
+345678901,'"Johnson, Adam"',Inspector General,'33'
+456789012,'Jenny',Cashier,'23'
+567890123,'Jon',Manager,'41'
+```
+Since the specified columns were not surrounded with single quote, all the specified columns are now surround with 
+single quote.
+
+- **Example 3**: `[CSV(${csv}) => parse(header=true) surround( ,*)]` yields:
+```csv
+SSN,Name,Position,Age
+ 123456789, James , Accountant , 41
+ 234567890, Jim , Educator , 42
+ 345678901, "Johnson, Adam" , Inspector General , 33
+ 456789012, Jenny , Cashier , 23
+ 567890123, Jon , Manager , 41
+```
+`*` means all columns.
+
+- **Example 4**: `[CSV(${csv}) => parse(header=false,keepQuote=true) surround(",2)]` yields:
+```csv
+SSN,Name,"Position",Age
+123456789,James,"Accountant",41
+234567890,Jim,"Educator",42
+345678901,"Johnson, Adam","Inspector General",33
+456789012,Jenny,"Cashier",23
+567890123,Jon,"Manager",41
+```
+Since this CSV was parsed with `header=false` and `keepQuote=true`, the first row is considered part of CSV data and
+`"Johnson, Adam"` still has the double quotes around it.
+
 
 -----
 
