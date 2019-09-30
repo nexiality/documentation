@@ -118,6 +118,8 @@ comments: true
 
 
 ### [json commands](../commands/json)
+- [`assertEqual(expected,actual)`](../commands/json/assertEqual(expected,actual)): change the comparison logic and 
+  report format to improve accuracy and readability. The comparison now includes "objects of object" comparison.
 
 
 ### [localdb commands](../commands/localdb)
@@ -144,3 +146,4 @@ comments: true
   enable the use of `(null)`, `(empty)` or `(blank)` for `header-cell` to omit the use of this `config`.
 - [`nexial.web.highlight`](../systemvars/index#nexial.web.highlight): fixed error when target element doesn't have any 
   `style` attribute
+- initial commit for browser-side performance metric collection logic. Not yet ready for prime time; only metrics collection for now.
