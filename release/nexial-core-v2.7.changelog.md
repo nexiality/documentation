@@ -149,3 +149,5 @@ comments: true
 - [`nexial.web.highlight`](../systemvars/index#nexial.web.highlight): fixed error when target element doesn't have any 
   `style` attribute
 - initial commit for browser-side performance metric collection logic. Not yet ready for prime time; only metrics collection for now.
+- [`assertAttributeContain(locator,attrName,contains)`](../commands/web/assertAttributeContain(locator,attrName,contains)):
+   renamed from `assertAttributeContains(locator,attrName,contains)` (grammatically displeasing).

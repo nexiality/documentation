@@ -42,14 +42,14 @@ web | assertAttributeNotContain(...) | css=... | class | REGEX:(.+Class)
 
 ### Example
 **Script**:<br/>
-![](image/assertAttributeNotContains_01.png)
+![](image/assertAttributeNotContain_01.png)
 
 **Output**:<br/>
-![](image/assertAttributeNotContains_02.png)
+![](image/assertAttributeNotContain_02.png)
 
 
 ### See Also
-- [`assertAttributeContains(locator,attrName,contains)`](assertAttributeContains(locator,attrName,contains).html)
+- [`assertAttributeContain(locator,attrName,contains)`](assertAttributeContain(locator,attrName,contains).html)
 - [`assertAttribute(locator,attrName,value)`](assertAttribute(locator,attrName,value).html)
 - [`assertAttributeNotPresent(locator,attrName)`](assertAttributeNotPresent(locator,attrName).html)
 - [`assertAttributePresent(locator,attrName)`](assertAttributePresent(locator,attrName).html)

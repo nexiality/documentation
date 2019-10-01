@@ -226,7 +226,7 @@ available commands.
 ### Available Commands
 - [`assertAndClick(locator,label)`](assertAndClick(locator,label))
 - [`assertAttribute(locator,attrName,value)`](assertAttribute(locator,attrName,value))
-- [`assertAttributeContains(locator,attrName,contains)`](assertAttributeContains(locator,attrName,contains))
+- [`assertAttributeContain(locator,attrName,contains)`](assertAttributeContain(locator,attrName,contains))
 - [`assertAttributeNotContain(locator,attrName,contains)`](assertAttributeNotContain(locator,attrName,contains))
 - [`assertAttributeNotPresent(locator,attrName)`](assertAttributeNotPresent(locator,attrName))
 - [`assertAttributePresent(locator,attrName)`](assertAttributePresent(locator,attrName))

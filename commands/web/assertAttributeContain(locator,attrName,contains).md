@@ -1,6 +1,6 @@
 ---
 layout: default
-title: assertAttributeContains(locator,attrName,contains)
+title: assertAttributeContain(locator,attrName,contains)
 parent: web
 tags: command web
 comments: true
@@ -17,7 +17,7 @@ Optionally, one can use the `REGEX:` syntax to invoke regular expression as the 
 example:
 
 ```text
-web | assertAttributeContains(...) | css=... | class | MyClass
+web | assertAttributeContain(...) | css=... | class | MyClass
 ```
 
 The above asserts that the `class` attribute of the target web element does not contain `MyClass` in its value. In 
@@ -25,12 +25,12 @@ contrast, using regular expression we can assert multiple things and in more exp
 
 This asserts that `class` contains `MyClass` or `YourClass`
 ```text
-web | assertAttributeContains(...) | css=... | class | REGEX:(MyClass|YourClass)
+web | assertAttributeContain(...) | css=... | class | REGEX:(MyClass|YourClass)
 ```
 
 This asserts that `class` contain one or more character, followed by `Class`
 ```text
-web | assertAttributeContains(...) | css=... | class | REGEX:(.+Class)
+web | assertAttributeContain(...) | css=... | class | REGEX:(.+Class)
 ```
 
 
@@ -42,10 +42,10 @@ web | assertAttributeContains(...) | css=... | class | REGEX:(.+Class)
 
 ### Example
 **Script**:<br/>
-![](image/assertAttributeContains_01.png)
+![](image/assertAttributeContain_01.png)
 
 **Output**:<br/>
-![](image/assertAttributeContains_02.png)
+![](image/assertAttributeContain_02.png)
 
 
 ### See Also
