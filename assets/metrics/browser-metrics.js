@@ -162,7 +162,15 @@ let BrowserMetrics = function (/*Object*/metrics) {
         if (step.hasOwnProperty(key)) {
           let type       = metadata[key].type;
           let styleClass = type === 'test' ? type + ' type-' + key : type;
-          html += '<td class="data type-' + styleClass + '">' + formatMetric(step[key], type) + '</td>';
+          html += '<td class="data type-' + styleClass + '">';
+          if (key === 'command') {
+            html += '<a href="' + step['command-ref'] + '" target="_nexial_external">' +
+                    formatMetric(step[key], type) +
+                    '</a>';
+          } else {
+            html += formatMetric(step[key], type);
+          }
+          html += '</td>';
         }
       });
       html += '</tr>\n';
@@ -171,7 +179,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
     return html;
   }
 
-  this.renderMetricsGrid = function (/*String*/scriptName, /*String*/scenarioName) {
+  function renderMetricsGrid(/*String*/scriptName, /*String*/scenarioName) {
     if (!metrics || !metrics.scripts || metrics.scripts.length < 1) { return; }
 
     let scenario = null;
@@ -215,11 +223,47 @@ let BrowserMetrics = function (/*Object*/metrics) {
     });
   };
 
-  this.renderMetrics = function() {
-    let _this = this;
+  this.renderMetrics = function () {
     metrics.scripts.forEach(function (script) {
-      script.scenarios.forEach(function (scenario) { _this.renderMetricsGrid(script.name, scenario.name); });
+      script.scenarios.forEach(function (scenario) { renderMetricsGrid(script.name, scenario.name); });
     });
+  };
+
+  this.renderExecMeta = function () {
+    let scripts = metrics.scripts.map(x => x.name).reduce((a, b) => a + ', ' + b);
+
+    let html = '<div class="execMeta canHide">' +
+               '<div class="showhide" target="execMeta">' +
+               '<i class="fas fa-minus-square" onclick="hideSection(this)" title="minimize this section"></i>' +
+               '<i class="fas fa-plus-square" onclick="showSection(this)" title="restore this section"></i>' +
+               '</div>' +
+               '<table id="execMeta" class="execMeta" cellpadding="4" cellspacing="3">' +
+               '<tbody>';
+    html += '<tr>' +
+            '<td nowrap="nowrap" class="execLabel">Run ID:</td>' +
+            '<th width="100%" class="execValue"><a href="execution-output.html">' + metrics.runID + '</a></th>' +
+            '</tr>';
+    html += '<tr>' +
+            '<td nowrap="nowrap" class="execLabel">Project:</td>' +
+            '<th width="100%" class="execValue">' + metrics.project + '</th>' +
+            '</tr>';
+    html += '<tr>' +
+            '<td nowrap="nowrap" class="execLabel">Scripts:</td>' +
+            '<th width="100%" class="execValue">' + scripts + '</th>' +
+            '</tr>';
+    html += '<tr>' +
+            '<td nowrap="nowrap" class="execLabel">Operating System:</td>' +
+            '<th width="100%" class="execValue">' + metrics.os + '</th>' +
+            '</tr>';
+    html += '<tr>' +
+            '<td nowrap="nowrap" class="execLabel">Browser:</td>' +
+            '<th width="100%" class="execValue">' + metrics.browser + '</th>' +
+            '</tr>';
+    html += '</tbody>' +
+            '</table>' +
+            '</div><br/>';
+
+    $('#app').append(html);
   };
 
   (function () {

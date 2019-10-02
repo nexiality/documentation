@@ -13,7 +13,7 @@ a {
     padding:         5px;
     border-radius:   5px;
     color:           rgba(106, 142, 46, 1);
-    background:      rgba(50, 185, 120, 0.1);
+    background:      rgba(150, 165, 100, 0.25);
 }
 
 a > i {
@@ -25,8 +25,8 @@ a:visited {
 }
 
 a:hover {
-    color:            rgba(160, 255, 220, 1) !important;
-    background-color: rgba(50, 50, 50, 0.75);
+    color:            rgba(230, 255, 200, 1) !important;
+    background-color: rgba(40, 60, 30, 0.75);
 }
 
 .title {
