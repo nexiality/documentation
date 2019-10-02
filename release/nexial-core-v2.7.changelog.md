@@ -151,3 +151,5 @@ comments: true
 - initial commit for browser-side performance metric collection logic. Not yet ready for prime time; only metrics collection for now.
 - [`assertAttributeContain(locator,attrName,contains)`](../commands/web/assertAttributeContain(locator,attrName,contains)):
    renamed from `assertAttributeContains(locator,attrName,contains)` (grammatically displeasing).
+- [Browser Performance Metrics](../commands/web/browsermetrics): **NEW** feature in Nexial to capture browser 
+  performance metrics as part of Web automation. Collected data will be presented as HTML at the end of execution.
