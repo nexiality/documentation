@@ -17,7 +17,7 @@ of its third-party libraries. Selenium is no exception. As of July 2018 Nexial u
 releases of related webdrivers.
 
 
-## Locators
+### Locators
 For effective automation of Web application, there are several critical technical knowledge and techniques to apply. 
 The most important of which is the right technique of writing locators. Locators are a collections of ways (7 in total) 
 to identify elements of a web page. It is by such mechanism one can effectively identify elements on a web page, 
@@ -32,7 +32,7 @@ Here's a summary of the various locators (click on tab to view):<br/>
 
 -----
 
-## Browser Support
+### Browser Support
 {% include_relative _browsers.html %}
 
 
@@ -47,6 +47,7 @@ one can disable the automatic webdriver update by setting `"neverCheck": true` i
 
 The "web" command type represents a series of automation commands regarding web operations. See below for a list of 
 available commands.
+
 
 ### Available Commands
 - [`assertAndClick(locator,label)`](assertAndClick(locator,label))
