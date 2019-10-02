@@ -1,0 +1,649 @@
+<style>
+  .locators.tabs .tab-content {
+    padding: 0;
+  }
+
+  table.locators {
+    width:     100%;
+    border:    2px solid rgba(122, 135, 85, 0.75);
+    font-size: 15px;
+    padding:   1px;
+  }
+
+  table.locators thead th {
+    background: rgba(122, 135, 85, 0.5);
+    text-align: left;
+    font-size:  15px;
+    padding:    5px;
+    border:     2px solid rgba(122, 135, 85, 0.75);
+  }
+
+  table.locators tbody td {
+    font-size: 15px;
+  }
+
+  table.locators tbody td i {
+    font-style: italic;
+    color:      #888;
+  }
+
+  table.locators tbody td p {
+    margin-bottom: 10px;
+  }
+
+  table.locators tbody td ul {
+    margin-bottom: 0 !important;
+  }
+
+  table.locators tbody td ul li {
+    list-style:    square;
+    padding-left:  0 !important;
+    padding-right: 0 !important;
+  }
+
+  table.locators tbody td.syntax {
+    font-family:   monospace;
+    border-top:    2px solid rgba(122, 135, 85, 0.75);
+    border-bottom: none;
+    background:    #fff;
+    width:         33%;
+  }
+
+  table.locators tbody td.syntax .example {
+    font-family: monospace;
+    background:  #ffc;
+    color:       #330;
+    margin:      15px 2px 0 2px;
+    padding:     5px;
+  }
+
+  table.locators tbody td.pros {
+    background:    #efd;
+    border-bottom: none;
+    width:         33%;
+  }
+
+  table.locators tbody td.cons {
+    background:    rgba(255, 185, 195, 0.5);
+    border-bottom: none;
+    width:         33%;
+  }
+
+  table.locators tbody td.explain {
+    background:   #fff;
+    color:        #335;
+    border-top:   none;
+    border-right: 2px solid rgba(122, 135, 85, 0.75);
+    padding:      10px;
+  }
+
+  table.locators li {
+    margin-bottom: 5px !important;
+  }
+</style>
+
+<div class="tabs locators">
+  <ul class="tab-links tabs-collapsed">
+    <li><a href="#tab_id" id="tab_title_id">ID</a></li>
+    <li><a href="#tab_name" id="tab_title_name">Name</a></li>
+    <li><a href="#tab_link" id="tab_title_link">Link Text</a></li>
+    <li><a href="#tab_tag" id="tab_title_tag">Tag</a></li>
+    <li><a href="#tab_class" id="tab_title_class">Style Class</a></li>
+    <li><a href="#tab_css" id="tab_title_css">CSS</a></li>
+    <li><a href="#tab_xpath" id="tab_title_xpath">XPath</a></li>
+  </ul>
+  <div class="tab-content">
+    <div id="tab_id" class="tab">
+      <table class="locators" cellspacing="0" cellpadding="3">
+        <thead>
+        <tr>
+          <th>Syntax/Example</th>
+          <th>Pros</th>
+          <th>Cons</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="syntax" nowrap="nowrap">
+            <b>id=</b><i>id-of-target-element</i>
+            <div class="example">
+              id=username<br/>
+              ID=section1
+            </div>
+          </td>
+          <td class="pros">
+            <ul>
+              <li>Low to zero impact by page structural changes</li>
+              <li>Generally faster than other methods</li>
+            </ul>
+          </td>
+          <td class="cons">
+            <ul>
+              <li>Not every web element is associated with an ID</li>
+              <li>Poorly coded web page may cause multiple matches</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="explain" colspan="3">
+            <p>
+              This strategy instructs Nexial (webdriver behind the scene) to look for an element in the
+              current page
+              with an <code>id</code> attribute corresponding to the specified one. Hence,
+              <code>&lt;div id="section1"&gt;...&lt;/div></code> can be referenced via locator
+              <code>id=section1</code>.
+            </p>
+            <p>
+              Typically the ID of a web element is assigned by the web developer. At the discretion of the
+              developer,
+              not every element might be assigned an ID, much less meaningful ones. Hence the success of
+              using this
+              approach is largely dependent on the developer, and to some extent the collaboration between
+              engineers.
+              Another issue is that, while ID should be unique on the same web page, many browsers allow
+              violation of
+              this rule such that an ID-based locator might match more than 1 element. Such anomaly occurs
+              more
+              frequently with generated ID stemmed from JavaScript front-end framework, the likes of
+              React, Angular,
+              Dojo, etc.
+            </p>
+            <p>
+              In terms of performance, this approach is generally recognized as one of the faster ones.
+            </p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="tab_name" class="tab">
+      <table class="locators" cellspacing="0" cellpadding="3">
+        <thead>
+        <tr>
+          <th>Syntax/Example</th>
+          <th>Pros</th>
+          <th>Cons</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="syntax" nowrap="nowrap">
+            <b>name=</b><i>name-of-target-element</i>
+            <div class="example">
+              name=Password<br/>
+              NAME=SubmitOrder
+            </div>
+          </td>
+          <td class="pros">
+            <ul>
+              <li>Works well with forms or simpler web applications</li>
+            </ul>
+          </td>
+          <td class="cons">
+            <ul>
+              <li>Not many HTML elements are associated with <code>name</code> attribute</li>
+              <li>The <code>name</code> attribute is not designed to be unique within the same page.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="explain" colspan="3">
+            <p>
+              This strategy is similar to that of ID (above), with the exception that the target attribute
+              is <code>"name"</code> instead of <code>"id"</code>. The <code>name</code> attribute is
+              commonly found with form elements such as textbox, select (dropdown), checkbox, radio box,
+              buttons and text area (like textbox, but supports multi-line input). Consider the following
+              web snippet and its HTML:<br/>
+            <div style="line-height:30px;margin:15px 35px;">
+              <form id="login_form" method="post" action="..." onsubmit="return false;"
+                    style="padding:8px">
+                Enter username: <input type="text" name="username"/><br/>
+                Enter password: <input type="password" name="password"/>
+                <input type="submit" name="submit" value="Log In"/>
+              </form>
+            </div>
+
+            <pre style="font-size:12px;padding:5px;margin:15px 35px;">
+&lt;form id="login_form" method="post" action="..."&gt;
+     Enter username: &lt;input type="text" name="username"/&gt;&lt;br/&gt;
+     Enter password: &lt;input type="password" name="password"/&gt;
+     &lt;input type="submit" name="submit" value="Log In"/&gt;
+&lt;/form&gt;</pre>
+
+            To access the textbox for username, one could use a locator as <code>name=username</code>.
+            To reference the "Log In" button, one could specify <code>name=submit</code>.
+            </p>
+            <p>
+              Due to how such attribute is used, this strategy is best suitable to reference form elements.
+              Some forms are generated dynamically or programmed to behave differently based on user
+              interaction. Such might be difficult for the name-based strategy.
+            </p>
+            <p>
+              By specification, the <code>name</code> attribute is not expected to be unique within the
+              same web page. At times one may use this to one's advantage. For example, a select
+              (dropdown) element that contains a list of 50 items can be referred by one single
+              <code>name=...</code> locator.
+            </p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="tab_link" class="tab">
+      <table class="locators" cellspacing="0" cellpadding="3">
+        <thead>
+        <tr>
+          <th>Syntax/Example</th>
+          <th>Pros</th>
+          <th>Cons</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="syntax" nowrap="nowrap">
+            <b>link=</b><i>link-text</i>
+            <div class="example">
+              link=Click here<br/>
+              LINK=Sale of the Week
+            </div>
+          </td>
+          <td class="pros">
+            <ul>
+              <li>automatically limits to &lt;A&gt; (hyperlink) element</li>
+              <li>best for testing navigation</li>
+              <li>guarded against stylistic or page structure changes</li>
+            </ul>
+          </td>
+          <td class="cons">
+            <ul>
+              <li>Not suitable when link text id generated dynamically</li>
+              <li>link text with line breaks work differently in some browsers</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="explain" colspan="3">
+            <p>
+              This strategy is intended to select hyperlink element(s) (denoted via the &lt;A&gt; tag) that contains
+              the specified text. It's straightforward and relatively fast. It is most suitable for navigation testing
+              or "dead link" checks. For example, consider this website with its navigation links:
+              <img src="image/web_03_ebay.png"/><br/>
+              One can devise a simple and maintainable navigation test using the link-based locators, like this:<br/>
+              <code>
+                link=Home<br/>
+                link=Electronics<br/>
+                link=Motors<br/>
+                link=Fashion<br/>
+                link=Saved<br/>
+                link=Collectibles & Art<br/>
+                ... ...
+              </code>
+            </p>
+            <p>
+              One would notice that the locators above are not listed in the order as shown on the web page. Since the
+              criteria herein is strictly based on (a) hyperlink element, (b) the text of such hyperlink, the order,
+              the location or hierarchy of these elements are important. This makes for an efficient navigation test.
+              <br/>
+              On the other hand, if order or position is important then a different locator strategy would need to be
+              considered.
+            </p>
+            <p>
+              Not all web applications use the &lt;A&gt; tag to represent its navigation (this is the recommended
+              approach
+              by all major search and SEO engines to improve search hits). If a web application opted to use another
+              tag, such as &lt;DIV&gt; tag, then this locator strategy would not work.
+            </p>
+            <p>
+              Lastly, some browsers treat line breaks in link text differently. Notably, older versions of IE would
+              add extra spaces where the link breaks are found. The link-based locator assumes <b>EXACT</b> match on
+              the link text.
+            </p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="tab_tag" class="tab">
+      <table class="locators" cellspacing="0" cellpadding="3">
+        <thead>
+        <tr>
+          <th>Syntax/Example</th>
+          <th>Pros</th>
+          <th>Cons</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="syntax" nowrap="nowrap">
+            <b>tag=</b><i>tag-name-of-element</i>
+            <div class="example">
+              tag=select<br/>
+              TAG=table
+            </div>
+          </td>
+          <td class="pros">
+            <ul>
+              <li>Simple to create, to understand and to maintain</li>
+              <li>Fast</li>
+            </ul>
+          </td>
+          <td class="cons">
+            <ul>
+              <li>Limited in usefulness; best suited for simple web pages</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="explain" colspan="3">
+            <p>
+              This is another simple way to located element(s) on a web page. The idea is to filter to
+              element(s) of
+              the same "tag" so that interactions can be made to all the elements of the same tag. There
+              is no
+              hierarchy support so only 1 tag can be referenced at one time. This is designed for
+              simplistic use cases
+              where tags are not used by overlapping purposes.
+            </p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="tab_class" class="tab">
+      <table class="locators" cellspacing="0" cellpadding="3">
+        <thead>
+        <tr>
+          <th>Syntax/Example</th>
+          <th>Pros</th>
+          <th>Cons</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="syntax" nowrap="nowrap">
+            <b>class=</b><i>css_class_name</i>
+            <div class="example">
+              class=nav-item<br/>
+              CLASS=required_input
+            </div>
+          </td>
+          <td class="pros">
+            <ul>
+              <li>Simple, easy to maintain and to understand</li>
+            </ul>
+          </td>
+          <td class="cons">
+            <ul>
+              <li>Not powerful enough for more complex web pages.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="explain" colspan="3">
+            <p>
+              This type of locator matches elements with an attribute named as <code>class</code> that
+              contains the specified value. One should recognize that this type of locator is just a
+              simplification of the CSS selector based locator (next). The CSS selector based locator is
+              much more powerful and offers a wide range of capabilities for selecting web elements.
+            </p>
+            <p>
+              This type of locator focused on the style class(es) set to web element. While only 1 style
+              class can be specified in the locator, it is capable of matching web element that contains
+              multiple style classes ( including the target class). For example, suppose the following
+              HTML snippet:
+            <pre style="font-size:12px;padding:5px;margin-bottom:5px;">
+    &lt;li name="item1" class="style1"&gt;Item 1&lt;/li&gt;
+    &lt;li name="item2" class="style1 style2"&gt;Item 2&lt;/li&gt;
+    &lt;li name="item3" class="style1 style3"&gt;Item 3&lt;/li&gt;
+    &lt;li name="item4" class="style1 style2"&gt;Item 4&lt;/li&gt;
+    &lt;li name="item5" class="style1 style2 style3"&gt;Item 5&lt;/li&gt;</pre>
+            In this case,<br/>
+            <ul>
+              <li>The locator <code>class=style1</code> would match all 5 elements.</li>
+              <li>The locator <code>class=style2</code> would match the 2nd, 4th, and 5th elements.</li>
+              <li>The locator <code>class=style3</code> would match the 3rd and 5th elements.</li>
+              <li>The locator <code>class=style1 style2</code> would NOT match any element since it is not
+                a valid class-based locator.
+              </li>
+            </ul>
+            The reason that the last locator would not match any element is that each style class is treated
+            as independent entity and is matched as such. To match multiple style classes, one would need to
+            consider the use of CSS selector based locator (next).
+            </p>
+            <p>
+              This type of locator is simple, highly readable and easy to maintain. However, it only deals
+              with one style class at a time and does not consider other HTML attributes.
+            </p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="tab_css" class="tab">
+      <table class="locators" cellspacing="0" cellpadding="3">
+        <thead>
+        <tr>
+          <th>Syntax/Example</th>
+          <th>Pros</th>
+          <th>Cons</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="syntax" nowrap="nowrap">
+            <b>css=</b><i>css-selector</i>
+            <div class="example">
+              css=form#login > input.username<br/>
+              css=input[name='login'][type='submit']<br/>
+              CSS=#records li:nth-of-type(4)<br/>
+              CSS=a[id^='id_prefix_']
+            </div>
+          </td>
+          <td class="pros">
+            <ul>
+              <li>Very powerful; supports a wide range of selection criteria</li>
+              <li>Can be independent to page structure or element hierarchy</li>
+              <li>Seems more consistent between browsers</li>
+              <li>Noticeable faster than XPATH</li>
+            </ul>
+          </td>
+          <td class="cons">
+            <ul>
+              <li>Syntax can be difficult to decipher</li>
+              <li>Steeper learning curve</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="explain" colspan="3">
+            <p>
+              Unlike the ID locator, name locator, link text locator and style class locator, which are
+              designed for more specific cases, the CSS locator is designed for general-purpose use. Using
+              the appropriate CSS selector, one can pinpoint to the element or elements with precision. A
+              CSS Selector is a combination of an element selector and a value which identifies the web
+              element within a web page. They represent HTML tags, attributes, Id and Classes as patterns
+              that match against elements in their respective hierarchical structure tree.
+            </p>
+            <p>
+              The<a href="https://www.w3.org/TR/CSS/#selectors" class="external-link" target="_nexial_link">
+              W3C CSS-Selector</a> provides a wide range of capabilities to reference web elements, of
+              which most are implemented in Selenium 3.x. In general, the CSS selectors can be divided
+              into the following categories:
+            <ul>
+              <li>HTML tag</li>
+              <li>ID via the <code>#id</code> syntax</li>
+              <li>Classname via the <code>.class</code> syntax</li>
+              <li>Attribute via the <code>@attrib</code> syntax</li>
+              <li>String matches: equals (<code>=</code>), start with (<code>^=</code>), ends with
+                (<code>$=</code>), contains (<code>*=</code>)
+              </li>
+              <li>Inward hierarchy: descendant, direct child (<code>&gt;</code>), first child
+                (<code>:first-child</code>), last child (<code>:last-child</code>), <i>n</i>th child
+                (<code>:nth-child(n)</code>)
+              </li>
+              <li>Outward hierarchy: immediate after (<code>+</code>), before (<code>~</code>).</li>
+              <li>Pseudo Class: active element (<code>:active</code>), enabled (<code>:enabled</code>),
+                disabled (<code>:disabled</code>), etc.
+              </li>
+            </ul>
+
+            The topic and discussion about CSS selectors is a substantial one. Many great resources are
+            widely available. Here are some of the popular ones:
+            <ul>
+              <li><a href="https://www.w3schools.com/cssref/css_selectors.asp" class="external-link"
+                     target="_nexial_link">w3shools - CSS Selector Reference</a></li>
+              <li><a href="https://saucelabs.com/resources/articles/selenium-tips-css-selectors"
+                     class="external-link" target="_nexial_link">saucelabs - Selenium Tips: CSS
+                Selectors</a></li>
+              <li><a href="https://www.swtestacademy.com/css-selenium/" class="external-link"
+                     target="_nexial_link">swtestacademy - How to Write Effective CSS Selenium
+                Selectors</a></li>
+              <li><a href="https://www.cheatography.com/janesh/cheat-sheets/css-selectors-for-selenium-webdriver/"
+                     class="external-link" target="_nexial_link">cheatography - CSS Selectors for Selenium
+                WebDriver Cheat Sheet</a></li>
+              <li><a href="https://yuanjiang.space/selenium-css-selector" class="external-link"
+                     target="_nexial_link">yuanjiang - Selenium css selector</a></li>
+              <li>
+                <a href="https://webkit.org/blog/3615/css-selectors-inside-selectors-discover-matches-not-and-nth-child/"
+                   class="external-link" target="_nexial_link">Complex CSS Selectors Inside
+                  Selectors</a></li>
+              <li><a href="https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048"
+                     class="external-link" target="_nexial_link">The 30 CSS Selectors You Must
+                Memorize</a></li>
+              <li><a href="https://css-tricks.com/attribute-selectors/"
+                     class="external-link" target="_nexial_link">The Skinny on CSS Attribute Selectors</a>
+              </li>
+            </ul>
+            </p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="tab_xpath" class="tab">
+      <table class="locators" cellspacing="0" cellpadding="3">
+        <thead>
+        <tr>
+          <th>Syntax/Example</th>
+          <th>Pros</th>
+          <th>Cons</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="syntax" nowrap="nowrap">
+            <b>xpath=</b><i>xpath-to-target</i>
+            <div class="example">
+              xpath=//div[@id='d1']//a[text()='Best Price']<br/>
+              <br/>
+              //span[contains(text(),'Complete']<br/>
+              <br/>
+              XPATH=//footer
+            </div>
+          </td>
+          <td class="pros">
+            <ul>
+              <li>Precision</li>
+              <li>Supports both hierarchy-aware and hierarchy-agnostic reference</li>
+            </ul>
+          </td>
+          <td class="cons">
+            <ul>
+              <li>One of the slowest locators</li>
+              <li>Inconsistent amongst browsers</li>
+              <li>Can be difficult to read and to maintain</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="explain" colspan="3">
+            <p>
+              XPATH is a W3C standard to reference nodes and fragments of an XML/xHTML document. It has
+              sufficiently descriptive syntax for precise element referencing while not bound to the
+              underlying DOM structure. It is commonly known as an effective alternative where
+              <code>id</code>, <code>name</code> or similar attributes are not available on the target
+              web element(s). This is because XPath is flexible enough to describe element(s) based on
+              its absolute or relative position in the containing document, and it can also be used to
+              filter via element attributes and pseudo-classes. In general, XPath is the "catch-all" for
+              locators.
+            </p>
+            <p>
+              However,
+              <a href="https://en.wikipedia.org/wiki/Uncle_Ben#%22With_great_power_comes_great_responsibility%22"
+                 class="external-link" target="_nexial_link">with great power comes great
+                responsibility</a> :-). XPath based locator can be easily misused where the locators can
+              become difficult to read and maintain. Deciphering and maintaining XPaths like
+              <code>/child::library/child::book/child::title[position()=2]/child::text</code> or
+              <code>//report//author[text()=../../following-sibling::report//author/text()]</code> are
+              certainly not a<i>walk in the park</i>. XPath designer must take special care in designing
+              locators, or they might end up as technical debts! What further the complication is the
+              interoperability of these XPath across browsers. There is to date no feature parity amongst
+              the popular browsers in terms of XPath implementation (particularly with IE). This adds
+              additional burden in designing cross-browser XPath. Also, XPATH based locators are not the
+              most ideal locator for performance (again, particularly with IE).
+            </p>
+            <p>
+              There are lots of tutorial and learning material on the 'Net regarding XPath. Here are some
+              that might be helpful:
+            <ul>
+              <li><a href="https://www.w3.org/TR/1999/REC-xpath-19991116/" class="external-link"
+                     target="_nexial_link">W3C - XML Path Language (XPath) 1.0</a></li>
+              <li><a href="https://www.guru99.com/xpath-selenium.html" class="external-link" target="_nexial_link">
+                gugu99 - XPath in Selenium WebDriver: Complete Tutorial</a></li>
+              <li><a href="https://www.w3schools.com/xml/xpath_intro.asp" class="external-link" target="_nexial_link">
+                w3schools - XPath Tutorial</a></li>
+              <li><a href="https://en.wikipedia.org/wiki/XPath" class="external-link" target="_nexial_link">
+                wikipedia - XPath</a></li>
+              <li><a href="https://automatetheplanet.com/underrated-webdriver-locator-xpath/" class="external-link"
+                     target="_nexial_target">automatetheplanet - Most Underrated WebDriver Locator -
+                XPath</a></li>
+              <li><a href="http://toolsqa.com/selenium-webdriver/choosing-effective-xpath/" class="external-link"
+                     target="_nexial_target">toolsqa - Choosing Effective XPaths</a></li>
+              <li><a href="https://devhints.io/xpath" class="external-link" target="_nexial_target">
+                devhints - XPath cheatsheet</a></li>
+              <li><a href="http://xpath.alephzarro.com/content/cheatsheet.html" class="external-link"
+                     target="_nexial_target">http://xpath.alephzarro.com/content/cheatsheet.html</a></li>
+              <li><a href="http://scraping.pro/res/xpath-cheat/xpath_css_dom_recipes.pdf" class="external-link"
+                     target="_nexial_target">http://scraping.pro/res/xpath-cheat/xpath_css_dom_recipes.pdf</a></li>
+              <li><a href="http://scraping.pro/res/xpath-cheat/xpath_css_dom_ref.pdf" class="external-link"
+                     target="_nexial_target">http://scraping.pro/res/xpath-cheat/xpath_css_dom_ref.pdf</a></li>
+            </ul>
+            </p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<br/>
+
+Here are a few tutorials on locators (please feel free to send more links so we can add to this list):
+<ul>
+  <li>
+    <a href="http://www.seleniumeasy.com/selenium-tutorials/selenium-locators" class="external-link" target="_nexial_target">seleniumeasy
+      - Locators for Selenium</a></li>
+  <li>
+    <a href="https://www.e-gineering.com/2016/06/07/selenium-webelement-selectors/" class="external-link" target="_nexial_target">e-gineering
+      - Simplify Selenium Selectors</a></li>
+  <li>
+    <a href="https://www.telerik.com/blogs/16-ways-to-search-find-and-edit-with-chrome-devtools" class="external-link" target="_nexial_target">16
+      Ways to Search, Find and Edit with Chrome DevTools</a></li>
+</ul>
+<br/>
+
+One might consider converting XPaths to CSS locators since CSS locators are generally faster and easier
+on the eyes. Here's an online app to help converting XPath to CSS locator:<br/>
+<a href="http://cssify.appspot.com/" class="external-link" target="_nexial_target">
+  http://cssify.appspot.com/<br/>
+  <img src="image/web_02.png"/>
+</a>
+<br/>
+
+Google Chrome comes with a sleuth of useful features to perform common tasks such as selecting and inspecting DOM
+elements, and monitoring DOM events. This is available from the Chrome DevTools (aka Console):<br/>
+<a href="https://developers.google.com/web/tools/chrome-devtools/console/command-line-reference" class="external-link" target="_nexial_target">
+  Command Line API Reference<br/>
+  <img src="image/web_05.png"/>
+</a>
+<br/>

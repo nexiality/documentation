@@ -1,0 +1,246 @@
+<style>
+  .tabs .tab-links li {
+    margin-bottom: 0 !important;
+  }
+
+  .tabs .tab-links .active {
+    display: block;
+    border-bottom: 5px solid #000;
+    margin-bottom: -5px !important;
+  }
+
+  .browsers {
+  }
+
+  .browsers li {
+    margin-bottom: 5px !important;
+  }
+
+</style>
+
+Nexial currently supports the following browsers (recent versions only):
+<ul>
+  <li><a href="javascript:void(0);" onclick="scrollToTab('tab_title_firefox', 'browser-support')">Firefox (via geckodriver)</a></li>
+  <li><a href="javascript:void(0);" onclick="scrollToTab('tab_title_firefox_headless', 'browser-support')">Firefox in Headless Mode</a></li>
+  <li><a href="javascript:void(0);" onclick="scrollToTab('tab_title_chrome', 'browser-support')">Chrome</a></li>
+  <li><a href="javascript:void(0);" onclick="scrollToTab('tab_title_chrome_headless', 'browser-support')">Chrome in Headless Mode</a></li>
+  <li><a href="javascript:void(0);" onclick="scrollToTab('tab_title_chrome_embedded', 'browser-support')">Chrome in Embedded Mode</a></li>
+  <li><a href="javascript:void(0);" onclick="scrollToTab('tab_title_electron', 'browser-support')">Electron (Chromium)</a></li>
+  <li><a href="javascript:void(0);" onclick="scrollToTab('tab_title_safari', 'browser-support')">Safari (on MacOS)</a></li>
+  <li><a href="javascript:void(0);" onclick="scrollToTab('tab_title_safari_preview', 'browser-support')">Safari Technology Preview (on MacOS)</a></li>
+  <li><a href="javascript:void(0);" onclick="scrollToTab('tab_title_ie9', 'browser-support')">Internet Explorer 9 and above (on Windows 7 and above)</a></li>
+  <li><a href="javascript:void(0);" onclick="scrollToTab('tab_title_edge', 'browser-support')">Microsoft Edge (currently in beta) (on Windows 10)</a></li>
+  <li><a href="javascript:void(0);" onclick="scrollToTab('tab_title_browserstack', 'browser-support')">BrowserStack</a></li>
+  <li><a href="javascript:void(0);" onclick="scrollToTab('tab_title_cbt', 'browser-support')">CrossBrowserTesting</a></li>
+</ul>
+
+<div class="tabs browsers">
+  <ul class="tab-links tabs-collapsed">
+    <li><a href="#tab_firefox" id="tab_title_firefox">Firefox</a></li>
+    <li><a href="#tab_firefox_headless" id="tab_title_firefox_headless">Firefox Headless</a></li>
+    <li><a href="#tab_chrome" id="tab_title_chrome">Chrome</a></li>
+    <li><a href="#tab_chrome_headless" id="tab_title_chrome_headless">Chrome Headless</a></li>
+    <li><a href="#tab_chrome_embedded" id="tab_title_chrome_embedded">Chrome in Embedded Mode</a></li>
+    <li><a href="#tab_electron" id="tab_title_electron">Electron</a></li>
+    <li><a href="#tab_safari" id="tab_title_safari">Safari</a></li>
+    <li><a href="#tab_safari_preview" id="tab_title_safari_preview">Safari Technology Preview</a></li>
+    <li><a href="#tab_ie9" id="tab_title_ie9">Internet Explorer 9 and above</a></li>
+    <li><a href="#tab_edge" id="tab_title_edge">Microsoft Edge</a></li>
+    <li><a href="#tab_browserstack" id="tab_title_browserstack">BrowserStack</a></li>
+    <li><a href="#tab_cbt" id="tab_title_cbt">CrossBrowserTester</a></li>
+  </ul>
+  <div class="tab-content">
+    <div id="tab_firefox" class="tab">
+      Enabling Firefox automation is straightforward:
+      <ol>
+        <li>Make sure a recent version of
+          <a href="https://www.mozilla.org/en-US/firefox/" class="external-link" target="_nexial_link">Firefox</a>
+          suitable to your platform is installed locally. For Linux and Mac OS, <code>firefox</code> or
+          <code>firefox-bin</code> is expected to be found in the <code>$PATH</code> environment variable. The order of
+          paths in <code>$PATH</code> determines the precedence in being selected as the target executable for 
+          automation. For Windows, Firefox is expected to be installed in either 
+          <code>%ProgramFiles%\Mozilla Firefox</code> or<code>%ProgramFiles(x86)%\Mozilla Firefox</code>.</li>
+        <li>Set <a href="../../systemvars/index#nexial.browser"><code>nexial.browser</code></a> to <code>firefox</code>.</li>
+        <li>Begin scripting...</li>
+      </ol>
+    </div>
+    <div id="tab_firefox_headless" class="tab">
+      Follow the same instruction as <a href="javascript:void(0);" onclick="scrollToTab('tab_title_firefox', 'browser-support')">
+      Firefox</a>, except setting <a href="../../systemvars/index#nexial.browser"><code>nexial.browser</code></a>
+      to <code>firefox.headless</code>.
+    </div>
+    <div id="tab_chrome" class="tab">
+      Enabling Chrome automation requires the following steps:
+      <ol>
+        <li>Make sure a recent version of 
+          <a href="https://www.google.com/chrome/" class="external-link" target="_nexial_link">Chrome</a> suitable to 
+          your platform is installed locally. Linux installation differs based on distro - check distribution vendor 
+          website or Google for more details. Be sure that <code>google-chrome</code> can be found in 
+          <code>$PATH</code> environment variable. For Mac, <code>Google Chrome</code> is expected to be installed 
+          either in the standard <code>/Applications/Google Chrome.app</code> or in the home directory of the current 
+          user (give precedence).</li>
+        <li>Set <a href="../../systemvars/index#nexial.browser"><code>nexial.browser</code></a> to <code>chrome</code>.</li>
+        <li>Begin scripting...</li>
+      </ol>
+
+      <b>Mobile Device Emulation</b><br/>
+      It is possible to emulate mobile devices during automation via the Chrome webdriver (i.e. 
+      <code>nexial.browser</code> as <code>chrome</code>).<br/>
+      There are 2 ways of enabling mobile device emulation:
+      <ol>
+        <li>via the <code>nexial.browser.emulation.deviceName</code> data variable</li>
+        <li>via the <code>nexial.browser.emulation.userAgent</code> data variable.</li>
+      </ol>
+
+      The first approach is simpler. Simply specify a mobile device name that is supported by the Chrome browser to 
+      enable such emulation. For example,<br/>
+      <img src="image/web_06.png"/><br/>
+      <br/>
+      The second approach offers finer controls. Along with the "User Agent" string to match the target mobile device,
+      one can also specify the width (via <code>nexial.browser.emulation.width</code> data variable), the height
+      (<code>nexial.browser.emulation.height</code> data variable), the pixel ratio (via the
+      <code>nexial.browser.emulation.pixelRatio</code> data variable) and touch activation (via the
+      <code>nexial.browser.emulation.touch</code> data variable). For example,<br/>
+      <img src="image/web_07.png"/><br/>
+      Note that <code>nexial.browser.emulation.pixelRatio</code> defaults to <code>3.0</code> and
+      <code>nexial.browser.emulation.touch</code> defaults to <code>true</code>.<br/>
+      <br/>
+      For a list of supported mobile devices and their respective "user-agent" string, visit the following link:
+      <a href="https://codesearch.chromium.org/codesearch/f/chromium/src/third_party/blink/renderer/devtools/front_end/emulated_devices/module.json"
+         class="external-link" target="_nexial_link">Chrome's Emulated Devices JSON</a><br/>
+      <img src="image/chrome-mobile-emu-find-useragent.gif"/><br/>
+      <br/>
+      For more information about mobile device emulation, visit ChromeDriver's
+      <a href="http://chromedriver.chromium.org/mobile-emulation" class="external-link" target="_nexial_link">
+        Mobile Emulation</a> page. While it is cost-effective to use the emulation capability of ChromeDriver, it is
+      noteworthy that there are <a href="https://bugs.chromium.org/p/chromedriver/issues/detail?id=2144&desc=2"
+         class="external-link" target="_nexial_link">known issues and limitations</a> of using ChromeDriver's mobile
+      emulation.<br/>
+      <br/>
+      Note that uring device emulation, the screen capturing might cause a sudden "grow-and-shrink" behavior as shown
+      below:<br/>
+      <img src="image/chrome-mobile-emu-screenshot-sudden-grow.gif"/><br/>
+      <br/>
+      Emulators cannot accurately reflect the real devices in terms of hardware and OS-specific nuances. For more
+      accurate testing, consider using
+      <a href="javascript:void(0);" onclick="scrollToTab('tab_title_browserstack','browser-support')">BrowserStack</a>
+      or <a href="javascript:void(0);" onclick="scrollToTab('tab_title_cbt','browser-support');">CrossBrowserTesting</a>
+      services (both commercial) instead.
+    </div>
+    <div id="tab_chrome_headless" class="tab">
+      Follow the same instruction as
+      <a href="javascript:void(0);" onclick="scrollToTab('tab_title_chrome','browser-support')">Chrome</a>, except
+      setting <a href="../../systemvars/index#nexial.browser"><code>nexial.browser</code></a> to <code>chrome.headless</code>.
+    </div>
+    <div id="tab_chrome_embedded" class="tab">
+      <a href="https://en.wikipedia.org/wiki/Chromium_Embedded_Framework" class="external-link" target="_nexial_link">
+        Chrome Embedded Framework</a>, or CEF for short, is
+      <a href="https://bitbucket.org/chromiumembedded/" class="external-link" target="_nexial_link">an open-source
+        framework</a> for embedding chrome browser (technically chromium) in a desktop application. The ability to do
+      so opens up a wide range of possibilities in application development.<br/>
+      <br/>
+      To enable CEF automation, follow these steps:
+      <ol>
+        <li>Make sure the Chrome-embedded application (AUT) is properly installed. In most cases, one should find a <code>libcef.dll</code>
+          or <code>libcef.so</code> in the same location as the CEF-enabled application.</li>
+        <li>Set <a href="../../systemvars/index#nexial.browser"><code>nexial.browser</code></a> to
+          <code>chrome.embedded</code>.</li>
+        <li>Set <a href="../../systemvars/index#nexial.browser.embedded.appLocation">
+          <code>nexial.browser.embedded.appLocation</code></a> to the full path of the application executable program.</li>
+        <li>Begin scripting...</li>
+      </ol>
+    </div>
+    <div id="tab_electron" class="tab">
+      <a href="https://en.wikipedia.org/wiki/Electron_(software_framework)" class="external-link" target="_nexial_link">
+        Electron</a> is an open-source framework to create desktop applications using JavaScript. It combines the use
+      of Node.js runtime as the backend and Chromium as the frontend engine to create a compelling, cross-platform
+      desktop GUI framework that powers popular applications such as Atom, Microsoft team, Microsoft Visual Studio
+      Code, WhatsApp, Slack and Cycligent.<br/>
+      <br/>
+      To enable Electron application automation, follow these steps:
+      <ol>
+        <li>Make sure the target Electron application is properly installed.</li>
+        <li>Set <a href="../../systemvars/index#nexial.browser"><code>nexial.browser</code></a> to
+          <code>electron</code>.</li>
+        <li>Set <a href="../../systemvars/index#nexial.browser.electron.appLocation">
+          <code>nexial.browser.electron.appLocation</code></a> to the full path of the executable program. For MacOS,
+          the executable is usually found under <code>$APPLICATION/Contents/MacOS/</code>.</li>
+        <li>Begin scripting...</li>
+      </ol>
+    </div>
+    <div id="tab_safari" class="tab">
+      Enabling Safari automation requires the following steps:
+      <ol>
+        <li>Make sure a recent version of <a href="https://support.apple.com/downloads/#safari" class="external-link" target="_nexial_link">
+          Safari</a> is installed locally. Only MacOS is supported for safari automation at this time.</li>
+        <li>Set <a href="../../systemvars/index#nexial.browser"><code>nexial.browser</code></a> to <code>safari</code>.</li>
+        <li>Begin scripting...</li>
+      </ol>
+    </div>
+    <div id="tab_safari_preview" class="tab">
+      Enabling Safari Technology Preview automation requires the following steps:
+      <ol>
+        <li>Make sure a recent version of
+          <a href="https://developer.apple.com/safari/technology-preview/" class="external-link" target="_nexial_link">
+            Safari Technology Preview</a> is installed locally. Only MacOS is supported for Safari automation at this
+          time.</li>
+        <li>Set <a href="../../systemvars/index#nexial.browser"><code>nexial.browser</code></a> to <code>safari</code>.</li>
+        <li>Set <a href="../../systemvars/index#nexial.browser.safari.useTechPreview">
+          <code>nexial.browser.safari.useTechPreview</code></a> to <code>true</code>.</li>
+        <li>Begin scripting...</li>
+      </ol>
+    </div>
+    <div id="tab_ie9" class="tab">
+      Enabling IE automation requires the following steps:
+      <ol>
+        <li>Make sure a recent version of
+          <a href="https://www.microsoft.com/en-us/download/internet-explorer.aspx" class="external-link" target="_nexial_link">
+            Internet Explorer</a> suitable to your platform is installed locally. Only Windows 7 and above is
+          supported at this time.</li>
+        <li>Set <a href="../../systemvars/index#nexial.browser"><code>nexial.browser</code></a> to <code>ie</code>.</li>
+        <li>Be sure to read through and follow the recommendations listed in
+          <a href="../../tipsandtricks/WebAutomationOnIE">Web Automation On IE</a>.</li>
+        <li>Begin scripting...</li>
+      </ol>
+    </div>
+    <div id="tab_edge" class="tab">
+      Enabling IE automation requires the following steps:
+      <ol>
+        <li>Make sure a recent version of <a href="https://www.microsoft.com/en-us/windows/microsoft-edge" class="external-link" target="_nexial_link">Microsft Edge Browser</a>
+          suitable to your platform is installed locally. Only Windows 10 is supported at this time.</li>
+        <li>Set <a href="../../systemvars/index#nexial.browser"><code>nexial.browser</code></a> to <code>edge</code>.</li>
+        <li>Be sure to read through and follow the recommendations listed in
+          <a href="../../tipsandtricks/WebAutomationOnIE">Improving IE Automation</a> (these recommendations apply to
+          Edge as well!).</li>
+        <li>Begin scripting...</li>
+      </ol>
+    </div>
+    <div id="tab_browserstack" class="tab">
+      <a href="http://browserstack.com/" class="external-link" target="_nexial_link">BrowserStack</a> is a popular
+      cloud, web and mobile testing platform that enables developers to test their websites and mobile applications
+      across on-demand browsers, operating systems, and real mobile devices. This is a paid service.<br/>
+      <br/>
+      To enable BrowserStack integration, be sure to read up on the
+      <a href="../../tipsandtricks/BrowserStackIntegration">BrowserStack Integration</a> page.
+    </div>
+    <div id="tab_cbt" class="tab">
+      <i>excerpts from
+        <a href="https://crossbrowsertesting.com/blog/browsers/what-is-cross-browser-testing/" class="external-link" target="_nexial_link">
+          CrossBrowserTesting.com</a>:</i>
+      <blockquote>
+      ... Browser testing is a method of quality assurance for web applications across multiple browsers. ...
+      It’s implemented to ensure a website’s functionality and design and includes testing a range of
+      devices and operating systems being used in the market and customer base.
+      </blockquote>
+
+      <a href="http://www.crossbrowsertesting.com/" class="external-link" target="_nexial_link">CrossBrowserTesting</a>
+      is a popular cloud, web and mobile testing platform that enables developers to test their websites and mobile
+      applications across on-demand browsers, operating systems, and real mobile devices. And, much like BrowserStack,
+      this is also a paid service.<br/>
+      <br/>
+      To enable CrossBrowserTesting integration, be sure to read up on the
+      <a href="../../tipsandtricks/CrossBrowserTestingIntegration">CrossBrowserTesting Integration</a> page.
+    </div>
+  </div>
+</div>
+<br/>
