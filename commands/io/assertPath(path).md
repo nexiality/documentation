@@ -16,7 +16,7 @@ This command asserts that `path` exists and is readable by the run-user of the
 
 
 ### Example
-Script:<br/>
+**Script**:<br/>
 ![script](image/assertPath_01.png)
 
 **Output**:<br/>

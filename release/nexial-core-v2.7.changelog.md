@@ -116,9 +116,9 @@ comments: true
 
 ### [io commands](../commands/io)
 - [`saveMatches(var,path,fileFilter,textFilter)`](../commands/io/saveMatches(var,path,fileFilter,textFilter)):
-  WAS `saveMatches(var,path,filePattern)`. This command has been enhanced to support content-level filtering (REGEX-based)
-  so that in addition to filtering by file name, last modified date and file size, one can also filter files by its content 
-  (support all text file, PDF and XLSX). This command now also support recursively scanning.
+  WAS `saveMatches(var,path,filePattern)`. This command has been enhanced to support content-level filtering 
+  (REGEX-based) so that in addition to filtering by file name, last modified date and file size, one can also filter 
+  files by its content (support all text file, PDF and XLSX). This command now also support recursively scanning.
 - [`assertPath(path)`](../commands/io/assertPath(path)): This command asserts that path exists and is readable by the 
   run-user of the execution. 
 
@@ -152,7 +152,8 @@ comments: true
   enable the use of `(null)`, `(empty)` or `(blank)` for `header-cell` to omit the use of this `config`.
 - [`nexial.web.highlight`](../systemvars/index#nexial.web.highlight): fixed error when target element doesn't have any 
   `style` attribute
-- initial commit for browser-side performance metric collection logic. Not yet ready for prime time; only metrics collection for now.
+- initial commit for browser-side performance metric collection logic. Not yet ready for prime time; only metrics 
+  collection for now.
 - [`assertAttributeContain(locator,attrName,contains)`](../commands/web/assertAttributeContain(locator,attrName,contains)):
    renamed from `assertAttributeContains(locator,attrName,contains)` (grammatically displeasing).
 - [Browser Performance Metrics](../commands/web/browsermetrics): **NEW** feature in Nexial to capture browser 
