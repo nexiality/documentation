@@ -1,6 +1,6 @@
 ---
 layout: default
-title: assertReadableDirectory(path)
+title: assertPath(path)
 parent: io
 tags: command io
 comments: true
@@ -16,11 +16,11 @@ This command asserts that `path` exists and is readable by the run-user of the
 
 
 ### Example
-Example:<br/>
-![script](image/assertReadableDirectory_01.png)
+Script:<br/>
+![script](image/assertPath_01.png)
 
 **Output**:<br/>
-![output](image/assertReadableDirectory_02.png)
+![output](image/assertPath_02.png)
 
 
 ### See Also
