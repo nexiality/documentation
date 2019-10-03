@@ -13,6 +13,7 @@ The "io" command type represents a series of automation commands regarding io op
 - [`assertEqual(file1,file2)`](assertEqual(file1,file2))
 - [`assertNotEqual(file1,file2)`](assertNotEqual(file1,file2))
 - [`assertReadableFile(file,minByte)`](assertReadableFile(file,minByte))
+- [`assertReadableDirectory(path)`](assertReadableDirectory(path))
 - [`base64(var,file)`](base64(var,file))
 - [`compare(expected,actual,failFast)`](compare(expected,actual,failFast)) 
 - [`copyFiles(source,target)`](copyFiles(source,target))

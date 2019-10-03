@@ -119,6 +119,8 @@ comments: true
   WAS `saveMatches(var,path,filePattern)`. This command has been enhanced to support content-level filtering (REGEX-based)
   so that in addition to filtering by file name, last modified date and file size, one can also filter files by its content 
   (support all text file, PDF and XLSX). This command now also support recursively scanning.
+- [`assertReadableDirectory(path)`](../commands/io/assertReadableDirectory(path)): This command asserts that path 
+  exists and is readable by the run-user of the execution. 
 
 
 ### [json commands](../commands/json)
