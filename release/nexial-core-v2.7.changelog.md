@@ -131,6 +131,11 @@ comments: true
 ### [localdb commands](../commands/localdb)
 
 
+### [rdbms commands](../commands/rdbms)
+- [`runSQL(var,db,sql)`](../commands/rdbms/runSQL(var,db,sql)): remove any trailing semi-colon since many RDBMS vendor 
+  don't support dangling semi-colon in query.
+
+
 ### [ws commands](../commands/ws)
 - [`nexial.ws.requestPayloadAsRaw`](../systemvars/index#nexial.ws.equestPayloadAsRaw): **NEW** System variable to 
   treat request payload as binary content.

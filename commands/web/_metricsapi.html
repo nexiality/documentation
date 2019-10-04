@@ -1,0 +1,151 @@
+<style>
+  .tabs .tab-links li {
+    margin-bottom: 0 !important;
+  }
+
+  .tabs .tab-links .active {
+    display:       block;
+    border-bottom: 5px solid #000;
+    margin-bottom: -5px !important;
+  }
+
+  .metrics {
+  }
+
+  .metrics li {
+    margin-bottom: 5px !important;
+  }
+
+</style>
+
+
+<div class="tabs metrics">
+  <ul class="tab-links tabs-collapsed">
+    <li><a href="#tab_navigation" id="tab_title_navigation">Navigation Timing</a></li>
+    <li><a href="#tab_resource" id="tab_title_resource">Resource Timing</a></li>
+    <li><a href="#tab_paint" id="tab_title_paint">Paint Timing</a></li>
+  </ul>
+  <div class="tab-content">
+    <div id="tab_navigation" class="tab">
+      The <a href="https://w3c.github.io/navigation-timing/" class="external-link" target="_nexial_link">
+      W3C Navigation Timing API</a> provides the tools to measure the critical milestones for the main HTML document:
+      DNS, TCP, request and response, and even DOM-level timing metrics. This API exposes the metrics as accurate and
+      detailed timing statistics — natively — for page navigation and load events. It's available now in Internet
+      Explorer 9 - 11, Edge, Google Chrome, Firefox and Safari.<br/>
+      <br/>
+      The exact metrics exposed via this API can be found in the
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming" class="external-link"
+         target="_nexial_link">MDN web docs</a>. The amount of timing and events being tracked through this API can be
+      overwhelming and possibly confusing. To streamline the metrics collection and to simplify analysis, Nexial
+      implemented a series of <i>simpler</i> data points via System variables. The image below depicts the mapping
+      between Nexial supported metrics and W3C's timing events. Click on the image below to open a larger version on a
+      separate tab.<br/>
+      <br/>
+      <a href="image/metrics_02.png" target="_nexial_external"><img src="image/metrics_01.png" width="780"/></a><br/>
+      <br/>
+      <table class="navigation_metrics">
+        <thead>
+        <th>System variable</th>
+        <th>Description</th>
+        </thead>
+        <tbody>
+        <tr>
+          <td><code>nexial.web.metrics.TTFB</code></td>
+          <td>The time, in milliseconds, between the start of user's request to the browser and when the corresponding
+            response is initially received by the browser.
+          </td>
+        </tr>
+        <tr>
+          <td><code>nexial.web.metrics.TTLB</code></td>
+          <td>The time, in milliseconds, between the start of user's request to the browser and the completion of the
+            corresponding response received (downloaded) by the browser.
+          </td>
+        </tr>
+        <tr>
+          <td><code>nexial.web.metrics.BackendTime</code></td>
+          <td><i>Same as <code>nexial.web.metrics.TTLB</code></i>.</td>
+        </tr>
+        <tr>
+          <td><code>nexial.web.metrics.DomInteractive</code></td>
+          <td>The time, in milliseconds, between the start of user's request to the browser and the requested page ready
+            for user interaction (while the same page might not be completely loaded).
+          </td>
+        </tr>
+        <tr>
+          <td><code>nexial.web.metrics.PageCompleteTime</code></td>
+          <td>The time, in milliseconds, between the start of user's request to the browser and the requested page being
+            completely loaded, parsed and all sub-resources loaded.
+          </td>
+        </tr>
+        <tr>
+          <td><code>nexial.web.metrics.Latency</code></td>
+          <td>The time incurred, in millisecond by the browser loading requested data from its cache, or the time
+            between the browser issuing the request and the corresponding response first received from the server.
+          </td>
+        </tr>
+        <tr>
+          <td><code>nexial.web.metrics.NetworkOverhead</code></td>
+          <td>The time incurred, in milliseconds, to complete DNS lookup and open TCP connection by the browser.</td>
+        </tr>
+        <tr>
+          <td><code>nexial.web.metrics.FirstResponseTime</code></td>
+          <td>The time, in millisecond, to receive initial response since the request was made.</td>
+        </tr>
+        <tr>
+          <td><code>nexial.web.metrics.ContentDownload</code></td>
+          <td>The time, in milliseconds, between the browser receiving the first and the last byte of the corresponding
+            response.
+          </td>
+        </tr>
+        <tr>
+          <td><code>nexial.web.metrics.ContentDownload</code></td>
+          <td>The time in millisecond between the first and the last byte of response for the current request (i.e.
+            URL).
+          </td>
+        </tr>
+        <tr>
+          <td><code>nexial.web.metrics.DomContentLoaded</code></td>
+          <td>The time, in milliseconds, between receiving the last byte of the response (which subsequently start the
+            parsing to the document thereof) and the complete construction of the parsed DOM and CSSOM objects.
+          </td>
+        </tr>
+        <tr>
+          <td><code>nexial.web.metrics.FirstInteractive</code></td>
+          <td>The time, in milliseconds, to parse the DOM objects.</td>
+        </tr>
+        <tr>
+          <td><code>nexial.web.metrics.PageReady</code></td>
+          <td>The time, in milliseconds, between the DOM objects being parsed and the corresponding page completely
+            loaded (i.e. DOM and CSSOM construction complete)."
+          </td>
+        </tr>
+        <tr>
+          <td><code>nexial.web.metrics.OnLoad</code></td>
+          <td>The time, in millisecond, taken to executed all the JavaScript load events after the corresponding page is
+            completely loaded.
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="tab_resource" class="tab">
+      This API that allows you to collect lifecycle timing information related to resources in a document. It enables
+      one to measure user latency, which is crucial to benchmark web pages.<br/>
+      <br/>
+      Using the Resource Timing API allows us to retrieve and analyze a detailed profile of all the network timing data
+      for every resource on the page. As such we can use this API to track the performance of the resources of our page,
+      and determine how many and what resources we have to optimize.
+    </div>
+    <div id="tab_paint" class="tab">
+      3. **Paint Timing**<br/>
+      First Paint (FP) is the first of these key moments, followed by First Contentful Paint (FCP). These metrics mark
+      the points, immediately after navigation, when the browser renders pixels to the screen. This is important to the
+      user because it answers the question: is it happening?
+
+      The primary difference between the two metrics is FP marks the point when the browser renders anything that is
+      visually different from what was on the screen prior to navigation. By contrast, FCP is the point when the browser
+      renders the first bit of content from the DOM, which may be text, an image, SVG, or even a canvas element.
+    </div>
+  </div>
+</div>
+<br/>

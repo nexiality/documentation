@@ -250,7 +250,7 @@ a:hover {
 
 .metrics th.label:hover:after {
     top:           49px;
-    left:          -55px;
+    left:          -65px;
     background:    rgba(0, 0, 0, .75);
     color:         #fff;
     font-size:     11px;
@@ -261,7 +261,7 @@ a:hover {
     white-space:   pre-wrap;
     border-radius: 10px;
     padding:       5px 10px;
-    width:         150px;
+    width:         172px;
     position:      absolute;
     line-height:   1.35em;
     z-index:       98;

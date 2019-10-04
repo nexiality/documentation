@@ -30,105 +30,122 @@ let BrowserMetrics = function (/*Object*/metrics) {
     "TTFB":                 {
       "type":        "time", "display": "TTFB",
       "description": "Time-To-First-Byte\n" +
-                     "-------------------------------------\n" +
-                     "The time, in milliseconds, " +
-                     "between the start of user's " +
-                     "request to the browser and " +
-                     "when the corresponding " +
-                     "response is initially " +
-                     "received by the browser.\n" +
+                     "------------------------------------------\n" +
+                     "The time, in milliseconds, between the start of user's request to the browser and when the " +
+                     "corresponding response is initially received by the browser.\n" +
                      "\n" +
                      "(responseStart - navigationStart)"
     },
     "TTLB":                 {
       "type":        "time", "display": "TTLB",
       "description": "Time-To-Last-Byte\n" +
-                     "-------------------------------------\n" +
-                     "The time, in milliseconds, " +
-                     "between the start of user's " +
-                     "request to the browser and " +
-                     "the completion of the " +
-                     "corresponding response " +
-                     "received (downloaded) by the " +
-                     "browser.\n" +
+                     "------------------------------------------\n" +
+                     "The time, in milliseconds, between the start of user's request to the browser and the " +
+                     "completion of the corresponding response received (downloaded) by the browser.\n" +
                      "\n" +
                      "(responseEnd - navigationStart)"
     },
     "BackendTime":          {
       "type":        "time", "display": "Backend",
-      "description": "Time for backend response to complete, in milliseconds\n" +
+      "description": "Backend\n" +
+                     "------------------------------------------\n" +
+                     "(This is the same as TTLB)\n" +
+                     "The time, in milliseconds, between the start of user's request to the browser and the " +
+                     "completion of the corresponding response received (downloaded) by the browser.\n" +
                      "\n" +
                      "(responseEnd - navigationStart)"
     },
     "DomInteractive":       {
       "type":        "time", "display": "DOM Interactive",
-      "description": "Time for the web page to be loaded and interactive, in milliseconds\n" +
+      "description": "DOM Interactive-Ready\n" +
+                     "------------------------------------------\n" +
+                     "The time, in milliseconds, between the start of user's request to the browser and the " +
+                     "requested page ready for user interaction (while the same page might not be completely " +
+                     "loaded).\n" +
                      "\n" +
                      "(domInteractive - navigationStart)"
     },
     "PageCompleteTime":     {
       "type":        "time", "display": "Page Complete",
-      "description": "Time to download, parse and ready the web page for use, in milliseconds\n" +
+      "description": "Page Complete Time\n" +
+                     "------------------------------------------\n" +
+                     "The time, in milliseconds, between the start of user's request to the browser and the " +
+                     "requested page being completely loaded, parsed and all sub-resources loaded.\n" +
                      "\n" +
                      "(domComplete - navigationStart)"
     },
     "Latency":              {
       "type":        "time", "display": "Network Latency",
-      "description": "Time incurred by the browser " +
-                     "loading requested data from " +
-                     "its cache, or the time " +
-                     "between the browser issuing " +
-                     "the request and the " +
-                     "corresponding response first " +
-                     "received from the server, in " +
-                     "milliseconds\n" +
+      "description": "Cache, DNS, TCP and Request\n" +
+                     "------------------------------------------\n" +
+                     "The time incurred, in millisecond by the browser loading requested data from its cache, or the " +
+                     "time between the browser issuing the request and the corresponding response first received " +
+                     "from the server.\n" +
                      "\n" +
                      "(responseStart - fetchStart)"
     },
     "NetworkOverhead":      {
       "type":        "time", "display": "Network Overhead",
-      "description": "Time incurred to complete DNS " +
-                     "lookup and open TCP connection, " +
-                     "in milliseconds\n" +
+      "description": "\n" +
+                     "DNS and TCP\n" +
+                     "------------------------------------------\n" +
+                     "The time incurred, in milliseconds, to complete DNS lookup and open TCP connection by the " +
+                     "browser.\n" +
                      "\n" +
                      "(connectEnd - domainLookupStart)"
     },
     "FirstResponseTime":    {
       "type":        "time", "display": "First Response",
-      "description": "Time to receive response " +
-                     "since the request was made, " +
-                     "in milliseconds\n" +
+      "description": "First Response Time\n" +
+                     "------------------------------------------\n" +
+                     "The time, in millisecond, to receive initial response since the request was made.\n" +
                      "\n" +
                      "(requestStart - responseStart)"
     },
     "ContentDownload":      {
-      "type":        "time", "display": "DCL",
+      "type":        "time", "display": "Content Download",
+      "description": "Content Downloaded\n" +
+                     "------------------------------------------\n" +
+                     "The time, in milliseconds, between the browser receiving the first and the last byte of the " +
+                     "corresponding response.\n" +
+                     "\n" +
+                     "(responseEnd - responseStart)"
+    },
+    "DomContentLoaded":     {
+      "type":        "time", "display": "DLC",
       "description": "DOM Content Loaded\n" +
                      "---------------------------------------\n" +
-                     "Time between the browser " +
-                     "receiving the first and the " +
-                     "last byte of the response, " +
-                     "in milliseconds\n" +
+                     "The time, in milliseconds, between receiving the last byte of the response (which " +
+                     "subsequently start the parsing to the document thereof) and the complete construction of the " +
+                     "parsed DOM and CSSOM objects.\n" +
                      "\n" +
                      "(domComplete - domLoading)"
     },
-    "DomContentLoaded":     {
-      "type":        "time", "display": "DOM Content Loaded",
-      "description": "Time to complete the DOM loading process after the content is downloaded, in milliseconds\n" +
-                     "\n" +
-                     "(responseStart - navigationStart)"
-    },
     "FirstInteractive":     {
       "type":        "time", "display": "First Interactive",
-      "description": "Time taken by the browser to load DOM content to a point where the web page can be used, in milliseconds"
+      "description": "Time to First Interactive\n" +
+                     "------------------------------------------\n" +
+                     "The time, in milliseconds, to parse the DOM objects.\n" +
+                     "\n" +
+                     "(domInteractive - domLoading)"
     },
     "PageReady":            {
       "type":        "time", "display": "Page Ready",
-      "description": "Time between the web page being usable and being completely loaded, in milliseconds"
+      "description": "Time to Page Ready\n" +
+                     "------------------------------------------\n" +
+                     "The time, in milliseconds, between the DOM objects being parsed and the corresponding page " +
+                     "completely loaded (i.e. DOM and CSSOM construction complete).\n" +
+                     "\n" +
+                     "(domComplete - domInteractive)"
     },
     "OnLoad":               {
       "type":        "time", "display": "On Load",
-      "description": "Time taken after the web page is loaded and all the JavaScript load events are completed, in milliseconds"
+      "description": "\n" +
+                     "------------------------------------------\n" +
+                     "The time, in millisecond, taken to executed all the JavaScript load events after the " +
+                     "corresponding page is completely loaded.\n" +
+                     "\n" +
+                     "(loadEventEnd - loadEventStart)"
     },
     "FirstPaint":           {
       "type":        "render", "display": "First Paint",
