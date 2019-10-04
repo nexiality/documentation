@@ -16,6 +16,7 @@ approach to building an automation platform, the Nexial development team tries t
 of its third-party libraries. Selenium is no exception. As of July 2018 Nexial uses Selenium 3.1.13 and the latest 
 releases of related webdrivers.
 
+-----
 
 ### Locators
 For effective automation of Web application, there are several critical technical knowledge and techniques to apply. 
@@ -38,16 +39,24 @@ Here's a summary of the various locators (click on tab to view):<br/>
 
 ### WebDriver Support
 Nexial automatically downloads required webdriver, during runtime as needed. Webdrivers are downloaded to the user's 
-home directory under `.nexial` folder. Also, a `.manifest` file with the driver details is maintained in the same
-directory. The `.manifest` file is used to check and download the latest version available based on the current OS.
-If there should be any reason not to update to the newer/latest webdriver (e.g. due to compatibility with older browser),
-one can disable the automatic webdriver update by setting `"neverCheck": true` in `.manifest` file.
+home directory, under the `.nexial` folder. For example, `C:\Users\MY_USER_ID\.nexial\chrome` or 
+`/Users/USERID/.nexial/firefox`. Also, a `.manifest` file with the driver details is maintained in the same directory. 
+The `.manifest` file is used to check and download the latest version available based on the current OS. If there should 
+be any reason not to update to the newer/latest webdriver (e.g. due to compatibility with older browser), one can 
+disable the automatic webdriver update by setting `"neverCheck": true` in `.manifest` file.
+
+
+### Browser Performance Metrics
+As of [v2.7](../../release/nexial-core-v2.7.changelog), Nexial supports the collection of browser performance metrics
+during execution. One can configure an execution to collect browser performance metrics without the need to modify
+automation script. The collected metrics will be presented as a web page at the end of the execution. To read more
+about this, visit [Browser Performance Metrics](browsermetrics).
+
 
 -----
 
 The "web" command type represents a series of automation commands regarding web operations. See below for a list of 
 available commands.
-
 
 ### Available Commands
 - [`assertAndClick(locator,label)`](assertAndClick(locator,label))
