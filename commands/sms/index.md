@@ -36,7 +36,7 @@ The following information is **REQUIRED** to enable SMS messaging.
 
 <br/>
 
-The above settings can be configured via [Nexial Setup](../../userguide/BatchFiles#nexial-setup.cmd-/-nexial-setup.sh),
+The above settings can be configured via [Nexial Setup](../../userguide/BatchFiles#nexial-setup),
 via command line and via `project.properties`. For example,
 
 - via command line:

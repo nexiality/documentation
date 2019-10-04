@@ -19,7 +19,7 @@ comments: true
 - avoid console pause when executing in zero-touch environment (like unit testing or Jenkins).
 - Fixed variable list indexing issue for the files.
 - reduce duplicate 3rd-party libraries.
-- [`nexial-project.sh|cmd`](../userguide/BatchFiles#nexial-projectcmd--nexial-projectsh):
+- [`nexial-project.sh|cmd`](../userguide/BatchFiles#nexial-project):
   - fixed the "ECHO is off" issue.
   - Nexial now detects "bad" project id in `.meta/project.id` file with fix instruction.
   - user can now override with a project id of his/her choice.

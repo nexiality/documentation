@@ -54,6 +54,9 @@ function newOperationSelect() { newQuickLinkSelect('#operations ~ h4, #available
 
 function newSystemVariableSelect() { newQuickLinkSelect('.varname > a', 'System Variables'); }
 
+function newBatchFileSelect() { newQuickLinkSelect('#available-batch-files ~ h4', 'Batch Files'); }
+
+
 jQuery(document).ready(function () {
   jQuery('.tabs .tab-links').on('click', function (e) {
     toggleTabContent(jQuery(this));

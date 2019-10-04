@@ -15,7 +15,7 @@ comments: true
 - code fix to render correctly (color) the console output for SKIPPED step in 
   [base &raquo; `repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)) loop. 
 - simplify `nexial.sh` by eliminating the need for a shell script to be generated dynamically.
-- fix error with macro refactoring via [`nexial-macro-update.sh`](../userguide/BatchFiles#nexial-macro-updatecmd--nexial-macro-updatesh).
+- fix error with macro refactoring via [`nexial-macro-update.sh`](../userguide/BatchFiles#nexial-macro-update).
 - fix error where data variables defined in `project.properties` are not overwritten via 
   [base &raquo; `save(var,value)`](../commands/base/save(var,value)). As with this fix, only certain System variables 
   will not be overwritten due to the run time nature of such data variables (e.g. 

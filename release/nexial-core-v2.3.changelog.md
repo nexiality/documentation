@@ -21,10 +21,10 @@ comments: true
 #### Improvements
 - omit the creation of hyperlink on path longer than 254 characters; Excel doesn't support long path.
 - updated to Kotlin 1.3.31, Spring 5, SpringBoot 2.1.4 - improved stability and performance.
-- [`nexial-artifact-repair.cmd|sh`](../userguide/BatchFiles#nexial-artifact-repaircmd--nexial-artifact-repairsh): 
+- [`nexial-artifact-repair.cmd|sh`](../userguide/BatchFiles#nexial-artifact-repair): 
   **NEW** Nexial utility batch file to repair excel file (remove unnecessary links and comments).
 - minor update to MacOSX/*NIX script to that focus will stay on terminal when Nexial execution commences.
-- [`nexial-var-update.cmd|sh`](../userguide/BatchFiles##nexial-variable-updatecmd--nexial-variable-updatesh): 
+- [`nexial-var-update.cmd|sh`](../userguide/BatchFiles##nexial-variable-update): 
   now support batch files and minor improvement to console output.
 - more informative error messages when invalid or out-of-bound array index is referenced.
 - console log hygiene; minor reduction of duplicated logs

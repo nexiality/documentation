@@ -14,7 +14,7 @@ intent of each macros in terms of:
 
 ### Using `nexial-project-inspector`
 Nexial ships with a batch script to scan for these macro-focused commands to generate documentation (HTML).  When 
-executed, the [`nexial-project-inspector`](../../userguide/BatchFiles#nexial-project-inspectorcmd--nexial-project-inspectorsh) 
+executed, the [`nexial-project-inspector`](../../userguide/BatchFiles#nexial-project-inspector) 
 batch performs the following actions:
 1. Searches for all valid macro files within a project.
 2. For each macro file, scan through all worksheets.
@@ -28,7 +28,7 @@ batch performs the following actions:
 4. Information gathered from the above step 3-5 are then gathered into a single JSON, which will be rendered via a 
    HTML file saved to the corresponding project home directory.
 
-Check [`nexial-project-inspector`](../../userguide/BatchFiles#nexial-project-inspectorcmd--nexial-project-inspectorsh)
+Check [`nexial-project-inspector`](../../userguide/BatchFiles#nexial-project-inspector)
 for more details of this batch file. One can execute the `nexial-project-inspector` batch file at any time, and even 
 commit the generated JSON/HTML files so that other team members can benefit from the generated documentation. Here's 
 an example of the generated documentation (part of Project Inspector):<br/>

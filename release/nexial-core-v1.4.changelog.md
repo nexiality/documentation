@@ -81,7 +81,7 @@ in effect.
 ### [number commands](../commands/number)
 - Update code to align with documentation; command parameters are now correctly named.
   - **You will likely need to run 
-    [`bin/nexial-script-update.cmd|sh`](../userguide/BatchFiles#nexial-script-update.cmd-/-nexial-script-update.sh) on
+    [`bin/nexial-script-update.cmd|sh`](../userguide/BatchFiles#nexial-script-update) on
     your project, and might need to update your scripts accordingly to match the command parameter changes.**
   - `assertEqual(value1,value2)` now correctly named as [`assertEqual(num1,num2)`](../commands/number/assertEqual(num1,num2))
   - `average(variableName,array)` now correctly named as [`average(var,array)`](../commands/number/average(var,array))

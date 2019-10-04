@@ -115,7 +115,7 @@ Command:<br/>
 ![terminal command](image/EmailNotifications_07.png)
 ![terminal output](image/EmailNotifications_08.png)
 
-Read more about nexial-setup.cmd on the [Nexial Batch Files](BatchFiles#nexial-setupcmd--nexial-setupsh) page. 
+Read more about nexial-setup.cmd on the [Nexial Batch Files](BatchFiles#nexial-setup) page. 
 
 
 ### See Also<br/>

@@ -42,7 +42,7 @@ comments: true
     Use `Ctrl-5` again to enable the corresponding test step.
   - supported on test script, macro and test plan.
   - **overwriting** instead of _appending_ `SkipIf(true)` to any existing [flow control](../flowcontrols).
-- [`bin/nexial-project.cmd|sh`](../userguide/BatchFiles#nexial-projectcmd--nexial-projectsh): 
+- [`bin/nexial-project.cmd|sh`](../userguide/BatchFiles#nexial-project): 
   - automatically create `.meta/project.id` under the target project directory to identify each project. This manifest 
     file can be useful (in the future) for tracking and comparison purpose.
   - create additional script/data files into existing project directory, without overwriting existing artifacts.

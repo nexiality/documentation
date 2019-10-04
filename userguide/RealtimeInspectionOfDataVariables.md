@@ -33,7 +33,7 @@ for troubleshooting and debugging running scripts.
   [`PauseAfter()`](../flowcontrols/index#pausebefore()--pauseafter()) to the flow control column of such step(s).
 - set the system variable [`nexial.inspectOnPause`](../systemvars/index#nexial.inspectOnPause) as `true`. This
   can be done in [various places](../userguide/DataManagement).
-- [Execute your script](../userguide/BatchFiles#nexialcmd--nexialsh) as one normally would. Nexial would pause the
+- [Execute your script](../userguide/BatchFiles#nexial) as one normally would. Nexial would pause the
   execution just before (`PauseBefore()`) or just after (`PauseAfter()`) the test steps where the "pause" control 
   flow was placed. Now we can interact with Nexial to inspect data variables, etc.
 - When inspection is complete, one can press `ENTER` key or type in `:resume` to continue execution.

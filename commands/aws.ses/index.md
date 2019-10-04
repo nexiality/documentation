@@ -32,7 +32,7 @@ For example, suppose we have a "profile" named as `mailer`:<br/>
 Shown above, `mailer` will be used as a "profile" throughout the "aws.ses" commands for SES-related automation.
 
 **NOTE**: 
-1. Consider using [nexial-crypt](../../userguide/BatchFiles#nexial-cryptcmd--nexial-cryptsh) to encrypt your access
+1. Consider using [nexial-crypt](../../userguide/BatchFiles#nexial-crypt) to encrypt your access
    key and secret key information.
 2. It is possible to create multiple profiles and use them selectively during execution.
 

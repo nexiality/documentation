@@ -29,7 +29,7 @@ Here are the known exit status that a Nexial execution can possibly emit:
 |-16 or 240 |Incorrect commandline argument; execution did not run.                                                    |
 |-17 or 239 |The target output Excel file is currently in use; execution did not complete successfully.                |
 |-18 or 238 |Most likely a bad Nexial distro. is in use. Please update to the latest Nexial distribution.              |
-|-19 or 237 |Only applicable to [Nexial Setup](../userguide/BatchFiles.html#nexial-setupcmd--nexial-setupsh). This usually means that the specified data file is not valid for use. |
+|-19 or 237 |Only applicable to [Nexial Setup](../userguide/BatchFiles.html#nexial-setup). This usually means that the specified data file is not valid for use. |
 
 <br/>
 

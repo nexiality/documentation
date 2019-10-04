@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 Nexial is designed to work with a variety of directory/file structures. One can specify target script or data file 
-locations when running [`nexial.[cmd|sh]`](BatchFiles#nexialcmd--nexialsh). However it is recommended to follow 
+locations when running [`nexial.[cmd|sh]`](BatchFiles#nexial). However it is recommended to follow 
 the standard Nexial automation project structure so that:
 1. Test artifacts are well-organized to reduce conflicts and to improve artifact management,
 2. Your project can integrate more easily with other project(s) (think Integration Testing) that follow the same 
@@ -45,7 +45,7 @@ Below is the general directory/file structure of a standard Nexial automation pr
    ![](image/UnderstandingProjectStructure_00a.png)
    
    To generate such file, one can create it manually, or use the  
-   [`bin/nexial-project.sh` or `bin/nexial-project.cmd`](BatchFiles#nexial-projectcmd--nexial-projectsh) batch file. A
+   [`bin/nexial-project.sh` or `bin/nexial-project.cmd`](BatchFiles#nexial-project) batch file. A
    a team, changes to this `.meta/project.id` file can be driven through consensus and propagated through source code 
    repository (such as GIT).
 
@@ -70,10 +70,10 @@ Below is the general directory/file structure of a standard Nexial automation pr
 
    2. `artifact/data` <a name="artifact/data"></a>- this directory will store your test data.  By default the data file is expected to be named in
    correspondent to the test script: `<TEST SCRIPT NAME>.data.xlsx`.  But this convention can be overridden during
-   execution via the `-data` flag to [`nexial.[cmd|sh]` script](BatchFiles#nexialcmd--nexialsh). Similar to test 
+   execution via the `-data` flag to [`nexial.[cmd|sh]` script](BatchFiles#nexial). Similar to test 
    scripts, each data file would contain one or many data sheets (worksheets) that correspond to the test scenarios. 
    Again, this is the convention. Deviating from this convention can be attained via the `-datasheet` flag to 
-   [`nexial.[cmd|sh]` script](BatchFiles#nexialcmd--nexialsh).
+   [`nexial.[cmd|sh]` script](BatchFiles#nexial).
    In general, other data files such as SQL, JSON, test data files (text) are stored in this location as well.
 
    3. `artifact/plan` <a name="artifact/plan"></a>- this directory will store all the test plan.  Each test plan may contain one or more test 
@@ -190,7 +190,7 @@ Below is the general directory/file structure of a standard Nexial automation pr
 
 ### Additional Notes
 For convenience, use the `bin/nexial-project.cmd` or `bin/nexial-project.sh` to generate the project structure for 
-you. See [`nexial-project.[cmd|sh]`](BatchFiles#nexial-projectcmd--nexial-projectsh) for more details.
+you. See [`nexial-project.[cmd|sh]`](BatchFiles#nexial-project) for more details.
 
 As a convention, it is recommended to use `C:\projects` or `/Users/<username/projects` (MacOSX/Linux) as the top-level 
 directory for all your Nexial projects.

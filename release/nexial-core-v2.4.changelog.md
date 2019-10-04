@@ -13,10 +13,10 @@ comments: true
 ### General
 #### Fixes
 - code fix to avoid modifying System properties while simultaneously reading such properties.
-- [`nexial-project.cmd`](../userguide/BatchFiles#nexial-projectcmd--nexial-projectsh): fixed the `ECHO is off.` error.
-- [`nexial-artifact-repair.cmd|sh`](../userguide/BatchFiles#nexial-artifact-repaircmd--nexial-artifact-repairsh): 
+- [`nexial-project.cmd`](../userguide/BatchFiles#nexial-project): fixed the `ECHO is off.` error.
+- [`nexial-artifact-repair.cmd|sh`](../userguide/BatchFiles#nexial-artifact-repair): 
   fixed invalid package reference.
-- [`nexial-artifact-repair.cmd|sh`](../userguide/BatchFiles#nexial-artifact-repaircmd--nexial-artifact-repairsh):
+- [`nexial-artifact-repair.cmd|sh`](../userguide/BatchFiles#nexial-artifact-repair):
   fixed formatting issue in data and script files.  
 - Fixed issue of opening an output excel/execution report after execution even if `nexial.openResult` or 
  `nexial.openExecutionReport` is `false`.

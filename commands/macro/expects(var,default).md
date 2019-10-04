@@ -15,7 +15,7 @@ This command serves 2 purposes:
    the specified data variable is not present, Nexial will issued a FAIL result for this command. The latter scenario 
    is functionally equivalent to [base &raquo; `assertVarPresent(var)`](../base/assertVarPresent(var)).
 2. As a "marker" for
-   [`nexial-project-inspector`](../../userguide/BatchFiles#nexial-project-inspectorcmd--nexial-project-inspectorsh) to 
+   [`nexial-project-inspector`](../../userguide/BatchFiles#nexial-project-inspector) to 
    collect the "expectation" of this macro prior to its invocation.
 
 
@@ -29,7 +29,7 @@ This command serves 2 purposes:
 The above use of the `expects` command shows one data variable - `command-type.link.url` - is expected by the enclosing
 macro. Since no default is defined, Nexial will issue a FAIL result if the specified data variable is not defined at
 the time of execution. Consequently, the execution of 
-[`nexial-project-inspector`](../../userguide/BatchFiles#nexial-project-inspectorcmd--nexial-project-inspectorsh) would
+[`nexial-project-inspector`](../../userguide/BatchFiles#nexial-project-inspector) would
 result the expected data variable and the corresponding description being added to the generated macro documentation, 
 as depicted below:<br/>
 ![](image/expects_02.png)<br/>

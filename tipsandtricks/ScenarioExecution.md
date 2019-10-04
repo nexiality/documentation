@@ -34,7 +34,7 @@ instead of using the template XLSX file provided as part of Nexial distribution.
 and then rename it accordingly. Simply copying just the worksheet to yours won't work. 
 
 Alternatively - and possibly simpler as well - you can run the 
-[`nexial-project.(sh|cmd)` script](../userguide/BatchFiles#nexial-proje ctcmd--nexial-projectsh) to generate new 
+[`nexial-project.(sh|cmd)` script](../userguide/BatchFiles#nexial-project) to generate new 
 script/data files. For example:
 
 On *NIX/MacOS:

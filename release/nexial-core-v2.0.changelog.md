@@ -14,7 +14,7 @@ comments: true
 #### Fixes:
 - fix email notification when email address isn't specified
 - force email notification to be sent as HTML
-- [`nexial-variable-update`](../userguide/BatchFiles#nexial-variable-updatecmd--nexial-variable-updatesh): slight 
+- [`nexial-variable-update`](../userguide/BatchFiles#nexial-variable-update): slight 
   improvement on logging
 - internal tracking of system variables and respective default value.
 - fix to allow shutting down of winium driver with session as required (useful in the case of clickByLocator like commands)
@@ -22,16 +22,16 @@ comments: true
 
 #### Improvements:
 - minor improvement on logging to help troubleshoot test step errors.
-- [`nexial-variable-update`](../userguide/BatchFiles#nexial-variable-updatecmd--nexial-variable-updatesh) script 
+- [`nexial-variable-update`](../userguide/BatchFiles#nexial-variable-update) script 
    now supports macro and HTML files. Also reduced excessive logging.
-- [`nexial-project-inspector`](../userguide/BatchFiles#nexial-project-inspectorcmd--nexial-project-inspectorsh):
+- [`nexial-project-inspector`](../userguide/BatchFiles#nexial-project-inspector):
   **NEW** batch file to generate project level information and insight. Current version supports macro and data 
   variable inspection. More enhancement forthcoming.
   - scan data variable across test scripts, batch files, `project.properties,` datasheets and `#default`.
 - [project id binding](../userguide/UnderstandingProjectStructure#project.id): use `.meta/project.id` to bind project
   identification across sandboxes (local project directory) instead of using project directory name. The same
   binding now affects cloud storage location to keep output of the same project together.
-- [`nexial-macro-update.cmd|sh`](../userguide/BatchFiles#nexial-macro-updatecmd--nexial-macro-updatesh): **NEW** batch 
+- [`nexial-macro-update.cmd|sh`](../userguide/BatchFiles#nexial-macro-update): **NEW** batch 
   file to rename macro name across all scripts within the same project. 
 
 

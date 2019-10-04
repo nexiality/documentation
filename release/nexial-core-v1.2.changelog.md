@@ -48,14 +48,14 @@ comments: true
   for built-in function parameter.
 
 #### Nexial Utility and Batch Files
-- [Nexial Setup](../userguide/BatchFiles#nexial-setup.cmd-/-nexial-setup.sh) now ready for use. This is a technique to 
+- [Nexial Setup](../userguide/BatchFiles#nexial-setup) now ready for use. This is a technique to 
   configure system-wide configurations (such as AWS credential, database connectivity) as a one-time activity and to 
   simplify distribution of such configuration across team or company. Checks documentation for usage details.
 - Fixed NexialSetup to support longer secret key.
 - Fixed NexialSetup to add more user-friendly messages.
-- Updated [`bin/nexial-project.sh` or `bin/nexial-project.cmd`](../userguide/BatchFiles#nexial-project.cmd-/-nexial-project.sh) 
+- Updated [`bin/nexial-project.sh` or `bin/nexial-project.cmd`](../userguide/BatchFiles#nexial-project) 
   to allow new script/data files to be added to existing project.
-- **Multi-plan support** now available. It is now possible to [specify multiple plan files](../userguide/BatchFiles#nexial.cmd-/-nexial.sh) 
+- **Multi-plan support** now available. It is now possible to [specify multiple plan files](../userguide/BatchFiles#nexial) 
   per execution so that each execution can span across one or more plans. Currently not supporting multiple sheets per 
   plan file.
 

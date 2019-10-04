@@ -30,7 +30,7 @@ Shown above, `MyProfile` will be used as a "profile" throughout the "aws.sqs" co
 
 
 **NOTE**: 
-1. Consider using [nexial-crypt](../../userguide/BatchFiles#nexial-cryptcmd--nexial-cryptsh) to encrypt your access
+1. Consider using [nexial-crypt](../../userguide/BatchFiles#nexial-crypt) to encrypt your access
    key and secret key information.
 2. It is possible to create multiple profiles and use them selectively during execution.
 

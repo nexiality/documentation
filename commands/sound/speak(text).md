@@ -29,7 +29,7 @@ as the underlying text-to-speech engine. To enable AWS Polly, the following conf
 
 <br/>
 
-The above settings can be configured via [Nexial Setup](../../userguide/BatchFiles#nexial-setup.cmd-/-nexial-setup.sh),
+The above settings can be configured via [Nexial Setup](../../userguide/BatchFiles#nexial-setup),
 via command line and via `project.properties`. For example,
 
 - via command line:
