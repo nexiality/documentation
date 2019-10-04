@@ -1,0 +1,54 @@
+<style>
+    table tbody {
+        width: 100%;
+    }
+
+    th {
+        width: 50%;
+    }
+</style>
+
+<h3 id="Difference between web typeKeys and desktop typeKeys">Difference between web typeKeys and desktop typeKeys</h3>
+
+<table>
+    <tbody>
+    <tr>
+        <th>web &raquo; typeKeys(locator,value)</th>
+        <th>desktop &raquo; typeKeys(os,keystrokes)</th>
+    </tr>
+    <tr>
+        <td>This web command is associated to web application for provided target web element only.</td>
+        <td>This desktop command is only associated to desktop application in provided execution environment.
+            It is independent of any desktop element.
+        </td>
+    </tr>
+    <tr>
+        <td>This web command will check if the target web element is present on active browser window.
+            If target web element is not present, this command will fail.
+        </td>
+        <td>This desktop command will not check if desktop application(AUT) is active in foreground. It simply issues
+            keystrokes on the application active in foreground.
+        </td>
+    </tr>
+    <tr>
+        <td>This web command accepts two parameters, First parameter <code>locator</code> is locator of the target
+            web element and second parameter is value/keystroke which to be entered in web element.
+        </td>
+        <td>This desktop also accepts two parameters, First parameter <code>os</code> is execution environment in
+            which provided keystrokes are supported e.g. Windows,Linux,Mac. While the second parameter is keystrokes
+            i.e. shortcut keys to be pressed on active window.
+        </td>
+    </tr>
+    <tr>
+        <td>If the locator resolves to more than one web element, only the first matched web element will be affected.
+        </td>
+        <td>This command is not associated with any desktop element.</td>
+    </tr>
+    <tr>
+        <td>Internally this command will send keys via <code>Selenium</code> web driver.</td>
+        <td>Internally this command will send keys via <code>java.awt.robot</code>. It is independent of Winium
+            driver.
+        </td>
+    </tr>
+    </tbody>
+</table>

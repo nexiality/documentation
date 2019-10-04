@@ -69,6 +69,7 @@ The issue of each keystroke (or combination of modifiers and a key) will additio
 additional time is needed to account for the intended reaction from the target application, it might be best to break
 up into multiple commands with [base &raquo; `waitFor(waitMs)`](../base/waitFor(waitMs)) commands between them.
 
+{% include typeKeysDiff.html %}
 
 ### Parameters
 - **os** - the operating system(s) that will support the specified keystrokes. Unmatched OS will omit such execution.
