@@ -1,54 +1,64 @@
 <style>
-    table tbody {
-        width: 100%;
-    }
+  table.diffs {
+    margin: 10px 0 25px;
+  }
 
-    th {
-        width: 50%;
-    }
+  table.diffs tbody {
+    width: 100%;
+  }
+
+  table.diffs th {
+    width:            50%;
+    background-color: rgba(200, 240, 180, 0.5);
+  }
+
+  h3.diffs code {
+    background-color: transparent;
+    color:            inherit;
+    border:           none;
+  }
 </style>
 
-<h3 id="Difference between web typeKeys and desktop typeKeys">Difference between web typeKeys and desktop typeKeys</h3>
+<h3 class="diffs" id="diffs">
+  Differences between web &raquo; <code>typeKeys(locator,value</code> and desktop &raquo; <code>typeKeys(os,keystrokes)</code>
+</h3>
 
-<table>
-    <tbody>
-    <tr>
-        <th>web &raquo; typeKeys(locator,value)</th>
-        <th>desktop &raquo; typeKeys(os,keystrokes)</th>
-    </tr>
-    <tr>
-        <td>This web command is associated to web application for provided target web element only.</td>
-        <td>This desktop command is only associated to desktop application in provided execution environment.
-            It is independent of any desktop element.
-        </td>
-    </tr>
-    <tr>
-        <td>This web command will check if the target web element is present on active browser window.
-            If target web element is not present, this command will fail.
-        </td>
-        <td>This desktop command will not check if desktop application(AUT) is active in foreground. It simply issues
-            keystrokes on the application active in foreground.
-        </td>
-    </tr>
-    <tr>
-        <td>This web command accepts two parameters, First parameter <code>locator</code> is locator of the target
-            web element and second parameter is value/keystroke which to be entered in web element.
-        </td>
-        <td>This desktop also accepts two parameters, First parameter <code>os</code> is execution environment in
-            which provided keystrokes are supported e.g. Windows,Linux,Mac. While the second parameter is keystrokes
-            i.e. shortcut keys to be pressed on active window.
-        </td>
-    </tr>
-    <tr>
-        <td>If the locator resolves to more than one web element, only the first matched web element will be affected.
-        </td>
-        <td>This command is not associated with any desktop element.</td>
-    </tr>
-    <tr>
-        <td>Internally this command will send keys via <code>Selenium</code> web driver.</td>
-        <td>Internally this command will send keys via <code>java.awt.robot</code>. It is independent of Winium
-            driver.
-        </td>
-    </tr>
-    </tbody>
+<table class="diffs">
+  <tbody>
+  <tr>
+    <th><a href="../web/typeKeys(locator,value)">web &raquo; <code>typeKeys(locator,value)</code></a></th>
+    <th><a href="../desktop/typeKeys(os,keystrokes)">desktop &raquo; <code>typeKeys(os,keystrokes)</code></a></th>
+  </tr>
+  <tr>
+    <td>This web command targets the web element associated to the specified locator.</td>
+    <td>This desktop command is associated to currently active desktop UI element. Such UI element may be something
+      on a web page or something on a desktop app (platform-independent).
+    </td>
+  </tr>
+  <tr>
+    <td>This web command will check if the target web element is present on active browser window.
+      If target web element is not present, this command will fail.
+    </td>
+    <td>This desktop command will not check if the target application is active or in foreground. It simply issues
+      keystrokes on the application active in foreground.
+    </td>
+  </tr>
+  <tr>
+    <td>This web command accepts two parameters, First parameter <code>locator</code> is locator of the target
+      web element and second parameter is value/keystroke which to be entered in web element.
+    </td>
+    <td>This desktop also accepts two parameters, First parameter <code>os</code> is execution environment in
+      which provided keystrokes are supported e.g. Windows,Linux,Mac. While the second parameter is keystrokes
+      i.e. shortcut keys to be pressed on active window.
+    </td>
+  </tr>
+  <tr>
+    <td>If the locator resolves to more than one web element, only the first matched web element will be affected.</td>
+    <td>This command is not associated with any desktop element.</td>
+  </tr>
+  <tr>
+    <td>This command will send keys via the underlying webdriver.</td>
+    <td>This command will send keys via native key emulator. It is independent of Winium driver or any webdriver.</td>
+  </tr>
+  </tbody>
 </table>

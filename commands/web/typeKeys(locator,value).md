@@ -13,7 +13,7 @@ controls are supported. If the specified `locator` does not result in a valid we
 If the specified `value` is `(empty)`, then the target element is effectively "cleared out" - meaning, any of its 
 existing text is removed. 
 
-The acceptable control keys can be specified as follows:
+The acceptable control keys are as follows:
 ```
 {SHIFT}
 {CONTROL}
@@ -54,6 +54,7 @@ The acceptable control keys can be specified as follows:
 
 {% include typeKeysDiff.html %}
 
+
 ### Parameters
 - **locator** - this parameter is the locator of the element.
 - **value** - this parameter is the key value which need to be send.
@@ -70,3 +71,4 @@ The acceptable control keys can be specified as follows:
 
 ### See Also
 - [`type(locator,value)`](type(locator,value))
+- [desktop &raquo; `typeKeys(os,keystrokes)`](../desktop/typeKeys(os,keystrokes))
