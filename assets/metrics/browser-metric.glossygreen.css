@@ -108,69 +108,6 @@ a:hover {
 /*.result-controls i.fa-expand {*/
 /*}*/
 
-.instruction {
-    font-family:   "Trebuchet MS", sans-serif;
-    font-size:     9pt;
-    color:         rgba(50, 50, 50, 0.75);
-    line-height:   1.5em;
-    margin-bottom: 15px;
-}
-
-.instruction .fa-clipboard, .instruction .fa, .instruction .far, .instruction .fas {
-    font-size: 12pt;
-}
-
-.instruction .instruction-text {
-    font-size: 9pt;
-    display:   block;
-    margin:    -18px 10px 3px 20px;
-}
-
-/* specific to project inspector page */
-.scanTime, .sub-title {
-    font-weight: normal;
-    font-size:   9pt;
-    text-shadow: none !important;
-    color:       rgba(0, 0, 0, 0.5);
-}
-
-#ready-container {
-    display:      inline;
-    margin-right: 10px;
-}
-
-#ready-container > i {
-    font-size: 14pt;
-    cursor:    default;
-}
-
-#ready-container i span {
-    font-size: 8pt;
-    margin:    -15px 0 0 25px;
-    display:   block;
-}
-
-#ready-container i.connected {
-    color:       rgba(10, 120, 10, 1);
-    font-weight: bold;
-}
-
-#ready-container > i.connected:hover, #ready-container > i.connected > span:hover {
-    background-color: transparent;
-    box-shadow:       none !important;
-}
-
-#ready-container i.disconnected {
-    color:       rgba(100, 100, 100, 0.5);
-    text-shadow: none;
-}
-
-#ready-container > i.disconnected:hover, #ready-container > i.disconnected > span:hover {
-    text-shadow:      1px 1px 2px #afa !important;
-    background-color: transparent;
-    box-shadow:       none !important;
-}
-
 .category {
     font-size:        12pt;
     font-family:      Tahoma, serif;
@@ -187,7 +124,6 @@ a:hover {
 }
 
 .category .showhide { top: -0.25em; }
-
 
 .metrics-container {
     margin:                  -8px 8px 0 2px;
@@ -277,331 +213,93 @@ a:hover {
     border:     none;
 }
 
-
-/*.metrics-container .top {*/
-/*    height:         28px;*/
-/*    vertical-align: middle;*/
-/*    width:          100%;*/
-/*    font-family:    Tahoma, serif;*/
-/*    font-size:      9pt;*/
-/*    display:        block;*/
-/*    white-space:    nowrap;*/
-/*}*/
-
-
 .metrics {
-    padding-top: 5px;
-    width:       100% !important;
-    box-shadow:  0 10px 10px -5px rgba(40, 40, 40, 0.45);
+    padding-top:   5px;
+    width:         100% !important;
+    box-shadow:    0 10px 10px -5px rgba(40, 40, 40, 0.45);
+    table-layout:  fixed;
+    border-radius: 15px;
+}
+
+.metrics th.type-row {
+    width: 15px;
+}
+
+.metrics th.type-time {
+    width: 50px;
+}
+
+.metrics th.sorting, .metrics th.sorting_asc, .metrics th.sorting_desc {
+    background-position: top right !important;
+}
+
+.metrics th.label {
+    text-align:     center;
+    vertical-align: bottom;
+    padding:        10px 15px 5px 5px;
+    position:       relative;
+    background:     rgba(180, 180, 180, 0.85);
+    border-left:    1px solid rgba(80, 80, 80, 0.15);
+}
+
+.metrics th.type-activity:hover:before, .metrics th.type-activity:hover:after,
+.metrics th.type-test:hover:before, .metrics th.type-test:hover:after {
+    background: none;
+    content:    none !important;
+}
+
+.metrics th.label:hover:after {
+    top:           49px;
+    left:          -55px;
+    background:    rgba(0, 0, 0, .75);
+    color:         #fff;
+    font-size:     11px;
+    font-weight:   normal;
+    text-align:    left;
+    text-shadow:   1px 1px 1px #000;
+    content:       attr(tooltip);
+    white-space:   pre-wrap;
+    border-radius: 10px;
+    padding:       5px 10px;
+    width:         150px;
+    position:      absolute;
+    line-height:   1.35em;
+    z-index:       98;
+}
+
+.metrics th.label:hover:before {
+    top:          41px;
+    left:         26px;
+    border:       solid;
+    border-color: #333 transparent;
+    border-width: 0 6px 6px 6px;
+    content:      "";
+    position:     absolute;
+    z-index:      99;
 }
 
 .metrics > tbody > tr > td {
+    padding:        8px 5px;
+    border-left:    1px solid rgba(80, 80, 80, 0.15);
     vertical-align: top;
 }
 
-.datavar {
-    width: 100%;
+.metrics > tbody > tr > td.type-test {
+    overflow-wrap: break-word;
 }
 
-.datavar .datavar-label {
-    font-weight:      normal;
-    font-size:        8pt;
-    border:           none !important;
-    text-align:       left;
-    vertical-align:   text-top;
-    white-space:      nowrap;
-
-    color:            rgba(13, 54, 42, 0.85);
-    background-color: rgba(170, 200, 190, 0.45);
+.metrics > tbody > tr > td.type-row {
+    text-align: right;
+    width:      15px;
 }
 
-.datavar .datavar-name {
-    font-family: monospace;
-    font-weight: bold;
-    font-size:   10pt;
-    border:      none !important;
-    text-align:  left;
-    white-space: nowrap;
-
-    color:       rgba(13, 64, 52, 0.85);
-}
-
-.datavar .description {
-    white-space: unset !important;
-}
-
-.section-separator {
-    height:     1px;
-    border:     1px solid rgba(135, 135, 135, 0.5);
-    margin:     5px auto;
-    box-shadow: 0 1px 1px rgba(250, 250, 250, 0.5);
-}
-
-.copy-macro {
-    margin:           2px;
-    font-size:        12pt;
-    border:           none;
-    background-color: transparent;
-    color:            #555;
-    cursor:           pointer;
-}
-
-#project-advice {
-    margin: 10px;
-}
-
-/*.advice {*/
-/*    font-family:      "Arial", "Verdana", sans-serif;*/
-/*    font-size:        9pt;*/
-/*    padding:          10px;*/
-/*    margin:           15px 50px;*/
-/*    border-radius:    5px;*/
-/*    line-height:      1.5em;*/
-/*    text-shadow:      none;*/
-/*    font-weight:      normal;*/
-
-/*    color:            #700;*/
-/*    background-color: rgba(255, 245, 245, 0.5);*/
-/*    background-image: linear-gradient(to bottom, rgba(100, 30, 30, 0.65) -20%, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0.15) 70%, rgba(100, 30, 30, 0.65) 135%);*/
-/*    box-shadow:       0 0 5px rgba(80, 0, 0, 0.95);*/
-/*}*/
-
-/*.advice a {*/
-/*    padding:          2px 5px;*/
-/*    background-color: #fff;*/
-/*    color:            #a00;*/
-/*    border-radius:    10px;*/
-/*    border-top:       1px inset rgba(80, 0, 0, 0.5);*/
-/*    border-bottom:    1px inset rgba(80, 0, 0, 0.5);*/
-/*}*/
-
-/*.advice a:hover {*/
-/*    color:         rgba(255, 10, 10, 1) !important;*/
-/*    border-top:    1px outset rgba(250, 0, 0, 1);*/
-/*    border-bottom: 1px outset rgba(250, 0, 0, 1);*/
-/*}*/
-
-/*.advice code {*/
-/*    font-weight: bold;*/
-/*    color:       #000;*/
-/*}*/
-
-/*.macro-container, .data-container, #project-advice {*/
-/*    display: none;*/
-/*}*/
-
-.data-table td.type-time {
+.metrics > tbody > tr > td.type-time {
     text-align:  right;
     font-family: monospace;
 }
 
-.data-table td.type-test {
-    color:       #555;
-    text-align:  left;
-    text-wrap:   none;
-    white-space: nowrap;
-}
-
-.data-table td.type-row {
-    text-align: right;
-}
-
-.data-table td.type-command, .data-table td.type-parameters {
-    font-family: monospace;
-}
-
-.data-table .data-name {
-    width:          300px;
-    vertical-align: middle;
-}
-
-.data-table .datavar-label {
-    white-space:    nowrap;
-    vertical-align: middle;
-    width:          50%;
-    padding:        10px;
-}
-
-.data-table .datavar-label > a {
-    padding:           0 5px 0 0;
-    display:           inline-block;
-    margin:            0 0 0 10px;
-    border:            1px inset rgba(80, 80, 80, 0.5);
-    border-left-style: none;
-    background:        rgba(245, 255, 250, 0.75);
-}
-
-.data-table .datavar-label > a:hover {
-    background-image: none;
-    text-shadow:      1px 1px 2px #000;
-}
-
-.data-table .datavar-label > a:hover i {
-    background-image: none;
-    text-shadow:      0 0 5px rgba(0, 0, 0, 0.75);
-}
-
-.data-table .datavar-label > a .far,
-.data-table .datavar-label > a .fas {
-    position:    relative;
-    top:         2px;
-    left:        -7px;
-    text-shadow: 0 0 5px rgba(245, 255, 245, 0.75);
-}
-
-.data-table .datavar-label > a .far:hover,
-.data-table .datavar-label > a .fas:hover {
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
-}
-
-.data-table .datavar-label > a .fa-edit {
-    font-size: 18px;
-    margin:    -4px -5px -1px -8px;
-    top:       1.5px;
-}
-
-.data-table .datavar-label > a .fa-table {
-    top:       3.5px;
-    font-size: 20px;
-    margin:    -5px -2px 0 -8px;
-    position:  relative;
-}
-
-.data-table .datavar-label > a .fa-window-restore {
-    font-size: 18px;
-    margin:    -5px 4px 0 -14px;
-    left:      0;
-}
-
-.data-table .datavar-label > a .fa-terminal {
-    font-size:     11px;
-    background:    rgba(150, 170, 170, 0.85);
-    top:           0;
-    padding:       3px 2px;
-    border-radius: 2px;
-    box-shadow:    2px 0 2px rgba(100, 120, 120, 0.95);
-    margin:        -2px -6px -2px -9px;
-}
-
-.data-table .datavar-label > a .fa-file-alt {
-    font-size: 18px;
-    left:      0;
-    margin:    -5px 6px 0 -12px;
-    top:       1.5px;
-}
-
-.data-table .datavar-label > a .fa-file-excel {
-    font-size: 18px;
-    margin:    -5px -1px 0 -5px;
-    top:       1.5px;
-}
-
-.data-table .datavar-label .fa-chevron-right {
-    margin:         0 5px;
-    color:          rgba(35, 35, 35, 0.35);
-    vertical-align: inherit;
-}
-
-.data-table .datavar-name {
-    white-space:      unset;
-    width:            100%;
-    background-color: rgba(200, 200, 200, 0.25);
-}
-
-/*.data-table .advice {*/
-/*    margin: 10px 5px 5px 0;*/
-/*}*/
-
-/*.data-container .advice b {*/
-/*    border:           1px inset;*/
-/*    padding:          2px 4px;*/
-/*    background-color: rgba(80, 80, 80, 0.2);*/
-/*    border-radius:    5px;*/
-/*}*/
-
-.data-name i.fa.refactor,
-.data-name i.fas.refactor,
-.data-name i.far.refactor {
-    margin-left: 9px;
-}
-
-.datavar-edit .proposed-table thead tr th:last-child {
-    width: 100%;
-}
-
-/* macro */
-.macro-file-container {
-    margin-top:    40px;
-    margin-bottom: 40px;
-}
-
-.macro-file {
-    font-size: 11pt;
-    display:   block;
-    margin:    8px 0;
-}
-
-.macro-name, .data-name {
-    margin:      5px 0;
-    font-weight: bold;
-    text-shadow: 1px 1px 5px rgba(80, 80, 80, 0.5);
-}
-
-.macro-description, .description {
-    font-family: "Trebuchet MS", sans-serif !important;
-    color:       rgba(10, 80, 80, 0.75);
-    font-weight: normal !important;
-    text-shadow: none !important;
-    font-style:  italic;
-    font-size:   9pt !important;
-}
-
-.macro-description {
-    margin: 5px 0;
-}
-
-.macro-table .label, .macro-table > tbody > tr > td {
-    width: 33%;
-}
-
-.macro-table .datavar-label {
-    width:          65px;
-    text-transform: lowercase;
-}
-
-.macro-table .expects, .macro-table .produces {
-    margin: 0 0 5px 0;
-}
-
-/* refactoring window */
-i.fa.refactor, i.fas.refactor, i.far.refactor {
-    margin:           2px 2px 2px 0;
-    font-size:        11pt;
-    border:           none;
-    background-color: transparent;
-    color:            #333;
-    cursor:           pointer;
-    text-shadow:      none;
-}
-
-.w2ui-popup {
-    opacity: 0.9 !important;
-}
-
-.w2ui-popup .w2ui-popup-title {
-    font-weight:      bold;
-    background-image: linear-gradient(180deg, rgba(90, 215, 135, 0.5) 5px, rgba(255, 255, 255, 0.1) 25px);
-    color:            rgba(80, 120, 100, 1);
-}
-
-.w2ui-popup .w2ui-box .w2ui-popup-body {
-    background-color: #fff;
-}
-
-.refactor-ui, .execute-ui {
-    height:  100%;
-    width:   100%;
-    padding: 10px;
+.metrics > tbody > tr > td {
+    vertical-align: top;
 }
 
 .control {
@@ -634,272 +332,6 @@ i.fa.refactor, i.fas.refactor, i.far.refactor {
 .control.disabled:hover {
     color:       rgba(150, 150, 150, 0.85);
     text-shadow: none;
-}
-
-.slated, .config {
-    height:           38px;
-    padding:          5px;
-    border-radius:    5px;
-    border:           2px inset rgba(190, 230, 215, 0.25);
-    background-color: rgba(190, 230, 215, 0.25);
-    background-image: linear-gradient(180deg, rgba(120, 160, 140, 0.85) -4px, rgba(190, 230, 215, 0.25) 5px, rgba(190, 230, 215, 0.25) 29px, rgba(120, 160, 140, 0.85) 38px);
-}
-
-.slated .field, .config .field {
-    padding:    2px;
-    width:      100%;
-    text-align: left;
-}
-
-.slated .field label, .config .field label {
-    width:   110px;
-    display: inline-block;
-    color:   rgba(0, 0, 0, 0.75);
-}
-
-.slated .field .as-found, .slated .field input {
-    width: 300px;
-}
-
-.slated .field input.system-field {
-    width: 620px;
-}
-
-.slated .field .as-found {
-    display:       inline-block;
-    font-weight:   bold;
-    white-space:   nowrap;
-    text-overflow: ellipsis;
-    overflow:      hidden;
-    margin:        0 0 -3px 0;
-    color:         rgba(20, 30, 40, 0.75);
-}
-
-.slated .field .divider {
-    padding: 0 5px;
-    color:   rgba(80, 80, 80, 0.5);
-}
-
-.slated .field input, .config .field input {
-    padding:        2px 4px;
-    height:         20px;
-    border-radius:  5px;
-    vertical-align: baseline;
-    border:         1px solid rgba(90, 110, 130, 0.75);
-}
-
-.slated .field input[disabled] {
-    cursor:           not-allowed;
-    background-color: rgba(180, 180, 180, 0.25);
-}
-
-.slated button.proposal-add {
-    border:     none;
-    background: transparent;
-    float:      right;
-    margin:     -25px -5px 0 0;
-}
-
-.slated button.proposal-add span {
-    font-size:   10px;
-    margin-left: 3px;
-}
-
-.refactor-ui div.proposed {
-    margin: 10px 0 0 0;
-}
-
-.refactor-ui table.proposed-table {
-    height:        418px;
-    overflow:      auto;
-    display:       block;
-    border-radius: 5px;
-    margin:        0 2px;
-    box-shadow:    0 0 3px rgba(80, 120, 100, 0.5);
-}
-
-.refactor-ui table.proposed-table thead th {
-    font-weight:      normal;
-    padding:          3px;
-
-    background-color: rgba(230, 230, 230, 0.2);
-    border:           1px solid rgba(100, 100, 100, 0.2);
-    color:            rgba(0, 0, 0, 0.75);
-}
-
-.refactor-ui table.proposed-table tbody td.include {
-    vertical-align:   baseline;
-    background-color: #fff;
-}
-
-.refactor-ui table.proposed-table tbody td.current {
-    color:          rgba(80, 80, 80, 0.75);
-    text-align:     left;
-    vertical-align: text-top;
-    font-family:    monospace;
-    padding:        0 4px;
-}
-
-.refactor-ui table.proposed-table tbody td.proposed {
-    font-weight:    bold;
-    text-align:     left;
-    height:         30px;
-    vertical-align: text-top;
-    font-family:    monospace;
-    padding:        0 4px;
-}
-
-.proposal-controls {
-    padding:          1px 0 5px 0;
-    margin:           10px 0 0 -10px;
-    background-image: linear-gradient(180deg, rgba(80, 120, 100, 0.5), rgba(255, 255, 255, 0.15) 11px, rgba(255, 255, 255, 0.15) 15px, rgba(80, 120, 100, 0.5));
-    position:         fixed;
-    bottom:           0;
-    width:            100%;
-}
-
-.proposal-controls i {
-    margin: 0 15px;
-}
-
-.no-proposal {
-    padding: 10px;
-}
-
-.execute-ui .config {
-    height:           62px !important;
-    background-image: linear-gradient(180deg, rgba(120, 160, 140, 0.85) -5px, rgba(190, 230, 215, 0.25) 10px, rgba(190, 230, 215, 0.25) 48px, rgba(120, 160, 140, 0.85) 65px) !important;
-}
-
-.execute-ui .config .field label {
-    width: 105px;
-}
-
-.execute-ui .config .field input {
-    width: 400px;
-}
-
-.execute-ui .instruction {
-    padding:    5px 0 15px;
-    background: none !important;
-    border:     none;
-    text-align: left;
-    color:      rgba(60, 60, 60, 0.75);
-}
-
-.execute-ui .instruction i {
-    font-size: 10pt;
-}
-
-.execute-ui .instruction i span {
-    font-size: 9pt;
-}
-
-.execute-ui .script {
-    width: 100%;
-}
-
-.execute-ui .script .gen-script {
-    width:            100%;
-    height:           230px;
-    border:           2px solid;
-    border-radius:    5px;
-    padding:          5px;
-    background-color: #000;
-    font-family:      Consolas, monospace;
-    white-space:      nowrap;
-    font-size:        12px;
-    color:            #eee;
-    box-shadow:       0 0 15px rgba(0, 0, 0, 0.75);
-}
-
-.execute-ui .script .copy-script {
-    float:   right;
-    margin:  -15px 0 5px 0;
-    display: inline-block;
-    border:  none;
-    color:   rgba(60, 80, 100, 1);
-}
-
-/* how to */
-.howto-container {
-    display: none;
-}
-
-.howto {
-    box-shadow:          0 0 10px 10px inset rgba(255, 255, 255, 1);
-    background-position: -10px -10px;
-    width:               100%;
-    height:              100%;
-    vertical-align:      text-bottom;
-}
-
-.howto .caption {
-    bottom:           10px;
-    width:            100%;
-    text-align:       center;
-    vertical-align:   middle;
-    padding:          5px;
-    background-color: rgba(100, 140, 120, 0.5);
-    border-top:       5px solid rgba(20, 60, 40, 0.15);
-    border-bottom:    5px solid rgba(20, 60, 40, 0.15);
-    font-weight:      bold;
-    position:         absolute;
-}
-
-/* artifact update */
-#artifact-update-logs_wrapper {
-    height:   415px;
-    overflow: auto;
-}
-
-table.artifact-update-logs {
-}
-
-table.artifact-update-logs thead th {
-    font-weight:      normal;
-    text-align:       left;
-    padding:          5px 7px 5px 5px !important;
-    background-color: rgba(230, 230, 230, 0.15);
-}
-
-td.update-log-file,
-td.update-log-worksheet,
-td.update-log-position,
-td.update-log-before,
-td.update-log-after {
-    vertical-align: text-top;
-    text-align:     left;
-    white-space:    nowrap;
-    font-size:      9pt;
-    font-family:    Thonburi, sans-serif;
-    padding:        5px !important;
-}
-
-td.update-log-file i {
-    margin-right:   5px;
-    font-size:      120%;
-    color:          rgba(0, 0, 0, 0.75);
-    vertical-align: bottom;
-}
-
-td.update-log-file { }
-
-td.update-log-worksheet { }
-
-td.update-log-worksheet { }
-
-td.update-log-position { }
-
-td.update-log-before {
-    font-family: monospace;
-    color:       #888;
-    white-space: pre-wrap;
-}
-
-td.update-log-after {
-    font-family: monospace;
-    white-space: pre-wrap;
 }
 
 /* utilities */

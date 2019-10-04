@@ -28,37 +28,95 @@ let BrowserMetrics = function (/*Object*/metrics) {
       "type": "test", "display": "Parameters", "description": "The parameter(s) used by the command of this test step"
     },
     "TTFB":                 {
-      "type": "time", "display": "TTFB", "description": "Time-To-First-Byte, in milliseconds"
+      "type":        "time", "display": "TTFB",
+      "description": "Time-To-First-Byte\n" +
+                     "-------------------------------------\n" +
+                     "The time, in milliseconds, " +
+                     "between the start of user's " +
+                     "request to the browser and " +
+                     "when the corresponding " +
+                     "response is initially " +
+                     "received by the browser.\n" +
+                     "\n" +
+                     "(responseStart - navigationStart)"
     },
     "TTLB":                 {
-      "type": "time", "display": "TTLB", "description": "Time-To-Last-Byte, in milliseconds"
+      "type":        "time", "display": "TTLB",
+      "description": "Time-To-Last-Byte\n" +
+                     "-------------------------------------\n" +
+                     "The time, in milliseconds, " +
+                     "between the start of user's " +
+                     "request to the browser and " +
+                     "the completion of the " +
+                     "corresponding response " +
+                     "received (downloaded) by the " +
+                     "browser.\n" +
+                     "\n" +
+                     "(responseEnd - navigationStart)"
     },
     "BackendTime":          {
-      "type": "time", "display": "Backend", "description": "Time for backend response to complete, in milliseconds"
+      "type":        "time", "display": "Backend",
+      "description": "Time for backend response to complete, in milliseconds\n" +
+                     "\n" +
+                     "(responseEnd - navigationStart)"
     },
     "DomInteractive":       {
       "type":        "time", "display": "DOM Interactive",
-      "description": "Time for the web to be loaded and interactive, in milliseconds"
+      "description": "Time for the web page to be loaded and interactive, in milliseconds\n" +
+                     "\n" +
+                     "(domInteractive - navigationStart)"
     },
     "PageCompleteTime":     {
       "type":        "time", "display": "Page Complete",
-      "description": "Time to download, parse and ready the page for use, in milliseconds"
+      "description": "Time to download, parse and ready the web page for use, in milliseconds\n" +
+                     "\n" +
+                     "(domComplete - navigationStart)"
+    },
+    "Latency":              {
+      "type":        "time", "display": "Network Latency",
+      "description": "Time incurred by the browser " +
+                     "loading requested data from " +
+                     "its cache, or the time " +
+                     "between the browser issuing " +
+                     "the request and the " +
+                     "corresponding response first " +
+                     "received from the server, in " +
+                     "milliseconds\n" +
+                     "\n" +
+                     "(responseStart - fetchStart)"
     },
     "NetworkOverhead":      {
       "type":        "time", "display": "Network Overhead",
-      "description": "Time incurred to complete DNS lookup and open TCP connection, in milliseconds"
+      "description": "Time incurred to complete DNS " +
+                     "lookup and open TCP connection, " +
+                     "in milliseconds\n" +
+                     "\n" +
+                     "(connectEnd - domainLookupStart)"
     },
     "FirstResponseTime":    {
       "type":        "time", "display": "First Response",
-      "description": "Time to receive response since the request was made, in milliseconds"
+      "description": "Time to receive response " +
+                     "since the request was made, " +
+                     "in milliseconds\n" +
+                     "\n" +
+                     "(requestStart - responseStart)"
     },
     "ContentDownload":      {
-      "type":        "time", "display": "Content Downloaded",
-      "description": "Time between the browser receiving the first and the last byte of the response, in milliseconds"
+      "type":        "time", "display": "DCL",
+      "description": "DOM Content Loaded\n" +
+                     "---------------------------------------\n" +
+                     "Time between the browser " +
+                     "receiving the first and the " +
+                     "last byte of the response, " +
+                     "in milliseconds\n" +
+                     "\n" +
+                     "(domComplete - domLoading)"
     },
     "DomContentLoaded":     {
       "type":        "time", "display": "DOM Content Loaded",
-      "description": "Time to complete the DOM loading process after the content is downloaded, in milliseconds"
+      "description": "Time to complete the DOM loading process after the content is downloaded, in milliseconds\n" +
+                     "\n" +
+                     "(responseStart - navigationStart)"
     },
     "FirstInteractive":     {
       "type":        "time", "display": "First Interactive",
@@ -120,7 +178,8 @@ let BrowserMetrics = function (/*Object*/metrics) {
       if (headers.includes(key)) {
         let keyMeta     = metadata[key];
         let description = keyMeta.description;
-        html += '<th class="label type-' + keyMeta.type + '" title="' + formatDescription(description) + '">' +
+        html += '<th class="label type-' + keyMeta.type + ' type-' + key + '"' +
+                ' tooltip="' + formatDescription(description) + '">' +
                 keyMeta.display +
                 '</th>\n';
       }

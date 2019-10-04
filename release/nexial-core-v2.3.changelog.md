@@ -24,7 +24,7 @@ comments: true
 - [`nexial-artifact-repair.cmd|sh`](../userguide/BatchFiles#nexial-artifact-repair): 
   **NEW** Nexial utility batch file to repair excel file (remove unnecessary links and comments).
 - minor update to MacOSX/*NIX script to that focus will stay on terminal when Nexial execution commences.
-- [`nexial-var-update.cmd|sh`](../userguide/BatchFiles##nexial-variable-update): 
+- [`nexial-var-update.cmd|sh`](../userguide/BatchFiles#nexial-variable-update): 
   now support batch files and minor improvement to console output.
 - more informative error messages when invalid or out-of-bound array index is referenced.
 - console log hygiene; minor reduction of duplicated logs
