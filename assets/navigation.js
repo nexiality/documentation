@@ -52,7 +52,17 @@ function newQuickLinkSelect(/*String*/selector, /*String*/initialLabel) {
 
 function newOperationSelect() { newQuickLinkSelect('#operations ~ h4, #available-functions ~ h4', 'Operations'); }
 
-function newSystemVariableSelect() { newQuickLinkSelect('.varname > a', 'System Variables'); }
+function newSystemVariableSelect() {
+  var operationsSelect = '<select class="operations" onchange="scrollToOperation(this);">' +
+                         '<option>System Variables</option>';
+  jQuery('.varname > a').sort(function (a, b) {
+    return jQuery(a).text() > jQuery(b).text() ? 1 : -1;
+  }).each(function (index, item) {
+    operationsSelect += '<option hash="#' + jQuery(item).attr('id') + '">' + jQuery(item).text() + '</option>';
+  });
+  operationsSelect += '</select>';
+  jQuery('div.breadcrumb').append(operationsSelect);
+}
 
 function newBatchFileSelect() { newQuickLinkSelect('#available-batch-files ~ h4', 'Batch Files'); }
 
