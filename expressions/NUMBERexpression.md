@@ -26,35 +26,89 @@ example would yield `-1770.2978788893238`.
 #### **`add(numbers)`**
 add one or more numbers to current number.
 
+**Example**<br/>
+Script:<br/>
+![script](image/NUMBERexpression_01.png)
+
+Output:<br/>
+![output](image/NUMBERexpression_02.png)
+
 -----
 
 #### **`ceiling`**
-round **`up`** current number.
+round up current number.
+
+**Example**<br/>
+Script:<br/>
+![script](image/NUMBERexpression_03.png)
+
+Output:<br/>
+![output](image/NUMBERexpression_04.png)
 
 -----
 
 #### **`divide(numbers)`**
 divide one or more numbers from current number, in the order specified.
 
+**Example**<br/>
+Script:<br/>
+![script](image/NUMBERexpression_05.png)
+
+Output:<br/>
+![output](image/NUMBERexpression_06.png)
+
+When any number is `divided by 0`. Then, output is `unable to process expression due to null`.<br/>
+Mathematically, any number divided by 0 is an invalid statement.
+
+![output](image/NUMBERexpression_27.png)
+
 -----
 
 #### **`floor`**
-round **`down`** current number.
+round down current number.
+
+**Example**<br/>
+Script:<br/>
+![script](image/NUMBERexpression_07.png)
+
+Output:<br/>
+![output](image/NUMBERexpression_08.png)
 
 -----
 
 #### **`minus(numbers)`**
 subtract one or more numbers from current number, in the order specified.
 
+**Example**<br/>
+Script:<br/>
+![script](image/NUMBERexpression_09.png)
+
+Output:<br/>
+![output](image/NUMBERexpression_10.png)
+
 -----
 
 #### **`multiply(numbers)`**
 multiple one or more numbers to current number, in the order specified.
 
+**Example**<br/>
+Script:<br/>
+![script](image/NUMBERexpression_11.png)
+
+Output:<br/>
+![output](image/NUMBERexpression_12.png)
+
 -----
 
 #### **`randomDigits(length)`** 
 generate a random string of digits of the specified `length`.
+
+**Example**<br/>
+Script:<br/>
+![script](image/NUMBERexpression_13.png)
+
+Output:<br/>
+![output](image/NUMBERexpression_14.png)
 
 -----
 
@@ -62,15 +116,36 @@ generate a random string of digits of the specified `length`.
 generate a random decimal number which contains a whole number of length as specified by `wholeLength`, and decimal 
 number of length as specified by `fractionLength`.
 
+**Example**<br/>
+Script:<br/>
+![script](image/NUMBERexpression_15.png)
+
+Output:<br/>
+![output](image/NUMBERexpression_16.png)
+
 -----
 
 #### **`randomInteger(atLeast,atMost)`**
 generate a random integer number within the range of `atLeast` and `atMost`.
 
+**Example**<br/>
+Script:<br/>
+![script](image/NUMBERexpression_17.png)
+
+Output:<br/>
+![output](image/NUMBERexpression_18.png)
+
 -----
 
 #### **`whole`**
 transform current number to a whole number (integer) by dropping any existing decimal value.
+
+**Example**<br/>
+Script:<br/>
+![script](image/NUMBERexpression_19.png)
+
+Output:<br/>
+![output](image/NUMBERexpression_20.png)
 
 -----
 
@@ -80,25 +155,39 @@ digit", "the closest tenth", "the closest hundredth", etc.  For example,  `[NU
 yield `174000`. However to retain decimals, one would specify `0.` followed by number of desired decimal places instead. 
 `[NUMBER(173921.22) => roundTo(0.0)]` would yield `173921.2`. 
 
+**Example**<br/>
+Script:<br/>
+![script](image/NUMBERexpression_21.png)
+
+Output:<br/>
+![output](image/NUMBERexpression_22.png)
+
 -----
 
 #### **`store(var)`**
 save current NUMBER expression to a data variable.  If the specified `var` exists, its value will be overwritten. 
 Using this operation, one can put an expression on pause and resume it at a later time.
 
+**Example**<br/>
+Script:<br/>
+![script](image/NUMBERexpression_23.png)
+
+Output:<br/>
+![output](image/NUMBERexpression_24.png)
+
 -----
 
 #### **`text`**
 transform current number to text
 
------
+**Example**<br/>
+In this example, [TEXT expression](TEXTexpression) operation is performed by 
+changing the number into text format.<br/>
+Script:<br/>
+![script](image/NUMBERexpression_25.png)
 
-### Example
-**Script**:<br/>
-![script](image/NUMBERexpression_01.png)
-
-**Output**:<br/>
-![output](image/NUMBERexpression_02.png)
+Output:<br/>
+![output](image/NUMBERexpression_26.png)
 
 -----
 
