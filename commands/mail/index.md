@@ -21,7 +21,7 @@ by Nexial to [send out email notification](../../systemvars/index#nexial.enableE
 The `mail` command type uses a "profile" to group related data variables together, much like the case for 
 [`ssh`](../ssh/index#connection-setup), [`rdbms`](../rdbms/index#database-connection-setup) or 
 [`aws.s3`](../aws.s3/index#connection-setup).  The profile-based connectivity setting can be defined via command line 
-(i.e. `-D`), [`project.properties`](../../userguide/UnderstandingProjectStructure#project.properties), or the 
+(i.e. `-D`), [`project.properties`](../../userguide/UnderstandingProjectStructure#artifactprojectproperties), or the 
 appropriate data file.  For example, via command line:
 
 > set JAVA_OPT=-DMyMail.from=boss@mystore.com -DMyMail.host=mail.mystore.com -DMyMail.port=25

@@ -28,7 +28,7 @@ comments: true
   **NEW** batch file to generate project level information and insight. Current version supports macro and data 
   variable inspection. More enhancement forthcoming.
   - scan data variable across test scripts, batch files, `project.properties,` datasheets and `#default`.
-- [project id binding](../userguide/UnderstandingProjectStructure#project.id): use `.meta/project.id` to bind project
+- [project id binding](../userguide/UnderstandingProjectStructure#metaprojectid): use `.meta/project.id` to bind project
   identification across sandboxes (local project directory) instead of using project directory name. The same
   binding now affects cloud storage location to keep output of the same project together.
 - [`nexial-macro-update.cmd|sh`](../userguide/BatchFiles#nexial-macro-update): **NEW** batch 

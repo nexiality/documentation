@@ -18,7 +18,7 @@ using with Nexial.
 ### General
 - Now supports [BAI2 Expression](../expressions/BAI2expression) to parse and validate text files with `BAI2` file format.
 - Upgraded to <a href="https://github.com/JetBrains/kotlin/releases/tag/v1.2.31" class="external-link" target="_nexial_link">Kotlin 1.2.31</a>
-- Enabled [`project.properties`](../userguide/UnderstandingProjectStructure#project.properties) setting to take effect 
+- Enabled [`project.properties`](../userguide/UnderstandingProjectStructure#artifactprojectproperties) setting to take effect 
   even when no site-wide Nexial setting jar is found.
 - Performance improvement on reading Excel files:
   - Delete "temp" Excel files ONLY if they were opened as duplicates (mostly Windows).

@@ -61,7 +61,7 @@ conducted with the following:
       
     This will enable execution result to be uploaded to the cloud, which in turn will be collected by Nexial to 
     compose the dashboard details.  This option can be enabled via command line, via 
-    [`project.properties`](UnderstandingProjectStructure#project.properties), as well as data file.
+    [`project.properties`](UnderstandingProjectStructure#artifactprojectproperties), as well as data file.
     
 3.  Enable the project prefix option via  
       

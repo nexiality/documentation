@@ -66,6 +66,8 @@ function newSystemVariableSelect() {
 
 function newBatchFileSelect() { newQuickLinkSelect('#available-batch-files ~ h4', 'Batch Files'); }
 
+function newProjectStructureSelect() { newQuickLinkSelect('#nexial-project-structure ~ ol > li h4', 'Structure'); }
+
 jQuery(document).ready(function () {
   jQuery('.tabs .tab-links').on('click', function (e) {
     toggleTabContent(jQuery(this));

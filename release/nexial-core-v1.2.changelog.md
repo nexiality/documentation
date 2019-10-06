@@ -61,7 +61,7 @@ comments: true
 
 #### Event Notification
 - Nexial now supports basic event notification so that significant execution events can trigger notification. Event 
-  notification are configured as System variables, either in data file, [`project.properties`](../userguide/UnderstandingProjectStructure#project.properties) 
+  notification are configured as System variables, either in data file, [`project.properties`](../userguide/UnderstandingProjectStructure#artifactprojectproperties) 
   or `JAVA_OPT` environment variable. Currently these are the supported events:<br/>
   
   | Event Name                 | System Variable                    |

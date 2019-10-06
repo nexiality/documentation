@@ -41,7 +41,9 @@
       between Nexial supported metrics and W3C's timing events. Click on the image below to open a larger version on a
       separate tab.<br/>
       <br/>
-      <a href="image/metrics_02.png" target="_nexial_external"><img src="image/metrics_01.png" width="780"/></a><br/>
+      <a href="image/metrics_02.png" target="_nexial_external" style="background-color:transparent !important;">
+        <img src="image/metrics_01.png" width="780"/>
+      </a><br/>
       <br/>
       <table class="navigation_metrics">
         <thead>
@@ -106,17 +108,25 @@
         <tr>
           <td><code>nexial.web.metrics.DomContentLoaded</code></td>
           <td>The time, in milliseconds, between receiving the last byte of the response (which subsequently start the
-            parsing to the document thereof) and the complete construction of the parsed DOM and CSSOM objects.
+            parsing to the document thereof) and the document in question being loaded completely.<br/>
+            To be considered as "loaded completely", the browser would perform the following activities:
+            <ol>
+              <li>parses the content received,</li>
+              <li>build the DOM, CSSOM, accessbility structures,</li>
+              <li>render the page objects (after which the document readiness is set to <i>interactive</i>),</li>
+              <li>parse any deferred scripts, if any,</li>
+              <li>execute any deferred scripts (after which the document readiness is set to "complete")</li>
+            </ol>
           </td>
         </tr>
         <tr>
           <td><code>nexial.web.metrics.FirstInteractive</code></td>
-          <td>The time, in milliseconds, to parse the DOM objects.</td>
+          <td>The time, in milliseconds, to parse the DOM, CSSOM and accessibility objects.</td>
         </tr>
         <tr>
           <td><code>nexial.web.metrics.PageReady</code></td>
-          <td>The time, in milliseconds, between the DOM objects being parsed and the corresponding page completely
-            loaded (i.e. DOM and CSSOM construction complete)."
+          <td>The time, in milliseconds, to load the DOM, CSSOM and accessibility objects parsed from the received
+            content, and to parse any deferred scripts.
           </td>
         </tr>
         <tr>
@@ -129,22 +139,32 @@
       </table>
     </div>
     <div id="tab_resource" class="tab">
-      This API that allows you to collect lifecycle timing information related to resources in a document. It enables
-      one to measure user latency, which is crucial to benchmark web pages.<br/>
+      Whereas Navigation Timing measures the performance of the main page, generally the HTML file via which all
+      the other assets are requested, the Resource Timing measures timing for individual resources, the assets
+      called in by the main page, and any assets that those resources request. Many of the measurements are
+      similar.<br/>
       <br/>
-      Using the Resource Timing API allows us to retrieve and analyze a detailed profile of all the network timing data
-      for every resource on the page. As such we can use this API to track the performance of the resources of our page,
-      and determine how many and what resources we have to optimize.
+      This API that allows you to collect lifecycle timing information related to resources in a document. It enables
+      one to measure user latency, which is crucial to benchmark web pages. Using the Resource Timing API allows us to
+      retrieve and analyze a detailed profile of all the network timing data for every resource on the page. As such
+      we can use this API to track the performance of the resources of our page, and determine how many and what
+      resources we have to optimize.<br/>
+      <br/>
+      [more to come...]
     </div>
     <div id="tab_paint" class="tab">
-      3. **Paint Timing**<br/>
-      First Paint (FP) is the first of these key moments, followed by First Contentful Paint (FCP). These metrics mark
-      the points, immediately after navigation, when the browser renders pixels to the screen. This is important to the
-      user because it answers the question: is it happening?
-
+      This API captures a series of key moments during pageload that provides visible feedback to its user. In the
+      context of Paint API, there are 2 such key moments - First Paint (FP) is the first of these key moments,
+      followed by First Contentful Paint (FCP). These metrics mark the points, immediately after navigation, when
+      the browser renders pixels to the screen. This is important to the user because it answers the question:<ol>
+      <li>Is it happening? (FP) </li>
+      <li>Is this useful? (FCP)</li>
+      </ol>
       The primary difference between the two metrics is FP marks the point when the browser renders anything that is
       visually different from what was on the screen prior to navigation. By contrast, FCP is the point when the browser
-      renders the first bit of content from the DOM, which may be text, an image, SVG, or even a canvas element.
+      renders the first bit of content from the DOM, which may be text, an image, SVG, or even a canvas element.<br/>
+      <br/>
+      [more to come...]
     </div>
   </div>
 </div>

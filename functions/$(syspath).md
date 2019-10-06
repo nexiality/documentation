@@ -38,7 +38,8 @@ Output:<br/>
 
 #### `$(syspath|script|...)`
 The standard location where Nexial scripts (Excel) are stored. This is usually the 
-  [`artifact/script`](../userguide/UnderstandingProjectStructure#artifact/script) directory under the target project.
+[`artifact/script`](../userguide/UnderstandingProjectStructure#artifactscript) directory under the target 
+project.
         
 **Example**<br/>
 Script:<br/>
@@ -51,7 +52,7 @@ Output:<br/>
 
 #### `$(syspath|data|...)` 
 The standard location where Nexial test data (Excel) are stored. This is usually the 
-[`artifact/data`](../userguide/UnderstandingProjectStructure#artifact/data) directory under the target project, but 
+[`artifact/data`](../userguide/UnderstandingProjectStructure#artifactdata) directory under the target project, but 
 can be overridden via the `-data` command line argument.
     
 **Example**<br/>
@@ -65,7 +66,7 @@ Output:<br/>
  
 #### `$(syspath|plan|...)`
 The standard location where Nexial plans (Excel) are stored. This is usually the
-[`artifact/plan`](../userguide/UnderstandingProjectStructure#artifact/plan) directory under the target project.
+[`artifact/plan`](../userguide/UnderstandingProjectStructure#artifactplan) directory under the target project.
     
 **Example**<br/>
 Script:<br/>
