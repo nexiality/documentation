@@ -221,12 +221,16 @@ a:hover {
     border-radius: 15px;
 }
 
+.metrics th.type-activity, .metrics th.type-test {
+    vertical-align: bottom !important;
+}
+
 .metrics th.type-row {
-    width: 15px;
+    width: 34px;
 }
 
 .metrics th.type-time {
-    width: 50px;
+    width: 70px;
 }
 
 .metrics th.sorting, .metrics th.sorting_asc, .metrics th.sorting_desc {
@@ -236,10 +240,17 @@ a:hover {
 .metrics th.label {
     text-align:     center;
     vertical-align: bottom;
-    padding:        10px 15px 5px 5px;
+    padding:        0 0 5px 0;
     position:       relative;
     background:     rgba(180, 180, 180, 0.85);
     border-left:    1px solid rgba(80, 80, 80, 0.15);
+    height:         52px;
+}
+
+.metrics th.label .chart-checkbox {
+    position: absolute;
+    top:      1px;
+    left:     24px;
 }
 
 .metrics th.type-activity:hover:before, .metrics th.type-activity:hover:after,
@@ -249,9 +260,9 @@ a:hover {
 }
 
 .metrics th.label:hover:after {
-    top:           49px;
-    left:          -65px;
-    background:    rgba(0, 0, 0, .75);
+    top:           59px;
+    left:          -63px;
+    background:    rgba(50, 50, 50, .85);
     color:         #fff;
     font-size:     11px;
     font-weight:   normal;
@@ -268,8 +279,8 @@ a:hover {
 }
 
 .metrics th.label:hover:before {
-    top:          41px;
-    left:         26px;
+    top:          51px;
+    left:         27px;
     border:       solid;
     border-color: #333 transparent;
     border-width: 0 6px 6px 6px;

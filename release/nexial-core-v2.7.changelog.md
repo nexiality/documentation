@@ -82,6 +82,7 @@ comments: true
   target columns with specified character(s). 
 - [TEXT &raquo; csv(positions)](../expressions/TEXTexpression#csvposition1position2): fixed parse logic to handle text 
   with double quotes and text with delimiter (will be surrounded with double quotes).
+- [JSON &raquo; `compact(removeEmpty)`](../expressions/JSONexpression#compactremoveempty): fix code to remove null values.
 
 
 ### [aws.vision commands](../commands/aws.vision)
@@ -126,6 +127,7 @@ comments: true
 ### [json commands](../commands/json)
 - [`assertEqual(expected,actual)`](../commands/json/assertEqual(expected,actual)): change the comparison logic and 
   report format to improve accuracy and readability. The comparison now includes "objects of object" comparison.
+- [`compact(var,json,removeEmpty)`](../commands/json/compact(var,json,removeEmpty)): fix code to remove null values.
 
 
 ### [localdb commands](../commands/localdb)

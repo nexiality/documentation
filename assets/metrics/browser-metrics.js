@@ -19,16 +19,18 @@
 let BrowserMetrics = function (/*Object*/metrics) {
   const METADATA = {
     "row":                  {
-      "type": "test", "display": "Row", "description": "The row number of the test step associated with this metric"
+      "type":        "test", "display": "Row", "chart": false,
+      "description": "The row number of the test step associated with this metric"
     },
     "command":              {
-      "type": "test", "display": "Command", "description": "The Nexial command used for this test step"
+      "type": "test", "display": "Command", "chart": false, "description": "The Nexial command used for this test step"
     },
     "parameters":           {
-      "type": "test", "display": "Parameters", "description": "The parameter(s) used by the command of this test step"
+      "type":        "test", "display": "Parameters", "chart": false,
+      "description": "The parameter(s) used by the command of this test step"
     },
     "TTFB":                 {
-      "type":        "time", "display": "TTFB",
+      "type":        "time", "display": "TTFB", "chart": true,
       "description": "Time-To-First-Byte\n" +
                      "------------------------------------------\n" +
                      "The time, in milliseconds, between the start of user's request to the browser and when the " +
@@ -37,7 +39,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(responseStart - navigationStart)"
     },
     "TTLB":                 {
-      "type":        "time", "display": "TTLB",
+      "type":        "time", "display": "TTLB", "chart": true,
       "description": "Time-To-Last-Byte\n" +
                      "------------------------------------------\n" +
                      "The time, in milliseconds, between the start of user's request to the browser and the " +
@@ -46,7 +48,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(responseEnd - navigationStart)"
     },
     "BackendTime":          {
-      "type":        "time", "display": "Backend",
+      "type":        "time", "display": "Backend", "chart": true,
       "description": "Backend\n" +
                      "------------------------------------------\n" +
                      "(This is the same as TTLB)\n" +
@@ -56,7 +58,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(responseEnd - navigationStart)"
     },
     "DomInteractive":       {
-      "type":        "time", "display": "DOM Interactive",
+      "type":        "time", "display": "DOM Interactive", "chart": true,
       "description": "DOM Interactive-Ready\n" +
                      "------------------------------------------\n" +
                      "The time, in milliseconds, between the start of user's request to the browser and the " +
@@ -66,7 +68,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(domInteractive - navigationStart)"
     },
     "PageCompleteTime":     {
-      "type":        "time", "display": "Page Complete",
+      "type":        "time", "display": "Page Complete", "chart": true,
       "description": "Page Complete Time\n" +
                      "------------------------------------------\n" +
                      "The time, in milliseconds, between the start of user's request to the browser and the " +
@@ -75,7 +77,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(domComplete - navigationStart)"
     },
     "Latency":              {
-      "type":        "time", "display": "Network Latency",
+      "type":        "time", "display": "Network Latency", "chart": true,
       "description": "Cache, DNS, TCP and Request\n" +
                      "------------------------------------------\n" +
                      "The time incurred, in millisecond by the browser loading requested data from its cache, or the " +
@@ -85,7 +87,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(responseStart - fetchStart)"
     },
     "NetworkOverhead":      {
-      "type":        "time", "display": "Network Overhead",
+      "type":        "time", "display": "Network Overhead", "chart": true,
       "description": "\n" +
                      "DNS and TCP\n" +
                      "------------------------------------------\n" +
@@ -95,7 +97,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(connectEnd - domainLookupStart)"
     },
     "FirstResponseTime":    {
-      "type":        "time", "display": "First Response",
+      "type":        "time", "display": "First Response", "chart": true,
       "description": "First Response Time\n" +
                      "------------------------------------------\n" +
                      "The time, in millisecond, to receive initial response since the request was made.\n" +
@@ -103,7 +105,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(requestStart - responseStart)"
     },
     "ContentDownload":      {
-      "type":        "time", "display": "Content Download",
+      "type":        "time", "display": "Content Download", "chart": true,
       "description": "Content Downloaded\n" +
                      "------------------------------------------\n" +
                      "The time, in milliseconds, between the browser receiving the first and the last byte of the " +
@@ -112,7 +114,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(responseEnd - responseStart)"
     },
     "DomContentLoaded":     {
-      "type":        "time", "display": "DLC",
+      "type":        "time", "display": "DLC", "chart": true,
       "description": "DOM Content Loaded\n" +
                      "---------------------------------------\n" +
                      "The time, in milliseconds, between receiving the last byte of the response (which " +
@@ -122,7 +124,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(domComplete - domLoading)"
     },
     "FirstInteractive":     {
-      "type":        "time", "display": "First Interactive",
+      "type":        "time", "display": "First Interactive", "chart": true,
       "description": "Time to First Interactive\n" +
                      "------------------------------------------\n" +
                      "The time, in milliseconds, to parse the DOM objects.\n" +
@@ -130,7 +132,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(domInteractive - domLoading)"
     },
     "PageReady":            {
-      "type":        "time", "display": "Page Ready",
+      "type":        "time", "display": "Page Ready", "chart": true,
       "description": "Time to Page Ready\n" +
                      "------------------------------------------\n" +
                      "The time, in milliseconds, between the DOM objects being parsed and the corresponding page " +
@@ -139,7 +141,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(domComplete - domInteractive)"
     },
     "OnLoad":               {
-      "type":        "time", "display": "On Load",
+      "type":        "time", "display": "On Load", "chart": true,
       "description": "\n" +
                      "------------------------------------------\n" +
                      "The time, in millisecond, taken to executed all the JavaScript load events after the " +
@@ -148,31 +150,31 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(loadEventEnd - loadEventStart)"
     },
     "FirstPaint":           {
-      "type":        "render", "display": "First Paint",
+      "type":        "render", "display": "First Paint", "chart": true,
       "description": "The first time when an UI rendering was detected while loading the current page"
     },
     "FirstContentfulPaint": {
-      "type":        "render", "display": "First Content Paint",
+      "type":        "render", "display": "First Content Paint", "chart": true,
       "description": "The first time when some content was rendering while loading the current page"
     },
     "RequestCount":         {
-      "type":        "transfer", "display": "Request Count",
+      "type":        "transfer", "display": "Request Count", "chart": true,
       "description": "The number of resources downloaded to complete this page load"
     },
     "CacheResources":       {
-      "type":        "transfer", "display": "Cached Resources",
+      "type":        "transfer", "display": "Cached Resources", "chart": true,
       "description": "The list of referenced resources that are cached by the browser"
     },
     "Fetched":              {
-      "type":        "transfer", "display": "Fetched Resources",
+      "type":        "transfer", "display": "Fetched Resources", "chart": true,
       "description": "The list of referenced resources downloaded by the browser"
     },
     "BytesDownloaded":      {
-      "type":        "transfer", "display": "Downloaded Bytes",
+      "type":        "transfer", "display": "Downloaded Bytes", "chart": true,
       "description": "The total number of bytes downloaded to load this page"
     },
     "CompressionRatio":     {
-      "type":        "transfer", "display": "Compression Ratio",
+      "type":        "transfer", "display": "Compression Ratio", "chart": true,
       "description": "The compression ratio of data downloaded to load this page"
     }
   };
@@ -196,9 +198,10 @@ let BrowserMetrics = function (/*Object*/metrics) {
         let keyMeta     = metadata[key];
         let description = keyMeta.description;
         html += '<th class="label type-' + keyMeta.type + ' type-' + key + '"' +
-                ' tooltip="' + formatDescription(description) + '">' +
-                keyMeta.display +
-                '</th>\n';
+                ' tooltip="' + formatDescription(description) + '">';
+        if (keyMeta.chart) { html += '<input type="checkbox" class="chart-checkbox" name="' + key + '"/>'; }
+        // html += '<div class="label">' + keyMeta.display + '</div></th>\n';
+        html += keyMeta.display + '</th>\n';
       }
     });
     return html;
@@ -297,11 +300,23 @@ let BrowserMetrics = function (/*Object*/metrics) {
     $('#' + containerId + ' .data-table').dataTable({
       "order": [[1, "asc"]]
     });
-  };
+  }
+
+  function selectForChart(/*DOM*/checkbox) {
+
+  }
 
   this.renderMetrics = function () {
     metrics.scripts.forEach(function (script) {
       script.scenarios.forEach(function (scenario) { renderMetricsGrid(script.name, scenario.name); });
+    });
+
+    jQuery('.metrics th.label .chart-checkbox').on('click', function (e) {
+      selectForChart(jQuery(this));
+
+      // e.preventDefault();
+      e.stopImmediatePropagation();
+      e.stopPropagation();
     });
   };
 
