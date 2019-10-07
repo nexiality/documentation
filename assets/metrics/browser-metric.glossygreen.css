@@ -117,7 +117,7 @@ a:hover {
     padding:          4px 10px 5px 15px;
     border:           none;
     border-radius:    5px 15px 15px 5px;
-    box-shadow:       0px 2px 7px rgba(80, 90, 70, 0.75);
+    box-shadow:       0 2px 7px rgba(80, 90, 70, 0.75);
     text-shadow:      1px 1px 1px rgba(250, 250, 250, 0.75);
     color:            rgba(101, 137, 41, 1);
     background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(218, 224, 159, 1));

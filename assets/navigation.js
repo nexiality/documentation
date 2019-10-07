@@ -96,11 +96,6 @@ jQuery(document).ready(function () {
     e.stopPropagation();
   });
 
-  /*
-   <div class="pageLinks">
-   <div class="pageLink" onclick="scrollToHash('available-expressions')">What is Nexial Expression?</div>
-   </div>
-   */
   var html     = '<div class="backToTop" onclick="scrollToTop()">&nbsp;</div>';
   var sections = jQuery('h3:not(.pageTitle)');
   if (sections && sections.length > 0) {
