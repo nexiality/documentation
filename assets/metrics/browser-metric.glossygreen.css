@@ -229,7 +229,7 @@ a:hover {
     width: 34px;
 }
 
-.metrics th.type-time {
+.metrics th.type-time, .metrics th.type-render, .metrics th.type-transfer {
     width: 70px;
 }
 
@@ -304,7 +304,7 @@ a:hover {
     width:      15px;
 }
 
-.metrics > tbody > tr > td.type-time {
+.metrics > tbody > tr > td.type-time, .metrics > tbody > tr > td.type-render, .metrics > tbody > tr > td.type-transfer {
     text-align:  right;
     font-family: monospace;
 }

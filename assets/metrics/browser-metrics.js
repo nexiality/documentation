@@ -142,7 +142,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
     },
     "OnLoad":               {
       "type":        "time", "display": "On Load", "chart": true,
-      "description": "\n" +
+      "description": "On Load Event\n" +
                      "------------------------------------------\n" +
                      "The time, in millisecond, taken to executed all the JavaScript load events after the " +
                      "corresponding page is completely loaded.\n" +
@@ -151,31 +151,45 @@ let BrowserMetrics = function (/*Object*/metrics) {
     },
     "FirstPaint":           {
       "type":        "render", "display": "First Paint", "chart": true,
-      "description": "The first time when an UI rendering was detected while loading the current page"
+      "description": "First Paint\n" +
+                     "------------------------------------------\n" +
+                     "The first time when an UI rendering was detected while loading the current page"
     },
     "FirstContentfulPaint": {
-      "type":        "render", "display": "First Content Paint", "chart": true,
-      "description": "The first time when some content was rendering while loading the current page"
+      "type":        "render", "display": "FCP", "chart": true,
+      "description": "First Contentful Paint\n" +
+                     "------------------------------------------\n" +
+                     "The first time when some content was rendering while loading the current page"
     },
     "RequestCount":         {
       "type":        "transfer", "display": "Request Count", "chart": true,
-      "description": "The number of resources downloaded to complete this page load"
+      "description": "Request Count\n" +
+                     "------------------------------------------\n" +
+                     "The number of resources downloaded to complete this page load"
     },
     "CacheResources":       {
       "type":        "transfer", "display": "Cached Resources", "chart": true,
-      "description": "The list of referenced resources that are cached by the browser"
+      "description": "Cache Resources\n" +
+                     "------------------------------------------\n" +
+                     "The list of referenced resources that are cached by the browser"
     },
     "Fetched":              {
       "type":        "transfer", "display": "Fetched Resources", "chart": true,
-      "description": "The list of referenced resources downloaded by the browser"
+      "description": "Fetched Resources\n" +
+                     "------------------------------------------\n" +
+                     "The list of referenced resources downloaded by the browser"
     },
     "BytesDownloaded":      {
       "type":        "transfer", "display": "Downloaded Bytes", "chart": true,
-      "description": "The total number of bytes downloaded to load this page"
+      "description": "Bytes Downloaded\n" +
+                     "------------------------------------------\n" +
+                     "The total number of bytes downloaded to load this page"
     },
     "CompressionRatio":     {
       "type":        "transfer", "display": "Compression Ratio", "chart": true,
-      "description": "The compression ratio of data downloaded to load this page"
+      "description": "Compression Ratio\n" +
+                     "------------------------------------------\n" +
+                     "The compression ratio of data downloaded to load this page"
     }
   };
 
@@ -217,7 +231,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
       return text.toString().replace('>>', '&raquo;');
     }
 
-    if (type === 'time') { return data.toFixed(2); }
+    if (type === 'time' || type === 'render' || type === 'transfer') { return data.toFixed(2); }
 
     return data;
   }
