@@ -1,13 +1,13 @@
 ---
 layout: default
-title: nexial-core 2.7 (2019-10-??)
+title: nexial-core 2.7 (2019-10-07)
 parent: release
 tags: release nexial-core 2.7
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v2.7_0???" class="external-link" target="_nexial_link">Release 2.7</a>
-2019-10-??
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v2.7_0671" class="external-link" target="_nexial_link">Release 2.7</a>
+2019-10-07
 
 
 ### General
@@ -85,9 +85,6 @@ comments: true
 - [JSON &raquo; `compact(removeEmpty)`](../expressions/JSONexpression#compactremoveempty): fix code to remove null values.
 
 
-### [aws.vision commands](../commands/aws.vision)
-
-
 ### [base commands](../commands/base)
 - [`stopRecording`](../commands/base/stopRecording()): after video file is saved either to local path or cloud, its 
   location is exposed as [`nexial.lastOutputLink`](../systemvars/index#nexial.lastOutputLink).
@@ -96,9 +93,6 @@ comments: true
 ### [csv commands](../commands/csv)
 - [`compareExtended`](../commands/csv/compareExtended(var,profile,expected,actual)): fix code to support negative 
   number parsing
-
-
-### [desktop commands](../commands/desktop)
 
 
 ### [external commands](../commands/external)
@@ -128,9 +122,6 @@ comments: true
 - [`assertEqual(expected,actual)`](../commands/json/assertEqual(expected,actual)): change the comparison logic and 
   report format to improve accuracy and readability. The comparison now includes "objects of object" comparison.
 - [`compact(var,json,removeEmpty)`](../commands/json/compact(var,json,removeEmpty)): fix code to remove null values.
-
-
-### [localdb commands](../commands/localdb)
 
 
 ### [rdbms commands](../commands/rdbms)
