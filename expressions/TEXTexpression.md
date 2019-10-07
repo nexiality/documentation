@@ -408,18 +408,6 @@ first line as `append` is set to `true`.
 
 -----
 
-#### **`substring(start,end)`**
-Retain the portion of text from the `start` position (zero-based) to the `end`  position (exclusive).
-
-**Example**<br/>
-Script:<br/>
-![script](image/TEXTexpression_65.png)
-
-Output:<br/>
-![output](image/TEXTexpression_66.png)
-
------
-
 #### **`store(var)`**
 Save current TEXT expression to a data variable.  If the specified `var` exists, its value will be overwritten. Using 
 this operation, one can put an expression on pause and resume it at a later time.
@@ -430,6 +418,18 @@ Script:<br/>
 
 Output:<br/>
 ![output](image/TEXTexpression_68.png)
+
+-----
+
+#### **`substring(start,end)`**
+Retain the portion of text from the `start` position (zero-based) to the `end`  position (exclusive).
+
+**Example**<br/>
+Script:<br/>
+![script](image/TEXTexpression_65.png)
+
+Output:<br/>
+![output](image/TEXTexpression_66.png)
 
 -----
 
