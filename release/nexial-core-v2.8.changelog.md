@@ -12,6 +12,8 @@ comments: true
 
 ### General
 #### Fixes
+- [`nexial-project-inspector`](../userguide/BatchFiles#nexial-project-inspector): code fix to consider encrypted data 
+  variables. Also minor update to inspector report (HTML).
 
 #### Improvements
 
@@ -26,7 +28,7 @@ comments: true
 
 
 ### [Nexial Expression](../expressions)
-- [JSON &raquo; keys(jsonpath)](../expressions/JSONexpression#keysjsonpath): code fix to extract JSON keys correctly. 
+- [JSON &raquo; `keys(jsonpath)`](../expressions/JSONexpression#keysjsonpath): code fix to extract JSON keys correctly. 
 
 
 ### [base commands](../commands/base)
