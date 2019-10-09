@@ -304,15 +304,18 @@ The following renames the macro `oldMacro1` to `newMacro1`, and `oldMacro2` to `
 
 This script repairs the artifacts by removing unnecessary, non-existing url links, comments from original file.
 This is mostly useful when excel file has links to non existing files asking for updated everytime the user opens the file.
-However, the updates fail because the target file does not exit.<br/>
+However, the updates fail because the target file does not exist.<br/>
 
 This batch file only supports Nexial excel files e.g. script, plan, data, macro files.<br/>
 
 If preview location(`-d`) is not provided, it will take backup of original file and override the original with repaired file.<br/>
 
-This script has following command line options:<br/> 
+##### Note 
+- Maximum row and column limit to read/write data is set to `10000`. 
+- Maximum row and column limit is more likely to impact on data files.
+- This script will read/write data till the first empty row. Rows after first empty row is ignored.
 
-**Note:** Maximum row and column limit to read/write data is set to `10000`.
+This script has following command line options:<br/> 
 
 |options  |explanation                                                                                          |
 |---------|-----------------------------------------------------------------------------------------------------|
