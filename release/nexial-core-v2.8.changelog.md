@@ -16,7 +16,8 @@ comments: true
   variables. Also minor update to inspector report (HTML).
 
 #### Improvements
-
+- Code change to omit the writing or creation of cells when there isn't data to display. In other words, display 
+as much of the actual content as possible in output file.
 
 ### [System Variable](../systemvars)
 
