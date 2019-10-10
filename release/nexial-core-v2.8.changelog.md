@@ -26,11 +26,17 @@ as much of the actual content as possible in output file.
 
 
 ### [Built-in Functions](../functions)
+- [`$(execution|plan|name)`](../functions/$(execution)#): **NEW** function to reveal the plan file name currently in 
+  execution.
+- [`$(execution|plan|fullpath)`](../functions/$(execution)#): **NEW** function to reveal the fully qualified path for 
+  the plan currently in execution.
+- [`$(execution|plan|index)`](../functions/$(execution)#): **NEW** function to reveal the plan step (i.e. row number) 
+  of the plan currently in execution.
 
 
 ### [Nexial Expression](../expressions)
 - [JSON &raquo; `keys(jsonpath)`](../expressions/JSONexpression#keysjsonpath): code fix to extract JSON keys correctly. 
-
+- [JSON &raquo; `pack`](../expressions/JSONexpression#pack): code fix to enforce JSON beautification after "packing".
 
 ### [base commands](../commands/base)
 
