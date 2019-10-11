@@ -63,3 +63,4 @@ as much of the actual content as possible in output file.
 
 
 ### [web commands](../commands/web)
+- [Browser Performance Metrics](../commands/web/browsermetrics): *NEW** option to create chart.
