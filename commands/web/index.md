@@ -154,6 +154,8 @@ available commands.
 - [`saveLocation(var)`](saveLocation(var))
 - [`savePageAs(var,sessionIdName,url)`](savePageAs(var,sessionIdName,url))
 - [`savePageAsFile(sessionIdName,url,file)`](savePageAsFile(sessionIdName,url,file))
+- [`saveSelectedText(var,locator)`](saveSelectedText(var,locator))
+- [`saveSelectedValue(var,locator)`](saveSelectedValue(var,locator))
 - [`saveTableAsCsv(locator,nextPageLocator,file)`](saveTableAsCsv(locator,nextPageLocator,file))
 - [`saveText(var,locator)`](saveText(var,locator))
 - [`saveTextArray(var,locator)`](saveTextArray(var,locator))

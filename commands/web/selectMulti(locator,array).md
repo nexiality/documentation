@@ -8,7 +8,7 @@ comments: true
 
 ### Description
 
-- This command is to selected multiple values from the multi select list box.
+- This command is to select multiple values from the multi select list box.
 - In other words is user has to select multiple option from the listbox then this command will select the desired values and pass or else fail otherwise.
 
 ### Parameters

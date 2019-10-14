@@ -63,4 +63,8 @@ as much of the actual content as possible in output file.
 
 
 ### [web commands](../commands/web)
-- [Browser Performance Metrics](../commands/web/browsermetrics): *NEW** option to create chart.
+- [Browser Performance Metrics](../commands/web/browsermetrics): **NEW** option to create chart.
+- [`saveSelectedText(var,locator)`](../commands/web/saveSelectedText(var,locator)): **NEW** command store the text of 
+ selected option from `single select or multi-select` element.
+- [`saveSelectedValue(var,locator)`](../commands/web/saveSelectedValue(var,locator)): **NEW** command store the value
+ (equivalent to the "value" attribute) of selected option from `single select or multi-select` element.
