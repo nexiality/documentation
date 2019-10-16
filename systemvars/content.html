@@ -1714,6 +1714,8 @@
                 <li><code>firefox.headless</code></li>
                 <li><code>chrome</code></li>
                 <li><code>chrome.headless</code></li>
+                <li><code>chrome.embedded</code></li>
+                <li><code>electron</code></li>
                 <li><code>safari</code></li>
                 <li><code>ie</code></li>
                 <li>
@@ -2515,74 +2517,97 @@
       </td>
     </tr>
     <tr>
-      <td nowrap="nowrap" class="varname">
-          <a id="nexial.browser.electron.forceTerminate"><code>nexial.browser.electron.forceTerminate</code></a>
-      </td>
-      <td>boolean</td>
-      <td>false</td>
-      <td>false</td>
-      <td>
-          <b>For Electron application only</b>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.browser.electron.forceTerminate"><code>nexial.browser.electron.forceTerminate</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            <b>For Electron application only</b>
 
-          For electron application, it is possible to forcefully terminating the application (AUT) when
-          <li><a href="../commands/web/closeAll()">web &raquo; <code>closeAll()</code></a></li> is invoked or when the
-          underlying `chromedriver` is shutting down.. Depending on the target application, it may be necessary to do
-          so in order to ensure all previously in-use resources are released for future use. To forcefully terminate
-          the target application, set the System variable to <code>true</code> (default is <code>false</code>).
-      </td>
+            For electron application, it is possible to forcefully terminating the application (AUT) when
+            <li><a href="../commands/web/closeAll()">web &raquo; <code>closeAll()</code></a></li>
+            is invoked or when the
+            underlying `chromedriver` is shutting down.. Depending on the target application, it may be necessary to do
+            so in order to ensure all previously in-use resources are released for future use. To forcefully terminate
+            the target application, set the System variable to <code>true</code> (default is <code>false</code>).
+        </td>
     </tr>
     <tr>
-      <td nowrap="nowrap" class="varname"><a id="nexial.browser.logElectron"><code>nexial.browser.logElectron</code></a></td>
-      <td>boolean</td>
-      <td>false</td>
-      <td>false</td>
-      <td>
-        Enable/Disable webdriver logging when automating against an Electron application. The
-        <code>nexial.browser</code> System variable must be set to <code>electron</code>. When enabled, Nexial will
-        create under the <code>log</code> directory of the execution output directory a log file named as
-        <code>electron-[application].log</code>, where <code>[application]</code> is the name of the application
-        under test. This file will contain the webdriver logs during automation, and will be linked in the
-        <code>#summary</code> tab of the execution report (.xlsx) under the <code>logs</code> section.<br/>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.browser.logElectron"><code>nexial.browser.logElectron</code></a></td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            Enable/Disable webdriver logging when automating against an Electron application. The
+            <code>nexial.browser</code> System variable must be set to <code>electron</code>. When enabled, Nexial will
+            create under the <code>log</code> directory of the execution output directory a log file named as
+            <code>electron-[application].log</code>, where <code>[application]</code> is the name of the application
+            under test. This file will contain the webdriver logs during automation, and will be linked in the
+            <code>#summary</code> tab of the execution report (.xlsx) under the <code>logs</code> section.<br/>
 
-        While not usually needed, webdriver log contain be very useful towards troubleshooting and debugging
-        intercommunication issues between webdriver and AUT.
-      </td>
+            While not usually needed, webdriver log contain be very useful towards troubleshooting and debugging
+            intercommunication issues between webdriver and AUT.
+        </td>
     </tr>
     <tr>
-      <td nowrap="nowrap" class="varname"><a id="nexial.browser.logElectronVerbose"><code>nexial.browser.logElectronVerbose</code></a></td>
-      <td>boolean</td>
-      <td>false</td>
-      <td>false</td>
-      <td>
-        <b>ONLY APPLICABLE WHEN <code>nexial.browser.logElectron</code> IS SET TO <code>true</code></b><br/>
-        <br/>
+        <td nowrap="nowrap" class="varname"><a id="nexial.browser.logElectronVerbose"><code>nexial.browser.logElectronVerbose</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            <b>ONLY APPLICABLE WHEN <code>nexial.browser.logElectron</code> IS SET TO <code>true</code></b><br/>
+            <br/>
 
-        Enable/Disable verbose webdriver logging when automating against an Electron application. By default, this
-        System variable is <code>false</code>.<br/>
-        <br/>
+            Enable/Disable verbose webdriver logging when automating against an Electron application. By default, this
+            System variable is <code>false</code>.<br/>
+            <br/>
 
-        While not usually needed, turning on verbose mode might be useful towards troubleshooting and debugging
-        intercommunication issues between webdriver and AUT.
-      </td>
+            While not usually needed, turning on verbose mode might be useful towards troubleshooting and debugging
+            intercommunication issues between webdriver and AUT.
+        </td>
     </tr>
     <tr>
-      <td nowrap="nowrap" class="varname">
-        <a id="nexial.browser.logChrome"><code>nexial.browser.logChrome</code></a>
-      </td>
-      <td>boolean</td>
-      <td>false</td>
-      <td>false</td>
-      <td>
-        Enable/Disable webdriver logging when automating against Chrome browser. The <code>nexial.browser</code>
-        System variable must be set to <code>chrome</code> or <code>chrome-headless</code>. When enabled, Nexial
-        will create under the <code>log</code> directory of the execution output directory a log file named as
-        <code>chrome-browser.log</code>. This file will contain the webdriver logs during automation, and will be
-        linked in the <code>#summary</code> tab of the execution report (.xlsx) under the <code>logs</code>
-        section.<br/>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.browser.logChrome"><code>nexial.browser.logChrome</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            Enable/Disable webdriver logging when automating against Chrome browser. The <code>nexial.browser</code>
+            System variable must be set to <code>chrome</code> or <code>chrome-headless</code>. When enabled, Nexial
+            will create under the <code>log</code> directory of the execution output directory a log file named as
+            <code>chrome-browser.log</code>. This file will contain the webdriver logs during automation, and will be
+            linked in the <code>#summary</code> tab of the execution report (.xlsx) under the <code>logs</code>
+            section.<br/>
 
-        While not usually needed, webdriver log contain be very useful towards troubleshooting and debugging
-        intercommunication issues between webdriver and the Chrome browser.
-      </td>
+            While not usually needed, webdriver log contain be very useful towards troubleshooting and debugging
+            intercommunication issues between webdriver and the Chrome browser.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.browser.userData"><code>nexial.browser.userData</code></a>
+        </td>
+        <td>text</td>
+        <td></td>
+        <td class="highlight-red">true</td>
+        <td>
+            Specify the user profile directory for the currently specified browser (via <a href="#nexial.browser">
+            <code>nexial.browser</code></a>). The user profile usually store cookies, caches and user preferences, which
+            can be used to test various scenarios such as "repeated visits" or "first-time visitor". Note that:
+            <ol>
+                <li>user profile directory is browser specified</li>
+                <li>user profile directory is platform-specified</li>
+                <li>user profile directory is not applicable for IE, Edge or Safari browser</li>
+                <li>when specified, this System variable will override the <a href="#nexial.browser.incognito">
+                    <code>nexial.browser.incognito</code></a> System variable (default is <code>false</code>).</li>
+            </ol>
+        </td>
     </tr>
     <tr>
         <td nowrap="nowrap" class="varname"><a id="nexial.forceIE32"><code>nexial.forceIE32</code></a></td>

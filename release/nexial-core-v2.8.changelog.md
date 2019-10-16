@@ -38,7 +38,10 @@ as much of the actual content as possible in output file.
 - [JSON &raquo; `keys(jsonpath)`](../expressions/JSONexpression#keysjsonpath): code fix to extract JSON keys correctly. 
 - [JSON &raquo; `pack`](../expressions/JSONexpression#pack): code fix to enforce JSON beautification after "packing".
 
+
 ### [base commands](../commands/base)
+- [`repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)): add console output when exception 
+  is thrown.
 
 
 ### [csv commands](../commands/csv)
@@ -68,3 +71,5 @@ as much of the actual content as possible in output file.
  selected option from `single select or multi-select` element.
 - [`saveSelectedValue(var,locator)`](../commands/web/saveSelectedValue(var,locator)): **NEW** command store the value
  (equivalent to the "value" attribute) of selected option from `single select or multi-select` element.
+- [`nexial.browser.userData`](../systemvars/index#nexial.browser.userData): **NEW** System variable to specify browser 
+  profile directory. 
