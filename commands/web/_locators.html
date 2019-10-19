@@ -389,14 +389,14 @@
             <p>
               This type of locator focused on the style class(es) set to web element. While only 1 style
               class can be specified in the locator, it is capable of matching web element that contains
-              multiple style classes ( including the target class). For example, suppose the following
+              multiple style classes (including the target class). For example, suppose the following
               HTML snippet:
             <pre style="font-size:12px;padding:5px;margin-bottom:5px;">
-    &lt;li name="item1" class="style1"&gt;Item 1&lt;/li&gt;
-    &lt;li name="item2" class="style1 style2"&gt;Item 2&lt;/li&gt;
-    &lt;li name="item3" class="style1 style3"&gt;Item 3&lt;/li&gt;
-    &lt;li name="item4" class="style1 style2"&gt;Item 4&lt;/li&gt;
-    &lt;li name="item5" class="style1 style2 style3"&gt;Item 5&lt;/li&gt;</pre>
+  &lt;li name="item1" class="style1"&gt;Item 1&lt;/li&gt;
+  &lt;li name="item2" class="style1 style2"&gt;Item 2&lt;/li&gt;
+  &lt;li name="item3" class="style1 style3"&gt;Item 3&lt;/li&gt;
+  &lt;li name="item4" class="style1 style2"&gt;Item 4&lt;/li&gt;
+  &lt;li name="item5" class="style1 style2 style3"&gt;Item 5&lt;/li&gt;</pre>
             In this case,<br/>
             <ul>
               <li>The locator <code>class=style1</code> would match all 5 elements.</li>
@@ -568,46 +568,43 @@
               locators.
             </p>
             <p>
-              However,
-              <a href="https://en.wikipedia.org/wiki/Uncle_Ben#%22With_great_power_comes_great_responsibility%22"
-                 class="external-link" target="_nexial_link">with great power comes great
-                responsibility</a> :-). XPath based locator can be easily misused where the locators can
-              become difficult to read and maintain. Deciphering and maintaining XPaths like
+              However, <a href="https://en.wikipedia.org/wiki/Uncle_Ben#%22With_great_power_comes_great_responsibility%22"
+                 class="external-link" target="_nexial_link">with great power comes great responsibility</a>
+              <i class="em em-smile" aria-role="presentation" aria-label="smike"></i>. XPath based locator can be
+              easily misused where the locators can become difficult to read and maintain. Deciphering and maintaining
+              XPaths like
               <code>/child::library/child::book/child::title[position()=2]/child::text</code> or
-              <code>//report//author[text()=../../following-sibling::report//author/text()]</code> are
-              certainly not a<i>walk in the park</i>. XPath designer must take special care in designing
-              locators, or they might end up as technical debts! What further the complication is the
-              interoperability of these XPath across browsers. There is to date no feature parity amongst
-              the popular browsers in terms of XPath implementation (particularly with IE). This adds
-              additional burden in designing cross-browser XPath. Also, XPATH based locators are not the
-              most ideal locator for performance (again, particularly with IE).
+              <code>//report//author[text()=../../following-sibling::report//author/text()]</code> are certainly not a
+              <i>walk in the park</i>. XPath designer must take special care in designing locators, or they might end
+              up as technical debts! What further the complication is the interoperability of these XPath across
+              browsers. There is to date no feature parity amongst the popular browsers in terms of XPath implementation
+              (particularly with IE). This adds additional burden in designing cross-browser XPath. Also, XPATH based
+              locators are not the most ideal locator for performance (again, particularly with IE).
             </p>
             <p>
-              There are lots of tutorial and learning material on the 'Net regarding XPath. Here are some
-              that might be helpful:
-            <ul>
-              <li><a href="https://www.w3.org/TR/1999/REC-xpath-19991116/" class="external-link"
-                     target="_nexial_link">W3C - XML Path Language (XPath) 1.0</a></li>
+              There are lots of tutorial and learning material on the Internet regarding XPath. Here are some that
+              might be helpful:<ul>
+              <li><a href="https://www.w3.org/TR/1999/REC-xpath-19991116/" class="external-link" target="_nexial_link">
+                  W3C - XML Path Language (XPath) 1.0</a></li>
               <li><a href="https://www.guru99.com/xpath-selenium.html" class="external-link" target="_nexial_link">
-                gugu99 - XPath in Selenium WebDriver: Complete Tutorial</a></li>
+                  gugu99 - XPath in Selenium WebDriver: Complete Tutorial</a></li>
               <li><a href="https://www.w3schools.com/xml/xpath_intro.asp" class="external-link" target="_nexial_link">
-                w3schools - XPath Tutorial</a></li>
+                  w3schools - XPath Tutorial</a></li>
               <li><a href="https://en.wikipedia.org/wiki/XPath" class="external-link" target="_nexial_link">
                 wikipedia - XPath</a></li>
               <li><a href="https://automatetheplanet.com/underrated-webdriver-locator-xpath/" class="external-link"
-                     target="_nexial_target">automatetheplanet - Most Underrated WebDriver Locator -
-                XPath</a></li>
+                   target="_nexial_target">automatetheplanet - Most Underrated WebDriver Locator - XPath</a></li>
               <li><a href="http://toolsqa.com/selenium-webdriver/choosing-effective-xpath/" class="external-link"
-                     target="_nexial_target">toolsqa - Choosing Effective XPaths</a></li>
+                   target="_nexial_target">toolsqa - Choosing Effective XPaths</a></li>
               <li><a href="https://devhints.io/xpath" class="external-link" target="_nexial_target">
                 devhints - XPath cheatsheet</a></li>
               <li><a href="http://xpath.alephzarro.com/content/cheatsheet.html" class="external-link"
-                     target="_nexial_target">http://xpath.alephzarro.com/content/cheatsheet.html</a></li>
+                   target="_nexial_target">http://xpath.alephzarro.com/content/cheatsheet.html</a></li>
               <li><a href="http://scraping.pro/res/xpath-cheat/xpath_css_dom_recipes.pdf" class="external-link"
-                     target="_nexial_target">http://scraping.pro/res/xpath-cheat/xpath_css_dom_recipes.pdf</a></li>
+                   target="_nexial_target">http://scraping.pro/res/xpath-cheat/xpath_css_dom_recipes.pdf</a></li>
               <li><a href="http://scraping.pro/res/xpath-cheat/xpath_css_dom_ref.pdf" class="external-link"
-                     target="_nexial_target">http://scraping.pro/res/xpath-cheat/xpath_css_dom_ref.pdf</a></li>
-            </ul>
+                   target="_nexial_target">http://scraping.pro/res/xpath-cheat/xpath_css_dom_ref.pdf</a></li>
+              </ul>
             </p>
           </td>
         </tr>
@@ -618,31 +615,33 @@
 </div>
 <br/>
 
+<h4>Additional Help on Locators</h4>
 Here are a few tutorials on locators (please feel free to send more links so we can add to this list):
 <ul>
-  <li>
-    <a href="http://www.seleniumeasy.com/selenium-tutorials/selenium-locators" class="external-link" target="_nexial_target">seleniumeasy
-      - Locators for Selenium</a></li>
-  <li>
-    <a href="https://www.e-gineering.com/2016/06/07/selenium-webelement-selectors/" class="external-link" target="_nexial_target">e-gineering
-      - Simplify Selenium Selectors</a></li>
-  <li>
-    <a href="https://www.telerik.com/blogs/16-ways-to-search-find-and-edit-with-chrome-devtools" class="external-link" target="_nexial_target">16
-      Ways to Search, Find and Edit with Chrome DevTools</a></li>
+  <li><a href="http://www.seleniumeasy.com/selenium-tutorials/selenium-locators" class="external-link"
+         target="_nexial_target">seleniumeasy - Locators for Selenium</a></li>
+  <li><a href="https://www.e-gineering.com/2016/06/07/selenium-webelement-selectors/" class="external-link"
+         target="_nexial_target">e-gineering - Simplify Selenium Selectors</a></li>
+  <li><a href="https://www.telerik.com/blogs/16-ways-to-search-find-and-edit-with-chrome-devtools" class="external-link"
+         target="_nexial_target">16 Ways to Search, Find and Edit with Chrome DevTools</a></li>
 </ul>
 
-One might consider converting XPaths to CSS locators since CSS locators are generally faster and easier
-on the eyes. Here's an online app to help converting XPath to CSS locator:<br/>
-<a href="http://cssify.appspot.com/" class="external-link" target="_nexial_target">
-  http://cssify.appspot.com/<br/>
-  <img src="image/web_02.png"/>
-</a>
+One might consider converting XPaths to CSS locators since CSS locators are generally faster and more readable. Here's
+an online app to help converting XPath to CSS locator:<br/>
+<div style="margin-left: 25px">
+  <a href="http://cssify.appspot.com/" class="external-link" target="_nexial_target">
+    http://cssify.appspot.com/ <br/>
+    <img src="image/web_02.png" alt="http://cssify.appspot.com/"/>
+  </a>
+</div>
 <br/>
 
 Google Chrome comes with a sleuth of useful features to perform common tasks such as selecting and inspecting DOM
 elements, and monitoring DOM events. This is available from the Chrome DevTools (aka Console):<br/>
-<a href="https://developers.google.com/web/tools/chrome-devtools/console/command-line-reference" class="external-link" target="_nexial_target">
-  Command Line API Reference<br/>
-  <img src="image/web_05.png"/>
-</a>
-<br/>
+<div style="margin-left: 25px">
+  <a href="https://developers.google.com/web/tools/chrome-devtools/console/command-line-reference" class="external-link"
+     target="_nexial_target">
+    Command Line API Reference <br/>
+    <img src="image/web_05.png" alt="developers.google.com"/>
+  </a>
+</div>

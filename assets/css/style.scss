@@ -344,11 +344,11 @@ span.command {
 }
 
 a.external-link {
-  padding:               1px 5px 1px 20px;
-  background:            rgba(60, 60, 60, 0.75) url(../../image/external_link.png) no-repeat !important;
-  color:                 #eea !important;
-  background-position-x: 3px !important;
-  background-position-y: 2px !important;
+  padding:               3px 5px 3px 23px;
+  background:            rgba(100, 160, 80, 0.85) url(../../image/external_link.png) no-repeat !important;
+  color:                 #ffb !important;
+  background-position-x: 4px !important;
+  background-position-y: 3px !important;
   font-weight:           normal !important;
   text-shadow:           none;
 }
@@ -660,7 +660,7 @@ pre.explain {
   background-position-y: 32px !important;
   background-position-x: -27px !important;
   background-blend-mode: luminosity !important;
-  box-shadow:            none !important;
+  box-shadow:            3px 5px 4px 1px rgba(100, 100, 100, 0.5) !important;
 }
 
 .tabs .tab-links li {
