@@ -162,6 +162,13 @@ Output:<br/>
 
 -----
 
+#### **`extract(beginRegex,endRegex,inclusive)`**
+Extract from current text all instances of text found between `beginRegex` and `endRegex`. Both `beginRegex` and 
+`endRegex` are regular expressions. Set `inclusive` as `true` to include the text that matches `beginRegex` and 
+`endRegex`. This operation effectively transforms current TEXT expression into a [`LIST`](LISTexpression) expression.
+
+-----
+
 #### **`insert(after,text)`**
 Search for `after` in text, and if found, add the specified text to it.  If `after` is not found, no changes will be 
 made to text.
@@ -169,6 +176,7 @@ made to text.
 **Example**<br/>
 Chain up a `remove` and a `insert`. In this example, after removing the word "all", insert operation will insert 
 "each and every" after the word "for".<br/>
+
 Script:<br/>
 ![script](image/TEXTexpression_26.png)
 

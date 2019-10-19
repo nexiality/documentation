@@ -63,6 +63,18 @@ Each cookie contains the following property:
 The status code (`${var}.returnCode`) and status text (`${var}.statusText) are equivalent, except the former is the 
 numeric value of a response return code.
 
+
+### Logging
+            If set to <code>true</code> (default is <code>false</code>), Nexial will record the request and response
+            detail for each API call made via <a href="../commands/ws">ws</a> commands. This request and response
+            detail may be helpful towards troubleshooting or further automation. The detail is written to a file in the
+            output directory and linked to the corresponding test step. For example:<br/>
+            <br/>
+            <b>Data File:</b><br/>
+            <img src="images/nexi">
+            <b>Script:</b>
+
+
 For more information about HTTP status codes, refer to
 <a href="https://httpstatuses.com/" class="external-link" target="_nexial_external">https://httpstatuses.com/</a> and 
 <a href="https://www.restapitutorial.com/httpstatuscodes.html" class="external-link" target="_nexial_external">https://www.restapitutorial.com/httpstatuscodes.html</a>.

@@ -37,6 +37,8 @@ as much of the actual content as possible in output file.
 ### [Nexial Expression](../expressions)
 - [JSON &raquo; `keys(jsonpath)`](../expressions/JSONexpression#keysjsonpath): code fix to extract JSON keys correctly. 
 - [JSON &raquo; `pack`](../expressions/JSONexpression#pack): code fix to enforce JSON beautification after "packing".
+- [TEXT &raquo; `extract(beginRegex,endRegex,inclusive)`](../expressions/TEXTexpression#extractbeginregexendregexinclusive): 
+  **NEW** operation to extract all instances of text between two regex-based patterns as a LIST expression.
 
 
 ### [base commands](../commands/base)
@@ -63,6 +65,15 @@ as much of the actual content as possible in output file.
 
 
 ### [ws commands](../commands/ws)
+- [`nexial.ws.logDetail`](../systemvars/index#nexial.ws.logDetail): set `true` to log the detail for each web service
+  call.
+- [`nexial.ws.logSummary`](../systemvars/index#nexial.ws.logSummary): set `true` to log the summary of each web service
+  call.
+- code fix to parse empty cookie in response header.
+- added `.ttfb` property to the response of web service call (e.g. ``${response}.ttfb`).
+- added `.requestTime` property to the Response of web service call (e.g. `${response}.requestTime`).
+- ensure the specified response data variable is cleared out prior to web service call, thus preventing previously 
+  derived response to be used.
 
 
 ### [web commands](../commands/web)
@@ -72,4 +83,4 @@ as much of the actual content as possible in output file.
 - [`saveSelectedValue(var,locator)`](../commands/web/saveSelectedValue(var,locator)): **NEW** command store the value
  (equivalent to the "value" attribute) of selected option from `single select or multi-select` element.
 - [`nexial.browser.userData`](../systemvars/index#nexial.browser.userData): **NEW** System variable to specify browser 
-  profile directory. 
+  profile directory.
