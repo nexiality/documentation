@@ -56,8 +56,8 @@ Since the response is received asynchronously, Nexial stores it in a designated 
 later. To further assist such processing (could be validation as well), the corresponding request information is also
 persisted in the same file. Below is the general JSON structure:<br/>
 
-![response](image/index_01.png)
- 
+<img src="image/index_01.png" alt style="box-shadow:none;"/>
+
 A few critical things to note:
 - The diagram above depicts corresponding request and response for a specific HTTP invocation. The request "container"
   reflects the request information for a given HTTP invocation, and the response "container" reflects the response
@@ -76,16 +76,26 @@ A few critical things to note:
         "enableExpectContinue": true,
         "allowCircularRedirects": false,
         "allowRelativeRedirects": true,
-        "headers": { "User-Agent": "... ...", "Content-Length": "...", "Content-Type": "application/json" }
+        "headers": { 
+          "User-Agent": "... ...", 
+          "Content-Length": "...", 
+          "Content-Type": "application/json" 
+        }
     },
 
     "response": {
+        "requestTime": 1528582478920,
         "body": "... ...",
         "returnCode": 200,
         "statusText": "OK",
-        "elapsedTime": 1234567890,
+        "ttfb": 1103,
+        "elapsedTime": 1234,
         "contentLength": 12345,
-        "headers": { "set-cookie": "... ...", "Content-Length": "...", "Content-Type": "application/json" }
+        "headers": { 
+          "set-cookie": "... ...", 
+          "Content-Length": "...", 
+          "Content-Type": "application/json" 
+        }
     }
   }
   ```
@@ -99,6 +109,8 @@ A few critical things to note:
 - Cookie information can be found via `response.headers.set-cookie`.
 
 For more explanation please visit [HTTP response](../ws/index#http-response).
+
+Visit [`ws`](../ws/#logging) page for more details on logging.
 
 
 ### Available Commands

@@ -26,17 +26,28 @@ The response at the network transport layer looks something like this:<br/>
 
 The response contains all sorts of useful information. Nexial captures such information and made them available during
 execution to support validation and further processing. Each "response" object contains the following data:<br/>
-![](image/index_03.png)
 
-Assuming that the response is stored in a data variable named `var`, one can use access the response payload via the
-`${var}.body` syntax. This usually returns some form of text, which can be further processed via the 
-[`json`](../json/index) command type, [`xml`](../xml/index) command type or [`io`](../io/index) command type for plain
-text.
+<img src="image/index_03.png" alt style="box-shadow:none;"/>
 
-The `${var}.contentLength` syntax returns the length of the payload.
-
-The `${var}.elapsedTime` syntax returns the number of millisecond between the request sent from Nexial to the intended
-server, and when the response was received by Nexial in return.
+Assuming that the response is stored in a data variable named `var`, one can ...:
+- access the date/time, in epoch, of the corresponding request via the **`${var}.requestTime`** syntax.
+- use the **`${var}.ttfb`** syntax to retrieve the number of millisecond between the request sent from Nexial to the 
+  intended server and the time when the first byte (of response) is received by Nexial in return. "TTFB" stands for 
+  "Time-to-First-Byte".
+- use the `${var}.elapsedTime` syntax to retrieve the number of millisecond between the request sent from Nexial to the 
+  intended server and the time when the entire response has been received by Nexial in return.
+- access the return code (status code) and status text via **`${var}.returnCode}`** and **`${var}.statusText`** 
+  respectively. The purpose of these "data" in inherently the same, except the former is a numerical representation. 
+  Visit <a href="https://httpstatuses.com/" class="external-link" target="_nexial_external">https://httpstatuses.com/</a> 
+  and <a href="https://www.restapitutorial.com/httpstatuscodes.html" class="external-link" target="_nexial_external">
+  HTTP Status Codes</a> for more information.
+- access the response payload via the **`${var}.body`** syntax. This usually returns some form of text, which can be 
+  further processed via the [`json`](../json/index) command type, [`xml`](../xml/index) command type or 
+  [`io`](../io/index) command type for plain text.
+- access the length of the payload via **`${var}.contentLength`** syntax.
+- determine the external file location which stores the response payload via the **`${var}.payloadLocation`** syntax.
+  This is only applicable for [ws &raquo; `download(url,queryString,saveTo)`](download(url,queryString,saveTo))
+  command.
 
 All HTTP response header information can be retrieved via the `${var}.headers.[HEADER_NAME]` syntax (assuming response
 is stored to the `var` data variable). For example, to retrieve response content type, we can specify
@@ -60,24 +71,43 @@ Each cookie contains the following property:
   contents of the cookie are of high value and could be potentially damaging to transmit as clear text. Syntax: 
   `${var}.cookies[COOKIE_NAME].secure`
 
-The status code (`${var}.returnCode`) and status text (`${var}.statusText) are equivalent, except the former is the 
-numeric value of a response return code.
-
 
 ### Logging
-            If set to <code>true</code> (default is <code>false</code>), Nexial will record the request and response
-            detail for each API call made via <a href="../commands/ws">ws</a> commands. This request and response
-            detail may be helpful towards troubleshooting or further automation. The detail is written to a file in the
-            output directory and linked to the corresponding test step. For example:<br/>
-            <br/>
-            <b>Data File:</b><br/>
-            <img src="images/nexi">
-            <b>Script:</b>
+Since [v2.8](../../release/nexial-core-v2.8.changelog.md), Nexial has the capability to externalize the 
+request/response details as log files. This can be very helpful towards root cause analysis or tracking purposes. There
+are two types of logging: detailed and summarized.
+
+#### Detailed Logging
+To enable detailed logging, set the System variable `nexial.ws.logDetail` to `true`. By doing so, all subsequent
+web service calls issued via a `ws` command would be logged and linked to the corresponding test step in the output
+file. For example:
+
+##### Data File
+![](image/index_04.png)
+
+##### Output File
+![](image/index_05.png)
+
+##### Sample Detailed Log
+![](image/index_06.png)
+
+Each web service call would have its own log file.
 
 
-For more information about HTTP status codes, refer to
-<a href="https://httpstatuses.com/" class="external-link" target="_nexial_external">https://httpstatuses.com/</a> and 
-<a href="https://www.restapitutorial.com/httpstatuscodes.html" class="external-link" target="_nexial_external">https://www.restapitutorial.com/httpstatuscodes.html</a>.
+#### Summarized Logging
+The summarized log is different from the detailed log in that it accumulates the timing and summary information about 
+each invoked web service calls in the same file. Such file can be useful for post-execution analysis across all the 
+web service calls made. To enable summarized logging, set the System variable `nexial.ws.logSummary` to `true`. The 
+summarized log will be linked in the `#summary` worksheet of the output file:<br/>
+![](image/index_07.png)
+
+Here's an sample of such summarized log file (CSV format):<br/>
+![](image/index_08.png)
+
+Note that the first line of the log file is the column headers. One can import such CSV file to Excel (or similar) to
+generate actionable visualization:<br/>
+![](image/index_09.png)
+
 
 
 ### Available Commands
