@@ -664,10 +664,15 @@ pre.explain {
 }
 
 .tabs .tab-links li {
-  margin:     0 10px;
+  margin:     0 10px !important;
   padding:    0 !important;
   float:      left;
   list-style: none;
+}
+
+.tabs .tab-links .active {
+  border-bottom: 5px solid #000;
+  margin-bottom: -5px !important;
 }
 
 .tabs .tab-links a {

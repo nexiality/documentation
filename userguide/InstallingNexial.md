@@ -118,7 +118,8 @@ your system, please follow the section above.
                 </li>
                 <li>
                     Click the following link to begin downloading the Nexial installer:
-                    <a href="https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.2/nexial-installer-1.4.2.zip" class="external-link" target="_nexial_link">Nexial Installer</a>.
+                    <a href="https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.3/nexial-installer-1.4.3.zip" 
+                    class="external-link" target="_nexial_link">Nexial Installer</a>.
                 </li>            
                 <li>
                     Next, locate the downloaded zip file in your Downloads folder.
@@ -166,32 +167,41 @@ your system, please follow the section above.
                 </li>
                 <li>
                     Click the following link to begin downloading the Nexial installer:
-                    <a href="https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.2/nexial-installer-1.4.2.zip" class="external-link" target="_nexial_link">Nexial Installer</a><br/>
+                    <a href="https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.3/nexial-installer-1.4.3.zip" 
+                    class="external-link" target="_nexial_link">Nexial Installer</a><br/>
                     <br/>
                     By default, it will be downloaded to the <code>Downloads</code> directory. Move this file to the 
-                    newly created <code>projects</code> directory:<br/>
+                    newly created <code>projects</code> directory (`~/projects`):<br/>
                     <img src="image/InstallingNexial_04.mac.png"/>
                 </li>            
                 <li>
                     Rename the Nexial Installer zip by removing its version number from the zip file. That way, it will
-                    unzip to a directory named as <code>nexial-installer</code> (instead of <code>nexial-installer-1.4.2</code>):<br/>
+                    unzip to a directory named as <code>nexial-installer</code> (instead of <code>nexial-installer-1.4.3</code>):<br/>
                     <img src="image/InstallingNexial_05.mac.png"/><br/>
                     <img src="image/InstallingNexial_06.mac.png"/><br/>
                 </li>
                 <li>
                     Double-click on <code>nexial-installer.zip</code> to start unzipping this file. This will unzip 
                     <code>nexial-installer.zip</code> to a directory named as <code>nexial-installer</code>:<br/>
-                    <img src="image/InstallingNexial_07.mac.png"/>
-                    <br/>
+                    <img src="image/InstallingNexial_07.mac.png"/><br/>
                     Note that the unzip directory contains a <code>bin</code> and a <code>lib</code> directory.
                 </li>
                 <li>
-                    Right-click on <code>nexial-installer/bin/installer-latest.sh</code> (<b>NOT 
-                    <code>installer-latest.cmd</code></b>). Choose either <code>Terminal.app</code> or 
-                    <code>iTerm.app</code>:<br/>
-                    <img src="image/InstallingNexial_08.mac.png"/>
-					<br/><b>a. If the terminal app does not show up on the list:</b> click "other" then in the drop down menu labeled "Enable:" select "All Applications". From here, navigate through
-					the Applications folder then enter the Utilities folder and select the Terminal application.
+                    Expand `nexial-installer` and then expand `bin` directory. Right-click on 
+                    <b><code>installer-latest.sh</code></b> (NOT <code>installer-latest.cmd</code>). Choose either 
+                    <code>Terminal.app</code> or <code>iTerm.app</code>:<br/>
+                    <img src="image/InstallingNexial_08.mac.png"/><br/>
+                    <ol style="list-style: lower-roman">
+                    <li><b>If none of the terminal app shows up on the list:</b> click "other" then in the drop down 
+                    menu labeled "Enable:" select "All Applications". From here, navigate through the Applications 
+                    folder then enter the Utilities folder and select the Terminal application.
+                    </li>
+                    <li><b>iTerm.app</b>: iTerm is an excellent terminal replacement for MacOSX's default Terminal.app. 
+                    This is optional to install or run Nexial. To install iTerm, please download it from
+                    <a href="https://www.iterm2.com/downloads.html" class="external-link" target="_nexial_external">
+                    iTerm2 download page</a>.
+                    </li>
+                    </ol>
                 </li>
                 <li>
                     Nexial installation will commence:<br/>
