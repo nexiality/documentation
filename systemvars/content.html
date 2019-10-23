@@ -1,4 +1,4 @@
-<style xmlns="http://www.w3.org/1999/html">
+<style>
   b { font-weight: bold; }
 
   body { font-family: Arial, Verdana, Tahoma, sans-serif; }
@@ -3504,8 +3504,29 @@
         <td>false</td>
         <td>false</td>
         <td>
-            Required if you are testing against internal/local servers. Nexial will automatically download/execute the
-            OS-specific BrowserStackLocal binary before executing your tests.
+            Required if you are <a href="https://www.browserstack.com/local-testing-internals" class="external-link"
+               target="_nexial_external">testing against internal/local servers</a>. Nexial will automatically
+            download/execute the OS-specific <code>BrowserStackLocal</code> binary before executing your tests. This
+            is neccessary to proxy the connections to the internal/local resources.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.browserstack.terminatelocal"><code>nexial.browserstack.terminatelocal</code></a>
+        </td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>false</td>
+        <td>
+            NOTE: Only applicable when <code>nexial.browserstack.enablelocal</code> is set to <code>true</code>.<br/>
+            <br/>
+            When this System variable is set to <code>false</code> (default is <code>true</code>), Nexial will
+            omit the termination of any running <code>BrowserStackLocal</code> binary. This may be necessary when
+            executing multiple simultaneous tests within one host.<br/>
+            <br/>
+            To ensure proper clean up, one may utilize the <a href="../commands/external/terminate(programName)">
+            external &raquo; <code>terminate(programName)</code></a> command to terminate any running
+            <code>BrowserStackLocal</code> binary when all the tests are complete.
         </td>
     </tr>
     <tr>
@@ -3516,7 +3537,7 @@
         <td>&nbsp;</td>
         <td>false</td>
         <td>
-            OS you want to test. For example: <code>WINDOWS, OS X</code>
+            OS you want to test. For example: <code>WINDOWS</code>, <code>OS X</code>
         </td>
     </tr>
     <tr>
@@ -3723,6 +3744,39 @@
             (<i>OPTIONAL</i>) timezone set on the browser. A full list of values can be found
             <a href="https://help.crossbrowsertesting.com/selenium-testing/resources/list-of-timezones/"
                class="external-link" target="_nexial_link">here</a>.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="cbt.enablelocal"><code>cbt.enablelocal</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            Required if you are <a href="https://help.crossbrowsertesting.com/local-connection/general/local-tunnel-overview/"
+            class="external-link" target="_nexial_external">testing against internal/local servers</a>. Nexial will
+            automatically download/execute the OS-specific <code>cbt_tunnels</code> binary before executing your tests.
+            This is necessary to proxy the connections to the internal/local resources.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="cbt.terminatelocal"><code>cbt.terminatelocal</code></a>
+        </td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>false</td>
+        <td>
+            NOTE: Only applicable when <code>cbt.enablelocal</code> is set to <code>true</code>.<br/>
+            <br/>
+            When this System variable is set to <code>false</code> (default is <code>true</code>), Nexial will
+            omit the termination of any running <code>cbt_tunnels</code> binary. This may be necessary when
+            executing multiple simultaneous tests within one host.<br/>
+            <br/>
+            To ensure proper clean up, one may utilize the <a href="../commands/external/terminate(programName)">
+            external &raquo; <code>terminate(programName)</code></a> command to terminate any running
+            <code>cbt_tunnels</code> binary when all the tests are complete.
         </td>
     </tr>
     </tbody>

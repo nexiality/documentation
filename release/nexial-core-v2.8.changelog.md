@@ -50,6 +50,8 @@ as much of the actual content as possible in output file.
 
 
 ### [external commands](../commands/external)
+- [`terminate(programName)`](../commands/external/terminate(programName)): terminate running program via the target 
+  program's file name.
 
 
 ### [image commands](../commands/image)
@@ -84,3 +86,7 @@ as much of the actual content as possible in output file.
  (equivalent to the "value" attribute) of selected option from `single select or multi-select` element.
 - [`nexial.browser.userData`](../systemvars/index#nexial.browser.userData): **NEW** System variable to specify browser 
   profile directory.
+- BrowserStack: support configurable termination of `BrowserStackLocal` binary to support parallel testing via 
+  `nexial.browserstack.terminatelocal` System variable. 
+- CrossBrowserTesting: support configurable termination of `cbt_tunnels` binary to support parallel testing via 
+  `cbt.terminatelocal` System variable.
