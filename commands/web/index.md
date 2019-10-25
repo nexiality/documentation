@@ -45,6 +45,8 @@ The `.manifest` file is used to check and download the latest version available 
 be any reason not to update to the newer/latest webdriver (e.g. due to compatibility with older browser), one can 
 disable the automatic webdriver update by setting `"neverCheck": true` in `.manifest` file.
 
+See [Forcefully update or omit webdriver updates](../../tipsandtricks/HOWTOForcefullyUpdateWebDriver) for more details.
+
 
 ### Browser Performance Metrics
 As of [v2.7](../../release/nexial-core-v2.7.changelog), Nexial supports the collection of browser performance metrics
