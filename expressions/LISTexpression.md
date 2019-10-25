@@ -339,7 +339,7 @@ Output:<br/>
 
 #### replica(count)
 Transform the current list to multiple copies of itself (append the list to itself).  The 
-  `count` is used to specify the number of times to repeat.  For example, `[LIST(a,b,c) => replace(2)]` would yield a 
+  `count` is used to specify the number of times to repeat.  For example, `[LIST(a,b,c) => replica(2)]` would yield a 
   list of `a,b,c,a,b,c,a,b,c`.
 
 **Example**<br/>

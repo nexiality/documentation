@@ -84,7 +84,7 @@ out.properties<br/>
 
 -----
 
-#### `store(var`
+#### `store(var)`
 save current CONFIG expression to a data variable.  If the specified `var` exists, its value will be overwritten. 
 Using this operation, one can put an expression on pause and resume it at a later time.
 

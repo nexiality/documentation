@@ -129,6 +129,18 @@ Output<br/>
 
 -----
 
+#### `$(array|pack|myarray)`
+Remove all empty or null items in the array.
+
+**Example**<br/>
+Script<br/>
+![](image/$(array)_27.png)
+
+Output<br/>
+![](image/$(array)_28.png)
+
+-----
+
 #### `$(array|prepend|myarray|item)`
 Add an element (`item`) to the end of the target array (`myarray`), and then render the resulting array.
 
@@ -151,6 +163,34 @@ Script<br/>
 
 Output<br/>
 ![](image/$(array)_22.png)
+
+-----
+
+#### `$(array|replica|myarray|count)`
+Transform the current array to multiple copies of itself (append the array to itself).  The 
+`count` is used to specify the number of times to repeat.  For example, `$(array|replica|a,b,c|2)` would yield a 
+array of `a,b,c,a,b,c`.
+
+**Example**<br/>
+Script<br/>
+![](image/$(array)_29.png)
+
+Output<br/>
+![](image/$(array)_30.png)
+
+-----
+
+#### `$(array|replicaUntil|myarray|size)`
+Transform the current array to multiple copies of itself (append the array to itself), 
+until the length of the array is the same as `size`.  For example, `$(array|replicaUntil|a,b,c|7)` would yield 
+a list of `a,b,c,a,b,c,a`.
+
+**Example**<br/>
+Script<br/>
+![](image/$(array)_31.png)
+
+Output<br/>
+![](image/$(array)_32.png)
 
 -----
 
