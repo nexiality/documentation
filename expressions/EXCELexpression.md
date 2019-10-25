@@ -131,7 +131,7 @@ Note that this operation **MUST** be preceded with a call to [`read(sheet,range)
 **Output:**<br/>
 ![](image/EXCELexpression_12.png)
 
-**Script:** Trying to located the cell which exists outside `maxRow` <br/>
+**Script:** Trying to locate the cell which exists outside `maxRow` <br/>
 ![](image/EXCELexpression_52.png)
 
 **Output:**<br/>
