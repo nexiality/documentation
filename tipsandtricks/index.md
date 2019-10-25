@@ -50,6 +50,7 @@ redirect_from:
 - [Reduce web automation flakiness with wait strategies](ReduceWebAutomationFlakiness)
 - [Improving IE Automation](WebAutomationOnIE)
 - [Fixing chromedriver "DevToolsActivePort" error](ChromeDevToolError)
+- [Forcefully update or omit webdriver updates](HOWTOForcefullyUpdateWebDriver)
 
 
 #### External Services
