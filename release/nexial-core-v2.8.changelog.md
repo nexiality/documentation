@@ -44,9 +44,14 @@ as much of the actual content as possible in output file.
 ### [base commands](../commands/base)
 - [`repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)): add console output when exception 
   is thrown.
+- [`assertEqual(expected,actual)`](../commands/base/assertEqual(expected,actual)): enforce numeric comparison when 
+  [`nexial.assert.asNumber`](../systemvars/index#nexial.assert.asNumber) is set to `true`. In such case, Nexial will 
+  implicitly trim both the expected and actual values as well.
 
 
 ### [csv commands](../commands/csv)
+- [`compareExtended(var,profile,expected,actual)`](../commands/csv/compareExtended(var,profile,expected,actual)): fixed
+  code to enforce numeric comparison on "`matchAsNumber`" fields, unless both actual and expected are **not** numbers.
 
 
 ### [external commands](../commands/external)
