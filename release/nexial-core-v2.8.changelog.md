@@ -17,7 +17,11 @@ comments: true
 
 #### Improvements
 - Code change to omit the writing or creation of cells when there isn't data to display. In other words, display 
-as much of the actual content as possible in output file.
+  as much of the actual content as possible in output file.
+- allow screenshots to be enhanced with captions via 
+  [`nexial.screenshot.caption`](../systemvars/index#nexial.screenshot.caption) and 
+  [`nexial.screenshot.caption.color`](../systemvars/index#nexial.screenshot.caption.color) System variables.
+
 
 ### [System Variable](../systemvars)
 
@@ -60,7 +64,7 @@ as much of the actual content as possible in output file.
 
 
 ### [image commands](../commands/image)
- 
+
 
 ### [io commands](../commands/io)
 
@@ -97,3 +101,4 @@ as much of the actual content as possible in output file.
   `cbt.terminatelocal` System variable.
 - [`screenshot(file,locator)`](../commands/web/screenshot(file,locator)): now saving the link to the target file (or url, 
   as in the case of "output-to-cloud") to [`nexial.lastOutputLink`](../systemvars/index#nexial.lastOutputLink)
+- fixed typo with `nexial.web.highlight` System variable.
