@@ -21,6 +21,13 @@ comments: true
 - allow screenshots to be enhanced with captions via 
   [`nexial.screenshot.caption`](../systemvars/index#nexial.screenshot.caption) and 
   [`nexial.screenshot.caption.color`](../systemvars/index#nexial.screenshot.caption.color) System variables.
+- allow screenshots to be enhanced with caption-related System variables: 
+  - [`nexial.screenshot.position`](../systemvars/index#nexial.screenshot.caption.position): specify where the caption 
+    should be placed.
+  - [`nexial.screenshot.alpha`](../systemvars/index#nexial.screenshot.caption.alpha): specify the transparency of the 
+    rendered caption text.
+  - [`nexial.screenshot.wrap`](../systemvars/index#nexial.screenshot.caption.wrap): specify if the rendered caption 
+    text should be rendered as contiguous text or not.
 
 
 ### [System Variable](../systemvars)
