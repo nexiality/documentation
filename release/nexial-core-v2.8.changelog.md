@@ -28,6 +28,8 @@ comments: true
     rendered caption text.
   - [`nexial.screenshot.wrap`](../systemvars/index#nexial.screenshot.caption.wrap): specify if the rendered caption 
     text should be rendered as contiguous text or not.
+  - [`nexial.screenshot.noBackground`](../systemvars/index#nexial.screenshot.caption.noBackground): specify if 
+    complementary background color should be rendered along with the caption. Default is `true`.
 
 
 ### [System Variable](../systemvars)
