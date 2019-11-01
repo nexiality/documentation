@@ -14,6 +14,8 @@ comments: true
 #### Fixes
 - [`nexial-project-inspector`](../userguide/BatchFiles#nexial-project-inspector): code fix to consider encrypted data 
   variables. Also minor update to inspector report (HTML).
+- enforce uniqueness of activity names within single scenario to avoid confusion and runtime error.
+- enforce activity name must not be spaces only (avoid busy finger or typo).
 
 #### Improvements
 - Code change to omit the writing or creation of cells when there isn't data to display. In other words, display 
@@ -94,6 +96,10 @@ comments: true
 - added `.requestTime` property to the Response of web service call (e.g. `${response}.requestTime`).
 - ensure the specified response data variable is cleared out prior to web service call, thus preventing previously 
   derived response to be used.
+- [`nexial.ws.keepAlive`](../systemvars/index#nexial.ws.keepAlive): **NEW** System variable to allow TCP connection to
+  be reused (or not) over subsequent calls.
+- Errors incurred during a web service call are now logged as part of the "detailed log". See 
+  [`nexial.ws.logDetail`](../systemvars/index#nexial.ws.logDetail) for more details.
 
 
 ### [web commands](../commands/web)
@@ -111,3 +117,5 @@ comments: true
 - [`screenshot(file,locator)`](../commands/web/screenshot(file,locator)): now saving the link to the target file (or url, 
   as in the case of "output-to-cloud") to [`nexial.lastOutputLink`](../systemvars/index#nexial.lastOutputLink)
 - fixed typo with `nexial.web.highlight` System variable.
+- [Browser Performance Metrics](../commands/web/browsermetrics): format all timing information to 2 decimal-places.
+- [Browser Performance Metrics](../commands/web/browsermetrics): minor color updates.

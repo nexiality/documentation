@@ -163,7 +163,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "The first time when some content was rendering while loading the current page"
     },
     "RequestCount":         {
-      "type":        "transfer", "display": "Request Count", "chart": true, "chartColor": "#ccf",
+      "type":        "transfer", "display": "Request Count", "chart": true, "chartColor": "#8ce",
       "description": "Request Count\n" +
                      "------------------------------------------\n" +
                      "The number of resources downloaded to complete this page load"
@@ -249,8 +249,6 @@ let BrowserMetrics = function (/*Object*/metrics) {
       if (data.push && data.pop && data.length) { text = data.reduce((a, b) => a + '<br/>' + b); }
       return text.toString().replace('>>', '&raquo;');
     }
-
-    if (type === 'time' || type === 'render' || type === 'transfer') { return data.toFixed(2); }
 
     return data;
   }
@@ -372,7 +370,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
         data:            [],
         label:           meta.display,
         borderColor:     meta.chartColor,
-        backgroundColor: "rgba(200,200,200,0.25)",
+        backgroundColor: "rgba(230,230,230,0.25)",
         borderWidth:     2,
         tension:         0.3,
         fill:            true,
@@ -390,10 +388,12 @@ let BrowserMetrics = function (/*Object*/metrics) {
       data:    {labels: dataLabels, datasets: datasets},
       options: {
         responsive:  true,
+        responsiveAnimationDuration: 250,
         aspectRatio: 1.3,
         layout:      {
           padding: {left: 5, right: 5, top: 5, bottom: 5}
-        }
+        },
+        backgroundColor: "#fff"
       }
     });
 
@@ -407,19 +407,14 @@ let BrowserMetrics = function (/*Object*/metrics) {
       modal:     false,
       showClose: true,
       showMax:   true,
-      onClose:   function (event) {
-        destroyChart();
-      },
-      onHide:    function (event) {
-        destroyChart();
-      }
+      onClose:   function (event) { destroyChart(); },
+      onHide:    function (event) { destroyChart(); }
     });
   };
 
   function destroyChart() {
     Chart.helpers.each(Chart.instances, function (instance) { instance.destroy(); });
     if (chart !== null) {
-      console.log('destroying current chart...');
       chart.destroy();
       chart = null;
     }

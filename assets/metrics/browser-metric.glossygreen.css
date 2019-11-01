@@ -74,7 +74,7 @@ a:hover {
     background-color: transparent;
     text-shadow:      1px 1px 1px rgba(255, 255, 255, 1) !important;
     padding:          3px 3px 0 6px;
-    border:           2px ridge rgba(106, 142, 46, 0.75);
+    border:           2px ridge rgba(106, 142, 46, 0.25);
     border-left:      none;
     border-right:     none;
 }
