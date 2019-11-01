@@ -195,7 +195,6 @@ let BrowserMetrics = function (/*Object*/metrics) {
   };
 
   let metadata = METADATA;
-  let chart    = null;
 
   function metaByType(/*String*/type) {
     let meta = {};
@@ -383,9 +382,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
       datasets.push(metrics);
     });
 
-    destroyChart();
-
-    chart = new Chart(document.getElementById('metrics_chart').getContext('2d'), {
+    let chart = new Chart(document.getElementById('metrics_chart').getContext('2d'), {
       type:    'line',
       data:    {labels: dataLabels, datasets: datasets},
       options: {
@@ -406,24 +403,9 @@ let BrowserMetrics = function (/*Object*/metrics) {
       opacity:   '0.25',
       modal:     false,
       showClose: true,
-      showMax:   true,
-      onClose:   function (event) {
-        destroyChart();
-      },
-      onHide:    function (event) {
-        destroyChart();
-      }
+      showMax:   true
     });
   };
-
-  function destroyChart() {
-    Chart.helpers.each(Chart.instances, function (instance) { instance.destroy(); });
-    if (chart !== null) {
-      console.log('destroying current chart...');
-      chart.destroy();
-      chart = null;
-    }
-  }
 
   function selectForChart(/*Object*/ display) {
     let selected = display.attr('data-selected');
