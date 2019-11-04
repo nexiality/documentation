@@ -75,7 +75,7 @@ comments: true
 
 
 ### [image commands](../commands/image)
-- 
+- code fix to properly state the need for Oracle JDK when processing JPG images.
 
 
 ### [io commands](../commands/io)
