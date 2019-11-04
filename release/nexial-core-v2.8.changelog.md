@@ -1,13 +1,13 @@
 ---
 layout: default
-title: nexial-core 2.8 (2019-11-??)
+title: nexial-core 2.8 (2019-11-04)
 parent: release
 tags: release nexial-core 2.8
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v2.8_????" class="external-link" target="_nexial_link">Release 2.8</a>
-2019-11-??
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v2.8_0700" class="external-link" target="_nexial_link">Release 2.8</a>
+2019-11-04
 
 
 ### General
@@ -32,12 +32,6 @@ comments: true
     text should be rendered as contiguous text or not.
   - [`nexial.screenshot.noBackground`](../systemvars/index#nexial.screenshot.caption.noBackground): specify if 
     complementary background color should be rendered along with the caption. Default is `true`.
-
-
-### [System Variable](../systemvars)
-
-
-### [Nexial Interactive](../interactive)
 
 
 ### [Built-in Functions](../functions)
@@ -76,15 +70,6 @@ comments: true
 
 ### [image commands](../commands/image)
 - code fix to properly state the need for Oracle JDK when processing JPG images.
-
-
-### [io commands](../commands/io)
-
-
-### [json commands](../commands/json)
-
-
-### [rdbms commands](../commands/rdbms)
 
 
 ### [ws commands](../commands/ws)
