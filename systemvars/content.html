@@ -598,6 +598,153 @@
         </td>
     </tr>
     <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.screenshot.caption"><code>nexial.screenshot.caption</code></a>
+        </td>
+        <td>text</td>
+        <td></td>
+        <td>false</td>
+        <td>
+            Optional caption for each captured screenshot.<br/>
+            <br/>
+            When performing desktop or web automation, one can indicate the desire to capture the screenshot (of the
+            current active desktop or application) after completing a specific test step. This is done by marking a
+            <code>x</code> on the corresponding test step (at Column L).<br/>
+            <br/>
+            However, one might find it useful to "annotate" the screenshots with additional text to provide further
+            clarity or context. For example, compare the following 2 captured screenshots:<br/>
+            <img src="image/systemvar_39.png"/><br/>
+            <img src="image/systemvar_40.png"/><br/>
+            <br/>
+            These two images are practically identical, excep the second one has additional caption at its bottom-right
+            corner. As such, the second image provides its viewer information that may be helpful towards understanding
+            its context or troubleshoot an underlying defect.<br/>
+            <br/>
+            To generate caption, simply define the caption to use via this System variable. For example:
+            <img src="image/systemvar_41.png"/><br/>
+            <br/>
+            Notice that Nexial built-in functions are used here. One can use regular data variable, built-in functions
+            and Nexial expression dynamically define the screen captions.<br/>
+            <br/>
+            Note that, while it is possible to specify this System variable via
+            <a href="../commands/base/save(var,value)">base &raquo; <code>base(var,value)</code></a> command, it is not
+            recommend because the caption will be evaluated and saved as is when the corresponding test step is
+            executed. Instead, define this System variable via a data file or <code>project.properties</code> to
+            maintain its dynamic value (geek term: <code>late binding</code>).<br/>
+            <br/>
+            See other <code>nexial.screenshot.caption.*</code> System variables for more configuration options.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.screenshot.caption.color"><code>nexial.screenshot.caption.color</code></a>
+        </td>
+        <td>text</td>
+        <td>yellow</td>
+        <td>false</td>
+        <td>
+            <b>NOTE: <a href="#nexial.screenshot.caption"><code>nexial.screenshot.caption</code></a> MUST BE SET TO 
+                <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b><br/>
+            <br/>
+            Determine the caption color to use. Choose one of the predefined colors list below:<br/>
+            <ul>
+                <li><code>red</code></li>
+                <li><code>orange</code></li>
+                <li><code>yellow</code> (default)</li>
+                <li><code>green</code></li>
+                <li><code>blue</code></li>
+                <li><code>cyan</code></li>
+                <li><code>black</code></li>
+                <li><code>gray</code></li>
+                <li><code>white</code></li>
+                <li><code>pink</code></li>
+                <li><code>magenta</code></li>
+            </ul>
+            Note that this will automatically turn on a "complimentary" background color, which can be turned off via the
+            <a href="#nexial.screenshot.caption.noBackground"><code>nexial.screenshot.caption.noBackground</code></a> 
+            System variable.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.screenshot.caption.alpha"><code>nexial.screenshot.caption.alpha</code></a>
+        </td>
+        <td>decimal</td>
+        <td>1.0</td>
+        <td>false</td>
+        <td>
+            <b>NOTE: <a href="#nexial.screenshot.caption"><code>nexial.screenshot.caption</code></a> MUST BE SET TO
+                <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b><br/>
+            <br/>
+            Determine the transparency level of the caption to render. The default is <code>1.0</code>, which means
+            "zero transparency". It is usually not recommended to change this System variable since textual transparency
+            might affect the readability thereof. In certain situation, such as white text on very dark images, it
+            might be reasonable to turn on some transparency (i.e. <code>0.8</code> for 20%).
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.screenshot.caption.noBackground"><code>nexial.screenshot.caption.noBackground</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            <b>NOTE: <a href="#nexial.screenshot.caption"><code>nexial.screenshot.caption</code></a> MUST BE SET TO
+                <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b><br/>
+            <br/>
+            Determine if Nexial should generate the caption with a background color that is "complimentary" to the 
+            selected text color. Default is <code>false</code>, which means that Nexial will generate the caption with
+            a complimentary background color.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+            <a id="nexial.screenshot.caption.position"><code>nexial.screenshot.caption.position</code></a>
+        </td>
+        <td>text</td>
+        <td><code>bottom,right</code></td>
+        <td>false</td>
+        <td>
+            <b>NOTE: <a href="#nexial.screenshot.caption"><code>nexial.screenshot.caption</code></a> MUST BE SET TO
+                <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b><br/>
+            <br/>
+            Determine the position of the caption using one of the following positions:
+            <ul>
+                <li><code>top,left</code></li>
+                <li><code>top,center</code></li>
+                <li><code>top,right</code></li>
+                <li><code>middle,left</code></li>
+                <li><code>middle,center</code></li>
+                <li><code>middle,right</code></li>
+                <li><code>bottom,left</code></li>
+                <li><code>bottom,center</code></li>
+                <li><code>bottom,right</code> (default)</li>
+            </ul>
+            Note that Nexial will attempt to keep the caption within 25% of the corresponding image, both in length and
+            width. If the caption is longer than such, Nexial will force the text to wrap to the next line.
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap" class="varname">
+        <a id="nexial.screenshot.caption.wrap"><code>nexial.screenshot.caption.wrap</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>false</td>
+        <td>
+            <b>NOTE: <a href="#nexial.screenshot.caption"><code>nexial.screenshot.caption</code></a> MUST BE SET TO
+                <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b><br/>
+            <br/>
+            If set to <code>true</code> the caption text will be rendered as one contiguous line. This means that
+            any extraneous leading or training spaces, tabs, carriage returns and newline characters will be removed.
+            If set to<code>false</code> (default), then the caption will be kept as is.<br/>
+            <br/>
+            In either case, the caption will be rendered with text wrapping enabled as needed. See
+            <a href="#nexial.screenshot.caption">nexial.screenshot.caption</a> for more details.
+        </td>
+    </tr>
+    <tr>
         <td nowrap="nowrap" class="varname"><a id="nexial.lastScreenshot"><code>nexial.lastScreenshot</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
