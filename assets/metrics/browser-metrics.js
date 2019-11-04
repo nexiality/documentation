@@ -30,7 +30,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
       "description": "The parameter(s) used by the command of this test step"
     },
     "TTFB":                 {
-      "type":        "time", "display": "TTFB", "chart": true, "chartColor": "rgba(120,105,0,0.75)",
+      "type":        "time", "display": "TTFB", "chart": true, "chartColor": "rgba(100,85,0,0.75)",
       "description": "Time-To-First-Byte\n" +
                      "------------------------------------------\n" +
                      "The time, in milliseconds, between the start of user's request to the browser and when the " +
@@ -370,9 +370,10 @@ let BrowserMetrics = function (/*Object*/metrics) {
         data:            [],
         label:           meta.display,
         borderColor:     meta.chartColor,
-        backgroundColor: "rgba(230,230,230,0.25)",
+        // backgroundColor: "rgba(230,230,230,0.15)",
+        backgroundColor: meta.chartColor.substring(0, meta.chartColor.lastIndexOf(',')) + ',0.1)',
         borderWidth:     2,
-        tension:         0.3,
+        tension:         0.4,
         fill:            true,
         radius:          4,
         pointStyle:      "rectRounded"
@@ -387,13 +388,12 @@ let BrowserMetrics = function (/*Object*/metrics) {
       type:    'line',
       data:    {labels: dataLabels, datasets: datasets},
       options: {
-        responsive:  true,
-        responsiveAnimationDuration: 250,
-        aspectRatio: 1.3,
-        layout:      {
+        responsive:                  true,
+        responsiveAnimationDuration: 500,
+        aspectRatio:                 1.3,
+        layout:                      {
           padding: {left: 5, right: 5, top: 5, bottom: 5}
-        },
-        backgroundColor: "#fff"
+        }
       }
     });
 
@@ -405,6 +405,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
       speed:     '0.3',
       opacity:   '0.25',
       modal:     false,
+      style:     'background:#fff',
       showClose: true,
       showMax:   true,
       onClose:   function (event) { destroyChart(); },

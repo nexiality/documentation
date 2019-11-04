@@ -287,31 +287,6 @@ a:hover {
     border:      1px inset;
 }
 
-/*.metrics th.chart-select:hover {*/
-/*    background: transparent;*/
-/*}*/
-
-/*.metrics th.label .chart-checkbox {*/
-/*    position: absolute;*/
-/*    top:      1px;*/
-/*    left:     24px;*/
-/*}*/
-
-/*.metrics th.label div.chart-name {*/
-/*    color:       #999;*/
-/*    height:      30px;*/
-/*    text-shadow: 1px 1px 2px #eee;*/
-/*    display:     contents;*/
-/*    cursor:      pointer;*/
-/*}*/
-
-/*.metrics th.label div.chart-name:hover {*/
-/*    color:       rgba(255, 255, 255, 0.9);*/
-/*    font-weight: bold;*/
-/*    text-shadow: 0px 0px 12px rgba(0, 0, 0, 1);*/
-/*    font-size:   105%;*/
-/*}*/
-
 .metrics th.type-activity:hover:before, .metrics th.type-activity:hover:after,
 .metrics th.type-test:hover:before, .metrics th.type-test:hover:after {
     background: none;
@@ -435,11 +410,7 @@ canvas {
 }
 
 .metrics_chart {
-    /*visibility: hidden;*/
-    /*display:    none;*/
-    animation: chartjs-render-animation 1ms;
-    /*width: 80% !important;*/
-    /*position: absolute;*/
-    /*width: 50%;*/
-    margin:    0 auto;
+    animation:  chartjs-render-animation 500ms;
+    margin:     0 auto;
+    background: #fff !important;
 }
