@@ -12,6 +12,7 @@ comments: true
 
 ### General
 #### Fixes
+- fix output excel so that verbose statement would merge param1 through param5 cells.
 
 #### Improvements
 
