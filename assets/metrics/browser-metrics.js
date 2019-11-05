@@ -30,7 +30,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
       "description": "The parameter(s) used by the command of this test step"
     },
     "TTFB":                 {
-      "type":        "time", "display": "TTFB", "chart": true, "chartColor": "rgba(100,85,0,0.75)",
+      "type":        "time", "display": "TTFB", "chart": true, "chartColor": "rgba(100,75,0,0.75)",
       "description": "Time-To-First-Byte\n" +
                      "------------------------------------------\n" +
                      "The time, in milliseconds, between the start of user's request to the browser and when the " +
@@ -39,7 +39,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(responseStart - navigationStart)"
     },
     "TTLB":                 {
-      "type":        "time", "display": "TTLB", "chart": true, "chartColor": "rgba(160,160,60,0.75)",
+      "type":        "time", "display": "TTLB", "chart": true, "chartColor": "rgba(153,27,29,0.75)",
       "description": "Time-To-Last-Byte\n" +
                      "------------------------------------------\n" +
                      "The time, in milliseconds, between the start of user's request to the browser and the " +
@@ -48,7 +48,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(responseEnd - navigationStart)"
     },
     "BackendTime":          {
-      "type":        "time", "display": "Backend", "chart": true, "chartColor": "rgba(165,155,60,0.75)",
+      "type":        "time", "display": "Backend", "chart": true, "chartColor": "rgba(103,17,19,0.75)",
       "description": "Backend\n" +
                      "------------------------------------------\n" +
                      "(This is the same as TTLB)\n" +
@@ -58,7 +58,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(responseEnd - navigationStart)"
     },
     "DomInteractive":       {
-      "type":        "time", "display": "DOM Interactive", "chart": true, "chartColor": "rgba(220,140,40,0.5)",
+      "type":        "time", "display": "DOM Interactive", "chart": true, "chartColor": "rgba(255,80,80,0.75)",
       "description": "DOM Interactive-Ready\n" +
                      "------------------------------------------\n" +
                      "The time, in milliseconds, between the start of user's request to the browser and the " +
@@ -68,7 +68,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(domInteractive - navigationStart)"
     },
     "PageCompleteTime":     {
-      "type":        "time", "display": "Page Complete", "chart": true, "chartColor": "rgba(255,204,60,0.5)",
+      "type":        "time", "display": "Page Complete", "chart": true, "chartColor": "rgba(255,160,80,0.75)",
       "description": "Page Complete Time\n" +
                      "------------------------------------------\n" +
                      "The time, in milliseconds, between the start of user's request to the browser and the " +
@@ -76,8 +76,11 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "\n" +
                      "(domComplete - navigationStart)"
     },
+    // brown, ruby, R, O, Y, G, B, I, V, teal, gray, lightgray, pink,
+    // rgba(255,254,128,0.75)
+    // rgba(255,0,255,0.5)
     "Latency":              {
-      "type":        "time", "display": "Network Latency", "chart": true, "chartColor": "rgba(255,254,128,0.75)",
+      "type":        "time", "display": "Network Latency", "chart": true, "chartColor": "rgba(225,225,60,0.75)",
       "description": "Cache, DNS, TCP and Request\n" +
                      "------------------------------------------\n" +
                      "The time incurred, in millisecond by the browser loading requested data from its cache, or the " +
@@ -87,7 +90,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(responseStart - fetchStart)"
     },
     "NetworkOverhead":      {
-      "type":        "time", "display": "Network Overhead", "chart": true, "chartColor": "#ffcc80",
+      "type":        "time", "display": "Network Overhead", "chart": true, "chartColor": "rgba(195,195,30,0.75)",
       "description": "\n" +
                      "DNS and TCP\n" +
                      "------------------------------------------\n" +
@@ -97,8 +100,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(connectEnd - domainLookupStart)"
     },
     "FirstResponseTime":    {
-      "type":        "time", "display": "First Response", "chart": true,
-      "chartColor":  "#ffcca0",
+      "type":        "time", "display": "First Response", "chart": true, "chartColor": "rgba(60,235,60,0.75)",
       "description": "First Response Time\n" +
                      "------------------------------------------\n" +
                      "The time, in millisecond, to receive initial response since the request was made.\n" +
@@ -106,7 +108,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(requestStart - responseStart)"
     },
     "ContentDownload":      {
-      "type":        "time", "display": "Content Download", "chart": true, "chartColor": "rgba(255,0,255,0.5)",
+      "type":        "time", "display": "Content Download", "chart": true, "chartColor": "rgba(80,150,255,0.75)",
       "description": "Content Downloaded\n" +
                      "------------------------------------------\n" +
                      "The time, in milliseconds, between the browser receiving the first and the last byte of the " +
@@ -115,7 +117,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(responseEnd - responseStart)"
     },
     "DomContentLoaded":     {
-      "type":        "time", "display": "DLC", "chart": true, "chartColor": "#a0a",
+      "type":        "time", "display": "DLC", "chart": true, "chartColor": "rgba(80,250,255,0.75)",
       "description": "DOM Content Loaded\n" +
                      "---------------------------------------\n" +
                      "The time, in milliseconds, between receiving the last byte of the response (which " +
@@ -125,7 +127,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(domComplete - domLoading)"
     },
     "FirstInteractive":     {
-      "type":        "time", "display": "First Interactive", "chart": true, "chartColor": "#080",
+      "type":        "time", "display": "First Interactive", "chart": true, "chartColor": "rgba(185,80,225,0.75)",
       "description": "Time to First Interactive\n" +
                      "------------------------------------------\n" +
                      "The time, in milliseconds, to parse the DOM objects.\n" +
@@ -133,7 +135,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(domInteractive - domLoading)"
     },
     "PageReady":            {
-      "type":        "time", "display": "Page Ready", "chart": true, "chartColor": "#660",
+      "type":        "time", "display": "Page Ready", "chart": true, "chartColor": "rgba(125,125,245,0.75)",
       "description": "Time to Page Ready\n" +
                      "------------------------------------------\n" +
                      "The time, in milliseconds, between the DOM objects being parsed and the corresponding page " +
@@ -142,7 +144,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(domComplete - domInteractive)"
     },
     "OnLoad":               {
-      "type":        "time", "display": "On Load", "chart": true, "chartColor": "#008",
+      "type":        "time", "display": "On Load", "chart": true, "chartColor": "rgba(125,125,125,0.75)",
       "description": "On Load Event\n" +
                      "------------------------------------------\n" +
                      "The time, in millisecond, taken to executed all the JavaScript load events after the " +
@@ -151,19 +153,19 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "(loadEventEnd - loadEventStart)"
     },
     "FirstPaint":           {
-      "type":        "render", "display": "First Paint", "chart": true, "chartColor": "#505",
+      "type":        "render", "display": "First Paint", "chart": true, "chartColor": "rgba(205,205,205,0.75)",
       "description": "First Paint\n" +
                      "------------------------------------------\n" +
                      "The first time when an UI rendering was detected while loading the current page"
     },
     "FirstContentfulPaint": {
-      "type":        "render", "display": "FCP", "chart": true, "chartColor": "#055",
+      "type":        "render", "display": "FCP", "chart": true, "chartColor": "rgba(235,180,180,0.75)",
       "description": "First Contentful Paint\n" +
                      "------------------------------------------\n" +
                      "The first time when some content was rendering while loading the current page"
     },
     "RequestCount":         {
-      "type":        "transfer", "display": "Request Count", "chart": true, "chartColor": "#8ce",
+      "type":        "transfer", "display": "Request Count", "chart": true, "chartColor": "rgba(60,60,60,0.75)",
       "description": "Request Count\n" +
                      "------------------------------------------\n" +
                      "The number of resources downloaded to complete this page load"
@@ -220,7 +222,8 @@ let BrowserMetrics = function (/*Object*/metrics) {
   }
 
   function addChartSelect(/*Array*/headers) {
-    let html = '';
+    let html           = '';
+    let numOfNonCharts = 0;
     Object.keys(metadata).forEach(key => {
       if (headers.includes(key)) {
         let keyMeta = metadata[key];
@@ -233,11 +236,15 @@ let BrowserMetrics = function (/*Object*/metrics) {
                   '<i class="fas fa-chart-bar off"></i>' +
                   '</th>';
         } else {
-          html += '<th class="chart-no-select type-' + keyMeta.type + ' type-' + key + '"></th>';
+          numOfNonCharts++;
         }
       }
     });
-    return html;
+
+    return '<th class="chart-no-select type-test chart-select-all" colspan="' + numOfNonCharts + '">' +
+           '<i class="fa fa-check-double chart-select-all" all-selected="false" title="click to select all metrics"></i>' +
+           '</th>' +
+           html;
   }
 
   function formatMetric(/*Object*/data, /*String*/type) {
@@ -338,9 +345,13 @@ let BrowserMetrics = function (/*Object*/metrics) {
     $('#app').append(banner + container);
     $('#' + containerId).append(html);
     $('#' + containerId + ' .data-table').dataTable({
-      "order":    [[1, "asc"]],
-      dom:        '<"top"f l i p>rt',
-      lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]]
+      "order":      [[1, "asc"]],
+      dom:          '<"top"f l i p>rt',
+      lengthMenu:   [[10, 25, 50, -1], [10, 25, 50, "All"]],
+      autoWidth: false,
+      "columnDefs": [
+        {"targets": 1, "width": "15px"}
+      ]
     });
   }
 
@@ -370,13 +381,12 @@ let BrowserMetrics = function (/*Object*/metrics) {
         data:            [],
         label:           meta.display,
         borderColor:     meta.chartColor,
-        // backgroundColor: "rgba(230,230,230,0.15)",
         backgroundColor: meta.chartColor.substring(0, meta.chartColor.lastIndexOf(',')) + ',0.1)',
         borderWidth:     2,
-        tension:         0.4,
+        tension:         0.3,
         fill:            true,
-        radius:          4,
-        pointStyle:      "rectRounded"
+        radius:          5,
+        pointStyle:      "hitRadius"
       };
       metricsData.forEach(activity => activity.steps.forEach(step => metrics.data.push(step[metricName])));
       datasets.push(metrics);
@@ -389,7 +399,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
       data:    {labels: dataLabels, datasets: datasets},
       options: {
         responsive:                  true,
-        responsiveAnimationDuration: 500,
+        responsiveAnimationDuration: 200,
         aspectRatio:                 1.3,
         layout:                      {
           padding: {left: 5, right: 5, top: 5, bottom: 5}
@@ -399,8 +409,8 @@ let BrowserMetrics = function (/*Object*/metrics) {
 
     $('#chart_popup').w2popup({
       title:     scriptName + ' / ' + scenarioName,
-      width:     850,
-      height:    700,
+      width:     Math.max(800, Math.round(window.innerWidth * 0.7)),
+      height:    Math.max(629, Math.round(window.innerWidth * 0.7 / 1.25)),
       overflow:  'hidden',
       speed:     '0.3',
       opacity:   '0.25',
@@ -421,17 +431,25 @@ let BrowserMetrics = function (/*Object*/metrics) {
     }
   }
 
-  function selectForChart(/*Object*/ display) {
+  function toggleMetricInclusion(/*Object*/ display) {
     let selected = display.attr('data-selected');
     if (selected && selected === 'true') {
-      display.attr('data-selected', 'false');
-      display.attr('style', '');
+      excludeMetric(display);
     } else {
-      display.attr('data-selected', 'true');
-      let backgroundColor = display.attr('data-color');
-      display.attr('style', 'background:linear-gradient(180deg, ' + backgroundColor + ' -2px,' +
-                            ' transparent 10px, ' + backgroundColor + ' 20px)');
+      includeMetric(display);
     }
+  }
+
+  function includeMetric(/*Object*/ display) {
+    display.attr('data-selected', 'true');
+    let backgroundColor = display.attr('data-color');
+    display.attr('style', 'background:linear-gradient(180deg, ' + backgroundColor + ' -2px, ' +
+                          'transparent 10px, ' + backgroundColor + ' 20px)');
+  }
+
+  function excludeMetric(/*Object*/ display) {
+    display.attr('data-selected', 'false');
+    display.attr('style', '');
   }
 
   this.renderMetrics = function () {
@@ -439,8 +457,22 @@ let BrowserMetrics = function (/*Object*/metrics) {
       script.scenarios.forEach(function (scenario) { renderMetricsGrid(script.name, scenario.name); });
     });
 
+    jQuery('.metrics th.chart-select-all i.chart-select-all').on('click', function (e) {
+      let allSelected = $(this).attr('all-selected') === 'true';
+
+      // find current parent id
+      let containerId = $(this).closest('.metrics-container').attr('id');
+      jQuery('#' + containerId + ' .metrics th.chart-select').each(function (index, item) {
+        if (allSelected) { excludeMetric(jQuery(item)); } else { includeMetric(jQuery(item)); }
+      });
+
+      $(this).attr('all-selected', allSelected ? 'false' : 'true');
+      e.stopImmediatePropagation();
+      e.stopPropagation();
+    });
+
     jQuery('.metrics th.chart-select').on('click', function (e) {
-      selectForChart(jQuery(this));
+      toggleMetricInclusion(jQuery(this));
       e.stopImmediatePropagation();
       e.stopPropagation();
     });

@@ -218,11 +218,13 @@ a:hover {
 }
 
 .metrics {
-    padding-top:   5px;
-    width:         100% !important;
-    box-shadow:    0 10px 10px -5px rgba(40, 40, 40, 0.45);
-    table-layout:  fixed;
-    border-radius: 15px;
+    padding-top:     5px;
+    width:           100% !important;
+    box-shadow:      0 10px 10px -5px rgba(40, 40, 40, 0.45);
+    /*table-layout:    fixed;*/
+    /*word-wrap:       break-word;*/
+    /*border-collapse: collapse;*/
+    border-radius:   15px;
 }
 
 .metrics th.type-activity, .metrics th.type-test {
@@ -230,7 +232,7 @@ a:hover {
 }
 
 .metrics th.type-row {
-    width: 34px;
+    width:     35px !important;
 }
 
 .metrics td.type-command {
@@ -263,6 +265,24 @@ a:hover {
 
 .metrics th.chart-no-select {
     background: #fff !important;
+}
+
+.metrics th.chart-select-all {
+    padding:    0;
+    text-align: right;
+}
+
+.metrics th.chart-select-all i.chart-select-all {
+    font-size:  8pt;
+    padding:    5px 15px 5px;
+    color:      #eee;
+    background: radial-gradient(circle, rgba(75, 75, 75, 0.75) 5px, transparent 12px);
+    cursor:     pointer;
+}
+
+.metrics th.chart-select-all i.chart-select-all:hover {
+    color:      #008;
+    background: radial-gradient(circle, rgba(160, 180, 200, 0.75) 5px, transparent 12px);
 }
 
 .metrics th.chart-select {
@@ -335,7 +355,6 @@ a:hover {
 
 .metrics > tbody > tr > td.type-row {
     text-align: right;
-    width:      15px;
 }
 
 .metrics > tbody > tr > td.type-time, .metrics > tbody > tr > td.type-render, .metrics > tbody > tr > td.type-transfer {

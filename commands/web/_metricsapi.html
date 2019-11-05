@@ -79,19 +79,13 @@
           </td>
         </tr>
         <tr>
-          <td><code>nexial.web.metrics.ContentDownload</code></td>
-          <td>The time in millisecond between the first and the last byte of response for the current request (i.e.
-            URL).
-          </td>
-        </tr>
-        <tr>
           <td><code>nexial.web.metrics.DomContentLoaded</code></td>
           <td>The time, in milliseconds, between receiving the last byte of the response (which subsequently start the
-            parsing to the document thereof) and the document in question being loaded completely.<br/>
+            parsing of the response thereof) and the document in question being loaded completely.<br/>
             To be considered as "loaded completely", the browser would perform the following activities:
             <ol>
               <li>parses the content received,</li>
-              <li>build the DOM, CSSOM, accessbility structures,</li>
+              <li>build the DOM, CSSOM, accessibility structures,</li>
               <li>render the page objects (after which the document readiness is set to <i>interactive</i>),</li>
               <li>parse any deferred scripts, if any,</li>
               <li>execute any deferred scripts (after which the document readiness is set to "complete")</li>
