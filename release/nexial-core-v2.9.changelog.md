@@ -12,7 +12,10 @@ comments: true
 
 ### General
 #### Fixes
-- fix output excel so that verbose statement would merge param1 through param5 cells.
+- fix output excel so that verbose statement would merge `param1` through `param5` cells.
+- Project Inspector:
+  - registered previously missed System variables for better project inspection; otherwise project inspector would report valid System variables as "unknown".
+  - fixed incorrect test step row number reported in project inspector HTML.
 
 #### Improvements
 
@@ -40,8 +43,15 @@ comments: true
 ### [image commands](../commands/image)
 
 
+### [rdbms commands](../commands/rdbms)
+- correctly capture rollback statements/events. 
+- replace deprecated DBCP API code
+- forced single-query transaction to close connection after execution; required to avoid resource contention.
+
+
 ### [ws commands](../commands/ws)
 
 
 ### [web commands](../commands/web)
-- [metrics]: minor type fix
+- browser metrics: minor typo fix
+- browser metrics: fixed timing calculation to avoid negative time.

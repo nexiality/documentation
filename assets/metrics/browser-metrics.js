@@ -371,7 +371,7 @@ let BrowserMetrics = function (/*Object*/metrics) {
                              .scenarios.find(scenario => scenario.name === scenarioName).activities;
 
     let dataLabels = [];
-    metricsData.forEach(activity => activity.steps.forEach(step => dataLabels.push(step.command)));
+    metricsData.forEach(activity => activity.steps.forEach(step => dataLabels.push('[#' + step.row + '] ' + step.command)));
 
     let datasets = [];
     checkedMetrics.each(function (index, item) {
@@ -382,10 +382,12 @@ let BrowserMetrics = function (/*Object*/metrics) {
         label:           meta.display,
         borderColor:     meta.chartColor,
         backgroundColor: meta.chartColor.substring(0, meta.chartColor.lastIndexOf(',')) + ',0.1)',
+        hoverBackgroundColor: meta.chartColor.substring(0, meta.chartColor.lastIndexOf(',')) + ',1)',
+        hoverBorderWidth: 5,
         borderWidth:     2,
         tension:         0.3,
         fill:            true,
-        radius:          5,
+        radius:          3,
         pointStyle:      "hitRadius"
       };
       metricsData.forEach(activity => activity.steps.forEach(step => metrics.data.push(step[metricName])));

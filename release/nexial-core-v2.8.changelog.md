@@ -14,7 +14,8 @@ comments: true
 #### Fixes
 - [`nexial-project-inspector`](../userguide/BatchFiles#nexial-project-inspector): code fix to consider encrypted data 
   variables. Also minor update to inspector report (HTML).
-- enforce uniqueness of activity names within single scenario to avoid confusion and runtime error.
+- enforce uniqueness of activity names within single scenario to avoid confusion and runtime error. This also clarifies
+  PASS/FAIL tallies in the execution summary report and email notifications.
 - enforce activity name must not be spaces only (avoid busy finger or typo).
 
 #### Improvements
@@ -75,6 +76,8 @@ comments: true
 ### [ws commands](../commands/ws)
 - [`nexial.ws.logDetail`](../systemvars/index#nexial.ws.logDetail): set `true` to log the detail for each web service
   call.
+  - Errors incurred during a web service call are now logged as part of the "detailed log". See 
+    [`nexial.ws.logDetail`](../systemvars/index#nexial.ws.logDetail) for more details.
 - [`nexial.ws.logSummary`](../systemvars/index#nexial.ws.logSummary): set `true` to log the summary of each web service
   call.
 - code fix to parse empty cookie in response header.
@@ -84,12 +87,12 @@ comments: true
   derived response to be used.
 - [`nexial.ws.keepAlive`](../systemvars/index#nexial.ws.keepAlive): **NEW** System variable to allow TCP connection to
   be reused (or not) over subsequent calls.
-- Errors incurred during a web service call are now logged as part of the "detailed log". See 
-  [`nexial.ws.logDetail`](../systemvars/index#nexial.ws.logDetail) for more details.
 
 
 ### [web commands](../commands/web)
 - [Browser Performance Metrics](../commands/web/browsermetrics): **NEW** option to create chart.
+  - format all timing information to 2 decimal-places.
+  - minor color updates.
 - [`saveSelectedText(var,locator)`](../commands/web/saveSelectedText(var,locator)): **NEW** command store the text of 
  selected option from `single select or multi-select` element.
 - [`saveSelectedValue(var,locator)`](../commands/web/saveSelectedValue(var,locator)): **NEW** command store the value
@@ -100,8 +103,6 @@ comments: true
   `nexial.browserstack.terminatelocal` System variable. 
 - CrossBrowserTesting: support configurable termination of `cbt_tunnels` binary to support parallel testing via 
   `cbt.terminatelocal` System variable.
-- [`screenshot(file,locator)`](../commands/web/screenshot(file,locator)): now saving the link to the target file (or url, 
-  as in the case of "output-to-cloud") to [`nexial.lastOutputLink`](../systemvars/index#nexial.lastOutputLink)
+- [`screenshot(file,locator)`](../commands/web/screenshot(file,locator)): now saving the link to the target file (or 
+  url, as in the case of "output-to-cloud") to [`nexial.lastOutputLink`](../systemvars/index#nexial.lastOutputLink)
 - fixed typo with `nexial.web.highlight` System variable.
-- [Browser Performance Metrics](../commands/web/browsermetrics): format all timing information to 2 decimal-places.
-- [Browser Performance Metrics](../commands/web/browsermetrics): minor color updates.
