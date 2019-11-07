@@ -81,7 +81,7 @@ comments: true
 - [`nexial.ws.logSummary`](../systemvars/index#nexial.ws.logSummary): set `true` to log the summary of each web service
   call.
 - code fix to parse empty cookie in response header.
-- added `.ttfb` property to the response of web service call (e.g. ``${response}.ttfb`).
+- added `.ttfb` property to the response of web service call (e.g. `${response}.ttfb`).
 - added `.requestTime` property to the Response of web service call (e.g. `${response}.requestTime`).
 - ensure the specified response data variable is cleared out prior to web service call, thus preventing previously 
   derived response to be used.

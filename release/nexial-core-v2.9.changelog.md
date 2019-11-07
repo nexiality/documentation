@@ -55,3 +55,5 @@ comments: true
 ### [web commands](../commands/web)
 - browser metrics: minor typo fix
 - browser metrics: fixed timing calculation to avoid negative time.
+- browser metrics: address Electron issue where browser signature cannot be properly derived
+- browser metrics: address exception condition when the target browser window is no longer available for inspection.
