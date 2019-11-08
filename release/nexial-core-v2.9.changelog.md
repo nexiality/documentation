@@ -47,6 +47,8 @@ comments: true
 - correctly capture rollback statements/events. 
 - replace deprecated DBCP API code
 - forced single-query transaction to close connection after execution; required to avoid resource contention.
+- remove double-commit scenario to avoid unnecessary error condition.
+- allow for non-standard or non-CRUD statements.
 
 
 ### [ws commands](../commands/ws)

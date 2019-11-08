@@ -20,7 +20,7 @@ job.  Here's an example:<br/>
 Let's walk through the steps:<br/>
 1. Using [io &raquo; `saveMatches(var,path,filePattern)`](../commands/io/saveMatches(var,path,filePattern)) to gather 
    a list of JSON files from `${data directory}`, which can be a local or network directory.  Note that `filePattern` 
-   can be more elaborate, such as `2017Q4*.j``son`, `project*.json`, `myFile.*`.
+   can be used to filter by file name pattern, such as `2017Q4*.json`, `project*.json`, `myFile.*`.
 2. The list of matching files is saved to `input file list`, which is an array (or list).  To find the number of 
    matches found, we can use [`Nexial Expression`](../expressions) like this:  
    `     LIST(${**input file list**}) => count]`      
