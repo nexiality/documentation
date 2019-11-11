@@ -26,7 +26,7 @@ comments: true
 ### [Nexial Expression](../expressions)
 - [JSON &raquo; `list`](../expressions/JSONexpression#list): code fix to enforce the use of 
  [`nexial.textDelim`](../systemvars/index#nexial.textDelim) for converting JsonArray to list.
-
+- [CONFIG &raquo; `keys`](../expressions/CONFIGexpression#keys): code fix to ensure proper textual output.
 
 ### [base commands](../commands/base)
 
