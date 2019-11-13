@@ -168,6 +168,26 @@ Here are the list of possible configuration (assuming the `profile` is `MyFil
 	(see above).
 	</td>
 </tr>
+<tr>
+	<td><code>MyFiles.compareExt.expected.readAsIs</code></td>
+	<td><code>true</code> to read the <code>expected</code> as is; <code>false</code> if otherwise.</td>
+	<td>
+	Determine if the <code>expected</code> should be read as is without any token replacement, end-of-line or 
+	character set conversion. This has direct impact to memory footprint (improvement, that is) and is the preferred 
+	choice if the <code>expected</code> content does not contain any data variables (i.e. <code>${...}</code>). The 
+	default value is <code>false</code>.
+	</td>
+</tr>
+<tr>
+	<td><code>MyFiles.compareExt.actual.readAsIs</code></td>
+	<td><code>true</code> to read the <code>actual</code> as is; <code>false</code> if otherwise.</td>
+	<td>
+	Determine if the <code>actual</code> should be read as is without any token replacement, end-of-line or 
+	character set conversion. This has direct impact to memory footprint (improvement, that is) and is the preferred 
+	choice if the <code>actual</code> content does not contain any data variables (i.e. <code>${...}</code>). The 
+	default value is <code>false</code>.
+	</td>
+</tr>
 </tbody>
 </table>
 <br/>

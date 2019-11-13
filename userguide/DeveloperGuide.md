@@ -76,6 +76,7 @@ ul, ol, dl {
                the macro command in question.
             3. for all the resolved macro steps, replace and expand the current test step (which has `base.macro()`)
                - this will expand the current test step set.
+            4. 
 
 
 

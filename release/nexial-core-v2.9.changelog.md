@@ -32,6 +32,10 @@ comments: true
 
 
 ### [csv commands](../commands/csv)
+- [`compareExtended(var,profile,expected,actual)`](../commands/csv/compareExtended(var,profile,expected,actual)): code
+  fix to support large file (> 200MB) processing.
+  - [`....compareExt.expected.readAsIs`]: **NEW** configuration to enforce that the `expected` should be read as is.
+  - [`....compareExt.actual.readAsIs`]: **NEW** configuration to enforce that the `actual` should be read as is.
 
 
 ### [external commands](../commands/external)
