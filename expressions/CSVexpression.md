@@ -70,26 +70,88 @@ See `parse()` below for more details.
 Render CSV content into a ASCII-based table. Also known/usable as 'ascii-table'. See example for details. Also, 
 [`htmlTable`](#htmltable) is a related operation to generate HTML table.
 
+**Example**<br/>
+Script:<br/>
+![script](image/CSVexpression_04.png)
+
+Output:<br/>
+![output](image/CSVexpression_05.png)
+
 -----
 
 #### `column(columnNameOrIndex)`
 Get all the data belonging to the same column as a [`LIST`](LISTexpression). For CSV without header information, 
 use column index (0-based). 
 
+**Example**<br/>
+In this example, `column(Name)` retrieves the data belonging to the corresponding column in the table. 
+If `header=true` then it displays the data belonging to that column excluding the column name else if `header=false` 
+then it includes column name along with the data belonging to that column as shown in the output of `column(2)` when 
+header is set to true and false.
+
+Script:<br/>
+![script](image/CSVexpression_06.png)
+
+Output:<br/>
+![output](image/CSVexpression_07.png)
+
 -----
 
 #### `columnCount`
 Number of columns to the current state of the CSV content.
+
+**Example**<br/>
+Script:<br/>
+![script](image/CSVexpression_08.png)
+
+Output:<br/>
+![output](image/CSVexpression_09.png)
 
 -----
 
 #### `config` 
 Convert CSV content into [`CONFIG`](CONFIGexpression) instance.
 
+**Example**<br/>
+Suppose the following CSV data:
+
+```csv
+SSN,Name,Position,Age
+123456789,James,Accountant,41
+234567890,Jim,Educator,42
+345678901,"Johnson, Adam",Inspector General,33
+456789012,Jenny,Cashier,23
+567890123,Jon,Manager,41
+```
+
+By performing `config` operation data is converted into config format that is key/value pair as shown: 
+
+ ```config
+ Position=Accountant,Educator,Inspector General,Cashier,Manager
+ Age=41,42,33,23,41
+ SSN=123456789,234567890,345678901,456789012,567890123
+ Name=James,Jim,Johnson, Adam,Jenny,Jon
+ ```
+
+Now, on this `config` instance any operation of [`CONFIG Expression`](CONFIGexpression) can be performed.
+ 
+Script:<br/>
+![script](image/CSVexpression_10.png)
+
+Output:<br/>
+![output](image/CSVexpression_11.png)
+
 -----
 
 #### `distinct`
 Remove all duplicate rows from the CSV content.
+
+**Example**<br/>
+Script:<br/>
+![script](image/CSVexpression_12.png)
+
+Output:<br/>
+![output](image/CSVexpression_13.png)
 
 -----
 
@@ -99,12 +161,39 @@ specified using conventional Excel cell like `A3`, `P11`, from which the CSV con
 CSV content contains header, then it will be included in the import as the first row. Both `file` and `sheet` can
 reference non-existing resources, which Nexial will create on-the-fly.
 
+**Example**<br/>
+Suppose the following csv file `csvFile.csv`:<br/>
+![csv](image/CSVexpression_87.png)
+
+and an Excel file `Excel_Data.xlsx`, before performing `excel(file,sheet,startCell)` operation.<br/>
+![excel](image/CSVexpression_88.png)
+
+With the following script, we can add CSV content into a Excel worksheet:
+![script](image/CSVexpression_14.png)
+
+The `csv` content is added to the `excel` file, to its `Sheet1` worksheet, starting from the cell `C1`.<br/>
+![excel](image/CSVexpression_89.png)
+
+Here's the corresponding Nexial output:<br/>
+![output](image/CSVexpression_15.png) 
+
 -----
 
 #### `fetch(conditions)`
 Fetch the first row that matched the specified [conditions](../flowcontrols/filter#specification). These conditions are 
 evaluated on the columns based their respective name or index. The condition follows the syntax as laid out in 
-[Nexial Filter](../flowcontrols/filter). 
+[Nexial Filter](../flowcontrols/filter).
+
+**Example**<br/>
+In this example, `fetch(Name = Jim)` displays the complete row where `Name` is equal to `Jim`. If the `condition`
+specified does not exists in the data then complete expression prints as it is in the output, as shown in the output 
+of `fetch(Name = Peter)`.
+
+Script:<br/>
+![script](image/CSVexpression_16.png)
+
+Output:<br/>
+![output](image/CSVexpression_17.png) 
 
 -----
 
@@ -114,12 +203,24 @@ Keep only the rows that matches the specified [conditions](../flowcontrols/filte
 can use the reserved word `[ANY FIELD]` to target any field. For example, `filter([ANY FIELD] contain USA)` means 
 filter a row if any of its fields contains `USA`.
 
+**Example**<br/>
+In this example, `filter(Age start with 4)` displays all the details where age starts with 4 including header. 
+If the `condition` specified contains no data then only headers are displayed as a result, as shown in 
+the output of `filter(Name start with A)`.   
+
+Script:<br/>
+![script](image/CSVexpression_18.png)
+
+Output:<br/>
+![output](image/CSVexpression_19.png)
+
 -----
 
 #### `groupCount(columns)`
 Create a new CSV using the specified column(s) and a new column (last column) as the count of occurrences. Multiple 
 columns are separated by comma (`,`). The newly formed CSV will named the last column (the count) as `Count`. 
 
+**Example**<br/>
 Let's see an example. Suppose we have a [CSV file of various sales information](CSV_sample1.csv), like this:<br/>
 ![sample csv](image/csv_27.png)<br/>
 
@@ -136,6 +237,12 @@ It is possible to include multiple columns for grouping, such as `groupCount(Cou
 results like this:<br/>
 ![](image/csv_29.png)
 
+Script:<br/>
+![script](image/CSVexpression_20.png)
+
+Output:<br/>
+![output](image/CSVexpression_21.png)
+
 -----
 
 #### `groupSum(columns)`
@@ -148,6 +255,7 @@ other words, it's akin to saying "Look at all the values in Column A, group them
 values are in the same group. Then find the corresponding Column B (assuming numeric value) and sum up the values 
 thereof by the associated group".
 
+**Example**<br/>
 Let's look at an example. Suppose we have a [CSV file of various sales information](CSV_sample1.csv):<br/>
 ![sample csv](image/csv_27.png)
 
@@ -162,11 +270,26 @@ As show, the data in `Country` is grouped together and the corresponding `Price`
 
 Note that **the last column must be the target column to sum, and it must be a "numeric" column**.
 
+Script:<br/>
+![script](image/CSVexpression_22.png)
+
+Output:<br/>
+![output](image/CSVexpression_23.png)
+
 -----
 
 #### headers
 Retrieves the column names of the current CSV content as a **[`LIST`](LISTexpression)**. If current CSV is not 
 parsed with `header=true`, then `null` is returned.
+
+**Example**<br/>
+This operation displays the column names only when `parse(header=true)` else complete expression is displayed.
+
+Script:<br/>
+![script](image/CSVexpression_24.png)
+
+Output:<br/>
+![output](image/CSVexpression_25.png)
 
 -----
 
@@ -184,12 +307,31 @@ Note that some amount of CSS is needed to format the generated HTML as shown abo
 like this:<br/>
 ![](image/CSVexpression_03.png)
 
+**Example**<br/>
+In this example `csvData` is converted into html content and then saved to specified path `html_Output.html`.
+
+Script:<br/>
+![script](image/CSVexpression_26.png)
+
+Output:<br/>
+![output](image/CSVexpression_27.png)
+
+Html Output obtained by above script is stored in `html_Output.html`, which can be viewed as html document 
+ or as a table in the browser. Both are as follows:<br/>
+1. `html code` <br/>
+![output](image/CSVexpression_91.png)
+
+2. `html output`<br/>
+![output](image/CSVexpression_92.png)
+
 -----
 
 #### json
 Convert current state of the CSV content to a JSON document.Technically speaking, it's a JSON array (to represent rows) 
 with multiple JSON document (each for one row).The CSV content in question may be one or more rows, with or without 
 headers. Below are some examples of the transformation from different CSV document to JSON:
+
+**Example**<br/>
 
 | example            | CSV                                                   | JSON                                                  |
 |+-------------------|+------------------------------------------------------|+------------------------------------------------------|
@@ -201,10 +343,28 @@ headers. Below are some examples of the transformation from different CSV docume
 As shown above, CSV with header produces JSON with names (node names), and CSV without header produces JSON array of 
 array without name/label references.
 
+Script:<br/>
+![script](image/CSVexpression_28.png)
+
+Output:<br/>
+![output](image/CSVexpression_29.png)
+![output](image/CSVexpression_30.png)
+![output](image/CSVexpression_39.png)
+
 -----
 
 #### length
 Synonymous to **[`size`](#size)** and **[`rowCount`](#rowcount)**.
+
+**Example**<br/>
+If `header=false` then header is included in calculating the length or rowcount, else if `header=true` then header is 
+not included in calculating the value of length as shown in this example:  
+
+Script:<br/>
+![script](image/CSVexpression_31.png)
+
+Output:<br/>
+![output](image/CSVexpression_32.png)
 
 -----
 
@@ -214,7 +374,9 @@ the 2 CSV content in such a way that the record of the same key are merged toget
 this operation:
 
 1. **merge two CSV files that have no header**<br/>
-   In this case, records will be merged line-by-line with no regard to the data value. For example:<br/>
+   In this case, records will be merged line-by-line with no regard to the data value.
+   
+   **Example**<br/> 
 ```text
 [CSV( ${csv file to merge from} ) => parse store(merge_from)]
 ... ...
@@ -246,10 +408,18 @@ this operation:
     <br/>
    Note that in this example **`\(empty\)`** as the `keyColumn` signifies that no shared column is between these 2 CSV 
    files.
+   
+   Script:<br/>
+   ![script](image/CSVexpression_33.png)
+   
+   Output:<br/>
+   ![output](image/CSVexpression_34.png)
 
 2. **merge two CSV files that have headers, but without keyColumn**<br/>
    In this case, `header` exists in both CSV file, but they do not share any common column from the merge can be based 
-   on. For example:<br/>
+   on.
+   
+   **Example**<br/>
 ```text
 [CSV( ${csv file to merge from} ) => parse(header=true) store(merge_from)]
 ... ...
@@ -281,10 +451,18 @@ this operation:
     <br/>
    Note that passing **`\(empty\)`** is required as the keyColumn to signify that no shared column is between these 2 
    CSV file.
-
+   
+   Script:<br/>
+   ![script](image/CSVexpression_35.png)
+   
+   Output:<br/>
+   ![output](image/CSVexpression_36.png)
+   
 3. **merge two CSV files that have headers and share the same `keyColumn`**<br/>
    In this case, header exists for both CSV data and they also share (at least) one common column whereby merge can use 
-   it to align the records. For example,<br/>
+   it to align the records.
+   
+   **Example**<br/>
 ```text
 [CSV( ${csv file to merge from} ) => parse(header=true) store(merge_from)]
 ... ...
@@ -317,6 +495,12 @@ this operation:
    Notice that the merged CSV is matching up the First Name and Last Name based on `SSN`, even though the order of these 
    `SSN` are not the same.
 
+   Script:<br/>
+   ![script](image/CSVexpression_37.png)
+   
+   Output:<br/>
+   ![output](image/CSVexpression_38.png)
+   
 -----
 
 #### parse(config)
@@ -358,12 +542,21 @@ CSV file is parsed. The `config` will be specified in the form of:
     the case for `"Johnson, Pete"` or `"San \"May-Eye\"'s Spot"`. By setting `keepQuote` as `true`, Nexial will retain
     the double quotes as found on the initial CSV data.
 
-For example: `[CSV(text) => parse(delim=\,|header=true|recordDelim=\r\n) text]` would read:
+**Example**<br/>
+`[CSV(text) => parse(delim=\|, header=true, recordDelim=\r\n, trim=true, keepQuote=true) text upper]` would read:
 1. convert text into a CSV component, using the default Excel CSV format.
-2. re-parse the same text but this time using **comma as the field delimiter**, the 
+2. re-parse the same text but this time using **`|` as the field delimiter**, the 
   **carriage return (DOS) as the record/row delimiter** and treat the **first line as the header**. Note that 
-  comma needs to be escape since it is also used as a parameter separator. Hence `delim=\,`.
-3. convert the CSV component into text.
+  comma needs to be escape since it is also used as a parameter separator. Hence `delim=\|`.
+3. `trim` removes all the leading and/or trailing whitespaces.
+4. `keepQuote` retain the double quotes of field `country` as nexial will remove these quotes by default.
+5. `text` convert the CSV component into text and then `upper` operation of text expression is performed on it.
+
+Script:<br/>
+![script](image/CSVexpression_40.png)
+
+Output:<br/>
+![output](image/CSVexpression_41.png)
 
 -----
 
@@ -371,8 +564,12 @@ For example: `[CSV(text) => parse(delim=\,|header=true|recordDelim=\r\n) text]` 
 Remove the entire column qualified via namesOrIndices parameter, which can be a list of column names or column 
 positions (zero-based). Multiple columns are separated by comma (`,`).
 
-The parameter `columnNameOrIndices` may be expressed as `*` to indicate **ALL** columns. As such, Nexial would remove all 
-columns of the target CSV.
+**Example**<br/>
+Script:<br/>
+![script](image/CSVexpression_42.png)
+
+Output:<br/>
+![output](image/CSVexpression_43.png)
 
 -----
 
@@ -390,8 +587,10 @@ means remove a row if any of its fields contains `USA`.
 
 The `conditions` parameter follows the syntax as laid out in [Nexial Filter](../flowcontrols/filter).
 
-Alternatively, one can also remove one or more rows based on the rows' index. Row index is 0-based. For example, 
-suppose we have the following CSV file:
+Alternatively, one can also remove one or more rows based on the rows' index. Row index is 0-based.
+
+**Example**<br/> 
+Suppose we have the following CSV file:
 ```csv
 User Name,First Name,Last Name,Display Name,Job Title
 chris@contoso.com,Chris,Green,Chris Green,Manager
@@ -417,16 +616,35 @@ melissa@contoso.com,Melissa,MacBeth,Melissa MacBeth,Supervisor
 
 Note that CSV parsed without header would yield the first line as row `0`.
 
+Script:<br/>
+![script](image/CSVexpression_44.png)
+
+Output:<br/>
+![output](image/CSVexpression_45.png)
+
 -----
 
 #### renameColumn(find,replace)
 Rename a column, as defined by `find`, with new value as defined by `replace`. The column position is maintained.
 
+**Example**<br/>
+In this example, column name `Position` is changed to `Title`.
+
+Script:<br/>
+![script](image/CSVexpression_46.png)
+
+Output:<br/>
+![output](image/CSVexpression_47.png)
+
 -----
 
 #### render(template)
-Generate text based on the infusing of CSV data and a designated "template".  Suppose:
+Generate text based on the infusing of CSV data and a designated "template".  
+
+**Example**<br/>
+Suppose:
 1. We have a CSV file with the following content:<br/>
+csvData.txt:<br/>
 <img style="box-shadow:none;margin:0" src="image/csv_16.jpg"/>
 
 2. We want to convert it (in reality, expand) to lines of text where each line represents one single record "merged", 
@@ -436,22 +654,40 @@ Generate text based on the infusing of CSV data and a designated "template".  S
 THEN we can use the following as the "template":
 <pre>Here is <b>${description}</b>, which is located in <b>${fullAddress}</b>, we call ourselves <b>${code}</b>.</pre>
 
+template.txt:<br/>
+![template](image/CSVexpression_48.png)
+
 HENCE the expression `[CSV(${file}) => parse(...) render(${template})]` would yield:<br/>
 <img style="box-shadow:none;margin:0" src="image/csv_17.jpg"/>
 Nexial works behind the scene to replace each token (data variable) found in the template with record data found in 
 each CSV record. For as many records as there are, Nexial will perform the same "merge" to produce many lines of text.
 
+Script:<br/>
+![script](image/CSVexpression_49.png)
+
+Output:<br/>
+![output](image/CSVexpression_50.png)
+
 -----
 
 #### replaceColumnRegex(searchFor,replaceWith,columnNameOrIndices)
 For the specified column (by name or by position), search for `searchFor` regular expression and replace matches by 
-`replaceWith`. Regex group supported. For example, `[CSV(${...}) => parse(...) replaceColumnRegex((\d+)(\d\d),$1.$2,1)]` 
+`replaceWith`. Regex group supported.
+
+**Example**<br/>
+`[CSV(${...}) => parse(...) replaceColumnRegex((\d+)(\d\d),$1.$2,1)]` 
 would search in the 2nd column of the CSV for a match against the pattern "a series of at least 3 consecutive digits" 
 and replace it with the same digits with a decimal point place just before the second-to-last digit. In other words, 
 `12345` would become `123.45`.
 
 The parameter `columnNameOrIndices` may be expressed as `*` to indicate **ALL** columns. As such, Nexial would apply the
 intended search-and-replace routine against all columns of the target CSV.
+
+Script:<br/>
+![script](image/CSVexpression_51.png)
+
+Output:<br/>
+![output](image/CSVexpression_52.png)
 
 -----
 
@@ -462,17 +698,43 @@ the opposite of `removeColumns(namesOrIndices)`. Any incorrectly referenced colu
 The parameter `columnNameOrIndices` may be expressed as `*` to indicate **ALL** columns. As such, Nexial would 
 essentially perform a "no-op" since all the columns would be retained.
 
------
+**Example**<br/>
+In this example, `retainColumns(Name,Position)` retrieves column `Name` and `Position`, `retainColumns(0,1)`
+retrieves column at index `0` and `1` and `retainColumns(*)` retrieve all the columns of `csvData`.
 
+Script:<br/>
+![script](image/CSVexpression_53.png)
+
+Output:<br/>
+![output](image/CSVexpression_54.png)
+
+-----
  
 #### row(index)
 Retrieves one row of data as a **[`LIST`](LISTexpression)**. `index` is zero-based. If `index` is not valid or too 
 large, then null will be returned.
 
+**Example**<br/>
+The `index` must be present in the given `csvData`. If index is not present in the csvData then complete
+expression is printed as shown in the example of `row(10)`.
+
+Script:<br/>
+![script](image/CSVexpression_55.png)
+
+Output:<br/>
+![output](image/CSVexpression_56.png)
+
 -----
 
 #### rowCount
 Number of rows to the current state of the CSV content. Synonymous to **[`size`](#size)** and **[`length`](#length)**.
+
+**Example**<br/>
+Script:<br/>
+![script](image/CSVexpression_57.png)
+
+Output:<br/>
+![output](image/CSVexpression_58.png)
 
 -----
 
@@ -480,11 +742,32 @@ Number of rows to the current state of the CSV content. Synonymous to **[`size`]
 Remove all empty rows from current CSV content. This could either be blank lines or lines with only field delimiter 
 (such as comma).
 
+**Example**<br/>
+Script:<br/>
+![script](image/CSVexpression_59.png)
+
+Output:<br/>
+![output](image/CSVexpression_60.png)
+
 -----
 
 #### save(file,append)
 Save current CSV content to `path`. If `path` resolves to an existing file, `append` set as `true` will append current 
 CSV content to the said file. `append` is optional and defaults to `false`.
+
+**Example**<br/>
+In this example,
+1. `csvData` is sorted in ascending order using **[`sortAscending`](#sortascendingcolumn)**
+2.  then sorted data is saved to specified path `Sample.csv`
+
+Script:<br/>
+![script](image/CSVexpression_61.png)
+
+Output:<br/>
+![output](image/CSVexpression_62.png)
+
+Sample.csv:<br/>
+![output](image/CSVexpression_90.png)
 
 -----
 
@@ -493,27 +776,71 @@ Save the row data corresponding to the specified `rowIndex` as data variable. Th
 as data variable names. Note that this operation can only be operated on CSV data that are [parsed](#parseconfig) with 
 header.
 
+**Example**<br/>
+In this example, `saveRowData(1)` store values of that row in the corresponding header. If 
+the specified row index does not exist as in the example `saveRowData(6)` then it takes previous values of 
+the variable.
+
+Script:<br/>
+![script](image/CSVexpression_63.png)
+
+Output:<br/>
+![output](image/CSVexpression_64.png)
+
 -----
 
 #### size
 Retrieves the number of rows in current CSV content. Synonymous to **[`rowCount`](#row(index))** and 
 **[`length`](#length)**.
 
+**Example**<br/>
+Script:<br/>
+![script](image/CSVexpression_65.png)
+
+Output:<br/>
+![output](image/CSVexpression_66.png)
+
 -----
 
 #### sortAscending(column)
 Sort the entire CSV content by the specified column, in ascending order. Note that the target **CSV MUST HAVE HEADERS**!
+
+**Example**<br/>
+Script:<br/>
+![script](image/CSVexpression_67.png)
+
+Output:<br/>
+![output](image/CSVexpression_68.png)
 
 -----
 
 #### sortDescending(column)
 Sort the entire CSV content by the specified column, in descending order. Note that the **TARGET CSV MUST HAVE HEADERS**!
 
+**Example**<br/>
+Script:<br/>
+![script](image/CSVexpression_69.png)
+
+Output:<br/>
+![output](image/CSVexpression_70.png)
+
 -----
 
 #### store(var)
 Save current CSV expression (including content) to a data variable. If the specified var exists, its value will be 
 overwritten. Using this operation, one can put an expression on pause and resume it at a later time.
+
+**Example**<br/>
+In this example,
+1. `filter(Age start with 4)` retrieves all the row having age in the range of 40's
+2. `store(Data)` save all the retrieved rows
+3. `sortDescending(Age)` sort the data stored in the `Data` variable
+
+Script:<br/>
+![script](image/CSVexpression_71.png)
+
+Output:<br/>
+![output](image/CSVexpression_72.png)
 
 -----
 
@@ -551,6 +878,12 @@ SSN,Name,Position,Age
 Since column positioning is 0-based, `1,2` means second and third column. Nexial is not surrounding `"Johnson, Admin"` 
 with double quote since it is surrounded by double quote.
 
+Script:<br/>
+![script](image/CSVexpression_73.png)
+
+Output:<br/>
+![output](image/CSVexpression_74.png)
+
 - **Example 2**: `[CSV(${csv}) => parse(header=true) surround(',Name,Age)]` yields:
 ```csv
 SSN,Name,Position,Age
@@ -563,6 +896,12 @@ SSN,Name,Position,Age
 Since the specified columns were not surrounded with single quote, all the specified columns are now surround with 
 single quote.
 
+Script:<br/>
+![script](image/CSVexpression_75.png)
+
+Output:<br/>
+![output](image/CSVexpression_76.png)
+
 - **Example 3**: `[CSV(${csv}) => parse(header=true) surround( ,*)]` yields:
 ```csv
 SSN,Name,Position,Age
@@ -573,6 +912,12 @@ SSN,Name,Position,Age
  567890123, Jon , Manager , 41
 ```
 `*` means all columns.
+
+Script:<br/>
+![script](image/CSVexpression_77.png)
+
+Output:<br/>
+![output](image/CSVexpression_78.png)
 
 - **Example 4**: `[CSV(${csv}) => parse(header=false,keepQuote=true) surround(",2)]` yields:
 ```csv
@@ -586,6 +931,11 @@ SSN,Name,"Position",Age
 Since this CSV was parsed with `header=false` and `keepQuote=true`, the first row is considered part of CSV data and
 `"Johnson, Adam"` still has the double quotes around it.
 
+Script:<br/>
+![script](image/CSVexpression_79.png)
+
+Output:<br/>
+![output](image/CSVexpression_80.png)
 
 -----
 
@@ -594,10 +944,22 @@ Transform the current CSV data to text. This would be the plain text rendition o
 latest CSV format as specified via the **[`parse(config)`](#parse(config))** operation is observed and will affect the 
 text output.
 
+Script:<br/>
+![script](image/CSVexpression_81.png)
+
+Output:<br/>
+![output](image/CSVexpression_82.png)
+
 -----
 
 #### transpose
 Transpose current CSV content so that row datas are displayed as column data, and column's as row's.
+
+Script:<br/>
+![script](image/CSVexpression_83.png)
+
+Output:<br/>
+![output](image/CSVexpression_84.png)
 
 -----
 
@@ -611,7 +973,8 @@ shown below:
   - `row` - default node name is row
   - `cell` - default node name is cell
 
-For example, **`[CSV(csv_file) => XML( , , )]`** would transform a CSV file to a XML document where the root node is 
+**Examples**:<br/>
+**`[CSV(csv_file) => XML( , , )]`** would transform a CSV file to a XML document where the root node is 
 rows, the next level node name is row and each of its element is named as cell. 
 
 The CSV content in question may be one or more rows, with or without headers. Here is an example of transforming from 
@@ -630,6 +993,12 @@ an example of using **`[CSV(csv_file) => XML( , , ,)]`**:
 <img style="box-shadow:none;margin:0" src="image/csv_20.jpg"/><br/>
 <img style="box-shadow:none;margin:0" src="image/csv_21.jpg"/><br/>
 As shown above, the column names are missing and default node names are applied.
+
+Script:<br/>
+![script](image/CSVexpression_85.png)
+
+Output:<br/>
+![output](image/CSVexpression_86.png)
 
 ---
 
