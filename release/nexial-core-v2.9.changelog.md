@@ -18,6 +18,9 @@ comments: true
   - fixed incorrect test step row number reported in project inspector HTML.
 
 #### Improvements
+- [`nexial.lastOutputLink`](../systemvars/index#nexial.lastOutputLink): update this System variable for files being 
+  generated locally in a "output-to-cloud" execution (which subsequently transferred such file to the cloud).
+- generate dedicated error log file for error or failure that occurred during execution.
 
 
 ### [Built-in Functions](../functions)
