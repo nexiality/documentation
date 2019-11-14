@@ -533,9 +533,9 @@ CSV file is parsed. The `config` will be specified in the form of:
     implication. This setting is usually not needed.
     
   - **`trim`** - instruct Nexial to retain or trim of any leading and/or trailing whitespaces per parsed value. By 
-    default, Nexial will trim each parsed value so ` California ` would be stored as `California` - the `trim` option is
-    by default `true`. But at times it is critical to retain all the data found from its original sources. As such, one
-    can specify `trim=false` to retain leading/trailing whitespaces.
+    default, Nexial will trim each parsed value so <code>&nbsp;California </code> would be stored as `California`.
+    The `trim` option is by default `true`. But at times it is critical to retain all the data found from its original 
+    sources. As such, one can specify `trim=false` to retain leading/trailing whitespaces.
 
   - **`keepQuote`** - instruct Nexial to retain the double quotes around the column data even if they are not necessary. 
     By default Nexial will remove the double quotes around the data of a field unless they are deemed necessary such as
