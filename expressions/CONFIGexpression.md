@@ -32,11 +32,41 @@ Also:
   **`C:\Projects\MyFirstProject\artifact\data\file.properties`**.<br/>
   ![](image/CONFIGexpression_01.png)
 
+#### `ascending()`
+Sorts the key-value pairs in ascending order of the keys. Can also be used to sort the keys themselves. 
+
+**Example**<br/>
+**Config File:** file.properties <br/>
+![](image/CONFIGexpression_01.png)
+
+**Script:**<br/>
+![](image/CONFIGexpression_17.png)
+
+**Output:**<br/>
+![](image/CONFIGexpression_18.png)
+
+-----
+
+#### `descending()`
+Sorts the key-value pairs in descending order of the keys. Can also be used to sort the keys themselves.
+
+**Example**<br/>
+**Config File:** file.properties<br/>
+![](image/CONFIGexpression_01.png)
+
+**Script:**
+![](image/CONFIGexpression_19.png)
+
+**Output:**<br/>
+![](image/CONFIGexpression_20.png)
 
 #### `keys()`
 Returns all the key names as [LIST](LISTexpression).
 
 **Example**<br/>
+**Config File:** file.properties<br/>
+![](image/CONFIGexpression_01.png)
+
 Script<br/>
 ![](image/CONFIGexpression_02.png)
 
@@ -49,6 +79,9 @@ Output<br/>
 removes the `key` and returns the updated CONFIG data.
 
 **Example**<br/>
+**Config File:** file.properties<br/>
+![](image/CONFIGexpression_01.png)
+
 Script<br/>
 ![](image/CONFIGexpression_04.png)
 
@@ -61,6 +94,9 @@ Output<br/>
 saves the current state of this CONFIG as a "properties" file to `filePath`.
 
 **Example**<br/>
+**Config File:** file.properties<br/>
+![](image/CONFIGexpression_01.png)
+
 Script<br/>
 ![](image/CONFIGexpression_06.png)
 
@@ -73,6 +109,9 @@ Output<br/>
 sets `value` to the given `key` and returns the updated CONFIG data.
 
 **Example**<br/>
+**Config File:** file.properties<br/>
+![](image/CONFIGexpression_01.png)
+
 Script<br/>
 ![](image/CONFIGexpression_08.png)
 
@@ -89,6 +128,9 @@ save current CONFIG expression to a data variable.  If the specified `var` ex
 Using this operation, one can put an expression on pause and resume it at a later time.
 
 **Example**<br/>
+**Config File:** file.properties<br/>
+![](image/CONFIGexpression_01.png)
+
 Script<br/>
 ![](image/CONFIGexpression_10.png)
 
@@ -101,6 +143,9 @@ Output<br/>
 returns the content of the CONFIG data as text.
 
 **Example**<br/>
+**Config File:** file.properties<br/>
+![](image/CONFIGexpression_01.png)
+
 Script<br/>
 ![](image/CONFIGexpression_12.png)
 
@@ -113,6 +158,9 @@ Output<br/>
 returns the corresponding value as text.
 
 **Example**<br/>
+**Config File:** file.properties<br/>
+![](image/CONFIGexpression_01.png)
+
 Script<br/>
 ![](image/CONFIGexpression_14.png)
 
