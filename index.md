@@ -21,6 +21,15 @@ Nexial Automation
 <br/>
 </h2>
 
+<a href="https://www.meetup.com/TestPro-Los-Angeles/events/266061271/" style="background-color:transparent !important;">
+<b>
+LA's Software Test Automation Meetup & Networking Session hosted by Test Pro will be at <br/>
+Entertainment Partners on 11/19. There will be an presentation on Nexial Automation Platform. Join us!
+</b><br/>
+<img src="https://media.licdn.com/dms/image/C4E22AQECm_jTOKn8Aw/feedshare-shrink_800/0?e=1576713600&v=beta&t=qeM4ntVvsfkoQBEuiAd3_lSRfnHEzFWMua8hNPxjs2U" alt="LA's Software Test Automation Meetup & Networking Session hosted by Test Pro will be at Entertainment Partners on 11/19"/>
+</a>
+<br/>
+
 #### Test Automation Platform for _Everyone_! 
 
 <img src="image/logo-x.png" alt="Nexial" style="box-shadow:none"/>
