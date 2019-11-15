@@ -11,6 +11,17 @@ title: Nexial Automation
 .top-link img { border: none; box-shadow: none !important; width: 32px; margin: 5px !important; vertical-align: bottom; }
 </style>
 
+<div style="background-color:#ffb;padding:10px 20px;font-size: 16pt;font-weight: bold">
+<a href="https://www.meetup.com/TestPro-Los-Angeles/events/266061271/" style="background-color:transparent !important;">
+LA's Software Test Automation Meetup & Networking Session hosted by Test<br/> 
+Pro will be at Entertainment Partners on 11/19 - presentation on Nexial <br/>
+Automation Platform. Join us!
+<br/>
+<img src="https://media.licdn.com/dms/image/C4E22AQECm_jTOKn8Aw/feedshare-shrink_800/0?e=1576713600&v=beta&t=qeM4ntVvsfkoQBEuiAd3_lSRfnHEzFWMua8hNPxjs2U" alt="LA's Software Test Automation Meetup & Networking Session hosted by Test Pro will be at Entertainment Partners on 11/19"/>
+</a>
+</div>
+<br/>
+
 <h2 id="nexial-automation">
 Nexial Automation
 <span class="top-link">
@@ -21,15 +32,6 @@ Nexial Automation
 <br/>
 </h2>
 
-<a href="https://www.meetup.com/TestPro-Los-Angeles/events/266061271/" style="background-color:transparent !important;">
-<b>
-LA's Software Test Automation Meetup & Networking Session hosted by Test Pro will be at <br/>
-Entertainment Partners on 11/19. There will be an presentation on Nexial Automation Platform. Join us!
-</b><br/>
-<img src="https://media.licdn.com/dms/image/C4E22AQECm_jTOKn8Aw/feedshare-shrink_800/0?e=1576713600&v=beta&t=qeM4ntVvsfkoQBEuiAd3_lSRfnHEzFWMua8hNPxjs2U" alt="LA's Software Test Automation Meetup & Networking Session hosted by Test Pro will be at Entertainment Partners on 11/19"/>
-</a>
-<br/>
-
 #### Test Automation Platform for _Everyone_! 
 
 <img src="image/logo-x.png" alt="Nexial" style="box-shadow:none"/>
@@ -37,7 +39,7 @@ Entertainment Partners on 11/19. There will be an presentation on Nexial Automat
 <img src="image/nexial-caption.png" alt="Test Automation Platform for Everyone" style="box-shadow:none"/>
 
 The name reflects our desire and intention to perfect the "art" and "science" of Software Testing and the promotion of 
-Quality Artisan.  As professional Quality Advocates, we are all _nexialists_ - we see links in the disconnected and 
+Quality Artisans.  As professional Quality Advocates, we are all _nexialists_ - we see links in the disconnected, 
 synergy in the seemingly independent, and draw from such new ideas/solutions.
 
 The main motivation of Nexial is to provide a set of capabilities to automate software testing.  
@@ -63,25 +65,59 @@ To see Nexial in action, watch this short demo showcasing how Nexial
 5. finally, performs a few simple data analytical queries and reports (database automation, Nexial expression). 
 
 [Nexial in Action](https://www.youtube.com/watch?v=b372XikN1YU&cc_lang_pref=en&cc_load_policy=1)
-
-<iframe width="560" height="555" src="https://www.youtube-nocookie.com/embed/b372XikN1YU?cc_lang_pref=en&cc_load_policy=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="820" height="555" src="https://www.youtube-nocookie.com/embed/b372XikN1YU?cc_lang_pref=en&cc_load_policy=1" 
+  frameborder="0" style="margin-bottom:20px" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 #### Wanna try? Have at it!
-1. Download [Nexial distro](https://github.com/nexiality/nexial-core/releases)
-2. Follow the [installation guide](https://nexiality.github.io/documentation/userguide/InstallingNexial) (most steps are one-time work)
-3. Download the ["nexial-in-action" project](nexial-in-action.zip) and unzip to local directory
-4. Run it:<br/>
-   Mac/Linux:
-   ```
-   cd <NEXIAL_HOME>/bin
-   ./nexial.sh -plan <MY_NEXIAL_IN_ACTION_PROJECT>/artifact/plan/demo1-plan.xlsx
-   ``` 
-
-   Windows:
-   ```
-   cd <NEXIAL_HOME>\bin
-   nexial.cmd -plan <MY_NEXIAL_IN_ACTION_PROJECT>\artifact\plan\demo1-plan.xlsx
-   ```
+<ol>
+<li>
+  Download <a href="https://github.com/nexiality/nexial-core/releases">Nexial distro</a>
+</li>
+<li>
+  Follow the <a href="https://nexiality.github.io/documentation/userguide/InstallingNexial">installation guide</a> 
+  (mostly one-time setup)
+</li>
+<li>
+  Download the <a href="nexial-in-action.zip">"nexial-in-action"</a> project and unzip to local directory
+</li>
+<li>Run it
+<div class="tabs">
+    <ul class="tab-links tabs-collapsed">
+        <li class="active"><a href="#tabwin">Windows</a></li>
+        <li><a href="#tabmac">Mac/Linux</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="tabwin" class="tab active">
+        Set up an environment variable - <code>NEXIAL_HOME</code> - and point it to the location where Nexial is 
+        installed. For example,
+<pre>set NEXIAL_HOME=C:\projects\nexial-core</pre>
+        Also, set up another environment variable - <code>PROJECT_HOME</code> - and set it to the location where 
+        the <a href="nexial-in-action.zip">"nexial-in-action"</a> project is unzipped. For example,
+<pre>set PROJECT_HOME=C:\projects\nexial-in-action</pre>
+        To execute:
+<pre>
+cd %NEXIAL_HOME%\bin
+nexial.cmd -plan %PROJECT_HOME%\artifact\plan\demo1-plan.xlsx
+</pre>
+        </div>
+        <div id="tabmac" class="tab" style= "display:none;">
+        Set up an environment variable - <code>NEXIAL_HOME</code> - and point it to the location where Nexial is 
+        installed. For example,
+<pre>export NEXIAL_HOME=~/projects/nexial-core</pre>
+        Also, set up another environment variable - <code>PROJECT_HOME</code> - and set it to the location where 
+        the <a href="nexial-in-action.zip">"nexial-in-action"</a> project is unzipped. For example,
+<pre>export PROJECT_HOME=~/projects/nexial-in-action</pre>
+        To execute:
+<pre>
+cd $NEXIAL_HOME/bin
+./nexial.sh -plan $PROJECT_HOME/artifact/plan/demo1-plan.xlsx
+</pre>
+        </div>
+    </div>
+</div>
+</li>
+</ol>
+<br/>
 
 ---------------------------------------------
 
