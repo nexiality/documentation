@@ -31,7 +31,7 @@ comments: true
 - [JSON &raquo; `list`](../expressions/JSONexpression#list): code fix to enforce the use of 
  [`nexial.textDelim`](../systemvars/index#nexial.textDelim) for converting JsonArray to list.
 - [CONFIG &raquo; `keys`](../expressions/CONFIGexpression#keys): code fix to ensure proper textual output.
-
+- [CONFIG &raquo; `keys`](../expressions/CONFIGexpression#keys): code fix to ensure order as found in source.
 
 ### [base commands](../commands/base)
 
@@ -41,6 +41,15 @@ comments: true
   fix to support large file (> 200MB) processing.
   - [`....compareExt.expected.readAsIs`]: **NEW** configuration to enforce that the `expected` should be read as is.
   - [`....compareExt.actual.readAsIs`]: **NEW** configuration to enforce that the `actual` should be read as is.
+- support CSV content line longer than the default 4096 via [`nexial.csv.maxColumnWidth`](../systemvars/index#nexial.csv.maxColumnWidth) 
+  System variable.
+
+
+### [excel commands](../commands/excel)
+- [`columnarCsv(file,worksheet,ranges,output)`](../commands/excel/columnarCsv(file,worksheet,ranges,output)): support 
+  columns more than the default 512 via [`nexial.csv.maxColumns`](../systemvars/index#nexial.csv.maxColumns) System 
+  variable, and column length longer than the default 4096 character via 
+  [`nexial.csv.maxColumnWidth`](../systemvars/index#nexial.csv.maxColumnWidth)  System variable.
 
 
 ### [external commands](../commands/external)

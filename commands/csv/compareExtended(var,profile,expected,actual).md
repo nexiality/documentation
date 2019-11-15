@@ -194,6 +194,16 @@ Here are the list of possible configuration (assuming the `profile` is `MyFil
 Here's an example of the comparison configuration (in this case, the `profile` is `AppOutput`):
 ![config](image/compareExtended_01.png)
 
+At times one might be working with a unusually long (or wide) CSV file, where the number of expected columns are longer
+than the default "max" of 512, or column width longer than the default "max" of 4096 character. In such case, one may
+want to set the following System variables to indicate the need thereof:
+1. [`nexial.csv.maxColumns`](../../systemvars/index#nexial.csv.maxColumns): configure the maximum number of columns to
+   expect. The default is 512.
+2. [`nexial.csv.maxColumnWidth`](../../systemvars/index#nexial.csv.maxColumnWidth): configure the maximum number of
+   character per column. The default is 4096 (characters).
+
+-----
+
 ### compareExtended result
 For output, there are various data elements that are available.  Below is a depiction of what one can retrieve from 
 the comparison result (referenced by the specified `var` variable):
