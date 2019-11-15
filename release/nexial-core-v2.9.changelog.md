@@ -24,6 +24,11 @@ comments: true
   - generated error log will be linked to the execution output (excel).
 
 
+### [JSONPath](../jsonpath)
+- code fix: `[] => count` now correctly returns `0` instead of `1`.
+- code fix: extract against an empty JSON array now returns `[]` rather than `null`.
+
+
 ### [Built-in Functions](../functions)
 
 
