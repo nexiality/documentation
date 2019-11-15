@@ -11,7 +11,7 @@ title: Nexial Automation
 .top-link img { border: none; box-shadow: none !important; width: 32px; margin: 5px !important; vertical-align: bottom; }
 </style>
 
-<div style="background-color:#ffb;padding:10px 20px;font-size: 16pt;font-weight: bold">
+<div style="background-color:rgba(180,220,150,0.5);padding:10px 20px;font-size: 16pt;font-weight: bold">
 <a href="https://www.meetup.com/TestPro-Los-Angeles/events/266061271/" style="background-color:transparent !important;">
 LA's Software Test Automation Meetup & Networking Session hosted by Test<br/> 
 Pro will be at Entertainment Partners on 11/19 - presentation on Nexial <br/>
