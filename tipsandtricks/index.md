@@ -44,6 +44,7 @@ redirect_from:
 #### Web Automation
 - [How to get a web element's XPath from Browser](FindXPathFromChrome)
 - [Execute Scripts in Headless Browser](ExecuteScripts_HeadlessBrowser)
+- [Execute Scripts in Incognito Mode](IncognitoMode)
 - [BrowserStack Integration](BrowserStackIntegration)
 - [CrossBrowserTesting Integration](CrossBrowserTestingIntegration)
 - [Script failing on BrowserStack](ScriptFailingonBrowserStack)

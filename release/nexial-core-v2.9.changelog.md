@@ -82,3 +82,4 @@ comments: true
 - browser metrics: fixed timing calculation to avoid negative time.
 - browser metrics: address Electron issue where browser signature cannot be properly derived
 - browser metrics: address exception condition when the target browser window is no longer available for inspection.
+- firefox: turn on automatic download and point the download directory to current output directory.
