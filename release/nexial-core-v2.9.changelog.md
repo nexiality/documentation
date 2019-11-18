@@ -22,6 +22,7 @@ comments: true
   generated locally in a "output-to-cloud" execution (which subsequently transferred such file to the cloud).
 - generate dedicated error log file for error or failure that occurred during execution.
   - generated error log will be linked to the execution output (excel).
+- first rendition of pause-and-inspect detection.
 
 
 ### [JSONPath](../jsonpath)
