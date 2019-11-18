@@ -23,6 +23,7 @@ comments: true
 - generate dedicated error log file for error or failure that occurred during execution.
   - generated error log will be linked to the execution output (excel).
 - first rendition of pause-and-inspect detection.
+  - renamed to On-Demand Inspection.
 
 
 ### [JSONPath](../jsonpath)
