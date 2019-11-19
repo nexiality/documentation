@@ -82,6 +82,10 @@ comments: true
 - allow for non-standard or non-CRUD statements.
 
 
+### [sound commands](../commands/sound)
+- code fix: escape special characters to avoid "sound" API error
+
+
 ### [ws commands](../commands/ws)
 
 
