@@ -31,6 +31,11 @@ comments: true
 - code fix: extract against an empty JSON array now returns `[]` rather than `null`.
 
 
+### [Nexial Interactive](../interactive)
+- clear off any "end immediate" or "fail immediate" flags before commencing any execution. This is necessary so that 
+  error or failure from any preceding executions won't affect current execution.
+
+
 ### [Built-in Functions](../functions)
 
 
@@ -39,6 +44,7 @@ comments: true
  [`nexial.textDelim`](../systemvars/index#nexial.textDelim) for converting JsonArray to list.
 - [CONFIG &raquo; `keys`](../expressions/CONFIGexpression#keys): code fix to ensure proper textual output.
 - [CONFIG &raquo; `keys`](../expressions/CONFIGexpression#keys): code fix to ensure order as found in source.
+
 
 ### [base commands](../commands/base)
 
