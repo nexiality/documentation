@@ -16,7 +16,7 @@ detail.
 ### Execution Result of Queries
 The `resultName` parameter used in the operations below refers to the [Execution Result](../commands/rdbms/#working-with-execution-result) 
 of the SQL queries. It is the variable associated with the query result that we can assign using the syntax
-<code>--nexial: resultName</code> as shown in the examples below. 
+<code>--nexial:resultName</code> as shown in the examples below. 
 In cases where there is no variable specified corresponding to the query, Nexial, by default uses 0-based index to refer to 
 execution outcome of that particular query.
 
