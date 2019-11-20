@@ -11,17 +11,6 @@ title: Nexial Automation
 .top-link img { border: none; box-shadow: none !important; width: 32px; margin: 5px !important; vertical-align: bottom; }
 </style>
 
-<div style="background-color:rgba(180,220,150,0.5);padding:10px 20px;font-size: 16pt;font-weight: bold">
-<a href="https://www.meetup.com/TestPro-Los-Angeles/events/266061271/" style="background-color:transparent !important;">
-LA's Software Test Automation Meetup & Networking Session hosted by Test<br/> 
-Pro will be at Entertainment Partners on 11/19 - presentation on Nexial <br/>
-Automation Platform. Join us!
-<br/>
-<img src="https://media.licdn.com/dms/image/C4E22AQECm_jTOKn8Aw/feedshare-shrink_800/0?e=1576713600&v=beta&t=qeM4ntVvsfkoQBEuiAd3_lSRfnHEzFWMua8hNPxjs2U" alt="LA's Software Test Automation Meetup & Networking Session hosted by Test Pro will be at Entertainment Partners on 11/19"/>
-</a>
-</div>
-<br/>
-
 <h2 id="nexial-automation">
 Nexial Automation
 <span class="top-link">
@@ -118,6 +107,12 @@ cd $NEXIAL_HOME/bin
 </li>
 </ol>
 <br/>
+
+#### Nexial Sighting
+Nexial Automation was presented in the Software Test Automation Meetup held on 2019/11/19. For those interested, here
+is the [presentation](meetup-1119/Nexial%20Meetup%20-%202019-11-19.pdf) and the 
+[demo automation project](Software_Test_Automation_Meetup_Demo.20191119.zip).
+
 
 ---------------------------------------------
 
