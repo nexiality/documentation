@@ -393,7 +393,8 @@ Output:<br/>
 -----
 
 #### sublist(start,end)
-Transform current list by downsizing it to a subset between `start` index and `end` index.
+Transform current list by downsizing it to a subset between `start` index and `end` index. Use `-1` (or omit) for `end`
+to signify the last position of the current list.
 
 **Example**<br/>
 Script:<br/>

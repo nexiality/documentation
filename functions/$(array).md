@@ -207,7 +207,8 @@ Output<br/>
 -----
 
 #### `$(array|subarray|myarray|start|end)`
-Renders a portion of the target array (`myarray`), based on the specified `start` and `end` positions.
+Renders a portion of the target array (`myarray`), based on the specified `start` and `end` positions. One may specify
+`end` as `-1` to signify the last position of the target array.
 
 **Example**<br/>
 Script<br/>

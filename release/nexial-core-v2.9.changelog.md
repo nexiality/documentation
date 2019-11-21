@@ -37,6 +37,8 @@ comments: true
 
 
 ### [Built-in Functions](../functions)
+- [`$(array|subarray|myarray|start|end)`](../functions/$(array)): supports the use of `-1` for `end` to signify the last
+  position of the target array.
 
 
 ### [Nexial Expression](../expressions)
@@ -44,6 +46,8 @@ comments: true
  [`nexial.textDelim`](../systemvars/index#nexial.textDelim) for converting JsonArray to list.
 - [CONFIG &raquo; `keys`](../expressions/CONFIGexpression#keys): code fix to ensure proper textual output.
 - [CONFIG &raquo; `keys`](../expressions/CONFIGexpression#keys): code fix to ensure order as found in source.
+- [LIST &raquo; `sublist`](../expressions/LISTexpression#subliststartend): supports the use of `-1` for the end range to
+  signify the last position of the target list.
 
 
 ### [base commands](../commands/base)
