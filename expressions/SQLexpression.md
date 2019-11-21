@@ -60,10 +60,10 @@ The resulting `student` table looks like this after running the queries. <br/>
 Normally, the execution outcome of a query would contain various pieces of information as shown in the pictures below. <br/>
 ![](image/SQLexpression_64.png) ![](image/SQLexpression_65.png)
 
-However, in case of an inaccurate or erroneous queries. <br/>
+However, in case of inaccurate or erroneous queries. <br/>
 ![](image/SQLexpression_66.png)
 
-The execution outcome will return an error upon running the execute. And running other operations on the outcome will return 
+The execution outcome will return an error upon running the execute and running other operations on the outcome will return 
 either 0 or null.
 ![](image/SQLexpression_67.png) 
 

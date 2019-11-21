@@ -167,6 +167,13 @@ Extract from current text all instances of text found between `beginRegex` and `
 `endRegex` are regular expressions. Set `inclusive` as `true` to include the text that matches `beginRegex` and 
 `endRegex`. This operation effectively transforms current TEXT expression into a [`LIST`](LISTexpression) expression.
 
+**Example**<br/>
+Script:<br/>
+![script](image/TEXTexpression_77.png)
+
+Output:<br/>
+![output](image/TEXTexpression_78.png)
+
 -----
 
 #### **`insert(after,text)`**
