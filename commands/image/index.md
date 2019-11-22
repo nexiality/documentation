@@ -17,3 +17,5 @@ like comparison, conversion and resizing:
 - [`crop(image,dimension,saveTo)`](crop(image,dimension,saveTo))
 - [`resize(image,width,height,saveTo)`](resize(image,width,height,saveTo))
 - [`saveDiff(var,baseline,actual)`](saveDiff(var,baseline,actual))
+
+<script>jQuery(document).ready(function () { newCommandSelect(); });</script>
