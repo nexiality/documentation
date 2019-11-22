@@ -109,9 +109,11 @@ cd $NEXIAL_HOME/bin
 <br/>
 
 #### Nexial Sighting
-Nexial Automation was presented in the Software Test Automation Meetup held on 2019/11/19. For those interested, here
-is the [presentation](meetup-1119/Nexial%20Meetup%20-%202019-11-19.pdf) and the 
-[demo automation project](Software_Test_Automation_Meetup_Demo.20191119.zip).
+[Nexial Automation was presented](https://www.youtube.com/watch?v=3lpsiC4j5L4&t=177s) in the Software Test Automation 
+Meetup held on 2019/11/19. For those interested, here is:
+- The [presentation](meetup-1119/Nexial%20Meetup%20-%202019-11-19.pdf),
+- The [demo automation project](Software_Test_Automation_Meetup_Demo.20191119.zip), and
+- The [presentation recording (Youtube)](https://www.youtube.com/watch?v=3lpsiC4j5L4&t=177s)
 
 
 ---------------------------------------------
