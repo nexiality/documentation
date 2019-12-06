@@ -36,6 +36,12 @@ comments: true
   error or failure from any preceding executions won't affect current execution.
 
 
+### [System Variable](../systemvars)
+- [`nexial.scope.required.variables`](../systemvars/index#nexial.scope.required.variables): **NEW** System variable to 
+  specify required variables for each iteration. If these variables are undefined, user will get console prompt to assign
+  value to missing variable. This variable is disabled by design, when Nexial is executing in the CI/CD environment.
+
+
 ### [Built-in Functions](../functions)
 - [`$(array|subarray|myarray|start|end)`](../functions/$(array)): supports the use of `-1` for `end` to signify the last
   position of the target array.

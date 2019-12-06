@@ -1580,6 +1580,35 @@
         </td>
     </tr>
     <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.scope.required.variables"><code>nexial.scope.required.variables</code></a>
+        </td>
+        <td>String</td>
+        <td></td>
+        <td class="highlight-red">false</td>
+        <td>
+            This variable contains the comma separated list of data variables which needs to be defined before start of
+            iteration. This will instruct Nexial to check whether value is assigned to those variables before start
+            of each iteration. If no value is assigned, Nexial will force console prompt to assign value for each
+            variables.
+            <br/>
+            For example, using <a href="../commands/web/open(url)">web &raquo;<code>open(url)</code></a> in web
+            automation,
+            URL is necessary to execute subsequent web commands. In such case, one should include url variable as
+            required
+            using <code>nexial.scope.required.variables</code>.
+            <br/>
+            However, at times one might have the intention to assign some values at runtime from one iteration to the
+            next. In such case too, one should add those variables in <code>nexial.scope.required.variables</code>.
+            <br/>
+            NOTE: <a href="#nexial.scope.fallbackToPrevious"><code>nexial.scope.fallbackToPrevious</code></a>
+            is applicable on the variables assigned from console prompt too.
+            <br/>
+            Like most interactive feature, this variable is disabled - by design - when Nexial is executing in the CI/CD
+            environment.
+        </td>
+    </tr>
+    <tr>
         <td class="highlight-section" colspan="5">
             <span>
               For <a href="../commands/io"><code>io</code></a> or <a href="../commands/csv"><code>csv</code></a>
