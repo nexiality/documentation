@@ -24,6 +24,8 @@ comments: true
   - generated error log will be linked to the execution output (excel).
 - first rendition of pause-and-inspect detection.
   - renamed to On-Demand Inspection.
+- added shutdown hook to terminate any processes/programs initialized during execution (such as webdriver or browser). 
+  This will not work if Nexial is terminated forcefully via Task Manager or [`SIGKILL`](http://en.wikipedia.org/wiki/SIGKILL).
 
 
 ### [JSONPath](../jsonpath)
