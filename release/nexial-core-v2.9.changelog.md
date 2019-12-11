@@ -108,4 +108,5 @@ comments: true
 - browser metrics: address exception condition when the target browser window is no longer available for inspection.
 - firefox: turn on automatic download and point the download directory to current output directory.
 - chrome: point default download directory to current output directory.
-
+- [`saveBrowserVersion(var)`](../commands/web/saveBrowserVersion(var)): **NEW** command to current browser version (
+  along with browser name) to `var`.
