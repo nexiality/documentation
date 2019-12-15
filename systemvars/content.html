@@ -1587,25 +1587,31 @@
         <td></td>
         <td class="highlight-red">false</td>
         <td>
-            This variable contains the comma separated list of data variables which needs to be defined before start of
-            iteration. This will instruct Nexial to check whether value is assigned to those variables before start
-            of each iteration. If no value is assigned, Nexial will force console prompt to assign value for each
-            variables.
+            This System variable contains the comma separated list of data variables which needs to be defined before
+            start of an iteration. This will instruct Nexial to check whether value is assigned to those variables
+            before start of each iteration. If no value is found to be assigned to the specified variable(s), Nexial
+            will force user input to assign missing value for these variables via console prompt.
+            <br/>
+            At times one might intent to assign one or more data variables at runtime (such as date or realtime data).
+            One can use this System variable to enforce user input accordingly.
+            <br/>
             <br/>
             For example, using <a href="../commands/web/open(url)">web &raquo;<code>open(url)</code></a> in web
-            automation,
-            URL is necessary to execute subsequent web commands. In such case, one should include url variable as
-            required
-            using <code>nexial.scope.required.variables</code>.
+            automation, URL is necessary to execute subsequent web commands. In such case, one would include the
+            respective variable as required using the <code>nexial.scope.required.variables</code> System variable.
             <br/>
-            However, at times one might have the intention to assign some values at runtime from one iteration to the
-            next. In such case too, one should add those variables in <code>nexial.scope.required.variables</code>.
+            <img src="image/nexial.scope.required.variables_1.png"/>
+            <br/>
+            During execution, if Nexial detect that such variable (<code>homepage.url</code>) is not yet defined, a
+            console prompt will be rendered to solicit user's input:<br/>
+            <img src="image/nexial.scope.required.variables_2.png"/>
+            <br/>
             <br/>
             NOTE: <a href="#nexial.scope.fallbackToPrevious"><code>nexial.scope.fallbackToPrevious</code></a>
             is applicable on the variables assigned from console prompt too.
             <br/>
-            Like most interactive feature, this variable is disabled - by design - when Nexial is executing in the CI/CD
-            environment.
+            Like most interactive feature, this variable is disabled - by design - when Nexial is executing in CI/CD
+            environment (e.g. Jenkins).
         </td>
     </tr>
     <tr>
