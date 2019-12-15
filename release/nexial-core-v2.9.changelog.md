@@ -110,3 +110,4 @@ comments: true
 - chrome: point default download directory to current output directory.
 - [`saveBrowserVersion(var)`](../commands/web/saveBrowserVersion(var)): **NEW** command to current browser version (
   along with browser name) to `var`.
+- add [browser metadata](../commands/web/index#browser-metadata) as System variable `nexial.browser.meta`.

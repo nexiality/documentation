@@ -36,6 +36,7 @@ Here's a summary of the various locators (click on tab to view):<br/>
 ### Browser Support
 {% include_relative _browsers.html %}
 
+-----
 
 ### WebDriver Support
 Nexial automatically downloads required webdriver, during runtime as needed. Webdrivers are downloaded to the user's 
@@ -47,6 +48,7 @@ disable the automatic webdriver update by setting `"neverCheck": true` in `.mani
 
 See [Forcefully update or omit webdriver updates](../../tipsandtricks/HOWTOForcefullyUpdateWebDriver) for more details.
 
+-----
 
 ### Browser Performance Metrics
 As of [v2.7](../../release/nexial-core-v2.7.changelog), Nexial supports the collection of browser performance metrics
@@ -54,6 +56,10 @@ during execution. One can configure an execution to collect browser performance 
 automation script. The collected metrics will be presented as a web page at the end of the execution. To read more
 about this, visit [Browser Performance Metrics](browsermetrics).
 
+-----
+
+### Browser Metadata
+{% include_relative _meta.md %}
 
 -----
 
@@ -147,6 +153,7 @@ available commands.
 - [`saveAttribute(var,locator,attrName)`](saveAttribute(var,locator,attrName))
 - [`saveAttributeList(var,locator,attrName)`](saveAttributeList(var,locator,attrName))
 - [`saveCount(var,locator)`](saveCount(var,locator))
+- [`saveBrowserVersion(var)`](saveBrowserVersion(var))
 - [`saveDivsAsCsv(headers,rows,cells,nextPage,file)`](saveDivsAsCsv(headers,rows,cells,nextPage,file))
 - [`saveElement(var,locator)`](saveElement(var,locator))
 - [`saveElements(var,locator)`](saveElements(var,locator))
