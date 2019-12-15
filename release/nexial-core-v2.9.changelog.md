@@ -92,6 +92,10 @@ comments: true
 - forced single-query transaction to close connection after execution; required to avoid resource contention.
 - remove double-commit scenario to avoid unnecessary error condition.
 - allow for non-standard or non-CRUD statements.
+- [`saveResults(db,sqls,outputDir)`](../commands/rdbms/saveResults(db,sqls,outputDir)): code fix to ensure all output 
+  are listed in execution output (Excel) and uploaded to the cloud when `nexial.outputToCloud` is set to `true`.
+- [`saveResult(db,sqls,outputDir)`](../commands/rdbms/saveResult(db,sqls,outputDir)): code fix to ensure all output 
+  are listed in execution output (Excel) and uploaded to the cloud when `nexial.outputToCloud` is set to `true`.
 
 
 ### [sound commands](../commands/sound)
@@ -111,3 +115,4 @@ comments: true
 - [`saveBrowserVersion(var)`](../commands/web/saveBrowserVersion(var)): **NEW** command to current browser version (
   along with browser name) to `var`.
 - add [browser metadata](../commands/web/index#browser-metadata) as System variable `nexial.browser.meta`.
+- code fix to ensure browser metrics report is uploaded to cloud when `nexial.outputToCloud` to set to `true`.
