@@ -1,0 +1,46 @@
+---
+layout: default
+title: nexial-core 3.0 (2020-01-??)
+parent: release
+tags: release nexial-core 3.0
+comments: true
+---
+
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v3.0_???" class="external-link" target="_nexial_link">Release 3.0</a>
+2020-01-??
+
+
+### General
+#### Fixes
+
+#### Improvements
+
+
+### [JSONPath](../jsonpath)
+
+
+### [Nexial Interactive](../interactive)
+
+
+### [System Variable](../systemvars)
+
+
+### [Built-in Functions](../functions)
+
+
+### [Nexial Expression](../expressions)
+
+
+### [csv commands](../commands/csv)
+
+
+### [excel commands](../commands/excel)
+
+
+### [rdbms commands](../commands/rdbms)
+
+
+### [sound commands](../commands/sound)
+
+
+### [web commands](../commands/web)

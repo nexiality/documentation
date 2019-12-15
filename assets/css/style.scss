@@ -165,6 +165,10 @@ ul li, ol li {
   padding-left: 5px !important;
 }
 
+li > ul {
+  margin-bottom: 0;
+}
+
 p {
   font-weight: inherit;
 }
