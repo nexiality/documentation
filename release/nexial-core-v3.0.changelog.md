@@ -29,6 +29,8 @@ comments: true
 
 
 ### [Nexial Expression](../expressions)
+- [JSON](../expressions/JSONexpression): code fix to accurately reporting invalid file or content when constructing a
+  JSON expression.
 
 
 ### [csv commands](../commands/csv)
@@ -38,6 +40,10 @@ comments: true
 
 
 ### [rdbms commands](../commands/rdbms)
+- [`saveResults(db,sqls,outputDir)`](../commands/rdbms/saveResults(db,sqls,outputDir)) and 
+  [`saveResult(db,sql,output)`](../commands/rdbms/saveResult(db,sql,output)): minor adjustment so that the resulting 
+  CSV file will be referenced by [`nexial.lastOutputLink`](../systemvars/index#nexial.lastOutputLink) System variable 
+  (instead of the metadata JSON file).
 
 
 ### [sound commands](../commands/sound)
