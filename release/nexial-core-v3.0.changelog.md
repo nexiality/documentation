@@ -14,6 +14,8 @@ comments: true
 #### Fixes
 
 #### Improvements
+- [bin/nexial-script-update](../userguide/BatchFiles#nexial-script-update): add optional flag to automatically 
+  rename duplicate activity names found in the same scenario.
 
 
 ### [JSONPath](../jsonpath)

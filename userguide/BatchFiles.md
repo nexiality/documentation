@@ -179,11 +179,12 @@ two command line options:<br/>
 |---------|--------------------------------------------------------------------------------------------------|
 |**`-t`** |**[REQUIRED]** This option is for location of a single Excel test script or a directory to update.|
 |**`-v`** |This option is to turn on verbose logging. This is optional.                                      |
-
+|**`-u`** |Auto-correct duplicate activity names within one scenario. The duplicate activity name will be append with a number at the end and thus making it unique within the same scenario.|
+                                             
 **Example**<br/>
 The following will update all the scripts from given path.<br/>
 
-`nexial-script-update.cmd -v -t C:\projects\myProject\artifact\script` 
+`nexial-script-update.cmd -v -t C:\projects\myProject\artifact\script -u`
 
 ---------------------------------------------
 
