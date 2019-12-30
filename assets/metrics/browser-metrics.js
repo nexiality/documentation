@@ -116,8 +116,8 @@ let BrowserMetrics = function (/*Object*/metrics) {
                      "\n" +
                      "(responseEnd - responseStart)"
     },
-    "DomContentLoaded":     {
-      "type":        "time", "display": "DLC", "chart": true, "chartColor": "rgba(80,250,255,0.75)",
+    "DomContentLoaded": {
+      "type":        "time", "display": "DCL", "chart": true, "chartColor": "rgba(80,250,255,0.75)",
       "description": "DOM Content Loaded\n" +
                      "---------------------------------------\n" +
                      "The time, in milliseconds, between receiving the last byte of the response (which " +
