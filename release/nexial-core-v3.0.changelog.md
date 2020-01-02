@@ -40,8 +40,12 @@ comments: true
 
 ### [csv commands](../commands/csv)
 - [`compareExtended(var,profile,expected,actual)`](../commands/csv/compareExtended(var,profile,expected,actual)): now
-  supports the comparing of cell content as either an order-significant (via `[profile].compareExt.matchAsOrderedList`)
-  or order-insignificant (via `[profile].compareExt.matchAsUnorderedList`) list.
+  supports the comparing of column content as either an order-significant 
+  (via `[profile].compareExt.matchAsOrderedList`) or order-insignificant 
+  (via `[profile].compareExt.matchAsUnorderedList`) list.
+- [`compareExtended(var,profile,expected,actual)`](../commands/csv/compareExtended(var,profile,expected,actual)): "list" 
+  column cell can also combine with "trim-first" (via `[profile].compareExt.matchAutoTrim`) and "insensitively compare" 
+  (via `[profile].compareExt.matchCaseInsensitive`).
 
 
 ### [excel commands](../commands/excel)
