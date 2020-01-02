@@ -28,6 +28,12 @@ comments: true
 
 
 ### [System Variable](../systemvars)
+- [`nexial.lastOutputPath`](../systemvars/index#nexial.lastOutputPath): **NEW** System variable to expose the location
+  of the last output ([`nexial.lastOutputLink`](../systemvars/index#nexial.lastOutputLink)). This System variable will 
+  honor the [`nexial.outputToCloud`](../systemvars/index#nexial.outputToCloud) mode where the output is to be 
+  transformed to a URL (cloud storage). This is useful when a command (such as 
+  [rdbms &raquo; `saveResults(db,sqls,outputDir)`](../commands/rdbms/saveResults(db,sqls,outputDir))) could possibly 
+  generate multiple output files.
 
 
 ### [Built-in Functions](../functions)
