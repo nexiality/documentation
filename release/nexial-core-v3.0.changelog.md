@@ -16,6 +16,9 @@ comments: true
 #### Improvements
 - [bin/nexial-script-update](../userguide/BatchFiles#nexial-script-update): add optional flag to automatically 
   rename duplicate activity names found in the same scenario.
+- [`nexial.outputToCloud`](../systemvars/index#nexial.outputToCloud): now supports subdirectory (or relative paths) when 
+  moving execution artifacts to cloud storage. This means that any execution artifacts to be created in a subdirectory
+  under the "output" directory will be move to the cloud storage with said subdirectory intact.
 
 
 ### [JSONPath](../jsonpath)
@@ -36,6 +39,9 @@ comments: true
 
 
 ### [csv commands](../commands/csv)
+- [`compareExtended(var,profile,expected,actual)`](../commands/csv/compareExtended(var,profile,expected,actual)): now
+  supports the comparing of cell content as either an order-significant (via `[profile].compareExt.matchAsOrderedList`)
+  or order-insignificant (via `[profile].compareExt.matchAsUnorderedList`) list.
 
 
 ### [excel commands](../commands/excel)
