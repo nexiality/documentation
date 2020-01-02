@@ -83,15 +83,15 @@ Here are the list of possible configuration (assuming the `profile` is `MyFil
 	<td><code>MyFiles.compareExt.ignore</code></td>
 	<td>The column(s) to ignore for comparison.</td>
 	<td>
-		Specifying the column(s) to ignore during field-by-field matching.  Multiple columns are separated by
-		<a href="../../systemvars/index#nexial.textDelim"><code>${nexial.textDelim}</code></a>.  The columns are
-		based on those specified in the expected file.  If a "ignore" column is mapped to a different column on the 
+		Specifying the column(s) to ignore during field-by-field matching. Multiple columns are separated by
+		<a href="../../systemvars/index#nexial.textDelim"><code>${nexial.textDelim}</code></a>. The columns are
+		based on those specified in the expected file. If a "ignore" column is mapped to a different column on the 
 		actual field (via the <code>...compareExt.match....</code> configuration), then the mapped column of the actual 
-		field will be ignored as well.  If the "ignore" column is not mapped, then Nexial assumes that the same column
+		field will be ignored as well. If the "ignore" column is not mapped, then Nexial assumes that the same column
 		on both the expected and actual files.<br/>
 		<br/>
 		Note that ignoring one or more columns for matching does not preclude them to be used as part of the 
-		comparison result.  This means that one can specify a column to be ignored for comparison, but use the same
+		comparison result. This means that one can specify a column to be ignored for comparison, but use the same
 		column in the comparison report (see <a href="#compareextended-result">compareExtended result</a> below) 
 		via the <code>[profile].compareExt.output.display</code> configuration (see below). 
     </td>
@@ -101,7 +101,7 @@ Here are the list of possible configuration (assuming the `profile` is `MyFil
 	<td>The column(s) to compare number.</td>
 	<td>
 		Specifying the column(s) that should be compared as numbers. Multiple columns are separated by
-		<a href="../../systemvars/index#nexial.textDelim"><code>${nexial.textDelim}</code></a>.  The columns are
+		<a href="../../systemvars/index#nexial.textDelim"><code>${nexial.textDelim}</code></a>. The columns are
 		based on those specified in the expected file.<br/>
 		<br/>
 		Note that if the value in the specified fields - either the ones in the expected file or the corresponding ones 
@@ -113,7 +113,7 @@ Here are the list of possible configuration (assuming the `profile` is `MyFil
 	<td>The column(s) to compare case-insensitively.</td>
 	<td>
 		Specifying the column(s) that should be compared as text case-insensitively. Multiple columns are separated by
-		<a href="../../systemvars/index#nexial.textDelim"><code>${nexial.textDelim}</code></a>.  The columns are
+		<a href="../../systemvars/index#nexial.textDelim"><code>${nexial.textDelim}</code></a>. The columns are
 		based on those specified in the expected file.<br/>
 		<br/>
 		Note that one may combine this configuration with <code>...compareExt.matchAutoTrim</code> so that text
@@ -126,11 +126,63 @@ Here are the list of possible configuration (assuming the `profile` is `MyFil
 	<td>
 		Specifying the column(s) that should be trimmed (both beginning and end of field value) before comparison. 
 		Multiple columns are separated by
-		<a href="../../systemvars/index#nexial.textDelim"><code>${nexial.textDelim}</code></a>.  The columns are
+		<a href="../../systemvars/index#nexial.textDelim"><code>${nexial.textDelim}</code></a>. The columns are
 		based on those specified in the expected file.<br/>
 		<br/>
 		Note that one may combine this configuration with <code>...compareExt.matchCaseInsensitive</code> so that text
 		comparison can be conducted after the field values are trimmed <b>AND</b> compared case-insensitively.
+    </td>
+</tr>
+<tr>
+	<td><code>MyFiles.compareExt.matchAsOrderedList</code></td>
+	<td>The column(s) to be compared as order-significant list (aka array)</td>
+	<td>
+	  Specifying the column(s) that should be compared as order-significant list. "Order-significant" means that the 
+	  order of the list items must be observed and matched between the corresponding EXPECTED and ACTUAL columns. This 
+	  means that the corresponding column content for both EXPECTED and ACTUAL files must match both in terms of list 
+	  items and their respective order.<br/>
+	  <br/>
+	  Further customization is possible via <code>...compareExt.matchAutoTrim</code> where one can request for each 
+	  list item to be trimmed prior to comparison so that<br/>
+      <code>Apple,Orange,Banana</code><br/>
+      ... would be considered the same as <br/>
+      <code>Apple, Orange  , Banana</code><br/>
+      <br/>
+      Multiple columns are separated by
+      <a href="../../systemvars/index#nexial.textDelim"><code>${nexial.textDelim}</code></a>. The columns are based on 
+      those specified in the expected file.<br/>
+    </td>
+</tr>
+<tr>
+	<td><code>MyFiles.compareExt.matchAsUnorderedList</code></td>
+	<td>The column(s) to be compared as order-insignificant list (aka array)</td>
+	<td>
+	  Specifying the column(s) that should be compared as order-insignificant list. "Order-insignificant" means that the 
+	  order of the list items is not considered as part of the comparison. In such case, only the presence of the list 
+	  items is considered for comparision. This means that<br/>
+      <code>Apple,Orange,Banana</code><br/>
+      ... would be considered the same as <br/>
+      <code>Apple,Banana,Orange</code><br/>
+	  <br/>
+	  Further customization is possible via <code>...compareExt.matchAutoTrim</code> where one can request for each 
+	  list item to be trimmed prior to comparison so that<br/>
+      <code>Apple,Orange,Banana</code><br/>
+      ... would be considered the same as <br/>
+      <code>Apple, Banana  , Orange </code><br/>
+      <br/>
+      Multiple columns are separated by
+      <a href="../../systemvars/index#nexial.textDelim"><code>${nexial.textDelim}</code></a>. The columns are
+      based on those specified in the expected file.<br/>
+    </td>
+</tr>
+<tr>
+	<td><code>MyFiles.compareExt.list.delim</code></td>
+	<td>The list item delimiter to use when comparing between "list" columns</td>
+	<td>
+	  Note that this configuration is only applicable for the columns targeted for 
+	  <code>...compareExt.matchAsOrderedList</code> or <code>...compareExt.matchAsUnorderedList</code>.<br/>
+	  <br/>
+	  The delimiter specified here will be used to parse the "list" columns prior to comparison.
     </td>
 </tr>
 <tr>
