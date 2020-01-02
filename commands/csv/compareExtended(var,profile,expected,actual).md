@@ -148,6 +148,9 @@ Here are the list of possible configuration (assuming the `profile` is `MyFil
       ... would be considered the same as <br/>
       <code>Apple, Orange  , Banana</code><br/>
       <br/>
+      Also, one can invoke case insensitive comparison over "list" columns via 
+      <code>...compareExt.matchCaseInsensitive</code>.<br/>
+      <br/>
       Multiple columns are separated by
       <a href="../../systemvars/index#nexial.textDelim"><code>${nexial.textDelim}</code></a>. The columns are based on 
       those specified in the expected file.<br/>
@@ -169,6 +172,9 @@ Here are the list of possible configuration (assuming the `profile` is `MyFil
       <code>Apple,Orange,Banana</code><br/>
       ... would be considered the same as <br/>
       <code>Apple, Banana  , Orange </code><br/>
+      <br/>
+      Also, one can invoke case insensitive comparison over "list" columns via 
+      <code>...compareExt.matchCaseInsensitive</code>.<br/>
       <br/>
       Multiple columns are separated by
       <a href="../../systemvars/index#nexial.textDelim"><code>${nexial.textDelim}</code></a>. The columns are
