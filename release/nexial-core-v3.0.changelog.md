@@ -42,6 +42,7 @@ comments: true
 ### [Nexial Expression](../expressions)
 - [JSON](../expressions/JSONexpression): code fix to accurately reporting invalid file or content when constructing a
   JSON expression.
+- [TEXT](../expressions/TEXTexpression): **NEW** operation - `parseAsCsv(configs)` - to convert TEXT to CSV expression.
 
 
 ### [csv commands](../commands/csv)
@@ -52,6 +53,8 @@ comments: true
 - [`compareExtended(var,profile,expected,actual)`](../commands/csv/compareExtended(var,profile,expected,actual)): "list" 
   column cell can also combine with "trim-first" (via `[profile].compareExt.matchAutoTrim`) and "insensitively compare" 
   (via `[profile].compareExt.matchCaseInsensitive`).
+- [`compareExtended(var,profile,expected,actual)`](../commands/csv/compareExtended(var,profile,expected,actual)): minor
+  fixes to improve "output to cloud" support for when the EXPECTED or ACTUAL file is stored in cloud storage.
 
 
 ### [excel commands](../commands/excel)
