@@ -282,6 +282,21 @@ Output:<br/>
 
 -----
 
+#### **`parseAsCsv(configs)`**
+Parse the current text content as CSV. This operation supports the same parsing options found in 
+[CSV &raquo; `parse(configs)`](CSVexpression#parseconfig).
+
+**Example**<br/>
+In this example, the `parseAsCsv(configs)` operation is invoked on a TEXT expression. The next operation, `store(var)`,
+is issued against the now-transformed CSV expression. This is evident by the fact that the subsequent operation is
+`column-count`, which is an operation from [CSV Expression](CSVexpression). Furthermore, the "stored" data variable is
+recalled in the next command as a CSV expression, from which the `row-count` operation is issued.
+
+Script:<br/>
+![script](image/TEXTexpression_79.png)
+
+-----
+
 #### **`prepend(text,text,text,...)`**
 Add one or more text to the beginning of `text`.
 
