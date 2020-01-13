@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Nexial Exit Status
-level: 1
+parent: System Variables
 tags: system exit status
 comments: true
 redirect_from:
@@ -9,6 +9,7 @@ redirect_from:
   - /exitcodes
   - /systemvars/exitcodes
 ---
+
 
 At the [end of execution](endofexecution), Nexial emits some information that might be useful for external or its parent
 process. One of such information is the <a href="https://en.wikipedia.org/wiki/Exit_status" class="external-link" 
