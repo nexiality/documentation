@@ -6,6 +6,7 @@ tags: system output end status
 comments: true
 ---
 
+
 At the [end of execution](endofexecution), Nexial emits some information that might be useful for external or its parent
 process. One may consider such information as execution metadata. The main idea is to provide information in a standard, 
 consistent manner so that it may be further processed as part of a larger pipeline (as the case for CI/CD). One could 
