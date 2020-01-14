@@ -21,6 +21,7 @@ redirect_from:
 - [Mass-generate data values via 1 data variable and iteration](scope-currentIteration)
 - [Render Date/time in Specific Timezone](DisplayCurrentTimeInSpecificTimeZone)
 - [Why isn't Nexial executing my scenario (worksheet)?!](ScenarioExecution)
+<!-- - [Targeted Test Data Management](TargetedData) -->
 
 
 #### Desktop Automation
