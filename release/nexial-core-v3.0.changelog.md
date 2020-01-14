@@ -19,7 +19,9 @@ comments: true
 - [`nexial.outputToCloud`](../systemvars/index#nexial.outputToCloud): now supports subdirectory (or relative paths) when 
   moving execution artifacts to cloud storage. This means that any execution artifacts to be created in a subdirectory
   under the "output" directory will be move to the cloud storage with said subdirectory intact.
-
+- Removed unnecessary error logs for commands other than web and desktop when 
+  [`nexial.screenshotOnError`](../systemvars/index#nexial.screenshotOnError) is true.
+ 
 
 ### [JSONPath](../jsonpath)
 
