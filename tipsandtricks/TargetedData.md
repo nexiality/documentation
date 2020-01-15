@@ -23,10 +23,30 @@ applying test automation across these environments should result in minimum impa
 Furthermore, if changes are needed, they should be easy to manage and isolated to each environment. Nexial provides a
 few different strategies of handling environment-specific differences, aiming to minimize, isolate and simplify such
 impact:
-1. Manage data impact through [Data Sheets](../userguide/UnderstandingExcelTemplates#anatomy-of-a-nexial-data-file)
+1. Manage data impact through [Datasheets](../userguide/UnderstandingExcelTemplates#anatomy-of-a-nexial-data-file)
 2. Manage data impact through [project.properties](../userguide/UnderstandingProjectStructure#artifactprojectproperties)
 3. Manage data impact through [plan](../userguide/UnderstandingExcelTemplates#anatomy-of-a-nexial-test-plan)
 4. Manage environment-specific execution flow
 5. Environment-specific data variables and reporting
 
+
+### Manage Data Impact Through Datasheets
+Nexial provides the ability to change the use of a datasheet during execution. By convention, Nexial looks for the 
+datasheet that matches the scenario currently in execution. More specifically, 
+- When executing scenario (worksheet) `TestScenario` of `artifact/script/MyTest.xlsx`, Nexial will attemp to load the 
+  data variables found in the datasheet (worksheet) `TestScenario` of `artifact/data/MyTest.data.xlsx`. 
+- When the datasheet (worksheet) `TestScenario` is not found in `artifact/data/MyTest.data.xlsx`, the datasheet 
+  (worksheet) `#default` will be load instead as a form of "catch all".
+
+This convention is the default behavior and is designed to simplify script development and straightforward tests. It
+gives a generally serviceable construct, especially for individuals who are newer to test automation or to Nexial. 
+However, Nexial provides the ability to override this convention via the `-datasheets` command line options.
+ 
+ 
+ 
+ For example,
+```shell script
+cd $NEXIAL_HOME/bin
+./nexial.sh -script $MY_PROJECT_HOME/artifact/script/MyTest.xlsx -datasheets Local,QA
+```
 
