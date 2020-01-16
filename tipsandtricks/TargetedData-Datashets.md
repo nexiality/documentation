@@ -76,9 +76,9 @@ datasheet will take effect because `QA` datasheet is the last one to load. Now o
 
 The value of referenced data variables are as follows:
 
-- `${MyTest.BusinessStarts}` &rightarrow; `09:30` (from `QA` datasheet)
-- `${MyTest.BusinessCloses}` &rightarrow; `21:30` (from `QA` datasheet)
-- `${MyTest.BusinessOpensOn}` &rightarrow; `Monday, Friday, Saturday` (from `Local` datasheet)
+- `${MyTest.BusinessStarts}` --> `09:30` (from `QA` datasheet)
+- `${MyTest.BusinessCloses}` --> `21:30` (from `QA` datasheet)
+- `${MyTest.BusinessOpensOn}` --> `Monday, Friday, Saturday` (from `Local` datasheet)
 
 Suppose we switch the order of the datasheets from `Local,QA` to `QA,Local`. What do you think the output would look 
 like:<br/>
@@ -87,9 +87,9 @@ like:<br/>
 
 In this case, the value of referenced data variables are as follows:
 
-- `${MyTest.BusinessStarts}` &rightarrow; `10:30` (from `Local` datasheet)
-- `${MyTest.BusinessCloses}` &rightarrow; `16:00` (from `Local` datasheet)
-- `${MyTest.BusinessOpensOn}` &rightarrow; `Monday, Friday, Saturday` (from `Local` datasheet)
+- `${MyTest.BusinessStarts}` --> `10:30` (from `Local` datasheet)
+- `${MyTest.BusinessCloses}` --> `16:00` (from `Local` datasheet)
+- `${MyTest.BusinessOpensOn}` --> `Monday, Friday, Saturday` (from `Local` datasheet)
 
 -----
 
