@@ -38,9 +38,10 @@ datasheet:<br/>
 ![DifferentDataFiles.data](image/TargetedData_02.png) &nbsp; ![DifferentDataFiles.data](image/TargetedData_03.png)
 
 When we execute this script, we can see that these 3 data variables are loaded and printed correctly on the console:<br/>
-```shell script
+```
 ./nexial.sh -script $MY_PROJECT_HOME/artifact/script/DifferentDataFiles.xlsx
 ```
+
 ![](image/TargetedData_04.png)
 
 Hence the "catch-all" logic is in effect where the `${MyTest.BusinessStarts}` data variable is loaded from `#default` 
@@ -55,7 +56,7 @@ Suppose we have 2 other datasheets in the same data file:<br/>
 ![DifferentDataFiles.data](image/TargetedData_05.png) &nbsp; ![DifferentDataFiles.data](image/TargetedData_06.png)
 
 We can specify the use of these datasheets via command line option:
-```shell script
+```
 ./nexial.sh -script $MY_PROJECT_HOME/artifact/script/MyTest.xlsx -datasheets Local,QA
 ```
 
@@ -75,9 +76,9 @@ datasheet will take effect because `QA` datasheet is the last one to load. Now o
 
 The value of referenced data variables are as follows:
 
-- `${MyTest.BusinessStarts}` &Longrightarrow; `09:30` (from `QA` datasheet)
-- `${MyTest.BusinessCloses}` &Longrightarrow; `21:30` (from `QA` datasheet)
-- `${MyTest.BusinessOpensOn}` &Longrightarrow; `Monday, Friday, Saturday` (from `Local` datasheet)
+- `${MyTest.BusinessStarts}` &rightarrow; `09:30` (from `QA` datasheet)
+- `${MyTest.BusinessCloses}` &rightarrow; `21:30` (from `QA` datasheet)
+- `${MyTest.BusinessOpensOn}` &rightarrow; `Monday, Friday, Saturday` (from `Local` datasheet)
 
 Suppose we switch the order of the datasheets from `Local,QA` to `QA,Local`. What do you think the output would look 
 like:<br/>
@@ -86,9 +87,9 @@ like:<br/>
 
 In this case, the value of referenced data variables are as follows:
 
-- `${MyTest.BusinessStarts}` &Longrightarrow; `10:30` (from `Local` datasheet)
-- `${MyTest.BusinessCloses}` &Longrightarrow; `16:00` (from `Local` datasheet)
-- `${MyTest.BusinessOpensOn}` &Longrightarrow; `Monday, Friday, Saturday` (from `Local` datasheet)
+- `${MyTest.BusinessStarts}` &rightarrow; `10:30` (from `Local` datasheet)
+- `${MyTest.BusinessCloses}` &rightarrow; `16:00` (from `Local` datasheet)
+- `${MyTest.BusinessOpensOn}` &rightarrow; `Monday, Friday, Saturday` (from `Local` datasheet)
 
 -----
 
