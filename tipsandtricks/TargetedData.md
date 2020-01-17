@@ -6,6 +6,7 @@ tags: command tipsandtricks data test environment
 comments: true
 ---
 
+
 ## Introduction
 Often in testing, one comes across the need to support multiple environments (e.g. DEV, QA, UAT, PROD). These 
 environments create segregated landscapes to serve different focus throughout the product delivery lifecycle. The
@@ -25,6 +26,7 @@ few different strategies of handling environment-specific differences, aiming to
 impact. Click on one of the following links to learn more.
 
 1. [Manage Environment Impact Through Datasheets](TargetedData-Datashets)
+1. [Manage Environment Impact Through Data File](TargetedData-Data-File)
 2. Manage data impact through [project.properties](../userguide/UnderstandingProjectStructure#artifactprojectproperties)
 3. Manage data impact through [plan](../userguide/UnderstandingExcelTemplates#anatomy-of-a-nexial-test-plan)
 4. Manage environment-specific execution flow

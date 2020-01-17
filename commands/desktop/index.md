@@ -5,6 +5,7 @@ tags: desktop command
 comments: true
 ---
 
+
 Nexial supports the automation of desktop application both in terms of performing actions by simulating keystrokes and
 mouse events. It uses <a href="https://github.com/2gis/Winium" class="external-link" target="_nexial_link">Winium</a> as
 the underlying automation engine. As such, Nexial currently does not support the automation of Java Swing applications
@@ -12,7 +13,6 @@ or non-Windows applications.
 
 If you are new to desktop automation via Nexial, please first familiarize yourself with the 
 [Basic Concept and Configuration](configureDesktopApplication).
-
 
 
 ### Available Commands
