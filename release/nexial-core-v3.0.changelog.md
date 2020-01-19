@@ -73,3 +73,4 @@ comments: true
 
 
 ### [web commands](../commands/web)
+- minor fixes to allow for multiple UserStack API keys.
