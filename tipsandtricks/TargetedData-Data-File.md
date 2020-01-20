@@ -10,17 +10,16 @@ comments: true
 
 ## Manage Environment Impact Through Data File
 
-This is a continuation from [Manage Environment I/mpact Through Datasheets](TargetedData-Datashets) (exerpt below)
+This is a continuation from [Manage Environment Impact Through Datasheets](TargetedData-Datasheets) (excerpt below)
 > The ability to load unconventional datasheets during execution gives us greater flexibility and control over the 
   automation data set. One can achieve via the `-datasheet` command line option. One can design environment-specific 
   dataset via dedicated datasheets. One can also design a "default" datasheet to maintain environment-agnostic dataset 
   (consider the `#default` datasheet for this) to further simplify the maintenance of data variables.
 
-In continuation from [Managing Environment Impact Through Datasheets](TargetedData-Datashets), we continue to explore
-other ways Nexial can help to manage environment impact. Another way is to segregate data into dedicated files. Another 
-way to manage one's automation data (or test data) is by segregating environment-specific data as separate data files 
-(Excel files). This means that one can design multiple data files for the same test script, and selectively elect 
-one of them for automation, at the time of execution.
+### Data File Convention
+We continue to explore other ways Nexial can help to manage environment impact. Besides the use of different datasheets 
+at execution time (via `-datasheet`), we can also specify different data file. This means that one can design multiple 
+data files for the same test script, and selectively elect one of them for automation, at the time of execution.
 
 First, here's the example script (`artifact/script/DifferentDataFile.xlsx`):<br/>
 ![](image/TargetedData_datafile_01.png)
@@ -31,113 +30,76 @@ As highlighted, this simple script references 4 data variables:
 - `${MyTest.BusinessStarts}`
 - `${MyTest.BusinessCloses}`
 
-The matching data file (`artifact/data/DifferentDataFile.data.xlsx`) is as follows:<br/>
+By convention, Nexial looks for the matching data file to load during execution. The basic matching rule is as follows:<br/>
+![](image/TargetedData_datafile_05.png)
 
+So based on this convention, matching data file would be `artifact/data/DifferentDataFile.data.xlsx`. In our case, it
+looks like this:<br/>
 ![](image/TargetedData_datafile_02.png) &nbsp; ![](image/TargetedData_datafile_03.png)
 
-No surprises here; the output prints out what we expect:<br/>
+No surprises here; the output shows what we expect (see highlighted):<br/>
 ![](image/TargetedData_datafile_04.png)
-
-
-
-By convention, Nexial resolves the effective data file by the name of the script in execution. More specifically,
-
-```
-artifact/script/[MY_SCRIPT_NAME].xlsx
-```
-
-would resolve to the effective data file as:
-
-```
-artifact/data/[MY_SCRIPT_NAME].data.x;lsx
-```
-
-By convention, Nexial looks for the [datasheet](../userguide/UnderstandingExcelTemplates#anatomy-of-a-nexial-data-file) 
-that matches the scenario currently in execution. This means that: 
-
-- When executing scenario `TestScenario` of `artifact/script/MyTest.xlsx`, Nexial will attemp to load the 
-  data variables defined in the datasheet `TestScenario` of `artifact/data/MyTest.data.xlsx`.
-- Regardless whether the `TestScenario` datasheet is loaded or not (perhaps it does not exist), Nexial will attempt 
-  to load `#default` datasheet from the same `artifact/data/MyTest.data.xlsx` data file. This way the `#default` 
-  datasheet acts as a form of "catch-all".
-- As a "catch-all", the data variables defined in `#default` datasheet will be loaded **ONLY** if they are not
-  defined in other datasheet. In other words, `#default` datasheet is of the _least priority_.
-
-The above convention is Nexial's default behavior and is designed to simplify script development and straightforward 
-tests. It provides a generally serviceable construct and a good starting point for individuals who are new to test 
-automation or to Nexial. To see this in action, let's look at the following example. Below is a simple test scenario 
-(named `TestScenario`) with 2 [base &raquo; `verbose(text)`](../commands/base/verbose(text)) commands and it 
-references to 3 data variables:
-
-1. On Row 5: `${MyTest.BusinessStarts}`
-2. On Row 5: `${MyTest.BusinessCloses}`
-3. On Row 6: `${MyTest.BusinessOpensOn}`
-
-![DifferentDataFiles](image/TargetedData_01.png)
-
-For this example, the referenced data variables are defined in the `#default` datasheet and the `TestScenario` 
-datasheet:<br/>
-![DifferentDataFiles.data](image/TargetedData_02.png) &nbsp; ![DifferentDataFiles.data](image/TargetedData_03.png)
-
-When we execute this script, we can see that these 3 data variables are loaded and printed correctly on the console:<br/>
-```
-./nexial.sh -script $MY_PROJECT_HOME/artifact/script/DifferentDataFiles.xlsx
-```
-
-![](image/TargetedData_04.png)
-
-Hence the "catch-all" logic is in effect where the `${MyTest.BusinessStarts}` data variable is loaded from `#default` 
-datasheet (since it's not defined elsewhere).
 
 -----
 
-### Alter The Datasheet Loading Sequence
-However, Nexial provides the ability to alter the above convention via the `-datasheets` command line option.
-
-Suppose we have 2 other datasheets in the same data file:<br/>
-![DifferentDataFiles.data](image/TargetedData_05.png) &nbsp; ![DifferentDataFiles.data](image/TargetedData_06.png)
-
-We can specify the use of these datasheets via command line option:
+### The Unconventional Way
+By using the `-data` command line option, we can override the above convention. For example,
 ```
-./nexial.sh -script $MY_PROJECT_HOME/artifact/script/MyTest.xlsx -datasheets Local,QA
+./nexial.sh -script $MY_PROJECT_HOME/artifact/script/DifferentDataFile.xlsx -data /Users/me/data/QA/AnotherDataFile.xlsx
 ```
 
-Now Nexial will not consider the data variables defined in `TestScenario`. The sequence of data variable resolution
-would now be:
+Nexial will use the fully qualified data file, as specified, instead of the conventional data file. However one can 
+also simplify the above command line option by omitting the fully qualified location of the target data file:
+```
+./nexial.sh -script $PROJECT_HOME/artifact/script/DifferentDataFile.xlsx -data AnotherDataFile.xlsx
+```
 
-- load data variables defined in `#default`
-- load data variables defined in `Local`, possibly overriding previously defined ones
-- load data variables defined in `QA`, possibly overriding previously defined ones
+When the precise location of `AnotherDataFile.xlsx` is not specified, Nexial searches through these locations 
+(order precedence):
+- `$PROJECT_HOME/artifact/script`
+- `$PROJECT_HOME/artifact/data`
+- `$PROJECT_HOME/artifact`
 
-**NOTE: "The lsat one WINS!"**
+Let's see this feature in action. Here, we have `AnotherDataFile.xlsx` located in `artifact/data`:<br/>
+![](image/TargetedData_datafile_06.png)
 
-Since `${MyTest.BusinessStarts}` is defined in the `#default`, `Local` and `QA` datasheets, the one defined in `QA`
-datasheet will take effect because `QA` datasheet is the last one to load. Now observe the execution output:<br/>
+The content of `AnotherDataFile.xlsx` looks like this:<br/>
+![](image/TargetedData_datafile_07.png) &nbsp; ![](image/TargetedData_datafile_08.png)
 
-![](image/TargetedData_07.png)
+As the execution output shows (below), Nexial is now using the data defined in `artifact/dataAnotherDataFile.xlsx`:
+![](image/TargetedData_datafile_09.png)
 
-The value of referenced data variables are as follows:
+-----
 
-- `${MyTest.BusinessStarts}` --> `09:30` (from `QA` datasheet)
-- `${MyTest.BusinessCloses}` --> `21:30` (from `QA` datasheet)
-- `${MyTest.BusinessOpensOn}` --> `Monday, Friday, Saturday` (from `Local` datasheet)
+### Combing the Use of `-data` and `-datasheet`
+Recalling from [the previous article](TargetedData-Datasheets.md) on the use of `-datasheet` command line option, we
+can combine the use of both `-data` and `-datasheet` to device a flexible and extensible way of handling 
+environment-specific data. Consider the following examples:
 
-Suppose we switch the order of the datasheets from `Local,QA` to `QA,Local`. What do you think the output would look 
-like:<br/>
+Running "happy path" with the "good data" that is valid in "QA":
+```
+./nexial.sh -script $MY_PROJECT_HOME/artifact/script/HappyPath.xlsx -data QA.xlsx -datasheet Good-Data
+```
 
-![](image/TargetedData_08.png)
+Running "happy path" with expected data in "QA", first use "last quarter" data and then override with "this quarter":
+```
+./nexial.sh -script $MY_PROJECT_HOME/artifact/script/HappyPath.xlsx -data QA.xlsx -datasheet LastQuarter,CurrentQuarter
+```
 
-In this case, the value of referenced data variables are as follows:
+Running the error conditions with the "outdated orders" found in "QA" environment:
+```
+./nexial.sh -script $MY_PROJECT_HOME/artifact/script/Exceptions.xlsx -data QA.xlsx -datasheet OutdatedOrder
+```
 
-- `${MyTest.BusinessStarts}` --> `10:30` (from `Local` datasheet)
-- `${MyTest.BusinessCloses}` --> `16:00` (from `Local` datasheet)
-- `${MyTest.BusinessOpensOn}` --> `Monday, Friday, Saturday` (from `Local` datasheet)
+Running the error conditions in "UAT", using first the data from "last month" and then overload with data from "this 
+month": 
+```
+./nexial.sh -script $MY_PROJECT_HOME/artifact/script/Exceptions.xlsx -data UA.xlsx -datasheet LastMonth,ThisMonth
+```
 
 -----
 
 ### Conclusion
-The ability to load different datasheets during execution gives us greater flexibility and control over the automation
-data set. One can design a set of datasheets, each designated to a specific environment. One can also design a "default"
-datasheet that would apply to all environment (consider using `#default` datasheet for this) to simply the work of
-maintaining data variables in the environment-specific datasheets.
-
+The ability to use different data file during execution gives us more coarse-grained control over our data set. One can 
+design segregated sets of data - and potentially each with different ownership - for each environment. When use in
+combination with the `-datasheet` command line option, we can achieve even flexibility.
