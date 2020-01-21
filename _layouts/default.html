@@ -73,21 +73,25 @@
         </select>
 
         {% if page.level and page.level == 1 %}
-            {% include _breadcrumb_level1.html %}
+        {% include _breadcrumb_level1.html %}
         {% else %}
-            {% if page.url contains '/commands/' %}
-                {% if page.parent %}
-                    {% include _breadcrumb_command.html %}
-                {% else %}
-                    {% include _breadcrumb_command_type.html %}
-                {% endif %}
-            {% else %}
-                {% if page.parent %}
-                    {% include _breadcrumb_level2.html %}
-                {% else %}
-                    {% include _breadcrumb_level1.html %}
-                {% endif %}
-            {% endif %}
+        {% if page.url contains '/commands/' %}
+        {% if page.parent %}
+        {% include _breadcrumb_command.html %}
+        {% else %}
+        {% include _breadcrumb_command_type.html %}
+        {% endif %}
+        {% else %}
+        {% if page.parent %}
+        {% if page.level > 2 %}
+        {% include _breadcrumb_level3.html %}
+        {% else %}
+        {% include _breadcrumb_level2.html %}
+        {% endif %}
+        {% else %}
+        {% include _breadcrumb_level1.html %}
+        {% endif %}
+        {% endif %}
         {% endif %}
 
         {% if site.tipue_search_active %}
