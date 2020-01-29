@@ -1,12 +1,12 @@
 ---
-layout: default
-title: Through Data File and Datasheets
-tags: command tipsandtricks data environment data-file
-parent: Targeted Test Data Management
+layout:     default
+title:      Through Data File and Datasheets
+tags:       command tipsandtricks data environment data-file
+parent:     Targeted Test Data Management
 parent-url: TargetedData
-level: 3
-section: Tips and Tricks
-comments: true
+level:      3
+section:    Tips and Tricks
+comments:   true
 ---
 
 

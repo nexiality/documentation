@@ -1,6 +1,6 @@
 ---
 layout: default
-title: artifact/project.properties
+title: Through project.properties
 tags: command tipsandtricks data environment project.properties
 parent: Targeted Test Data Management
 parent-url: TargetedData

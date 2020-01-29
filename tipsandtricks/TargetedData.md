@@ -138,7 +138,7 @@ Now, back to the topic at hand. Below are a list of strategies in which to handl
 Nexial:
 1. [Through Data File and Datasheets](TargetedData-DataFile_DataSheets)
 3. [Through Plan](TargetedData-Plan)
-4. [`artifact/project.properties`](TargetedData-ProjectProperties)
+4. [Through `artifact/project.properties`](TargetedData-ProjectProperties)
 5. [Through Command Line Option](TargetedData-override)
 6. Manage environment-specific execution flow
 7. Environment-specific data variables and reporting
