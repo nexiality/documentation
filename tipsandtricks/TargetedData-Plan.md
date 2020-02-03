@@ -17,28 +17,56 @@ addition, one can associate different data files and datasheets per script execu
 tool to create elaborate and dynamic automation. Let's see this in more details.
 
 
-### Dealing with Multiple Script and Data
+### Test Plan Primer
 Suppose we have the following test plan (`arifact/plan/TestPlan.xlsx):<br/>
 ![](image/TargetedData_Plan1.png)<br/>
 
-As specified, this test plan references 2 scripts: `PlanControl1` and `PlanControl2`. Consistent with 
-Nexial's design, the script locations are automatically resolved based on convention. Furthermore the reference to
-data file is subsequently inferred as `artifact/data/PlanControl1.data.xlsx` and `artifact/data/PlanControl2.data.xlsx` 
-respectively. One could draw up a project directory as something like this:
+As shown above, this test plan references 2 scripts: `PlanControl1` and `PlanControl2`. Consistent with 
+Nexial's design, the script location is automatically resolved based on convention -- the convention that the test plan
+resides in `artifact/plan` and the scripts reside in `artifact/script`. Using the same convention, the data file is also
+resolved to `artifact/data/[SCRIPT_NAME].data.xlsx`. Hence based on these conventions, here's the corresponding project 
+directory structure would look something like this:<br/>
 
- 
-this means that:
-1. `artifact/plan/TestPlan.xlsx` references its first script as `artifact/script/PlanControl1.xlsx`. 
+![](image/TargetedData_Plan6.png)
 
+Notice that:
+- In the test plan, the scripts are referenced as `PlanControl1` and `PlanControl2`. Nexial will add the `.xlsx` 
+  extension as needed.
+- Since no datasheet is specified in the test plan, the convention, _once again_, dictates that the datasheet matching
+  to the executing scenario and the fallback `#default` datasheet will be loaded during execution.
 
-![](image/TargetedData_Plan2.png)<br/>
-![](image/TargetedData_Plan3.png)<br/>
-![](image/TargetedData_Plan4.png)<br/>
-![](image/TargetedData_Plan5.png)<br/>
+Here are the content of the referenced scripts and data files:
 
-It is not uncommon to run multiple scripts consecutively.
+| artifact                                                       | content                           |
+|----------------------------------------------------------------|-----------------------------------|
+| `artifact/script/PlanControl1.xlsx`<br/>(scenario: `Scenario`) | ![](image/TargetedData_Plan2.png) |
+| `artifact/data/PlanControl1.data.xlsx`<br/>(only `#default`)   | ![](image/TargetedData_Plan5.png) |
+| `artifact/script/PlanControl2.xlsx`<br/>(scenario: `Scenario`) | ![](image/TargetedData_Plan3.png) |
+| `artifact/data/PlanControl2.data.xlsx`<br/>(only `#default`)   | ![](image/TargetedData_Plan4.png) |
+
+When this test plan is executed, Nexial will read its content and execute:
+1. The scenario `Scenario` in `artifact/script/PlanControl.xlsx`, using the `#default` datasheet in 
+   `artifact/data/PlanControl1.data.xlsx`
+2. The scenario `Scenario` in `artifact/script/PlanContro2.xlsx`, using the `#default` datasheet in 
+   `artifact/data/PlanControl2.data.xlsx`
+
+The execution output looks like this:
+`./nexial.sh -plan $PROJECT/artifact/plan/TestPlan.xlsx`
+
+![](image/TargetedData_Plan7.png)
+
+Observe that:
+- the scripts are executed in sequence as specified in the test plan
+- each script execution ends with a dedicated summary outlining the high-level execution outcome. There is also a 
+  separate execution output (in Excel) per script
 
 -----
+
+### Dealing with Multiple Script and Data
+The test plan 
+
+-----
+
 
 ### Applying Matching Data File
 
