@@ -14,19 +14,23 @@ Nexial provides a mechanism to execute multiple scripts, either in succession or
 [test plan](../userguide/UnderstandingExcelTemplates#anatomy-of-a-nexial-test-plan). A test plan organizes the order 
 of executions across multiple scripts, even those in different projects (i.e. different project directories). In 
 addition, one can associate different data files and datasheets per script execution, making the test plan a powerful 
-tool to create elaborate and dynamic automation. Let's see this in more details.
+tool to create intricate and dynamic automation. Let's see this in more details.
 
 
-### Test Plan Primer
-Suppose we have the following test plan (`arifact/plan/TestPlan.xlsx):<br/>
+### Primer on Test Plan
+Suppose we have the following test plan (`arifact/plan/TestPlan.xlsx`):<br/>
 ![](image/TargetedData_Plan1.png)<br/>
 
-As shown above, this test plan references 2 scripts: `PlanControl1` and `PlanControl2`. Consistent with 
-Nexial's design, the script location is automatically resolved based on convention -- the convention that the test plan
-resides in `artifact/plan` and the scripts reside in `artifact/script`. Using the same convention, the data file is also
-resolved to `artifact/data/[SCRIPT_NAME].data.xlsx`. Hence based on these conventions, here's the corresponding project 
-directory structure would look something like this:<br/>
+This test plan references 2 scripts: `PlanControl1` and `PlanControl2`. Consistent to Nexial's design and approach to 
+convention, the script location is automatically resolved based on the location of the test plan. Similarly, the data 
+file is also resolved by the same convention, which is:
 
+> <br/>
+> The test plan resides in `artifact/plan/`<br/>
+> The scripts reside in `artifact/script/`<br/>
+> The data files reside `artifact/data/[SCRIPT_NAME].data.xlsx`
+
+Here's the corresponding project directory structure:<br/>
 ![](image/TargetedData_Plan6.png)
 
 Notice that:
@@ -50,9 +54,8 @@ When this test plan is executed, Nexial will read its content and execute:
 2. The scenario `Scenario` in `artifact/script/PlanContro2.xlsx`, using the `#default` datasheet in 
    `artifact/data/PlanControl2.data.xlsx`
 
-The execution output looks like this:
-`./nexial.sh -plan $PROJECT/artifact/plan/TestPlan.xlsx`
-
+The execution output looks like this:<br/>
+`./nexial.sh -plan $PROJECT/artifact/plan/TestPlan.xlsx`<br/>
 ![](image/TargetedData_Plan7.png)
 
 Observe that:
@@ -63,13 +66,46 @@ Observe that:
 -----
 
 ### Dealing with Multiple Script and Data
-The test plan 
+The test plan gives us a singular view on the organization of our automation. We can specify the scripts to execute 
+and the sequence of such execution. More importantly we can also specify the data files and datasheets to use when 
+executing each script (i.e. breaking convention). Below are some examples.
 
------
+#### Case #1: Running the same execution with customized data files
+Running the same execution but using `artifact/data/QA data.xlsx` as the data file for each script:<br/>
+![](image/TargetedData_Plan8.png)
 
+##### Case #2: Running the same execution with customized data files (second variation)
+Running the same execution, except that the second script will use `artifact/data/BigCompany-data.xlsx` instead of
+the conventional `artifact/data/PlanControl2.data.xlsx`<br/>
+![](image/TargetedData_Plan9.png)
 
-### Applying Matching Data File
+#### Case #3: Running the same execution with customized datasheets
+- When executing `artifact/script/PlanControl1.xlsx` script, use `artifact/data/PlanControl1.data.xlsx` as data file 
+  but load the `Base`, `QA1` and `#default` datasheets **REGARDLESS** of the test scenario to execute.
+- When executing `artifact/script/PlanControl2.xlsx` script, use `artifact/data/PlanControl2.data.xlsx` as data file 
+  but load the `Commons` and `#default` datasheets **REGARDLESS** of the test scenario to execute.
+
+![](image/TargetedData_Plan10.png)
+
+Note that:
+- the `#default` datasheet is implicitly considered when loading any data file, but it will always act as the 
+  "fallback" (least priority data definition).
+- when datasheet(s) is/are specified in a test plan, the convention of "auto-matching" of test scenario against 
+  datasheet will suspend. This means that the specified datasheet will be loaded for all the test scenarios of the 
+  corresponding script.
+
+#### Case #4: Running the same execution with customized data file location
+Running the same execution, except that the second script will use `C:\CustomerA\data.xlsx` as data file, which is
+outside the given project directory structure.
+![](image/TargetedData_Plan11.png)
+
+This is not usually encouraged since it would decrease the portability of the project. But it is at times necessary 
+(and thus allowed in Nexial). Imagine that instead of `C:\CustomerA` as the data file location, we might have a mapped
+network drive, like `X:\Customers\CustomerA`. As such, collaboration across different groups can be easily achieve to 
+create a co-sharing data strategy.
 
 -----
 
 ### Conclusion
+Through the use of test plan, Nexial provides a mechanism to execute multiple scripts with flexible capability to match 
+against different data files and datasheets. One can employ such feature towards environment-specific data requiurement.
