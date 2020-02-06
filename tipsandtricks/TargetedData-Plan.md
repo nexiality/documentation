@@ -93,6 +93,9 @@ Note that:
 - when datasheet(s) is/are specified in a test plan, the convention of "auto-matching" of test scenario against 
   datasheet will suspend. This means that the specified datasheet will be loaded for all the test scenarios of the 
   corresponding script.
+- using this technique, one can think of a data overridding strategy where the data of a "higher" environment overrides
+  those of the "lower" ones. For example, `#default,DEV,QA,UAT,PROD` - would mean the data in `PROD` overrides those in
+  `UAT`, the data in `UAT` overrides those in `QA`, and so on.
 
 #### Case #4: Running the same execution with customized data file location
 Running the same execution, except that the second script will use `C:\CustomerA\data.xlsx` as data file, which is
@@ -109,3 +112,5 @@ create a co-sharing data strategy.
 ### Conclusion
 Through the use of test plan, Nexial provides a mechanism to execute multiple scripts with flexible capability to match 
 against different data files and datasheets. One can employ such feature towards environment-specific data requiurement.
+Environment-specific data and data variable can be managed independently and one data set can override another at the
+time of execution with ease - via the Nexial test plan.
