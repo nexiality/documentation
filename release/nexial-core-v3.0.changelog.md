@@ -21,6 +21,8 @@ comments: true
   under the "output" directory will be move to the cloud storage with said subdirectory intact.
 - Removed unnecessary error logs for commands other than web and desktop when 
   [`nexial.screenshotOnError`](../systemvars/index#nexial.screenshotOnError) is true.
+- [bin/nexial-project](../userguide/BatchFiles#nexial-project): Now supports creation of project.properties
+   if it doesn't exist.
  
 
 ### [JSONPath](../jsonpath)
@@ -60,6 +62,11 @@ comments: true
 
 
 ### [excel commands](../commands/excel)
+
+
+### [desktop commands](../commands/desktop)
+- Fixed issue of build number. Now build num provided by [`nexial.scriptRef.buildnum`](../systemvars/index#nexial.scriptRef.buildnum)
+  has precedence over application version defined in application config xml file. 
 
 
 ### [rdbms commands](../commands/rdbms)
