@@ -10,20 +10,20 @@ comments:   true
 ---
 
 
-Nexial provides a mechanism to execute multiple scripts, either in succession or in sequence through the use of
+Nexial provides a mechanism to execute multiple scripts, either in succession or in sequence through the use of a
 [test plan](../userguide/UnderstandingExcelTemplates#anatomy-of-a-nexial-test-plan). A test plan organizes the order 
-of executions across multiple scripts, even those in different projects (i.e. different project directories). In 
-addition, one can associate different data files and datasheets per script execution, making the test plan a powerful 
-tool to create intricate and dynamic automation. Let's see this in more details.
+of executions across multiple scripts, even those in different projects (i.e. different project directories). Also, one 
+can associate different data files and datasheets per script execution, making the test plan a powerful tool to create 
+intricate and dynamic automation. Let's see this in more detail.
 
 
 ### Primer on Test Plan
 Suppose we have the following test plan (`arifact/plan/TestPlan.xlsx`):<br/>
 ![](image/TargetedData_Plan1.png)<br/>
 
-This test plan references 2 scripts: `PlanControl1` and `PlanControl2`. Consistent to Nexial's design and approach to 
-convention, the script location is automatically resolved based on the location of the test plan. Similarly, the data 
-file is also resolved by the same convention, which is:
+This test plan references 2 scripts: `PlanControl1` and `PlanControl2`. Consistent with Nexial's design and approach 
+towards convention, the script location is automatically resolved based on the location of the test plan. Similarly, the 
+data file is also resolved by the same convention, which is:
 
 > <br/>
 > The test plan resides in `artifact/plan/`<br/>
@@ -66,8 +66,8 @@ Observe that:
 -----
 
 ### Dealing with Multiple Script and Data
-The test plan gives us a singular view on the organization of our automation. We can specify the scripts to execute 
-and the sequence of such execution. More importantly we can also specify the data files and datasheets to use when 
+The test plan gives us a singular view of the organization of our automation. We can specify the scripts to execute 
+and the sequence of such execution. More importantly, we can also specify the data files and datasheets to use when 
 executing each script (i.e. breaking convention). Below are some examples.
 
 #### Case #1: Running the same execution with customized data files
@@ -93,24 +93,24 @@ Note that:
 - when datasheet(s) is/are specified in a test plan, the convention of "auto-matching" of test scenario against 
   datasheet will suspend. This means that the specified datasheet will be loaded for all the test scenarios of the 
   corresponding script.
-- using this technique, one can think of a data overridding strategy where the data of a "higher" environment overrides
+- using this technique, one can think of a data overriding strategy where the data of a "higher" environment overrides
   those of the "lower" ones. For example, `#default,DEV,QA,UAT,PROD` - would mean the data in `PROD` overrides those in
   `UAT`, the data in `UAT` overrides those in `QA`, and so on.
 
 #### Case #4: Running the same execution with customized data file location
-Running the same execution, except that the second script will use `C:\CustomerA\data.xlsx` as data file, which is
+Running the same execution, except that the second script will use `C:\CustomerA\data.xlsx` as the data file, which is
 outside the given project directory structure.
 ![](image/TargetedData_Plan11.png)
 
-This is not usually encouraged since it would decrease the portability of the project. But it is at times necessary 
+This is not usually recommended since it would decrease the portability of the project. But it is at times necessary 
 (and thus allowed in Nexial). Imagine that instead of `C:\CustomerA` as the data file location, we might have a mapped
-network drive, like `X:\Customers\CustomerA`. As such, collaboration across different groups can be easily achieve to 
+network drive, like `X:\Customers\CustomerA`. As such, collaboration across different groups can be easily achieved to 
 create a co-sharing data strategy.
 
 -----
 
 ### Conclusion
-Through the use of test plan, Nexial provides a mechanism to execute multiple scripts with flexible capability to match 
-against different data files and datasheets. One can employ such feature towards environment-specific data requiurement.
+Through the use of test plan, Nexial provides a mechanism to execute multiple scripts with the flexibility to match 
+against different data files and datasheets. One can employ this feature towards environment-specific data requirement.
 Environment-specific data and data variable can be managed independently and one data set can override another at the
 time of execution with ease - via the Nexial test plan.

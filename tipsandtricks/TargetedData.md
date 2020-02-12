@@ -11,9 +11,9 @@ comments: true
 Often in testing - and automation in general - one comes across the need to support multiple environments 
 (e.g. DEV, QA, UAT, PROD). These environments create segregated landscapes to serve the different focuses throughout the 
 product delivery lifecycle. The so-called "lower" environments, such as DEV or QA, are purposed to support the early 
-phases of application development, integration, and testing, while the "higher" ones (UAT and PROD) focus on the end-user 
-experience and end-to-end workflow. While the target application (a.k.a. _application under test_) could be the same 
-version across these environments, the application data and configuration might differ greatly. For example, each 
+phases of application development, integration, and testing, while the "higher" ones (UAT and PROD) focus on the 
+end-user experience and end-to-end workflow. While the target application (a.k.a. _application under test_) could be the 
+same version across these environments, the application data and configuration might differ greatly. For example, each 
 environment could differ in terms of:
 1. Connectivity to external services and components, such as databases, messaging services, integration endpoints
 2. User credentials and roles
@@ -44,8 +44,8 @@ As highlighted, this simple script references 4 data variables:
 - `${MyTest.BusinessStarts}`
 - `${MyTest.BusinessCloses}`
 
-By default, Nexial looks for the matching data file to load during automation. In this case, the matching data file would 
-be `artifact/data/DifferentDataFile.data.xlsx`, which looks like this:<br/>
+By default, Nexial looks for the matching data file to load during automation. In this case, the matching data file 
+would be `artifact/data/DifferentDataFile.data.xlsx`, which looks like this:<br/>
 ![](image/TargetedData_datafile_02.png) &nbsp; ![](image/TargetedData_datafile_03.png)
 
 When we execute this script, no surprises here; the output shows what we expect (see highlighted):<br/>
@@ -80,7 +80,7 @@ For this example, the referenced data variables are defined in the `#default` da
 datasheet:<br/>
 ![DifferentDataFiles.data](image/TargetedData_02.png) &nbsp; ![DifferentDataFiles.data](image/TargetedData_03.png)
 
-When we execute this script, we can see that these 3 data variables are loaded and printed correctly on the console:<br/>
+When we execute this script, we see these 3 data variables are loaded and printed correctly on the console:<br/>
 
 `./nexial.sh -script $PROJECT_HOME/artifact/script/DifferentDataFiles.xlsx`
 ![](image/TargetedData_04.png)
@@ -93,7 +93,7 @@ datasheet (since it's not defined elsewhere).
 ### Project-wide Data Management
 Besides the use of data files and various datasheets, Nexial provides another form of data management to handle
 project-wide data variables. Within each project, one may create a 
-[`project.properties` file under the `artifact/`](../userguide/UnderstandingProjectStructure#artifactprojectproperties)
+[`project.properties` file](../userguide/UnderstandingProjectStructure#artifactprojectproperties) under the `artifact/`
 directory:<br/>
 ![](image/TargetedData_datafile_10.png)
 
@@ -114,7 +114,7 @@ Note the following:
    keep the project consistent and hierarchically sound. However one can still override the project-bound data variable
    via the use of [base &raquo; `save(var,value)`](../commands/base/save(var,value)) and 
    [base &raquo; `clear(vars)`](../commands/base/clear(vars)) command.
-5. Subject to the same rules as a standard Java 
+6. Subject to the same rules as a standard Java 
    <a href="https://docs.oracle.com/cd/E26180_01/Platform.94/ATGProgGuide/html/s0204propertiesfileformat01.html" class="external-link" target="_nexial_link">Properties file format</a>,
    duplication of data variable in the same `project.properties` is not allowed. The last data variable definition will
    trump the preceding ones. 
@@ -134,17 +134,17 @@ variables) separate from the corresponding scripts, in the order of override pri
    active scenario (default behavior), or user-defined datasheet(s) specified as a command-line option. If more than one 
    datasheets are specified, the data variable found in the later datasheet will override the earlier ones 
    ("_last one WINs_").
-2. **Data can be defined in data files**. This can either be the data file matching to the active script (default 
+3. **Data can be defined in data files**. This can either be the data file matching to the active script (default 
    behavior), or a user-defined data file specified as a command-line option. The data overriding rule would follow the 
    same as those of datasheet (above point). 
-3. **Data can be defined in [`project.properties`](../userguide/UnderstandingProjectStructure#artifactprojectproperties)**.
+4. **Data can be defined in [`project.properties`](../userguide/UnderstandingProjectStructure#artifactprojectproperties)**.
    The `project.properties` is a simple text file with name-value pairs to represent a set of project-wide data 
    variables and their corresponding value. For a given project, there would be at most 1 `project.properties`. All
    data variables defined here would override those found in data files. 
-4. **Data can be defined through command-line options**. One would use the 
+5. **Data can be defined through command-line options**. One would use the 
    [`-override` command-line option](../userguide/BatchFiles#nexial) to override other definitions of the same data 
    variables found in `project.properties` or data file.
-5. Lastly, and not recommended, **Data can be defined directly via the scripts**. While this is not recommended, it is
+6. Lastly, and not recommended, **Data can be defined directly via the scripts**. While this is not recommended, it is
    useful and at times downright necessary. Using the [base &raquo; `save(var,value)`](../commands/base/save(var,value)),
    one may inject or override a data variable dynamically. Data variables such as those derived via date or application 
    behavior can be dynamically created this way.
@@ -155,8 +155,8 @@ variables) separate from the corresponding scripts, in the order of override pri
 Now, back to the topic at hand. Below is a list of strategies in which to handle environment-specific differences via
 Nexial:
 1. [Through Data File and Datasheets](TargetedData-DataFile_DataSheets)
-3. [Through Plan](TargetedData-Plan)
-4. [Through `project.properties`](TargetedData-ProjectProperties)
-5. [Through Command-Line Option](TargetedData-override)
-6. Manage environment-specific execution flow
-7. Environment-specific data variables and reporting
+2. [Through Plan](TargetedData-Plan)
+3. [Through `project.properties`](TargetedData-ProjectProperties)
+4. [Through Command-Line Option](TargetedData-override)
+5. Manage environment-specific execution flow
+6. Environment-specific data variables and reporting
