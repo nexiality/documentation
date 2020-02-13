@@ -16,6 +16,9 @@ This feature helps to streamline data management and expedite script development
 
 
 ### Toggling Multiple `project.properties`
+Suppose we store environment-specific data variables in different `project.properties` files, like this:
+
+
 One can consider storing environment-specific data variables in different renditions of `project.properties`. Just 
 before execution, one can swap one of the `project.properties` file to create a wholesale change of data variables.
 

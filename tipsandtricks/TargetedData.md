@@ -104,15 +104,30 @@ corresponding data value. The data variables defined here are relevant for the e
 project directory). For example,<br/>
 ![](image/TargetedData_datafile_11.png)
 
-Note the following:
+With such a `project.properties`, we can execute the following script to reference any of its data variables:<br/>
+![](image/TargetedData_Prop1.png)
+
+(and the accompanying data file with minimum content):<br/>
+![](image/TargetedData_Prop2.png)
+
+The output prints out the values of the data variables defined in `project.properties`, as expected:<br/>
+![](image/TargetedData_Prop3.png)
+
+There are a number of things to note:
 1. As stated, data variables defined here can be used in any of the artifacts within the same project structure
 2. One can include project-wide [System variables](../systemvars/) in `project.properties`
 3. A data variable can reference another data variable. For example `MyName=${My First Name} ${My Last Name}`
 4. One can use [functions](../functions) and [expressions](../expressions), just as one could in data files. Observe
-   `MyTest.Discount.MaxDiscountPrice` data variable (highlighted)
+   `MyTest.Discount.MaxDiscountPrice` data variable (highlighted above)
 5. Data variable defined in `project.properties` will supersede those defined in the data files. This is by design to
-   keep the project consistent and hierarchically sound. However one can still override the project-bound data variable
-   via the use of [base &raquo; `save(var,value)`](../commands/base/save(var,value)) and 
+   keep the project consistent and hierarchically sound. The example above shows that while the data file defines 
+   `MyTest.Discount.Levels` as `25,50`, the output shows that the first element of `MyTest.Discount.Levels` is `3` and
+   its last element is `12`. This matches the definition of the same `MyTest.Discount.Levels` defined in 
+   `project.properties`. Note that the example usesthe [LIST expression](../expressions/LISTexpression) -
+   `[LIST(${MyTest.Discount.Levels}) => first]` and `[LIST(${MyTest.Discount.Levels}) => last]` respectively to extract
+   the first and last element of `MyTest.Discount.Levels`.  
+   - However one can still override the project-bound data variable via 
+   [base &raquo; `save(var,value)`](../commands/base/save(var,value)) and 
    [base &raquo; `clear(vars)`](../commands/base/clear(vars)) command.
 6. Subject to the same rules as a standard Java 
    <a href="https://docs.oracle.com/cd/E26180_01/Platform.94/ATGProgGuide/html/s0204propertiesfileformat01.html" class="external-link" target="_nexial_link">Properties file format</a>,
