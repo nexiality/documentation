@@ -60,8 +60,8 @@ that matches the scenario currently in execution. This means that:
 - When executing scenario `TestScenario` of `artifact/script/MyTest.xlsx`, Nexial will attempt to load the 
   data variables defined in the datasheet `TestScenario` of `artifact/data/MyTest.data.xlsx`.
 - Regardless of whether the `TestScenario` datasheet is loaded or not (or if it exists), Nexial will attempt to load 
-  `#default` datasheet from the same `artifact/data/MyTest.data.xlsx` data file. This way the `#default` datasheet acts 
-  as a form of "catch-all".
+  the `#default` datasheet from the same `artifact/data/MyTest.data.xlsx` data file. This way the `#default` datasheet 
+  acts as a "catch-all".
 - As a "catch-all", the data variables defined in `#default` datasheet will be loaded **ONLY** if they are not
   defined in other datasheets. The `#default` datasheet is of the _least priority_.
 
@@ -113,7 +113,7 @@ With such a `project.properties`, we can execute the following script to referen
 The output prints out the values of the data variables defined in `project.properties`, as expected:<br/>
 ![](image/TargetedData_Prop3.png)
 
-There are a number of things to note:
+There are a few important things to note:
 1. As stated, data variables defined here can be used in any of the artifacts within the same project structure
 2. One can include project-wide [System variables](../systemvars/) in `project.properties`
 3. A data variable can reference another data variable. For example `MyName=${My First Name} ${My Last Name}`
@@ -123,10 +123,10 @@ There are a number of things to note:
    keep the project consistent and hierarchically sound. The example above shows that while the data file defines 
    `MyTest.Discount.Levels` as `25,50`, the output shows that the first element of `MyTest.Discount.Levels` is `3` and
    its last element is `12`. This matches the definition of the same `MyTest.Discount.Levels` defined in 
-   `project.properties`. Note that the example usesthe [LIST expression](../expressions/LISTexpression) -
+   `project.properties`. Note that the example uses the [LIST expression](../expressions/LISTexpression) -
    `[LIST(${MyTest.Discount.Levels}) => first]` and `[LIST(${MyTest.Discount.Levels}) => last]` respectively to extract
    the first and last element of `MyTest.Discount.Levels`.  
-   - However one can still override the project-bound data variable via 
+   - However, one can still override the project-bound data variable via 
    [base &raquo; `save(var,value)`](../commands/base/save(var,value)) and 
    [base &raquo; `clear(vars)`](../commands/base/clear(vars)) command.
 6. Subject to the same rules as a standard Java 
@@ -143,9 +143,9 @@ artifacts within the same project (i.e. same project home directory).
 Separating data from the script (or automation script) is the fundamental impetus of Data-driven Testing and a central
 design objective for Nexial. Nexial supports multiple ways of doing so. Below are the ways to keep data (and data 
 variables) separate from the corresponding scripts, in the order of override priority:
-1. **Data can be defined in `#default` datasheet**. Those defined here are the lowest in priority. This means that 
+1. **Data can be defined in the `#default` datasheet**. Those defined here are the lowest in priority. This means that 
    similar data variables defined elsewhere would override those defined in `#default` datasheet.
-2. **Data can be defined in datasheet(s)** (other than `#default`). This can either be the datasheet matching to the 
+2. **Data can be defined in datasheets** (other than `#default`). This can either be the datasheet matching to the 
    active scenario (default behavior), or user-defined datasheet(s) specified as a command-line option. If more than one 
    datasheets are specified, the data variable found in the later datasheet will override the earlier ones 
    ("_last one WINs_").

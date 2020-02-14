@@ -111,6 +111,6 @@ create a co-sharing data strategy.
 
 ### Conclusion
 Through the use of test plan, Nexial provides a mechanism to execute multiple scripts with the flexibility to match 
-against different data files and datasheets. One can employ this feature towards environment-specific data requirement.
-Environment-specific data and data variable can be managed independently and one data set can override another at the
-time of execution with ease - via the Nexial test plan.
+against different data files and datasheets. One can employ this feature to handle environment-specific data 
+requirements. Environment-specific data and data variables can be managed independently and one data set can override 
+another at the time of execution with ease - via the Nexial test plan.
