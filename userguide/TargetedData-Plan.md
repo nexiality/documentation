@@ -2,10 +2,10 @@
 layout:     default
 title:      Through Plan
 tags:       command tipsandtricks data environment plan test-plan
-parent:     Targeted Test Data Management
+parent:     Targeted Data Management
 parent-url: TargetedData
 level:      3
-section:    Tips and Tricks
+section:    User Guide
 comments:   true
 ---
 

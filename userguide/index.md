@@ -22,7 +22,7 @@ Let's get started!
 - [Setting Up Your First Project](SettingUpYourFirstProject)
 - [Understanding Nexial Test Artifact](UnderstandingExcelTemplates)
 - [Understanding Project Structure](UnderstandingProjectStructure)
-- [Data Management](DataManagement)
+- [Targeted Data Management](TargetedData)
 - [Nexial batch files](BatchFiles)
 - [Executing Multiple Plan Files](ExecutingMultiplePlanFiles)
 - [Execution Flow Control](../flowcontrols/index)

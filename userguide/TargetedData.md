@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Targeted Test Data Management
-parent: Tips and Tricks
+title: Targeted Data Management
+parent: User Guide
 tags: command tipsandtricks data test environment
 comments: true
 ---
@@ -171,7 +171,7 @@ Now, back to the topic at hand. Below is a list of strategies in which to handle
 Nexial:
 1. [Through Data File and Datasheets](TargetedData-DataFile_DataSheets)
 2. [Through Plan](TargetedData-Plan)
-3. [Through `project.properties`](TargetedData-ProjectProperties)
-4. [Through Command-Line Option](TargetedData-override)
-5. Manage environment-specific execution flow
-6. Environment-specific data variables and reporting
+3. (WIP) [Through `project.properties`](TargetedData-ProjectProperties)
+4. (_coming soon!_) Through Command-Line Option
+5. (_coming soon!_) Manage environment-specific execution flow
+6. (_coming soon!_) Environment-specific data variables and reporting

@@ -81,3 +81,5 @@ comments: true
 
 ### [web commands](../commands/web)
 - minor fixes to allow for multiple UserStack API keys.
+- [`switchBrowser(profile,config)`](../commands/web/switchBrowser(profile,config)): **NEW** command to switch between
+  two or more independent browsers during execution.

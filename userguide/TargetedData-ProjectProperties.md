@@ -2,10 +2,10 @@
 layout:     default
 title:      Through project.properties
 tags:       command tipsandtricks data environment project.properties
-parent:     Targeted Test Data Management
+parent:     Targeted Data Management
 parent-url: TargetedData
 level:      3
-section:    Tips and Tricks
+section:    User Guide
 comments:   true
 ---
 
@@ -72,7 +72,7 @@ Now we can design a script that would:
 There are many ways to accomplish this. Below are 2 working examples (one for Windows and another for Mac):
 
 
-
+_WORK IN PROGRESS..._
 
 
 -----
