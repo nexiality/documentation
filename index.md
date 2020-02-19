@@ -17,7 +17,7 @@ Nexial Automation
 <a href="https://github.com/nexiality/nexial-core/releases"><img src="image/download.png">Download</a> &nbsp;&nbsp;
 <a href="https://github.com/nexiality/nexial-core/"><img src="image/github.jpg">Fork to GitHub</a> &nbsp;&nbsp;
 <a href="https://nexiality.github.io/documentation/userguide/InstallingNexial"><img src="image/install-manual-icon.png">Installation Guide</a> &nbsp;&nbsp;
-<a href="http://nexiality.slack.com/"><img src="image/slack.png"/>Slack</a>
+<a href="http://nexiality.slack.com/"><img src="image/slack2.png"/>Slack</a>
 </span>
 <br/>
 </h2>
@@ -44,7 +44,8 @@ Here are some of the core design considerations for this platform:
 - Integration to existing collaboration tools such as JIRA and Confluence
 - Supports F.R.I.P. (functional, regression, integration, performance testing)
 
-## **<a href="http://nexiality.slack.com/" style="background-color:transparent !important;vertical-align: middle;"><img src="image/slack2.png" style="box-shadow:none;width:64px;vertical-align:inherit;">Find us on slack!</a>**
+<br/>
+## **<a href="http://nexiality.slack.com/" style="background-color:transparent !important;vertical-align: middle;"><img src="image/slack2.png" style="box-shadow:none;width:64px;vertical-align:inherit;margin-top:-10px;">Find us on slack!</a>**
 
 ---------------------------------------------
 
