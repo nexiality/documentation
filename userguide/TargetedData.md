@@ -2,7 +2,7 @@
 layout: default
 title: Targeted Data Management
 parent: User Guide
-tags: command tipsandtricks data test environment
+tags: command data test environment
 comments: true
 ---
 
@@ -172,6 +172,6 @@ Nexial:
 1. [Through Data File and Datasheets](TargetedData-DataFile_DataSheets)
 2. [Through Plan](TargetedData-Plan)
 3. [Through `project.properties`](TargetedData-ProjectProperties)
-4. (_coming soon!_) Through Command-Line Option
+4. [Through Command-Line Option](TargetedData-CLI)
 5. (_coming soon!_) Manage environment-specific execution flow
 6. (_coming soon!_) Environment-specific data variables and reporting

@@ -1,7 +1,7 @@
 ---
 layout:     default
 title:      Through Data File and Datasheets
-tags:       command tipsandtricks data environment data-file datasheets
+tags:       command data environment data-file datasheets
 parent:     Targeted Data Management
 parent-url: TargetedData
 level:      3
@@ -12,11 +12,15 @@ comments:   true
 
 ### Specify Data File
 By using the `-data` command-line option, we can override the above convention. For example,<br/>
-`./nexial.sh -script $MY_PROJECT_HOME/artifact/script/DifferentDataFile.xlsx -data /Users/me/data/QA/AnotherDataFile.xlsx`
+```
+./nexial.sh -script $MY_PROJECT_HOME/artifact/script/DifferentDataFile.xlsx -data /Users/me/data/QA/AnotherDataFile.xlsx
+```
 
 Nexial will use the fully qualified data file, as specified, instead of the conventional data file. However one can 
 also simplify the above command-line option by omitting the fully qualified location of the target data file:<br/>
-`./nexial.sh -script $PROJECT_HOME/artifact/script/DifferentDataFile.xlsx -data AnotherDataFile.xlsx`
+```
+./nexial.sh -script $PROJECT_HOME/artifact/script/DifferentDataFile.xlsx -data AnotherDataFile.xlsx
+```
 
 When the precise location of `AnotherDataFile.xlsx` is not specified, Nexial searches through these locations 
 (order precedence):
@@ -24,13 +28,16 @@ When the precise location of `AnotherDataFile.xlsx` is not specified, Nexial sea
 - `$PROJECT_HOME/artifact/data`
 - `$PROJECT_HOME/artifact`
 
-Let's see this feature in action. Here, we have `AnotherDataFile.xlsx` located in `artifact/data`:<br/>
+Let's see this feature in action. Here's the automation script (`artifact/script/DifferentDataFile.xlsx`):<br/>
+![](image/TargetedData_datafile_01.png)
+
+We have `AnotherDataFile.xlsx` located in `artifact/data`:<br/>
 ![](image/TargetedData_datafile_06.png)
 
 The content of `AnotherDataFile.xlsx` looks like this:<br/>
 ![](image/TargetedData_datafile_07.png) &nbsp; ![](image/TargetedData_datafile_08.png)
 
-As the execution output shows (below), Nexial is now using the data defined in `artifact/dataAnotherDataFile.xlsx`:
+As the execution output shows (below), Nexial is now using the data defined in `artifact/data/AnotherDataFile.xlsx`:
 ![](image/TargetedData_datafile_09.png)
 
 -----

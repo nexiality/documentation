@@ -1,7 +1,7 @@
 ---
 layout:     default
 title:      Through project.properties
-tags:       command tipsandtricks data environment project.properties
+tags:       command data environment project.properties
 parent:     Targeted Data Management
 parent-url: TargetedData
 level:      3
@@ -48,26 +48,30 @@ Here are their respective content (shorten for brevity):<br/>
    MyTest.site.homepage=https://www.superduper123.com/home
    ```
 
-As shown, each `project.properties` file contains its own version of `MyTest.site.homepage`. The main idea here is to
+As shown, each `project.properties` file contains its version of `MyTest.site.homepage`. The main idea here is to
 ensure that along with the data definition in `project.properties`, the environment-specific one is loaded as well.
 This means that when automating against the QA environment, we would load `project.properties` as well as 
-`project.QA.properties`. Similarly when we automate against the PROD environment, we would load `project.properties` as
+`project.QA.properties`. Similarly, when we automate against the PROD environment, we would load `project.properties` as
 well as `project.DEV.properties`, and so on.
 
+It is paramount to note that the duplicate data variables in the same properties file mean that the last one would
+supersede that those that precede. Hence we would want the environment-specific ones to be appended - as opposed to 
+_prepended_ - to `project.properties`.
+
 A simple approach would simply be appending the content of the environment-specific properties file to 
-`project.properties` each time prior to execution. While this works, it is both tedious and error-prone. A better 
+`project.properties` each time before execution. While this works, it is both tedious and error-prone. A better 
 approach is to automate the merging of `project.properties` and the environment-specific one.
 
 To accomplish this, we can use a simple batch script (or shell script) to automate the process of combining the right 
-`project.properties` files together prior to running the Nexial automation thereafter. But before we proceed to create 
+`project.properties` files together before running the Nexial automation thereafter. But before we proceed to create 
 this script, there's one more thing we should do:
 
-### **rename `project.properties` to `project.local.properties`**:<br/>
+### **Rename `project.properties` to `project.local.properties`**<br/>
 ![](image/TargetedData_Prop5.png)
 
 The expected `project.properties` file would be generated dynamically by our batch/shell script each time we run it:
-1. Ensure proper command line arguments are supplied
-2. Backing up existing `project.properties`, if any. This step is optional
+1. Ensure proper command-line arguments are supplied
+2. Backing up the existing `project.properties`, if any. This step is optional
 3. Combine `project.local.properties` and an environment-specific properties file (e.g. `project.DEV.properties`) into
    `artifact/project.properties`
 4. Run Nexial automation as normal
@@ -200,11 +204,13 @@ goto end
 ```
 
 Now, instead of running the `$NEXIAL_HOME/bin/nexial.sh` or `%NEXIAL_HOME%\bin\nexial.cmd` directory, one would run
-one of the above script. And because it is a script, this can be used in any of the CI/CD envionrment (such as Jenkins)
+one of the above scripts. And because it is a script, this can be used in any of the CI/CD environment (such as Jenkins)
 as well!
 
 -----
 
 ### Conclusion
-The `project.properties` concept is an effective way to manage a set of project-wide data variables and their respective
-values. Using simple scripts we can further maintain environment-specific, project-wide data variables with ease!
+The `project.properties` concept is an effective way to manage project-wide data variables and their respective values.
+These data variables can be expressed as plain data value, referenced data variables, [functions](../functions) or 
+[expressions](../expressions). Using simple scripts we can further maintain environment-specific, project-wide data 
+variables with ease!
