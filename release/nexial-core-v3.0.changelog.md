@@ -84,3 +84,4 @@ comments: true
 - [`switchBrowser(profile,config)`](../commands/web/switchBrowser(profile,config)): **NEW** command to switch between
   two or more independent browsers during execution.
 - support auto-search for chrome and firefox binary when the "default" or system-defined binary path cannot be found.
+- userstack error no longer pervent execution from continuing. 
