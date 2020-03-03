@@ -85,3 +85,4 @@ comments: true
   two or more independent browsers during execution.
 - support auto-search for chrome and firefox binary when the "default" or system-defined binary path cannot be found.
 - userstack error no longer pervent execution from continuing. 
+- code fix to ignore scrolling or [highlight](../systemvars/index#nexial.web.highlight) error during automation.
