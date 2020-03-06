@@ -29,6 +29,8 @@ comments: true
 
 
 ### [Nexial Interactive](../interactive)
+- minor fix for corner case dealing with iteration. Now it is possible to run a non-default (`1`) iteration value
+  via `nexial.scope.iteration` in the data file without forcefully setting such iteration value in Interactive Mode.
 
 
 ### [System Variable](../systemvars)
