@@ -180,9 +180,11 @@ available commands.
 - [`scrollRight(locator,pixel)`](scrollRight(locator,pixel))
 - [`scrollTo(locator)`](scrollTo(locator))
 - [`select(locator,text)`](select(locator,text))
+- [`selectAllOptions(locator)`](selectAllOptions(locator))
 - [`selectFrame(locator)`](selectFrame(locator))
 - [`selectMulti(locator,array)`](selectMulti(locator,array))
-- [`selectMultiOptions(locator)`](selectMultiOptions(locator))
+- [`selectMultiByValue(locator,array)`](selectMultiByValue(locator,array))
+- (deprecated) ~~[`selectMultiOptions(locator)`](selectMultiOptions(locator))~~
 - [`selectText(locator)`](selectText(locator))
 - [`selectWindow(winId)`](selectWindow(winId))
 - [`selectWindowAndWait(winId,waitMs)`](selectWindowAndWait(winId,waitMs))
@@ -203,3 +205,5 @@ available commands.
 - [`waitForPopUp(winId,waitMs)`](waitForPopUp(winId,waitMs))
 - [`waitForTextPresent(text)`](waitForTextPresent(text))
 - [`waitForTitle(text)`](waitForTitle(text))
+
+

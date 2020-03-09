@@ -1,7 +1,7 @@
 ---
 layout: default
 title: select(locator,text)
-parent: web SELECT
+parent: web
 tags: command web
 comments: true
 ---

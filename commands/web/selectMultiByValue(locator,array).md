@@ -1,6 +1,6 @@
 ---
 layout: default
-title: selectMulti(locator,array)
+title: selectMultiByValue(locator,array)
 parent: web
 tags: command web
 comments: true
@@ -13,12 +13,12 @@ The `locator` parameter is used to find the first matching `<SELECT>` element. I
 (i.e. `<SELECT multiple ...>`), then all matching text from the specified `array` will be selected. If such `<SELECT>`
 element does not support multi-select, then only the first matching child `<OPTION>` will be selected. 
 
-`array` is the series of text to select from the resolved `<SELECT>` element. It can be expressed as a list separated
+`array` is the series of value to select from the resolved `<SELECT>` element. It can be expressed as a list separated
 by [`nexial.textDelim`](../../systemvars/index#nexial.textDelim) or by newline character (i.e. each item as a separate 
-line).
+line). Nexial will find the `<OPTION>` element with the matching `value` attribute and select it.
 
-Note that this command selects the item(s) of a `<SELECT>` element based on the rendered text. To select the items under
-a `<SELECT>` element via their `value`, try [`selectMultiByValue(locator,array)`](selectMultiByValue(locator,array)).
+Note that this command selects the item(s) of a `<SELECT>` element based on their `value` attribute. To select the 
+items under a `<SELECT>` element based on their rendered text, try [`selectMulti(locator,array)`](selectMultiBy(locator,array)).
 
 
 ### Parameters
@@ -28,10 +28,13 @@ a `<SELECT>` element via their `value`, try [`selectMultiByValue(locator,array)`
 
 ### Example
 **Script**:<br/>
-![](image/selectMulti_01.png)
+![](image/selectMultiByValue_01.png)
+
+Note that the underlying HTML for the target element:<br/>
+![](image/selectMultiByValue_03.png)
 
 **Before command execution**                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **After command execution**<br/>
-&nbsp;&nbsp;&nbsp;![](image/selectAllOptions_02.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![](image/selectMulti_02.png)
+&nbsp;&nbsp;&nbsp;![](image/selectAllOptions_02.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![](image/selectMultiByValue_02.png)
 
 
 ### See Also
@@ -39,4 +42,4 @@ a `<SELECT>` element via their `value`, try [`selectMultiByValue(locator,array)`
 - [`deselectMulti(locator,array)`](deselectMulti(locator,array))
 - [`select(locator,text)`](select(locator,text))
 - [`selectAllOptions(locator)`](selectAllOptions(locator))
-- [`selectMultiByValue(locator,array)`](selectMultiByValue(locator,array))
+- [`selectMulti(locator,array)`](selectMulti(locator,array))

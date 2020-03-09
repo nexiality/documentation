@@ -88,6 +88,8 @@ comments: true
 - support auto-search for chrome and firefox binary when the "default" or system-defined binary path cannot be found.
 - userstack error no longer pervent execution from continuing. 
 - code fix to ignore scrolling or [highlight](../systemvars/index#nexial.web.highlight) error during automation.
-
-
+- deprecated [`selectMultiOptions(locator,array)`](../commands/web/selectMultiOptions(locator)); use 
+  [`selectAllOptions(locator)`](../commands/web/selectAllOptions(locator)) instead.
+- [`selectMultiByValue(locator,array)`](../commands/web/selectMultiByValue(locator,array)): **NEW** command to select
+  `<OPTION>` elements of a `<SELECT>` element based on their assigned `value` attribute.
 
