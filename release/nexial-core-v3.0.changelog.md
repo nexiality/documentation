@@ -13,6 +13,7 @@ comments: true
 ### General
 #### Fixes
 - remove erroneous data output generation in `#summary` worksheet.
+- ensure `nexial.lastOutcome` to set to `false` when exception occurs.
 #### Improvements
 - [bin/nexial-script-update](../userguide/BatchFiles#nexial-script-update): add optional flag to automatically 
   rename duplicate activity names found in the same scenario.
@@ -23,6 +24,7 @@ comments: true
   [`nexial.screenshotOnError`](../systemvars/index#nexial.screenshotOnError) is true.
 - [bin/nexial-project](../userguide/BatchFiles#nexial-project): Now supports creation of project.properties
    if it doesn't exist.
+- create error log when exception ocurrs to help improve RCA.
  
 
 ### [JSONPath](../jsonpath)
