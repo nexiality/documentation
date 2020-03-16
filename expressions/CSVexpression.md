@@ -50,7 +50,7 @@ An CSV expression can be initiated in various ways:
 
 |syntax                        |explanation                                                                            |
 |------------------------------|---------------------------------------------------------------------------------------|
-|`[CSV(file) => ...]`           |Initiate a CSV expression via an external file.<br/><br/>This file can be expressed via a variable (syntax: `${var_points_to_my_csv_file}`), <br/>or as the fully qualified path (e.g. `C:\my_files\data.csv`). Such expression will read<br/>in the entire content of the specified CSV file. Note that the specified file is considered as<br/>"disconnected", meaning that changes to the CSV content will not automatically/directly affect<br/>the CSV file until a **`save()`** operation is issued.|
+|`[CSV(${file}) => ...]`       |Initiate a CSV expression via an external file.<br/><br/>This file can be expressed via a variable (syntax: `${var_points_to_my_csv_file}`), <br/>or as the fully qualified path (e.g. `C:\my_files\data.csv`). Such expression will read<br/>in the entire content of the specified CSV file. Note that the specified file is considered as<br/>"disconnected", meaning that changes to the CSV content will not automatically/directly affect<br/>the CSV file until a **`save()`** operation is issued.|
 |`[CSV(${csv_content}) => ...]`|Initiate a CSV expression via CSV content (expressed as text).<br/><br/>The content can be expressed via a variable (syntax: `${csv_content}`).|
 |`[CSV(var) => ...]`           |Continue a previously initiated CSV expression denoted by `var`.<br/><br/>Note that var **`does not`** follow the `${...}` syntax. Simply specify the variable name<br/>to instruct Nexial to resume a previously initiated CSV expression (that was saved via the<br/>**`store()`** operation). See **`store()`** operation below for more details.|
 
@@ -543,7 +543,7 @@ CSV file is parsed. The `config` will be specified in the form of:
     the double quotes as found on the initial CSV data.
 
 **Example**<br/>
-`[CSV(text) => parse(delim=\|, header=true, recordDelim=\r\n, trim=true, keepQuote=true) text upper]` would read:
+`[CSV(${text}) => parse(delim=\|, header=true, recordDelim=\r\n, trim=true, keepQuote=true) text upper]` would read:
 1. convert text into a CSV component, using the default Excel CSV format.
 2. re-parse the same text but this time using **`|` as the field delimiter**, the 
   **carriage return (DOS) as the record/row delimiter** and treat the **first line as the header**. Note that 
@@ -578,7 +578,7 @@ Remove all rows that meet the specified [conditions](../flowcontrols/filter#spec
 following CSV file:<br/>
 ![](image/csv_14.jpg)
 
-**`[CSV(csv_file) => removeRows(city = Scottsdale|raisedAmt < 200000)]`** would remove all the rows where city is 
+**`[CSV(${csv_file}) => removeRows(city = Scottsdale|raisedAmt < 200000)]`** would remove all the rows where city is 
 `Scottsdale` and `raisedAmt` is less than `200000`. The result should look like this:<br/>
 ![](image/csv_15.jpg)
 
@@ -974,11 +974,11 @@ shown below:
   - `cell` - default node name is cell
 
 **Examples**:<br/>
-**`[CSV(csv_file) => XML( , , )]`** would transform a CSV file to a XML document where the root node is 
-rows, the next level node name is row and each of its element is named as cell. 
+**`[CSV(${csv_file}) => XML( , , )]`** would transform a CSV file to a XML document where the root node is rows, the 
+next level node name is row and each of its element is named as cell. 
 
 The CSV content in question may be one or more rows, with or without headers. Here is an example of transforming from 
-one CSV document (with header) to a XML document (for example, **`[CSV(csv_file) => XML(team,members,member)]`**):<br/>
+one CSV document (with header) to a XML document (for example, **`[CSV(${csv_file}) => XML(team,members,member)]`**):<br/>
 <img style="box-shadow:none;margin:0" src="image/csv_18.jpg"/><br/>
 <img style="box-shadow:none;margin:0" src="image/csv_19.jpg"/>
 
@@ -988,7 +988,7 @@ generated to reference the column name (e.g., User Name, Address, etc.) and anot
 generate to represent the column position of each cell value.
 
 In contrast, transforming a CSV content without header to a XML document would look a bit differently. Below is 
-an example of using **`[CSV(csv_file) => XML( , , ,)]`**:
+an example of using **`[CSV(${csv_file}) => XML( , , ,)]`**:
 
 <img style="box-shadow:none;margin:0" src="image/csv_20.jpg"/><br/>
 <img style="box-shadow:none;margin:0" src="image/csv_21.jpg"/><br/>

@@ -173,5 +173,5 @@ Nexial:
 2. [Through Plan](TargetedData-Plan)
 3. [Through `project.properties`](TargetedData-ProjectProperties)
 4. [Through Command-Line Option](TargetedData-CLI)
-5. (_coming soon!_) Manage environment-specific execution flow
+5. (WIP) [Manage environment-specific execution flow](TargetedData-Execution)
 6. (_coming soon!_) Environment-specific data variables and reporting
