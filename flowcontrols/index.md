@@ -39,7 +39,7 @@ For further details and examples of `[nexial filter conditions]`, click [Nexial 
 More than one flow controls may be specified for a given test step.  During execution, Nexial evaluates the flow controls
 with the following order of significance:
 1. `PauseBefore()`
-2. `FailIF()`
+2. `FailIf()`
 3. `EndLoopIf()`
 4. `EndIf()`
 5. `SkipIf()`
