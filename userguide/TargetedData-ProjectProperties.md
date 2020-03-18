@@ -187,7 +187,7 @@ if "%NEXIAL_HOME%"=="" (
 )
 
 shift 1
-%NEXIAL_HOME%/bin/nexial.sh $*
+%NEXIAL_HOME%/bin/nexial.cmd $*
 
 goto end
 
