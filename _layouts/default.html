@@ -24,6 +24,8 @@
 
     {% seo %}
 
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+
     {% if site.tipue_search_active %}
     <link rel="stylesheet" href="{{ "/assets/tipuesearch/css/normalize.css" | relative_url }}">
     <link rel="stylesheet" href='{{ "/assets/tipuesearch/css/tipuesearch.css" | relative_url }}'>
@@ -36,7 +38,6 @@
     {% include analytics.html %}
     {% endif %}
 
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
     <script src='{{ "/assets/navigation.js" | relative_url }}'></script>
 </head>
 
