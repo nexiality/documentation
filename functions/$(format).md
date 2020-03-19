@@ -75,8 +75,13 @@ Output:<br/>
 -----
 
 #### `$(format|left|text|length)`
-Render only the left-most portion of `text`, for the specified `length`.
-  
+Render only the left-most portion of `text`, for the specified `length`.<br/>
+One can consider this built-in function as a way to truncate `text` and retain its left-most characters, up to the 
+specified `length`. <br/>
+<br/>
+Note that if the specified `text` is less than the specified `length`, then the entire `text` will be rendered. If the 
+specified `length` is less than 1, then this function will render an empty text instead.
+
 **Example**<br/>
 Script:<br/>
 ![script](image/$(format)_09.png)
@@ -156,7 +161,7 @@ Render `text` as a phone number, with support for various length.  
 	 - Otherwise, `text` will be rendered as `x...x(xxx)xxx-xxxx`, depending on the number of characters found.  Note 
 	   that in this case, the formatting starts from right to left.
 	 - For more flexible formatting option, see `$(format|custom|text|format)`.
-  
+
 **Example**<br/>
 Script:<br/>
 ![script](image/$(format)_19.png)
@@ -167,8 +172,14 @@ Output:<br/>
 -----
 
 #### `$(format|right|text|length)`
-Render only the right-most portion of `text`, for the specified `length`.
-  
+Render only the right-most portion of `text`, for the specified `length`.<br/>
+One can consider this built-in function as a way to truncate (**from the left**) `text` and retain its right-most 
+characters, up to the specified `length`. <br/>
+<br/>
+Note that if the specified `text` is less than the specified `length`, then the entire `text` will be rendered. If the 
+specified `length` is less than 1, then this function will render an empty text instead.
+
+
 **Example**<br/>
 Script:<br/>
 ![script](image/$(format)_21.png)
