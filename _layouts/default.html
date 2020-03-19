@@ -25,10 +25,9 @@
     {% seo %}
 
     {% if site.tipue_search_active %}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-    <script src="{{ "/assets/tipuesearch/tipuesearch_content.js" | relative_url }}"></script>
+    <link rel="stylesheet" href="{{ "/assets/tipuesearch/css/normalize.css" | relative_url }}">
     <link rel="stylesheet" href='{{ "/assets/tipuesearch/css/tipuesearch.css" | relative_url }}'>
+    <script src="{{ "/assets/tipuesearch/tipuesearch_content.js" | relative_url }}"></script>
     <script src='{{ "/assets/tipuesearch/tipuesearch_set.js" | relative_url }}'></script>
     <script src='{{ "/assets/tipuesearch/tipuesearch.min.js" | relative_url }}'></script>
     {% endif %}
@@ -37,6 +36,7 @@
     {% include analytics.html %}
     {% endif %}
 
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
     <script src='{{ "/assets/navigation.js" | relative_url }}'></script>
 </head>
 
@@ -47,29 +47,18 @@
         <h1>Nexial Automation</h1>
         <h2>{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
 
-        <select class="quick_links_dropdown" id="quick_links_dropdown"
-                onchange="document.location=this.selectedOptions[0].value;">
+        <select class="quick_links_dropdown" id="quick_links_dropdown" onchange="document.location=this.selectedOptions[0].value;">
             <option value="{{'/'              | prepend:site.baseurl }}">Home</option>
-            <option value="{{'/userguide'     | prepend:site.baseurl }}"
-                    {% if page.url contains '/userguide/' %}selected="true"{% endif %}>User Guide</option>
-            <option value="{{'/commands'      | prepend:site.baseurl }}"
-                    {% if page.url contains '/commands/' %}selected="true"{% endif %}>Command Reference</option>
-            <option value="{{'/systemvars'    | prepend:site.baseurl }}"
-                    {% if page.url contains '/systemvars/' %}selected="true"{% endif %}>System Variables</option>
-            <option value="{{'/flowcontrols'  | prepend:site.baseurl }}"
-                    {% if page.url contains '/flowcontrols/' %}selected="true"{% endif %}>Flow Controls</option>
-            <option value="{{'/functions'     | prepend:site.baseurl }}"
-                    {% if page.url contains '/functions/' %}selected="true"{% endif %}>Built-in Functions</option>
-            <option value="{{'/expressions'   | prepend:site.baseurl }}"
-                    {% if page.url contains '/expressions/' %}selected="true"{% endif %}>Expressions</option>
-            <option value="{{'/jsonpath'      | prepend:site.baseurl }}"
-                    {% if page.url contains '/jsonpath/' %}selected="true"{% endif %}>Jsonpath</option>
-            <option value="{{'/interactive'   | prepend:site.baseurl }}"
-                    {% if page.url contains '/interactive/' %}selected="true"{% endif %}>Nexial Interactive</option>
-            <option value="{{'/tipsandtricks' | prepend:site.baseurl }}"
-                    {% if page.url contains '/tipsandtricks/' %}selected="true"{% endif %}>Tips and Tricks</option>
-            <option value="{{'/release'       | prepend:site.baseurl }}"
-                    {% if page.url contains '/release/' %}selected="true"{% endif %}>Release Notes</option>
+            <option value="{{'/userguide'     | prepend:site.baseurl }}" {% if page.url contains '/userguide/' %}selected="true"{% endif %}>User Guide</option>
+            <option value="{{'/commands'      | prepend:site.baseurl }}" {% if page.url contains '/commands/' %}selected="true"{% endif %}>Command Reference</option>
+            <option value="{{'/systemvars'    | prepend:site.baseurl }}" {% if page.url contains '/systemvars/' %}selected="true"{% endif %}>System Variables</option>
+            <option value="{{'/flowcontrols'  | prepend:site.baseurl }}" {% if page.url contains '/flowcontrols/' %}selected="true"{% endif %}>Flow Controls</option>
+            <option value="{{'/functions'     | prepend:site.baseurl }}" {% if page.url contains '/functions/' %}selected="true"{% endif %}>Built-in Functions</option>
+            <option value="{{'/expressions'   | prepend:site.baseurl }}" {% if page.url contains '/expressions/' %}selected="true"{% endif %}>Expressions</option>
+            <option value="{{'/jsonpath'      | prepend:site.baseurl }}" {% if page.url contains '/jsonpath/' %}selected="true"{% endif %}>Jsonpath</option>
+            <option value="{{'/interactive'   | prepend:site.baseurl }}" {% if page.url contains '/interactive/' %}selected="true"{% endif %}>Nexial Interactive</option>
+            <option value="{{'/tipsandtricks' | prepend:site.baseurl }}" {% if page.url contains '/tipsandtricks/' %}selected="true"{% endif %}>Tips and Tricks</option>
+            <option value="{{'/release'       | prepend:site.baseurl }}" {% if page.url contains '/release/' %}selected="true"{% endif %}>Release Notes</option>
         </select>
 
         {% if page.level and page.level == 1 %}
@@ -156,7 +145,6 @@
             {% if site.github.is_project_page %}
             {{ site.title | default: site.github.repository_name }} is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a><br/>
             {% endif %}
-            <!--This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.-->
         </footer>
 
     </div>
