@@ -14,6 +14,8 @@ comments: true
 #### Fixes
 - remove erroneous data output generation in `#summary` worksheet.
 - ensure `nexial.lastOutcome` to set to `false` when exception occurs.
+- update Nexial internal use of web service functionality so that such use is not affected by user's configuration and 
+  project artifacts.
 #### Improvements
 - [bin/nexial-script-update](../userguide/BatchFiles#nexial-script-update): add optional flag to automatically 
   rename duplicate activity names found in the same scenario.
@@ -42,6 +44,9 @@ comments: true
   transformed to a URL (cloud storage). This is useful when a command (such as 
   [rdbms &raquo; `saveResults(db,sqls,outputDir)`](../commands/rdbms/saveResults(db,sqls,outputDir))) could possibly 
   generate multiple output files.
+- [`nexial.maxConsoleDisplay`](../systemvars/index#nexial.maxConsoleDisplay): **NEW** System variable to limit the 
+  amount of text or data variable to be displayed on console to ease the readability of the execution log on the 
+  console. Default is `500`. Setting this System variable to `-1` will disable such limit.
 
 
 ### [Built-in Functions](../functions)
@@ -94,4 +99,10 @@ comments: true
   [`selectAllOptions(locator)`](../commands/web/selectAllOptions(locator)) instead.
 - [`selectMultiByValue(locator,array)`](../commands/web/selectMultiByValue(locator,array)): **NEW** command to select
   `<OPTION>` elements of a `<SELECT>` element based on their assigned `value` attribute.
+
+### [webcookie commands](../commands/webcookie)
+- [`saveAllAsText(var,excludes)`](../commands/webcookie/saveAllAsText(var,exclude)): **NEW** commnd to save all 
+  available cookie (at the time of execution) as `var`. One can optionally excludes one or more cookie by name via the 
+  `excludes` parameter.
+
 

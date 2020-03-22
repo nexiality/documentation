@@ -24,8 +24,9 @@ This command saves all the cookies, as a list, in `var`.
 
 
 ### See Also
-- [`assertValue(name,value)`](assertValue(name,value))
-- [`assertPresent(name)`](assertPresent(name))
 - [`assertNotPresent(name)`](assertNotPresent(name))
+- [`assertPresent(name)`](assertPresent(name))
+- [`assertValue(name,value)`](assertValue(name,value))
 - [`delete(name)`](delete(name))
 - [`deleteAll()`](deleteAll())
+- [`saveAllAsText(var,exclude)`](saveAllAsText(var,exclude))

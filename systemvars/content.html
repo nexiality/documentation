@@ -602,6 +602,37 @@
   </tr>
   <tr>
     <td nowrap="nowrap" class="varname">
+      <a id="nexial.maxConsoleDisplay"><code>nexial.maxConsoleDisplay</code></a>
+    </td>
+    <td>integer</td>
+    <td>500</td>
+    <td>false</td>
+    <td>
+      In cases where a data variable might hold a large amount of text, it might not always be the best idea to display
+      its entirety on the console. Long running console output might make the rest of the execution log more
+      difficult to read, as well as slowing down the execution a bit.<br/>
+      For these reasons, this System variable is designed to cut down the display of the data variable with large amount
+      of data. By defailt, this System variable is set to 500. This means that only the first 500 characters (up to)
+      will be displayed on the console. One may choose to modify this System variable to fit one's need. To disable
+      limiting the number of characters to display, set this System variable to <code>-1</code>.<br/>
+      <br/>
+      This System variable currently impacts only the following commands (but will be expanded to more soon):
+      <ul>
+        <li><code>base &raquo; assertContains(text,substring)</code></li>
+        <li><code>base &raquo; assertEndsWith(text,suffix)</code></li>
+        <li><code>base &raquo; assertEqual(expected,actual)</code></li>
+        <li><code>base &raquo; assertNotContain(text,substring)</code></li>
+        <li><code>base &raquo; assertNotEqual(expected,actual)</code></li>
+        <li><code>base &raquo; assertStartsWith(text,prefix)</code></li>
+        <li><code>base &raquo; verbose(text)</code> - when used to display the response of a Web Service call.</li>
+      </ul>
+      <br/>
+      Note that this will have no effect on the actual content of the data variable.
+    </td>
+  </tr>
+
+  <tr>
+    <td nowrap="nowrap" class="varname">
       <a id="nexial.printErrorDetails"><code>nexial.printErrorDetails</code></a>
     </td>
     <td>boolean</td>
@@ -3177,7 +3208,7 @@
   </tr>
   <tr>
     <td nowrap="nowrap" class="varname">
-      <a name="nexial.ws.enableRedirects"><code>nexial.ws.enableRedirects</code></a></td>
+      <a id="nexial.ws.enableRedirects"><code>nexial.ws.enableRedirects</code></a></td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>
@@ -3324,8 +3355,9 @@
     </td>
   </tr>
   <tr>
-    <td nowrap="nowrap" class="varname"><a
-      name="nexial.ws.digest.password"><code>nexial.ws.digest.password</code></a></td>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.ws.digest.password"><code>nexial.ws.digest.password</code></a>
+    </td>
     <td>text</td>
     <td>&nbsp;</td>
     <td>false</td>
@@ -3365,24 +3397,6 @@
     <td>false</td>
   </tr>
   <tr>
-    <td class="highlight-section" colspan="5"><span>For <a href="../commands/ws.async"><code>ws.async</code></a> commands only.</span>
-    </td>
-  </tr>
-  <tr>
-    <td nowrap="nowrap" class="varname">
-      <a id="nexial.ws.async.shutdownWaitMs"><code>nexial.ws.async.shutdownWaitMs</code></a>
-    </td>
-    <td>millisecond</td>
-    <td>180000</td>
-    <td>false</td>
-    <td>
-      In order to support the download to file that might potentially take longer than the execution time, Nexial
-      will attempt to wait for the asynchronous HTTP invocations (if any) to complete before shutting down. The
-      amount of such wait time is by default set to 180000 (3 minutes). One may override the default with another
-      value, in millisecond, to possible speed up or prolong the shutdown event.
-    </td>
-  </tr>
-  <tr>
     <td nowrap="nowrap" class="varname">
       <a id="nexial.ws.logDetail"><code>nexial.ws.logDetail</code></a>
     </td>
@@ -3408,6 +3422,26 @@
       <a href="../commands/ws/index#logging"><code>ws</code> Logging</a> section for more details.
     </td>
   </tr>
+
+  <tr>
+    <td class="highlight-section" colspan="5"><span>For <a href="../commands/ws.async"><code>ws.async</code></a> commands only.</span>
+    </td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.ws.async.shutdownWaitMs"><code>nexial.ws.async.shutdownWaitMs</code></a>
+    </td>
+    <td>millisecond</td>
+    <td>180000</td>
+    <td>false</td>
+    <td>
+      In order to support the download to file that might potentially take longer than the execution time, Nexial
+      will attempt to wait for the asynchronous HTTP invocations (if any) to complete before shutting down. The
+      amount of such wait time is by default set to 180000 (3 minutes). One may override the default with another
+      value, in millisecond, to possible speed up or prolong the shutdown event.
+    </td>
+  </tr>
+
   <tr>
     <td class="highlight-section" colspan="5">
       <span>For desktop-based (<a href="../commands/desktop"><code>desktop</code></a> commands) testing only.</span>
@@ -3509,8 +3543,9 @@
     </td>
   </tr>
   <tr>
-    <td nowrap="nowrap" class="varname"><a
-      name="nexial.winiumJoinExisting"><code>nexial.winiumJoinExisting</code></a></td>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.winiumJoinExisting"><code>nexial.winiumJoinExisting</code></a>
+    </td>
     <td>boolean</td>
     <td>false</td>
     <td>false</td>

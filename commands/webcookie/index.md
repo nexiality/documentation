@@ -16,3 +16,4 @@ This command type deals with web cookies.
 - [`deleteAll()`](deleteAll())
 - [`save(var,name)`](save(var,name))
 - [`saveAll(var)`](saveAll(var))
+- [`saveAllAsText(var,exclude)`](saveAllAsText(var,exclude))
