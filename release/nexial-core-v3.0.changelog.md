@@ -99,10 +99,14 @@ comments: true
   [`selectAllOptions(locator)`](../commands/web/selectAllOptions(locator)) instead.
 - [`selectMultiByValue(locator,array)`](../commands/web/selectMultiByValue(locator,array)): **NEW** command to select
   `<OPTION>` elements of a `<SELECT>` element based on their assigned `value` attribute.
+- workaround for the recent `samesite` implementation by Chrome (v80+) to block certain cookies.
+ 
 
 ### [webcookie commands](../commands/webcookie)
-- [`saveAllAsText(var,excludes)`](../commands/webcookie/saveAllAsText(var,exclude)): **NEW** commnd to save all 
+- [`saveAllAsText(var,excludes)`](../commands/webcookie/saveAllAsText(var,exclude)): **NEW** command to save all 
   available cookie (at the time of execution) as `var`. One can optionally excludes one or more cookie by name via the 
   `excludes` parameter.
+- [`clearCookieFields(var,remove)`](../commands/webcookie/clearCookieFields(var,remove)): **NEW** command to remove
+  one or more fields (denoted as `remove`) from the cookie(s) saved in `var`.
 
 
