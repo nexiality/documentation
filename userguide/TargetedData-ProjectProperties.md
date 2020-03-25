@@ -205,7 +205,21 @@ goto end
 
 Now, instead of running the `$NEXIAL_HOME/bin/nexial.sh` or `%NEXIAL_HOME%\bin\nexial.cmd` directory, one would run
 one of the above scripts. And because it is a script, this can be used in any of the CI/CD environment (such as Jenkins)
-as well!
+as well! Below is a few examples on using this script:
+
+Example 1: running `MyTestPlan1.xlsx` on `QA` (Windows)
+```batch
+cd %PROJECT_HOME%
+cd artifact\bin
+my-nexial.cmd QA -plan %PROJECT_HOME%\artifact\plan\MyTestPlan1.xlsx
+```
+
+Example 2: running `RegressionScript_152.xlsx` on DEV (*NIX)
+```batch
+cd $PROJECT_HOME
+cd artifact/bin
+./my-nexial.sh DEV -script $PROJECT_HOME/artifact/script/RegressionScript_152.xlsx
+```
 
 -----
 
