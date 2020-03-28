@@ -368,20 +368,22 @@ Output:<br/>
 
 -----
 
-#### merge(var,keyColumn)
-Merge the CSV data represented by `var` into existing CSV content. The `keyColumn`, if specified, is used to merge 
-the 2 CSV content in such a way that the record of the same key are merged together. In general, there are 3 uses of 
-this operation:
+#### merge(var,keyColumns)
+Merge the CSV data represented by `var` into existing CSV content. The `keyColumns`, if specified, is used to merge 
+the 2 CSV content in such a way that the record of the same key(s) are merged together. For merging 2 CSV content based 
+on multiple "key" columns, specified these columns (1) in the order of importance, and (2) separated by 
+[`nexial.textDelim`](../systemvars/index#nexial.textDelim).
 
-1. **merge two CSV files that have no header**<br/>
+In general, there are 3 uses of this operation:
+
+1. **merge two CSV content have no header**<br/>
    In this case, records will be merged line-by-line with no regard to the data value.
    
-   **Example**<br/> 
+   **Example**:<br/> 
 ```text
 [CSV( ${csv file to merge from} ) => parse store(merge_from)]
 ... ...
-[CSV( ${csv file to merge into} ) => parse(header=false) merge(merge_from,\(empty\)) 
-                                        store(merge_into)]
+[CSV( ${csv file to merge into} ) => parse(header=false) merge(merge_from) store(merge_into)]
 ```
     <table border="1" cellspacing="0" cellpadding="5">
     <thead>
@@ -406,25 +408,24 @@ this operation:
     </tbody>
     </table>
     <br/>
-   Note that in this example **`\(empty\)`** as the `keyColumn` signifies that no shared column is between these 2 CSV 
-   files.
    
    Script:<br/>
    ![script](image/CSVexpression_33.png)
+   Note that in this example **`\(empty\)`** as the `keyColumns` signifies that no shared column is between these 2 CSV 
+   files. Alternatively, omit the `keyColumns` parameter entirely, as in `merge(merge_from)`.
    
    Output:<br/>
    ![output](image/CSVexpression_34.png)
 
-2. **merge two CSV files that have headers, but without keyColumn**<br/>
+2. **merge two CSV content with headers, but without `keyColumns`**<br/>
    In this case, `header` exists in both CSV file, but they do not share any common column from the merge can be based 
    on.
    
-   **Example**<br/>
+   **Example**:<br/>
 ```text
 [CSV( ${csv file to merge from} ) => parse(header=true) store(merge_from)]
 ... ...
-[CSV( ${csv file to merge into} ) => parse(header=true) merge(merge_from,\(empty\)) 
-                                        store(merge_into)]
+[CSV( ${csv file to merge into} ) => parse(header=true) merge(merge_from) store(merge_into)]
 ```
     <table border="1" cellspacing="0" cellpadding="5">
     <thead>
@@ -449,16 +450,16 @@ this operation:
     </tbody>
     </table>
     <br/>
-   Note that passing **`\(empty\)`** is required as the keyColumn to signify that no shared column is between these 2 
-   CSV file.
    
    Script:<br/>
    ![script](image/CSVexpression_35.png)
+   Note that passing  **`\(empty\)`** as the `keyColumns` signifies that no shared column is between these 2 CSV 
+   files. Alternatively, omit the `keyColumns` parameter entirely, as in `merge(merge_from)`.
    
    Output:<br/>
    ![output](image/CSVexpression_36.png)
    
-3. **merge two CSV files that have headers and share the same `keyColumn`**<br/>
+3. **merge two CSV content with headers and share same `keyColumns`**<br/>
    In this case, header exists for both CSV data and they also share (at least) one common column whereby merge can use 
    it to align the records.
    
@@ -500,7 +501,26 @@ this operation:
    
    Output:<br/>
    ![output](image/CSVexpression_38.png)
+ 
+4. (more like _3a_) **merge two CSV content with headers and share multiple `keyColumns`**<br/>
+   Similar to the above usage, Nexial also supports the merging of 2 CSV content with multiple key columns.  As such,
+   both CSV content will be sorted against the specified key columns before the content are merged together. Consider
+   the following example:<br/>
    
+   Script:<br/>
+   ![script](image/CSVexpression_93.png)
+   
+   Output:<br/>
+   In the first example (line 4), we are merging two CSV content using `SSN`, `First Name`, and `Last Name`. The output
+   for this command looks like this:<br/>
+   ![output](image/CSVexpression_95.png)<br/>
+   
+   In the second example (line 5), we mare merging the same two CSV content using `Last Name`, `First Name` and then 
+   `SSN`. Note that the key columns affected the sorting order:<br/> 
+   ![output](image/CSVexpression_94.png)<br/>
+   <br/>
+   Observe that the order of the merged CSV content is different than the previous output.
+ 
 -----
 
 #### parse(config)
