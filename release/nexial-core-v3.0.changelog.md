@@ -35,6 +35,7 @@ comments: true
 ### [Nexial Interactive](../interactive)
 - minor fix for corner case dealing with iteration. Now it is possible to run a non-default (`1`) iteration value
   via `nexial.scope.iteration` in the data file without forcefully setting such iteration value in Interactive Mode.
+- fixed runtime error when inspecting data variables within Nexial Interactive
 
 
 ### [System Variable](../systemvars)
@@ -59,6 +60,7 @@ comments: true
 - [CSV](../expressions/CSVexpression): [`merge(var,keyColumns)`](../expressions/CSVexpression#mergevarkeycolumns) now
   supports multiple "key" columns so that one can merge 2 CSV content based on multiple keys. Note that both CSV content
   must contain header (i.e. parsed with `header=true`).
+- additional logging to improve troubleshooting and RCA.
 
 
 ### [csv commands](../commands/csv)
