@@ -23,6 +23,21 @@ example would yield `-1770.2978788893238`.
 
 ### Operations
 
+#### **`abs(numbers)`**
+transform current number as a positive number. 
+
+This means that a positive number will remain as is. A negative number will be negated (i.e. multiply by `-1`), 
+transforming into its positive "counterpart".
+
+**Example**<br/>
+Script:<br/>
+![script](image/NUMBERexpression_28.png)
+
+Output:<br/>
+![output](image/NUMBERexpression_29.png)
+
+-----
+
 #### **`add(numbers)`**
 add one or more numbers to current number.
 

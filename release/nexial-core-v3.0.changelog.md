@@ -61,6 +61,8 @@ comments: true
   supports multiple "key" columns so that one can merge 2 CSV content based on multiple keys. Note that both CSV content
   must contain header (i.e. parsed with `header=true`).
 - additional logging to improve troubleshooting and RCA.
+- [NUMBER](../expressions/NUMBERexpression): **NEW** operation - `abs` - to convert a number into its absolute form 
+  (i.e. positive number).
 
 
 ### [csv commands](../commands/csv)
