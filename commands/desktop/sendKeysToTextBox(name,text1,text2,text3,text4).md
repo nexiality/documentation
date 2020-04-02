@@ -11,7 +11,7 @@ This command performs the same automation as [desktop &raquo; `typeTextBox(name,
 It is recommended for use as a secondary option, only when any text field in the desktop does not respond properly with 
 [desktop &raquo; `typeTextBox(name,text1,text2,text3,text4)`](typeTextBox(name,text1,text2,text3,text4)) command. 
 The first parameters is the required  `name` that corresponds to the label of the target UI element. The second parameter 
-is the required text to be entered. The remaining parameters are optional and can used used to send the keys after 
+is the required text to be entered. The remaining parameters are optional and can used to send the keys after 
 text is entered into the target text box.
 
 

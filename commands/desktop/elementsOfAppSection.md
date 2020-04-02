@@ -50,7 +50,7 @@ comments: true
 
 **xpath:**
 - The value for this key is to provide the xpath of the application under Test.
-- This is is staring point from where the initial xpath will get created for your application(**app**)
+- This is the starting point from where the initial xpath will get created for your application(**app**)
 
 **xpathGenerationStrategy:**
 

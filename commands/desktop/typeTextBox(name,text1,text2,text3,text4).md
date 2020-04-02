@@ -11,7 +11,7 @@ comments: true
 - This command is to enter the text into Text box
 - The first parameters is the required  `name` is the actual `label name`  of the control displayed in the Application.
 - The second parameter is the required text to be entered.
-- The remaining parameters are optional and can used used to send the keys after text is entered intoTextBox.
+- The remaining parameters are optional and can used to send the keys after text is entered intoTextBox.
 - The command will return pass if successful or else fail otherwise with error.
 
 ### Parameters

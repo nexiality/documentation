@@ -47,7 +47,7 @@ Setting `failfast` as `false` would instruct Nexial to provide detailed comparis
   turn on the reporting of matching lines.
   - Assign this System variable to `true` will result in Nexial generating the comparison report for the lines that 
     matched. This may be helpful to provide better context such the case for reports, essays, manuscripts, dialogs, 
-    etc. The default for this System variable is is `false`. One can set this System variable _just_ before the 
+    etc. The default for this System variable is `false`. One can set this System variable _just_ before the 
     comparison to impact specific use of this command.
 
 Let's look at an example. Suppose we have the following CSV file, `expected` and `actual`:<br/>
