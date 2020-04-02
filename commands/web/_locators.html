@@ -87,6 +87,7 @@
     <li><a href="#tab_id" id="tab_title_id">ID</a></li>
     <li><a href="#tab_name" id="tab_title_name">Name</a></li>
     <li><a href="#tab_link" id="tab_title_link">Link Text</a></li>
+    <li><a href="#tab_partialLinkText" id="tab_title_partialLinkText">Partial Link Text</a></li>
     <li><a href="#tab_tag" id="tab_title_tag">Tag</a></li>
     <li><a href="#tab_class" id="tab_title_class">Style Class</a></li>
     <li><a href="#tab_css" id="tab_title_css">CSS</a></li>
@@ -108,7 +109,7 @@
             <b>id=</b><i>id-of-target-element</i>
             <div class="example">
               id=username<br/>
-              ID=section1
+              id=section1
             </div>
           </td>
           <td class="pros">
@@ -171,7 +172,7 @@
             <b>name=</b><i>name-of-target-element</i>
             <div class="example">
               name=Password<br/>
-              NAME=SubmitOrder
+              name=SubmitOrder
             </div>
           </td>
           <td class="pros">
@@ -244,7 +245,7 @@
             <b>link=</b><i>link-text</i>
             <div class="example">
               link=Click here<br/>
-              LINK=Sale of the Week
+              link=Sale of the Week
             </div>
           </td>
           <td class="pros">
@@ -256,7 +257,7 @@
           </td>
           <td class="cons">
             <ul>
-              <li>Not suitable when link text id generated dynamically</li>
+              <li>Not suitable when link text is generated dynamically</li>
               <li>link text with line breaks work differently in some browsers</li>
             </ul>
           </td>
@@ -264,7 +265,7 @@
         <tr>
           <td class="explain" colspan="3">
             <p>
-              This strategy is intended to select hyperlink element(s) (denoted via the &lt;A&gt; tag) that contains
+              This strategy is intended to select hyperlink element(s) (denoted via the &lt;A&gt; tag) which has exactly
               the specified text. It's straightforward and relatively fast. It is most suitable for navigation testing
               or "dead link" checks. For example, consider this website with its navigation links:
               <img src="image/web_03_ebay.png"/><br/>
@@ -303,6 +304,69 @@
         </tbody>
       </table>
     </div>
+
+    <div id="tab_partialLinkText" class="tab">
+      <table class="locators" cellspacing="0" cellpadding="3">
+        <thead>
+        <tr>
+          <th>Syntax/Example</th>
+          <th>Pros</th>
+          <th>Cons</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="syntax" nowrap="nowrap">
+            <b>partialLinkText=</b><i>partial-link-text</i>
+            <div class="example">
+              partialLinkText=Forgot My<br/>
+              partial=Click here to
+            </div>
+          </td>
+          <td class="pros">
+            <ul>
+              <li>automatically limits to &lt;A&gt; (hyperlink) element</li>
+              <li>best for testing navigation</li>
+              <li>guarded against stylistic or page structure changes</li>
+              <li>partial match can be easier to maintain than exact match (as in Link Text)</li>
+            </ul>
+          </td>
+          <td class="cons">
+            <ul>
+              <li>Not suitable when link text is generated dynamically</li>
+              <li>Unintended consequences of matching to multiple elements</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="explain" colspan="3">
+            <p>
+              This strategy is intended to select hyperlink element(s) (denoted via the &lt;A&gt; tag) that contains
+              the specified text. This strategy is similar to that of Link Text, except that only partial match on the
+              link text is required. As a convenience, Nexial supports both the use of <code>partialLinkText=</code> or
+              <code>partial=</code> prefix for this locator strategy. For example, these 2 locators yield the same
+              outcome:<br/>
+              <code>partialLinkText=Submit</code><br/>
+              <code>partial=Submit</code><br/>
+            </p>
+            <p>
+              This strategy has potentially some advantages and some disadvantages. On one hand, partial match would
+              remove the need for exact match thus simplify the automation work a bit. However partial match could
+              result in erroneous automation. Partial match could result in multiple matches and an unintended link
+              could be invoked as a result. As with most <a href="#available-commands">web commands</a>, when there
+              are multiple matches to the specified partial text match, only the first matched element is considered.
+            </p>
+            <p>
+              Not all web applications use the &lt;A&gt; tag to represent its navigation (inasmuch as this is the
+              recommended approach by all major search and SEO engines to improve search hits). If a web application
+              opted to use another tag, such as &lt;DIV&gt; tag, then this locator strategy would not work.
+            </p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
     <div id="tab_tag" class="tab">
       <table class="locators" cellspacing="0" cellpadding="3">
         <thead>
@@ -318,7 +382,7 @@
             <b>tag=</b><i>tag-name-of-element</i>
             <div class="example">
               tag=select<br/>
-              TAG=table
+              tag=table
             </div>
           </td>
           <td class="pros">
@@ -364,7 +428,7 @@
             <b>class=</b><i>css_class_name</i>
             <div class="example">
               class=nav-item<br/>
-              CLASS=required_input
+              class=required_input
             </div>
           </td>
           <td class="pros">
@@ -435,8 +499,8 @@
             <div class="example">
               css=form#login > input.username<br/>
               css=input[name='login'][type='submit']<br/>
-              CSS=#records li:nth-of-type(4)<br/>
-              CSS=a[id^='id_prefix_']
+              css=#records li:nth-of-type(4)<br/>
+              css=a[id^='id_prefix_']
             </div>
           </td>
           <td class="pros">
@@ -535,10 +599,8 @@
             <b>xpath=</b><i>xpath-to-target</i>
             <div class="example">
               xpath=//div[@id='d1']//a[text()='Best Price']<br/>
-              <br/>
+              xpath=//footer<br/>
               //span[contains(text(),'Complete']<br/>
-              <br/>
-              XPATH=//footer
             </div>
           </td>
           <td class="pros">
