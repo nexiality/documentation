@@ -107,6 +107,8 @@ comments: true
 - [`selectMultiByValue(locator,array)`](../commands/web/selectMultiByValue(locator,array)): **NEW** command to select
   `<OPTION>` elements of a `<SELECT>` element based on their assigned `value` attribute.
 - workaround for the recent `samesite` implementation by Chrome (v80+) to block certain cookies.
+ - [`saveTitle(var`)](../commands/web/saveTitle(var)): **NEW** command to save the current page title to a variable.
+ - supports the `partialLinkText` locator (alias: `partial`).
  
 
 ### [webcookie commands](../commands/webcookie)
