@@ -29,9 +29,6 @@ comments: true
 - create error log when exception ocurrs to help improve RCA.
  
 
-### [JSONPath](../jsonpath)
-
-
 ### [Nexial Interactive](../interactive)
 - minor fix for corner case dealing with iteration. Now it is possible to run a non-default (`1`) iteration value
   via `nexial.scope.iteration` in the data file without forcefully setting such iteration value in Interactive Mode.
