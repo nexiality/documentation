@@ -41,6 +41,11 @@ load the appropriate connection driver (a.k.a. JDBC driver). The valid values (c
 	 - **`sqlite`** (SQLite)
 	 - **`hsqldb`** (HyperSQL)
 	 - **`isam` or `connx`** (ISAM/Connx, JDBC type 2)
+	 - **`mongodb`** (see [below](#connecting-to-mongodb) for more details)
+	 - Note that to connect toother database not mentioned above, you may do the following:
+	   1. add the appropriate JDBC Type 4 driver (jar file) to `${NEXIAL_HOME}/lib` directory.
+	   2. add the appropriate driver class name to `<connection name>.JavaClassName` data variable (instead of 
+	      `<connection name>.type`). Check the vendor's support page for the correct driver jar and driver classname.
 - `<connection name>` **.url** - this specifies how to connect to the target database. Some connection string may 
   contain username and password. Hence the `.username` and `.password` are required. For more details about 
   connection string, check the following links:
@@ -90,22 +95,47 @@ In addition to the above, there are other useful configurations:
    | DEF  |          | 456  |
     
 It is not uncommon that multiple connections are needed within one test script. To differentiate between different 
-connections, set up multiple connections in the appropriate Nexial data file:
+connections, set up multiple connections in the appropriate Nexial data file:<br/>
 ![setup2](image/index_02.png)
 
-Then in test script, reference the appropriate connection via its name (i.e. `mydb` or `app2`):
+Then in test script, reference the appropriate connection via its name (i.e. `mydb` or `app2`):<br/>
 ![script](image/index_03.png)
+
+#### Connecting to MongoDB
+[MongoDB](https://www.mongodb.com/) is not a relational database. It is another form of database called 
+[NoSQL](https://en.wikipedia.org/wiki/NoSQL) that provides a mechanism for managing unstructured (or non-tabular)
+data structure. As a convenience, Nexial provides MongoDb connectivity via the `rdbms` commands so that those familar
+with the `rdbms` command type might be able to adapt quickly to automating with MongoDb.
+
+Connecting to MongoDb via Nexial is similar to how one would connect to MongoDb directly. One can utilize the same
+[MongoDb connection URL](https://docs.mongodb.com/manual/reference/connection-string/). Be sure to specify the 
+`<connection name>.type` as `mongodb`, and supply the appropriate credentials via the `<connection name>.user` and 
+`<connection name>.password` data variables. For example:<br/>
+![](image/index_10.png)
+
+
+In addition, there's another specialized data variable - `<connection name>.expandDocument` to "expand" the retrieved 
+document into columns. This may be of some help as one would be able to directly access the retrieved document via its 
+top-level key. For example, by default each document retrieved (such as using 
+[db.find()](https://docs.mongodb.com/manual/reference/method/db.collection.find/) command) would be shown as a 
+"document" column in separate rows:<br/>
+![](image/index_13.png)
+
+As shown above, each row contains a "document" column, each with the corresponding retrieved JSON document.
+
+When the `.expandDocument` is set to `true`, the retrieved document is "expanded" into individual columns:<br/>
+![](image/index_11.png)<br/>
+![](image/index_12.png)<br/>
 
 
 ### Working with Execution Result
 Executing a SQL statement results in a series of outcome. The most common and sought-after is, of course, the 
 resultset or dataset - assuming the executed SQL statement is a SELECT statement. However, for UPDATE, DELETE or 
-INSERT, one might be more interested in the number of rows affected by the SQL statement in question. Perhaps one 
-would be interested in capturing any errors generated on the database server during SQL execution.
-
-For these reasons, Nexial is designed to encapsulate the various execution result into a "wrapper", or a "object". 
-This wrapper can be thought of as the "outer casing" which houses the various execution results. There are 2 types 
-of wrapper - one for SELECT statements and the other one for INSERT/UPDATE/DELETE:<br/>
+INSERT, one might be more interested in the number of rows affected by the SQL statement in question. Or, perhaps one 
+is interested in capturing any errors generated on the database server during SQL execution. For these reasons, Nexial 
+is designed to encapsulate the various execution result into a "wrapper", or a "object". This wrapper can be thought 
+of as the "outer casing" which houses the various execution results. There are 2 types of wrapper - one for SELECT 
+statements and the other one for INSERT/UPDATE/DELETE:<br/>
 
 ![metadata](image/index_04.png)![metadata2](image/index_05.png)
 
@@ -144,6 +174,21 @@ other than `result`.
 
 Note that many database vendors (and the corresponding database drivers) adhere to case-sensitivity so that column 
 'Address' is considered NOT THE SAME as 'address' or 'ADDRESS'.
+
+#### Working with MongoDb Query Result
+In addition to the execution result as shown above, MongoDb query result contains additional information:<br/>
+![](image/index_09.png)
+
+As shown above, there are additional execution results for MongoDb:
+- `${...}.deletedCount` - retrieves the number of documents deleted; applicable only when using MongoDb's 
+   [delete commands](https://docs.mongodb.com/manual/reference/method/db.collection.find/).
+- `${...}.modifiedCount` - retrieves the number of documents modified; applicable only when using MongoDb's 
+   [update commands](https://docs.mongodb.com/manual/reference/command/update/). 
+- `${...}.matchedCount` - retrieves the number of documents matched to the 
+   [update commands](https://docs.mongodb.com/manual/reference/command/update/) command.
+- `${...}.acknowledged` - `true`/`false` to signify whether a write operation was acknowledged by the corresponding 
+   MongoDb server. It is often safe to ignore this except for high volume writes to replica set. For more information, 
+   check out MongoDb's document on [Write Concern](https://docs.mongodb.com/manual/reference/write-concern/).
 
 
 ### Available Commands

@@ -20,7 +20,7 @@ For example,<br/>
 
 ### Available Functions
 
-#### `$(project|text|...)`
+#### `$(projectfile|text|...)`
 Retrieve the content of a project file.  Assumes that the target file has "text" content (not binary).
 
 ### Example

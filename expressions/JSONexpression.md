@@ -7,7 +7,7 @@ comments: true
 ---
 
 
-### De**Script**ion
+### **Description**
 JSON provides transformational operations on a 
 <a href="http://json.org/" class="external-link" target="_nexial_external">JSON document</a>, which can be a JSON 
 object or JSON array.

@@ -87,6 +87,10 @@ comments: true
   [`saveResult(db,sql,output)`](../commands/rdbms/saveResult(db,sql,output)): minor adjustment so that the resulting 
   CSV file will be referenced by [`nexial.lastOutputLink`](../systemvars/index#nexial.lastOutputLink) System variable 
   (instead of the metadata JSON file).
+- supports MongoDB via [`rdbms`](../commands/rdbms) commands. See 
+  [Database Connection Setup](../commands/rdbms/index#database-connection-setup) and 
+  [Working With Execution Result](../commands/rdbms/index#working-with-execution-result) for more details. Not all
+  `rdbms` commands are yet supported (to be ratified soon!)
 
 
 ### [sound commands](../commands/sound)
@@ -106,7 +110,9 @@ comments: true
 - workaround for the recent `samesite` implementation by Chrome (v80+) to block certain cookies.
  - [`saveTitle(var`)](../commands/web/saveTitle(var)): **NEW** command to save the current page title to a variable.
  - supports the `partialLinkText` locator (alias: `partial`).
- 
+- [`nexial.browser.isOpen`] - **NEW** System variable to indicate that the target browser is opened (to an URL) or not.
+- [`nexial.browser.current`] - **NEW** System variable to indicate the current browser type.
+
 
 ### [webcookie commands](../commands/webcookie)
 - [`saveAllAsText(var,excludes)`](../commands/webcookie/saveAllAsText(var,exclude)): **NEW** command to save all 
