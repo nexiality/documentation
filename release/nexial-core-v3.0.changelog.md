@@ -91,6 +91,8 @@ comments: true
   [Database Connection Setup](../commands/rdbms/index#database-connection-setup) and 
   [Working With Execution Result](../commands/rdbms/index#working-with-execution-result) for more details. Not all
   `rdbms` commands are yet supported (to be ratified soon!)
+- [`saveResult(db,sql,output)`](../commands/rdbms/saveResult(db,sql,output)): force FAIL when unable to execute query
+- [`saveResults(db,sqls,outputDir)`](../commands/rdbms/saveResults(db,sqls,outputDir)): force FAIL when unable to execute query
 
 
 ### [sound commands](../commands/sound)
