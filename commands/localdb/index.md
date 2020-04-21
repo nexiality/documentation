@@ -111,6 +111,7 @@ that support SQLite (in alphabetical order):
 - <a href="https://sqlitestudio.pl/" class="external-link" target="_nexial_link">SQLite Studio</a>
 - <a href="https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager-webext/" class="external-link" target="_nexial_link">SQLite Manager, a Firefox Add-On</a>
 - <a href="https://tableplus.io/" class="external-link" target="_nexial_link">TablePlus</a> (commercial license available)
+- <a href="https://sqliteonline.com/" class="external-link" target="_nexial_link">SQLite Online (browser-based)</a>
 
 
 ## SQLite References

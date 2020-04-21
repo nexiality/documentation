@@ -27,6 +27,8 @@ comments: true
 - [bin/nexial-project](../userguide/BatchFiles#nexial-project): Now supports creation of project.properties
    if it doesn't exist.
 - create error log when exception ocurrs to help improve RCA.
+- update mail configuration, including `nexial.mailHeader` and `nexial.mailFooter` information at the end of each 
+  script execution.
  
 
 ### [Nexial Interactive](../interactive)
