@@ -127,6 +127,17 @@ When the `.expandDocument` is set to `true`, the retrieved document is "expanded
 ![](image/index_11.png)<br/>
 ![](image/index_12.png)<br/>
 
+It is possible to connect to MongoDB via SSL/TLS. However there is a bit of upfront (one-time) work to get it working:
+
+1. Obtain the appropriate `.pem` file for the target MongoDB server.
+2. Run the following command with the `keytool` utility that comes with your Java installation (in `$JAVA_HOME/bin`):<br/>
+   ```
+   keytool -importcert -trustcacerts -file <pem file location> -keystore <trust store location> -storepass <password>
+   ```
+3. Now reference the generated "trust store" file in your MongoDB connectivity:<br/>
+   ![](image/index_14.png)
+
+
 
 ### Working with Execution Result
 Executing a SQL statement results in a series of outcome. The most common and sought-after is, of course, the 
