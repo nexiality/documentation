@@ -11,7 +11,7 @@ The chief purpose of a Nexial script is to organize related or similar tests int
 the work of identifying tests (for edits or for execution). It will also streamline the process of maintaining broad-
 impact changes across multiple scenarios.
 
-### Organization
+#### Organization
 Note that we should not force any dependencies of the scenarios within the same script. Flow and order can be (and 
 importantly, **should be**) defined either at execution time or via a plan file. Thus, If the following are the 
 sequence of executions:
@@ -81,7 +81,7 @@ macro library. A more generalized name for macro library would serve it well.
 
 ## Data Variable
 
-### Naming Convention
+#### Naming Convention
 Ideally we want to name our data variables to clearly identify its purpose and it's reference back to the application, 
 when appropriate. When dealing with a larger application, there may be many situations where a data variable can be 
 misrepresented or misused. Names such as `name`, `error`, `address` can be too generic and would cause conflict and 
@@ -98,24 +98,24 @@ their identification and to avoid conflict. The following are 2 recommended stra
 2. `[section].[element].[type]`
 
 
-### Typical Use for `project.properties`
-### Typical Use of `#default` datasheet
+#### Typical Use for `project.properties`
+#### Typical Use of `#default` datasheet
 
 -----
 
 ## Improving Execution 
-### Creating batch files and shell scripts
-### Naming convention
+#### Creating batch files and shell scripts
+#### Naming convention
 
 -----
 
 ## Improving Teamwork and Collaboration
-### Use of SCM
-### Commit consideration
-### commit frequency
-### use of commit comment
-### Avoid rich text (default) copy-and-paste
-### Use `nexial-artifact-repair`
+#### Use of SCM
+#### Commit consideration
+#### commit frequency
+#### use of commit comment
+#### Avoid rich text (default) copy-and-paste
+#### Use `nexial-artifact-repair`
 
 -----
 
