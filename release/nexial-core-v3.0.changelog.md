@@ -125,3 +125,7 @@ comments: true
   `excludes` parameter.
 - [`clearCookieFields(var,remove)`](../commands/webcookie/clearCookieFields(var,remove)): **NEW** command to remove
   one or more fields (denoted as `remove`) from the cookie(s) saved in `var`.
+
+
+### [ws commands](../commands/ws)
+- fix URL encoding unnecessarily applied on certain characters.
