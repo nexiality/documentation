@@ -117,7 +117,9 @@ comments: true
  - supports the `partialLinkText` locator (alias: `partial`).
 - [`nexial.browser.isOpen`] - **NEW** System variable to indicate that the target browser is opened (to an URL) or not.
 - [`nexial.browser.current`] - **NEW** System variable to indicate the current browser type.
-
+- [`assertElementEnabled(locator)`](../commands/web/assertElementEnabled(locator)): **NEW** command to validate the 
+  usability of an element (usually form element).
+  
 
 ### [webcookie commands](../commands/webcookie)
 - [`saveAllAsText(var,excludes)`](../commands/webcookie/saveAllAsText(var,exclude)): **NEW** command to save all 

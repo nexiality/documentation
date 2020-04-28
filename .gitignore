@@ -52,7 +52,7 @@ coverage
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (http://nodejs.org/api/addons)
+# Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
 # Dependency directories
@@ -67,20 +67,13 @@ jspm_packages
 ### Java template
 *.class
 
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
 # Package Files #
-*.jar
+#*.jar
 *.war
 *.ear
-#*.zip
 *.tar.gz
 *.rar
 
@@ -178,9 +171,13 @@ dataSources/
 .idea/sqlDataSources.xml
 .idea/dynamic.xml
 *.ipr
+*.iml
 
 # Gradle:
 .idea/gradle.xml
+gradlew
+gradlew.bat
+gradle/wrapper/
 
 # Mongo Explorer plugin:
 #.idea/mongoSettings.xml
@@ -302,9 +299,6 @@ $RECYCLE.BIN/
 # extra
 classes/
 logs/
-/nexial-core_main.iml
-/nexial-core_test.iml
-documentation.iml
 output/
 /_sass/*
 /.jekyll-metadata
