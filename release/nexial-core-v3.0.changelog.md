@@ -35,6 +35,8 @@ comments: true
 - minor fix for corner case dealing with iteration. Now it is possible to run a non-default (`1`) iteration value
   via `nexial.scope.iteration` in the data file without forcefully setting such iteration value in Interactive Mode.
 - fixed runtime error when inspecting data variables within Nexial Interactive
+- improved support for flow control over [`base.section(step)`](../commands/base/section(steps)) to properly skip
+  over steps that are enclosed within a section
 
 
 ### [System Variable](../systemvars)
@@ -94,6 +96,8 @@ comments: true
   [Working With Execution Result](../commands/rdbms/index#working-with-execution-result) for more details. Not all
   `rdbms` commands are yet supported (to be ratified soon!)
 - supports connecting to MongoDB with SSL/TLS
+- improved support for AWS DocumentDB via the current MongoDB connectivity support. Nexial now includes standard AWS 
+  `rds-combined-ca-bundle.pem` in the `jks` form to simplify connectivity.
 - [`saveResult(db,sql,output)`](../commands/rdbms/saveResult(db,sql,output)): force FAIL when unable to execute query
 - [`saveResults(db,sqls,outputDir)`](../commands/rdbms/saveResults(db,sqls,outputDir)): force FAIL when unable to execute query
 
@@ -119,6 +123,8 @@ comments: true
 - [`nexial.browser.current`] - **NEW** System variable to indicate the current browser type.
 - [`assertElementEnabled(locator)`](../commands/web/assertElementEnabled(locator)): **NEW** command to validate the 
   usability of an element (usually form element).
+- add EAGER as default page load strategy for chrome browser; help to reduce occasional false-positive error when the 
+  web page does not load timely.
   
 
 ### [webcookie commands](../commands/webcookie)
