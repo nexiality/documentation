@@ -18,15 +18,8 @@ This command saves the form values from the pdf document and store the data in t
 - **var** - variable name to store the form data
 - **pageAndLineStartEnd** - identify the starting page number, start line and end line. All the three values to be 
   given with comma separated
-- **strategy** - the strategy to read the pdf form. Following strategies are supported to read the data. 
-
-|Strategy|Description|
-|---|---|
-|ALTERNATING_ROW|This is to be applied when the PDF form has the headers in one row and the values are followed in the next row. And the headers are being repeated in the alternate rows.|
-|ALTERNATING_CELL|This is to be applied when the PDF form has the headers in one cell and the values are followed in the next cell. And the headers are being repeated in the alternate cells.|
-|SHARED_CELL|This is to be applied when the PDF form has the headers and the values are shared in one cell.|
-
-<br/>
+- **strategy** - the strategy to read the pdf form. See [Form Data Extraction](index.md#pdf-form-data-extraction) for 
+  more details.
 
 ### Example
 **Script**:<br/>
