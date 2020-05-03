@@ -16,6 +16,7 @@ comments: true
 - ensure `nexial.lastOutcome` to set to `false` when exception occurs.
 - update Nexial internal use of web service functionality so that such use is not affected by user's configuration and 
   project artifacts.
+- remove email receipt (aka DSN, or delivery status notification) from Nexial mail notification.
 #### Improvements
 - [bin/nexial-script-update](../userguide/BatchFiles#nexial-script-update): add optional flag to automatically 
   rename duplicate activity names found in the same scenario.
