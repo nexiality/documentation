@@ -30,6 +30,8 @@ comments: true
 - create error log when exception ocurrs to help improve RCA.
 - update mail configuration, including `nexial.mailHeader` and `nexial.mailFooter` information at the end of each 
   script execution.
+- Added **NEW** command line option [`-subplan`](../userguide/BatchFiles#nexial) to execute specific worksheets/subplans
+  of a test plan which is only available for single plan execution.
  
 
 ### [Nexial Interactive](../interactive)
@@ -50,7 +52,10 @@ comments: true
 - [`nexial.maxConsoleDisplay`](../systemvars/index#nexial.maxConsoleDisplay): **NEW** System variable to limit the 
   amount of text or data variable to be displayed on console to ease the readability of the execution log on the 
   console. Default is `500`. Setting this System variable to `-1` will disable such limit.
-
+- [`nexial.subplansIncluded`](../systemvars/index#nexial.subplansIncluded): **NEW** This variable provides all 
+  worksheets/subplans executed by Nexial single plan execution.
+- [`nexial.subplansOmitted`](../systemvars/index#nexial.subplansOmitted): **NEW** This variable provides all 
+  worksheets/subplans omitted(not executed) by Nexial single plan execution.
 
 ### [Built-in Functions](../functions)
 

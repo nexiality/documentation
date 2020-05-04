@@ -28,6 +28,7 @@ This is the main script is used to execute Nexial script or plan.  This command 
 |**`-output`**     | This will ensure output directory where results are stored. <br/>Default location is `../../output` relative to script/plan.|
 |**`-override`**   | [_optional_] Add or override data variables in the form of `name=value`. <br/>Multiple overrides are supported via multiple `-override name=value` arguments.<br/>Note that variable name or value with spaces must be enclosed in double quotes.|
 |**`-plan`**       | This option is for running plan. This will require full path of plan. <br/>This is required if `-script` is missing.|
+|**`-subplans`**   | This option is for running specific worksheets(subplans) of plan. This will require one or more worksheets separated by comma.<br/>This will work for single plan execution.|
 |**`-script`**     | This option is for running script. This will require full path of script. <br/>This is required if `-plan` is missing.|
 |**`-scenario`**   | This will run one or more test scenarios separated by comma.|
 
@@ -41,6 +42,10 @@ This is the main script is used to execute Nexial script or plan.  This command 
 - Execute a Nexial plan:<br/>
 
   `nexial.cmd -plan c:\projects\myProject\artifact\plan\myProject.xlsx`
+  
+- Execute one or more specific subplans of single plan file:<br/>
+
+  `nexial.cmd -plan c:\projects\myProject\artifact\plan\myProject.xlsx -subplans testPlan1,testPlan2`
 
 - Execute one specific scenario (i.e. worksheet):<br/>
 
