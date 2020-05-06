@@ -131,7 +131,11 @@ comments: true
   usability of an element (usually form element).
 - add EAGER as default page load strategy for chrome browser; help to reduce occasional false-positive error when the 
   web page does not load timely.
-  
+- [`waitForElementsPresents(locators)`](../commands/web/waitForElementsPresent(locators)): **NEW** command to wait for 
+  the presence of one or more locators.
+- explicitly use `nexial.web.alwaysWait` system variable to trigger Selenium's fluent-wait strategy.
+- change default value for `nexial.web.pageLoadWaitMs` to 15 seconds (instead of 10 seconds).
+
 
 ### [webcookie commands](../commands/webcookie)
 - [`saveAllAsText(var,excludes)`](../commands/webcookie/saveAllAsText(var,exclude)): **NEW** command to save all 
