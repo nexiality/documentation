@@ -203,6 +203,7 @@ available commands.
 - [`verifyText(locator,text)`](verifyText(locator,text))
 - [`wait(waitMs)`](wait(waitMs))
 - [`waitForElementPresent(locator)`](waitForElementPresent(locator)) 
+- [`waitForElementsPresent(locators)`](waitForElementsPresent(locators)) 
 - [`waitForPopUp(winId,waitMs)`](waitForPopUp(winId,waitMs))
 - [`waitForTextPresent(text)`](waitForTextPresent(text))
 - [`waitForTitle(text)`](waitForTitle(text))

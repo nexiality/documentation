@@ -333,7 +333,7 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
 
 .label-num, .value-num, .label-percent, .value-percent { text-align: right !important; }
 
-.label-num, .value-num { width: 35px; white-space: nowrap; }
+.label-num, .value-num { width: 38px; white-space: nowrap; }
 
 .label-percent, .value-percent { width: 55px; white-space: nowrap; }
 
@@ -353,7 +353,7 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
     padding:          5px;
     margin:           5px 0 0 0;
     white-space:      nowrap;
-    width:            240px;
+    /*width:            240px;*/
     font-family:      monospace;
     font-size:        9pt;
 }
