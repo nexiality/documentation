@@ -8,8 +8,9 @@ comments: true
 
 
 ### Description
-This command stores the text of the alert dialog to variable denoted by `var`.  If no alert dialog is found, or 
-retrieval of dialog text is not possible, this command will FAIL.
+This command stores the text of the alert dialog to variable denoted by `var`.  If no alert dialog is found or if the
+current dialog contains no text, the specified `var` will subsequently be removed to prevent any data taining from
+previous use. In either way, this command will always return as PASS.
 
 
 ### Parameters

@@ -245,4 +245,12 @@ Output:<br/>
 
 -----
 
+#### `waitFor(locator)`
+This operation waits for the specified locator to be present in the current page (or frame). The maximum wait time is
+controlled by [`nexial.pollWaitMs`](../systemvars/index#nexial.pollWaitMs).
+
+**Example**<br/>
+
+-----
+
 <script>jQuery(document).ready(function () { newOperationSelect(); });</script>

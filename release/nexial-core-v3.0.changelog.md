@@ -70,6 +70,8 @@ comments: true
 - additional logging to improve troubleshooting and RCA.
 - [NUMBER](../expressions/NUMBERexpression): **NEW** operation - `abs` - to convert a number into its absolute form 
   (i.e. positive number).
+- [WEB](../expressions/WEBexpression): **NEW** operation - `waitFor(locator)` - to wait for the specified element to be
+  present.
 
 
 ### [csv commands](../commands/csv)
@@ -135,6 +137,13 @@ comments: true
   the presence of one or more locators.
 - explicitly use `nexial.web.alwaysWait` system variable to trigger Selenium's fluent-wait strategy.
 - change default value for `nexial.web.pageLoadWaitMs` to 15 seconds (instead of 10 seconds).
+- additional arguments set to chromedriver to remove the "Chrome is being controlled by automated test software" warning.
+
+
+[webalert]
+- [`storeText(var)`](../commands/webalert/storeText(var)): logic change - this command no longer returns FAIL when no 
+  alert text can be found; it now simply removes the specified variable when no alert dialog is found or when dialog 
+  contains no text.
 
 
 ### [webcookie commands](../commands/webcookie)
