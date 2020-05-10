@@ -19,6 +19,7 @@ comments: true
 - remove email receipt (aka DSN, or delivery status notification) from Nexial mail notification.
 - fixed date format displayed on Windows console.
 - removed erroneous screenshot generation in repeat-until loop. 
+- support additional command type, beyond 31 of them. :-)
 #### Improvements
 - [bin/nexial-script-update](../userguide/BatchFiles#nexial-script-update): add optional flag to automatically 
   rename duplicate activity names found in the same scenario.
