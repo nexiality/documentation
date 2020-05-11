@@ -20,6 +20,9 @@ comments: true
 - fixed date format displayed on Windows console.
 - removed erroneous screenshot generation in repeat-until loop. 
 - support additional command type, beyond 31 of them. :-)
+- limit exception stack trace to only when [`nexial.verbose`](../systemvars/index#nexial.verbose) is set to `true`
+- Java version-specific handling of Nashorn script engine, which is needed for mongodb support.
+- correctly display Java version on console when running Nexial on MacOSX & *NIX
 #### Improvements
 - [bin/nexial-script-update](../userguide/BatchFiles#nexial-script-update): add optional flag to automatically 
   rename duplicate activity names found in the same scenario.
