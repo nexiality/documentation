@@ -105,13 +105,14 @@ comments: true
   [`saveResult(db,sql,output)`](../commands/rdbms/saveResult(db,sql,output)): minor adjustment so that the resulting 
   CSV file will be referenced by [`nexial.lastOutputLink`](../systemvars/index#nexial.lastOutputLink) System variable 
   (instead of the metadata JSON file).
-- supports MongoDB via [`rdbms`](../commands/rdbms) commands. See 
-  [Database Connection Setup](../commands/rdbms/index#database-connection-setup) and 
-  [Working With Execution Result](../commands/rdbms/index#working-with-execution-result) for more details. Not all
-  `rdbms` commands are yet supported (to be ratified soon!)
-- supports connecting to MongoDB with SSL/TLS
-- improved support for AWS DocumentDB via the current MongoDB connectivity support. Nexial now includes standard AWS 
-  `rds-combined-ca-bundle.pem` in the `jks` form to simplify connectivity.
+- supports MongoDB via [`rdbms`](../commands/rdbms) commands. 
+  - See [Database Connection Setup](../commands/rdbms/index#database-connection-setup) and 
+    [Working With Execution Result](../commands/rdbms/index#working-with-execution-result) for more details. Not all 
+    `rdbms` commands are yet supported (to be ratified soon!)
+  - supports connecting to MongoDB with SSL/TLS
+  - improved support for AWS DocumentDB via the current MongoDB connectivity support. Nexial now includes standard AWS 
+    `rds-combined-ca-bundle.pem` in the `jks` form to simplify connectivity.
+  - support non-document (such as numeric) resultset, such as `.countDocument()` queries.
 - [`saveResult(db,sql,output)`](../commands/rdbms/saveResult(db,sql,output)): force FAIL when unable to execute query
 - [`saveResults(db,sqls,outputDir)`](../commands/rdbms/saveResults(db,sqls,outputDir)): force FAIL when unable to execute query
 
