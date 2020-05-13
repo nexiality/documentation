@@ -100,6 +100,11 @@ comments: true
   has precedence over application version defined in application config xml file. 
 
 
+### [pdf commands](../commands/pdf)
+- [`saveAsPdf(profile,content,file)`](../commands/pdf/saveAsPdf(profile,content,file)): **NEW** command to save text or
+  HTML content to a PDF.
+
+
 ### [rdbms commands](../commands/rdbms)
 - [`saveResults(db,sqls,outputDir)`](../commands/rdbms/saveResults(db,sqls,outputDir)) and 
   [`saveResult(db,sql,output)`](../commands/rdbms/saveResult(db,sql,output)): minor adjustment so that the resulting 

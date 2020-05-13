@@ -81,6 +81,7 @@ the extraction strategy by setting up profile(s), using the data variables below
 - [`assertTextPresent(pdf,text)`](assertTextPresent(pdf,text))
 - [`count(pdf,text,var)`](count(pdf,text,var))
 - [`saveAsPages(pdf,destination)`](saveAsPages(pdf,destination))
+- [`saveAsPdf(profile,content,file)`](saveAsPdf(profile,content,file))
 - [`saveAsText(pdf,destination)`](saveAsText(pdf,destination))
 - [`saveFormValues(pdf,var,pageAndLineStartEnd,strategy)`](saveFormValues(pdf,var,pageAndLineStartEnd,strategy))
 - [`saveMetadata(pdf,var)`]( saveMetadata(pdf,var))
