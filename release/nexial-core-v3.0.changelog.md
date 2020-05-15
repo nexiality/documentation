@@ -63,21 +63,24 @@ comments: true
 - [`nexial.subplansOmitted`](../systemvars/index#nexial.subplansOmitted): **NEW** This variable provides all 
   worksheets/subplans omitted(not executed) by Nexial single plan execution.
 
+
 ### [Built-in Functions](../functions)
 
 
 ### [Nexial Expression](../expressions)
 - [JSON](../expressions/JSONexpression): code fix to accurately reporting invalid file or content when constructing a
   JSON expression.
-- [TEXT](../expressions/TEXTexpression): **NEW** operation - `parseAsCsv(configs)` - to convert TEXT to CSV expression.
+- [TEXT](../expressions/TEXTexpression): 
+  - **NEW** operation - `parseAsCsv(configs)` - to convert TEXT to CSV expression.
+  - [`number`](../expressions/TEXTexpression#number) operation: handle "octal-like" numbers
 - [CSV](../expressions/CSVexpression): [`merge(var,keyColumns)`](../expressions/CSVexpression#mergevarkeycolumns) now
   supports multiple "key" columns so that one can merge 2 CSV content based on multiple keys. Note that both CSV content
   must contain header (i.e. parsed with `header=true`).
 - additional logging to improve troubleshooting and RCA.
-- [NUMBER](../expressions/NUMBERexpression): **NEW** operation - `abs` - to convert a number into its absolute form 
-  (i.e. positive number).
-- [WEB](../expressions/WEBexpression): **NEW** operation - `waitFor(locator)` - to wait for the specified element to be
-  present.
+- [NUMBER](../expressions/NUMBERexpression): 
+  - **NEW** operation - `abs` - to convert a number into its absolute form (i.e. positive number).
+- [WEB](../expressions/WEBexpression): 
+  - **NEW** operation - `waitFor(locator)` - to wait for the specified element to be present.
 
 
 ### [csv commands](../commands/csv)
