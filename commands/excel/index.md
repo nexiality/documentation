@@ -18,7 +18,6 @@ The "excel" command type represents a series of automation commands regarding ex
 - [`json(file,worksheet,range,header,output)`](json(file,worksheet,range,header,output))
 - [`saveData(var,file,worksheet,range)`](saveData(var,file,worksheet,range))
 - [`saveRange(var,file,worksheet,range)`](saveRange(var,file,worksheet,range))
-- [`saveTotalDataCount(file,worksheet,saveVar)`](saveTotalDataCount(file,worksheet,saveVar))
 - [`setPassword(file,password)`](setPassword(file,password))
 - [`write(file,worksheet,startCell,data)`](write(file,worksheet,startCell,data))
 - [`writeAcross(file,worksheet,startCell,array)`](writeAcross(file,worksheet,startCell,array))
