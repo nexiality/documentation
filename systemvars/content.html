@@ -2025,6 +2025,50 @@
   </tr>
 
   <tr>
+    <td class="highlight-section" colspan="5">
+      <span>For <a href="../commands/external/"><code>excel</code></a> commands and <a href="../expressions/EXCELexpression">[<code>EXCEL</code>]</a> expression only.</span>
+    </td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.excel.recalcBeforeSave"><code>nexial.excel.recalcBeforeSave</code></a>
+    </td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>false</td>
+    <td>
+      This system variable instructs Nexial to perform formula recalculation before saving changes to an Excel file.
+      Depending on the size of the target Excel and the number of formulae it contains, setting this System variable
+      to <code>true</code> could potentially slow down the file saving process. By default this System variable is
+      set to <code>false</code>.
+      <br/>
+      Note that for <a href="../expressions/EXCELexpression">[<code>EXCEL</code>]</a> expression, the target Excel
+      file is not automatically saved after each write operation
+      (e.g. <code>EXCEL &raquo; writeAcross(start,value1,value2,value3,...)</code>. One would need to explicitly invoke
+      the <code>EXCEL &raquo; save(file,sheet,start)</code> operation to trigger the recalculation.
+    </td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.excel.retainCellType"><code>nexial.excel.retainCellType</code></a>
+    </td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>false</td>
+    <td>
+      When writing data into Excel, Nexial writes them as text by default. This is generally acceptable. However, at
+      times it is important to retain the cell type as found in the target Excel file. This is especially true if the
+      affected cells are referenced by formulae found in the same Excel file. In such case, one can instruct Nexial
+      to retain target cell data type by setting this System variable to <code>true</code> (default to
+      <code>false</code>).
+      <br/>
+      Note that Nexial's attempt to retain the cell data type is limited. At this time it can handle
+      <code>NUMERIC</code>, <code>BOOLEAN</code> and <code>TEXT</code>. Special data type of <code>FORMULA</code>,
+      <code>DATE</code>, <code>OLE</code>, etc. are currently not support.
+    </td>
+  </tr>
+
+  <tr>
     <td class="highlight-section" colspan="5"><span>For browser-based testing only. </span></td>
   </tr>
   <tr>
