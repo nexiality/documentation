@@ -63,6 +63,9 @@ comments: true
 - [`nexial.subplansOmitted`](../systemvars/index#nexial.subplansOmitted): **NEW** This variable provides all 
   worksheets/subplans omitted(not executed) by Nexial single plan execution.
 
+### [Flow Control](../flowcontrols)
+- Fixed flow control for [Nexial Expression](../expressions) like -
+SkipIf([CSV($(syspath|data|fullpath)/abc.csv) => parse(header=false) size] = 3)
 
 ### [Built-in Functions](../functions)
 
@@ -171,3 +174,4 @@ comments: true
 
 ### [ws commands](../commands/ws)
 - fix URL encoding unnecessarily applied on certain characters.
+
