@@ -308,6 +308,12 @@ location of the underlying Excel file will be returned.  In order to return the
 
 -----
 
+#### totalDataRow
+Returns the number of row for the given worksheet. More specifically, this operation will return the last row with data
+to the current worksheet. This operation effectively returns a [`NUMBER`](../expressions/NUMBERexpression) expression.
+
+-----
+
 #### transpose
 Transpose captured cell values so that row data is displayed as column data, and column data as row data.
 

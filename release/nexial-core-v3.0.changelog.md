@@ -57,11 +57,16 @@ comments: true
   generate multiple output files.
 - [`nexial.maxConsoleDisplay`](../systemvars/index#nexial.maxConsoleDisplay): **NEW** System variable to limit the 
   amount of text or data variable to be displayed on console to ease the readability of the execution log on the 
-  console. Default is `500`. Setting this System variable to `-1` will disable such limit.
+  console. Default is `500`. Setting this System variable to `-1` will disable such a limit.
 - [`nexial.subplansIncluded`](../systemvars/index#nexial.subplansIncluded): **NEW** This variable provides all 
   worksheets/subplans executed by Nexial single plan execution.
 - [`nexial.subplansOmitted`](../systemvars/index#nexial.subplansOmitted): **NEW** This variable provides all 
   worksheets/subplans omitted(not executed) by Nexial single plan execution.
+- [`nexial.excel.recalcBeforeSave`](../systemvars/index#nexial.excel.recalcBeforeSave): **NEW** System variable to 
+  instruct Nexial to perform recalculation on Excel before saving it.
+- [`nexial.excel.retainCellType`](../systemvars/index#nexial.excel.retainCellType): **NEW** System variable to enable
+  Nexial's attempt to retain the Excel cell type when writing data to it. More advanced cell type such as `OLE`, 
+  `CHART` is not yet support.
 
 ### [Flow Control](../flowcontrols)
 - Fixed flow control for [Nexial Expression](../expressions) like -
@@ -84,6 +89,8 @@ SkipIf([CSV($(syspath|data|fullpath)/abc.csv) => parse(header=false) size] = 3)
   - **NEW** operation - `abs` - to convert a number into its absolute form (i.e. positive number).
 - [WEB](../expressions/WEBexpression): 
   - **NEW** operation - `waitFor(locator)` - to wait for the specified element to be present.
+- [EXCEL](../expressions/EXCELexpression):
+  - **NEW** operation - `totalDataRow` - to expose the total number of row with data.
 
 
 ### [csv commands](../commands/csv)
@@ -99,6 +106,8 @@ SkipIf([CSV($(syspath|data|fullpath)/abc.csv) => parse(header=false) size] = 3)
 
 
 ### [excel commands](../commands/excel)
+- [`saveTotalDataCount(file,worksheet,saveVar)`](../commands/excel/saveTotalDataCount(file,worksheet,saveVar)): **NEW**
+  command to expose the total number of row with data.
 
 
 ### [desktop commands](../commands/desktop)
