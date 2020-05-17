@@ -1,6 +1,6 @@
 ---
 layout: default
-title: saveTotalDataCount(file,worksheet,saveVar)
+title: saveTotalRowCount(file,worksheet,saveVar)
 parent: excel
 tags: command excel
 comments: true
@@ -23,3 +23,4 @@ save that to `saveVar`.
 
 
 ### See Also
+- [`saveTotalColumnCount(file,worksheet,row,saveVar)`](saveTotalDataCount(file,worksheet,row,saveVar))

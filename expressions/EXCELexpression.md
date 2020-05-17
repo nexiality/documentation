@@ -308,6 +308,13 @@ location of the underlying Excel file will be returned.  In order to return the
 
 -----
 
+#### totalDataColumn(row)
+Returns the number of column for the given row in a worksheet. The `row` parameter is expected to be 1-based (as shown 
+in Excel), and the result, which will be a [`NUMBER`](../expressions/NUMBERexpression) expression, is also 1-based, for
+consistency sake.
+
+-----
+
 #### totalDataRow
 Returns the number of row for the given worksheet. More specifically, this operation will return the last row with data
 to the current worksheet. This operation effectively returns a [`NUMBER`](../expressions/NUMBERexpression) expression.

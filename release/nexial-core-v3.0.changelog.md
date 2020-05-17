@@ -67,6 +67,8 @@ comments: true
 - [`nexial.excel.retainCellType`](../systemvars/index#nexial.excel.retainCellType): **NEW** System variable to enable
   Nexial's attempt to retain the Excel cell type when writing data to it. More advanced cell type such as `OLE`, 
   `CHART` is not yet support.
+  - added more aggressive data type matching logic so that numeric value can be treated as such.
+
 
 ### [Flow Control](../flowcontrols)
 - Fixed flow control for [Nexial Expression](../expressions), as in `SkipIf([CSV($(syspath|data|fullpath)/abc.csv) => parse(header=false) size] = 3)`
@@ -90,7 +92,8 @@ comments: true
 - [WEB](../expressions/WEBexpression): 
   - **NEW** operation - `waitFor(locator)` - to wait for the specified element to be present.
 - [EXCEL](../expressions/EXCELexpression):
-  - **NEW** operation - `totalDataRow` - to expose the total number of row with data.
+  - **NEW** operation - `totalDataRow` - to expose the total number of row in an Excel worksheet.
+  - **NEW** operation - `totalDataColumn(row)` - to expose the total number of column for the specified row.
 
 
 ### [csv commands](../commands/csv)
@@ -106,7 +109,7 @@ comments: true
 
 
 ### [excel commands](../commands/excel)
-- [`saveTotalDataCount(file,worksheet,saveVar)`](../commands/excel/saveTotalDataCount(file,worksheet,saveVar)): **NEW**
+- [`saveTotalRowCount(file,worksheet,saveVar)`](../commands/excel/saveTotalRowCount(file,worksheet,saveVar)): **NEW**
   command to expose the total number of row with data.
 
 
