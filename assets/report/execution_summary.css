@@ -245,7 +245,7 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
     overflow:         hidden;
 
     background-color: rgba(255, 255, 255, 0.25);
-    padding:          3px 5px 1px 5px;
+    padding:          8px 5px 1px 5px;
     border-bottom:    1px solid rgba(100, 100, 100, 0.15);
 
     float:            left;
@@ -269,7 +269,12 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
 }
 
 .plan-step-summary .hasFailure {
-    background-color: rgba(255, 239, 239, 1);
+    background-color: rgba(255, 150, 150, 1) !important;
+}
+
+.plan-step-summary .hasFailure a {
+    background-color: rgba(255, 100, 100, 0.5) !important;
+    color:            rgba(120, 0, 0, 1);
 }
 
 .label-script, .value-script { width: 250px; }
