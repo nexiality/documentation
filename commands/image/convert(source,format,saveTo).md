@@ -34,8 +34,8 @@ save it to temporary location (System/OS -specific). Use `saveTo` to determine t
 
 
 ### Example
-- [`colorbit(source,bit,saveTo)`](colorbit(source,bit,saveTo))
+- [`colorbit(image,bit,saveTo)`](colorbit(image,bit,saveTo))
 
 
 ### See Also
-- [`colorbit(source,bit,saveTo)`](colorbit(source,bit,saveTo))
+- [`colorbit(image,bit,saveTo)`](colorbit(image,bit,saveTo))

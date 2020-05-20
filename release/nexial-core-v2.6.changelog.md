@@ -85,7 +85,7 @@ comments: true
 
 
 ### [image commands](../commands/image)
-- [`colorbit(source,bit,saveTo)`](../commands/image/colorbit(source,bit,saveTo)), 
+- [`colorbit(image,bit,saveTo)`](../commands/image/colorbit(image,bit,saveTo)), 
   [`convert(source,format,saveTo)`](../commands/image/convert(source,format,saveTo)),
   [`crop(image,dimension,saveTo)`](../commands/image/crop(image,dimension,saveTo)): 
   now support `source` as URL. Nexial will automatically download image content and save it to temporary location 

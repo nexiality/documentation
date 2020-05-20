@@ -118,6 +118,12 @@ comments: true
   has precedence over application version defined in application config xml file. 
 
 
+### [image commands](../commands/image)
+- [`ocr(source,saveVar)`](../commands/pdf/ocr(source,saveVar)): **NEW** command to perform OCR (optical character 
+  recognition) on image (`source`). This command works best on images containing mostly text with block font (not 
+  handwriting). This command internally uses OCR.space API to perform OCR.
+
+
 ### [pdf commands](../commands/pdf)
 - [`saveAsPdf(profile,content,file)`](../commands/pdf/saveAsPdf(profile,content,file)): **NEW** command to save text or
   HTML content to a PDF.
