@@ -38,6 +38,8 @@ comments: true
   script execution.
 - Added **NEW** command line option [`-subplan`](../userguide/BatchFiles#nexial) to execute specific worksheets/subplans
   of a test plan which is only available for single plan execution.
+- [bin/nexial-project](../userguide/BatchFiles#nexial-project): new and improved; now supports creating of Nexial
+  macro scripts and helper batch files.
  
 
 ### [Nexial Interactive](../interactive)
