@@ -98,6 +98,13 @@ comments: true
   - **NEW** operation - `totalDataColumn(row)` - to expose the total number of column for the specified row.
 
 
+### [base commands](../commands/base)
+- [`assertEqual(expected,actual)`](../commands/base/assertEqual(expected,actual)): fixed edge cases where a `null` 
+  value is mistaken as a numeric value.
+- [`assertNotEqual(value1,value2)`](../commands/base/assertNotEqual(value1,value2)): fixed edge cases where a `null` 
+  value is mistaken as a numeric value.
+
+
 ### [csv commands](../commands/csv)
 - [`compareExtended(var,profile,expected,actual)`](../commands/csv/compareExtended(var,profile,expected,actual)): now
   supports the comparing of column content as either an order-significant 
