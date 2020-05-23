@@ -158,6 +158,15 @@ comments: true
 ### [sound commands](../commands/sound)
 
 
+### [step.inTime](../commands/step.inTime) 
+- [`observe(prompt,waitMs)`](../commands/step.inTime/observe(prompt,waitMs)): **NEW** command for manual observation  
+with timeout duration to set maximum execution time in milliseconds via `waitMs` parameter.
+- [`perform(instructions,waitMs)`](../commands/step.inTime/perform(instructions,waitMs)): **NEW** command for performing 
+manual tasks with timeout duration to set maximum execution time in milliseconds via `waitMs` parameter.
+- [`validate(prompt,responses,passResponses,waitMs)`](../commands/step.inTime/validate(prompt,responses,passResponses,waitMs)): 
+**NEW** command for manual validation with timeout duration to set maximum execution time in milliseconds via `waitMs` parameter.
+
+
 ### [web commands](../commands/web)
 - minor fixes to allow for multiple UserStack API keys.
 - [`switchBrowser(profile,config)`](../commands/web/switchBrowser(profile,config)): **NEW** command to switch between
