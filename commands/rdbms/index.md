@@ -42,10 +42,19 @@ load the appropriate connection driver (a.k.a. JDBC driver). The valid values (c
 	 - **`hsqldb`** (HyperSQL)
 	 - **`isam` or `connx`** (ISAM/Connx, JDBC type 2)
 	 - **`mongodb`** (see [below](#connecting-to-mongodb) for more details)
-	 - Note that to connect toother database not mentioned above, you may do the following:
-	   1. add the appropriate JDBC Type 4 driver (jar file) to `${NEXIAL_HOME}/lib` directory.
+	 - **`mariadb`** (MariaDB)
+	 
+	 - List of database type with their driver class
+	 ![](image/dbtype_driver_class_01.png)
+	 
+	 - Note that to connect to other database not mentioned above, you may do the following:
+	   1. add the appropriate JDBC Type 4 driver (jar file) to `${user.home}/.nexial/jar` directory.
+	        OR
+	      add the appropriate JDBC Type 4 driver (jar file) to `${NEXIAL_HOME}/lib` directory.
 	   2. add the appropriate driver class name to `<connection name>.JavaClassName` data variable (instead of 
 	      `<connection name>.type`). Check the vendor's support page for the correct driver jar and driver classname.
+	   3. If you have any dll file which is required to load then you can add it to `${user.home}/.nexial/dll` directory.
+	    
 - `<connection name>` **.url** - this specifies how to connect to the target database. Some connection string may 
   contain username and password. Hence the `.username` and `.password` are required. For more details about 
   connection string, check the following links:

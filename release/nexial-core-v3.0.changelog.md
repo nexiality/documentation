@@ -153,7 +153,10 @@ comments: true
   - support non-document (such as numeric) resultset, such as `.countDocument()` queries.
 - [`saveResult(db,sql,output)`](../commands/rdbms/saveResult(db,sql,output)): force FAIL when unable to execute query
 - [`saveResults(db,sqls,outputDir)`](../commands/rdbms/saveResults(db,sqls,outputDir)): force FAIL when unable to execute query
-
+- supports to load jar & dll from external directory for DB connection
+  - Now you can manually download driver jar and place it to ${user.home}/.nexial/jar directory. JVM will load the driver from this location.
+  - You can add any dll file to ${user.home}/.nexial/dll directory.
+- gradle dependency has been removed for mysql,postgresql,sqlserver,hsqldb drivers, now jar will be downloaded automatically based on configuration.
 
 ### [sound commands](../commands/sound)
 
