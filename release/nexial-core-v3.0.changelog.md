@@ -192,6 +192,8 @@ manual tasks with timeout duration to set maximum execution time in milliseconds
 - explicitly use `nexial.web.alwaysWait` system variable to trigger Selenium's fluent-wait strategy.
 - change default value for `nexial.web.pageLoadWaitMs` to 15 seconds (instead of 10 seconds).
 - additional arguments set to chromedriver to remove the "Chrome is being controlled by automated test software" warning.
+- added code to handle the situation where clearing out an input field would invoke the containing page to reload (as 
+  intended by the web application in question).
 
 
 [webalert]
