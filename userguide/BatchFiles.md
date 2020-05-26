@@ -55,6 +55,19 @@ This is the main script is used to execute Nexial script or plan.  This command 
 
   `nexial.cmd -script c:\projects\Project1\artifact\script\script17.xlsx -scenario scenario1,scenario1a -override nexial.outputToCloud=true -override myData=XYZ`
 
+**Temp Clean Up**:-
+During execution, Nexial also cleans up files/folders created by Nexial in TEMP directory. Nexial checks for 
+configuration saved in json file at `${user.home}/.nexial/config.json` location. If configuration file doesn't exist, 
+Nexial will clean up TEMP directory for the first time and also create configuration json file for Nexial user.
+The json config for temp clean up looks like this:
+![](image/BatchFiles_12.png)
+    
+Json has two config parameters:-
+1. `lastChecked`: This shows last time when Nexial did clean up `TEMP` directory.
+2. `checkFrequencyDay`: This provides frequency of cleaning up `TEMP` by Nexial. It is in `day` as name suggests.
+    The default value of `TEMP` clean up is 5 days.
+    
+
 ---------------------------------------------
 
 #### **nexial-setup**
@@ -334,6 +347,48 @@ This script has following command line options:<br/>
 The following repair all files from `searchPath` and store at destinationPath.
 
 `nexial-artifact-repair.cmd -t <searchPath> -d <destinationPath>`
+
+---------------------------------------------
+
+#### **nexial-custom-jar**
+
+This script copies the files/directories from source location to the `${user.home}/.nexial/jar` destination. 
+This is mostly useful when user wants to add some custom jars such as database specific jars which needs to be loaded
+while executing Nexial test cases. Nexial also loads custom jars from location `${user.home}/.nexial/jar` directory.
+So user can provide one or more source locations from where jars will be copied to `${user.home}/.nexial/jar`.
+
+
+#### Note
+- Source location can be directory or file path.
+- User can specify multiple source locations.
+
+**Example** <br/>
+The following will copy all files from `sourcePath` and store at `${user.home}/.nexial/jar`.
+
+`nexial-custom-jar.cmd <sourcePath>`
+
+For copying files from multiple location:-
+`nexial-custom-jar.cmd <sourcePath1> <sourcePath2> <sourcePath3>`
+
+---------------------------------------------
+
+#### **nexial-temp-clean**
+
+This script deletes all the directories created during Nexial execution from `TEMP` directory. For windows, `TEMP`
+location is `%userprofile%\AppData\Local\Temp` and `/tmp` , or `/var/tmp` on Unix-like platforms.
+
+This script has following command line option:<br/>
+
+|options  |explanation                                                                               |
+|---------|------------------------------------------------------------------------------------------|
+|**`-v`** |Turn on verbose logging.                                                                  |
+
+<br/>
+
+**Example** <br/>
+The following will clean up directories from `TEMP` folder created during Nexial execution.
+
+`nexial-temp-clean.cmd -v`
 
 ---------------------------------------------
 
