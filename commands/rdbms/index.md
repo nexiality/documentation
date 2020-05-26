@@ -44,12 +44,12 @@ load the appropriate connection driver (a.k.a. JDBC driver). The valid values (c
 	 - **`mongodb`** (see [below](#connecting-to-mongodb) for more details)
 	 - **`mariadb`** (MariaDB)
 	 
-	 - List of database type with their driver class
+	 - List of database type with their driver class:<br/>
 	 ![](image/dbtype_driver_class_01.png)
 	 
 	 - Note that to connect to other database not mentioned above, you may do the following:
-	   1. add the appropriate JDBC Type 4 driver (jar file) to `${user.home}/.nexial/jar` directory.
-	        OR
+	   1. add the appropriate JDBC Type 4 driver (jar file) to `${user.home}/.nexial/jar` directory.<br/>
+	        OR<br/>
 	      add the appropriate JDBC Type 4 driver (jar file) to `${NEXIAL_HOME}/lib` directory.
 	   2. add the appropriate driver class name to `<connection name>.JavaClassName` data variable (instead of 
 	      `<connection name>.type`). Check the vendor's support page for the correct driver jar and driver classname.
