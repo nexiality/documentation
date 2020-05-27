@@ -30,85 +30,7 @@ To describe a connection, add the following to the appropriate data file:
 
 You can substitute `mydb` with something else more readable (**without dot**).
 
-**IMPORTANT !!!** Note that only the following are required:
-- `<connection name>` **.type** - this specifies the type of database to connect. Nexial will use this data to 
-load the appropriate connection driver (a.k.a. JDBC driver). The valid values (currently supported drivers) are:
-	 - **`db2`** (IBM DB2, JDBC type 4)
-	 - **`mssql`** (Microsoft SQL Server)
-	 - **`oracle`** (Oracle, JDBC type 4)
-	 - **`postgresql`** (PostgreSQL)
-	 - **`mysql`** (MySQL)
-	 - **`sqlite`** (SQLite)
-	 - **`hsqldb`** (HyperSQL)
-	 - **`isam` or `connx`** (ISAM/Connx, JDBC type 2)
-	 - **`mongodb`** (see [below](#connecting-to-mongodb) for more details)
-	 - **`mariadb`** (MariaDB)
-	 
-	 - List of database type with their driver class:<br/>
-	 ![](image/dbtype_driver_class_01.png)
-	 
-	 - Note that to connect to other database not mentioned above, you may do the following:
-	   1. add the appropriate JDBC Type 4 driver (jar file) to `${user.home}/.nexial/jar` directory.<br/>
-	        OR<br/>
-	      add the appropriate JDBC Type 4 driver (jar file) to `${NEXIAL_HOME}/lib` directory.
-	   2. add the appropriate driver class name to `<connection name>.JavaClassName` data variable (instead of 
-	      `<connection name>.type`). Check the vendor's support page for the correct driver jar and driver classname.
-	   3. If you have any dll file which is required to load then you can add it to `${user.home}/.nexial/dll` directory.
-	    
-- `<connection name>` **.url** - this specifies how to connect to the target database. Some connection string may 
-  contain username and password. Hence the `.username` and `.password` are required. For more details about 
-  connection string, check the following links:
-  - <a href="https://msdn.microsoft.com/en-us/library/ms378428(v=sql.110).aspx" class="external-link" target="_nexial_link">Microsoft SQL Server connection string</a>
-  - <a href="http://www.orafaq.com/wiki/JDBC#Thin_driver" class="external-link" target="_nexial_link">Oracle thin driver connection string</a>
-    - not distributed as part of Nexial due to vendor restriction.  Please visit vendor website to obtain appropriate 
-      driver files.
-  - <a href="https://www.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.apdv.java.doc/src/tpc/imjcc_r0052342.html" class="external-link" target="_nexial_link">IBM DB2 thin driver connection string</a>
-    - not distributed as part of Nexial due to vendor restriction.  Please visit vendor website to obtain appropriate 
-      driver files.
-  - <a href="https://jdbc.postgresql.org/documentation/80/connect.html" class="external-link" target="_nexial_link">PostgreSQL connection string</a>
-  - <a href="https://dev.mysql.com/doc/connector-j/5.1/en/connector-j-reference-configuration-properties.html" class="external-link" target="_nexial_link">MySQL connection string</a>
-
-In addition to the above, there are other useful configurations:
-1. `<connection name>` **.user** - the username to use to connect to the target database.
-2. `<connection name>` **.password** - the password to use to connect to the target database.
-3. `<connection name>` **.autocommit** - specifies if the executions (e.g. INSERT, DELETE, UPDATE) carried out via 
-   this connection should be treated as individual transaction or as a single transaction. This configuration only 
-   makes sense when executing multiple SQL statements within one command. Executing a single SQL statement within 1 
-   command is always treated as a single transaction. `.autocommit` set to `true` means that each SQL statement 
-   within one command is treated as individual transaction. `.autocommit` set to `false` means the commit will only 
-   occur after all the SQL statements are executed successfully - any failure will force a rollback.
-4. `<connection name>` **.treatNullAs** - specifies how `NULL` value should be represented. By default, a `NULL` 
-   value will be treated as an empty string. 
-5. For example, let's say that a query returns 2 rows of 3 columns each. The first row has a `NULL` value for `col2`, 
-   the second row as a empty string for `col2`.
-
-   | col1 | col2   | col3 |
-   | ---- | ------ | ---- |
-   | ABC  | `NULL` | 123  |
-   | DEF  |        | 456  |
-    
-   if <connection name>`.treatNullAs` is not defined or set to `(empty)`, then the output 
-   via [`runSQL(var,db,sql)`](runSQL(var,db,sql)) would look like:
-   
-   | col1 | col2 | col3 |
-   | ---- | ---- | ---- |
-   | ABC  |      | 123  |
-   | DEF  |      | 456  |
-    
-   if <connection name>`.treatNullAs` is defined as `<null>`, then the output via 
-   [`runSQL(var,db,sql)`](runSQL(var,db,sql)) would look like:
-
-   | col1 | col2     | col3 |
-   | ---- | -------- | ---- |
-   | ABC  | `<null>` | 123  |
-   | DEF  |          | 456  |
-    
-It is not uncommon that multiple connections are needed within one test script. To differentiate between different 
-connections, set up multiple connections in the appropriate Nexial data file:<br/>
-![setup2](image/index_02.png)
-
-Then in test script, reference the appropriate connection via its name (i.e. `mydb` or `app2`):<br/>
-![script](image/index_03.png)
+[Click here](dbConnectionSetup) for more detail.
 
 #### Connecting to MongoDB
 [MongoDB](https://www.mongodb.com/) is not a relational database. It is another form of database called 
@@ -122,30 +44,7 @@ Connecting to MongoDb via Nexial is similar to how one would connect to MongoDb 
 `<connection name>.password` data variables. For example:<br/>
 ![](image/index_10.png)
 
-
-In addition, there's another specialized data variable - `<connection name>.expandDocument` to "expand" the retrieved 
-document into columns. This may be of some help as one would be able to directly access the retrieved document via its 
-top-level key. For example, by default each document retrieved (such as using 
-[db.find()](https://docs.mongodb.com/manual/reference/method/db.collection.find/) command) would be shown as a 
-"document" column in separate rows:<br/>
-![](image/index_13.png)
-
-As shown above, each row contains a "document" column, each with the corresponding retrieved JSON document.
-
-When the `.expandDocument` is set to `true`, the retrieved document is "expanded" into individual columns:<br/>
-![](image/index_11.png)<br/>
-![](image/index_12.png)<br/>
-
-It is possible to connect to MongoDB via SSL/TLS. However there is a bit of upfront (one-time) work to get it working:
-
-1. Obtain the appropriate `.pem` file for the target MongoDB server.
-2. Run the following command with the `keytool` utility that comes with your Java installation (in `$JAVA_HOME/bin`):<br/>
-   ```
-   keytool -importcert -trustcacerts -file <pem file location> -keystore <trust store location> -storepass <password>
-   ```
-3. Now reference the generated "trust store" file in your MongoDB connectivity:<br/>
-   ![](image/index_14.png)
-
+[Click here](mongodbConnectionSetup) for more detail.
 
 
 ### Working with Execution Result
@@ -157,59 +56,7 @@ is designed to encapsulate the various execution result into a "wrapper", or a "
 of as the "outer casing" which houses the various execution results. There are 2 types of wrapper - one for SELECT 
 statements and the other one for INSERT/UPDATE/DELETE:<br/>
 
-![metadata](image/index_04.png)![metadata2](image/index_05.png)
-
-To reference the specific execution result, one would use the dot notation (`.`) like this: `${result}.sql`. This 
-would retrieve the SQL statement associated to this execution.  Of course one could assign a different variable name 
-other than `result`. 
-- `${...}.sql` - retrieves the SQL statement executed to derive this execution result
-- `${...}.startTime` - retrieves the time when this SQL was executed, in 
-  <a href="https://en.wikipedia.org/wiki/Unix_time" class="external-link" target="_nexial_link">epoch</a> format. 
-  Considering using the [`date`](../../functions/$(date)) built-in function to convert the timestamp value into a 
-  human-readable form.
-- `${...}.elapsedTime` - retrieves the time spent to complete the associated SQL execution, in milliseconds.
-- `${...}.rowCount` - retrieves the number of rows affected by the execution of the associated SQL statement. This 
-   is usually used when executing a INSERT, DELETE or UPDATE statement. 
-- `${...}.error` - retrieves the error message as a result of executing the associated SQL statement. 
-- `${...}.data` - retrieves the resultset or dataset; usually only contains data for SELECT statements. To retrieve 
-  portion of the dataset,
-  - use `${...}.data[1]` notation to retrieve a row of data (row index is zero-based)
-  - use `${...}.data[1].column-name` notation to retrieve the value of a specific cell
-- `${...}.cells[COLUMN_NAME]`
-  - ONLY APPLICABLE TO SELECTs
-  - Retrieves data column-wise so that the values of the matching column (as specified via `COLUMN_NAME`) are 
-    retrieved, in the order of the rows returned from the query execution, as a list
-  - For example, suppose a query returns a data set like this:<br/>
-    ![resultset](image/index_06.png)  
-
-    If this resultset is encapsulated in a variable named as `${result}`, then <br/>
-    ![script3](image/index_07.png)
-    
-    would produce the following:<br/>
-    ![](image/index_08.png)
-  - Note that some database vendors adhered to case sensitivity for column names
-- `${...}.columns` - retrieves the column names of the resultset
-- `${...}.columnCount` - retrieves the number of columns in the resultset
-- `${...}.rolledBack` - `true` or `false` to indicate whether the execution had resulted in a transaction rollback
-
-Note that many database vendors (and the corresponding database drivers) adhere to case-sensitivity so that column 
-'Address' is considered NOT THE SAME as 'address' or 'ADDRESS'.
-
-#### Working with MongoDb Query Result
-In addition to the execution result as shown above, MongoDb query result contains additional information:<br/>
-![](image/index_09.png)
-
-As shown above, there are additional execution results for MongoDb:
-- `${...}.deletedCount` - retrieves the number of documents deleted; applicable only when using MongoDb's 
-   [delete commands](https://docs.mongodb.com/manual/reference/method/db.collection.find/).
-- `${...}.modifiedCount` - retrieves the number of documents modified; applicable only when using MongoDb's 
-   [update commands](https://docs.mongodb.com/manual/reference/command/update/). 
-- `${...}.matchedCount` - retrieves the number of documents matched to the 
-   [update commands](https://docs.mongodb.com/manual/reference/command/update/) command.
-- `${...}.acknowledged` - `true`/`false` to signify whether a write operation was acknowledged by the corresponding 
-   MongoDb server. It is often safe to ignore this except for high volume writes to replica set. For more information, 
-   check out MongoDb's document on [Write Concern](https://docs.mongodb.com/manual/reference/write-concern/).
-
+[Click here](executionResult) for more detail.
 
 ### Available Commands
 - [`resultToCSV(var,csvFile,delim,showHeader)`](resultToCSV(var,csvFile,delim,showHeader))
