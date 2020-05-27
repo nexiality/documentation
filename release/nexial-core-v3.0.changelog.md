@@ -22,7 +22,8 @@ comments: true
 - support additional command type, beyond 31 of them. :-)
 - limit exception stack trace to only when [`nexial.verbose`](../systemvars/index#nexial.verbose) is set to `true`
 - Java version-specific handling of Nashorn script engine, which is needed for mongodb support.
-- correctly display Java version on console when running Nexial on MacOSX & *NIX
+- correctly display Java version on console when running Nexial on MacOSX & *NIX.
+- fixed code to perform temp file clean up (at the start of execution) even when "verbose" mode is turned off.
 #### Improvements
 - [bin/nexial-script-update](../userguide/BatchFiles#nexial-script-update): add optional flag to automatically 
   rename duplicate activity names found in the same scenario.
@@ -56,6 +57,8 @@ comments: true
 - fixed runtime error when inspecting data variables within Nexial Interactive
 - improved support for flow control over [`base.section(step)`](../commands/base/section(steps)) to properly skip
   over steps that are enclosed within a section
+- improved support for the use of [base &raquo; `repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs))
+  in Nexial Interactive; now the steps are executed correctly!
 
 
 ### [System Variable](../systemvars)
@@ -165,8 +168,6 @@ comments: true
   - Now you can manually download driver jar and place it to ${user.home}/.nexial/jar directory. JVM will load the driver from this location.
   - You can add any dll file to ${user.home}/.nexial/dll directory.
 - gradle dependency has been removed for mysql,postgresql,sqlserver,hsqldb drivers, now jar will be downloaded automatically based on configuration.
-
-### [sound commands](../commands/sound)
 
 
 ### [step.inTime](../commands/step.inTime) 
