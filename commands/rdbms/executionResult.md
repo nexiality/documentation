@@ -54,7 +54,7 @@ other than `result`.
 Note that many database vendors (and the corresponding database drivers) adhere to case-sensitivity so that column 
 'Address' is considered NOT THE SAME as 'address' or 'ADDRESS'.
 
-#### Working with MongoDb Query Result
+### Working with MongoDb Query Result
 In addition to the execution result as shown above, MongoDb query result contains additional information:<br/>
 ![](image/index_09.png)
 

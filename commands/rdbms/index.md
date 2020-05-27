@@ -32,7 +32,7 @@ You can substitute `mydb` with something else more readable (**without dot**).
 
 [Click here](dbConnectionSetup) for more detail.
 
-#### Connecting to MongoDB
+### Connecting to MongoDB
 [MongoDB](https://www.mongodb.com/) is not a relational database. It is another form of database called 
 [NoSQL](https://en.wikipedia.org/wiki/NoSQL) that provides a mechanism for managing unstructured (or non-tabular)
 data structure. As a convenience, Nexial provides MongoDb connectivity via the `rdbms` commands so that those familar
