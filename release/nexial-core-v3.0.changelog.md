@@ -99,6 +99,7 @@ comments: true
 - [CSV](../expressions/CSVexpression): [`merge(var,keyColumns)`](../expressions/CSVexpression#mergevarkeycolumns) now
   supports multiple "key" columns so that one can merge 2 CSV content based on multiple keys. Note that both CSV content
   must contain header (i.e. parsed with `header=true`).
+  - [`group-sum`](../expressions/CSVexpression#groupsumcolumns): fix floating point precision issue.
 - additional logging to improve troubleshooting and RCA.
 - [NUMBER](../expressions/NUMBERexpression): 
   - **NEW** operation - `abs` - to convert a number into its absolute form (i.e. positive number).
@@ -206,6 +207,7 @@ manual tasks with timeout duration to set maximum execution time in milliseconds
 - additional arguments set to chromedriver to remove the "Chrome is being controlled by automated test software" warning.
 - added code to handle the situation where clearing out an input field would invoke the containing page to reload (as 
   intended by the web application in question).
+- fixed unintended error when switching to another window that contains no content (such as file download popup window).
 
 
 ### [webalert](../commands/webalert)

@@ -19,7 +19,6 @@ Connecting to MongoDb via Nexial is similar to how one would connect to MongoDb 
 `<connection name>.password` data variables. For example:<br/>
 ![](image/index_10.png)
 
-
 In addition, there's another specialized data variable - `<connection name>.expandDocument` to "expand" the retrieved 
 document into columns. This may be of some help as one would be able to directly access the retrieved document via its 
 top-level key. For example, by default each document retrieved (such as using 
@@ -44,6 +43,5 @@ It is possible to connect to MongoDB via SSL/TLS. However there is a bit of upfr
    ![](image/index_14.png)
 
 
-
 ### See Also
-- [`Execution Result`](executionResult)
+- [Execution Result](executionResult)

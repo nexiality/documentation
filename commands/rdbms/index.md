@@ -32,6 +32,8 @@ You can substitute `mydb` with something else more readable (**without dot**).
 
 [Click here](dbConnectionSetup) for more detail.
 
+-----
+
 ### Connecting to MongoDB
 [MongoDB](https://www.mongodb.com/) is not a relational database. It is another form of database called 
 [NoSQL](https://en.wikipedia.org/wiki/NoSQL) that provides a mechanism for managing unstructured (or non-tabular)
@@ -46,6 +48,7 @@ Connecting to MongoDb via Nexial is similar to how one would connect to MongoDb 
 
 [Click here](mongodbConnectionSetup) for more detail.
 
+-----
 
 ### Working with Execution Result
 Executing a SQL statement results in a series of outcome. The most common and sought-after is, of course, the 
@@ -57,6 +60,8 @@ of as the "outer casing" which houses the various execution results. There are 2
 statements and the other one for INSERT/UPDATE/DELETE:<br/>
 
 [Click here](executionResult) for more detail.
+
+-----
 
 ### Available Commands
 - [`resultToCSV(var,csvFile,delim,showHeader)`](resultToCSV(var,csvFile,delim,showHeader))

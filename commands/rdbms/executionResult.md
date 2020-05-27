@@ -54,6 +54,7 @@ other than `result`.
 Note that many database vendors (and the corresponding database drivers) adhere to case-sensitivity so that column 
 'Address' is considered NOT THE SAME as 'address' or 'ADDRESS'.
 
+
 ### Working with MongoDb Query Result
 In addition to the execution result as shown above, MongoDb query result contains additional information:<br/>
 ![](image/index_09.png)
@@ -68,8 +69,6 @@ As shown above, there are additional execution results for MongoDb:
 - `${...}.acknowledged` - `true`/`false` to signify whether a write operation was acknowledged by the corresponding 
    MongoDb server. It is often safe to ignore this except for high volume writes to replica set. For more information, 
    check out MongoDb's document on [Write Concern](https://docs.mongodb.com/manual/reference/write-concern/).
-
-
 
 
 ### See Also

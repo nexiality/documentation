@@ -20,25 +20,26 @@ You can substitute `mydb` with something else more readable (**without dot**).
 
 **IMPORTANT !!!** Note that only the following are required:
 - `<connection name>` **.type** - this specifies the type of database to connect. Nexial will use this data to 
-load the appropriate connection driver (a.k.a. JDBC driver). The valid values (currently supported drivers) are:
-	 - **`db2`** (IBM DB2, JDBC type 4)
-	 - **`mssql`** (Microsoft SQL Server)
-	 - **`oracle`** (Oracle, JDBC type 4)
-	 - **`postgresql`** (PostgreSQL)
-	 - **`mysql`** (MySQL)
-	 - **`sqlite`** (SQLite)
-	 - **`hsqldb`** (HyperSQL)
-	 - **`isam` or `connx`** (ISAM/Connx, JDBC type 2)
-	 - **`mongodb`** (see [below](#connecting-to-mongodb) for more details)
-	 - **`mariadb`** (MariaDB)
-	 
-	 - Note that to connect to other database not mentioned above, you may do the following:
-	   1. Add the appropriate JDBC Type 4 driver (jar file) to `${user.home}/.nexial/jar` or `${NEXIAL_HOME}/lib` directory.<br/>	       
-	   2. Add the appropriate driver class name to `<connection name>.JavaClassName` data variable (instead of 
-	      `<connection name>.type`). Check the vendor's support page for the correct driver jar and driver classname.	      
-	   3. If you have any dll file which is required to load then you can add it to `${user.home}/.nexial/dll` directory.
-	     Example: mssql requires a dll file if integratedSecurity (for window authentication) is true in the url, system will automatically download the dll file while downloading the driver but if you have to use some different dll you can place here. 
-	    
+  load the appropriate connection driver (a.k.a. JDBC driver). The valid values (currently supported drivers) are:
+  - **`db2`** (IBM DB2, JDBC type 4)
+  - **`mssql`** (Microsoft SQL Server)
+  - **`oracle`** (Oracle, JDBC type 4)
+  - **`postgresql`** (PostgreSQL)
+  - **`mysql`** (MySQL)
+  - **`sqlite`** (SQLite)
+  - **`hsqldb`** (HyperSQL)
+  - **`isam` or `connx`** (ISAM/Connx, JDBC type 2)
+  - **`mongodb`** (see [below](#connecting-to-mongodb) for more details)
+  - **`mariadb`** (MariaDB)
+  - To connect to other database not mentioned above, you may do the following:
+    1. Add the appropriate JDBC Type 4 driver (jar file) to `${user.home}/.nexial/jar` or `${NEXIAL_HOME}/lib` directory.<br/>	       
+    2. Add the appropriate driver class name to `<connection name>.JavaClassName` data variable (instead of 
+       `<connection name>.type`). Check the vendor's support page for the correct driver jar and driver classname.	      
+    3. If you have any dll file which is required to load then you can add it to `${user.home}/.nexial/dll` directory.
+       Example: mssql requires a dll file if integratedSecurity (for window authentication) is true in the url, 
+       system will automatically download the dll file while downloading the driver but if you have to use some 
+       different dll you can place here. 
+   
 - `<connection name>` **.url** - this specifies how to connect to the target database. Some connection string may 
   contain username and password. Hence the `.username` and `.password` are required. For more details about 
   connection string, check the following links:
@@ -87,6 +88,7 @@ In addition to the above, there are other useful configurations:
    | ABC  | `<null>` | 123  |
    | DEF  |          | 456  |
 
+
 ### Multiple connections within one test script   
 It is not uncommon that multiple connections are needed within one test script. To differentiate between different 
 connections, set up multiple connections in the appropriate Nexial data file:<br/>
@@ -97,4 +99,4 @@ Then in test script, reference the appropriate connection via its name (i.e. `m
 
 
 ### See Also
-- [`Execution Result`](executionResult)
+- [Execution Result](executionResult)
