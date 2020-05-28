@@ -87,9 +87,6 @@ comments: true
 - Fixed flow control for [Nexial Expression](../expressions), as in `SkipIf([CSV($(syspath|data|fullpath)/abc.csv) => parse(header=false) size] = 3)`
 
 
-### [Built-in Functions](../functions)
-
-
 ### [Nexial Expression](../expressions)
 - [JSON](../expressions/JSONexpression): code fix to accurately reporting invalid file or content when constructing a
   JSON expression.
@@ -143,6 +140,7 @@ comments: true
 - [`ocr(source,saveVar)`](../commands/pdf/ocr(source,saveVar)): **NEW** command to perform OCR (optical character 
   recognition) on image (`source`). This command works best on images containing mostly text with block font (not 
   handwriting). This command internally uses OCR.space API to perform OCR.
+  - reduce console verbosity.
 
 
 ### [pdf commands](../commands/pdf)
