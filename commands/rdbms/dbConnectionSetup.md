@@ -33,6 +33,7 @@ You can substitute `mydb` with something else more readable (**without dot**).
   - **`mariadb`** (MariaDB)
   - To connect to other database not mentioned above, you may do the following:
     1. Add the appropriate JDBC Type 4 driver (jar file) to `${user.home}/.nexial/jar` or `${NEXIAL_HOME}/lib` directory.<br/>	       
+       Find more details about [How to copy custom jars](../../userguide/BatchFiles#nexial-custom-jars) here.
     2. Add the appropriate driver class name to `<connection name>.JavaClassName` data variable (instead of 
        `<connection name>.type`). Check the vendor's support page for the correct driver jar and driver classname.	      
     3. If you have any dll file which is required to load then you can add it to `${user.home}/.nexial/dll` directory.

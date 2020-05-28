@@ -55,18 +55,23 @@ This is the main script is used to execute Nexial script or plan.  This command 
 
   `nexial.cmd -script c:\projects\Project1\artifact\script\script17.xlsx -scenario scenario1,scenario1a -override nexial.outputToCloud=true -override myData=XYZ`
 
-**Temp Clean Up**:-
+**Temp Clean Up**:-<br/>
 During execution, Nexial also cleans up files/folders created by Nexial in TEMP directory. Nexial checks for 
-configuration saved in json file at `${user.home}/.nexial/config.json` location. If configuration file doesn't exist, 
-Nexial will clean up TEMP directory for the first time and also create configuration json file for Nexial user.
-The json config for temp clean up looks like this:
+configuration saved in json file at `${user.home}/.nexial/config.json` location.
+Nexial checks last time when clean up is done. If it's more than specified days by `checkFrequencyDay` in config file,
+it will clean up `TEMP` directory and update configuration json file otherwise it will simply ignore cleaning up.
+If configuration file doesn't exist, Nexial will clean up `TEMP` directory for the first time and also, create
+configuration json file for Nexial user.<br/>
+
+The json config file for `TEMP` clean up looks like this: <br/>
 ![](image/BatchFiles_12.png)
     
 Json has two config parameters:-
 1. `lastChecked`: This shows last time when Nexial did clean up `TEMP` directory.
-2. `checkFrequencyDay`: This provides frequency of cleaning up `TEMP` by Nexial. It is in `day` as name suggests.
-    The default value of `TEMP` clean up is 5 days.
-    
+2. `checkFrequencyDay`: This provides frequency of cleaning up `TEMP` by Nexial in `days`.
+   The default value of `TEMP` directory clean up is 5 days.
+  
+Also, Nexial user can clean up `TEMP` directories using [`bin/nexial-temp-clean`](BatchFiles#nexial-temp-clean) script.
 
 ---------------------------------------------
 
@@ -353,12 +358,13 @@ The following repair all files from `searchPath` and store at destinationPath.
 #### **nexial-custom-jar**
 
 This script copies the files/directories from source location to the `${user.home}/.nexial/jar` destination. 
-This is mostly useful when user wants to add some custom jars such as database specific jars which needs to be loaded
-while executing Nexial test cases. Nexial also loads custom jars from location `${user.home}/.nexial/jar` directory.
+This is mostly useful when user wants to add some custom jars and database drivers which will be loaded while
+executing Nexial test cases. Nexial also loads custom jars from location `${user.home}/.nexial/jar` directory.
 So user can provide one or more source locations from where jars will be copied to `${user.home}/.nexial/jar`.
 
-
-#### Note
+Find more details about custom jars [here](CustomJars)
+ 
+##### Note
 - Source location can be directory or file path.
 - User can specify multiple source locations.
 
@@ -374,8 +380,10 @@ For copying files from multiple location:-
 
 #### **nexial-temp-clean**
 
-This script deletes all the directories created during Nexial execution from `TEMP` directory. For windows, `TEMP`
-location is `%userprofile%\AppData\Local\Temp` and `/tmp` , or `/var/tmp` on Unix-like platforms.
+This script deletes all the directories created by Nexial execution from `TEMP` directory. 
+It cleans up directories which are at least `24 hours(1 day)` old.
+
+For windows, `TEMP` location is `%userprofile%\AppData\Local\Temp` and `/tmp` , or `/var/tmp` on Unix-like platforms.
 
 This script has following command line option:<br/>
 
