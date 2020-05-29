@@ -23,6 +23,7 @@ comments: true
 - limit exception stack trace to only when [`nexial.verbose`](../systemvars/index#nexial.verbose) is set to `true`
 - Java version-specific handling of Nashorn script engine, which is needed for mongodb support.
 - correctly display Java version on console when running Nexial on MacOSX & *NIX.
+
 #### Improvements
 - create error log when exception ocurrs to help improve RCA.
 - update mail configuration, including `nexial.mailHeader` and `nexial.mailFooter` information at the end of each 
