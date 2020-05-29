@@ -28,55 +28,64 @@ This is the main script is used to execute Nexial script or plan.  This command 
 |**`-output`**     | This will ensure output directory where results are stored. <br/>Default location is `../../output` relative to script/plan.|
 |**`-override`**   | [_optional_] Add or override data variables in the form of `name=value`. <br/>Multiple overrides are supported via multiple `-override name=value` arguments.<br/>Note that variable name or value with spaces must be enclosed in double quotes.|
 |**`-plan`**       | This option is for running plan. This will require full path of plan. <br/>This is required if `-script` is missing.|
-|**`-subplans`**   | This option is for running specific worksheets(subplans) of plan. This will require one or more worksheets separated by comma.<br/>This will work for single plan execution.|
+|**`-subplans`**   | This option is for running specific worksheets(subplans) of plan. This will require one<br/>or more worksheets separated by comma.<br/>This will work for single plan execution.|
 |**`-script`**     | This option is for running script. This will require full path of script. <br/>This is required if `-plan` is missing.|
 |**`-scenario`**   | This will run one or more test scenarios separated by comma.|
 
 <br/>
 
-**Example**<br/>
+##### Example
 - Execute a Nexial script:<br/>
-
-  `nexial.cmd -script c:\projects\myProject\artifact\script\myProject.xlsx`
+  ```
+  nexial.cmd -script c:\projects\myProject\artifact\script\myProject.xlsx
+  ```
 
 - Execute a Nexial plan:<br/>
-
-  `nexial.cmd -plan c:\projects\myProject\artifact\plan\myProject.xlsx`
+  ```
+  nexial.cmd -plan c:\projects\myProject\artifact\plan\myProject.xlsx
+  ```
   
 - Execute one or more specific subplans of single plan file:<br/>
-
-  `nexial.cmd -plan c:\projects\myProject\artifact\plan\myProject.xlsx -subplans testPlan1,testPlan2`
+  ```
+  nexial.cmd -plan c:\projects\myProject\artifact\plan\myProject.xlsx 
+    -subplans testPlan1,testPlan2
+  ```
 
 - Execute one specific scenario (i.e. worksheet):<br/>
-
-  `nexial.cmd -script c:\projects\myProject\artifact\script\myProject.xlsx -scenario test1`
+  ```
+  nexial.cmd -script c:\projects\myProject\artifact\script\myProject.xlsx -scenario test1
+  ```
 
 - Execute 2 scenarios with data variable overrides<br/>
+  ```
+  nexial.cmd -script c:\projects\Project1\artifact\script\script17.xlsx
+    -scenario scenario1,scenario1a
+    -override nexial.outputToCloud=true -override myData=XYZ
+  ```
 
-  `nexial.cmd -script c:\projects\Project1\artifact\script\script17.xlsx -scenario scenario1,scenario1a -override nexial.outputToCloud=true -override myData=XYZ`
+##### Cleaning up Temp Files
+As part of execution, Nexial create temp files to store any in-flight automation artifacts. These temp files might not
+get clean up properly. Over time, these temp files could create additional strain on the execution host (i.e. disk 
+space). To circumvent such issue, starting from [Release 3](../release/nexial-core-v3.0.changelog), Nexial now will 
+perform a quick routine clean up process at the start of an execution.
 
-**Temp Clean Up**:-<br/>
-During execution, Nexial also cleans up files/folders created by Nexial in TEMP directory. Nexial checks for 
-configuration saved in json file at `${user.home}/.nexial/config.json` location.
-Nexial checks last time when clean up is done. If it's more than specified days by `checkFrequencyDay` in config file,
-it will clean up `TEMP` directory and update configuration json file otherwise it will simply ignore cleaning up.
-If configuration file doesn't exist, Nexial will clean up `TEMP` directory for the first time and also, create
-configuration json file for Nexial user.<br/>
+At the start of an execution, Nexial will checks for a configuration file stored in `${user.home}/.nexial/config.json`. 
+This file contains the timestamp of when the last clean up was performed. As deemed necessary, Nexial will automatically
+clean up outdated temp files it had previously created. This `.nexial/config.json` file will be automatically created
+by Nexial. This file looks something like this:<br/>
 
-The json config file for `TEMP` clean up looks like this: <br/>
 ![](image/BatchFiles_12.png)
     
-Json has two config parameters:-
-1. `lastChecked`: This shows last time when Nexial did clean up `TEMP` directory.
-2. `checkFrequencyDay`: This provides frequency of cleaning up `TEMP` by Nexial in `days`.
-   The default value of `TEMP` directory clean up is 5 days.
-  
-Also, Nexial user can clean up `TEMP` directories using [`bin/nexial-temp-clean`](BatchFiles#nexial-temp-clean) script.
+Note that,
+1. `lastChecked`: This shows last time when Nexial performed a temp file clean up.
+2. `checkFrequencyDay`: This indicates the number of days since `lastCheck` by which Nexial will perform the next temp
+  file clean up. The default value of this configuraiton is 5 days.
+
+Separately, one can also force a clean up via the [`bin/nexial-temp-clean`](BatchFiles#nexial-temp-clean) script.
 
 ---------------------------------------------
 
 #### **nexial-setup**
-
 This is the script used to setup the user specific configurations. This command has following command line options:
 
 |options                 |explanation                                                      |
@@ -88,23 +97,20 @@ This is the script used to setup the user specific configurations. This command 
 
 **Example**<br/>
 - Setup user defined configurations:<br/>
-
   `nexial-setup.cmd -f "C:\Projects\config.data" -k "|7FDo8#Q;;mZ>G22"`
   
 **Usage**
 1. Open a console and point it to `${NEXIAL_HOME}/bin`
 
-2. Run `nexial-crypt.cmd` (Windows) or `./nexial-crypt.sh` (*NIX, OSX) with the configuration file and the secret key as follows:
-  
+2. Run `nexial-crypt.cmd` (Windows) or `./nexial-crypt.sh` (*NIX, OSX) with the configuration file and the secret key 
+   as follows:<br/>
    `nexial-setup.cmd -f "C:\Projects\config.data" -k "|7FDo8#Q;;mZ>G22"`
 
 3. The config.data file content looks like the following:<br/>
-   
    ![](image/BatchFiles_03.png)
  
 4. When the Nexial command is run with the appropriate arguments it creates a lib called setup.jar inside the lib folder.
    Also a message is displayed asking you to delete the config file as shown below:<br/>
-   
    ![](image/BatchFiles_04.png)
    
 5. Now you can further zip this using the `jar` command and distribute it further with the team. For example:<br/>
@@ -119,7 +125,6 @@ on the Email Notifications page.
 ---------------------------------------------
 
 #### **nexial-crypt**
-
 This script is used to encrypt the sensitive data.
 
 For sensitive information such as password, it may be important to store them encrypted at rest to avoid tampering or 
@@ -212,7 +217,6 @@ The following will update all the scripts from given path.<br/>
 ---------------------------------------------
 
 #### **nexial-variable-update**
-
 This script refactors the data variables referenced across test artifacts to provide uniformity across script authors 
 and teams. One may specify the current keys and new keys in the form of:
 `-d "key1=NEW_KEY1;key2=NEW_KEY2;..."`
@@ -228,12 +232,10 @@ This script has four command line options:<br/>
 
 <br/>
 For example, The following renames the key `oldKey1` to `newKey1`, and `oldKey2` to `newKey2`, and so on:<br/>
-
 `nexial-variable-update.cmd -v -d oldKey1=newKey1;oldKey2=newKey2;oldKey3=newKey3 -t projectFullPath` 
 
 If you just want to examine the positions of `oldKey1`, `oldKey2` and so on which will be affected, but don't 
 want to refactor them. Following will preview the substitutions:<br/>
-
 `nexial-variable-update.cmd -v -d oldKey1=newKey1;oldKey2=newKey2;oldKey3=newKey3 -t projectFullPath -p`<br/>
 
 Format of data variable update preview has four columns:
@@ -256,7 +258,6 @@ The variable update preview would look like so:<br/>
 ---------------------------------------------
 
 #### **nexial-log-parser**
-
 This script captures required log statements (mainly for elapsed time between request and response of given step) from a log 
 file generated through execution and stored to new file.<br/>
 
@@ -282,7 +283,6 @@ calculate elapsed time for the same.
 ---------------------------------------------
 
 #### **nexial-project-inspector**
-
 The script scans existing artifacts of a project and generate an interactive HTML report.<br/>
 This script has the following command line options:<br/>
 
@@ -296,13 +296,11 @@ This script has the following command line options:<br/>
 
 **Example**<br/>
 The following script will scan the demoProject directory<br/>
-
-`nexial-project-inspector -t C:\projects\demoProject -v`<br/>
+`nexial-project-inspector -t C:\projects\demoProject -v`
 
 ---------------------------------------------
 
 #### **nexial-macro-update**
-
 This script refactor the macro name referenced across test scripts and macro files to provide uniformity across script 
 author and teams.<br/>
 This script has four command line options:<br/> 
@@ -319,13 +317,11 @@ This script has four command line options:<br/>
 
 **Example**<br/> 
 The following renames the macro `oldMacro1` to `newMacro1`, and `oldMacro2` to `newMacro2`, and so on:<br/>
-
 `nexial-variable-update.cmd -t searchPath -f macroFile -s macrosheet -m oldMacro1=newMacro1,oldMacro2=newMacro2`
 
 ---------------------------------------------
 
 #### **nexial-artifact-repair**
-
 This script repairs the artifacts by removing unnecessary, non-existing url links, comments from original file.
 This is mostly useful when excel file has links to non existing files asking for updated everytime the user opens the file.
 However, the updates fail because the target file does not exist.<br/>
@@ -350,20 +346,41 @@ This script has following command line options:<br/>
 
 **Example** <br/>
 The following repair all files from `searchPath` and store at destinationPath.
-
 `nexial-artifact-repair.cmd -t <searchPath> -d <destinationPath>`
 
 ---------------------------------------------
 
 #### **nexial-custom-jar**
+At times, additional 3rd-party library files (jar) might by needed in order to sufficiently perform the desired 
+automation. For example, one might need to use a specialized database driver (JDBC), or vendor-specific JMS client
+library. Or, perhaps one has set up a company-specific [setup.jar](#nexial-setup) to connect to company-specific 
+email server or AWS account. In order for Nexial to utilize these jar files, they should be placed in 
+`${user.home}/.nexial/jar` directory.
 
-This script copies the files/directories from source location to the `${user.home}/.nexial/jar` destination. 
-This is mostly useful when user wants to add some custom jars and database drivers which will be loaded while
-executing Nexial test cases. Nexial also loads custom jars from location `${user.home}/.nexial/jar` directory.
-So user can provide one or more source locations from where jars will be copied to `${user.home}/.nexial/jar`.
+To simplify the copying of these "custom" jars, and possibly to update them periodically, this simple batch script
+is created to aid in that.
 
-Find more details about custom jars [here](CustomJars)
- 
+Steps:
+1. [ONE-TIME] Create a directory on a network shared drive. This directory should be reachable by other Nexial users on
+   the network as well.
+2. [ONE-TIME] Place all the custom jar files in this shared directory.
+3. Each user would run the following command on his/her workstation:
+   ```
+   nexial-custom-jar.cmd <shared directory>
+   ```
+   or
+   ```
+   nexial-custom-jar.sh <shared directory>
+   ```
+4. Nexial will then copy all the jar files found in the specified shared directory to `${user.name}/.nexial/jar`. 
+   Existing jar files will be overwritten.
+5. When there are new jar files to distribute, simply repeat Step 2 and 3!
+
+Note that more than 1 shared directory may be specified.
+
+This is mostly useful when one wants to add some additional libraries, JDBC drivers, JMS clients, etc. during one's
+automation. To learn more about custom jars please clikc [here](CustomJars).
+
 ##### Note
 - Source location can be directory or file path.
 - User can specify multiple source locations.
@@ -379,11 +396,8 @@ For copying files from multiple location:-
 ---------------------------------------------
 
 #### **nexial-temp-clean**
-
-This script deletes all the directories created by Nexial execution from `TEMP` directory. 
-It cleans up directories which are at least `24 hours(1 day)` old.
-
-For windows, `TEMP` location is `%userprofile%\AppData\Local\Temp` and `/tmp` , or `/var/tmp` on Unix-like platforms.
+This script will remove the temp files created by Nexial during an execution. Note that only the temp files that are more
+than 1 day old will be removed.
 
 This script has following command line option:<br/>
 
@@ -394,8 +408,7 @@ This script has following command line option:<br/>
 <br/>
 
 **Example** <br/>
-The following will clean up directories from `TEMP` folder created during Nexial execution.
-
+The following will clean up directories from `TEMP` folder created during Nexial execution.<br/>
 `nexial-temp-clean.cmd -v`
 
 ---------------------------------------------
