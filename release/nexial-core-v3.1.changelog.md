@@ -57,6 +57,12 @@ comments: true
 
 
 ### [web commands](../commands/web)
+- [`checkAll(locator,waitMs)`](../commands/web/checkAll(locator,waitMs)): **NEW** command to allow the checking of all 
+  checkbox elements that matched the specified `locator` and that are not yet "checked". This is a modification to
+  the previous [`checkAll(locator)`](../commands/web/checkAll(locator)) command (now removed).
+- [`uncheckAll(locator,waitMs)`](../commands/web/uncheckAll(locator,waitMs)): **NEW** command to allow the unchecking of 
+  all checkbox elements that matched the specified `locator` and that are "checked". This is a modification to
+  the previous [`uncheckAll(locator)`](../commands/web/checkAll(locator)) command (now removed).
 
 
 ### [webalert](../commands/webalert)

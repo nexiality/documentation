@@ -6,6 +6,9 @@ tags: command web checkbox
 comments: true
 ---
 
+**REMOVED - USE [`uncheckAll(locator,waitMs)`](uncheckAll(locator,waitMs)) INSTEAD.**
+
+
 ### Description
 This command automates the "uncheck" of all 
 <a href="https://www.w3.org/wiki/Html/Elements/input/checkbox" class="external-link" link="nexial_link">CheckBox</a> 

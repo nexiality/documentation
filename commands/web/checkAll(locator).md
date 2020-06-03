@@ -6,6 +6,8 @@ tags: command web checkbox
 comments: true
 ---
 
+**REMOVED - USE [`checkAll(locator,waitMs)`](checkAll(locator,waitMs)) INSTEAD.**
+
 ### Description
 This command automates the "check" of all 
 <a href="https://www.w3.org/wiki/Html/Elements/input/checkbox" class="external-link" link="nexial_link">CheckBox</a> 

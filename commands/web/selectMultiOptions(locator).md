@@ -6,7 +6,7 @@ tags: command web
 comments: true
 ---
 
-**DEPRECATED - USE [`selectAllOptions(locator)`](selectAllOptions(locator)) INSTEAD.**
+**REMOVED - USE [`selectAllOptions(locator)`](selectAllOptions(locator)) INSTEAD.**
 
 
 ### Description

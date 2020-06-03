@@ -114,7 +114,8 @@ available commands.
 - [`assertValue(locator,value)`](assertValue(locator,value))
 - [`assertValueOrder(locator,descending)`](assertValueOrder(locator,descending))
 - [`assertVisible(locator)`](assertVisible(locator))
-- [`checkAll(locator)`](checkAll(locator))
+- ~~[`checkAll(locator)`](checkAll(locator))~~ (removed)
+- [`checkAll(locator,waitMs)`](checkAll(locator,waitMs))
 - [`clearLocalStorage()`](clearLocalStorage())
 - [`click(locator)`](click(locator))
 - [`clickAll(locator)`](clickAll(locator))
@@ -185,7 +186,7 @@ available commands.
 - [`selectFrame(locator)`](selectFrame(locator))
 - [`selectMulti(locator,array)`](selectMulti(locator,array))
 - [`selectMultiByValue(locator,array)`](selectMultiByValue(locator,array))
-- (deprecated) ~~[`selectMultiOptions(locator)`](selectMultiOptions(locator))~~
+- ~~[`selectMultiOptions(locator)`](selectMultiOptions(locator))~~ (removed) 
 - [`selectText(locator)`](selectText(locator))
 - [`selectWindow(winId)`](selectWindow(winId))
 - [`selectWindowAndWait(winId,waitMs)`](selectWindowAndWait(winId,waitMs))
@@ -195,7 +196,8 @@ available commands.
 - [`toggleSelections(locator)`](toggleSelections(locator))
 - [`type(locator,value)`](type(locator,value))
 - [`typeKeys(locator,value)`](typeKeys(locator,value))
-- [`uncheckAll(locator)`](uncheckAll(locator))
+- ~~[`uncheckAll(locator)`](uncheckAll(locator))~~ (removed)
+- [`uncheckAll(locator,waitMs)`](uncheckAll(locator,waitMs))
 - [`unselectAllText()`](unselectAllText())
 - [`updateAttribute(locator,attrName,value)`](updateAttribute(locator,attrName,value))
 - [`upload(fieldLocator,file)`](upload(fieldLocator,file))
@@ -207,5 +209,3 @@ available commands.
 - [`waitForPopUp(winId,waitMs)`](waitForPopUp(winId,waitMs))
 - [`waitForTextPresent(text)`](waitForTextPresent(text))
 - [`waitForTitle(text)`](waitForTitle(text))
-
-
