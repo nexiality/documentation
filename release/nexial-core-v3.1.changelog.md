@@ -44,6 +44,10 @@ comments: true
 ### [desktop commands](../commands/desktop)
 
 
+### [localdb commands](../commands/localdb)
+- [`queryAsCSV(var,sql)`](../commands/localdb/queryAsCSV(var,sql)): **NEW** command to transform query result to CSV.
+
+
 ### [image commands](../commands/image)
 
 
@@ -63,6 +67,8 @@ comments: true
 - [`uncheckAll(locator,waitMs)`](../commands/web/uncheckAll(locator,waitMs)): **NEW** command to allow the unchecking of 
   all checkbox elements that matched the specified `locator` and that are "checked". This is a modification to
   the previous [`uncheckAll(locator)`](../commands/web/checkAll(locator)) command (now removed).
+- [`assertElementDisabled(locator)`](../commands/web/assertElementDisabled(locator)): **NEW** command to check if a web
+  element is disabled for interaction.
 
 
 ### [webalert](../commands/webalert)

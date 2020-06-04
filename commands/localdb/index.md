@@ -139,4 +139,5 @@ Here are some useful links and references about SQLite:<br/>
 - [`importEXCEL(var,excel,sheet,ranges,table)`](importEXCEL(var,excel,sheet,ranges,table))
 - [`importRecords(var,sourceDb,sql,table)`](importRecords(var,sourceDb,sql,table))
 - [`purge(var)`](purge(var))
+- [`queryAsCSV(var,sql)`](queryAsCSV(var,sql))
 - [`runSQLs(var,sqls)`](runSQLs(var,sqls))

@@ -80,6 +80,7 @@ available commands.
 - [`assertElementByAttributes(nameValues)`](assertElementByAttributes(nameValues))
 - [`assertElementByText(locator,text)`](assertElementByText(locator,text))
 - [`assertElementCount(locator,count)`](assertElementCount(locator,count))
+- [`assertElementDisabled(locator)`](assertElementDisabled(locator))
 - [`assertElementEnabled(locator)`](assertElementEnabled(locator))
 - [`assertElementNotPresent(locator)`](assertElementNotPresent(locator))
 - [`assertElementPresent(locator)`](assertElementPresent(locator))
