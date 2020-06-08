@@ -69,6 +69,12 @@ comments: true
   the previous [`uncheckAll(locator)`](../commands/web/checkAll(locator)) command (now removed).
 - [`assertElementDisabled(locator)`](../commands/web/assertElementDisabled(locator)): **NEW** command to check if a web
   element is disabled for interaction.
+- apply "preemptive JavaScript dialog check" prior to executing:
+  - [`type(locator,value)`](../commands/web/type(locator,value))
+  - [`waitForElementPresent(locator)`](../commands/web/waitForElementPresent(locator))
+  - [`waitForElementsPresent(locators)`](../commands/web/waitForElementsPresent(locators))
+  - [`waitForTextPresent(text)`](../commands/web/waitForTextPresent(text))
+  - [`waitForPopUp(winId,waitMs)`](../commands/web/waitForPopUp(winId,waitMs))
 
 
 ### [webalert](../commands/webalert)
