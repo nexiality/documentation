@@ -14,6 +14,7 @@ comments: true
 #### Fixes
 - fixed email notification template when execution terminates too abruptly
 - fixed SES-based email notification; possible SSL cert conflict with DocumentDB automation 
+- nexial.cmd needs to handle spaces in the directory name
 #### Improvements
   
    
