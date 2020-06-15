@@ -71,11 +71,20 @@ comments: true
 - [`assertElementDisabled(locator)`](../commands/web/assertElementDisabled(locator)): **NEW** command to check if a web
   element is disabled for interaction.
 - apply "preemptive JavaScript dialog check" prior to executing:
+  - [`assertElementByAttributes(nameValues)`](../commands/web/assertElementByAttributes(nameValues))
+  - [`assertElementByText(locator,text)`](../commands/web/assertElementByText(locator,text))
+  - [`assertElementCount(locator,count)`](../commands/web/assertElementCount(locator,count))
+  - [`assertElementDisabled(locator)`](../commands/web/assertElementDisabled(locator))
+  - [`assertElementEnabled(locator)`](../commands/web/assertElementEnabled(locator))
+  - [`assertElementPresent(locator)`](../commands/web/assertElementPresent(locator))
+  - [`saveAttribute(var,locator,attrName)`](../commands/web/saveAttribute(var,locator,attrName))
+  - [`saveCount(var,locator)`](../commands/web/saveCount(var,locator))
+  - [`saveElement(var,locator)`](../commands/web/saveElement(var,locator))
   - [`type(locator,value)`](../commands/web/type(locator,value))
   - [`waitForElementPresent(locator)`](../commands/web/waitForElementPresent(locator))
   - [`waitForElementsPresent(locators)`](../commands/web/waitForElementsPresent(locators))
-  - [`waitForTextPresent(text)`](../commands/web/waitForTextPresent(text))
   - [`waitForPopUp(winId,waitMs)`](../commands/web/waitForPopUp(winId,waitMs))
+  - [`waitForTextPresent(text)`](../commands/web/waitForTextPresent(text))
 
 
 ### [webalert](../commands/webalert)
