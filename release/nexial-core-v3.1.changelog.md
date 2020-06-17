@@ -56,6 +56,7 @@ comments: true
 
 
 ### [rdbms commands](../commands/rdbms)
+- supports `EXEC ` and `CALL ` keywords
 
 
 ### [step.inTime](../commands/step.inTime) 
