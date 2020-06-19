@@ -45,6 +45,22 @@ many areas:
    There are situations where the required automation is not available in Nexial, or where manual intervention is 
    required (such as multi-factor authentication or physical tasks).  Using the "step" command we can provide timely
    pauses in execution so such the required manual step can be carried out.
+   
+5. Capturing and Processing inputs provided in prompt
+   
+   The inputs provided by user during execution will also be shown in execution report file. These inputs are referred 
+   as `response` and `comment`. 
+   
+   There may be some cases where execution script might need these inputs for further processing or decision making. 
+   These can be retrieved using system variables `nexial.step.response` and `nexial.step.comment` respectively. The scope
+   of these system variables will be limited till the start of next `step` or `step.inTime` commands (if any).
+   
+   Example: If a script has one `step` or `step.inTime` command (say [`observe(prompt)`](observe(prompt).html)) on row 
+   8 and another `step` or `step.inTime` command (say 
+   [`validate(prompt,responses,passResponses)`](validate(prompt,responses,passResponses).html)) on row 18 then the system 
+   variables `nexial.step.response` and `nexial.step.response` will hold up the values provided on row 8 until row 18. 
+   Once the row 18 ([`validate(prompt,responses,passResponses)`](validate(prompt,responses,passResponses).html)) starts 
+   it's execution it will clear any previous value of these system variables and overwrite with latest one.
 
 
 Future version of Nexial will replace console-based prompts with desktop-based (GUI) prompts.

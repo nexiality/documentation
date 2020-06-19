@@ -16,7 +16,8 @@ comments: true
 - fixed SES-based email notification; possible SSL cert conflict with DocumentDB automation 
 - nexial.cmd needs to handle spaces in the directory name
 #### Improvements
-  
+- Execution Report will now show user response & comments provided in `step` and `step.inTime` commands.
+- Support for accessing response and comments within script execution using System variables `nexial.step.response` and `nexial.step.comment` respectively.
    
 ### [Batch Files](../userguide/BatchFiles)
 
@@ -25,6 +26,7 @@ comments: true
 
 
 ### [System Variable](../systemvars)
+- new variable `nexial.step.comment` added
 
 
 ### [Flow Control](../flowcontrols)
@@ -64,6 +66,9 @@ comments: true
 - [`assertResultNotMatch(var,columns,search)`](../commands/rdbms/assertResultNotMatch(var,columns,search)) - **NEW** 
   command to verify that a query result DOES NOT contains certain data. `search` parameter can be prefixed with 
   `REGEX:` for regular expression check, `CONTAIN:` for substring check, or "as is" for equality check. 
+
+
+### [step](../commands/step) 
 
 
 ### [step.inTime](../commands/step.inTime) 
