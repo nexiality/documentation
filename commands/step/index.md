@@ -51,16 +51,14 @@ many areas:
    The inputs provided by user during execution will also be shown in execution report file. These inputs are referred 
    as `response` and `comment`. 
    
-   There may be some cases where execution script might need these inputs for further processing or decision making. 
-   These can be retrieved using system variables `nexial.step.response` and `nexial.step.comment` respectively. The scope
-   of these system variables will be limited till the start of next `step` or `step.inTime` commands (if any).
+   There may be cases where an execution could use these inputs for further processing or decision making. These can be 
+   retrieved via the System variables `nexial.step.response` and `nexial.step.comment` respectively. Note that these
+   System variables will be overwritten in subsequent `step` or `step.inTime` commands.
    
-   Example: If a script has one `step` or `step.inTime` command (say [`observe(prompt)`](observe(prompt).html)) on row 
-   8 and another `step` or `step.inTime` command (say 
-   [`validate(prompt,responses,passResponses)`](validate(prompt,responses,passResponses).html)) on row 18 then the system 
-   variables `nexial.step.response` and `nexial.step.response` will hold up the values provided on row 8 until row 18. 
-   Once the row 18 ([`validate(prompt,responses,passResponses)`](validate(prompt,responses,passResponses).html)) starts 
-   it's execution it will clear any previous value of these system variables and overwrite with latest one.
+   Example: Suppose a script uses a [`observe(prompt)`](observe(prompt).html) command on Row 8, and a 
+   [`validate(prompt,responses,passResponses)`](validate(prompt,responses,passResponses).html) command on Row 18. 
+   The system variables `nexial.step.response` and `nexial.step.response` will reflect the `response` and `comments` 
+   captured at Row 8 until Row 18, when the next `step` (or `step.inTime`) command is executed.
 
 
 Future version of Nexial will replace console-based prompts with desktop-based (GUI) prompts.

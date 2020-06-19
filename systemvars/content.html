@@ -1197,7 +1197,13 @@
     <td></td>
     <td>false</td>
     <td>
-      Capture and holds the user provided response during execution of <code>step</code> or <code>step.inTime</code> commands.
+      The commands in <a href="../commands/step"><code>step</code></a> and
+      <a href="../commands/step.inTime"><code>step.inTime</code></a> are designed for automation where human interaction
+      (or intervention) is needed. As such, these commands prompt for user input in the form of a "response" and/or
+      "comment".<br/>
+      This System variable captures the "response" provided by the user during the execution of such command. One may
+      include the content of this System variable as part of the automation. For example, the "response" can be included
+      in an email generation or an output file.
     </td>
   </tr>
   <tr>
@@ -1208,7 +1214,13 @@
     <td></td>
     <td>false</td>
     <td>
-      Capture and holds the user provided comment during execution of <code>step</code> or <code>step.inTime</code> commands.
+      The commands in <a href="../commands/step"><code>step</code></a> and
+      <a href="../commands/step.inTime"><code>step.inTime</code></a> are designed for automation where human interaction
+      (or intervention) is needed. As such, these commands prompt for user input in the form of a "response" and/or
+      "comment".<br/>
+      This System variable captures the "comment" provided by the user during the execution of such command. One may
+      include the content of this System variable as part of the automation. For example, the "comment" can be included
+      in an email generation or an output file.
     </td>
   </tr>
   <tr>
