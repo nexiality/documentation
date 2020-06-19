@@ -57,6 +57,13 @@ comments: true
 
 ### [rdbms commands](../commands/rdbms)
 - supports `EXEC ` and `CALL ` keywords
+- improve console logs to aid in troubleshooting
+- [`assertResultMatch(var,columns,search)`](../commands/rdbms/assertResultMatch(var,columns,search)) - **NEW** command 
+  to verify that a query result contains certain data. `search` parameter can be prefixed with `REGEX:` for regular 
+  expression check, `CONTAIN:` for substring check, or "as is" for equality check.
+- [`assertResultNotMatch(var,columns,search)`](../commands/rdbms/assertResultNotMatch(var,columns,search)) - **NEW** 
+  command to verify that a query result DOES NOT contains certain data. `search` parameter can be prefixed with 
+  `REGEX:` for regular expression check, `CONTAIN:` for substring check, or "as is" for equality check. 
 
 
 ### [step.inTime](../commands/step.inTime) 
