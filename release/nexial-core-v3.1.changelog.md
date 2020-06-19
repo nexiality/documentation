@@ -18,6 +18,7 @@ comments: true
 #### Improvements
 - Execution Report will now show user response & comments provided in `step` and `step.inTime` commands.
 - Support for accessing response and comments within script execution using System variables `nexial.step.response` and `nexial.step.comment` respectively.
+- Support for chrome/firefox web driver auto update when browser updated to lower version (not latest).
    
 ### [Batch Files](../userguide/BatchFiles)
 
@@ -36,7 +37,10 @@ comments: true
 
 
 ### [base commands](../commands/base)
-
+new clipboard commands has been added to copy from/into clipboard.
+- [`clearClipboard()`](../commands/base/clearClipboard())
+- [`copyFromClipboard(var)`](../commands/base/copyFromClipboard(var))
+- [`copyIntoClipboard(text)`](../commands/base/copyIntoClipboard(text))
 
 ### [csv commands](../commands/csv)
 

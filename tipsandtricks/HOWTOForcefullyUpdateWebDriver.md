@@ -21,8 +21,8 @@ As of now, below is the webdriver update schedule in Nexial:
 
 | Browser             | WebDriver                | Update Frequency                          | Update From             |
 |+--------------------|+-------------------------|+------------------------------------------|+------------------------|
-| Firefox             | `geckodriver`            | Bi-weekly                                 |[https://github.com/mozilla/geckodriver/releases](https://github.com/mozilla/geckodriver/releases) |
-| Chrome              | `chromedriver`           | Bi-weekly                                 |[https://chromedriver.chromium.org/downloads](https://chromedriver.chromium.org/downloads) |
+| Firefox             | `geckodriver`            | after browser update or Bi-weekly         |[https://github.com/mozilla/geckodriver/releases](https://github.com/mozilla/geckodriver/releases) |
+| Chrome              | `chromedriver`           | after browser update or Bi-weekly         |[https://chromedriver.chromium.org/downloads](https://chromedriver.chromium.org/downloads) |
 | Electron            | a fork of `chromedriver` | Bi-weekly                                 |[https://github.com/electron/electron/releases](https://github.com/electron/electron/releases) |
 | Internet Explorer   | `IEDriverServer`         | Bi-weekly                                 |[http://selenium-release.storage.googleapis.com/index.html](http://selenium-release.storage.googleapis.com/index.html) |
 | Microsoft Edge      | `MicrosoftWebDriver`     | None; pre-installed as part of Windows 10 ||
@@ -45,6 +45,14 @@ example of such directory, along with the `.manifest` file:<br/>
 The checking and update process are largely transparent to Nexial user, albeit a slight delay during installation 
 process. However the benefits, as stated above, easily outweigh the infrequent and small delays.
  
+ <br/>
+ 
+ **NOTE** for Chrome & Firefox browser
+ - **Old version browser** : If you have updated the browser to old version, Nexial will auto download the compatible web driver when you will execute the script. 
+ For example, if you are using firefox version 56 or chrome version 78 then system will download the compatible driver for this version.
+ - **Stop auto update** : To stop the Nexial auto update you can set the flag `neverCheck = true` in `$HOME/.nexial/{webdriver}/.manifest` file.
+ - **Beta version browser** : If you are using beta version browser you can set the flag `neverCheck = true` and manually download and place the driver at `$HOME/.nexial/{webdriver}` directory. For example, you can download and install the `Google Chrome Beta` version browser and set the driver manually for this.
+
 #### But...
 There are two possible issues that might arise:
 1. The target browser has been updated on your test harness between 2 consecutive "check for update" 
