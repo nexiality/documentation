@@ -16,7 +16,7 @@ This command instructs Nexial to save/overwrite the clipboard with the specified
 
 
 ### Example
-![script](image/clipboard_02.png)
+![script](image/clipboard_copyinto.png)
 
 
 ### See Also
