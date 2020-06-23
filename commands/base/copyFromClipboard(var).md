@@ -16,10 +16,9 @@ This command instructs Nexial to save/overwrite a variable with the clipboard va
 
 
 ### Example
-Below script shows how we can log in to some website without storing login details into script/data file. We can use prompt and clipboard commands for user input. 
-![script](image/clipboard_01.png)
+![script](image/clipboard_copyfrom.png)
 
-In the above script row number 10 showing how to copy from the clipboard.
+Above script showing how to use `copyFromClipboard` command.
 
 ### See Also
 - [`clearClipboard()`](clearClipboard())

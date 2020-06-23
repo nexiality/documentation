@@ -12,9 +12,9 @@ This command instructs Nexial to clear the system clipboard. This can be used wh
 
 
 ### Example
-![script](image/clipboard_01.png)
+![script](image/clipboard_clear.png)
 
-In the above script row number 12 showing how to clear the clipboard.
+Above script showing how to use `clearClipboard` command.
 
 ### See Also
 - [`copyFromClipboard(var)`](copyFromClipboard(var))
