@@ -15,11 +15,13 @@ comments: true
 - fixed email notification template when execution terminates too abruptly
 - fixed SES-based email notification; possible SSL cert conflict with DocumentDB automation 
 - nexial.cmd needs to handle spaces in the directory name
+- ensure Nexial doesn't write too much data into a output excelc cell (should be less than 32k)
 #### Improvements
 - Execution Report will now show user response & comments provided in `step` and `step.inTime` commands.
 - Support for accessing response and comments within script execution using System variables `nexial.step.response` and `nexial.step.comment` respectively.
 - Support for chrome/firefox web driver auto update when browser updated to lower version (not latest).
-   
+
+
 ### [Batch Files](../userguide/BatchFiles)
 
 
