@@ -16,11 +16,12 @@ comments: true
 - fixed SES-based email notification; possible SSL cert conflict with DocumentDB automation 
 - nexial.cmd needs to handle spaces in the directory name
 - ensure Nexial doesn't write too much data into a output excelc cell (should be less than 32k)
+- fixed issue of skipping the section command which has nested section.
 #### Improvements
 - Execution Report will now show user response & comments provided in `step` and `step.inTime` commands.
 - Support for accessing response and comments within script execution using System variables `nexial.step.response` and `nexial.step.comment` respectively.
 - Support for chrome/firefox web driver auto update when browser updated to lower version (not latest).
-
+- If section has inner section then inner steps will not be considered in outer section step count.
 
 ### [Batch Files](../userguide/BatchFiles)
 - [`nexial-temp-clean.cmd|sh`](../userguide/BatchFiles#nexial-temp-clean): fix logic to evaluate temp folders that 
