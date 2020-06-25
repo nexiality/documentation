@@ -23,6 +23,8 @@ comments: true
 
 
 ### [Batch Files](../userguide/BatchFiles)
+- [`nexial-temp-clean.cmd|sh`](../userguide/BatchFiles#nexial-temp-clean): fix logic to evaluate temp folders that 
+  are more than a day old.
 
 
 ### [Nexial Interactive](../interactive)
@@ -106,6 +108,9 @@ new clipboard commands has been added to copy from/into clipboard.
   - [`waitForElementsPresent(locators)`](../commands/web/waitForElementsPresent(locators))
   - [`waitForPopUp(winId,waitMs)`](../commands/web/waitForPopUp(winId,waitMs))
   - [`waitForTextPresent(text)`](../commands/web/waitForTextPresent(text))
+- [`nexial.browser.postCloseWaitMs`](../systemvars/index#nexial.browser.postCloseWaitMs): logical change; now this 
+  System variable is only applicable when closing the last browser window, for performance reason.
+
 
 
 ### [webalert](../commands/webalert)
