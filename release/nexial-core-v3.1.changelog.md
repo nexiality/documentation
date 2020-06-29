@@ -126,8 +126,8 @@ new clipboard commands has been added to copy from/into clipboard.
   System variable is only applicable when closing the last browser window, for performance reason.
 
 
-
 ### [webalert](../commands/webalert)
+- code fix to improve handling of stale web elements or window.
 
 
 ### [webcookie commands](../commands/webcookie)
