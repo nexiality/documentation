@@ -35,6 +35,15 @@ comments: true
 - new variable `nexial.step.comment` added
 
 
+### [Nexial Filter](../flowcontrols/filter)
+- `is readable-file`: **NEW** filter to check for valid, readable file
+- `is not readable-file`: **NEW** filter to check for non-existent file
+- `is readable-path`: **NEW** filter to check for valid, readable path
+- `is not readable-path`: **NEW** filter to check for invalid or unreadable path
+- `is empty-path`: **NEW** filter to check for empty path (without files or sub-directories)
+- `is not empty-path`: **NEW** filter to check for non-empty path (some either files or sub-directories)
+
+
 ### [Flow Control](../flowcontrols)
 
 
@@ -81,6 +90,10 @@ new clipboard commands has been added to copy from/into clipboard.
 
 
 ### [step.inTime](../commands/step.inTime) 
+
+### [ssh](../commands/ssh)
+- [`sftpMoveFrom(var,profile,remote,local)`](../commands/ssh/sftpMoveFrom(var,profile,remote,local)): supports
+  wildcard moves (other commands soon to follow) 
 
 
 ### [web commands](../commands/web)

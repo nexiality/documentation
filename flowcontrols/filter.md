@@ -27,33 +27,39 @@ where,
 **`[comparator]`** represents how **`[subject]`** is to be compared with **`[controls]`**. Currently supported 
 comparisons are:
 
-| comparator             | description |
-| ---------------------- | ----------- |
-| **`=`**                | equals, as in "is _this_ the same as _that_?". It supports for both _text_ and _numeric values_ as well. |
-| **`!=`**               | not equals, as in "is _this_ not the same as _that_?". It supports for both _text_ and _numeric values_ as well. |
-| **`>`**                | greater than, as in "is _this value_ greater than that value?" Only applicable to numbers. |
-| **`>=`**               | greater or equal to, as in "is _this value_ greater or the same as _that value_?" Only applicable to numbers. |
-| **`<`**                | less than, as in "is _this value_ less than _that value_?" Only applicable to numbers. |
-| **`<=`**               | less or equal to, as in "is that value less or equal to that value?" Only applicable to numbers. |
-| **`is`**               | is one of ..., as in "is _this_ one of the values in _that_ list?" |
-| **`is not`**           | is not any of ..., as in "is _this_ not found in any of the values in _that_ list?" |
-| **`in`**               | same as **is** |
-| **`not in`**           | same as not **in** |
-| **`between`**          | between/within, as in "is _this_ value within the range of these two values?" Only applicable to numbers. |
-| **`not contain`**      | **not** containing, as in "does _this_ not containing _that_?" |
-| **`contain`**          | containing, as in "does _this_ contains _that_?" |
-| **`start with`**       | start with, as in "does _this_ starts with _that_?" |
-| **`not start with`**   | **not** start with, as in "does _this_ not starts with _that_?" |
-| **`end with`**         | end with, as in "does _this_ ends with _that_?" |
-| **`not end with`**     | **not** end with, as in "does _this_ not ends with _that_?" |
-| **`match`**            | match by regular expression, as in "can _this_ be expressed via _that_ regular expression?" |
-| **`is empty`**         | does the specified data variable contains empty or no value? |
-| **`is not empty`**     | does the specified data variable contains some value that is **NOT** empty? |
-| **`is defined`**       | is the specified data variable defined (such as in a data sheet)? |
-| **`is undefined`**     | is the specified data variable **NOT** defined (in a data sheet, project.properties, etc.)? |
-| **`has length of`**    | does the specified data variable contains value of __ character. Only applicable to text or numeric value. |
-| **`has file-size`**    | does the specified data variable represents a **readable** file with a size of **at least** __ bytes. Only applicable to fully qualified file path. |
-| **`is readable-path`** | does the specified data variable represents a **valid, readable** directory. |
+| comparator                 | description |
+|+---------------------------| ----------- |
+| **`=`**                    | equals, as in "is _this_ the same as _that_?". It supports for both _text_ and _numeric values_ as well. |
+| **`!=`**                   | not equals, as in "is _this_ not the same as _that_?". It supports for both _text_ and _numeric values_ as well. |
+| **`>`**                    | greater than, as in "is _this value_ greater than that value?" Only applicable to numbers. |
+| **`>=`**                   | greater or equal to, as in "is _this value_ greater or the same as _that value_?" Only applicable to numbers. |
+| **`<`**                    | less than, as in "is _this value_ less than _that value_?" Only applicable to numbers. |
+| **`<=`**                   | less or equal to, as in "is that value less or equal to that value?" Only applicable to numbers. |
+| **`is`**                   | is one of ..., as in "is _this_ one of the values in _that_ list?" |
+| **`is not`**               | is not any of ..., as in "is _this_ not found in any of the values in _that_ list?" |
+| **`in`**                   | same as **is** |
+| **`not in`**               | same as not **in** |
+| **`between`**              | between/within, as in "is _this_ value within the range of these two values?" Only applicable to numbers. |
+| **`not contain`**          | **not** containing, as in "does _this_ not containing _that_?" |
+| **`contain`**              | containing, as in "does _this_ contains _that_?" |
+| **`start with`**           | start with, as in "does _this_ starts with _that_?" |
+| **`not start with`**       | **not** start with, as in "does _this_ not starts with _that_?" |
+| **`end with`**             | end with, as in "does _this_ ends with _that_?" |
+| **`not end with`**         | **not** end with, as in "does _this_ not ends with _that_?" |
+| **`match`**                | match by regular expression, as in "can _this_ be expressed via _that_ regular expression?" |
+| **`is empty`**             | does the specified data variable contains empty or no value? |
+| **`is not empty`**         | does the specified data variable contains some value that is **NOT** empty? |
+| **`is defined`**           | is the specified data variable defined (such as in a data sheet)? |
+| **`is undefined`**         | is the specified data variable **NOT** defined (in a data sheet, project.properties, etc.)? |
+| **`has length of`**        | does the specified data variable contains value of __ character. Only applicable to text or numeric value. |
+| **`has file-size`**        | does the specified data variable represents a **readable** file with a size of **at least** __ bytes. Only applicable to fully qualified file path. |
+| **`is readable-file`**     | does the specified data variable represents a **valid, readable** file (of any size)? |
+| **`is not readable-file`** | does the specified data variable _NOT_ represents a **valid, readable** file? |
+| **`is readable-path`**     | does the specified data variable represents a **valid, readable** directory? |
+| **`is not readable-path`** | does the specified data variable _NOT_ represents a **valid, readable** directory? |
+| **`is empty-path`**        | does the specified data variable represents a **valid, readable, but empty** directory? (Meaning no files or subdirectories) |
+| **`is not empty-path`**    | does the specified data variable _NOT_ represents an **empty** directory? |
+
 
 **`[controls]`** represents the variable or data (could be more than one) to consider in order to qualify a condition. 
 It must be separated by pipe (` | `) like `${fruit} in [apple|banana|chicken|shoes]`. 
