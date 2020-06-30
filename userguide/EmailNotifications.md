@@ -98,25 +98,7 @@ Read more about pre-configured emails and conditional notifications on the [Even
 ![Email Notification](image/EmailNotifications_05.png)<br/>
 
 
-### One Time Server Setup
-Using the `nexial-setup.cmd` command allows you to setup the email server by providing it the location of the 
-configuration file.<br/>
-
-**Advantages**
-- One time setup, no need to configure system variables for every project/test.
-- Encryption of sensitive information such as passwords and secret keys. 
-- Running the command creates a configuration jar. This nexial build can be distributed to other members of team 
-allowing the team to work with the same configuration without having to set it up individually. 
-
-#### Example
-project.properties<br/>
-![project properties](image/EmailNotifications_06.png)<br/>
-Command:<br/>
-![terminal command](image/EmailNotifications_07.png)
-![terminal output](image/EmailNotifications_08.png)
-
-Read more about nexial-setup.cmd on the [Nexial Batch Files](BatchFiles#nexial-setup) page. 
-
+Follow [this guide](../userguide/ServiceIntegration#email-notification-setup-example) for onetime setup for email notification using `nexial-setup`  
 
 ### See Also<br/>
 - [commands &raquo; `mail`](../commands/mail)

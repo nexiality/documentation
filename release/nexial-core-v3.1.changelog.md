@@ -22,6 +22,7 @@ comments: true
 - Support for accessing response and comments within script execution using System variables `nexial.step.response` and `nexial.step.comment` respectively.
 - Support for chrome/firefox web driver auto update when browser updated to lower version (not latest).
 - If section has inner section then inner steps will not be considered in outer section step count.
+- Support for AWS SQS and S3 alternatives
 
 ### [Batch Files](../userguide/BatchFiles)
 - [`nexial-temp-clean.cmd|sh`](../userguide/BatchFiles#nexial-temp-clean): fix logic to evaluate temp folders that 

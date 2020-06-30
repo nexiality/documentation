@@ -355,39 +355,7 @@
       <img src="image/systemvar_04.jpg" class="resize" alt="nexial.outputToCloud example"/><br/>
       <br/>
 
-      Note that cloud storage support is not enabled by default (it's not free). One can enable such capability
-      by adding the following configuration for S3 connectivity (in addition to setting
-      <code>nexial.outputToCloud</code> as <code>true</code>:<br/>
-      <table>
-        <tbody>
-        <tr>
-          <th align="left">nexial.otc.region</th>
-          <td>
-            The desire
-            <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html"
-               class="external-link" target="_nexial_link">AWS region</a>. Default is <code>us-west-2</code>.
-          </td>
-        </tr>
-        <tr>
-          <th align="left">nexial.otc.accessKey</th>
-          <td>The
-            <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys"
-               class="external-link" target="_nexial_link">AWS access key</a> to access target S3 service.
-          </td>
-        </tr>
-        <tr>
-          <th align="left">nexial.otc.secretKey</th>
-          <td>The
-            <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys"
-               class="external-link" target="_nexial_link">AWS secret key</a> to access target S3 service.
-          </td>
-        </tr>
-        <tr>
-          <th align="left">nexial.outputCloudBase</th>
-          <td>The target bucket and path (prefix) to use for storing execution output.</td>
-        </tr>
-        </tbody>
-      </table>
+      Follow <a href="../userguide/ServiceIntegration#nexial-outputtocloud-setup-example">this guide</a> for one-time setup of <code>nexial.outputToCloud</code> configurations.
     </td>
   </tr>
   <tr>

@@ -35,6 +35,7 @@ Let's get started!
 - [End of Execution](../systemvars/endofexecution)
 - [Executing Nexial in CI/CD](ExecutingNexialInCICD)
 - [Nexial Execution Dashboard](ExecutionDashboard)
+- [Service Integration](ServiceIntegration)
 
 ------------------------------------------------------------------------------------------------------------------------
 

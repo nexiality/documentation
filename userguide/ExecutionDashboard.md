@@ -63,6 +63,8 @@ conducted with the following:
     compose the dashboard details.  This option can be enabled via command line, via 
     [`project.properties`](UnderstandingProjectStructure#artifactprojectproperties), as well as data file.
     
+    Nexial supports local cloud solutions such as MinIO. [click here](InstallingMinio) to learn more.
+    
 3.  Enable the project prefix option via  
       
     **`nexial.runID.prefix=...`**  
