@@ -8,7 +8,9 @@ comments: true
 
 
 ### Description
-This command automates the copy of a local resource to a remote path via SFTP. The remote resource, if exist, will be overwritten.
+This command automates the copy of one or more local resources to a remote path via SFTP. The remote resource, 
+if exist, will be overwritten. If `local` represents multiple files, then `remote` is expected to be a directory. 
+Wildcard is supported - for example, `/my_folder/my_data/my_files*`.
 
 For output process via `var`, check out [Command Output Processing](index#command-output-processing)
 
@@ -16,8 +18,8 @@ For output process via `var`, check out [Command Output Processing](index#comman
 ### Parameters
 - **var** - the variable name that references the outcome of this command.
 - **profile** - the profile that encapsulates the SSH connectivity and security information.
-- **remote** - the pattern which specifies the folder, file or a pattern of files.
-- **local** - the directory from which the files should be copied.
+- **local** - the file(s) to move from a local directory (wildcard supported).
+- **remote** - the target file or directory.
 
 
 ### Example

@@ -23,6 +23,7 @@ comments: true
 - Support for chrome/firefox web driver auto update when browser updated to lower version (not latest).
 - If section has inner section then inner steps will not be considered in outer section step count.
 - Support for AWS SQS and S3 alternatives
+- log files will now automatically rollover at midnight 
 
 ### [Batch Files](../userguide/BatchFiles)
 - [`nexial-temp-clean.cmd|sh`](../userguide/BatchFiles#nexial-temp-clean): fix logic to evaluate temp folders that 
@@ -93,8 +94,16 @@ new clipboard commands has been added to copy from/into clipboard.
 ### [step.inTime](../commands/step.inTime) 
 
 ### [ssh](../commands/ssh)
-- [`sftpMoveFrom(var,profile,remote,local)`](../commands/ssh/sftpMoveFrom(var,profile,remote,local)): supports
-  wildcard moves (other commands soon to follow) 
+- [`sftpMoveFrom(var,profile,remote,local)`](../commands/ssh/sftpMoveFrom(var,profile,remote,local)): supports 
+  wildcard moves (not recursive)
+- [`sftpMoveTo(var,profile,local,remote)`](../commands/ssh/sftpMoveTo(var,profile,local,remote)): supports wildcard 
+  moves (not recursive)
+- [`sftpCopyFrom(var,profile,remote,local)`](../commands/ssh/sftpCopyFrom(var,profile,remote,local)): supports wildcard 
+  copy (not recursive) 
+- [`sftpCopyTo(var,profile,local,remote)`](../commands/ssh/sftpCopyTo(var,profile,local,remote)): supports wildcard 
+  copy (not recursive)
+- [`sftpDelete(var,profile,remote)](../commands/ssh/sftpDelete(var,profile,remote)): supports wildcard delete and 
+  deleting a remote directory 
 
 
 ### [web commands](../commands/web)
