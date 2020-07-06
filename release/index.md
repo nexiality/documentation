@@ -31,3 +31,4 @@ redirect_from:
 - [v2.8 (2019-11-04)](nexial-core-v2.8.changelog)
 - [v2.9 (2019-12-14)](nexial-core-v2.9.changelog)
 - [v3.0 (2020-05-29)](nexial-core-v3.0.changelog)
+- [v3.1 (2020-07-06)](nexial-core-v3.1.changelog)
