@@ -24,6 +24,8 @@ comments: true
 - If section has inner section then inner steps will not be considered in outer section step count.
 - Support for AWS SQS and S3 alternatives
 - log files will now automatically rollover at midnight 
+- additional Jenkins-specific information added to email notification.
+- make the timestamp on log files be more consistent.
 
 ### [Batch Files](../userguide/BatchFiles)
 - [`nexial-temp-clean.cmd|sh`](../userguide/BatchFiles#nexial-temp-clean): fix logic to evaluate temp folders that 
@@ -34,7 +36,10 @@ comments: true
 
 
 ### [System Variable](../systemvars)
-- new variable `nexial.step.comment` added
+- new variable `nexial.step.comment` added.
+- [nexial.trackErrors](../systemvars/index#nexial.trackErrors): **NEW** System variable to enable the explicit tracking
+  of step failures into a designated log file (`logs/nexial-execution-errors.log`).
+- [nexial.lastError](../systemvars/index#[nexial.lastError): **NEW** System variable store the last FAIL message.
 
 
 ### [Nexial Filter](../flowcontrols/filter)
@@ -47,6 +52,11 @@ comments: true
 
 
 ### [Flow Control](../flowcontrols)
+
+
+[Built-In Function]
+- [`$(projectfile|executionErrorsAsHtml|tableOnly)`](../function/projectfile/index.html#project.executionErrorsAsHtml): 
+  **NEW** function to convert the "execution-failure" logs into an HTML.
 
 
 ### [Nexial Expression](../expressions)
@@ -134,6 +144,12 @@ new clipboard commands has been added to copy from/into clipboard.
   - [`waitForTextPresent(text)`](../commands/web/waitForTextPresent(text))
 - [`nexial.browser.postCloseWaitMs`](../systemvars/index#nexial.browser.postCloseWaitMs): logical change; now this 
   System variable is only applicable when closing the last browser window, for performance reason.
+- [`waitForElementPresent(locator)`](../commands/web/waitForElementPresent(locator)): changed to 
+  [`waitForElementPresent(locator,waitMs)`](../commands/web/waitForElementPresent(locator,waitMs)) to improve control and flexibility.
+- [`waitUntilVisible(locator,waitMs)`](waitUntilVisible(locator,waitMs)): **NEW** command to wait until a Web element because visible.
+- [`waitUntilHidden(locator,waitMs)`](waitUntilHidden(locator,waitMs)): **NEW** command to wait until a Web element because hidden.
+- [`waitUntilEnabled(locator,waitMs)`](waitUntilEnabled(locator,waitMs)): **NEW** command to wait until a Web element because enabled.
+- [`waitUntilDisabled(locator,waitMs)`](waitUntilDisabled(locator,waitMs)): **NEW** command to wait until a Web element because disabled.
 
 
 ### [webalert](../commands/webalert)

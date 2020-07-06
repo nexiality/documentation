@@ -25,7 +25,9 @@
 
   table.sysvar a code { background-color: transparent; border: none; font-weight: normal; }
 
-  .highlight-red { background-color: #ffe7e7; }
+  .read-only { background-color: #ffe7e7; }
+
+  .read-write { color: #ccc; }
 
   .highlight-section {
     border-color:     rgb(150, 150, 150) !important;
@@ -107,7 +109,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.executionType"><code>nexial.executionType</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       Read Only System variable to indicate the type of execution currently in progress. The only possible values
       are:
@@ -121,7 +123,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.runID"><code>nexial.runID</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       The unique identifier for each test execution, derived at the beginning of the execution. Generally this is
       the start of execution in the form of&nbsp;<code>yyyyMMdd_HHmmss</code>.
@@ -131,7 +133,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.runID.prefix"><code>nexial.runID.prefix</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       Optional prefix to the system-generated <code>nexial.runID</code>, which is based on the timestamp of the
       start of an execution. This will directly impact the output directory, in that both the prefix and the
@@ -165,7 +167,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.verbose"><code>nexial.verbose</code></a></td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determine if additional log information should be captured in the output. The additional log information
       differs from command to command, and will be displayed in the subsequent row (i.e. below the test step).
@@ -175,7 +177,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.quiet"><code>nexial.quiet</code></a></td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       A.K.A. the <i>quiet mode</i>.<br/>
       Set this System variable to <code>true</code> to drastically reduce the amount of console logging during
@@ -204,7 +206,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.lastElapsedTime"><code>nexial.lastElapsedTime</code></a></td>
     <td>millisecond</td>
     <td>&nbsp;</td>
-    <td>true</td>
+    <td class="read-only">read-only</td>
     <td>
       Represent the elapsed time in millisecond of the last executed step (regardless of its PASS or FAIL status).
     </td>
@@ -215,7 +217,7 @@
     </td>
     <td>millisecond</td>
     <td>600</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>The wait time between test steps, in milliseconds.</td>
   </tr>
 
@@ -223,7 +225,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.textDelim"><code>nexial.textDelim</code></a></td>
     <td>text</td>
     <td><code>,</code></td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       The delimiter character to split a string of characters into array. <br/>
       <br/>
@@ -239,7 +241,7 @@
       <a id="nexial.resolveTextAsURL"><code>nexial.resolveTextAsURL</code></a></td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       When set to <code>true</code>, this System variable instructs Nexial to make the attempt of resolving the
       text parameter of a command or expression - where appropriate - as a valid URL. If such resolution is
@@ -263,7 +265,7 @@
       <a id="nexial.resolveTextAsIs"><code>nexial.resolveTextAsIs</code></a></td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       When a parameter points to a local file (fully qualified path), Nexial will by default performs the following:
       <ol>
@@ -285,7 +287,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.nullValue"><code>nexial.nullValue</code></a></td>
     <td>text</td>
     <td><code>(null)</code></td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Change the default representation of a null value. Leaving a cell empty can be confusing - is it
       <code>null</code>, <code>empty</code>, <code>blank</code>? <br/>
@@ -302,7 +304,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.var.ignored"><code>nexial.var.ignored</code></a></td>
     <td>text / list</td>
     <td></td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       By default Nexial searches for data variables in the form of <code>${...}</code> and substitutes them with
       the corresponding value. This is an useful feature to create dynamic data substitution and generation.<br/>
@@ -329,7 +331,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       By default Nexial searches for data variables in the form of <code>${...}</code> and substitutes them with
       the corresponding value. If a data variable, as derived from the <code>${...}</code> syntax, is not found
@@ -348,7 +350,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.outputToCloud"><code>nexial.outputToCloud</code></a></td>
     <td>boolean</td>
     <td>true</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determine if execution output (report, screenshots, etc.) should be saved to cloud storage so that they may
       be retrieved remotely. When such configuration is turned on, the console log will indicate as such:<br/>
@@ -362,7 +364,7 @@
     <td class="varname" nowrap="nowrap"><a id="nexial.subplansIncluded"><code>nexial.subplansIncluded</code></a></td>
     <td>text</td>
     <td></td>
-    <td>true</td>
+    <td class="read-only">read-only</td>
     <td>
       This variable provides all worksheets/subplans executed while running specific
       <a href="../userguide/BatchFiles#nexial"><code>-subplans</code></a> command option during Single plan execution.
@@ -372,7 +374,7 @@
     <td class="varname" nowrap="nowrap"><a id="nexial.subplansOmitted"><code>nexial.subplansOmitted</code></a></td>
     <td>text</td>
     <td></td>
-    <td>true</td>
+    <td class="read-only">read-only</td>
     <td>
       This variable provides all worksheets/subplans omitted while executing specific
       <a href="../userguide/BatchFiles#nexial"><code>-subplans</code></a> command option during Single plan execution.
@@ -382,7 +384,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.scriptRef"><code>nexial.scriptRef.&ast;</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       This configuration does not modify the behavior or outcome of a test execution. Instead it is used to
       create reference information, which may change over iteration, to improve the readability of the execution
@@ -405,7 +407,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.scenarioRef"><code>nexial.scenarioRef.&ast;</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       This configuration has a similar purpose as that of <code>nexial.scriptRef.&ast;</code>, except it applies
       to the scenario level (not script). As such, one can provide context information at the scenario level,
@@ -424,7 +426,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.stepByStep"><code>nexial.stepByStep</code></a></td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determine if Nexial to pause after each test step. When set to true, Nexial will pause test execution after
       each step. User will need to press <code>Enter</code> on the console to resume the next step.
@@ -434,7 +436,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.inspectOnPause"><code>nexial.inspectOnPause</code></a></td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       During <a href="../flowcontrols/#pausebefore--pauseafter">PauseBefore() or PauseAfter()</a>, it is possible
       to interact with Nexial to inquire of the state of a data variable, a built-in function or a Nexial
@@ -445,7 +447,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.pauseOnError"><code>nexial.pauseOnError</code></a></td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       During script development, it is often advantageous to "step through" the execution so that improvements
       and correction can be made upon runtime observation. However for a very large execution run, it might be
@@ -465,7 +467,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.odiEnabled"><code>nexial.odiEnabled</code></a></td>
     <td>boolean</td>
     <td>true</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Enable (default) or disable
       <a href="../userguide/RealtimeInspectionOfDataVariables#on-demand-inspection">On-Demand Inspection (ODI)</a>.
@@ -483,7 +485,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.odiTimer"><code>nexial.odiTimer</code></a></td>
     <td>millisecond</td>
     <td>500</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determine the frequency, in milliseconds, of input detection by the On-Demand Inspection (ODI) "listener".
       Note that setting this value too low could cause an execution to hang or become unresponsive since there
@@ -498,7 +500,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.odiKeys"><code>nexial.odiKeys</code></a></td>
     <td>text</td>
     <td><code>!!!</code></td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determine the key sequence to activate On-Demand Inspection. The default value is <code>!!!</code> but one
       can change it to other ASCII character sequence. Note that compound key sequences that contains
@@ -514,7 +516,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.failFast"><code>nexial.failFast</code></a></td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determine how Nexial should handle the test execution when a failure is found. Failure could either be an
       unexpected outcome of an action, or the undesired result of a validation. If set to true, Nexial will
@@ -528,7 +530,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.resetFailFast"><code>nexial.resetFailFast</code></a></td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determine if the failure condition of one script should cascade down to subsequent scripts. Only applicable
       when using test plan.<br/>
@@ -548,7 +550,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.failImmediate"><code>nexial.failImmediate</code></a></td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determine if Nexial should terminate execution at the next failure. This configuration can be useful to
       signify the intent of "<em>after this point, failure will not be tolerated</em>". For example,<br/>
@@ -594,7 +596,7 @@
     </td>
     <td>integer</td>
     <td>500</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       In cases where a data variable might hold a large amount of text, it might not always be the best idea to display
       its entirety on the console. Long running console output might make the rest of the execution log more
@@ -618,14 +620,13 @@
       Note that this will have no effect on the actual content of the data variable.
     </td>
   </tr>
-
   <tr>
     <td nowrap="nowrap" class="varname">
       <a id="nexial.printErrorDetails"><code>nexial.printErrorDetails</code></a>
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       When set to <code>true</code>, Nexial will print out additional details (i.e. exception stack trace) when
       an error occurred while processing a command. Not usually needed, but could be useful during
@@ -633,13 +634,36 @@
       By default, this System variable is set to <code>false</code>
     </td>
   </tr>
+
+  <tr>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.lastError"><code>nexial.lastError</code></a>
+    </td>
+    <td>text</td>
+    <td></td>
+    <td class="read-only">read-only</td>
+    <td>
+      This System variable stores the last FAIL message.
+    </td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.trackErrors"><code>nexial.trackErrors</code></a>
+    </td>
+    <td>boolean</td>
+    <td>false</td>
+    <td class="read-write">read-write</td>
+    <td>
+    </td>
+  </tr>
+
   <tr>
     <td nowrap="nowrap" class="varname">
       <a id="nexial.screenshotOnError"><code>nexial.screenshotOnError</code></a>
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Only application to <code>web</code>, <code>desktop</code> commands. Set to <code>true</code> for Nexial
       to capture the screenshot when a failure occurred.
@@ -651,7 +675,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       When running <a href="../commands/web"><code>web</code> commands</a>, the norm has been using the underlying
       WebDriver's screen capturing capability. However in some situation, it might be beneficial or perhaps
@@ -671,7 +695,7 @@
     </td>
     <td>text</td>
     <td></td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Optional caption for each captured screenshot.<br/>
       <br/>
@@ -709,7 +733,7 @@
     </td>
     <td>text</td>
     <td>yellow</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>NOTE: <a href="#nexial.screenshot.caption"><code>nexial.screenshot.caption</code></a> MUST BE SET TO
         <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b><br/>
@@ -739,7 +763,7 @@
     </td>
     <td>decimal</td>
     <td>1.0</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>NOTE: <a href="#nexial.screenshot.caption"><code>nexial.screenshot.caption</code></a> MUST BE SET TO
         <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b><br/>
@@ -756,7 +780,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>NOTE: <a href="#nexial.screenshot.caption"><code>nexial.screenshot.caption</code></a> MUST BE SET TO
         <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b><br/>
@@ -772,7 +796,7 @@
     </td>
     <td>text</td>
     <td><code>bottom,right</code></td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>NOTE: <a href="#nexial.screenshot.caption"><code>nexial.screenshot.caption</code></a> MUST BE SET TO
         <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b><br/>
@@ -799,7 +823,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>NOTE: <a href="#nexial.screenshot.caption"><code>nexial.screenshot.caption</code></a> MUST BE SET TO
         <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b><br/>
@@ -816,7 +840,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.lastScreenshot"><code>nexial.lastScreenshot</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       The fully qualified path of the last screenshot taken (meaning that the "screenshot" column in the test
       script is marked with <code>x</code>). If
@@ -828,7 +852,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.lastOutcome"><code>nexial.lastOutcome</code></a></td>
     <td>boolean</td>
     <td>&nbsp;</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       A <code>true</code> or <code>false</code> to indicate the outcome of the last command. This can be useful
       when used as flow control condition. For example,<br/>
@@ -842,7 +866,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.lastPlanStep"><code>nexial.lastPlanStep</code></a></td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       A <code>true</code> or <code>false</code>, indicate to stop or continue the execution after the script.
       This can be useful when one wants to interrupt/stop execution flow immediate after completion of the script.
@@ -855,7 +879,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.lastOutputLink"><code>nexial.lastOutputLink</code></a></td>
     <td>text</td>
     <td></td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       This system variable reflects the filename of the output generated via certain commands, such as:
       <ul>
@@ -885,7 +909,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.lastOutputPath"><code>nexial.lastOutputPath</code></a></td>
     <td>text</td>
     <td></td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       This system variable reflects the location of the output generated via certain commands, such as:
       <ul>
@@ -921,7 +945,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.failAfter"><code>nexial.failAfter</code></a></td>
     <td>integer</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determine the number of failure that can be tolerated before Nexial forcefully terminates the test
       execution. In effect, this System variable provides a way to implement a "fail-not-so-fast" execution.
@@ -943,7 +967,7 @@
     </td>
     <td>decimal</td>
     <td>100</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       By default, only an execution with 100% PASS rate would be considered as a <em>SUCCESS</em>. Well, from time
       to time, success isn't always that straightforward. There might be valid and one-off reason as to why the
@@ -981,7 +1005,7 @@
     </td>
     <td>integer</td>
     <td></td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       The number of steps executed at the time of this System variable being referenced. Note that this
       represents the cumulative total number of steps executed within one execution, which span across the plans,
@@ -994,7 +1018,7 @@
     </td>
     <td>integer</td>
     <td></td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       The number of PASS steps at the time of this System variable being referenced. Note that this represents
       the cumulative total number of PASS steps within one execution, which span across the plans, scripts,
@@ -1007,7 +1031,7 @@
     </td>
     <td>integer</td>
     <td></td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       The number of FAIL steps executed at the time of this System variable being referenced. Note that this
       represents the cumulative total number of FAIL steps within one execution, which could span across the
@@ -1020,7 +1044,7 @@
     </td>
     <td>integer</td>
     <td></td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       The number of steps skipped (not executed) at the time of this System variable being referenced. Note that
       this represents the cumulative total number of steps skipped within one execution, which span across the
@@ -1033,7 +1057,7 @@
     </td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       This system variable is to indicate the Activity currently in Execution. It will only show activity name
       currently executing.
@@ -1045,7 +1069,7 @@
     </td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       This system variable is to indicate the Scenario currently in Execution. It will only show scenario name
       currently executing.
@@ -1058,7 +1082,7 @@
     </td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       Allow one to customize "header" content in the execution summary generated at the end of a Nexial execution.
       <br/>
@@ -1076,7 +1100,7 @@
     </td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       Allow one to customize "footer" content in the execution summary generated at the end of a Nexial execution.
       <br/>
@@ -1093,7 +1117,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.manageMemory"><code>nexial.manageMemory</code></a></td>
     <td>boolean</td>
     <td>false</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       <strong>MUST BE SET AS A ENVIRONMENT VARIABLE VIA THE STANDARD <code>-D</code> ARGUMENT.</strong><br/>
       To turn on this variable, one must set the <code>-D</code> environment variable prior to executing a test
@@ -1119,7 +1143,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.assistantMode"><code>nexial.assistantMode</code></a></td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <i>DEPRECATED SYSTEM VARIABLE NAME.
         PLEASE SEE <a href="#nexial.openResult"><code>nexial.openResult</code></a> INSTEAD.</i>
@@ -1129,7 +1153,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.openResult"><code>nexial.openResult</code></a></td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determine if Nexial should automatically open the output in Excel after each iteration. This could be a
       time saver since one would not have to manually search for the output file.<br/>
@@ -1143,7 +1167,7 @@
     </td>
     <td>text</td>
     <td>excel</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       Configure the full path, including the executable name, of the program to use when opening Nexial output at
       the end of an execution run. This is only applicable when <code>nexial.openResult</code> is enabled. By
@@ -1163,7 +1187,7 @@
     </td>
     <td>text</td>
     <td></td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       The commands in <a href="../commands/step"><code>step</code></a> and
       <a href="../commands/step.inTime"><code>step.inTime</code></a> are designed for automation where human interaction
@@ -1180,7 +1204,7 @@
     </td>
     <td>text</td>
     <td></td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       The commands in <a href="../commands/step"><code>step</code></a> and
       <a href="../commands/step.inTime"><code>step.inTime</code></a> are designed for automation where human interaction
@@ -1200,7 +1224,7 @@
     </td>
     <td>boolean</td>
     <td>true</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determine if string comparison should be "<em>forgiving"</em> by converting newline and carriage return
       characters to space BEFORE comparison starts. This is generally needed for Internet Explorer based
@@ -1213,7 +1237,7 @@
     </td>
     <td>boolean</td>
     <td>true</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Perform text assertion by first converting both the expected and actual text to number - if they are in fact
       numbers. As such, <code>1</code> would be treated the same as <code>1.0</code>.<br/>
@@ -1228,7 +1252,7 @@
     </td>
     <td>boolean</td>
     <td></td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Perform text assertion by first trimming (both leading and trailing) spaces from text. Default is
       <code>false</code> (no trimming).
@@ -1240,7 +1264,7 @@
     </td>
     <td>boolean</td>
     <td></td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Perform text assertion case-insensitively. Default is <code>false</code>.
     </td>
@@ -1255,7 +1279,7 @@
     </td>
     <td>boolean</td>
     <td>true</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determine if the screen recording is enabled or not during test Execution. This system variable
       <strong>CAN</strong> be read from data file,&nbsp;specified via command line or via
@@ -1271,7 +1295,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.screenRecorder"><code>nexial.screenRecorder</code></a></td>
     <td>text</td>
     <td>mp4</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       Determine format of the recording file need to be created. Currently supported screen recording files to be
       <code>mp4</code> (default) or <code>avi</code><br/>
@@ -1285,7 +1309,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.enableEmail"><code>nexial.enableEmail</code></a></td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Enable email notification at the end of an execution. By default this is not enabled as using email to
       communicate execution status carries a variety of possible side issues. Nonetheless, email notification is
@@ -1335,7 +1359,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.mailTo"><code>nexial.mailTo</code></a></td>
     <td>text</td>
     <td></td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>NOTE: <a href="#nexial.enableEmail"><code>nexial.enableEmail</code></a> MUST BE SET TO
         <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b><br/>
@@ -1351,7 +1375,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.mailSubject"><code>nexial.mailSubject</code></a></td>
     <td>text</td>
     <td></td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>NOTE: <a href="#nexial.enableEmail"><code>nexial.enableEmail</code></a> MUST BE SET TO
         <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b><br/>
@@ -1376,7 +1400,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.mailHeader"><code>nexial.mailHeader</code></a></td>
     <td>text</td>
     <td></td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>NOTE: <a href="#nexial.enableEmail"><code>nexial.enableEmail</code></a> MUST BE SET TO
         <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b>
@@ -1399,7 +1423,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.mailFooter"><code>nexial.mailFooter</code></a></td>
     <td>text</td>
     <td></td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>NOTE: <a href="#nexial.enableEmail"><code>nexial.enableEmail</code></a> MUST BE SET TO
         <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b>
@@ -1430,7 +1454,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       This system variable is specified to track time taken for entire execution to complete. The time tracking
       logs generated by this variable are stored alongside time-tracking logs for test steps.
@@ -1444,7 +1468,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       This system variable is specified to track time taken for each script to complete. The time tracking logs
       generated by this variable are stored alongside time-tracking logs for test steps. For more information,
@@ -1458,7 +1482,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       This system variable is specified to track time taken for each iteration to complete. The time tracking logs
       generated by this variable are stored alongside time-tracking logs for test steps.
@@ -1473,7 +1497,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       This system variable is specified to track time taken for each scenario to complete. The tracking logs
       generated by this variable are stored alongside time-tracking logs for test steps.
@@ -1487,7 +1511,7 @@
     </td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       This system variable is to specify variety of formats for time tracking logs. Default format is
       <code>START_DATE|START_TIME|END_DATE|END_TIME|ELAPSED_TIME|THREAD_NAME|LABEL|REMARK</code>.
@@ -1504,7 +1528,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <i>DEPRECATED SYSTEM VARIABLE NAME.
         PLEASE SEE <a href="#nexial.resolveTextAsIs"><code>nexial.resolveTextAsIs</code></a> INSTEAD.</i>
@@ -1516,7 +1540,7 @@
     </td>
     <td>boolean</td>
     <td>true</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <i>DEPRECATED SYSTEM VARIABLE NAME.
         PLEASE SEE <a href="#nexial.resolveTextAsURL"><code>nexial.resolveTextAsURL</code></a> INSTEAD.</i>
@@ -1532,7 +1556,7 @@
     </td>
     <td>ranges</td>
     <td>1</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       Specify the iteration or iteration range to execute. This can expressed as number (each represent the
       iteration index) or a number range. For example,<br/>
@@ -1585,7 +1609,7 @@
     </td>
     <td>boolean</td>
     <td>true</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       Specify the desired behavior when specific data is not defined. Set this to true means to traverse backward
       (in iteration) until the data is found in previous iteration. Setting it to false would enforce null to be
@@ -1598,7 +1622,7 @@
     </td>
     <td>integer</td>
     <td>&nbsp;</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       The index (1-base) of the iterations being executed. Note that this is not an indication that a specific
       iteration has completed or succeeded.
@@ -1610,7 +1634,7 @@
     </td>
     <td>integer</td>
     <td>&nbsp;</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       The "id" of the iterations being executed. This is equivalent to the column position of the corresponding
       iteration in the datasheet.
@@ -1622,7 +1646,7 @@
     </td>
     <td>integer</td>
     <td>&nbsp;</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       The index (1-base) of the last completed iteration. This does not indicate whether the last iteration was
       completed with or without any failure.
@@ -1634,7 +1658,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       <code>true</code> to indicate that the current iteration is the first iteration of the corresponding
       script.
@@ -1646,7 +1670,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       <code>true</code> to indicate that the current iteration is the last iteration of the corresponding
       script.
@@ -1658,7 +1682,7 @@
     </td>
     <td>boolean</td>
     <td>true</td>
-    <td class="highlight-red">false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determine whether Nexial should re-read the target data file per iteration or not. Sometimes it is
       beneficial to re-fetch the target data file between iteration in case its content has been modified during
@@ -1675,7 +1699,7 @@
     </td>
     <td>String</td>
     <td></td>
-    <td class="highlight-red">false</td>
+    <td class="read-write">read/write</td>
     <td>
       This System variable contains the comma separated list of data variables which needs to be defined before
       start of an iteration. This will instruct Nexial to check whether value is assigned to those variables
@@ -1718,7 +1742,7 @@
     </td>
     <td>boolean</td>
     <td>true</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       If <code>true</code> (default), content comparison will produce a text-based comparison report at the end.
       The report is stored in the output directory (along with other test output) or in the cloud
@@ -1737,7 +1761,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       If <code>true</code>, content comparison will produce a JSON-based comparison report at the end. The report
       is stored in the output directory (along with other test output) or in the cloud (if
@@ -1756,7 +1780,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       If <code>true</code>, content comparison will produce a HTML comparison report at the end. The report is
       stored in the output directory (along with other test output) or in the cloud (if
@@ -1775,7 +1799,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       If true, content comparison will report each matching lines, in addition to reporting all mismatched
       incidents. This can make the comparison report too tedious when comparing large files. See
@@ -1790,7 +1814,7 @@
     </td>
     <td>text</td>
     <td>platform</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Control the end-of-line (EOL) character to use when writing content to a file via
       <a href="../commands/io/writeFile(file,content,append)">io &raquo;
@@ -1813,7 +1837,7 @@
     </td>
     <td>text</td>
     <td>keepOriginal</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Control copying of the <b>existing</b> file at the target location via
       <a href="../commands/io/copyFilesByRegex(sourceDir,regex,target)">io &raquo;
@@ -1842,7 +1866,7 @@
     </td>
     <td>number</td>
     <td>512</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Specify the maximum number of columns a CSV file/content can contain. This is used during the parsing
       or construction of CSV data structure via the <a href="../commands/csv"><code>csv</code> command</a> or
@@ -1855,7 +1879,7 @@
     </td>
     <td>number</td>
     <td>4096</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Specify the maximum number of character a column of a CSV file/content can contain. This is used during the
       parsing or construction of CSV data structure via the <a href="../commands/csv"><code>csv</code> command</a>
@@ -1872,7 +1896,7 @@
     </td>
     <td>boolean</td>
     <td>true</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       For JSON fragment extraction using command or expression, Nexial, by default, stores the resulting content
       as close (or as compatible) to JSON as possible. This means that if the resulting content is a JSON array,
@@ -1897,7 +1921,7 @@
     </td>
     <td>json</td>
     <td></td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       <b>For <a href="../commands/json/assertEqual(expected,actual)">json &raquo;
         <code>assertEqual(expectedJson,actualJson)</code></a> only.</b><br/>
@@ -1924,7 +1948,7 @@
     </td>
     <td>boolean</td>
     <td>true</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>For <a href="../commands/json/assertEqual(expected,actual)">json &raquo;
         <code>assertEqual(expectedJson,actualJson)</code></a> only.</b><br/>
@@ -1945,7 +1969,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>For <a href="../commands/json/assertEqual(expected,actual)">json &raquo;
         <code>assertEqual(expectedJson,actualJson)</code></a> only.</b><br/>
@@ -1966,7 +1990,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>For <a href="../commands/json/assertEqual(expected,actual)">json &raquo;
         <code>assertEqual(expectedJson,actualJson)</code></a> only.</b><br/>
@@ -1998,7 +2022,7 @@
     </td>
     <td>text</td>
     <td></td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       This system variable reflects the filename of the output generated as a result of executing a
       <a href="../commands/external/runProgram(programPathAndParams)">external &raquo;
@@ -2017,7 +2041,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       This system variable indicates that Nexial should push the console output (i.e. standard out) of the
       external programs it launches to the same console which Nexial logs. By doing so, users will be able to
@@ -2036,7 +2060,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       This system variable instructs Nexial to perform formula recalculation before saving changes to an Excel file.
       Depending on the size of the target Excel and the number of formulae it contains, setting this System variable
@@ -2055,7 +2079,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       When writing data into Excel, Nexial writes them as text by default. This is generally acceptable. However, at
       times it is important to retain the cell type as found in the target Excel file. This is especially true if the
@@ -2076,7 +2100,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.browser"><code>nexial.browser</code></a></td>
     <td>text</td>
     <td>firefox</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determine the browser to use for test execution. The possible values are:<br/>
       <ul style="margin: 10px 0 0; list-style-type: square; padding-left: 22px;">
@@ -2105,7 +2129,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       Delay the initialization of web browser until the first command of
       <a href="../commands/web/open(url)">web &raquo; <code>open()</code></a> is invoked.
@@ -2119,7 +2143,7 @@
     </td>
     <td>boolean</td>
     <td>true</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       Determine if the target browser should be initialized by Nexial in incognito/private mode. The common
       practice is to <u>ALWAYS</u> run browser in such mode to avoid residual side-effects to the browser between
@@ -2139,7 +2163,7 @@
     </td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       Specify the initial browser window size to be opened during test execution. Generally if windows size is not
       provided, the driver uses either previously-set or self-determined <code>width/height</code> during runtime.
@@ -2170,7 +2194,7 @@
     </td>
     <td>boolean</td>
     <td>true</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determine the browser page stability during test execution. Generally most of the modern web applications
       are rich in interactivity which require some background proceed to be completed when page gets loaded. But
@@ -2189,7 +2213,7 @@
     </td>
     <td>millisecond</td>
     <td>3000</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Time allotted, in millisecond, to allow the system is settled down and process any <em>clean up</em> after the
       last browser window is closed. The default for this is <code>3000</code>, which means the execution of
@@ -2201,7 +2225,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.pollWaitMs"><code>nexial.pollWaitMs</code></a></td>
     <td>milliseconds</td>
     <td>30000</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       The time to wait for the impact caused by an action (such as click) to subside. In modern web-based
       application, esp. those implemented with AJAX, not all the resulting elements (DOM, resource, etc.) are
@@ -2218,7 +2242,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.uiRenderWaitMs"><code>nexial.uiRenderWaitMs</code></a></td>
     <td>milliseconds</td>
     <td>3000</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       The number of milliseconds to wait before taking a screenshot on current browser. This would allow the
       UI elements to "<em>settle down</em>".
@@ -2228,7 +2252,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.waitSpeed"><code>nexial.waitSpeed</code></a></td>
     <td>integer</td>
     <td>3</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determine how much time to wait for a dynamic page/response to stabilize before proceeding to next test
       step. This is set at a 400ms increment.
@@ -2240,7 +2264,7 @@
     </td>
     <td>millisecond</td>
     <td>15000</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Sets the amount of time (in millisecond) to wait for a page load to complete before considering the page
       load event (such as <a href="../commands/web/open(url)">web &raquo; <code>open(url)</code></a> is
@@ -2251,7 +2275,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.web.alwaysWait"><code>nexial.web.alwaysWait</code></a></td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Enable auto-continuation mode so that browser will wait for requested element with 10 ms poll. This
       technique can help reduce the use of implicit or explicit wait.
@@ -2263,7 +2287,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       By default, Nexial uses Selenium API (i.e. via <code>WebElement</code>) for click event. This generally
       works. However with the combination of a certain browser and certain web application, timing sometimes work
@@ -2283,7 +2307,7 @@
     </td>
     <td>object</td>
     <td></td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       Metadata for the browser for the current execution. For more information, visit
       <a href="../commands/web/index#browser-metadata">Browser Metadata</a>.
@@ -2295,7 +2319,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       For web application, it is not uncommon that the "type" event is recognized only after the target web
       element has lost its focus. In other words, while entering text into a web element, no notification is
@@ -2313,7 +2337,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Instruct Nexial to forcefully clear a textbox or textarea input via <code>BACKSPACE</code> key.<br/>
       <br/>
@@ -2330,7 +2354,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       (<strong><code>web</code></strong> commands only). When set to <code>true</code>, Nexial will check for the
       presence of JavaScript alert/confirm/prompt dialog after a web command (such as click or type) and before
@@ -2355,7 +2379,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       For browser-based testing only. Determine the behavior to used if an unexpected Alert is found. If set to
       true, unexpected alert will be ignored.
@@ -2365,7 +2389,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.lastAlertText"><code>nexial.lastAlertText</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       (<a href="../commands/webalert"><strong><code>webalert</code></strong></a> commands only). The text of the
       last javascript alert found during test execution. For example:<br/>
@@ -2378,7 +2402,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>RENAMED FROM THE OUTDATED <code>nexial.highlight</code> FOR CONSISTENCY AND PROPER NAMESPACING.</b>
       <br/><br/>
@@ -2402,7 +2426,7 @@
     </td>
     <td>millisecond</td>
     <td>250</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>RENAMED FROM THE OUTDATED <code>nexial.highlightWaitMs</code> FOR CONSISTENCY AND PROPER NAMESPACING.</b>
       <br/>
@@ -2419,7 +2443,7 @@
     </td>
     <td>text</td>
     <td><code>background: #faf557</code></td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       The applicable CSS style to the target web element during highlighting. This is only effective when
       <a href="#nexial.web.highlight"><code>nexial.web.highlight</code></a> is set to <code>true</code>.
@@ -2431,7 +2455,7 @@
     </td>
     <td>boolean</td>
     <td>true</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       During web automation, it is possible that the target web element might not be visible on the screen.
       Perhaps it is below or above the viewing area of the host browser. To help clarify intent, it might be
@@ -2462,7 +2486,7 @@
     </td>
     <td>text</td>
     <td>middle</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Set the starting point on the target element from which to initiate a "drag" movement. See
       <a href="../commands/web/dragTo(fromLocator,xOffset,yOffset)#nexial.web.dragFrom">
@@ -2482,14 +2506,12 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>
         ONLY APPLICABLE TO THE FOLLOWING COMMANDS:
-        <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a>
-        </li>
-        <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a>
-        </li>
+        <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a></li>
+        <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a></li>
       </b>
 
       When Nexial is capturing data grid into a CSV file (via one of the commands above), it does so by scanning
@@ -2521,14 +2543,12 @@
     </td>
     <td>text</td>
     <td><code>name</code></td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>
         ONLY APPLICABLE TO THE FOLLOWING COMMANDS:
-        <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a>
-        </li>
-        <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a>
-        </li>
+        <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a></li>
+        <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a></li>
       </b>
       <br/>
 
@@ -2629,14 +2649,12 @@
     </td>
     <td>text</td>
     <td><code>type</code></td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>
         ONLY APPLICABLE TO THE FOLLOWING COMMANDS:
-        <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a>
-        </li>
-        <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a>
-        </li>
+        <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a></li>
+        <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a></li>
       </b>
       <br/>
 
@@ -2705,14 +2723,12 @@
     </td>
     <td>text</td>
     <td><code>state</code></td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>
         ONLY APPLICABLE TO THE FOLLOWING COMMANDS:
-        <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a>
-        </li>
-        <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a>
-        </li>
+        <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a></li>
+        <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a></li>
       </b>
       <br/>
 
@@ -2796,14 +2812,12 @@
     </td>
     <td>text</td>
     <td><code>type</code></td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>
         ONLY APPLICABLE TO THE FOLLOWING COMMANDS:
-        <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a>
-        </li>
-        <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a>
-        </li>
+        <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a></li>
+        <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a></li>
       </b>
       <br/>
 
@@ -2870,14 +2884,12 @@
     </td>
     <td>boolean</td>
     <td>true</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>
         ONLY APPLICABLE TO THE FOLLOWING COMMANDS:
-        <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a>
-        </li>
-        <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a>
-        </li>
+        <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a></li>
+        <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a></li>
       </b>
       <br/>
 
@@ -2890,14 +2902,12 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>
         ONLY APPLICABLE TO THE FOLLOWING COMMANDS:
-        <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a>
-        </li>
-        <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a>
-        </li>
+        <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a></li>
+        <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a></li>
       </b>
       <br/>
 
@@ -2916,7 +2926,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       <strong>Applicable only when <code>nexial.browser</code> is set to <code>safari</code>.</strong><br/>
       Instruct Nexial to use the
@@ -2934,7 +2944,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>For Electron application only</b>
 
@@ -2951,7 +2961,7 @@
       <a id="nexial.browser.logElectron"><code>nexial.browser.logElectron</code></a></td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Enable/Disable webdriver logging when automating against an Electron application. The
       <code>nexial.browser</code> System variable must be set to <code>electron</code>. When enabled, Nexial will
@@ -2969,7 +2979,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>ONLY APPLICABLE WHEN <code>nexial.browser.logElectron</code> IS SET TO <code>true</code></b><br/>
       <br/>
@@ -2988,7 +2998,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Enable/Disable webdriver logging when automating against Chrome browser. The <code>nexial.browser</code>
       System variable must be set to <code>chrome</code> or <code>chrome-headless</code>. When enabled, Nexial
@@ -3007,7 +3017,7 @@
     </td>
     <td>text</td>
     <td></td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       Specify the user profile directory for the currently specified browser (via <a href="#nexial.browser">
       <code>nexial.browser</code></a>). The user profile usually store cookies, caches and user preferences, which
@@ -3026,7 +3036,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.forceIE32"><code>nexial.forceIE32</code></a></td>
     <td>boolean</td>
     <td>false</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       <strong>Applicable only for automating Internet Explorer.</strong><br/>
       This system variable instructs Nexial on which version of <strong>IEDriverServer</strong> to use for
@@ -3059,7 +3069,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       <strong>Applicable only for Internet Explorer Browser.</strong><br/>
       <ul>
@@ -3079,7 +3089,7 @@
     <td nowrap="nowrap" class="varname"><a id="webdriver.ie.driver"><code>webdriver.ie.driver</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       <strong>Applicable only for automating Internet Explorer.</strong><br/>
       The location of the IE driver binary (ie IEDriverServer). By default, Nexial will determine the appropriate
@@ -3101,7 +3111,7 @@
     </td>
     <td>text</td>
     <td>FATAL</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       <strong>Applicable only for automating Internet Explorer.</strong><br/>
       Specifies the level at which logging messages are output. Valid values are <code>FATAL</code>,
@@ -3123,7 +3133,7 @@
     </td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       <strong>Applicable only for automating Internet Explorer.</strong>
       Specifies the full path and file name of the log file.<br/>
@@ -3142,7 +3152,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       <strong>Applicable only for automating Internet Explorer.</strong><br/>
       Suppresses diagnostic output when the IE driver is started.<br/>
@@ -3166,7 +3176,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.imageTolerance"><code>nexial.imageTolerance</code></a></td>
     <td>decimal</td>
     <td>0</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       For <code>image</code> commands only. Determine the amount of tolerance (0 to 100) when comparing two image
       artifacts. 0 means "zero-tolerance".
@@ -3176,7 +3186,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.imageDiffColor"><code>nexial.imageDiffColor</code></a></td>
     <td>string</td>
     <td>red</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       For <code>image</code> commands only. Determine the color for highlighting difference when comparing two
       image artifacts. Available colors for highlighting are <code>red</code>, <code>yellow</code>,
@@ -3188,7 +3198,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       For <code>image</code> commands only. Determine the images to be trimmed before comparing or not. Default is
       <code>false</code>. To trim off spaces from images before comparing, set this variable to <code>true</code>.
@@ -3198,7 +3208,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.image.trimColor"><code>nexial.image.trimColor</code></a></td>
     <td>string</td>
     <td>255,255,255</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       For <code>image</code> commands only. Determine the color of trimming off spaces before comparing two
       image artifacts. Default RGB color code of trimming spaces is <code>255,255,255</code>, which is white. One
@@ -3242,7 +3252,7 @@
     </td>
     <td>milliseconds</td>
     <td>300000</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determine the connection timeout value (in milliseconds) until a connection is established. A timeout value
       of zero is interpreted as an infinite timeout. Default is 5 minutes.
@@ -3252,7 +3262,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.ws.readTimeout"><code>nexial.ws.readTimeout</code></a></td>
     <td>milliseconds</td>
     <td>300000</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determine the socket timeout value when reading response payload from either a reused or new connection.
       Default is 5 minutes.
@@ -3262,7 +3272,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.ws.keepAlive"><code>nexial.ws.keepAlive</code></a></td>
     <td>boolean</td>
     <td>true</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Set to <code>true</code> to turn on<a href="https://en.wikipedia.org/wiki/Keepalive" class="external-link"
                                             target="_nexial_external">socket keep-alive</a>, which has
@@ -3278,7 +3288,7 @@
       <a id="nexial.ws.enableRedirects"><code>nexial.ws.enableRedirects</code></a></td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>Determines whether redirects should be handled automatically.</td>
   </tr>
   <tr>
@@ -3287,7 +3297,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determines whether the '<code>Expect: 100-Continue</code>' handshake is enabled for HTTP methods with
       payload body (such as POST and PUT). The purpose of the '<code>Expect: 100-Continue</code>' handshake is
@@ -3310,7 +3320,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determines whether circular redirects (redirects to the same location) should be allowed. The HTTP
       specification
@@ -3324,7 +3334,7 @@
     </td>
     <td>boolean</td>
     <td>true</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determines whether relative redirects should be rejected. An older HTTP 1.1 specification requires the
       location value be an absolute URI. But since most browsers tolerates relative URI,
@@ -3339,7 +3349,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determine if request query string or request body should be trimmed (beginning and ending spaces removed)
       prior to it being sent to target URI.
@@ -3351,7 +3361,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       This System variable is applicable when the corresponding request body is expressed as a fully qualified file
       path. Nexial has the capability to use such file content in binary form such as the case for images or PDF,
@@ -3374,7 +3384,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.ws.header"><code>nexial.ws.header.&ast;</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Execution-bound HTTP header(s) to be used for each HTTP request (regardless of method). This is a
       convenience mechanism since one would only need to define a set of common HTTP headers in the data file
@@ -3414,7 +3424,7 @@
     </td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td rowspan="4">
       Authenticate HTTP interaction via the digest authentication scheme as defined in RFC 2617. All but
       <code>nexial.ws.digest.nonce</code> are required configuration parameters to activate such authentication.
@@ -3427,14 +3437,14 @@
     </td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
   </tr>
   <tr>
     <td nowrap="nowrap" class="varname"><a id="nexial.ws.digest.realm"><code>nexial.ws.digest.realm</code></a>
     </td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
   </tr>
   <tr>
     <td nowrap="nowrap" class="varname">
@@ -3442,13 +3452,13 @@
     </td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
   </tr>
   <tr>
     <td nowrap="nowrap" class="varname"><a id="nexial.ws.basic.user"><code>nexial.ws.basic.user</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td rowspan="2">
       Authentication HTTP interaction via the basic authentication scheme as defined in RFC 2617. This
       authentication scheme is insecure, as the credentials are transmitted in clear text. Both of these
@@ -3461,7 +3471,7 @@
     </td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
   </tr>
   <tr>
     <td nowrap="nowrap" class="varname">
@@ -3469,7 +3479,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       When set to <code>true</code> (default is <code>false</code>), Nexial will record the request and response
       detail for each API call made via <a href="../commands/ws">ws</a> commands. See the
@@ -3482,7 +3492,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       When set to <code>true</code> (default is <code>false</code>), Nexial will record summary information for
       each API call made via <a href="../commands/ws">ws</a> commands. See the
@@ -3500,7 +3510,7 @@
     </td>
     <td>millisecond</td>
     <td>180000</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       In order to support the download to file that might potentially take longer than the execution time, Nexial
       will attempt to wait for the asynchronous HTTP invocations (if any) to complete before shutting down. The
@@ -3520,7 +3530,7 @@
     </td>
     <td>millisecond</td>
     <td>3000</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Specify the time to allow for a taskbar-based notification to stay visible. Such notification would display
       log information as issued by the <code>desktop</code> commands, and they are displayed as a
@@ -3534,7 +3544,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Specify if screenshot should be taken for the entire desktop or only limit to the target AUT.
       If <code>true</code>, the screen capture will capture the entire desktop, possibly including other
@@ -3550,7 +3560,7 @@
     </td>
     <td>boolean</td>
     <td>true</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       When automating the editing of a table cell (desktop application only), it is often a good idea to bring
       focus to the target row or cell prior to commencing the editing. This is the default behavior for Nexial.
@@ -3569,7 +3579,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       This System variable applies to the following commands:
       <ul>
@@ -3603,7 +3613,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Specify if any uncertainty of showing up of dialog boxes while editing the desktop table cells. If any such
       dialog box comes up, Nexial will stop further editing the table cells and the step will be failed.
@@ -3615,7 +3625,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determine if Nexial should "join session" with an existing Winium instance or create its own (i.e. new).
       This configuration would only make sense to be set to true if <code>nexial.winiumPort</code> is also
@@ -3629,7 +3639,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.winiumPort"><code>nexial.winiumPort</code></a></td>
     <td>number</td>
     <td>&nbsp;</td>
-    <td class="highlight-red">true</td>
+    <td class="read-only">read-only</td>
     <td>
       Specify the port to use (by Winium driver) when automating against a desktop application. Winium uses this
       port to communicate between Nexial and the Winium command processor. If none specified, Nexial will search
@@ -3640,7 +3650,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.winiumSoloMode"><code>nexial.winiumSoloMode</code></a></td>
     <td>boolean</td>
     <td>true</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Determine if Nexial should run the current AUT exe in "Solo" mode (default) - which means to reuse
       existing instances if found. This means that one could forcefully configure the AUT to run as a single
@@ -3670,7 +3680,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Specify in the scenario where a single row is returned as a result of executing a SQL statement, whether
       Nexial should pack the result set (i.e.the single row) by removing all <code>NULL</code> columns.<br/>
@@ -3841,7 +3851,7 @@
     </td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>[REQUIRED]</b> This is the username as found in
       <a href="https://www.browserstack.com/accounts/settings" class="external-link" target="_nexial_external">
@@ -3854,7 +3864,7 @@
     </td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>[REQUIRED]</b> This is the access key as found in
       <a href="https://www.browserstack.com/accounts/settings" class="external-link" target="_nexial_external">
@@ -3867,7 +3877,7 @@
     </td>
     <td>text</td>
     <td>chrome</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Specify the browser to use when executing browser-based automation on BrowserStack. Valid value would be
       limited to what
@@ -3882,7 +3892,7 @@
     </td>
     <td>text</td>
     <td>latest stable</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Specify the browser version to use when executing browser-based automation on BrowserStack. Valid value
       would be limited to
@@ -3896,7 +3906,7 @@
     </td>
     <td>boolean</td>
     <td>true</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       As per BrowserStack documentation: Required if you want to generate screenshots at various steps in your
       test.
@@ -3908,7 +3918,7 @@
     </td>
     <td>text</td>
     <td>1024x768</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Set the resolution of target VM before beginning of your automation. Below is what BrowserStack
       supports:<br/>
@@ -3930,7 +3940,7 @@
     </td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Allow user to group a set of automation under a specific label that would represent a specific AUT build.
     </td>
@@ -3941,7 +3951,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Required if you are <a href="https://www.browserstack.com/local-testing-internals" class="external-link"
                              target="_nexial_external">testing against internal/local servers</a>. Nexial will
@@ -3956,7 +3966,7 @@
     </td>
     <td>boolean</td>
     <td>true</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       NOTE: Only applicable when <code>nexial.browserstack.enablelocal</code> is set to <code>true</code>.<br/>
       <br/>
@@ -3975,7 +3985,7 @@
     </td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       OS you want to test. For example: <code>WINDOWS</code>, <code>OS X</code>
     </td>
@@ -3986,7 +3996,7 @@
     </td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       OS version you want to test. For example:<br/>
       <br/>
@@ -4001,7 +4011,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>Capture additional details if an automation session should crash.</td>
   </tr>
   <tr>
@@ -4010,7 +4020,7 @@
     </td>
     <td>*&nbsp;</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Nexial will pass on all BrowserStack-specific "capabilities" to BrowserStack during automation. See the
       <a href="https://www.browserstack.com/automate/capabilities#" class="external-link" target="_nexial_link">
@@ -4047,7 +4057,7 @@
     <td nowrap="nowrap" class="varname"><a id="cbt.username"><code>cbt.username</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>[REQUIRED]</b> This is the username found in
       <a href="https://app.crossbrowsertesting.com/selenium/run" class="external-link" link="_nexial_link">
@@ -4058,7 +4068,7 @@
     <td nowrap="nowrap" class="varname"><a id="cbt.authkey"><code>cbt.authkey</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>[REQUIRED]</b> This is the Auth Key found in
       <a href="https://app.crossbrowsertesting.com/selenium/run" class="external-link" link="_nexial_link">
@@ -4069,7 +4079,7 @@
     <td nowrap="nowrap" class="varname"><a id="cbt.browserName"><code>cbt.browserName</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <b>[REQUIRED]</b> The name of the browser to test. For a list of supported browsers, check out
       <a href="https://help.crossbrowsertesting.com/selenium-testing/tutorials/crossbrowsertesting-automation-capabilities/"
@@ -4082,7 +4092,7 @@
     <td nowrap="nowrap" class="varname"><a id="cbt.screenResolution"><code>cbt.screenResolution</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       (<i>OPTIONAL</i>) The preferred resolution of the OS for automated testing. The default is `1366x768`.<br/>
       Only applicable for desktop browser.
@@ -4092,7 +4102,7 @@
     <td nowrap="nowrap" class="varname"><a id="cbt.version"><code>cbt.version</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       (<i>OPTIONAL</i>) The browser version to test. Default is <code>latest</code>.<br/>
       Only applicable for desktop browser.
@@ -4102,7 +4112,7 @@
     <td nowrap="nowrap" class="varname"><a id="cbt.platform"><code>cbt.platform</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       (<b>REQUIRED</b> for desktop browser) OS for the target browser.<br/>
       Only applicable for desktop browser.
@@ -4112,7 +4122,7 @@
     <td nowrap="nowrap" class="varname"><a id="cbt.deviceName"><code>cbt.deviceName</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       (<b>REQUIRED</b> for mobile browser) The target mobile device name.<br/>
       Only applicable for mobile browser automation.
@@ -4122,7 +4132,7 @@
     <td nowrap="nowrap" class="varname"><a id="cbt.deviceOrientation"><code>cbt.deviceOrientation</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       <code>landscape</code> or <code>portrait</code> (default).<br/>
       Only applicable for mobile browser automation.
@@ -4132,7 +4142,7 @@
     <td nowrap="nowrap" class="varname"><a id="cbt.build"><code>cbt.build</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       (<i>OPTIONAL</i>) free-form description of the build version of the target application.
     </td>
@@ -4141,7 +4151,7 @@
     <td nowrap="nowrap" class="varname"><a id="cbt.name"><code>cbt.name</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       (<i>OPTIONAL</i>) free-form description of your test.
     </td>
@@ -4150,7 +4160,7 @@
     <td nowrap="nowrap" class="varname"><a id="cbt.record_video"><code>cbt.record_video</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       (<i>OPTIONAL</i>) <code>true</code> (default) to start video recording of the target browser during test
       (max length 10 minutes).
@@ -4160,7 +4170,7 @@
     <td nowrap="nowrap" class="varname"><a id="cbt.record_network"><code>cbt.record_network</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       (<i>OPTIONAL</i>) <code>true</code> to record the network packages incurred by the test automation.
     </td>
@@ -4169,7 +4179,7 @@
     <td nowrap="nowrap" class="varname"><a id="cbt.max_duration"><code>cbt.max_duration</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       (<i>OPTIONAL</i>) Maximum test length in seconds. Use to refrain from timing out during long tests.
       Default is 30 minutes.
@@ -4179,7 +4189,7 @@
     <td nowrap="nowrap" class="varname"><a id="cbt.timezone"><code>cbt.timezone</code></a></td>
     <td>text</td>
     <td>&nbsp;</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       (<i>OPTIONAL</i>) timezone set on the browser. A full list of values can be found
       <a href="https://help.crossbrowsertesting.com/selenium-testing/resources/list-of-timezones/"
@@ -4192,7 +4202,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       Required if you are <a href="https://help.crossbrowsertesting.com/local-connection/general/local-tunnel-overview/"
                              class="external-link" target="_nexial_external">testing against internal/local servers</a>.
@@ -4207,7 +4217,7 @@
     </td>
     <td>boolean</td>
     <td>true</td>
-    <td>false</td>
+    <td class="read-write">read/write</td>
     <td>
       NOTE: Only applicable when <code>cbt.enablelocal</code> is set to <code>true</code>.<br/>
       <br/>
