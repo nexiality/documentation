@@ -25,9 +25,9 @@
 
   table.sysvar a code { background-color: transparent; border: none; font-weight: normal; }
 
-  .read-only { background-color: #ffe7e7; }
+  .read-only { background-color: #ffe7e7; font-weight: bold }
 
-  .read-write { color: #ccc; }
+  .read-write { }
 
   .highlight-section {
     border-color:     rgb(150, 150, 150) !important;
@@ -654,6 +654,12 @@
     <td>false</td>
     <td class="read-write">read-write</td>
     <td>
+      Setting this System variable to <code>true</code> would activate
+      <a href="../userguide/ExecutionLogs#errortracker-error-only-log-file">ErrorTracker</a>, where each of the
+      failed steps of an execution would be tracked to a <code>logs/nexial-execution-errors.log</code> file. This
+      can greatly improve the process of root cause analysis or postmortem discovery since only errors and failed steps
+      are "trapped" in this designated file.<br/>
+      This feature is disabled by default (i.e. <code>false</code>).
     </td>
   </tr>
 

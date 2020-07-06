@@ -38,7 +38,14 @@ Notice that the output at row 7 is the same as the "text" property printed on ro
 
 -----
 
+#### `$(projectfile|executionErrorsAsHtml|tableOnly)`
+Specialized built-in function to convert [execution errors] into HTML. Use `true` for `tableOnly` parameter to generate 
+only the HTML table. See [ErrorTracker](../userguide/ExecutionLogs#errortracker-error-only-log-file) for more details. 
+
+-----
+
 ### See Also
 - [`$(syspath)`]($(syspath))
+
 
 <script>jQuery(document).ready(function () { newOperationSelect(); });</script>

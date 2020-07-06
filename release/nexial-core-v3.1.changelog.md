@@ -1,38 +1,40 @@
 ---
 layout: default
-title: nexial-core 3.1 (2020-07-0?)
+title: nexial-core 3.1 (2020-07-06)
 parent: release
 tags: release nexial-core 3.1
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v3.1_???" class="external-link" target="_nexial_link">Release 3.1</a>
-2020-07-??
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v3.1_852" class="external-link" target="_nexial_link">Release 3.1</a>
+2020-07-06
 
 
 ### General
 #### Fixes
-- fixed email notification template when execution terminates too abruptly
-- fixed SES-based email notification; possible SSL cert conflict with DocumentDB automation 
-- nexial.cmd needs to handle spaces in the directory name
-- ensure Nexial doesn't write too much data into a output excelc cell (should be less than 32k)
+- fixed email notification template when execution terminates too abruptly.
+- fixed SES-based email notification; possible SSL cert conflict with DocumentDB automation. 
+- nexial.cmd needs to handle spaces in the directory name.
+- ensure Nexial doesn't write too much data into a output excel cell (should be less than 32k).
 - fixed issue of skipping the section command which has nested section.
 #### Improvements
-- Execution Report will now show user response & comments provided in `step` and `step.inTime` commands.
-- Support for accessing response and comments within script execution using System variables `nexial.step.response` and `nexial.step.comment` respectively.
-- Support for chrome/firefox web driver auto update when browser updated to lower version (not latest).
-- If section has inner section then inner steps will not be considered in outer section step count.
-- Support for AWS SQS and S3 alternatives
-- log files will now automatically rollover at midnight 
-- additional Jenkins-specific information added to email notification.
-- make the timestamp on log files be more consistent.
+- Execution output will now show user response & comments provided in [`step`](../commands/step) and 
+  [`step.inTime`](../commands/step.inTime) commands.
+- Support for accessing response and comments within script execution using System variables 
+  [`nexial.step.response`](../systemvars/index.html#nexial.step.response) and 
+  [`nexial.step.comment`](../systemvars/index.html#nexial.step.comment) respectively.
+- Support for chrome/firefox web driver auto update when browser updated to lower version (i.e. not latest).
+- If a [section](../commands/base/section(steps)) has inner section then inner steps will no longer needed to be 
+  counted towards the outer section step count. This will make one's script authoring easier to maintain.
+- Support for AWS SQS and S3 alternative such as LocalStack and MinIO.
+- [Standard log](../userguide/ExecutionLogs#standard-log) files will now automatically rollover at midnight. 
+- Additional Jenkins-specific information added to email notification, making it more useful.
+- Make the timestamp on log files be more consistent. The unified format is now `yyyy-MM-dd HH:mm:ss.SSSS`.
+
 
 ### [Batch Files](../userguide/BatchFiles)
 - [`nexial-temp-clean.cmd|sh`](../userguide/BatchFiles#nexial-temp-clean): fix logic to evaluate temp folders that 
   are more than a day old.
-
-
-### [Nexial Interactive](../interactive)
 
 
 ### [System Variable](../systemvars)
@@ -43,15 +45,12 @@ comments: true
 
 
 ### [Nexial Filter](../flowcontrols/filter)
-- `is readable-file`: **NEW** filter to check for valid, readable file
-- `is not readable-file`: **NEW** filter to check for non-existent file
-- `is readable-path`: **NEW** filter to check for valid, readable path
-- `is not readable-path`: **NEW** filter to check for invalid or unreadable path
-- `is empty-path`: **NEW** filter to check for empty path (without files or sub-directories)
-- `is not empty-path`: **NEW** filter to check for non-empty path (some either files or sub-directories)
-
-
-### [Flow Control](../flowcontrols)
+- `is readable-file`: **NEW** filter to check for valid, readable file.
+- `is not readable-file`: **NEW** filter to check for non-existent file.
+- `is readable-path`: **NEW** filter to check for valid, readable path.
+- `is not readable-path`: **NEW** filter to check for invalid or unreadable path.
+- `is empty-path`: **NEW** filter to check for empty path (without files or sub-directories).
+- `is not empty-path`: **NEW** filter to check for non-empty path (some either files or sub-directories).
 
 
 [Built-In Function]
@@ -59,37 +58,20 @@ comments: true
   **NEW** function to convert the "execution-failure" logs into an HTML.
 
 
-### [Nexial Expression](../expressions)
-
-
 ### [base commands](../commands/base)
-new clipboard commands has been added to copy from/into clipboard.
-- [`clearClipboard()`](../commands/base/clearClipboard())
-- [`copyFromClipboard(var)`](../commands/base/copyFromClipboard(var))
-- [`copyIntoClipboard(text)`](../commands/base/copyIntoClipboard(text))
-
-### [csv commands](../commands/csv)
-
-
-### [excel commands](../commands/excel)
-
-
-### [desktop commands](../commands/desktop)
+- **NEW** clipboard-related commands has been added to copy to/from clipboard:
+  - [`clearClipboard()`](../commands/base/clearClipboard()) - clear from current clipboard.
+  - [`copyFromClipboard(var)`](../commands/base/copyFromClipboard(var)) - copy from current clipboard.
+  - [`copyIntoClipboard(text)`](../commands/base/copyIntoClipboard(text)) - copy/override into current clipboard.
 
 
 ### [localdb commands](../commands/localdb)
 - [`queryAsCSV(var,sql)`](../commands/localdb/queryAsCSV(var,sql)): **NEW** command to transform query result to CSV.
 
 
-### [image commands](../commands/image)
-
-
-### [pdf commands](../commands/pdf)
-
-
 ### [rdbms commands](../commands/rdbms)
-- supports `EXEC ` and `CALL ` keywords
-- improve console logs to aid in troubleshooting
+- supports `EXEC ` and `CALL ` SQL keywords.
+- improve console logs to aid in troubleshooting.
 - [`assertResultMatch(var,columns,search)`](../commands/rdbms/assertResultMatch(var,columns,search)) - **NEW** command 
   to verify that a query result contains certain data. `search` parameter can be prefixed with `REGEX:` for regular 
   expression check, `CONTAIN:` for substring check, or "as is" for equality check.
@@ -98,22 +80,17 @@ new clipboard commands has been added to copy from/into clipboard.
   `REGEX:` for regular expression check, `CONTAIN:` for substring check, or "as is" for equality check. 
 
 
-### [step](../commands/step) 
-
-
-### [step.inTime](../commands/step.inTime) 
-
 ### [ssh](../commands/ssh)
 - [`sftpMoveFrom(var,profile,remote,local)`](../commands/ssh/sftpMoveFrom(var,profile,remote,local)): supports 
-  wildcard moves (not recursive)
+  wildcard moves (not recursive).
 - [`sftpMoveTo(var,profile,local,remote)`](../commands/ssh/sftpMoveTo(var,profile,local,remote)): supports wildcard 
-  moves (not recursive)
+  moves (not recursive).
 - [`sftpCopyFrom(var,profile,remote,local)`](../commands/ssh/sftpCopyFrom(var,profile,remote,local)): supports wildcard 
-  copy (not recursive) 
+  copy (not recursive) .
 - [`sftpCopyTo(var,profile,local,remote)`](../commands/ssh/sftpCopyTo(var,profile,local,remote)): supports wildcard 
-  copy (not recursive)
+  copy (not recursive).
 - [`sftpDelete(var,profile,remote)](../commands/ssh/sftpDelete(var,profile,remote)): supports wildcard delete and 
-  deleting a remote directory 
+  deleting a remote directory. 
 
 
 ### [web commands](../commands/web)
@@ -145,18 +122,17 @@ new clipboard commands has been added to copy from/into clipboard.
 - [`nexial.browser.postCloseWaitMs`](../systemvars/index#nexial.browser.postCloseWaitMs): logical change; now this 
   System variable is only applicable when closing the last browser window, for performance reason.
 - [`waitForElementPresent(locator)`](../commands/web/waitForElementPresent(locator)): changed to 
-  [`waitForElementPresent(locator,waitMs)`](../commands/web/waitForElementPresent(locator,waitMs)) to improve control and flexibility.
-- [`waitUntilVisible(locator,waitMs)`](waitUntilVisible(locator,waitMs)): **NEW** command to wait until a Web element because visible.
-- [`waitUntilHidden(locator,waitMs)`](waitUntilHidden(locator,waitMs)): **NEW** command to wait until a Web element because hidden.
-- [`waitUntilEnabled(locator,waitMs)`](waitUntilEnabled(locator,waitMs)): **NEW** command to wait until a Web element because enabled.
-- [`waitUntilDisabled(locator,waitMs)`](waitUntilDisabled(locator,waitMs)): **NEW** command to wait until a Web element because disabled.
+  [`waitForElementPresent(locator,waitMs)`](../commands/web/waitForElementPresent(locator,waitMs)) to improve control 
+  and flexibility.
+- [`waitUntilVisible(locator,waitMs)`](waitUntilVisible(locator,waitMs)): **NEW** command to wait until a web element 
+  because visible.
+- [`waitUntilHidden(locator,waitMs)`](waitUntilHidden(locator,waitMs)): **NEW** command to wait until a web element 
+  becomes hidden.
+- [`waitUntilEnabled(locator,waitMs)`](waitUntilEnabled(locator,waitMs)): **NEW** command to wait until a web element 
+  becomes enabled.
+- [`waitUntilDisabled(locator,waitMs)`](waitUntilDisabled(locator,waitMs)): **NEW** command to wait until a web element 
+  becomes disabled.
 
 
 ### [webalert](../commands/webalert)
 - code fix to improve handling of stale web elements or window.
-
-
-### [webcookie commands](../commands/webcookie)
-
-
-### [ws commands](../commands/ws)

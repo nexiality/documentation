@@ -51,7 +51,7 @@ To setup Email Notification with Gmail, [click here](../tipsandtricks/Integratin
 ### Nexial Output-To-Cloud Setup
 Note that cloud storage support is not enabled by default (it's not free). One can enable such capability
 by adding the following configuration for S3 connectivity (in addition to setting
-[`nexial.outputToCloud`](../systemvars/content.html#nexial.outputToCloud) as <code>true</code>:
+[`nexial.outputToCloud`](../systemvars/index.html#nexial.outputToCloud) as <code>true</code>:
 
 | configuration          | notes                                                                                       |
 |:-----------------------|:--------------------------------------------------------------------------------------------|

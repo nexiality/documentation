@@ -8,3 +8,10 @@ comments: true
 
 
 Coming soon!
+
+Notes:
+- Plugins:
+  - https://plugins.jenkins.io/anything-goes-formatter/
+  - https://plugins.jenkins.io/ansicolor/
+  - https://plugins.jenkins.io/build-user-vars-plugin/
+4

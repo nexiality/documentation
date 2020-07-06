@@ -77,7 +77,7 @@ Nexial provides a few different forms of execution-time inspection:
 
 #### Disabled during Continuous Testing
 > **Note**: Nexial is designed to disable "pauses" in CI/CD environment, which it determines dynamically at runtime. 
-> One can also force [Nexial to consider current environment as CI/CD](../userguide/ExecutingNexialInCICD). 
+> One can also force [Nexial to consider current environment as CI/CD](ExecutingNexialInCICD). 
 
 
 -----
@@ -94,8 +94,8 @@ can be enabled from any test step, this is particularly useful for troubleshooti
 - Add [`PauseBefore()`](../flowcontrols/index#pausebefore()--pauseafter()) or 
   [`PauseAfter()`](../flowcontrols/index#pausebefore()--pauseafter()) to the flow control column of such step(s).
 - Optionally, set the system variable [`nexial.inspectOnPause`](../systemvars/index#nexial.inspectOnPause) as `true`. 
-  This can be done in [various places](../userguide/DataManagement).
-- [Execute your script](../userguide/BatchFiles#nexial) as one normally would. Nexial would pause the
+  This can be done in [various places](TargetedData).
+- [Execute your script](BatchFiles#nexial) as one normally would. Nexial would pause the
   execution just before (`PauseBefore()`) or just after (`PauseAfter()`) the test steps where the "pause" control 
   flow directive was placed. Now we can interact with Nexial to inspect data variables, etc.
 - When inspection is complete, one can press `ENTER` key or type in `:resume` to continue execution.
