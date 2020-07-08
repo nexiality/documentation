@@ -12,7 +12,8 @@ comments: true
 
 ### General
 #### Fixes
-
+- Fix issue with Excel parsing where `_x[NUMBER]_` is treated as UTF decoding and thus translated into UTF character.
+  Code fix circumvented the UTF translation.  
 #### Improvements
 
 
@@ -35,6 +36,10 @@ comments: true
 
 
 ### [rdbms commands](../commands/rdbms)
+- [`saveResult(db,sql,output)`](../commands/rdbms/saveResult(db,sql,output)): a query of zero row will no longer be 
+  considered as FAIL 
+- [`saveResults(db,sqls,outputDir)`](../commands/rdbms/saveResults(db,sqls,outputDir)): queries of zero row will no 
+  longer be considered as FAIL 
 
 
 ### [ssh](../commands/ssh)
