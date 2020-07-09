@@ -26,7 +26,11 @@ comments: true
 ### [Nexial Filter](../flowcontrols/filter)
 
 
-[Built-In Function]
+### [Expression](../expressions)
+- [WEB](../expressions/WEBexpression): slight output improvement (shorter)
+
+
+### [Built-In Function]
 
 
 ### [base commands](../commands/base)
@@ -53,6 +57,8 @@ comments: true
   - [`waitUntilEnabled(locator,waitMs)`](waitUntilEnabled(locator,waitMs)).
   - [`waitUntilDisabled(locator,waitMs)`](waitUntilDisabled(locator,waitMs)). 
   - the default `waitMs` (if not specified) is the same as `${nexial.pollWaitMs}`.
+- [`nexial.web.unfocusAfterType`](../systemvars/index.html#nexial.web.unfocusAfterType): added slight wait between 
+  typing and "tabbing" out of current web element.
 
 
 ### [webalert](../commands/webalert)
