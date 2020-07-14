@@ -23,6 +23,10 @@ comments: true
 ### [System Variable](../systemvars)
 
 
+### [Nexial Interactive](../interactive)
+- minor improvement on console output
+
+
 ### [Nexial Filter](../flowcontrols/filter)
 
 
