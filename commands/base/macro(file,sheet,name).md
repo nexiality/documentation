@@ -6,6 +6,7 @@ tags: command base
 comments: true
 ---
 
+> **Consider using [`macroFlex(macro,input,output)`](macroFlex(macro,input,output)) for greater flexibility and maintainability**
 
 ### Description
 The main idea with macro is to enable the reuse of a set of test steps. Not only the reuse of the scripting effort, 
