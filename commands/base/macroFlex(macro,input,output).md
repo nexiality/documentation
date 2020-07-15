@@ -29,6 +29,7 @@ Such are the initial impetus to creating `macroFlex`. The main idea is to isolat
 disruption to the calling script and other test artifacts during execution. Consider the following simple example:
 
 ##### Macro (macro1)
+
 |cmd type|command                |param 1             |param 2  |param 3|
 |--------|-----------------------|--------------------|---------|-------|
 |`number`|`increment(var,amount)`|`${num1}`           |`${num2}`|       |
@@ -36,6 +37,7 @@ disruption to the calling script and other test artifacts during execution. Cons
 <br/>
 
 ##### Script
+
 |cmd type|command                            |param 1             |param 2  |param 3|
 |--------|-----------------------------------|--------------------|---------|-------|
 |`base`  |`save(var,value)`                  |`${num1}`           |`37`     |       |
