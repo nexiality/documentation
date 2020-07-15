@@ -34,6 +34,7 @@ disruption to the calling script and other test artifacts during execution. Cons
 |--------|-----------------------|--------------------|---------|-------|
 |`number`|`increment(var,amount)`|`${num1}`           |`${num2}`|       |
 |`base`  |`verbose(text)`        |`The sum is ${num1}`|         |       |
+
 <br/>
 
 ##### Script
@@ -44,6 +45,7 @@ disruption to the calling script and other test artifacts during execution. Cons
 |`base`  |`save(var,value)`                  |`${num2}`           |`5`      |       |
 |`base`  |**`macroFlex(macro,input,output)`**|**`num1=${num1}`<br/>`num2=${num2}`**|**`num1=total`**|       |
 |`base`  |`verbose(text)`                    |`${num1} + ${num2} = ${total}`       |                |       |
+
 <br/>
 
 Th macro `macro1` is invoked from the script (line 3) via the `macroFlex` command. Looking at the macro, it is no 
