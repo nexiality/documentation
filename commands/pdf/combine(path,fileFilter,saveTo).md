@@ -1,6 +1,6 @@
 ---
 layout: default
-title: combine(String path,fileFilter,saveTo)
+title: combine(path,fileFilter,saveTo)
 parent: pdf
 tags: command pdf
 comments: true

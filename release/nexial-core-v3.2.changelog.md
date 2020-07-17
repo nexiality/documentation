@@ -47,8 +47,8 @@ comments: true
 
 
 ### [pdf commands](../commands/pdf)
-- [`combine(String path,fileFilter,saveTo)`](../commands/pdf/combine(String%20path,fileFilter,saveTo)) - **NEW** 
-  combining multiple PDF files into a single PDF file.
+- [`combine(path,fileFilter,saveTo)`](../commands/pdf/combine(path,fileFilter,saveTo)) - **NEW** combining multiple PDF 
+  files into a single PDF file.
 
 
 ### [rdbms commands](../commands/rdbms)

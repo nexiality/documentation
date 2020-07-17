@@ -79,6 +79,7 @@ the extraction strategy by setting up profile(s), using the data variables below
 - [`assertTextArray(pdf,textArray,ordered)`](assertTextArray(pdf,textArray,ordered))
 - [`assertTextNotPresent(pdf,text)`](assertTextNotPresent(pdf,text))
 - [`assertTextPresent(pdf,text)`](assertTextPresent(pdf,text))
+- [`combine(path,fileFilter,saveTo)`](combine(path,fileFilter,saveTo))
 - [`count(pdf,text,var)`](count(pdf,text,var))
 - [`saveAsPages(pdf,destination)`](saveAsPages(pdf,destination))
 - [`saveAsPdf(profile,content,file)`](saveAsPdf(profile,content,file))
