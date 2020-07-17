@@ -15,6 +15,8 @@ comments: true
 - Fix issue with Excel parsing where `_x[NUMBER]_` is treated as UTF decoding and thus translated into UTF character.
   Code fix circumvented the UTF translation.  
 #### Improvements
+- [ErrorTracker](../userguide/ExecutionLogs#errortracker-error-only-log-file): new feature to trap all step-wise errors
+  into a separate log file so that we can streamline root cause analysis.
 
 
 ### [Batch Files](../userguide/BatchFiles)
@@ -41,6 +43,7 @@ comments: true
 
 
 ### [localdb commands](../commands/localdb)
+- added code to handle the use of "reserved" words in column names.
 
 
 ### [rdbms commands](../commands/rdbms)
@@ -63,6 +66,7 @@ comments: true
   - the default `waitMs` (if not specified) is the same as `${nexial.pollWaitMs}`.
 - [`nexial.web.unfocusAfterType`](../systemvars/index.html#nexial.web.unfocusAfterType): added slight wait between 
   typing and "tabbing" out of current web element.
+- added error handling when Nexial timed out during the execution of a `wait...` command.
 
 
 ### [webalert](../commands/webalert)
