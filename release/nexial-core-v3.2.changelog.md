@@ -46,6 +46,11 @@ comments: true
 - added code to handle the use of "reserved" words in column names.
 
 
+### [pdf commands](../commands/pdf)
+- [`combine(String path,fileFilter,saveTo)`](../commands/pdf/combine(String%20path,fileFilter,saveTo)) - **NEW** 
+  combining multiple PDF files into a single PDF file.
+
+
 ### [rdbms commands](../commands/rdbms)
 - [`saveResult(db,sql,output)`](../commands/rdbms/saveResult(db,sql,output)): a query of zero row will no longer be 
   considered as FAIL 
