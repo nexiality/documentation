@@ -172,31 +172,29 @@ as part of the email notification. Suppose we have the following CSS:
 
 ```html
 <style>
-table.execution-errors {
-	background-color: #fdd;
-	font-size: 11pt;
-	border-spacing: 3px; 
-	border-collapse: separate;
-	padding: 5px;
-}
+    table.execution-errors {
+        background-color: #fff0f0;
+        font-size:        9pt;
+        padding:          5px;
+    }
 
-table.execution-errors th, table.execution-errors td {
-	text-align: left;
-	vertical-align: top;
-	padding: 3px;
-}
+    table.execution-errors th, table.execution-errors td {
+        text-align:     left;
+        vertical-align: top;
+        padding:        2px 5px;
+    }
 
-table.execution-errors th {
-	border-top: 1px solid black;
-	border-bottom: 1px solid black;
-}
+    table.execution-errors th {
+        border-top:       1px solid black;
+        border-bottom:    1px solid black;
+        background-color: #ebb;
+    }
 
-table.execution-errors td {
-	color: #800;
-	border-bottom: 1px solid #777;
-	border-left: 1px solid #777;
-	border-right: 1px solid #777;
-}
+    TABLE.execution-errors TD {
+        color:         #600;
+        border-bottom: 1px solid #777;
+        border-right:  1px solid #999;
+    }
 </style>
 ```
 
