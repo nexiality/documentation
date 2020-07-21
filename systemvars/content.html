@@ -697,6 +697,39 @@
   </tr>
   <tr>
     <td nowrap="nowrap" class="varname">
+      <a id="nexial.screenshotInFull"><code>nexial.screenshotInFull</code></a>
+    </td>
+    <td>boolean</td>
+    <td>false</td>
+    <td class="read-write">read/write</td>
+    <td>
+      When running <a href="../commands/web"><code>web</code> commands</a>, the norm has been using the underlying
+      WebDriver's screen capturing capability. However in some situation, it might be beneficial or perhaps
+      necessary to screen capture the entire web page instead. <br/>
+
+      By setting this System variable as <code>true</code> (default is <code>false</code>), Nexial will capture
+      the entire web page instead of what the browser renders.
+    </td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.screenshotInFullTimeout"><code>nexial.screenshotInFullTimeout</code></a>
+    </td>
+    <td>integer</td>
+    <td>5000</td>
+    <td class="read-write">read/write</td>
+    <td>
+      When running <a href="../commands/web"><code>web</code> commands</a>, the norm has been using the underlying
+      WebDriver's screen capturing capability. However in some situation, it might be beneficial or perhaps
+      necessary to screen capture the entire web page instead. So, while capturing full screenshot, the timeout needed to
+      load image before scrolling to next screen is specified via this variable. Default value is <code>5000</code>
+      (in milliseconds). This system variable only comes in effect if
+      <a href="index#nexial.screenshotInFull">base &raquo; <code>index#nexial.screenshotInFull</code></a> is set to <code>true</code>
+
+    </td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname">
       <a id="nexial.screenshot.caption"><code>nexial.screenshot.caption</code></a>
     </td>
     <td>text</td>

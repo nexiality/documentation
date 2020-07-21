@@ -23,6 +23,7 @@ maintainability:
 1. The data variables used by a macro must be correctly defined prior to invocation.
 2. The data variables created or modified by a macro could possibly conflict (and override) with its calling script.
 3. A macro might modify one or more System variables, which could adversely impact the rest of the execution.
+4. So, the data variables created or modified by a macro will not be accessible after completion of macro.
 
 Such are the initial impetus to creating `macroFlex`. The main idea is to isolate a set of data variables, assigned as 
 "inputs", to a macro and to extract a set of "outputs" produced by the same macro into data variables -- with minimum
@@ -32,18 +33,18 @@ disruption to the calling script and other test artifacts during execution. Cons
 
 |cmd type|command                |param 1             |param 2  |param 3|
 |--------|-----------------------|--------------------|---------|-------|
-|`number`|`increment(var,amount)`|`${num1}`           |`${num2}`|       |
+|`number`|`increment(var,amount)`|`num1`              |`${num2}`|       |
 |`base`  |`verbose(text)`        |`The sum is ${num1}`|         |       |
 
 <br/>
 
 ##### Script
 
-|cmd type|command                            |param 1             |param 2  |param 3|
-|--------|-----------------------------------|--------------------|---------|-------|
-|`base`  |`save(var,value)`                  |`${num1}`           |`37`     |       |
-|`base`  |`save(var,value)`                  |`${num2}`           |`5`      |       |
-|`base`  |**`macroFlex(macro,input,output)`**|**`num1=${num1}`<br/>`num2=${num2}`**|**`num1=total`**|       |
+|cmd type|command                            |param 1          |param 2  |param 3|
+|--------|-----------------------------------|-----------------|---------|-------|
+|`base`  |`save(var,value)`                  |`num1`           |`37`     |       |
+|`base`  |`save(var,value)`                  |`num2`           |`5`      |       |
+|`base`  |**`macroFlex(macro,input,output)`**|${macro}         |**`num1=${num1}`<br/>`num2=${num2}`**|**`num1=total`**|
 |`base`  |`verbose(text)`                    |`${num1} + ${num2} = ${total}`       |                |       |
 
 <br/>
@@ -92,8 +93,9 @@ information about this, visit the [`$(profile|macro)`](../../functions/$(project
 
 ### Example
 In below example, this macro accepts values for `url`, `title`, `searchButtonLoc` and `sectionLoc`. Also, it passes 
-result data values back to script like `matched` to `result1` in this example. So `matched` will be variable which 
-will be accessible within this macro only. User can assign multiply values in separate lines.
+result data values back to script like `matched` to `result1` in this example. In this case, if user have variable 
+`matched` outside this macro (probably in script or data), it will not be overridden. So, `matched` variable
+will be accessible within this macro only. User can specify multiple output params in separate lines.
 
 **Script**<br/>
 ![script](image/macroPlus_01.png)<br/>

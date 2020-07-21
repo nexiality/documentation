@@ -44,6 +44,16 @@ only the HTML table. See [ErrorTracker](../userguide/ExecutionLogs#errortracker-
 
 -----
 
+#### `$(projectfile|macro|file|sheet|name)`
+This specialized built-in function provides macro details such as macro file, sheet and macro name. These details mainly
+needed to be referred to invocation of macro from **[base &raquo; `macroFlex(macro,input,output)`](../commands/base/macroFlex(macro,input,output)))**.
+In this case, `file` can be relative path or absolute path of macro excel. For more details about parameters, go through
+**[base &raquo; `macro(file,sheet,name)`](../commands/base/macro(file,sheet,name)))**.<br/>
+In following example, first parameter of **[base &raquo; `macroFlex(macro,input,output)`](../commands/base/macroFlex(macro,input,output)))**
+command is the `$(projectfile)` built-in function which is used to invoke macro.<br/>
+![script](image/$(projectfile)_03.png)
+
+-----
 ### See Also
 - [`$(syspath)`]($(syspath))
 

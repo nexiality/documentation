@@ -29,5 +29,5 @@ Suppose we want to capture element image from news.google.com:<br/>
 ![](image/screenshot_02.png)
 
 
-
 ### See Also
+- [`screenshot(file,locator)`](screenshot(file,locator))

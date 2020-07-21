@@ -13,7 +13,7 @@ comments: true
 ### General
 #### Fixes
 - Fix issue with Excel parsing where `_x[NUMBER]_` is treated as UTF decoding and thus translated into UTF character.
-  Code fix circumvented the UTF translation.  
+  Code fix circumvented the UTF translation.
 #### Improvements
 - [ErrorTracker](../userguide/ExecutionLogs#errortracker-error-only-log-file): new feature to trap all step-wise errors
   into a separate log file so that we can streamline root cause analysis.
@@ -23,7 +23,10 @@ comments: true
 
 
 ### [System Variable](../systemvars)
-
+- [`nexial.screenshotInFull`](../systemvars/index#nexial.screenshotInFull): **New** system variable to capture 
+entire web page screen. Default value for this variable is `false`.
+- [`nexial.screenshotInFullTimeout`](../systemvars/index#nexial.screenshotInFullTimeout): **New** system variable 
+to provide time before scrolling down while capturing entire web page. Default value of this variable is `5000` milliseconds.
 
 ### [Nexial Interactive](../interactive)
 - minor improvement on console output
@@ -74,6 +77,8 @@ comments: true
 - [`nexial.web.unfocusAfterType`](../systemvars/index.html#nexial.web.unfocusAfterType): added slight wait between 
   typing and "tabbing" out of current web element.
 - added error handling when Nexial timed out during the execution of a `wait...` command.
+- [`screenshotInFull(file,timeout)`](../commands/web/screenshotInFull(file,timeout)): **NEW** command to capture entire 
+web page screenshot with scrolling timeout.
 
 
 ### [webalert](../commands/webalert)

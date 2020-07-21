@@ -177,6 +177,7 @@ available commands.
 - [`saveValue(var,locator)`](saveValue(var,locator))
 - [`saveValues(var,locator)`](saveValues(var,locator))
 - [`screenshot(file,locator)`](screenshot(file,locator))
+- [`screenshotInFull(file,timeout)`](screenshotInFull(file,timeout))
 - [`scrollElement(locator,xOffset,yOffset)`](scrollElement(locator,xOffset,yOffset))
 - [`scrollLeft(locator,pixel)`](scrollLeft(locator,pixel))
 - [`scrollPage(xOffset,yOffset)`](scrollPage(xOffset,yOffset))
