@@ -36,7 +36,9 @@ comments: true
 - [WEB](../expressions/WEBexpression): slight output improvement (shorter)
 
 
-### [Built-In Function]
+### [Built-In Function](../functions)
+- [`$(format|fileURI)`](../functions/$(format)#formatfileuritext): **NEW** function to convert local file path into a 
+  `file://` type URL.
 
 
 ### [base commands](../commands/base)

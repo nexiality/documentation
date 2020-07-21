@@ -16,6 +16,8 @@ This built-in function provides textual formatting of various common data type. 
 #### `$(format|base64decode|text)`
 base64 decode `text`.
 
+-----
+
 #### `$(format|base64encode|text)`
 base64 encode `text`.
   
@@ -58,6 +60,24 @@ Script:<br/>
 
 Output:<br/>
 ![output](image/$(format)_06.png)
+
+-----
+
+ 
+#### `$(format|fileURI|text)`
+Render `text` into a fully qualified file path using the `file://` URI scheme. Th assumption here is that `text` 
+resolves to a valid local file or path. If not, `text` will be appended with the fully qualified path of the current
+project diretory. This function is particularly useful when it is necessary to create a URL for a local file for the
+purpose of hypertext-based content rendering (such as HTML or XML).
+
+  
+**Example**<br/>
+1. `$(format|fileURI|C:\temp\myfile.txt)` will be rendered as `file:///C:/temp/myfile.txt`.
+2. `$(format|fileURI|\\network_drive\dir1\my documents\june 20202 reports.txt)` will be rendered as 
+   `file:////network_drive/dir1/my%20documents/june%202020%20reports.txt`.
+3. `$(format|fileURI|non_exisistent)` will be rendered as `file:///Users/user1/projects/MyProject/non_existent`. 
+   Assuming that there is no file or directory named as `non_existent` and the current project directory is 
+   `/Users/user1/projects/MyProject`.
 
 -----
 
