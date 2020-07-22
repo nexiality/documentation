@@ -17,6 +17,7 @@ comments: true
 #### Improvements
 - [ErrorTracker](../userguide/ExecutionLogs#errortracker-error-only-log-file): new feature to trap all step-wise errors
   into a separate log file so that we can streamline root cause analysis.
+  - minor HTML-level changes to improve the display of ErrorTracker logs (in email notification).
 
 
 ### [Batch Files](../userguide/BatchFiles)
@@ -78,7 +79,8 @@ to provide time before scrolling down while capturing entire web page. Default v
   typing and "tabbing" out of current web element.
 - added error handling when Nexial timed out during the execution of a `wait...` command.
 - [`screenshotInFull(file,timeout)`](../commands/web/screenshotInFull(file,timeout)): **NEW** command to capture entire 
-web page screenshot with scrolling timeout.
-
+  web page screenshot with scrolling timeout.
+- added more leniency in terms of exception handling when executing the `waitUntil...` and the `assert...` commands.
+  This results in more robust handling of slower or unreliable application response during automation.
 
 ### [webalert](../commands/webalert)
