@@ -62,6 +62,9 @@ to provide time before scrolling down while capturing entire web page. Default v
   considered as FAIL 
 - [`saveResults(db,sqls,outputDir)`](../commands/rdbms/saveResults(db,sqls,outputDir)): queries of zero row will no 
   longer be considered as FAIL 
+- fixed error when handling the execution of stored procedures which might contain multiple results (result set and 
+  possibly update row count). 
+- for executing stored procedure, both the `{CALL ...(...)}` and `EXEC ... ...` forms are supported now.
 
 
 ### [ssh](../commands/ssh)
