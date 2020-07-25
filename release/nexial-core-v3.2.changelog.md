@@ -18,6 +18,8 @@ comments: true
 - [ErrorTracker](../userguide/ExecutionLogs#errortracker-error-only-log-file): new feature to trap all step-wise errors
   into a separate log file so that we can streamline root cause analysis.
   - minor HTML-level changes to improve the display of ErrorTracker logs (in email notification).
+- Ensure Nexial (re)reads datasheets per plan step to ensure the latest information being parsed for execution. This 
+  enhancement supports the scenario where preceding plan step would modify data sheets for subsequent plan steps.
 
 
 ### [Batch Files](../userguide/BatchFiles)
@@ -85,5 +87,6 @@ to provide time before scrolling down while capturing entire web page. Default v
   web page screenshot with scrolling timeout.
 - added more leniency in terms of exception handling when executing the `waitUntil...` and the `assert...` commands.
   This results in more robust handling of slower or unreliable application response during automation.
+
 
 ### [webalert](../commands/webalert)
