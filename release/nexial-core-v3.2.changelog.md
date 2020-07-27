@@ -20,7 +20,7 @@ comments: true
   - minor HTML-level changes to improve the display of ErrorTracker logs (in email notification).
 - Ensure Nexial (re)reads datasheets per plan step to ensure the latest information being parsed for execution. This 
   enhancement supports the scenario where preceding plan step would modify data sheets for subsequent plan steps.
-
+- Added logic for opening report file in linux machine after execution.
 
 ### [Batch Files](../userguide/BatchFiles)
 
