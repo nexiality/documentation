@@ -53,8 +53,8 @@ to provide time before scrolling down while capturing entire web page. Default v
 
 
 ### [io commands](../commands/io)
-- [`waitForFile()`](../commands/io/waitForFile(file,minFileSize,waitMs,maxWaitMs)): **NEW** command to wait until a
-  file is stabilized in term of file size and last modification date.
+- [`waitForFile(file,minFileSize,waitMs,maxWaitMs)`](../commands/io/waitForFile(file,minFileSize,waitMs,maxWaitMs)):
+  **NEW** command to wait until a file is stabilized in term of file size and last modification date.
 
 
 ### [localdb commands](../commands/localdb)
@@ -101,5 +101,6 @@ to provide time before scrolling down while capturing entire web page. Default v
 - [`nexial.browser.windowPosition`](../systemvars/index#nexial.browser.windowPosition): allow user to set the initial
   position of the target browser window. Default is `0,0`, meaning top-left position of the current desktop.
 - [`moveTo(x,y)`](../commands/web/moveTo(x,y)): **NEW** command to move current browser window to another position.
+
 
 ### [webalert](../commands/webalert)
