@@ -22,6 +22,7 @@ comments: true
   enhancement supports the scenario where preceding plan step would modify data sheets for subsequent plan steps.
 - Added logic for opening report file in linux machine after execution.
 
+
 ### [Batch Files](../userguide/BatchFiles)
 
 
@@ -30,6 +31,7 @@ comments: true
 entire web page screen. Default value for this variable is `false`.
 - [`nexial.screenshotInFullTimeout`](../systemvars/index#nexial.screenshotInFullTimeout): **New** system variable 
 to provide time before scrolling down while capturing entire web page. Default value of this variable is `5000` milliseconds.
+
 
 ### [Nexial Interactive](../interactive)
 - minor improvement on console output
@@ -48,6 +50,11 @@ to provide time before scrolling down while capturing entire web page. Default v
 
 
 ### [base commands](../commands/base)
+
+
+### [io commands](../commands/io)
+- [`waitForFile()`](../commands/io/waitForFile(file,minFileSize,waitMs,maxWaitMs)): **NEW** command to wait until a
+  file is stabilized in term of file size and last modification date.
 
 
 ### [localdb commands](../commands/localdb)
@@ -93,6 +100,6 @@ to provide time before scrolling down while capturing entire web page. Default v
   encountered during browser automation should be displayed (default) or downloaded.
 - [`nexial.browser.windowPosition`](../systemvars/index#nexial.browser.windowPosition): allow user to set the initial
   position of the target browser window. Default is `0,0`, meaning top-left position of the current desktop.
-
+- [`moveTo(x,y)`](../commands/web/moveTo(x,y)): **NEW** command to move current browser window to another position.
 
 ### [webalert](../commands/webalert)

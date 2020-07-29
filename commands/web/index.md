@@ -143,6 +143,7 @@ available commands.
 - [`goBackAndWait()`](goBackAndWait())
 - [`maximizeWindow()`](maximizeWindow())
 - [`mouseOver(locator)`](mouseOver(locator))
+- [`moveTo(x,y)`](moveTo(x,y))
 - [`open(url)`](open(url))
 - [`openAndWait(url,waitMs)`](openAndWait(url,waitMs))
 - [`openHttpBasic(url,username,password)`](openHttpBasic(url,username,password))
