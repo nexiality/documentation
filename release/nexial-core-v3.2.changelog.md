@@ -87,6 +87,12 @@ to provide time before scrolling down while capturing entire web page. Default v
   web page screenshot with scrolling timeout.
 - added more leniency in terms of exception handling when executing the `waitUntil...` and the `assert...` commands.
   This results in more robust handling of slower or unreliable application response during automation.
+- [`nexial.browser.downloadTo`](../systemvars/index#nexial.browser.downloadTo): determine the target location to 
+  download files during browser automation.
+- [`nexial.browser.downloadPdf`](../systemvars/index#nexial.browser.downloadPdf): determine if any PDF document  
+  encountered during browser automation should be displayed (default) or downloaded.
+- [`nexial.browser.windowPosition`](../systemvars/index#nexial.browser.windowPosition): allow user to set the initial
+  position of the target browser window. Default is `0,0`, meaning top-left position of the current desktop.
 
 
 ### [webalert](../commands/webalert)

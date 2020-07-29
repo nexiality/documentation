@@ -2178,57 +2178,6 @@
   </tr>
   <tr>
     <td nowrap="nowrap" class="varname">
-      <a id="nexial.browser.incognito"><code>nexial.browser.incognito</code></a>
-    </td>
-    <td>boolean</td>
-    <td>true</td>
-    <td class="read-only">read-only</td>
-    <td>
-      Determine if the target browser should be initialized by Nexial in incognito/private mode. The common
-      practice is to <u>ALWAYS</u> run browser in such mode to avoid residual side-effects to the browser between
-      tests. The default is <strong><code>true</code></strong>.<br/>
-      <br/>
-      <strong>
-        Due to a
-        <a href="https://bugs.chromium.org/p/chromedriver/issues/detail?id=504" class="external-link"
-           target="_nexial_external">known/unresolved issue with chrome</a>, if your tests requires resizing
-        or maximizing target browser, the recommendation is to set this variable to <code>false</code>.
-      </strong>
-    </td>
-  </tr>
-  <tr>
-    <td nowrap="nowrap" class="varname">
-      <a id="nexial.browser.windowSize"><code>nexial.browser.windowSize</code></a>
-    </td>
-    <td>text</td>
-    <td>&nbsp;</td>
-    <td class="read-only">read-only</td>
-    <td>
-      Specify the initial browser window size to be opened during test execution. Generally if windows size is not
-      provided, the driver uses either previously-set or self-determined <code>width/height</code> during runtime.
-      In order to have a consistency, it is recommended to define browser height and width as desired initial
-      browser window size.<br/>
-      <br/>
-      For headless (<code><strong>chrome.headless and firefox.headless</strong></code>) this is a
-      <strong>MUST</strong>.
-      <u><strong>If no window size is provided, Nexial will default the window size for the headless browser to
-        1200x900</strong></u>.<br/>
-      <br/>
-      For regular UI browser if window size not provided, it will execute whatever window size determined by the
-      target browser found during execution. <br/>
-      <br/>
-      Dimension format as follows:
-      <ul>
-        <li>Expects lowercase "x" is allowed between width and height.
-          (e.g<code>1048<strong>x</strong>900</code>).
-        </li>
-        <li>Neither height nor width can be set to a value less than 100.</li>
-      </ul>
-      <img src="image/systemvar_20.png" alt="nexial.browser.windowSize example"/>
-    </td>
-  </tr>
-  <tr>
-    <td nowrap="nowrap" class="varname">
       <a id="nexial.enforcePageSourceStability"><code>nexial.enforcePageSourceStability</code></a>
     </td>
     <td>boolean</td>
@@ -2247,17 +2196,23 @@
     </td>
   </tr>
   <tr>
-    <td nowrap="nowrap" class="varname">
-      <a id="nexial.browser.postCloseWaitMs"><code>nexial.browser.postCloseWaitMs</code></a>
+    <td nowrap="nowrap" class="varname"><a id="nexial.waitSpeed"><code>nexial.waitSpeed</code></a></td>
+    <td>integer</td>
+    <td>3</td>
+    <td class="read-write">read/write</td>
+    <td>
+      Determine how much time to wait for a dynamic page/response to stabilize before proceeding to next test
+      step. This is set at a 400ms increment.
     </td>
-    <td>millisecond</td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname"><a id="nexial.uiRenderWaitMs"><code>nexial.uiRenderWaitMs</code></a></td>
+    <td>milliseconds</td>
     <td>3000</td>
     <td class="read-write">read/write</td>
     <td>
-      Time allotted, in millisecond, to allow the system is settled down and process any <em>clean up</em> after the
-      last browser window is closed. The default for this is <code>3000</code>, which means the execution of
-      <a href="../commands/web/close()">web &raquo; <code>close()</code></a> on the last browser window will add 3 seconds
-      by default to the overall execution time.
+      The number of milliseconds to wait before taking a screenshot on current browser. This would allow the
+      UI elements to "<em>settle down</em>".
     </td>
   </tr>
   <tr>
@@ -2275,81 +2230,6 @@
 
       Note that as per WebDriver specification, the poll wait time is only set once per initial use of a browser-
       specific webdriver instance.
-    </td>
-  </tr>
-  <tr>
-    <td nowrap="nowrap" class="varname"><a id="nexial.uiRenderWaitMs"><code>nexial.uiRenderWaitMs</code></a></td>
-    <td>milliseconds</td>
-    <td>3000</td>
-    <td class="read-write">read/write</td>
-    <td>
-      The number of milliseconds to wait before taking a screenshot on current browser. This would allow the
-      UI elements to "<em>settle down</em>".
-    </td>
-  </tr>
-  <tr>
-    <td nowrap="nowrap" class="varname"><a id="nexial.waitSpeed"><code>nexial.waitSpeed</code></a></td>
-    <td>integer</td>
-    <td>3</td>
-    <td class="read-write">read/write</td>
-    <td>
-      Determine how much time to wait for a dynamic page/response to stabilize before proceeding to next test
-      step. This is set at a 400ms increment.
-    </td>
-  </tr>
-  <tr>
-    <td nowrap="nowrap" class="varname">
-      <a id="nexial.web.pageLoadWaitMs"><code>nexial.web.pageLoadWaitMs</code></a>
-    </td>
-    <td>millisecond</td>
-    <td>15000</td>
-    <td class="read-write">read/write</td>
-    <td>
-      Sets the amount of time (in millisecond) to wait for a page load to complete before considering the page
-      load event (such as <a href="../commands/web/open(url)">web &raquo; <code>open(url)</code></a> is
-      considered as FAIL. If the timeout is negative, page loads can be indefinite.
-    </td>
-  </tr>
-  <tr>
-    <td nowrap="nowrap" class="varname"><a id="nexial.web.alwaysWait"><code>nexial.web.alwaysWait</code></a></td>
-    <td>boolean</td>
-    <td>false</td>
-    <td class="read-write">read/write</td>
-    <td>
-      Enable auto-continuation mode so that browser will wait for requested element with 10 ms poll. This
-      technique can help reduce the use of implicit or explicit wait.
-    </td>
-  </tr>
-  <tr>
-    <td nowrap="nowrap" class="varname">
-      <a id="nexial.browser.forceJSClick"><code>nexial.browser.forceJSClick</code></a>
-    </td>
-    <td>boolean</td>
-    <td>false</td>
-    <td class="read-write">read/write</td>
-    <td>
-      By default, Nexial uses Selenium API (i.e. via <code>WebElement</code>) for click event. This generally
-      works. However with the combination of a certain browser and certain web application, timing sometimes work
-      against expectation. Such anomaly is especially noticeable with IE and AJAX-rich web applications (from
-      which timing might be less than predictable). To circumvent this issue, one may turn on the feature of
-      forcefully issuing click event via JavaScript by setting <code>nexial.browser.forceJSClick</code> to
-      <code>true</code>.<br/>
-      <br/>
-      Consequently, this feature is also effective as a workaround for IE to handle the click event on a target
-      inside an iframe, which can be particularly problematic when the click event triggers a 'File Download'
-      that in turn triggers a IE-only 'Download Notification' outside of the iframe.
-    </td>
-  </tr>
-  <tr>
-    <td nowrap="nowrap" class="varname">
-      <a id="nexial.browser.meta"><code>nexial.browser.meta</code></a>
-    </td>
-    <td>object</td>
-    <td></td>
-    <td class="read-only">read-only</td>
-    <td>
-      Metadata for the browser for the current execution. For more information, visit
-      <a href="../commands/web/index#browser-metadata">Browser Metadata</a>.
     </td>
   </tr>
   <tr>
@@ -2410,6 +2290,180 @@
       employ the use of JavaScript dialog (such as <code>alert('...')</code>), it is likely a good idea to leave this
       feature off. Our rudimentary tests show a 12 - 20% time improvement when this feature is turned off, most
       noticeably when running under IE.
+    </td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname"><a id="nexial.web.alwaysWait"><code>nexial.web.alwaysWait</code></a></td>
+    <td>boolean</td>
+    <td>false</td>
+    <td class="read-write">read/write</td>
+    <td>
+      Enable auto-continuation mode so that browser will wait for requested element with 10 ms poll. This
+      technique can help reduce the use of implicit or explicit wait.
+    </td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.web.pageLoadWaitMs"><code>nexial.web.pageLoadWaitMs</code></a>
+    </td>
+    <td>millisecond</td>
+    <td>15000</td>
+    <td class="read-write">read/write</td>
+    <td>
+      Sets the amount of time (in millisecond) to wait for a page load to complete before considering the page
+      load event (such as <a href="../commands/web/open(url)">web &raquo; <code>open(url)</code></a> is
+      considered as FAIL. If the timeout is negative, page loads can be indefinite.
+    </td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.browser.postCloseWaitMs"><code>nexial.browser.postCloseWaitMs</code></a>
+    </td>
+    <td>millisecond</td>
+    <td>3000</td>
+    <td class="read-write">read/write</td>
+    <td>
+      Time allotted, in millisecond, to allow the system is settled down and process any <em>clean up</em> after the
+      last browser window is closed. The default for this is <code>3000</code>, which means the execution of
+      <a href="../commands/web/close()">web &raquo; <code>close()</code></a> on the last browser window will add 3 seconds
+      by default to the overall execution time.
+    </td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.browser.incognito"><code>nexial.browser.incognito</code></a>
+    </td>
+    <td>boolean</td>
+    <td>true</td>
+    <td class="read-only">read-only</td>
+    <td>
+      Determine if the target browser should be initialized by Nexial in incognito/private mode. The common
+      practice is to <u>ALWAYS</u> run browser in such mode to avoid residual side-effects to the browser between
+      tests. The default is <strong><code>true</code></strong>.<br/>
+      <br/>
+      <strong>
+        Due to a
+        <a href="https://bugs.chromium.org/p/chromedriver/issues/detail?id=504" class="external-link"
+           target="_nexial_external">known/unresolved issue with chrome</a>, if your tests requires resizing
+        or maximizing target browser, the recommendation is to set this variable to <code>false</code>.
+      </strong>
+    </td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.browser.windowSize"><code>nexial.browser.windowSize</code></a>
+    </td>
+    <td>text</td>
+    <td>&nbsp;</td>
+    <td class="read-only">read-only</td>
+    <td>
+      Specify the initial browser window size to be opened during test execution. Generally if windows size is not
+      provided, the driver uses either previously-set or self-determined <code>width/height</code> during runtime.
+      In order to have a consistency, it is recommended to define browser height and width as desired initial
+      browser window size.<br/>
+      <br/>
+      For headless (<code><strong>chrome.headless and firefox.headless</strong></code>) this is a
+      <strong>MUST</strong>.
+      <u><strong>If no window size is provided, Nexial will default the window size for the headless browser to
+        1200x900</strong></u>.<br/>
+      <br/>
+      For regular UI browser if window size not provided, it will execute whatever window size determined by the
+      target browser found during execution. <br/>
+      <br/>
+      Dimension format as follows:
+      <ul>
+        <li>Expects lowercase "x" is allowed between width and height.
+          (e.g<code>1048<strong>x</strong>900</code>).
+        </li>
+        <li>Neither height nor width can be set to a value less than 100.</li>
+      </ul>
+      <img src="image/systemvar_20.png" alt="nexial.browser.windowSize example"/>
+    </td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.browser.windowPosition"><code>nexial.browser.windowPosition</code></a>
+    </td>
+    <td>x,y</td>
+    <td>0,0</td>
+    <td class="read-only">read-only</td>
+    <td>
+      Specify the initial browser window position, in pixel, in relation to the primary monitor. The position
+      information is expected in the form of:<br/>
+      <pre>x value in pixel,y value in pixel</pre><br/>
+      The default value is <code>0,0</code>, which means top-left corner of the primary monitor. Specifying
+      <code>640,1</code> on a screen resolution of 1280x960 would put the browser window on the right side of the screen.
+    </td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.browser.downloadTo"><code>nexial.browser.downloadTo</code></a>
+    </td>
+    <td>text</td>
+    <td><a href="../functions/$(syspath)#syspathout"><code>$(syspath|out|fullpath)</code></a></td>
+    <td class="read-only">read-only</td>
+    <td>
+      <b>APPLICABLE FOR CHROME AND FIREFOX BROWSERS ONLY.</b><br/>
+
+      Specify the location to save any files downloaded from the current browser. By default, the download location is
+      set to the output directory of the corresponding execution.<br/>
+
+      This System variable is read during browser initialization. Any changes to this System variable after browser
+      initialization will have not effect until the execution is restarted.
+      <br/>
+    </td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.browser.downloadPdf"><code>nexial.browser.downloadPdf</code></a>
+    </td>
+    <td>boolean</td>
+    <td>false</td>
+    <td class="read-only">true</td>
+    <td>
+      <b>APPLICABLE FOR CHROME BROWSERS ONLY AT THIS TIME.</b><br/>
+
+      Specify if a PDF document encountered during automation would be display in the browser or downloaded
+      (to <a href="#nexial.browser.downloadTo"><code>nexial.browser.downloadTo</code></a>). By default, Nexial will open
+      the said PDF document to be opened in the current browser. In many situations it might be beneficial to download
+      the PDF instead. One can utilize the <a href="../commands/pdf"><code>pdf</code></a> commands for additional
+      value-added automation.<br/>
+
+      Note that when this System variable is set to <code>true</code>, PDF documents will be downloaded to
+      <a href="#nexial.browser.downloadTo"><code>nexial.browser.downloadTo</code></a>, which, by default, is set to
+      <a href="../functions/$(syspath)#syspathout"><code>$(syspath|out|fullpath)</code></a>.
+    </td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.browser.forceJSClick"><code>nexial.browser.forceJSClick</code></a>
+    </td>
+    <td>boolean</td>
+    <td>false</td>
+    <td class="read-write">read/write</td>
+    <td>
+      By default, Nexial uses Selenium API (i.e. via <code>WebElement</code>) for click event. This generally
+      works. However with the combination of a certain browser and certain web application, timing sometimes work
+      against expectation. Such anomaly is especially noticeable with IE and AJAX-rich web applications (from
+      which timing might be less than predictable). To circumvent this issue, one may turn on the feature of
+      forcefully issuing click event via JavaScript by setting <code>nexial.browser.forceJSClick</code> to
+      <code>true</code>.<br/>
+      <br/>
+      Consequently, this feature is also effective as a workaround for IE to handle the click event on a target
+      inside an iframe, which can be particularly problematic when the click event triggers a 'File Download'
+      that in turn triggers a IE-only 'Download Notification' outside of the iframe.
+    </td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.browser.meta"><code>nexial.browser.meta</code></a>
+    </td>
+    <td>object</td>
+    <td></td>
+    <td class="read-only">read-only</td>
+    <td>
+      Metadata for the browser for the current execution. For more information, visit
+      <a href="../commands/web/index#browser-metadata">Browser Metadata</a>.
     </td>
   </tr>
   <tr>
