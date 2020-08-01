@@ -21,6 +21,10 @@ comments: true
 - Ensure Nexial (re)reads datasheets per plan step to ensure the latest information being parsed for execution. This 
   enhancement supports the scenario where preceding plan step would modify data sheets for subsequent plan steps.
 - Added logic for opening report file in linux machine after execution.
+- Execution output generation:
+  - line breaks in [base &raquo; `verbose(text)`](../commands/base/verbose(text)) are now preserved
+  - skipped steps are no longer evaluated for data variable, function or expression expansions. This will speed up 
+    execution and avoid unwanted side effects.
 
 
 ### [Batch Files](../userguide/BatchFiles)
@@ -101,6 +105,7 @@ to provide time before scrolling down while capturing entire web page. Default v
 - [`nexial.browser.windowPosition`](../systemvars/index#nexial.browser.windowPosition): allow user to set the initial
   position of the target browser window. Default is `0,0`, meaning top-left position of the current desktop.
 - [`moveTo(x,y)`](../commands/web/moveTo(x,y)): **NEW** command to move current browser window to another position.
+- failure to download webdriver will no longer fail execution.
 
 
 ### [webalert](../commands/webalert)
