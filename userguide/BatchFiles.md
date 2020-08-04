@@ -102,7 +102,7 @@ This is the script used to setup the user specific configurations. This command 
 **Usage**
 1. Open a console and point it to `${NEXIAL_HOME}/bin`
 
-2. Run `nexial-crypt.cmd` (Windows) or `./nexial-crypt.sh` (*NIX, OSX) with the configuration file and the secret key 
+2. Run `nexial-setup.cmd` (Windows) or `./nexial-setup.sh` (*NIX, OSX) with the configuration file and the secret key 
    as follows:<br/>
    `nexial-setup.cmd -f "C:\Projects\config.data" -k "|7FDo8#Q;;mZ>G22"`
 

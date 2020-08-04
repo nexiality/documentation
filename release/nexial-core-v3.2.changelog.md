@@ -51,10 +51,14 @@ to provide time before scrolling down while capturing entire web page. Default v
 ### [Built-In Function](../functions)
 - [`$(format|fileURI)`](../functions/$(format)#formatfileuritext): **NEW** function to convert local file path into a 
   `file://` type URL.
-
+- [`$(projectfile|macro)`](../functions/$(projectfile)#projectfilemacrofilesheetname)): **NEW** function to provides
+  macro details such as macro file, sheet and macro name mainly to be referred to invocation of 
+  macro from **[base &raquo; `macroFlex(macro,input,output)`](../commands/base/macroFlex(macro,input,output)))**.
 
 ### [base commands](../commands/base)
-
+- [`macroFlex(macro,input,output)`](../commands/base/macroFlex(macro,input,output)): **NEW** command as extension to 
+[`macro(file,sheet,name)`](../commands/base/macro(file,sheet,name))` with functionality of providing inputs and 
+extracting outputs during invocation.
 
 ### [io commands](../commands/io)
 - [`waitForFile(file,minFileSize,waitMs,maxWaitMs)`](../commands/io/waitForFile(file,minFileSize,waitMs,maxWaitMs)):
