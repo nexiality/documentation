@@ -15,6 +15,7 @@ comments: true
 - Fix issue with Excel parsing where `_x[NUMBER]_` is treated as UTF decoding and thus translated into UTF character.
   Code fix circumvented the UTF translation.
 - Fix code to read from multiple datasheets with respect to change of iteration configuration between data sheets.
+- minor adjustments to the data file in `template/` directory to improve performance.
 #### Improvements
 - [ErrorTracker](../userguide/ExecutionLogs#errortracker-error-only-log-file): new feature to trap all step-wise errors
   into a separate log file so that we can streamline root cause analysis.
