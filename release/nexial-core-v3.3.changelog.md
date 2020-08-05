@@ -1,21 +1,19 @@
 ---
 layout: default
-title: nexial-core 3.2 (2020-08-05)
+title: nexial-core 3.3 (2020-09-??)
 parent: release
-tags: release nexial-core 3.2
+tags: release nexial-core 3.3
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v3.2_887" class="external-link" target="_nexial_link">Release 3.2</a>
-2020-08-04
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v3.3_???" class="external-link" target="_nexial_link">Release 3.3</a>
+2020-09-??
 
 
 ### General
 #### Fixes
 - Fix issue with Excel parsing where `_x[NUMBER]_` is treated as `UTF` decoding and thus translated into `UTF` character.
-  Code fix circumvented the `UTF` translation.
-- Fix code to read from multiple datasheets with respect to change of iteration configuration between data sheets.
-- minor adjustments to the data file in `template/` directory to improve performance.
+  Code fix circumvented the UTF translation.
 #### Improvements
 - [ErrorTracker](../userguide/ExecutionLogs#errortracker-error-only-log-file): **New** feature to trap all step-wise errors
   into a separate log file so that we can streamline root cause analysis.
@@ -47,15 +45,6 @@ to provide time before scrolling down while capturing entire web page. Default v
 ### [Built-In Function](../functions)
 - [`$(format|fileURI)`](../functions/$(format)#formatfileuritext): **NEW** function to convert local file path into a 
   `file://` type URL.
-- [`$(projectfile|macro)`](../functions/$(projectfile)#projectfilemacrofilesheetname)): **NEW** function to provides
-  macro details such as macro file, sheet and macro name mainly to be referred to invocation of 
-  macro from **[base &raquo; `macroFlex(macro,input,output)`](../commands/base/macroFlex(macro,input,output)))**.
-
-
-### [base commands](../commands/base)
-- [`macroFlex(macro,input,output)`](../commands/base/macroFlex(macro,input,output)): **NEW** command as extension to 
-[`macro(file,sheet,name)`](../commands/base/macro(file,sheet,name))` with functionality of providing inputs and 
-extracting outputs during invocation.
 
 
 ### [io commands](../commands/io)
