@@ -6,7 +6,7 @@ tags: release nexial-core 3.2
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v3.2_887" class="external-link" target="_nexial_link">Release 3.2</a>
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v3.2_0887" class="external-link" target="_nexial_link">Release 3.2</a>
 2020-08-04
 
 
