@@ -12,7 +12,7 @@ comments: true
 
 ### General
 #### Fixes
-
+- fix OS-specific path issue when handling path as command parameter
 #### Improvements
 
 
@@ -34,7 +34,7 @@ comments: true
 ### [json commands](../commands/json)
 - [`assertCorrectness(json,schema)`](../commands/json/assertCorrectness(json,schema)): now supports 
   [JSON Schema Core Draft v2019-09](http://json-schema.org/draft/2019-09/json-schema-core.html), in addition to 
-  existing support for Draft v4, v6, v7.
+  existing support for Draft v4, v6, v7. If schema is not specified, then `v2019-09` is the default.
 
 
 ### [localdb commands](../commands/localdb)
