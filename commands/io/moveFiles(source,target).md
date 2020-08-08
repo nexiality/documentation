@@ -8,7 +8,9 @@ comments: true
 
 
 ### Description
-This command moves the files from one location to other. The user need to provide `source` and `destination`.
+This command moves the file(s)s from one location (`source`) to other (`target`). Th `target` parameter can be 
+a file or directory. If the specified `target` does not exist and it ends with either `/` or '\' - indicating that it 
+is a directory - then Nexial will attempt to create such directory before moving `source` to `target`. 
 
 {% include _overrides_mode.md %}
 

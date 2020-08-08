@@ -13,6 +13,9 @@ comments: true
 ### General
 #### Fixes
 - fix OS-specific path issue when handling path as command parameter
+- fix screenshot link creation in execution output.
+- exposing [`nexial.lastError`](../systemvars/index#nexial.lastError) within macro execution
+- enable [`PauseAfter()`](../flowcontrols/index#pausebefore--pauseafter) within macro execution
 #### Improvements
 
 
@@ -29,6 +32,7 @@ comments: true
 
 
 ### [io commands](../commands/io)
+- [`moveFiles(source,target)`](../commands/io/moveFiles(source,target)): proactively create missing `target` directory.
 
 
 ### [json commands](../commands/json)
