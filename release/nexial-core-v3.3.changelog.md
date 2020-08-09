@@ -16,23 +16,29 @@ comments: true
 - fix screenshot link creation in execution output.
 - exposing [`nexial.lastError`](../systemvars/index#nexial.lastError) within macro execution
 - enable [`PauseAfter()`](../flowcontrols/index#pausebefore--pauseafter) within macro execution
+- consider setting data variables from with macro (`macroFlex()`)
 #### Improvements
 
 
 ### [System Variable](../systemvars)
 
 
+
 ### [Nexial Interactive](../interactive)
+
 
 
 ### [Expression](../expressions)
 
 
+
 ### [Built-In Function](../functions)
+
 
 
 ### [io commands](../commands/io)
 - [`moveFiles(source,target)`](../commands/io/moveFiles(source,target)): proactively create missing `target` directory.
+
 
 
 ### [json commands](../commands/json)
