@@ -57,3 +57,8 @@ comments: true
 
 
 ### [web commands](../commands/web)
+- [`screenshot(file,locator,removeFixed)`](../commands/web/screenshot(file,locator,removeFixed)): now support capturing
+  screenshot by disabling persistent navigation elements.
+- [`screenshotInFull(file,timeout,removeFixed)`](../commands/web/screenshotInFull(file,timeout,removeFixed)): now 
+  support capturing screenshot by disabling persistent navigation elements.
+
