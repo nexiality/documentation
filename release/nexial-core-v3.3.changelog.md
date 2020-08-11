@@ -75,4 +75,4 @@ comments: true
   screenshot by disabling persistent navigation elements.
 - [`screenshotInFull(file,timeout,removeFixed)`](../commands/web/screenshotInFull(file,timeout,removeFixed)): now 
   support capturing screenshot by disabling persistent navigation elements.
-
+- fixed the downloading of [CrossBrowserTesting](https://crossbrowsertesting.com/) webdriver.
