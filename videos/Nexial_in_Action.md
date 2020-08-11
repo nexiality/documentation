@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Videos - Nexial in Action
-level: 1
+title: Nexial in Action
+parent: Videos
 tags: commands userguide quickstart
 comments: true
 ---

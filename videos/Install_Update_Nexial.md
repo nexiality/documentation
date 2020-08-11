@@ -1,32 +1,38 @@
 ---
 layout: default
 title: Installing Nexial Automation The Easy Way
-level: 1
+parent: Videos
 tags: commands userguide quickstart
 comments: true
 ---
 
-## Installing and Upgrade Nexial Automation the Easy Way
-
-[Install & Upgrade Nexial Automation The Easy Way!](https://www.youtube.com/watch?v=n_EBXE7sWJ4&cc_load_policy=1)
-<iframe width="820" height="555" src="https://www.youtube-nocookie.com/embed/n_EBXE7sWJ4&cc_load_policy=1" 
+## [Install & Upgrade Nexial Automation The Easy Way!](https://www.youtube.com/watch?v=n_EBXE7sWJ4)
+<iframe width="820" height="555" src="https://www.youtube-nocookie.com/embed/n_EBXE7sWJ4" 
   frameborder="0" style="margin-bottom:20px" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 -----
 
-## References:
+## References & Links
+
+### Download Nexial Installer
+- [Nexial Installer](https://github.com/nexiality/nexial-installer#get-installer)
+
+### Download JDK
 - [Oracle Java SE Development Kit 14 Downloads](https://www.oracle.com/java/technologies/javase-jdk14-downloads.html)
 - [JDK 1.4.0.2 General-Availability Release, GNU GPL v2](https://jdk.java.net/14/)
 - [Amazon Corretto 11 (OpenJDK)](https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/downloads-list.html)
 - [AdoptOpenJDK OpenJDK  v14](https://adoptopenjdk.net/?variant=openjdk14&jvmVariant=hotspot)
-- [Download Nexial Installer](https://github.com/nexiality/nexial-installer#get-installer)
-- [GNU Wget for Windows](https://eternallybored.org/misc/wget/)
-- [unzip for Windows](http://stahlworks.com/dev/index.php?tool=zipunzip)
 
-## Code Sample
+### Additional Tools for Windows
+- [GNU Wget](https://eternallybored.org/misc/wget/)
+- [unzip](http://stahlworks.com/dev/index.php?tool=zipunzip)
 
-### Shell script (*NIX/Mac) for installing/upgrading latest version of Nexial Automation (suitable for CI/CD toolchain)
-```shell script
+
+## Code Sample (suitable for CI/CD toolchain)
+
+### Shell script (*NIX/Mac) for installing/upgrading latest version of Nexial Automation
+
+```
 #!/bin/sh
 
 
@@ -69,7 +75,8 @@ if [ ${build_ret} != 0 ]; then
 fi
 ```
 
-### Windows batch script for installing/upgrading latest version of Nexial Automation (suitable for CI/CD toolchain)
+### Windows batch script for installing/upgrading latest version of Nexial Automation
+
 ```batch
 @echo off
 
