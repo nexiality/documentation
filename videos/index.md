@@ -8,8 +8,6 @@ comments: true
 
 ## Nexial Automation Platform
 ** Watch and Learn **
-
-#### Videos
 - [Nexial in Action](Nexial_in_Action)
 - [Installing Nexial Automation The Easy Way](Install_Update_Nexial)
 - [Launch External Program and Tailing](Launch_External_Program_and_Tailing)
