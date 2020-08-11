@@ -208,6 +208,21 @@ Output:<br/>
 
 -----
 
+#### **`leftMost(length)`**
+Truncate the current TEXT value *FROM THE LEFT* so that its length is equal or less to `length`. If the current TEXT 
+value has a length less than `length`, then it will remain unchanged
+
+**Example**<br/>
+Script:<br/>
+![](image/TEXTexpression_83.png)
+
+This will print to the console:
+```
+Carni
+```
+
+-----
+
 #### **`length`**
 Transfer into a [`NUMBER`](NUMBERexpression) data type that contains the length of text.
 
@@ -279,6 +294,37 @@ Script:<br/>
 
 Output:<br/>
 ![output](image/TEXTexpression_41.png)
+
+-----
+
+#### **`padLeft(padWith,maxLength)`**
+Pad (add) existing text with `padWith` character(s) from the left, until `maxLength` length is reached. If current 
+`TEXT` expression value already exceeds specified `maxLength`, it will be truncated (from the right) to `maxLength`.
+
+**Example**<br/>
+Script:<br/>
+![](image/TEXTexpression_80.png)
+
+This will print out the following on the console:
+```
+......John
+```
+
+-----
+
+#### **`padRight(padWith,maxLength)`**
+Pad (add) existing text with `padWith` character(s) from the right, until `maxLength` length is reached. If current 
+`TEXT` expression value already exceeds specified `maxLength`, it will be truncated (from the right) to `maxLength`.
+
+**Example**<br/>
+Script:<br/>
+![](image/TEXTexpression_81.png)
+
+This will print out the following on the console:
+```
+John------
+```
+
 
 -----
 
@@ -416,6 +462,21 @@ Script:<br/>
 
 Output:<br/>
 ![output](image/TEXTexpression_61.png)
+
+-----
+
+#### **`rightMost(length)`**
+Truncate the current TEXT value so that its length is equal or less to `length`. If the current TEXT value has a length
+less than `length`, then it will remain unchanged
+
+**Example**<br/>
+Script:<br/>
+![](image/TEXTexpression_82.png)
+
+This will print to the console:
+```
+enture
+```
 
 -----
 

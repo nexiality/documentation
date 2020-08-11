@@ -199,7 +199,19 @@
     <td>
       Determine the elapsed time of any test step to be considered as out of compliance (outside of SLA). Such
       test step would be marked as <span style="color: rgb(153, 51, 0);"><strong>FAIL</strong></span> with
-      explanation in the <code>result</code>&nbsp;column.
+      explanation in the <code>result</code>&nbsp;column.<br/>
+      <br/>
+      Note that this SLA will not be applicable to the composite commands such as:<ul>
+      <li><a href="../commands/base/macro(file,sheet,name)">base &raquo; <code>macro(file,sheet,name)</code></a></li>
+      <li><a href="../commands/base/macroFlex(macro,input,output)">base &raquo; <code>macroFlex(macro,input,output)</code></a></li>
+      <li><a href="../commands/base/repeatUntil(steps,maxWaitMs)">base &raquo; <code>repeatUntil(steps,maxWaitMs)</code></a></li>
+      <li><a href="../commands/base/section(steps)">base &raquo; <code>section(steps)</code></a></li>
+      </ul>
+      These composite commands would likely violate the specified SLA on the account of the enclosed commands. Hence it
+      is more meaningful (and accurate) to uphold the SLA on the enclosed commands instead of the composite commands.<br/>
+      <br/>
+      Similarly, all the <code>wait...</code> commands will be exempt from this SLA check since such command would
+      likely contain its own SLA (aka timeout) enforcement.
     </td>
   </tr>
   <tr>
