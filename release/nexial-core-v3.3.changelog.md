@@ -46,13 +46,13 @@ comments: true
 ### [Built-In Function](../functions)
 
 
-### [number commands](../commands/number)
-- [`average(var,array)`](../commands/number/average(var,array)): exclude empty values during calculation
+### [base commands](../commands/base)
+- [`macroFlex(macro,input,output)`](../commands/base/macroFlex(macro,input,output)): supports empty input and output
+ parameters.
 
 
 ### [io commands](../commands/io)
 - [`moveFiles(source,target)`](../commands/io/moveFiles(source,target)): proactively create missing `target` directory.
-
 
 
 ### [json commands](../commands/json)
@@ -62,6 +62,10 @@ comments: true
 
 
 ### [localdb commands](../commands/localdb)
+
+
+### [number commands](../commands/number)
+- [`average(var,array)`](../commands/number/average(var,array)): exclude empty values during calculation
 
 
 ### [pdf commands](../commands/pdf)
