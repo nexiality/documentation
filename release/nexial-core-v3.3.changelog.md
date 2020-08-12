@@ -53,6 +53,10 @@ comments: true
  parameters.
 
 
+### [image commands](../commands/image)
+- [`ocr(source,saveVar)`](../commands/image/ocr(source,saveVar)): now supports retries when OCR fails (default 3 retries)
+
+
 ### [io commands](../commands/io)
 - [`moveFiles(source,target)`](../commands/io/moveFiles(source,target)): proactively create missing `target` directory.
 
