@@ -12,13 +12,15 @@ comments: true
 
 ### General
 #### Fixes
-- fix OS-specific path issue when handling path as command parameter
+- fix OS-specific path issue when handling path as command parameter.
 - fix screenshot link creation in execution output.
-- exposing [`nexial.lastError`](../systemvars/index#nexial.lastError) within macro execution
-- enable [`PauseAfter()`](../flowcontrols/index#pausebefore--pauseafter) within macro execution
-- consider setting data variables from with macro (`macroFlex()`)
-- code fix to accurately parse text into array when successive delimiter is encountered 
+- exposing [`nexial.lastError`](../systemvars/index#nexial.lastError) within macro execution.
+- enable [`PauseAfter()`](../flowcontrols/index#pausebefore--pauseafter) within macro execution.
+- consider setting data variables from with macro (`macroFlex()`).
+- code fix to accurately parse text into array when successive delimiter is encountered. 
   (e.g. `a,,b` will be parsed as `["a", "", "", "b"]`).
+- prevent a "skip" condition to be considered as a failure via the 
+  [`nexial.lastOutcome`](../systemvars/index#nexial.lastOutcome) System variable. 
 #### Improvements
 
 
@@ -80,3 +82,9 @@ comments: true
 - [`screenshotInFull(file,timeout,removeFixed)`](../commands/web/screenshotInFull(file,timeout,removeFixed)): now 
   support capturing screenshot by disabling persistent navigation elements.
 - fixed the downloading of [CrossBrowserTesting](https://crossbrowsertesting.com/) webdriver.
+
+## [tn.5250 commands]
+- (**nexial-amplify ONLY**)
+- fixed parsing logic: skip over screen text with no content to avoid NPE
+- fixed parsing logic: actively lining up table content against table header; some heuristics applied
+- [`saveTableRow`]: *NEW* command to save the first matching row of a screen table based on the `criteria`

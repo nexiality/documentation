@@ -73,7 +73,7 @@ Each cookie contains the following property:
 
 
 ### Logging
-Since [v2.8](../../release/nexial-core-v2.8.changelog.md), Nexial has the capability to externalize the 
+Since [v2.8](../../release/nexial-core-v2.8.changelog), Nexial has the capability to externalize the 
 request/response details as log files. This can be very helpful towards root cause analysis or tracking purposes. There
 are two types of logging: detailed and summarized.
 

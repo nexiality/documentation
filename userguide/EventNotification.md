@@ -80,7 +80,7 @@ execution-time automation metadata such as script, scenario, iteration, activity
 
 
 ### Conditional Notification
-Notifications can also be further controlled via [Nexial Filter](../flowcontrols/filter.md). In this way, the 
+Notifications can also be further controlled via [Nexial Filter](../flowcontrols/filter). In this way, the 
 notifications can be suppressed until the specific conditions (i.e. filters) are met. Notification conditions are 
 represented via a set of System variables corresponding to each event:
 

@@ -1,4 +1,4 @@
-As of [Nexial v2.9](../../release/nexial-core-v2.9.changelog.md), Nexial exposes a set of metadata concerning the 
+As of [Nexial v2.9](../../release/nexial-core-v2.9.changelog), Nexial exposes a set of metadata concerning the 
 browser in execution.  Such metadata provides further insight concerning the browser in used for automation, such
 as the browser version and if it is running in a desktop or mobile platform. This can be useful towards conditional 
 execution and reporting.

@@ -33,4 +33,4 @@ Note that `encodedSource` may be represented as a file. Nexial will resolve the 
 
 ### See Also
 - [`base64(var,file)`](base64(var,file))
-- [`writeFile(file,content,append)`](writeFile(file,content,append).md))
+- [`writeFile(file,content,append)`](writeFile(file,content,append)))

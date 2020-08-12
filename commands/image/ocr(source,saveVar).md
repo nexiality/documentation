@@ -28,7 +28,7 @@ This command is best use to detect key words or key phrases, such as names, addr
 formatting, alignment, font sizes or color, this command will not be able to provide sufficiently towards such ends.
 
 For more advance text scraping automation, consider using 
-[vision &raquo; `saveText(profile,image,var)`](../aws.vision/saveText(profile,image,var).md). It uses 
+[vision &raquo; `saveText(profile,image,var)`](../aws.vision/saveText(profile,image,var)). It uses 
 <a href="https://aws.amazon.com/rekognition/" class="external_link" target="_nexial_target">AWS' Rekognition</a>, 
 which is paid service.
 

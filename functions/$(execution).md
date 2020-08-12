@@ -322,7 +322,7 @@ Output<br/>
 Display the current Java version.
 
 **Example**<br/>
-{% include_relative example_execution.md  %}  Here, we are using this function in combination with `sms` [Event Notification](../userguide/EventNotification.md)
+{% include_relative example_execution.md  %}  Here, we are using this function in combination with `sms` [Event Notification](../userguide/EventNotification)
  to expose metadata about the the java version used for the execution.
 
 Input function<br/>
@@ -337,7 +337,7 @@ Output<br/>
 Display the username of the current Nexial execution.
 
 **Example**<br/>
-{% include_relative example_execution.md  %}  Here, we are using this function in combination with `sms` [Event Notification](../userguide/EventNotification.md)
+{% include_relative example_execution.md  %}  Here, we are using this function in combination with `sms` [Event Notification](../userguide/EventNotification)
  to expose metadata about the username which carried out the execution.
  
 Input function<br/>

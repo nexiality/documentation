@@ -35,4 +35,4 @@ Output:<br/>
 - [`clear(xml,xpath,var)`](clear(xml,xpath,var))
 - [`delete(xml,xpath,var)`](delete(xml,xpath,var))
 - [`prepend(xml,xpath,content,var)`](prepend(xml,xpath,content,var))
-- [`replaceIn(xml,xpath,content,var)`](replaceIn(xml,xpath,content,var).md)
+- [`replaceIn(xml,xpath,content,var)`](replaceIn(xml,xpath,content,var))

@@ -40,7 +40,7 @@ its process:
 2. As you can see macro script don't have first three rows of script template. Also it has first column as `macro` 
    instead of `activity`.
 3. You can get macro script template at **"${NEXIAL_HOME}/template"**. NEXIAL_HOME is the location where 
-   [Nexial is installed](../../userguide/InstallingNexial.md).
+   [Nexial is installed](../../userguide/InstallingNexial).
 
 In the depiction above, there are 3 sets of macros:
 1. "sample_greetings": Row 2

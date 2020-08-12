@@ -147,7 +147,7 @@ angled brackets (`[ref]`).  But within the confines of these basic rules, we sh
 common queries and still retain its readability. 
 
 ### JSONPath Function
-As of [Nexial v1.9](../release/nexial-core-v1.9.changelog.md), we are introducing the concept of "function" to JSONPath.
+As of [Nexial v1.9](../release/nexial-core-v1.9.changelog), we are introducing the concept of "function" to JSONPath.
 The main idea is to provide the ability to apply one or more functional computation on the end representation of a 
 `jsonpath`. Currently here are the supported functions:
 
