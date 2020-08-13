@@ -54,7 +54,9 @@ comments: true
 
 
 ### [image commands](../commands/image)
-- [`ocr(source,saveVar)`](../commands/image/ocr(source,saveVar)): now supports retries when OCR fails (default 3 retries)
+- [`ocr(source,saveVar)`](../commands/image/ocr(source,saveVar)): 
+  - supports retries when OCR fails (default 3 retries)
+  - random waits between retries to reduce conflicts
 
 
 ### [io commands](../commands/io)
