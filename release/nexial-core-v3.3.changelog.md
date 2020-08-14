@@ -32,6 +32,12 @@ comments: true
   [base &raquo; `section(steps)`](../commands/base/section(steps)) since these composite commands would likely over
   extent beyond the specified SLA after the enclosed commands are executed. Similarly, all the `wait...` commands will
   not be held accountable to the same SLA set forth via this System variable.
+- [`nexial.repeatUntil.index`](../systemvars/index#nexial.repeatUntil.index): tracking the loop occurrence within a 
+  `repeat-until` instance.
+- [`nexial.repeatUntil.startTime`](../systemvars/index#nexial.repeatUntil.startTime): tracking the start time (epoch) 
+  of a `repeat-until` instance.
+- [`nexial.repeatUntil.endTime`](../systemvars/index#nexial.repeatUntil.endTime): tracking the end time (epoch) of a 
+  `repeat-until` instance.
 
 
 ### [Nexial Interactive](../interactive)
@@ -51,6 +57,8 @@ comments: true
 ### [base commands](../commands/base)
 - [`macroFlex(macro,input,output)`](../commands/base/macroFlex(macro,input,output)): supports empty input and output
  parameters.
+- [`repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)): supports the tracking, start time 
+  and end time of a `repeat-until` loop.
 
 
 ### [image commands](../commands/image)
