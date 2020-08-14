@@ -1779,6 +1779,61 @@
       environment (e.g. Jenkins).
     </td>
   </tr>
+
+  <tr>
+    <td class="highlight-section" colspan="5">
+      <span>For <a href="../commands/base/repeatUntil(steps,maxWaitMs)"><code>base &raquo; repeatUntil(steps,maxWaitMs)</code></a> command only.</span>
+    </td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.repeatUntil.index"><code>nexial.repeatUntil.index</code></a>
+    </td>
+    <td>integer</td>
+    <td></td>
+    <td class="read-only">read-only</td>
+    <td>
+      This System variable keeps track of the loop occurrence for the current or last-used
+      <a href="../commands/base/repeatUntil(steps,maxWaitMs)"><code>base &raquo; repeatUntil(steps,maxWaitMs)</code></a>.
+      <br/>
+      <br/>
+      During the execution of a <code>repeat-until</code> loop, Nexial will keep track of the loop occurrence (
+      in effect, the loop counter) and update this System variable accordingly. At the end of a
+      <code>repeat-until</code> loop, this System variable will continue to be available for the subsequent test step.
+      It is, however, subject to being overwritten once the next instance of <code>repeat-until</code> loop commence.
+      <br/>
+      <br/>
+      This System variable is 1-based (first loop is considered as <code>1</code>).
+    </td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.repeatUntil.startTime"><code>nexial.repeatUntil.startTime</code></a>
+    </td>
+    <td>integer</td>
+    <td></td>
+    <td class="read-only">read-only</td>
+    <td>
+      This System variable keeps track of the execution start time, in epoch, of a
+      <a href="../commands/base/repeatUntil(steps,maxWaitMs)"><code>base &raquo; repeatUntil(steps,maxWaitMs)</code></a>
+      instance. At the start of the next <code>repeat-until</code> loop, this System variable will be overwritten.<br/>
+    </td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.repeatUntil.endTime"><code>nexial.repeatUntil.endTime</code></a>
+    </td>
+    <td>integer</td>
+    <td></td>
+    <td class="read-only">read-only</td>
+    <td>
+      This System variable keeps track of the execution end time, in epoch, of a
+      <a href="../commands/base/repeatUntil(steps,maxWaitMs)"><code>base &raquo; repeatUntil(steps,maxWaitMs)</code></a>
+      instance. This System variable is not an indication of the status of a <code>repeat-until</code> loop; it will be
+      updated at the end of a <code>repeat-until</code> loop regardless of its PASS/FAIL outcome.<br/>
+    </td>
+  </tr>
+
   <tr>
     <td class="highlight-section" colspan="5">
             <span>

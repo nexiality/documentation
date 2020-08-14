@@ -39,16 +39,21 @@ certain time, check for specific text or state of a web page or application.
    2. EXCEPT when [`nexial.failFast`](../../systemvars/index.html#nexial.failFast) is set to `false`. The repeat-until 
    loop honors the `nexial.failFast` system variable so that one can "collect-all-failures" rather than 
    "fail-at-first-instance".
-   3. To enforce the "fail-at-first-instance" requirement, either
-   
-      - `set JAVA_OPT=-Dnexial.failFast=true` on command line before running Nexial, OR  
-      - add to your datasheet: `nexial.failFast | true`, OR  
+   3. To enforce the "fail-at-first-instance" requirement, either<br/>
+      - `set JAVA_OPT=-Dnexial.failFast=true` on command line before running Nexial, OR 
+      - add to your datasheet: `nexial.failFast | true`, OR
       - via command: `base | save(var,value) | nexial.failFast | true`
 4. If one wish to limit the timespan such repeat-until execution, the second parameter `maxWaitMs` can be used. 
    However, it must be a value greater than `1000` (i.e. 1 second). Use `-1` if time should not be considered as a 
    constraint (ie. disable time tracking). This is a great way to simulate a time-out condition.
 5. The use of [verbose(text)](verbose(text)) will have no impact to the corresponding output file. However the 
-			output produced by this command can be observed in the console log.
+   output produced by this command can be observed in the console log.
+6. Thre are 3 System variable specificall related to this command:<br/>
+   1. [`nexial.repeatUntil.index`](../../systemvars/index#nexial.repeatUntil.index) - to track the loop occurrence.
+   2. [`nexial.repeatUntil.startTime`](../../systemvars/index#nexial.repeatUntil.startTime) - to track the start time, 
+      in epoch, of a `repeat-until` instance.
+   3. [`nexial.repeatUntil.endTime`](../../systemvars/index#nexial.repeatUntil.endTime) - to track the end time, in 
+      epoch, of a `repeat-until` instance.
 
 
 ### Parameters
