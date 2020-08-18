@@ -55,8 +55,9 @@ comments: true
 
 
 ### [base commands](../commands/base)
-- [`macroFlex(macro,input,output)`](../commands/base/macroFlex(macro,input,output)): supports empty input and output
- parameters.
+- [`macroFlex(macro,input,output)`](../commands/base/macroFlex(macro,input,output)): 
+  - supports empty input and output parameters.
+  - output returns as object (such as list, number, etc.) instead of the corresponding string representation
 - [`repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)): supports the tracking, start time 
   and end time of a `repeat-until` loop.
 
@@ -97,8 +98,17 @@ comments: true
   support capturing screenshot by disabling persistent navigation elements.
 - fixed the downloading of [CrossBrowserTesting](https://crossbrowsertesting.com/) webdriver.
 
+
 ## [tn.5250 commands]
 - (**nexial-amplify ONLY**)
 - fixed parsing logic: skip over screen text with no content to avoid NPE
 - fixed parsing logic: actively lining up table content against table header; some heuristics applied
 - [`saveTableRow`]: *NEW* command to save the first matching row of a screen table based on the `criteria`
+- code stabilization for full screen and nested screen scanning
+- `{SPACE}` no longer supported as it is platform-specific. Use literal space (` `) instead
+- remove "hidden" text (a.k.a. "black" text) from being displayed during TN5250 screen scanning
+- support dual-pane data layout during screen scanning
+- duplicated data labels are now prefixed with `@1`, `@2`, ... (previously using `[1]`, `[2]`, ... wasn't great since it created more parsing issues)
+- when possible, PPI are hidden from console logging
+- support successive use of the same profile (previously created duplicated session) via the same TN5250 session
+- detect read-only fields
