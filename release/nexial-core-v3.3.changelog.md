@@ -97,6 +97,7 @@ comments: true
 - [`screenshotInFull(file,timeout,removeFixed)`](../commands/web/screenshotInFull(file,timeout,removeFixed)): now 
   support capturing screenshot by disabling persistent navigation elements.
 - fixed the downloading of [CrossBrowserTesting](https://crossbrowsertesting.com/) webdriver.
+- update chromedriver setting to allow for multiple downloads.
 
 
 ## [tn.5250 commands]
