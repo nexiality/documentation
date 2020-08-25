@@ -100,6 +100,13 @@ comments: true
 - update chromedriver setting to allow for multiple downloads.
 
 
+### [xml commands](../commands/xml)
+- [`assertValue(xml,xpath,expected)`](../commands/xml/assertValue(xml,xpath,expected)): support validating against 
+  empty or blank `expected` values.
+- [`assertValues(xml,xpath,array,exactOrder)`](../commands/xml/assertValues(xml,xpath,array,exactOrder)): support 
+  validating against empty or blank `expected` values.
+
+
 ## [tn.5250 commands]
 - (**nexial-amplify ONLY**)
 - fixed parsing logic: skip over screen text with no content to avoid NPE
