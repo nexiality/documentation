@@ -120,7 +120,9 @@ comments: true
 - when possible, PPI are hidden from console logging
 - support successive use of the same profile (previously created duplicated session) via the same TN5250 session
 - detect read-only fields
-- [`saveTableAsCSV(csv)`]: additional logic applied to handle empty cell or cell data contains comma or double quote.
+- [`saveTableAsCSV(csv)`]: 
+  - additional logic applied to handle empty cell or cell data contains comma or double quote.
+  - additional logic to handle cells with missing data or missing headers.
 - [`inspectScreen()`] and [`inspectNesteScreen(titles)`]: handle the parsing of data displayed in 2-column format
 - [`typeKeys(keystrokes)`]: enable direct support for `[ATTN]` key to invoke CIS command menu
 - [`{PROFILE}.logInspection]: reworked the log file output to improve readability.
