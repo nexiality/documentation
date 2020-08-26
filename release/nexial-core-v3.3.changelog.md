@@ -123,6 +123,9 @@ comments: true
 - [`saveTableAsCSV(csv)`]: 
   - additional logic applied to handle empty cell or cell data contains comma or double quote.
   - additional logic to handle cells with missing data or missing headers.
-- [`inspectScreen()`] and [`inspectNesteScreen(titles)`]: handle the parsing of data displayed in 2-column format
+  - additional logic to handle dangling cell data (without matching header).
+- [`inspectScreen()`] and [`inspectNesteScreen(titles)`]: 
+  - handle the parsing of data displayed in 2-column format
+  - support partially dual-column display (where a screen contains only partially dual-column data layout)
 - [`typeKeys(keystrokes)`]: enable direct support for `[ATTN]` key to invoke CIS command menu
 - [`{PROFILE}.logInspection]: reworked the log file output to improve readability.
