@@ -20,7 +20,8 @@ comments: true
 - code fix to accurately parse text into array when successive delimiter is encountered. 
   (e.g. `a,,b` will be parsed as `["a", "", "", "b"]`).
 - prevent a "skip" condition to be considered as a failure via the 
-  [`nexial.lastOutcome`](../systemvars/index#nexial.lastOutcome) System variable. 
+  [`nexial.lastOutcome`](../systemvars/index#nexial.lastOutcome) System variable.
+- replaced new line character with space for activity name in log, output/junit.xml and output/execution_detail.json  
 #### Improvements
 
 
