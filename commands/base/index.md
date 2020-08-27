@@ -51,3 +51,4 @@ The "base" command type represents a series of common automation commands:
 - [`substringBetween(text,start,end,saveVar)`](substringBetween(text,start,end,saveVar))
 - [`verbose(text)`](verbose(text))
 - [`waitFor(waitMs)`](waitFor(waitMs))
+- [`waitForCondition(conditions,maxWaitMs)`](waitForCondition(conditions,maxWaitMs))

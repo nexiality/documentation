@@ -14,7 +14,7 @@ Instruct Nexial to wait for the specified `file` to "*stabilize*", which means t
 - such `file` has a file size and last-modified timestamp that remains unchanged between `waitMs` millisecond,
 
 Nexial will continuously change for the above-mentioned conditions until `maxWaitMs` time is reached. After `maxWaitMs`
-time, if the specified `file` still does not satisified all the conditions, then Nexial will consider this command
+time, if the specified `file` still does not satisfy all the conditions, then Nexial will consider this command
 as **FAIL**.
 
 
