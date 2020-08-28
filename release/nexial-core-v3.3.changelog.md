@@ -23,7 +23,8 @@ comments: true
   [`nexial.lastOutcome`](../systemvars/index#nexial.lastOutcome) System variable.
 - replaced new line character with space for activity name in log, output/junit.xml and output/execution_detail.json  
 #### Improvements
-
+- for all command parameters of type boolean, support the use of `true`, `false`, `yes`, `no`, `on`, `off` and 
+  log error message if invalid value found.
 
 ### [System Variable](../systemvars)
 - [`nexial.elapsedTimeSLA`](../systemvars/index#nexial.elapsedTimeSLA): SLA enforcement will no longer to applicable to
