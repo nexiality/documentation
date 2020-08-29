@@ -10,6 +10,9 @@ comments: true
 ### Description
 This command round the number represented by `var` to the nearest digits and stores it back to `var`.
 
+Note that the rounding logic can be affected/customized via the 
+[`nexial.number.rounding`](../../systemvars/index#nexial.number.rounding) System variable.
+
 
 ### Parameters
 - **var** - the value to be rounded.

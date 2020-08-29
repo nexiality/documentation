@@ -26,6 +26,7 @@ comments: true
 - for all command parameters of type boolean, support the use of `true`, `false`, `yes`, `no`, `on`, `off` and 
   log error message if invalid value found.
 
+
 ### [System Variable](../systemvars)
 - [`nexial.elapsedTimeSLA`](../systemvars/index#nexial.elapsedTimeSLA): SLA enforcement will no longer to applicable to
   [base &raquo; `macro(file,sheet,name)`](../commands/base/macro(file,sheet,name)), 
@@ -51,6 +52,8 @@ comments: true
 - [NUMBER >> divide](../expressions/NUMBERexpression#dividenumbers): skip over empty values during calculation
 - [NUMBER >> add](../expressions/NUMBERexpression#addnumbers): skip over empty values during calculation
 - [NUMBER >> minus](../expressions/NUMBERexpression#minusnumbers): skip over empty values during calculation
+- [NUMBER >> roundTo](../expressions/NUMBERexpression#roundtoclosestdigit): custom decimal rounding support via 
+  [`nexial.number.rounding`](../systemvars/index#nexial.number.rounding)
 
 
 ### [Built-In Function](../functions)
@@ -71,13 +74,13 @@ comments: true
 
 
 ### [io commands](../commands/io)
-- [`moveFiles(source,target)`](../commands/io/moveFiles(source,target)): proactively create missing `target` directory.
+- [`moveFiles(source,target)`](../commands/io/moveFiles(source,target)): proactively create missing `target` directory
 
 
 ### [json commands](../commands/json)
 - [`assertCorrectness(json,schema)`](../commands/json/assertCorrectness(json,schema)): now supports 
   [JSON Schema Core Draft v2019-09](http://json-schema.org/draft/2019-09/json-schema-core.html), in addition to 
-  existing support for Draft v4, v6, v7. If schema is not specified, then `v2019-09` is the default.
+  existing support for Draft v4, v6, v7. If schema is not specified, then `v2019-09` is the default
 
 
 ### [localdb commands](../commands/localdb)
@@ -85,6 +88,8 @@ comments: true
 
 ### [number commands](../commands/number)
 - [`average(var,array)`](../commands/number/average(var,array)): exclude empty values during calculation
+- [`roundTo(var,closestDigit)`](../commands/number/roundTo(var,closestDigit)): custom decimal rounding support via 
+  [`nexial.number.rounding`](../systemvars/index#nexial.number.rounding)
 
 
 ### [pdf commands](../commands/pdf)
@@ -95,18 +100,18 @@ comments: true
 
 ### [web commands](../commands/web)
 - [`screenshot(file,locator,removeFixed)`](../commands/web/screenshot(file,locator,removeFixed)): now support capturing
-  screenshot by disabling persistent navigation elements.
+  screenshot by disabling persistent navigation elements
 - [`screenshotInFull(file,timeout,removeFixed)`](../commands/web/screenshotInFull(file,timeout,removeFixed)): now 
-  support capturing screenshot by disabling persistent navigation elements.
-- fixed the downloading of [CrossBrowserTesting](https://crossbrowsertesting.com/) webdriver.
-- update chromedriver setting to allow for multiple downloads.
+  support capturing screenshot by disabling persistent navigation elements
+- fixed the downloading of [CrossBrowserTesting](https://crossbrowsertesting.com/) webdriver
+- update chromedriver setting to allow for multiple downloads
 
 
 ### [xml commands](../commands/xml)
 - [`assertValue(xml,xpath,expected)`](../commands/xml/assertValue(xml,xpath,expected)): support validating against 
-  empty or blank `expected` values.
+  empty or blank `expected` values
 - [`assertValues(xml,xpath,array,exactOrder)`](../commands/xml/assertValues(xml,xpath,array,exactOrder)): support 
-  validating against empty or blank `expected` values.
+  validating against empty or blank `expected` values
 
 
 ## [tn.5250 commands]
@@ -130,4 +135,4 @@ comments: true
   - handle the parsing of data displayed in 2-column format
   - support partially dual-column display (where a screen contains only partially dual-column data layout)
 - [`typeKeys(keystrokes)`]: enable direct support for `[ATTN]` key to invoke CIS command menu
-- [`{PROFILE}.logInspection]: reworked the log file output to improve readability.
+- [`{PROFILE}.logInspection`]: reworked the log file output to improve readability.

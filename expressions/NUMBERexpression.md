@@ -170,6 +170,9 @@ digit", "the closest tenth", "the closest hundredth", etc.  For example,  `[NU
 yield `174000`. However to retain decimals, one would specify `0.` followed by number of desired decimal places instead. 
 `[NUMBER(173921.22) => roundTo(0.0)]` would yield `173921.2`. 
 
+Note that the rounding logic can be affected/customized via the 
+[`nexial.number.rounding`](../../systemvars/index#nexial.number.rounding) System variable.
+
 **Example**<br/>
 Script:<br/>
 ![script](image/NUMBERexpression_21.png)

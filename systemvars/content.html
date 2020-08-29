@@ -1354,6 +1354,59 @@
   </tr>
 
   <tr>
+    <td class="highlight-section" colspan="5"><span>For number-related functionality.</span></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.number.rounding"><code>nexial.number.rounding</code></a>
+    </td>
+    <td>text</td>
+    <td>ROUND_UP</td>
+    <td class="read-write">read/write</td>
+    <td>
+      Customize how one would like the decimal rounding logic to be implemented. This System variable only impacts
+      the following functionality:
+      <ul>
+        <li><a href="../commands/number/roundTo(var,closestDigit)">number &raquo; <code>roundTo(var,closestDigit)</code></a></li>
+        <li><a href="../expressions/NUMBERexpression#roundtoclosestdigit"><code>[NUMBER(...) ==> roundTo(var,closestDigit)]</code></a></li>
+      </ul>
+      <br/>
+      This System variable can be configured as one of the following:
+      <table cellpadding="5" cellspacing="0">
+        <tr>
+          <th><code>nexial.number.rounding</code></th>
+          <th>description</th>
+        </tr>
+        <tr>
+          <td><code>ROUND_UP</code> (default)</td>
+          <td>
+            Round a decimal number <b>up</b>, if its fractional portion is ≥ 0.5. This is probably the common
+            approach towards decimal rounding. For more information, see
+            <a href="https://docs.oracle.com/javase/8/docs/api/java/math/RoundingMode.html#HALF_UP"
+               class="external-link" target="_nexial_link">Javadoc for RoundingMode.HALF_UP</a>.
+          </td>
+        </tr>
+        <tr>
+          <td><code>ROUND_DOWN</code> (default)</td>
+          <td>
+            Round a decimal number <b>down</b>, if its fractional portion is <= 0.5. For more information, see
+            <a href="https://docs.oracle.com/javase/8/docs/api/java/math/RoundingMode.html#HALF_DOWN"
+               class="external-link" target="_nexial_link">Javadoc for RoundingMode.HALF_DOWN</a>.
+          </td>
+        </tr>
+        <tr>
+          <td><code>ROUND_EVEN</code> (default)</td>
+          <td>
+            It is sometimes known as "Banker's rounding," and is chiefly used in the USA. For more information, see
+            <a href="https://docs.oracle.com/javase/8/docs/api/java/math/RoundingMode.html#HALF_EVEN"
+               class="external-link" target="_nexial_link">Javadoc for RoundingMode.HALF_EVEN</a>.
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
     <td class="highlight-section" colspan="5"><span>For email notification only.</span></td>
   </tr>
   <tr>
