@@ -21,7 +21,7 @@ comments: true
   (e.g. `a,,b` will be parsed as `["a", "", "", "b"]`).
 - prevent a "skip" condition to be considered as a failure via the 
   [`nexial.lastOutcome`](../systemvars/index#nexial.lastOutcome) System variable.
-- replaced new line character with space for activity name in log, output/junit.xml and output/execution_detail.json  
+- replaced new line character with space for activity name in log, output/junit.xml and output/execution_detail.json
 #### Improvements
 - for all command parameters of type boolean, support the use of `true`, `false`, `yes`, `no`, `on`, `off` and 
   log error message if invalid value found.
@@ -123,16 +123,20 @@ comments: true
 - `{SPACE}` no longer supported as it is platform-specific. Use literal space (` `) instead
 - remove "hidden" text (a.k.a. "black" text) from being displayed during TN5250 screen scanning
 - support dual-pane data layout during screen scanning
-- duplicated data labels are now prefixed with `@1`, `@2`, ... (previously using `[1]`, `[2]`, ... wasn't great since it created more parsing issues)
+- duplicated data labels are now prefixed with `@1`, `@2`, ... (previously using `[1]`, `[2]`, ... wasn't great since 
+  it created more parsing issues)
 - when possible, PPI are hidden from console logging
 - support successive use of the same profile (previously created duplicated session) via the same TN5250 session
 - detect read-only fields
 - [`saveTableAsCSV(csv)`]: 
-  - additional logic applied to handle empty cell or cell data contains comma or double quote.
-  - additional logic to handle cells with missing data or missing headers.
-  - additional logic to handle dangling cell data (without matching header).
+  - additional logic applied to handle empty cell or cell data contains comma or double quote
+  - additional logic to handle cells with missing data or missing headers
+  - additional logic to handle dangling cell data (without matching header)
+  - support automatic paging (and scroll back) of table content. Use `maxPage` to limit excessive paging.
 - [`inspectScreen()`] and [`inspectNesteScreen(titles)`]: 
   - handle the parsing of data displayed in 2-column format
   - support partially dual-column display (where a screen contains only partially dual-column data layout)
 - [`typeKeys(keystrokes)`]: enable direct support for `[ATTN]` key to invoke CIS command menu
-- [`{PROFILE}.logInspection`]: reworked the log file output to improve readability.
+- [`{PROFILE}.logInspection`]: reworked the log file output to improve readability
+- cleaned up some log misconfiguration
+- implemented a slightly more stable approach to wait for the TN5250 screen to "settle" down
