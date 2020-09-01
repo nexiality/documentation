@@ -25,6 +25,7 @@ comments: true
 #### Improvements
 - for all command parameters of type boolean, support the use of `true`, `false`, `yes`, `no`, `on`, `off` and 
   log error message if invalid value found.
+- improve performance of preparing and validating large plan files (multiple subplans and many steps)
 
 
 ### [System Variable](../systemvars)
