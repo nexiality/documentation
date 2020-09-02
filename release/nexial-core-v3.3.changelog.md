@@ -26,6 +26,8 @@ comments: true
 - for all command parameters of type boolean, support the use of `true`, `false`, `yes`, `no`, `on`, `off` and 
   log error message if invalid value found.
 - improve performance of preparing and validating large plan files (multiple subplans and many steps)
+- improve performance by reducing the template rows in template xlsx files
+- improve performance by remove some border styles from execution output files (xslx)
 
 
 ### [System Variable](../systemvars)
