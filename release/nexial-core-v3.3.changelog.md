@@ -108,6 +108,11 @@ comments: true
 - update chromedriver setting to allow for multiple downloads
 
 
+### [ws commands](../commands/ws)
+- fix over-zealous URL encoding, which in turn had caused some authentication issue
+
+
+
 ### [xml commands](../commands/xml)
 - [`assertValue(xml,xpath,expected)`](../commands/xml/assertValue(xml,xpath,expected)): support validating against 
   empty or blank `expected` values
