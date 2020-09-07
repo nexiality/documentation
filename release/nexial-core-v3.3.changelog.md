@@ -28,6 +28,7 @@ comments: true
 - improve performance of preparing and validating large plan files (multiple subplans and many steps)
 - improve performance by reducing the template rows in template xlsx files
 - improve performance by remove some border styles from execution output files (xslx)
+- reduce unnecessary logging
 
 
 ### [System Variable](../systemvars)
@@ -99,6 +100,7 @@ comments: true
 
 
 ### [rdbms commands](../commands/rdbms)
+- extra logic to handle SQL comments
 
 
 ### [web commands](../commands/web)
