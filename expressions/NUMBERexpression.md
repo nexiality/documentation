@@ -103,6 +103,15 @@ Output:<br/>
 
 -----
 
+#### **`mod(divisor)`**
+transform the current number to the remainder (modulus) of being divided by the specified `divisor`.
+
+**Example**<br/>
+Script:<br/>
+![script](image/NUMBERexpression_30.png)
+
+-----
+
 #### **`multiply(numbers)`**
 multiple one or more numbers to current number, in the order specified.
 

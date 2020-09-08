@@ -58,7 +58,7 @@ comments: true
 - [NUMBER >> minus](../expressions/NUMBERexpression#minusnumbers): skip over empty values during calculation
 - [NUMBER >> roundTo](../expressions/NUMBERexpression#roundtoclosestdigit): custom decimal rounding support via 
   [`nexial.number.rounding`](../systemvars/index#nexial.number.rounding)
-
+- [NUMBER >> mod](../expressions/NUMBERexpression#moddivisor): **NEW** operation to calculate the remainder of a division.
 
 ### [Built-In Function](../functions)
 
