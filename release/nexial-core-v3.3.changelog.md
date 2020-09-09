@@ -29,6 +29,8 @@ comments: true
 - improve performance by reducing the template rows in template xlsx files
 - improve performance by remove some border styles from execution output files (xslx)
 - reduce unnecessary logging
+- end-immediate results in a “END test result, not PASS – to provide more clarity to the execution
+- improved performance while copying macro to test script
 
 
 ### [System Variable](../systemvars)
