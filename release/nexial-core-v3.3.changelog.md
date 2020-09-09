@@ -60,12 +60,25 @@ comments: true
 - [NUMBER >> mod](../expressions/NUMBERexpression#moddivisor): **NEW** operation to calculate the remainder of a division.
 
 
+### [Filter](../flowcontrols/filter)
+- Added *NEW* filters for file
+     - `contain file`: check if the specified path directory contains a file named as given.
+     - `contain file pattern`:  Filter to check does the specified path directory contain one or more files matching provided file pattern
+     - `has file content`: Filter to check does the specified file has provided content at least once.
+     - `has file content pattern`: Filter to check does the specified file content matches given pattern.
+     - `has lastmod >`: Filter to check does file have a "last modified date" greater than given value.
+     - `has lastmod <`: Filter to check does file have a "last modified date" lesser than given value.
+     - `has lastmod =`: Filter to check does file have a "last modified date" same as that of given value.
+     
+ 
 ### [base commands](../commands/base)
 - [`macroFlex(macro,input,output)`](../commands/base/macroFlex(macro,input,output)): 
   - supports empty input and output parameters.
   - output returns as object (such as list, number, etc.) instead of the corresponding string representation
 - [`repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)): supports the tracking, start time 
   and end time of a `repeat-until` loop.
+- [`waitForCondition(conditions,maxWaitMs)`](../commands/base/waitForCondition(conditions,maxWaitMs))- Added *NEW* 
+ command to wait until provided conditions satisfy or reached max time and then proceed.
 
 
 ### [image commands](../commands/image)
