@@ -149,3 +149,4 @@ comments: true
 - [`{PROFILE}.logInspection`]: reworked the log file output to improve readability
 - cleaned up some log misconfiguration
 - implemented a slightly more stable approach to wait for the TN5250 screen to "settle" down
+- [clearField(label)]: **NEW** command to clear any value for a given field.
