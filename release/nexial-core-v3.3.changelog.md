@@ -118,7 +118,7 @@ comments: true
 - (**nexial-amplify ONLY**)
 - fixed parsing logic: skip over screen text with no content to avoid NPE
 - fixed parsing logic: actively lining up table content against table header; some heuristics applied
-- [`saveTableRow`]: *NEW* command to save the first matching row of a screen table based on the `criteria`
+- [`saveTableRow`] *NEW* command to save the first matching row of a screen table based on the `criteria`
 - code stabilization for full screen and nested screen scanning
 - `{SPACE}` no longer supported as it is platform-specific. Use literal space (` `) instead
 - remove "hidden" text (a.k.a. "black" text) from being displayed during TN5250 screen scanning
@@ -128,7 +128,7 @@ comments: true
 - when possible, PPI are hidden from console logging
 - support successive use of the same profile (previously created duplicated session) via the same TN5250 session
 - detect read-only fields
-- [`saveTableAsCSV(csv)`]: 
+- [`saveTableAsCSV(csv)`] 
   - additional logic applied to handle empty cell or cell data contains comma or double quote
   - additional logic to handle cells with missing data or missing headers
   - additional logic to handle dangling cell data (without matching header)
@@ -136,8 +136,8 @@ comments: true
 - [`inspectScreen()`] and [`inspectNesteScreen(titles)`]: 
   - handle the parsing of data displayed in 2-column format
   - support partially dual-column display (where a screen contains only partially dual-column data layout)
-- [`typeKeys(keystrokes)`]: enable direct support for `[ATTN]` key to invoke CIS command menu
-- [`{PROFILE}.logInspection`]: reworked the log file output to improve readability
+- [`typeKeys(keystrokes)`] enable direct support for `[ATTN]` key to invoke CIS command menu
+- [`{PROFILE}.logInspection`] reworked the log file output to improve readability
 - cleaned up some log misconfiguration
 - implemented a slightly more stable approach to wait for the TN5250 screen to "settle" down
-- [clearField(label)]: **NEW** command to clear any value for a given field.
+- [`clearField(label)`] **NEW** command to clear any value for a given field.
