@@ -1,13 +1,13 @@
 ---
 layout: default
-title: nexial-core 3.3 (2020-09-??)
+title: nexial-core 3.3 (2020-09-09)
 parent: release
 tags: release nexial-core 3.3
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v3.3_???" class="external-link" target="_nexial_link">Release 3.3</a>
-2020-09-??
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v3.3_943" class="external-link" target="_nexial_link">Release 3.3</a>
+2020-09-09
 
 
 ### General
@@ -49,9 +49,6 @@ comments: true
   `repeat-until` instance.
 
 
-### [Nexial Interactive](../interactive)
-
-
 ### [Expression](../expressions)
 - [NUMBER >> average](../expressions/NUMBERexpression#average): exclude empty values during calculation
 - [NUMBER >> multiple](../expressions/NUMBERexpression#multiplynumbers): skip over empty values during calculation
@@ -61,8 +58,6 @@ comments: true
 - [NUMBER >> roundTo](../expressions/NUMBERexpression#roundtoclosestdigit): custom decimal rounding support via 
   [`nexial.number.rounding`](../systemvars/index#nexial.number.rounding)
 - [NUMBER >> mod](../expressions/NUMBERexpression#moddivisor): **NEW** operation to calculate the remainder of a division.
-
-### [Built-In Function](../functions)
 
 
 ### [base commands](../commands/base)
@@ -89,16 +84,10 @@ comments: true
   existing support for Draft v4, v6, v7. If schema is not specified, then `v2019-09` is the default
 
 
-### [localdb commands](../commands/localdb)
-
-
 ### [number commands](../commands/number)
 - [`average(var,array)`](../commands/number/average(var,array)): exclude empty values during calculation
 - [`roundTo(var,closestDigit)`](../commands/number/roundTo(var,closestDigit)): custom decimal rounding support via 
   [`nexial.number.rounding`](../systemvars/index#nexial.number.rounding)
-
-
-### [pdf commands](../commands/pdf)
 
 
 ### [rdbms commands](../commands/rdbms)
