@@ -20,6 +20,10 @@ comments: true
 ### [System Variable](../systemvars)
 
 
+### [Nexial Interactive](../interactive)
+- added some helpful hints on how to use "Inspect" within Nexial Interactive
+
+
 ### [Expression](../expressions)
 
 
