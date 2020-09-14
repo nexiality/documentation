@@ -22,6 +22,8 @@ comments: true
 
 ### [Nexial Interactive](../interactive)
 - added some helpful hints on how to use "Inspect" within Nexial Interactive
+- fixed defect to support iteration in Nexial Interactive. Now one can change iteration scope 
+  (i.e. [`nexial.scope.iteration`](../systemvars/index.html#nexial.scope.iteration)) between the reload of test artifacts.
 
 
 ### [Expression](../expressions)
