@@ -15,6 +15,7 @@ comments: true
 - fixed runtime error when checking for Nexial Installer and Nexial version
 
 #### Improvements
+- Enhanced `nexial-artifact-repair` to retain specific data format (date format, background and border colors mainly).
 
 
 ### [System Variable](../systemvars)
