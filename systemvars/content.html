@@ -1501,6 +1501,25 @@
     </td>
   </tr>
   <tr>
+    <td nowrap="nowrap" class="varname"><a id="nexial.mailSubject.withSynopsis"><code>nexial.mailSubject.withSynopsis</code></a></td>
+    <td>booelan</td>
+    <td>true</td>
+    <td class="read-write">read/write</td>
+    <td>
+      <b>NOTE: <a href="#nexial.enableEmail"><code>nexial.enableEmail</code></a> MUST BE SET TO
+        <code>true</code> IN ORDER TO ACTIVATE THIS FEATURE.</b><br/>
+      <br/>
+
+      Customize the system generated mail subject by adding a short "synopsis" of the overall execution. If this
+      System variable is set to <code>true</code> (default), then Nexial will include either a postfix to the mail
+      subject:<ul>
+      <li><code>ALL PASS</code> - to represent that the corresponding execution has no failed step.</li>
+      <li><code>FAIL (...% success)</code> - to present that some of the steps in the corresponding execution failed.</li>
+      </ul>
+      <br/>
+    </td>
+  </tr>
+  <tr>
     <td nowrap="nowrap" class="varname"><a id="nexial.mailHeader"><code>nexial.mailHeader</code></a></td>
     <td>text</td>
     <td></td>

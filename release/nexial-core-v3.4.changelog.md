@@ -18,7 +18,8 @@ comments: true
 
 
 ### [System Variable](../systemvars)
-
+- [`nexial.mailSubject.withSynopsis`](../systemvars/index.html#nexial.mailSubject.withSynopsis): **NEW** System variable
+  to support to inclusion of a "PASS" or "FAIL" postfix at the end of an execution notification email.
 
 ### [Nexial Interactive](../interactive)
 - added some helpful hints on how to use "Inspect" within Nexial Interactive
