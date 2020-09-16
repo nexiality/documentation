@@ -62,15 +62,15 @@ comments: true
 
 ### [Filter](../flowcontrols/filter)
 - Added *NEW* filters for file
-     - `contain file`: check if the specified path directory contains a file named as given.
-     - `contain file pattern`:  Filter to check does the specified path directory contain one or more files matching provided file pattern
-     - `has file content`: Filter to check does the specified file has provided content at least once.
-     - `has file content pattern`: Filter to check does the specified file content matches given pattern.
-     - `has lastmod >`: Filter to check does file have a "last modified date" greater than given value.
-     - `has lastmod <`: Filter to check does file have a "last modified date" lesser than given value.
-     - `has lastmod =`: Filter to check does file have a "last modified date" same as that of given value.
-     
- 
+  - `contain file`: check if the specified path directory contains a file named as given.
+  - `contain file pattern`:  Filter to check does the specified path directory contain one or more files matching provided file pattern
+  - `has file content`: Filter to check does the specified file has provided content at least once.
+  - `has file content pattern`: Filter to check does the specified file content matches given pattern.
+  - `has lastmod >`: Filter to check does file have a "last modified date" greater than given value.
+  - `has lastmod <`: Filter to check does file have a "last modified date" lesser than given value.
+  - `has lastmod =`: Filter to check does file have a "last modified date" same as that of given value.
+
+
 ### [base commands](../commands/base)
 - [`macroFlex(macro,input,output)`](../commands/base/macroFlex(macro,input,output)): 
   - supports empty input and output parameters.
