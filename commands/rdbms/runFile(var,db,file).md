@@ -27,8 +27,9 @@ specified as a parameter. Other than that, both commands have the same capabilit
    3. The result of the third SQL will be assigned to the variable `${client}`.  The variable will contain the same 
       properties as per [`runSQL(var,db,sql)`](runSQL(var,db,sql)). See 
       [`Working with Execution Result`](index) for more details.
-4. These SQL statements can potentially be committed or rolled back as a single transaction (one unit of work). To 
-   enforce single transaction, [`<connection name>.autocommit`](index)` must be set to `false`.
+4. These SQL statements can potentially be committed or rolled back as a single transaction (single unit of work). To 
+   enforce single transaction, [`<connection name>.autocommit`](index.md#working-with-execution-result) must be 
+   set to `false`.
 
 
 ### Parameters

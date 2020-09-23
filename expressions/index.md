@@ -159,6 +159,7 @@ applied.
 
 
 ### Available Expressions
+- [`BINARY expression`](BINARYexpression)
 - [`BAI2 expression`](BAI2expression)
 - [`CONFIG expression`](CONFIGexpression)
 - [`CSV expression`](CSVexpression)

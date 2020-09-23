@@ -14,6 +14,7 @@ comments: true
 #### Fixes
 - fixed runtime error when checking for Nexial Installer and Nexial version
 - fixed issue for windows while executing script/plan when `USER_HOME` has spaces.
+- fixed the issue where an expression is sometime evaluated twice.
 
 #### Improvements
 - Enhanced `nexial-artifact-repair` to retain specific data format (date format, background and border colors mainly).
@@ -30,12 +31,25 @@ comments: true
 
 
 ### [Expression](../expressions)
+- [`BINARY`](../expressions/BINARYexpression): **NEW** expression to support binary data type.
+- [`SQL => cell(resultName,row,column)`](../expressions/SQLexpression.md#cellresultnamerowcolumn): **NEW** operation
+  to retrieve a specific column of a specific row from a specific query result (referenced by name). Depending on the
+  underlying data type, the resulting expression could be a [`NUMBER`](../expressions/NUMBERexpression), 
+  [`BINARY`](../expressions/BINARYexpression), or [`TEXT`](../expressions/TEXTexpression) expression.
+- [`SQL`](../expressions/SQLexpression): support binary or byte-array data type
+- [`TEXT => base64decode()`](../expressions/TEXTexpression#base64decode): now returns a [`BINARY`] expression
+- [`TEXT => binary`](../expressions/TEXTexpression#binary): **NEW** operation to convert text into its binary form
 
 
 ### [Filter](../flowcontrols/filter)
      
  
 ### [base commands](../commands/base)
+
+
+### [external commands](../commands/external)
+- [`nexial.external.workingDirectory`](../systemvars/index#nexial.external.workingDirectory): supports the use of a 
+  "working directory" when running an external program. This will affect the starting directory of an external program.
 
 
 ### [image commands](../commands/image)
@@ -47,10 +61,15 @@ comments: true
 ### [json commands](../commands/json)
 
 
+### [localdb commands](../commands/localdb)
+- support binary or byte-array data types
+
+
 ### [number commands](../commands/number)
 
 
 ### [rdbms commands](../commands/rdbms)
+- support binary or byte-array data types
 
 
 ### [web commands](../commands/web)

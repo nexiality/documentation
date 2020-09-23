@@ -120,8 +120,24 @@ be preceded by `execute(db)` as a requirement. `
  
 -----
 
+#### `cell(resultName,row,column)`
+Return the value of a specific cell (`row` + `column`) from an execution result named `resultName`.  Must be invoked 
+only after **`execute()`**.
+- The `resultName` can either be [the name given](#execution-result-of-queries) to the corresponding result or its 
+  index (the _nth_ resultset). 
+- The `row` parameter refers to the row index of the target resultset. Note that `row` is zero-based.
+- The `column` parameter refers to the column name of the target resultset.
+
+As for result:
+- Note that if `row` or `column` is not valid, Nexial will throw an exception.
+- If the resolved value is a number, then a [`NUMBER`](NUMBERexpression) expression will be returned.
+- If the resolved value is a binary or byte array in nature, then a [`BINARY`](BINARYexpression) expression will be returned.
+- All else, a [`TEXT`](TEXTexpression) expression will be returned.
+
+-----
+
 #### `cells(resultName,column)`
-Return a list of data matching `column`.
+Return a list of data matching `column`.
 
 **Example**
 
@@ -137,8 +153,7 @@ Return a list of data matching `column`.
 -----
 
 #### `columns(resultName)`
-Returns the column names of an execution result named `resultName`. Must be invoked 
-after **`execute()`**.
+Returns the column names of an execution result named `resultName`. Must be invoked after **`execute()`**.
 
 **Example**
 
