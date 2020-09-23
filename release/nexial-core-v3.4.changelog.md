@@ -37,7 +37,6 @@ comments: true
   underlying data type, the resulting expression could be a [`NUMBER`](../expressions/NUMBERexpression), 
   [`BINARY`](../expressions/BINARYexpression), or [`TEXT`](../expressions/TEXTexpression) expression.
 - [`SQL`](../expressions/SQLexpression): support binary or byte-array data type
-- [`TEXT => base64decode()`](../expressions/TEXTexpression#base64decode): now returns a [`BINARY`] expression
 - [`TEXT => binary`](../expressions/TEXTexpression#binary): **NEW** operation to convert text into its binary form
 
 
