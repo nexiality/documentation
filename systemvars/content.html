@@ -2219,17 +2219,32 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td class="read-only">read-only</td>
+    <td>read/write</td>
     <td>
       This system variable indicates that Nexial should push the console output (i.e. standard out) of the
       external programs it launches to the same console which Nexial logs. By doing so, users will be able to
       observe both the output from Nexial and the invoked external programs from the same console/terminal.
     </td>
   </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname">
+      <a id="nexial.external.workingDirectory"><code>nexial.external.workingDirectory</code></a>
+    </td>
+    <td>text</td>
+    <td></td>
+    <td>read/write</td>
+    <td>
+      This system variable specifies the location from where an external process would start. In some cases, it is
+      important to specify the working directory (or some time it is referred to as the "starting directory") so that
+      the program can run from its "home" location. Some program would uses its working directory as the location to
+      generate/reference temporal files.
+    </td>
+  </tr>
 
   <tr>
     <td class="highlight-section" colspan="5">
-      <span>For <a href="../commands/external/"><code>excel</code></a> commands and <a href="../expressions/EXCELexpression">[<code>EXCEL</code>]</a> expression only.</span>
+      <span>For <a href="../commands/external/"><code>excel</code></a> commands and
+        <a href="../expressions/EXCELexpression">[<code>EXCEL</code>]</a> expression only.</span>
     </td>
   </tr>
   <tr>

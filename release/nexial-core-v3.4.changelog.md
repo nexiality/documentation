@@ -72,6 +72,14 @@ comments: true
 
 
 ### [web commands](../commands/web)
+- [`clickAndWait(locator,waitMs)`](../commands/web/clickAndWait(locator,waitMs)): use `waitMs` to as time out value to 
+  wait for the completion of the page load event, which is triggered from this click event.
+- [`clickByLabelAndWait(label,waitMs)`](../commands/web/clickByLabelAndWait(label,waitMs)): use `waitMs` to as time out 
+  value to wait for the completion of the page load event, which is triggered from this click event.
+- [`doubleClickAndWait(locator,waitMs)`](../commands/web/doubleClickAndWait(locator,waitMs)): use `waitMs` to as time 
+  out value to wait for the completion of the page load event, which is triggered from this double-click event.
+- [`doubleClickByLabelAndWait(label,waitMs)`](../commands/web/doubleClickByLabelAndWait(label,waitMs)): use `waitMs` to 
+  as time out value to wait for the completion of the page load event, which is triggered from this double-click event.
 
 
 ### [ws commands](../commands/ws)
