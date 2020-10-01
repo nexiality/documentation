@@ -57,4 +57,5 @@ output folder.
 
 
 ### See Also
+[external &raquo; `openFile(filePath)`](openFile(filePath))
 [external &raquo; `runProgramNoWait(programPathAndParams)`](runProgramNoWait(programPathAndParams))

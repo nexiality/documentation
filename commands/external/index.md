@@ -20,6 +20,7 @@ Launch External Program and Tailing</a><br/>
 
 
 ### Available Commands
+- [`openFile(filePath)`](openFile(filePath))
 - [`runJUnit(className)`](runJUnit(className))
 - [`runProgram(programPathAndParams)`](runProgram(programPathAndParams))
 - [`runProgramNoWait(programPathAndParams)`](runProgramNoWait(programPathAndParams))

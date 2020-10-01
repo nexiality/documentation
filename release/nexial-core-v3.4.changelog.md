@@ -49,6 +49,8 @@ comments: true
 ### [external commands](../commands/external)
 - [`nexial.external.workingDirectory`](../systemvars/index#nexial.external.workingDirectory): supports the use of a 
   "working directory" when running an external program. This will affect the starting directory of an external program.
+- [`openFile(filePath)`](../commands/external/openFile(filePath)): **NEW** command used to 
+   open any type of file like pdf, excel, txt, png etc.
 
 
 ### [image commands](../commands/image)
