@@ -116,6 +116,17 @@ Output:<br/>
 
 -----
 
+#### **`binary`**
+Convert current text into a [`BINARY`](BINARYexpression) expression. Generally speaking, a
+[`BINARY`](BINARYexpression) expression by itself isn't very useful. One can use its
+[`save(filepath)`](BINARYexpression#savefilepath) operation to persist binary data into an external file.
+
+**Example**<br/>
+Script:<br/>
+![script](image/TEXTexpression_88.png)
+
+-----
+
 #### **`count(searchFor)`**
 Transfer into a [`NUMBER`](NUMBERexpression) data type that contains the number of occurrence for `searchFor`.
 
@@ -209,8 +220,8 @@ Output:<br/>
 -----
 
 #### **`leftMost(length)`**
-Truncate the current TEXT value *FROM THE LEFT* so that its length is equal or less to `length`. If the current TEXT 
-value has a length less than `length`, then it will remain unchanged
+Or **`left-most(length)`**. Truncate the current TEXT value *FROM THE LEFT* so that its length is equal or less to 
+`length`. If the current TEXT value has a length less than `length`, then it will remain unchanged.
 
 **Example**<br/>
 Script:<br/>
@@ -298,8 +309,9 @@ Output:<br/>
 -----
 
 #### **`padLeft(padWith,maxLength)`**
-Pad (add) existing text with `padWith` character(s) from the left, until `maxLength` length is reached. If current 
-`TEXT` expression value already exceeds specified `maxLength`, it will be truncated (from the right) to `maxLength`.
+Or **`pad-left(padWith,maxLength)`**. Pad (add) existing text with `padWith` character(s) from the left, until 
+`maxLength` length is reached. If current `TEXT` expression value already exceeds specified `maxLength`, it will be 
+truncated (from the right) to `maxLength`.
 
 **Example**<br/>
 Script:<br/>
@@ -313,8 +325,9 @@ This will print out the following on the console:
 -----
 
 #### **`padRight(padWith,maxLength)`**
-Pad (add) existing text with `padWith` character(s) from the right, until `maxLength` length is reached. If current 
-`TEXT` expression value already exceeds specified `maxLength`, it will be truncated (from the right) to `maxLength`.
+Or **`pad-right(padWith,maxLength)`**. Pad (add) existing text with `padWith` character(s) from the right, until 
+`maxLength` length is reached. If current `TEXT` expression value already exceeds specified `maxLength`, it will be 
+truncated (from the right) to `maxLength`.
 
 **Example**<br/>
 Script:<br/>
@@ -356,7 +369,7 @@ Output:<br/>
 -----
 
 #### **`prependIfMissing(prependWith)`**
-Add `prependWith` to the beginning of current text ONLY if `prependWith` if currently not at the beginning of text.
+Add `prependWith` to the beginning of current text ONLY if `prependWith` if currently not at the beginning of text.
 
 **Example**<br/>
 Script:<br/>
@@ -368,7 +381,7 @@ Output:<br/>
 -----
 
 #### **`remove(criteria)`**
-Remove any and all occurrences of `criteria`.
+Remove any and all occurrences of `criteria`.
 
 **Example**<br/>
 Script:<br/>
@@ -380,7 +393,7 @@ Output:<br/>
 -----
 
 #### **`removeEnd(ending)`**
-Or **`remove-end(ending)`**. Remove ending character sequence (substring) of text that matches `ending`.
+Or **`remove-end(ending)`**. Remove ending character sequence (substring) of text that matches `ending`.
 
 **Example**<br/>
 Script:<br/>
@@ -388,6 +401,34 @@ Script:<br/>
 
 Output:<br/>
 ![output](image/TEXTexpression_49.png)
+
+-----
+
+#### **`removeLeft(length)`**
+Or **`remove-left(length)`**. Use `length` to specify the number of characters to remove from the left (i.e. the 
+beginning) of the text. The parameter `length` must be a positive integer. If `length` is greater than the length of
+current text, an empty text will be returned.
+
+**Example**<br/>
+Script:<br/>
+![script](image/TEXTexpression_84.png)
+
+Output:<br/>
+![output](image/TEXTexpression_85.png)
+
+-----
+
+#### **`removeRight(length)`**
+Or **`remove-right(length)`**. Use `length` to specify the number of characters to remove from the right (i.e. the 
+end) of the text. The parameter `length` must be a positive integer. If `length` is greater than the length of current 
+text, an empty text will be returned.
+
+**Example**<br/>
+Script:<br/>
+![script](image/TEXTexpression_86.png)
+
+Output:<br/>
+![output](image/TEXTexpression_87.png)
 
 -----
 
@@ -405,7 +446,7 @@ Output:<br/>
 
 #### **`removeStart(start)`**
 Or **`remove-start(start)`**
-Remove starting character sequence (substring) of text that matches `start`.
+Remove starting character sequence (substring) of text that matches `start`.
 
 **Example**<br/>
 Script:<br/>
@@ -454,7 +495,7 @@ Output:<br/>
 -----
 
 #### **`retainRegex(regex)`**
-Retain only the characters matched to `regex`.
+Or **`retain-regex(regex)`**. Retain only the characters matched to `regex`.
 
 **Example**<br/>
 Script:<br/>
@@ -466,8 +507,8 @@ Output:<br/>
 -----
 
 #### **`rightMost(length)`**
-Truncate the current TEXT value so that its length is equal or less to `length`. If the current TEXT value has a length
-less than `length`, then it will remain unchanged
+Or **`right-most(length)`**. Truncate the current TEXT value so that its length is equal or less to `length`. If the 
+current TEXT value has a length less than `length`, then it will remain unchanged.
 
 **Example**<br/>
 Script:<br/>
