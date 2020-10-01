@@ -19,7 +19,7 @@ specified file is not found, OS will show alert message.
 **Script**:<br/>
 ![script](image/openFile_01.png)
 
-If the file does not exist at the specified path the OS will show alert message.
+If the file does not exist at the specified path the OS may show alert message like <br/>
 ![script](image/openFile_02.png)
 
 
