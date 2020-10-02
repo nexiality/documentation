@@ -270,19 +270,6 @@ Output:<br/>
 
 -----
 
-#### **`number`**
-Transfer into a [`NUMBER`](NUMBERexpression) data type by converting text into a numeric value. Failure to explicitly 
-convert text into number will result in an ERROR condition.
-
-**Example**<br/>
-Script:<br/>
-![script](image/TEXTexpression_36.png)
-
-Output:<br/>
-![output](image/TEXTexpression_37.png)
-
------
-
 #### **`normalize`**
 Remove any leading or trailing whitespaces and also remove duplicate whitespace characters in text. The end result is 
 that text will not contain any occurrences of successive spaces.
@@ -293,6 +280,19 @@ Script:<br/>
 
 Output:<br/>
 ![output](image/TEXTexpression_39.png)
+
+-----
+
+#### **`number`**
+Transfer into a [`NUMBER`](NUMBERexpression) data type by converting text into a numeric value. Failure to explicitly 
+convert text into number will result in an ERROR condition.
+
+**Example**<br/>
+Script:<br/>
+![script](image/TEXTexpression_36.png)
+
+Output:<br/>
+![output](image/TEXTexpression_37.png)
 
 -----
 
@@ -418,6 +418,18 @@ Output:<br/>
 
 -----
 
+#### **`removeRegex(regex)`**
+Remove character(s) that matches `regex`.
+
+**Example**<br/>
+Script:<br/>
+![script](image/TEXTexpression_50.png)
+
+Output:<br/>
+![output](image/TEXTexpression_51.png)
+
+-----
+
 #### **`removeRight(length)`**
 Or **`remove-right(length)`**. Use `length` to specify the number of characters to remove from the right (i.e. the 
 end) of the text. The parameter `length` must be a positive integer. If `length` is greater than the length of current 
@@ -429,18 +441,6 @@ Script:<br/>
 
 Output:<br/>
 ![output](image/TEXTexpression_87.png)
-
------
-
-#### **`removeRegex(regex)`**
-Remove character(s) that matches `regex`.
-
-**Example**<br/>
-Script:<br/>
-![script](image/TEXTexpression_50.png)
-
-Output:<br/>
-![output](image/TEXTexpression_51.png)
 
 -----
 

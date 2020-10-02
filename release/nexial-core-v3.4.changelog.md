@@ -32,12 +32,17 @@ comments: true
 
 ### [Expression](../expressions)
 - [`BINARY`](../expressions/BINARYexpression): **NEW** expression to support binary data type.
+- [`BINARY`]: support loading of binary data from external file.
 - [`SQL => cell(resultName,row,column)`](../expressions/SQLexpression.md#cellresultnamerowcolumn): **NEW** operation
   to retrieve a specific column of a specific row from a specific query result (referenced by name). Depending on the
   underlying data type, the resulting expression could be a [`NUMBER`](../expressions/NUMBERexpression), 
   [`BINARY`](../expressions/BINARYexpression), or [`TEXT`](../expressions/TEXTexpression) expression.
 - [`SQL`](../expressions/SQLexpression): support binary or byte-array data type
-- [`TEXT => binary`](../expressions/TEXTexpression#binary): **NEW** operation to convert text into its binary form
+- [`TEXT => binary`](../expressions/TEXTexpression#binary): **NEW** operation to convert text into its binary form.
+- [`TEXT => removeLeft(length)`]: **NEW** operation to remove characters off the current text from the left (i.e. beginning).
+- [`TEXT => removeRight(length)`]: **NEW** operation to remove characters off the current text from the right (i.e. end).
+- [`LIST => saveItems(indexAndVar)`](../expressions/LISTexpression#saveitemsindexandvar): **NEW** operation to save one
+  or more items from a `LIST` as individual data variables.
 
 
 ### [Filter](../flowcontrols/filter)
