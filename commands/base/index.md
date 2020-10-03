@@ -19,6 +19,7 @@ The "base" command type represents a series of common automation commands:
 - [`assertEmpty(text)`](assertEmpty(text))
 - [`assertEndsWith(text,suffix)`](assertEndsWith(text,suffix))
 - [`assertEqual(expected,actual)`](assertEqual(expected,actual))
+- [`assertMatch(text,regex)`](assertMatch(text,regex))
 - [`assertNotContain(text,substring)`](assertNotContain(text,substring))
 - [`assertNotEmpty(text)`](assertNotEmpty(text))
 - [`assertNotEqual(value1,value2)`](assertNotEqual(value1,value2))

@@ -49,6 +49,8 @@ comments: true
      
  
 ### [base commands](../commands/base)
+- [`assertMatch(text,regex)`](../commands/base/assertMatch(text,regex)): **NEW** command to check for text value via
+  regular expression.
 
 
 ### [external commands](../commands/external)
