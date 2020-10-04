@@ -32,7 +32,9 @@ comments: true
 
 ### [Expression](../expressions)
 - [`BINARY`](../expressions/BINARYexpression): **NEW** expression to support binary data type.
-- [`BINARY`]: support loading of binary data from external file.
+  - support loading of binary data from external file.
+  - previous [`encodeBase64`] has been renamed as [`base64encode`](../expressions/BINARYexpression#base64encode) for 
+    consistency.
 - [`SQL => cell(resultName,row,column)`](../expressions/SQLexpression.md#cellresultnamerowcolumn): **NEW** operation
   to retrieve a specific column of a specific row from a specific query result (referenced by name). Depending on the
   underlying data type, the resulting expression could be a [`NUMBER`](../expressions/NUMBERexpression), 

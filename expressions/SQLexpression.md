@@ -100,26 +100,6 @@ with portablity.
 
 ### Operations
 
-#### `execute(db)`
-Execute the associated SQL statement(s) using `db` as the database connection. Most of the operations mentioned below must
-be preceded by `execute(db)` as a requirement. `
-
-**Example**
-
-**Database:**<br/>
-![](image/SQLexpression_23.png)
-
-**Script:** Inserting new tuples into the table<br/>
-![](image/SQLexpression_24.png)
-
-**Output:** Insertion successful<br/>
-![](image/SQLexpression_25.png)
-
-**Output:** Insertion failed. Nexial prints the query as the output.
-![](image/SQLexpression_26.png)
- 
------
-
 #### `cell(resultName,row,column)`
 Return the value of a specific cell (`row` + `column`) from an execution result named `resultName`.  Must be invoked 
 only after **`execute()`**.
@@ -152,22 +132,6 @@ Return a list of data matching `column`.
 
 -----
 
-#### `columns(resultName)`
-Returns the column names of an execution result named `resultName`. Must be invoked after **`execute()`**.
-
-**Example**
-
-**Database:**<br/>
-![](image/SQLexpression_08.png)
-
-**Script:**<br/>
-![](image/SQLexpression_09.png)
-
-**Output:**<br/>
-![](image/SQLexpression_10.png)
-
------
-
 #### `columnCount(resultName)`
 Returns the number of columns for a given execution result named `resultName`. 
   Must be invoked after **`execute()`**.
@@ -185,6 +149,22 @@ Returns the number of columns for a given execution result named `resultName`.�
 
 -----
   
+#### `columns(resultName)`
+Returns the column names of an execution result named `resultName`. Must be invoked after **`execute()`**.
+
+**Example**
+
+**Database:**<br/>
+![](image/SQLexpression_08.png)
+
+**Script:**<br/>
+![](image/SQLexpression_09.png)
+
+**Output:**<br/>
+![](image/SQLexpression_10.png)
+
+-----
+
 #### `csv(resultName)`
 Transform the content of execution result named `resultName` to [`CSV`](CSVexpression). 
   Must be invoked after **`execute()`**.
@@ -244,6 +224,26 @@ Returns any error, as [`TEXT`](TEXTexpression), incurred during the execution a
 
 -----
 
+#### `execute(db)`
+Execute the associated SQL statement(s) using `db` as the database connection. Most of the operations mentioned below must
+be preceded by `execute(db)` as a requirement. `
+
+**Example**
+
+**Database:**<br/>
+![](image/SQLexpression_23.png)
+
+**Script:** Inserting new tuples into the table<br/>
+![](image/SQLexpression_24.png)
+
+**Output:** Insertion successful<br/>
+![](image/SQLexpression_25.png)
+
+**Output:** Insertion failed. Nexial prints the query as the output.
+![](image/SQLexpression_26.png)
+ 
+-----
+
 #### `resultCount`
 Find out the number of execution results rendered through the most recent `execute()` 
   operation. Must be invoked after **`execute()`**.
@@ -296,9 +296,17 @@ Returns `true`/`false` value if the execution and retrieval of an execution r
 
 -----
 
+#### `row(resultName,rowIndex)`
+Transform one row (denoted by `rowIndex`) from the specific result (denoted by `resultName`) as a 
+[`LIST`](LISTexpression) expression. Must be invoked after **`execute()`**.
+
+Note that any invalid row reference (less than zero or greater than available row) will result in an empty 
+[`LIST`](LISTexpression).,  
+
+-----
+
 #### `rowCount(resultName)`
-Returns the number of rows for a given execution result named `resultName`. Must be 
-  invoked after **`execute()`**.
+Returns the number of rows for a given execution result named `resultName`. Must be invoked after **`execute()`**.
 
 **Example**
 

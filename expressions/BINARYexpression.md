@@ -39,7 +39,7 @@ Script:<br/>
 
 -----
 
-#### **`encodeBase64()`**
+#### **`base64encode()`**
 BASE64 encoding on current binary data. This effectively transforms the current expression into a 
 [`TEXT` expression](TEXTexpression).
 
