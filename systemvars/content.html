@@ -195,7 +195,7 @@
     <td nowrap="nowrap" class="varname"><a id="nexial.elapsedTimeSLA"><code>nexial.elapsedTimeSLA</code></a></td>
     <td>millisecond</td>
     <td>&nbsp;</td>
-    <td>false&nbsp;</td>
+    <td class="read-write">read/write&nbsp;</td>
     <td>
       Determine the elapsed time of any test step to be considered as out of compliance (outside of SLA). Such
       test step would be marked as <span style="color: rgb(153, 51, 0);"><strong>FAIL</strong></span> with
@@ -2219,7 +2219,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td>read/write</td>
+    <td class="read-write">read/write</td>
     <td>
       This system variable indicates that Nexial should push the console output (i.e. standard out) of the
       external programs it launches to the same console which Nexial logs. By doing so, users will be able to
@@ -2232,7 +2232,7 @@
     </td>
     <td>text</td>
     <td></td>
-    <td>read/write</td>
+    <td class="read-write">read/write</td>
     <td>
       This system variable specifies the location from where an external process would start. In some cases, it is
       important to specify the working directory (or some time it is referred to as the "starting directory") so that
@@ -2573,7 +2573,7 @@
     </td>
     <td>boolean</td>
     <td>false</td>
-    <td class="read-only">true</td>
+    <td class="read-only">read-only</td>
     <td>
       <b>APPLICABLE FOR CHROME BROWSERS ONLY AT THIS TIME.</b><br/>
 
@@ -3960,7 +3960,7 @@
   the list of available System properties:
 </p>
 
-<table class="sysvar" cellspacing="0" cellpadding="3">
+<table cellpadding="3" cellspacing="0" class="sysvar" id="systemProperties">
   <tbody>
   <tr>
     <th nowrap="nowrap">property name</th>
@@ -4083,7 +4083,7 @@
   page.
 </p>
 
-<table class="sysvar" cellspacing="0" cellpadding="3">
+<table cellpadding="3" cellspacing="0" class="sysvar" id="browserstackVar">
   <tbody>
   <tr>
     <th nowrap="nowrap">configuration</th>
@@ -4291,7 +4291,7 @@
 <p>
 </p>
 
-<table class="sysvar" cellspacing="0" cellpadding="3">
+<table cellpadding="3" cellspacing="0" class="sysvar" id="cbtVar">
   <tbody>
   <tr>
     <th nowrap="nowrap">configuration</th>
