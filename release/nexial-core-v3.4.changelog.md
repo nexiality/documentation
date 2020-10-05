@@ -15,6 +15,8 @@ comments: true
 - fixed runtime error when checking for Nexial Installer and Nexial version
 - fixed issue for windows while executing script/plan when `USER_HOME` has spaces.
 - fixed the issue where an expression is sometime evaluated twice.
+- forcefully failed script where leading/trailing non-printable characters in Activity name is found; 
+  necessary since such cases would likely cause execution failures.
 
 #### Improvements
 - Enhanced `nexial-artifact-repair` to retain specific data format (date format, background and border colors mainly).
