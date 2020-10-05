@@ -20,16 +20,19 @@ comments: true
 
 #### Improvements
 - Enhanced `nexial-artifact-repair` to retain specific data format (date format, background and border colors mainly).
+- [`nexial-script-update`](../userguide/BatchFiles#nexial-script-update): automatically trim scenario names and activity
+  with leading/trailing whitespaces to avoid execution-time errors.
 
 
 ### [System Variable](../systemvars)
 - [`nexial.mailSubject.withSynopsis`](../systemvars/index.html#nexial.mailSubject.withSynopsis): **NEW** System variable
   to support to inclusion of a "PASS" or "FAIL" postfix at the end of an execution notification email.
 
+
 ### [Nexial Interactive](../interactive)
 - added some helpful hints on how to use "Inspect" within Nexial Interactive
 - fixed defect to support iteration in Nexial Interactive. Now one can change iteration scope 
-  (i.e. [`nexial.scope.iteration`](../systemvars/index.html#nexial.scope.iteration)) between the reload of test artifacts.
+  (i.e. [`nexial.scope.iteration`](../systemvars/index.html#nexial.scope.iteration)) between the test artifacts reloads.
 
 
 ### [Expression](../expressions)
