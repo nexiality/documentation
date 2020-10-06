@@ -96,7 +96,8 @@ comments: true
   out value to wait for the completion of the page load event, which is triggered from this double-click event.
 - [`doubleClickByLabelAndWait(label,waitMs)`](../commands/web/doubleClickByLabelAndWait(label,waitMs)): use `waitMs` to 
   as time out value to wait for the completion of the page load event, which is triggered from this double-click event.
-
+- [`doubleClick(locator)`](../commands/web/doubleClick(locator)): fixed erroneous code that attempts to perform triple 
+  clicks (yikes...).
 
 ### [ws commands](../commands/ws)
 
