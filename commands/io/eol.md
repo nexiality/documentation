@@ -1,8 +1,9 @@
 
 
-In general, it would be a good idea to derive at a predictable outcome inasmuch as reasonable. The end-of-line (EOL) 
-character, however, is system-dependent. On Windows, it's usually a combination of carriage return (`\r`) and line 
-feed (`\n`). On *NIX/Mac it's usually just the line feed (`\n`).
+In general, it would be a good idea to derive at a predictable outcome inasmuch as reasonable. However the end-of-line 
+(EOL) character (a.k.a. newline or _nextline_) is system-dependent. On Windows, it's usually a combination of carriage 
+return (`\r`) and line feed (`\n`). On *NIX/Mac it's usually just the line feed (`\n`).  One can usually generalize this
+using the `(eol)` syntax and let Nexial figures out the appropriate character(s) to use.
 
 In order to compensate for the differences, Nexial supports a few different ways to handle the EOL characters. Using
 the [`nexial.io.eolConfig`](../../systemvars/index#nexial.io.eolConfig) System variable, one can control the EOL

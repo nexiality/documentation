@@ -87,6 +87,19 @@
 </p>
 
 <p>
+  It is good to be aware that Nexial comes with a set "special" handling for certain non-printable characters. One
+  may use these within the scripts in order to render characters not easily recognized on a spreadsheet:
+  <li><code>(eol)</code> - this represents the newline (carriage return or line feed) character</li>
+  <li><code>(empty)</code> - this represents no input. Rather than leaving a parameter empty, one can use this to
+    clarity the input intent</li>
+  <li><code>(blank)</code> - this represents 1 space. Since it is hard to see spaces in a spreadsheet, one might opt
+    for using this for clarity's sake</li>
+  <li><code>(tab)</code> - this represents 1 tab character. Again, use this to improve readability.</li>
+  <li><code>(null)</code> - this represents the <code>null</code> character, which is rarely needed. Some commands
+    might have specific use for such representation.</li>
+</p>
+
+<p>
   Below are a list of configurable system variables. During the test execution, Nexial may generates one or more
   variables which maybe incorporated as part of your test script.
 </p>
