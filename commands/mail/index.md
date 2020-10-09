@@ -6,10 +6,13 @@ comments: true
 ---
 
 
-The "mail" command type represents the automation command regarding sending emails.  Future enhancement could include
-the retrieval of emails as well (_if you need this feature sooner, submit an 
-<a href="https://github.com/nexiality/nexial-core/issues/new" class="external-link" target="_nexial_link">issue</a> 
-to increase the priority thereof_).
+The "mail" command type represents the automation command regarding sending emails. This command helps to configure the 
+email dynamically. With the help of this command we can:-
+
+- Add TO, CC and BCC recipients.
+- Set the email subject.
+- Append content to the body of the email at various steps.
+- Add attachments to the email.
 
 In order to send email, appropriate mail server connectivity must be defined first.  The section below describes how
 mail server connectivity would be configured. 
@@ -60,5 +63,6 @@ optionally rename the profile from `Gmail` to something else.
 
 
 ### Available Commands
-- [mail &raquo; `send(profile,to,subject,body)`](../mail/send(profile,to,subject,body))
-
+- [mail &raquo; `composeMail(var,action,value)`](../mail/composeMail(var,action,value))
+- [mail &raquo; `send(profile,var)`](../mail/send(profile,var))
+- [mail &raquo; `clearMail(var)`](../mail/clearMail(var))

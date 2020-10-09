@@ -79,6 +79,10 @@ comments: true
 ### [localdb commands](../commands/localdb)
 - support binary or byte-array data types
 
+### [mail commands](../commands/mail)
+- support for adding recipients in the TO, CC and BCC list.
+- support for adding attachments to the email.
+- support for appending the body to email at different steps.
 
 ### [number commands](../commands/number)
 
