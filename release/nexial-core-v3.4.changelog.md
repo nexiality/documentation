@@ -64,6 +64,14 @@ comments: true
    open any type of file like pdf, excel, txt, png etc.
 
 
+### [image commands](../commands/image)
+- [`ocr(source,saveVar)`](../commands/image/ocr(source,saveVar)): performance improvement to cache OCR text for repeated use
+
+
+### [io commands](../commands/io)
+- [`checksum(var,file)`](../commands/io/checksum(var,file)): **NEW** command to determine a file's checksum value.
+
+
 ### [localdb commands](../commands/localdb)
 - support binary or byte-array data types
 

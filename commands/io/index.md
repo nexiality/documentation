@@ -15,6 +15,7 @@ The "io" command type represents a series of automation commands regarding io op
 - [`assertPath(path)`](assertPath(path))
 - [`assertReadableFile(file,minByte)`](assertReadableFile(file,minByte))
 - [`base64(var,file)`](base64(var,file))
+- [`checksum(var,file)`](checksum(var,file))
 - [`compare(expected,actual,failFast)`](compare(expected,actual,failFast)) 
 - [`copyFiles(source,target)`](copyFiles(source,target))
 - [`copyFilesByRegex(sourceDir,regex,target)`](copyFilesByRegex(sourceDir,regex,target))

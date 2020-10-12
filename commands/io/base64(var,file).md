@@ -14,8 +14,8 @@ read in the respective binary form, thus allowing the base64 encoding to be file
 
 
 ### Parameters
-- **var** - the variable to store the encoded base64 text
-- **file** - the file from which to read and encode as base64 text
+- **var** - the variable to store the encoded base64 text
+- **file** - the file from which to read and encode as base64 text
 
 
 ### Example
@@ -40,4 +40,5 @@ The source and output file are identical.
 
 ### See Also
 - [`base64encode`](../../expressions/TEXTexpression)
+- [`checksum(var,file)`](checksum(var,file))
 - [`writeBase64decode(encodedSource,decodedTarget,append)`](writeBase64decode(encodedSource,decodedTarget,append))
