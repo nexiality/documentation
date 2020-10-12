@@ -51,9 +51,6 @@ comments: true
 - [`LIST => saveItems(indexAndVar)`](../expressions/LISTexpression#saveitemsindexandvar): **NEW** operation to save one
   or more items from a `LIST` as individual data variables.
 
-
-### [Filter](../flowcontrols/filter)
-     
  
 ### [base commands](../commands/base)
 - [`assertMatch(text,regex)`](../commands/base/assertMatch(text,regex)): **NEW** command to check for text value via
@@ -67,24 +64,14 @@ comments: true
    open any type of file like pdf, excel, txt, png etc.
 
 
-### [image commands](../commands/image)
-
-
-### [io commands](../commands/io)
-
-
-### [json commands](../commands/json)
-
-
 ### [localdb commands](../commands/localdb)
 - support binary or byte-array data types
+
 
 ### [mail commands](../commands/mail)
 - support for adding recipients in the TO, CC and BCC list.
 - support for adding attachments to the email.
 - support for appending the body to email at different steps.
-
-### [number commands](../commands/number)
 
 
 ### [rdbms commands](../commands/rdbms)
@@ -102,11 +89,3 @@ comments: true
   as time out value to wait for the completion of the page load event, which is triggered from this double-click event.
 - [`doubleClick(locator)`](../commands/web/doubleClick(locator)): fixed erroneous code that attempts to perform triple 
   clicks (yikes...).
-
-### [ws commands](../commands/ws)
-
-
-### [xml commands](../commands/xml)
-
-
-## [tn.5250 commands]
