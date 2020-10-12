@@ -7,14 +7,18 @@ comments: true
 ---
 
 ### Description
-This command the deletes the variable name mentioned in the parameter `var` which contains the email information.
+This command deletes existing email configuration (configured via [`compose`](composeMail(var,action,value))) based on 
+specified `var`.
+
 
 ### Parameters
 - **var** - the variable name containing the email information.
 
+
 ### Example
 **Script**:<br/>
 ![](image/mail_02.png)
+
 
 ### See Also
 - [mail &raquo; `composeMail(var,action,value)`](../mail/composeMail(var,action,value))

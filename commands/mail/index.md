@@ -6,13 +6,22 @@ comments: true
 ---
 
 
-The "mail" command type represents the automation command regarding sending emails. This command helps to configure the 
-email dynamically. With the help of this command we can:-
+The `mail` commands represent a series of automation regarding emails (SMTP). As of now, the main focus is on sending 
+email. Future version of Nexial could potentially support the reading email as well. If this is of interest or
+importance to you, please let us know via the 
+[GitHub Feature request form](https://github.com/nexiality/nexial-core/issues/new?template=feature_request.md). It'll
+help us prioritize future Nexial features. 
 
-- Add TO, CC and BCC recipients.
-- Set the email subject.
-- Append content to the body of the email at various steps.
-- Add attachments to the email.
+Using the `mail` commands, one can configure the configuration of an outgoing email dynamically, including: 
+- The TO recipient(s) (via [`composeMail(var,action,value)`](composeMail(var,action,value)))
+- The CC recipient(s) (via [`composeMail(var,action,value)`](composeMail(var,action,value)))
+- The BCC recipient(s) (via [`composeMail(var,action,value)`](composeMail(var,action,value)))
+- The FROM email (via [Mail Settings](#mail-settings))
+- The email subject (via [`composeMail(var,action,value)`](composeMail(var,action,value)))
+- The content of an email, which may be built dynamically over multiple steps 
+  (via [`composeMail(var,action,value)`](composeMail(var,action,value)))
+- The content type of an email (via [Mail Settings](#mail-settings))
+- The attachment(s) (via [`composeMail(var,action,value)`](composeMail(var,action,value)))
 
 In order to send email, appropriate mail server connectivity must be defined first.  The section below describes how
 mail server connectivity would be configured. 
@@ -20,16 +29,18 @@ mail server connectivity would be configured.
 It is noteworthy to clarify that the mail server connectivity used here may not necessarily be the same as that used
 by Nexial to [send out email notification](../../systemvars/index#nexial.enableEmail).
 
+
 ### Mail Settings
 The `mail` command type uses a "profile" to group related data variables together, much like the case for 
 [`ssh`](../ssh/index#connection-setup), [`rdbms`](../rdbms/index#database-connection-setup) or 
 [`aws.s3`](../aws.s3/index#connection-setup).  The profile-based connectivity setting can be defined via command line 
-(i.e. `-D`), [`project.properties`](../../userguide/UnderstandingProjectStructure#artifactprojectproperties), or the 
-appropriate data file.  For example, via command line:
+(i.e. `JAVA_OPT=-D...` or via the `-override` option), 
+[`project.properties`](../../userguide/UnderstandingProjectStructure#artifactprojectproperties), or the appropriate 
+data file.  Below is a command line example:
 
-> set JAVA_OPT=-DMyMail.from=boss@mystore.com -DMyMail.host=mail.mystore.com -DMyMail.port=25
-> 
-> nexial.sh -plan ... ...
+```
+nexial.sh -plan ... ... -override MyMail.from=boss@mystore.com -override MyMail.host=mail.mystore.com -override MyMail.port=25
+```
 
 Here are the various settings available to configure the appropriate mail server for your automation 
 (assuming profile is `MyEmail`):
@@ -49,6 +60,7 @@ Here are the various settings available to configure the appropriate mail server
 | `MyEmail.contentType` | [optional] smtp MIME type to use; default is `text/html`                       |
 
 <br/>
+
 
 #### Gmail
 Sending email via Gmail is possible, albeit a few things to take care initially.
