@@ -13,7 +13,7 @@ would be considered as binary data, and as such could possibly benefit from usin
 
 Generally speaking, binary data (zero's and one's, or hexadecimals) aren't useful to be treated as text. Quite often,
 rendering binary data as characters would result in unreadable text. For such reason, `[BINARY(...)] => ... text]` will
-simply return `<binary>`.  
+simply return `<binary>`.
 
 One may start this expression by pointing to an external file (such as an image file):
 ```
@@ -29,6 +29,9 @@ Alternatively one can start from an empty BINARY expression and then load an ext
 #### **`save(path)`**
 Save current binary data into a file denoted by `path`. No encoding will be performed when saving.
 
+Example:
+![](image/BINARY_01.png)
+
 -----
 
 #### **`saveEncoded(path,append)`**
@@ -36,6 +39,7 @@ Save current binary data into file denoted by `path`, with the option (`append`)
 
 **Example**<br/>
 Script:<br/>
+![](image/BINARY_02.png)
 
 -----
 
@@ -45,14 +49,12 @@ BASE64 encoding on current binary data. This effectively transforms the current 
 
 **Example**<br/>
 Script:<br/>
+![](image/BINARY_03.png)
 
 -----
 
 #### **`size()`**
 The size of current binary data as a [`NUMBER` expression](NUMBERexpression).
-
-**Example**<br/>
-Script:<br/>
 
 -----
 
@@ -61,6 +63,7 @@ Override current binary data with the content of the specified `file` that is BA
 
 **Example**<br/>
 Script:<br/>
+![](image/BINARY_04.png)
 
 -----
 
@@ -69,7 +72,6 @@ Override current binary data with the binary content of the specified `file`.
 
 **Example**<br/>
 Script:<br/>
+![](image/BINARY_05.png)
 
 -----
-
-
