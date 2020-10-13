@@ -16,7 +16,8 @@ comments: true
 - fix screenshot link creation in execution output.
 - exposing [`nexial.lastError`](../systemvars/index#nexial.lastError) within macro execution.
 - enable [`PauseAfter()`](../flowcontrols/index#pausebefore--pauseafter) within macro execution.
-- consider setting data variables from with macro (`macroFlex()`).
+- support data variable creation (such as via [base &raquo; `save(var,value)`](../commands/base/save(var,value))) from 
+  within macro (`macroFlex()`).
 - code fix to accurately parse text into array when successive delimiter is encountered. 
   (e.g. `a,,b` will be parsed as `["a", "", "", "b"]`).
 - prevent a "skip" condition to be considered as a failure via the 
@@ -77,14 +78,14 @@ comments: true
   - output returns as object (such as list, number, etc.) instead of the corresponding string representation
 - [`repeatUntil(steps,maxWaitMs)`](../commands/base/repeatUntil(steps,maxWaitMs)): supports the tracking, start time 
   and end time of a `repeat-until` loop.
-- [`waitForCondition(conditions,maxWaitMs)`](../commands/base/waitForCondition(conditions,maxWaitMs))- Added *NEW* 
+- [`waitForCondition(conditions,maxWaitMs)`](../commands/base/waitForCondition(conditions,maxWaitMs)): *NEW* 
  command to wait until provided conditions satisfy or reached max time and then proceed.
 
 
 ### [image commands](../commands/image)
 - [`ocr(source,saveVar)`](../commands/image/ocr(source,saveVar)): 
-  - supports retries when OCR fails (default 3 retries)
-  - random waits between retries to reduce conflicts
+  - supports retries when OCR fails (default 3 retries).
+  - random waits between retries to reduce conflicts.
 
 
 ### [io commands](../commands/io)
