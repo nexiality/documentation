@@ -1,6 +1,6 @@
 ---
 layout: default
-title: send(profile,var)
+title: sendComposed(profile,var)
 parent: mail
 tags: command mail
 comments: true
@@ -8,10 +8,10 @@ comments: true
 
 ### Description
 This command instructs Nexial to send out an email using the email configuration set in the `profile` and set via the 
-[composeMail(var,action,value)](../mail/composeMail(var,action,value)) command. Use `var` to specify the email settings 
+[compose(var,config,value)](../mail/compose(var,config,value)) command. Use `var` to specify the email settings 
 to use for sending out email.
 
-This comman d expects that the variable passed in the `var` has the Subject, TO recipient and Body set. In case any of
+This command expects that the variable passed in the `var` has the Subject, TO recipient and Body set. In case any of
 these values are not set, then the email will not be delivered resulting an error message.
 
 Read about [Mail Settings](index#mail-settings) for details about configuring mail server for your automation.
@@ -28,5 +28,6 @@ Read about [Mail Settings](index#mail-settings) for details about configuring ma
 
 
 ### See Also
-- [mail &raquo; `composeMail(var,action,value)`](../mail/composeMail(var,action,value))
-- [mail &raquo; `clearMail(var)`](../mail/clearMail(var))
+- [mail &raquo; `send(profile,to,subject,body)`](../mail/send(profile,to,subject,body))
+- [mail &raquo; `compose(var,config,value)`](../mail/compose(var,config,value))
+- [mail &raquo; `clearComposed(var)`](../mail/clearComposed(var))

@@ -81,7 +81,7 @@ comments: true
 ### [mail commands](../commands/mail)
 - support for adding recipients in the TO, CC and BCC list.
 - support for adding attachments to the email.
-- support for appending the body to email at different steps.
+- support for configuring email at different steps.
 
 
 ### [rdbms commands](../commands/rdbms)
