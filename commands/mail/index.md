@@ -5,6 +5,13 @@ tags: command mail smtp
 comments: true
 ---
 
+The "mail" command type represents the automation command regarding sending emails.  Future enhancement could include
+the retrieval of emails as well (_if you need this feature sooner, submit an 
+<a href="https://github.com/nexiality/nexial-core/issues/new" class="external-link" target="_nexial_link">issue</a> 
+to increase the priority thereof_).
+
+In order to send email, appropriate mail server connectivity must be defined first.  The section below describes how
+mail server connectivity would be configured.
 
 The `mail` commands represent a series of automation regarding emails (SMTP). As of now, the main focus is on sending 
 email. Future version of Nexial could potentially support the reading email as well. If this is of interest or
@@ -75,6 +82,7 @@ optionally rename the profile from `Gmail` to something else.
 
 
 ### Available Commands
-- [mail &raquo; `composeMail(var,action,value)`](../mail/composeMail(var,action,value))
-- [mail &raquo; `send(profile,var)`](../mail/send(profile,var))
-- [mail &raquo; `clearMail(var)`](../mail/clearMail(var))
+- [mail &raquo; `send(profile,to,subject,body)`](../mail/send(profile,to,subject,body))
+- [mail &raquo; `compose(var,config,value)`](../mail/compose(var,config,value))
+- [mail &raquo; `sendComposed(profile,var)`](../mail/sendComposed(profile,var))
+- [mail &raquo; `clearComposed(var)`](../mail/clearComposed(var))
