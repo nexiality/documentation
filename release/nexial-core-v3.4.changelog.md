@@ -22,7 +22,7 @@ comments: true
 - Enhanced `nexial-artifact-repair` to retain specific data format (date format, background and border colors mainly).
 - [`nexial-script-update`](../userguide/BatchFiles#nexial-script-update): automatically trim scenario names and activity
   with leading/trailing whitespaces to avoid execution-time errors.
-- updated to Spring 2.3.4, Kotline 1.4.10
+- updated to Spring 2.3.4, Kotlin 1.4.10
 - updated code to eliminate JVM warning on "illegal reflective access".
 
 
