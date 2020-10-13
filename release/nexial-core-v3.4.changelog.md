@@ -87,7 +87,7 @@ comments: true
 - [`compose(var,config,value)`](../commands/mail/compose(var,config,value)): **NEW** command to allow for flexibility 
   in sending SMTP email. Currently, this command supports the adding of recipients in the TO, CC, and BCC list, the 
   adding of attachments, and the HTML content.
-- [`clearComposed(var)`](../commands/mail/clearCompose(var)): **NEW** command to clear any previously configured 
+- [`clearComposed(var)`](../commands/mail/clearComposed(var)): **NEW** command to clear any previously configured 
   email composition.
 - [`sendComposed(profile,var)`](../commands/mail/sendComposed(profile,var)): **NEW** command to send a composed email.
 
@@ -100,13 +100,13 @@ comments: true
 
 
 ### [web commands](../commands/web)
-- [`clickAndWait(locator,waitMs)`](../commands/web/clickAndWait(locator,waitMs)): use `waitMs` to as time out value to 
+- [`clickAndWait(locator,waitMs)`](../commands/web/clickAndWait(locator,waitMs)): use `waitMs` as time out value to 
   wait for the completion of the page load event, which is triggered by this click event.
-- [`clickByLabelAndWait(label,waitMs)`](../commands/web/clickByLabelAndWait(label,waitMs)): use `waitMs` to as time out 
+- [`clickByLabelAndWait(label,waitMs)`](../commands/web/clickByLabelAndWait(label,waitMs)): use `waitMs` as time out 
   value to wait for the completion of the page load event, which is triggered by this click event.
-- [`doubleClickAndWait(locator,waitMs)`](../commands/web/doubleClickAndWait(locator,waitMs)): use `waitMs` to as time 
+- [`doubleClickAndWait(locator,waitMs)`](../commands/web/doubleClickAndWait(locator,waitMs)): use `waitMs` as time 
   out value to wait for the completion of the page load event, which is triggered by this double-click event.
-- [`doubleClickByLabelAndWait(label,waitMs)`](../commands/web/doubleClickByLabelAndWait(label,waitMs)): use `waitMs` to 
+- [`doubleClickByLabelAndWait(label,waitMs)`](../commands/web/doubleClickByLabelAndWait(label,waitMs)): use `waitMs` 
   as time out value to wait for the completion of the page load event, which is triggered by this double-click event.
 - [`doubleClick(locator)`](../commands/web/doubleClick(locator)): fixed erroneous code that attempts to perform triple 
   clicks (_yikes_...).
