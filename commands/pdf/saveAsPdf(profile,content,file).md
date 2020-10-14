@@ -8,7 +8,7 @@ comments: true
 
 
 ### Description
-This command saves the specified `content` as a PDF file (denoted as `pdf`). One can utilize the `profile` parameter
+This command saves the specified `content` as a PDF file (denoted as `file`). One can utilize the `profile` parameter
 to customize various output setting for the PDF generation. Suppose the intended profile is named as `pdfOutput`. We
 can have the following set of output configurations:
 
