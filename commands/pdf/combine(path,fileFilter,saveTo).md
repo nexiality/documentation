@@ -26,3 +26,6 @@ The `saveTo` parameter should be a fully qualified location of the combined PDF 
 
 
 ### See Also
+- [`saveAsPages(pdf,destination)`](saveAsPages(pdf,destination))
+- [`savePageCount(pdf,var)`](savePageCount(pdf,var))
+- [`split(pdf,saveTo)`](split(pdf,saveTo))

@@ -86,4 +86,6 @@ the extraction strategy by setting up profile(s), using the data variables below
 - [`saveAsText(pdf,destination)`](saveAsText(pdf,destination))
 - [`saveFormValues(pdf,var,pageAndLineStartEnd,strategy)`](saveFormValues(pdf,var,pageAndLineStartEnd,strategy))
 - [`saveMetadata(pdf,var)`]( saveMetadata(pdf,var))
+- [`savePageCount(pdf,var)`](savePageCount(pdf,var))
 - [`saveToVar(pdf,var)`](saveToVar(pdf,var))
+- [`split(pdf,saveTo)`](split(pdf,saveTo))
