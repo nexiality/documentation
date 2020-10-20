@@ -15,6 +15,6 @@ like comparison, conversion and resizing:
 - (deprecated) ~~[`compare(baseline,actual)`](compare(baseline,actual))~~
 - [`convert(source,format,saveTo)`](convert(source,format,saveTo))
 - [`crop(image,dimension,saveTo)`](crop(image,dimension,saveTo))
-- [`ocr(source,saveVar)`](ocr(source,saveVar))
+- [`ocr(image,saveVar)`](ocr(image,saveVar))
 - [`resize(image,width,height,saveTo)`](resize(image,width,height,saveTo))
 - [`saveDiff(var,baseline,actual)`](saveDiff(var,baseline,actual))

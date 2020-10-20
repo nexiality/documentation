@@ -36,9 +36,12 @@ comments: true
   given `pdf` file. 
 - [`split(pdf,saveTo)`](../commands/pdf/split(pdf,saveTo)): **NEW** command to split a given `pdf` file into single 
   page PDF files.
+- [`ocr(pdf,saveTo)`](../commands/pdf/ocr(pdf,saveVar)): **NEW** command to perform OCR on a PDF file. Internally 
+  invokes the [image &raquo; `ocr(image,saveVar)`](../commands/image/ocr(image,saveVar)) command.
 
 
 ### [image commands](../commands/image)
+- [`ocr(image,saveVar)`](../commands/image/ocr(image,saveVar)): supports PDF file.
 
 
 ### [io commands](../commands/io)
