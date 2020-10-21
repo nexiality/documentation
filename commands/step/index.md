@@ -7,7 +7,7 @@ comments: true
 
 
 ### Introduction
-This set of commands provides console-based prompt during execution for manual test steps.  Using a "step" command, user
+This set of commands provide console-based prompt during execution for manual test steps.  Using a "step" command, user
 will be prompted to carry out an action manually and optionally provide feedback.  This technique can be useful in the
 many areas:
 

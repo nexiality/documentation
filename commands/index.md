@@ -46,6 +46,7 @@ below to learn more about each type and the commands available under each of the
 - [`web`](web): commands to regarding web application.
 - [`webalert`](webalert): commands regarding JavaScript alert boxes in a web application.
 - [`webcookie`](webcookie): commands regarding HTTP cookie in a web application.
+- [`word`](word): commands regarding Microsoft Word documents.
 - [`ws`](ws): commands to automation Web Services / API.
 - [`ws.async`](ws.async): commands to automation Web Services / API in asynchronous fashion.
 - [`xml`](xml): commands regarding the XML file type.

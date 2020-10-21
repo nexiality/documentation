@@ -57,3 +57,12 @@ comments: true
 
 
 ### [web commands](../commands/web)
+
+
+### [word commands](../commands/word)
+- [`extractText(var,file)`](../commands/word/extractText(var,file)): **NEW** command to extract text from a Word 
+  document.
+- [`readOnly(file,password)`](../commands/word/readOnly(file,password)): **NEW** command to restrict update access on a 
+  Word document.
+- [`removeProtection(file)`](../commands/word/removeProtection(file)): **NEW** command to remove update restriction from
+  a Word document.
