@@ -66,3 +66,8 @@ comments: true
   Word document.
 - [`removeProtection(file)`](../commands/word/removeProtection(file)): **NEW** command to remove update restriction from
   a Word document.
+
+
+## [tn.5250 commands](../commands/tn.5250)
+- [`saveTableAsCSV(csv,maxPage)`](../commands/tn.5250/saveTableAsCSV(csv,maxPage)): enhance tracking of last table 
+  page and added additional logs to improve RCA.
