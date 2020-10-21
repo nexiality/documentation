@@ -24,6 +24,16 @@ Note that:
 
 
 ### Example
+Suppose we have the following Word document:<br/>
+![](image/extractText_01.png)
+
+We can use the following script to extract text content from this document:<br/>
+![](image/extractText_03.png)
+
+Below is the extracted text as a text file (note the line wraps):<br/>
+![](image/extractText_02.png)
 
 
 ### See Also
+- [`assertContains(file,text)`](assertContains(file,text))
+- [`assertNotContain(file,text)`](assertNotContain(file,text))

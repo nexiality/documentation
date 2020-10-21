@@ -18,6 +18,18 @@ access to the specified `file`.
 
 
 ### Example
+Suppose we have the following Word document that is not "protected":<br/>
+![](image/readOnly_01.png)
+
+We can use this command to "password protect" this file:<br/>
+![](image/readOnly_02.png)
+
+After execution, the same file is now "protected":<br/>
+![](image/readOnly_03.png)<br/>
+![](image/readOnly_04.png)
 
 
 ### See Also
+- [`assertNotReadOnly(file)`](assertNotReadOnly(file))
+- [`assertReadOnly(file)`](assertReadOnly(file))
+- [`removeProtection(file)`](removeProtection(file))

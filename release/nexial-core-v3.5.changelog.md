@@ -66,6 +66,16 @@ comments: true
   Word document.
 - [`removeProtection(file)`](../commands/word/removeProtection(file)): **NEW** command to remove update restriction from
   a Word document.
+- [`assertContains(file,text)`](../commands/word/assertContains(file,text)): **NEW** command to verify if `text` can be 
+  found in a Word `file`.
+- [`assertNotContain(file,text)`](../commands/word/assertNotContain(file,text)): **NEW** command to verify if `text` is 
+  absent from a Word `file.
+- [`assertNotReadOnly(file)`](../commands/word/assertNotReadOnly(file)): **NEW** command to verify a Word `file` is not 
+  password-protected.
+- [`assertPassword(file,password)`](../commands/word/assertPassword(file,password)): **NEW** command to verify 
+  `password` for a given Word `file`.
+- [`assertReadOnly(file)`](../commands/word/assertReadOnly(file).md): **NEW** command to verify that a Word `file is 
+  currently password protected. 
 
 
 ## [tn.5250 commands](../commands/tn.5250)
