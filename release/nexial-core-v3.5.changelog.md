@@ -17,6 +17,7 @@ comments: true
 
 
 ### [System Variable](../systemvars)
+- [`nexial.version`](../systemvars/index.html#nexial.version): expose the version information of currently-running Nexial.
 
 
 ### [Nexial Interactive](../interactive)
@@ -51,6 +52,8 @@ comments: true
 
 
 ### [mail commands](../commands/mail)
+- [`compose(var,config,value)`](../commands/mail/compose(var,config,value)): support externalized file/template for 
+  mail content.
 
 
 ### [rdbms commands](../commands/rdbms)
