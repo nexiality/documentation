@@ -12,7 +12,7 @@ comments: true
 
 ### General
 #### Fixes
-
+- code fix to improve support on saving array to data variable 
 #### Improvements
 
 
@@ -60,6 +60,7 @@ comments: true
 
 
 ### [web commands](../commands/web)
+- [`saveTextArray(var,locator)`](../commands/web/saveTextArray(var,locator)): honor the use of `nexial.textDelim`.
 
 
 ### [word commands](../commands/word)
