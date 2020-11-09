@@ -23,7 +23,7 @@ example would yield `-1770.2978788893238`.
 
 ### Operations
 
-#### **`abs(numbers)`**
+#### **`abs`**
 transform current number as a positive number. 
 
 This means that a positive number will remain as is. A negative number will be negated (i.e. multiply by `-1`), 

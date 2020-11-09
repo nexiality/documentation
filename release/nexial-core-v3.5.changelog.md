@@ -82,5 +82,10 @@ comments: true
 
 
 ## [tn.5250 commands](../commands/tn.5250)
-- [`saveTableAsCSV(csv,maxPage)`](../commands/tn.5250/saveTableAsCSV(csv,maxPage)): enhance tracking of last table 
-  page and added additional logs to improve RCA.
+- [`saveTableAsCSV(csv,maxPage)`](../commands/tn.5250/saveTableAsCSV(csv,maxPage)): 
+  - enhance tracking of last table page and added additional logs to improve RCA.
+  - support saving of table data into CSV in "page-up" or reverse order by specifying the `maxPage` as a negative number.
+    For example, `saveTableAsCSV(csv,maxPage) | myCSV.csv | -3`
+- [`inspectScreen()`](../commands/tn.5250/inspectScreen()): fixed the inspection of table that uses spaces to delineate 
+  columns (instead of using the `0` character).
+
