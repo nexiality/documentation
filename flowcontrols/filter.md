@@ -69,7 +69,7 @@ comparisons are:
 
 
 **`[controls]`** represents the variable or data (could be more than one) to consider in order to qualify a condition. 
-It must be separated by pipe (` | `) like `${fruit} in [apple|banana|chicken|shoes]`. 
+It must be separated by pipe (` | `) like `${fruit} in [apple|banana|chicken|shoes]`. 
 
 Multiple conditions are separated by ampersand (` & `). This represents the "AND" conditions, as in
 "_condition 1_ **AND** _condition 2_". For example, `${name} contain "Smith" & ${age} between [18|65]` would mean 
@@ -91,16 +91,16 @@ context of [Flow Control](index):
 ### Example
 <table class="sysvar" cellspacing="0" cellpadding="3">
 <tr><th>condition</th><th>description</th></tr>
-<tr><td><code>"A" = "A"</code></td><td>is "A" equals to "A"?</td></tr>
-<tr><td><code>${fruit} in [apple|banana|chicken|shoes]</code></td><td>is <code>${fruit}</code> one of the items in the list <code>apple, banana, chicken, shoes</code>?</td></tr>
-<tr><td><code>${error message} start with "Error: "</code></td><td>does <code>${error message}</code> starts with the text <code>"Error: "</code>?</td></tr>
-<tr><td><code>${rate} between [7.005|7.8001]</code></td><td>is <code>${rate}</code> between <code>7.005</code> and <code>7.8001</code>?</td></tr>
-<tr><td><code>${my_age} between [${min_age}|${max_age}]</code></td><td>is <code>${my_age}</code> between <code>${min_age}</code> and <code>${max_age}</code>?</td></tr>
-<tr><td><code>${my_fruit} match [A-Za-z]{5} | ${my_age} &gt; 25</code></td><td>is <code>${my_fruit}</code> 5 alphabets <b>and</b> <code>${my_age}</code> greater than <code>25</code>?</td></tr>
+<tr><td><code>"A" = "A"</code></td><td>is "A" equals to "A"?</td></tr>
+<tr><td><code>${fruit} in [apple|banana|chicken|shoes]</code></td><td>is <code>${fruit}</code> one of the items in the list <code>apple, banana, chicken, shoes</code>?</td></tr>
+<tr><td><code>${error message} start with "Error: "</code></td><td>does <code>${error message}</code> starts with the text <code>"Error: "</code>?</td></tr>
+<tr><td><code>${rate} between [7.005|7.8001]</code></td><td>is <code>${rate}</code> between <code>7.005</code> and <code>7.8001</code>?</td></tr>
+<tr><td><code>${my_age} between [${min_age}|${max_age}]</code></td><td>is <code>${my_age}</code> between <code>${min_age}</code> and <code>${max_age}</code>?</td></tr>
+<tr><td><code>${my_fruit} match [A-Za-z]{5} & ${my_age} &gt; 25</code></td><td>is <code>${my_fruit}</code> 5 alphabets <b>and</b> <code>${my_age}</code> greater than <code>25</code>?</td></tr>
 <tr><td><code>${my_name} end with nathan</code></td><td>Does <code>${my_name}</code> end with <code>nathan</code> (such as Jonathan)?</td></tr>
 <tr><td><code>${is_login} is false</code></td><td>is <code>${is_login}</code> false (i.e. NOT true)?</td></tr>
 <tr><td><code>not_a_var is undefined</code></td><td>is there a variable defined as <code>not_a_var</code>?<br/><br/><b>Note that <code>not_a_var</code> is not specified in the format of <code>${...}</code></b> since we are referencing the data variable, not the inferred value.</td></tr>
-<tr><td><code>my_age is defined & ${my_age} is not empty & ${my_age} has length of 2</code></td><td>is there a variable defined as <code>my_age</code>, and such variable is not empty and contains 2 characters?<br/><br/><b>Note that <code>my_age</code> is not specified in the format of <code>${...}</code> in the context of the <code>is defined</code> condition</b> since we are referencing the data variable, not the inferred value.  <br/>However, with the <code>is not empty</code> and <code>has length of</code> conditions, we would use the <code>${...}</code> form.</td></tr>
+<tr><td><code>my_age is defined & ${my_age} is not empty & ${my_age} has length of 2</code></td><td>is there a variable defined as <code>my_age</code>, and such variable is not empty and contains 2 characters?<br/><br/><b>Note that <code>my_age</code> is not specified in the format of <code>${...}</code> in the context of the <code>is defined</code> condition</b> since we are referencing the data variable, not the inferred value.<br/>However, with the <code>is not empty</code> and <code>has length of</code> conditions, we would use the <code>${...}</code> form.</td></tr>
 <tr><td><code>${os.name} not start with "Windows"</code></td><td>the current operating system is NOT a Windows OS</td></tr>
 <tr><td><code>$(syspath|out|fullpath)/myFile.txt has file-size 1024</code></td><td>does the file "myFile.txt" in the "output" directory has at least 1024 bytes?</td></tr>
 <tr><td><code>$(syspath|out|fullpath)/myFile.txt has file content Nexial_version</code></td><td>does the file "myFile.txt" in the "output" directory contains content Nexial_version?</td></tr>
