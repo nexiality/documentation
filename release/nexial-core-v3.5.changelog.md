@@ -25,6 +25,12 @@ comments: true
 
 
 ### [Expression](../expressions)
+- [`[TEXT(...) -> if-contain(test,match,notMatch)]`](../expressions/TEXTexpression#ifcontaintestmatchnotmatch): **NEW**
+  operation to support the "if contains ... then replace with ... else with ..." operation.
+- [`[TEXT(...) -> if-equal(test,match,notMatch)]`](../expressions/TEXTexpression#ifequaltestmatchnotmatch): **NEW**
+  operation to support the "if equal ... then replace with ... else with ..." operation.
+- [`[TEXT(...) -> if-match(regex,match,notMatch)]`](../expressions/TEXTexpression#ifmatchregexmatchnotmatch): **NEW**
+  operation to support the "if match regex ... then replace with ... else with ..." operation.
 
  
 ### [base commands](../commands/base)

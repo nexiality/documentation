@@ -8,12 +8,12 @@ comments: true
 
 
 ### Description
-`TEXT`, as the name suggest, treats its input as text.  All its operations treat their respective input as text as well.
+`TEXT`, as the name suggest, treats its input as text.  All its operations treat their respective input as text as well.
 
 
 ### Operations
 #### **`after(criteria)`**
-Retain the portion of text after the specified `criteria`.
+Retain the portion of text after the specified `criteria`.
 
 **Example**<br/>
 Script:<br/>
@@ -25,7 +25,7 @@ Output:<br/>
 -----
 
 #### **`append(text,text,text,...)`**
-Add one or more text to the end of `text`.
+Add one or more text to the end of `text`.
 
 **Example**<br/>
 Script:<br/>
@@ -37,7 +37,7 @@ Output:<br/>
 -----
 
 #### **`appendIfMissing(appendWith)`**
-Add `appendWith` to the end of current text ONLY if `appendWith` is currently not at the end of text.
+Add `appendWith` to the end of current text ONLY if `appendWith` is currently not at the end of text.
 
 **Example**<br/>
 Script:<br/>
@@ -93,7 +93,7 @@ Output:<br/>
 -----
 
 #### **`before(criteria)`**
-Retain the portion of text before the specified `criteria`.
+Retain the portion of text before the specified `criteria`.
 
 **Example**<br/>
 Script:<br/>
@@ -105,7 +105,7 @@ Output:<br/>
 -----
 
 #### **`between(start,end)`**
-Retain the portion of text that is between the specified `start` and `end` text.
+Retain the portion of text that is between the specified `start` and `end` text.
 
 **Example**<br/>
 Script:<br/>
@@ -128,7 +128,7 @@ Script:<br/>
 -----
 
 #### **`count(searchFor)`**
-Transfer into a [`NUMBER`](NUMBERexpression) data type that contains the number of occurrence for `searchFor`.
+Transfer into a [`NUMBER`](NUMBERexpression) data type that contains the number of occurrence for `searchFor`.
 
 **Example**<br/>
 Script:<br/>
@@ -187,8 +187,75 @@ Output:<br/>
 
 -----
 
+#### **`ifContain(test,match,notMatch)`**
+Also known as `if-contain(test,match,notMatch)`. This operation replaces value of the current TEXT expression to either 
+`match` or `notMatch`, based on whether the value of the current TEXT expression contains `test` or not.
+
+In other word,
+- if current TEXT expression has a value that contains `test`, then its value is replaced with `match`.  
+- if current TEXT expression has a value that **DOES NOT** contain `test`, then its value is replaced with `notMatch`.  
+
+**Example**<br/>
+
+Script:<br/>
+```
+[TEXT(Hello) => if-contain(ell,Hi,Bye)]
+```
+
+Output:<br/>
+```
+Hi
+```
+
+-----
+
+#### **`ifEqual(test,match,notMatch)`**
+Also known as `if-equal(test,match,notMatch)`. This operation replaces value of the current TEXT expression to either 
+`match` or `notMatch`, based on whether the value of the current TEXT expression is equal to `test` or not.
+
+In other word,
+- if current TEXT expression has a value equal to `test`, then its value is replaced with `match`.  
+- if current TEXT expression has a value **NOT** equal to `test`, then its value is replaced with `notMatch`.  
+
+**Example**<br/>
+
+Script:<br/>
+```
+[TEXT(Hello) => if-equal(Hello,Bye,Huh?)]
+```
+
+Output:<br/>
+```
+Bye
+```
+
+-----
+
+#### **`ifMatch(regex,match,notMatch)`**
+Also known as `if-match(test,match,notMatch)`. This operation replaces value of the current TEXT expression to either 
+`match` or `notMatch`, based on whether the value of the current TEXT expression satisfies the specified `regex` in 
+its entirety or not.
+
+In other word,
+- if current TEXT expression has a value that matches `regex`, then its value is replaced with `match`.  
+- if current TEXT expression has a value that **DOES NOT** match to `regex`, then its value is replaced with `notMatch`.  
+
+**Example**<br/>
+
+Script:<br/>
+```
+[TEXT(Catepillar) => if-match(^.+pills.+$,Butterfly,Medicine)]
+```
+
+Output:<br/>
+```
+Medicine
+```
+
+-----
+
 #### **`insert(after,text)`**
-Search for `after` in text, and if found, add the specified text to it.  If `after` is not found, no changes will be 
+Search for `after` in text, and if found, add the specified text to it.  If `after` is not found, no changes will be 
 made to text.
 
 **Example**<br/>
@@ -235,7 +302,7 @@ Carni
 -----
 
 #### **`length`**
-Transfer into a [`NUMBER`](NUMBERexpression) data type that contains the length of text.
+Transfer into a [`NUMBER`](NUMBERexpression) data type that contains the length of text.
 
 **Example**<br/>
 Script:<br/>
@@ -247,7 +314,7 @@ Output:<br/>
 -----
 
 #### **`list(delim)`**
-Transfer into a [`LIST`](LISTexpression) data type by converting text into a list, using  `delim` as the character to split.
+Transfer into a [`LIST`](LISTexpression) data type by converting text into a list, using  `delim` as the character to split.
 
 **Example**<br/>
 Script:<br/>
@@ -284,7 +351,7 @@ Output:<br/>
 -----
 
 #### **`number`**
-Transfer into a [`NUMBER`](NUMBERexpression) data type by converting text into a numeric value. Failure to explicitly 
+Transfer into a [`NUMBER`](NUMBERexpression) data type by converting text into a numeric value. Failure to explicitly 
 convert text into number will result in an ERROR condition.
 
 **Example**<br/>
@@ -357,7 +424,7 @@ Script:<br/>
 -----
 
 #### **`prepend(text,text,text,...)`**
-Add one or more text to the beginning of `text`.
+Add one or more text to the beginning of `text`.
 
 **Example**<br/>
 Script:<br/>
@@ -369,7 +436,7 @@ Output:<br/>
 -----
 
 #### **`prependIfMissing(prependWith)`**
-Add `prependWith` to the beginning of current text ONLY if `prependWith` if currently not at the beginning of text.
+Add `prependWith` to the beginning of current text ONLY if `prependWith` if currently not at the beginning of text.
 
 **Example**<br/>
 Script:<br/>
@@ -458,7 +525,7 @@ Output:<br/>
 -----
 
 #### **`replace(searchFor,replaceWith)`**
-As the name suggest, this operation will search for `searchFor` and replace matches with `replaceWith`.
+As the name suggest, this operation will search for `searchFor` and replace matches with `replaceWith`.
 
 **Example**<br/>
 Script:<br/>
@@ -470,8 +537,8 @@ Output:<br/>
 -----
 
 #### **`replaceRegex(searchRegex,replaceWith)`**
-Perform a regex-search on text using `searchRegex` and replace all matches with `replaceWith`.  Note that grouping 
-character `(` and `)` should be escaped as `\(...\)`.  For example,  `[TEXT(...) => replaceRegex(\(chicken\),beef)]`
+Perform a regex-search on text using `searchRegex` and replace all matches with `replaceWith`.  Note that grouping 
+character `(` and `)` should be escaped as `\(...\)`.  For example,  `[TEXT(...) => replaceRegex(\(chicken\),beef)]`
 
 **Example**<br/>
 Script:<br/>
@@ -541,7 +608,7 @@ first line as `append` is set to `true`.
 -----
 
 #### **`store(var)`**
-Save current TEXT expression to a data variable.  If the specified `var` exists, its value will be overwritten. Using 
+Save current TEXT expression to a data variable.  If the specified `var` exists, its value will be overwritten. Using 
 this operation, one can put an expression on pause and resume it at a later time.
 
 **Example**<br/>
@@ -554,7 +621,7 @@ Output:<br/>
 -----
 
 #### **`substring(start,end)`**
-Retain the portion of text from the `start` position (zero-based) to the `end`  position (exclusive).
+Retain the portion of text from the `start` position (zero-based) to the `end`  position (exclusive).
 
 **Example**<br/>
 Script:<br/>
