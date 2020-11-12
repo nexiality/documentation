@@ -12,7 +12,8 @@ comments: true
 
 ### General
 #### Fixes
-- code fix to improve support on saving array to data variable 
+- code fix to improve support on saving array to data variable.
+- code fix to accurately skip over a repeat-until block that is embedded within a "skipped" section.
 #### Improvements
 
 
@@ -89,4 +90,9 @@ comments: true
     For example, `saveTableAsCSV(csv,maxPage) | myCSV.csv | -3`
 - [`inspectScreen()`](../commands/tn.5250/inspectScreen()): fixed the inspection of table that uses spaces to delineate 
   columns (instead of using the `0` character).
-
+- support use of secondary table (instead of the first) during screen inspection
+- support data matching across ANY column of the current table. Use `*` for `column` to denote any column. Affected commands:
+  - [`assertTableMatch(column,text)`](../commands/tn.5250/assertTableMatch(column,text))
+  - [`assertTableNotMatch(column,text)`](../commands/tn.5250/assertTableNotMatch(column,text))
+  - [`saveTableMatchCount(column,text)`](../commands/tn.5250/saveTableMatchCount(column,text))
+  - [`typeOnMatchedRow(column,match,keystrokes)`](../commands/tn.5250/typeOnMatchedRow(column,match,keystrokes))
