@@ -14,6 +14,7 @@ comments: true
 #### Fixes
 - code fix to improve support on saving array to data variable.
 - code fix to accurately skip over a repeat-until block that is embedded within a "skipped" section.
+- code fix to accurately skip over section block that is embedded within a macro, which is called from another section.
 #### Improvements
 
 
