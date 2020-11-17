@@ -31,6 +31,7 @@ Nexial currently supports the following browsers (recent versions only):
     <li><a href="#tab_safari_preview" id="tab_title_safari_preview">Safari Technology Preview</a></li>
     <li><a href="#tab_ie9" id="tab_title_ie9">Internet Explorer 9 and above</a></li>
     <li><a href="#tab_edge" id="tab_title_edge">Microsoft Edge</a></li>
+    <li><a href="#tab_edge_chrome" id="tab_title_edge_chrome">Microsoft Edge Chromium</a></li>
     <li><a href="#tab_browserstack" id="tab_title_browserstack">BrowserStack</a></li>
     <li><a href="#tab_cbt" id="tab_title_cbt">CrossBrowserTester</a></li>
   </ul>
@@ -189,14 +190,37 @@ Nexial currently supports the following browsers (recent versions only):
       </ol>
     </div>
     <div id="tab_edge" class="tab">
-      Enabling IE automation requires the following steps:
+      Enabling Edge automation requires the following steps:
       <ol>
-        <li>Make sure a recent version of <a href="https://www.microsoft.com/en-us/windows/microsoft-edge" class="external-link" target="_nexial_link">Microsft Edge Browser</a>
-          suitable to your platform is installed locally. Only Windows 10 is supported at this time.</li>
-        <li>Set <a href="../../systemvars/index#nexial.browser"><code>nexial.browser</code></a> to <code>edge</code>.</li>
+        <li>Make sure a recent version of <a class="external-link"
+                                             href="https://www.microsoft.com/en-us/windows/microsoft-edge"
+                                             target="_nexial_link">Microsoft Edge Browser</a>
+          suitable to your platform is installed locally. Only Windows 10 is supported at this time.
+        </li>
+        <li>Set <a href="../../systemvars/index#nexial.browser"><code>nexial.browser</code></a> to <code>edge</code>.
+        </li>
         <li>Be sure to read through and follow the recommendations listed in
           <a href="../../tipsandtricks/WebAutomationOnIE">Improving IE Automation</a> (these recommendations apply to
-          Edge as well!).</li>
+          Edge as well!).
+        </li>
+        <li>Begin scripting...</li>
+      </ol>
+    </div>
+    <div class="tab" id="tab_edge_chrome">
+      Enabling Chromium Based Edge automation requires the following steps:
+      <ol>
+        <li>Make sure a recent version of <a class="external-link"
+                                             href="https://www.microsoft.com/en-us/windows/microsoft-edge"
+                                             target="_nexial_link">Microsoft Edge Chromium Browser</a>
+          suitable to your platform is installed locally. Only Windows 10 is supported at this time.
+        </li>
+        <li>Set <a href="../../systemvars/index#nexial.browser"><code>nexial.browser</code></a> to
+          <code>edgechrome</code>.
+        </li>
+        <li>Be sure to read through and follow the recommendations listed in
+          <a href="../../tipsandtricks/WebAutomationOnIE">Improving IE Automation</a> (these recommendations apply to
+          Edge as well!).
+        </li>
         <li>Begin scripting...</li>
       </ol>
     </div>

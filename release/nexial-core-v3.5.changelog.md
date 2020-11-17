@@ -20,7 +20,8 @@ comments: true
 
 ### [System Variable](../systemvars)
 - [`nexial.version`](../systemvars/index.html#nexial.version): expose the version information of currently-running Nexial.
-
+- [`nexial.browser`](../systemvars/index#nexial.browser): Supports new browser type `edgechrome` for chromium based 
+  edge browser.
 
 ### [Nexial Interactive](../interactive)
 
@@ -73,6 +74,7 @@ comments: true
 
 ### [web commands](../commands/web)
 - [`saveTextArray(var,locator)`](../commands/web/saveTextArray(var,locator)): honor the use of `nexial.textDelim`.
+- Added *NEW* webdriver for chromium based edge browser.
 
 
 ### [word commands](../commands/word)
