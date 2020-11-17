@@ -26,13 +26,17 @@ comments: true
 
 
 ### [Expression](../expressions)
-- [`[TEXT(...) -> if-contain(test,match,notMatch)]`](../expressions/TEXTexpression#ifcontaintestmatchnotmatch): **NEW**
+- [`[TEXT(...) => if-contain(test,match,notMatch)]`](../expressions/TEXTexpression#ifcontaintestmatchnotmatch): **NEW**
   operation to support the "if contains ... then replace with ... else with ..." operation.
-- [`[TEXT(...) -> if-equal(test,match,notMatch)]`](../expressions/TEXTexpression#ifequaltestmatchnotmatch): **NEW**
+- [`[TEXT(...) => if-equal(test,match,notMatch)]`](../expressions/TEXTexpression#ifequaltestmatchnotmatch): **NEW**
   operation to support the "if equal ... then replace with ... else with ..." operation.
-- [`[TEXT(...) -> if-match(regex,match,notMatch)]`](../expressions/TEXTexpression#ifmatchregexmatchnotmatch): **NEW**
+- [`[TEXT(...) => if-match(regex,match,notMatch)]`](../expressions/TEXTexpression#ifmatchregexmatchnotmatch): **NEW**
   operation to support the "if match regex ... then replace with ... else with ..." operation.
-
+- [`[TEXT(...) => repeat(count)]`](../expressions/TEXTexpression#repeattimes): **NEW** repeat current text by number 
+  of `times.
+- [`[LIST(...) => index(item)]`](../expressions/LISTexpression#indexitem): support `CONTAIN:` and `REGEX:` prefixes for 
+  improved expressiveness.
+ 
  
 ### [base commands](../commands/base)
 
@@ -103,3 +107,5 @@ comments: true
   - [`assertTableNotMatch(column,text)`](../commands/tn.5250/assertTableNotMatch(column,text))
   - [`saveTableMatchCount(column,text)`](../commands/tn.5250/saveTableMatchCount(column,text))
   - [`typeOnMatchedRow(column,match,keystrokes)`](../commands/tn.5250/typeOnMatchedRow(column,match,keystrokes))
+- [`typeOnMatchedColumns(matches,keystrokes)`](../commands/tn.5250/typeOnMatchedColumns(matches,keystrokes)): **NEW** 
+  command to allow the matching of table row based on multiple columns (each filter separated by new line).

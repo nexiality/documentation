@@ -524,6 +524,12 @@ Output:<br/>
 
 -----
 
+#### **`repeat(times)`**
+Transform current TEXT expression by repeating its text value. The number of repeats is controlled via the `times` 
+parameter. Note that if `times` is not a positive number, this expression would contain empty text (i.e. no value).
+
+-----
+
 #### **`replace(searchFor,replaceWith)`**
 As the name suggest, this operation will search for `searchFor` and replace matches with `replaceWith`.
 

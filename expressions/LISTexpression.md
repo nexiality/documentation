@@ -8,21 +8,21 @@ comments: true
 
 
 ### Description
-LIST represents expression intended to transform/manipulate a list of _things_.  This expression starts by specifying 
-a list separated by [`nexial.textDelim`](../systemvars/index#nexial.textDelim)<br/>
+LIST represents expression intended to transform/manipulate a list of _things_.  This expression starts by specifying 
+a list separated by [`nexial.textDelim`](../systemvars/index#nexial.textDelim)<br/>
 
 For example:<br/>
 ![](image/LISTexpression_01.png)
 
-Here, we are forcing `nexial.textDelim` as comma (`,`), although it is unlikely necessary.  Then we set `myList` to 
-a list of US states. The last command uses a `LIST` expression to sort the US states.  Here's the output:<br/>
+Here, we are forcing `nexial.textDelim` as comma (`,`), although it is unlikely necessary.  Then we set `myList` to 
+a list of US states. The last command uses a `LIST` expression to sort the US states.  Here's the output:<br/>
 ![](image/LISTexpression_02.png)
 
 
 ### Operations
 
 #### **`append(items)`**
-Add the specified `items` to the end of the current list.
+Add the specified `items` to the end of the current list.
 
 **Example**<br/>
 Script:<br/>
@@ -34,7 +34,7 @@ Output:<br/>
 -----
 
 #### **`ascending`**
-Re-order the list in ascending order, based on the 
+Re-order the list in ascending order, based on the 
   <a href="https://en.wikipedia.org/wiki/Lexicographical_order" class="external-link" target="_nexial_link">natural lexicographical order</a>.
 
 **Example**<br/>
@@ -47,8 +47,8 @@ Output:<br/>
 -----
 
 #### **`average`**
-Calculate the average of all the numbers found in the list as a [`NUMBER`](NUMBERexpression).   Non-numeric items in 
-  the list will be ignored, and not count towards the calculation of the average.  In almost all cases, this will be a 
+Calculate the average of all the numbers found in the list as a [`NUMBER`](NUMBERexpression).   Non-numeric items in 
+  the list will be ignored, and not count towards the calculation of the average.  In almost all cases, this will be a 
   decimal number.
 
 **Example**<br/>
@@ -70,7 +70,7 @@ Output:<br/>
 -----
 
 #### **`combine(delim)`**
-Same as [`text`](#text), but with customized separator (`delim`).
+Same as [`text`](#text), but with customized separator (`delim`).
 
 **Example**<br/>
 Script:<br/>
@@ -82,7 +82,7 @@ Output:<br/>
 -----
 
 #### **`count`**
-Find the number of items in this list as a [`NUMBER`](NUMBERexpression). Alias to [`length`](#length).
+Find the number of items in this list as a [`NUMBER`](NUMBERexpression). Alias to [`length`](#length).
 
 **Example**<br/>
 Script:<br/>
@@ -94,7 +94,7 @@ Output:<br/>
 -----
 
 #### **`descending`**
-Re-order the list in descending order, based on the 
+Re-order the list in descending order, based on the 
   <a href="https://en.wikipedia.org/wiki/Lexicographical_order" class="external-link" target="_nexial_link">natural lexicographical order</a>.
 
 **Example**<br/>
@@ -119,7 +119,7 @@ Output:<br/>
 -----
 
 #### **`first`**
-Retrieve the first item in the list as a [`TEXT`](TEXTexpression).
+Retrieve the first item in the list as a [`TEXT`](TEXTexpression).
 
 **Example**<br/>
 Script:<br/>
@@ -131,8 +131,22 @@ Output:<br/>
 -----
 
 #### **`index(item)`**
-Transform the current list to a [`NUMBER`](NUMBERexpression) representing the position of the specified `item` in 
-  the list.
+Transform the current list to a [`NUMBER`](NUMBERexpression) representing the position of the specified `item` in the 
+list. **NOTE that index is zero-based!** One can use `CONTAIN:` or `REGEX:` prefix for more expressiveness way of 
+searching for a specific item. For example,
+
+```
+[LIST(Alabama,Alaska,Arizona,Arkansas) => index(CONTAIN:as)]
+```
+
+... would result in `NUMBER(1)` since Al**as**ka is the first item for the "contain" match. 
+
+```
+LIST(New Hampshire,New Jersey,New Mexico,New York) => index(REGEX:New.+co)]
+```
+
+.. would result in `NUMBER(2)` since `New Mexico` is the first to match `New.+co`.
+
 
 **Example**<br/>
 Script:<br/>
@@ -149,7 +163,7 @@ output is `[LIST(china,india,australia,egypt,spain) => index(japan)]`. As `japan
 -----
 
 #### **`insert(index,item)`**
-Insert new `item` to existing list at position specified by `index`. 
+Insert new `item` to existing list at position specified by `index`. 
 
 **Example**<br/>
 Script:<br/>
@@ -165,8 +179,8 @@ When `index` is greater than the `length` of the list. Then, output is `unable t
 -----
 
 #### **`intersect(list)`**
-Transform the current list by creating a new list that contains only the items found in both `list`.  See 
-  <a href="https://en.wikipedia.org/wiki/Union_(set_theory)" class="external-link" target="_nexial_link">Intersection (set theory)</a> for more details.
+Transform the current list by creating a new list that contains only the items found in both `list`.  See 
+  <a href="https://en.wikipedia.org/wiki/Union_(set_theory)" class="external-link" target="_nexial_link">Intersection (set theory)</a> for more details.
 
 **Example**<br/>
 Script:<br/>
@@ -178,7 +192,7 @@ Output:<br/>
 -----
 
 #### **`item(index)`**
-Retrieve the item on the list based on its `index`.  If invalid `index` is specified, an empty string is returned.
+Retrieve the item on the list based on its `index`.  If invalid `index` is specified, an empty string is returned.
 
 **Example**<br/>
 Script:<br/>
@@ -192,7 +206,7 @@ Output:<br/>
 -----
 
 #### **`join(list)`**
-Transform the current list by appending `list` to it; same as [`append(items)`](#append(items)).
+Transform the current list by appending `list` to it; same as [`append(items)`](#append(items)).
 
 **Example**<br/>
 Script:<br/>
@@ -204,7 +218,7 @@ Output:<br/>
 -----
 
 #### **`last`**
-Retrieve the last item in the list as a [`TEXT`](TEXTexpression).
+Retrieve the last item in the list as a [`TEXT`](TEXTexpression).
 
 **Example**<br/>
 Script:<br/>
@@ -216,7 +230,7 @@ Output:<br/>
 -----
 
 #### **`length`**
-Find the length of this list as a [`NUMBER`](NUMBERexpression). Alias to [`count`](#count).
+Find the length of this list as a [`NUMBER`](NUMBERexpression). Alias to [`count`](#count).
 
 **Example**<br/>
 Script:<br/>
@@ -228,7 +242,7 @@ Output:<br/>
 -----
 
 #### **`max`**
-Find the largest number in the list as a [`NUMBER`](NUMBERexpression).
+Find the largest number in the list as a [`NUMBER`](NUMBERexpression).
 
 **Example**<br/>
 Script:<br/>
@@ -240,7 +254,7 @@ Output:<br/>
 -----
 
 #### **`min`**
-Find the smallest number in the list as a [`NUMBER`](NUMBERexpression).
+Find the smallest number in the list as a [`NUMBER`](NUMBERexpression).
 
 **Example**<br/>
 Script:<br/>
@@ -264,7 +278,7 @@ Output:<br/>
 -----
 
 #### **`prepend(items)`**
-Add the specified `items` to the beginning of the current list.
+Add the specified `items` to the beginning of the current list.
 
 **Example**<br/>
 Script:<br/>
@@ -276,7 +290,7 @@ Output:<br/>
 -----
 
 #### **`remove(index)`**
-Remove an item of the list denoted by the item's `index`.
+Remove an item of the list denoted by the item's `index`.
 
 **Example**<br/>
 Script:<br/>
@@ -300,7 +314,7 @@ Output:<br/>
 -----
 
 #### **`replace(searchFor,replaceWith)`**
-For the portion of all items that matches `searchFor`, replace it with `replaceWith`.
+For the portion of all items that matches `searchFor`, replace it with `replaceWith`.
 
 **Example**<br/>
 Script:<br/>
@@ -312,8 +326,8 @@ Output:<br/>
 -----
 
 #### **`replaceItem(searchFor,replaceWith)`**
-Replace all items that exactly matches `searchFor` with `replaceWith`.  For example, list = 
-  `CA,NY,AL,AK,HI,CA,AS,KR,CT,CS,CS,CA`.  `[LIST($list) => replaceItem(CA,TX)]` would return a list as 
+Replace all items that exactly matches `searchFor` with `replaceWith`.  For example, list = 
+  `CA,NY,AL,AK,HI,CA,AS,KR,CT,CS,CS,CA`.  `[LIST($list) => replaceItem(CA,TX)]` would return a list as 
   `TX,NY,AL,AK,HI,TX,AS,KR,CT,CS,CS,TX`.
 
 **Example**<br/>
@@ -326,7 +340,7 @@ Output:<br/>
 -----
 
 #### **`replaceRegex(searchFor,replaceWith)`**
-Replace the content of all items that match the regular expression  `searchFor`, with `replaceWith`.
+Replace the content of all items that match the regular expression  `searchFor`, with `replaceWith`.
 
 **Example**<br/>
 Script:<br/>
@@ -413,7 +427,7 @@ Output:<br/>
 -----
 
 #### **`sublist(start,end)`**
-Transform current list by downsizing it to a subset between `start` index and `end` index. Use `-1` (or omit) for `end`
+Transform current list by downsizing it to a subset between `start` index and `end` index. Use `-1` (or omit) for `end`
 to signify the last position of the current list.
 
 **Example**<br/>
@@ -430,7 +444,7 @@ Output:<br/>
 -----
 
 #### **`sum`**
-Add up all the numbers found in the list as a [`NUMBER`](NUMBERexpression).  Depending on the numbers found, the 
+Add up all the numbers found in the list as a [`NUMBER`](NUMBERexpression).  Depending on the numbers found, the 
   resulting number (the sum) could be a whole or decimal number.
 
 **Example**<br/>
@@ -443,7 +457,7 @@ Output:<br/>
 -----
 
 #### **`text`**
-Transform list into text using current text delimiter (denoted via 
+Transform list into text using current text delimiter (denoted via 
   [`nexial.textDelim`](../systemvars/index#nexial.textDelim)) as separator between item list items.
 
 **Example**<br/>
@@ -456,9 +470,9 @@ Output:<br/>
 -----
 
 #### **`union(list)`**
-Transform the current list by appending to it the items in the specified `list` that are not found.  In essence, 
-  this operation creates a new list that contains all the items in both list without any repeats. See 
-  <a href="https://en.wikipedia.org/wiki/Union_(set_theory)" class="external-link" target="_nexial_link">Union (set theory)</a> 
+Transform the current list by appending to it the items in the specified `list` that are not found.  In essence, 
+  this operation creates a new list that contains all the items in both list without any repeats. See 
+  <a href="https://en.wikipedia.org/wiki/Union_(set_theory)" class="external-link" target="_nexial_link">Union (set theory)</a> 
   for more details.
  
 **Example**<br/>
