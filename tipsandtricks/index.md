@@ -53,6 +53,7 @@ redirect_from:
 - [Improving IE Automation](WebAutomationOnIE)
 - [Fixing chromedriver "DevToolsActivePort" error](ChromeDevToolError)
 - [Forcefully update or omit webdriver updates](HOWTOForcefullyUpdateWebDriver)
+- [How to check edge browser version](HOWTOCheckEdgeVersion)
 
 
 #### External Services
