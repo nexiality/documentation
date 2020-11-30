@@ -692,7 +692,8 @@ Output:<br/>
 
 #### replaceColumnRegex(searchFor,replaceWith,columnNameOrIndices)
 For the specified column (by name or by position), search for `searchFor` regular expression and replace matches by 
-`replaceWith`. Regex group supported.
+`replaceWith`. Regex group supported. Consistent with the support for "dash-delimited" operation names, one can 
+reference this operation either as `replaceColumnRegex` (camel-case) or `replace-column-regex` (dash-delimited). 
 
 **Example**<br/>
 `[CSV(${...}) => parse(...) replaceColumnRegex((\d+)(\d\d),$1.$2,1)]` 
@@ -702,6 +703,14 @@ and replace it with the same digits with a decimal point place just before the s
 
 The parameter `columnNameOrIndices` may be expressed as `*` to indicate **ALL** columns. As such, Nexial would apply the
 intended search-and-replace routine against all columns of the target CSV.
+
+{% include _regex_in_expression.md %}
+
+For example, replace "Apple", "Banana" or "Orange" with "Fruit(s)":
+
+```
+[CSV(...) => replace-column-regex(\\(Apple|Banana|Orange\\),Fruit\(s\),*)
+```
 
 Script:<br/>
 ![script](image/CSVexpression_51.png)

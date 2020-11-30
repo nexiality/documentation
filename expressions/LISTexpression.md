@@ -342,6 +342,8 @@ Output:<br/>
 #### **`replaceRegex(searchFor,replaceWith)`**
 Replace the content of all items that match the regular expression  `searchFor`, with `replaceWith`.
 
+{% include _regex_in_expression.md %}
+
 **Example**<br/>
 Script:<br/>
 ![script](image/LISTexpression_51.png)

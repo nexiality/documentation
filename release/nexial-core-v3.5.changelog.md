@@ -24,6 +24,7 @@ comments: true
 - [`nexial.browser`](../systemvars/index#nexial.browser): Supports new browser type `edgechrome` for chromium based 
   edge browser.
 
+
 ### [Nexial Interactive](../interactive)
 
 
@@ -38,7 +39,13 @@ comments: true
   of `times.
 - [`[LIST(...) => index(item)]`](../expressions/LISTexpression#indexitem): support `CONTAIN:` and `REGEX:` prefixes for 
   improved expressiveness.
- 
+- [`CSV(...) => replaceColumnRegex(searchFor,replaceWith,columnNameOrIndices)`](../expressions/CSVexpression#replacecolumnregexsearchforreplacewithcolumnnameorindices):
+  support search-and-replace empty and blank cells.
+- [`LIST(...) => replace(searchFor,replaceWith)`](../expressions/LISTexpression#replaceitemsearchforreplacewith): 
+  support search-and-replace empty and blank item.
+- [`TEXT(...) => replace(searchFor,replaceWith)`](../expressions/TEXTexpression#replacesearchforreplacewith): support 
+  search-and-replace empty and blank text.
+
  
 ### [base commands](../commands/base)
 
