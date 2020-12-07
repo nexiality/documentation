@@ -132,7 +132,7 @@ message = Welcome to \
           Nexial!
 
 # Add spaces to the key
-key with spaces = This is the value that could be looked up with the key "key with spaces".
+key=with spaces = This is the value that could be looked up with the key "key with spaces".
 
 # If you want your property to include a backslash, escaped it by another backslash
 path=c:\\wiki\\templates
@@ -140,6 +140,40 @@ path=c:\\wiki\\templates
 For more information on properties file, refer to 
 <a href="https://docs.oracle.com/cd/E26180_01/Platform.94/ATGProgGuide/html/s0204propertiesfileformat01.html" 
 class="external-link" target="_nexial_link">Properties file format</a>. 
+
+##### Environment-specific `project.properties`
+As of [Release v3.6](../release/nexial-core-v3.6.changelog), Nexial supports the concept of environment-specific
+project.properties. Inspired by the ever-popular Spring Framework, Nexial allows user to interchange the use of one
+`project.properties` with another via the runtime-defined data variable `nexial.env`. One can use the 
+`JAVA_OPT=-Dnexial.env=...` or `-override nexial.env=...` technique on command line to specific a different 
+`project.properties` via the following naming convention:
+
+`nexial.${nexial.env}.properties`
+
+For example,
+
+(on Windows, using `JAVA_OPT=-Dnexial.env=...` technique):
+```
+cd %NEXIAL_HOME%\bin
+
+set JAVA_OPT=-D... -Dnexial.env=QA ...
+
+nexial.cmd -script %PROJECT_HOME%\artifact\script\... ...
+```
+
+The above instructs Nexial to use **`artifact/project.QA.properties`** instead of `artifact/project.propertes`.
+
+(or Mac/*NIX, using `-override` technique):
+```
+cd $PROJECT_HOME/bin
+
+nexial.sh -script $PROJECT_HOME/artifact/script/... ... -override nexial.env=STAGING
+```
+
+The above instructs Nexial to use **`artifact/project.STAGING.properties`** instead of `artifact/project.propertes`.
+
+Note that if the specified `nexial.env` cannot resolve to a readable file, Nexial will fallback to the default 
+`project.properties` instead.
 
 
 ### `output/`

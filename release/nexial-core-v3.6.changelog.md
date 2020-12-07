@@ -14,6 +14,8 @@ comments: true
 #### Fixes
 
 #### Improvements
+- [`project.properties`](../userguide/UnderstandingProjectStructure#artifactprojectproperties): supports 
+  environment-specific project.properties via runtime environment variable `nexial.env`.
 
 
 ### [System Variable](../systemvars)
@@ -35,7 +37,9 @@ comments: true
 
 
 ### [web commands](../commands/web)
-
+- instructs chrome browser not to show "Save Password" prompt during automation
+- instructs firefox browser not to show "Save Password" prompt during automation
+ 
 
 ### [word commands](../commands/word)
 
