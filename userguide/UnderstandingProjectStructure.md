@@ -55,7 +55,7 @@ enhancements such as execution output analysis, tracking and comparison.
 
 
 ## The `artifact/` directory
-   The `artifact` directory contains 3 sub-directories: `data`, `plan`, `script`. These are the directories are used 
+   The `artifact` directory contains 3 sub-directories: `data`, `plan`, `script`. These are the directories are used 
    to store test data, test plan and test scripts respectively.
 
 
@@ -83,7 +83,7 @@ It is recommended that the [macro files](../commands/base/macro(file,sheet,name)
 
 ### `artifact/data/`
 The `artifact/data` directory stores your test data. By default the data file is expected to be named in 
-correspondent to the test script: `<TEST SCRIPT NAME>.data.xlsx`. But this convention can be overridden during 
+correspondent to the test script: `<TEST SCRIPT NAME>.data.xlsx`. But this convention can be overridden during 
 execution via the `-data` flag to [`nexial.[cmd|sh]` script](BatchFiles#nexial). Similar to test scripts, each 
 data file would contain one or many data sheets (worksheets) that correspond to the test scenarios. Again, this 
 is the convention. Deviating from this convention can be attained via the `-datasheet` flag in 
@@ -142,9 +142,11 @@ For more information on properties file, refer to
 class="external-link" target="_nexial_link">Properties file format</a>. 
 
 ##### Environment-specific `project.properties`
-As of [Release v3.6](../release/nexial-core-v3.6.changelog), Nexial supports the concept of environment-specific
-project.properties. Inspired by the ever-popular Spring Framework, Nexial allows user to interchange the use of one
-`project.properties` with another via the runtime-defined data variable `nexial.env`. One can use the 
+As of [Release v3.6](../release/nexial-core-v3.6.changelog), Nexial supports the concept of loading environment-specific
+`project.properties` files. Inspired by the ever-popular Spring Framework, Nexial allows user to "stack" 2 distinct 
+`project.properties` files via the runtime-defined data variable `nexial.env`. This would enable Nexial to first load
+the data variables found in `project.properties`, and then load (and possibly override) the data variables found in
+the environment-specific `project.properties` file, such as `project.QA.properties`. One can use the 
 `JAVA_OPT=-Dnexial.env=...` or `-override nexial.env=...` technique on command line to specific a different 
 `project.properties` via the following naming convention:
 
@@ -161,7 +163,7 @@ set JAVA_OPT=-D... -Dnexial.env=QA ...
 nexial.cmd -script %PROJECT_HOME%\artifact\script\... ...
 ```
 
-The above instructs Nexial to use **`artifact/project.QA.properties`** instead of `artifact/project.properties`.
+The above instructs Nexial to load `artifact/project.properties` and then load **`artifact/project.QA.properties`**.
 
 (or Mac/*NIX, using `-override` technique):
 ```
@@ -170,16 +172,20 @@ cd $PROJECT_HOME/bin
 nexial.sh -script $PROJECT_HOME/artifact/script/... ... -override nexial.env=STAGING
 ```
 
-The above instructs Nexial to use **`artifact/project.STAGING.properties`** instead of `artifact/project.properties`.
+The above instructs Nexial to load `artifact/project.properties` and then **`artifact/project.STAGING.properties`**.
 
 Note that if the specified `nexial.env` cannot resolve to a readable file, Nexial will fallback to the default 
 `project.properties` instead.
 
+Using this `nexial.env` System variable, one can device 
+[an effective strategy towards data management](./TargetedData-ProjectProperties) where environment-specific data 
+variables can be separately managed while common, project-wide data variables remain centrally organized. 
+
 
 ### `output/`
-The `output` directory contains the output of each test execution named as a `run id`, which is simply the timestamp 
-of the start of an execution. The `captures` sub-directory stores all the screenshots and capture 
-videos (if any). The `logs` directory stores all the log files, with the main log file named as 
+The `output` directory contains the output of each test execution named as a `run id`, which is simply the timestamp 
+of the start of an execution. The `captures` sub-directory stores all the screenshots and capture 
+videos (if any). The `logs` directory stores all the log files, with the main log file named as 
 `nexial-[START DATE/TIME].log`. The execution output file is named similarly to the corresponding test script:
 `[TEST SCRIPT NAME].[START DATE/TIME].[ITERATION].xlsx`. It is generally a good idea to keep output separated by 
 its execution. Hence the timestamp-based approach allows each execution its dedicated output directory. One can 
@@ -232,13 +238,13 @@ uploaded to designated cloud location and removed from local output directory.
 
 
 ### Additional Notes
-For convenience, use the `bin/nexial-project.cmd` or `bin/nexial-project.sh` to generate the project structure for 
+For convenience, use the `bin/nexial-project.cmd` or `bin/nexial-project.sh` to generate the project structure for 
 you. See [`nexial-project.[cmd|sh]`](BatchFiles#nexial-project) for more details.
 
-As a convention, it is recommended to use `C:\projects` or `/Users/<username/projects` (MacOSX/Linux) as the top-level 
+As a convention, it is recommended to use `C:\projects` or `/Users/<username/projects` (MacOSX/Linux) as the top-level 
 directory for all your Nexial projects.
 
-For more information, check out [Understanding Nexial Test Artifact](UnderstandingExcelTemplates).
+For more information, check out [Understanding Nexial Test Artifact](UnderstandingExcelTemplates).
 
 ### Adding new test artifact
 Nexial is distributed with a set of empty, ready-to-use templates for your automation. Navigate to 
@@ -246,12 +252,12 @@ Nexial is distributed with a set of empty, ready-to-use templates for your autom
 
 ![nexial_home](image/UnderstandingProjectStructure_02.png)
 
-This template directory contains a few files – templates to get you starting a new test automation effort.  Let's have 
+This template directory contains a few files – templates to get you starting a new test automation effort.  Let's have 
 a closer look:
 
-The `template/` directory contains 4 files:
+The `template/` directory contains 4 files:
 - **nexial-data.xlsx**: contains formatting rules to help differentiate between Nexial-specific data element and 
-  application-specific / custom data element.  Technically one wouldn't need this template per se.  But it is 
+  application-specific / custom data element.  Technically one wouldn't need this template per se.  But it is 
   recommended to use this template for your new data file for consistency sake.
 - **nexial-macro.xlsx**: contains the basic template of a Nexial macro script (reusable steps).  See 
   [base &raquo; `macro(file,sheet,name)`](../commands/base/macro(file,sheet,name)) for more details about macros.
@@ -259,9 +265,9 @@ The `template/` directory contains 4 files:
 - **nexial-testplan.xlsx**: the basic template of a test plan.
 
 Once you copy one of these template to your project directory, remember to (1) place it in the designated location 
-(`script/` for scripts, `data/` for data, etc.), and (2) rename according to [convention](#nexial-project-structure).
+(`script/` for scripts, `data/` for data, etc.), and (2) rename according to [convention](#nexial-project-structure).
 
-Lastly, the templates are shipped with each build.  They already contain the latest set of commands available for
+Lastly, the templates are shipped with each build.  They already contain the latest set of commands available for
 each build.
 
 <script>jQuery(document).ready(function () { newProjectStructureSelect(); });</script>

@@ -23,6 +23,9 @@ Here are their respective content (shorten for brevity):<br/>
 - `project.properties`
    ```
    ...
+   report.year=2020
+   report.limit=25
+   
    # local environment
    MyTest.site.homepage=http://localhost:8080/home
    ```
@@ -55,171 +58,57 @@ This means that when automating against the QA environment, we would load `proje
 well as `project.DEV.properties`, and so on.
 
 It is paramount to note that the duplicate data variables in the same properties file mean that the last one would
-supersede that those that precede. Hence we would want the environment-specific ones to be appended - as opposed to 
-_prepended_ - to `project.properties`.
+supersedes those that precede. Hence we would want the environment-specific ones to be appended (and possibly override), 
+as opposed to _prepended_ to `project.properties`.
 
-A simple approach would simply be appending the content of the environment-specific properties file to 
-`project.properties` each time before execution. While this works, it is both tedious and error-prone. A better 
-approach is to automate the merging of `project.properties` and the environment-specific one.
+As of [Release v3.6](../release/nexial-core-v3.6.changelog), Nexial supports this concept of the environment-based 
+data overriding via a System variable - `nexial.env`. By specifying an appropriate value to this System variable, Nexial
+will carry out the loading of these data variables - first from `project.properties` and then from 
+`project.${nexial.env}.properties`. The environment-specific `project.properties` is expected to be found under the 
+`artifact/` directory.
 
-To accomplish this, we can use a simple batch script (or shell script) to automate the process of combining the right 
-`project.properties` files together before running the Nexial automation thereafter. But before we proceed to create 
-this script, there's one more thing we should do:
+Here are a few examples.
 
-### **Rename `project.properties` to `project.local.properties`**<br/>
-![](image/TargetedData_Prop5.png)
-
-The expected `project.properties` file would be generated dynamically by our batch/shell script each time we run it:
-1. Ensure proper command-line arguments are supplied
-2. Backing up the existing `project.properties`, if any. This step is optional
-3. Combine `project.local.properties` and an environment-specific properties file (e.g. `project.DEV.properties`) into
-   `artifact/project.properties`
-4. Run Nexial automation as normal
-
-There are many ways to accomplish this. Below are 2 working examples for your consideration (Mac and Windows):
-
-#### [`artifact/bin/my-nexial.sh`](https://github.com/nexiality/tutorials/blob/master/examples/data-management/artifact/bin/my-nexial.sh)
+Example 1: running `MyTestPlan1.xlsx` on `QA` (Windows) - This will first load `artifact\project.properties` and then 
+`artifact\project.QA.properties`. 
 ```batch
-#!/usr/bin/env bash
-
-# at least 3 arguments is expected
-if [[ $# -lt 3 ]]; then
-  echo
-  echo "ERROR: No input found. Please run this script like this:"
-  echo "$0 [local|DEV|QA|PROD] [-script|-plan] [location of target script or plan] ..."
-  echo
-  exit 243
-fi
-
-# find location of this script and this project
-PROJECT_BIN_HOME=$(
-  cd "$(dirname "$0")" || exit
-  pwd -P
-)
-PROJECT_HOME=$(
-  cd $PROJECT_BIN_HOME/../.. || exit
-  pwd -P
-)
-
-PROJECT_PROP="$PROJECT_HOME/artifact/project.properties"
-LOCAL_PROP=$PROJECT_HOME/artifact/project.local.properties
-TARGET_PROP=$PROJECT_HOME/artifact/project.$1.properties
-
-# check if requested project.properties exists
-if [[ ! -f $TARGET_PROP ]]; then
-  echo
-  echo "ERROR: requested file $TARGET_PROP does not exists or is unreadable"
-  echo
-  exit 244
-fi
-
-# backup existing project.properties, if found
-if [[ -f $PROJECT_PROP ]]; then
-  echo "moving existing project.properties to project.properties.BAK"
-  mv $PROJECT_PROP ${PROJECT_PROP}.BAK
-fi
-
-# combining local and requested project.properties
-# save combined properties to project.properties file
-if [[ "$LOCAL_PROP" == "$TARGET_PROP" ]]; then
-  echo "copy $LOCAL_PROP to $PROJECT_PROP"
-  cat "$TARGET_PROP" >"$PROJECT_PROP"
-else
-  echo "copy $LOCAL_PROP and $TARGET_PROP to $PROJECT_PROP"
-  cat "$LOCAL_PROP" "$TARGET_PROP" >"$PROJECT_PROP"
-fi
-
-# run nexial
-echo "running Nexial..."
-if [[ "$NEXIAL_HOME" == "" ]]; then
-  NEXIAL_HOME=~/projects/nexial-core
-fi
-
-shift 1
-$NEXIAL_HOME/bin/nexial.sh $*
-
-exit $_
+cd %NEXIAL_HOME%\bin
+nexial.cmd -override nexial.env=QA -plan %PROJECT_HOME%\artifact\plan\MyTestPlan1.xlsx
 ```
 
-#### [`artifact\bin\my-nexial.cmd`](https://github.com/nexiality/tutorials/blob/master/examples/data-management/artifact/bin/my-nexial.cmd)
+In this example, the data variables `report.year` and `report.limit` will be loaded from `artifact\project.properties` 
+as `2020` and `25`, respectively. However, `MyTest.site.homepage` would hold the value `http://sdcsqa02/v2/home`, which
+is derived from `artifact\project.QA.properties`.
+
+Example 2: running `RegressionScript_152.xlsx` on DEV (*NIX) - This will first load `artifact/project.properties` and 
+then `artifact/project.DEV.properties`. 
 ```batch
-@echo off
-setlocal enableextensions
-
-REM at least 3 arguments is expected
-if "%3"=="" goto invalid_input
-
-REM find location of this script and this project
-SET PROJECT_BIN_HOME=%~dp0..
-SET PROJECT_HOME="%PROJECT_BIN_HOME%/../.."
-SET PROJECT_PROP="%PROJECT_HOME%/artifact/project.properties"
-SET LOCAL_PROP="%PROJECT_HOME%/artifact/project.local.properties"
-SET TARGET_PROP="%PROJECT_HOME%/artifact/project.%1.properties"
-
-REM check if requested project.properties exists
-if not exist %TARGET_PROP% (
-  echo.
-  echo ERROR: requested file %TARGET_PROP% does not exists or is unreadable
-  echo.
-  exit /B 244
-)
-
-REM backup existing project.properties, if found
-if exist %PROJECT_PROP% (
-  echo moving existing project.properties to project.properties.BAK
-  move %PROJECT_PROP% %PROJECT_PROP%.BAK
-)
-
-REM combining local and requested project.properties
-REM save combined properties to project.properties file
-if %LOCAL_PROP%==%TARGET_PROP% (
-  echo copy %LOCAL_PROP% to %PROJECT_PROP%
-  cat "$TARGET_PROP" >"$PROJECT_PROP"
-) else (
-  echo copy %LOCAL_PROP% and %TARGET_PROP% to %PROJECT_PROP%
-  cat "$LOCAL_PROP" "$TARGET_PROP" >"$PROJECT_PROP"
-)
-
-REM run nexial
-echo "running Nexial..."
-if "%NEXIAL_HOME%"=="" (
-  set NEXIAL_HOME=C:\projects\nexial-core
-)
-
-shift 1
-%NEXIAL_HOME%/bin/nexial.cmd $*
-
-goto end
-
-
-:invalid_input
-    echo.
-    echo ERROR: Invalid input. Please run this script like this:
-    echo %0 [ local ^| DEV ^| QA ^| PROD ] [ -script ^| -plan ] [ target script or plan ] ...
-    echo.
-    exit /B 243
-
-:end
-    exit
+cd $NEXIAL_HOME/bin
+nexial.sh -override nexial.env=DEV -script $PROJECT_HOME/artifact/script/RegressionScript_152.xlsx
 ```
 
-Now, instead of running the `$NEXIAL_HOME/bin/nexial.sh` or `%NEXIAL_HOME%\bin\nexial.cmd` directory, one would run
-one of the above scripts. And because it is a script, this can be used in any of the CI/CD environment (such as Jenkins)
-as well! Below is a few examples on using this script:
+In this example, the data variables `report.year` and `report.limit` will be loaded from `artifact/project.properties` 
+as `2020` and `25`, respectively. However, `MyTest.site.homepage` would hold the value `http://sdcsdev01:8888/v2/home`, 
+which is derived from `artifact\project.DEV.properties`.
 
-Example 1: running `MyTestPlan1.xlsx` on `QA` (Windows)
-```batch
-cd %PROJECT_HOME%
-cd artifact\bin
-my-nexial.cmd QA -plan %PROJECT_HOME%\artifact\plan\MyTestPlan1.xlsx
-```
-
-Example 2: running `RegressionScript_152.xlsx` on DEV (*NIX)
-```batch
-cd $PROJECT_HOME
-cd artifact/bin
-./my-nexial.sh DEV -script $PROJECT_HOME/artifact/script/RegressionScript_152.xlsx
-```
+Using this technique, one can device the following strategy towards data management:
+1. Common data variables, such as locators, would be managed through `project.properties` file. These are the data 
+   variables that would unlikely to differ based on environment (such as DEV, TEST, PRODUCTION). As such, we can 
+   streamline access and management, thus improving reuse while keeping the cost of maintenance low.
+2. Environment-specific data variables that are applicable across multiple scripts would be maintained in 
+   `project.${nexial.env}.properties` files. Examples of such data variables would be database connectivity, API access 
+   point, application web site, and client-specific test data. By keeping data variables that hold specific values based
+   on environment in `project.${nexial.env}.properties` files, we gain both reusability and maintainability. By allowing
+   environment-specific data variables to be maintained in separate files, we also ensure minimum project-wide impact
+   when update these data variables.
+3. In some cases, certain data variables might hold unique values only in 1 or 2 environments. For example, in all 
+   non-PRODUCTION environment, the data variable `process.credit-card` might be set to `false`, while in PRODUCTION 
+   environment we would set the same data variable as `true`. For such scenario, we can maintain this data variable in
+   `project.properties` as `process.credit-card=false`, while ONLY in `project.PRODUCTION.properties` we would have
+   `process.credit-card=true`. Since Nexial will **ALWAYS** load `project.properties` before loading 
+   environment-specific `properties` file, this would ensure that in all non-PRODUCTION environment, the value of 
+   `process.credit-card` is `false`, while in PRODUCTION environment it has the value of `true`. Once again, this is
+   an effective way of improving reusability and maintainability.
 
 -----
 
