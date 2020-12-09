@@ -12,10 +12,14 @@ comments: true
 
 ### General
 #### Fixes
+- fixed "quiet mode" ([`nexial.quiet`](../systemvars/index.html#nexial.quiet)) so that console logs will be drastically 
+  reduced.
 
 #### Improvements
 - [`project.properties`](../userguide/UnderstandingProjectStructure#artifactprojectproperties): supports 
   environment-specific project.properties via runtime environment variable `nexial.env`.
+  - when environment-specific project.properties is specified, the default `project.properties` will be loaded first
+- minor log reformatting to improve readability.
 
 
 ### [System Variable](../systemvars)

@@ -161,7 +161,7 @@ set JAVA_OPT=-D... -Dnexial.env=QA ...
 nexial.cmd -script %PROJECT_HOME%\artifact\script\... ...
 ```
 
-The above instructs Nexial to use **`artifact/project.QA.properties`** instead of `artifact/project.propertes`.
+The above instructs Nexial to use **`artifact/project.QA.properties`** instead of `artifact/project.properties`.
 
 (or Mac/*NIX, using `-override` technique):
 ```
@@ -170,7 +170,7 @@ cd $PROJECT_HOME/bin
 nexial.sh -script $PROJECT_HOME/artifact/script/... ... -override nexial.env=STAGING
 ```
 
-The above instructs Nexial to use **`artifact/project.STAGING.properties`** instead of `artifact/project.propertes`.
+The above instructs Nexial to use **`artifact/project.STAGING.properties`** instead of `artifact/project.properties`.
 
 Note that if the specified `nexial.env` cannot resolve to a readable file, Nexial will fallback to the default 
 `project.properties` instead.
