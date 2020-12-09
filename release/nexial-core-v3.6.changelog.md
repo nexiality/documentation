@@ -14,6 +14,7 @@ comments: true
 #### Fixes
 - fixed "quiet mode" ([`nexial.quiet`](../systemvars/index.html#nexial.quiet)) so that console logs will be drastically 
   reduced.
+- correctly read `nexial.mail.smtp.from` from command line or nexial-setup.
 
 #### Improvements
 - [`project.properties`](../userguide/UnderstandingProjectStructure#artifactprojectproperties): supports 
