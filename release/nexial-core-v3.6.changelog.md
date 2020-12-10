@@ -1,13 +1,13 @@
 ---
 layout: default
-title: nexial-core 3.5 (2020-12-01)
+title: nexial-core 3.6 (2021-01-08)
 parent: release
-tags: release nexial-core 3.5
+tags: release nexial-core 3.6
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v3.5_1020" class="external-link" target="_nexial_link">Release 3.5</a>
-2020-12-01
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v3.6_????" class="external-link" target="_nexial_link">Release 3.6</a>
+2021-01-08
 
 
 ### General
