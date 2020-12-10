@@ -15,6 +15,7 @@ comments: true
 - fixed "quiet mode" ([`nexial.quiet`](../systemvars/index.html#nexial.quiet)) so that console logs will be drastically 
   reduced.
 - correctly read `nexial.mail.smtp.from` from command line or nexial-setup.
+- [`nexial-setup`](../userguide/BatchFiles#nexial-setup): backward supports for older Java (version 8-15).
 
 #### Improvements
 - [`project.properties`](../userguide/UnderstandingProjectStructure#artifactprojectproperties): supports 
