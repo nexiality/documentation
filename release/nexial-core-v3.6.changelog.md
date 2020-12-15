@@ -25,6 +25,9 @@ comments: true
 
 
 ### [System Variable](../systemvars)
+- [`nexial.io.matchRecursive`](../systemvars/index#nexial.ui.matchRecursive): **NEW** System variable to determine if 
+  Nexial should scan recursively the target directory when invoking 
+  [io &raquo; `saveMatches(var,path,fileFilter,textFilter)`](../commands/io/saveMatches(var,path,fileFilter,textFilter)).
 
 
 ### [Expression](../expressions)
