@@ -33,6 +33,10 @@ comments: true
 ### [Expression](../expressions)
 
  
+### [desktop commands](../commands/desktop)
+- [`clickMenu(menu)`](../commands/desktop/clickMenu(menu)): avoid unnecessary error when clicking on a menu item.
+
+
 ### [pdf commands](../commands/pdf)
 
 

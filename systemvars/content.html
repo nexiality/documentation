@@ -2066,6 +2066,29 @@
   </tr>
   <tr>
     <td nowrap="nowrap" class="varname">
+      <a id="nexial.io.matchRecursive"><code>nexial.io.matchRecursive</code></a>
+    </td>
+    <td>boolean</td>
+    <td>true</td>
+    <td class="read-write">read/write</td>
+    <td>
+      Determine if Nexial should scan recursively when executing
+      <a href="../commands/io/saveMatches(var,path,fileFilter,textFilter).html">io &raquo; <code>saveMatches(var,path,fileFilter,textFilter)</code></a>
+      command. By default, Nexial will scan the specified <code>path</code> recursively. If need be, one may set this
+      System variable as <code>false</code> to instruct Nexial to scan only the specified directory.
+      <br/>
+      <ul>
+        <li><code>keepOriginal</code> - no change to existing file. `copy` or `move` operation not performed
+        </li>
+        <li><code>backup</code> - take backup of existing file and copy the new file.
+          Backup file will have name in `FILENAME - [yyyyMMdd_hhmmss] format.
+        </li>
+        <li><code>override</code> - override existing file with new file</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" class="varname">
       <a id="nexial.csv.maxColumns"><code>nexial.csv.maxColumns</code></a>
     </td>
     <td>integer</td>
