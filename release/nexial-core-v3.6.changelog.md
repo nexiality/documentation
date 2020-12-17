@@ -28,6 +28,13 @@ comments: true
 - [`nexial.io.matchRecursive`](../systemvars/index#nexial.ui.matchRecursive): **NEW** System variable to determine if 
   Nexial should scan recursively the target directory when invoking 
   [io &raquo; `saveMatches(var,path,fileFilter,textFilter)`](../commands/io/saveMatches(var,path,fileFilter,textFilter)).
+  - also impacts [io &raquo; `count(var,path,pattern)`](../commands/io/count(var,path,pattern)).
+- [`nexial.io.matchExact`](../systemvars/index#nexial.ui.matchExact): **NEW** System variable to determine if the 
+  regex-based matching logic should match "partially" or "exactly". Use `true` to perform match. Default is `false`.
+  This impact the following commands:
+  - [io &raquo; `moveFilesByRegex(sourceDir,regex,target)`](../commands/io/moveFilesByRegex(sourceDir,regex,target))
+  - [io &raquo; `deleteFilesByRegex(sourceDir,regex)`](../commands/io/deleteFilesByRegex(sourceDir,regex))
+  - [io &raquo; `copyFilesByRegex(sourceDir,regex,target)`](../commands/io/copyFilesByRegex(sourceDir,regex,target))
 
 
 ### [Expression](../expressions)
