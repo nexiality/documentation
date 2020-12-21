@@ -39,6 +39,10 @@ comments: true
 
 ### [Expression](../expressions)
 
+### [Function](../functions)
+- [`$(format|phone|text)`](../functions/$(format).html#formatphonetext): improvement to accept phone number with 
+  non-numeric characters such as `-`, `.`, `(` and `)`.
+
  
 ### [desktop commands](../commands/desktop)
 - [`clickMenu(menu)`](../commands/desktop/clickMenu(menu)): avoid unnecessary error when clicking on a menu item.
