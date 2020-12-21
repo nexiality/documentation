@@ -65,3 +65,4 @@ comments: true
 
 
 ## [tn.5250 commands](../commands/tn.5250)
+- implement retry logic when scanning for nested screen
