@@ -16,6 +16,8 @@ comments: true
   reduced.
 - correctly read `nexial.mail.smtp.from` from command line or nexial-setup.
 - [`nexial-setup`](../userguide/BatchFiles#nexial-setup): backward supports for older Java (version 8-15).
+- fixed code not to fire "fail" event when evaluating an assert command within `repeat-until` to evaluate the 
+  continuation of a loop.
 
 #### Improvements
 - [`project.properties`](../userguide/UnderstandingProjectStructure#artifactprojectproperties): supports 
