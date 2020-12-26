@@ -1,5 +1,5 @@
 -----
-#### PolyMatcher - a flexible way to perform text matching
+##### **PolyMatcher** - a flexible way to perform text matching
 In addition to extract text matching (or _string matching_), this command/expression also supports "polymatcher" 
 (as of [v3.6](../release/nexial-core-v3.6.changelog)). With polymatcher, one can instruct Nexial to match the 
 intended text in a less exact (but more expressiveness) way. Here are the supported matching strategies:
