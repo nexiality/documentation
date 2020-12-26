@@ -11,7 +11,7 @@ intended text in a less exact (but more expressiveness) way. Here are the suppor
   "Completed successfully", "Completed Successfully", and "COMPLETED SUCCESSFULLY".
 - **`START:`**: Use this technique to perform "starts with" text matches. For example, `START:Greetings` matches any
   text starting with the text "Greetings".
-- **`START:`**: Use this technique to perform "starts with" text matches without considering letter casing. For 
+- **`START_ANY_CASE:`**: Use this technique to perform "starts with" text matches without considering letter casing. For 
   example, `START_ANY_CASE:Greetings` matches any text starting with the text "Greetings", "GREETINGS", "greetings", 
   "greeTINGs", etc.
 - **`END:`**: Use this technique to perform "ends with" text matches. For example, `END:Please try again.` matches any
