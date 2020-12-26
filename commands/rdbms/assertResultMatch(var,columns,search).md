@@ -14,13 +14,7 @@ This command instructs Nexial to perform data validation on a previously execute
 One may limit the span of the data validation via the `columns` parameters. Specify the column(s) to validate against,
 using [`nexial.textDelim`](../../systemvars/index#nexial.textDelim) as separator. Note that invalid columns are ignored.
 
-The `search` parameter may contain 3 types of content for 3 different forms of data validation:
-- `REGEX:...`: if `search` is prefixed with `REGEX:`, such as `REGEX:John .+`, then Nexial will match the specified 
-  column(s) using regular expression.
-- `CONTAIN:...`: if `search` is prefixed with `CONTAIN:`, such as `CONTAIN:123`, then Nexial will match the specified 
-  column(s) using substring match.
-- Otherwise Nexial will perform exact string match against the the specified column(s).
-   
+{% include _polymatcher.md %}
 
 ### Parameters
 - **var** - the data variable of a previously executed query result

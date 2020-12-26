@@ -10,6 +10,8 @@ comments: true
 This command asserts that the desired text is not found on the element.  The command will pass if desired text not 
 found or else fail otherwise.
 
+{% include _polymatcher.md %}
+
 
 ### Parameters
 - **locator** - this parameter if the xpath of the element.

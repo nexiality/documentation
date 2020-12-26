@@ -24,6 +24,8 @@ Now suppose we have a `SELECT` element that suppose multi-select:
 To select both "Andean flamingo" and "Chilean flamingo", one would specify `text` as `REGEX:.+ean .+` 
 (reads: _contains "ean "_).
 
+{% include _polymatcher.md %}
+
 #### Note
 - If multiple matches are found through regex-based identification but the target `SELECT` element only support single 
   selection, then only the first one will be selected.
@@ -31,13 +33,15 @@ To select both "Andean flamingo" and "Chilean flamingo", one would specify `text
   will look for a `OPTION` element under the target `SELECT` element that contains the text `REGEX:...`.
 - The `REGEX:` capability works for both [`select(locator,text)`](select(locator,text)) and 
   [`deselect(locator,text)`](deselect(locator,text)) command.
-- If `text` is `{ALL}` and the target `SELECT` element supports **multi-select**, then `ALL` its `OPTION` elements will be
-  **selected.**
+- If `text` is `{ALL}` and the target `SELECT` element supports **multi-select**, then **ALL** its `OPTION` elements 
+  will be **selected.**
+
 
 ### Parameters
 - **locator** - the locator of the `SELECT` element.
 - **text** - the text to be selected on the `SELECT` element. As said earlier, it supports `Regex:` capability 
             as well as `{ALL}` to select all options.
+
 
 ### Example
 **Script**:<br/>
@@ -52,6 +56,7 @@ To select both "Andean flamingo" and "Chilean flamingo", one would specify `text
 
 **After selection**:<br/>
 ![](image/select_06.png)
+
 
 ### See Also
 - [`deselect(locator,text)`](deselect(locator,text))

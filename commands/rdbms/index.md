@@ -64,9 +64,11 @@ statements and the other one for INSERT/UPDATE/DELETE:<br/>
 -----
 
 ### Available Commands
-- [`resultToCSV(var,csvFile,delim,showHeader)`](resultToCSV(var,csvFile,delim,showHeader))
-- [`runFile(var,db,file)`](runFile(var,db,file))
-- [`runSQL(var,db,sql)`](runSQL(var,db,sql))
-- [`runSQLs(var,db,sqls)`](runSQLs(var,db,sqls))
-- [`saveResult(db,sql,output)`](saveResult(db,sql,output))
 - [`saveResults(db,sqls,outputDir)`](saveResults(db,sqls,outputDir))
+- [`saveResult(db,sql,output)`](saveResult(db,sql,output))
+- [`runSQLs(var,db,sqls)`](runSQLs(var,db,sqls))
+- [`runSQL(var,db,sql)`](runSQL(var,db,sql))
+- [`runFile(var,db,file)`](runFile(var,db,file))
+- [`resultToCSV(var,csvFile,delim,showHeader)`](resultToCSV(var,csvFile,delim,showHeader))
+- [`assertResultNotMatch(var,columns,search)`](assertResultNotMatch(var,columns,search))
+- [`assertResultMatch(var,columns,search)`](assertResultMatch(var,columns,search))

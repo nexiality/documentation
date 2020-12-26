@@ -24,6 +24,10 @@ comments: true
   environment-specific project.properties via runtime environment variable `nexial.env`.
   - when environment-specific project.properties is specified, the default `project.properties` will be loaded first
 - minor log reformatting to improve readability.
+- PolyMatcher: **NEW** expressive comparison technique to perform inexact text comparison.  Currently supports
+  `REGEX:` for regular expression based matching, `CONTAIN:` and `CONTAIN_ANY_CASE:` for partial text matching, 
+  `START:` and `START_ANY_CASE:` for "starts-with" text matching, `END:` and `END_ANY_CASE:` for "ends-with" text 
+  matching. Will be added to more commands and expressions in the future.
 
 
 ### [System Variable](../systemvars)
@@ -40,6 +44,8 @@ comments: true
 
 
 ### [Expression](../expressions)
+- [LIST &raquo; `index(item)`](../expressions/LISTexpression#indexitem): supports PolyMatcher for inexact/expressive text comparison.
+
 
 ### [Function](../functions)
 - [`$(format|phone|text)`](../functions/$(format).html#formatphonetext): improvement to accept phone number with 
@@ -48,6 +54,11 @@ comments: true
  
 ### [desktop commands](../commands/desktop)
 - [`clickMenu(menu)`](../commands/desktop/clickMenu(menu)): avoid unnecessary error when clicking on a menu item.
+
+
+### [json commands](../commands/json)
+- [`assertValue(json,jsonpath,expected)`](../commands/json/assertValue(json,jsonpath,expected)): supports PolyMatcher 
+  for inexact/expressive text comparison.
 
 
 ### [pdf commands](../commands/pdf)
@@ -60,15 +71,55 @@ comments: true
 
 
 ### [rdbms commands](../commands/rdbms)
+- [`assertResultMatch(var,columns,search)`](../commands/rdbms/assertResultMatch(var,columns,search)): supports 
+  PolyMatcher for inexact/expressive text comparison.
+- [`assertResultNotMatch(var,columns,search)`](../commands/rdbms/assertResultNotMatch(var,columns,search)): supports 
+  PolyMatcher for inexact/expressive text comparison.
 
 
 ### [web commands](../commands/web)
-- instructs chrome browser not to show "Save Password" prompt during automation
-- instructs firefox browser not to show "Save Password" prompt during automation
- 
+- instructs chrome browser not to show "Save Password" prompt during automation.
+- instructs firefox browser not to show "Save Password" prompt during automation.
+- [`assertText(locator,text)`](../commands/web/assertText(locator,text)): supports PolyMatcher for inexact/expressive 
+  text comparison.
+- [`assertValue(locator,value)`](../commands/web/assertValue(locator,value)): supports PolyMatcher for 
+  inexact/expressive text comparison.
+- [`assertAttribute(locator,attrName,value)`](../commands/web/assertAttribute(locator,attrName,value)): supports 
+  PolyMatcher for inexact/expressive text comparison.
+- [`assertNotText(locator,text)`](../commands/web/assertNotText(locator,text)): supports PolyMatcher for 
+  inexact/expressive text comparison.
+- [`deselectMulti(locator,array)`](../commands/web/deselectMulti(locator,array)): supports PolyMatcher for 
+  inexact/expressive text comparison.
+- [`select(locator,text)`](../commands/web/select(locator,text)): supports PolyMatcher for inexact/expressive text 
+  comparison.
+- [`selectMulti(locator,array)`](../commands/web/selectMulti(locator,array)): supports PolyMatcher for 
+  inexact/expressive text comparison.
+
 
 ### [word commands](../commands/word)
 
 
 ## [tn.5250 commands](../commands/tn.5250)
 - implement retry logic when scanning for nested screen
+- [`assertFieldMatch(label,expects)`](assertFieldMatch(label,expects)): supports PolyMatcher for inexact/expressive 
+  text comparison.
+- [`assertFieldNotMatch(label,expects)`](assertFieldNotMatch(label,expects)): supports PolyMatcher for 
+  inexact/expressive text comparison.
+- [`assertMessageMatch(expects)`](assertMessageMatch(expects)): supports PolyMatcher for inexact/expressive text 
+  comparison.
+- [`assertMessageNotMatch(expects)`](assertMessageNotMatch(expects)): supports PolyMatcher for inexact/expressive 
+  text comparison.
+- [`assertTableMatch(column,text)`](assertTableMatch(column,text)): supports PolyMatcher for inexact/expressive text 
+  comparison.
+- [`assertTableNotMatch(column,text)`](assertTableNotMatch(column,text)): supports PolyMatcher for inexact/expressive 
+  text comparison.
+- [`checkScreenText((expected,expectMatch)`](checkScreenText((expected,expectMatch)): supports PolyMatcher for 
+  inexact/expressive text comparison.
+- [`checkTableContains(column,text,expectMatch)`](checkTableContains(column,text,expectMatch)): supports PolyMatcher 
+  for inexact/expressive text comparison.
+- [`saveTableMatchCount(var,column,text)`](saveTableMatchCount(var,column,text)): supports PolyMatcher for 
+  inexact/expressive text comparison.
+- [`typeOnMatchedColumns(matches,keystrokes)`](typeOnMatchedColumns(matches,keystrokes)): supports PolyMatcher for 
+  inexact/expressive text comparison.
+- [`typeOnMatchedRow(column,match,keystrokes)`](typeOnMatchedRow(column,match,keystrokes)): supports PolyMatcher for 
+  inexact/expressive text comparison.

@@ -11,6 +11,8 @@ comments: true
 This command asserts that `jsonpath` points to an element (or the first element) in `json` whose value match that of
 `expected`.
 
+{% include _polymatcher.md %}
+
 
 ### Parameters
 - **json** - the JSON document or file

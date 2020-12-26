@@ -20,6 +20,8 @@ line).
 Note that this command selects the item(s) of a `<SELECT>` element based on the rendered text. To select the items under
 a `<SELECT>` element via their `value`, try [`selectMultiByValue(locator,array)`](selectMultiByValue(locator,array)).
 
+{% include _polymatcher.md %}
+
 
 ### Parameters
 - **locator** - this parameter is the locator of the list or combo box element.

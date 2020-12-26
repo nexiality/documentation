@@ -132,21 +132,9 @@ Output:<br/>
 
 #### **`index(item)`**
 Transform the current list to a [`NUMBER`](NUMBERexpression) representing the position of the specified `item` in the 
-list. **NOTE that index is zero-based!** One can use `CONTAIN:` or `REGEX:` prefix for more expressiveness way of 
-searching for a specific item. For example,
+list. 
 
-```
-[LIST(Alabama,Alaska,Arizona,Arkansas) => index(CONTAIN:as)]
-```
-
-... would result in `NUMBER(1)` since Al**as**ka is the first item for the "contain" match. 
-
-```
-LIST(New Hampshire,New Jersey,New Mexico,New York) => index(REGEX:New.+co)]
-```
-
-.. would result in `NUMBER(2)` since `New Mexico` is the first to match `New.+co`.
-
+{% include _polymatcher.md %}
 
 **Example**<br/>
 Script:<br/>
