@@ -28,6 +28,7 @@ comments: true
   `REGEX:` for regular expression based matching, `CONTAIN:` and `CONTAIN_ANY_CASE:` for partial text matching, 
   `START:` and `START_ANY_CASE:` for "starts-with" text matching, `END:` and `END_ANY_CASE:` for "ends-with" text 
   matching. Will be added to more commands and expressions in the future.
+- adding logging for clarity
 
 
 ### [System Variable](../systemvars)
