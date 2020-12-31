@@ -78,6 +78,10 @@ comments: true
   PolyMatcher for inexact/expressive text comparison.
 
 
+### [ssh commands](../commands/ssh)
+- added additional logging for better RCA
+
+
 ### [web commands](../commands/web)
 - instructs chrome browser not to show "Save Password" prompt during automation.
 - instructs firefox browser not to show "Save Password" prompt during automation.
@@ -95,6 +99,8 @@ comments: true
   comparison.
 - [`selectMulti(locator,array)`](../commands/web/selectMulti(locator,array)): supports PolyMatcher for 
   inexact/expressive text comparison.
+- [`assertCssPresent(locator,property,value)`](../commands/web/assertCssPresent(locator,property,value)): supports 
+  conversion of HEX color to RGBA form.
 
 
 ### [word commands](../commands/word)
