@@ -69,6 +69,8 @@ comments: true
 
 
 ### [mail commands](../commands/mail)
+- [`compose(var,config,value)`](../commands/mail/compose(var,config,value)): support adding new files as attachments, 
+  instead of replacing them.
 
 
 ### [rdbms commands](../commands/rdbms)
