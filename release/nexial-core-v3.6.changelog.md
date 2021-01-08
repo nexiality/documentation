@@ -71,6 +71,7 @@ comments: true
 ### [mail commands](../commands/mail)
 - [`compose(var,config,value)`](../commands/mail/compose(var,config,value)): support adding new files as attachments, 
   instead of replacing them.
+- [`clearComposed(var)`](../commands/mail/clearComposed(var)): no longer cause FAIL when specified variable is not found.
 
 
 ### [rdbms commands](../commands/rdbms)
