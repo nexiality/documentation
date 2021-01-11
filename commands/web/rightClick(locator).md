@@ -21,6 +21,6 @@ or positively responds to the right-click event.
 
 
 ### See Also
-- [`clickAndWait(locator,waitMs)`](clickAndWait(locator,waitMs).html)
-- [`clickByLabelAndWait(label,waitMs)`](clickByLabelAndWait(label,waitMs).html)
-- [`clickByLabel(label)`](clickByLabel(label).html)
+- [`clickAndWait(locator,waitMs)`](clickAndWait(locator,waitMs))
+- [`clickByLabelAndWait(label,waitMs)`](clickByLabelAndWait(label,waitMs))
+- [`clickByLabel(label)`](clickByLabel(label))

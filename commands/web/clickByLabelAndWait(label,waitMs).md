@@ -26,5 +26,5 @@ comments: true
 
 ### See Also
 
-- [`doubleClickByLabel(label)`](doubleClickByLabel(label).html)
-- [`doubleClickByLabelAndWait(label,waitMs)`](doubleClickByLabelAndWait(label,waitMs).html)
+- [`doubleClickByLabel(label)`](doubleClickByLabel(label))
+- [`doubleClickByLabelAndWait(label,waitMs)`](doubleClickByLabelAndWait(label,waitMs))

@@ -17,4 +17,4 @@ comments: true
 
 ### See Also
 
-- [`assertIECompatMode()`](assertIECompatMode().html)
+- [`assertIECompatMode()`](assertIECompatMode())

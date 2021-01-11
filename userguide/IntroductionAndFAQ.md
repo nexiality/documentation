@@ -109,4 +109,4 @@ to keep would be two-fold:
 2.  Monthly `MAJOR.MINOR` release.  Mostly likely we would keep to the `x.y` release schema where 
 				`x` starts from `1` and `y` is a number between 0 to 9.
 
-Ready to get started? Click [here](index.html).
+Ready to get started? Click [here](../userguide).

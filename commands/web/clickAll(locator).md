@@ -43,6 +43,6 @@ mark the "screenshot" column with `x`.
 
 ### See Also
 - [`click(locator)`](click(locator))
-- [`clickAndWait(locator,waitMs)`](clickAndWait(locator,waitMs).html)
-- [`clickByLabel(label)`](clickByLabel(label).html)
-- [`clickByLabelAndWait(label,waitMs)`](clickByLabelAndWait(label,waitMs).html)
+- [`clickAndWait(locator,waitMs)`](clickAndWait(locator,waitMs))
+- [`clickByLabel(label)`](clickByLabel(label))
+- [`clickByLabelAndWait(label,waitMs)`](clickByLabelAndWait(label,waitMs))

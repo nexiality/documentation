@@ -49,8 +49,8 @@ web | assertAttributeNotContain(...) | css=... | class | REGEX:(.+Class)
 
 
 ### See Also
-- [`assertAttributeContain(locator,attrName,contains)`](assertAttributeContain(locator,attrName,contains).html)
-- [`assertAttribute(locator,attrName,value)`](assertAttribute(locator,attrName,value).html)
-- [`assertAttributeNotPresent(locator,attrName)`](assertAttributeNotPresent(locator,attrName).html)
-- [`assertAttributePresent(locator,attrName)`](assertAttributePresent(locator,attrName).html)
-- [`saveAttribute(var,locator,attrName)`](saveAttribute(var,locator,attrName).html)
+- [`assertAttributeContain(locator,attrName,contains)`](assertAttributeContain(locator,attrName,contains))
+- [`assertAttribute(locator,attrName,value)`](assertAttribute(locator,attrName,value))
+- [`assertAttributeNotPresent(locator,attrName)`](assertAttributeNotPresent(locator,attrName))
+- [`assertAttributePresent(locator,attrName)`](assertAttributePresent(locator,attrName))
+- [`saveAttribute(var,locator,attrName)`](saveAttribute(var,locator,attrName))

@@ -29,6 +29,6 @@ outside the bounds of the target element).
 
 ### See Also
 - [`click(locator)`](click(locator))
-- [`clickAndWait(locator,waitMs)`](clickAndWait(locator,waitMs).html)
-- [`clickByLabelAndWait(label,waitMs)`](clickByLabelAndWait(label,waitMs).html)
-- [`clickByLabel(label)`](clickByLabel(label).html)
+- [`clickAndWait(locator,waitMs)`](clickAndWait(locator,waitMs))
+- [`clickByLabelAndWait(label,waitMs)`](clickByLabelAndWait(label,waitMs))
+- [`clickByLabel(label)`](clickByLabel(label))

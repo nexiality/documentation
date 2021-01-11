@@ -42,7 +42,7 @@ saved as a JSON file.
 
 
 ### Parameters
-- **db** - the profile from which defines the [`database connectivity details`](index).
+- **db** - the profile from which defines the [`database connectivity details`](dbConnectionSetup).
 - **sqls** - the queries to execute.  This can be a data variable or a fully-qualified file path containing the 
   queries to execute.
 - **outputDir** - the target location to save the output files.

@@ -25,4 +25,4 @@ comments: true
 
 ### See Also
 
-- [`assertVisible(locator)`](assertVisible(locator).html)
+- [`assertVisible(locator)`](assertVisible(locator))

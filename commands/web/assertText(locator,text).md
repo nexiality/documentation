@@ -32,4 +32,4 @@ This command is to assert text of the element with the specified `locator`.
 - [`assertTextNotContain(locator,text)`](assertTextNotContain(locator,text))
 - [`assertTextNotPresent(text)`](assertTextNotPresent(text))
 - [`assertTextPresent(text)`](assertTextPresent(text))
-- [`verifyText(locator,text)`](verifyText(locator,text).html)
+- [`verifyText(locator,text)`](verifyText(locator,text))

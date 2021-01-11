@@ -37,4 +37,4 @@ in order to gather all 5 locators.
 
 ### See Also
 - [`assertElementPresent(locator)`](assertElementPresent(locator))
-- [`web`](index.html)
+- [`web`](../web)

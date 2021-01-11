@@ -27,4 +27,4 @@ comments: true
 
 ### See Also
 
-- [`assertTextPresent(text)`](assertTextPresent(text).html)
+- [`assertTextPresent(text)`](assertTextPresent(text))

@@ -26,5 +26,5 @@ comments: true
 
 ### See Also
 
-- [`web`](index.html)
-- [`assertVisible(locator)`](assertVisible(locator).html)
+- [`web`](../web)
+- [`assertVisible(locator)`](assertVisible(locator))

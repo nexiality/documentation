@@ -129,3 +129,12 @@ function toggleExpansion(/*HTMLElement*/icon) {
         turnOff(icon, 'fas fa-compress');
     }
 }
+
+
+function copyToClipboard(data) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val(data).select();
+    document.execCommand("copy");
+    $temp.remove();
+}

@@ -26,4 +26,4 @@ comments: true
 
 ### See Also
 
-- [`web`](index.html)
+- [`web`](../web)

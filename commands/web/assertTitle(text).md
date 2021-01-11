@@ -25,5 +25,5 @@ comments: true
 
 ### See Also
 
-- [`web`](index.html)
-- [`open(url)`](open(url).html)
+- [`web`](../web)
+- [`open(url)`](open(url))

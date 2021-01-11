@@ -33,6 +33,6 @@ comments: true
 
 ### See Also
 
-- [`assertElementPresent(locator)`](assertElementPresent(locator).html)
-- [`assertElementNotPresent(locator)`](assertElementNotPresent(locator).html)
-- [`assertElementCount(locator,count)`](assertElementCount(locator,count).html)
+- [`assertElementPresent(locator)`](assertElementPresent(locator))
+- [`assertElementNotPresent(locator)`](assertElementNotPresent(locator))
+- [`assertElementCount(locator,count)`](assertElementCount(locator,count))

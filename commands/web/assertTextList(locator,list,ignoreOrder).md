@@ -27,6 +27,6 @@ comments: true
 
 ### See Also
 
-- [`assertTextPresent(text)`](assertTextPresent(text).html)
-- [`assertText(locator,text)`](assertText(locator,text).html)
-- [`assertTextOrder(locator,descending)`](assertTextOrder(locator,descending).html)
+- [`assertTextPresent(text)`](assertTextPresent(text))
+- [`assertText(locator,text)`](assertText(locator,text))
+- [`assertTextOrder(locator,descending)`](assertTextOrder(locator,descending))

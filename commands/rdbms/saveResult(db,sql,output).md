@@ -25,7 +25,7 @@ records):<br/>
 
 #### Query Metadata
 The content of the query metadata differs by the query specified. In general, it contains the 
-[`Execution Result`](index) but without the dataset. For example, the screenshot shows one such JSON containing:
+[`Execution Result`](executionResult) but without the dataset. For example, the screenshot shows one such JSON containing:
 
 1. column names
 2. the sql that was executed

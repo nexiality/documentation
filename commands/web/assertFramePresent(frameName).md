@@ -27,4 +27,4 @@ comments: true
 
 ### See Also
 
-- [`assertFrameCount(count)`](assertFrameCount(count).html)
+- [`assertFrameCount(count)`](assertFrameCount(count))

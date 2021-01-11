@@ -25,5 +25,5 @@ comments: true
 
 ### See Also
 
-- [`assertElementPresent(locator)`](assertElementPresent(locator).html)
-- [`assertAttributePresent(locator,attrName)`](assertAttributePresent(locator,attrName).html)
+- [`assertElementPresent(locator)`](assertElementPresent(locator))
+- [`assertAttributePresent(locator,attrName)`](assertAttributePresent(locator,attrName))

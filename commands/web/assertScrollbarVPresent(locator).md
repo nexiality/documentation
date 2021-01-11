@@ -25,4 +25,4 @@ comments: true
 
 ### See Also
 
-- [`assertScrollbarHPresent(locator)`](assertScrollbarHPresent(locator).html)
+- [`assertScrollbarHPresent(locator)`](assertScrollbarHPresent(locator))

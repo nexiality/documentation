@@ -26,4 +26,4 @@ comments: true
 
 ### See Also
 
-- [`assertScrollbarVPresent(locator)`](assertScrollbarVPresent(locator).html)
+- [`assertScrollbarVPresent(locator)`](assertScrollbarVPresent(locator))

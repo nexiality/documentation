@@ -504,4 +504,4 @@ learn more:
 - [desktop JSON files for Calc](jsonForCalc)
 - [More configuration for component](componentConfiguration)
 
-[Back to Desktop Commands](index)
+[Back to Desktop Commands](../desktop)

@@ -27,6 +27,6 @@ comments: true
 
 ### See Also
 
-- [`assertTextPresent(text)`](assertTextPresent(text).html)
-- [`assertTextContains(locator,text)`](assertTextContains(locator,text).html)
-- [`verifyText(locator,text)`](verifyText(locator,text).html)
+- [`assertTextPresent(text)`](assertTextPresent(text))
+- [`assertTextContains(locator,text)`](assertTextContains(locator,text))
+- [`verifyText(locator,text)`](verifyText(locator,text))

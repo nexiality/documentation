@@ -38,4 +38,4 @@ Note:
 - [`assertTextNotPresent(text)`](assertTextNotPresent(text))
 - [`assertTextPresent(text)`](assertTextPresent(text))
 - [`verifyContainText(locator,text)`](verifyContainText(locator,text))
-- [`verifyText(locator,text)`](verifyText(locator,text).html)
+- [`verifyText(locator,text)`](verifyText(locator,text))

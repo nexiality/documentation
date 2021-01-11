@@ -14,12 +14,12 @@ in response to a GET request. This command can be used for obtaining meta inform
 request without transferring the entity-body itself. This command is often used for testing hypertext links for 
 validity, accessibility, and recent modification.
 
-To learn about how to utilize the response returned from the target URL, click [here](index.html#http-response).
+To learn about how to utilize the response returned from the target URL, click [here](index#http-response).
 
 
 ### Parameters
 - **url** - the target URL
-- **var** - the variable to hold the [response](index.html#http-response)
+- **var** - the variable to hold the [response](index#http-response)
 
 
 ### Example

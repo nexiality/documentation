@@ -25,4 +25,4 @@ comments: true
 
 ### See Also
 
-- [`assertNotVisible(locator)`](assertNotVisible(locator).html)
+- [`assertNotVisible(locator)`](assertNotVisible(locator))

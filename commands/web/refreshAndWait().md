@@ -20,4 +20,4 @@ This command instruct Nexial to refresh current page and then wait for an amount
 ### See Also
 - [`open(url)`](open(url))
 - [`refresh()`](refresh())
-- [`web`](index)
+- [`web`](../web)

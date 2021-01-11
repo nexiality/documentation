@@ -15,4 +15,4 @@ comments: true
 
 ### Se Also
 
-- [`assertIENavtiveMode()`](assertIENavtiveMode().html)
+- [`assertIENavtiveMode()`](assertIENavtiveMode())

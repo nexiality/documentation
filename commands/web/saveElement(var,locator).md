@@ -27,4 +27,4 @@ comments: true
 ### See Also
 
 - [`saveAttribute(var,locator,attrName)`](saveAttribute(var,locator,attrName))
-- [`web`](index)
+- [`web`](../web)

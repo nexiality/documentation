@@ -28,5 +28,5 @@ would be `1`, second would be `2`, and so on).
 
 
 ### See Also
-- [`assertTextPresent(text)`](assertTextPresent(text).html)
-- [`assertElementPresent(locator)`](assertElementPresent(locator).html)
+- [`assertTextPresent(text)`](assertTextPresent(text))
+- [`assertElementPresent(locator)`](assertElementPresent(locator))

@@ -26,6 +26,6 @@ comments: true
 
 ### See Also
 
-- [`selectMultiOptions(locator)`](selectMultiOptions(locator).html)
-- [`selectMulti(locator,array)`](selectMulti(locator,array).html)
-- [`deselectMulti(locator,array)`](deselectMulti(locator,array).html)
+- [`selectMultiOptions(locator)`](selectMultiOptions(locator))
+- [`selectMulti(locator,array)`](selectMulti(locator,array))
+- [`deselectMulti(locator,array)`](deselectMulti(locator,array))

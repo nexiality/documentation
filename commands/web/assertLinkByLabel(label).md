@@ -26,4 +26,4 @@ comments: true
 
 ### See Also
 
-- [`assertText(name,text)`](assertText(locator,text).html)
+- [`assertText(name,text)`](assertText(locator,text))

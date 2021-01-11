@@ -27,4 +27,4 @@ comments: true
 ### See Also
 
 - [`saveElement(var,locator)`](saveElement(var,locator))
-- [`web`](index)
+- [`web`](../web)

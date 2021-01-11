@@ -77,7 +77,7 @@ Multiple conditions are separated by ampersand (` & `). This represents the "AND
 
 (Since Nexial 1.8) There is another unique type of filter - the unary filter. This type of filter only has `[subject]`
 and it should always evaluate to either `true` or `false`. Consider the following uses of the unary filter in the 
-context of [Flow Control](index):
+context of [Flow Control](../flowcontrols):
 
 - `SkipIf(true)`: this means to **always** skip the corresponding step since `true` is _always_ true.
 - `ProceedIf(false)`: this means to **always** bypass the corresponding step since `false` is _never_ true.
@@ -113,4 +113,4 @@ context of [Flow Control](index):
 This filter specification will be used within the following operations:
 - [CSV &raquo; `filter(conditions)`](../expressions/CSVexpression#filter(conditions))
 - [CSV &raquo; `removeRows(conditions)`](../expressions/CSVexpression#removerows(conditions))
-- [Flow Controls](index)
+- [Flow Controls](../flowcontrols)

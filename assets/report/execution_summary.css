@@ -429,3 +429,9 @@ div.custom-header a, div.custom-footer a {
     border-radius: initial;
     padding:       initial;
 }
+
+.fa, .fas {
+    font-weight: 900;
+    color: #444;
+    cursor: pointer;
+}

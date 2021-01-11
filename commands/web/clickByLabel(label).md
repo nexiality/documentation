@@ -26,5 +26,5 @@ comments: true
 
 ### See Also
 
-- [`click(locator)`](click(locator).html)
-- [`clickByLabelAndWait(label,waitMs)`](clickByLabelAndWait(label,waitMs).html)
+- [`click(locator)`](click(locator))
+- [`clickByLabelAndWait(label,waitMs)`](clickByLabelAndWait(label,waitMs))

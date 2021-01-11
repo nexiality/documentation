@@ -26,6 +26,6 @@ comments: true
 
 ### See Also
 
-- [`assertElementNotPresent(locator)`](assertElementNotPresent(locator).html)
-- [`assertTextPresent(text)`](assertTextPresent(text).html)
-- [`assertElementByAttributes(nameValues)`](assertElementByAttributes(nameValues).html)
+- [`assertElementNotPresent(locator)`](assertElementNotPresent(locator))
+- [`assertTextPresent(text)`](assertTextPresent(text))
+- [`assertElementByAttributes(nameValues)`](assertElementByAttributes(nameValues))

@@ -8,7 +8,7 @@ comments: true
 
 
 ### Description
-This command generates audio notification, just like other [sound commands](index). However this one is different in 
+This command generates audio notification, just like other [sound commands](../sound). However this one is different in 
 that it generates audio rendition of specified `text` via text-to-speech technology. By specifying `text`, this command
 converts the audio equivalent, which can be purposed as an effective form of audio notification.
 

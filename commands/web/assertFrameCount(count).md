@@ -25,4 +25,4 @@ comments: true
 
 ### See Also
 
-- [`assertFramePresent(frameName)`](assertFramePresent(frameName).html)
+- [`assertFramePresent(frameName)`](assertFramePresent(frameName))

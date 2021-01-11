@@ -34,4 +34,4 @@ Any of the following will result in a FAIL for the corresponding step:
 
 
 ### See Also
-- [`assertAttributePresent(locator,attrName)`](assertAttributePresent(locator,attrName).html)
+- [`assertAttributePresent(locator,attrName)`](assertAttributePresent(locator,attrName))
