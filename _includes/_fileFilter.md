@@ -1,11 +1,9 @@
 Th `filterFilter` parameter can be expressed in one or more of the following:
 1. The exact file name such as `MyDocument.txt`
 2. The conventional wildcard file pattern such as `*.log` or `a*.json`
-3. The more powerful name matching approach using regular expression, which is prefixed with `REGEX:`
-   - e.g. `REGEX:a.{2,5}\-\d{4}.txt`
-4 file name (use `name match ...`.)
-5 file size in bytes (use `size > ...` or `size < ...`).
-6 file's last modified date (use `lastmod > ...` or `lastmod < ...`). This matches the last modified date/time of a 
+3. file name (use `name match ...`.)
+4. file size in bytes (use `size > ...` or `size < ...`).
+5. file's last modified date (use `lastmod > ...` or `lastmod < ...`). This matches the last modified date/time of a 
   file as timestamp (i.e. epoch).
 
 Additionally, `fileFilter` may be expressed as [Nexial Filter](../../flowcontrols/filter) to create a multi-criteria
