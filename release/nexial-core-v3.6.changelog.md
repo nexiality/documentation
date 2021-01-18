@@ -28,6 +28,7 @@ comments: true
   `REGEX:` for regular expression based matching, `CONTAIN:` and `CONTAIN_ANY_CASE:` for partial text matching, 
   `START:` and `START_ANY_CASE:` for "starts-with" text matching, `END:` and `END_ANY_CASE:` for "ends-with" text 
   matching. Will be added to more commands and expressions in the future.
+  - now supports `EXACT:` syntax for "equality matching".
 - adding logging for clarity
 
 
@@ -45,7 +46,7 @@ comments: true
 
 
 ### [Expression](../expressions)
-- [LIST &raquo; `index(item)`](../expressions/LISTexpression#indexitem): supports PolyMatcher for inexact/expressive text comparison.
+- [LIST &raquo; `index(item)`](../expressions/LISTexpression#indexitem)
 
 
 ### [Function](../functions)
@@ -53,8 +54,13 @@ comments: true
   non-numeric characters such as `-`, `.`, `(` and `)`.
 
  
+### [base commands](../commands/base)
+- [`assertMatch(text,regex)`](../commands/base/assertMatch(text,regex)): now supports PolyMatcher.
+
+
 ### [desktop commands](../commands/desktop)
 - [`clickMenu(menu)`](../commands/desktop/clickMenu(menu)): avoid unnecessary error when clicking on a menu item.
+- support the use of `{DEL}` as an alternate/shortcut to `{DELETE}`.
 
 
 ### [json commands](../commands/json)
@@ -62,10 +68,9 @@ comments: true
   for inexact/expressive text comparison.
 
 
-### [pdf commands](../commands/pdf)
-
-
-### [image commands](../commands/image)
+### [macro commands](../commands/macro)
+- [`expects(var,default)`](../commands/macro/expects(var,default)): fixed logic to use default when specified `var` 
+  has no value.
 
 
 ### [mail commands](../commands/mail)
@@ -106,30 +111,24 @@ comments: true
   conversion of HEX color to RGBA form.
 
 
-### [word commands](../commands/word)
-
-
 ## [tn.5250 commands](../commands/tn.5250)
 - implement retry logic when scanning for nested screen
-- [`assertFieldMatch(label,expects)`](assertFieldMatch(label,expects)): supports PolyMatcher for inexact/expressive 
-  text comparison.
-- [`assertFieldNotMatch(label,expects)`](assertFieldNotMatch(label,expects)): supports PolyMatcher for 
-  inexact/expressive text comparison.
-- [`assertMessageMatch(expects)`](assertMessageMatch(expects)): supports PolyMatcher for inexact/expressive text 
-  comparison.
-- [`assertMessageNotMatch(expects)`](assertMessageNotMatch(expects)): supports PolyMatcher for inexact/expressive 
-  text comparison.
-- [`assertTableMatch(column,text)`](assertTableMatch(column,text)): supports PolyMatcher for inexact/expressive text 
-  comparison.
-- [`assertTableNotMatch(column,text)`](assertTableNotMatch(column,text)): supports PolyMatcher for inexact/expressive 
-  text comparison.
-- [`checkScreenText((expected,expectMatch)`](checkScreenText((expected,expectMatch)): supports PolyMatcher for 
-  inexact/expressive text comparison.
-- [`checkTableContains(column,text,expectMatch)`](checkTableContains(column,text,expectMatch)): supports PolyMatcher 
-  for inexact/expressive text comparison.
-- [`saveTableMatchCount(var,column,text)`](saveTableMatchCount(var,column,text)): supports PolyMatcher for 
-  inexact/expressive text comparison.
-- [`typeOnMatchedColumns(matches,keystrokes)`](typeOnMatchedColumns(matches,keystrokes)): supports PolyMatcher for 
-  inexact/expressive text comparison.
-- [`typeOnMatchedRow(column,match,keystrokes)`](typeOnMatchedRow(column,match,keystrokes)): supports PolyMatcher for 
-  inexact/expressive text comparison.
+- support PolyMatcher for inexact/expressive text comparison:
+  - [`assertFieldMatch(label,expects)`](assertFieldMatch(label,expects))
+  - [`assertFieldNotMatch(label,expects)`](assertFieldNotMatch(label,expects))
+  - [`assertMessageMatch(expects)`](assertMessageMatch(expects))
+  - [`assertMessageNotMatch(expects)`](assertMessageNotMatch(expects))
+  - [`assertTableMatch(column,text)`](assertTableMatch(column,text))
+  - [`assertTableNotMatch(column,text)`](assertTableNotMatch(column,text))
+  - [`assertTitle(expects)`](assertTitle(expects))
+  - [`saveTableMatchCount(var,column,text)`](saveTableMatchCount(var,column,text))
+  - [`typeOnMatchedColumns(matches,keystrokes)`](typeOnMatchedColumns(matches,keystrokes))
+  - [`typeOnMatchedRow(column,match,keystrokes)`](typeOnMatchedRow(column,match,keystrokes))
+- [`waitUntilTextPresent(text,maxWaitMs)`](waitUntilTextPresent(text,maxWaitMs)): **NEW** command to wait until 
+  specified text is found on current TN5250 screen.
+- [`waitUntilTitlePresent(title,maxWaitMs)`](waitUntilTitlePresent(title,maxWaitMs)): **NEW** command to wait until 
+  specified text is found on current TN5250 screen title.
+- [`waitUntilMessagePresent(message,maxWaitMs)`](waitUntilMessagePresent(message,maxWaitMs)): **NEW** command to wait 
+  until specified text is found on current TN5250 status message.
+- [`inspectScreen()`](../command/tn.5250/inspectScreen()): add pre-fetch wait time (1.5second) prior to render TN5250 
+  screen data.

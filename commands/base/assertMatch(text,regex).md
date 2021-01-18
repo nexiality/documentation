@@ -11,6 +11,8 @@ comments: true
 Use this command to assert that `text` matches entirely to the specified `regex`. More specifically, the content of
 `text` is evaluated in its entirety against the specified `regex`.
 
+{% include _polymatcher.md %}
+
 
 ### Parameters
 - **text** - the content to evaluate

@@ -19,9 +19,13 @@ intended text in a less exact (but more expressiveness) way. Here are the suppor
 - **`END_ANY_CASE:`**: Use this technique to perform "ends with" text matches without considering letter casing. For 
   example, `END_ANY_CASE:Please try again.` matches any text that ends with the text "Please try again." in any 
   combination of upper or lower case.
-- **`REGEX:`**: Use this technque to perform text matching via regular expression. For example: use 
+- **`REGEX:`**: Use this technique to perform text matching via regular expression. For example: use 
   `REGEX:.+[S|s]uccessfully.*` as intent for "_matching text that contains 1 or more character, then either 
   'Successfully' or 'successfully', follow by zero or more characters._".
+- **`EXACT:`**: Use this to perform exact text matching, i.e. equality matching. In most cases, this is not required as 
+  the absence of any special keyword almost always means the "_is this the same as that?_" test. However in some special 
+  cases such as [base &raquo; `assertMatch(text,regex)`](../commands/base/assertMatch(text,regex)), one may use this 
+  `EXACT:` syntax to indicate match by equality instead of regular expression.
 - And, of course, one can still use the exact matching strategy by specifying the exact text to match.
 
 We will be adding new strategy to polymatcher -- Please feel free to 
