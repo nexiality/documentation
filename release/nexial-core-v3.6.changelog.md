@@ -18,6 +18,7 @@ comments: true
 - [`nexial-setup`](../userguide/BatchFiles#nexial-setup): backward supports for older Java (version 8-15).
 - fixed code not to fire "fail" event when evaluating an assert command within `repeat-until` to evaluate the 
   continuation of a loop.
+- fixed minor coding issue when updating a step result when its corresponding parameter(s) resolve to a link.
 
 #### Improvements
 - [`project.properties`](../userguide/UnderstandingProjectStructure#artifactprojectproperties): supports 
