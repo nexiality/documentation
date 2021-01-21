@@ -2784,6 +2784,60 @@
             that in turn triggers a IE-only 'Download Notification' outside of the iframe.
         </td>
     </tr>
+
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.browser.geolocation"><code>nexial.browser.geolocation</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td class="read-write">read/write</td>
+        <td>
+            Specify <code>true</code> to enable geo-location support on the target browser. This would enable
+            geo-location detection, which could possibly alter the behavior of the web application under test.<br/>
+            <br/>
+            Currently only the Chrome and Firefox browsers are support for this feature.
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.browser.geolocation.longitude"><code>nexial.browser.geolocation.longitude</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td class="read-write">read/write</td>
+        <td>
+            Use this System variable, along with
+            <a href="#nexial.browser.geolocation.latitude"><code>nexial.browser.geolocation.latitude</code></a> to
+            simulate a different geo location - a.k.a. location faking.<br/>
+            <br/>
+            To find the corresponding longitude and latitude via address, consider using the following websites:<br/>
+            <a href="https://www.latlong.net/convert-address-to-lat-long.html">Get Lat Long from Address</a><br/>
+            <a href="https://www.gps-coordinates.net/">GPS Coordinates</a>
+            <br/>
+            Currently only the Chrome and Firefox browsers are support for this feature.
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.browser.geolocation.latitude"><code>nexial.browser.geolocation.latitude</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td class="read-write">read/write</td>
+        <td>
+            Use this System variable, along with
+            <a href="#nexial.browser.geolocation.longitude"><code>nexial.browser.geolocation.longitude</code></a> to
+            simulate a different geo location - a.k.a. location faking.<br/>
+            <br/>
+            To find the corresponding longitude and latitude via address, consider using the following websites:<br/>
+            <a href="https://www.latlong.net/convert-address-to-lat-long.html">Get Lat Long from Address</a><br/>
+            <a href="https://www.gps-coordinates.net/">GPS Coordinates</a>
+            <br/>
+            Currently only the Chrome and Firefox browsers are support for this feature.
+        </td>
+    </tr>
+
     <tr>
         <td class="varname" nowrap="nowrap">
             <a id="nexial.browser.meta"><code>nexial.browser.meta</code></a>
@@ -2812,7 +2866,7 @@
         <td class="varname" nowrap="nowrap"><a id="nexial.lastAlertText"><code>nexial.lastAlertText</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
-        <td class="read-only">read-only</td>
+        <td class="read-rewrite">read-rewrite</td>
         <td>
             (<a href="../commands/webalert"><strong><code>webalert</code></strong></a> commands only). The text of the
             last javascript alert found during test execution. For example:<br/>

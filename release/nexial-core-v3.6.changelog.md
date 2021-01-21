@@ -110,6 +110,13 @@ comments: true
   inexact/expressive text comparison.
 - [`assertCssPresent(locator,property,value)`](../commands/web/assertCssPresent(locator,property,value)): supports 
   conversion of HEX color to RGBA form.
+- geo location support via [`nexial.browser.geolocation`](../systemvars/index.html#nexial.browser.geolocation).
+- geo location faking via [`nexial.browser.geolocation.longitude`](../systemvars/index.html#nexial.browser.geolocation.longitude) 
+  and [`nexial.browser.geolocation.latitude`](../systemvars/index.html#nexial.browser.geolocation.latitude)
+
+
+[webalert]
+- allow [`nexial.lastAlertText`] to be removed during automation.
 
 
 ## [tn.5250 commands](../commands/tn.5250)

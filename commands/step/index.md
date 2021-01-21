@@ -57,7 +57,8 @@ many areas:
    
    Example: Suppose a script uses a [`observe(prompt)`](observe(prompt).html) command on Row 8, and a 
    [`validate(prompt,responses,passResponses)`](validate(prompt,responses,passResponses).html) command on Row 18. 
-   The system variables `nexial.step.response` and `nexial.step.response` will reflect the `response` and `comments` 
+   The system variables [`nexial.step.response`](../../systemvars/index.html#nexial.step.response) and 
+   [`nexial.step.comment`](../../systemvars/index.html#nexial.step.comment) will reflect the `response` and `comments` 
    captured at Row 8 until Row 18, when the next `step` (or `step.inTime`) command is executed.
 
 
