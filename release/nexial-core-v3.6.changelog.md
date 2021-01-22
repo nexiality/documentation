@@ -19,6 +19,9 @@ comments: true
 - fixed code not to fire "fail" event when evaluating an assert command within `repeat-until` to evaluate the 
   continuation of a loop.
 - fixed minor coding issue when updating a step result when its corresponding parameter(s) resolve to a link.
+- fix output for [`step`](../commands/step) and [`step.inTime`](../commands/step.inTime) commands to capture user input.
+- fix [`step`](../commands/step) and [`step.inTime`](../commands/step.inTime) commands for repeated use within an 
+  Interactive session.
 
 #### Improvements
 - [`project.properties`](../userguide/UnderstandingProjectStructure#artifactprojectproperties): supports 
