@@ -37,11 +37,11 @@ comments: true
 
 
 ### [System Variable](../systemvars)
-- [`nexial.io.matchRecursive`](../systemvars/index#nexial.ui.matchRecursive): **NEW** System variable to determine if 
+- [`nexial.io.matchRecursive`](../systemvars/index#nexial.io.matchRecursive): **NEW** System variable to determine if 
   Nexial should scan recursively the target directory when invoking 
   [io &raquo; `saveMatches(var,path,fileFilter,textFilter)`](../commands/io/saveMatches(var,path,fileFilter,textFilter)).
   - also impacts [io &raquo; `count(var,path,pattern)`](../commands/io/count(var,path,pattern)).
-- [`nexial.io.matchExact`](../systemvars/index#nexial.ui.matchExact): **NEW** System variable to determine if the 
+- [`nexial.io.matchExact`](../systemvars/index#nexial.io.matchExact): **NEW** System variable to determine if the 
   regex-based matching logic should match "partially" or "exactly". Use `true` to perform match. Default is `false`.
   This impact the following commands:
   - [io &raquo; `moveFilesByRegex(sourceDir,regex,target)`](../commands/io/moveFilesByRegex(sourceDir,regex,target))
@@ -118,8 +118,8 @@ comments: true
   and [`nexial.browser.geolocation.latitude`](../systemvars/index.html#nexial.browser.geolocation.latitude)
 
 
-[webalert]
-- allow [`nexial.lastAlertText`] to be removed during automation.
+### [webalert commands](../commands/web)
+- allow [`nexial.lastAlertText`](../systemvars/index.html#nexial.lastAlertText) to be removed during automation.
 
 
 ## [tn.5250 commands](../commands/tn.5250)

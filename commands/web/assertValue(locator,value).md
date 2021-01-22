@@ -7,24 +7,24 @@ comments: true
 ---
 
 ### Description
+This command asserts the value of the element denoted by the specified `locator` has the specified `value`.
 
-- This command is to assert value of the element found as per the locator.
-- The command will pass if the value matches with the expected or else fail otherwise.
+{% include _polymatcher.md %}
+
 
 ### Parameters
-
 - **locator** - this parameter is the locator of the element.
 - **value** -  this parameter is value to be found in the element and asserted.
 
-### Example
 
+### Example
 **Script**:<br/>
 ![](image/assertValue_01.png)
 
 **Output**:<br/>
 ![](image/assertValue_02.png)
 
-### See Also
 
+### See Also
 - [`web`](../web)
 - [`assertVisible(locator)`](assertVisible(locator))

@@ -109,3 +109,5 @@ jQuery(document).ready(function () {
 
   jQuery('h3.pageTitle').after(html);
 });
+
+function toggleContent(/*String*/classId) { $('.' + classId).toggle("slow"); }
