@@ -50,7 +50,7 @@ comments: true
 
 
 ### [Expression](../expressions)
-- [LIST &raquo; `index(item)`](../expressions/LISTexpression#indexitem)
+- [LIST &raquo; `index(item)`](../expressions/LISTexpression#indexitem): now supports PolyMatcher.
 
 
 ### [Function](../functions)
