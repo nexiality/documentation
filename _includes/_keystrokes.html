@@ -1,0 +1,62 @@
+<div class="collapsible-teaser" onclick="toggleContent('collapsible-content')"
+     title="click to read more about Function and Control Key Mapping">
+    Function and Control Key Mapping
+</div>
+
+<div class="collapsible-content">
+    <h4>Function and Control Key Mapping</h4>
+    Nexial's key mapping supports all common PC-104 and Mac keyboard keys. Modifiers and function keys are enclosed
+    within <code>{...}</code>(see below). Regular keys can be expressed as is.<br/>
+    <br/>
+    <h4>Modifiers</h4>
+    &nbsp;&nbsp;&nbsp;&nbsp;(may be use in combination, such as <code>{CONTROL}{ALT}F</code>)
+    <ul>
+        <li><code>{SHIFT}</code></li>
+        <li><code>{CONTROL}</code>, <code>{CTRL}</code></li>
+        <li><code>{ALT}</code></li>
+        <li><code>{WINDOWS}</code>, <code>{WIN}</code> (PC-104 keyboard only)</li>
+        <li><code>{COMMAND}</code>, <code>{META}</code> (Mac keyboard only)</li>
+    </ul>
+    <h4>Function keys</h4>
+    <ul>
+        <li><code>{F1}</code> through <code>{F12}</code></li>
+        <li><code>{ESCAPE}</code>, <code>{ESC}</code></li>
+        <li><code>{BACKSPACE}</code>, <code>{BKSP}</code></li>
+        <li><code>{INSERT}</code></li>
+        <li><code>{DELETE}</code>, <code>{DEL}</code></li>
+        <li><code>{TAB}</code></li>
+        <li><code>{SPACE}</code></li>
+        <li><code>{ENTER}</code></li>
+        <li><code>{CONTEXT}</code> (context menu, PC-104 keyboard only)</li>
+        <li><code>{CAPSLOCK}</code></li>
+        <li><code>{NUMLOCK}</code> (PC-104 keyboard only)</li>
+        <li><code>{PRINTSCREEN}</code>, <code>{PRNTSCN}</code>, <code>{PRTSC}</code> (PC-104 keyboard only)</li>
+        <li><code>{SCROLL_LOCK}</code> (PC-104 keyboard only)</li>
+        <li><code>{PAUSE}</code> (PC-104 keyboard only)</li>
+    </ul>
+    <h4>Directional keys</h4>
+    <ul>
+        <li><code>{HOME}</code></li>
+        <li><code>{END}</code></li>
+        <li><code>{PAGEUP}</code></li>
+        <li><code>{PAGEDOWN}</code></li>
+        <li><code>{UP}</code></li>
+        <li><code>{DOWN}</code></li>
+        <li><code>{LEFT}</code></li>
+        <li><code>{RIGHT}</code></li>
+    </ul>
+    <h4>Legacy desktop application support</h4>
+    <p>
+        The key mapping described above should suffice for most desktop application as well as modern browser. However,
+        there are some <i>older</i> applications where these key mapping might not yield the desired effect. Older, or
+        legacy, applications tend to use "ASCII-based" key mapping instead of the
+        <a href="https://en.wikipedia.org/wiki/Private_Use_Areas" class="external-link" target="_nexial_link">newer
+        Unicode PUA (Private Use Area) code points</a> (which, incidentally, is what Selenium is based on).<br/>
+        <br/>
+        In order to properly simulate key presses on legacy applications, or applications that only support
+        ASCII-based key mapping, one would enable such feature via the System variable
+        <a href="../systemvars/index.html#nexial.desktop.useAsciiKey"><code>nexial.desktop.useAsciiKey</code></a> by
+        setting it to <code>true</code>. The default for this System variable is <code>false</code>.
+    </p>
+
+</div>

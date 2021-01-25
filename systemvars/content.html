@@ -4043,6 +4043,17 @@
         <td>3000</td>
         <td class="read-write">read/write</td>
         <td>
+            <b>DEPRECATED: USE <a href="#nexial.desktop.notifyWaitMs">nexial.desktop.notifyWaitMs</a> instead</b>
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.desktop.notifyWaitMs"><code>nexial.desktop.notifyWaitMs</code></a>
+        </td>
+        <td>millisecond</td>
+        <td>3000</td>
+        <td class="read-write">read/write</td>
+        <td>
             Specify the time to allow for a taskbar-based notification to stay visible. Such notification would display
             log information as issued by the <code>desktop</code> commands, and they are displayed as a
             <a class="external-link" href="https://www.groovypost.com/wp-content/uploads/2011/10/image252.png"
@@ -4116,6 +4127,27 @@
             When this System variable is set to <code>true</code>, Nexial converts the text input parameters to
             "keystrokes". Functionally this would be equivalent to
             <a href="../commands/desktop/typeKeys(os,keystrokes)">web &raquo; <code>typeKeys(os,keystrokes)</code></a>.
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.desktop.useAsciiKey"><code>nexial.desktop.useAsciiKey</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td class="read-write">read/write</td>
+        <td>
+            This System variable applies to the following commands:
+            <ul>
+                <li><a href="../commands/desktop/typeByLocator(locator,text)">desktop &raquo;
+                    <code>typeByLocator(locator,text)</code></a></li>
+            </ul>
+
+            Turn this System variable to <code>true</code> to instruct Nexial to use ASCII-based key mapping, instead
+            of the more-common <a href="https://en.wikipedia.org/wiki/Private_Use_Areas" class="external-link" target="_nexial_link">
+            Unicode PUA (Private Use Area) code points</a> (which, incidentally, is what Selenium is based on).<br/>
+
+            This is at times necessarily, especially in the case of automating legacy applications.
         </td>
     </tr>
     <tr>

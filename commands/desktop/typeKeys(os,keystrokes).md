@@ -29,35 +29,8 @@ systems. For example the following means that these `keystrokes` are supported b
 
 ![](image/typeKeys_02.png)
 
-The command supports all common PC-104 and Mac keyboard keys. Modifiers and function keys are enclosed within `{...}` 
-(see below). Regular keys can be expressed as is. 
-
-##### Modifiers
-- `{SHIFT}`
-- `{CONTROL}`
-- `{ALT}`
-- `{WINDOWS}` (for PC-104 keyboard only)
-- `{CONTEXT}` (for PC-104 keyboard only)
-- `{COMMAND}` or `{META}` (for Mac keyboard only)
-
-##### Function keys
-- `{ESCAPE}` or `{ESC}`
-- `{F1}` through `{F12}`
-- `{PRINTSCREEN}` or `{PRNTSCN}` (for PC-104 keyboard only)
-- `{SCROLL_LOCK}` (for PC-104 keyboard only)
-- `{PAUSE}` (for PC-104 only)
-- `{BACKSPACE}` or `{BKSP}`
-- `{INSERT}`
-- `{DELETE}` or `{DEL}`
-- `{NUMLOCK}` (for PC-104 keyboard only)
-- `{TAB}`
-- `{CAPSLOCK}`
-- `{SPACE}`
-- `{ENTER}`
-
-##### Directional keys
-- `{HOME}`, `{END}`, `{PAGEUP}`, `{PAGEDOWN}`, `{UP}`, `{DOWN}`, `{LEFT}`, `{RIGHT}`
-
+{% include _keystrokes.html %}
+<br/>
 
 ### Caution
 This command do not check or make any effort that AUT is currently present or in display in the foreground. It simply
@@ -70,11 +43,12 @@ additional time is needed to account for the intended reaction from the target a
 up into multiple commands with [base &raquo; `waitFor(waitMs)`](../base/waitFor(waitMs)) commands between them.
 
 {% include typeKeysDiff.html %}
+<br/>
 
 ### Parameters
 - **os** - the operating system(s) that will support the specified keystrokes. Unmatched OS will omit such execution.
 - **keystrokes** - the keys to issue upon the current operating system. Longer keystrokes can be broken down to 
-multiple lines.
+  multiple lines.
       
 
 ### Example

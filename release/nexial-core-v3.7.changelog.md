@@ -20,6 +20,22 @@ comments: true
 
 
 ### [System Variable](../systemvars)
+- deprecated [`nexial.desktopNotifyWaitMs`](../systemvars/content.html#nexial.desktopNotifyWaitMs) in favor of
+  [`nexial.desktop.notifyWaitMs`](../systemvars/content.html#nexial.desktop.notifyWaitMs) for consistency.
+
+
+### [Nexial Interactive](../interactive)
+- support inspection and basic step-by-step automation for desktop application:
+  - `DESKTOP(xpath)` to inspect desktop element by XPATH.
+  - `DESKTOP(xpath) => click` to click on a desktop element by XPATH.
+  - `DESKTOP(xpath) => doubleclick` to double click on a desktop element by XPATH.
+  - `DESKTOP(xpath) => type(text)` to type on a desktop element by XPATH.
+  - `DESKTOP(label)` to inspect desktop element by a label in the current form.
+  - `DESKTOP(label) => click` to click on a desktop element by a label in the current form.
+  - `DESKTOP(label) => doubleclick` to double click on a desktop element by a label in the current form.
+  - `DESKTOP(label) => type(text)` to type on a desktop element by a label in the current form.
+  - `DESKTOP(app) => menu(label,label,...)` to simulate the activation of menu/menus via label/labels. For example,
+    `DESKTOP(app) => menu(File,Open)`
 
 
 ### [Expression](../expressions)
@@ -32,6 +48,15 @@ comments: true
 
 
 ### [desktop commands](../commands/desktop)
+- enhanced support for "_older_" applications that require (or prefer) ASCII-based key mapping, especially for function
+  and control keys such as `{BACKSPACE}` and `{ESCAPE}`. Set 
+  [`nexial.desktop.useAsciiKey`](../systemvars/index.html#nexial.destop.useAsciiKey) to `true` to enable this feature.
+- [`doubleClick(name)`](../commands/desktop/doubleClick(name)): **NEW** command to perform double click.
+- [`doubleClickByLocator(locator)`](../commands/desktop/doubleClickByLocator(locator)): **NEW** command to perform 
+  double click.
+- [`waitForLocator(locator,maxWaitMs)`](../commands/desktop/waitForLocator(locator,maxWaitMs)): code fix to continue 
+  waiting for specified element until specified time out.
+- added `[CONTEXT]` key map to support shortcut key for context menu (Windows only).
 
 
 ### [json commands](../commands/json)

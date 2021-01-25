@@ -750,23 +750,51 @@ pre.explain {
   color: #333;
 }
 
-/* polymatcher */
-.polymatcher-teaser {
+/* collapsible-content */
+.collapsible-teaser, .collapsible-teaser2, .collapsible-teaser3 {
   font-weight: bold;
-  color: #255;
-  background-image: linear-gradient(90deg, transparent 0%, rgba(200, 220, 220, 0.75) 50%, transparent 100%);
+  color: #5d8540;
   display: inline-block;
-  box-shadow: 2px 2px 8px 3px rgba(90, 115, 75, 0.9);
-  margin: 5px 0 15px -6px;
-  text-shadow: -1px 0px 3px white;
-  padding: 5px 15px 5px 15px;
+  box-shadow: 2px -2px 8px 3px rgba(90, 115, 75, 0.9);
+  margin: 5px 0 15px 10px;
+  padding: 5px 15px 5px 38px;
+  border-radius: 5px 5px 0 0;
+  background-color: rgba(220, 225, 190, 0.65);
+  background-image: url(../../image/info_green.png);
+  background-size: 32px 32px;
+  background-repeat: no-repeat;
+  background-position: 0 1px;
+  font-variant: all-small-caps;
   cursor: pointer;
-  border-radius: 15px 15px 0 0;
 }
 
-.polymatcher-content {
+.collapsible-teaser:hover, .collapsible-teaser2:hover, .collapsible-teaser3:hover {
+  box-shadow: 2px -2px 15px 5px rgba(90, 115, 75, 1);
+  background-color: rgba(220, 225, 190, 0.35);
+  color: rgba(40, 60, 0, 0.85);
+}
+
+.collapsible-content, .collapsible-content2, .collapsible-content3 {
   display: none;
-  background-color: rgba(90, 115, 75, 0.25);
+  background-color: rgba(140, 145, 140, 0.2);
   padding: 15px;
-  margin: -13px 0px 0px -7px;
+  margin: -15px 0 0 10px;
+}
+
+.collapsible-content li {
+  width: max-content;
+  height: 25px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 5px;
+  margin: 3px 1px;
+  vertical-align: middle;
+  background-color: #c9c9c9;
+  border: 1px inset rgba(220, 220, 220, 0.5);
+}
+
+.collapsible-content li code {
+  margin: 0 3px;
+  font-size: 90%;
 }

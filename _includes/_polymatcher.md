@@ -1,10 +1,10 @@
 <hr/>
 
-<div class="polymatcher-teaser" onclick="toggleContent('polymatcher-content')" title="click to read more about PolyMatcher">
+<div class="collapsible-teaser" onclick="toggleContent('collapsible-content')" title="click to read more about PolyMatcher">
   PolyMatcher Enabled 
 </div>
 
-<div class="polymatcher-content">
+<div class="collapsible-content">
 <h4><b>PolyMatcher</b> - a flexible way to perform text matching</h4>
 <p>
 In addition to extract text matching (or <em>string matching</em>), this command/expression also supports "polymatcher" 

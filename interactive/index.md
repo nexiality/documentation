@@ -378,19 +378,33 @@ All option and action keys are **NOT** case-sensitive.
             Below are a few examples:<br/><pre>
 > inspect: SAVE(myData) = [LIST(1,2,3,4,5,6,7,8,9,10) => sum]
 11:15:15.786 >> LIST    => sum                   NUMBER(55)
-11:15:15.787 >> creating data variable [a] to [55]
-<br/>
+11:15:15.787 >> creating data variable [a] to [55]<br/>
 > inspect: CLEAR(b,a,nexial.runID)
 11:14:27.730 >> removing data variable [b, a, nexial.runID]
 11:14:27.731 >> The following data variable(s) are READ ONLY and ignored: nexial.runID
-11:14:27.731 >> The following data variable(s) are removed from execution: a
-<br/>
+11:14:27.731 >> The following data variable(s) are removed from execution: a<br/>
 > inspect: CLEAR(*)
 11:14:27.730 >> removing data variable [*]
 11:14:27.731 >> The following data variable(s) are removed from execution:
 11:14:27.731 >>     data1
 11:14:27.731 >>     password
 11:14:27.731 >>     target_url </pre>
+            Starting with <a href="../release/nexial-core-v3.7.changelog">Nexial v3.7</a>, Inspect in Nexial Interactive
+            supports <a href="../commands/desktop">Desktop Automation</a> as well. Here are the possible inspection 
+            features for Desktop Automation:<br/>
+            <li><code>DESKTOP(xpath)</code> - inspect a desktop element based on XPATH</li>
+            <li><code>DESKTOP(label)</code> - inspect a desktop element based on a label in the current form</li>
+            <li><code>DESKTOP(xpath) => click</code> - click on a desktop element based on XPATH</li>
+            <li><code>DESKTOP(labell) => click</code> - click on a desktop element based a label in the current form</li>
+            <li><code>DESKTOP(xpath) => doubleClick</code> - double click on a desktop element based on XPATH</li>
+            <li><code>DESKTOP(labell) => doubleClick</code> - double click on a desktop element based on a label in 
+                the current form</li>
+            <li><code>DESKTOP(xpath) => type(input)</code> - type the specified input on a desktop element based on 
+                XPATH</li>
+            <li><code>DESKTOP(labell) => type(input)</code> - type the specified input on a desktop element based a 
+                label in the current form</li>
+            <li><code>DESKTOP(app) => menu(label,label,...)</code> - click on one or more menu items on the current 
+                form</li>
         </div>
         <div id="tab17" class="tab">
             Use <code>A</code> to reset all custom step assignment to assign to all steps.<br/>
