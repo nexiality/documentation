@@ -15,7 +15,7 @@ If the specified `value` is `(empty)`, then the target element is effectively "c
 existing text is removed. 
 
 {% include _keystrokes.html %}
-
+<br/
 {% include typeKeysDiff.html %}
 <br/>
 
