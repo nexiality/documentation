@@ -16,6 +16,7 @@ The "excel" command type represents a series of automation commands regarding ex
 - [`columnarCsv(file,worksheet,ranges,output)`](columnarCsv(file,worksheet,ranges,output))
 - [`csv(file,worksheet,range,output)`](csv(file,worksheet,range,output))
 - [`json(file,worksheet,range,header,output)`](json(file,worksheet,range,header,output))
+- [`renameSheet(file,worksheet,newName)`](renameSheet(file,worksheet,newName))
 - [`saveData(var,file,worksheet,range)`](saveData(var,file,worksheet,range))
 - [`saveRange(var,file,worksheet,range)`](saveRange(var,file,worksheet,range))
 - [`saveTotalColumnCount(file,worksheet,row,saveVar)`](saveTotalColumnCount(file,worksheet,row,saveVar))

@@ -36,9 +36,12 @@ comments: true
   - `DESKTOP(label) => type(text)` to type on a desktop element by a label in the current form.
   - `DESKTOP(app) => menu(label,label,...)` to simulate the activation of menu/menus via label/labels. For example,
     `DESKTOP(app) => menu(File,Open)`
+- minor improvement on console output for Inspect.
 
 
 ### [Expression](../expressions)
+- [EXCEL &raquo; `renameSheet`](../expressions/EXCELexpression.md#renamesheetworksheetnewname): **NEW** operation to 
+  rename worksheet.
 
 
 ### [Function](../functions)
@@ -57,6 +60,11 @@ comments: true
 - [`waitForLocator(locator,maxWaitMs)`](../commands/desktop/waitForLocator(locator,maxWaitMs)): code fix to continue 
   waiting for specified element until specified time out.
 - added `[CONTEXT]` key map to support shortcut key for context menu (Windows only).
+
+
+### [excel commands](../commands/excel)
+- [`renameSheet(file,worksheet,newName)`](../commands/excel/renameSheet(file,worksheet,newName)): **NEW** command to 
+  rename worksheet.
 
 
 ### [json commands](../commands/json)

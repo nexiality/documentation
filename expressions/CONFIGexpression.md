@@ -12,7 +12,7 @@ The CONFIG files are simple text files with key/value pairs. The general format 
 explained below:
 
 Generally expected to be a single line of the form, one of the following:<br/>
-- `property-bame=property-value`
+- `property-name=property-value`
 - `property-name:property-value`
 
 White space that appears between the property name and property value is ignored, so the following are equivalent.

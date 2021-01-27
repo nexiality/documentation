@@ -215,6 +215,12 @@ contain any value.  After this operation, **`text`** will render the captured
 
 -----
 
+#### renameSheet(worksheet,newName)
+Rename an existing worksheet (denote as `worksheet`) to `newName`. The specified worksheet must exists, and the 
+corresponding Excel must not be locked (i.e. only by an Microsoft Excel program).
+
+-----
+
 #### replace(search,replace)
 Of all the cells captured through [`read(sheet,range)`](#readsheetrange), replace all instances of `search` with 
 `replace`. Note that the replaced cells are only kept in memory. Use [`csv`](#csv), [`csvWithHeader`](#csvwithheader)
