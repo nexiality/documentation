@@ -14,7 +14,7 @@ comments: true
 #### Fixes
 - fixed Excel output so that only the first 500 characters will be stored for the parameter values. 
   Configurable via [`nexial.maxConsoleDisplay`](../systemvars/index.html#nexial.maxConsoleDisplay).
-
+- logic fix when dealing with nested steps in macro
 
 #### Improvements
 
