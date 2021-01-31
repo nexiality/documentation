@@ -40,8 +40,10 @@ comments: true
 
 
 ### [Expression](../expressions)
-- [EXCEL &raquo; `renameSheet`](../expressions/EXCELexpression.md#renamesheetworksheetnewname): **NEW** operation to 
+- [EXCEL &raquo; `renameSheet`](../expressions/EXCELexpression#renamesheetworksheetnewname): **NEW** operation to 
   rename worksheet.
+- [LIST &raquo; `removeMatch(match)`](../expressions/LISTexpression#removematchmatch): **NEW** operation to remove from 
+  a LIT the items that match the specified `match` criteria.
 
 
 ### [Function](../functions)

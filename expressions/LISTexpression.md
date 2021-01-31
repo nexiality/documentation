@@ -301,6 +301,14 @@ Output:<br/>
 
 -----
 
+#### **`removeMatch(match)`**
+Remove one or more items from the list based on specified `match` criteria. This operation utilizes polymatcher (below)
+to determine the matching items. The result is a LIST without any items that match the specified critiera. 
+
+{% include _polymatcher.md %}
+
+-----
+
 #### **`replace(searchFor,replaceWith)`**
 For the portion of all items that matches `searchFor`, replace it with `replaceWith`.
 
