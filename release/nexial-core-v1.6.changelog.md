@@ -45,7 +45,7 @@ comments: true
 
 
 ### Nexial Expression  
-- [`[LIST(...) => count]`](../expressions/LISTexpression.md#count): added logic to compensate for web element array 
+- [`[LIST(...) => count]`](../expressions/LISTexpression.html#count): added logic to compensate for web element array 
   with characters that might be misinterpreted as array delimiter. Now it should be safe/correct to issue: 
   `web    | saveElements(var,locator) | MyList | //div` <br/>
   `number | assertEquals(num1,num2)   | 53     | [LIST(${MyList}) => count] `

@@ -18,7 +18,7 @@ This command saves the form values from the pdf document and store the data in t
 - **var** - variable name to store the form data
 - **pageAndLineStartEnd** - identify the starting page number, start line and end line. All the three values to be 
   given with comma separated
-- **strategy** - the strategy to read the pdf form. See [Form Data Extraction](index.md#pdf-form-data-extraction) for 
+- **strategy** - the strategy to read the pdf form. See [Form Data Extraction](index.html#pdf-form-data-extraction) for 
   more details.
 
 ### Example

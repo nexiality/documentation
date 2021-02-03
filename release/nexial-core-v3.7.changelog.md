@@ -30,12 +30,14 @@ comments: true
   - `DESKTOP(xpath) => click` to click on a desktop element by XPATH.
   - `DESKTOP(xpath) => doubleclick` to double click on a desktop element by XPATH.
   - `DESKTOP(xpath) => type(text)` to type on a desktop element by XPATH.
-  - `DESKTOP(label)` to inspect desktop element by a label in the current form.
-  - `DESKTOP(label) => click` to click on a desktop element by a label in the current form.
-  - `DESKTOP(label) => doubleclick` to double click on a desktop element by a label in the current form.
-  - `DESKTOP(label) => type(text)` to type on a desktop element by a label in the current form.
+  - `DESKTOP(name)` to inspect desktop element by a component name in the current form.
+  - `DESKTOP(name) => click` to click on a desktop element by a component name in the current form.
+  - `DESKTOP(name) => doubleclick` to double click on a desktop element by a component name in the current form.
+  - `DESKTOP(name) => type(text)` to type on a desktop element by a component name in the current form.
   - `DESKTOP(app) => menu(label,label,...)` to simulate the activation of menu/menus via label/labels. For example,
     `DESKTOP(app) => menu(File,Open)`
+  - `DESKTOP(xpath) => context(label,label,...)` to trigger context on a desktop element.
+  - `DESKTOP(name) => context(label,label,...)` to trigger context on a desktop element.
 - minor improvement on console output for Inspect.
 
 
@@ -62,6 +64,13 @@ comments: true
 - [`waitForLocator(locator,maxWaitMs)`](../commands/desktop/waitForLocator(locator,maxWaitMs)): code fix to continue 
   waiting for specified element until specified time out.
 - added `[CONTEXT]` key map to support shortcut key for context menu (Windows only).
+- [`clickMenuByLocator(locator,menu)`](../commands/desktop/clickMenuByLocator(locator,menu)): **NEW** command to trigger
+  application menu via a `locator`.
+- [`contextMenuByLocator(locator,menu)`](../commands/desktop/contextMenuByLocator(locator,menu)): **NEW** command to
+  trigger context menu (i.e. right-click) on a desktop element via `locator`.
+- [`contextMenu(name,menu)`](../commands/desktop/contextMenu(locator,menu)): **NEW** command to
+  trigger context menu (i.e. right-click) on a desktop element via `locator`.
+- improved keyboard automation by utilizing Winium's internal "shortcut" script.
 
 
 ### [excel commands](../commands/excel)

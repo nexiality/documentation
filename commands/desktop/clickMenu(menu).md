@@ -7,16 +7,21 @@ comments: true
 ---
 
 ### Description
+This command is used to click and select the menu item from the Menu bar to access specific functionality of the 
+application
 
-This command is used to click and select the menu item from the Menu bar to run specific program on the window.
 
 ### Parameters
-
 - **menu** - this parameter is the name of the menu item.
 
-- **Note**: If the menu has list of items to select, then parameter name should be with _\[Main menu item, menu item name from the list\]_
+- **Note**: To access menu in the successive level, separate each menu item with a comma (`,`). For example, to 
+access "Copy" from "Edit" menu, specify `Edit,Copy` (read, click Edit and then click Copy). 
+
 
 ### Example
 
 
 ### See Also
+- [`clickMenuByLocator(locator,menu)`](clickMenuByLocator(locator,menu))
+- [`contextMenuByLocator(locator,menu)`](contextMenuByLocator(locator,menu))
+- [`contextMenu(name,menu)`](contextMenu(name,menu))

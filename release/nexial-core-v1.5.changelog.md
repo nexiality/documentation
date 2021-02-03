@@ -43,7 +43,7 @@ comments: true
 
 
 ### Nexial Expression  
-- [CSV `excel(file,sheet,startCell)`](../expressions/CSVexpression.md#excel): **NEW** operation to import CSV into
+- [CSV `excel(file,sheet,startCell)`](../expressions/CSVexpression.html#excel): **NEW** operation to import CSV into
   a Excel worksheet. By default, `startCell` is set to `A1`.
 - [DATE expression](../expressions/DATEexpression): support for `informal` date/time formatting to mimic human 
   conversation.

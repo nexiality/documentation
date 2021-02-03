@@ -29,7 +29,7 @@ In above example, [WEB &raquo; `executeScript(var,script)`](executeScript(var,sc
 `headerId`. Then, user can take full screenshot using `screenshotInFull(file,timeout,removeFixed)` command. After 
 screenshot taken, user can refresh page to go back to original page with header.
 
-Note that if [`nexial.outputToCloud`](../../systemvars/index.md#nexial.outputToCloud) System variable is set to `true`, 
+Note that if [`nexial.outputToCloud`](../../systemvars/index.html#nexial.outputToCloud) System variable is set to `true`, 
 then the captured image will be uploaded to the cloud as well.
 
 

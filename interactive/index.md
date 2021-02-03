@@ -8,6 +8,14 @@ redirect_from:
   - /interactive
 ---
 
+<style>
+.tabs .tab-content li {
+    margin-bottom: 15px;
+    list-style-position: inside;
+    text-indent: -20px;
+    padding-left: 20px;
+}
+</style>
 
 ## Introduction
 While we strive to create an intuitive and empowering platform for automation, Nexial might still seem challenging for 
@@ -44,7 +52,7 @@ Currently Nexial Interactive comes with the following capabilities:
 Note that the main objective of Nexial Interactive is to execute a subset of the automation script, possibly repeatedly,
 so that we can better understand the target application, the automation objective, or the Nexial capability. For such
 reasons, Nexial Interactive does not support test plan or multiple scenarios. The common pattern is to focus on a block 
-of steps (of one scenario, naturally), work through the __"experiment-observe-repeat"__ cycle, and move on to the next 
+of steps (of one scenario, naturally), work through the __"execute-observe-repeat"__ cycle, and move on to the next 
 block of steps. One can (re)assign the number of steps or scenario between execution. 
 
 
@@ -395,16 +403,35 @@ All option and action keys are **NOT** case-sensitive.
             <li><code>DESKTOP(xpath)</code> - inspect a desktop element based on XPATH</li>
             <li><code>DESKTOP(label)</code> - inspect a desktop element based on a label in the current form</li>
             <li><code>DESKTOP(xpath) => click</code> - click on a desktop element based on XPATH</li>
-            <li><code>DESKTOP(labell) => click</code> - click on a desktop element based a label in the current form</li>
+            <li><code>DESKTOP(label) => click</code> - click on a desktop element based a label in the current form</li>
             <li><code>DESKTOP(xpath) => doubleClick</code> - double click on a desktop element based on XPATH</li>
-            <li><code>DESKTOP(labell) => doubleClick</code> - double click on a desktop element based on a label in 
+            <li><code>DESKTOP(label) => doubleClick</code> - double click on a desktop element based on a label in 
                 the current form</li>
             <li><code>DESKTOP(xpath) => type(input)</code> - type the specified input on a desktop element based on 
                 XPATH</li>
-            <li><code>DESKTOP(labell) => type(input)</code> - type the specified input on a desktop element based a 
+            <li><code>DESKTOP(label) => type(input)</code> - type the specified input on a desktop element based a 
                 label in the current form</li>
-            <li><code>DESKTOP(app) => menu(label,label,...)</code> - click on one or more menu items on the current 
-                form</li>
+            <li><code>DESKTOP(xpath) => context(menu,menu,...)</code> - simulate the activation of context menu (i.e. 
+                right-click) on a desktop element based on XPATH, follow by the activation of such context menu via 
+                the `menu` input. For sub-menu, use comma (<code>,</code>) to specify multi-level of sub-menu to 
+                activate.</li>
+            <li><code>DESKTOP(label) => context(menu,menu,...)</code> - simulate the activation of context menu (i.e. 
+                right-click) on a desktop element based on a label in the current form, follow by the activation of 
+                such context menu via the <code>label</code> parameter(s). For sub-menu, use comma (<code>,</code>) to 
+                specify multi-level of sub-menu to activate.</li>
+            <li><code>DESKTOP(xpath) => menu(label,label,...)</code> - simulate the activation of the application menu 
+                on an application window based on XPATH, follow by the activation of the sub-menu(s) items. Each level 
+                of sub-menu items are separated by comma (<code>,</code>). Note that the specified XPATH must resolved 
+                to the "owning" window of the target application menu.</li>
+            <li><code>DESKTOP(label) => menu(label,label,...)</code> - simulate the activation of the application menu 
+                of an application window based its "autoscan" label, follow by the activation of the sub-menu(s) items. 
+                Each level of sub-menu items are separated by comma (<code>,</code>). Note that the specified label 
+                must resolved to the "owning" window of the target application menu.</li>
+            <li><code>DESKTOP(app) => menu(label,label,...)</code> - click on one or more application menu items on the 
+                current form. This is effectively the same as <code>DESKTOP(label) => menu(label,label,...)</code></li>
+            <br/>
+            For more information and examples, read <a href="inspect_desktop.html">Inspecting Desktop Elements in 
+            Nexial Interactive</a>.
         </div>
         <div id="tab17" class="tab">
             Use <code>A</code> to reset all custom step assignment to assign to all steps.<br/>
@@ -437,6 +464,10 @@ All option and action keys are **NOT** case-sensitive.
         </div>
     </div>
 </div>
+
+<br/>
+Click here to learn more about [Inspecting Desktop Elements in Nexial Interactive](inspect_desktop)
+
 <br/>
 <br/>
 

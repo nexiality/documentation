@@ -52,7 +52,7 @@ comments: true
   (`alert`, `confirm` or `prompt`). Our simple tests show that switching this System variable to `false` (default is `true`)
   yields about 15-20% time improvement.
   - note that if this System variable is set to `true` or undefined, any harvested alert text would be available via the
-    [`nexial.lastAlertText`](../systemvars/index.md#nexial.lastAlertText) System variable.
+    [`nexial.lastAlertText`](../systemvars/index.html#nexial.lastAlertText) System variable.
 - System variable [`nexial.safari.cleanSession`](../systemvars/index#nexial.safari.cleanSession) removed since safari now
   ALWAYS open clean session.    
 

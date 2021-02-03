@@ -105,7 +105,7 @@ As stated earlier, one can also opt to generate the comparison report as CSV or 
 In this example, we have set both [`nexial.json.compareResultsAsCSV`](../../systemvars/index#nexial.json.compareResultsAsCSV) 
 and [`nexial.json.compareResultsAsHTML`](../../systemvars/index#nexial.json.compareResultsAsHTML) to `true`. After the 
 `assertEqual(expected,actual)` command is executed, we can use the 
-[`nexial.lastOutputLink`](../../systemvars/index.md#nexial.lastOutputLink) to retrieve the exact location of the
+[`nexial.lastOutputLink`](../../systemvars/index.html#nexial.lastOutputLink) to retrieve the exact location of the
 generated output. Since all 3 report types are set to `true`, there would be 3 files generated, in very similar format:
 
 `<output_location>/<execution_output_xlsx>_<scenario>_A<step_row>_<output_index>.<extension>`
