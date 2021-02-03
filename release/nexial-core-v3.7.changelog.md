@@ -45,7 +45,8 @@ comments: true
 - [EXCEL &raquo; `renameSheet`](../expressions/EXCELexpression#renamesheetworksheetnewname): **NEW** operation to 
   rename worksheet.
 - [LIST &raquo; `removeMatch(match)`](../expressions/LISTexpression#removematchmatch): **NEW** operation to remove from 
-  a LIT the items that match the specified `match` criteria.
+  a [`LIST`](../expressions/LISTexpression) the items that match the specified `match` criteria.
+- [TEXT &raquo; `removeRegex(regex)`](../expressions/TEXTexpression.md#removeregexregex): Now supports multi-line text.
 
 
 ### [Function](../functions)
