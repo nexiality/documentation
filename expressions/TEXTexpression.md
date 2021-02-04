@@ -485,8 +485,23 @@ Output:<br/>
 
 -----
 
-#### **`removeRegex(regex)`**
-Remove character(s) that matches `regex`.
+#### **`removeLine(match)`**
+Remove lines from current expression that matches the specified `match`. This operation supports PolyMatcher.
+
+{% include _polymatcher.md %}
+
+-----
+
+#### **`removeRegex(regex,multiLine,caseSensitive)`**
+Remove character(s) that matches `regex`. Optionally, one can specify `true` for `multiLine` to support text content
+that spans across multiple lines. By default, this operation will perform regular expression pattern matching 
+case-sensitively. One can set the `caseSensitive` parameter as `false` to enforce a case-insensitive pattern matching.
+
+Both the `multiLine` and `caseSensitive` parameters are optional, and they are by default set to `true` and `false`, 
+respectively.
+
+When enabling the multi-line mode, be sure to start the `regex` with a `^` character to signify the start of a line, and
+to end the `regex` with a `\n` character (not `$`) to represent the end of line.
 
 **Example**<br/>
 Script:<br/>

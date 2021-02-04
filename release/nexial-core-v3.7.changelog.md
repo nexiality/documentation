@@ -46,7 +46,10 @@ comments: true
   rename worksheet.
 - [LIST &raquo; `removeMatch(match)`](../expressions/LISTexpression#removematchmatch): **NEW** operation to remove from 
   a [`LIST`](../expressions/LISTexpression) the items that match the specified `match` criteria.
-- [TEXT &raquo; `removeRegex(regex)`](../expressions/TEXTexpression.md#removeregexregex): Now supports multi-line text.
+- [TEXT &raquo; `removeRegex(regex)`](../expressions/TEXTexpression#removeregexregexmultilinecasesensitive): Now 
+  supports multi-line text and case-insensitive pattern matching.
+- [TEXT &raquo; `removeLine(match)`](../expressions/TEXTexpression#removelinematch): PolyMatcher-based operation to 
+  remove one or more lines from a TEXT expression.
 
 
 ### [Function](../functions)
