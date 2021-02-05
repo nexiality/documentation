@@ -91,6 +91,11 @@ comments: true
 ### [mail commands](../commands/mail)
 
 
+### [localdb commands](../commands/localdb)
+- [`importCSV(var,csv,table)`](../commands/localdb/importCSV(var,csv,table)): fix code to support headers with 
+  special characters and data with single quote (now escaped).
+
+
 ### [rdbms commands](../commands/rdbms)
 
 
