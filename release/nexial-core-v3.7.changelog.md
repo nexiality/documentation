@@ -75,6 +75,8 @@ comments: true
 - [`contextMenu(name,menu)`](../commands/desktop/contextMenu(locator,menu)): **NEW** command to
   trigger context menu (i.e. right-click) on a desktop element via `locator`.
 - improved keyboard automation by utilizing Winium's internal "shortcut" script.
+- [`contextMenu(name,menu)`](../commands/desktop/contextMenu(locator,menu)): support position-based menu item with prefix
+  `INDEX:`.
 
 
 ### [excel commands](../commands/excel)

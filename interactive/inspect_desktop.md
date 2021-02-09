@@ -71,7 +71,9 @@ As of now, here are the possible automation that can be performed from Inspect:
 3. `DESKTOP(xpath|name) => type(input)` - to enter text (i.e. keyboard input) on a desktop element. Shortcuts are 
    supported here.
 4. `DESKTOP(xpath|name) => context(label,label,...)` - to activate the context menu (i.e. right-click) on a desktop 
-   element.
+   element. To trigger submenu, specify the successive list of menu items separated by commas. Alternatively one can
+   also trigger the context menu via the position of the menu item. For example, `context(INDEX:5,2)` means trigger the
+   5th item of the context menu, follow by the 2nd item of the submenu. 
 5. `DESKTOP(xpath|name) => menu(label,label,...)` - to active the application menu (from menu bar). Note that the target 
    element, expressed either as XPATH or component name, should point to the application window (the parent component 
    of the MenuBar component).
