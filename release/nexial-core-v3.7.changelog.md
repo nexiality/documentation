@@ -77,6 +77,34 @@ comments: true
 - improved keyboard automation by utilizing Winium's internal "shortcut" script.
 - [`contextMenu(name,menu)`](../commands/desktop/contextMenu(locator,menu)): support position-based menu item with prefix
   `INDEX:`.
+- additional support for Infragistics 4 components:
+  - support the use of TreeView-based datagrid on the `table`-related commands such as 
+    [`assertTableRowContains(row,contains)`](../commands/desktop/assertTableRowContains(row,contains)), 
+    [`saveAllTableRows(var)`](../commands/desktop/saveAllTableRows(var)) and 
+    [`editTableCells(row,nameValues)`](../commands/desktop/editTableCells(row,nameValues)).
+  - support various types of Combo via common set of `combo`-related commands:
+    - [`selectCombo(name,text)`](../commands/desktop/selectCombo(name,text)): supports "single-select", "multi-select" 
+      and "type-ahead" combo boxes
+    - [`assertSelected(name,text)`](../commands/desktop/assertSelected(name,text)): supports "single-select", 
+      "multi-select" and "type-ahead" combo boxes
+- improves [autoscanning](../commands/desktop/configureDesktopApplication#the-benefit-of-autoscan) process with better
+  support for Infragistics 4 components.
+- [`saveTableRows(var,contains,csv)`](../commands/desktop/saveTableRows(var,contains,csv)): support conversion of grid
+  data into CSV for further data processing.
+- [`saveAllTableRows(var,csv)`](../commands/desktop/saveAllTableRows(var,csv)): support conversion of grid data into 
+  CSV for further data processing.
+- [`saveTableRowsRange(var,beginRow,endRow,csv)`](../commands/desktop/saveTableRowsRange(var,beginRow,endRow,csv)): 
+  support conversion of grid data into CSV for further data processing.
+- [`assertTableRowContains(row,contains)`](../commands/desktop/assertTableRowContains(row,contains)): supports PolyMatcher.
+- [`assertTableColumnContains(column,contains)`](../commands/desktop/assertTableColumnContains(column,contains)): 
+  supports PolyMatcher.
+- [`assertTableContains(contains)`](../commands/desktop/assertTableContains(contains)): supports PolyMatcher.
+- [`assertTableCell(row,column,contains)`](../commands/desktop/assertTableCell(row,column,contains)): supports PolyMatcher.
+- [`saveTableRows(var,contains,csv)`](../commands/desktop/saveTableRows(var,contains,csv)): supports PolyMatcher.
+- [`assertChecked(name)`](../commands/desktop/assertChecked(name)): supports both Checkbox and Radio component.
+- [`assertNotChecked(name)`](../commands/desktop/assertNotChecked(name)): supports both Checkbox and Radio component.
+- Autoscanning: support the use of data variable in the "Aut" section of "application.json".
+- Autoscanning: support for special/rare case of Combo box component containing only Radio component(s).
 
 
 ### [excel commands](../commands/excel)

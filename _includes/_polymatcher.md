@@ -47,7 +47,7 @@ intended text in a less exact (but more expressiveness) way. Here are the suppor
   </li>
   <li>
   <b><code>EXACT:</code></b>: Use this to perform exact text matching, i.e. equality matching. In most cases, this is 
-  not required as the absence of any special keyword almost always means the "<em>is this the same as that?</em>" test. 
+  not required as the absence of any special keyword almost always means the "<i>is this the same as that?</i>" test. 
   However in some special cases such as <a href="../commands/base/assertMatch(text,regex)">base » 
   <code>assertMatch(text,regex)</code></a>, one may use this <code>EXACT:</code> syntax to indicate match by equality 
   instead of regular expression.

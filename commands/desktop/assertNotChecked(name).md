@@ -6,16 +6,15 @@ tags: command desktop
 comments: true
 ---
 ### Description
+This command is used to assert if a check box or radio element in the form is not checked.
 
-This command is used to assert if the check box element in the form is not checked.
 
 ### Parameters
-
 - **name** - this parameter is the name of the check box element
+
 
 ### Example
 
 
 ### See Also
-
 - [`assertChecked(name)`](assertChecked(name))

@@ -7,17 +7,21 @@ comments: true
 ---
 
 ### Description
+This command asserts that a specific `row` and `column` of the current table has the specified value (`contains`).
 
-- This command is to validate the result of a particular cell under data grid.
-- In other words after performing successful search where data is retrieved and need to validate data in row for a particular column then this command can be used.
-- if the Cell contains the expected values the assert will pass or fail otherwise.
+This command supports PolyMatcher, which provides greater flexibility and expressiveness in data filter:
+
+{% include _polymatcher.md %}
+
 
 ### Parameters
-
-- **row** -  this parameter is the row of the data grid(remember the row of your data grid start with "0", meaning the first row of the data grid will be starting with "0".
+- **row** -  the row index of the current table (0-based).
 - **column** -  this parameter is the column name for the which values needs to be identified.
 - **contains** -  this parameter is the expected value under the column name.
 
+
 ### Example
 
+
 ### See Also
+
