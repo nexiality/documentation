@@ -133,6 +133,7 @@ comments: true
 
 
 ### [web commands](../commands/web)
-
+- [`dragAndDrop(fromLocator,toLocator)`](../commands/web/dragAndDrop(fromLocator,toLocator)): updated to support 
+  Angular/Material-based tree node components.
 
 ## [tn.5250 commands](../commands/tn.5250)
