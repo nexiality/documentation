@@ -2973,6 +2973,80 @@
             </a> for more details.
         </td>
     </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.web.dragNative"><code>nexial.web.dragNative</code></a>
+        </td>
+        <td>bolean</td>
+        <td>false</td>
+        <td class="read-write">read/write</td>
+        <td>
+            Determine if the <a href="../commands/web/dragAndDrop(fromLocator,toLocator)">web &raquo;
+            <code>dragAndDrop(fromLocator,toLocator)</code></a> and <a href="../commands/web/dragTo(fromLocator,xOffset,yOffset)">
+            web &raquo; <code>dragTo(fromLocator,xOffset,yOffset)</code></a> commands should be performed via native
+            mouse event (meaning: the actual "mouse-click-drag-move-then-drop") or via the WebDriver simulation (default).
+            <br/>
+            <br/>
+            This is not often required (nor recommended) as setting the "native" mode will interrupt one's use of the
+            mouse device during the execution of either aforementioned commands. Not so much of an issue when running
+            one's automation via remote terminals. But this might result in some minor annoyance when automating via
+            one's laptop/workstation.
+            <br/>
+            <br/>
+            Running the drop-and-drop functionality using native mouse event is needed at times. This is especially
+            true when the target web application drastically change either the source or the target web element during
+            the drag-and-drop event, or if a new web element is generated (often as a visual cue) during the
+            drag-and-drop.
+            <br/>
+            <br/>
+            By default this System variable is set to false. When setting this System variable to true, one might want
+            to consider the following System variables as well:<ul>
+            <li><a href="#nexial.web.dragNativeXOffset">nexial.web.dragNativeXOffset</a></li>
+            <li><a href="#nexial.web.dragNativeYOffset">nexial.web.dragNativeYOffset</a></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.web.dragNativeXOffset"><code>nexial.web.dragNativeXOffset</code></a>
+        </td>
+        <td>integer</td>
+        <td>0</td>
+        <td class="read-write">read/write</td>
+        <td>
+            Instruct Nexial to apply additional offset to the x-position. Only applicable when
+            <a href="#nexial.web.dragNative">nexial.web.dragNative</a> is set to <code>true</code>.
+            <br/>
+            <br/>
+            The idea behind this System variable is to provision control over one's browser. For example, one may have
+            the browser configured with a thicker border. Using this System variable to take into account the additional
+            value that the browser might have taken in the x-axis.
+            <br/>
+            <br/>
+            By default this System variable is set to <code>0</code>.
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.web.dragNativeYOffset"><code>nexial.web.dragNativeYOffset</code></a>
+        </td>
+        <td>integer</td>
+        <td>80</td>
+        <td class="read-write">read/write</td>
+        <td>
+            Instruct Nexial to apply additional offset to the y-position. Only applicable when
+            <a href="#nexial.web.dragNative">nexial.web.dragNative</a> is set to <code>true</code>.
+            <br/>
+            <br/>
+            The idea behind this System variable is to provision control over one's browser. For example, one may have
+            the browser configured additional icons or a "taller" title bar. Using this System variable to take into
+            account the additional value that the browser might have taken in the y-axis.
+            <br/>
+            <br/>
+            By default this System variable is set to <code>80</code> since almost all browser would have title bar,
+            the address/location bar, etc.
+        </td>
+    </tr>
 
     <tr>
         <td class="highlight-section" colspan="5">

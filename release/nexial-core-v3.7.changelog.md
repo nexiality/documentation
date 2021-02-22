@@ -105,6 +105,12 @@ comments: true
 - [`assertNotChecked(name)`](../commands/desktop/assertNotChecked(name)): supports both Checkbox and Radio component.
 - Autoscanning: support the use of data variable in the "Aut" section of "application.json".
 - Autoscanning: support for special/rare case of Combo box component containing only Radio component(s).
+- [`screenshotByLocator(locator,file)`](../commands/desktop/screenshotByLocator(locator,file)): **NEW** capture the 
+  screenshot of the specified locator.
+- [`screenshot(name,file)`](../commands/desktop/screenshot(name,file)): **NEW** capture the screenshot of the specified 
+  desktop component via its name.
+- [`clickMenuByLocator(locator,menu)`](../commands/desktop/clickMenuByLocator(locator,menu)): support the triggering 
+  of menu via `INDEX:` (same support as in context menu).
 
 
 ### [excel commands](../commands/excel)
@@ -135,5 +141,12 @@ comments: true
 ### [web commands](../commands/web)
 - [`dragAndDrop(fromLocator,toLocator)`](../commands/web/dragAndDrop(fromLocator,toLocator)): updated to support 
   Angular/Material-based tree node components.
+- [`dragAndDrop(fromLocator,toLocator)`](../commands/web/dragAndDrop(fromLocator,toLocator)): updated to support 
+  native mouse event, which is required when start of a drag-and-drop event also trigger drastic changes to the 
+  underlying DOM structure.
+- [`dragTo(fromLocator,xOffset,yOffset)`](../commands/web/dragTo(fromLocator,xOffset,yOffset)): updated to support 
+  native mouse event, which is required when start of a drag-and-drop event also trigger drastic changes to the 
+  underlying DOM structure.
+
 
 ## [tn.5250 commands](../commands/tn.5250)
