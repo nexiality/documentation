@@ -111,6 +111,7 @@ comments: true
   desktop component via its name.
 - [`clickMenuByLocator(locator,menu)`](../commands/desktop/clickMenuByLocator(locator,menu)): support the triggering 
   of menu via `INDEX:` (same support as in context menu).
+- code fix to use the correct driver script for grid data edits.
 
 
 ### [excel commands](../commands/excel)
