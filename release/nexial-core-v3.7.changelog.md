@@ -112,6 +112,10 @@ comments: true
 - [`clickMenuByLocator(locator,menu)`](../commands/desktop/clickMenuByLocator(locator,menu)): support the triggering 
   of menu via `INDEX:` (same support as in context menu).
 - code fix to use the correct driver script for grid data edits.
+- additional support for "FormattedTextbox" to avoid data type conversion issue.
+- post-edit validation now will performance numeric comparison if both before-edit and after-edit value can be 
+  converted into number. For example, `100.00` would be considered as `100`.
+- logic to avoid double "clear field" action; minor speed improvement.
 
 
 ### [excel commands](../commands/excel)
