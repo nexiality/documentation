@@ -126,6 +126,7 @@ comments: true
   for Tab element.
 - [autoscanning enhancement](../commands/desktop/configureDesktopApplication#autoscan): support "deeper" scanning of 
   Tab items in case they are not placed directly underneath a Tab element.
+- performance improvement over the editing of data grid and fetching of data from a data grid.
 
 
 ### [excel commands](../commands/excel)
