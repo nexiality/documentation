@@ -116,6 +116,16 @@ comments: true
 - post-edit validation now will performance numeric comparison if both before-edit and after-edit value can be 
   converted into number. For example, `100.00` would be considered as `100`.
 - logic to avoid double "clear field" action; minor speed improvement.
+- [`saveText(var,name)`](../commands/desktop/saveText(var,name)): support "CheckBox" and "Radio" component so that 
+  checked state would result in `True` as its text, and `False` if such component is unchecked.
+- [`saveTextByLocator(var,locator)`](../commands/desktop/saveTextByLocator(var,locator)): support "CheckBox" and "Radio" 
+  component so that checked state would result in `True` as its text, and `False` if such component is unchecked.
+- [`nexial.desktop.autoscan.verbose`](../../systemvar/index.html#nexiak.desktop.autoscan.verbose): *NEW* enable console 
+  logging during [autoscanning](../commands/desktop/configureDesktopApplication#autoscan).
+- [autoscanning enhancement](../commands/desktop/configureDesktopApplication#autoscan): capture component name as label 
+  for Tab element.
+- [autoscanning enhancement](../commands/desktop/configureDesktopApplication#autoscan): support "deeper" scanning of 
+  Tab items in case they are not placed directly underneath a Tab element.
 
 
 ### [excel commands](../commands/excel)

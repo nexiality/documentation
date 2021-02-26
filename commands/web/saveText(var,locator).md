@@ -7,25 +7,24 @@ comments: true
 ---
 
 ### Description
+This command retrieves text from target element (`locator`) and save it to a data variable denoted as `var`. Note that
+if no text can be found, the specified data variable will be removed to avoid confusion.
 
-- This command is to get the text from element and save to the variable to be used for future reference in test.
-- In other words this command will get the text from the element and will store to the user defined variable.
 
 ### Parameters
-
 - **var** - this parameter is to store the value into variable.
 - **locator** - this parameter is locator(xpath) of the element.
 
-### Example
 
+### Example
 **Script**:<br/>
 ![](image/saveText_01.png)
 
 **Output**:<br/>
 ![](image/saveText_02.png)
 
-### See Also
 
+### See Also
 - [`assertElementPresent(locator)`](assertElementPresent(locator))
 - [`saveTextSubstringAfter(var,locator,delim)`](saveTextSubstringAfter(var,locator,delim))
 - [`saveTextSubstringBefore(var,locator,delim)`](saveTextSubstringBefore(var,locator,delim))
