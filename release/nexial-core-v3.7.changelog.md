@@ -50,6 +50,8 @@ comments: true
   supports multi-line text and case-insensitive pattern matching.
 - [TEXT &raquo; `removeLine(match)`](../expressions/TEXTexpression#removelinematch): PolyMatcher-based operation to 
   remove one or more lines from a TEXT expression.
+- [LisT &raquo; `item(index)`](../expressions/LISTexpression#itemindex): support multiple indices (to concatenate 
+  specified items into 1 text) and the use of `random` to randomly select one of the available item.
 
 
 ### [Function](../functions)

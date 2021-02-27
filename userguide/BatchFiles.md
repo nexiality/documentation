@@ -379,7 +379,7 @@ Steps:
 Note that more than 1 shared directory may be specified.
 
 This is mostly useful when one wants to add some additional libraries, JDBC drivers, JMS clients, etc. during one's
-automation. To learn more about custom jars please clikc [here](CustomJars).
+automation. To learn more about custom jars please click [here](CustomJars).
 
 ##### Note
 - Source location can be directory or file path.

@@ -182,6 +182,12 @@ Output:<br/>
 #### **`item(index)`**
 Retrieve the item on the list based on its `index`.  If invalid `index` is specified, an empty string is returned.
 
+This operation supports the retrieval of multiple items as a single [TEXT](TEXTexpression) expression. For example:
+`[LIST(a,b,c,d,e) => item(0,1,4)]` would result in the return of `a,b,e` (first, second, and fifth item).
+
+This operation also supports the retrieval of a list item via random selection. Use `random` or `RANDOM` to signify 
+such intent. For example, `[LIST(a,b,c,d,e) => item(random)]` or `[LIST(a,b,c,d,e) => item(RANDOM)]`.
+
 **Example**<br/>
 Script:<br/>
 ![script](image/LISTexpression_27.png)
