@@ -129,6 +129,17 @@ comments: true
 - [autoscanning enhancement](../commands/desktop/configureDesktopApplication#autoscan): support "deeper" scanning of 
   Tab items in case they are not placed directly underneath a Tab element.
 - performance improvement over the editing of data grid and fetching of data from a data grid.
+- performance improvement over the reading of data grid content.
+- [`clickMenuByLocator(locator,menu)`](../commands/desktop/clickMenuByLocator(locator,menu)): support the triggering 
+  of menu via `INDEX:` (same support as in context menu) in combination with menu item label. For example, 
+  `File,INDEX:2,Open Last...`
+- improvement on the repeated typing over the same component:
+  - One can now use `[ctrl-end]` to append text to the end of existing text.
+  - Nexial automatically translate newline as `[ENTER]`. 
+  - Also some performance improvements. 
+  This impact the following commands:
+  - [`typeTextArea(name,text1,text2,text3,text4)`](../commands/desktop/typeTextArea(name,text1,text2,text3,text4))
+  - [`typeTextBox(name,text1,text2,text3,text4)`](../commands/desktop/typeTextBox(name,text1,text2,text3,text4))
 
 
 ### [excel commands](../commands/excel)
