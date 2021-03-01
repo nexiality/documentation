@@ -140,6 +140,10 @@ comments: true
   This impact the following commands:
   - [`typeTextArea(name,text1,text2,text3,text4)`](../commands/desktop/typeTextArea(name,text1,text2,text3,text4))
   - [`typeTextBox(name,text1,text2,text3,text4)`](../commands/desktop/typeTextBox(name,text1,text2,text3,text4))
+- support the triggering of context menu via `INDEX:` in combination with menu item label. For example, 
+    `File,INDEX:2,Open Last...`. Impacted commands:
+  - [`contextMenu(name,menu)`](../commands/desktop/contextMenu(name,menu)) 
+  - [`contextMenuByLocator(locator,menu)`](../commands/desktop/contextMenuByLocator(locator,menu)) 
 
 
 ### [excel commands](../commands/excel)
