@@ -45,6 +45,35 @@ intended text in a less exact (but more expressiveness) way. Here are the suppor
   <code>REGEX:.+[S|s]uccessfully.*</code> as intent for "<em>matching text that contains 1 or more character, then 
   either ‘Successfully’ or ‘successfully’, follow by zero or more characters.</em>".
   </li>
+
+  <li>
+  <b><code>EMPTY:[true|false]</code></b>: Use this technique to perform "<em>is empty?</em>" check. 
+  <code>EMPTY:true</code> means that the target value is expected to be empty (no content or length). 
+  <code>EMPTY:false</code> means the target value is expected <b>NOT</b> to be empty (with content).
+  </li>
+  <li>
+  <b><code>BLANK:[true|false]</code></b>: Use this technique to perform "<em>is blank?</em>" check. 
+  <code>BLANK:true</code> means that the target value is expected to contain blank(s) or whitespace (space, tab, 
+  newline, line feed, etc.) characters or empty (no content or length). <code>BLANK:false</code> means the target value 
+  is expected to contain at least 1 non-whitespace character. Note that this matcher includes te <code>EMPTY:</code> 
+  check as well.
+  </li>
+  <li>
+  <b><code>LENGTH:</code></b>: Use this technique to perform text length validation against target value. One may use a
+  numeric comparator for added flexibility/expressiveness. For example: <code>LENGTH:5</code> means to match the target 
+  value to a length of 5. <code>LENGTH: > 5</code> means to match the target value to a length greater than 5. The 
+  available comparators are: <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, 
+  <code>&equals;</code>, <code>!=</code>.
+  </li>
+  <li>
+  <b><code>NUMERIC:</code></b>: Use this technique to perform numeric comparison/matching against target value. With this
+  technique, <code>100</code> considered the same as <code>100.00</code> since both value has the same numerical value.
+  One may use a numeric comparator for added flexibility/expressiveness. For example: <code>NUMERIC:5</code> means to 
+  match the 
+  target value to the number <code>5</code>. <code>NUMERIC: <= -15.02</code> means to match the target value as a 
+  number that is less or equal to <code>-15.02</code>. The available comparators are: <code>&gt;</code>, 
+  <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&equals;</code>, <code>!=</code>.
+  </li>
   <li>
   <b><code>EXACT:</code></b>: Use this to perform exact text matching, i.e. equality matching. In most cases, this is 
   not required as the absence of any special keyword almost always means the "<i>is this the same as that?</i>" test. 
