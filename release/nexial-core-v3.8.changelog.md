@@ -15,9 +15,9 @@ comments: true
 
 #### Improvements
 - PolyMatcher: **NEW** matchers added
-  - [`HAS_LENGTH:`]: check that the target value contains specified length. For example, `HAS_LENGTH:5` means to 
+  - [`LENGTH:`]: check that the target value contains specified length. For example, `LENGTH:5` means to 
     check that the target value has a length of 5. One may prefix with a numeric comparator for added expressiveness. 
-    For example, `HAS_LENGTH: >5` means to check that the target value has a length greater than 5.
+    For example, `LENGTH: >5` means to check that the target value has a length greater than 5.
   - [`NUMERIC:`]: perform numeric comparison so that `100` would be considered the same as `100.00`. For example, 
     `NUMERIC:100.0` means to check that the target value has a numerical value of `100`. One may prefix with a numeric 
     comparator for added expressiveness. For example, `NUMERIC: >= -5.01` means to check that the target value has a 
