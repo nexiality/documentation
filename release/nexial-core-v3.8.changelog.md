@@ -69,3 +69,8 @@ comments: true
 
 
 ### [web commands](../commands/web)
+
+
+### [tn.5250 commands](../commands/tn.5250)
+- handle special case during "type key" when the input contains `[` without `]`.
+
