@@ -71,7 +71,9 @@ comments: true
   update logic to determine underlying locators for better performance.
 - [`editTableCells(row,nameValues)`](../commands/desktop/editTableCells(row,nameValues)): implemented retry logic when 
   creating new row.
-
+- support clicking on a offset with negative x or y value:
+	- [`clickOffset(locator,xOffset,yOffset)`](../commands/desktop/clickOffset(locator,xOffset,yOffset))
+	- [`clickElementOffset(name,xOffset,yOffset)`](../commands/desktop/clickElementOffset(name,xOffset,yOffset))
 
 ### [excel commands](../commands/excel)
 
