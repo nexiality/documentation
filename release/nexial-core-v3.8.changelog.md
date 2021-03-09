@@ -30,6 +30,17 @@ comments: true
 ### [System Variable](../systemvars)
 
 
+### [Flow Control](../flowcontrols)
+- *NEW* flow control to be evaluated *AFTER* the execution of a step. This guarantees that the current step will be 
+  executed before any flow control is considered (for subsequent steps):
+  - `EndAfterIf(filter)`: end current execution if the specified filter is matched. This flow control will not alter 
+    the count of failed steps.
+  - `EndLoopAfterIf(filter)`: end current loop (iteration or repeat-until) if the specified filter is matched. This 
+    flow control will not alter the count of failed steps.
+  - `FailAfterIf(filter)`: fail current execution if the specifie filter is matched. This flow control will result in 
+    an additional count towards the total failed steps.
+
+
 ### [Nexial Interactive](../interactive)
 
 
@@ -69,6 +80,11 @@ comments: true
 
 
 ### [web commands](../commands/web)
+- supports the automation of Edge browser embedded in another Windows application via the use of 
+  `nexial.browser.embedded.appLocation` System variable. Note that this is only supported for Microsoft Edge v80 or 
+  above (i.e. chromium).
+- supports browser-level logging for Microsoft Edge browser via 
+  [`nexial.browser.logEdge`](../systemvars/index.html#nexial.browser.logEdge) System variable. 
 
 
 ### [tn.5250 commands](../commands/tn.5250)
