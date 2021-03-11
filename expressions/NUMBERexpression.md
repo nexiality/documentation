@@ -91,6 +91,26 @@ Output:<br/>
 
 -----
 
+#### **`max(numbers)`**
+find the maximum value amongst current value and a list of numbers.
+
+**Example**<br/>
+`[NUMBER(15.02) => max(17.91)]` would result in the expression's value updated to `17.91`.
+
+`[NUMBER(15.02) => max(15.05,17.91,-29.12,18.0)]` would result in the expression's value updated to `18.0`.
+
+-----
+
+#### **`min(numbers)`**
+find the minimum value amongst current value and a list of numbers.
+
+**Example**<br/>
+`[NUMBER(15.02) => min(17.91)]` would result in the expression's value updated to `15.02`.
+
+`[NUMBER(15.02) => min(15.05,17.91,-29.12,18.0)]` would result in the expression's value updated to `-29.12`.
+
+-----
+
 #### **`minus(numbers)`**
 subtract one or more numbers from current number, in the order specified.
 

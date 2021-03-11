@@ -45,6 +45,10 @@ comments: true
 
 
 ### [Expression](../expressions)
+- [NUMBER &raquo; `max(numbers)`](../expressions/NUMBERexpression#maxnumbers): **NEW** operation to replace current 
+  expression value with the maximum value amongst current value and a list of `numbers`.
+- [NUMBER &raquo; `min(numbers)`](../expressions/NUMBERexpression#minnumbers): **NEW** operation to replace current 
+  expression value with the minimum value amongst current value and a list of `numbers`.
 
 
 ### [desktop commands](../commands/desktop)
