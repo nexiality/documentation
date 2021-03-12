@@ -1,6 +1,6 @@
 ---
 layout: default
-title: BAI2
+title: BAI2 expression
 parent: Expressions
 tags: command expressions
 comments: true

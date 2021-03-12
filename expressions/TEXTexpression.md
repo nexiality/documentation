@@ -1,6 +1,6 @@
 ---
 layout: default
-title: TEXT
+title: TEXT expression
 parent: Expressions
 tags: command expressions
 comments: true

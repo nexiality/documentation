@@ -1,6 +1,6 @@
 ---
 layout: default
-title: XML
+title: XML expression
 parent: Expressions
 tags: command expressions
 comments: true

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SQL
+title: SQL expression
 parent: Expressions
 tags: command expressions
 comments: true

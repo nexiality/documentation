@@ -1,6 +1,6 @@
 ---
 layout: default
-title: DATE
+title: DATE expression
 parent: Expressions
 tags: command expressions
 comments: true

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: INI
+title: INI expression
 parent: Expressions
 tags: command expressions
 comments: true

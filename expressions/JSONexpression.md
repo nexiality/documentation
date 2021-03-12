@@ -1,6 +1,6 @@
 ---
 layout: default
-title: JSON
+title: JSON expression
 parent: Expressions
 tags: command expressions
 comments: true

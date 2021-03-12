@@ -1,6 +1,6 @@
 ---
 layout: default
-title: CONFIG
+title: CONFIG expression
 parent: Expressions
 tags: command expressions
 comments: true
@@ -59,8 +59,6 @@ Sorts the key-value pairs in descending order of the keys. Can also be used to s
 
 **Output:**<br/>
 ![](image/CONFIGexpression_20.png)
-
------
 
 #### `keys()`
 Returns all the key names as [LIST](LISTexpression).
