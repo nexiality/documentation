@@ -91,7 +91,7 @@ comments: true
   above (i.e. chromium).
 - supports browser-level logging for Microsoft Edge browser via 
   [`nexial.browser.logEdge`](../systemvars/index.html#nexial.browser.logEdge) System variable. 
-
+- code fix to prevent pre-emptive browser initialization (and opening) after initial scenario execution. 
 
 ### [tn.5250 commands](../commands/tn.5250)
 - handle special case during "type key" when the input contains `[` without `]`.
