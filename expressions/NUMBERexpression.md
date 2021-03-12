@@ -1,6 +1,6 @@
 ---
 layout: default
-title: NUMBER expression
+title: NUMBER
 parent: Expressions
 tags: command expressions
 comments: true

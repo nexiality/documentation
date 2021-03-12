@@ -1,6 +1,6 @@
 ---
 layout: default
-title: BINARY expression
+title: BINARY
 parent: Expressions
 tags: command expressions
 comments: true
@@ -75,3 +75,5 @@ Script:<br/>
 ![](image/BINARY_05.png)
 
 -----
+
+<script>jQuery(document).ready(function () { newOperationSelect(); });</script>

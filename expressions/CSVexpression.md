@@ -1,6 +1,6 @@
 ---
 layout: default
-title: CSV expression
+title: CSV
 parent: Expressions
 tags: command expressions
 comments: true
@@ -1029,7 +1029,7 @@ Script:<br/>
 Output:<br/>
 ![output](image/CSVexpression_86.png)
 
----
+-----
 
 ### Examples
 
@@ -1065,6 +1065,6 @@ Here's the output that depicts the same analysis above:
 <img style="box-shadow:none;margin:0" src="image/csv_25.jpg"/><br/>
 <img style="box-shadow:none;margin:0" src="image/csv_26.jpg"/>
 
----
+-----
 
 <script>jQuery(document).ready(function () { newOperationSelect(); });</script>

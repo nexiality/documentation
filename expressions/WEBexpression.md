@@ -1,6 +1,6 @@
 ---
 layout: default
-title: WEB expression
+title: WEB
 parent: Expressions
 tags: command expressions
 comments: true

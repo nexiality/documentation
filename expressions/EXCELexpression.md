@@ -1,6 +1,6 @@
 ---
 layout: default
-title: EXCEL expression
+title: EXCEL
 parent: Expressions
 tags: command expressions
 comments: true
