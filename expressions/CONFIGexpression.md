@@ -1,6 +1,6 @@
 ---
 layout: default
-title: CONFIG expression
+title: CONFIG
 parent: Expressions
 tags: command expressions
 comments: true

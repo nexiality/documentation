@@ -1,6 +1,6 @@
 ---
 layout: default
-title: LIST expression
+title: LIST
 parent: Expressions
 tags: command expressions
 comments: true
