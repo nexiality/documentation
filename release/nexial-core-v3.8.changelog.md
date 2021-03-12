@@ -78,6 +78,7 @@ comments: true
 - support clicking on a offset with negative x or y value:
 	- [`clickOffset(locator,xOffset,yOffset)`](../commands/desktop/clickOffset(locator,xOffset,yOffset))
 	- [`clickElementOffset(name,xOffset,yOffset)`](../commands/desktop/clickElementOffset(name,xOffset,yOffset))
+- [`clearCombo(name)`](../commands/desktop/clearCombo(name)): code fix to properly clear off selection in a `SingleSelectCombo'
 
 ### [excel commands](../commands/excel)
 
@@ -92,6 +93,7 @@ comments: true
 - supports browser-level logging for Microsoft Edge browser via 
   [`nexial.browser.logEdge`](../systemvars/index.html#nexial.browser.logEdge) System variable. 
 - code fix to prevent pre-emptive browser initialization (and opening) after initial scenario execution. 
+
 
 ### [tn.5250 commands](../commands/tn.5250)
 - handle special case during "type key" when the input contains `[` without `]`.
