@@ -42,6 +42,8 @@ comments: true
 
 
 ### [Nexial Interactive](../interactive)
+- redesigned execution summary on console to reduce output and to improve readability.
+- code fix to correctly update execution statistics (esp. on execution duration).
 
 
 ### [Expression](../expressions)
@@ -97,4 +99,9 @@ comments: true
 
 ### [tn.5250 commands](../commands/tn.5250)
 - handle special case during "type key" when the input contains `[` without `]`.
-
+- [`waitUntilProcessed(maxWaitMs)`](../commands/tn.5250/waitUntilProcessed(maxWaitMs)): **NEW** wait-until command to
+  poll for the current TN5250 session to be unblocked from processing request. Usually, when a request is made to the 
+  connected TN5250 session, the server will need some time to completed the requested command/transaction. This command
+  the automation to pause (and poll) until the request is completed and the session is "unblocked" from further 
+  interaction.
+- reduce poll time from 1000ms to 200ms to improve overall performance.
