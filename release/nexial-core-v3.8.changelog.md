@@ -80,7 +80,13 @@ comments: true
 - support clicking on a offset with negative x or y value:
 	- [`clickOffset(locator,xOffset,yOffset)`](../commands/desktop/clickOffset(locator,xOffset,yOffset))
 	- [`clickElementOffset(name,xOffset,yOffset)`](../commands/desktop/clickElementOffset(name,xOffset,yOffset))
-- [`clearCombo(name)`](../commands/desktop/clearCombo(name)): code fix to properly clear off selection in a `SingleSelectCombo'
+- [`clearCombo(name)`](../commands/desktop/clearCombo(name)): code fix to properly clear off selection in a 
+  `SingleSelectCombo'.
+- support editing of table with column name that contains newline or escaped character. 
+- [`nexial.desktop.table.tabAfterEdit`](../systemvars/index.html#nexial.desktop.table.tabAfterEdit): *NEW* System 
+  variable for [`editTableCells(row,nameValues)`](../commands/desktop/editTableCells(row,nameValues)) to automatically 
+  "tab" to the next column after the current column has been edited.
+
 
 ### [excel commands](../commands/excel)
 
