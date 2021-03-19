@@ -44,6 +44,7 @@ comments: true
 ### [Nexial Interactive](../interactive)
 - redesigned execution summary on console to reduce output and to improve readability.
 - code fix to correctly update execution statistics (esp. on execution duration).
+- simplify "Inspect" mode in Nexial Interactive to improve usability. Type `:HELP` to show usage.
 
 
 ### [Expression](../expressions)
@@ -87,8 +88,8 @@ comments: true
   variable for [`editTableCells(row,nameValues)`](../commands/desktop/editTableCells(row,nameValues)) to automatically 
   "tab" to the next column after the current column has been edited.
 - to determine the text of the selected item from a Combo component, Nexial will now attempt to retrieve the text 
-  value of the selected item instead from the Combo component itself. This is more accurate, albeit a slight performance 
-  penalty. 
+  value of the selected item instead of from the Combo component itself. This is more accurate, albeit with a slight 
+  performance penalty. 
 
 
 ### [excel commands](../commands/excel)
