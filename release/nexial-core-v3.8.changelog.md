@@ -86,6 +86,9 @@ comments: true
 - [`nexial.desktop.table.tabAfterEdit`](../systemvars/index.html#nexial.desktop.table.tabAfterEdit): *NEW* System 
   variable for [`editTableCells(row,nameValues)`](../commands/desktop/editTableCells(row,nameValues)) to automatically 
   "tab" to the next column after the current column has been edited.
+- to determine the text of the selected item from a Combo component, Nexial will now attempt to retrieve the text 
+  value of the selected item instead from the Combo component itself. This is more accurate, albeit a slight performance 
+  penalty. 
 
 
 ### [excel commands](../commands/excel)
