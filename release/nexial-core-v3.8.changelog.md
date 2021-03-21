@@ -115,3 +115,4 @@ comments: true
   the automation to pause (and poll) until the request is completed and the session is "unblocked" from further 
   interaction.
 - reduce poll time from 1000ms to 200ms to improve overall performance.
+- code fix to parse correctly TN5250 table with overrun cell data (cell data that is longer than the associated header).  
