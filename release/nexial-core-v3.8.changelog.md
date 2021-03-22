@@ -90,6 +90,8 @@ comments: true
 - to determine the text of the selected item from a Combo component, Nexial will now attempt to retrieve the text 
   value of the selected item instead of from the Combo component itself. This is more accurate, albeit with a slight 
   performance penalty. 
+- [`selectCombo(name,text)`](../commands/desktop/selectCombo(name,text)): code fix for better handling of 
+  _'Single Select'_ combo element that might contain multiple similar values. 
 
 
 ### [excel commands](../commands/excel)
