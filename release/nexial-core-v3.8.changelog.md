@@ -92,6 +92,11 @@ comments: true
   performance penalty. 
 - [`selectCombo(name,text)`](../commands/desktop/selectCombo(name,text)): code fix for better handling of 
   _'Single Select'_ combo element that might contain multiple similar values. 
+- Improved support for Hierarchical Table (aka nested table) with added integration with Infragistics 4 TreeView components:
+  - [`useHierTable(var,name)`](../commands/desktop/useHierTable(var,name))
+  - [`assertHierRow(matchBy,expected)`](../commands/desktop/assertHierRow(matchBy,expected)) 
+  - [`assertHierCells(matchBy,column,expected,nestedOnly)`](../commands/desktop/assertHierCells(matchBy,column,expected,nestedOnly))
+  - [`editHierCells(var,matchBy,nameValues)`](../commands/desktop/assertHierCells(matchBy,column,expected,nestedOnly)) 
 
 
 ### [excel commands](../commands/excel)
