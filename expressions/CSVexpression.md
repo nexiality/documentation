@@ -7,42 +7,42 @@ comments: true
 ---
 
 ## Description
-<a href="https://en.wikipedia.org/wiki/Comma-separated_values" class="external-link" target="_nexial_link">CSV, or Comma-Separated Values</a>, 
-is text-based file format to store tabular data.  In many ways this file format can be viewed as a simplified, 
-no-format, version of Excel.   Using this file format, one can store tabular data (i.e. 2-dimensional) of various 
-types and sizes.  This expression, then, can help to manipulate a CSV file content as part of automation.
+<a href="https://en.wikipedia.org/wiki/Comma-separated_values" class="external-link" target="_nexial_link">CSV, or 
+Comma-Separated Values</a>, is text-based file format to store tabular data. In many ways this file format can be viewed 
+as a simplified, no-format, version of Excel. Using this file format, one can store tabular data (i.e. 2-dimensional) 
+of various types and sizes. This expression, then, can help to manipulate a CSV file content as part of automation.
 
-As popular as CSV has been since 
-<a href="https://en.wikipedia.org/wiki/FORTRAN#FORTRAN_77" class="external-link" target="_nexial_link">FORTRAN 77</a> 
-(yes, 1978), it might surprise some to know that there isn't yet a standard for it.  The closet of a standard would be 
-<a href="https://tools.ietf.org/html/rfc4180" class="external-link" target="_nexial_link">RFC 4180</a>, 
-which is a proposal and a formalization of CSV as a specification, but not yet accepted as specification.  As such, 
-there are many, and some subtle, variations out there and many are staunchly supported by technology communities and 
-companies alike. The most popular varieties of CSV would be:
+As popular as CSV has been since 
+<a href="https://en.wikipedia.org/wiki/FORTRAN#FORTRAN_77" class="external-link" target="_nexial_link">FORTRAN 77</a> 
+(yes, 1978), it might surprise some to know that there isn't yet a standard for it. The closet of a standard would be 
+<a href="https://tools.ietf.org/html/rfc4180" class="external-link" target="_nexial_link">RFC 4180</a>, which is a 
+proposal and a formalization of CSV as a specification, but not yet accepted as specification. As such, there are many, 
+and some subtle, variations out there and many are staunchly supported by technology communities and companies alike. 
+The most popular varieties of CSV would be:
 
-- **Excel CSV** - the CSV format produced by Microsoft Excel when using its Export functionality.  In essence, such 
+- **Excel CSV** - the CSV format produced by Microsoft Excel when using its Export functionality. In essence, such 
 CSV file format:
   - uses comma as delimiter
   - uses double quote for non-numeric value
   - uses carriage return (`\r\n`) as record separator
   - regard empty lines as an empty records
-  - allow subsequent lines to be longer than the first line (usually represents the header columns)        
-- **RFC 4180** - the proposed CSV file submitted to IETF. Essentially, this CSV file format:  
+  - allow subsequent lines to be longer than the first line (usually represents the header columns)
+- **RFC 4180** - the proposed CSV file submitted to IETF. Essentially, this CSV file format:
   - uses comma as delimiter
   - uses double quote for non-numeric value
   - uses carriage return (`\r\n`) as record separator
   - regard empty lines as an empty records
 - **<a href="https://en.wikipedia.org/wiki/Tab-separated_values" class="external-link" target="_nexial_link">TDF or TSV</a>** - 
-  The tab-delimited format, which uses the  `TAB` character instead of comma as field value delimiter.  This is also 
+  The tab-delimited format, which uses the `TAB` character instead of comma as field value delimiter. This is also 
   the default CSV format for MySQL export. Such format:
-  - uses `TAB` character as delimiter
+  - uses `TAB` character as delimiter
   - uses double quote for non-numeric value
   - uses carriage return (`\r\n`) as record separator
   - regard empty lines as an empty records
   - ignore spaces between fields
 
-Nexial CSV expression uses the **Excel CSV as the default format**, but can be configured to handle other formatting 
-subtleties (see the `parse()` operation below).
+Nexial CSV expression uses the **Excel CSV as the default format**, but can be configured to handle other formatting 
+subtleties (see the `parse()` operation below).
 
 
 ## Different ways to initiate CSV expression
@@ -63,6 +63,41 @@ The official CSV specification of Microsoft/CSV does not default to using header
 
 See `parse()` below for more details.
 
+### Examples
+
+**Example 1: Using filter to limit the rows of a CSV file.**
+- For more details about initializing a CSV structure, please read the section on 
+  [Initiate CSV expression](CSVexpression#different-ways-to-initiate-csv-expression).
+- For more details about filter condition, please read [Nexial Filter](../flowcontrols/filter).
+
+Suppose a file named expression-example1.csv exists in the artifact/data directory with the following content:<br/> 
+<img style="box-shadow:none;margin:0" src="image/csv_22.jpg"/>
+
+We can use the `filter()` operation to limit the rows of this CSV file. Here are 3 examples of filter applied to the same 
+file:
+<img style="box-shadow:none;margin:0" src="image/csv_23.jpg"/>
+
+Note that the [`parse(config)`](#parse(config)) operation is only invoked one (2nd line). Using the 
+[`store(var)`](#store(var)) operation, we can reuse the CSV structure (in 3rd and 4th line). In this example, we 
+assigned `myCSV` to the parsed CSV structure in line 2.
+- The first filter operation limits to rows where the column `First Name` is exactly `David`. In this case, there 
+  should only be 1 row (row 3 of the input CSV file) matched.
+- The second filter operation limits to rows where the column Mobile Phone contains `-6641` **AND** the column `Fax` 
+  ends with `9825`. The row 1 of input CSV file contains `123-555-6641` in its `Mobile Phone` column - this is the 
+  only match for the first condition. However this same line does not match the second condition (`Fax` ends with 
+  `9825`). Hence this filter yields no rows matched.
+- The third filter operations limits to rows where **any field** ends with `3`. As such we see that row 3 of the 
+  input CSV file is a match since its `Office Phone` ends with 3 and its Fax ends with 3 (either match would suffice). 
+  Other than that there isn't another match.
+
+Here's the output that depicts the same analysis above:
+<img style="box-shadow:none;margin:0" src="image/csv_24.jpg"/>
+
+`filter2.txt` is empty, as expected. Here's the content of `filter1.txt` and `filter3.txt`, respectively.
+<img style="box-shadow:none;margin:0" src="image/csv_25.jpg"/><br/>
+<img style="box-shadow:none;margin:0" src="image/csv_26.jpg"/>
+
+-----
 
 ### Operations
 
@@ -206,7 +241,7 @@ filter a row if any of its fields contains `USA`.
 **Example**<br/>
 In this example, `filter(Age start with 4)` displays all the details where age starts with 4 including header. 
 If the `condition` specified contains no data then only headers are displayed as a result, as shown in 
-the output of `filter(Name start with A)`.   
+the output of `filter(Name start with A)`. 
 
 Script:<br/>
 ![script](image/CSVexpression_18.png)
@@ -358,7 +393,7 @@ Synonymous to **[`size`](#size)** and **[`rowCount`](#rowcount)**.
 
 **Example**<br/>
 If `header=false` then header is included in calculating the length or rowcount, else if `header=true` then header is 
-not included in calculating the value of length as shown in this example:  
+not included in calculating the value of length as shown in this example:
 
 Script:<br/>
 ![script](image/CSVexpression_31.png)
@@ -453,7 +488,7 @@ In general, there are 3 uses of this operation:
    
    Script:<br/>
    ![script](image/CSVexpression_35.png)
-   Note that passing  **`\(empty\)`** as the `keyColumns` signifies that no shared column is between these 2 CSV 
+   Note that passing **`\(empty\)`** as the `keyColumns` signifies that no shared column is between these 2 CSV 
    files. Alternatively, omit the `keyColumns` parameter entirely, as in `merge(merge_from)`.
    
    Output:<br/>
@@ -645,7 +680,7 @@ Output:<br/>
 -----
 
 #### renameColumn(find,replace)
-Rename a column, as defined by `find`, with new value as defined by `replace`. The column position is maintained.
+Rename a column, as defined by `find`, with new value as defined by `replace`. The column position is maintained.
 
 **Example**<br/>
 In this example, column name `Position` is changed to `Title`.
@@ -659,7 +694,7 @@ Output:<br/>
 -----
 
 #### render(template)
-Generate text based on the infusing of CSV data and a designated "template".  
+Generate text based on the infusing of CSV data and a designated "template".
 
 **Example**<br/>
 Suppose:
@@ -787,7 +822,7 @@ CSV content to the said file. `append` is optional and defaults to `false`.
 **Example**<br/>
 In this example,
 1. `csvData` is sorted in ascending order using **[`sortAscending`](#sortascendingcolumn)**
-2.  then sorted data is saved to specified path `Sample.csv`
+2. then sorted data is saved to specified path `Sample.csv`
 
 Script:<br/>
 ![script](image/CSVexpression_61.png)
@@ -1028,42 +1063,6 @@ Script:<br/>
 
 Output:<br/>
 ![output](image/CSVexpression_86.png)
-
------
-
-### Examples
-
-**Example 1: Using filter to limit the rows of a CSV file.**
-- For more details about initializing a CSV structure, please read the section on 
-  [Initiate CSV expression](CSVexpression#different-ways-to-initiate-csv-expression).
-- For more details about filter condition, please read [Nexial Filter](../flowcontrols/filter).
-
-Suppose a file named expression-example1.csv exists in the artifact/data directory with the following content:	   
-<img style="box-shadow:none;margin:0" src="image/csv_22.jpg"/>
-
-We can use the `filter()` operation to limit the rows of this CSV file. Here are 3 examples of filter applied to the same 
-file:
-<img style="box-shadow:none;margin:0" src="image/csv_23.jpg"/>
-
-Note that the [`parse(config)`](#parse(config)) operation is only invoked one (2nd line). Using the 
-[`store(var)`](#store(var)) operation, we can reuse the CSV structure (in 3rd and 4th line). In this example, we 
-assigned `myCSV` to the parsed CSV structure in line 2.
-- The first filter operation limits to rows where the column `First Name` is exactly `David`. In this case, there 
-  should only be 1 row (row 3 of the input CSV file) matched.
-- The second filter operation limits to rows where the column Mobile Phone contains `-6641` **AND** the column `Fax` 
-  ends with `9825`. The row 1 of input CSV file contains `123-555-6641` in its `Mobile Phone` column - this is the 
-  only match for the first condition. However this same line does not match the second condition (`Fax` ends with 
-  `9825`). Hence this filter yields no rows matched.
-- The third filter operations limits to rows where **any field** ends with `3`. As such we see that row 3 of the 
-  input CSV file is a match since its `Office Phone` ends with 3 and its Fax ends with 3 (either match would suffice). 
-  Other than that there isn't another match.
-
-Here's the output that depicts the same analysis above:
-<img style="box-shadow:none;margin:0" src="image/csv_24.jpg"/>
-
-`filter2.txt` is empty, as expected. Here's the content of `filter1.txt` and `filter3.txt`, respectively.
-<img style="box-shadow:none;margin:0" src="image/csv_25.jpg"/><br/>
-<img style="box-shadow:none;margin:0" src="image/csv_26.jpg"/>
 
 -----
 
