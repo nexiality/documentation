@@ -96,7 +96,8 @@ comments: true
   - [`useHierTable(var,name)`](../commands/desktop/useHierTable(var,name))
   - [`assertHierRow(matchBy,expected)`](../commands/desktop/assertHierRow(matchBy,expected)) 
   - [`assertHierCells(matchBy,column,expected,nestedOnly)`](../commands/desktop/assertHierCells(matchBy,column,expected,nestedOnly))
-  - [`editHierCells(var,matchBy,nameValues)`](../commands/desktop/assertHierCells(matchBy,column,expected,nestedOnly)) 
+  - [`editHierCells(var,matchBy,nameValues)`](../commands/desktop/assertHierCells(matchBy,column,expected,nestedOnly))
+   - aggressively reformat numerical values from the "stored" format to its "displayed" format.
 
 
 ### [excel commands](../commands/excel)
