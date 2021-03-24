@@ -1,0 +1,15 @@
+<table>
+    <tr> 
+ <th nowrap>configuration</th> 
+ <th nowrap>data type</th> 
+ <th nowrap>default</th> 
+ <th nowrap>read only?</th> 
+ <th nowrap>description</th> 
+</tr>    
+    <tr> 
+ <td class="varname" nowrap> <a id="nexial.screenshot.caption"><code>nexial.screenshot.caption</code></a> </td> 
+ <td>text</td> 
+ <td></td> 
+ <td class="read-write">read/write</td> 
+ <td> Optional caption for each captured screenshot.<br> <br> When performing desktop or web automation, one can indicate the desire to capture the screenshot (of the current active desktop or application) after completing a specific test step. This is done by marking a <code>x</code> on the corresponding test step (at Column L).<br> <br> However, one might find it useful to "annotate" the screenshots with additional text to provide further clarity or context. For example, compare the following 2 captured screenshots:<br> <img src="image/systemvar_39.png"><br> <img src="image/systemvar_40.png"><br> <br> These two images are practically identical, excep the second one has additional caption at its bottom-right corner. As such, the second image provides its viewer information that may be helpful towards understanding its context or troubleshoot an underlying defect.<br> <br> To generate caption, simply define the caption to use via this System variable. For example: <img src="image/systemvar_41.png"><br> <br> Notice that Nexial built-in functions are used here. One can use regular data variable, built-in functions and Nexial expression dynamically define the screen captions.<br> <br> Note that, while it is possible to specify this System variable via <a href="../commands/base/save(var,value)">base » <code>base(var,value)</code></a> command, it is not recommend because the caption will be evaluated and saved as is when the corresponding test step is executed. Instead, define this System variable via a data file or <code>project.properties</code> to maintain its dynamic value (geek term: <code>late binding</code>).<br> <br> See other <code>nexial.screenshot.caption.*</code> System variables for more configuration options. </td> 
+</tr></table>
