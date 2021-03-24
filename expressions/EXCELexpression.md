@@ -36,7 +36,7 @@ To specify the location of a cell, simply use the format: `[column letter][row 
 
 ### Operations
 
-#### clear(range)
+#### `clear(range)`
 Clear off any existing value from the cells found in the range specified by `range`.  After clearing off any existing 
 value from the target cells, cell values can be recaptured (via  **[`read(sheet,range)`](#read(sheet,range))**) again to 
 ensure relevancy.
@@ -54,7 +54,7 @@ ensure relevancy.
 
 -----
 
-#### columnCount
+#### `columnCount`
 Return the number of columns captured.
 
 **Example**
@@ -70,7 +70,7 @@ Return the number of columns captured.
 
 -----
 
-#### csv
+#### `csv`
 Transform current EXCEL content into **[`CSV`](CSVexpression)**. Field delimiter will be set to the current value of
 [`nexial.textDelim`](../systemvars/index#nexial.textDelim) (default to comma), and record delimiter will be set to
 CRLF (`\r\n`).
@@ -88,7 +88,7 @@ CRLF (`\r\n`).
 
 -----
 
-#### csvWithHeader
+#### `csvWithHeader`
 Transform current EXCEL content into **[`CSV`](CSVexpression)**, using the first row as header. Field delimiter will 
 be set to the current value of [`nexial.textDelim`](../systemvars/index#nexial.textDelim) (default to comma), and 
 record delimiter will be set to CRLF (`\r\n`).
@@ -111,7 +111,7 @@ Output JSON<br/>
 
 -----
 
-#### firstCell(column,regex,maxRow)
+#### `firstCell(column,regex,maxRow)`
 Find the first cell in the specified `column` that satisfies `regex` and transform it to a 
 [TEXT expression](TEXTexpression). The `column` parameter is expected to be in the form of `A`, `B`, `C`, etc. - 
 mimicking how columns are represented in Excel. The `regex` parameter act as a filter to find the first matching
@@ -151,7 +151,7 @@ Note that this operation **MUST** be preceded with a call to [`read(sheet,range)
 
 -----
 
-#### json(firstRowAsHeader)
+#### `json(firstRowAsHeader)`
 Transform current EXCEL content into **[`JSON`](JSONexpression)**. This operation provides 2 forms of transformations.
 When `firstRowAsHeader` is set to `false`, the current EXCEL content is converted into a JSON array containing one or 
 more JSON array. For example,
@@ -180,7 +180,7 @@ With Header: outJson2.json<br/>
 
 -----
 
-#### pack
+#### `pack`
 Trim (remove beginning and trailing spaces) the values of the cells captured by the [`read(sheet,range)`](#readsheetrange) 
 operation and remove any blank rows in the captured cells.
 
@@ -197,7 +197,7 @@ operation and remove any blank rows in the captured cells.
 
 -----
 
-#### read(sheet,range)
+#### `read(sheet,range)`
 Read a contiguous set of cell values in a worksheet denoted by `sheet`, in a range denoted by `range`. See [above](#description) 
 for more details on specifying cell range.   All the cells in the specified range will be read, regardless if those cells 
 contain any value.  After this operation, **`text`** will render the captured value as `LIST` of `LIST`.
@@ -215,13 +215,13 @@ contain any value.  After this operation, **`text`** will render the captured
 
 -----
 
-#### renameSheet(worksheet,newName)
+#### `renameSheet(worksheet,newName)`
 Rename an existing worksheet (denote as `worksheet`) to `newName`. The specified worksheet must exists, and the 
 corresponding Excel must not be locked (i.e. only by an Microsoft Excel program).
 
 -----
 
-#### replace(search,replace)
+#### `replace(search,replace)`
 Of all the cells captured through [`read(sheet,range)`](#readsheetrange), replace all instances of `search` with 
 `replace`. Note that the replaced cells are only kept in memory. Use [`csv`](#csv), [`csvWithHeader`](#csvwithheader)
 or [`save(file,sheet,start)`](#savefilesheetstart) to store the modified cell data externally.
@@ -239,7 +239,7 @@ or [`save(file,sheet,start)`](#savefilesheetstart) to store the modified cell da
 
 -----
 
-#### rowCount
+#### `rowCount`
 Return the number of rows captured.
 
 **Example**
@@ -255,7 +255,7 @@ Return the number of rows captured.
 
 -----
 
-#### save(file,sheet,start)
+#### `save(file,sheet,start)`
 Save the captured cell values to a Excel `file` (existing or new), using the specified `sheet` as the target worksheet 
 and `start` as the start cell position where the captured cell values will be saved to.  For example, 
 `[EXCEL(${file}) => read(Sheet1,A5:M10) save(${file},Sheet1,A11:M16)]` would effectively copy cell value from `A5:M10` 
@@ -275,7 +275,7 @@ starting from the cell D3<br/>
 
 -----
 
-#### store(var)
+#### `store(var)`
 Save current EXCEL expression to a data variable.  If the specified `var` exists, its value will be overwritten. Using 
 this operation, one can put an expression on pause and resume it at a later time.
 
@@ -295,7 +295,7 @@ this operation, one can put an expression on pause and resume it at a later time
 
 -----
 
-#### text
+#### `text`
 Transform the current EXCEL cell data to text.  This would be the plain text rendition of the referenced cell data. 
 Note that if **`text`** is called prior to the **[`read(sheet,range)`](#read(sheet,range))**  operation, then only the 
 location of the underlying Excel file will be returned.  In order to return the cell content, the 
@@ -314,20 +314,20 @@ location of the underlying Excel file will be returned.  In order to return the
 
 -----
 
-#### totalDataColumn(row)
+#### `totalDataColumn(row)`
 Returns the number of column for the given row in a worksheet. The `row` parameter is expected to be 1-based (as shown 
 in Excel), and the result, which will be a [`NUMBER`](../expressions/NUMBERexpression) expression, is also 1-based, for
 consistency sake.
 
 -----
 
-#### totalDataRow
+#### `totalDataRow`
 Returns the number of row for the given worksheet. More specifically, this operation will return the last row with data
 to the current worksheet. This operation effectively returns a [`NUMBER`](../expressions/NUMBERexpression) expression.
 
 -----
 
-#### transpose
+#### `transpose`
 Transpose captured cell values so that row data is displayed as column data, and column data as row data.
 
 **Example**
@@ -343,7 +343,7 @@ Transpose captured cell values so that row data is displayed as column data, and
 
 -----
 
-#### worksheets
+#### `worksheets`
 Retrieves a list of worksheets in the referenced Excel file in the order in which they are present in the Excel file.
 
 **Example**
@@ -359,7 +359,7 @@ Retrieves a list of worksheets in the referenced Excel file in the order in whic
 
 -----
 
-#### writeAcross(start,value1,value2,value3,...)
+#### `writeAcross(start,value1,value2,value3,...)`
 Starting from the cell location specified via `start`, save into cells the values as specified via 
 `value1`, `value2`, `value3`, ... by moving to the right for each value specified.  For example,  
 `[EXCEL( ${file} ) => read(Sheet1,B2:F20) writeAcross(B3,Banana,Grape,Apple,Kiwi,Black Concurrent]` would write the 
@@ -379,7 +379,7 @@ is stored to `B3`, `Grape` is stored to `C3`, Apple to `D3`, and so on:
 
 -----
 
-#### writeDown(start,value1,value2,value3,...)
+#### `writeDown(start,value1,value2,value3,...)`
 Store `value1`, `value2`, so on, starting from the cell position denoted by `start`.  See  
 **[`writeAcross(start,value1,value2,value3,...)`](#writeacross(start,value1,value2,value3,...))** for more details.
 

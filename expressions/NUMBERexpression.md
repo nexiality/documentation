@@ -23,7 +23,7 @@ example would yield `-1770.2978788893238`.
 
 ### Operations
 
-#### **`abs`**
+#### `abs`
 transform current number as a positive number. 
 
 This means that a positive number will remain as is. A negative number will be negated (i.e. multiply by `-1`), 
@@ -38,7 +38,7 @@ Output:<br/>
 
 -----
 
-#### **`add(numbers)`**
+#### `add(numbers)`
 add one or more numbers to current number.
 
 **Example**<br/>
@@ -50,7 +50,7 @@ Output:<br/>
 
 -----
 
-#### **`ceiling`**
+#### `ceiling`
 round up current number.
 
 **Example**<br/>
@@ -62,7 +62,7 @@ Output:<br/>
 
 -----
 
-#### **`divide(numbers)`**
+#### `divide(numbers)`
 divide one or more numbers from current number, in the order specified.
 
 **Example**<br/>
@@ -79,7 +79,7 @@ Mathematically, any number divided by 0 is an invalid statement.
 
 -----
 
-#### **`floor`**
+#### `floor`
 round down current number.
 
 **Example**<br/>
@@ -91,7 +91,7 @@ Output:<br/>
 
 -----
 
-#### **`max(numbers)`**
+#### `max(numbers)`
 find the maximum value amongst current value and a list of numbers.
 
 **Example**<br/>
@@ -101,7 +101,7 @@ find the maximum value amongst current value and a list of numbers.
 
 -----
 
-#### **`min(numbers)`**
+#### `min(numbers)`
 find the minimum value amongst current value and a list of numbers.
 
 **Example**<br/>
@@ -111,7 +111,7 @@ find the minimum value amongst current value and a list of numbers.
 
 -----
 
-#### **`minus(numbers)`**
+#### `minus(numbers)`
 subtract one or more numbers from current number, in the order specified.
 
 **Example**<br/>
@@ -123,7 +123,7 @@ Output:<br/>
 
 -----
 
-#### **`mod(divisor)`**
+#### `mod(divisor)`
 transform the current number to the remainder (modulus) of being divided by the specified `divisor`.
 
 **Example**<br/>
@@ -132,7 +132,7 @@ Script:<br/>
 
 -----
 
-#### **`multiply(numbers)`**
+#### `multiply(numbers)`
 multiple one or more numbers to current number, in the order specified.
 
 **Example**<br/>
@@ -144,7 +144,7 @@ Output:<br/>
 
 -----
 
-#### **`randomDigits(length)`** 
+#### `randomDigits(length)` 
 generate a random string of digits of the specified `length`.
 
 **Example**<br/>
@@ -156,7 +156,7 @@ Output:<br/>
 
 -----
 
-#### **`randomDecimal(wholeLength,fractionLength)`**
+#### `randomDecimal(wholeLength,fractionLength)`
 generate a random decimal number which contains a whole number of length as specified by `wholeLength`, and decimal 
 number of length as specified by `fractionLength`.
 
@@ -169,7 +169,7 @@ Output:<br/>
 
 -----
 
-#### **`randomInteger(atLeast,atMost)`**
+#### `randomInteger(atLeast,atMost)`
 generate a random integer number within the range of `atLeast` and `atMost`.
 
 **Example**<br/>
@@ -181,7 +181,7 @@ Output:<br/>
 
 -----
 
-#### **`whole`**
+#### `whole`
 transform current number to a whole number (integer) by dropping any existing decimal value.
 
 **Example**<br/>
@@ -193,7 +193,7 @@ Output:<br/>
 
 -----
 
-#### **`roundTo(closestDigit)`**
+#### `roundTo(closestDigit)`
 transform current number by rounding it to the `closestDigit`. The `closestDigit` is used to specify "the closest 
 digit", "the closest tenth", "the closest hundredth", etc.  For example,  `[NUMBER(173921.22) => roundTo(1000)]` would 
 yield `174000`. However to retain decimals, one would specify `0.` followed by number of desired decimal places instead. 
@@ -211,7 +211,7 @@ Output:<br/>
 
 -----
 
-#### **`store(var)`**
+#### `store(var)`
 save current NUMBER expression to a data variable.  If the specified `var` exists, its value will be overwritten. 
 Using this operation, one can put an expression on pause and resume it at a later time.
 
@@ -224,7 +224,7 @@ Output:<br/>
 
 -----
 
-#### **`text`**
+#### `text`
 transform current number to text
 
 **Example**<br/>

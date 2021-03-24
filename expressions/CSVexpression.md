@@ -313,7 +313,7 @@ Output:<br/>
 
 -----
 
-#### headers
+#### `headers`
 Retrieves the column names of the current CSV content as a **[`LIST`](LISTexpression)**. If current CSV is not 
 parsed with `header=true`, then `null` is returned.
 
@@ -328,7 +328,7 @@ Output:<br/>
 
 -----
 
-#### htmlTable
+#### `htmlTable`
 Render CSV content into a HTML table. Also known/usable as `html-table`. For text-only rendering, 
 consider using [`asciiTable`](#asciitable) operation instead. Let's see an example:<br/>
 
@@ -361,7 +361,7 @@ Html Output obtained by above script is stored in `html_Output.html`, which can 
 
 -----
 
-#### json
+#### `json`
 Convert current state of the CSV content to a JSON document.Technically speaking, it's a JSON array (to represent rows) 
 with multiple JSON document (each for one row).The CSV content in question may be one or more rows, with or without 
 headers. Below are some examples of the transformation from different CSV document to JSON:
@@ -388,7 +388,7 @@ Output:<br/>
 
 -----
 
-#### length
+#### `length`
 Synonymous to **[`size`](#size)** and **[`rowCount`](#rowcount)**.
 
 **Example**<br/>
@@ -403,7 +403,7 @@ Output:<br/>
 
 -----
 
-#### merge(var,keyColumns)
+#### `merge(var,keyColumns)`
 Merge the CSV data represented by `var` into existing CSV content. The `keyColumns`, if specified, is used to merge 
 the 2 CSV content in such a way that the record of the same key(s) are merged together. For merging 2 CSV content based 
 on multiple "key" columns, specified these columns (1) in the order of importance, and (2) separated by 
@@ -558,7 +558,7 @@ In general, there are 3 uses of this operation:
  
 -----
 
-#### parse(config)
+#### `parse(config)`
 (Re)Parse current CSV data with consideration towards the specified configurations. By default, Nexial uses the Excel 
 CSV (see [above](#description)) as the file format to parse a CSV file. Using this operation, one can change the way a 
 CSV file is parsed. The `config` will be specified in the form of:
@@ -615,7 +615,7 @@ Output:<br/>
 
 -----
 
-#### removeColumns(namesOrIndices)
+#### `removeColumns(namesOrIndices)`
 Remove the entire column qualified via namesOrIndices parameter, which can be a list of column names or column 
 positions (zero-based). Multiple columns are separated by comma (`,`).
 
@@ -628,7 +628,7 @@ Output:<br/>
 
 -----
 
-#### removeRows(conditions)
+#### `removeRows(conditions)`
 Remove all rows that meet the specified [conditions](../flowcontrols/filter#specification). For example, consider the 
 following CSV file:<br/>
 ![](image/csv_14.jpg)
@@ -679,7 +679,7 @@ Output:<br/>
 
 -----
 
-#### renameColumn(find,replace)
+#### `renameColumn(find,replace)`
 Rename a column, as defined by `find`, with new value as defined by `replace`. The column position is maintained.
 
 **Example**<br/>
@@ -693,7 +693,7 @@ Output:<br/>
 
 -----
 
-#### render(template)
+#### `render(template)`
 Generate text based on the infusing of CSV data and a designated "template".
 
 **Example**<br/>
@@ -725,7 +725,7 @@ Output:<br/>
 
 -----
 
-#### replaceColumnRegex(searchFor,replaceWith,columnNameOrIndices)
+#### `replaceColumnRegex(searchFor,replaceWith,columnNameOrIndices)`
 For the specified column (by name or by position), search for `searchFor` regular expression and replace matches by 
 `replaceWith`. Regex group supported. Consistent with the support for "dash-delimited" operation names, one can 
 reference this operation either as `replaceColumnRegex` (camel-case) or `replace-column-regex` (dash-delimited). 
@@ -755,7 +755,7 @@ Output:<br/>
 
 -----
 
-#### retainColumns(columnNamesOrIndices)
+#### `retainColumns(columnNamesOrIndices)`
 Retain only the specified columns (by name or by position, separated by commas) in a CSV. Think of this operation as 
 the opposite of `removeColumns(namesOrIndices)`. Any incorrectly referenced columns will be ignored.
 
@@ -774,7 +774,7 @@ Output:<br/>
 
 -----
  
-#### row(index)
+#### `row(index)`
 Retrieves one row of data as a **[`LIST`](LISTexpression)**. `index` is zero-based. If `index` is not valid or too 
 large, then null will be returned.
 
@@ -790,7 +790,7 @@ Output:<br/>
 
 -----
 
-#### rowCount
+#### `rowCount`
 Number of rows to the current state of the CSV content. Synonymous to **[`size`](#size)** and **[`length`](#length)**.
 
 **Example**<br/>
@@ -802,7 +802,7 @@ Output:<br/>
 
 -----
 
-#### pack
+#### `pack`
 Remove all empty rows from current CSV content. This could either be blank lines or lines with only field delimiter 
 (such as comma).
 
@@ -815,7 +815,7 @@ Output:<br/>
 
 -----
 
-#### save(file,append)
+#### `save(file,append)`
 Save current CSV content to `path`. If `path` resolves to an existing file, `append` set as `true` will append current 
 CSV content to the said file. `append` is optional and defaults to `false`.
 
@@ -835,7 +835,7 @@ Sample.csv:<br/>
 
 -----
 
-#### saveRowData(rowIndex)
+#### `saveRowData(rowIndex)`
 Save the row data corresponding to the specified `rowIndex` as data variable. The corresponding header names are treated
 as data variable names. Note that this operation can only be operated on CSV data that are [parsed](#parseconfig) with 
 header.
@@ -853,7 +853,7 @@ Output:<br/>
 
 -----
 
-#### size
+#### `size`
 Retrieves the number of rows in current CSV content. Synonymous to **[`rowCount`](#row(index))** and 
 **[`length`](#length)**.
 
@@ -866,7 +866,7 @@ Output:<br/>
 
 -----
 
-#### sortAscending(column)
+#### `sortAscending(column)`
 Sort the entire CSV content by the specified column, in ascending order. Note that the target **CSV MUST HAVE HEADERS**!
 
 **Example**<br/>
@@ -878,7 +878,7 @@ Output:<br/>
 
 -----
 
-#### sortDescending(column)
+#### `sortDescending(column)`
 Sort the entire CSV content by the specified column, in descending order. Note that the **TARGET CSV MUST HAVE HEADERS**!
 
 **Example**<br/>
@@ -890,7 +890,7 @@ Output:<br/>
 
 -----
 
-#### store(var)
+#### `store(var)`
 Save current CSV expression (including content) to a data variable. If the specified var exists, its value will be 
 overwritten. Using this operation, one can put an expression on pause and resume it at a later time.
 
@@ -908,7 +908,7 @@ Output:<br/>
 
 -----
 
-#### surround(parameters)
+#### `surround(parameters)`
 Surround the data of all target columns with specified character(s). The `parameters` has 2 parts: 
 1. The character(s) to use to surround the column data, such as `"`, `'` or `:: `. The specified character(s) will be 
    added to the beginning and end of the matching column. Note that if the target column data is already surrounded with
@@ -1003,7 +1003,7 @@ Output:<br/>
 
 -----
 
-#### text
+#### `text`
 Transform the current CSV data to text. This would be the plain text rendition of the CSV content. Note that the 
 latest CSV format as specified via the **[`parse(config)`](#parse(config))** operation is observed and will affect the 
 text output.
@@ -1016,7 +1016,7 @@ Output:<br/>
 
 -----
 
-#### transpose
+#### `transpose`
 Transpose current CSV content so that row datas are displayed as column data, and column's as row's.
 
 Script:<br/>
@@ -1027,7 +1027,7 @@ Output:<br/>
 
 -----
 
-#### xml(root,row,cell)
+#### `xml(root,row,cell)`
 Convert current state of the CSV content to a XML document. It's a 2-level XML document, with the first level 
 representing 'rows' and second level 'one row'. The first level node name is specified through `root` parameter while 
 the second level node name is specified through row `parameter`. For each column, `cell` is used to specify its node 

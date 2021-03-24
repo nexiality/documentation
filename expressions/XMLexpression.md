@@ -12,7 +12,7 @@ XML Expression provides transformational operations on a XML document.
 
 
 ### Operations
-#### **`append(xpath,content)`**
+#### `append(xpath,content)`
 search against specified `xml` via `xpath`, and append `content` to all matching instances. 
 
 **Example**
@@ -28,7 +28,7 @@ search against specified `xml` via `xpath`, and append `content` to all matching
 
 -----
 
-#### **`attribute(xpath,name)`**
+#### `attribute(xpath,name)`
 Retrieves the value of `name` attribute from the element(s) that matched the specified `xpath`. If exactly one match is 
 found, this operation returns a [`TEXT`](TEXTexpression) data type. If more than one matches are found, a 
 [`LIST`](LISTexpression) data type is returned instead.
@@ -46,7 +46,7 @@ found, this operation returns a [`TEXT`](TEXTexpression) data type. If more than
 
 -----
 
-#### **`beautify`**
+#### `beautify`
 "Pretty" formatting on current XML document to improve readability.
 
 **Input XML file**: books.xml<br/>
@@ -60,7 +60,7 @@ found, this operation returns a [`TEXT`](TEXTexpression) data type. If more than
 
 -----
 
-#### **`clear(xpath)`**
+#### `clear(xpath)`
 Search against specified `xml` via `xpath` and clear content of all matching instances. As seen above, `clear(xpath)` 
 clears the element's content. This is different from [`delete(xpath)`](#deletexpath) which removes the matching element 
 itself. 
@@ -78,7 +78,7 @@ itself.
 
 -----
 
-#### **`content(xpath)`**
+#### `content(xpath)`
 Retrieves the content of the element(s) that matched the specified `xpath`. If exactly one match is found, this 
 operation returns a [`TEXT`](TEXTexpression) data type. If more than one matches are found, a [`LIST`](LISTexpression) 
 data type is returned instead.
@@ -96,7 +96,7 @@ data type is returned instead.
 
 -----
 
-#### **`count(xpath)`**
+#### `count(xpath)`
 Counts the number of elements present at the specified `xpath`.
 
 **Example**
@@ -112,7 +112,7 @@ Counts the number of elements present at the specified `xpath`.
 
 -----
 
-#### **`delete(xpath)`**
+#### `delete(xpath)`
 Search against specified `xml` via `xpath` and delete xml node of all matching instances.`delete(xpath)` removes the 
 matching element(s) itself. This is different from [`clear(xpath)`](#clearxpath) which only clears the content of the 
 matching element(s). This operation is the same as [`remove(xpath)`](#removexpath).
@@ -130,7 +130,7 @@ matching element(s). This operation is the same as [`remove(xpath)`](#removexpat
 
 -----
 
-#### **`extract(xpath)`**
+#### `extract(xpath)`
 Extract a portion of the XML document based on the specified `xpath`. Based on the XML document in question and the `xpath`
 specified, the result could either be `null` (none matched), text (matched to a textual value), XML node or an XML array.
 `extracted` is added as the root tag if the specified `xpath` matches with multiple nodes in order to make it a valid XML.
@@ -159,7 +159,7 @@ specified, the result could either be `null` (none matched), text (matched to a 
 
 -----
 
-#### **`insertAfter(xpath,content)`**
+#### `insertAfter(xpath,content)`
 Search against specified `xml` via `xpath`, and insert `content` after all matching instances. 
 
 **Example**
@@ -175,7 +175,7 @@ Search against specified `xml` via `xpath`, and insert `content` after all match
 
 -----
 
-#### **`insertBefore(xpath,content)`**
+#### `insertBefore(xpath,content)`
 Search against specified `xml` via `xpath`, and insert `content` before all matching instances. 
 
 **Example**
@@ -191,7 +191,7 @@ Search against specified `xml` via `xpath`, and insert `content` before all matc
 
 -----
 
-#### **`minify`**
+#### `minify`
 Compressed current XML document which are suitable for effecient data transfer.
 
 **Example**
@@ -207,7 +207,7 @@ Compressed current XML document which are suitable for effecient data transfer.
 
 -----
 
-#### **`prepend(xpath,content)`**
+#### `prepend(xpath,content)`
 Search against specified `xml` via `xpath`, and prepend `content` to all matching instances. 
 
 **Example**
@@ -223,7 +223,7 @@ Search against specified `xml` via `xpath`, and prepend `content` to all matchin
 
 -----
 
-#### **`remove(xpath)`**
+#### `remove(xpath)`
 Remove from the source XML the element(s) that matches the specified `xpath`. This operation is the same as 
 [`delete(xpath)`](#deletexpath).
 
@@ -240,7 +240,7 @@ Remove from the source XML the element(s) that matches the specified `xpath`. Th
 
 -----
 
-#### **`replace(xpath,content)`**
+#### `replace(xpath,content)`
 Search against specified `xml` via `xpath`, and replace `content` against all matching instances. This command 
 is different from [`replaceIn(xpath,content)`](#replaceinxpathcontent) in that it replaces the tags as well as the 
 content of the matching elements while [`replaceIn(xpath,content)`](#replaceinxpathcontent) only replaces the content 
@@ -260,7 +260,7 @@ replaced by the `current_dateTime` tag and its content.<br/>
 
 -----
 
-#### **`replaceIn(xpath,content)`**
+#### `replaceIn(xpath,content)`
 Search against specified `xml` via `xpath`, and replace inside content of all matching instances. This command 
 is different from [`replace(xpath,content)`](#replacexpathcontent) in that it only replaces the content of the 
 matching elements while [`replace(xpath,content)`](#replacexpathcontent) replaces the tags as well as the content 
@@ -282,7 +282,7 @@ the specified xpath points to an XML node.
 
 -----
 
-#### **`save(path,append)`**
+#### `save(path,append)`
 Save current expression content to `path`. If `path` resolves to an existing file, `append` set as `true` will append 
 current expression content to the said file. `append` is optional and defaults to `false`.
 
@@ -299,7 +299,7 @@ current expression content to the said file. `append` is optional and defaults t
 
 -----
 
-#### **`store(var)`**
+#### `store(var)`
 Save current XML expression to a data variable.  If the specified `var` exists, its value will be overwritten. Using 
 this operation, one can put an expression on pause and resume it at a later time.
 
@@ -317,7 +317,7 @@ extract the books belonging to the `Cooking` category.<br/>
 
 -----
 
-#### **`text`**
+#### `text`
 Transform current XML document into its textual representation.
 
 **Example**
@@ -333,8 +333,8 @@ Transform current XML document into its textual representation.
 
 -----
 
-#### **`updateAttribute(xpath,name,value)`**
-Also known as **`update-attribute(xpath,name,value)`**. This operation updates the attribute of all matched elements 
+#### `updateAttribute(xpath,name,value)`
+Also known as `update-attribute(xpath,name,value)`. This operation updates the attribute of all matched elements 
 based on `name` and `value`. If `value` is empty, then the target attributes are effectively removed. 
 
 **Example**
@@ -350,8 +350,8 @@ based on `name` and `value`. If `value` is empty, then the target attributes are
 
 -----
 
-#### **`updateContent(xpath,content)`**
-Also known as **`update-content(xpath,content)`**. This operation updates (technically speaking, replace) the content 
+#### `updateContent(xpath,content)`
+Also known as `update-content(xpath,content)`. This operation updates (technically speaking, replace) the content 
 of the matched elements with the specified `content`. `content` may be text or XML nodes. If `content` is empty, then 
 the content of the target elements are effectively removed. 
 
@@ -371,5 +371,5 @@ specified xpath points to a XML node.
 
 -----
 
-<Script>jQuery(document).ready(function () { newOperationSelect(); });</Script>
+<script>jQuery(document).ready(function () { newOperationSelect(); });</script>
 

@@ -12,7 +12,7 @@ comments: true
 
 
 ### Operations
-#### **`after(criteria)`**
+#### `after(criteria)`
 Retain the portion of text after the specified `criteria`.
 
 **Example**<br/>
@@ -24,7 +24,7 @@ Output:<br/>
 
 -----
 
-#### **`append(text,text,text,...)`**
+#### `append(text,text,text,...)`
 Add one or more text to the end of `text`.
 
 **Example**<br/>
@@ -36,7 +36,7 @@ Output:<br/>
 
 -----
 
-#### **`appendIfMissing(appendWith)`**
+#### `appendIfMissing(appendWith)`
 Add `appendWith` to the end of current text ONLY if `appendWith` is currently not at the end of text.
 
 **Example**<br/>
@@ -48,7 +48,7 @@ Output:<br/>
 
 -----
 
-#### **`base64decode`**
+#### `base64decode`
 BASE64 decode text.
 
 **Example**<br/>
@@ -60,8 +60,8 @@ Output:<br/>
 
 -----
 
-#### **`base64decodeThenSave(file,append)`**
-Or, **`base64decode-then-save(file,append)`**. 
+#### `base64decodeThenSave(file,append)`
+Or, `base64decode-then-save(file,append)`. 
 BASE64 decode current `TEXT` content and saving the decoded bytes to `file`. This operation assumes that current `TEXT` 
 content is BASE64 encoded, and that the decoded content is binary (e.g. Excel, PDF or Image file). Use `append` to 
 append the decoded content to an existing file.
@@ -80,7 +80,7 @@ decode.txt:<br/>
 
 -----
 
-#### **`base64encode`**
+#### `base64encode`
 BASE64 encode text.
 
 **Example**<br/>
@@ -92,7 +92,7 @@ Output:<br/>
 
 -----
 
-#### **`before(criteria)`**
+#### `before(criteria)`
 Retain the portion of text before the specified `criteria`.
 
 **Example**<br/>
@@ -104,7 +104,7 @@ Output:<br/>
 
 -----
 
-#### **`between(start,end)`**
+#### `between(start,end)`
 Retain the portion of text that is between the specified `start` and `end` text.
 
 **Example**<br/>
@@ -116,7 +116,7 @@ Output:<br/>
 
 -----
 
-#### **`binary`**
+#### `binary`
 Convert current text into a [`BINARY`](BINARYexpression) expression. Generally speaking, a
 [`BINARY`](BINARYexpression) expression by itself isn't very useful. One can use its
 [`save(filepath)`](BINARYexpression#savefilepath) operation to persist binary data into an external file.
@@ -127,7 +127,7 @@ Script:<br/>
 
 -----
 
-#### **`count(searchFor)`**
+#### `count(searchFor)`
 Transfer into a [`NUMBER`](NUMBERexpression) data type that contains the number of occurrence for `searchFor`.
 
 **Example**<br/>
@@ -139,7 +139,7 @@ Output:<br/>
 
 -----
 
-#### **`csv(position1,position2,...)`**
+#### `csv(position1,position2,...)`
 Converts the given text content to csv format, separated by the given position numbers for each line.
 
 **Example**<br/>
@@ -161,7 +161,7 @@ Text Output:<br/>
 
 -----
 
-#### **`distinct`**
+#### `distinct`
 Remove any duplicate characters from text.
 
 **Example**<br/>
@@ -173,7 +173,7 @@ Output:<br/>
 
 -----
 
-#### **`extract(beginRegex,endRegex,inclusive)`**
+#### `extract(beginRegex,endRegex,inclusive)`
 Extract from current text all instances of text found between `beginRegex` and `endRegex`. Both `beginRegex` and 
 `endRegex` are regular expressions. Set `inclusive` as `true` to include the text that matches `beginRegex` and 
 `endRegex`. This operation effectively transforms current TEXT expression into a [`LIST`](LISTexpression) expression.
@@ -187,7 +187,7 @@ Output:<br/>
 
 -----
 
-#### **`ifContain(test,match,notMatch)`**
+#### `ifContain(test,match,notMatch)`
 Also known as `if-contain(test,match,notMatch)`. This operation replaces value of the current TEXT expression to either 
 `match` or `notMatch`, based on whether the value of the current TEXT expression contains `test` or not.
 
@@ -209,7 +209,7 @@ Hi
 
 -----
 
-#### **`ifEqual(test,match,notMatch)`**
+#### `ifEqual(test,match,notMatch)`
 Also known as `if-equal(test,match,notMatch)`. This operation replaces value of the current TEXT expression to either 
 `match` or `notMatch`, based on whether the value of the current TEXT expression is equal to `test` or not.
 
@@ -231,7 +231,7 @@ Bye
 
 -----
 
-#### **`ifMatch(regex,match,notMatch)`**
+#### `ifMatch(regex,match,notMatch)`
 Also known as `if-match(test,match,notMatch)`. This operation replaces value of the current TEXT expression to either 
 `match` or `notMatch`, based on whether the value of the current TEXT expression satisfies the specified `regex` in 
 its entirety or not.
@@ -254,7 +254,7 @@ Medicine
 
 -----
 
-#### **`insert(after,text)`**
+#### `insert(after,text)`
 Search for `after` in text, and if found, add the specified text to it.  If `after` is not found, no changes will be 
 made to text.
 
@@ -270,7 +270,7 @@ Output:<br/>
 
 -----
 
-#### **`json`**
+#### `json`
 Transform existing text into a [JSON expression](JSONexpression). If 
 [`nexial.expression.resolveURL`](../systemvars/index#nexial.expression.resolveURL) is set to `true` and the current 
 text content is a URL, Nexial will automatically download from such URL and transform the download content as 
@@ -286,8 +286,8 @@ Output:<br/>
 
 -----
 
-#### **`leftMost(length)`**
-Or **`left-most(length)`**. Truncate the current TEXT value *FROM THE LEFT* so that its length is equal or less to 
+#### `leftMost(length)`
+Or `left-most(length)`. Truncate the current TEXT value *FROM THE LEFT* so that its length is equal or less to 
 `length`. If the current TEXT value has a length less than `length`, then it will remain unchanged.
 
 **Example**<br/>
@@ -301,7 +301,7 @@ Carni
 
 -----
 
-#### **`length`**
+#### `length`
 Transfer into a [`NUMBER`](NUMBERexpression) data type that contains the length of text.
 
 **Example**<br/>
@@ -313,7 +313,7 @@ Output:<br/>
 
 -----
 
-#### **`list(delim)`**
+#### `list(delim)`
 Transfer into a [`LIST`](LISTexpression) data type by converting text into a list, using  `delim` as the character to split.
 
 **Example**<br/>
@@ -325,7 +325,7 @@ Output:<br/>
 
 -----
 
-#### **`lower`**
+#### `lower`
 Turn text into lowercase equivalent.
 
 **Example**<br/>
@@ -337,7 +337,7 @@ Output:<br/>
 
 -----
 
-#### **`normalize`**
+#### `normalize`
 Remove any leading or trailing whitespaces and also remove duplicate whitespace characters in text. The end result is 
 that text will not contain any occurrences of successive spaces.
 
@@ -350,7 +350,7 @@ Output:<br/>
 
 -----
 
-#### **`number`**
+#### `number`
 Transfer into a [`NUMBER`](NUMBERexpression) data type by converting text into a numeric value. Failure to explicitly 
 convert text into number will result in an ERROR condition.
 
@@ -363,7 +363,7 @@ Output:<br/>
 
 -----
 
-#### **`pack`**
+#### `pack`
 Remove all whitespace characters (tab, space, line feed, carriage return) from text.
 
 **Example**<br/>
@@ -375,8 +375,8 @@ Output:<br/>
 
 -----
 
-#### **`padLeft(padWith,maxLength)`**
-Or **`pad-left(padWith,maxLength)`**. Pad (add) existing text with `padWith` character(s) from the left, until 
+#### `padLeft(padWith,maxLength)`
+Or `pad-left(padWith,maxLength)`. Pad (add) existing text with `padWith` character(s) from the left, until 
 `maxLength` length is reached. If current `TEXT` expression value already exceeds specified `maxLength`, it will be 
 truncated (from the right) to `maxLength`.
 
@@ -391,8 +391,8 @@ This will print out the following on the console:
 
 -----
 
-#### **`padRight(padWith,maxLength)`**
-Or **`pad-right(padWith,maxLength)`**. Pad (add) existing text with `padWith` character(s) from the right, until 
+#### `padRight(padWith,maxLength)`
+Or `pad-right(padWith,maxLength)`. Pad (add) existing text with `padWith` character(s) from the right, until 
 `maxLength` length is reached. If current `TEXT` expression value already exceeds specified `maxLength`, it will be 
 truncated (from the right) to `maxLength`.
 
@@ -408,7 +408,7 @@ John------
 
 -----
 
-#### **`parseAsCsv(configs)`**
+#### `parseAsCsv(configs)`
 Parse the current text content as CSV. This operation supports the same parsing options found in 
 [CSV &raquo; `parse(configs)`](CSVexpression#parseconfig).
 
@@ -423,7 +423,7 @@ Script:<br/>
 
 -----
 
-#### **`prepend(text,text,text,...)`**
+#### `prepend(text,text,text,...)`
 Add one or more text to the beginning of `text`.
 
 **Example**<br/>
@@ -435,7 +435,7 @@ Output:<br/>
 
 -----
 
-#### **`prependIfMissing(prependWith)`**
+#### `prependIfMissing(prependWith)`
 Add `prependWith` to the beginning of current text ONLY if `prependWith` if currently not at the beginning of text.
 
 **Example**<br/>
@@ -447,7 +447,7 @@ Output:<br/>
 
 -----
 
-#### **`remove(criteria)`**
+#### `remove(criteria)`
 Remove any and all occurrences of `criteria`.
 
 **Example**<br/>
@@ -459,8 +459,8 @@ Output:<br/>
 
 -----
 
-#### **`removeEnd(ending)`**
-Or **`remove-end(ending)`**. Remove ending character sequence (substring) of text that matches `ending`.
+#### `removeEnd(ending)`
+Or `remove-end(ending)`. Remove ending character sequence (substring) of text that matches `ending`.
 
 **Example**<br/>
 Script:<br/>
@@ -471,8 +471,8 @@ Output:<br/>
 
 -----
 
-#### **`removeLeft(length)`**
-Or **`remove-left(length)`**. Use `length` to specify the number of characters to remove from the left (i.e. the 
+#### `removeLeft(length)`
+Or `remove-left(length)`. Use `length` to specify the number of characters to remove from the left (i.e. the 
 beginning) of the text. The parameter `length` must be a positive integer. If `length` is greater than the length of
 current text, an empty text will be returned.
 
@@ -485,14 +485,14 @@ Output:<br/>
 
 -----
 
-#### **`removeLine(match)`**
+#### `removeLine(match)`
 Remove lines from current expression that matches the specified `match`. This operation supports PolyMatcher.
 
 {% include _polymatcher.md %}
 
 -----
 
-#### **`removeRegex(regex,multiLine,caseSensitive)`**
+#### `removeRegex(regex,multiLine,caseSensitive)`
 Remove character(s) that matches `regex`. Optionally, one can specify `true` for `multiLine` to support text content
 that spans across multiple lines. By default, this operation will perform regular expression pattern matching 
 case-sensitively. One can set the `caseSensitive` parameter as `false` to enforce a case-insensitive pattern matching.
@@ -512,8 +512,8 @@ Output:<br/>
 
 -----
 
-#### **`removeRight(length)`**
-Or **`remove-right(length)`**. Use `length` to specify the number of characters to remove from the right (i.e. the 
+#### `removeRight(length)`
+Or `remove-right(length)`. Use `length` to specify the number of characters to remove from the right (i.e. the 
 end) of the text. The parameter `length` must be a positive integer. If `length` is greater than the length of current 
 text, an empty text will be returned.
 
@@ -526,8 +526,8 @@ Output:<br/>
 
 -----
 
-#### **`removeStart(start)`**
-Or **`remove-start(start)`**
+#### `removeStart(start)`
+Or `remove-start(start)`
 Remove starting character sequence (substring) of text that matches `start`.
 
 **Example**<br/>
@@ -539,13 +539,13 @@ Output:<br/>
 
 -----
 
-#### **`repeat(times)`**
+#### `repeat(times)`
 Transform current TEXT expression by repeating its text value. The number of repeats is controlled via the `times` 
 parameter. Note that if `times` is not a positive number, this expression would contain empty text (i.e. no value).
 
 -----
 
-#### **`replace(searchFor,replaceWith)`**
+#### `replace(searchFor,replaceWith)`
 As the name suggest, this operation will search for `searchFor` and replace matches with `replaceWith`.
 
 **Example**<br/>
@@ -557,7 +557,7 @@ Output:<br/>
 
 -----
 
-#### **`replaceRegex(searchRegex,replaceWith)`**
+#### `replaceRegex(searchRegex,replaceWith)`
 Perform a regex-search on text using `searchRegex` and replace all matches with `replaceWith`.  Note that grouping 
 character `(` and `)` should be escaped as `\(...\)`.  For example,  `[TEXT(...) => replaceRegex(\(chicken\),beef)]`
 
@@ -570,7 +570,7 @@ Output:<br/>
 
 -----
 
-#### **`retain(keep)`**
+#### `retain(keep)`
 Retain only the characters found in `keep`.
 
 **Example**<br/>
@@ -582,8 +582,8 @@ Output:<br/>
 
 -----
 
-#### **`retainRegex(regex)`**
-Or **`retain-regex(regex)`**. Retain only the characters matched to `regex`.
+#### `retainRegex(regex)`
+Or `retain-regex(regex)`. Retain only the characters matched to `regex`.
 
 **Example**<br/>
 Script:<br/>
@@ -594,8 +594,8 @@ Output:<br/>
 
 -----
 
-#### **`rightMost(length)`**
-Or **`right-most(length)`**. Truncate the current TEXT value so that its length is equal or less to `length`. If the 
+#### `rightMost(length)`
+Or `right-most(length)`. Truncate the current TEXT value so that its length is equal or less to `length`. If the 
 current TEXT value has a length less than `length`, then it will remain unchanged.
 
 **Example**<br/>
@@ -609,7 +609,7 @@ enture
 
 -----
 
-#### **`save(path,append)`**
+#### `save(path,append)`
 Save current text content to `path`. If `path` resolves to an existing file, `append` set as `true` will append 
 current text content to the said file. `append` is optional and defaults to `false`.
 
@@ -628,7 +628,7 @@ first line as `append` is set to `true`.
 
 -----
 
-#### **`store(var)`**
+#### `store(var)`
 Save current TEXT expression to a data variable.  If the specified `var` exists, its value will be overwritten. Using 
 this operation, one can put an expression on pause and resume it at a later time.
 
@@ -641,7 +641,7 @@ Output:<br/>
 
 -----
 
-#### **`substring(start,end)`**
+#### `substring(start,end)`
 Retain the portion of text from the `start` position (zero-based) to the `end`  position (exclusive).
 
 **Example**<br/>
@@ -653,7 +653,7 @@ Output:<br/>
 
 -----
 
-#### **`title`**
+#### `title`
 Turn text into Title Case, while the first letter of every word is capitalized.
 
 **Example**<br/>
@@ -665,7 +665,7 @@ Output:<br/>
 
 -----
 
-#### **`trim`**
+#### `trim`
 Remove any non-printable character in the beginning or ending of text.
 
 **Example**<br/>
@@ -677,7 +677,7 @@ Output:<br/>
 
 -----
 
-#### **`upper`**
+#### `upper`
 Turn text into UPPERCASE equivalent.
 
 **Example**<br/>
@@ -689,7 +689,7 @@ Output:<br/>
 
 -----
 
-#### **`xml`**
+#### `xml`
 Transform existing text into a [XML expression](XMLexpression). If 
 [`nexial.expression.resolveURL`](../systemvars/index#nexial.expression.resolveURL) is set to `true` and the current 
 text content is a URL, Nexial will automatically download from such URL and transform the download content as 

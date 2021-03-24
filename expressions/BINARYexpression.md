@@ -26,7 +26,7 @@ Alternatively one can start from an empty BINARY expression and then load an ext
 ```
 
 ### Operations
-#### **`save(path)`**
+#### `save(path)`
 Save current binary data into a file denoted by `path`. No encoding will be performed when saving.
 
 Example:
@@ -34,7 +34,7 @@ Example:
 
 -----
 
-#### **`saveEncoded(path,append)`**
+#### `saveEncoded(path,append)`
 Save current binary data into file denoted by `path`, with the option (`append`) to append or override existing file.
 
 **Example**<br/>
@@ -43,7 +43,7 @@ Script:<br/>
 
 -----
 
-#### **`base64encode()`**
+#### `base64encode()`
 BASE64 encoding on current binary data. This effectively transforms the current expression into a 
 [`TEXT` expression](TEXTexpression).
 
@@ -53,12 +53,12 @@ Script:<br/>
 
 -----
 
-#### **`size()`**
+#### `size()`
 The size of current binary data as a [`NUMBER` expression](NUMBERexpression).
 
 -----
 
-#### **`loadBase64(file)`**
+#### `loadBase64(file)`
 Override current binary data with the content of the specified `file` that is BASE64 decoded and converted to binary.
 
 **Example**<br/>
@@ -67,7 +67,7 @@ Script:<br/>
 
 -----
 
-#### **`loadBinary(file)`**
+#### `loadBinary(file)`
 Override current binary data with the binary content of the specified `file`.
 
 **Example**<br/>
