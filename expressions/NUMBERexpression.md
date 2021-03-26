@@ -51,7 +51,7 @@ Output:<br/>
 -----
 
 #### `ceiling`
-round up current number.
+round up current number.
 
 **Example**<br/>
 Script:<br/>
@@ -80,7 +80,7 @@ Mathematically, any number divided by 0 is an invalid statement.
 -----
 
 #### `floor`
-round down current number.
+round down current number.
 
 **Example**<br/>
 Script:<br/>
@@ -144,8 +144,8 @@ Output:<br/>
 
 -----
 
-#### `randomDigits(length)` 
-generate a random string of digits of the specified `length`.
+#### `randomDigits(length)`
+generate a random string of digits of the specified `length`.
 
 **Example**<br/>
 Script:<br/>
@@ -157,8 +157,8 @@ Output:<br/>
 -----
 
 #### `randomDecimal(wholeLength,fractionLength)`
-generate a random decimal number which contains a whole number of length as specified by `wholeLength`, and decimal 
-number of length as specified by `fractionLength`.
+generate a random decimal number which contains a whole number of length as specified by `wholeLength`, and decimal 
+number of length as specified by `fractionLength`.
 
 **Example**<br/>
 Script:<br/>
@@ -170,7 +170,7 @@ Output:<br/>
 -----
 
 #### `randomInteger(atLeast,atMost)`
-generate a random integer number within the range of `atLeast` and `atMost`.
+generate a random integer number within the range of `atLeast` and `atMost`.
 
 **Example**<br/>
 Script:<br/>
@@ -194,9 +194,9 @@ Output:<br/>
 -----
 
 #### `roundTo(closestDigit)`
-transform current number by rounding it to the `closestDigit`. The `closestDigit` is used to specify "the closest 
-digit", "the closest tenth", "the closest hundredth", etc.  For example,  `[NUMBER(173921.22) => roundTo(1000)]` would 
-yield `174000`. However to retain decimals, one would specify `0.` followed by number of desired decimal places instead. 
+transform current number by rounding it to the `closestDigit`. The `closestDigit` is used to specify "the closest 
+digit", "the closest tenth", "the closest hundredth", etc.  For example,  `[NUMBER(173921.22) => roundTo(1000)]` would 
+yield `174000`. However to retain decimals, one would specify `0.` followed by number of desired decimal places instead. 
 `[NUMBER(173921.22) => roundTo(0.0)]` would yield `173921.2`. 
 
 Note that the rounding logic can be affected/customized via the 
@@ -212,7 +212,7 @@ Output:<br/>
 -----
 
 #### `store(var)`
-save current NUMBER expression to a data variable.  If the specified `var` exists, its value will be overwritten. 
+save current NUMBER expression to a data variable.  If the specified `var` exists, its value will be overwritten. 
 Using this operation, one can put an expression on pause and resume it at a later time.
 
 **Example**<br/>

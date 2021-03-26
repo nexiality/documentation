@@ -429,7 +429,7 @@ Output:<br/>
 ![output](image/LISTexpression_60.png)
 
 -----
-n
+
 #### `sublist(start,end)`
 Transform current list by downsizig it to a subset between `start` index and `end` index. Use `-1` (or omit) for `end`
 to signify the last position of the current list.
