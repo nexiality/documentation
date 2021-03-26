@@ -1,0 +1,15 @@
+<div class="main_content">
+    {{ content }}
+</div>
+<div class="footer-links">
+    <ul>
+        <li><a href="/" target="_blank">Documentation Home Page</a></li>
+        {% if page.parent contains 'expression' %}
+        {% include _expression_operation_footer.html %}
+        {% else %}
+        {% if page.parent contains '$(' %}
+        {% include _function_operation_footer.html %}
+        {% endif %}
+        {% endif %}
+    </ul>
+</div>

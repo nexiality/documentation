@@ -1,0 +1,8 @@
+<div>
+    {% assign parent_url = '/expressions/' | append: page.parent %}
+    <li><a href="{{ parent_url }}" target="_blank">{{page.parent}}</a></li>
+    {% assign s = page.title | split: '_' %}
+    {% assign op = s[1] | downcase | remove: '(' | remove: ')' | remove: ','%}
+    {% assign operation_url = '/expressions/' | append: page.parent | append: '#' | append: op %}
+    <li><a href="{{ operation_url }}" target="_blank">{{ page.parent }} {{s[1]}}</a></li>
+</div>
