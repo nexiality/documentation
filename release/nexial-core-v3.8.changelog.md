@@ -123,4 +123,13 @@ comments: true
   the automation to pause (and poll) until the request is completed and the session is "unblocked" from further 
   interaction.
 - reduce poll time from 1000ms to 200ms to improve overall performance.
-- code fix to parse correctly TN5250 table with overrun cell data (cell data that is longer than the associated header).  
+- code fix to parse correctly TN5250 table with overrun cell data (cell data that is longer than the associated header).
+- implemented "automatic break-message detection and dismissal" via System variables:
+  - `nexial.tn5250.detectBroadcastTitle`
+  - `nexial.tn5250.detectBroadcastText` and 
+  - `nexial.tn5250.dismissBroadcastMessage` (required).
+- improved the handling of table data in nested screen (AS/400's pop up screen).
+- improved the parsing of table data esp. when the data of 1 cell extends beyond its bound (into adjacent cell).
+- improved table automation when saving table data to CSV. When PAGE-UP or PAGE-DOWN is required, Nexial performs 
+  additional check to ensure that the status message remains unchanged.
+- when inspecting a nested screen, an extra `{TAB}` character is issued to ensure keyboard focus on the nested screen.
