@@ -128,8 +128,9 @@ comments: true
   - `nexial.tn5250.detectBroadcastTitle`
   - `nexial.tn5250.detectBroadcastText` and 
   - `nexial.tn5250.dismissBroadcastMessage` (required).
-- improved the handling of table data in nested screen (AS/400's pop up screen).
-- improved the parsing of table data esp. when the data of 1 cell extends beyond its bound (into adjacent cell).
+  - reference: https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/cl/sndbrkmsg.htm
+- improved the handling of table data in nested screen (AS/400's pop-up screen).
+- improved the parsing of table data esp. when the data of 1 cell extends beyond its bound (into the adjacent cell).
 - improved table automation when saving table data to CSV. When PAGE-UP or PAGE-DOWN is required, Nexial performs 
-  additional check to ensure that the status message remains unchanged.
+  additional checks to ensure that the status message remains unchanged.
 - when inspecting a nested screen, an extra `{TAB}` character is issued to ensure keyboard focus on the nested screen.
