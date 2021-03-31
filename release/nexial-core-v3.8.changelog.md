@@ -92,6 +92,8 @@ comments: true
   performance penalty. 
 - [`selectCombo(name,text)`](../commands/desktop/selectCombo(name,text)): code fix for better handling of 
   _'Single Select'_ combo element that might contain multiple similar values. 
+  - fix combo selection issue when the selection list is generated dynamically each time (in such case, Nexial resorts 
+    to the classic "type-first-char" strategy, it's slow but should work)
 - Improved support for Hierarchical Table (aka nested table) with added integration with Infragistics 4 TreeView components:
   - [`useHierTable(var,name)`](../commands/desktop/useHierTable(var,name))
   - [`assertHierRow(matchBy,expected)`](../commands/desktop/assertHierRow(matchBy,expected)) 
