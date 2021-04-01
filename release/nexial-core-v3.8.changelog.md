@@ -25,6 +25,10 @@ comments: true
   - [`EMPTY:`]: check that the target value is empty (`EMPTY:true`) or not (`EMPTY:false`).
   - [`BLANK:`]: check that the target value is blank (`BLANK:true`) or not (`BLANK:false`). Note that an empty value is
     considered as blank as well (however, not the other way around).
+- better console output for failed actual-expected comparison, this impacts:
+  - [base &raquo; `assertArrayEqual(array1,array2,exactOrder)`](../commands/base/assertArrayEqual(array1,array2,exactOrder))
+  - [web &raquo; `assertText(locator,text)`](../commands/web/assertText(locator,text))
+  - [web &raquo; `assertNotText(locator,text)`](../commands/web/assertNotText(locator,text))
 
 
 ### [System Variable](../systemvars)
