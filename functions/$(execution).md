@@ -303,6 +303,33 @@ The notification email will appear as like<br/>
 
 -----
 
+#### `$(execution|plan|fullpath)`
+Display the fullpath of the plan file currently in execution.
+
+**Example**<br/>
+{% include_relative example_execution.md  %}. In this example, we use this function in combination with email 
+notification to expose the step that had failed during execution. 
+
+-----
+
+#### `$(execution|plan|name)`
+Display the plan name (without file extension) currently in execution
+
+**Example**<br/>
+{% include_relative example_execution.md  %}. In this example, we use this function in combination with email 
+notification to expose the step that had failed during execution. 
+
+-----
+
+#### `$(execution|plan|index)`
+Display the row index of script in plan file currently in execution
+
+**Example**<br/>
+{% include_relative example_execution.md  %}. In this example, we use this function in combination with email 
+notification to expose the step that had failed during execution. 
+
+-----
+
 #### `$(execution|meta|nexial)`
 Display the current Nexial version.
 

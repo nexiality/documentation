@@ -96,7 +96,7 @@ comments: true
 - [TEXT](../expressions/TEXTexpression): 
   - **NEW** operation - `parseAsCsv(configs)` - to convert TEXT to CSV expression.
   - [`number`](../expressions/TEXTexpression#number) operation: handle "octal-like" numbers
-- [CSV](../expressions/CSVexpression): [`merge(var,keyColumns)`](../expressions/CSVexpression#mergevarkeycolumns) now
+- [CSV](../expressions/CSVexpression): [`merge(csvVariable,refColumns)`](../expressions/CSVexpression#mergecsvVariablerefcolumn) now
   supports multiple "key" columns so that one can merge 2 CSV content based on multiple keys. Note that both CSV content
   must contain header (i.e. parsed with `header=true`).
   - [`group-sum`](../expressions/CSVexpression#groupsumcolumns): fix floating point precision issue.

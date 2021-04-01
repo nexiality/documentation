@@ -111,11 +111,11 @@ Output JSON<br/>
 
 -----
 
-#### `firstCell(column,regex,maxRow)`
+#### `firstCell(column,regex,maxRows)`
 Find the first cell in the specified `column` that satisfies `regex` and transform it to a 
 [TEXT expression](TEXTexpression). The `column` parameter is expected to be in the form of `A`, `B`, `C`, etc. - 
 mimicking how columns are represented in Excel. The `regex` parameter act as a filter to find the first matching
-cell. The `maxRow` is required to ensure that Nexial performs sufficient (but not burdensome) scanning of available
+cell. The `maxRows` is required to ensure that Nexial performs sufficient (but not burdensome) scanning of available
 rows.
 
 Note that this operation **MUST** be preceded with a call to [`read(sheet,range)`](#readsheetrange).
@@ -131,13 +131,13 @@ Note that this operation **MUST** be preceded with a call to [`read(sheet,range)
 **Output:**<br/>
 ![](image/EXCELexpression_12.png)
 
-**Script:** Trying to locate the cell which exists outside `maxRow` <br/>
+**Script:** Trying to locate the cell which exists outside `maxRows` <br/>
 ![](image/EXCELexpression_52.png)
 
 **Output:**<br/>
 ![](image/EXCELexpression_53.png)
 
-**Script:** Providing an invalid `maxRow`<br/>
+**Script:** Providing an invalid `maxRows`<br/>
 ![](image/EXCELexpression_54.png)
 
 **Output**<br/>

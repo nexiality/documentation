@@ -49,9 +49,9 @@ Output<br/>
 
 -----
 
-#### `$(random|decimal|whole_and_fraction)`
+#### `$(random|decimal|wholeAndFraction)`
 Render a random decimal number with specified `length` for the whole number portion and the fractional portion. The 
-`whole_and_fraction` is separated by **comma** (`,`). For example, `$(random|decimal|5,3)` would generate a random 
+`wholeAndFraction` is separated by **comma** (`,`). For example, `$(random|decimal|5,3)` would generate a random 
 decimal number between `00000.000` and `99999.999`. 
 
 **Example**<br/>
@@ -102,8 +102,8 @@ Output<br/>
 
 -----
 
-#### `$(random|characters|<specify characters>|length)`
-Render a random string based on the specified `characters` and the  specified `length`. This can be particularly useful 
+#### `$(random|characters|inputCharacters|length)`
+Render a random string based on the specified `inputCharacters` and the  specified `length`. This can be particularly useful 
 to validate functionality with specified characteristics on input characters, such as password. For example, 
 `$(random|characters|abcdefghijklmnopqrstuvwxyz!@#$%^*()|8)` will render 8 characters randomly from the 
 **`abcdefghijklmnopqrstuvwxyz!@#$%^*()`** range. 

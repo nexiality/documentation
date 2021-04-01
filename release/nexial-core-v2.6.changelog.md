@@ -45,8 +45,8 @@ comments: true
   set to `true`.
 - [CSV &raquo; `parse(config)`](../expressions/CSVexpression#parseconfig): use 
   [`nexial.textDelim`](../systemvars/index#nexial.textDelim) as CSV delimiter when none is explicitly specified.
-- [CSV &raquo; `merge(var,keycolumn)`](../expressions/CSVexpression#mergevarkeycolumn): avoid merging empty or blank rows.
-- [EXCEL &raquo; `firstCell(column,regex,maxRow)`](../expressions/EXCELexpression#firstcellcolumnregexmaxrow): **NEW** 
+- [CSV &raquo; `merge(csvVariable,refColumn)`](../expressions/CSVexpression#mergecsvVariablerefcolumn): avoid merging empty or blank rows.
+- [EXCEL &raquo; `firstCell(column,regex,maxRows)`](../expressions/EXCELexpression#firstcellcolumnregexmaxrows): **NEW** 
   operation to find the first cell in the specified `column` that satisfies `regex`.
 - [LIST expression](../expressions/LISTexpression): fixed previous erroneous parsing where a list is wrapped between 
   `{...}` or `[...]` characters.

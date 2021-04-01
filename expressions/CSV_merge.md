@@ -1,11 +1,11 @@
 ---
 layout: minified
-title: CSV_merge
+title: merge(csvVariable,refColumns)
 parent: CSVexpression
 ---
 
-#### `merge(var,keyColumns)`
-Merge the CSV data represented by `var` into existing CSV content. The `keyColumns`, if specified, is used to merge 
+#### `merge(csvVariable,refColumns)`
+Merge the CSV data represented by `csvVariable` into existing CSV content. The `refColumns`, if specified, is used to merge 
 the 2 CSV content in such a way that the record of the same key(s) are merged together. For merging 2 CSV content based 
 on multiple "key" columns, specified these columns (1) in the order of importance, and (2) separated by 
 [`nexial.textDelim`](../systemvars/index#nexial.textDelim).
@@ -47,13 +47,13 @@ In general, there are 3 uses of this operation:
    
    Script:<br/>
    ![script](image/CSVexpression_33.png)
-   Note that in this example **`\(empty\)`** as the `keyColumns` signifies that no shared column is between these 2 CSV 
-   files. Alternatively, omit the `keyColumns` parameter entirely, as in `merge(merge_from)`.
+   Note that in this example **`\(empty\)`** as the `refColumns` signifies that no shared column is between these 2 CSV 
+   files. Alternatively, omit the `refColumns` parameter entirely, as in `merge(merge_from)`.
    
    Output:<br/>
    ![output](image/CSVexpression_34.png)
 
-2. **merge two CSV content with headers, but without `keyColumns`**<br/>
+2. **merge two CSV content with headers, but without `refColumns`**<br/>
    In this case, `header` exists in both CSV file, but they do not share any common column from the merge can be based 
    on.
    
@@ -89,13 +89,13 @@ In general, there are 3 uses of this operation:
    
    Script:<br/>
    ![script](image/CSVexpression_35.png)
-   Note that passing **`\(empty\)`** as the `keyColumns` signifies that no shared column is between these 2 CSV 
-   files. Alternatively, omit the `keyColumns` parameter entirely, as in `merge(merge_from)`.
+   Note that passing  **`\(empty\)`** as the `refColumns` signifies that no shared column is between these 2 CSV 
+   files. Alternatively, omit the `refColumns` parameter entirely, as in `merge(merge_from)`.
    
    Output:<br/>
    ![output](image/CSVexpression_36.png)
    
-3. **merge two CSV content with headers and share same `keyColumns`**<br/>
+3. **merge two CSV content with headers and share same `refColumns`**<br/>
    In this case, header exists for both CSV data and they also share (at least) one common column whereby merge can use 
    it to align the records.
    
@@ -138,7 +138,7 @@ In general, there are 3 uses of this operation:
    Output:<br/>
    ![output](image/CSVexpression_38.png)
  
-4. (more like _3a_) **merge two CSV content with headers and share multiple `keyColumns`**<br/>
+4. (more like _3a_) **merge two CSV content with headers and share multiple `refColumns`**<br/>
    Similar to the above usage, Nexial also supports the merging of 2 CSV content with multiple key columns.  As such,
    both CSV content will be sorted against the specified key columns before the content are merged together. Consider
    the following example:<br/>

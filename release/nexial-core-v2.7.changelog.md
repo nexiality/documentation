@@ -80,7 +80,7 @@ comments: true
   quote after parsing. This only apply to column values where the quote is not needed (such as those without delimiter).
 - [CSV >> `surround(parameters)`](../expressions/CSVexpression#surroundparameters): **NEW** operation to surround all
   target columns with specified character(s). 
-- [TEXT &raquo; csv(positions)](../expressions/TEXTexpression#csvposition1position2): fixed parse logic to handle text 
+- [TEXT &raquo; csv(positions)](../expressions/TEXTexpression#csvpositions): fixed parse logic to handle text 
   with double quotes and text with delimiter (will be surrounded with double quotes).
 - [JSON &raquo; `compact(removeEmpty)`](../expressions/JSONexpression#compactremoveempty): fix code to remove null values.
 

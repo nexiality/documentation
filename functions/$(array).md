@@ -27,8 +27,8 @@ By default, [`nexial.textDelim`](../systemvars/index#nexial.textDelim) has the
 
 ### Available Functions
 
-#### `$(array|append|myarray|item)`
-Add an element (`item`) to the beginning of the target array (`myarray`), and then render the resulting array.
+#### `$(array|append|inputArray|item)`
+Add an element (`item`) to the beginning of the target array (`inputArray`), and then render the resulting array.
 
 **Example**<br/>
 Script<br/>
@@ -39,8 +39,8 @@ Output<br/>
 
 -----
 
-#### `$(array|ascending|myarray)`
-Renders the target array (`myarray`) in ascending order. The order is determined lexicographically via the ASCII values 
+#### `$(array|ascending|inputArray)`
+Renders the target array (`inputArray`) in ascending order. The order is determined lexicographically via the ASCII values 
 of the array elements.
 
 **Example**<br/>
@@ -52,8 +52,8 @@ Output<br/>
 
 -----
 
-#### `$(array|descending|myarray)`
-Renders the target array (`myarray`) in descending order. The order is determined lexicographically via the ASCII values 
+#### `$(array|descending|inputArray)`
+Renders the target array (`inputArray`) in descending order. The order is determined lexicographically via the ASCII values 
 of the array elements.
 
 **Example**<br/>
@@ -65,8 +65,8 @@ Output<br/>
 
 -----
 
-#### `$(array|distinct|myarray)`
-Renders the target array (`myarray`) by removing duplicated elements.
+#### `$(array|distinct|inputArray)`
+Renders the target array (`inputArray`) by removing duplicated elements.
 
 **Example**<br/>
 Script<br/>
@@ -77,8 +77,8 @@ Output<br/>
 
 -----
 
-#### `$(array|index|myarray|item)`
-Renders the position within the target array (`myarray`) where the first occurrence of a specified element (`item`) is 
+#### `$(array|index|inputArray|item)`
+Renders the position within the target array (`inputArray`) where the first occurrence of a specified element (`item`) is 
 found.  For example, `$(array|index|Apple,Orange,Banana|Orange)` would return `1`.  
 Note that Nexial is zero-based.
 
@@ -91,8 +91,8 @@ Output<br/>
 
 -----
 
-#### `$(array|insert|myarray|index|item)`
-Add an element (`item`) into the target array (`myarray`), at the specified position (`index`), and then render the 
+#### `$(array|insert|inputArray|index|item)`
+Add an element (`item`) into the target array (`inputArray`), at the specified position (`index`), and then render the 
 resulting array.
 
 **Example**<br/>
@@ -104,8 +104,8 @@ Output<br/>
 
 -----
 
-#### `$(array|item|myarray|index)`
-Renders the element (`item`) of the specified position (`index`, zero-based) in the target array (`myarray`).  
+#### `$(array|item|inputArray|index)`
+Renders the element (`item`) of the specified position (`index`, zero-based) in the target array (`inputArray`).  
 For example, `$(array|item|Salt,Pepper,Sugar,Cheese|3)` would render `Cheese`. 
 
 **Example**<br/>
@@ -117,8 +117,8 @@ Output<br/>
 
 -----
 
-#### `$(array|length|myarray)`
-Renders the length of the target array (`myarray`).  An empty array would render `0`.
+#### `$(array|length|inputArray)`
+Renders the length of the target array (`inputArray`).  An empty array would render `0`.
 
 **Example**<br/>
 Script<br/>
@@ -129,7 +129,7 @@ Output<br/>
 
 -----
 
-#### `$(array|pack|myarray)`
+#### `$(array|pack|inputArray)`
 Remove all empty or null items in the array.
 
 **Example**<br/>
@@ -141,8 +141,8 @@ Output<br/>
 
 -----
 
-#### `$(array|prepend|myarray|item)`
-Add an element (`item`) to the end of the target array (`myarray`), and then render the resulting array.
+#### `$(array|prepend|inputArray|item)`
+Add an element (`item`) to the end of the target array (`inputArray`), and then render the resulting array.
 
 **Example**<br/>
 Script<br/>
@@ -153,8 +153,8 @@ Output<br/>
 
 -----
 
-#### `$(array|remove|myarray|index)`
-Remove an element (`item`) from the array (`myarray`), at the specified position (`index`), and then render the 
+#### `$(array|remove|inputArray|index)`
+Remove an element (`item`) from the array (`inputArray`), at the specified position (`index`), and then render the 
 resulting array.
 
 **Example**<br/>
@@ -166,7 +166,7 @@ Output<br/>
 
 -----
 
-#### `$(array|replica|myarray|count)`
+#### `$(array|replica|inputArray|count)`
 Transform the current array to multiple copies of itself (append the array to itself).  The 
 `count` is used to specify the number of times to repeat.  For example, `$(array|replica|a,b,c|2)` would yield a 
 array of `a,b,c,a,b,c`.
@@ -180,7 +180,7 @@ Output<br/>
 
 -----
 
-#### `$(array|replicaUntil|myarray|size)`
+#### `$(array|replicaUntil|inputArray|size)`
 Transform the current array to multiple copies of itself (append the array to itself), 
 until the length of the array is the same as `size`.  For example, `$(array|replicaUntil|a,b,c|7)` would yield 
 a list of `a,b,c,a,b,c,a`.
@@ -194,7 +194,7 @@ Output<br/>
 
 -----
 
-#### `$(array|reverse|myarray)`
+#### `$(array|reverse|inputArray)`
 Renders the array (`myarray`) in its reversed order.
 
 **Example**<br/>
@@ -206,7 +206,7 @@ Output<br/>
 
 -----
 
-#### `$(array|subarray|myarray|start|end)`
+#### `$(array|subarray|inputArray|start|end)`
 Renders a portion of the target array (`myarray`), based on the specified `start` and `end` positions. One may specify
 `end` as `-1` to signify the last position of the target array.
 
