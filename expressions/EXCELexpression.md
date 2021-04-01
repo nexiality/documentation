@@ -359,12 +359,12 @@ Retrieves a list of worksheets in the referenced Excel file in the order in whic
 
 -----
 
-#### `writeAcross(start,value1,value2,value3,...)`
-Starting from the cell location specified via `start`, save into cells the values as specified via 
-`value1`, `value2`, `value3`, ... by moving to the right for each value specified.  For example,  
-`[EXCEL( ${file} ) => read(Sheet1,B2:F20) writeAcross(B3,Banana,Grape,Apple,Kiwi,Black Concurrent]` would write the 
-list of fruits (Banana, Grape, Apple, Kiwi, and Black Concurrent) into Sheet1, starting from `B3`.  Therefore  `Banana` 
-is stored to `B3`, `Grape` is stored to `C3`, Apple to `D3`, and so on:
+#### `writeAcross(startAddress,values)`
+Starting from the cell location specified via `startAddress`, save into cells the values as specified via 
+`values` by moving to the right for each value specified.  
+For example,  `[EXCEL( ${file} ) => read(Sheet1,B2:F20) writeAcross(B3,Banana,Grape,Apple,Kiwi,Black Concurrent]`
+would write the list of fruits (Banana, Grape, Apple, Kiwi, and Black Concurrent) into Sheet1, starting from `B3`.
+Therefore  `Banana` is stored to `B3`, `Grape` is stored to `C3`, Apple to `D3`, and so on:
 
 **Example**
 
@@ -379,9 +379,12 @@ is stored to `B3`, `Grape` is stored to `C3`, Apple to `D3`, and so on:
 
 -----
 
-#### `writeDown(start,value1,value2,value3,...)`
-Store `value1`, `value2`, so on, starting from the cell position denoted by `start`.  See  
-**[`writeAcross(start,value1,value2,value3,...)`](#writeacross(start,value1,value2,value3,...))** for more details.
+#### `writeDown(startAddress,values)`
+Starting from the cell location specified via `startAddress`, save into cells the values as specified via 
+`values` by moving to the down for each value specified.  
+For example,  `[EXCEL( ${file} ) => read(Sheet1,B2:F20) writeDown(B3,Banana,Grape,Apple,Kiwi,Black Concurrent]`
+would write the list of fruits (Banana, Grape, Apple, Kiwi, and Black Concurrent) into Sheet1, starting from `B3`.
+Therefore  `Banana` is stored to `B3`, `Grape` is stored to `B4`, Apple to `B5`, and so on:
 
 **Example**
 

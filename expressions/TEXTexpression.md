@@ -654,6 +654,11 @@ Output:<br/>
 
 -----
 
+#### `text`
+Retrieve the text from this Text Expression.
+
+-----
+
 #### `title`
 Turn text into Title Case, while the first letter of every word is capitalized.
 
