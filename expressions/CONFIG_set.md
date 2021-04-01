@@ -1,10 +1,10 @@
 ---
 layout: minified
-title: CONFIG_set
+title: set(key,value)
 parent: CONFIGexpression
 ---
 
-#### `set(key, value)`
+#### `set(key,value)`
 sets `value` to the given `key` and returns the updated CONFIG data.
 
 **Example**<br/>

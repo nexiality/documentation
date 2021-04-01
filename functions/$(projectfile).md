@@ -20,8 +20,8 @@ For example,<br/>
 
 ### Available Functions
 
-#### `$(projectfile|text|...)`
-Retrieve the content of a project file.  Assumes that the target file has "text" content (not binary).
+#### `$(projectfile|text|file)`
+Retrieve the content of a project file specified as `file`.  Assumes that the target file has "text" content (not binary).
 
 ### Example
 Suppose we have the following test **Script**:<br/>

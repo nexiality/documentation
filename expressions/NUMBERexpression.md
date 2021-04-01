@@ -50,6 +50,11 @@ Output:<br/>
 
 -----
 
+#### `average(numbers)`
+Calculate the average current number and one or more numbers specifies as `numbers`
+
+-----
+
 #### `ceiling`
 round up current number.
 

@@ -12,8 +12,8 @@ comments: true
 
 
 ### Operations
-#### `after(criteria)`
-Retain the portion of text after the specified `criteria`.
+#### `after(text)`
+Retain the portion of text after the specified `text`.
 
 **Example**<br/>
 Script:<br/>
@@ -24,7 +24,7 @@ Output:<br/>
 
 -----
 
-#### `append(text,text,text,...)`
+#### `append(text)`
 Add one or more text to the end of `text`.
 
 **Example**<br/>
@@ -36,8 +36,8 @@ Output:<br/>
 
 -----
 
-#### `appendIfMissing(appendWith)`
-Add `appendWith` to the end of current text ONLY if `appendWith` is currently not at the end of text.
+#### `appendIfMissing(text)`
+Add `text` to the end of current text ONLY if `text` is currently not at the end of text.
 
 **Example**<br/>
 Script:<br/>
@@ -60,11 +60,11 @@ Output:<br/>
 
 -----
 
-#### `base64decodeThenSave(file,append)`
-Or, `base64decode-then-save(file,append)`. 
-BASE64 decode current `TEXT` content and saving the decoded bytes to `file`. This operation assumes that current `TEXT` 
-content is BASE64 encoded, and that the decoded content is binary (e.g. Excel, PDF or Image file). Use `append` to 
-append the decoded content to an existing file.
+#### `base64decodeThenSave(path,append)`
+Or, `base64decode-then-save(path,append)`. 
+BASE64 decode current `TEXT` content and saving the decoded bytes to file specified via `path`. This operation assumes 
+that current `TEXT` content is BASE64 encoded, and that the decoded content is binary (e.g. Excel, PDF or Image file).
+Use `append` to append the decoded content to an existing file.
 
 **Example**<br/>
 Script:<br/>
@@ -92,8 +92,8 @@ Output:<br/>
 
 -----
 
-#### `before(criteria)`
-Retain the portion of text before the specified `criteria`.
+#### `before(text)`
+Retain the portion of text before the specified `text`.
 
 **Example**<br/>
 Script:<br/>
@@ -104,8 +104,8 @@ Output:<br/>
 
 -----
 
-#### `between(start,end)`
-Retain the portion of text that is between the specified `start` and `end` text.
+#### `between(after,before)`
+Retain the portion of text that is between the specified `after` and `before` text.
 
 **Example**<br/>
 Script:<br/>
@@ -139,8 +139,8 @@ Output:<br/>
 
 -----
 
-#### `csv(position1,position2,...)`
-Converts the given text content to csv format, separated by the given position numbers for each line.
+#### `csv(positions)`
+Converts the given text content to csv format, separated by the given position numbers for each line specified via `positions`.
 
 **Example**<br/>
 Text input could be a text itself or a path to text file.
@@ -423,8 +423,8 @@ Script:<br/>
 
 -----
 
-#### `prepend(text,text,text,...)`
-Add one or more text to the beginning of `text`.
+#### `prepend(text)`
+Add one or more `text` to the beginning of current text.
 
 **Example**<br/>
 Script:<br/>
@@ -435,8 +435,8 @@ Output:<br/>
 
 -----
 
-#### `prependIfMissing(prependWith)`
-Add `prependWith` to the beginning of current text ONLY if `prependWith` if currently not at the beginning of text.
+#### `prependIfMissing(text)`
+Add `text` to the beginning of current text ONLY if `text` if currently not at the beginning of text.
 
 **Example**<br/>
 Script:<br/>
@@ -447,8 +447,8 @@ Output:<br/>
 
 -----
 
-#### `remove(criteria)`
-Remove any and all occurrences of `criteria`.
+#### `remove(text)`
+Remove any and all occurrences of `text`.
 
 **Example**<br/>
 Script:<br/>
@@ -485,23 +485,24 @@ Output:<br/>
 
 -----
 
-#### `removeLine(match)`
+#### `removeLines(match)`
 Remove lines from current expression that matches the specified `match`. This operation supports PolyMatcher.
 
 {% include _polymatcher.md %}
 
 -----
 
-#### `removeRegex(regex,multiLine,caseSensitive)`
-Remove character(s) that matches `regex`. Optionally, one can specify `true` for `multiLine` to support text content
-that spans across multiple lines. By default, this operation will perform regular expression pattern matching 
+#### `removeRegex(regex,options)`
+Remove character(s) that matches `regex`.  
+Optionally, one can specify two options `multiLine`, `caseSensitivity`. Both the parameters are optional.
+
+1. `multiLine` :- `true` to support text content that spans across multiple lines. Default value set to `true`. 
+**This MUST BE FIRST PARAMETER after regex**. When enabling the multi-line mode, be sure to start the `regex`
+with a `^` character to signify the start of a line, and to end the `regex` with a `\n` character (not `$`)
+to represent the end of line.
+2. `caseSensitivity` : By default, this operation will perform regular expression pattern matching 
 case-sensitively. One can set the `caseSensitive` parameter as `false` to enforce a case-insensitive pattern matching.
-
-Both the `multiLine` and `caseSensitive` parameters are optional, and they are by default set to `true` and `false`, 
-respectively.
-
-When enabling the multi-line mode, be sure to start the `regex` with a `^` character to signify the start of a line, and
-to end the `regex` with a `\n` character (not `$`) to represent the end of line.
+Default value set to `false`. **This MUST BE SECOND PARAMETER after regex**, immediately after `multiLine`. 
 
 **Example**<br/>
 Script:<br/>
@@ -557,8 +558,8 @@ Output:<br/>
 
 -----
 
-#### `replaceRegex(searchRegex,replaceWith)`
-Perform a regex-search on text using `searchRegex` and replace all matches with `replaceWith`.  Note that grouping 
+#### `replaceRegex(regexSearch,replaceWith)`
+Perform a regex-search on text using `regexSearch` and replace all matches with `replaceWith`.  Note that grouping 
 character `(` and `)` should be escaped as `\(...\)`.  For example,  `[TEXT(...) => replaceRegex(\(chicken\),beef)]`
 
 **Example**<br/>

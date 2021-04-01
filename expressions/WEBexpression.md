@@ -52,6 +52,12 @@ return first operation result as `PASS` or `FAIL`. One can use a different varia
 
 ### Operations
 
+#### `allPass`
+This returns the last result of all executed web operations. Checks if all operations were successful or not and 
+returns `true` or `false`.
+
+-----
+
 #### `click(locator)`
 This clicks on element specified via locator. If one wants to perform operation `clickByLabel`, provided label as input 
 must be with prefix `text=`. So for example, if locator is `text=LOGIN`, this clicks on the element having label `LOGIN`.
@@ -69,13 +75,14 @@ Output:<br/>
 
 -----
 
-#### `deselect(locator,option1,option2,option3...)`
+#### `deselect(locator,options)`
 This automates deselection of one or multiple `OPTION` elements from `select` element identified via locator. If 
 multiple `OPTION` elements specified, it deselects multiple options from the list-box (i.e. `<select multiple ...>`).
+Multiple options specified via `options` must be separated by [`nexial.textDelim`](./../systemvars/index#nexial.textDelim)
 
 **Example**<br/>
 In this example, selection and deselection of values is done from the `sample.html` page using 
-[`select(locator,option1,option2,option3...)`](#selectlocatoroption1option2option3) and then `deselect(locator,option1,option2,option3...)`
+[`select(locator,options)`](#selectlocatoroptions) and then `deselect(locator,options)`
 operation.
 
 Sample HTML:<br/>
@@ -101,15 +108,15 @@ Output:<br/>
 
 -----
 
-#### `fetchAsCsv(locator1,locator2,locator3...)`
-This stores the values of web elements specified via locators to [CSV](CSVexpression) format with the headers `locator` 
-and `value`.
+#### `fetchAsCsv(locators)`
+This stores the values of web elements specified via locators separated by [`nexial.textDelim`](../systemvars/index#nexial.textDelim)
+to [CSV](CSVexpression) format with the headers `locator` and `value`.
 
 **Example**<br/>
 In this example, the first step is to open the URL and login the site
 [`(https://opensource-demo.orangehrmlive.com/)`](https://opensource-demo.orangehrmlive.com/) using [`type`](#typelocatorvalue)
 and [`click`](#clicklocator) operations. If `allPass` is `true` and login is done successfully, then add new user. 
-Details of new user is stored in the `user.csv` file by using `fetchAsCsv(locator1,locator2,locator3...)`
+Details of new user is stored in the `user.csv` file by using `fetchAsCsv(locators)`
 operation.
 
 Script:<br/>
@@ -128,13 +135,14 @@ Output Excel:<br/>
 
 -----
 
-#### `select(locator,option1,option2,option3...)`
+#### `select(locator,options)`
 This automates selection of one or multiple `OPTION` elements from `select` element identified via locator. If multiple 
 `OPTION` elements specified, it selects multiple options from the list-box (i.e. `<select multiple ...>`).
+Multiple options specified via `options` must be separated by [`nexial.textDelim`](./../systemvars/index#nexial.textDelim)
 
 **Example**<br/>
 In this example, selection of values is done from the `sample.html` page using 
-`select(locator,option1,option2,option3...)` operation.
+`select(locator,options)` operation.
 
 Sample HTML:<br/>
 ```html

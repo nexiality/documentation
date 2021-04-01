@@ -32,6 +32,11 @@ BAI2 Sample File<br/>
 
 ### Operations
 
+#### `count`
+Get the count of all records in the file and convert into `number` data type.<br/>
+
+-----
+
 #### `csv`
 Convert the file content to CSV data type.
 

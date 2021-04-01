@@ -179,8 +179,8 @@ Output:<br/>
 
 -----
 
-#### `item(index)`
-Retrieve the item on the list based on its `index`.  If invalid `index` is specified, an empty string is returned.
+#### `item(indices)`
+Retrieve the item on the list based on its `indices`.  If invalid `indices` is specified, an empty string is returned.
 
 This operation supports the retrieval of multiple items as a single [TEXT](TEXTexpression) expression. For example:
 `[LIST(a,b,c,d,e) => item(0,1,4)]` would result in the return of `a,b,e` (first, second, and fifth item).

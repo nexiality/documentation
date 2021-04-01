@@ -75,7 +75,7 @@ Output<br/>
 
 -----
 
-#### `addSecond(second)`
+#### `addSecond(seconds)`
 Add seconds to the current second part of the date instance.
 
 **Example**<br/>

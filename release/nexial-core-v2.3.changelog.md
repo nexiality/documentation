@@ -43,7 +43,7 @@ comments: true
   [CSV expression](../expressions/CSVexpression#parseconfig) and [`CSV`](../commands/csv) commands.
 
 ### Nexial Expression
-- [TEXT &raquo; `base64decodeThenSave(file,append)`] or [TEXT &raquo; `base64decode-then-save(file,append)`](../expressions/TEXTexpression): 
+- [TEXT &raquo; `base64decodeThenSave(path,append)`] or [TEXT &raquo; `base64decode-then-save(path,append)`](../expressions/TEXTexpression): 
   **NEW** operation to perform BASE64 decoding on current TEXT content and then saving the decoded content to `file`. 
   This is useful when the decoded content is expected to be binary data. 
 - [`LIST`](../expressions/LISTexpression): now supports array/list data variables, such as those derived from

@@ -43,7 +43,7 @@ Script:<br/>
 
 -----
 
-#### `base64encode()`
+#### `base64encode`
 BASE64 encoding on current binary data. This effectively transforms the current expression into a 
 [`TEXT` expression](TEXTexpression).
 
@@ -53,7 +53,7 @@ Script:<br/>
 
 -----
 
-#### `size()`
+#### `size`
 The size of current binary data as a [`NUMBER` expression](NUMBERexpression).
 
 -----
@@ -73,6 +73,11 @@ Override current binary data with the binary content of the specified `file`.
 **Example**<br/>
 Script:<br/>
 ![](image/BINARY_05.png)
+
+-----
+
+#### `text`
+Convert current binary data as a `Text` data type for [`TEXT` expression](Textexpression).
 
 -----
 

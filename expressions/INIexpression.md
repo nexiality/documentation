@@ -103,8 +103,8 @@ Output:<br/>
 
 -----
 
-#### `set(section,key,value)`
-Sets the key and value in the given section. If section is not available, creates 
+#### `set(sectionName,key,value)`
+Sets the `key` and `value` in the given section specified via `sectionName`. If section is not available, creates 
 the section and sets the key and value.
 
 **Example**<br/>
@@ -128,7 +128,7 @@ be overwritten.  Using this operation, one can put an expression on pause and r
 **Example**<br/>
 In this example, [`remove(section,key)`](#removesectionkey) operation is performed to 
 `remove(database,port)` and the `UpdatedData` is stored to extract all the values 
-from the `database` section by using [`values(section)`](#removesectionkey)
+from the `database` section by using [`values(section)`](#valuessectionkey)
 operation. 
 
 Script:<br/>
@@ -154,7 +154,7 @@ Output:<br/>
 
 -----
 
-#### `value(section,key)`
+#### `value(sectionName,key)`
 Gets the value of corresponding key from the given section
 
 **Example**<br/>

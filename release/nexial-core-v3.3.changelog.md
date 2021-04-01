@@ -51,7 +51,7 @@ comments: true
 
 
 ### [Expression](../expressions)
-- [NUMBER >> average](../expressions/NUMBERexpression#average): exclude empty values during calculation
+- [NUMBER >> average](../expressions/NUMBERexpression#averagenumbers): exclude empty values during calculation
 - [NUMBER >> multiple](../expressions/NUMBERexpression#multiplynumbers): skip over empty values during calculation
 - [NUMBER >> divide](../expressions/NUMBERexpression#dividenumbers): skip over empty values during calculation
 - [NUMBER >> add](../expressions/NUMBERexpression#addnumbers): skip over empty values during calculation

@@ -44,11 +44,11 @@ comments: true
   rename worksheet.
 - [LIST &raquo; `removeMatch(match)`](../expressions/LISTexpression#removematchmatch): **NEW** operation to remove from 
   a [`LIST`](../expressions/LISTexpression) the items that match the specified `match` criteria.
-- [LisT &raquo; `item(index)`](../expressions/LISTexpression#itemindex): support multiple indices (to concatenate 
+- [LisT &raquo; `item(indices)`](../expressions/LISTexpression#itemindices): support multiple indices (to concatenate 
   specified items into 1 text) and the use of `random` to randomly select one of the available item.
 - [TEXT &raquo; `removeRegex(regex)`](../expressions/TEXTexpression#removeregexregexmultilinecasesensitive): Now 
   supports multi-line text and case-insensitive pattern matching.
-- [TEXT &raquo; `removeLine(match)`](../expressions/TEXTexpression#removelinematch): PolyMatcher-based operation to 
+- [TEXT &raquo; `removeLine(match)`](../expressions/TEXTexpression#removelinesmatch): PolyMatcher-based operation to 
   remove one or more lines from a TEXT expression.
 
 

@@ -32,7 +32,7 @@ Also:
   **`C:\Projects\MyFirstProject\artifact\data\file.properties`**.<br/>
   ![](image/CONFIGexpression_01.png)
 
-#### `ascending()`
+#### `ascending`
 Sorts the key-value pairs in ascending order of the keys. Can also be used to sort the keys themselves. 
 
 **Example**<br/>
@@ -47,7 +47,7 @@ Sorts the key-value pairs in ascending order of the keys. Can also be used to so
 
 -----
 
-#### `descending()`
+#### `descending`
 Sorts the key-value pairs in descending order of the keys. Can also be used to sort the keys themselves.
 
 **Example**<br/>
@@ -60,7 +60,7 @@ Sorts the key-value pairs in descending order of the keys. Can also be used to s
 **Output:**<br/>
 ![](image/CONFIGexpression_20.png)
 
-#### `keys()`
+#### `keys`
 Returns all the key names as [LIST](LISTexpression).
 
 **Example**<br/>
@@ -90,8 +90,8 @@ Output<br/>
 
 -----
 
-#### `save(filePath)`
-saves the current state of this CONFIG as a "properties" file to `filePath`.
+#### `save(filepath)`
+saves the current state of this CONFIG as a "properties" file to `filepath`.
 
 **Example**<br/>
 **Config File:** file.properties<br/>
@@ -105,7 +105,7 @@ Output<br/>
 
 -----
 
-#### `set(key, value)`
+#### `set(key,value)`
 sets `value` to the given `key` and returns the updated CONFIG data.
 
 **Example**<br/>
@@ -139,7 +139,7 @@ Output<br/>
 
 -----
 
-#### `text()`
+#### `text`
 returns the content of the CONFIG data as text.
 
 **Example**<br/>
