@@ -112,6 +112,10 @@ comments: true
 ### [localdb commands](../commands/localdb)
 
 
+### [pdf commands](../commands/pdf)
+- reduced excessive (and otherwise unhelpful) logging from console during the parsing of PDF document.
+
+
 ### [web commands](../commands/web)
 - supports the automation of Edge browser embedded in another Windows application via the use of 
   `nexial.browser.embedded.appLocation` System variable. Note that this is only supported for Microsoft Edge v80 or 
