@@ -136,9 +136,9 @@ Output:<br/>
 
 -----
 
-#### `$(date|setYear|date|year)` 
+#### `$(date|setYear|date|years)` 
 Set the year portion of `date` to the specified `years`. The specified `date` is 
-  assumed in standard format (`MM/dd/yyyy HH:mm:ss`).
+assumed in standard format (`MM/dd/yyyy HH:mm:ss`).
   
 **Example**<br/>
 Script:<br/>
@@ -149,7 +149,7 @@ Output:<br/>
 
 -----
 
-#### `$(date|setMonth|date|month)`
+#### `$(date|setMonth|date|months)`
 Set the month portion of `date` to the specified months. The specified `date` is 
   assumed in standard format (`MM/dd/yyyy HH:mm:ss`).
   
@@ -162,7 +162,7 @@ Output:<br/>
 
 -----
 
-#### `$(date|setDay|date|day)`
+#### `$(date|setDay|date|days)`
 Set the day portion of `date` to the specified days. The specified `date` is assumed 
   in standard format (`MM/dd/yyyy HH:mm:ss`).  
   

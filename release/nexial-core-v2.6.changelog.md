@@ -43,7 +43,7 @@ comments: true
 - For TEXT expression, a new System variable, [`nexial.expression.resolveUrl`](../systemvars/index#nexial.expression.resolveUrl),
   is available to disable the automatic content resolution of HTTP-based resource. This System variable is by default 
   set to `true`.
-- [CSV &raquo; `parse(config)`](../expressions/CSVexpression#parseconfig): use 
+- [CSV &raquo; `parse(configs)`](../expressions/CSVexpression#parseconfigs): use 
   [`nexial.textDelim`](../systemvars/index#nexial.textDelim) as CSV delimiter when none is explicitly specified.
 - [CSV &raquo; `merge(csvVariable,refColumn)`](../expressions/CSVexpression#mergecsvVariablerefcolumn): avoid merging empty or blank rows.
 - [EXCEL &raquo; `firstCell(column,regex,maxRows)`](../expressions/EXCELexpression#firstcellcolumnregexmaxrows): **NEW** 

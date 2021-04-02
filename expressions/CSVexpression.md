@@ -77,7 +77,7 @@ We can use the `filter()` operation to limit the rows of this CSV file. Here are
 file:
 <img style="box-shadow:none;margin:0" src="image/csv_23.jpg"/>
 
-Note that the [`parse(config)`](#parse(config)) operation is only invoked one (2nd line). Using the 
+Note that the [`parse(configs)`](#parseconfigs) operation is only invoked one (2nd line). Using the 
 [`store(var)`](#store(var)) operation, we can reuse the CSV structure (in 3rd and 4th line). In this example, we 
 assigned `myCSV` to the parsed CSV structure in line 2.
 - The first filter operation limits to rows where the column `First Name` is exactly `David`. In this case, there 
@@ -1005,7 +1005,7 @@ Output:<br/>
 
 #### `text`
 Transform the current CSV data to text. This would be the plain text rendition of the CSV content. Note that the 
-latest CSV format as specified via the **[`parse(config)`](#parse(config))** operation is observed and will affect the 
+latest CSV format as specified via the **[`parse(configs)`](#parseconfigs)** operation is observed and will affect the 
 text output.
 
 Script:<br/>

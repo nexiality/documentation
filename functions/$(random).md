@@ -102,8 +102,8 @@ Output<br/>
 
 -----
 
-#### `$(random|characters|inputCharacters|length)`
-Render a random string based on the specified `inputCharacters` and the  specified `length`. This can be particularly useful 
+#### `$(random|characters|input|length)`
+Render a random string based on the specified `input` and the  specified `length`. This can be particularly useful 
 to validate functionality with specified characteristics on input characters, such as password. For example, 
 `$(random|characters|abcdefghijklmnopqrstuvwxyz!@#$%^*()|8)` will render 8 characters randomly from the 
 **`abcdefghijklmnopqrstuvwxyz!@#$%^*()`** range. 

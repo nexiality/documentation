@@ -52,7 +52,7 @@ Output<br/>
 -----
 
 #### `addMinute(minutes)`
-Add minutes to the current minute part of the date instance.
+Add `minutes` to the current _minute_ part of the date instance.
 
 **Example**<br/>
 Script<br/>
@@ -64,7 +64,7 @@ Output<br/>
 -----
 
 #### `addMonth(months)`
-Add months to the current month part of the date instance.
+Add `months` to the current _month_ part of the date instance.
 
 **Example**<br/>
 Script<br/>
@@ -76,7 +76,7 @@ Output<br/>
 -----
 
 #### `addSecond(seconds)`
-Add seconds to the current second part of the date instance.
+Add `seconds` to the current _second_ part of the date instance.
 
 **Example**<br/>
 Script<br/>
@@ -88,7 +88,7 @@ Output<br/>
 -----
 
 #### `addYear(years)`
-Add years to the current year part of the date instance.
+Add `years` to the current _year_ part of the date instance.
 
 **Example**<br/>
 Script<br/>
@@ -99,12 +99,12 @@ Output<br/>
 
 -----
 
-#### `format(targetFormat)`
-Transform the same date instance into another textual form, using the specified  targetFormat. 
-Use epoch to format date as timestamp. Use informal to format date in colloquial, non-exact manner that mimic human 
-conversation. For example, informal format would output about a minute ago instead of 00:00:57, or about a month and a 
-half ago rather than 2018/08/24 00:01:32. The informal format is suitable to use in conjunction with the 
-sound » speak(text) command.
+#### `format(pattern)`
+Transform the same date instance into another textual form, using the specified  `pattern`. 
+Use `epoch` to format date as timestamp. Use `informal` to format date in colloquial, non-exact manner that mimic human 
+conversation. For example, `informal` format would output about a minute ago instead of 00:00:57, or about a month and a 
+half ago rather than 2018/08/24 00:01:32. The `informal` format is suitable to use in conjunction with the 
+[`sound » speak(text)`](../commands/sound/sound/speak(text)) command.
 
 **Example**<br/>
 Script<br/>
@@ -116,7 +116,7 @@ Output<br/>
 -----
 
 #### `setDay(days)`
-Set the day part of the date instance.
+Set the `day` part of the date instance.
 
 **Example**<br/>
 Script<br/>
@@ -141,7 +141,7 @@ Output<br/>
 -----
 
 #### `setHour(hours)`
-Set the hour part of the date instance.  Note that the value represents the 24-hour system (i.e. 22 means 10 p.m.).
+Set the `hour` part of the date instance.  Note that the value represents the 24-hour system (i.e. 22 means 10 p.m.).
 
 **Example**<br/>
 Script<br/>
@@ -153,7 +153,7 @@ Output<br/>
 -----
 
 #### `setMinute(minutes)`
-Set the minute part of the date instance.
+Set the `minute` part of the date instance.
  
 **Example**<br/>
 Script<br/>
@@ -165,7 +165,7 @@ Output<br/>
 -----
 
 #### `setMonth(months)`
-Set the month part of the date instance.
+Set the `month` part of the date instance.
 
 **Example**<br/>
 Script<br/>
@@ -177,7 +177,7 @@ Output<br/>
 -----
 
 #### `setSecond(seconds)`
-Set the second part of the date instance.
+Set the `second` part of the date instance.
 
 **Example**<br/>
 Script<br/>
@@ -189,7 +189,7 @@ Output<br/>
 -----
 
 #### `setYear(years)`
-Set the year part of the date instance.
+Set the `year` part of the date instance.
 
 **Example**<br/>
 Script<br/>

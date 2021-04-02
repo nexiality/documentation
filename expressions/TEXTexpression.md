@@ -104,8 +104,8 @@ Output:<br/>
 
 -----
 
-#### `between(after,before)`
-Retain the portion of text that is between the specified `after` and `before` text.
+#### `between(before,after)`
+Retain the portion of text that is between the specified `before` and `after` text.
 
 **Example**<br/>
 Script:<br/>

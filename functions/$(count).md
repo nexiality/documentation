@@ -87,11 +87,11 @@ Output<br/>
 
 -----
 
-#### `$(count|any|text|characters)`
-renders the number of matches in `text` based on the characters listed in `characters`.  
+#### `$(count|any|text|include)`
+renders the number of matches in `text` based on the characters listed in `include`.  
 For example, `$(count|any|This is a test.|ist)` would yield `7` since `This is a test.`
 - duplicate character in `characters` will not alter the result (i.e. no duplicate count)
-- character in `characters` is not order specific
+- character in `include` is not order specific
 
 **Example**<br/>
 Script<br/>
@@ -126,8 +126,8 @@ Output<br/>
 
 -----
 
-#### `$(count|sequence|text|seq)`
-Renders the number of matches in `text` based on the specified `seq`. 
+#### `$(count|sequence|text|search)`
+Renders the number of matches in `text` based on the specified `search`. 
 For example, `$(count|sequence|Doo be doo be doo|oo)` would render `3`.
 
 **Example**<br/>
