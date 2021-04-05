@@ -107,6 +107,7 @@ comments: true
 
 
 ### [excel commands](../commands/excel)
+- [`xls2xlsx(xlsFile,xlsxFile)`](../commands/excel/xls2xlsx(xlsFile,xlsxFile)): **NEW** command to convert XLS to XLSX.
 
 
 ### [localdb commands](../commands/localdb)
@@ -116,6 +117,11 @@ comments: true
 - reduced excessive (and otherwise unhelpful) logging from console during the parsing of PDF document.
 
 
+### [rdbms commands](../commands/rdbms)
+- [`resultToCSV(var,csvFile,delim,showHeader)`](../commands/rdbms/resultToCSV(var,csvFile,delim,showHeader)): removed 
+  trailing newline character.
+
+
 ### [web commands](../commands/web)
 - supports the automation of Edge browser embedded in another Windows application via the use of 
   `nexial.browser.embedded.appLocation` System variable. Note that this is only supported for Microsoft Edge v80 or 
@@ -123,6 +129,11 @@ comments: true
 - supports browser-level logging for Microsoft Edge browser via 
   [`nexial.browser.logEdge`](../systemvars/index.html#nexial.browser.logEdge) System variable. 
 - code fix to prevent pre-emptive browser initialization (and opening) after initial scenario execution. 
+
+
+### [ws commands](../commands/ws)
+- For BASIC authentication, `nexial.ws.basic.password` is no longer required (edge cases). `nexial.ws.basic.user` is 
+  still required for BASIC authentication.
 
 
 ### [tn.5250 commands](../commands/tn.5250)

@@ -26,3 +26,4 @@ The "excel" command type represents a series of automation commands regarding ex
 - [`writeAcross(file,worksheet,startCell,array)`](writeAcross(file,worksheet,startCell,array))
 - [`writeDown(file,worksheet,startCell,array)`](writeDown(file,worksheet,startCell,array))
 - [`writeVar(var,file,worksheet,startCell)`](writeVar(var,file,worksheet,startCell))
+- [`xls2xlsx(xlsFile,xlsxFile)`](xls2xlsx(xlsFile,xlsxFile))
