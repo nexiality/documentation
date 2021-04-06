@@ -50,6 +50,7 @@ redirect_from:
 - [CrossBrowserTesting Integration](CrossBrowserTestingIntegration)
 - [Script failing on BrowserStack](ScriptFailingonBrowserStack)
 - [Reduce web automation flakiness with wait strategies](ReduceWebAutomationFlakiness)
+- [Wait Strategies for Web Automation](WebAutomationWaitStrategy)
 - [Improving IE Automation](WebAutomationOnIE)
 - [Fixing chromedriver "DevToolsActivePort" error](ChromeDevToolError)
 - [Forcefully update or omit webdriver updates](HOWTOForcefullyUpdateWebDriver)

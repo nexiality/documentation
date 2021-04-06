@@ -2619,8 +2619,12 @@
         <td>false</td>
         <td class="read-write">read/write</td>
         <td>
-            Enable auto-continuation mode so that browser will wait for requested element with 10 ms poll. This
-            technique can help reduce the use of implicit or explicit wait.
+            When set to <code>true</code>, Nexial will enable explicit wait during Web automation with a poll of 10 ms
+            until the corresponding condition is reached or the value of
+            <a href="#nexial.pollWaitMs"><code>nexial.pollWaitMs</code></a> is reached.. This technique can help reduce
+            the use of implicit wait, which can be unreliable.<br/>
+            <br/>
+            The default is <code>false</code>.
         </td>
     </tr>
     <tr>
