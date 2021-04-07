@@ -27,3 +27,6 @@ behavior, for example. Note that the function/control key sequence should be enc
 
 
 ### See Also
+- [`clearCombo(name)`](clearCombo(name))
+- [`saveComboOptions(var,name)`](saveComboOptions(var,name))
+- [`saveComboOptionsByLocator(var,locator)`](saveComboOptionsByLocator(var,locator))

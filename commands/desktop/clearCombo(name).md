@@ -7,16 +7,17 @@ comments: true
 ---
 
 ### Description
-- This command is used to clear the text from the Combo box.
-- In other words the command will clear the value for the combo box  and pass or else fail otherwise.
+This command instructs Nexial to clear off the text (or the selection) from a ComboBox denoted by `name`. If the 
+specified component is not a ComboBox or if the ComboBox component is currently not enabled, then the corresponding
+step will be determined as FAIL.
 
 
 ### Parameters
 - **name** - this parameter is the name of the Combo box.(The label name displayed in the UI for the element)
 
 
-### Example
-
-
 ### See Also
 - [`clear(locaotr)`](clear(locator))
+- [`saveComboOptions(var,name)`](saveComboOptions(var,name))
+- [`saveComboOptionsByLocator(var,locator)`](saveComboOptionsByLocator(var,locator))
+- [`selectCombo(name,text)`](selectCombo(name,text))

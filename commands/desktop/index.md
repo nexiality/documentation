@@ -80,6 +80,8 @@ If you are new to desktop automation via Nexial, please first familiarize yourse
 - [`resize(width,height)`](resize(width,height))
 - [`saveAllTableRows(var,csv)`](saveAllTableRows(var,csv))
 - [`saveAttributeByLocator(var,locator,attribute)`](saveAttributeByLocator(var,locator,attribute))
+- [`saveComboOptions(var,name)`](saveComboOptions(var,name))
+- [`saveComboOptionsByLocator(var,locator)`](saveComboOptionsByLocator(var,locator))
 - [`saveElementCount(var,name)`](saveElementCount(var,name))
 - [`saveFirstListData(var,contains)`](saveFirstListData(var,contains))
 - [`saveFirstMatchedListIndex(var,contains)`](saveFirstMatchedListIndex(var,contains))
