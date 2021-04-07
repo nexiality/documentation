@@ -110,7 +110,7 @@ comments: true
 - [`saveComboOptionsByLocator(var,locator)`](../commands/desktop/saveComboOptionsByLocator(var,locator)): **NEW** 
   command to capture the available options of a ComboBox component as a list.
 - [`selectCombo(name,text)`](../commands/desktop/selectCombo(name,text)): fix flaky automation when dealing with 
-  SingleSelectList component that contains nested SingleSelectList components. 
+  SingleSelectList component that contains nested SingleSelectList components.
 
 
 ### [excel commands](../commands/excel)
