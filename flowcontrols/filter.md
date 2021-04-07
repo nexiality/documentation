@@ -111,6 +111,6 @@ context of [Flow Control](../flowcontrols):
 
 ### See Also
 This filter specification will be used within the following operations:
-- [CSV &raquo; `filter(conditions)`](../expressions/CSVexpression#filter(conditions))
-- [CSV &raquo; `removeRows(conditions)`](../expressions/CSVexpression#removerows(conditions))
+- [CSV &raquo; `filter(conditions)`](../expressions/CSVexpression#filterconditions)
+- [CSV &raquo; `removeRows(conditions)`](../expressions/CSVexpression#removerowsconditions)
 - [Flow Controls](../flowcontrols)

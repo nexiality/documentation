@@ -36,11 +36,11 @@ comments: true
 
 
 ### [Built-in Functions](../functions)
-- [`$(execution|plan|name)`](../functions/$(execution)#): **NEW** function to reveal the plan file name currently in 
+- [`$(execution|plan|name)`](../functions/$(execution)#executionplanname): **NEW** function to reveal the plan file name currently in 
   execution.
-- [`$(execution|plan|fullpath)`](../functions/$(execution)#): **NEW** function to reveal the fully qualified path for 
+- [`$(execution|plan|fullpath)`](../functions/$(execution)#executionplanfullpath): **NEW** function to reveal the fully qualified path for 
   the plan currently in execution.
-- [`$(execution|plan|index)`](../functions/$(execution)#): **NEW** function to reveal the plan step (i.e. row number) 
+- [`$(execution|plan|index)`](../functions/$(execution)#executionplanindex): **NEW** function to reveal the plan step (i.e. row number) 
   of the plan currently in execution.
 
 

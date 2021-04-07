@@ -70,11 +70,11 @@ comments: true
 - [CSV &raquo; `replaceColumnRegex(searchFor,replaceWith,columnNameOrIndices`](../expressions/CSVexpression#replacecolumnregexsearchforreplacewithcolumnnameorindices):
   - the parameter `columnNameOrIndices` now can be expressed as `*` to indicate **ALL** columns.
   - fixed error when working on a file with columns wrapped in double quotes.
-- [CSV &raquo; `saveRowData(rowIndex)`](../expressions/CSVexpression#saveRowData(rowIndex)): save a row of CSV data
+- [CSV &raquo; `saveRowData(rowIndex)`](../expressions/CSVexpression#saverowdatarowindex): save a row of CSV data
   as data variable by using the corresponding CSV header name as data variable name.
 - [CSV &raquo; `removeRows(conditions)`](../expressions/CSVexpression#removerowsconditions): now supports the 
   removal of one or more rows based on row index. Note that row index is 0-based and for CSV that is 
-  [parsed](../expressions/CSVexpression#parseconfig) with `header=true`, row 0 is the row **AFTER** the header.
+  [parsed](../expressions/CSVexpression#parseconfigs) with `header=true`, row 0 is the row **AFTER** the header.
 - [CSV expression](../expressions/CSVexpression): fix issue dealing with content that contains delimiter or double quotes.
 - [CSV >> `parse(configs)`](../expressions/CSVexpression#parseconfigs): **NEW** config - `keepQuote` - to keep or remove
   quote after parsing. This only apply to column values where the quote is not needed (such as those without delimiter).

@@ -37,10 +37,10 @@ comments: true
   Default is false.
 - [`nexial.csv.maxColumns`](../systemvars/index#nexial.csv.maxColumns): **NEW** System variable to alter default max.
   number of columns to allow during the parsing of a CSV file. Applicable to 
-  [CSV expression](../expressions/CSVexpression#parseconfig) and [`CSV`](../commands/csv) commands.
+  [CSV expression](../expressions/CSVexpression#parseconfigs) and [`CSV`](../commands/csv) commands.
 - [`nexial.csv.maxColumnWidth`](../systemvars/index#nexial.csv.maxColumnWidth): **NEW** System variable to alter default 
   max. number of characters allowed per column during the parsing of a CSV file. Applicable to 
-  [CSV expression](../expressions/CSVexpression#parseconfig) and [`CSV`](../commands/csv) commands.
+  [CSV expression](../expressions/CSVexpression#parseconfigs) and [`CSV`](../commands/csv) commands.
 
 ### Nexial Expression
 - [TEXT &raquo; `base64decodeThenSave(path,append)`] or [TEXT &raquo; `base64decode-then-save(path,append)`](../expressions/TEXTexpression): 

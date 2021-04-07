@@ -119,7 +119,7 @@ Output:<br/>
 #### `binary`
 Convert current text into a [`BINARY`](BINARYexpression) expression. Generally speaking, a
 [`BINARY`](BINARYexpression) expression by itself isn't very useful. One can use its
-[`save(filepath)`](BINARYexpression#savefilepath) operation to persist binary data into an external file.
+[`save(path)`](BINARYexpression#savepath) operation to persist binary data into an external file.
 
 **Example**<br/>
 Script:<br/>
@@ -410,7 +410,7 @@ John------
 
 #### `parseAsCsv(configs)`
 Parse the current text content as CSV. This operation supports the same parsing options found in 
-[CSV &raquo; `parse(configs)`](CSVexpression#parseconfig).
+[CSV &raquo; `parse(configs)`](CSVexpression#parseconfigs).
 
 **Example**<br/>
 In this example, the `parseAsCsv(configs)` operation is invoked on a TEXT expression. The next operation, `store(var)`,

@@ -67,15 +67,15 @@ using with Nexial.
 
   ###### [CSV expression]
   - [CSV » `htmlTable`](../expressions/CSVexpression#htmltable): **NEW** operation to render CSV content into a HTML table.
-  - [CSV » `groupCount(columns)`](../expressions/CSVexpression#groupcount(columns)): **NEW** operation to create new 
+  - [CSV » `groupCount(columns)`](../expressions/CSVexpression#groupcountcolumns): **NEW** operation to create new 
     CSV with count information of columns with same data.
-  - [CSV » `groupSum(columns)`](../expressions/CSVexpression#groupsum(columns)): **NEW** operation to render new CSV 
+  - [CSV » `groupSum(columns)`](../expressions/CSVexpression#groupsumcolumns): **NEW** operation to render new CSV 
     with sum information grouped by columns with same data.
-  - [CSV &raquo; `removeColumns(namesorindices)`](../expressions/CSVexpression#removecolumns(namesorindices)): now 
+  - [CSV &raquo; `removeColumns(namesorindices)`](../expressions/CSVexpression#removecolumnscolumnnamesorindices): now 
     supports one or many columns referenced by name or index (zero-based); separated by comma.
 
   ###### [EXCEL expression]
-  - fixed [`clear((range))`](../expressions/EXCELexpression#clear(range)); code was previously missing last column.
+  - fixed [`clear((range))`](../expressions/EXCELexpression#clearrange); code was previously missing last column.
 
   ###### [NUMBER expression]
   - fixed [NUMBER expression](../expressions/NUMBERexpression) when dealing with whole number.  Previous 

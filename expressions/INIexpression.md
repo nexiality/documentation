@@ -128,7 +128,7 @@ be overwritten.  Using this operation, one can put an expression on pause and r
 **Example**<br/>
 In this example, [`remove(section,key)`](#removesectionkey) operation is performed to 
 `remove(database,port)` and the `UpdatedData` is stored to extract all the values 
-from the `database` section by using [`values(section)`](#valuessectionkey)
+from the `database` section by using [`values(section)`](#valuessection)
 operation. 
 
 Script:<br/>
