@@ -131,36 +131,13 @@ automation. This is especially true when slower locator strategies like XPath ar
 
 Example of Nexial's [`web`](../commands/web/) commands affected by the implicit wait (via `nexial.pollWaitMs`) are 
 (not complete list):
-&nbsp;[`assertAttribute(locator,attrName,value)`](../commands/web/assertAttribute(locator,attrName,value))
-&nbsp;[`assertCssNotPresent(locator,property)`](../commands/web/assertCssNotPresent(locator,property))
-&nbsp;[`assertCssPresent(locator,property,value)`](../commands/web/assertCssPresent(locator,property,value))
-&nbsp;[`assertElementByText(locator,text)`](../commands/web/assertElementByText(locator,text))
-&nbsp;[`assertElementDisabled(locator)`](../commands/web/assertElementDisabled(locator))
-&nbsp;[`assertElementEnabled(locator)`](../commands/web/assertElementEnabled(locator))
-&nbsp;[`assertElementPresent(locator)`](../commands/web/assertElementPresent(locator))
-&nbsp;[`assertNotVisible(locator)`](../commands/web/assertNotVisible(locator))
-&nbsp;[`assertVisible(locator)`](../commands/web/assertVisible(locator))
-&nbsp;[`clickAll(locator)`](../commands/web/clickAll(locator))
-&nbsp;[`clickByLabel(label)`](../commands/web/clickByLabel(label))
-&nbsp;[`clickOffset(locator,x,y)`](../commands/web/clickOffset(locator,x,y))
-&nbsp;[`deselect(locator,text)`](../commands/web/deselect(locator,text))
-&nbsp;[`dragAndDrop(fromLocator,toLocator)`](../commands/web/dragAndDrop(fromLocator,toLocator))
-&nbsp;[`saveAttributeList(var,locator,attrName)`](../commands/web/saveAttributeList(var,locator,attrName))
-&nbsp;[`saveAttribute(var,locator,attrName)`](../commands/web/saveAttribute(var,locator,attrName))
-&nbsp;[`saveElement(var,locator)`](../commands/web/saveElement(var,locator))
-&nbsp;[`saveElements(var,locator)`](../commands/web/saveElements(var,locator))
-&nbsp;[`saveValues(var,locator)`](../commands/web/saveValues(var,locator))
-&nbsp;[`selectMultiByValue(locator,array)`](../commands/web/selectMultiByValue(locator,array))
-&nbsp;[`selectMulti(locator,array)`](../commands/web/selectMulti(locator,array))
-&nbsp;[`select(locator,text)`](../commands/web/select(locator,text))
-&nbsp;[`toggleSelections(locator)`](../commands/web/toggleSelections(locator))
-&nbsp;[`type(locator,value)`](../commands/web/type(locator,value))
-&nbsp;[`upload(fieldLocator,file)`](../commands/web/upload(fieldLocator,file))
-&nbsp;[`waitForElementPresent(locator)`](../commands/web/waitForElementPresent(locator))
-&nbsp;[`waitForElementsPresent(locators)`](../commands/web/waitForElementsPresent(locators))
-&nbsp;[`waitForTextPresent(text)`](../commands/web/waitForTextPresent(text))
-&nbsp;[`waitForTitle(text)`](../commands/web/waitForTitle(text))
-&nbsp;[`waitUntilHidden(locator,waitMs)`](../commands/web/waitUntilHidden(locator,waitMs))
+
+| types     | [`web`](../commands/web/) commands                                                                       |
+|:---------:|----------------------------------------------------------------------------------------------------------|
+| assert... | &nbsp;[`assertAttribute(locator,attrName,value)`](../commands/web/assertAttribute(locator,attrName,value)) &nbsp;[`assertCssNotPresent(locator,property)`](../commands/web/assertCssNotPresent(locator,property)) &nbsp;[`assertCssPresent(locator,property,value)`](../commands/web/assertCssPresent(locator,property,value)) &nbsp;[`assertElementByText(locator,text)`](../commands/web/assertElementByText(locator,text)) &nbsp;[`assertElementDisabled(locator)`](../commands/web/assertElementDisabled(locator)) &nbsp;[`assertElementEnabled(locator)`](../commands/web/assertElementEnabled(locator)) &nbsp;[`assertElementPresent(locator)`](../commands/web/assertElementPresent(locator)) &nbsp;[`assertNotVisible(locator)`](../commands/web/assertNotVisible(locator)) &nbsp;[`assertVisible(locator)`](../commands/web/assertVisible(locator)) | 
+| save...   | &nbsp;[`saveAttributeList(var,locator,attrName)`](../commands/web/saveAttributeList(var,locator,attrName)) &nbsp;[`saveAttribute(var,locator,attrName)`](../commands/web/saveAttribute(var,locator,attrName)) &nbsp;[`saveElement(var,locator)`](../commands/web/saveElement(var,locator)) &nbsp;[`saveElements(var,locator)`](../commands/web/saveElements(var,locator)) &nbsp;[`saveValues(var,locator)`](../commands/web/saveValues(var,locator)) |
+| interact  | &nbsp;[`clickAll(locator)`](../commands/web/clickAll(locator)) &nbsp;[`clickByLabel(label)`](../commands/web/clickByLabel(label)) &nbsp;[`clickOffset(locator,x,y)`](../commands/web/clickOffset(locator,x,y)) &nbsp;[`deselect(locator,text)`](../commands/web/deselect(locator,text)) &nbsp;[`dragAndDrop(fromLocator,toLocator)`](../commands/web/dragAndDrop(fromLocator,toLocator)) &nbsp;[`selectMultiByValue(locator,array)`](../commands/web/selectMultiByValue(locator,array)) &nbsp;[`selectMulti(locator,array)`](../commands/web/selectMulti(locator,array)) &nbsp;[`select(locator,text)`](../commands/web/select(locator,text)) &nbsp;[`toggleSelections(locator)`](../commands/web/toggleSelections(locator)) &nbsp;[`type(locator,value)`](../commands/web/type(locator,value)) &nbsp;[`upload(fieldLocator,file)`](../commands/web/upload(fieldLocator,file)) |
+|:---------:|----------------------------------------------------------------------------------------------------------|
 
 #### Note
 Note that when the specified wait time has expired but the target element is not present, Nexial will consider the 
@@ -175,8 +152,8 @@ but it can work very nicely with other wait strategies like [Explicit Wait](#exp
 ### Explicit Wait
 Certainly an improvement over the [implicit wait](#implicit-wait) strategy, this strategy extends the concept of 
 "conditional wait" from the presence of web elements to a sleuth of conditions related to web elements. With explicit 
-wait we can, for example, delay automation until a certain text is found with a specific web element. Of course, such 
-checks implicitly include the presence of said web element as well. When using this wait strategy, Nexial instructs the 
+wait, we can, for example, delay automation until a certain text is found with a specific web element. Of course, such 
+checks implicitly include the presence of said web element as well. When using this strategy, Nexial instructs the 
 underlying WebDriver to poll and wait until a specific condition is met before proceeding with the intended automation.
 Nexial implements the explicit wait strategy in 3 different ways:
 
@@ -196,22 +173,22 @@ commands where explicit wait should be used in _almost_ all scenarios:
 For the list of commands above, the explicit wait is built into the commands themselves. With the commands with a 
 `waitMs` parameter, one can specify the maximum amount of wait time. For the commands without the additional `waitMs` 
 parameter, Nexial would use the value of [`nexial.pollWaitMs`](../systemvars/index.html#nexial.pollWaitMs) as the 
-maximize wait time.  
+maximum wait time.  
 
 #### B. Configurable Explicit Wait
 Some Nexial commands are configurable to employ either implicit or explicit wait. This potentially gives its users to
 most flexible way to approach inconsistent or unreliable web applications. Two System variables are at play here:
 
 1. [`nexial.pollWaitMs`](../systemvars/index.html#nexial.pollWaitMs): specify the maximum amount of time to wait. 
-   Default value is `30000` (or 30 seconds).
+   The default value is `30000` (or 30 seconds).
 2. [`nexial.web.alwaysWait`](../systemvars/index.html#nexial.web.alwaysWait): if set to `true` then the value of 
    `nexial.pollWaitMs` would be considered as the maximum amount of time for an explicit wait to expire (and the 
    corresponding step to FAIL). If it is set to `false` then the value of `nexial.pollWaitMs` would be considered the 
    maximum amount of time for an implicit wait.
 
 With the setting of a single System variable, many Nexial commands would switch to using explicit wait. This can be an 
-efficient way towards thwarting flaky tests caused by implicit wait. Some of the commands affected by this 
-`nexial.web.alwaysWait` System variable are shown below (not complete list):
+efficient way towards thwarting flaky tests. Some of the commands that are affected by this `nexial.web.alwaysWait` 
+System variable is shown below (not complete list):
 
 | types     | [`web`](../commands/web/) commands                                                                       |
 |:---------:|----------------------------------------------------------------------------------------------------------|
@@ -220,17 +197,48 @@ efficient way towards thwarting flaky tests caused by implicit wait. Some of the
 | interact  | &nbsp;[`clickAll(locator)`](../commands/web/clickAll(locator)) &nbsp;[`clickOffset(locator,x,y)`](../commands/web/clickOffset(locator,x,y)) &nbsp;[`deselect(locator,text)`](../commands/web/deselect(locator,text)) &nbsp;[`deselectMulti(locator,array)`](../commands/web/deselectMulti(locator,array)) &nbsp;[`dragAndDrop(fromLocator,toLocator)`](../commands/web/dragAndDrop(fromLocator,toLocator)) &nbsp;[`dragTo(fromLocator,xOffset,yOffset)`](../commands/web/dragTo(fromLocator,xOffset,yOffset)) &nbsp;[`focus(locator)`](../commands/web/focus(locator)) &nbsp;[`mouseOver(locator)`](../commands/web/mouseOver(locator)) &nbsp;[`rightClick(locator)`](../commands/web/rightClick(locator)) &nbsp;[`scrollTo(locator)`](../commands/web/scrollTo(locator)) &nbsp;[`select(locator,text)`](../commands/web/select(locator,text)) &nbsp;[`selectAllOptions(locator)`](../commands/web/selectAllOptions(locator)) &nbsp;[`selectFrame(locator)`](../commands/web/selectFrame(locator)) &nbsp;[`selectMultiByValue(locator,array)`](../commands/web/selectMultiByValue(locator,array)) &nbsp;[`selectMultiOptions(locator)`](../commands/web/selectMultiOptions(locator)) &nbsp;[`selectText(locator)`](../commands/web/selectText(locator)) &nbsp;[`toggleSelections(locator)`](../commands/web/toggleSelections(locator)) &nbsp;[`type(locator,value)`](../commands/web/type(locator,value)) &nbsp;[`typeKeys(locator,value)`](../commands/web/typeKeys(locator,value)) &nbsp;[`updateAttribute(locator,attrName,value)`](../commands/web/updateAttribute(locator,attrName,value)) &nbsp;[`upload(fieldLocator,file)`](../commands/web/upload(fieldLocator,file)) |
 |:---------:|----------------------------------------------------------------------------------------------------------|
 
-One can also consider turning on the explicit wait for a few steps - perhaps in areas which exhibit most of the test
+One can also consider turning on the explicit wait for a few steps - perhaps in areas that exhibit most of the test
 flakiness - and then turn it back to default (`nexial.web.alwaysWait` set to `false`).
 
-#### C. Fluent Wait through the Wait-Until Commands
+#### C. Fluent Wait / Wait-Until Commands
+In this category, Nexial implements what is known in Selenium as the Fluent Wait across a set of "waitFor" or "waitUntil" 
+commands. The design of these commands is to poll for the desired condition to be met before proceeding further with the
+automation. As such, this "condition polling" creates a delay effect that allows for the target web application to 
+"catch up". The "waitFor" commands use the value of `nexial.pollWaitMs` as the maximum amount of time to wait, while 
+the "waitUntil" commands allow for a time of one's choosing.
 
+##### "waitFor" commands:
 - [web &raquo; `waitForElementPresent(locator)`](../commands/web/waitForElementPresent(locator))
-- [web &raquo; `type(locator,value)`](../commands/web/type(locator,value))
 - [web &raquo; `waitForElementsPresent(locators)`](../commands/web/waitForElementsPresent(locators))
 - [web &raquo; `waitForTextPresent(text)`](../commands/web/waitForTextPresent(text))
+- [web &raquo; `waitForTitle(text)`](../commands/web/waitForTitle(text))
+
+##### "waitUntil" commands:
 - [web &raquo; `waitUntilDisabled(locator,waitMs)`](../commands/web/waitUntilDisabled(locator,waitMs))
 - [web &raquo; `waitUntilEnabled(locator,waitMs)`](../commands/web/waitUntilEnabled(locator,waitMs))
 - [web &raquo; `waitUntilHidden(locator,waitMs)`](../commands/web/waitUntilHidden(locator,waitMs))
 - [web &raquo; `waitUntilVisible(locator,waitMs)`](../commands/web/waitUntilVisible(locator,waitMs))
 
+We will be adding more "waitFor" and "waitUntil" commands from time to time.
+
+
+-----
+
+### Conclusion
+Different wait strategy serves a different purpose, thus all these wait strategies have its place. While there is no 
+"one-size-fits-all", the generally accepted best practice regarding wait strategy can be summarized as follows:
+1. Specify a fairly generous value for [`nexial.web.pageLoadWaitMs`](../systemvars/index.html#nexial.web.pageLoadWaitMs)
+   to avoid timeout failure when opening an URL. This System variable has no impact on other commands except
+   - [web &raquo; `open(url)`](../commands/web/open(url))
+   - [web &raquo; `openAndWait(url,waitMs)`](../commands/web/openAndWait(url,waitMs))
+   - [web &raquo; `openHttpBasic(url,username,password)`](../commands/web/openHttpBasic(url,username,password))
+   - [web &raquo; `openHttpBasic(url,username,password)`](../commands/web/goBack())
+2. Specify `true` for [`nexial.web.alwaysWait`](../systemvars/index.html#nexial.web.alwaysWait) to enable explicit
+   wait. When invoking commands without the `waitMs` parameter, the value of `nexial.pollWaitMs` will be used.
+3. Specify a fairly high value for [`nexial.pollMs`](../systemvars/index.html#nexial.pollWaitMs) to avoid timeout 
+   failure during automation. In the context of explicit wait, setting this System variable with a high value is 
+   generally a good idea. For Intranet websites or simple websites, one may start with `15000` (15 seconds). For 
+   complex or data-intensive websites, try starting with `30000` (30 seconds).
+4. Avoid the use of [Fixed Wait](#fixed-wait) as a delay tactic for the target website to "catch up". Instead, consider
+   one of the "waitFor" or "waitUntil" commands mentioned in the [Fluent Wait](#c-fluent-wait--wait-until-commands) 
+   section.
