@@ -105,6 +105,10 @@ comments: true
   - [`editHierCells(var,matchBy,nameValues)`](../commands/desktop/assertHierCells(matchBy,column,expected,nestedOnly))
    - aggressively reformat numerical values from the "stored" format to its "displayed" format.
 - improved the fetching of text value from desktop components; also avoid the dreaded "NO GET TEXT" error.
+- [`saveComboOptions(var,name)`](../commands/desktop/saveComboOptions(var,name)): **NEW** command to capture the 
+  available options of a Combo component as a list.
+- [`selectCombo(name,text)`](../commands/desktop/selectCombo(name,text)): fix flaky automation when dealing with 
+  SingleSelectList component that contains nested SingleSelectList components. 
 
 
 ### [excel commands](../commands/excel)
