@@ -19,6 +19,54 @@ a list of US states. The last command uses a `LIST` expression to sort the US st
 ![](image/LISTexpression_02.png)
 
 
+### Example
+Suppose we want to sum up a list of numbers (_In this example, we are not considering currency conversion_):
+- €28,782.00
+- €28,901.23
+- €31,234.56
+- $29,876.54
+- €28,567.51
+
+Here's how one might approach the automation:
+
+**Script**:<br/>
+![script](image/LISTexpression_03.png)
+
+Since the values contains commas (`,`), we should not consider `,` as the delimiter (default). Hence the first step is
+to substitute `,` with another delimiter (`|`).
+
+As an example, we are creating the list of values manually here in Step 2. One might derive at this list of values via
+of the commands that support LIST such as:
+- [base &raquo; `split(text,delim,saveVar)`](../commands/base/split(text,delim,saveVar))
+- [excel &raquo; `saveData(var,file,worksheet,range)`](../commands/excel/saveData(var,file,worksheet,range))
+- [json &raquo; `storeValues(json,jsonpath,var)`](../commands/json/storeValues(json,jsonpath,var))
+- [web &raquo; `saveValues(var,locator)`](../commands/web/saveValues(var,locator))
+- [web &raquo; `saveTextArray(var,locator)`](../commands/web/saveTextArray(var,locator))
+- [xml &raquo; `storeValues(xml,xpath,var)`](../commands/xml/storeValues(xml,xpath,var))
+
+The bulk of the work is in the 3rd step, where we employ multiple operations:
+1. Replace `,` with nothing - effectively removing the `,` character. Note that `,` is also the parameter separator -
+   hence the slightly unusual syntax `replace(\,,)`. It reads: "replace commas (the escaped comma (`\,`)) with nothing".
+2. Replace the `€` and `$` with nothing - effectively removing them. Here we are using the `replaceRegex` operation to
+   remove multiple characters with one operation. As a matter of personal preference, one could use multiple `replace`
+   operations to achieve the same result.
+3. Now that `,` `€` and `$` characters have been removed, our values now can be treated as numbers. We can simply
+   apply the `sum` operations to derive the total value. Note that after the `sum` operation, we have effectively
+   switch from a LIST expression to [NUMBER expression](NUMBERexpression).
+4. The [NUMBER expression](NUMBERexpression), among other operations, allows for customized numeric rounding. Here we
+   are rounding the total to 1 decimal place via the `roundTo` operation.
+5. Finally we are storing the value to a variable named as `total`.
+
+Step 4 shows how the rounded `total` value can be compared with another numeric value that contains different
+decimal precision. Unlike the text-based assertion commands in [`base`](../commands/base), the assertion commands in
+[`number`](../commands/number) perform numerical comparison so that numbers of different precision may be treated as the
+same if they are numerically equivalent.
+
+The output further illustrates the explanation above and confirms the expectation.
+
+**Output**:<br/>
+![script](image/LISTexpression_04.png)
+
 ### Operations
 
 #### `append(items)`
@@ -485,56 +533,6 @@ Script:<br/>
 
 Output:<br/>
 ![output](image/LISTexpression_68.png)
- 
------
-
-### Example
-Suppose we want to sum up a list of numbers (_In this example, we are not considering currency conversion_):
-- €28,782.00
-- €28,901.23
-- €31,234.56
-- $29,876.54
-- €28,567.51
-
-Here's how one might approach the automation:
-
-**Script**:<br/>
-![script](image/LISTexpression_03.png)
-
-Since the values contains commas (`,`), we should not consider `,` as the delimiter (default). Hence the first step is 
-to substitute `,` with another delimiter (`|`).
-
-As an example, we are creating the list of values manually here in Step 2. One might derive at this list of values via 
-of the commands that support LIST such as:
-- [base &raquo; `split(text,delim,saveVar)`](../commands/base/split(text,delim,saveVar))
-- [excel &raquo; `saveData(var,file,worksheet,range)`](../commands/excel/saveData(var,file,worksheet,range))
-- [json &raquo; `storeValues(json,jsonpath,var)`](../commands/json/storeValues(json,jsonpath,var))
-- [web &raquo; `saveValues(var,locator)`](../commands/web/saveValues(var,locator))
-- [web &raquo; `saveTextArray(var,locator)`](../commands/web/saveTextArray(var,locator))
-- [xml &raquo; `storeValues(xml,xpath,var)`](../commands/xml/storeValues(xml,xpath,var))
-
-The bulk of the work is in the 3rd step, where we employ multiple operations:
-1. Replace `,` with nothing - effectively removing the `,` character. Note that `,` is also the parameter separator - 
-   hence the slightly unusual syntax `replace(\,,)`. It reads: "replace commas (the escaped comma (`\,`)) with nothing". 
-2. Replace the `€` and `$` with nothing - effectively removing them. Here we are using the `replaceRegex` operation to 
-   remove multiple characters with one operation. As a matter of personal preference, one could use multiple `replace` 
-   operations to achieve the same result. 
-3. Now that `,` `€` and `$` characters have been removed, our values now can be treated as numbers. We can simply 
-   apply the `sum` operations to derive the total value. Note that after the `sum` operation, we have effectively 
-   switch from a LIST expression to [NUMBER expression](NUMBERexpression).
-4. The [NUMBER expression](NUMBERexpression), among other operations, allows for customized numeric rounding. Here we 
-   are rounding the total to 1 decimal place via the `roundTo` operation.
-5. Finally we are storing the value to a variable named as `total`.
-
-Step 4 shows how the rounded `total` value can be compared with another numeric value that contains different 
-decimal precision. Unlike the text-based assertion commands in [`base`](../commands/base), the assertion commands in 
-[`number`](../commands/number) perform numerical comparison so that numbers of different precision may be treated as the
-same if they are numerically equivalent.
-
-The output further illustrates the explanation above and confirms the expectation.
-
-**Output**:<br/>
-![script](image/LISTexpression_04.png)
 
 -----
 

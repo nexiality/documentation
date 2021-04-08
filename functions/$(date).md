@@ -72,7 +72,7 @@ Output:<br/>
 
 #### `$(date|addDay|date|days)`
 Add days to `date`. Use negative value to denote the "subtract" intent. The specified 
-  `date` is assumed in standard format (`MM/dd/yyyy HH:mm:ss`.
+  `date` is assumed in standard format (`MM/dd/yyyy HH:mm:ss`).
  
 **Example**<br/>
 Script:<br/>

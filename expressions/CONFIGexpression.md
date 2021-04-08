@@ -60,6 +60,8 @@ Sorts the key-value pairs in descending order of the keys. Can also be used to s
 **Output:**<br/>
 ![](image/CONFIGexpression_20.png)
 
+-----
+
 #### `keys`
 Returns all the key names as [LIST](LISTexpression).
 

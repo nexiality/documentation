@@ -77,7 +77,7 @@ Script:<br/>
 -----
 
 #### `text`
-Convert current binary data as a `Text` data type for [`TEXT` expression](Textexpression).
+Convert current binary data as a `Text` data type for [`TEXT` expression](TEXTexpression).
 
 -----
 

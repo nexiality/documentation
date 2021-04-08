@@ -8,7 +8,7 @@ parent: CSVexpression
 Merge the CSV data represented by `csvVariable` into existing CSV content. The `refColumns`, if specified, is used to merge 
 the 2 CSV content in such a way that the record of the same key(s) are merged together. For merging 2 CSV content based 
 on multiple "key" columns, specified these columns (1) in the order of importance, and (2) separated by 
-[`nexial.textDelim`](../systemvars/index#nexial.textDelim).
+[`nexial.textDelim`](https://nexiality.github.io/documentation/systemvars/index#nexial.textDelim).
 
 In general, there are 3 uses of this operation:
 
@@ -46,12 +46,12 @@ In general, there are 3 uses of this operation:
     <br/>
    
    Script:<br/>
-   ![script](image/CSVexpression_33.png)
+   ![script](https://nexiality.github.io/documentation/expressions/image/CSVexpression_33.png)
    Note that in this example **`\(empty\)`** as the `refColumns` signifies that no shared column is between these 2 CSV 
    files. Alternatively, omit the `refColumns` parameter entirely, as in `merge(merge_from)`.
    
    Output:<br/>
-   ![output](image/CSVexpression_34.png)
+   ![output](https://nexiality.github.io/documentation/expressions/image/CSVexpression_34.png)
 
 2. **merge two CSV content with headers, but without `refColumns`**<br/>
    In this case, `header` exists in both CSV file, but they do not share any common column from the merge can be based 
@@ -88,12 +88,12 @@ In general, there are 3 uses of this operation:
     <br/>
    
    Script:<br/>
-   ![script](image/CSVexpression_35.png)
+   ![script](https://nexiality.github.io/documentation/expressions/image/CSVexpression_35.png)
    Note that passing  **`\(empty\)`** as the `refColumns` signifies that no shared column is between these 2 CSV 
    files. Alternatively, omit the `refColumns` parameter entirely, as in `merge(merge_from)`.
    
    Output:<br/>
-   ![output](image/CSVexpression_36.png)
+   ![output](https://nexiality.github.io/documentation/expressions/image/CSVexpression_36.png)
    
 3. **merge two CSV content with headers and share same `refColumns`**<br/>
    In this case, header exists for both CSV data and they also share (at least) one common column whereby merge can use 
@@ -133,10 +133,10 @@ In general, there are 3 uses of this operation:
    `SSN` are not the same.
 
    Script:<br/>
-   ![script](image/CSVexpression_37.png)
+   ![script](https://nexiality.github.io/documentation/expressions/image/CSVexpression_37.png)
    
    Output:<br/>
-   ![output](image/CSVexpression_38.png)
+   ![output](https://nexiality.github.io/documentation/expressions/image/CSVexpression_38.png)
  
 4. (more like _3a_) **merge two CSV content with headers and share multiple `refColumns`**<br/>
    Similar to the above usage, Nexial also supports the merging of 2 CSV content with multiple key columns.  As such,
@@ -144,16 +144,16 @@ In general, there are 3 uses of this operation:
    the following example:<br/>
    
    Script:<br/>
-   ![script](image/CSVexpression_93.png)
+   ![script](https://nexiality.github.io/documentation/expressions/image/CSVexpression_93.png)
    
    Output:<br/>
    In the first example (line 4), we are merging two CSV content using `SSN`, `First Name`, and `Last Name`. The output
    for this command looks like this:<br/>
-   ![output](image/CSVexpression_95.png)<br/>
+   ![output](https://nexiality.github.io/documentation/expressions/image/CSVexpression_95.png) <br/>
    
    In the second example (line 5), we mare merging the same two CSV content using `Last Name`, `First Name` and then 
    `SSN`. Note that the key columns affected the sorting order:<br/> 
-   ![output](image/CSVexpression_94.png)<br/>
+   ![output](https://nexiality.github.io/documentation/expressions/image/CSVexpression_94.png) <br/>
    <br/>
    Observe that the order of the merged CSV content is different than the previous output.
  

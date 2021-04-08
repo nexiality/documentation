@@ -257,7 +257,7 @@ columns are separated by comma (`,`). The newly formed CSV will named the last c
 
 **Example**<br/>
 Let's see an example. Suppose we have a [CSV file of various sales information](CSV_sample1.csv), like this:<br/>
-![sample csv](image/csv_27.png)<br/>
+![sample csv](image/csv_27.png) <br/>
 
 To create a CSV file that would count up the occurrences of different `Country`, we can do something like this:<br/>
 `[CSV(${sample_csv}) => parse(header=true) group-count(Country) text]`
@@ -284,21 +284,21 @@ Output:<br/>
 Create new CSV using the specified column(s) to group rows of same values. The last specified column is considered as 
 the one holding the values to aggregate, and will be named as `Sum`.
 
-This operation is similar to [`groupCount(columns)`](#groupcount(columns)) except, instead of counting occurrence of 
+This operation is similar to [`groupCount(columns)`](#groupcountcolumns) except, instead of counting occurrence of 
 equivalent data, this operation groups the equivalent data and sums up another corresponding numeric column. In 
 other words, it's akin to saying "Look at all the values in Column A, group them by their values so that equivalent 
 values are in the same group. Then find the corresponding Column B (assuming numeric value) and sum up the values 
 thereof by the associated group".
 
 **Example**<br/>
-Let's look at an example. Suppose we have a [CSV file of various sales information](CSV_sample1.csv):<br/>
+Let's look at an example. Suppose we have a [CSV file of various sales information](CSV_sample1.csv) :<br/>
 ![sample csv](image/csv_27.png)
 
 We can group by `Country` and sum the corresponding `Price` column, like this:<br/>
 `[CSV(${sample_csv}) => parse(header=true) group-sum(Country,Price) text]`
 
 The result CSV would look something like this:<br/>
-![](image/csv_30.png)<br/>
+![](image/csv_30.png) <br/>
 
 As show, the data in `Country` is grouped together and the corresponding `Price` summed by under the column named 
 `Sum`. Just like `groupCount(columns)`, it is possible specify multiple columns for multi-level grouping and summing.
@@ -548,11 +548,11 @@ In general, there are 3 uses of this operation:
    Output:<br/>
    In the first example (line 4), we are merging two CSV content using `SSN`, `First Name`, and `Last Name`. The output
    for this command looks like this:<br/>
-   ![output](image/CSVexpression_95.png)<br/>
+   ![output](image/CSVexpression_95.png) <br/>
    
    In the second example (line 5), we mare merging the same two CSV content using `Last Name`, `First Name` and then 
    `SSN`. Note that the key columns affected the sorting order:<br/> 
-   ![output](image/CSVexpression_94.png)<br/>
+   ![output](image/CSVexpression_94.png) <br/>
    <br/>
    Observe that the order of the merged CSV content is different than the previous output.
  
@@ -854,7 +854,7 @@ Output:<br/>
 -----
 
 #### `size`
-Retrieves the number of rows in current CSV content. Synonymous to **[`rowCount`](#row(index))** and 
+Retrieves the number of rows in current CSV content. Synonymous to **[`rowCount`](#rowindex)** and 
 **[`length`](#length)**.
 
 **Example**<br/>

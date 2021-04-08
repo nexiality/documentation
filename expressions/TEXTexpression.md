@@ -25,7 +25,8 @@ Output:<br/>
 -----
 
 #### `append(text)`
-Add one or more text to the end of `text`.
+Add one or more text to the end of `text`. Multiple texts can be passed in by separating them with a comma. For example
+`append(text1, text2, text3, ...)`
 
 **Example**<br/>
 Script:<br/>

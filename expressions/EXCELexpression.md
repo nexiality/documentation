@@ -38,7 +38,7 @@ To specify the location of a cell, simply use the format: `[column letter][row 
 
 #### `clear(range)`
 Clear off any existing value from the cells found in the range specified by `range`.  After clearing off any existing 
-value from the target cells, cell values can be recaptured (via  **[`read(sheet,range)`](#read(sheet,range))**) again to 
+value from the target cells, cell values can be recaptured (via  **[`read(sheet,range)`](#readsheetrange)**) again to 
 ensure relevancy.
 
 **Example**
@@ -299,7 +299,7 @@ this operation, one can put an expression on pause and resume it at a later time
 Transform the current EXCEL cell data to text.  This would be the plain text rendition of the referenced cell data. 
 Note that if **`text`** is called prior to the **[`read(sheet,range)`](#read(sheet,range))**  operation, then only the 
 location of the underlying Excel file will be returned.  In order to return the cell content, the 
-**[`read(sheet,range)`](#read(sheet,range))** operation must be invoked.
+**[`read(sheet,range)`](#readsheetrange)** operation must be invoked.
 
 **Example**
 

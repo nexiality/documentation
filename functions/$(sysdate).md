@@ -28,7 +28,7 @@ this: **`$(sysdate|now|epoch)`**.
 
 **Example**<br/>
 Script<br/>
-![](image/$(sysdate)_01.png)<br/>
+![](image/$(sysdate)_01.png) <br/>
 ![](image/$(sysdate)_03.png)
 
 Output<br/>

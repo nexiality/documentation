@@ -104,7 +104,7 @@ Transform the same date instance into another textual form, using the specified 
 Use `epoch` to format date as timestamp. Use `informal` to format date in colloquial, non-exact manner that mimic human 
 conversation. For example, `informal` format would output about a minute ago instead of 00:00:57, or about a month and a 
 half ago rather than 2018/08/24 00:01:32. The `informal` format is suitable to use in conjunction with the 
-[`sound » speak(text)`](../commands/sound/sound/speak(text)) command.
+[`sound » speak(text)`](../commands/sound/speak(text)) command.
 
 **Example**<br/>
 Script<br/>
