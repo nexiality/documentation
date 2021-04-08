@@ -1,8 +1,7 @@
 <div>
     {% assign parent_url = '/functions/' | append: page.parent %}
     <li><a href="https://nexiality.github.io/documentation/{{ parent_url }}" target="_blank">{{ page.parent}}</a></li>
-    {% assign s = page.title | split: '_' %}
-    {% assign op = s[1] | downcase | remove: '(' | remove: ')' | remove: ','%}
+    {% assign op = page.title | downcase | remove: '_' | remove: '$' | remove: '(' | remove: ')' | remove: ','%}
     {% assign operation_url = '/functions/' | append: page.parent | append: '#' | append: op %}
-    <li><a href="https://nexiality.github.io/documentation/{{ operation_url }}" target="_blank">{{ page.parent }} {{s[1]}}</a></li>
+    <li><a href="https://nexiality.github.io/documentation/{{ operation_url }}" target="_blank">{{page.title}}</a></li>
 </div>
