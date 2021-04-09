@@ -1,13 +1,13 @@
 ---
 layout: default
-title: nexial-core 3.8 (2021-03-??)
+title: nexial-core 3.8 (2021-04-09)
 parent: release
 tags: release nexial-core 3.8
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v3.8_????" class="external-link" target="_nexial_link">Release 3.8</a>
-2021-03-?
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v3.8_1121" class="external-link" target="_nexial_link">Release 3.8</a>
+2021-04-09
 
 
 ### General
@@ -15,23 +15,20 @@ comments: true
 
 #### Improvements
 - PolyMatcher: **NEW** matchers added
-  - [`LENGTH:`]: check that the target value contains specified length. For example, `LENGTH:5` means to 
-    check that the target value has a length of 5. One may prefix with a numeric comparator for added expressiveness. 
+  - `LENGTH:`: check that the target value contains specified length. For example, `LENGTH:5` means to check that the 
+    target value has a length of 5. One may prefix with a numeric comparator for added expressiveness. 
     For example, `LENGTH: >5` means to check that the target value has a length greater than 5.
-  - [`NUMERIC:`]: perform numeric comparison so that `100` would be considered the same as `100.00`. For example, 
+  - `NUMERIC:`: perform numeric comparison so that `100` would be considered the same as `100.00`. For example, 
     `NUMERIC:100.0` means to check that the target value has a numerical value of `100`. One may prefix with a numeric 
     comparator for added expressiveness. For example, `NUMERIC: >= -5.01` means to check that the target value has a 
     numerical value greater or equal to `-5.01`.
-  - [`EMPTY:`]: check that the target value is empty (`EMPTY:true`) or not (`EMPTY:false`).
-  - [`BLANK:`]: check that the target value is blank (`BLANK:true`) or not (`BLANK:false`). Note that an empty value is
+  - `EMPTY:`: check that the target value is empty (`EMPTY:true`) or not (`EMPTY:false`).
+  - `BLANK:`: check that the target value is blank (`BLANK:true`) or not (`BLANK:false`). Note that an empty value is
     considered as blank as well (however, not the other way around).
 - better console output for failed actual-expected comparison, this impacts:
   - [base &raquo; `assertArrayEqual(array1,array2,exactOrder)`](../commands/base/assertArrayEqual(array1,array2,exactOrder))
   - [web &raquo; `assertText(locator,text)`](../commands/web/assertText(locator,text))
   - [web &raquo; `assertNotText(locator,text)`](../commands/web/assertNotText(locator,text))
-
-
-### [System Variable](../systemvars)
 
 
 ### [Flow Control](../flowcontrols)
@@ -59,23 +56,49 @@ comments: true
 
 
 ### [desktop commands](../commands/desktop)
+#### Screen Capture:
 - fix image capturing error when the target image spans beyond the dimension of current screen resolution:
   - [`screenshot(name,file)`](../commands/desktop/screenshot(name,file))
   - [`screenshotByLocator(locator,file)`](../commands/desktop/screenshotByLocator(locator,file))
 - [`screenshot(name,file)`](../commands/desktop/screenshot(name,file)): allow screenshot to be taken against a form 
-  (as well as UI component)
+  (as well as UI component).
+#### TextBox components:
 - update logic to determine "FormattedTextBox".
 - automate the clearing of existing content before entering specified content:
   - [`typeTextBox(name,text1,text2,text3,text4)`](../commands/desktop/typeTextBox(name,text1,text2,text3,text4))
-  - [`selectCombo(name,text)`](../commands/desktop/selectCombo(name,text))
-- update the handling of masked textbox and "date/time combo" with regards to clearing its content
-- bypassing automation when the intended content is already present/selected on the target component (performance improvements):
+- skip over automation when the intended content is already present/selected on a component (improve performance):
   - [`typeTextBox(name,text1,text2,text3,text4)`](../commands/desktop/typeTextBox(name,text1,text2,text3,text4))
-  - [`selectCombo(name,text)`](../commands/desktop/selectCombo(name,text))
-- reduce clicks during automation (performance improvements):
+- reduce clicks during automation (improve performance):
   - [`typeTextBox(name,text1,text2,text3,text4)`](../commands/desktop/typeTextBox(name,text1,text2,text3,text4))
-  - [`selectCombo(name,text)`](../commands/desktop/selectCombo(name,text))
-- [`selectCombo(name,text)`](../commands/desktop/selectCombo(name,text)): update logic to select from "SingleSelectCombo"
+- [`saveText(var,name)`](../commands/desktop/saveText(var,name)):
+  - fixed logic for disabled components.
+#### ComboBox components:
+- to determine the text of the selected item from a Combo component, Nexial will now attempt to retrieve the text
+  value of the selected item instead of from the Combo component itself. This is more accurate, albeit with a slight
+  performance penalty.
+- [`selectCombo(name,text)`](../commands/desktop/selectCombo(name,text)):
+  - automate the clearing of existing content before entering specified content
+  - update logic to select from "SingleSelectCombo"
+  - stabilize the handling of masked textbox and "DateTime Combo" when clearing its content
+  - skip over automation when the intended content is already present/selected on a component (improve performance)
+  - reduce clicks during automation (improve performance)
+  - code fix for better handling of _'Single Select'_ combo element that might contain multiple similar values.
+  - fix combo selection issue when the selection list is generated dynamically each time (in such case, Nexial resorts
+    to the classic "type-first-char" strategy, it's slow but should work)
+  - fix flaky automation when dealing with SingleSelectList component that contains nested SingleSelectList components.
+- [`saveText(var,name)`](../commands/desktop/saveText(var,name)):
+  - a slightly more aggressive approach towards retrieving text from a ComboBox component.
+- [`clearCombo(name)`](../commands/desktop/clearCombo(name)): code fix to properly clear off selection in a `SingleSelectCombo'.
+- [`saveComboOptions(var,name)`](../commands/desktop/saveComboOptions(var,name)): **NEW** command to capture the
+  available options of a ComboBox component as a list.
+- [`saveComboOptionsByLocator(var,locator)`](../commands/desktop/saveComboOptionsByLocator(var,locator)): **NEW**
+  command to capture the available options of a ComboBox component as a list.
+#### DataGrid components:
+- improved the fetching of text value from desktop components; also avoid the dreaded "NO GET TEXT" error.
+- support editing of table with column name that contains newline or escaped character.
+- [`nexial.desktop.table.tabAfterEdit`](../systemvars/index.html#nexial.desktop.table.tabAfterEdit): *NEW* System
+  variable for [`editTableCells(row,nameValues)`](../commands/desktop/editTableCells(row,nameValues)) to automatically
+  "tab" to the next column after the current column has been edited.
 - [`useTable(var,name)`](../commands/desktop/useTable(var,name)): code update to determine headers when scanning a 
   TreeView table
 - [`saveTableRowsRange(var,beginRow,endRow,csv)`](../commands/desktop/saveTableRowsRange(var,beginRow,endRow,csv)): 
@@ -85,41 +108,16 @@ comments: true
 - support clicking on a offset with negative x or y value:
 	- [`clickOffset(locator,xOffset,yOffset)`](../commands/desktop/clickOffset(locator,xOffset,yOffset))
 	- [`clickElementOffset(name,xOffset,yOffset)`](../commands/desktop/clickElementOffset(name,xOffset,yOffset))
-- [`clearCombo(name)`](../commands/desktop/clearCombo(name)): code fix to properly clear off selection in a 
-  `SingleSelectCombo'.
-- support editing of table with column name that contains newline or escaped character. 
-- [`nexial.desktop.table.tabAfterEdit`](../systemvars/index.html#nexial.desktop.table.tabAfterEdit): *NEW* System 
-  variable for [`editTableCells(row,nameValues)`](../commands/desktop/editTableCells(row,nameValues)) to automatically 
-  "tab" to the next column after the current column has been edited.
-- to determine the text of the selected item from a Combo component, Nexial will now attempt to retrieve the text 
-  value of the selected item instead of from the Combo component itself. This is more accurate, albeit with a slight 
-  performance penalty. 
-- [`selectCombo(name,text)`](../commands/desktop/selectCombo(name,text)): code fix for better handling of 
-  _'Single Select'_ combo element that might contain multiple similar values. 
-  - fix combo selection issue when the selection list is generated dynamically each time (in such case, Nexial resorts 
-    to the classic "type-first-char" strategy, it's slow but should work)
 - Improved support for Hierarchical Table (aka nested table) with added integration with Infragistics 4 TreeView components:
   - [`useHierTable(var,name)`](../commands/desktop/useHierTable(var,name))
   - [`assertHierRow(matchBy,expected)`](../commands/desktop/assertHierRow(matchBy,expected)) 
   - [`assertHierCells(matchBy,column,expected,nestedOnly)`](../commands/desktop/assertHierCells(matchBy,column,expected,nestedOnly))
   - [`editHierCells(var,matchBy,nameValues)`](../commands/desktop/assertHierCells(matchBy,column,expected,nestedOnly))
-   - aggressively reformat numerical values from the "stored" format to its "displayed" format.
-- improved the fetching of text value from desktop components; also avoid the dreaded "NO GET TEXT" error.
-- [`saveComboOptions(var,name)`](../commands/desktop/saveComboOptions(var,name)): **NEW** command to capture the 
-  available options of a ComboBox component as a list.
-- [`saveComboOptionsByLocator(var,locator)`](../commands/desktop/saveComboOptionsByLocator(var,locator)): **NEW** 
-  command to capture the available options of a ComboBox component as a list.
-- [`selectCombo(name,text)`](../commands/desktop/selectCombo(name,text)): fix flaky automation when dealing with 
-  SingleSelectList component that contains nested SingleSelectList components.
-- [`saveText(var,name)`](../commands/desktop/saveText(var,name)): a slightly more aggressive approach towards 
-  retrieving text from a ComboBox component.
+  - aggressively reformat numerical values from the "stored" format to its "displayed" format.
 
 
 ### [excel commands](../commands/excel)
 - [`xls2xlsx(xlsFile,xlsxFile)`](../commands/excel/xls2xlsx(xlsFile,xlsxFile)): **NEW** command to convert XLS to XLSX.
-
-
-### [localdb commands](../commands/localdb)
 
 
 ### [pdf commands](../commands/pdf)
