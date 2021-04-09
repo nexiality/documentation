@@ -111,8 +111,9 @@ comments: true
   command to capture the available options of a ComboBox component as a list.
 - [`selectCombo(name,text)`](../commands/desktop/selectCombo(name,text)): fix flaky automation when dealing with 
   SingleSelectList component that contains nested SingleSelectList components.
-- [`saveText(var,name)`](../commands/desktop/saveText(var,name)): a slightly more aggressive approach towards 
-  retrieving text from a ComboBox component.
+- [`saveText(var,name)`](../commands/desktop/saveText(var,name)): 
+  - a slightly more aggressive approach towards retrieving text from a ComboBox component.
+  - fixed logic for disabled components.
 
 
 ### [excel commands](../commands/excel)
