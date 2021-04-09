@@ -1,8 +1,6 @@
-<div>
-    {% assign parent_url = '/expressions/' | append: page.parent %}
-    {% assign s = page.parent | split: 'expression' %}
-    <li><a href="https://nexiality.github.io/documentation/{{ parent_url }}" target="_blank">{{s[0]}}</a></li>
-    {% assign op = page.title | downcase | remove: '(' | remove: ')' | remove: ','%}
-    {% assign operation_url = '/expressions/' | append: page.parent | append: '#' | append: op %}
-    <li><a href="https://nexiality.github.io/documentation/{{ operation_url }}" target="_blank">{{page.title}}</a></li>
-</div>
+{% assign parent_url = '/expressions/' | append: page.parent %}
+{% assign s = page.parent | split: 'expression' %}
+<li><a href="https://nexiality.github.io/documentation/{{ parent_url }}" target="_blank">{{s[0]}}</a></li>
+{% assign op = page.title | downcase | remove: '(' | remove: ')' | remove: ','%}
+{% assign operation_url = '/expressions/' | append: page.parent | append: '#' | append: op %}
+<li><a href="https://nexiality.github.io/documentation/{{ operation_url }}" target="_blank">{{page.title}}</a></li>
