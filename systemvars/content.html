@@ -193,6 +193,35 @@
         </td>
     </tr>
     <tr>
+        <td class="varname" nowrap="nowrap"><a id="nexial.projectProperties.trimKey">
+            <code>nexial.projectProperties.trimKey</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td class="read-write">read/write</td>
+        <td>
+            <b>MUST BE SET FROM COMMAND LINE VIA <code>-override</code> or <code>set JAVA_OPT=-D...</code></b><br/>
+            <br/>
+            This System variable instructs Nexial to load the <code>project.properties</code> with the data variable
+            names (i.e. the property keys) trimmed. As such the data variable name derived from the
+            <code>project.properties</code> will not contain any leading or trailing whitespaces.<br/>
+            <br/>
+            One can consider this System variable as a form of improving readability over project artifacts. Consider
+            the following 2 <code>project.properties</code>:
+            <br/>
+            <img src="image/nexial.projectProperties.trimKey_01.png"/><br/>
+            <img src="image/nexial.projectProperties.trimKey_02.png"/><br/>
+            <br/>
+            One may argue that the latter looks more organized. Many of the modern text editors support this sort of
+            text formatting. If one would like to structure the <code>project.properties</code> the data variable values
+            aligned (shown above as the latter image), then set this System properties as true. However, note that
+            this System variable <b>MUST BE SET AT RUNTIME</b> via the <code>-override</code> parameter or via the
+            <code>set JAVA_OPT=-D...</code> environment variable.<br/>
+            <br/>
+            By default, this System variable is set to <code>false</code> for backward compatibility.
+        </td>
+    </tr>
+    <tr>
         <td class="varname" nowrap="nowrap"><a id="nexial.verbose"><code>nexial.verbose</code></a></td>
         <td>boolean</td>
         <td>false</td>

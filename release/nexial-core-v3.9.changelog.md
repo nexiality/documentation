@@ -14,6 +14,9 @@ comments: true
 #### Fixes
 
 #### Improvements
+- [`nexial.projectProperties.trimKey`](../systemvars/content.html#nexial.projectProperties.trimKey): support 
+  leading/trailing spaces in data variable names in the `project.properties`, for aligning variable values to improve 
+  readability.
 
 
 ### [Flow Control](../flowcontrols)
