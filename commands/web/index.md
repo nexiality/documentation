@@ -91,6 +91,7 @@ available commands.
 - [`assertIECompatMode()`](assertIECompatMode())
 - [`assertIENavtiveMode()`](assertIENavtiveMode())
 - [`assertLinkByLabel(label)`](assertLinkByLabel(label))
+- [`assertLocation(search)`](assertLocation(search))
 - [`assertMultiSelect(locator)`](assertMultiSelect(locator))
 - [`assertNotChecked(locator)`](assertNotChecked(locator))
 - [`assertNotFocus(locator)`](assertNotFocus(locator))

@@ -26,6 +26,8 @@ comments: true
 
 
 ### [Expression](../expressions)
+- [TEXT &raquo; `number`](../expressions/TEXTexpression#number): "optimistically" converts text to number by _gently_ 
+  removing non-numeric characters.
 
 
 ### [desktop commands](../commands/desktop)
@@ -47,6 +49,8 @@ comments: true
 ### [web commands](../commands/web)
 - [`screenshot(file,locator,removeFixed)`](../commands/web/screenshot(file,locator,removeFixed)): additional wait time 
   to offset any visual effect caused by [`nexial.web.highlight`](../systemvars/index.html#nexial.web.highlight)
+- [`assertLocation(search)`](../commands/web/assertLocation(search)): **NEW** command to assert the current URL with PolyMatcher.
+- fixed a "circular reference" issue with collection browser performance metrics over JQuery-laden web page.
 
 
 ### [ws commands](../commands/ws)
