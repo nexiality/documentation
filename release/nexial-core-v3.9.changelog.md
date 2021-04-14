@@ -14,7 +14,7 @@ comments: true
 #### Fixes
 
 #### Improvements
-- [`nexial.projectProperties.trimKey`](../systemvars/content.html#nexial.projectProperties.trimKey): support 
+- [`nexial.projectProperties.trimKey`](../systemvars/index.html#nexial.projectProperties.trimKey): support 
   leading/trailing spaces in data variable names in the `project.properties`, for aligning variable values to improve 
   readability.
 
@@ -45,6 +45,8 @@ comments: true
 
 
 ### [web commands](../commands/web)
+- [`screenshot(file,locator,removeFixed)`](../commands/web/screenshot(file,locator,removeFixed)): additional wait time 
+  to offset any visual effect caused by [`nexial.web.highlight`](../systemvars/index.html#nexial.web.highlight)
 
 
 ### [ws commands](../commands/ws)

@@ -71,7 +71,7 @@ variable. Example of image trimming using `nexial.image.trimBeforeDiff` system v
 As stated earlier, comparison metadata is stored to variable specified as `var`. Following are the metadata fields:
 1. **expected**: the file path of predefined `baseline` image.
 2. **actual**: the file path of `actual` image.
-3. **matchPercent**:r the matched percentage of two images.
+3. **matchPercent**: the matched percentage of two images.
 4. **tolerance**: tolerance to be needed during comparing images.
 5. **count**: count of differences of the image
 6. **differences**: list of differences in the image.
