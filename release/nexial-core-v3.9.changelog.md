@@ -31,6 +31,7 @@ comments: true
 
 
 ### [desktop commands](../commands/desktop)
+- improved support on grid cell data by making special treatment for combo box embedded within a grid cell.
 
 
 ### [excel commands](../commands/excel)
