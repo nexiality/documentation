@@ -4,7 +4,6 @@ title: xml
 parent: TEXTexpression
 ---
 
-#### `xml`
 Transform existing text into a [XML expression](https://nexiality.github.io/documentation/expressions/XMLexpression). If 
 [`nexial.expression.resolveURL`](https://nexiality.github.io/documentation/systemvars/index#nexial.expression.resolveURL) is set to `true` and the current 
 text content is a URL, Nexial will automatically download from such URL and transform the download content as 
@@ -35,4 +34,3 @@ Output:<br/>
 ![output](https://nexiality.github.io/documentation/expressions/image/TEXTexpression_76.png)
 
 -----
-

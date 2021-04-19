@@ -250,9 +250,9 @@ In datasheet<br/>
 ![](image/$(execution)_31.png)
 
 The console will appear like so<br/>
-![](image/$(execution)_32.png)<br/>
-![](image/$(execution)_33.png)<br/>
-![](image/$(execution)_34.png)<br/>
+![](image/$(execution)_32.png) <br/>
+![](image/$(execution)_33.png) <br/>
+![](image/$(execution)_34.png) <br/>
 
 -----
 

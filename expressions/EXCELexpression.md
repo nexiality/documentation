@@ -71,8 +71,7 @@ Return the number of columns captured.
 -----
 
 #### `csv`
-Transform current EXCEL content into **[`CSV`](CSVexpression)**. Field delimiter will be set to the current value of
-[`nexial.textDelim`](../systemvars/index#nexial.textDelim) (default to comma), and record delimiter will be set to
+Transform current EXCEL content into **[`CSV`](CSVexpression)**. Field delimiter will be set to the current value of [`nexial.textDelim`](../systemvars/index#nexial.textDelim) (default to comma), and record delimiter will be set to
 CRLF (`\r\n`).
 
 **Example**
@@ -89,8 +88,7 @@ CRLF (`\r\n`).
 -----
 
 #### `csvWithHeader`
-Transform current EXCEL content into **[`CSV`](CSVexpression)**, using the first row as header. Field delimiter will 
-be set to the current value of [`nexial.textDelim`](../systemvars/index#nexial.textDelim) (default to comma), and 
+Transform current EXCEL content into **[`CSV`](CSVexpression)**, using the first row as header. Field delimiter will be set to the current value of [`nexial.textDelim`](../systemvars/index#nexial.textDelim) (default to comma), and 
 record delimiter will be set to CRLF (`\r\n`).
 
 **Input File:** `properties.xlsx`<br/>
@@ -152,7 +150,7 @@ Note that this operation **MUST** be preceded with a call to [`read(sheet,range)
 -----
 
 #### `json(firstRowAsHeader)`
-Transform current EXCEL content into **[`JSON`](JSONexpression)**. This operation provides 2 forms of transformations.
+Transform current EXCEL content into **[`JSON`](JSONexpression)**. This operation provides 2 forms of transformations.
 When `firstRowAsHeader` is set to `false`, the current EXCEL content is converted into a JSON array containing one or 
 more JSON array. For example,
 ![](../expressions/image/csv_04.jpg)

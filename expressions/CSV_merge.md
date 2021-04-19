@@ -4,7 +4,6 @@ title: merge(csvVariable,refColumns)
 parent: CSVexpression
 ---
 
-#### `merge(csvVariable,refColumns)`
 Merge the CSV data represented by `csvVariable` into existing CSV content. The `refColumns`, if specified, is used to merge 
 the 2 CSV content in such a way that the record of the same key(s) are merged together. For merging 2 CSV content based 
 on multiple "key" columns, specified these columns (1) in the order of importance, and (2) separated by 
@@ -158,4 +157,3 @@ In general, there are 3 uses of this operation:
    Observe that the order of the merged CSV content is different than the previous output.
  
 -----
-

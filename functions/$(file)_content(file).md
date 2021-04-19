@@ -1,10 +1,9 @@
 ---
 layout: minified
-title: $(file)_content(file)
+title: $(file|content|file)
 parent: $(file)
 ---
 
-#### `$(file|content|file)`
 Read and return the content of `file`.
 
 **Example**

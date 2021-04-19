@@ -4,7 +4,6 @@ title: set(key,value)
 parent: CONFIGexpression
 ---
 
-#### `set(key,value)`
 sets `value` to the given `key` and returns the updated CONFIG data.
 
 **Example**<br/>
@@ -21,4 +20,3 @@ out.properties<br/>
 ![](https://nexiality.github.io/documentation/expressions/image/CONFIGexpression_16.png)
 
 -----
-

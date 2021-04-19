@@ -1,10 +1,9 @@
 ---
 layout: minified
-title: $(sysdate)_now(format)
+title: $(sysdate|now|format)
 parent: $(sysdate)
 ---
 
-#### `$(sysdate|now|format)`
 Render the current date/time using the specified `format`. For formatting timestamp, use the format like 
 this: **`$(sysdate|now|epoch)`**.
 

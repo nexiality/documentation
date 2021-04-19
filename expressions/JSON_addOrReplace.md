@@ -4,7 +4,6 @@ title: addOrReplace(jsonpath,input)
 parent: JSONexpression
 ---
 
-#### `addOrReplace(jsonpath,input)`
 Reference a specific position or element in current JSON via `jsonpath`, and then add or replace it with `input`. 
 The end result would be the modified JSON document/array. Refer to 
 [json &raquo; `addOrReplace(json,jsonpath,input,var)`](https://nexiality.github.io/documentation/commands/json/addOrReplace(json,jsonpath,input,var)#rules) 
@@ -91,4 +90,3 @@ for additional details and the rules of adding or replacing element in an existi
 ![](https://nexiality.github.io/documentation/expressions/image/JSONexpression_28.png)
 
 -----
-

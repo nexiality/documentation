@@ -119,7 +119,7 @@ Output<br/>
 ![](image/$(file)_18.png)
 
 File moved from `data` directory to `output` directory.<br/>
-![](image/$(file)_19.png)<br/>
+![](image/$(file)_19.png) <br/>
 ![](image/$(file)_20.png)
 
 -----
@@ -142,7 +142,7 @@ Overwrite the content of `file` with `content` and return the full path of
 
 **Example**
 Input File<br/>
-[](image/$(file)_04.png)
+![](image/$(file)_04.png)
 
 Script<br/>
 ![](image/$(file)_23.png)
