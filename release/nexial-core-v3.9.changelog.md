@@ -18,6 +18,8 @@ comments: true
 - [`nexial.projectProperties.trimKey`](../systemvars/index.html#nexial.projectProperties.trimKey): support 
   leading/trailing spaces in data variable names in the `project.properties`, for aligning variable values to improve 
   readability.
+- implemented auto-retry when Nexial fails to retrieve content from a URL. This can impact (hopefully positively) many
+  functionalities where a URL is referenced (for remote content) instead of a local file path.
 
 
 ### [Flow Control](../flowcontrols)
