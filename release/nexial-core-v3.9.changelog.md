@@ -12,6 +12,7 @@ comments: true
 
 ### General
 #### Fixes
+- fixed data type conversion issue when generating execution result after execution.
 
 #### Improvements
 - [`nexial.projectProperties.trimKey`](../systemvars/index.html#nexial.projectProperties.trimKey): support 
