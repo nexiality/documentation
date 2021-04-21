@@ -6,13 +6,15 @@ tags: command base
 comments: true
 ---
 
+**DEPRECATED - USE [`assertVarsPresent(vars)`](assertVarsPresent(vars)) INSTEAD.**
+
 ### Description
-This command asserts that the specified `var` exists, regardless to its value, in the current execution.  
-Note that `var` is the name of the variable, not its value (i.e. not `${...}`)
+This command asserts that the specified `var` exists, regardless to its value, in the current execution.  
+Note that `var` is the name of the variable, not its value (i.e. not `${...}`)
 
 
 ### Parameters
-- **var** - the name of the variable in question
+- **var** - the name of the variable in question
 
 
 ### Example
@@ -27,4 +29,4 @@ In above example test step 2 and 3 passed because `nexial.browser` is defined in
 
 
 ### See Also
-- [`assertVarNotPresent(var)`](assertVarNotPresent(var))
+- [`assertVarsNotPresent(vars)`](assertVarsNotPresent(vars))

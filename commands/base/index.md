@@ -25,8 +25,10 @@ The "base" command type represents a series of common automation commands:
 - [`assertNotEqual(value1,value2)`](assertNotEqual(value1,value2))
 - [`assertStartsWith(text,prefix)`](assertStartsWith(text,prefix))
 - [`assertTextOrder(var,descending)`](assertTextOrder(var,descending))
-- [`assertVarNotPresent(var)`](assertVarNotPresent(var))
-- [`assertVarPresent(var)`](assertVarPresent(var))
+- (deprecated) ~~[`assertVarNotPresent(var)`](assertVarNotPresent(var))~~
+- [`assertVarsNotPresent(vars)`](assertVarsNotPresent(vars))
+- (deprecated) ~~[`assertVarPresent(var)`](assertVarPresent(var))~~
+- [`assertVarsPresent(vars)`](assertVarsPresent(vars))
 - [`clear(vars)`](clear(vars))
 - [`clearClipboard()`](clearClipboard())
 - [`copyFromClipboard(var)`](copyFromClipboard(var))

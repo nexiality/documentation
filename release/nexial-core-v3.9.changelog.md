@@ -33,6 +33,13 @@ comments: true
   removing non-numeric characters.
 
 
+### [base commands](../commands/base)
+- [`assertVarsPresent(vars)`](../commands/base/assertVarsPresent(vars)): check that all the specified data variables 
+  exist in the current execution.
+- [`assertVarsNotPresent(vars)`](../commands/base/assertVarsNotPresent(vars)): check that none of the specified data 
+  variables exist in the current execution.
+
+
 ### [desktop commands](../commands/desktop)
 - improved support on grid cell data by making special treatment for combo box embedded within a grid cell.
 - improved accuracy and performance of fetching cell data from a datagrid component (Infragistics 4).
