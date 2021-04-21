@@ -2184,6 +2184,19 @@
         </td>
     </tr>
     <tr>
+        <td class="varname" nowrap="nowrap"><a id="nexial.io.matchIncludeDirectories"><code>nexial.io.matchIncludeDirectories</code></a></td>
+        <td>boolean</td>
+        <td>false</td>
+        <td class="read-write">read/write</td>
+        <td>
+            Determine if Nexial should include subdirectories when executing
+            <a href="../commands/io/saveMatches(var,path,fileFilter,textFilter).html">io &raquo; <code>saveMatches(var,path,fileFilter,textFilter)</code></a>
+            command. By default, Nexial will scan only files under the specified <code>path</code>. If need be, one may
+            set this System variable as <code>tue</code> to instruct Nexial to scan both files and subdirectories under
+            the specified directory.
+        </td>
+    </tr>
+    <tr>
         <td class="varname" nowrap="nowrap"><a id="nexial.io.matchExact"><code>nexial.io.matchExact</code></a></td>
         <td>boolean</td>
         <td>false</td>

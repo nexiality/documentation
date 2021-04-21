@@ -35,6 +35,7 @@ comments: true
 
 ### [desktop commands](../commands/desktop)
 - improved support on grid cell data by making special treatment for combo box embedded within a grid cell.
+- improved accuracy and performance of fetching cell data from a datagrid component (Infragistics 4).
 
 
 ### [excel commands](../commands/excel)
@@ -42,6 +43,12 @@ comments: true
 
 ### [mail commands](../commands/mail)
 - [`sendComposed(profile,var)`](../commands/mail/sendComposed(profile,var)): failure condition now generate error log to aid in RCA
+
+
+### [io commands](../commands/io)
+- [`saveMatches(var,path,fileFilter,textFilter)`](../commands/io/saveMatches(var,path,fileFilter,textFilter)): Use
+  [`nexial.io.matchIncludeDirectories`](../systemvars/index.html#nexial.io.matchIncludeDirectories) to include 
+  subdirectories in the match.
 
 
 ### [pdf commands](../commands/pdf)

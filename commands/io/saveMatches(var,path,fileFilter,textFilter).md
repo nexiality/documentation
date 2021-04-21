@@ -23,7 +23,11 @@ filtering on all text-based files, PDF and XLSX. For both PDF and XLSX files, Ne
 filtering automatically. 
 
 Note that:
-1. This command WILL automatically scan the specified `path` recursively.
+1. This command WILL automatically scan the specified `path` recursively. Use 
+   [`nexial.io.matchRecursive`](../../systemvars/index.html#nexial.io.matchRecursive) to alter this behavior.
+2. This command by default scans only files under the specified `path`. Set
+   [nexial.io.matchIncludeDirectories`](../../systemvars/content.html#nexial.io.matchIncludeDirectories) true to 
+   instruct Nexial to include subdirectories as well.
 2. Special care has been given to MS Office documents so that the working documents (such as `~myFile.xlsx`) will be 
    ignored.
 
