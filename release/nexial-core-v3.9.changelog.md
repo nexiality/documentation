@@ -53,9 +53,10 @@ comments: true
 
 
 ### [io commands](../commands/io)
-- [`saveMatches(var,path,fileFilter,textFilter)`](../commands/io/saveMatches(var,path,fileFilter,textFilter)): Use
-  [`nexial.io.matchIncludeDirectories`](../systemvars/index.html#nexial.io.matchIncludeDirectories) to include 
-  subdirectories in the match.
+- [`saveMatches(var,path,fileFilter,textFilter)`](../commands/io/saveMatches(var,path,fileFilter,textFilter)): 
+  - Use [`nexial.io.matchIncludeDirectories`](../systemvars/index.html#nexial.io.matchIncludeDirectories) to include 
+    subdirectories in the match.
+  - fix logical inclusion issue when mixed with [`nexial.io.matchRecursive`](../systemvars/index.html#nexial.io.matchRecursive)
 
 
 ### [pdf commands](../commands/pdf)
