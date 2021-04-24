@@ -4249,6 +4249,95 @@
             <code>false</code>.
         </td>
     </tr>
+
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.desktop.autoClearModalDialog"><code>nexial.desktop.autoClearModalDialog</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td class="read-write">read/write</td>
+        <td>
+            Set to <code>true</code> to automatically dismiss any modal dialog that shows up during automation as a
+            result of a <code>click...</code>, <code>doubleClick...</code>, <code>clear...</code> or <code>type...</code>
+            commands.<br/>
+            <br/>
+            During automation, there are occasions where the target application would render a modal (meaning: blocking)
+            dialog component - usually for the purpose of warning or to solicit user confirmation - after a certain
+            action is performed. Nexial can automatically dismiss such dialog component and thus allow the automation
+            to continue without user intervention. If this is the desired behavior, then one should set this System
+            variable to <code>true</code>. The default value of this System variable is <code>false</code>.<br/>
+            <br/>
+            Note that automatically dismissing a dialog component might not always be the right course of action. There
+            are situations where one should deliberately select the appropriate button presented in a dialog component.
+            For example:<br/>
+            <img src="image/nexial.desktop.autoClearModalDialog_01.png"/>
+            <br/>
+            When possible, one should consider explicitly automate the interaction with such dialog component, when
+            possible.
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.desktop.simulateClick"><code>nexial.desktop.simulateClick</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td class="read-write">read/write</td>
+        <td>
+            At times, the clicking of a desktop component such as a button would trigger the rendering of a modal
+            component (such as a dialog), like this:<br/>
+            <img src="image/nexial.desktop.simulateClick_01.png"/><br/>
+            <br/>
+            Depending on how the modal component is rendered, this can be an issue and the corresponding command might
+            fail. If you are facing issue where the clicking of a component renders another modal component, and
+            such rendering is causing the corresponding step to fail, then setting this System variable to
+            <code>true</code> may help.<br/>
+            <br/>
+            Essentially, setting this System variable to true instructs Nexial to "simulate" the click rather than
+            generating a "real" mouse click event. Using simulated click has the following effects:
+            <ol>
+                <li>
+                    Simulated click allows for immediate completion of the corresponding command, rather than waiting
+                    for the mouse event to complete (requires further interaction with the target application).
+                </li>
+                <li>
+                    Simulate click will always target the center of the target component (based on its bounding
+                    rectangle).
+                </li>
+            </ol>
+            Since simulated click does not wait for the target application to complete its response and/or rendering,
+            Nexial will complete the corresponding command immediately and not be blocked by any modal component that
+            follows the click. One can then use the <a href="../commands/desktop/clearModalDialog(var,button)">desktop
+            &raquo; <code>clearModalDialog(var,button)</code></a> command to dismiss the modal component.<br/>
+            <br/>
+            Note this System variable can impact the following commands:<ul>
+            <li><a href="../commands/desktop/clickButton(name)">desktop &raquo; <code>clickButton(name)</code></a></li>
+            <li><a href="../commands/desktop/clickCheckbox(name)">desktop &raquo; <code>clickCheckbox(name)</code></a></li>
+            <li><a href="../commands/desktop/clickRadio(name)">desktop &raquo; <code>clickRadio(name)</code></a></li>
+            </ul>
+            <br/>
+            In addition, if one uses <a href="../commands/desktop/configureDesktopApplication">AutoScanning</a>, then
+            it's worth noting that a similar setting can be configured for an individual component instead of the entire
+            execution. For example,<br/>
+            <pre>
+    "Lock": {
+      "type": "DesktopElement",
+      "xpath": "...",
+      "controlType": "ControlType.Button",
+      "name": "Lock",
+      "automationId": "...",
+      "elementType": "Button",
+      "label": "Lock",
+      "extra": {
+        <b>"nexial.desktop.simulateClick": true</b>
+      }
+    }
+            </pre>
+            See one of the above command links for more details.
+        </td>
+    </tr>
+
     <tr>
         <td class="varname" nowrap="nowrap">
             <a id="nexial.desktop.useTypeKeys"><code>nexial.desktop.useTypeKeys</code></a>

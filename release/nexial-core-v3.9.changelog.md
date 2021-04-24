@@ -32,6 +32,10 @@ comments: true
 - [TEXT &raquo; `number`](../expressions/TEXTexpression#number): "optimistically" converts text to number by _gently_ 
   removing non-numeric characters.
 
+### [System Variables](../systemvars)
+- [`nexial.desktop.simulateClick`](../systemvars/index.html#nexial.desktop.simulateClick): **NEW** System variable to 
+  support "simulated" click which might provides more stability in automation.
+
 
 ### [base commands](../commands/base)
 - [`assertVarsPresent(vars)`](../commands/base/assertVarsPresent(vars)): check that all the specified data variables 
@@ -43,6 +47,8 @@ comments: true
 ### [desktop commands](../commands/desktop)
 - improved support on grid cell data by making special treatment for combo box embedded within a grid cell.
 - improved accuracy and performance of fetching cell data from a datagrid component (Infragistics 4).
+- implemented `nexial.desktop.simulateClick` configuration in the "`extra" section of a component configuration. This
+  configuration supports the clicking of a button, checkbox or radio button via simulated click.
 
 
 ### [excel commands](../commands/excel)
