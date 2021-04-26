@@ -49,6 +49,9 @@ comments: true
 - improved accuracy and performance of fetching cell data from a datagrid component (Infragistics 4).
 - implemented `nexial.desktop.simulateClick` configuration in the "`extra" section of a component configuration. This
   configuration supports the clicking of a button, checkbox or radio button via simulated click.
+- implement cell-specific value formatting for data grid cells. Add formatting rules in the `"extra"` fields of the 
+  JSON configuration, like this: `"extra": { "Column Name.format": "old_format,new_format" }`
+- [`clickMenuByLocator(locator,menu)`]: fixed automation for index-based menu.
 
 
 ### [excel commands](../commands/excel)
