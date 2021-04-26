@@ -5,8 +5,8 @@ parent: XMLexpression
 ---
 
 Search against specified `xml` via `xpath`, and replace inside content of all matching instances. This command 
-is different from [`replace(xpath,content)`](https://nexiality.github.io/documentation/expressions/XML_replace(xpath,content) in that it only replaces the content of the 
-matching elements while [`replace(xpath,content)`](https://nexiality.github.io/documentation/expressions/XML_replace(xpath,content) replaces the tags as well as the content 
+is different from [`replace(xpath,content)`](https://nexiality.github.io/documentation/expressions/XML_replace.mini) in that it only replaces the content of the 
+matching elements while [`replace(xpath,content)`](https://nexiality.github.io/documentation/expressions/XML_replace.mini) replaces the tags as well as the content 
 of the matching elements. 
 
 **Example**
@@ -20,7 +20,7 @@ of the matching elements.
 **Output**: As seen below. only the content of the `price` tag was replaced, the tag itself remains unmodified.<br/>
 ![](https://nexiality.github.io/documentation/expressions/image/XMLexpression_33.png)
 
-**Note:** `replaceIn(xpath,content)` and [`updateContent(xpath,content)`](https://nexiality.github.io/documentation/expressions/XML_updateContent(xpath,content) are the same when 
+**Note:** `replaceIn(xpath,content)` and [`updateContent(xpath,content)`](https://nexiality.github.io/documentation/expressions/XML_updateContent.mini) are the same when 
 the specified xpath points to an XML node.
 
 -----

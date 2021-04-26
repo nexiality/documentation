@@ -78,7 +78,7 @@ file:
 <img style="box-shadow:none;margin:0" src="image/csv_23.jpg"/>
 
 Note that the [`parse(configs)`](#parseconfigs) operation is only invoked one (2nd line). Using the 
-[`store(var)`](#store(var)) operation, we can reuse the CSV structure (in 3rd and 4th line). In this example, we 
+[`store(var)`](#storevar) operation, we can reuse the CSV structure (in 3rd and 4th line). In this example, we 
 assigned `myCSV` to the parsed CSV structure in line 2.
 - The first filter operation limits to rows where the column `First Name` is exactly `David`. In this case, there 
   should only be 1 row (row 3 of the input CSV file) matched.
@@ -821,7 +821,7 @@ CSV content to the said file. `append` is optional and defaults to `false`.
 
 **Example**<br/>
 In this example,
-1. `csvData` is sorted in ascending order using **[`sortAscending`](#sortascendingcolumn)**
+1. `csvData` is sorted in ascending order using **[`sortAscending(column)`](#sortascendingcolumn)**
 2. then sorted data is saved to specified path `Sample.csv`
 
 Script:<br/>
@@ -854,7 +854,7 @@ Output:<br/>
 -----
 
 #### `size`
-Retrieves the number of rows in current CSV content. Synonymous to **[`rowCount`](#rowindex)** and 
+Retrieves the number of rows in current CSV content. Synonymous to **[`row(index)`](#rowindex)** and 
 **[`length`](#length)**.
 
 **Example**<br/>
