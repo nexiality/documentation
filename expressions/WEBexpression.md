@@ -64,7 +64,7 @@ must be with prefix `text=`. So for example, if locator is `text=LOGIN`, this cl
 
 **Example**<br/>
 In this example, the first step is to open the URL and then login the site
-[`(https://opensource-demo.orangehrmlive.com/)`](https://opensource-demo.orangehrmlive.com/) using [`type`](#typelocatorvalue)
+[`(https://opensource-demo.orangehrmlive.com/)`](https://opensource-demo.orangehrmlive.com/) using [`type(locator,value)`](#typelocatorvalue)
 and `click` operations.
 
 Script:<br/>
@@ -114,8 +114,8 @@ to [CSV](CSVexpression) format with the headers `locator` and `value`.
 
 **Example**<br/>
 In this example, the first step is to open the URL and login the site
-[`(https://opensource-demo.orangehrmlive.com/)`](https://opensource-demo.orangehrmlive.com/) using [`type`](#typelocatorvalue)
-and [`click`](#clicklocator) operations. If `allPass` is `true` and login is done successfully, then add new user. 
+[`(https://opensource-demo.orangehrmlive.com/)`](https://opensource-demo.orangehrmlive.com/) using [`type(locator,value)`](#typelocatorvalue)
+and [`click(locator)`](#clicklocator) operations. If `allPass` is `true` and login is done successfully, then add new user. 
 Details of new user is stored in the `user.csv` file by using `fetchAsCsv(locators)`
 operation.
 
@@ -199,7 +199,7 @@ Output:<br/>
 This enters the specified `value` into the first element that matches the specified `locator`.
  
 **Example**<br/>
-In this example, `nexial` is typed in the google and the `google search` button is clicked by [`clicklocator`](#click)
+In this example, `nexial` is typed in the google and the `google search` button is clicked by [`click(locator)`](#clicklocator)
 operation.  
 
 Script:<br/>
@@ -219,8 +219,8 @@ through [web &raquo; `typeKeys(locator,value)`](../commands/web/typeKeys(locator
  
 **Example**<br/>
 In this example, the first step is to open the URL and login the site
-[`(https://opensource-demo.orangehrmlive.com/)`](https://opensource-demo.orangehrmlive.com/) using [`type`](#typelocatorvalue)
-and [`click`](#clicklocator) operations. By using, `typeKeys(locator,value)` the Username in the Admin Module is copied 
+[`(https://opensource-demo.orangehrmlive.com/)`](https://opensource-demo.orangehrmlive.com/) using [`type(locator,value)`](#typelocatorvalue)
+and [`click(locator)`](#clicklocator) operations. By using, `typeKeys(locator,value)` the Username in the Admin Module is copied 
 and pasted to the Employee Name.
 
 Script:<br/>

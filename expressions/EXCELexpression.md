@@ -295,8 +295,8 @@ this operation, one can put an expression on pause and resume it at a later time
 
 #### `text`
 Transform the current EXCEL cell data to text.  This would be the plain text rendition of the referenced cell data. 
-Note that if **`text`** is called prior to the **[`read(sheet,range)`](#read(sheet,range))**  operation, then only the 
-location of the underlying Excel file will be returned.  In order to return the cell content, the 
+Note that if **`text`** is called prior to the **[`read(sheet,range)`](#readsheetrange)**  operation, then only the
+location of the underlying Excel file will be returned.  In order to return the cell content, the
 **[`read(sheet,range)`](#readsheetrange)** operation must be invoked.
 
 **Example**

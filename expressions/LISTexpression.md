@@ -248,7 +248,7 @@ Output:<br/>
 -----
 
 #### `join(list)`
-Transform the current list by appending `list` to it; same as [`append(items)`](#append(items)).
+Transform the current list by appending `list` to it; same as [`append(items)`](#appenditems).
 
 **Example**<br/>
 Script:<br/>
