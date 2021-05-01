@@ -616,7 +616,7 @@ Output:<br/>
 -----
 
 #### `removeColumns(columnNamesOrIndices)`
-Remove the entire column qualified via namesOrIndices parameter, which can be a list of column names or column 
+Remove the entire column qualified via `namesOrIndices` parameter, which can be a list of column names or column 
 positions (zero-based). Multiple columns are separated by comma (`,`).
 
 **Example**<br/>
@@ -706,13 +706,13 @@ csvData.txt:<br/>
    like:
    <pre>Here is <b>Tempe, AZ office</b>, which is located in <b>51 w 3rd st #105, Tempe AZ 85182 USA</b>, we call ourselves <b>PHX</b>.</pre>
 
-THEN we can use the following as the "template":
+Then we can use the following as the "template":
 <pre>Here is <b>${description}</b>, which is located in <b>${fullAddress}</b>, we call ourselves <b>${code}</b>.</pre>
 
 template.txt:<br/>
 ![template](image/CSVexpression_48.png)
 
-HENCE the expression `[CSV(${file}) => parse(...) render(${template})]` would yield:<br/>
+Hence, the expression `[CSV(${file}) => parse(...) render(${template})]` would yield:<br/>
 <img style="box-shadow:none;margin:0" src="image/csv_17.jpg"/>
 Nexial works behind the scene to replace each token (data variable) found in the template with record data found in 
 each CSV record. For as many records as there are, Nexial will perform the same "merge" to produce many lines of text.
@@ -722,6 +722,35 @@ Script:<br/>
 
 Output:<br/>
 ![output](image/CSVexpression_50.png)
+
+-----
+
+#### `reorder(columnNamesOrIndices)`
+Rearrange the column order via the `columnNamesOrIndices` parameter, which can be either column names or column
+positions (zero-based). Any invalid column specified will cause an error to occur. Note that this operation allows for
+duplicate column references so that the resulting CSV may have more columns. For example,
+
+##### MyCSV.csv
+![](image/CSV_reorder_1.png)
+
+```
+[CSV(MyCSV.csv) => 
+ parse(header=true) 
+ reorder(User Name,Department,First Name,Last Name,User Name)
+]
+```
+
+![](image/CSV_reorder_2.png)
+
+It is possible to mix column positions and column names, provided that the current CSV is parsed with `header=true`.
+For example,
+
+```
+[CSV(MyCSV.csv) => 
+ parse(header=true) 
+ reorder(User Name,Department,1,2,0)
+]
+```
 
 -----
 

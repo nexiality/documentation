@@ -31,6 +31,9 @@ comments: true
 ### [Expression](../expressions)
 - [TEXT &raquo; `number`](../expressions/TEXTexpression#number): "optimistically" converts text to number by _gently_ 
   removing non-numeric characters.
+- [CSV &raquo; `reorder`](../expressions/CSVexpression#reordercolumnnamesorindices): rearrange the column order.
+- [LIST](../expressions/LISTexpression): allows the creation of a `LIST` expression with no data (a list of size 0).
+
 
 ### [System Variables](../systemvars)
 - [`nexial.desktop.simulateClick`](../systemvars/index.html#nexial.desktop.simulateClick): **NEW** System variable to 
