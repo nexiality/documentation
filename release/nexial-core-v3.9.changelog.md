@@ -77,8 +77,11 @@ comments: true
 ### [web commands](../commands/web)
 - [`screenshot(file,locator,removeFixed)`](../commands/web/screenshot(file,locator,removeFixed)): additional wait time 
   to offset any visual effect caused by [`nexial.web.highlight`](../systemvars/index.html#nexial.web.highlight)
-- [`assertLocation(search)`](../commands/web/assertLocation(search)): **NEW** command to assert the current URL with PolyMatcher.
+- [`assertLocation(search)`](../commands/web/assertLocation(search)): **NEW** command to assert the current URL with 
+  PolyMatcher.
 - fixed a "circular reference" issue with collection browser performance metrics over JQuery-laden web page.
+- improve screenshot support on headless automation by automatically dismissing any JS alert/confirm dialogs before 
+  taking screenshots.
 
 
 ### [ws commands](../commands/ws)
