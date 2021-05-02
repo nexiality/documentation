@@ -69,6 +69,7 @@ comments: true
   - Use [`nexial.io.matchIncludeDirectories`](../systemvars/index.html#nexial.io.matchIncludeDirectories) to include 
     subdirectories in the match.
   - fix logical inclusion issue when mixed with [`nexial.io.matchRecursive`](../systemvars/index.html#nexial.io.matchRecursive)
+  - fixed `UnsupportedOperationException` due to the use of singleton list
 
 
 ### [pdf commands](../commands/pdf)
