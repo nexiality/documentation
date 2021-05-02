@@ -40,4 +40,4 @@ Suppose we want to capture element image from acousticguitar.com:<br/>
 
 
 ### See Also
-- [`screenshot(file,locator)`](screenshot(file,locator))
+- [`screenshotInFull(file,locator,removeFixed)`](screenshotInFull(file,timeout,removeFixed))

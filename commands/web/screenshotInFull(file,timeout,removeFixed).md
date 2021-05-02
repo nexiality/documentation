@@ -51,4 +51,4 @@ Suppose we want to capture full web page image from news.google.com:<br/>
 
 
 ### See Also
-- [screenshot(file,locator)](screenshot(file,locator))
+- [screenshot(file,locator,removeFixed)](screenshot(file,locator,removeFixed))

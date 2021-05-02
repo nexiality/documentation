@@ -21,7 +21,7 @@ existing text is removed.
 
 ### Parameters
 - **locator** - this parameter is the locator of the element.
-- **value** - this parameter is the key value which need to be send.
+- **value** - this parameter is the key value which need to be sent.
 
 
 ### Example

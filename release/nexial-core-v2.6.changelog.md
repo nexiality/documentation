@@ -164,7 +164,7 @@ comments: true
   support single select option.
 - System variable [`nexial.screenshotAsDesktop`](../systemvars/index#nexial.screenshotAsDesktop): **NEW** System
   variable to allow for desktop screen capturing instead of browser-scoped screen capturing.
-- [`screenshot(file,locator`](../commands/web/screenshot(file,locator)): **NEW** command to capture the graphical 
+- [`screenshot(file,locator,removeFixed`](../commands/web/screenshot(file,locator,removeFixed)): **NEW** command to capture the graphical 
   rendering of a Web element based on specified `locator`. Automatically upload screenshot to cloud if 
   [`nexial.outputToCloud`](../systemvars/index#nexial.outputToCloud) is set to `true.
 - [`updateAttribute(locator,attrName,value)`](../commands/web/updateAttribute(locator,attrName,value)): support to 

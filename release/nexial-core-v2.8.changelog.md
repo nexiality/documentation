@@ -103,6 +103,6 @@ comments: true
   `nexial.browserstack.terminatelocal` System variable. 
 - CrossBrowserTesting: support configurable termination of `cbt_tunnels` binary to support parallel testing via 
   `cbt.terminatelocal` System variable.
-- [`screenshot(file,locator)`](../commands/web/screenshot(file,locator)): now saving the link to the target file (or 
+- [`screenshot(file,locator,removeFixed)`](../commands/web/screenshot(file,locator,removeFixed)): now saving the link to the target file (or 
   url, as in the case of "output-to-cloud") to [`nexial.lastOutputLink`](../systemvars/index#nexial.lastOutputLink)
 - fixed typo with `nexial.web.highlight` System variable.
