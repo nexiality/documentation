@@ -20,5 +20,5 @@ This command is used to save the table row count to the given `var`.
 ### See Also
 
 - [`saveAllTableRows(var)`](saveAllTableRows(var))
-- [`saveTableRows(var,contains)`](saveTableRows(var,contains))
+- [`saveTableRows(var,contains,csv)`](saveTableRows(var,contains,csv))
 - [`saveTableRowsRange(var,beginRow,endRow)`](saveTableRowsRange(var,beginRow,endRow))

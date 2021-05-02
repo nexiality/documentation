@@ -138,7 +138,7 @@ Here is the list of supported commands separated by their command type:
 - [`saveModalDialogText(var)`](../commands/desktop/saveModalDialogText(var))
 - [`saveModalDialogTextByLocator(var,locater)`](../commands/desktop/saveModalDialogTextByLocator(var,locater))
 - [`saveProcessId(var,locator)`](../commands/desktop/saveProcessId(var,locator))
-- [`saveTableRows(var,contains)`](../commands/desktop/saveTableRows(var,contains))
+- [`saveTableRows(var,contains,csv)`](../commands/desktop/saveTableRows(var,contains,csv))
 - [`saveTableRowsRange(var,beginRow,endRow)`](../commands/desktop/saveTableRowsRange(var,beginRow,endRow))
 - [`saveText(var,name)`](../commands/desktop/saveText(var,name))
 - [`saveTextPane(var,name,criteria)`](../commands/desktop/saveTextPane(var,name,criteria))
