@@ -757,14 +757,35 @@
 
     <tr>
         <td class="varname" nowrap="nowrap">
+            <a id="nexial.screenshotEnabled"><code>nexial.screenshotEnabled</code></a>
+        </td>
+        <td>boolean</td>
+        <td>true</td>
+        <td class="read-write">read/write</td>
+        <td>
+            <b>Only applicable to <code>web</code>, <code>desktop</code> commands.</b><br/>
+            <br/>
+            Set this System variable to <code>false</code> to disable all screen capturing during execution. When this
+            System variable is set to <code>false</code>, the following commands will render <code>SKIP</code> as
+            outcome:<ol>
+            <li><a href="../commands/web/screenshot(file,locator,removeFixed)">web &raquo; <code>screenshot(file,locator,removeFixed)</code></a></li>
+            <li><a href="../commands/web/screenshotInFull(file,timeout,removeFixed)">web &raquo; <code>screenshotInFull(file,timeout,removeFixed)</code></a></li>
+            </ol>
+            <br/>
+            By default, this System variable is set to <code>true</code>.
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.screenshotOnError"><code>nexial.screenshotOnError</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
         <td class="read-write">read/write</td>
         <td>
-            Only application to <code>web</code>, <code>desktop</code> commands. Set to <code>true</code> for Nexial
-            to capture the screenshot when a failure occurred.
+            <b>Only applicable to <code>web</code>, <code>desktop</code> commands.</b><br/>
+            <br/>
+            Set to <code>true</code> for Nexial to capture screenshot when a failure occurred.
         </td>
     </tr>
     <tr>
@@ -2537,18 +2558,36 @@
             <a id="nexial.enforcePageSourceStability"><code>nexial.enforcePageSourceStability</code></a>
         </td>
         <td>boolean</td>
-        <td>true</td>
+        <td>false</td>
         <td class="read-write">read/write</td>
         <td>
+            <b>
+                As of Nexial v3.9, this System variable has been set to <code>false</code> by default to improve overall
+                execution performance. It isd determined that this System variable would be most applicable for web
+                applications that contain one or more active background AJAX calls after the current page is loaded. As
+                such, the "stability" of the corresponding web page might require the background AJAX calls to complete.
+                Setting this System variable to <code>true</code> would be helpful in such instance.
+                <br/>
+                However, such behavior isn't common amongst most web application and hence this System variable is set
+                to <code>false</code> by default.
+            </b>
+            <br/>
+            <br/>
             Determine the browser page stability during test execution. Generally most of the modern web applications
             are rich in interactivity which require some background proceed to be completed when page gets loaded. But
             older or simpler web applications do not have such requirement. For such case, one can use this system
             variable to speed up test automation.<br/>
             <br/>
-            By default the value is set to <code>true</code> and will ensure that the web page in question is stabilized
-            before proceeding to next command. If this system variable is set to <code>false</code>, this enforcement
-            will be omitted. For example:<br/>
+            <strike>
+                By default the value is set to <code>true</code> and will ensure that the web page in question is
+                stabilized before proceeding to next command.
+            </strike>
+            If this system variable is set to <code>false</code>, this enforcement will be omitted. For example:<br/>
             <img alt="nexial.enforcePageSourceStability example" src="image/systemvar_23.png"/>
+            <br/>
+            <br/>
+            See <a href="#nexial.waitSpeed"><code>nexial.waitSpeed</code></a> for more control over this "stability
+            wait".
         </td>
     </tr>
     <tr>

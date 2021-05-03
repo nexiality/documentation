@@ -20,6 +20,8 @@ comments: true
   readability.
 - implemented auto-retry when Nexial fails to retrieve content from a URL. This can impact (hopefully positively) many
   functionalities where a URL is referenced (for remote content) instead of a local file path.
+- Default [`nexial.enforcePageSourceStability`](../systemvars/index.html#nexial.enforcePageSourceStability) to `false`
+  to improve overall execution performance.
 
 
 ### [Flow Control](../flowcontrols)
@@ -38,6 +40,10 @@ comments: true
 ### [System Variables](../systemvars)
 - [`nexial.desktop.simulateClick`](../systemvars/index.html#nexial.desktop.simulateClick): **NEW** System variable to 
   support "simulated" click which might provides more stability in automation.
+- [`nexial.screenshotEnabled`](../systemvars/index.html#nexial.screenshotEnabled): **NEW** System variable to 
+  enable/disable screen capturing across an entire execution. By default, this is set to `true`. Setting it `false` will
+  disable screen capturing for all steps and the "screenshot"-related commands.
+ 
 
 
 ### [base commands](../commands/base)

@@ -17,8 +17,11 @@ Nexial. When `removeFixed` parameter is set to `true`, Nexial will attempt to fi
 (either top or bottom of the page) and disable its positional persistence. After screenshot capturing is complete,
 Nexial will restore the page navigation's positional persistence.
 
-If [`nexial.outputToCloud`](../../systemvars/index.html#nexial.outputToCloud) System variable is set to `true`, then the 
-captured image will be uploaded to the cloud as well.
+Note:
+- If [`nexial.outputToCloud`](../../systemvars/index.html#nexial.outputToCloud) System variable is set to `true`, then 
+  the captured image will be uploaded to the cloud as well.
+- screen capturing can be disabled for the entire execution via
+  [`nexial.screenshotEnabled`](../../systemvars/index.html#nexial.screenshotEnabled) System variable.
 
 
 ### Parameters
