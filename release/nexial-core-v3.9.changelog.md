@@ -92,6 +92,8 @@ comments: true
 - fixed a "circular reference" issue with collection browser performance metrics over JQuery-laden web page.
 - improve screenshot support on headless automation by automatically dismissing any JS alert/confirm dialogs before 
   taking screenshots.
+- [`selectText(locator)`](../commands/web/selectText(locator)): improved approach to select text on a page; no longer 
+  required ID on the target element.
 
 
 ### [ws commands](../commands/ws)
