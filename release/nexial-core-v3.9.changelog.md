@@ -66,16 +66,21 @@ comments: true
 ### [excel commands](../commands/excel)
 
 
-### [mail commands](../commands/mail)
-- [`sendComposed(profile,var)`](../commands/mail/sendComposed(profile,var)): failure condition now generate error log to aid in RCA
+### [image commands](../commands/image)
+- [`saveDiff(var,baseline,actual)`](../commands/image/saveDiff(var,baseline,actual)): improved image comparison 
+  algorithm for more accurate and meaningful result.
 
 
 ### [io commands](../commands/io)
-- [`saveMatches(var,path,fileFilter,textFilter)`](../commands/io/saveMatches(var,path,fileFilter,textFilter)): 
-  - Use [`nexial.io.matchIncludeDirectories`](../systemvars/index.html#nexial.io.matchIncludeDirectories) to include 
+- [`saveMatches(var,path,fileFilter,textFilter)`](../commands/io/saveMatches(var,path,fileFilter,textFilter)):
+  - Use [`nexial.io.matchIncludeDirectories`](../systemvars/index.html#nexial.io.matchIncludeDirectories) to include
     subdirectories in the match.
   - fix logical inclusion issue when mixed with [`nexial.io.matchRecursive`](../systemvars/index.html#nexial.io.matchRecursive)
   - fixed `UnsupportedOperationException` due to the use of singleton list
+
+
+### [mail commands](../commands/mail)
+- [`sendComposed(profile,var)`](../commands/mail/sendComposed(profile,var)): failure condition now generate error log to aid in RCA
 
 
 ### [pdf commands](../commands/pdf)
