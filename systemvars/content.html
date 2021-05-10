@@ -2830,23 +2830,21 @@
             <a id="nexial.browser.downloadPdf"><code>nexial.browser.downloadPdf</code></a>
         </td>
         <td>boolean</td>
-        <td>false</td>
+        <td>true</td>
         <td class="read-only">read-only</td>
         <td>
-            <b>APPLICABLE FOR CHROME BROWSERS ONLY AT THIS TIME.</b><br/>
+            <b>APPLICABLE FOR CHROME AND FIREFOX BROWSERS ONLY AT THIS TIME.</b><br/>
 
             Specify if a PDF document encountered during automation would be display in the browser or downloaded
             (to <a href="#nexial.browser.downloadTo"><code>nexial.browser.downloadTo</code></a>). By default, Nexial
-            will open
-            the said PDF document to be opened in the current browser. In many situations it might be beneficial to
-            download
-            the PDF instead. One can utilize the <a href="../commands/pdf"><code>pdf</code></a> commands for additional
-            value-added automation.<br/>
+            will download PDF to disk rather than open the said PDF document to be opened in the current browser. In
+            many situations it is more beneficial to download the PDF. One can utilize the
+            <a href="../commands/pdf"><code>pdf</code></a> commands for additional automation.<br/>
 
-            Note that when this System variable is set to <code>true</code>, PDF documents will be downloaded to
+            Note that when this System variable is set to <code>false</code>, PDF documents will open on the current
+            browser. By default Nexial will download PDF documents to
             <a href="#nexial.browser.downloadTo"><code>nexial.browser.downloadTo</code></a>, which, by default, is set
-            to
-            <a href="../functions/$(syspath)#syspathout"><code>$(syspath|out|fullpath)</code></a>.
+            to <a href="../functions/$(syspath)#syspathout"><code>$(syspath|out|fullpath)</code></a>.
         </td>
     </tr>
     <tr>

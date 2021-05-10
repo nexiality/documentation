@@ -99,6 +99,8 @@ comments: true
   taking screenshots.
 - [`selectText(locator)`](../commands/web/selectText(locator)): improved approach to select text on a page; no longer 
   required ID on the target element.
+- support downloading multiple files at once on Chrome and Firefox browser.
+- [`nexial.browser.downloadPdf`](../systemvars/index.html#nexial.browser.downloadPdf): now default to `true`, which means Nexial will download PDF instead of opening it by default; seems to be a useful default.
 
 
 ### [ws commands](../commands/ws)
