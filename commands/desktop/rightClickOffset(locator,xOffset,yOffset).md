@@ -11,7 +11,9 @@ comments: true
 This command instructs Nexial to right-click on the element matched to the specified `locator`, with the desired 
 positional offset. This allows for more fine control and additional interactivity during automation.
 
-The `xOffset` and `yOffset` values are the relative left and top position of the specified element, respectively.
+The `xOffset` and `yOffset` values are the relative left and top position of the specified element, respectively. If
+these optional parameters are not specified, then Nexial will attempt to invoke right click at (or near) the center of
+the target element.
 
 One may view this command as a simplified form of [`clickScreen(button,modifiers,x,y)`](clickScreen(button,modifiers,x,y)).
 

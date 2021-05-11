@@ -30,6 +30,7 @@ Both the `xOffset` and `yOffset` parameters are optional. One can use these 2 pa
 right-click should be invoked. By leaving both parameters as blank, Nexial will target the center (approximately) of the
 specified element instead.
 
+
 ### Parameters
 - **name** - the name of the component from which the context menu will be triggered.
 - **menu** - the menu item(s) to invoked from the context menu.

@@ -16,9 +16,9 @@ Note that this command will only work on an "interactive" element, such as textb
 combo (i.e. dropdown). Issuing this command on element such as a label or dialog title bar will likely result in no
 automation being performed.
 
-The `xOffset` and `yOffset` values are the relative left and top position of the specified element. In contrast, the 
-[`clickByLocator(locator)`](clickByLocator(locator)) command generally would perform the click at the center of the
-target element.
+The `xOffset` and `yOffset` values are the relative left and top position of the specified element, respectively. If
+these optional parameters are not specified, then Nexial will attempt to invoke right click at (or near) the center of
+the target element.
 
 
 ### Parameters
