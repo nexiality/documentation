@@ -65,6 +65,9 @@ comments: true
 - [`rightClickOffset(locator,xOffset,yOffset)`](../commands/desktop/rightClickOffset(locator,xOffset,yOffset)): 
   **NEW** command to support right click.
 - update both "contextMenu" commands to support x/y offsets.
+- speed up the initialization of winium driver.
+- reduce winium driver's internal logging
+
 
 ### [excel commands](../commands/excel)
 

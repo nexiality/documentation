@@ -66,8 +66,8 @@ If you are new to desktop automation via Nexial, please first familiarize yourse
 - [`clickTextPaneRow(var,index)`](clickTextPaneRow(var,index))
 - [`closeApplication()`](closeApplication())
 - [`collapseHierTable()`](collapseHierTable())
-- [`contextMenu(name,menu)`](contextMenu(name,menu,xOffset,yOffset))
-- [`contextMenuByLocator(locator,menu)`](contextMenuByLocator(locator,menu,xOffset,yOffset))
+- [`contextMenu(name,menu,xOffset,yOffset)`](contextMenu(name,menu,xOffset,yOffset))
+- [`contextMenuByLocator(locator,menu,xOffset,yOffset)`](contextMenuByLocator(locator,menu,xOffset,yOffset))
 - [`doubleClick(name)`](doubleClick(name))
 - [`doubleClickByLocator(locator)`](doubleClickByLocator(locator))
 - ~~[`editCurrentRow(nameValues)`](editCurrentRow(nameValues))~~
