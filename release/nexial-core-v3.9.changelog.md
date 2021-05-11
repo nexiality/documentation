@@ -43,7 +43,6 @@ comments: true
 - [`nexial.screenshotEnabled`](../systemvars/index.html#nexial.screenshotEnabled): **NEW** System variable to 
   enable/disable screen capturing across an entire execution. By default, this is set to `true`. Setting it `false` will
   disable screen capturing for all steps and the "screenshot"-related commands.
- 
 
 
 ### [base commands](../commands/base)
@@ -61,7 +60,11 @@ comments: true
 - implement cell-specific value formatting for data grid cells. Add formatting rules in the `"extra"` fields of the 
   JSON configuration, like this: `"extra": { "Column Name.format": "old_format,new_format" }`
 - [`clickMenuByLocator(locator,menu)`]: fixed automation for index-based menu.
-
+- [`rightClickElementOffset(name,xOffset,yOffset)`](../commands/desktop/rightClickElementOffset(name,xOffset,yOffset)): 
+  **NEW** command to support right click.
+- [`rightClickOffset(locator,xOffset,yOffset)`](../commands/desktop/rightClickOffset(locator,xOffset,yOffset)): 
+  **NEW** command to support right click.
+- update both "contextMenu" commands to support x/y offsets.
 
 ### [excel commands](../commands/excel)
 

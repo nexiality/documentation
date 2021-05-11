@@ -16,8 +16,9 @@ Note that this command will only work on an "interactive" element, such as textb
 combo (i.e. dropdown). Issuing this command on element such as a label or dialog title bar will likely result in no
 automation being performed.
 
-The `xOffset` and `yOffset` values are the relative left and top position of the specified element. If they are both 
-specified as `0`, it would be equivalent to [`clickByLocator(locator)`](clickByLocator(locator)).
+The `xOffset` and `yOffset` values are the relative left and top position of the specified element. In contrast, the 
+[`clickByLocator(locator)`](clickByLocator(locator)) command generally would perform the click at the center of the
+target element.
 
 
 ### Parameters

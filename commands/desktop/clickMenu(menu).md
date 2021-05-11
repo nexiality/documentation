@@ -23,5 +23,5 @@ access "Copy" from "Edit" menu, specify `Edit,Copy` (read, click Edit and then c
 
 ### See Also
 - [`clickMenuByLocator(locator,menu)`](clickMenuByLocator(locator,menu))
-- [`contextMenuByLocator(locator,menu)`](contextMenuByLocator(locator,menu))
-- [`contextMenu(name,menu)`](contextMenu(name,menu))
+- [`contextMenu(name,menu)`](contextMenu(name,menu,xOffset,yOffset))
+- [`contextMenuByLocator(locator,menu)`](contextMenuByLocator(locator,menu,xOffset,yOffset))

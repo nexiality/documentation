@@ -30,5 +30,5 @@ A few critical things to note:
 
 ### See Also
 - [`clickMenu(menu)`](clickMenu(menu))
-- [`contextMenuByLocator(locator,menu)`](contextMenuByLocator(locator,menu))
-- [`contextMenu(name,menu)`](contextMenu(name,menu))
+- [`contextMenuByLocator(locator,menu)`](contextMenuByLocator(locator,menu,xOffset,yOffset))
+- [`contextMenu(name,menu)`](contextMenu(name,menu,xOffset,yOffset))

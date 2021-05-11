@@ -1,6 +1,6 @@
 ---
 layout: default
-title: contextMenu(name,menu)
+title: contextMenu(name,menu,xOffset,yOffset)
 parent: desktop
 tags: command desktop
 comments: true
@@ -20,14 +20,21 @@ For context menu with multiple levels of menu items, use comma (`,`) to separate
 to access the "Base64 Encode" item under the "Plugin commands" menu (below), one would specify 
 `Plugin commands,Base64 Encode` as the `menu` parameter.
 
+![](image/contextMenu_01.png)
+
 Alternatively, one may reference the menu item via its position within its corresponding menu. Use the `INDEX:` prefix
 to indicate position-based triggering. For example, to access the 3rd menu item from the context menu, follow by the 2nd
 menu item from the submenu, the `menu` parameter would be `INDEX:3,2`.
 
+Both the `xOffset` and `yOffset` parameters are optional. One can use these 2 parameters to fine-tune where the
+right-click should be invoked. By leaving both parameters as blank, Nexial will target the center (approximately) of the
+specified element instead.
 
 ### Parameters
 - **name** - the name of the component from which the context menu will be triggered.
 - **menu** - the menu item(s) to invoked from the context menu.
+- **xOffset** - the X coordinate of the element to be clicked on.
+- **yOffset** - the Y coordinate of the element to be clicked on.
 
 
 ### Example
@@ -36,4 +43,4 @@ menu item from the submenu, the `menu` parameter would be `INDEX:3,2`.
 ### See Also
 - [`clickMenu(menu)`](clickMenu(menu))
 - [`clickMenuByLocator(locator,menu)`](clickMenuByLocator(locator,menu))
-- [`contextMenuByLocator(locator,menu)`](contextMenuByLocator(locator,menu))
+- [`contextMenuByLocator(locator,menu)`](contextMenuByLocator(locator,menu,xOffset,yOffset))
