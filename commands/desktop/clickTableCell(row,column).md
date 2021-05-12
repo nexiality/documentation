@@ -7,16 +7,23 @@ comments: true
 ---
 
 ### Description
+This command clicks on the specified `column` of the specified `row` of the current data grid component. The 
+corresponding data grid component must first be recognized as "current" via the [`useTable(var,name)`](useTable(var,name)) 
+command.
 
-- This command is to click on the table(data grid).In other words this command will click on the exact cell and column name of the table.
-- In order to use this command make sure you have data on the grid.
-- The row number start with "0" index for any table,so in order to enter first row, the row number will be "0".
-- The command will perform click on the data grid row number and column name and pass or else fail otherwise.
+Note:
+- In order to use this command make sure you have data on the specified `row` and `column`. In many instances, data grid
+  cell without any data would likely NOT respond to any click.
+- `row` is 0-based.
+- `column` should match the header of the target data grid component.
+- The click will be performed on the middle (approximate) of the target cell.
+- If the specified row is currently not in displayed, the corresponding step will likely FAIL.
+
 
 ### Parameters
-
 - **rowNum** -  This parameter is the row number of the table(data Grid)
 - **column-** -  This is parameter is the column name of the table(data Grid)
+
 
 ### Example
 

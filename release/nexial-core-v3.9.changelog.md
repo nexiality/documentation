@@ -67,7 +67,8 @@ comments: true
 - update both "contextMenu" commands to support x/y offsets.
 - speed up the initialization of winium driver.
 - reduce winium driver's internal logging
-
+- [`editTableCells(row,nameValues)`](../commands/desktop/editTableCells(row,nameValues)): fixed the handling of 
+  checkbox in data grid cell. Faster and more stable now. :-)
 
 ### [excel commands](../commands/excel)
 

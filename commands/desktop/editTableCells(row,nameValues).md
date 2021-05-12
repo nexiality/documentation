@@ -23,7 +23,7 @@ The cell/value is separate by `=`, and each pair is separated by either a newlin
 - `[CLEAR]` – to clear data in the specified cell
 - `[CHECK]` – to check the checkbox element in the specified cell
 - `[UNCHECK]` – to uncheck the checkbox element in the specified cell
-- `[CLICK]` – to click on the specific cell. In some rare situation, clicking on a cell updates its value (by the
+- `[CLICK]` – to click on the specific cell. In some rare situations, clicking on a cell updates its value (by the
   application)
 - `[<Function Key>]` - to send the function key in the table to the specific column. For example, 
   `Column 1=[F5]`,`Column2`=[TAB]`
