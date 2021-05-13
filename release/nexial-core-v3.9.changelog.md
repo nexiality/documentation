@@ -22,6 +22,7 @@ comments: true
   functionalities where a URL is referenced (for remote content) instead of a local file path.
 - Default [`nexial.enforcePageSourceStability`](../systemvars/index.html#nexial.enforcePageSourceStability) to `false`
   to improve overall execution performance.
+- consider Nexial installer directory case-insensitively for Windows system.
 
 
 ### [Flow Control](../flowcontrols)
