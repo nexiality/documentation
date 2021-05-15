@@ -111,6 +111,17 @@ comments: true
 - [`nexial.browser.downloadPdf`](../systemvars/index.html#nexial.browser.downloadPdf): now default to `true`, which means Nexial will download PDF instead of opening it by default; seems to be a useful default.
 
 
+### [webmail commands](../commands/webmail)
+- First release of Nexial's support for webmail services. Currently supporting: Mailinator.
+- Documentation forthcoming
+- [`search(var,profile,searchCriteria,duration)`](../commands/webmail/search(var,profile,searchCriteria,duration)): 
+  search through available emails for the email specified in `profile` and store the corresponding email id in `var`.
+  These email id's can be used to retrieve email detail and to delete email.
+- [`read(var,profile,id)`](../commands/webmail/read(var,profile,id)): retrieve email details via the corresponding
+  profile and email id
+- [`delete(profile,id)`](../commands/webmail/delete(profile,id)): delete email via the corresponding profile and email id
+
+
 ### [ws commands](../commands/ws)
 
 
