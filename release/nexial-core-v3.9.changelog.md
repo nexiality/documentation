@@ -112,7 +112,7 @@ comments: true
 
 
 ### [webmail commands](../commands/webmail)
-- First release of Nexial's support for webmail services. Currently supporting: Mailinator.
+- First release of Nexial's support for webmail services. Currently supporting: [Mailinator](https://www.mailinator.com).
 - Documentation forthcoming
 - [`search(var,profile,searchCriteria,duration)`](../commands/webmail/search(var,profile,searchCriteria,duration)): 
   search through available emails for the email specified in `profile` and store the corresponding email id in `var`.
@@ -120,6 +120,8 @@ comments: true
 - [`read(var,profile,id)`](../commands/webmail/read(var,profile,id)): retrieve email details via the corresponding
   profile and email id
 - [`delete(profile,id)`](../commands/webmail/delete(profile,id)): delete email via the corresponding profile and email id
+- added support for [Temporary-Mail](https://temporary-mail.net) as well.
+- improved support and performance for [Mailinator](https://www.mailinator.com) 
 
 
 ### [ws commands](../commands/ws)
