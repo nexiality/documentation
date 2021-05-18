@@ -7,7 +7,7 @@ comments: true
 ---
 
 ### Description
-This command instructs Nexial to save all data of the [current table](useTable(var,name).md) into `var` for offline 
+This command instructs Nexial to save all data of the [current table](useTable(var,name)) into `var` for offline 
 (and often, faster) data processing. All the captured data will be treated as text; no data type conversion or 
 formatting will be performed.
 

@@ -1,13 +1,13 @@
 ---
 layout: default
-title: nexial-core 3.9 (2021-05-??)
+title: nexial-core 3.9 (2021-05-17)
 parent: release
 tags: release nexial-core 3.9
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v3.9_????" class="external-link" target="_nexial_link">Release 3.9</a>
-2021-05-??
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v3.9_1163" class="external-link" target="_nexial_link">Release 3.9</a>
+2021-05-17
 
 
 ### General
@@ -23,12 +23,6 @@ comments: true
 - Default [`nexial.enforcePageSourceStability`](../systemvars/index.html#nexial.enforcePageSourceStability) to `false`
   to improve overall execution performance.
 - consider Nexial installer directory case-insensitively for Windows system.
-
-
-### [Flow Control](../flowcontrols)
-
-
-### [Nexial Interactive](../interactive)
 
 
 ### [Expression](../expressions)
@@ -59,20 +53,20 @@ comments: true
 - implemented `nexial.desktop.simulateClick` configuration in the "`extra" section of a component configuration. This
   configuration supports the clicking of a button, checkbox or radio button via simulated click.
 - implement cell-specific value formatting for data grid cells. Add formatting rules in the `"extra"` fields of the 
-  JSON configuration, like this: `"extra": { "Column Name.format": "old_format,new_format" }`
+  JSON configuration, like this: `"extra": { "Column Name.format": "old_format,new_format" }`.
 - [`clickMenuByLocator(locator,menu)`]: fixed automation for index-based menu.
 - [`rightClickElementOffset(name,xOffset,yOffset)`](../commands/desktop/rightClickElementOffset(name,xOffset,yOffset)): 
   **NEW** command to support right click.
 - [`rightClickOffset(locator,xOffset,yOffset)`](../commands/desktop/rightClickOffset(locator,xOffset,yOffset)): 
   **NEW** command to support right click.
-- update both "contextMenu" commands to support x/y offsets.
+- update both "contextMenu" commands to support x/y offsets:
+  - [`contextMenu(name,menu,xOffset,yOffset)`](../commands/desktop/contextMenu(name,menu,xOffset,yOffset))
+  - [`contextMenuByLocator(locator,menu,xOffset,yOffset)`](../commands/desktop/contextMenuByLocator(locator,menu,xOffset,yOffset))
 - speed up the initialization of winium driver.
 - reduce winium driver's internal logging
 - [`editTableCells(row,nameValues)`](../commands/desktop/editTableCells(row,nameValues)): 
-  - fixed the handling of checkbox in data grid cell. Faster and more stable now. :-)
+  - fixed the handling of checkbox in data grid cell. Faster and more stable now.
   - avoid unintended clicking of a checkbox-cell during the initial focus on the target data grid component. 
-
-### [excel commands](../commands/excel)
 
 
 ### [image commands](../commands/image)
@@ -89,13 +83,8 @@ comments: true
 
 
 ### [mail commands](../commands/mail)
-- [`sendComposed(profile,var)`](../commands/mail/sendComposed(profile,var)): failure condition now generate error log to aid in RCA
-
-
-### [pdf commands](../commands/pdf)
-
-
-### [rdbms commands](../commands/rdbms)
+- [`sendComposed(profile,var)`](../commands/mail/sendComposed(profile,var)): failure condition now generate error log 
+  to aid in RCA
 
 
 ### [web commands](../commands/web)
@@ -109,23 +98,19 @@ comments: true
 - [`selectText(locator)`](../commands/web/selectText(locator)): improved approach to select text on a page; no longer 
   required ID on the target element.
 - support downloading multiple files at once on Chrome and Firefox browser.
-- [`nexial.browser.downloadPdf`](../systemvars/index.html#nexial.browser.downloadPdf): now default to `true`, which means Nexial will download PDF instead of opening it by default; seems to be a useful default.
+- [`nexial.browser.downloadPdf`](../systemvars/index.html#nexial.browser.downloadPdf): now default to `true`, which 
+  means Nexial will download PDF instead of opening it by default; seems to be a useful default.
 
 
 ### [webmail commands](../commands/webmail)
-- First release of Nexial's support for webmail services. Currently supporting: [Mailinator](https://www.mailinator.com).
-- Documentation forthcoming
-- [`search(var,profile,searchCriteria,duration)`](../commands/webmail/search(var,profile,searchCriteria,duration)): 
-  search through available emails for the email specified in `profile` and store the corresponding email id in `var`.
-  These email id's can be used to retrieve email detail and to delete email.
-- [`read(var,profile,id)`](../commands/webmail/read(var,profile,id)): retrieve email details via the corresponding
-  profile and email id
-- [`delete(profile,id)`](../commands/webmail/delete(profile,id)): delete email via the corresponding profile and email id
-- added support for [Temporary-Mail](https://temporary-mail.net) as well.
-- improved support and performance for [Mailinator](https://www.mailinator.com) 
-
-
-### [ws commands](../commands/ws)
-
-
-### [tn.5250 commands](../commands/tn.5250)
+- First release of Nexial's support for webmail services (web-based email service suitable to SMTP testing). 
+  - Currently supports [Mailinator](https://www.mailinator.com) and [Temporary-Mail](https://temporary-mail.net).
+  - FYI: [_we take request!_](https://github.com/nexiality/nexial-core/issues/new?assignees=&labels=&template=feature_request.md) :-)
+  - Documentation forthcoming
+  - [`search(var,profile,searchCriteria,duration)`](../commands/webmail/search(var,profile,searchCriteria,duration)): 
+    search through available emails for the email specified in `profile` and store the corresponding email id in `var`.
+    These email id's can be used to retrieve email detail and to delete email.
+  - [`read(var,profile,id)`](../commands/webmail/read(var,profile,id)): retrieve email details via the corresponding
+    profile and email id
+  - [`delete(profile,id)`](../commands/webmail/delete(profile,id)): delete email via the corresponding profile and email 
+    id

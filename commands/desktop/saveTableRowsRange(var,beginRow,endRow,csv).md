@@ -7,7 +7,7 @@ comments: true
 ---
 
 ### Description
-This command instructs Nexial to save rows of data from the [current table](useTable(var,name).md) into `var` for 
+This command instructs Nexial to save rows of data from the [current table](useTable(var,name)) into `var` for 
 offline (and often, faster) data processing. All the captured data will be treated as text; no data type conversion or 
 formatting will be performed. One would use `beginRow` and `endRow` to indicate the row(s) to capture.
 
