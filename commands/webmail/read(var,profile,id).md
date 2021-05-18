@@ -28,16 +28,17 @@ In the above example you can see that once the email is read we can retrieve the
 <br/>
 
 ### Email Details
+
 | property              | description                                                                    |
 | --------------------- | ------------------------------------------------------------------------------ |
-| `id`                  | The `id` of the email read.|
-| `from`                | The `from` address of the email.|
-| `to`                  | The `to` address of the email.|
-| `subject`             | The `subject` of the email.|
-| `time`                | The `time` at which the email is received.|
-| `content`             | The `text content` of the email.|
-| `links`               | The list of the `html links` in the email.|
-| `html`                | The `html` content of the email.|
+| `id`                  | The `id` of the email read.                                                    |
+| `from`                | The `from` address of the email.                                               |
+| `to`                  | The `to` address of the email.                                                 |
+| `subject`             | The `subject` of the email.                                                    |
+| `time`                | The `time` at which the email is received.                                     |
+| `content`             | The `text content` of the email.                                               |
+| `links`               | The list of the `html links` in the email.                                     |
+| `html`                | The `html` content of the email.                                               |
 
 ### See Also
 - [webmail &raquo; `search(var,profile,searchCriteria,duration)`](../webmail/search(var,profile,searchCriteria,duration))
