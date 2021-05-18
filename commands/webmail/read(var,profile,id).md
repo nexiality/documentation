@@ -37,6 +37,7 @@ In the above example you can see that once the email is read we can retrieve the
 - **links** - The list of the `html links` in the email.
 - **html** - The `html` content of the email.
 
+<br/>
 
 ### See Also
 - [webmail &raquo; `search(var,profile,searchCriteria,duration)`](../webmail/search(var,profile,searchCriteria,duration))
