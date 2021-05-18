@@ -10,6 +10,7 @@ redirect_from:
 
 
 ### Releases
+- [v3.9 (2021-05-17)](nexial-core-v3.9.changelog)
 - [v3.8 (2021-04-08)](nexial-core-v3.8.changelog)
 - [v3.7 (2021-03-01)](nexial-core-v3.7.changelog)
 - [v3.6 (2020-01-21)](nexial-core-v3.6.changelog)
