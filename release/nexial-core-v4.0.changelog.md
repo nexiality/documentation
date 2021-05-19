@@ -26,6 +26,16 @@ comments: true
 
 
 ### [desktop commands](../commands/desktop)
+- [`selectCombo(name,text)`](../commands/desktop/selectCombo(name,text)): performance improvement when target combo 
+  element contains no selection.
+- [`clickTableRow(row)`](../commands/desktop/clickTableRow(row)): 
+  - stability improvement when requested row does not exist in the current table component.
+  - accuracy improvement by considering `[COLUMN].format` information in the `"extra"` section of the autoscanned JSON 
+    file.
+- [`clickFirstMatchRow(nameValues)`](../commands/desktop/clickFirstMatchRow(nameValues)): performance improvement to
+  find matching row over multiple column criterion.
+- [`saveTableRows(var,contains,csv)`](../commands/desktop/saveTableRows(var,contains,csv)): improve accurracy by 
+  omitting the last, not-yet-exist row
 
 
 ### [image commands](../commands/image)
