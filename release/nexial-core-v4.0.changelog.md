@@ -37,6 +37,12 @@ comments: true
   find matching row over multiple column criterion.
 - [`saveTableRows(var,contains,csv)`](../commands/desktop/saveTableRows(var,contains,csv)): improve accuracy by 
   omitting the last, not-yet-exist row
+- [`editTableCells(row,nameValues)`](../commands/desktop/editTableCells(row,nameValues)): fixed logical error when 
+  editing an empty table with no rows created.
+- [`check(name)`]: *NEW* command to check a Checkbox component only if it is currently unchecked.
+- [`uncheck(name)`]: *NEW* command to uncheck a Checkbox component only if it is currently checked.
+- [`checkByLocator(locator)`]: *NEW* command to check a Checkbox component only if it is currently unchecked.
+-  [`uncheckByLocator(locator)`]: *NEW* command to uncheck a Checkbox component only if it is currently checked.
 
 
 ### [image commands](../commands/image)
