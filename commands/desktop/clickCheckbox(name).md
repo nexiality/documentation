@@ -16,7 +16,7 @@ for more details.
 
 
 ### Parameters
-- **name** - this parameter is the name of the Check Box element.
+- **name** - this parameter is the name of the CheckBox element.
 
 
 ### Example
