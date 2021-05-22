@@ -45,13 +45,17 @@ comments: true
 - [`uncheckByLocator(locator)`]: *NEW* command to uncheck a Checkbox component only if it is currently checked.
 - support the use of `nexial.desktop.useTypeKeys` for any TextBox element; this configuration should be set in the 
   `"extra"` section of the corresponding JSON document.
-- performance improvement during scanning data grid when it contains no rows
-- performance improvement during scanning data grid when fetch its first row (empty)
-- performance improvement during editing of data grid cells, when the target cell contains the same data as in the 
-  parameter
-- [`editTableCells(row,nameValues)`](../commands/desktop/editTableCells(row,nameValues)): when the last column is 
-  provided by some shortcuts as the last keystroke sequence, Nexial will perform the shortcut keystrokes but will not 
-  forward to the subsequent column even if `nexial.desktop.table.tabAfterEdit` is set to `true`
+- [`editTableCells(row,nameValues)`](../commands/desktop/editTableCells(row,nameValues)): 
+  - when the last column is provided by some shortcuts as the last keystroke sequence, Nexial will perform the 
+    shortcut keystrokes but will not forward to the subsequent column even if `nexial.desktop.table.tabAfterEdit` 
+    is set to `true`
+  - performance improvement during editing of data grid cells, when the target cell contains the same data as in the
+    parameter
+- performance improvement during scanning or fetching data from a data grid when it contains no rows:
+  - [`saveTableRows(var,contains,csv)`](../commands/desktop/saveTableRows(var,contains,csv))
+  - [`assertTableColumnContains(column,contains)`](../commands/desktop/assertTableColumnContains(column,contains))
+  - [`saveAllTableRows(var,csv)`](../commands/desktop/saveAllTableRows(var,csv))
+  - [`assertTableContains(contains)`](../commands/desktop/assertTableContains(contains))
 
 
 ### [image commands](../commands/image)
