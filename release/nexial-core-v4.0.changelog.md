@@ -42,7 +42,16 @@ comments: true
 - [`check(name)`]: *NEW* command to check a Checkbox component only if it is currently unchecked.
 - [`uncheck(name)`]: *NEW* command to uncheck a Checkbox component only if it is currently checked.
 - [`checkByLocator(locator)`]: *NEW* command to check a Checkbox component only if it is currently unchecked.
--  [`uncheckByLocator(locator)`]: *NEW* command to uncheck a Checkbox component only if it is currently checked.
+- [`uncheckByLocator(locator)`]: *NEW* command to uncheck a Checkbox component only if it is currently checked.
+- support the use of `nexial.desktop.useTypeKeys` for any TextBox element; this configuration should be set in the 
+  `"extra"` section of the corresponding JSON document.
+- performance improvement during scanning data grid when it contains no rows
+- performance improvement during scanning data grid when fetch its first row (empty)
+- performance improvement during editing of data grid cells, when the target cell contains the same data as in the 
+  parameter
+- [`editTableCells(row,nameValues)`](../commands/desktop/editTableCells(row,nameValues)): when the last column is 
+  provided by some shortcuts as the last keystroke sequence, Nexial will perform the shortcut keystrokes but will not 
+  forward to the subsequent column even if `nexial.desktop.table.tabAfterEdit` is set to `true`
 
 
 ### [image commands](../commands/image)
