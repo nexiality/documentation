@@ -68,6 +68,12 @@ comments: true
 
 
 ### [web commands](../commands/web)
+- [`openInTab(name,url)`](../commands/web/openInTab(name,url)): **NEW** command to open an `url` in another tab.
+- [`switchBrowser(profile,config)`](../commands/web/switchBrowser(profile,config)): fixes for switching between multiple 
+  headless browsers.
+- minor logging improvements.
 
 
 ### [webmail commands](../commands/webmail)
+- [`read(var,profile,id)`](../commands/webmail/read(var,profile,id)): fix minor runtime errors when automating 
+  mailinator webmail service.

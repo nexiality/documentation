@@ -149,6 +149,7 @@ available commands.
 - [`openAndWait(url,waitMs)`](openAndWait(url,waitMs))
 - [`openHttpBasic(url,username,password)`](openHttpBasic(url,username,password))
 - [`openIgnoreTimeout(url)`](openIgnoreTimeout(url))
+- [`openInTab(name,url)`](openInTab(name,url))
 - [`refresh()`](refresh())
 - [`refreshAndWait()`](refreshAndWait())
 - [`resizeWindow(width,height)`](resizeWindow(width,height))
