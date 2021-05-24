@@ -39,10 +39,14 @@ comments: true
   omitting the last, not-yet-exist row
 - [`editTableCells(row,nameValues)`](../commands/desktop/editTableCells(row,nameValues)): fixed logical error when 
   editing an empty table with no rows created.
-- [`check(name)`]: *NEW* command to check a Checkbox component only if it is currently unchecked.
-- [`uncheck(name)`]: *NEW* command to uncheck a Checkbox component only if it is currently checked.
-- [`checkByLocator(locator)`]: *NEW* command to check a Checkbox component only if it is currently unchecked.
-- [`uncheckByLocator(locator)`]: *NEW* command to uncheck a Checkbox component only if it is currently checked.
+- [`check(name)`](../commands/desktop/check(name)): *NEW* command to check a Checkbox component only if it is 
+  currently unchecked.
+- [`uncheck(name)`](../commands/desktop/uncheck(name)): *NEW* command to uncheck a Checkbox component only if it is 
+  currently checked.
+- [`checkByLocator(locator)`](../commands/desktop/checkByLocator(locator).md): *NEW* command to check a Checkbox 
+  component only if it is currently unchecked.
+- [`uncheckByLocator(locator)`](../commands/desktop/uncheckByLocator(locator)): *NEW* command to uncheck a Checkbox 
+  component only if it is currently checked.
 - support the use of `nexial.desktop.useTypeKeys` for any TextBox element; this configuration should be set in the 
   `"extra"` section of the corresponding JSON document.
 - [`editTableCells(row,nameValues)`](../commands/desktop/editTableCells(row,nameValues)): 
@@ -56,6 +60,11 @@ comments: true
   - [`assertTableColumnContains(column,contains)`](../commands/desktop/assertTableColumnContains(column,contains))
   - [`saveAllTableRows(var,csv)`](../commands/desktop/saveAllTableRows(var,csv))
   - [`assertTableContains(contains)`](../commands/desktop/assertTableContains(contains))
+- FIX: properly translate newline characters so that they are reflect in the type* commands:
+  - [`typeAppendTextArea(name,text1,text2,text3,text4)`](../commands/desktop/typeAppendTextArea(name,text1,text2,text3,text4))
+  - [`typeAppendTextBox(name,text1,text2,text3,text4)`](../commands/desktop/typeAppendTextBox(name,text1,text2,text3,text4))
+  - [`typeTextArea(name,text1,text2,text3,text4)`](../commands/desktop/typeTextArea(name,text1,text2,text3,text4))
+  - [`typeTextBox(name,text1,text2,text3,text4)`](../commands/desktop/typeTextBox(name,text1,text2,text3,text4))
 
 
 ### [image commands](../commands/image)
