@@ -72,6 +72,7 @@ comments: true
 - [`switchBrowser(profile,config)`](../commands/web/switchBrowser(profile,config)): fixes for switching between multiple 
   headless browsers.
 - minor logging improvements.
+- reduce logging during webdriver initialization.
 
 
 ### [webmail commands](../commands/webmail)
