@@ -25,6 +25,8 @@ comments: true
 ### [base commands](../commands/base)
 - [`assertEqual(expected,actual)`](../commands/base/assertEqual(expected,actual)): code fix to avoid long-running 
   comparison between text with regex-typed characters.
+- [`assertContains(text,substring)`](../commands/base/assertContains(text,substring)): code fix to properly consider 
+  empty text comparison.
 
 
 ### [desktop commands](../commands/desktop)
@@ -67,6 +69,8 @@ comments: true
   - [`typeAppendTextBox(name,text1,text2,text3,text4)`](../commands/desktop/typeAppendTextBox(name,text1,text2,text3,text4))
   - [`typeTextArea(name,text1,text2,text3,text4)`](../commands/desktop/typeTextArea(name,text1,text2,text3,text4))
   - [`typeTextBox(name,text1,text2,text3,text4)`](../commands/desktop/typeTextBox(name,text1,text2,text3,text4))
+- [`assertTableCell(row,column,contains)`](../commands/desktop/assertTableCell(row,column,contains)): code fix to 
+  properly consider empty text comparison.
 
 
 ### [image commands](../commands/image)
