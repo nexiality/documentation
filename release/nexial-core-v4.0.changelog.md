@@ -23,6 +23,8 @@ comments: true
 
 
 ### [base commands](../commands/base)
+- [`assertEqual(expected,actual)`](../commands/base/assertEqual(expected,actual)): code fix to avoid long-running 
+  comparison between text with regex-typed characters.
 
 
 ### [desktop commands](../commands/desktop)
