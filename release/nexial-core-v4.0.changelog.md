@@ -88,6 +88,9 @@ comments: true
   headless browsers.
 - minor logging improvements.
 - reduce logging during webdriver initialization.
+- browser performance metrics
+  - upgrade to ChartJS 3.3: vulnerability fix
+  - realign the commands from which browser performance tracking should be made
 
 
 ### [webmail commands](../commands/webmail)
