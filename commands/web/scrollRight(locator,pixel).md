@@ -7,7 +7,15 @@ comments: true
 ---
 
 ### Description
-> **One should treat [`scrollElement(locator,xOffset,yOffset)`](scrollElement(locator,xOffset,yOffset)) as the supersede 
+
+<div style="color:red;background-color:#ffb0b0;font-weight:bold;padding:15px;margin:15px;">
+PLEASE NOTE THAT THIS COMMAND HAS BEEN REMOVED SINCE THE UNDERLYING JAVASCRIPT CAN NO LONGER STABLY PERFORM
+THE INTENDED OPERATIONS ON ALL BROWSERS.<br/>
+This command might be reinstated in the future, if we can find a suitable solution.
+</div>
+<br/>
+
+> > **One should treat [`scrollElement(locator,xOffset,yOffset)`](scrollElement(locator,xOffset,yOffset)) as the supersede 
 of [`scrollLeft(locator,pixel)`](scrollLeft(locator,pixel)) and [`scrollRight(locator,pixel)`](scrollRight(locator,pixel)).**
 
 - This command scroll right on the first matched element of the specified `locator`.  The amount of scroll is 

@@ -91,6 +91,14 @@ comments: true
 - browser performance metrics
   - upgrade to ChartJS 3.3: vulnerability fix
   - realign the commands from which browser performance tracking should be made
+- [`clickByLabel(label)`]: improved implementation by supporting case insensitive matching.
+- remove commands due to unsupported/non-working underlying JavaScript:
+  - `web.scrollElement(locator,xOffset,yOffset)`: use [`scrollTo(locator)`](../commands/web/scrollTo(locator)) or 
+    [`scrollPage(xOffset,yOffset)`](../commands/web/scrollPage(xOffset,yOffset)) instead
+  - `web.scrollLeft(locator,pixel)`: use [`scrollTo(locator)`](../commands/web/scrollTo(locator)) or 
+    [`scrollPage(xOffset,yOffset)`](../commands/web/scrollPage(xOffset,yOffset)) instead
+  - `web.scrollRight(locator,pixel)`: use [`scrollTo(locator)`](../commands/web/scrollTo(locator)) or 
+    [`scrollPage(xOffset,yOffset)`](../commands/web/scrollPage(xOffset,yOffset)) instead
 
 
 ### [webmail commands](../commands/webmail)

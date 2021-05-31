@@ -7,6 +7,14 @@ comments: true
 ---
 
 ### Description
+
+<div style="color:red;background-color:#ffb0b0;font-weight:bold;padding:15px;margin:15px;">
+PLEASE NOTE THAT THIS COMMAND HAS BEEN REMOVED SINCE THE UNDERLYING JAVASCRIPT CAN NO LONGER STABLY PERFORM
+THE INTENDED OPERATIONS ON ALL BROWSERS.<br/>
+This command might be reinstated in the future, if we can find a suitable solution.
+</div>
+<br/>
+
 This command instructs Nexial to scroll the content within a web element (denoted by `locator`) by specified x-offset 
 (`xOffset`) and y-offset (`yOffset`) relative to its current position.
 

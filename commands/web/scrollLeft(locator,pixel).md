@@ -7,8 +7,18 @@ comments: true
 ---
 
 ### Description
-> **One should treat [`scrollElement(locator,xOffset,yOffset)`](scrollElement(locator,xOffset,yOffset)) as the supersede 
-of [`scrollLeft(locator,pixel)`](scrollLeft(locator,pixel)) and [`scrollRight(locator,pixel)`](scrollRight(locator,pixel)).**
+
+<div style="color:red;background-color:#ffb0b0;font-weight:bold;padding:15px;margin:15px;">
+PLEASE NOTE THAT THIS COMMAND HAS BEEN REMOVED SINCE THE UNDERLYING JAVASCRIPT CAN NO LONGER STABLY PERFORM
+THE INTENDED OPERATIONS ON ALL BROWSERS.<br/>
+This command might be reinstated in the future, if we can find a suitable solution.
+</div>
+<br/>
+
+
+> **One should treat [`scrollElement(locator,xOffset,yOffset)`](scrollElement(locator,xOffset,yOffset)) as the 
+successor of [`scrollLeft(locator,pixel)`](scrollLeft(locator,pixel)) and 
+[`scrollRight(locator,pixel)`](scrollRight(locator,pixel)).**
 
 - This command is to scroll left of the scroll element.
 - In other words the command will scroll left to the defined pixel if element found and will pass the command or else fail otherwise.
