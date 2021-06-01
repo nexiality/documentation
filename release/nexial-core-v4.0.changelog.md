@@ -71,6 +71,8 @@ comments: true
   - [`typeTextBox(name,text1,text2,text3,text4)`](../commands/desktop/typeTextBox(name,text1,text2,text3,text4))
 - [`assertTableCell(row,column,contains)`](../commands/desktop/assertTableCell(row,column,contains)): code fix to 
   properly consider empty text comparison.
+- [`assertText(name,expected)`](../commands/desktop/assertText(name,expected)): handling of combo element when no 
+  selection is made.
 
 
 ### [image commands](../commands/image)
