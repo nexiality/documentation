@@ -112,3 +112,4 @@ comments: true
 - [`read(var,profile,id)`](../commands/webmail/read(var,profile,id)): fix minor runtime errors when automating 
   mailinator webmail service.
 - improved extraction of "clickable" links on mailinator mails.
+- improved/reduced harvested text content from webmail.
