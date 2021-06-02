@@ -84,6 +84,11 @@ comments: true
 ### [mail commands](../commands/mail)
 
 
+### [ws commands](../commands/ws)
+- [`oauth(var,url,auth)`](../commands/ws/oauth(var,url,auth)): add URL encoding to request parameters during OAUTH token 
+  exchange.
+
+
 ### [web commands](../commands/web)
 - [`openInTab(name,url)`](../commands/web/openInTab(name,url)): **NEW** command to open an `url` in another tab.
 - [`switchBrowser(profile,config)`](../commands/web/switchBrowser(profile,config)): fixes for switching between multiple 
