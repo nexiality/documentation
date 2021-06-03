@@ -59,6 +59,7 @@ comments: true
     is set to `true`
   - performance improvement during editing of data grid cells, when the target cell contains the same data as in the
     parameter
+  - special handling of checkboxes, especially when they are placed at the end of a row.
 - performance improvement during scanning or fetching data from a data grid when it contains no rows:
   - [`saveTableRows(var,contains,csv)`](../commands/desktop/saveTableRows(var,contains,csv))
   - [`assertTableColumnContains(column,contains)`](../commands/desktop/assertTableColumnContains(column,contains))
