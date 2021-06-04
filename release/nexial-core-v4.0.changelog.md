@@ -74,6 +74,36 @@ comments: true
   properly consider empty text comparison.
 - [`assertText(name,expected)`](../commands/desktop/assertText(name,expected)): handling of combo element when no 
   selection is made.
+- support the clicking of an input element prior to typing on it via [`nexial.desktop.clickBeforeEdit`], which can
+  either be configured as part of the target element's `extra` section, or as a System variable. Impacted commands are:
+  - [`sendKeysToTextBox(name,text1,text2,text3,text4)`](../commands/desktop/sendKeysToTextBox(name,text1,text2,text3,text4))
+  - [`typeAppendTextArea(name,text1,text2,text3,text4)`](../commands/desktop/typeAppendTextArea(name,text1,text2,text3,text4))
+  - [`typeAppendTextBox(name,text1,text2,text3,text4)`](../commands/desktop/typeAppendTextBox(name,text1,text2,text3,text4))
+  - [`typeTextArea(name,text1,text2,text3,text4)`](../commands/desktop/typeTextArea(name,text1,text2,text3,text4))
+  - [`typeTextBox(name,text1,text2,text3,text4)`](../commands/desktop/typeTextBox(name,text1,text2,text3,text4))
+- support the reformatting of component value via the "`extra`" section of the corresponding JSON configuration.
+  - for example, the following reformat a "number with the thousand separator" to a plain number:
+```json
+    "Field 1": {
+      "type": "DesktopElement",
+      "xpath": "/*[... ...]",
+      ... ...
+      "extra": {
+        "format": "[#,###,##0.00],[0.00]"
+      },... ...
+    }, ... ...
+```
+  - for example, the following reformat a "date with time" to just date:
+```json
+    "Field 12: {
+      "type": "DesktopElement",
+      "xpath": "/*[... ...]",
+      ... ...
+      "extra": {
+        "format": "[M/d/yyyy h:m:s a],[MM/dd/yyyy]"
+      },... ...
+    }, ... ...
+```
 
 
 ### [image commands](../commands/image)
