@@ -19,6 +19,13 @@ comments: true
 ### [Expression](../expressions)
 
 
+### [Interactive](../interactive)
+- Option 1 (`1 <script>`) now supports test script without path (assumes such script is located in the `artifact/script`
+  directory of the current project.
+- Option 2 (`2 <data>`) now supports data file without path (assumes such data file is located in the `artifact/data`
+  directory of the current project.
+
+
 ### [System Variables](../systemvars)
 
 
@@ -60,6 +67,7 @@ comments: true
   - performance improvement during editing of data grid cells, when the target cell contains the same data as in the
     parameter
   - special handling of checkboxes, especially when they are placed at the end of a row.
+  - improvement on checkbox fields to eliminate unnecessary clicks and mouse movements.
 - performance improvement during scanning or fetching data from a data grid when it contains no rows:
   - [`saveTableRows(var,contains,csv)`](../commands/desktop/saveTableRows(var,contains,csv))
   - [`assertTableColumnContains(column,contains)`](../commands/desktop/assertTableColumnContains(column,contains))
@@ -104,6 +112,11 @@ comments: true
       },... ...
     }, ... ...
 ```
+- [`nexial.desktop.explicitWait`](../systemvars/index.html#nexial.desktop.explicitWait): **NEW** System variable to 
+  support explicit wait for desktop automation. Currently only supports the `**Locator()` desktop commands.
+- [`nexial.desktop.simulateClick`](../systemvars/index.html#nexial.desktop.simulateClick): **NEW** System variable to 
+  simulate mouse click rather than using actual one. Such feature allows for one to automate clicks without waiting for 
+  the target component to complete the corresponding event handling.
 
 
 ### [image commands](../commands/image)
@@ -137,6 +150,9 @@ comments: true
     [`scrollPage(xOffset,yOffset)`](../commands/web/scrollPage(xOffset,yOffset)) instead
   - `web.scrollRight(locator,pixel)`: use [`scrollTo(locator)`](../commands/web/scrollTo(locator)) or 
     [`scrollPage(xOffset,yOffset)`](../commands/web/scrollPage(xOffset,yOffset)) instead
+- [`nexial.web.explicitWait`](../systemvars/index.html#nexial.web.explicitWait): **NEW** System variable to replace
+  now-deprecated `nexial.web.alwaysWait` System variable. Both serves the same purpose except that 
+  `nexial.web.explicitWait` defaults to `true.
 
 
 ### [webmail commands](../commands/webmail)

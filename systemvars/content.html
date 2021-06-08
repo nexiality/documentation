@@ -5,9 +5,9 @@
 
     table.sysvar { width: 1250px; text-align: left; vertical-align: top; }
 
-    table.sysvar th { padding: 5px; border: 1px #AAAAAA solid; }
+    table.sysvar th { padding: 5px; border: 1px #aaaaaa solid; }
 
-    table.sysvar td { padding: 5px; border: 1px #DDDDDD solid; text-align: left; vertical-align: top; }
+    table.sysvar td { padding: 5px; border: 1px #dddddd solid; text-align: left; vertical-align: top; }
 
     table.sysvar img.resize { width: 960px; }
 
@@ -25,7 +25,7 @@
 
     table.sysvar a code { background-color: transparent; border: none; font-weight: normal; }
 
-    .read-only { background-color: #FFE7E7; font-weight: bold }
+    .read-only { background-color: #ffe7e7; font-weight: bold }
 
     .read-write { }
 
@@ -36,7 +36,7 @@
         box-shadow:       0 5px 5px -2px rgba(80, 80, 80, 0.75);
         color:            #335566;
         font-weight:      bold;
-        text-shadow:      1px 1px 0 #EEEEEE;
+        text-shadow:      1px 1px 0 #eeeeee;
     }
 
     .highlight-section a {
@@ -53,6 +53,17 @@
     }
 
     .highlight-yellow { border-color: rgb(221, 221, 221); padding: 7px 10px; }
+
+    .deprecated {
+        background-color: rgba(200, 180, 100, 0.25);
+        padding:          10px;
+        margin:           10px;
+        display:          block;
+        color:            rgba(100, 80, 0, 0.8);
+        font-family:      cursive;
+    }
+
+    }
 </style>
 
 <p>
@@ -359,7 +370,7 @@
             Step #2 (data variable substitution), one would set the value of this System variable to
             <code>true</code>.
 
-            Note that this System variable supersede the now-deprecated
+            Note that this System variable supersedes the now-deprecated
             <a href="#nexial.expression.OpenFileAsIs"><code>nexial.expression.OpenFileAsIs</code></a> System variable.
         </td>
     </tr>
@@ -767,9 +778,12 @@
             <br/>
             Set this System variable to <code>false</code> to disable all screen capturing during execution. When this
             System variable is set to <code>false</code>, the following commands will render <code>SKIP</code> as
-            outcome:<ol>
-            <li><a href="../commands/web/screenshot(file,locator,removeFixed)">web &raquo; <code>screenshot(file,locator,removeFixed)</code></a></li>
-            <li><a href="../commands/web/screenshotInFull(file,timeout,removeFixed)">web &raquo; <code>screenshotInFull(file,timeout,removeFixed)</code></a></li>
+            outcome:
+            <ol>
+                <li><a href="../commands/web/screenshot(file,locator,removeFixed)">web &raquo; <code>screenshot(file,locator,removeFixed)</code></a>
+                </li>
+                <li><a href="../commands/web/screenshotInFull(file,timeout,removeFixed)">web &raquo; <code>screenshotInFull(file,timeout,removeFixed)</code></a>
+                </li>
             </ol>
             <br/>
             By default, this System variable is set to <code>true</code>.
@@ -1315,7 +1329,7 @@
         <td>false</td>
         <td class="read-write">read/write</td>
         <td>
-            <i>DEPRECATED SYSTEM VARIABLE NAME.
+            <i class="deprecated">DEPRECATED SYSTEM VARIABLE NAME.
                 PLEASE SEE <a href="#nexial.openResult"><code>nexial.openResult</code></a> INSTEAD.</i>
         </td>
     </tr>
@@ -1514,7 +1528,8 @@
                         common
                         approach towards decimal rounding. For more information, see
                         <a class="external-link"
-                           href="https://docs.oracle.com/javase/8/docs/api/java/math/RoundingMode.html#HALF_UP" target="_nexial_link">Javadoc for RoundingMode.HALF_UP</a>.
+                           href="https://docs.oracle.com/javase/8/docs/api/java/math/RoundingMode.html#HALF_UP"
+                           target="_nexial_link">Javadoc for RoundingMode.HALF_UP</a>.
                     </td>
                 </tr>
                 <tr>
@@ -1523,7 +1538,8 @@
                         Round a decimal number <b>down</b>, if its fractional portion is <= 0.5. For more information,
                         see
                         <a class="external-link"
-                           href="https://docs.oracle.com/javase/8/docs/api/java/math/RoundingMode.html#HALF_DOWN" target="_nexial_link">Javadoc for RoundingMode.HALF_DOWN</a>.
+                           href="https://docs.oracle.com/javase/8/docs/api/java/math/RoundingMode.html#HALF_DOWN"
+                           target="_nexial_link">Javadoc for RoundingMode.HALF_DOWN</a>.
                     </td>
                 </tr>
                 <tr>
@@ -1532,7 +1548,8 @@
                         It is sometimes known as "Banker's rounding," and is chiefly used in the USA. For more
                         information, see
                         <a class="external-link"
-                           href="https://docs.oracle.com/javase/8/docs/api/java/math/RoundingMode.html#HALF_EVEN" target="_nexial_link">Javadoc for RoundingMode.HALF_EVEN</a>.
+                           href="https://docs.oracle.com/javase/8/docs/api/java/math/RoundingMode.html#HALF_EVEN"
+                           target="_nexial_link">Javadoc for RoundingMode.HALF_EVEN</a>.
                     </td>
                 </tr>
             </table>
@@ -1795,7 +1812,7 @@
         <td>false</td>
         <td class="read-write">read/write</td>
         <td>
-            <i>DEPRECATED SYSTEM VARIABLE NAME.
+            <i class="deprecated">DEPRECATED SYSTEM VARIABLE NAME.
                 PLEASE SEE <a href="#nexial.resolveTextAsIs"><code>nexial.resolveTextAsIs</code></a> INSTEAD.</i>
         </td>
     </tr>
@@ -1807,7 +1824,7 @@
         <td>true</td>
         <td class="read-write">read/write</td>
         <td>
-            <i>DEPRECATED SYSTEM VARIABLE NAME.
+            <i class="deprecated">DEPRECATED SYSTEM VARIABLE NAME.
                 PLEASE SEE <a href="#nexial.resolveTextAsURL"><code>nexial.resolveTextAsURL</code></a> INSTEAD.</i>
         </td>
     </tr>
@@ -2183,7 +2200,8 @@
         </td>
     </tr>
     <tr>
-        <td class="varname" nowrap="nowrap"><a id="nexial.io.matchRecursive"><code>nexial.io.matchRecursive</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.io.matchRecursive"><code>nexial.io.matchRecursive</code></a>
+        </td>
         <td>boolean</td>
         <td>true</td>
         <td class="read-write">read/write</td>
@@ -2205,7 +2223,8 @@
         </td>
     </tr>
     <tr>
-        <td class="varname" nowrap="nowrap"><a id="nexial.io.matchIncludeDirectories"><code>nexial.io.matchIncludeDirectories</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.io.matchIncludeDirectories"><code>nexial.io.matchIncludeDirectories</code></a>
+        </td>
         <td>boolean</td>
         <td>false</td>
         <td class="read-write">read/write</td>
@@ -2700,12 +2719,45 @@
         <td>false</td>
         <td class="read-write">read/write</td>
         <td>
+            <i class="deprecated">DEPRECATED SYSTEM VARIABLE NAME.
+                PLEASE USE <a href="#nexial.web.explicitWait"><code>nexial.web.explicitWait</code></a> INSTEAD.</i>
+
             When set to <code>true</code>, Nexial will enable explicit wait during Web automation with a poll of 10 ms
             until the corresponding condition is reached or the value of
             <a href="#nexial.pollWaitMs"><code>nexial.pollWaitMs</code></a> is reached.. This technique can help reduce
             the use of implicit wait, which can be unreliable.<br/>
             <br/>
             The default is <code>false</code>.
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap"><a id="nexial.web.explicitWait"><code>nexial.web.explicitWait</code></a>
+        </td>
+        <td>boolean</td>
+        <td>true</td>
+        <td class="read-write">read/write</td>
+        <td>
+            When set to <code>true</code> (default), Nexial will enable
+            <a href="https://www.selenium.dev/documentation/en/webdriver/waits/#explicit-wait" class="external-link"
+               target="_nexial_link">explicit wait</a> during Web automation with a poll of 10 ms until the
+            corresponding condition is met or the value of<a
+                href="#nexial.pollWaitMs"><code>nexial.pollWaitMs</code></a>
+            is reached. This technique can help reduce the use of implicit wait, which can be unreliable and is known
+            as a chief source of test flakiness.<br/>
+            <br/>
+            Technically speaking, Nexial implements <a
+                href="https://www.selenium.dev/documentation/en/webdriver/waits/#fluentwait"
+                class="external-link" target="_nexial_link">fluent wait</a>, which is essentially a more flexible form
+            of
+            explicit wait. Using this technique, we can overcome the infamous
+            <a href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Errors/StaleElementReference"
+               class="external-link" target="_nexial_link">"stale element exception"</a> as well.<br/>
+            <br/>
+            This System variable supersedes the now-deprecated
+            <a href="#nexial.web.alwaysWait"><code>nexial.web.always</code></a> (since
+            <a href="../release/nexial-core-v4.0.changelog">Nexial v4.0</a>)<br/>
+            <br/>
+            The default is <code>true</code>.
         </td>
     </tr>
     <tr>
@@ -3065,9 +3117,11 @@
         <td class="read-write">read/write</td>
         <td>
             Determine if the <a href="../commands/web/dragAndDrop(fromLocator,toLocator)">web &raquo;
-            <code>dragAndDrop(fromLocator,toLocator)</code></a> and <a href="../commands/web/dragTo(fromLocator,xOffset,yOffset)">
+            <code>dragAndDrop(fromLocator,toLocator)</code></a> and <a
+                href="../commands/web/dragTo(fromLocator,xOffset,yOffset)">
             web &raquo; <code>dragTo(fromLocator,xOffset,yOffset)</code></a> commands should be performed via native
-            mouse event (meaning: the actual "mouse-click-drag-move-then-drop") or via the WebDriver simulation (default).
+            mouse event (meaning: the actual "mouse-click-drag-move-then-drop") or via the WebDriver simulation
+            (default).
             <br/>
             <br/>
             This is not often required (nor recommended) as setting the "native" mode will interrupt one's use of the
@@ -3083,9 +3137,10 @@
             <br/>
             <br/>
             By default this System variable is set to false. When setting this System variable to true, one might want
-            to consider the following System variables as well:<ul>
-            <li><a href="#nexial.web.dragNativeXOffset">nexial.web.dragNativeXOffset</a></li>
-            <li><a href="#nexial.web.dragNativeYOffset">nexial.web.dragNativeYOffset</a></li>
+            to consider the following System variables as well:
+            <ul>
+                <li><a href="#nexial.web.dragNativeXOffset">nexial.web.dragNativeXOffset</a></li>
+                <li><a href="#nexial.web.dragNativeYOffset">nexial.web.dragNativeYOffset</a></li>
             </ul>
         </td>
     </tr>
@@ -3780,7 +3835,8 @@
             system variable to force the use of a out-of-distribution IEDriverServer.<br/>
             <br/>
             For more detail, see <a class="external-link"
-                                    href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver" target="_nexial_external">
+                                    href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver"
+                                    target="_nexial_external">
             https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver</a><br/>
             <br/>
             This system variable is marked as <code>read-only</code> because it is only read once during startup.
@@ -3802,7 +3858,8 @@
             <code>FATAL</code>.<br/>
             <br/>
             For more detail, see <a class="external-link"
-                                    href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver" target="_nexial_external">
+                                    href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver"
+                                    target="_nexial_external">
             https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver</a><br/>
             <br/>
             This system variable is marked as <code>read-only</code> because it is only read once during startup.
@@ -3821,7 +3878,8 @@
             Specifies the full path and file name of the log file.<br/>
             <br/>
             For more detail, see <a class="external-link"
-                                    href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver" target="_nexial_external">
+                                    href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver"
+                                    target="_nexial_external">
             https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver</a><br/>
             <br/>
             This system variable is marked as <code>read-only</code> because it is only read once during startup.
@@ -4217,7 +4275,8 @@
         <td>3000</td>
         <td class="read-write">read/write</td>
         <td>
-            <b>DEPRECATED: USE <a href="#nexial.desktop.notifyWaitMs">nexial.desktop.notifyWaitMs</a> instead</b>
+            <i class="deprecated">DEPRECATED SYSTEM VARIABLE.
+                PLEASE USE <a href="#nexial.desktop.notifyWaitMs">nexial.desktop.notifyWaitMs</a> instead</i>
         </td>
     </tr>
     <tr>
@@ -4252,25 +4311,6 @@
     </tr>
     <tr>
         <td class="varname" nowrap="nowrap">
-            <a id="nexial.desktop.table.clickBeforeEdit"><code>nexial.desktop.table.clickBeforeEdit</code></a>
-        </td>
-        <td>boolean</td>
-        <td>true</td>
-        <td class="read-write">read/write</td>
-        <td>
-            When automating the editing of a table cell (desktop application only), it is often a good idea to bring
-            focus to the target row or cell prior to commencing the editing. This is the default behavior for Nexial.
-            When executing <a href="../commands/desktop/editTableCells(row,nameValues)">desktop &raquo;
-            <code>editTableCells(row,nameValues)</code></a>, Nexial will, by default, click on the target table row -
-            thus bringing such row to focus - and then proceed to enter specified data to target cells. However there
-            might be situation where this initial click is not necessary or desirable. In such situation, one can
-            turn off the default behavior:<br/><br/>
-
-            <code>nexial.desktop.table.clickBeforeEdit</code> | <code>false</code>
-        </td>
-    </tr>
-    <tr>
-        <td class="varname" nowrap="nowrap">
             <a id="nexial.desktop.autoscan.verbose"><code>nexial.desktop.autoscan.verbose</code></a>
         </td>
         <td>boolean</td>
@@ -4286,7 +4326,6 @@
             <code>false</code>.
         </td>
     </tr>
-
     <tr>
         <td class="varname" nowrap="nowrap">
             <a id="nexial.desktop.autoClearModalDialog"><code>nexial.desktop.autoClearModalDialog</code></a>
@@ -4296,7 +4335,8 @@
         <td class="read-write">read/write</td>
         <td>
             Set to <code>true</code> to automatically dismiss any modal dialog that shows up during automation as a
-            result of a <code>click...</code>, <code>doubleClick...</code>, <code>clear...</code> or <code>type...</code>
+            result of a <code>click...</code>, <code>doubleClick...</code>, <code>clear...</code> or
+            <code>type...</code>
             commands.<br/>
             <br/>
             During automation, there are occasions where the target application would render a modal (meaning: blocking)
@@ -4312,6 +4352,67 @@
             <br/>
             When possible, one should consider explicitly automate the interaction with such dialog component, when
             possible.
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.desktop.explicitWait"><code>nexial.desktop.explicitWait</code></a>
+        </td>
+        <td>boolean</td>
+        <td>true</td>
+        <td class="read-write">read/write</td>
+        <td>
+            Nexial supports both implicit wait and explicit wait
+            (<a href="https://www.selenium.dev/documentation/en/webdriver/waits/" class="external-link"
+                target="_nexial_link">more technical details on waits</a>) for desktop automation, much like how the
+            same is perceived for web automation. By using the explicit wait strategy, one would likely experience a
+            simpler automation scripting process and a more stable execution:
+            <ol>
+                <li>
+                    With explicit wait enabled, one could set a more generous
+                    <a href="#nexial.pollWaitMs">nexial.pollWaitMs</a> or <code>"defaultWaitMs"</code> in
+                    <code>application.json</code> file. Nexial will use such wait value as the maximum amount of time
+                    to wait for element to be available. In contrast, in "implicit wait" mode,
+                    the <code>nexial.pollWaitMs</code> or <code>"defaultWaitMs"</code> in <code>application.json</code>
+                    would be consider as _fixed_ wait time.
+                </li>
+                <li>
+                    With explicit wait enabled, there would be hardly any need to explicitly invoke
+                    <a href="../commands/base/waitFor(waitMs)">base &raquo; <code>waitFor(waitMs)</code></a>,
+                    <a href="../commands/desktop/waitFor(name,maxWaitMs)">desktop &raquo; <code>waitFor(name,maxWaitMs)
+                    </code></a>, or <a href="../commands/desktop/waitForLocator(locator,maxWaitMs)">desktop &raquo;
+                    <code>waitForLocator(locator,maxWaitMs)</code></a> commands. Nexial will orchestrate the
+                    wait-and-retry routine, until tha specified max wait time is reached, thus simplify the scripting
+                    process with less steps.
+                </li>
+            </ol>
+            <!--
+            Note that Nexial allows this System variable to be overridden from within an <code>application.json</code>.
+            <br/>
+            <br/>
+            Also, Nexial will favor the <code>"defaultWaitMs"</code> in <code>application.json</code> over the
+            System variable <a href="#nexial.pollWaitMs"><code>nexial.pollWaitMs</code></a>. As such, one can customize
+            the maximum amount of wait time per application.<br/>
+            <br/>
+            Example:
+            <pre>
+{
+    "aut": {
+        "path": "...",
+        "exe": "...",
+        ... ...
+    },
+
+    "nexial.desktop.explicitWait": true,
+    "defaultWaitMs": 10000,
+    "appStartupWaitMs": 5000,
+
+    "app": {
+        ... ...
+    }
+}
+            </pre>
+            -->
         </td>
     </tr>
     <tr>
@@ -4348,33 +4449,103 @@
             follows the click. One can then use the <a href="../commands/desktop/clearModalDialog(var,button)">desktop
             &raquo; <code>clearModalDialog(var,button)</code></a> command to dismiss the modal component.<br/>
             <br/>
-            Note this System variable can impact the following commands:<ul>
-            <li><a href="../commands/desktop/clickButton(name)">desktop &raquo; <code>clickButton(name)</code></a></li>
-            <li><a href="../commands/desktop/clickCheckbox(name)">desktop &raquo; <code>clickCheckbox(name)</code></a></li>
-            <li><a href="../commands/desktop/clickRadio(name)">desktop &raquo; <code>clickRadio(name)</code></a></li>
+            Note this System variable can impact the following commands:
+            <ul>
+                <li><a href="../commands/desktop/clickButton(name)">desktop &raquo; <code>clickButton(name)</code></a>
+                </li>
+                <li><a href="../commands/desktop/clickCheckbox(name)">desktop &raquo;
+                    <code>clickCheckbox(name)</code></a></li>
+                <li><a href="../commands/desktop/clickRadio(name)">desktop &raquo; <code>clickRadio(name)</code></a>
+                </li>
             </ul>
             <br/>
             In addition, if one uses <a href="../commands/desktop/configureDesktopApplication">AutoScanning</a>, then
             it's worth noting that a similar setting can be configured for an individual component instead of the entire
             execution. For example,<br/>
             <pre>
-    "Lock": {
-      "type": "DesktopElement",
-      "xpath": "...",
-      "controlType": "ControlType.Button",
-      "name": "Lock",
-      "automationId": "...",
-      "elementType": "Button",
-      "label": "Lock",
-      "extra": {
-        <b>"nexial.desktop.simulateClick": true</b>
-      }
-    }
+"Lock": {
+  "type": "DesktopElement",
+  "xpath": "...",
+  "controlType": "ControlType.Button",
+  "name": "Lock",
+  "automationId": "...",
+  "elementType": "Button",
+  "label": "Lock",
+  "extra": {
+    <b>"nexial.desktop.simulateClick": true</b>
+  }
+}
             </pre>
             See one of the above command links for more details.
         </td>
     </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.desktop.table.clickBeforeEdit"><code>nexial.desktop.table.clickBeforeEdit</code></a>
+        </td>
+        <td>boolean</td>
+        <td>true</td>
+        <td class="read-write">read/write</td>
+        <td>
+            When automating the editing of a table cell (desktop application only), it is often a good idea to bring
+            focus to the target row or cell prior to commencing the editing. This is the default behavior for Nexial
+            when executing <a href="../commands/desktop/editTableCells(row,nameValues)">desktop &raquo;
+            <code>editTableCells(row,nameValues)</code></a>, Nexial will, by default, click on the target table row -
+            thus bringing such row to focus - and then proceed to enter specified data to target cells. However there
+            might be situation where this initial click is not necessary or desirable. In such situation, one can
+            turn off the default behavior:<br/>
+            <br/>
+            <code>nexial.desktop.table.clickBeforeEdit=false</code><br/>
+            <br/>
+            Note that this System variable cannot be overridden individually for each desktop grid configuration (i.e.
+            auto-scanned JSON file). One can add this System variable in the <code>"extra"</code> section of the
+            corresponding JSON file to customize this behavior, like this:
+            <pre>
+"grid": {
+    "type": "DesktopHierTable",
+    ... ...
+    "extra": {
+        "nexial.desktop.table.clickBeforeEdit": true
+    },
+    ... ...
+}
+            </pre>
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.desktop.table.tabAfterEdit"><code>nexial.desktop.table.tabAfterEdit</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td class="read-write">read/write</td>
+        <td>
+            When automating the editing of a table cell (desktop application only), it might be a good idea to
+            "tab out" of a cell after editing so that the AUT can carry out the appropriate "out of focus" event for
+            that cell. For example, the application might invoke a verification API against the input, or execute
+            a lookup routine to populate additional fields. By configuring this System variable to "tab out" after
+            each edit, one might be able to simulate the intended user experience more accurately.
 
+            This System variable impacts only "table edit" related commands such as
+            <a href="../commands/desktop/editTableCells(row,nameValues)">desktop &raquo;
+                <code>editTableCells(row,nameValues)</code></a>. By default, this System variable is set to
+            <code>false</code>.<br/>
+            <br/>
+            Note that this System variable cannot be overridden individually for each desktop grid configuration (i.e.
+            auto-scanned JSON file). One can add this System variable in the <code>"extra"</code> section of the
+            corresponding JSON file to customize this behavior, like this:
+            <pre>
+"grid": {
+    "type": "DesktopHierTable",
+    ... ...
+    "extra": {
+        "nexial.desktop.table.tabAfterEdit": true
+    },
+    ... ...
+}
+            </pre>
+        </td>
+    </tr>
     <tr>
         <td class="varname" nowrap="nowrap">
             <a id="nexial.desktop.useTypeKeys"><code>nexial.desktop.useTypeKeys</code></a>
@@ -4406,7 +4577,23 @@
             <br/>
             When this System variable is set to <code>true</code>, Nexial converts the text input parameters to
             "keystrokes". Functionally this would be equivalent to
-            <a href="../commands/desktop/typeKeys(os,keystrokes)">web &raquo; <code>typeKeys(os,keystrokes)</code></a>.
+            <a href="../commands/desktop/typeKeys(os,keystrokes)">web &raquo;
+                <code>typeKeys(os,keystrokes)</code></a>.<br/>
+            <br/>
+            <br/>
+            Note that this System variable cannot be overridden by the desktop component configuration (i.e.
+            auto-scanned JSON file). One can add this System variable in the <code>"extra"</code> section of the
+            corresponding JSON file to customize this behavior, like this:
+            <pre>
+"TextBox1": {
+    "type": "...",
+    ... ...
+    "extra": {
+        "nexial.desktop.useTypeKeys": true
+    },
+    ... ...
+}
+            </pre>
         </td>
     </tr>
     <tr>
@@ -4424,7 +4611,8 @@
             </ul>
 
             Turn this System variable to <code>true</code> to instruct Nexial to use ASCII-based key mapping, instead
-            of the more-common <a href="https://en.wikipedia.org/wiki/Private_Use_Areas" class="external-link" target="_nexial_link">
+            of the more-common <a href="https://en.wikipedia.org/wiki/Private_Use_Areas" class="external-link"
+                                  target="_nexial_link">
             Unicode PUA (Private Use Area) code points</a> (which, incidentally, is what Selenium is based on).<br/>
 
             This is at times necessarily, especially in the case of automating legacy applications.
@@ -4442,7 +4630,6 @@
             dialog box comes up, Nexial will stop further editing the table cells and the step will be failed.
         </td>
     </tr>
-
     <tr>
         <td class="varname" nowrap="nowrap">
             <a id="nexial.desktop.infragistics4Aware"><code>nexial.desktop.infragistics4Aware</code></a>
@@ -4455,7 +4642,6 @@
             <a href="../commands/desktop/configureDesktopApplication#the-benefit-of-autoscan">autoscanning process</a>.
         </td>
     </tr>
-
     <tr>
         <td class="varname" nowrap="nowrap">
             <a id="nexial.winiumJoinExisting"><code>nexial.winiumJoinExisting</code></a>
@@ -4724,7 +4910,8 @@
             Specify the browser to use when executing browser-based automation on BrowserStack. Valid value would be
             limited to what
             <a class="external-link"
-               href="https://www.browserstack.com/list-of-browsers-and-platforms?product=automate" target="_nexial_external">BrowserStack can support</a>.<br/>
+               href="https://www.browserstack.com/list-of-browsers-and-platforms?product=automate"
+               target="_nexial_external">BrowserStack can support</a>.<br/>
             For example, <code>Firefox, Safari, IE, Chrome, Opera, Edge</code>.
         </td>
     </tr>
@@ -4925,7 +5112,8 @@
         <td>
             <b>[REQUIRED]</b> The name of the browser to test. For a list of supported browsers, check out
             <a class="external-link"
-               href="https://help.crossbrowsertesting.com/selenium-testing/tutorials/crossbrowsertesting-automation-capabilities/" target="_nexial_link">CBT's Selenium Automation Capabilities</a> page or
+               href="https://help.crossbrowsertesting.com/selenium-testing/tutorials/crossbrowsertesting-automation-capabilities/"
+               target="_nexial_link">CBT's Selenium Automation Capabilities</a> page or
             <a class="external-link"
                href="http://crossbrowsertesting.com/api/v3/selenium/browsers" target="_nexial_link">http://crossbrowsertesting.com/api/v3/selenium/browsers</a>.
         </td>
@@ -5035,7 +5223,8 @@
         <td>
             (<i>OPTIONAL</i>) timezone set on the browser. A full list of values can be found
             <a class="external-link"
-               href="https://help.crossbrowsertesting.com/selenium-testing/resources/list-of-timezones/" target="_nexial_link">here</a>.
+               href="https://help.crossbrowsertesting.com/selenium-testing/resources/list-of-timezones/"
+               target="_nexial_link">here</a>.
         </td>
     </tr>
     <tr>
@@ -5048,7 +5237,8 @@
         <td>
             Required if you are <a
                 class="external-link"
-                href="https://help.crossbrowsertesting.com/local-connection/general/local-tunnel-overview/" target="_nexial_external">testing against internal/local servers</a>.
+                href="https://help.crossbrowsertesting.com/local-connection/general/local-tunnel-overview/"
+                target="_nexial_external">testing against internal/local servers</a>.
             Nexial will
             automatically download/execute the OS-specific <code>cbt_tunnels</code> binary before executing your tests.
             This is necessary to proxy the connections to the internal/local resources.
