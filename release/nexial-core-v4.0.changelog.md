@@ -113,7 +113,8 @@ comments: true
     }, ... ...
 ```
 - [`nexial.desktop.explicitWait`](../systemvars/index.html#nexial.desktop.explicitWait): **NEW** System variable to 
-  support explicit wait for desktop automation. Currently only supports the `**Locator()` desktop commands.
+  support explicit wait for desktop automation. Currently, only supports the `**Locator()` desktop commands.
+  - added optimistic retry logic during explicit waits to reduce test flakiness.
 - [`nexial.desktop.simulateClick`](../systemvars/index.html#nexial.desktop.simulateClick): **NEW** System variable to 
   simulate mouse click rather than using actual one. Such feature allows for one to automate clicks without waiting for 
   the target component to complete the corresponding event handling.
