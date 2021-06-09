@@ -43,6 +43,10 @@ The above settings will read emails from the Mailinator inbox with the specified
 <br/>
 <br/>
 
+Since Mailinator supports SMS messages, one can configure a burner phone number for the `.inbox` data variable to 
+receive SMS messages.
+
+
 #### Temporary-mail
 Here are the settings for targeting [temporary-mail](https://www.temporary-mail.net).
 <br/>

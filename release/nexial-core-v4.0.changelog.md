@@ -160,3 +160,5 @@ comments: true
   mailinator webmail service.
 - improved extraction of "clickable" links on mailinator mails.
 - improved/reduced harvested text content from webmail.
+- [`search(var,profile,searchCriteria,duration)`](../commands/webmail/search(var,profile,searchCriteria,duration)): 
+  support the search of all messages via setting `searchCriteria` as `(empty)`.

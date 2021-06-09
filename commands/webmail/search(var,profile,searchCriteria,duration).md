@@ -10,7 +10,8 @@ comments: true
 This command instructs Nexial to retrieve emails corresponding to the specified `profile`. The `profile` should be 
 [configured](index#webmail-configuration-settings) with the appropriate webmail provider and inbox. This command
 will retrieve the available email of the configured inbox based on 2 criterion:
-- The email subject should contain the text specified in `searchCriteria`. Note that this is a "contains" search.
+- The email subject should contain the text specified in `searchCriteria`. Note that this is a "contains" search. If
+  no criteria or `(empty)` is specified, then Nexial will consider emails of _any_ subject.
 - The email should be less than `duration` since it was first received. In other words, the mail should have a 
   "received" time that is no more than the specified `duration` minutes.
 
