@@ -154,6 +154,9 @@ comments: true
 - [`nexial.web.explicitWait`](../systemvars/index.html#nexial.web.explicitWait): **NEW** System variable to replace
   now-deprecated `nexial.web.alwaysWait` System variable. Both serves the same purpose except that 
   `nexial.web.explicitWait` defaults to `true.
+- [`nexial.browser.chrome.enableExtension`](../systemvars/index.html#nexial.browser.chrome.enableExtension): **NEW**
+  System variable to allow chrome extensions to be loaded during automation. Setting 
+  `nexial.browser.chrome.enableExtension` to `true` will enable the installation and loading Chrome extensions.
 
 
 ### [webmail commands](../commands/webmail)
@@ -163,3 +166,9 @@ comments: true
 - improved/reduced harvested text content from webmail.
 - [`search(var,profile,searchCriteria,duration)`](../commands/webmail/search(var,profile,searchCriteria,duration)): 
   support the search of all messages via setting `searchCriteria` as `(empty)`.
+
+
+[ws]
+- enable custom HTTP response handling to support the fetching of response content even when the corresponding status 
+  code is 204 or 205. Useful for testing non-conformant API endpoint.
+
