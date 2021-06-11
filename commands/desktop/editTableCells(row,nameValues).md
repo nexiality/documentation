@@ -7,7 +7,7 @@ comments: true
 ---
 
 ### Description
-This command is used to enter the values in a row of a table (data grid). This command should be used after the
+This command instructs Nexial to enter the values in a row of a table (data grid). This command should be used after the
 successful execution of [`useTable(var,name)`](useTable(var,name)). `row` specifies the target row number and its
 0-based. The `nameValues` parameter is a set of cell-value pairs in the form of
 ```

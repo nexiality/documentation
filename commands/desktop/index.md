@@ -75,6 +75,8 @@ If you are new to desktop automation via Nexial, please first familiarize yourse
 - ~~[`editCurrentRow(nameValues)`](editCurrentRow(nameValues))~~
 - [`editHierCells(var,matchBy,nameValues)`](editHierCells(var,matchBy,nameValues))
 - [`editTableCells(row,nameValues)`](editTableCells(row,nameValues))
+- [`focusFirstTableRow`](focusFirstTableRow)
+- [`focusLastTableRow`](focusLastTableRow)
 - [`hideExplorerBar()`](hideExplorerBar)
 - [`login(form,username,password)`](login(form,username,password))
 - [`maximize()`](maximize())
