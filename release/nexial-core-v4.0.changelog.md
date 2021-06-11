@@ -12,7 +12,8 @@ comments: true
 
 ### General
 #### Fixes
-
+- screen recording now accurately determine the screen resolution of the active monitor during recording, thus avoiding
+  any oversized or chopped-off capturing.
 #### Improvements
 
 
@@ -118,6 +119,9 @@ comments: true
 - [`nexial.desktop.simulateClick`](../systemvars/index.html#nexial.desktop.simulateClick): **NEW** System variable to 
   simulate mouse click rather than using actual one. Such feature allows for one to automate clicks without waiting for 
   the target component to complete the corresponding event handling.
+- implemented auto-retries for both implicit and explicit wait scenarios to reduce occurrence of flaky tests.
+  - [`clickByLocator(locator)`](../commands/desktop/clickByLocator(locator)) 
+  - [`typeByLocator(locator,text)`](../commands/desktop/typeByLocator(locator,text)) 
 
 
 ### [image commands](../commands/image)
