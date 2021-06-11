@@ -121,7 +121,13 @@ comments: true
   the target component to complete the corresponding event handling.
 - implemented auto-retries for both implicit and explicit wait scenarios to reduce occurrence of flaky tests.
   - [`clickByLocator(locator)`](../commands/desktop/clickByLocator(locator)) 
-  - [`typeByLocator(locator,text)`](../commands/desktop/typeByLocator(locator,text)) 
+  - [`typeByLocator(locator,text)`](../commands/desktop/typeByLocator(locator,text))
+- [`editTableCells(row,nameValues)`](../commands/desktop/editTableCells(row,nameValues)): account for row(s) that are
+  not currently visible within the bounds of the corresponding table.
+- [`focusFirstTableRow`](../commands/desktop/focusFirstTableRow): **NEW** command to put focus on and select the first 
+  row of the current table.
+- [`focusLastTableRow`](../commands/desktop/focusLastTableRow): **NEW** command to put focus on and select the last 
+  row of the current table.
 
 
 ### [image commands](../commands/image)
