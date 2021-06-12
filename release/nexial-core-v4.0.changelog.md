@@ -85,7 +85,7 @@ comments: true
     row of the current table.
   - [`focusLastTableRow`](../commands/desktop/focusLastTableRow): **NEW** command to put focus on and select the last
     row of the current table.
-- #### Checkbocx improvements:
+- #### Checkbox improvements:
   - [`check(name)`](../commands/desktop/check(name)): *NEW* command to check a Checkbox component only if it is 
     currently unchecked.
   - [`uncheck(name)`](../commands/desktop/uncheck(name)): *NEW* command to uncheck a Checkbox component only if it is 
@@ -154,7 +154,8 @@ comments: true
 - browser performance metrics:
   - upgrade to ChartJS 3.3: vulnerability fix
   - realign the commands from which browser performance tracking should be made
-- [`clickByLabel(label)`]: improved implementation by supporting case-insensitive matching.
+- [`clickByLabel(label)`](../commands/web/clickByLabel(label)): improved implementation by supporting case-insensitive 
+  matching.
 - remove commands due to unsupported/non-working underlying JavaScript:
   - `web.scrollElement(locator,xOffset,yOffset)`: use [`scrollTo(locator)`](../commands/web/scrollTo(locator)) or 
     [`scrollPage(xOffset,yOffset)`](../commands/web/scrollPage(xOffset,yOffset)) instead
