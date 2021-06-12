@@ -14,6 +14,7 @@ comments: true
 #### Fixes
 - screen recording now accurately determine the screen resolution of the active monitor during recording, thus avoiding
   any oversized or chopped-off capturing.
+- minor improvements on execution output (HTML) to remove unnecessary escaping of double quotes
 #### Improvements
 
 
