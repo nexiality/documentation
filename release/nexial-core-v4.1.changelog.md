@@ -26,12 +26,15 @@ comments: true
 
 
 ### [desktop commands](../commands/desktop)
+- added more meaningful error messages for explicit wait
 
 
 ### [web commands](../commands/web)
 - [`waitForPopUp(winId,waitMs)`](../commands/web/waitForPopUp(winId,waitMs)): FIXED to support both window name and 
   window index. Also the target window will be selected (meaning: switched to) when it is detected within the specified 
   max time.
+- added more meaningful error messages for explicit wait
+- [`click(locator)`](../commands/web/click(locator)): better "find element" strategy for click target
 
 
 ### [webmail commands](../commands/webmail)
