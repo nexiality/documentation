@@ -12,6 +12,8 @@ comments: true
 
 ### General
 #### Fixes
+- minor console logging formatting
+
 #### Improvements
 
 
@@ -27,6 +29,7 @@ comments: true
 
 ### [desktop commands](../commands/desktop)
 - added more meaningful error messages for explicit wait
+- [`assertLocatorPresent(locator)`](../commands/desktop/assertLocatorPresent(locator)): added auto-retry logic
 
 
 ### [web commands](../commands/web)
