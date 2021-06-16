@@ -32,6 +32,11 @@ comments: true
 - [`assertLocatorPresent(locator)`](../commands/desktop/assertLocatorPresent(locator)): added auto-retry logic
 
 
+### [macro commands](../commands/macro)
+- [`produce`](../commands/macro/produces(var,value)): allow a data variable generated in within a macro to be exposed to
+  the calling script directly via its data variable name.
+  
+
 ### [web commands](../commands/web)
 - [`waitForPopUp(winId,waitMs)`](../commands/web/waitForPopUp(winId,waitMs)): FIXED to support both window name and 
   window index. Also the target window will be selected (meaning: switched to) when it is detected within the specified 
