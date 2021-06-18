@@ -24,6 +24,11 @@ comments: true
 ### [System Variables](../systemvars)
 
 
+### [Expressions](../expressions)
+- [WEB &raquo; `check(locator)`](../expressions/WEBexpression#checklocator): **NEW** operation to ensure a checkbox is checked
+- [WEB &raquo; `uncheck(locator)`](../expressions/WEBexpression#unchecklocator):  **NEW** operation to ensure a checkbox is unchecked
+
+
 ### [base commands](../commands/base)
 
 
@@ -43,6 +48,10 @@ comments: true
   max time.
 - added more meaningful error messages for explicit wait
 - [`click(locator)`](../commands/web/click(locator)): better "find element" strategy for click target
+- avoid "double-highlighting" caused by nested command calls
+- highlighting improvement made to reduce styling conflicting against AUT
+- [`type(locator,value)`](../commands/web/type(locator,value)): minor logging improvements for clarity
+
 
 
 ### [webmail commands](../commands/webmail)

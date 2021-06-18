@@ -38,7 +38,7 @@ comments: true
     the count of failed steps.
   - `EndLoopAfterIf(filter)`: end current loop (iteration or repeat-until) if the specified filter is matched. This 
     flow control will not alter the count of failed steps.
-  - `FailAfterIf(filter)`: fail current execution if the specifie filter is matched. This flow control will result in 
+  - `FailAfterIf(filter)`: fail current execution if the specified filter is matched. This flow control will result in 
     an additional count towards the total failed steps.
 
 
