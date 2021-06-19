@@ -51,7 +51,12 @@ comments: true
 - avoid "double-highlighting" caused by nested command calls
 - highlighting improvement made to reduce styling conflicting against AUT
 - [`type(locator,value)`](../commands/web/type(locator,value)): minor logging improvements for clarity
-
+- Support `SELECT` element on extracting the text of the selected option.
+  - [`assertText(locator,text)`](../commands/web/assertText(locator,text))
+  - [`assertNotText(locator,text)`](../commands/web/assertNotText(locator,text))
+  - [`assertTextContains(locator,text)`](../commands/web/assertTextContains(locator,text))
+  - [`assertTextNotContain(locator,text)`](../commands/web/assertTextNotContain(locator,text))
+  - [`saveText(var,locator)`](../commands/web/saveText(var,locator))
 
 
 ### [webmail commands](../commands/webmail)
