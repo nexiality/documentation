@@ -16,6 +16,7 @@ comments: true
 
 #### Improvements
 - support Java 16
+- enhancements to Execution Summary to show/hide timing and pass/fail information.
 
 
 ### [Interactive](../interactive)
