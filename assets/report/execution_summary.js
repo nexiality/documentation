@@ -89,9 +89,11 @@ function toggleActivity(/*HTMLElement*/icon) {
     showHideStepDetailSection();
 }
 
-function toggleRefs(/*HTMLElement*/icon) {
-    toggleShowHide(icon, '.value-scriptRef, .value-scenarioRef');
-}
+function toggleRefs(/*HTMLElement*/icon) { toggleShowHide(icon, '.value-scriptRef, .value-scenarioRef'); }
+
+function toggleTimings(/*HTMLElement*/icon) { toggleShowHide(icon, '.exectime'); }
+
+function togglePassFail(/*HTMLElement*/icon) { toggleShowHide(icon, '.passfail'); }
 
 function collapsePassRows(/*HTMLElement*/icon) {
     $('tr.noFailure').css('visibility', 'collapse');
