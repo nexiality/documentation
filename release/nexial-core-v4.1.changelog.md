@@ -15,6 +15,7 @@ comments: true
 - minor console logging formatting
 
 #### Improvements
+- support Java 16
 
 
 ### [Interactive](../interactive)
