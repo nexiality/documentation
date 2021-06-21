@@ -36,7 +36,9 @@ comments: true
 
 ### [desktop commands](../commands/desktop)
 - added more meaningful error messages for explicit wait
-- [`assertLocatorPresent(locator)`](../commands/desktop/assertLocatorPresent(locator)): added auto-retry logic
+- added auto-retry logic
+  - [`assertLocatorPresent(locator)`](../commands/desktop/assertLocatorPresent(locator))
+  - [`clickMenuByLocator(locator,menu)`](../commands/desktop/clickMenuByLocator(locator,menu))
 
 
 ### [macro commands](../commands/macro)
@@ -59,6 +61,7 @@ comments: true
   - [`assertTextContains(locator,text)`](../commands/web/assertTextContains(locator,text))
   - [`assertTextNotContain(locator,text)`](../commands/web/assertTextNotContain(locator,text))
   - [`saveText(var,locator)`](../commands/web/saveText(var,locator))
+- [`close`](../commands/web/close()): also shut down underlying webdriver if the last browser window is closed.
 
 
 ### [webmail commands](../commands/webmail)
