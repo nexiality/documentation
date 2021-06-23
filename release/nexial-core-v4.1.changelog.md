@@ -16,6 +16,7 @@ comments: true
 
 #### Improvements
 - support Java 16
+  - adjustments for older Java (pre Java 11)
 - enhancements to Execution Summary to show/hide timing and pass/fail information.
 
 
