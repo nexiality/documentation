@@ -40,6 +40,8 @@ comments: true
 - added auto-retry logic
   - [`assertLocatorPresent(locator)`](../commands/desktop/assertLocatorPresent(locator))
   - [`clickMenuByLocator(locator,menu)`](../commands/desktop/clickMenuByLocator(locator,menu))
+- [autoscanning](../commands/desktop/configureDesktopApplication): code fixes to continue with autoscanning when an 
+  error occurred due to component not bing active or misconfigured.
 
 
 ### [macro commands](../commands/macro)
