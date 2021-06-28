@@ -8,7 +8,7 @@ comments: true
 
 ### Description
 The sound commands are an interesting set of commands. They are not designed for automation as one would traditionally 
-considered as automation. Instead, they are designed to enhance one's automation execution by providing audio 
+consider as automation. Instead, they are designed to enhance one's automation execution by providing audio 
 notifications.
 
 Consider the following: Supposed you have an automation script to test out a long list of functionality. The entire 
@@ -43,4 +43,3 @@ show a "SKIPPED" result for any sound commands executed in a zero-touch environm
 - [sound &raquo; `laser(repeats)`](laser(repeats))
 - [sound &raquo; `play(audio)`](play(audio))
 - [sound &raquo; `speak(text)`](speak(text))
-

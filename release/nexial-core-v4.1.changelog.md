@@ -47,7 +47,18 @@ comments: true
 ### [macro commands](../commands/macro)
 - [`produce`](../commands/macro/produces(var,value)): allow a data variable generated in within a macro to be exposed to
   the calling script directly via its data variable name.
-  
+
+
+### [mobile commands](../commands/mobile)
+- alpha build for local mobile test automation support. Currently supports only Android, with iOS soon to follow.
+- documentation forthcoming (please be patient).
+- current implementation requires user to install android studio, android sdk, platform-tools, AVD manager, any Android 
+  emulators, and Appium Desktop *BEFORE* using Nexial's mobile automation feature.
+
+
+### [sound commands](../commands/sound)
+- [`play(audio)`](../commands/sound/play(audio)): update all sound files to MP3 (instead of WAV) to reduce footprint
+
 
 ### [web commands](../commands/web)
 - [`waitForPopUp(winId,waitMs)`](../commands/web/waitForPopUp(winId,waitMs)): FIXED to support both window name and 
