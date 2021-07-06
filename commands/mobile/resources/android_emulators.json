@@ -1,0 +1,291 @@
+{
+  "vendors": [
+    {
+      "name":     "Samsung",
+      "products": [
+        {
+          "id":         "Galaxy_S21_Ultra",
+          "name":       "Galaxy S21 Ultra",
+          "display":    "6.8 inches",
+          "resolution": "1440x3200",
+          "skin":       "Galaxy_S21_Ultra"
+        },
+        {
+          "id":         "Galaxy_S21_Plus",
+          "name":       "Samsung Galaxy S21+",
+          "display":    "6.7",
+          "resolution": "1080x2400",
+          "skin":       "Galaxy_S21_Plus"
+        },
+        {
+          "id":         "Galaxy_S21",
+          "name":       "Samsung Galaxy S21",
+          "display":    "6.2",
+          "resolution": "1080x2400",
+          "skin":       "Galaxy_S21"
+        },
+        {
+          "id":         "Galaxy_S20_FE",
+          "name":       "Samsung Galaxy S20 FE",
+          "display":    "6.5",
+          "resolution": "1080x2400",
+          "skin":       "Galaxy_S20_FE"
+        },
+        {
+          "id":         "Galaxy_Z_Fold2",
+          "name":       "Samsung Galaxy Z Fold2",
+          "display":    "7.6",
+          "resolution": "1768x2208",
+          "skin":       "Galaxy_Z_Fold2"
+        },
+        {
+          "id":         "Galaxy_Note20_Ultra",
+          "name":       "Samsung Galaxy Note20 Ultra",
+          "display":    "6.9",
+          "resolution": "1440x3088",
+          "skin":       "Galaxy_Note20_Ultra"
+        },
+        {
+          "id":         "Galaxy_Note20",
+          "name":       "Samsung Galaxy Note20",
+          "display":    "6.7",
+          "resolution": "1080x2400",
+          "skin":       "Galaxy_Note20"
+        },
+        {
+          "id":         "Galaxy_Note10",
+          "name":       "Samsung Galaxy Note10",
+          "display":    "6.3",
+          "resolution": "1080x2280",
+          "skin":       "Galaxy_Note10_Black"
+        },
+        {
+          "id":         "Galaxy_Tab_A7_Lite",
+          "name":       "Samsung Galaxy Tab A7 Lite",
+          "display":    "8.7",
+          "resolution": "800x1340",
+          "skin":       "Galaxy_Tab_A7_Lite"
+        },
+        {
+          "id":         "Galaxy_Tab_S7_FE",
+          "name":       "Samsung Galaxy Tab S7 FE",
+          "display":    "12.4",
+          "resolution": "1600x2560",
+          "skin":       "Galaxy_Tab_S7_FE"
+        },
+        {
+          "id":         "Galaxy_Tab_A",
+          "name":       "Samsung Galaxy Tab A 10.5",
+          "display":    "10.5",
+          "resolution": "1200x1920",
+          "skin":       "Galaxy_Tab_S4_10.5"
+        },
+        {
+          "id":         "Galaxy_Tab_S4",
+          "name":       "Samsung Galaxy Tab S4 10.5",
+          "display":    "10.5",
+          "resolution": "1600x2560",
+          "skin":       "Galaxy_Tab_S4_10.5"
+        }
+      ]
+    },
+    {
+      "name":     "Google",
+      "products": [
+        {
+          "id":         "Pixel_XL",
+          "name":       "Pixel XL",
+          "display":    "5.5 inches",
+          "resolution": "1440x2560",
+          "skin":       "pixel_xl_silver"
+        },
+        {
+          "id":         "Pixel_4a",
+          "name":       "Pixel 4a",
+          "display":    "5.8 inches",
+          "resolution": "1080x2340",
+          "skin":       "pixel_4a"
+        },
+        {
+          "id":         "Pixel_4_XL",
+          "name":       "Pixel 4 XL",
+          "display":    "6.3 inches",
+          "resolution": "1440x3040",
+          "skin":       "pixel_4_xl"
+        },
+        {
+          "id":         "Pixel_4",
+          "name":       "Pixel 4",
+          "display":    "5.7 inches",
+          "resolution": "1080x2280",
+          "skin":       "pixel_4"
+        },
+        {
+          "id":         "Pixel_3a_XL",
+          "name":       "Pixel 3a XL",
+          "display":    "6.0 inches",
+          "resolution": "1080x2160",
+          "skin":       "pixel_"
+        },
+        {
+          "id":         "Pixel_3a",
+          "name":       "Pixel 3a",
+          "display":    "5.6 inches",
+          "resolution": "1080x2220",
+          "skin":       "pixel_3a"
+        },
+        {
+          "id":         "Pixel_3_XL",
+          "name":       "Pixel 3 XL",
+          "display":    "6.3 inches",
+          "resolution": "1440x2960",
+          "skin":       "pixel_3_xl"
+        },
+        {
+          "id":         "Pixel_3",
+          "name":       "Pixel 3",
+          "display":    "5.46 inches",
+          "resolution": "1080x2160",
+          "skin":       "pixel_3"
+        },
+        {
+          "id":         "Pixel_2_XL",
+          "name":       "Pixel 2 XL",
+          "display":    "5.99 inches",
+          "resolution": "1440x2880",
+          "skin":       "pixel_2_xl"
+        },
+        {
+          "id":         "Pixel_2",
+          "name":       "Pixel 2",
+          "display":    "5.0 inches",
+          "resolution": "1080x1920",
+          "skin":       "pixel_2"
+        },
+        {
+          "id":         "Pixel",
+          "name":       "Pixel",
+          "display":    "5.0 inches",
+          "resolution": "1080x1920",
+          "skin":       "pixel_silver"
+        },
+        {
+          "id":         "Nexus_S",
+          "name":       "Nexus S",
+          "display":    "4.0 inches",
+          "resolution": "480x800",
+          "skin":       "nexus_s"
+        },
+        {
+          "id":         "Nexus_One",
+          "name":       "Nexus One",
+          "display":    "3.7 inches",
+          "resolution": "480x800",
+          "skin":       "nexus_one"
+        },
+        {
+          "id":         "Nexus_10",
+          "name":       "Nexus 10",
+          "display":    "10.1 inches",
+          "resolution": "2560x1600",
+          "skin":       "nexus_10"
+        },
+        {
+          "id":         "Nexus_9",
+          "name":       "Nexus 9",
+          "display":    "8.9 inches",
+          "resolution": "2048x1536",
+          "skin":       "nexus_9"
+        },
+        {
+          "id":         "Nexus_7",
+          "name":       "Nexus 7",
+          "display":    "7.02 inches",
+          "resolution": "1920x1200",
+          "skin":       "nexus_7"
+        },
+        {
+          "id":         "Nexus_7_2013",
+          "name":       "Nexus 7 (2013)",
+          "display":    "7.02 inches",
+          "resolution": "1920x1200",
+          "skin":       "nexus_7_2013"
+        },
+        {
+          "id":         "Nexus_6P",
+          "name":       "Nexus 6P",
+          "display":    "5.7 inches",
+          "resolution": "1440x2560",
+          "skin":       "nexus_6p"
+        },
+        {
+          "id":         "Nexus_6",
+          "name":       "Nexus 6",
+          "display":    "5.96 inches",
+          "resolution": "1440x2560",
+          "skin":       "nexus_6"
+        },
+        {
+          "id":         "Nexus_5X",
+          "name":       "Nexus 5X",
+          "display":    "5.2 inches",
+          "resolution": "1080x1920",
+          "skin":       "nexus_5x"
+        },
+        {
+          "id":         "Nexus_5",
+          "name":       "Nexus 5",
+          "display":    "4.95 inches",
+          "resolution": "1080x1920",
+          "skin":       "nexus_5"
+        },
+        {
+          "id":         "Nexus_4",
+          "name":       "Nexus 4",
+          "display":    "4.7 inches",
+          "resolution": "768x1280",
+          "skin":       "nexus_4"
+        }
+      ]
+    },
+    {
+      "name":     "Xiaomi",
+      "products": [
+        {
+          "id":         "",
+          "name":       "",
+          "display":    " inches",
+          "resolution": "",
+          "skin":       ""
+        }
+
+      ]
+    },
+    {
+      "name":     "Motorola",
+      "products": [
+        {
+          "id":         "",
+          "name":       "",
+          "display":    " inches",
+          "resolution": "",
+          "skin":       ""
+        }
+
+      ]
+    },
+    {
+      "name":     "Vivo",
+      "products": [
+        {
+          "id":         "",
+          "name":       "",
+          "display":    " inches",
+          "resolution": "",
+          "skin":       ""
+        }
+
+      ]
+    }
+  ]
+}

@@ -41,7 +41,12 @@ comments: true
   - [`assertLocatorPresent(locator)`](../commands/desktop/assertLocatorPresent(locator))
   - [`clickMenuByLocator(locator,menu)`](../commands/desktop/clickMenuByLocator(locator,menu))
 - [autoscanning](../commands/desktop/configureDesktopApplication): code fixes to continue with autoscanning when an 
-  error occurred due to component not bing active or misconfigured.
+  error occurred due to component not bing active or mis-configured.
+- remove _over-zealous_ trimming of component text during editing of a textbox/textarea component.
+  - [`typeTextBox(name,text1,text2,text3,text4)`](../commands/desktop/typeTextBox(name,text1,text2,text3,text4))
+  - [`typeTextArea(name,text1,text2,text3,text4)`](../commands/desktop/typeTextArea(name,text1,text2,text3,text4))
+  - [`typeAppendTextBox(name,text1,text2,text3,text4)`](../commands/desktop/typeAppendTextBox(name,text1,text2,text3,text4))
+  - [`typeAppendTextArea(name,text1,text2,text3,text4)`](../commands/desktop/typeAppendTextArea(name,text1,text2,text3,text4))
 
 
 ### [macro commands](../commands/macro)
@@ -54,6 +59,15 @@ comments: true
 - documentation forthcoming (please be patient).
 - current implementation requires user to install android studio, android sdk, platform-tools, AVD manager, any Android 
   emulators, and Appium Desktop *BEFORE* using Nexial's mobile automation feature.
+- additional profile configuration for added:
+  - `.orientation`
+  - `.geoLocation`
+  - `.server.url`
+  - `.server.address`
+  - `.server.logging`
+- fix the shutdown sequence of appium server when Nexial is terminating execution
+- support externalizing the Appiums log during execution (`log/appium.log` under the output directory)
+- support both external appium server integration and auto-start appium server during Nexial execution
 
 
 ### [sound commands](../commands/sound)
@@ -76,6 +90,10 @@ comments: true
   - [`assertTextNotContain(locator,text)`](../commands/web/assertTextNotContain(locator,text))
   - [`saveText(var,locator)`](../commands/web/saveText(var,locator))
 - [`close`](../commands/web/close()): also shut down underlying webdriver if the last browser window is closed.
+- [`selectDropdown(locator,optLocator,optText)`](../commands/web/selectDropdown(locator,optLocator,optText)): *NEW* 
+  command to select an option from a dropdown component.
+- [`waitForElementTextPresent(locator,text)`](../commands/web/waitForElementTextPresent(locator,text)): *NEW* command 
+  to wait for the presence of an element that matches both the specified `locator` and specified `text`.
 
 
 ### [webmail commands](../commands/webmail)
