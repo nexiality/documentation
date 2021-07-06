@@ -12,77 +12,77 @@
         },
         {
           "id":         "Galaxy_S21_Plus",
-          "name":       "Samsung Galaxy S21+",
+          "name":       "Galaxy S21+",
           "display":    "6.7 inches",
           "resolution": "1080x2400",
           "skin":       "Galaxy_S21_Plus"
         },
         {
           "id":         "Galaxy_S21",
-          "name":       "Samsung Galaxy S21",
+          "name":       "Galaxy S21",
           "display":    "6.2 inches",
           "resolution": "1080x2400",
           "skin":       "Galaxy_S21"
         },
         {
           "id":         "Galaxy_S20_FE",
-          "name":       "Samsung Galaxy S20 FE",
+          "name":       "Galaxy S20 FE",
           "display":    "6.5 inches",
           "resolution": "1080x2400",
           "skin":       "Galaxy_S20_FE"
         },
         {
           "id":         "Galaxy_Z_Fold2",
-          "name":       "Samsung Galaxy Z Fold2",
+          "name":       "Galaxy Z Fold2",
           "display":    "7.6 inches",
           "resolution": "1768x2208",
           "skin":       "Galaxy_Z_Fold2"
         },
         {
           "id":         "Galaxy_Note20_Ultra",
-          "name":       "Samsung Galaxy Note20 Ultra",
+          "name":       "Galaxy Note20 Ultra",
           "display":    "6.9 inches",
           "resolution": "1440x3088",
           "skin":       "Galaxy_Note20_Ultra"
         },
         {
           "id":         "Galaxy_Note20",
-          "name":       "Samsung Galaxy Note20",
+          "name":       "Galaxy Note20",
           "display":    "6.7 inches",
           "resolution": "1080x2400",
           "skin":       "Galaxy_Note20"
         },
         {
           "id":         "Galaxy_Note10",
-          "name":       "Samsung Galaxy Note10",
+          "name":       "Galaxy Note10",
           "display":    "6.3 inches",
           "resolution": "1080x2280",
           "skin":       "Galaxy_Note10_Black"
         },
         {
           "id":         "Galaxy_Tab_A7_Lite",
-          "name":       "Samsung Galaxy Tab A7 Lite",
+          "name":       "Galaxy Tab A7 Lite",
           "display":    "8.7 inches",
           "resolution": "800x1340",
           "skin":       "Galaxy_Tab_A7_Lite"
         },
         {
           "id":         "Galaxy_Tab_S7_FE",
-          "name":       "Samsung Galaxy Tab S7 FE",
+          "name":       "Galaxy Tab S7 FE",
           "display":    "12.4 inches",
           "resolution": "1600x2560",
           "skin":       "Galaxy_Tab_S7_FE"
         },
         {
           "id":         "Galaxy_Tab_A",
-          "name":       "Samsung Galaxy Tab A 10.5",
+          "name":       "Galaxy Tab A 10.5",
           "display":    "10.5 inches",
           "resolution": "1200x1920",
           "skin":       "Galaxy_Tab_S4_10.5"
         },
         {
           "id":         "Galaxy_Tab_S4",
-          "name":       "Samsung Galaxy Tab S4 10.5",
+          "name":       "Galaxy Tab S4 10.5",
           "display":    "10.5 inches",
           "resolution": "1600x2560",
           "skin":       "Galaxy_Tab_S4_10.5"
