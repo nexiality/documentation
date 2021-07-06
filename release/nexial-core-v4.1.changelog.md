@@ -68,6 +68,7 @@ comments: true
 - fix the shutdown sequence of appium server when Nexial is terminating execution
 - support externalizing the Appiums log during execution (`log/appium.log` under the output directory)
 - support both external appium server integration and auto-start appium server during Nexial execution
+- improved Android setup scripts to install Android SDK and emulators
 
 
 ### [sound commands](../commands/sound)
