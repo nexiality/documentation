@@ -247,45 +247,6 @@
           "skin":       "nexus_4"
         }
       ]
-    },
-    {
-      "name":     "Xiaomi",
-      "products": [
-        {
-          "id":         "",
-          "name":       "",
-          "display":    " inches",
-          "resolution": "",
-          "skin":       ""
-        }
-
-      ]
-    },
-    {
-      "name":     "Motorola",
-      "products": [
-        {
-          "id":         "",
-          "name":       "",
-          "display":    " inches",
-          "resolution": "",
-          "skin":       ""
-        }
-
-      ]
-    },
-    {
-      "name":     "Vivo",
-      "products": [
-        {
-          "id":         "",
-          "name":       "",
-          "display":    " inches",
-          "resolution": "",
-          "skin":       ""
-        }
-
-      ]
     }
   ]
 }
