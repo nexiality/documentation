@@ -84,6 +84,13 @@ comments: true
 - [`play(audio)`](../commands/sound/play(audio)): update all sound files to MP3 (instead of WAV) to reduce footprint
 
 
+### [ws commands](../commands/ws)
+- [`upload(url,body,fileParams,var)`](../commands/ws/upload(url,body,fileParams,var)): additional logging enabled via 
+  the `nexial.verbose` System variable.
+- [`upload(url,body,fileParams,var)`](../commands/ws/upload(url,body,fileParams,var)): honoring the Content-Type header 
+  defined in preceding [`header(name,value)`](../commands/ws/header(name,value)) command(s).
+
+
 ### [web commands](../commands/web)
 - [`waitForPopUp(winId,waitMs)`](../commands/web/waitForPopUp(winId,waitMs)): FIXED to support both window name and 
   window index. Also the target window will be selected (meaning: switched to) when it is detected within the specified 
