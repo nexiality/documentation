@@ -18,6 +18,7 @@ comments: true
 - support Java 16
   - adjustments for older Java (pre Java 11)
 - enhancements to Execution Summary to show/hide timing and pass/fail information.
+- minor stylesheet update for email notification template.
 
 
 ### [Interactive](../interactive)
@@ -68,7 +69,15 @@ comments: true
 - fix the shutdown sequence of appium server when Nexial is terminating execution
 - support externalizing the Appiums log during execution (`log/appium.log` under the output directory)
 - support both external appium server integration and auto-start appium server during Nexial execution
-- improved Android setup scripts to install Android SDK and emulators
+- improved Android setup script to install Android SDK and emulators
+  - alpha-ready: Android setup script will now 
+    1. install Android SDK to `~/.nexial/android/sdk`
+    2. install Android system images (user selects)
+    3. install Android emulators with skins (user selects)
+    4. create batch files to start emulators
+- [`saveCount(var,locator)`]: **NEW** command to save the number of matching elements to `var`.
+- [`type(locator,text)`]: fix code to allow time for the onscreen keyboard to render.
+- [`scroll(locator,direction)`]: fix code to properly scroll in all 4 directions.
 
 
 ### [sound commands](../commands/sound)

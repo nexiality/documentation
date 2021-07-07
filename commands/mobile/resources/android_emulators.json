@@ -100,6 +100,13 @@
           "skin":       "pixel_xl_silver"
         },
         {
+          "id":         "Pixel_05",
+          "name":       "Pixel 5",
+          "display":    "6.0 inches",
+          "resolution": "1080x2340",
+          "skin":       "pixel_4a"
+        },
+        {
           "id":         "Pixel_04a",
           "name":       "Pixel 4a",
           "display":    "5.8 inches",
