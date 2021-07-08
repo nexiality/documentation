@@ -86,15 +86,15 @@ comments: true
 
 
 ### [ws commands](../commands/ws)
-- [`upload(url,body,fileParams,var)`](../commands/ws/upload(url,body,fileParams,var)): additional logging enabled via 
-  the `nexial.verbose` System variable.
-- [`upload(url,body,fileParams,var)`](../commands/ws/upload(url,body,fileParams,var)): honoring the Content-Type header 
-  defined in preceding [`header(name,value)`](../commands/ws/header(name,value)) command(s).
+- [`upload(url,body,fileParams,var)`](../commands/ws/upload(url,body,fileParams,var)): 
+  - additional logging enabled via the `nexial.verbose` System variable. 
+  - honoring the Content-Type header defined in preceding [`header(name,value)`](../commands/ws/header(name,value)) command(s).
+  - support content type with charset
 
 
 ### [web commands](../commands/web)
 - [`waitForPopUp(winId,waitMs)`](../commands/web/waitForPopUp(winId,waitMs)): FIXED to support both window name and 
-  window index. Also the target window will be selected (meaning: switched to) when it is detected within the specified 
+  window index. Also, the target window will be selected (meaning: switched to) when it is detected within the specified 
   max time.
 - added more meaningful error messages for explicit wait
 - [`click(locator)`](../commands/web/click(locator)): better "find element" strategy for click target
@@ -112,6 +112,8 @@ comments: true
   command to select an option from a dropdown component.
 - [`waitForElementTextPresent(locator,text)`](../commands/web/waitForElementTextPresent(locator,text)): *NEW* command 
   to wait for the presence of an element that matches both the specified `locator` and specified `text`.
+- disable native screenshot when executing under headless environment (not supported)
+- disable native DnD when executing under headless environment (not supported)
 
 
 ### [webmail commands](../commands/webmail)
