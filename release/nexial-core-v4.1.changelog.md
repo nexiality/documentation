@@ -48,6 +48,20 @@ comments: true
   - [`typeTextArea(name,text1,text2,text3,text4)`](../commands/desktop/typeTextArea(name,text1,text2,text3,text4))
   - [`typeAppendTextBox(name,text1,text2,text3,text4)`](../commands/desktop/typeAppendTextBox(name,text1,text2,text3,text4))
   - [`typeAppendTextArea(name,text1,text2,text3,text4)`](../commands/desktop/typeAppendTextArea(name,text1,text2,text3,text4))
+- HierTable support:
+  - auto scrolling for HierTable to bring offscreen rows into view (currently only support Infragistics4 UI):
+    - [`assertHierCells(matchBy,column,expected,nestedOnly)`](../commands/desktop/assertHierCells(matchBy,column,expected,nestedOnly))
+    - [`assertHierRow(matchBy,expected)`](../commands/desktop/assertHierRow(matchBy,expected))
+    - [`editHierCells(var,matchBy,nameValues)`](../commands/desktop/editHierCells(var,matchBy,nameValues))
+    - [`saveHierCells(var,matchBy,column,nestedOnly)`](../commands/desktop/saveHierCells(var,matchBy,column,nestedOnly))
+    - [`saveHierRow(var,matchBy)`](../commands/desktop/saveHierRow(var,matchBy))
+  - allow "extra" section of a HierTable element to be loaded more dynamically
+  - reformat multi-line column headers as single line to better support assertions and data comparison
+    - [`assertHierCells(matchBy,column,expected,nestedOnly)`](../commands/desktop/assertHierCells(matchBy,column,expected,nestedOnly))
+    - [`assertHierRow(matchBy,expected)`](../commands/desktop/assertHierRow(matchBy,expected))
+    - [`saveHierCells(var,matchBy,column,nestedOnly)`](../commands/desktop/saveHierCells(var,matchBy,column,nestedOnly))
+    - [`saveHierRow(var,matchBy)`](../commands/desktop/saveHierRow(var,matchBy))
+- code fix to eliminate unwanted exceptions
 
 
 ### [macro commands](../commands/macro)
