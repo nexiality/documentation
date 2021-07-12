@@ -29,8 +29,13 @@ comments: true
 
 
 ### [Expressions](../expressions)
-- [WEB &raquo; `check(locator)`](../expressions/WEBexpression#checklocator): **NEW** operation to ensure a checkbox is checked
-- [WEB &raquo; `uncheck(locator)`](../expressions/WEBexpression#unchecklocator):  **NEW** operation to ensure a checkbox is unchecked
+- [WEB &raquo; `check(locator)`](../expressions/WEBexpression#checklocator): **NEW** operation to ensure a checkbox is 
+  checked
+- [WEB &raquo; `uncheck(locator)`](../expressions/WEBexpression#unchecklocator):  **NEW** operation to ensure a 
+  checkbox is unchecked
+- rewrote parsing logic for expression in order to support parameter values that contains `(`, `)`, `[`, and `]`.
+- implemented special parameter delimiter - ` %% ` - to handle situations where comma (`,`) is used as part of the 
+  parameter itself. This special parameter delimiter allows user to use commas freely as part of the parameter value.
 
 
 ### [base commands](../commands/base)
