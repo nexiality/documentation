@@ -99,3 +99,4 @@ If all goes well, the result would look something like this:<br/>
 
 
 ### See Also
+- [`oauthProfile(var,profile)`](oauthProfile(var,profile))
