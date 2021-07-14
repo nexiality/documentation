@@ -34,6 +34,7 @@ comments: true
 - [WEB &raquo; `uncheck(locator)`](../expressions/WEBexpression#unchecklocator):  **NEW** operation to ensure a 
   checkbox is unchecked
 - rewrote parsing logic for expression in order to support parameter values that contains `(`, `)`, `[`, and `]`.
+  - it is now possible to nest parenthesis (`(` and `)`) and square brackets (`[` and `]`) within expression operations.
 - implemented special parameter delimiter - ` %% ` - to handle situations where comma (`,`) is used as part of the 
   parameter itself. This special parameter delimiter allows user to use commas freely as part of the parameter value.
 
