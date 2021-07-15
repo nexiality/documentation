@@ -2,7 +2,7 @@
 layout: default
 title: oauthProfile(var,profile)
 parent: ws
-tags: command ws web_service api
+tags: command ws web_service api oauth
 comments: true
 ---
 
@@ -12,13 +12,15 @@ This command is another version of [oauth(var,url,auth)](oauth(var,url,auth)) bu
 defaults based on the major OAuth providers such as Google, Microsoft, Okta, Gitlab and Twitter. It can also support 
 other unknown OAuth provider in most cases. 
 
-### Parameters
-- **var** - the name of the variable to which the OAuth response will be stored. Nexial user can in turn retrieve 
-  specific values from this variable in the respective Nexial script.
-- **profile** - the profile name with which OAuth inputs are defined in the data variables that share the same prefix
 
-The OAuth providers are identified by the `<profile>.type` (case-sensitive). Please refer the screenshots of `profile` data variable for 
-different OAuth providers.
+### Parameters
+- **var** - the name of the variable to which the OAuth response will be stored. Nexial user can in turn retrieve 
+  specific values from this variable in the respective Nexial script.
+- **profile** - the profile name with which OAuth inputs are defined in the data variables that share the same prefix
+
+The OAuth providers are identified by the `<profile>.type` (case-sensitive). Please refer the screenshots of 
+`profile` data variable for different OAuth providers.
+
 
 ### Microsoft
 Below is an example how to use this command for `microsoft` as OAuth provider. 
@@ -40,14 +42,13 @@ If all inputs are valid, the successful OAuth response will look something like 
 
 Refer this link for more information on [Microsoft OAuth](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth-ropc)
 
+
 ### Google
 
 Google OAuth implementation is a bit restricted as compared to other providers. Hence, there are some additional steps 
 you need to perform before you could use the oauth for `google`.
 
-
 ![](image/google_script.png)
-
 
 Since Google OAuth API requires using `grant_type` as `refresh_token`, you need to generate one `refresh_token` first and
 then set it in `profile` data variables along with `client_id` & `client_secret` as shown in below image.
@@ -60,20 +61,19 @@ To generate the `refresh_token`, you may follow these steps:
      browser with `code` parameter as query param in the redirected URI of the browser window.
 4. Copy the value of `code` and use it to make below POST call using any of your favourite tools like Postman, Curl, Insomnia etc.
      ```
-     curl --request POST
-     // Added new lines in `data` for readabilty 
-     --data "code=<CODE_YOU_COPIED_FROM_REDIRECTED_WINDOW_URL>
-             &client_id=<YOUR_CLIENT_ID>
-             &client_secret=<YOUR_CLIENT_SECRET>
-             &grant_type=authorization_code" 
-     https://accounts.google.com/o/oauth2/token
+     curl --request POST \
+          --data "code=<CODE_YOU_COPIED_FROM_REDIRECTED_WINDOW_URL> \
+                 &client_id=<YOUR_CLIENT_ID> \
+                 &client_secret=<YOUR_CLIENT_SECRET> \
+                 &grant_type=authorization_code" \
+          https://accounts.google.com/o/oauth2/token
      ```
 5. The response of the above HTTP call will be a json body containing `refresh_token`.
 6. Copy that `refresh_token` value and set it into `profile` data variable as shown in below image. That's it.     
 
-
 The `profile` data variables will be something like this
 ![](image/google_data.png)
+
 
 #### Defaults
 - The default url for `google` is `https://accounts.google.com/o/oauth2/token` 
@@ -81,7 +81,6 @@ The `profile` data variables will be something like this
 
 If all inputs are valid, the successful OAuth response will look something like this
 ![](image/google_output.png)
-
 
 
 ### Okta
@@ -103,6 +102,7 @@ If all inputs are valid, the successful OAuth response will look something like 
 
 Refer this link for more information on [Okta OAuth](https://developer.okta.com/docs/guides/implement-password/use-flow/)
 
+
 ### Gitlab
 Below is an example how to use this command for `gitlab` as OAuth provider.
 
@@ -112,6 +112,7 @@ The `profile` data variables will be something like this
 
 ![](image/gitlab_data.png)
 
+
 #### Defaults
 - The default url for `gitlab` is `https://gitlab.com/oauth/token`
 - The default `grant_type` is `password`
@@ -120,6 +121,7 @@ If all inputs are valid, the successful OAuth response will look something like 
 ![](image/gitlab_output.png)
 
 Refer this link for more information on [Gitlab OAuth](https://docs.gitlab.com/ee/api/oauth2.html#resource-owner-password-credentials-flow)
+
 
 ### Twitter
 Below is an example how to use this command for `twitter` as OAuth provider.
@@ -138,6 +140,7 @@ If all inputs are valid, the successful OAuth response will look something like 
 ![](image/twitter_output.png)
 
 Refer this link for more information on [Twitter OAuth](https://developer.twitter.com/en/docs/authentication/oauth-2-0/bearer-tokens)
+
 
 ### Custom
 Below is an example how to use this command for any other OAuth provider.
