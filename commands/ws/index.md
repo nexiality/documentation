@@ -121,6 +121,7 @@ generate actionable visualization:<br/>
 - [`jwtParse(var,token,key)`](jwtParse(var,token,key))
 - [`jwtSignHS256(var,payload,key)`](jwtSignHS256(var,payload,key))
 - [`oauth(var,url,auth)`](oauth(var,url,auth))
+- [`oauthProfile(var,profile)`](oauthProfile(var,profile))
 - [`patch(url,body,var)`](patch(url,body,var))
 - [`post(url,body,var)`](post(url,body,var))
 - [`put(url,body,var)`](put(url,body,var))
