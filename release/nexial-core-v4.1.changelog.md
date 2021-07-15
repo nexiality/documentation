@@ -101,6 +101,10 @@ comments: true
 - [`waitForElement(locator,waitMs)`]: wait until the target element is found before continuing execution.
 
 
+### [rdbms commands](../commands/rdbms)
+- update multiple database drivers to newer version for better product support
+
+
 ### [sound commands](../commands/sound)
 - [`play(audio)`](../commands/sound/play(audio)): update all sound files to MP3 (instead of WAV) to reduce footprint
 
