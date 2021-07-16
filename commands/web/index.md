@@ -221,3 +221,4 @@ available commands.
 - [`waitUntilEnabled(locator,waitMs)`](waitUntilEnabled(locator,waitMs))
 - [`waitUntilHidden(locator,waitMs)`](waitUntilHidden(locator,waitMs))
 - [`waitUntilVisible(locator,waitMs)`](waitUntilVisible(locator,waitMs))
+- [`waitWhileElementNotPresent(locator,waitMs)`](waitWhileElementNotPresent(locator,waitMs))

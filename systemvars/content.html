@@ -4215,6 +4215,78 @@
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
     </tr>
+
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.ws.multipart.spec"><code>nexial.ws.multipart.spec</code></a>
+        </td>
+        <td>text</td>
+        <td>standard</td>
+        <td class="read-write">read/write</td>
+        <td>
+            <b>APPLICABLE FOR <a href="../commands/ws/upload(url,body,fileParams,var)">ws &raquo;
+                <code>upload(url,body,fileParams,var)</code></a> COMMAND ONLY.</b><br/>
+
+            When performing a file upload operation on an API call, sometimes it is beneficial (even necessary) to
+            fine-tune the underlying HTTP construct in order to yield the desired effect. The file upload operation
+            has undergone various specification changes over the year. The latest specification is RFC 6532.
+            Subsequently Nexial is using this RFC 6532 as the default "mode" for file upload operation for API testing.
+            <br/>
+            <br/>
+            These "modes" essentially controls how Nexial constructs the HTTP request, particularly with regards to the
+            HTTP headers for each of the multipart content.<br/>
+
+            <table border="1" cellspacing="0" cellpadding="5">
+            <tr><th>mode</th><th>description</th></tr>
+            <tr>
+                <td><code>standard</code></td>
+                <td><b>This is the default</b>. This mode is RFC 6532 compliant. This means that Nexial would implement
+                    the strict (RFC 822, RFC 2045, RFC 2046) interpretation of the spec but allows for UTF-8 charset
+                    headers.
+                </td>
+            </tr>
+            <tr>
+                <td><code>strict</code></td>
+                <td>This is also known as the "strict" mode. It is a combination of RFC 822, RFC 2045, RFC 2046.
+                    Choose this mode to enforce <code>Content-Type</code>,<code>Content-Disposition</code> and
+                    <code>Content-Transfer-Encoding</code> compliance.
+                </td>
+            </tr>
+            <tr>
+                <td><code>browser</code></td>
+                <td>This is also known as the "lax" mode. It is meant to provide compatibility with older browser
+                    (IE 5 or earlier). Only <code>Content-Disposition</code> and content charset will be consider for
+                    the corresponding multipart header.
+                </td>
+            </tr>
+            </table>
+            <br/>
+            When in doubt, start with the default (<code>standard</code>) mode. Chances are it will work as expected.
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.ws.multipart.charset"><code>nexial.ws.multipart.charset</code></a>
+        </td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td class="read-write">read/write</td>
+        <td>
+            <b>APPLICABLE FOR <a href="../commands/ws/upload(url,body,fileParams,var)">ws &raquo;
+                <code>upload(url,body,fileParams,var)</code></a> COMMAND ONLY.</b><br/>
+
+            While performing a file upload operation on an API call, sometimes it is beneficial (even necessary) to
+            explicitly use a specific character set. One can use this System variable to instruct Nexial on the
+            specific character set to use. If none is defined, none will be specified during the construction of the
+            corresponding HTTP request.<br/>
+            <br/>
+            For example, <code>nexial.ws.multipart.charset=UTF-8</code> would instruct Nexial to add
+            <code>; charset=UTF-8</code> to the end of the multiple request header, like this:<br/>
+            <br/>
+            <code>Content-Type: multipart/form-data; boundary=oasidASLD...<b>; charset=UTF-8</b></code>
+        </td>
+    </tr>
+
     <tr>
         <td class="varname" nowrap="nowrap">
             <a id="nexial.ws.logDetail"><code>nexial.ws.logDetail</code></a>

@@ -7,7 +7,7 @@ comments: true
 ---
 
 
-### Description 
+### Description
 This command is used to send POST request to the given endpoint URL. This could be used for both SOAP and RESTful 
 Services.
 

@@ -7,7 +7,7 @@ comments: true
 ---
 
 
-### Description 
+### Description
 This command generates JWT Token that can be used further as an Authorization Header in the Web Service Request.
 
 ##### What is JSON Web Token?
