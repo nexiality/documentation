@@ -95,6 +95,8 @@ comments: true
     2. install Android system images (user selects)
     3. install Android emulators with skins (user selects)
     4. create batch files to start emulators
+  - added support for MacOS shell scripts
+  - added common utility batch files to `${NEXIAL_HOME}/bin/mobile`
 - [`saveCount(var,locator)`]: **NEW** command to save the number of matching elements to `var`.
 - [`type(locator,text)`]: fix code to allow time for the onscreen keyboard to render.
 - [`scroll(locator,direction)`]: fix code to properly scroll in all 4 directions.
