@@ -101,6 +101,8 @@ comments: true
 - [`type(locator,text)`]: fix code to allow time for the onscreen keyboard to render.
 - [`scroll(locator,direction)`]: fix code to properly scroll in all 4 directions.
 - [`waitForElement(locator,waitMs)`]: wait until the target element is found before continuing execution.
+- auto-resolves the location of Appium Server startup script (`main.js`)
+- auto-resolves the location of NodeJS executable (`node`)
 
 
 ### [rdbms commands](../commands/rdbms)

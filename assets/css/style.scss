@@ -274,7 +274,6 @@ select.operations {
   color: #333;
   box-shadow: 0 0 5px 5px rgba(100, 100, 100, 0.5);
   text-shadow: 1px 1px 1px #eee;
-  //font-family:      monospace;
   font-size: 12pt;
   top: -3px;
 }
@@ -405,7 +404,7 @@ div.search-form form input#tipue_search_input {
   width: 8px;
 }
 
-@media screen and (min-height: 0) and (max-height: 680px), screen and (min-width: 0) and (max-width: 600px) {
+@media screen and (min-height: 0) and (max-height: 550px), screen and (min-width: 0) and (max-width: 600px) {
   header {
     padding-top: 1px;
     padding-bottom: 0;

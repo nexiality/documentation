@@ -34,6 +34,7 @@ below to learn more about each type and the commands available under each of the
 - [`localdb`](localdb): commands designed to manage and manipulate an embedded database in Nexial.
 - [`macro`](macro): commands designed to facilitate standard macro behavior and documentation.
 - [`mail`](mail): commands regarding email operations.
+- [`mobile`](mobile): commands regarding mobile automation.
 - [`number`](number): number-related automation commands.
 - [`pdf`](pdf): commands regarding the PDF file type.
 - [`rdbms`](rdbms): commands regarding RDBMS operations.
