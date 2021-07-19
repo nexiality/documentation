@@ -1,13 +1,15 @@
 ---
-layout: default title: assertVarsNotPresent(vars)
-parent: base tags: command base comments: true
+layout: default 
+title: assertVarsNotPresent(vars)
+parent: base
+tags: command base variable
+comments: true
 ---
 
 
 ### Description
 This command asserts that none of the specified data variables (denoted as `vars`) exists in the current execution.  
-This list of data variable names is be to separated
-by [`nexial.textDelim`](../../systemvars/index.html#nexial.textDelim).
+This list of data variable names is be to separated by [`nexial.textDelim`](../../systemvars/index.html#nexial.textDelim).
 
 Notes:
 - `vars` represent a list of data variable names, not their respective values (i.e. not `${...}`).

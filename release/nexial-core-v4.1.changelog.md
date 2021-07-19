@@ -103,7 +103,7 @@ comments: true
 - [`waitForElement(locator,waitMs)`]: wait until the target element is found before continuing execution.
 - auto-resolves the location of Appium Server startup script (`main.js`)
 - auto-resolves the location of NodeJS executable (`node`)
-
+- [`hideKeyboard`]: **NEW** command to key on-screen keyboard
 
 ### [rdbms commands](../commands/rdbms)
 - update multiple database drivers to newer version for better product support
