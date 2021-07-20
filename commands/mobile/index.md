@@ -38,6 +38,7 @@ The "mobile" command type represents a series of automation commands regarding m
 - [`click(locator)`](click(locator))
 - [`clickUntilNotFound(locator,waitMs,max)`](clickUntilNotFound(locator,waitMs,max))
 - [`closeApp()`](closeApp())
+- [`doubleClick(locator,xOffset,yOffset)`](doubleClick(locator,xOffset,yOffset))
 - [`hideKeyboard()`](hideKeyboard())
 - [`orientation(mode)`](orientation(mode))
 - [`saveCount(var,locator)`](saveCount(var,locator))

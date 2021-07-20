@@ -104,6 +104,10 @@ comments: true
 - auto-resolves the location of Appium Server startup script (`main.js`)
 - auto-resolves the location of NodeJS executable (`node`)
 - [`hideKeyboard`]: **NEW** command to key on-screen keyboard
+- add auto-hiding of on-screen keyboard via [`nexial.mobile.hideKeyboard`](../systemvars/index.html#nexial.mobile.hideKeyboard)
+  System variable.
+- correctly sending the correct time unit for `newCommandTimeout` capability.
+
 
 ### [rdbms commands](../commands/rdbms)
 - update multiple database drivers to newer version for better product support
@@ -111,21 +115,6 @@ comments: true
 
 ### [sound commands](../commands/sound)
 - [`play(audio)`](../commands/sound/play(audio)): update all sound files to MP3 (instead of WAV) to reduce footprint
-
-
-### [ws commands](../commands/ws)
-- [`upload(url,body,fileParams,var)`](../commands/ws/upload(url,body,fileParams,var)): 
-  - additional logging enabled via the `nexial.verbose` System variable. 
-  - honoring the Content-Type header defined in preceding [`header(name,value)`](../commands/ws/header(name,value)) command(s).
-  - support content type with charset
-  - further customization and control via [`nexial.ws.multipart.charset`](../systemvars/index.html#nexial.ws.multipart.charset) 
-    and [`nexial.ws.multipart.spec`](../systemvars/index.html#nexial.ws.multipart.spec) System variables.
-- [`graphql(url,body,var)`](../commands/ws/graphql(url,body,var)): **NEW** command to support GraphQA request automation
-- code fix to stablize and enhance web service logging.
-
-
-[web]
-- [`waitWhileElementNotPresent(locator,waitMs)`]: **NEW** command to ensure that a specific element is not present within a fixed amount of time.
 
 
 ### [web commands](../commands/web)
@@ -150,11 +139,20 @@ comments: true
   to wait for the presence of an element that matches both the specified `locator` and specified `text`.
 - disable native screenshot when executing under headless environment (not supported)
 - disable native DnD when executing under headless environment (not supported)
-- [`waitWhileElementNotPresent(locator,waitMs)`](waitWhileElementNotPresent(locator,waitMs)): **NEW** command to ensure
-  that a specific element is not present within a fixed amount of time.
+- [`waitWhileElementNotPresent(locator,waitMs)`](../commands/web/waitWhileElementNotPresent(locator,waitMs)): **NEW**
+  command to ensure that a specific element is not present within a fixed amount of time.
 
 
 ### [webmail commands](../commands/webmail)
 
 
 ### [ws commands](../commands/ws)
+- [`upload(url,body,fileParams,var)`](../commands/ws/upload(url,body,fileParams,var)):
+  - additional logging enabled via the `nexial.verbose` System variable.
+  - honoring the Content-Type header defined in preceding [`header(name,value)`](../commands/ws/header(name,value))
+    command(s).
+  - support content type with charset.
+  - further customization and control via [`nexial.ws.multipart.charset`](../systemvars/index.html#nexial.ws.multipart.charset)
+    and [`nexial.ws.multipart.spec`](../systemvars/index.html#nexial.ws.multipart.spec) System variables.
+- [`graphql(url,body,var)`](../commands/ws/graphql(url,body,var)): **NEW** command to support GraphQA request automation
+- code fix to stablize and enhance web service logging.
