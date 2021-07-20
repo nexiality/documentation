@@ -141,6 +141,7 @@ comments: true
 - disable native DnD when executing under headless environment (not supported)
 - [`waitWhileElementNotPresent(locator,waitMs)`](../commands/web/waitWhileElementNotPresent(locator,waitMs)): **NEW**
   command to ensure that a specific element is not present within a fixed amount of time.
+  - code fix to prefer the `waitMs` parameter over `nexial.pollWaitMs` value.
 
 
 ### [webmail commands](../commands/webmail)
