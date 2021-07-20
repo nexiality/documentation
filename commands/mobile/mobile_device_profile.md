@@ -21,6 +21,8 @@ A profile is referenced by the [`use(profile)`](use(profile)) command to start a
 the same [`use(profile)`](use(profile)) command should be considered as the first command to invoke when perform mobile 
 testing, so that the appropriate device context and appium runtime is instantiated.
 
+
+### Configuration
 Here are the common configurations for any device target:
 (assuming profile name as `MY_MOBILE`)
 
