@@ -107,6 +107,40 @@ comments: true
 - add auto-hiding of on-screen keyboard via [`nexial.mobile.hideKeyboard`](../systemvars/index.html#nexial.mobile.hideKeyboard)
   System variable.
 - correctly sending the correct time unit for `newCommandTimeout` capability.
+- [`assertTextPresent(locator,text)`](../commands/mobile/assertTextPresent(locator,text)): **NEW** command to assert 
+  that an element contains the specified text.
+- [`clickByDisplayText(text)`](../commands/mobile/clickByDisplayText(text)): **NEW** command to click an element based
+  on its text.
+- [`longClick(locator,waitMs)`](../commands/mobile/longClick(locator,waitMs)): **NEW** command to simulate long-click
+  action on a device; generally used to evoke context menu or popup menu.
+- [`doubleClick(locator,xOffset,yOffset)`](../commands/mobile/doubleClick(locator,xOffset,yOffset)): **NEW** command to
+  simulate double-click action on specified locator.
+- [`shake()`](../commands/mobile/shake()): **NEW** command to simulate shaking the current device (iOS only), which could 
+  trigger other event. 
+- [`lock()`](../commands/mobile/lock()): **NEW** command to lock current device.
+- [`unlock()`](../commands/mobile/unlock()): **NEW** command to unlock current device. By default no password is placed 
+  on emulator. For unlocking a device with passcode or pattern, visit 
+  [Appium Desired Capability](https://appium.io/docs/en/writing-running-appium/caps/#appium-desired-capabilities) and
+  search for `unlockType` and `unlockKey`.
+- [`assertLocked()`](../commands/mobile/assertLocked()): **NEW** command to assert that the target device is currently 
+  locked. 
+- [`saveLockStatus(var)`](../commands/mobile/saveLockStatus(var)): **NEW** command to save current device lock status
+  (`LOCKED` or `UNLOCKED`) to `var`.
+- [`sendSms(phone,message)`](../commands/mobile/sendSms(phone,message)): **NEW** command to send SMS `message` to
+  specified `phone` number.
+- [`home()`](../commands/mobile/home()): **NEW** command to navigate to current device's "HOME" screen. 
+- [`back()`](../commands/mobile/back()): **NEW** command to navigate back to previous screen. 
+- [`forward()`](../commands/mobile/forward()): **NEW** command to navigate forward from current screen (after 
+  navigated back to previous screen) 
+- [`recentApps`](../commands/mobile/recentApps()): **NEW** command to show recently opened (and still running) apps on
+  current device.
+- [`closeApp()`](../commands/mobile/closeApp()): implementation change to **ONLY** close the specified application of 
+  current mobile profile.
+- [`shutdown(profile)`](../commands/mobile/shutdown(profile)): **NEW** command to shut down any running emulator and
+  Appium server instance.
+- [`screenshot(file,locator)`](../commands/mobile/screenshot(file,locator)): now support "output-to-cloud" functionality,
+  which is toggled via the [`nexial.outputToCloud`](../systemvars/index.html#nexial.outputToCloud) System variable. 
+- [`type(locator,text)`]: now supports clearing out text (if `text` is `(empty)`).
 
 
 ### [rdbms commands](../commands/rdbms)
