@@ -43,6 +43,81 @@ If all inputs are valid, the successful OAuth response will look something like 
 Refer this link for more information on [Microsoft OAuth](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth-ropc)
 
 
+### Microsoft (Using `refresh_token`)
+There may be some use-cases where one might not be able to use the above option for Microsoft as OAuth provider. So 
+this command has another option built-in to support Microsoft OAuth with `refresh_token`. In `refresh_token` based 
+approach, you don't have to provide the credentials of your Microsoft account instead it just needs a valid 
+`refresh token`.
+
+To generate the `refresh token`, follow the below steps:
+
+1. Make a cURL request as shown here
+    ```
+   curl --request POST \
+   --data "client_id=<YOUR_CLIENT_ID>&scope=user.read offline_access openid profile email" \
+   https://login.microsoftonline.com/organizations/oauth2/v2.0/devicecode
+    ```
+   You will get a response in JSON format like below:
+    ```
+   {
+    "user_code": "ABCD1234X",
+    "device_code": "AABBCCDDEE--sadjkTHuiykjnuityytjkliolibvghuLYoio---z9aVQ7V5IvU7O_ksjjuiYtionIOUhiudzkl-5TdsyS4ujAA",
+    "verification_uri": "https://microsoft.com/devicelogin",
+    "expires_in": 900,
+    "interval": 5,
+    "message": "To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code ABCD1234X to authenticate."
+   }
+    ```
+
+2. Open the URL [`https://microsoft.com/devicelogin`](https://microsoft.com/devicelogin) in your browser and type/paste 
+   the `user_code` received in above cURL response. Then click on Next & follow the instructions shown on the browser 
+   until you see the below screen
+   ![](image/microsoft_device_login_confirmation.png)
+   
+3. You need to copy the `device_code` value, we're going to need it in next (and the last) cURL request.
+    ```
+   curl --request POST \
+   --data "grant_type=urn:ietf:params:oauth:grant-type:device_code \
+         &code=<DEVICE_CODE_THAT_YOU_COPIED_FROM_ABOVE_RESPONSE> \
+         &client_id=<YOUR_CLIENT_ID>" \
+   https://login.microsoftonline.com/organizations/oauth2/v2.0/token
+    ```
+    The response will contain a `refresh_token` like below:
+    ```
+    {
+        "token_type": "Bearer",
+        "scope": "email openid profile User.Read",
+        "expires_in": 3599,
+        "ext_expires_in": 3599,
+        "access_token": <ACCESS_TOKEN_IN_JWT_FORMAT>,
+        "refresh_token": "0.AwFTXpJw659XEeyic2zSy3hj9LOc2jc51NpgG3dOj18shWAJE.AgABAAAAAAD--...(huge_string)",
+        "id_token": <ID_TOKEN_IN_JWT_FORMAT>
+    }
+    ```
+    Copy `refresh_token` from this response and pass it in the profile data variable `<profile>.refresh_token` in the 
+    data sheet. To know more about Microsoft OAuth, access token & refresh tokens, see 
+   [this information](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-protocols)
+
+Below is an example script that uses this option.
+
+![](image/microsoft_refresh_script.png)
+
+The `profile` data variables will be something like this
+
+![](image/microsoft_refresh_data.png)
+
+#### Defaults
+- The default url for `microsoft` is `https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token` and so it
+  requires `<your_profile>.tenant_id` in the profile data variable.
+- The default `grant_type` is `refresh_token`
+
+If all inputs are valid, the successful OAuth response will look something like this
+
+![](image/microsoft_refresh_output.png)
+
+Refer this link for more information on [Microsoft OAuth](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth-ropc)
+
+
 ### Google
 
 Google OAuth implementation is a bit restricted as compared to other providers. Hence, there are some additional steps 
