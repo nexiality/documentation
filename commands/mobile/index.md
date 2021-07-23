@@ -35,6 +35,8 @@ The "mobile" command type represents a series of automation commands regarding m
 
 ### Available Commands
 - [`assertElementPresent(locator)`](assertElementPresent(locator))
+- [`assertElementsPresent(prefix)`](assertElementsPresent(prefix))
+- [`assertElementVisible(locator)`](assertElementVisible(locator))
 - [`assertLocked()`](assertLocked())
 - [`assertTextPresent(locator,text)`](assertTextPresent(locator,text))
 - [`back()`](back())
@@ -52,6 +54,8 @@ The "mobile" command type represents a series of automation commands regarding m
 - [`recentApps`](recentApps())
 - [`saveCount(var,locator)`](saveCount(var,locator))
 - [`saveLockStatus(var)`](saveLockStatus(var))
+- [`saveText(var,locator)`](saveText(var,locator))
+- [`saveTextArray(var,locator)`](saveTextArray(var,locator))
 - [`screenshot(file,locator)`](screenshot(file,locator))
 - [`scroll(locator,direction)`](scroll(locator,direction))
 - [`sendSms(phone,message)`](sendSms(phone,message))

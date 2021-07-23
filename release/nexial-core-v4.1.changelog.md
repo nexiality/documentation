@@ -97,13 +97,17 @@ comments: true
     4. create batch files to start emulators
   - added support for MacOS shell scripts
   - added common utility batch files to `${NEXIAL_HOME}/bin/mobile`
-- [`saveCount(var,locator)`]: **NEW** command to save the number of matching elements to `var`.
-- [`type(locator,text)`]: fix code to allow time for the onscreen keyboard to render.
-- [`scroll(locator,direction)`]: fix code to properly scroll in all 4 directions.
-- [`waitForElement(locator,waitMs)`]: wait until the target element is found before continuing execution.
+- [`saveCount(var,locator)`](../commands/mobile/saveCount(var,locator)): **NEW** command to save the number of matching 
+  elements to `var`.
+- [`type(locator,text)`](../commands/mobile/type(locator,text)): fix code to allow time for the onscreen keyboard to 
+  render.
+- [`scroll(locator,direction)`](../commands/mobile/scroll(locator,direction)): fix code to properly scroll in all 4 
+  directions.
+- [`waitForElement(locator,waitMs)`](../commands/mobile/waitForElementPresent(locator,waitMs)): wait until the target 
+  element is found before continuing execution.
 - auto-resolves the location of Appium Server startup script (`main.js`)
 - auto-resolves the location of NodeJS executable (`node`)
-- [`hideKeyboard`]: **NEW** command to key on-screen keyboard
+- [`hideKeyboard`](../commands/mobile/hideKeyboard()): **NEW** command to key on-screen keyboard
 - add auto-hiding of on-screen keyboard via [`nexial.mobile.hideKeyboard`](../systemvars/index.html#nexial.mobile.hideKeyboard)
   System variable.
 - correctly sending the correct time unit for `newCommandTimeout` capability.
@@ -140,7 +144,27 @@ comments: true
   Appium server instance.
 - [`screenshot(file,locator)`](../commands/mobile/screenshot(file,locator)): now support "output-to-cloud" functionality,
   which is toggled via the [`nexial.outputToCloud`](../systemvars/index.html#nexial.outputToCloud) System variable. 
-- [`type(locator,text)`]: now supports clearing out text (if `text` is `(empty)`).
+- [`type(locator,text)`](../commands/mobile/type(locator,text)): now supports clearing out text (if `text` is `(empty)`).
+- [`type(locator,text)`](../commands/mobile/type(locator,text)): improved stability and performance.
+- [`scroll(locator,direction)`](../commands/mobile/scroll(locator,direction)): added more fine-grained scroll increments
+- [`assertElementVisible(locator)`](../commands/mobile/assertElementVisible(locator)): **NEW** command to assert that the
+  element referenced by the specified `locator` is both present and visible on current screen.
+- [`saveText(var,locator)`](../commands/mobile/saveText(var,locator)): **NEW** command to save the text of the referenced
+  element to `var`.
+- [`saveTextArray(var,locator)`](../commands/mobile/saveTextArray(var,locator)): **NEW** command to save the text of
+  all matching elements as an array (or list) to `var`.
+- [`assertElementsPresent(prefix)`](../commands/mobile/assertElementsPresent(prefix)): **NEW** command to assert the 
+  presence of a series of locators.
+- [`screenshot9file,locator)`]: improved stability and performance.
+- now supports a variety of locators via unique prefixes:
+  - `id=...`: ID-based locator.
+  - `xpath=...`: XPATH-based locator. Note that the `xpath=` prefix not required since XPATH locators are fairly easy to recognize
+  - `a11y=...`: accessbility id-based locator.
+  - `class=...`: class-based locator.
+  - `res=...`: resource id-based locator, which is an alias to ID-based locator.
+  - `predicate=...`: predicate-based locator. Note that this is for iOS device only.
+  - `cc=...`: class chain-based locator. Note that this is for iOS device only.
+  - `name=...`: name-based locator, which is an alias to ID-based locator. Note that this is for iOS device only.
 
 
 ### [rdbms commands](../commands/rdbms)
