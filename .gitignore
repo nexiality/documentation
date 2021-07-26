@@ -300,7 +300,7 @@ $RECYCLE.BIN/
 classes/
 logs/
 output/
-#/_sass/*
+/_sass/*
 /.jekyll-metadata
 /jekyll-theme-tactile.gemspec
 /jekyll-theme-tactile-0.1.0.gem
