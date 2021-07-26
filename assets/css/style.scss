@@ -1032,7 +1032,7 @@ pre.explain {
 }
 
 .tabs .tab-links li {
-  margin: 0 10px !important;
+  margin: -5px 10px !important;
   padding: 0 !important;
   float: left;
   list-style: none;
@@ -1044,7 +1044,8 @@ pre.explain {
 }
 
 .tabs .tab-links a {
-  background: rgba(140, 200, 40, 0.55) !important;
+  background: rgba(125, 175, 60, 1) !important;
+  //background: rgba(140, 200, 40, 0.55) !important;
   color: #f0f0f0;
   box-shadow: 3px -2px 2px -1px #151;
   display: inline-block;

@@ -1,0 +1,241 @@
+<style>
+    .locators.tabs { padding: 5px; }
+
+    .locators.tabs li { margin-bottom: 0 !important; }
+
+    .tab-links code { background-image: none; padding: 2px; }
+</style>
+
+<div class="tabs locators">
+    <ul class="tab-links tabs-collapsed">
+        <li><a href="#tab_id" id="tab_title_id">ID</a></li>
+        <li><a href="#tab_a11y" id="tab_title_a11y">Accessibility ID</a></li>
+        <li><a href="#tab_xpath" id="tab_title_xpath">XPath</a></li>
+        <li><a href="#tab_name" id="tab_title_name">Name</a></li>
+        <li><a href="#tab_res" id="tab_title_res">Resource ID</a></li>
+        <li><a href="#tab_predicate" id="tab_title_predicate">Predicate</a></li>
+        <li><a href="#tab_cc" id="tab_title_cc">Class Chain</a></li>
+        <li><a href="#tab_link" id="tab_title_link">Link Text</a></li>
+        <li><a href="#tab_partialLinkText" id="tab_title_partialLinkText">Partial Link Text</a></li>
+        <li><a href="#tab_tag" id="tab_title_tag">Tag</a></li>
+        <li><a href="#tab_class" id="tab_title_class">Style Class</a></li>
+        <li><a href="#tab_css" id="tab_title_css">CSS</a></li>
+        <li><a href="#tab_image" id="tab_title_image">Image</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="tab_id" class="tab">
+            Quick Tip: ID locators are prefixed by <code>id=</code><br/>
+            <br/>
+            Reference an element by its ID is, by far, the simplest type of locator. Unfortunately, just like its web
+            counterpart, the "ID" in reference isn't always unique as one would hope. For simpler application this
+            locator usually works well. For more complex applications where an "ID" might be repeated across multiple
+            elements, a different locator strategy (such as XPATH) might be a better way to go.<br/>
+            <br/>
+            For Android application, the "resource-id" property is also considered as an "ID". One can use either the
+            <code>id=...</code> or <code>res=...</code> syntax. Here's an example of finding a "ID" of a element via the
+            Appium inspector:<br/>
+            <img src="image/locator_01.png"/><br/>
+            <br/>
+            For the above example, one may express this locator as:
+            <ul>
+                <li><code>id=com.google.android.calculator:id/digit_5</code></li>
+                <li><code>res=com.google.android.calculator:id/digit_5</code></li>
+            </ul>
+            In contrast, iOS automation uses the "name" property as the "ID". Note that there isn't an actual property
+            named as "ID" or "id". However, one may use either <code>id=...</code> or <code>name=...</code> syntax.
+            Nexial will appropriately resolve it to the correct type of locator.<br/>
+            <img src="image/locator_02.png"/><br/>
+            <br/>
+            For the above example, one may express this locator as:
+            <ul>
+                <li><code>id=Remind me on a day</code></li>
+                <li><code>name=Remind me on a day</code></li>
+            </ul>
+        </div>
+
+        <div id="tab_a11y" class="tab">
+            Quick Tip: Accessibility ID locators are prefixed by <code>a11y=</code><br/>
+            <br/>
+            The design purpose of an accessibility ID is to improve usability for users with visual or hearing
+            impairment. Accessibility tools like screen readers or TTS software utilize these IDs to provide additional
+            usability support. From the test automation standpoint, the same accessibility ID can be utilized as the
+            basis of identifying an element. As a convenience, Nexial recognizes a locator by accessibility ID via the
+            <code>a11y</code> prefix (there are 11 characters between <code>a</code> and <code>y</code> of
+            <code>accessibility</code>).<br/>
+            <br/>
+            On Android, this locator strategy uses <code>contentDescription</code> or <code>content-desc</code>
+            property:<br/>
+            <img src="image/locator_03.png"/><br/>
+            <br/>
+            For the above example, the locator would be <code>a11y=Dark theme</code>.<br/>
+            <br/>
+            On iOS, the accessibility id, the id, and the name locator strategies are all identical. Behind the scene,
+            they are implemented the same way.<br/>
+            <img src="image/locator_04.png"/><br/>
+            <br/>
+            For the above example, one would specify this locator as <code>a11y=Back</code>.<br/>
+            <br/>
+            Generally speaking, it is preferred to use the accessibility ID over ID (although on iOS they are the same)
+            because the accessibility ID is:
+            <ol>
+                <li>beneficial to both testers and users with visual or hearing impairment.</li>
+                <li>generally more readable than plain ID.</li>
+            </ol>
+        </div>
+
+        <div id="tab_xpath" class="tab">
+            Quick Tip: XPATH locators are prefixed by <code>xpath=</code> or without any prefixes.<br/>
+            <br/>
+            The tried and true XPATH locator is available for mobile automation, as in the case of web or desktop
+            automation. And as it is in the case of other automation uses, XPATH is both powerful and potentially
+            troublesome.<br/>
+            <br/>
+            With XPATH, one can search for an element via its hierarchy, its attributes and its text. Whereas the power
+            lies, so is the danger thereof (
+            <a href="https://en.wikipedia.org/wiki/With_great_power_comes_great_responsibility" class="external-link"
+               target="_nexial_link">Peter Parker principle</a>).<br/>
+            <br/>
+            It is often prudent <b>NOT</b> to use the XPATH locator provided by Appium inspector. Instead, one should
+            put some effort to simplifying it. For example,<br/>
+            <img src="image/locator_05.png"/><br/>
+            <br/>
+            The provided/suggested XPATH for the "Connected devices" link is as follows (broken into lines for
+            readability):
+            <pre>/hierarchy/android.widget.FrameLayout
+  /android.widget.LinearLayout
+    /android.widget.FrameLayout
+      /android.view.ViewGroup
+        /android.widget.ScrollView
+          /android.widget.LinearLayout
+            /android.widget.FrameLayout[2]
+              /android.widget.LinearLayout
+                /android.widget.FrameLayout
+                  /androidx.recyclerview.widget.RecyclerView
+                    /android.widget.LinearLayout[2]
+                      /android.widget.RelativeLayout
+                        /android.widget.TextView[1]</pre>
+            Surely this would work (since Appium provides this). It is also incredibly difficult to decipher and to
+            maintain. Instead, one could reduce this to something like:
+            <ul>
+                <li><code>//android.widget.TextView[@text='Connected devices']</code></li>
+                <li><code>//*[@text='Connected devices']</code></li>
+            </ul>
+            The benefits of optimizing the XPATH are:
+            <ol>
+                <li>Easier to read, hence easier to maintain</li>
+                <li>No long dependent on the hierarchy or placements of UI elements</li>
+                <li>Potentially faster than the long-winded version</li>
+            </ol>
+            To use XPATH locator in Nexial, simply use the XPATH as is or prefix it with <code>xpath=</code>.
+        </div>
+
+        <div id="tab_name" class="tab">
+            Quick Tip: Name locators are prefixed by <code>name=</code><br/>
+            <br/>
+            <b>Only applicable for iOS automation</b>. Alias to the ID locator. See <a href="#tab_id">ID locator</a>
+            for more details.
+        </div>
+
+        <div id="tab_res" class="tab">
+            Quick Tip: Resource ID locators are prefixed by <code>res=</code><br/>
+            <br/>
+            <b>Only applicable for Android automation</b>. Alias to the ID locator. See <a href="#tab_id">ID locator</a>
+            for more details.
+        </div>
+
+        <div id="tab_predicate" class="tab">
+            Quick Tip: Predicate locators are prefixed by <code>predicate=</code><br/>
+            <br/>
+            <b>Only applicable for iOS automation</b>. Also known as <code>-ios predicate string</code>. This type
+            of locator represents a recursive element search using the iOS Predicate (iOS 10.0 and above). The syntax
+            is similar to XPATH query but comes with its own set of logical and comparative operators. While this type
+            of locator is powerful, one would essentially be writing another "mini" query language. Consult the
+            following links for more details:
+            <ul>
+                <li><a href="http://appium.io/docs/en/writing-running-appium/ios/ios-predicate/">http://appium.io/docs/en/writing-running-appium/ios/ios-predicate/</a></li>
+                <li><a href="https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/ios/ios-predicate.md">https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/ios/ios-predicate.md</a></li>
+                <li><a href="https://developer.apple.com/documentation/foundation/nspredicate">https://developer.apple.com/documentation/foundation/nspredicate</a></li>
+            </ul>
+            Since this only works on iOS and has dependency on the underlying iOS object model, this form of
+            identifying elements should not be considered as the first choice. Nonetheless, at times the iOS-specific
+            technique might be the only viable option.<br/>
+            <br/>
+            For this type of locator, prefix it with <code>predicate=</code>.
+        </div>
+
+        <div id="tab_cc" class="tab">
+            Quick Tip: Class Chain locators are prefixed by <code>cc=</code><br/>
+            <br/>
+            <b>Only applicable for iOS automation</b>. This type of locator strategy is designed to replace XPATH
+            (albeit only available on iOS platform) to quickly locate hierarchical elements. It is possible to use class
+            chain (from this point, <code>cc</code>) to search for direct child element using <code>/</code> or
+            search for descendent elements using <code>**/</code> syntax. Filter criteria should be enclosed within
+            back tick (<code>`...`</code>) for matching predicate, and enclosed within dollar (<code>$...$</code>) for
+            containing predicates. For example, the following XPATH:<br/>
+            <pre>//XCUIElementTypeTable[@name="table"]/XCUIElementTypeCell[@visible="true" and .//XCUIElementTypeTextField[@name="input]]</pre>
+            ... would be translated into <cod>cc</cod> locator like this:<br/>
+            <pre>
+**/XCUIElementTypeTable[`name == "table"`]/XCUIElementTypeCell[`visible == 1`][$type == "XCUIElementTypeTextField" AND name == "input"$]<font color="#aaa">
+\_____________________/\_________________/\__________________/\______________/\________________________________________________________/</font><font color="#ccf">
+
+ find an
+ "XCUIElementTypeTable" that has an
+ element...             attribute named
+                        "name" with value
+                        equals to "table"  followed by an
+                                           "XCUIElementTypeCell"
+                                           cell...             that is visible  and it <b><u>contains</u></b> under its hierarchy
+                                                                                another element of type "XCUIElementTypeTextField"
+                                                                                which has an attribute called "name" with value equals
+                                                                                to "input".</font></pre>
+            <br/>
+            While not necessarily less verbose than its XPATH counterpart, <code>cc</code> locator promised to be more
+            performant without losing much of the flexibility found in XPATH. Here are a few more examples,<br>
+            <ul>
+                <li><code>XCUIElementTypeWindow[2]</code> - selects the second window in the hierarchy.</li>
+                <li><code>XCUIElementTypeWindow[label BEGINSWITH “foo”][-1]</code> - selects the last window whose
+                    label begins with <code>foo</code>.
+                </li>
+                <li><code>**/XCUIElementTypeCell[name BEGINSWITH "C"]/XCUIElementTypeButton[10]</code> - selects the
+                    10th child button of the first cell in the tree whose name starts with <code>C</code> and which
+                    has at least ten direct children of type <code>XCUIElementTypeButton</code>.
+                </li>
+            </ul>
+            One may use Appium inspector to find a suitable <code>cc</code> locator for a iOS device.<br/>
+            <br/>
+            For more details about class chain, please visit:
+            <ul>
+                <li><a href="https://github.com/facebookarchive/WebDriverAgent/wiki/Class-Chain-Queries-Construction-Rules" class="external-link" target="_nexial_link">https://github.com/facebookarchive/WebDriverAgent/wiki/Class-Chain-Queries-Construction-Rules</a></li>
+            </ul>
+        </div>
+
+        <div id="tab_link" class="tab">
+            This form of locator is not available in mobile automation. However, one can use the
+            <a href="clickByDisplayText(text)"><code>clickByDisplayText(text)</code></a> to achieve the same effect.
+            Note
+            that this command supports PolyMatcher, a flexible way to qualify the click target via its text. See the
+            command for more details.
+        </div>
+
+        <div id="tab_partialLinkText" class="tab">
+            This form of locator is not available in mobile automation. However, one can use the
+            <a href="clickByDisplayText(text)"><code>clickByDisplayText(text)</code></a> to achieve the same effect.
+            Note
+            that this command supports PolyMatcher, a flexible way to qualify the click target via its text. See the
+            command for more details.
+        </div>
+
+        <div id="tab_tag" class="tab">Not available in mobile automation.</div>
+
+        <div id="tab_class" class="tab">Not available in mobile automation.</div>
+
+        <div id="tab_css" class="tab">Not available in mobile automation.</div>
+
+        <div id="tab_image" class="tab">
+            Quick Tip: Image locators are prefixed by <code>image=</code><br/>
+            <br/>
+            <i>Coming soon, stay tuned!!</i>
+        </div>
+    </div>
+</div>
+<br/>
