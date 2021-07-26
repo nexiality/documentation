@@ -21,7 +21,7 @@ on your system.
 
 ### Install Node.js
 - Get <a href="https://nodejs.org/en/download/" class="external-link" target="_nexial_link">**Node.js**</a>
-- Node.js (or simply _node) will be used to launch Appium from within Nexial execution. This is also known as 
+- Node.js (or simply _node_) will be used to launch Appium from within Nexial execution. This is also known as 
   "Appium local service", in which Appium is started and terminated from within an execution. This technique provides 
   better control and less runtime dependencies. It also means that the target device must be locally available 
   (either connected or running as emulator).
@@ -59,15 +59,15 @@ on your system.
 - To install Appium Desktop, follow the above link and select the appropriate distro for your system.
 - In most cases, the default installation options should suffice. 
   - Note that on Windows, if you choose to install Appium Desktop so that it is available for all users (of the same 
-    system), then local admin access is required, and the installation directory is likely be 
+    system), then local admin access is required. As such the installation directory is likely 
     `C:\Program Files\Appium`. If you choose to install Appium Desktop only for yourself, then the installation 
     directory will likely be `C:\Users\<user_id>\AppData\Local\Programs\Appium`.
     ![](image/install_appium_02.png)
   - On MacOS, it is recommended to install Appium Desktop under `/Applications/Appium.app`.
 - Set up an environment variable **`APPIUM_BINARY_PATH`** based on the installation location of Appium Desktop. The
-  value of this environment variable should be `<APPIUM_HOME>/resources/app/node_modules/appium/build/lib/main.js`.
-  <br/>
-  For example, on Windows:<br/>
+  value of this environment variable should be `<APPIUM_HOME>/resources/app/node_modules/appium/build/lib/main.js`. For
+  example, <br/>
+  On Windows:<br/>
   ![](image/install_appium_03.png)<br/>
   On MacOS/*NIX:
   ```
@@ -75,12 +75,48 @@ on your system.
   ```
 
 
+### Running Appium
+As mentioned in the [section above](#install-appium-desktop), one can use Appium Desktop to configure, to start and to 
+stop Appium server. However, in order to support Nexial automation both locally and remotely, consider enable the 
+following options:
+- Specify either hostname or machine IP.<br/>
+  ![configure appium](image/install_appium_04.png)
+- Under Advanced tab, check "Allow CORS", "Allow Session Override" and "Relaxed Security"<br/>
+  ![](image/install_appium_05.png)
+
+These settings allow the Appium server instance would be reachable remotely and hence allows for remote automation. 
+As a convenience, one may choose to save the setting as a preset.
+
+While using Appium Desktop is simple and convenient, it isn't great for Continuous Testing where the test execution 
+might be invoked via scripts and conducted remotely (think CI/CD). Alternative to Appium Desktop, one can also run 
+Appium server via command line. This approach is both script-friendly and CI/CD ready. Below is an example of such 
+script:<br/>
+On Windows:<br/>
+```
+cd %APPIUM%\resources\app\node_modules\appium\build\lib
+node main.js --allows-cors -a <LOCAL-IP-OR-HOSTNAME> -p 4723 --session-override --no-perms-check --relaxed-security
+```
+
+On MacOS:<br/>
+```
+cd $APPIUM/Contents/Resources/app/node_moduels/appium/build/lib
+node main.js --allows-cors -a <LOCAL-IP-OR-HOSTNAME> -p 4723 --session-override --no-perms-check --relaxed-security
+```
+
+![](image/install_appium_06.png)
+
+For more Appium runtime options, consult the official 
+<a href="https://appium.io/docs/en/writing-running-appium/server-args/" class="external-link" target="_nexial_link">
+Appium server arguments</a> documentation.
+
+
+
 ### Additional Notes
-Nexial will make a number of attempts to resolve the installation directory of both Node.js and Appium. It does so via
-searching through commonly known/used path locations. If you have installed Node.js or Appium in a custom location, 
-please set the following environment variables on your system:
+If it is configured to run Appium server from within a Nexial execution, Nexial will make a number of attempts to 
+resolve the installation directory of both Node.js and Appium. It does so via searching through commonly known paths. 
+If you have installed Node.js or Appium in a custom location, please set the following local environment variables:
 
 ```
 NODE_BINARY_PATH=<location of node.exe or node executable>
-APPIUM_BINARY_PATH=<installation location of Appium/Appium Desktop + /resources/app/node_modules/appium/build/lib/main.js>
+APPIUM_BINARY_PATH=<installation location of Appium/Appium Desktop>/resources/app/node_modules/appium/build/lib/main.js
 ```
