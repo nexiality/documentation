@@ -166,6 +166,7 @@ comments: true
   - `cc=...`: class chain-based locator. Note that this is for iOS device only.
   - `name=...`: name-based locator, which is an alias to ID-based locator. Note that this is for iOS device only.
 - [`select(locator,item)`](../commands/mobile/select(locator,item)): **NEW** command to select an item from a dropdown.
+- fix code to support both implicit and explicit wait strategy.
 
 
 ### [rdbms commands](../commands/rdbms)

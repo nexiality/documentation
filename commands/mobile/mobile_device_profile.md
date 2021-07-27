@@ -43,14 +43,14 @@ Here are the common configurations for any device target:
 target="_nexial_link">Appium Desired Capabilities</a>. Simply prefix the capability name in question with the profile
 name. For example,
 
-| configuration                            | value                    | notes                                          |
-|+----------------------------------------+|+------------------------+|+----------------------------------------------+|
-|`MY_MOBILE.deviceName`	                   | The target device name   | equivalent to Appium Desired Capabilities / General Capabilities / `deviceName` |
-|`MY_MOBILE.platformVersion`	             | Mobile OS version        | equivalent to Appium Desired Capabilities / General Capabilities / `platformVersion` |
-|`MY_MOBILE.udid`	                         | **U**nique **D**evice **Id**entifier | equivalent to Appium Desired Capabilities / General Capabilities / `udid` |
-|`MY_MOBILE.app`	                         | Location of target app   | equivalent to Appium Desired Capabilities / General Capabilities / `app` |
-|`MY_MOBILE.orientation`	                 | (Emulator only) start application is a certain orientation | equivalent to Appium Desired Capabilities / General Capabilities / `orientation` |
-|`MY_MOBILE.appPackage`                    | (Android only) package of the target app | equivalent to Appium Desired Capabilities / Android Only / `appPackage` |
-|`MY_MOBILE.appActivity`	                 | (Android only) the activity name to wait for | equivalent to Appium Desired Capabilities / Android Only / `appPackage` |
-|+----------------------------------------+|+-----------------------+|+-----------------------------------------------+|
+| configuration              | purpose                              | reference under Appium Desired Capabilities    |
+|+--------------------------+|+------------------------------------+|+----------------------------------------------+|
+|`MY_MOBILE.deviceName`	     | The target device name               |  General Capabilities &raquo; `deviceName`     |
+|`MY_MOBILE.platformVersion` | Mobile OS version                    | General Capabilities &raquo; `platformVersion` |
+|`MY_MOBILE.udid`	           | **U**nique **D**evice **Id**entifier | General Capabilities &raquo; `udid`            |
+|`MY_MOBILE.app`	           | Location of target app               | General Capabilities &raquo; `app`             |
+|`MY_MOBILE.orientation`	   | (Emulator only) start application in a certain orientation | General Capabilities &raquo; `orientation` |
+|`MY_MOBILE.appPackage`      | (Android only) package of the target app | Android Only &raquo; `appPackage`          |
+|`MY_MOBILE.appActivity`	   | (Android only) the activity name to wait for | Android Only &raquo; `appPackage`      |
+|+--------------------------+|+------------------------------------+|+----------------------------------------------+|
 

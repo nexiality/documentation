@@ -46,12 +46,21 @@ Finding and interacting with elements</a>.
 
 -----
 
-The "mobile" command type represents a series of automation commands regarding mobile automation:
-
 ### Available Commands
+In almost all cases, one would start with the [`use(profile)`](use(profile)) command to establish connectivity between
+Nexial, Appium server and the target device. Without proper connectivity, none of these commands would run correctly. 
+When finished, use the [`closeApp()`](closeApp()) command to close down the application configured for a `profile`.
+One then can switch to another profile via the same [`use(profile)`](use(profile)) command -- potentially to connect to
+another device or another Appium server.
+
+If Appium server is configured to start internally within Nexial, one can also terminate it via the 
+[`shutdown(profile)`](shutdown(profile)) command.
+
+Click on one of the links below to learn about each command.
+
 - [`assertElementPresent(locator)`](assertElementPresent(locator))
-- [`assertElementVisible(locator)`](assertElementVisible(locator))
 - [`assertElementsPresent(prefix)`](assertElementsPresent(prefix))
+- [`assertElementVisible(locator)`](assertElementVisible(locator))
 - [`assertLocked()`](assertLocked())
 - [`assertTextPresent(locator,text)`](assertTextPresent(locator,text))
 - [`back()`](back())

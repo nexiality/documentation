@@ -21,7 +21,7 @@ additional validation output. But `false` (default) will result in error-only ou
 
 
 ### Parameters
-- **prefix** - the prefix to consider to gather a set of data variables that contain locator for "element presence" test.
+- **prefix** - the prefix to gather a set of data variables that contain locator for "element presence" test.
 
 
 ### Example
