@@ -4,7 +4,7 @@ title: attachments(profile,id,saveDir)
 parent: webmail
 tags: command mail mailinator webmail temporary-mail
 comments: true
----****
+---
 
 ### Description
 This command instructs Nexial to download all the attachments of the email `id` corresponding to the 
@@ -14,7 +14,9 @@ the attachments should be downloaded.
 This "email id" is determined during the 
 [`search(var,profile,searchCriteria,duration)`](search(var,profile,searchCriteria,duration)) command.
 
-### Note: The following points to be taken into consideration before using the attachment commands.
+### Points to Remember
+
+The following points to be taken into consideration before using the attachment commands.
 
 - For the attachments command to work the email provider should be "temporary-mail". So the `provider`  value
 in the [profile](index#webmail-configuration-settings) should be *temporary-mail*.
@@ -28,7 +30,7 @@ the overall size of the attachments should not exceed the Max size limit.
 - **id** - the `id` of the email which contains the attachments.
 - **saveDir** - the "directory" to which the email attachments are downloaded.
 
-### Example 1 Download all the attachments.
+### Example 1:- Download all the attachments.
 
 **Script**:
 
@@ -56,7 +58,7 @@ You can see the below screenshot where all the attachments are downloaded to the
 
 
 
-### Example 2 Email with no attachments to download.
+### Example 2:- Email with no attachments to download.
 
 **Email**:
 
