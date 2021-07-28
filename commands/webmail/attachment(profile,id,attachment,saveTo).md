@@ -67,7 +67,7 @@ with the name of your choice.
 
 **Email**:
 
-![](image/attachments_04.png)
+![](image/attachments_07.png)
 
 In the above email, you can see that the Email has no attachments to download. When we try to download attachments
 for the same email it will give the error message as shown below.
