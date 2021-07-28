@@ -64,3 +64,5 @@ The above settings will read emails from the temporary-mail.net **inbox** with t
 - [webmail &raquo; `search(var,profile,searchCriteria,duration)`](../webmail/search(var,profile,searchCriteria,duration))
 - [webmail &raquo; `read(var,profile,id)`](../webmail/read(var,profile,id))
 - [webmail &raquo; `delete(profile,id)`](../webmail/delete(profile,id))
+- [webmail &raquo; `attachment(profile,id,attachment,saveTo)`](../webmail/attachment(profile,id,attachment,saveTo))
+- [webmail &raquo; `attachments(profile,id,saveDir)`](../webmail/attachments(profile,id,saveDir))
