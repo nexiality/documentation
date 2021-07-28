@@ -167,6 +167,13 @@ comments: true
   - `name=...`: name-based locator, which is an alias to ID-based locator. Note that this is for iOS device only.
 - [`select(locator,item)`](../commands/mobile/select(locator,item)): **NEW** command to select an item from a dropdown.
 - fix code to support both implicit and explicit wait strategy.
+- [`text=...`](../commands/mobile/index.html#locators): **NEW** locator type to simplify automation.
+- [`select(locator,item)`](../commands/mobile/select(locator,item)): code fix to accurately select items that are not 
+  immediately visible on-screen.
+- [`assertTextPresent(locator,text)`](../commands/mobile/assertTextPresent(locator,text)): scan across all matching 
+  elements (not just the 1st one) for text content assertion.
+- [`clickByDisplayText(text)`](../commands/mobile/clickByDisplayText(text)): improved implementation to handle text 
+  with single and/or double quotes.
 
 
 ### [rdbms commands](../commands/rdbms)
@@ -216,4 +223,6 @@ comments: true
   - further customization and control via [`nexial.ws.multipart.charset`](../systemvars/index.html#nexial.ws.multipart.charset)
     and [`nexial.ws.multipart.spec`](../systemvars/index.html#nexial.ws.multipart.spec) System variables.
 - [`graphql(url,body,var)`](../commands/ws/graphql(url,body,var)): **NEW** command to support GraphQA request automation
-- code fix to stablize and enhance web service logging.
+- code fix to stabilize and enhance web service logging.
+- prevent default content type to be sent as a part of a GET request header; GET request, per spec, does not require 
+  any `Content-Type` header.
