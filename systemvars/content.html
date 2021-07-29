@@ -3,13 +3,13 @@
 
     body { font-family: Arial, Verdana, Tahoma, sans-serif; }
 
-    table.sys-var { width: 1250px; text-align: left; vertical-align: top; }
+    table.sysvar { width: 1250px; text-align: left; vertical-align: top; }
 
-    table.sys-var th { padding: 5px; border: 1px #aaaaaa solid; }
+    table.sysvar th { padding: 5px; border: 1px #aaaaaa solid; }
 
-    table.sys-var td { padding: 5px; border: 1px #dddddd solid; text-align: left; vertical-align: top; }
+    table.sysvar td { padding: 5px; border: 1px #dddddd solid; text-align: left; vertical-align: top; }
 
-    table.sys-var td.var-name code {
+    table.sysvar td.varname code {
         background: rgba(250, 250, 250, 0.9) !important;
         border:     none !important;
         color:      #000000;
@@ -17,11 +17,11 @@
         margin:     -2px;
     }
 
-    table.sys-var img { margin: 8px 0; }
+    table.sysvar img { margin: 8px 0; }
 
-    table.sys-var blockquote { font-size: 1em; }
+    table.sysvar blockquote { font-size: 1em; }
 
-    table.sys-var a code { background-color: transparent; border: none; font-weight: normal; }
+    table.sysvar a code { background-color: transparent; border: none; font-weight: normal; }
 
     .read-only { background-color: #ffe7e7; font-weight: bold }
 
@@ -119,7 +119,7 @@
     <a href="#standard-system-properties">Standard System Properties</a>.
 </p>
 
-<table class="sys-var">
+<table class="sysvar">
     <tbody>
     <tr>
         <th nowrap="nowrap">configuration</th>
@@ -129,7 +129,7 @@
         <th nowrap="nowrap">description</th>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.executionType"><code>nexial.executionType</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.executionType"><code>nexial.executionType</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-only">read-only</td>
@@ -143,7 +143,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.runID"><code>nexial.runID</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.runID"><code>nexial.runID</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-only">read-only</td>
@@ -153,7 +153,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.runID.prefix"><code>nexial.runID.prefix</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.runID.prefix"><code>nexial.runID.prefix</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-only">read-only</td>
@@ -187,7 +187,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.env"><code>nexial.env</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.env"><code>nexial.env</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
@@ -200,7 +200,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.projectProperties.trimKey">
+        <td class="varname" nowrap="nowrap"><a id="nexial.projectProperties.trimKey">
             <code>nexial.projectProperties.trimKey</code></a>
         </td>
         <td>boolean</td>
@@ -229,7 +229,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.verbose"><code>nexial.verbose</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.verbose"><code>nexial.verbose</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td class="read-write">read/write</td>
@@ -239,7 +239,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.quiet"><code>nexial.quiet</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.quiet"><code>nexial.quiet</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td class="read-write">read/write</td>
@@ -257,7 +257,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.elapsedTimeSLA"><code>nexial.elapsedTimeSLA</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.elapsedTimeSLA"><code>nexial.elapsedTimeSLA</code></a></td>
         <td>millisecond</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write&nbsp;</td>
@@ -286,7 +286,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.lastElapsedTime"><code>nexial.lastElapsedTime</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.lastElapsedTime"><code>nexial.lastElapsedTime</code></a></td>
         <td>millisecond</td>
         <td>&nbsp;</td>
         <td class="read-only">read-only</td>
@@ -295,7 +295,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.delayBetweenStepsMs"><code>nexial.delayBetweenStepsMs</code></a>
         </td>
         <td>millisecond</td>
@@ -305,7 +305,7 @@
     </tr>
 
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.textDelim"><code>nexial.textDelim</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.textDelim"><code>nexial.textDelim</code></a></td>
         <td>text</td>
         <td><code>,</code></td>
         <td class="read-write">read/write</td>
@@ -320,7 +320,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.resolveTextAsURL"><code>nexial.resolveTextAsURL</code></a></td>
         <td>boolean</td>
         <td>false</td>
@@ -344,7 +344,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.resolveTextAsIs"><code>nexial.resolveTextAsIs</code></a></td>
         <td>boolean</td>
         <td>false</td>
@@ -371,7 +371,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.nullValue"><code>nexial.nullValue</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.nullValue"><code>nexial.nullValue</code></a></td>
         <td>text</td>
         <td><code>(null)</code></td>
         <td class="read-write">read/write</td>
@@ -388,7 +388,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.var.ignored"><code>nexial.var.ignored</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.var.ignored"><code>nexial.var.ignored</code></a></td>
         <td>text / list</td>
         <td></td>
         <td class="read-write">read/write</td>
@@ -413,7 +413,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.var.defaultAsIs"><code>nexial.var.defaultAsIs</code></a>
         </td>
         <td>boolean</td>
@@ -434,7 +434,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.outputToCloud"><code>nexial.outputToCloud</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.outputToCloud"><code>nexial.outputToCloud</code></a></td>
         <td>boolean</td>
         <td>true</td>
         <td class="read-write">read/write</td>
@@ -449,7 +449,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.subplansIncluded"><code>nexial.subplansIncluded</code></a>
+        <td class="varname" nowrap="nowrap"><a id="nexial.subplansIncluded"><code>nexial.subplansIncluded</code></a>
         </td>
         <td>text</td>
         <td></td>
@@ -461,7 +461,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.subplansOmitted"><code>nexial.subplansOmitted</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.subplansOmitted"><code>nexial.subplansOmitted</code></a></td>
         <td>text</td>
         <td></td>
         <td class="read-only">read-only</td>
@@ -472,7 +472,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.scriptRef"><code>nexial.scriptRef.&ast;</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.scriptRef"><code>nexial.scriptRef.&ast;</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
@@ -495,7 +495,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.scenarioRef"><code>nexial.scenarioRef.&ast;</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.scenarioRef"><code>nexial.scenarioRef.&ast;</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
@@ -514,7 +514,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.stepByStep"><code>nexial.stepByStep</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.stepByStep"><code>nexial.stepByStep</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td class="read-write">read/write</td>
@@ -524,7 +524,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.inspectOnPause"><code>nexial.inspectOnPause</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.inspectOnPause"><code>nexial.inspectOnPause</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td class="read-write">read/write</td>
@@ -535,7 +535,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.pauseOnError"><code>nexial.pauseOnError</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.pauseOnError"><code>nexial.pauseOnError</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td class="read-write">read/write</td>
@@ -555,7 +555,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.odiEnabled"><code>nexial.odiEnabled</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.odiEnabled"><code>nexial.odiEnabled</code></a></td>
         <td>boolean</td>
         <td>true</td>
         <td class="read-write">read/write</td>
@@ -573,7 +573,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.odiTimer"><code>nexial.odiTimer</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.odiTimer"><code>nexial.odiTimer</code></a></td>
         <td>millisecond</td>
         <td>500</td>
         <td class="read-write">read/write</td>
@@ -589,7 +589,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.odiKeys"><code>nexial.odiKeys</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.odiKeys"><code>nexial.odiKeys</code></a></td>
         <td>text</td>
         <td><code>!!!</code></td>
         <td class="read-write">read/write</td>
@@ -606,7 +606,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.failFast"><code>nexial.failFast</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.failFast"><code>nexial.failFast</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td class="read-write">read/write</td>
@@ -620,7 +620,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.resetFailFast"><code>nexial.resetFailFast</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.resetFailFast"><code>nexial.resetFailFast</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td class="read-write">read/write</td>
@@ -640,7 +640,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.failImmediate"><code>nexial.failImmediate</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.failImmediate"><code>nexial.failImmediate</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td class="read-write">read/write</td>
@@ -684,7 +684,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.maxConsoleDisplay"><code>nexial.maxConsoleDisplay</code></a>
         </td>
         <td>integer</td>
@@ -719,7 +719,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.printErrorDetails"><code>nexial.printErrorDetails</code></a>
         </td>
         <td>boolean</td>
@@ -734,7 +734,7 @@
     </tr>
 
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.lastError"><code>nexial.lastError</code></a>
         </td>
         <td>text</td>
@@ -745,7 +745,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.trackErrors"><code>nexial.trackErrors</code></a>
         </td>
         <td>boolean</td>
@@ -763,7 +763,7 @@
     </tr>
 
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.screenshotEnabled"><code>nexial.screenshotEnabled</code></a>
         </td>
         <td>boolean</td>
@@ -786,7 +786,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.screenshotOnError"><code>nexial.screenshotOnError</code></a>
         </td>
         <td>boolean</td>
@@ -799,7 +799,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.screenshotAsDesktop"><code>nexial.screenshotAsDesktop</code></a>
         </td>
         <td>boolean</td>
@@ -819,7 +819,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.screenshotInFull"><code>nexial.screenshotInFull</code></a>
         </td>
         <td>boolean</td>
@@ -835,7 +835,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.screenshotInFullTimeout"><code>nexial.screenshotInFullTimeout</code></a>
         </td>
         <td>integer</td>
@@ -855,7 +855,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.screenshot.caption"><code>nexial.screenshot.caption</code></a>
         </td>
         <td>text</td>
@@ -893,7 +893,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.screenshot.caption.color"><code>nexial.screenshot.caption.color</code></a>
         </td>
         <td>text</td>
@@ -924,7 +924,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.screenshot.caption.alpha"><code>nexial.screenshot.caption.alpha</code></a>
         </td>
         <td>decimal</td>
@@ -941,7 +941,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.screenshot.caption.noBackground"><code>nexial.screenshot.caption.noBackground</code></a>
         </td>
         <td>boolean</td>
@@ -957,7 +957,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.screenshot.caption.position"><code>nexial.screenshot.caption.position</code></a>
         </td>
         <td>text</td>
@@ -984,7 +984,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.screenshot.caption.wrap"><code>nexial.screenshot.caption.wrap</code></a>
         </td>
         <td>boolean</td>
@@ -1003,7 +1003,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.lastScreenshot"><code>nexial.lastScreenshot</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.lastScreenshot"><code>nexial.lastScreenshot</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-only">read-only</td>
@@ -1015,7 +1015,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.lastOutcome"><code>nexial.lastOutcome</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.lastOutcome"><code>nexial.lastOutcome</code></a></td>
         <td>boolean</td>
         <td>&nbsp;</td>
         <td class="read-only">read-only</td>
@@ -1029,7 +1029,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.lastPlanStep"><code>nexial.lastPlanStep</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.lastPlanStep"><code>nexial.lastPlanStep</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td class="read-write">read/write</td>
@@ -1042,7 +1042,7 @@
     </tr>
 
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.lastOutputLink"><code>nexial.lastOutputLink</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.lastOutputLink"><code>nexial.lastOutputLink</code></a></td>
         <td>text</td>
         <td></td>
         <td class="read-only">read-only</td>
@@ -1078,7 +1078,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.lastOutputPath"><code>nexial.lastOutputPath</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.lastOutputPath"><code>nexial.lastOutputPath</code></a></td>
         <td>text</td>
         <td></td>
         <td class="read-only">read-only</td>
@@ -1120,7 +1120,7 @@
     </tr>
 
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.failAfter"><code>nexial.failAfter</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.failAfter"><code>nexial.failAfter</code></a></td>
         <td>integer</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
@@ -1140,7 +1140,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.minExecSuccessRate"><code>nexial.minExecSuccessRate</code></a>
         </td>
         <td>decimal</td>
@@ -1178,7 +1178,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.executionCount"><code>nexial.executionCount</code></a>
         </td>
         <td>integer</td>
@@ -1191,7 +1191,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.executionPassCount"><code>nexial.executionPassCount</code></a>
         </td>
         <td>integer</td>
@@ -1204,7 +1204,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.executionFailCount"><code>nexial.executionFailCount</code></a>
         </td>
         <td>integer</td>
@@ -1217,7 +1217,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.executionSkipCount"><code>nexial.executionSkipCount</code></a>
         </td>
         <td>integer</td>
@@ -1230,7 +1230,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.currentActivity"><code>nexial.currentActivity</code></a>
         </td>
         <td>text</td>
@@ -1242,7 +1242,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.currentScenario"><code>nexial.currentScenario</code></a>
         </td>
         <td>text</td>
@@ -1255,7 +1255,7 @@
     </tr>
 
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.summary.header"><code>nexial.summary.header</code></a>
         </td>
         <td>text</td>
@@ -1273,7 +1273,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.summary.footer"><code>nexial.summary.footer</code></a>
         </td>
         <td>text</td>
@@ -1292,7 +1292,7 @@
     </tr>
 
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.manageMemory"><code>nexial.manageMemory</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.manageMemory"><code>nexial.manageMemory</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td class="read-only">read-only</td>
@@ -1318,7 +1318,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.assistantMode"><code>nexial.assistantMode</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.assistantMode"><code>nexial.assistantMode</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td class="read-write">read/write</td>
@@ -1328,7 +1328,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.openResult"><code>nexial.openResult</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.openResult"><code>nexial.openResult</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td class="read-write">read/write</td>
@@ -1340,7 +1340,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.spreadsheet.program"><code>nexial.spreadsheet.program</code></a>
         </td>
         <td>text</td>
@@ -1360,7 +1360,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.step.response"><code>nexial.step.response</code></a>
         </td>
         <td>text</td>
@@ -1381,7 +1381,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.step.comment"><code>nexial.step.comment</code></a>
         </td>
         <td>text</td>
@@ -1405,7 +1405,7 @@
         <td class="highlight-section" colspan="5"><span>For text-based assertion only.</span></td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.assert.lenient"><code>nexial.assert.lenient</code></a>
         </td>
         <td>boolean</td>
@@ -1418,7 +1418,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.assert.asNumber"><code>nexial.assert.asNumber</code></a>
         </td>
         <td>boolean</td>
@@ -1434,7 +1434,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.assert.useTrim"><code>nexial.assert.useTrim</code></a>
         </td>
         <td>boolean</td>
@@ -1446,7 +1446,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.assert.caseInsensitive"><code>nexial.assert.caseInsensitive</code></a>
         </td>
         <td>boolean</td>
@@ -1461,7 +1461,7 @@
         <td class="highlight-section" colspan="5"><span>For screen recording only.</span></td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.recordingEnabled"><code>nexial.recordingEnabled</code></a>
         </td>
         <td>boolean</td>
@@ -1479,7 +1479,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.screenRecorder"><code>nexial.screenRecorder</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.screenRecorder"><code>nexial.screenRecorder</code></a></td>
         <td>text</td>
         <td>mp4</td>
         <td class="read-only">read-only</td>
@@ -1493,7 +1493,7 @@
         <td class="highlight-section" colspan="5"><span>For number-related functionality.</span></td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.number.rounding"><code>nexial.number.rounding</code></a>
         </td>
         <td>text</td>
@@ -1554,7 +1554,7 @@
         <td class="highlight-section" colspan="5"><span>For email notification only.</span></td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.enableEmail"><code>nexial.enableEmail</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.enableEmail"><code>nexial.enableEmail</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td class="read-write">read/write</td>
@@ -1608,7 +1608,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.mailTo"><code>nexial.mailTo</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.mailTo"><code>nexial.mailTo</code></a></td>
         <td>text</td>
         <td></td>
         <td class="read-write">read/write</td>
@@ -1624,7 +1624,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.mailSubject"><code>nexial.mailSubject</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.mailSubject"><code>nexial.mailSubject</code></a></td>
         <td>text</td>
         <td></td>
         <td class="read-write">read/write</td>
@@ -1649,7 +1649,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.mailSubject.withSynopsis"><code>nexial.mailSubject.withSynopsis</code></a>
+        <td class="varname" nowrap="nowrap"><a id="nexial.mailSubject.withSynopsis"><code>nexial.mailSubject.withSynopsis</code></a>
         </td>
         <td>booelan</td>
         <td>true</td>
@@ -1672,7 +1672,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.mailHeader"><code>nexial.mailHeader</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.mailHeader"><code>nexial.mailHeader</code></a></td>
         <td>text</td>
         <td></td>
         <td class="read-write">read/write</td>
@@ -1695,7 +1695,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.mailFooter"><code>nexial.mailFooter</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.mailFooter"><code>nexial.mailFooter</code></a></td>
         <td>text</td>
         <td></td>
         <td class="read-write">read/write</td>
@@ -1724,7 +1724,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.timetrack.trackExecution"><code>nexial.timetrack.trackExecution</code></a>
         </td>
         <td>boolean</td>
@@ -1738,7 +1738,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.timetrack.trackScript"><code>nexial.timetrack.trackScript</code></a>
         </td>
         <td>boolean</td>
@@ -1752,7 +1752,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.timetrack.trackIteration"><code>nexial.timetrack.trackIteration</code></a>
         </td>
         <td>boolean</td>
@@ -1767,7 +1767,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.timetrack.trackScenario"><code>nexial.timetrack.trackScenario</code></a>
         </td>
         <td>boolean</td>
@@ -1781,7 +1781,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.timetrack.format"><code>nexial.timetrack.format</code></a>
         </td>
         <td>text</td>
@@ -1799,7 +1799,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.expression.OpenFileAsIs"><code>nexial.expression.OpenFileAsIs</code></a>
         </td>
         <td>boolean</td>
@@ -1811,7 +1811,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.expression.resolveURL"><code>nexial.expression.resolveURL</code></a>
         </td>
         <td>boolean</td>
@@ -1827,7 +1827,7 @@
         <td class="highlight-section" colspan="5"><span>For iteration-based testing only.</span></td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.scope.iteration"><code>nexial.scope.iteration</code></a>
         </td>
         <td>ranges</td>
@@ -1880,7 +1880,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.scope.fallbackToPrevious"><code>nexial.scope.fallbackToPrevious</code></a>
         </td>
         <td>boolean</td>
@@ -1893,7 +1893,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.scope.currentIteration"><code>nexial.scope.currentIteration</code></a>
         </td>
         <td>integer</td>
@@ -1905,7 +1905,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.scope.currentIterationId"><code>nexial.scope.currentIterationId</code></a>
         </td>
         <td>integer</td>
@@ -1917,7 +1917,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.scope.lastIteration"><code>nexial.scope.lastIteration</code></a>
         </td>
         <td>integer</td>
@@ -1929,7 +1929,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.scope.isFirstIteration"><code>nexial.scope.isFirstIteration</code></a>
         </td>
         <td>boolean</td>
@@ -1941,7 +1941,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.scope.isLastIteration"><code>nexial.scope.isLastIteration</code></a>
         </td>
         <td>boolean</td>
@@ -1953,7 +1953,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.scope.refetchDataFile"><code>nexial.scope.refetchDataFile</code></a>
         </td>
         <td>boolean</td>
@@ -1970,7 +1970,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.scope.required.variables"><code>nexial.scope.required.variables</code></a>
         </td>
         <td>text</td>
@@ -2011,7 +2011,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.repeatUntil.index"><code>nexial.repeatUntil.index</code></a>
         </td>
         <td>integer</td>
@@ -2035,7 +2035,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.repeatUntil.startTime"><code>nexial.repeatUntil.startTime</code></a>
         </td>
         <td>timestamp</td>
@@ -2049,7 +2049,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.repeatUntil.endTime"><code>nexial.repeatUntil.endTime</code></a>
         </td>
         <td>timestamp</td>
@@ -2074,7 +2074,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.compare.textReport"><code>nexial.compare.textReport</code></a>
         </td>
         <td>boolean</td>
@@ -2093,7 +2093,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.compare.jsonReport"><code>nexial.compare.jsonReport</code></a>
         </td>
         <td>boolean</td>
@@ -2112,7 +2112,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.compare.htmlReport"><code>nexial.compare.htmlReport</code></a>
         </td>
         <td>boolean</td>
@@ -2131,7 +2131,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.compare.reportMatch"><code>nexial.compare.reportMatch</code></a>
         </td>
         <td>boolean</td>
@@ -2146,7 +2146,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.io.eolConfig"><code>nexial.io.eolConfig</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.io.eolConfig"><code>nexial.io.eolConfig</code></a></td>
         <td>text</td>
         <td>platform</td>
         <td class="read-write">read/write</td>
@@ -2167,7 +2167,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.io.copyConfig"><code>nexial.io.copyConfig</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.io.copyConfig"><code>nexial.io.copyConfig</code></a></td>
         <td>text</td>
         <td><code>keepOriginal</code></td>
         <td class="read-write">read/write</td>
@@ -2194,7 +2194,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.io.matchRecursive"><code>nexial.io.matchRecursive</code></a>
+        <td class="varname" nowrap="nowrap"><a id="nexial.io.matchRecursive"><code>nexial.io.matchRecursive</code></a>
         </td>
         <td>boolean</td>
         <td>true</td>
@@ -2217,7 +2217,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.io.matchIncludeDirectories"><code>nexial.io.matchIncludeDirectories</code></a>
+        <td class="varname" nowrap="nowrap"><a id="nexial.io.matchIncludeDirectories"><code>nexial.io.matchIncludeDirectories</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -2231,7 +2231,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.io.matchExact"><code>nexial.io.matchExact</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.io.matchExact"><code>nexial.io.matchExact</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td class="read-write">read/write</td>
@@ -2265,7 +2265,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.csv.maxColumns"><code>nexial.csv.maxColumns</code></a>
         </td>
         <td>integer</td>
@@ -2278,7 +2278,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.csv.maxColumnWidth"><code>nexial.csv.maxColumnWidth</code></a>
         </td>
         <td>integer</td>
@@ -2295,7 +2295,7 @@
         <td class="highlight-section" colspan="5"><span>For JSON testing only. </span></td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.json.treatJsonAsIs"><code>nexial.json.treatJsonAsIs</code></a>
         </td>
         <td>boolean</td>
@@ -2320,7 +2320,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.json.lastCompareResults"><code>nexial.json.lastCompareResults</code></a>
         </td>
         <td>json</td>
@@ -2347,7 +2347,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.json.compareResultsAsJSON"><code>nexial.json.compareResultsAsJSON</code></a>
         </td>
         <td>boolean</td>
@@ -2368,7 +2368,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.json.compareResultsAsCSV"><code>nexial.json.compareResultsAsCSV</code></a>
         </td>
         <td>boolean</td>
@@ -2389,7 +2389,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.json.compareResultsAsHTML"><code>nexial.json.compareResultsAsHTML</code></a>
         </td>
         <td>boolean</td>
@@ -2421,7 +2421,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.external.output"><code>nexial.external.output</code></a>
         </td>
         <td>text</td>
@@ -2440,7 +2440,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.external.console"><code>nexial.external.console</code></a>
         </td>
         <td>boolean</td>
@@ -2453,7 +2453,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.external.workingDirectory"><code>nexial.external.workingDirectory</code></a>
         </td>
         <td>text</td>
@@ -2476,7 +2476,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.excel.recalcBeforeSave"><code>nexial.excel.recalcBeforeSave</code></a>
         </td>
         <td>boolean</td>
@@ -2498,7 +2498,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.excel.retainCellType"><code>nexial.excel.retainCellType</code></a>
         </td>
         <td>boolean</td>
@@ -2524,7 +2524,7 @@
         <td class="highlight-section" colspan="5"><span>For browser-based testing only. </span></td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.browser"><code>nexial.browser</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.browser"><code>nexial.browser</code></a></td>
         <td>text</td>
         <td>firefox</td>
         <td class="read-write">read/write</td>
@@ -2553,7 +2553,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.delayBrowser"><code>nexial.delayBrowser</code></a>
         </td>
         <td>boolean</td>
@@ -2567,7 +2567,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.enforcePageSourceStability"><code>nexial.enforcePageSourceStability</code></a>
         </td>
         <td>boolean</td>
@@ -2604,7 +2604,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.waitSpeed"><code>nexial.waitSpeed</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.waitSpeed"><code>nexial.waitSpeed</code></a></td>
         <td>integer</td>
         <td>3</td>
         <td class="read-write">read/write</td>
@@ -2614,7 +2614,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.uiRenderWaitMs"><code>nexial.uiRenderWaitMs</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.uiRenderWaitMs"><code>nexial.uiRenderWaitMs</code></a></td>
         <td>milliseconds</td>
         <td>3000</td>
         <td class="read-write">read/write</td>
@@ -2624,7 +2624,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.pollWaitMs"><code>nexial.pollWaitMs</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.pollWaitMs"><code>nexial.pollWaitMs</code></a></td>
         <td>milliseconds</td>
         <td>30000</td>
         <td class="read-only">read-only</td>
@@ -2641,7 +2641,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.web.unfocusAfterType"><code>nexial.web.unfocusAfterType</code></a>
         </td>
         <td>boolean</td>
@@ -2659,7 +2659,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.web.clearWithBackspace"><code>nexial.web.clearWithBackspace</code></a>
         </td>
         <td>boolean</td>
@@ -2676,7 +2676,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.web.preemptiveAlertCheck"><code>nexial.web.preemptiveAlertCheck</code></a>
         </td>
         <td>boolean</td>
@@ -2708,7 +2708,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.web.alwaysWait"><code>nexial.web.alwaysWait</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.web.alwaysWait"><code>nexial.web.alwaysWait</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td class="read-write">read/write</td>
@@ -2725,7 +2725,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.web.explicitWait"><code>nexial.web.explicitWait</code></a>
+        <td class="varname" nowrap="nowrap"><a id="nexial.web.explicitWait"><code>nexial.web.explicitWait</code></a>
         </td>
         <td>boolean</td>
         <td>true</td>
@@ -2755,7 +2755,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.web.pageLoadWaitMs"><code>nexial.web.pageLoadWaitMs</code></a>
         </td>
         <td>millisecond</td>
@@ -2768,7 +2768,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browser.postCloseWaitMs"><code>nexial.browser.postCloseWaitMs</code></a>
         </td>
         <td>millisecond</td>
@@ -2784,7 +2784,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browser.incognito"><code>nexial.browser.incognito</code></a>
         </td>
         <td>boolean</td>
@@ -2804,7 +2804,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browser.windowSize"><code>nexial.browser.windowSize</code></a>
         </td>
         <td>text</td>
@@ -2835,7 +2835,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browser.windowPosition"><code>nexial.browser.windowPosition</code></a>
         </td>
         <td>x,y</td>
@@ -2851,7 +2851,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browser.downloadTo"><code>nexial.browser.downloadTo</code></a>
         </td>
         <td>text</td>
@@ -2869,7 +2869,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browser.downloadPdf"><code>nexial.browser.downloadPdf</code></a>
         </td>
         <td>boolean</td>
@@ -2891,7 +2891,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browser.forceJSClick"><code>nexial.browser.forceJSClick</code></a>
         </td>
         <td>boolean</td>
@@ -2912,7 +2912,7 @@
     </tr>
 
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browser.geolocation"><code>nexial.browser.geolocation</code></a>
         </td>
         <td>boolean</td>
@@ -2926,7 +2926,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browser.geolocation.longitude"><code>nexial.browser.geolocation.longitude</code></a>
         </td>
         <td>boolean</td>
@@ -2945,7 +2945,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browser.geolocation.latitude"><code>nexial.browser.geolocation.latitude</code></a>
         </td>
         <td>boolean</td>
@@ -2965,7 +2965,7 @@
     </tr>
 
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browser.meta"><code>nexial.browser.meta</code></a>
         </td>
         <td>object</td>
@@ -2977,7 +2977,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.ignoreBrowserAlert"><code>nexial.ignoreBrowserAlert</code></a>
         </td>
         <td>boolean</td>
@@ -2989,7 +2989,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.lastAlertText"><code>nexial.lastAlertText</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.lastAlertText"><code>nexial.lastAlertText</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-rewrite">read-rewrite</td>
@@ -3000,7 +3000,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.web.highlight"><code>nexial.web.highlight</code></a>
         </td>
         <td>boolean</td>
@@ -3024,7 +3024,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.web.highlight.waitMs"><code>nexial.web.highlight.waitMs</code></a>
         </td>
         <td>millisecond</td>
@@ -3041,7 +3041,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.web.highlight.style"><code>nexial.web.highlight.style</code></a>
         </td>
         <td>text</td>
@@ -3053,7 +3053,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.web.scrollIntoView"><code>nexial.web.scrollIntoView</code></a>
         </td>
         <td>boolean</td>
@@ -3086,7 +3086,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.web.dragFrom"><code>nexial.web.dragFrom</code></a>
         </td>
         <td>text</td>
@@ -3100,7 +3100,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.web.dragNative"><code>nexial.web.dragNative</code></a>
         </td>
         <td>bolean</td>
@@ -3136,7 +3136,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.web.dragNativeXOffset"><code>nexial.web.dragNativeXOffset</code></a>
         </td>
         <td>integer</td>
@@ -3156,7 +3156,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.web.dragNativeYOffset"><code>nexial.web.dragNativeYOffset</code></a>
         </td>
         <td>integer</td>
@@ -3183,7 +3183,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.web.saveGrid.deepScan"><code>nexial.web.saveGrid.deepScan</code></a>
         </td>
         <td>boolean</td>
@@ -3222,7 +3222,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.web.saveGrid.header.input"><code>nexial.web.saveGrid.header.input</code></a>
         </td>
         <td>text</td>
@@ -3334,7 +3334,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.web.saveGrid.header.image"><code>nexial.web.saveGrid.header.image</code></a>
         </td>
         <td>text</td>
@@ -3414,7 +3414,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.web.saveGrid.data.input"><code>nexial.web.saveGrid.data.input</code></a>
         </td>
         <td>text</td>
@@ -3509,7 +3509,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.web.saveGrid.data.image"><code>nexial.web.saveGrid.data.image</code></a>
         </td>
         <td>text</td>
@@ -3586,7 +3586,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.web.saveGrid.data.trim"><code>nexial.web.saveGrid.data.trim</code></a>
         </td>
         <td>boolean</td>
@@ -3606,7 +3606,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.web.saveGrid.end.trim"><code>nexial.web.saveGrid.end.trim</code></a>
         </td>
         <td>boolean</td>
@@ -3632,7 +3632,7 @@
         <td class="highlight-section" colspan="5"><span>Browser-specific configuration.</span></td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.safari.useTechPreview"><code>nexial.browser.safari.useTechPreview</code></a>
         </td>
         <td>boolean</td>
@@ -3650,7 +3650,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browser.electron.forceTerminate"><code>nexial.browser.electron.forceTerminate</code></a>
         </td>
         <td>boolean</td>
@@ -3668,7 +3668,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browser.logElectron"><code>nexial.browser.logElectron</code></a></td>
         <td>boolean</td>
         <td>false</td>
@@ -3686,7 +3686,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.browser.logElectronVerbose"><code>nexial.browser.logElectronVerbose</code></a>
+        <td class="varname" nowrap="nowrap"><a id="nexial.browser.logElectronVerbose"><code>nexial.browser.logElectronVerbose</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -3704,7 +3704,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browser.logChrome"><code>nexial.browser.logChrome</code></a>
         </td>
         <td>boolean</td>
@@ -3723,7 +3723,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browser.logEdge"><code>nexial.browser.logEdge</code></a>
         </td>
         <td>boolean</td>
@@ -3740,7 +3740,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browser.userData"><code>nexial.browser.userData</code></a>
         </td>
         <td>text</td>
@@ -3761,7 +3761,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.forceIE32"><code>nexial.forceIE32</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.forceIE32"><code>nexial.forceIE32</code></a></td>
         <td>boolean</td>
         <td>false</td>
         <td class="read-only">read-only</td>
@@ -3792,7 +3792,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browser.ie.requireWindowFocus"><code>nexial.browser.ie.requireWindowFocus</code></a>
         </td>
         <td>boolean</td>
@@ -3814,7 +3814,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="webdriver.ie.driver"><code>webdriver.ie.driver</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="webdriver.ie.driver"><code>webdriver.ie.driver</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-only">read-only</td>
@@ -3835,7 +3835,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="webdriver.ie.driver.loglevel"><code>webdriver.ie.driver.loglevel</code></a>
         </td>
         <td>text</td>
@@ -3858,7 +3858,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="webdriver.ie.driver.logfile"><code>webdriver.ie.driver.logfile</code></a>
         </td>
         <td>text</td>
@@ -3878,7 +3878,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="webdriver.ie.driver.silent"><code>webdriver.ie.driver.silent</code></a>
         </td>
         <td>boolean</td>
@@ -3904,7 +3904,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.imageTolerance"><code>nexial.imageTolerance</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.imageTolerance"><code>nexial.imageTolerance</code></a></td>
         <td>decimal</td>
         <td>0</td>
         <td class="read-write">read/write</td>
@@ -3914,7 +3914,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.imageDiffColor"><code>nexial.imageDiffColor</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.imageDiffColor"><code>nexial.imageDiffColor</code></a></td>
         <td>text</td>
         <td>red</td>
         <td class="read-write">read/write</td>
@@ -3925,7 +3925,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.image.trimBeforeDiff"><code>nexial.image.trimBeforeDiff</code></a>
+        <td class="varname" nowrap="nowrap"><a id="nexial.image.trimBeforeDiff"><code>nexial.image.trimBeforeDiff</code></a>
         </td>
         <td>boolean</td>
         <td>false</td>
@@ -3936,7 +3936,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.image.trimColor"><code>nexial.image.trimColor</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.image.trimColor"><code>nexial.image.trimColor</code></a></td>
         <td>text</td>
         <td>255,255,255</td>
         <td class="read-write">read/write</td>
@@ -3978,7 +3978,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.ws.connectionTimeout"><code>nexial.ws.connectionTimeout</code></a>
         </td>
         <td>milliseconds</td>
@@ -3990,7 +3990,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.ws.readTimeout"><code>nexial.ws.readTimeout</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.ws.readTimeout"><code>nexial.ws.readTimeout</code></a></td>
         <td>milliseconds</td>
         <td>300000</td>
         <td class="read-write">read/write</td>
@@ -4000,7 +4000,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.ws.keepAlive"><code>nexial.ws.keepAlive</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.ws.keepAlive"><code>nexial.ws.keepAlive</code></a></td>
         <td>boolean</td>
         <td>true</td>
         <td class="read-write">read/write</td>
@@ -4016,7 +4016,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.ws.enableRedirects"><code>nexial.ws.enableRedirects</code></a></td>
         <td>boolean</td>
         <td>false</td>
@@ -4024,7 +4024,7 @@
         <td>Determines whether redirects should be handled automatically.</td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.ws.enabledExpectContinue"><code>nexial.ws.enabledExpectContinue</code></a>
         </td>
         <td>boolean</td>
@@ -4047,7 +4047,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.ws.allowCircularRedirects"><code>nexial.ws.allowCircularRedirects</code></a>
         </td>
         <td>boolean</td>
@@ -4061,7 +4061,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.ws.allowRelativeRedirects"><code>nexial.ws.allowRelativeRedirects</code></a>
         </td>
         <td>boolean</td>
@@ -4076,7 +4076,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.ws.requestPayloadCompact"><code>nexial.ws.requestPayloadCompact</code></a>
         </td>
         <td>boolean</td>
@@ -4088,7 +4088,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.ws.requestPayloadAsRaw"><code>nexial.ws.requestPayloadAsRaw</code></a>
         </td>
         <td>boolean</td>
@@ -4114,7 +4114,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.ws.header"><code>nexial.ws.header.&ast;</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.ws.header"><code>nexial.ws.header.&ast;</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
@@ -4152,7 +4152,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.ws.digest.user"><code>nexial.ws.digest.user</code></a>
         </td>
         <td>text</td>
@@ -4165,7 +4165,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.ws.digest.password"><code>nexial.ws.digest.password</code></a>
         </td>
         <td>text</td>
@@ -4173,14 +4173,14 @@
         <td class="read-write">read/write</td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.ws.digest.realm"><code>nexial.ws.digest.realm</code></a>
+        <td class="varname" nowrap="nowrap"><a id="nexial.ws.digest.realm"><code>nexial.ws.digest.realm</code></a>
         </td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.ws.digest.nonce"><code>nexial.ws.digest.nonce</code></a>
         </td>
         <td>text</td>
@@ -4188,7 +4188,7 @@
         <td class="read-write">read/write</td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.ws.basic.user"><code>nexial.ws.basic.user</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.ws.basic.user"><code>nexial.ws.basic.user</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
@@ -4199,7 +4199,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.ws.basic.password"><code>nexial.ws.basic.password</code></a>
         </td>
         <td>text</td>
@@ -4208,7 +4208,7 @@
     </tr>
 
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.ws.multipart.spec"><code>nexial.ws.multipart.spec</code></a>
         </td>
         <td>text</td>
@@ -4256,7 +4256,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.ws.multipart.charset"><code>nexial.ws.multipart.charset</code></a>
         </td>
         <td>text</td>
@@ -4279,7 +4279,7 @@
     </tr>
 
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.ws.logDetail"><code>nexial.ws.logDetail</code></a>
         </td>
         <td>boolean</td>
@@ -4292,7 +4292,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.ws.logSummary"><code>nexial.ws.logSummary</code></a>
         </td>
         <td>boolean</td>
@@ -4310,7 +4310,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.ws.async.shutdownWaitMs"><code>nexial.ws.async.shutdownWaitMs</code></a>
         </td>
         <td>millisecond</td>
@@ -4331,7 +4331,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.desktopNotifyWaitMs"><code>nexial.desktopNotifyWaitMs</code></a>
         </td>
         <td>millisecond</td>
@@ -4343,7 +4343,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.desktop.notifyWaitMs"><code>nexial.desktop.notifyWaitMs</code></a>
         </td>
         <td>millisecond</td>
@@ -4357,7 +4357,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.desktop.fullScreenCapture"><code>nexial.desktop.fullScreenCapture</code></a>
         </td>
         <td>boolean</td>
@@ -4373,7 +4373,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.desktop.autoscan.verbose"><code>nexial.desktop.autoscan.verbose</code></a>
         </td>
         <td>boolean</td>
@@ -4390,7 +4390,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.desktop.autoClearModalDialog"><code>nexial.desktop.autoClearModalDialog</code></a>
         </td>
         <td>boolean</td>
@@ -4418,7 +4418,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.desktop.explicitWait"><code>nexial.desktop.explicitWait</code></a>
         </td>
         <td>boolean</td>
@@ -4479,7 +4479,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.desktop.simulateClick"><code>nexial.desktop.simulateClick</code></a>
         </td>
         <td>boolean</td>
@@ -4542,7 +4542,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.desktop.table.clickBeforeEdit"><code>nexial.desktop.table.clickBeforeEdit</code></a>
         </td>
         <td>boolean</td>
@@ -4574,7 +4574,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.desktop.table.tabAfterEdit"><code>nexial.desktop.table.tabAfterEdit</code></a>
         </td>
         <td>boolean</td>
@@ -4607,7 +4607,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.desktop.useTypeKeys"><code>nexial.desktop.useTypeKeys</code></a>
         </td>
         <td>boolean</td>
@@ -4656,7 +4656,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.desktop.useAsciiKey"><code>nexial.desktop.useAsciiKey</code></a>
         </td>
         <td>boolean</td>
@@ -4678,7 +4678,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.desktop.dialogLookup"><code>nexial.desktop.dialogLookup</code></a>
         </td>
         <td>boolean</td>
@@ -4690,7 +4690,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.desktop.infragistics4Aware"><code>nexial.desktop.infragistics4Aware</code></a>
         </td>
         <td>boolean</td>
@@ -4702,7 +4702,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.winiumJoinExisting"><code>nexial.winiumJoinExisting</code></a>
         </td>
         <td>boolean</td>
@@ -4718,7 +4718,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.winiumPort"><code>nexial.winiumPort</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.winiumPort"><code>nexial.winiumPort</code></a></td>
         <td>integer</td>
         <td>&nbsp;</td>
         <td class="read-only">read-only</td>
@@ -4729,7 +4729,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.winiumSoloMode"><code>nexial.winiumSoloMode</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.winiumSoloMode"><code>nexial.winiumSoloMode</code></a></td>
         <td>boolean</td>
         <td>true</td>
         <td class="read-write">read/write</td>
@@ -4757,7 +4757,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.rdbms.packSingleRow"><code>nexial.rdbms.packSingleRow</code></a>
         </td>
         <td>boolean</td>
@@ -4777,7 +4777,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.mobile.postActionWaitMs"><code>nexial.mobile.postActionWaitMs</code></a>
         </td>
         <td>integer</td>
@@ -4796,7 +4796,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.mobile.explicitWaitMs"><code>nexial.mobile.explicitWaitMs</code></a>
         </td>
         <td>integer</td>
@@ -4812,7 +4812,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.mobile.implicitWaitMs"><code>nexial.mobile.implicitWaitMs</code></a>
         </td>
         <td>integer</td>
@@ -4831,7 +4831,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.mobile.sessionTimeoutMs"><code>nexial.mobile.sessionTimeoutMs</code></a>
         </td>
         <td>integer</td>
@@ -4856,7 +4856,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.mobile.hideKeyboard"><code>nexial.mobile.hideKeyboard</code></a>
         </td>
         <td>boolean</td>
@@ -4893,7 +4893,7 @@
     the list of available System properties:
 </p>
 
-<table cellpadding="3" cellspacing="0" class="sys-var" id="systemProperties">
+<table cellpadding="3" cellspacing="0" class="sysvar" id="systemProperties">
     <tbody>
     <tr>
         <th nowrap="nowrap">property name</th>
@@ -4901,42 +4901,42 @@
         <th nowrap="nowrap">example</th>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="file.separator"><code>file.separator</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="file.separator"><code>file.separator</code></a></td>
         <td>The character used to separate files and directory. On Windows, this is usually <code>\</code>. On *NIX and
             OSX, this would be <code>/</code></td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="java.home"><code>java.home</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="java.home"><code>java.home</code></a></td>
         <td>Where the current Java runtime is installed</td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="java.io.tmpdir"><code>java.io.tmpdir</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="java.io.tmpdir"><code>java.io.tmpdir</code></a></td>
         <td>Current temp directory. The actual directory differs from host to host, depending on how each machine is set
             up
         </td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="java.version"><code>java.version</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="java.version"><code>java.version</code></a></td>
         <td>The version of the current Java runtime, include the minor and patch number</td>
         <td><code>1.8.0_152</code></td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="line.separator"><code>line.separator</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="line.separator"><code>line.separator</code></a></td>
         <td>The character(s) used as line separator. On Windows this is commonly implemented as the \r\n, while in *NIX
             and OSX it's the \n character
         </td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="os.arch"><code>os.arch</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="os.arch"><code>os.arch</code></a></td>
         <td>The operating system architecture of the current host</td>
         <td><code>x86_64</code></td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="os.name"><code>os.name</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="os.name"><code>os.name</code></a></td>
         <td>The short name of the current operating system</td>
         <td>
             <code>Mac OS X</code><br/>
@@ -4944,22 +4944,22 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="os.version"><code>os.version</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="os.version"><code>os.version</code></a></td>
         <td>The operating system version</td>
         <td><code>10.12.6</code></td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="os.hostname"><code>os.hostname</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="os.hostname"><code>os.hostname</code></a></td>
         <td>The machine name of this current host</td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="user.country"><code>user.country</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="user.country"><code>user.country</code></a></td>
         <td>The country or region code of the user that executed Nexial</td>
         <td><code>US</code></td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="user.dir"><code>user.dir</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="user.dir"><code>user.dir</code></a></td>
         <td>a.k.a. Current working directory<br/>
             This is the directory where Nexial - ultimately Java - was run. In most cases this would be
             <code>${NEXIAL_HOME}/bin</code>
@@ -4967,7 +4967,7 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="user.home"><code>user.home</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="user.home"><code>user.home</code></a></td>
         <td>User home directory</td>
         <td>
             <code>C:\Users\Administrator</code><br/>
@@ -4975,22 +4975,22 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="user.language"><code>user.language</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="user.language"><code>user.language</code></a></td>
         <td>The language code of the user that executed Nexial</td>
         <td><code>en</code></td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="user.name"><code>user.name</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="user.name"><code>user.name</code></a></td>
         <td>The user ID of the user that executed Nexial.</td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="user.timezone"><code>user.timezone</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="user.timezone"><code>user.timezone</code></a></td>
         <td>The timezone of the operation system that executed Nexial</td>
         <td><code>America/Los_Angeles</code></td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="nexial.version"><code>nexial.version</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="nexial.version"><code>nexial.version</code></a></td>
         <td>The version of the currently-running Nexial Automation</td>
         <td><code>nexial-core 3.5_0996</code></td>
     </tr>
@@ -5021,7 +5021,7 @@
     page.
 </p>
 
-<table cellpadding="3" cellspacing="0" class="sys-var" id="browserstackVar">
+<table cellpadding="3" cellspacing="0" class="sysvar" id="browserstackVar">
     <tbody>
     <tr>
         <th nowrap="nowrap">configuration</th>
@@ -5031,7 +5031,7 @@
         <th nowrap="nowrap">description</th>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browserstack.username"><code>nexial.browserstack.username</code></a>
         </td>
         <td>text</td>
@@ -5044,7 +5044,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browserstack.automatekey"><code>nexial.browserstack.automatekey</code></a>
         </td>
         <td>text</td>
@@ -5057,7 +5057,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browserstack.browser"><code>nexial.browserstack.browser</code></a>
         </td>
         <td>text</td>
@@ -5073,7 +5073,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browserstack.browser.version"><code>nexial.browserstack.browser.version</code></a>
         </td>
         <td>text</td>
@@ -5087,7 +5087,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browserstack.debug"><code>nexial.browserstack.debug</code></a>
         </td>
         <td>boolean</td>
@@ -5099,7 +5099,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browserstack.resolution"><code>nexial.browserstack.resolution</code></a>
         </td>
         <td>text</td>
@@ -5121,7 +5121,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browserstack.app.buildnumber"><code>nexial.browserstack.app.buildnumber</code></a>
         </td>
         <td>text</td>
@@ -5132,7 +5132,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browserstack.enablelocal"><code>nexial.browserstack.enablelocal</code></a>
         </td>
         <td>boolean</td>
@@ -5147,7 +5147,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browserstack.terminatelocal"><code>nexial.browserstack.terminatelocal</code></a>
         </td>
         <td>boolean</td>
@@ -5166,7 +5166,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browserstack.os"><code>nexial.browserstack.os</code></a>
         </td>
         <td>text</td>
@@ -5177,7 +5177,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browserstack.os.version"><code>nexial.browserstack.os.version</code></a>
         </td>
         <td>text</td>
@@ -5192,7 +5192,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.browserstack.captureCrash"><code>nexial.browserstack.captureCrash</code></a>
         </td>
         <td>boolean</td>
@@ -5201,7 +5201,7 @@
         <td>Capture additional details if an automation session should crash.</td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="browserstack.*"><code>browserstack.*</code></a>
         </td>
         <td>*&nbsp;</td>
@@ -5230,7 +5230,7 @@
 <p>
 </p>
 
-<table cellpadding="3" cellspacing="0" class="sys-var" id="cbtVar">
+<table cellpadding="3" cellspacing="0" class="sysvar" id="cbtVar">
     <tbody>
     <tr>
         <th nowrap="nowrap">configuration</th>
@@ -5240,7 +5240,7 @@
         <th nowrap="nowrap">description</th>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="cbt.username"><code>cbt.username</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="cbt.username"><code>cbt.username</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
@@ -5251,7 +5251,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="cbt.authkey"><code>cbt.authkey</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="cbt.authkey"><code>cbt.authkey</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
@@ -5262,7 +5262,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="cbt.browserName"><code>cbt.browserName</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="cbt.browserName"><code>cbt.browserName</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
@@ -5276,7 +5276,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="cbt.screenResolution"><code>cbt.screenResolution</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="cbt.screenResolution"><code>cbt.screenResolution</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
@@ -5286,7 +5286,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="cbt.version"><code>cbt.version</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="cbt.version"><code>cbt.version</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
@@ -5296,7 +5296,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="cbt.platform"><code>cbt.platform</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="cbt.platform"><code>cbt.platform</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
@@ -5306,7 +5306,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="cbt.deviceName"><code>cbt.deviceName</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="cbt.deviceName"><code>cbt.deviceName</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
@@ -5316,7 +5316,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="cbt.deviceOrientation"><code>cbt.deviceOrientation</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="cbt.deviceOrientation"><code>cbt.deviceOrientation</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
@@ -5326,7 +5326,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="cbt.build"><code>cbt.build</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="cbt.build"><code>cbt.build</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
@@ -5335,7 +5335,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="cbt.name"><code>cbt.name</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="cbt.name"><code>cbt.name</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
@@ -5344,7 +5344,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="cbt.record_video"><code>cbt.record_video</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="cbt.record_video"><code>cbt.record_video</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
@@ -5354,7 +5354,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="cbt.record_network"><code>cbt.record_network</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="cbt.record_network"><code>cbt.record_network</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
@@ -5363,7 +5363,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="cbt.max_duration"><code>cbt.max_duration</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="cbt.max_duration"><code>cbt.max_duration</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
@@ -5373,7 +5373,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap"><a id="cbt.timezone"><code>cbt.timezone</code></a></td>
+        <td class="varname" nowrap="nowrap"><a id="cbt.timezone"><code>cbt.timezone</code></a></td>
         <td>text</td>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
@@ -5385,7 +5385,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="cbt.enablelocal"><code>cbt.enablelocal</code></a>
         </td>
         <td>boolean</td>
@@ -5402,7 +5402,7 @@
         </td>
     </tr>
     <tr>
-        <td class="var-name" nowrap="nowrap">
+        <td class="varname" nowrap="nowrap">
             <a id="cbt.terminatelocal"><code>cbt.terminatelocal</code></a>
         </td>
         <td>boolean</td>
