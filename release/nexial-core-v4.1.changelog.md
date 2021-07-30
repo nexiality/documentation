@@ -13,6 +13,7 @@ comments: true
 ### General
 #### Fixes
 - minor console logging formatting
+- fix error when retrieving profile-based variable set from a macro 
 
 #### Improvements
 - support Java 16
@@ -174,6 +175,8 @@ comments: true
   elements (not just the 1st one) for text content assertion.
 - [`clickByDisplayText(text)`](../commands/mobile/clickByDisplayText(text)): improved implementation to handle text 
   with single and/or double quotes.
+- [`nearby=...`](../commands/mobile/index.html#locators): **NEW** locator type to simplify the task of identifying 
+  elements that are adjacent to label or text element.
 
 
 ### [rdbms commands](../commands/rdbms)
@@ -209,6 +212,7 @@ comments: true
 - [`waitWhileElementNotPresent(locator,waitMs)`](../commands/web/waitWhileElementNotPresent(locator,waitMs)): **NEW**
   command to ensure that a specific element is not present within a fixed amount of time.
   - code fix to prefer the `waitMs` parameter over `nexial.pollWaitMs` value.
+- additional settings to speed up and stablize chrome browser during automation, esp. in headless mode.
 
 
 ### [webmail commands](../commands/webmail)
