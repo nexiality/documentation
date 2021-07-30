@@ -213,7 +213,9 @@ comments: true
 - [`waitWhileElementNotPresent(locator,waitMs)`](../commands/web/waitWhileElementNotPresent(locator,waitMs)): **NEW**
   command to ensure that a specific element is not present within a fixed amount of time.
   - code fix to prefer the `waitMs` parameter over `nexial.pollWaitMs` value.
-- additional settings to speed up and stablize chrome browser during automation, esp. in headless mode.
+- additional settings to speed up and stabilize chrome browser during automation, esp. in headless mode.
+- [`assertElementNotPresent(locator,maxWaitMs)`](../commands/web/assertElementNotPresent(locator,maxWaitMs)): added 
+  `maxWaitMs` to custom amount of time to wait.
 
 
 ### [webmail commands](../commands/webmail)

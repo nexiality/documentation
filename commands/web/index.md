@@ -82,7 +82,7 @@ available commands.
 - [`assertElementCount(locator,count)`](assertElementCount(locator,count))
 - [`assertElementDisabled(locator)`](assertElementDisabled(locator))
 - [`assertElementEnabled(locator)`](assertElementEnabled(locator))
-- [`assertElementNotPresent(locator)`](assertElementNotPresent(locator))
+- [`assertElementNotPresent(locator,maxWaitMs)`](assertElementNotPresent(locator,maxWaitMs))
 - [`assertElementPresent(locator)`](assertElementPresent(locator))
 - [`assertElementsPresent(prefix)`](assertElementsPresent(prefix))
 - [`assertFocus(locator)`](assertFocus(locator))
