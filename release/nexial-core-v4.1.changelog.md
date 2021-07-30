@@ -177,6 +177,7 @@ comments: true
   with single and/or double quotes.
 - [`nearby=...`](../commands/mobile/index.html#locators): **NEW** locator type to simplify the task of identifying 
   elements that are adjacent to label or text element.
+- automatically add [`scenarioRef`](../systemvars/index.html#nexial.scenarioRef) for the mobile device used in automation.
 
 
 ### [rdbms commands](../commands/rdbms)
