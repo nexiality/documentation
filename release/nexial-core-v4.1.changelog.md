@@ -21,7 +21,7 @@ comments: true
   - adjustments for older Java (pre Java 11)
 - enhancements to Execution Summary to show/hide timing and pass/fail information.
 - minor stylesheet update for email notification template.
-- Nexial build size has been reduced by extracting some jars into nexial-lib-x.x.zip
+- Nexial build size has been reduced by extracting some jars into nexial-lib-1.0.zip
   this will be downloaded by nexial automatically.
 - Batch file `nexial-lib-downloader` has been added to download nexial-lib-x.x.zip file manually.
 
