@@ -413,4 +413,19 @@ The following will clean up directories from `TEMP` folder created during Nexial
 
 ---------------------------------------------
 
+#### **nexial-lib-downloader**
+This script will download the additional library which is required by nexial but was not provided as part of nexial build. 
+It will download library to `${user.home}/.nexial/lib/`. All other batch file has been configured to load the library from this location.
+
+User don't need to run this script manually, this will be called when we will run any script using `nexial.cmd`/`nexial.sh`. 
+Nexial will automatically decide whether it should download or not based on the configured version in `${NEXIAL_HOME}/lib/nexial-lib-version.txt`.
+
+If you want to run this manually you can run it, you don't need to pass any command-line argument. 
+<br/>
+
+**Example** <br/>
+![](image/NexialLibDownloader.png)
+
+---------------------------------------------
+
 <script>jQuery(document).ready(function () { newBatchFileSelect(); });</script>

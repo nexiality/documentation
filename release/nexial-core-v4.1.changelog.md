@@ -11,6 +11,7 @@ comments: true
 
 
 ### General
+
 #### Fixes
 - minor console logging formatting
 - fix error when retrieving profile-based variable set from a macro 
@@ -20,6 +21,10 @@ comments: true
   - adjustments for older Java (pre Java 11)
 - enhancements to Execution Summary to show/hide timing and pass/fail information.
 - minor stylesheet update for email notification template.
+- Nexial build size has been reduced by extracting some jars into nexial-lib-x.x.zip
+  this will be downloaded by nexial automatically.
+- Batch file `nexial-lib-downloader` has been added to download nexial-lib-x.x.zip file manually.
+
 
 
 ### [Interactive](../interactive)
@@ -183,9 +188,13 @@ comments: true
 ### [rdbms commands](../commands/rdbms)
 - update multiple database drivers to newer version for better product support
 
+### [localdb commands](../commands/localdb)
+- localdb driver (sqlite) configuration has been removed from `build.gradle` and it has been 
+  configured to download it automatically while using localdb command for the first time
 
 ### [sound commands](../commands/sound)
 - [`play(audio)`](../commands/sound/play(audio)): update all sound files to MP3 (instead of WAV) to reduce footprint
+- [`play(audio)`](../commands/sound/play(audio)): it will download and play the audio files from `${user.home}/.nexial/sound/`
 
 
 ### [web commands](../commands/web)
