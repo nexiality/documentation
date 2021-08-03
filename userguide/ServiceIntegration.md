@@ -79,7 +79,8 @@ nexial.tms.password=<tms_password>
 ~~~
 # Values are for reference purpose only except source
 # Azure doesn't require username. Only passowrd can be specified as pat(Personal access token)
-nexial.tms.source=azurehttps://dev.azure.com/tms1
+nexial.tms.source=azure
+nexial.tms.url=https://dev.azure.com/tms1
 nexial.tms.username=
 nexial.tms.password=4hsg6n5bb5n56ahixmdu7suoah65kk6bro3yu3rokcqhee5u5
 ~~~
