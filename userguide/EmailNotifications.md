@@ -55,7 +55,7 @@ Read more about pre-configured emails and conditional notifications on the [Even
                     <li><code>nexial.mail.smtp.auth</code> - <code>true|false</code>.</li>
                     <li><code>nexial.mail.smtp.username</code> - username only needed if <code>nexial.mail.smtp.auth</code> 
                     is set to <code>true</code>.</li>
-                    <li><code>nexial.mail.smtp.password</code> - username only needed if <code>nexial.mail.smtp.auth</code> 
+                    <li><code>nexial.mail.smtp.password</code> - password only needed if <code>nexial.mail.smtp.auth</code> 
                     is set to <code>true</code>.</li>                                                                         
                 </ol><br/>
                 <br/>

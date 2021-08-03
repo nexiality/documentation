@@ -4868,6 +4868,74 @@
             value for this System variable is <code>true</code>.
         </td>
     </tr>
+    <tr>
+        <td class="highlight-section" colspan="5">
+            <span>For <a href="../userguide/TmsManagement"><code>TMS integration</code></a> only.</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.tms.source"><code>nexial.tms.source</code></a>
+        </td>
+        <td>text</td>
+        <td></td>
+        <td class="read-write">read/write</td>
+        <td>
+            Specify source tool for Test Management Service integration. As of now, supported TMS tools by Nexial
+            are:
+            <ul>
+                <li><b>azure</b> - For <a href="https://azure.microsoft.com/en-in/services/devops/"><code>Azure
+                    DevOps</code></a>
+                <li><b>testrail</b> - For <a href="https://www.gurock.com/testrail/"><code>Test Rail</code></a>
+            </ul>
+            To setup TMS integration, please go through <a href="../userguide/ServiceIntegration"><code>service
+            integration</code></a>
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.tms.url"><code>nexial.tms.url</code></a>
+        </td>
+        <td>text</td>
+        <td></td>
+        <td class="read-write">read/write</td>
+        <td>
+            Specify URL of the TMS tool where Nexial test cases to be imported. For example,
+            <ul>
+                <li>For <b>azure</b>- <code><b>https://dev.azure.com/{organization}/</b></code> where
+                    <code>organization</code> is Azure DevOps organization
+                </li>
+                <li>For <b>testrail</b>- <code><b>https://{organization}.testrail.io/</b></code> where <code>organization</code>
+                    is TestRail organization
+                </li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.tms.username"><code>nexial.tms.username</code></a>
+        </td>
+        <td>text</td>
+        <td></td>
+        <td class="read-write">read/write</td>
+        <td>
+            Specify username required to access TMS tool api provided by <a href="#nexial.tms.source"><code>nexial.tms.source</code></a>
+            This can be empty text for some of the tools which provides access tokens to access apis.
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.tms.password"><code>nexial.tms.password</code></a>
+        </td>
+        <td>text</td>
+        <td></td>
+        <td class="read-write">read/write</td>
+        <td>
+            Specify password required to access TMS tool api provided by <a href="#nexial.tms.source"><code>nexial.tms.source</code></a>
+            This can be password or access token to access apis. For example, Azure requires <code>PAT(Personal Access
+            Token)</code>
+        </td>
+    </tr>
     </tbody>
 </table>
 

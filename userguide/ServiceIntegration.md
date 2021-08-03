@@ -61,3 +61,27 @@ by adding the following configuration for S3 connectivity (in addition to settin
 |`nexial.otc.url`        | The URL of alternative S3 service such as <a href="InstallingMinio">MinIO. |
 |`nexial.outputCloudBase`| The target bucket and path (prefix) to use for storing execution output. |
 
+
+### TMS Integration Setup
+With this one-time setup, you can provide TMS integration configuration details once and build `setup.jar` using 
+[`nexial-setup.cmd`](BatchFiles#nexial-setup) or [`nexial-setup.sh`](BatchFiles#nexial-setup).
+
+Example of a **_setup.properties_**
+- TestRail
+~~~
+# Values are for reference purpose only except source 
+nexial.tms.source=testrail
+nexial.tms.url=https://tms1.testrail.io/
+nexial.tms.username=<tms_username>
+nexial.tms.password=<tms_password>
+~~~
+- Azure 
+~~~
+# Values are for reference purpose only except source
+# Azure doesn't require username. Only passowrd can be specified as pat(Personal access token)
+nexial.tms.source=azurehttps://dev.azure.com/tms1
+nexial.tms.username=
+nexial.tms.password=4hsg6n5bb5n56ahixmdu7suoah65kk6bro3yu3rokcqhee5u5
+~~~
+
+ 

@@ -216,6 +216,41 @@ The following will update all the scripts from given path.<br/>
 
 ---------------------------------------------
 
+#### **nexial-tms-importer**
+This script imports Nexial test cases to provided TMS tool via system variables. Follow [TMS Management](./TmsManagement)
+to configure TMS tool. This command will also update already existing test cases in TMS.
+
+|options           |explanation  |
+|------------------|-------------|
+|**`-plan`**       | This option is for importing plan test cases to TMS tool. This will require full path of plan. <br/>This is required if `-script` is missing.|
+|**`-subplans`**   | This option is for importing specific worksheets(subplan) of plan. This will require only one worksheet This is required if `-plan` is provided.|
+|**`-script`**     | This option is for importing script test cases to TMS tool. This will require full path of script.<br/>This is required if `-plan` is missing.|
+|**`-scenario`**   | This will import specified one or more test scenarios separated by comma.|
+|**`-b`**          | This will follow `BDDKeyword` formatting while importing testcase.|
+|**`-c`**         | This will close previous test runs for this script before importing testcases.|
+
+<br/>
+
+##### Example
+- Import a Nexial script to TMS with BDD keywords formatting:<br/>
+  ```
+  nexial-tms-importer.cmd -script c:\projects\myProject\artifact\script\myProject.xlsx -b
+  ```
+
+- Import one or more specific scenario(i.e. worksheet) of script:<br/>
+  ```
+  nexial-tms-importer.cmd -script c:\projects\myProject\artifact\script\myProject.xlsx -scenario test1,test2
+  ```
+
+- Import specific subplan of Nexial plan to TMS<br/>
+  ```
+  nexial-tms-importer.cmd -plan c:\projects\myProject\artifact\plan\myProject-plan.xlsx -subplan testPlan1
+  ```
+  
+- **Note**: This command doesn't support import of more than one subplan of plan file at once.
+
+---------------------------------------------
+
 #### **nexial-variable-update**
 This script refactors the data variables referenced across test artifacts to provide uniformity across script authors 
 and teams. One may specify the current keys and new keys in the form of:
