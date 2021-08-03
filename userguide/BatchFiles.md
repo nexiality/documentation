@@ -34,7 +34,7 @@ This is the main script is used to execute Nexial script or plan.  This command 
 
 <br/>
 
-##### Example
+**Example**
 - Execute a Nexial script:<br/>
   ```
   nexial.cmd -script c:\projects\myProject\artifact\script\myProject.xlsx
@@ -63,7 +63,7 @@ This is the main script is used to execute Nexial script or plan.  This command 
     -override nexial.outputToCloud=true -override myData=XYZ
   ```
 
-##### Cleaning up Temp Files
+##### **Cleaning up Temp Files**
 As part of execution, Nexial create temp files to store any in-flight automation artifacts. These temp files might not
 get clean up properly. Over time, these temp files could create additional strain on the execution host (i.e. disk 
 space). To circumvent such issue, starting from [Release 3](../release/nexial-core-v3.0.changelog), Nexial now will 
@@ -75,7 +75,7 @@ clean up outdated temp files it had previously created. This `.nexial/config.jso
 by Nexial. This file looks something like this:<br/>
 
 ![](image/BatchFiles_12.png)
-    
+
 Note that,
 1. `lastChecked`: This shows last time when Nexial performed a temp file clean up.
 2. `checkFrequencyDay`: This indicates the number of days since `lastCheck` by which Nexial will perform the next temp
@@ -101,25 +101,20 @@ This is the script used to setup the user specific configurations. This command 
   
 **Usage**
 1. Open a console and point it to `${NEXIAL_HOME}/bin`
-
 2. Run `nexial-setup.cmd` (Windows) or `./nexial-setup.sh` (*NIX, OSX) with the configuration file and the secret key 
    as follows:<br/>
    `nexial-setup.cmd -f "C:\Projects\config.data" -k "|7FDo8#Q;;mZ>G22"`
-
 3. The config.data file content looks like the following:<br/>
    ![](image/BatchFiles_03.png)
- 
 4. When the Nexial command is run with the appropriate arguments it creates a lib called setup.jar inside the lib folder.
    Also a message is displayed asking you to delete the config file as shown below:<br/>
    ![](image/BatchFiles_04.png)
-   
 5. Now you can further zip this using the `jar` command and distribute it further with the team. For example:<br/>
    `jar -cf nexial.zip .`
-
 6. That is it! The latest zip you have is configured with the necessary configurations.
 
 **Note** 
-1. For information about setting up an email-server configuration please look at [One Time Server Setup](EmailNotifications#one-time-server-setup)
+- For information about setting up an email-server configuration please look at [One Time Server Setup](EmailNotifications#one-time-server-setup)
 on the Email Notifications page.
 
 ---------------------------------------------
@@ -141,30 +136,24 @@ It should be considered as best practice to encrypt information that would other
 where automation scripts are made available (e.g. via SCM), this is especially important.
 
 **Usage**
-1. Open a console and point it to `${NEXIAL_HOME}/bin`
 
+1. Open a console and point it to `${NEXIAL_HOME}/bin`
 2. Run `nexial-crypt.cmd` (Windows) or `./nexial-crypt.sh` (*NIX, OSX) with the target sensitive data as an argument:
    ![](image/BatchFiles_05.png)
-
 3. The script will encrypt the argument and provide the encrypted form:
    ![](image/BatchFiles_06.png)
-
 4. Copy the highlighted encrypted data (including `crypt:`) to data file:
    ![](image/BatchFiles_07.png)
-
 5. That's it! Now you can reference this data via its name, as is `${TopSecret}`.
 
 **Notes**
 1. At times, using command line console (especially on Windows) can present some challenges when encrypting special 
    characters such as pipe (`|`), percent (`%`), ampersand (`&`) or question mark (`?`).  When dealing with special 
    character, be sure to surround the entire input parameter with double quote.  For example,<br/>
-   
    `nexial-crypt.cmd "ab&c"`<br/>
    `nexial-crypt.cmd "ab|c"`
-
 2. If the intent input contains double quote (`"`), then one would need to surround the entire input with double 
    quote, and also prepend the double quote with another double quote.  For example,<br/>
-
    `nexial-crypt.cmd "ab""c"`
 
 ---------------------------------------------
