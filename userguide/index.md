@@ -37,6 +37,7 @@ Let's get started!
 - [Executing Nexial in CI/CD](ExecutingNexialInCICD)
 - [Nexial Execution Dashboard](ExecutionDashboard)
 - [Service Integration](ServiceIntegration)
+- [TMS Management](TmsManagement)
 
 ------------------------------------------------------------------------------------------------------------------------
 
