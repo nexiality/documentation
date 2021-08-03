@@ -24,7 +24,7 @@ comments: true
 - Nexial build size has been reduced by extracting some jars into nexial-lib-1.0.zip
   this will be downloaded by nexial automatically.
 - Batch file `nexial-lib-downloader` has been added to download nexial-lib-x.x.zip file manually.
-
+  - minor fixes applied to ensure successful downloading of support lib zip file.
 
 
 ### [Interactive](../interactive)

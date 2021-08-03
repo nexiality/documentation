@@ -50,5 +50,6 @@ option underneath it. This command performs precisely these actions, with a few 
 
 
 ### See Also
+- [`select(locator,text)`](select(locator,text))
 - [`selectMulti(locator,array)`](selectMulti(locator,array))
 - [`selectMultiOptions(locator)`](selectMultiOptions(locator))

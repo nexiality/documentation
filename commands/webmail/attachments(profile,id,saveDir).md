@@ -14,15 +14,14 @@ the attachments should be downloaded.
 This "email id" is determined during the 
 [`search(var,profile,searchCriteria,duration)`](search(var,profile,searchCriteria,duration)) command.
 
-### Points to Remember
-
+### Note
 The following points to be taken into consideration before using the attachment commands.
-
 - For the attachments command to work the email provider should be "temporary-mail". So the `provider`  value
 in the [profile](index#webmail-configuration-settings) should be *temporary-mail*.
 - [temporary-mail](https://temporary-mail.net) allows attachments size up to max of 7024 KB. This is the observation.
 - You can add multiple files as attachments to an email sent to [temporary-mail](https://temporary-mail.net). However,
 the overall size of the attachments should not exceed the Max size limit.
+
 
 ### Parameters
 - **profile** - the *webmail* profile which [specifies the settings](index#webmail-configuration-settings) like 
