@@ -188,9 +188,11 @@ comments: true
 ### [rdbms commands](../commands/rdbms)
 - update multiple database drivers to newer version for better product support
 
+
 ### [localdb commands](../commands/localdb)
 - localdb driver (sqlite) configuration has been removed from `build.gradle` and it has been 
   configured to download it automatically while using localdb command for the first time
+
 
 ### [sound commands](../commands/sound)
 - [`play(audio)`](../commands/sound/play(audio)): update all sound files to MP3 (instead of WAV) to reduce footprint
@@ -228,6 +230,11 @@ comments: true
 
 
 ### [webmail commands](../commands/webmail)
+- [`attachment(profile,id,attachment,saveTo)`](../commands/webmail/attachment(profile,id,attachment,saveTo)): **NEW** 
+  command to download an attachment associated with an email identified by `id` and save it locally to `saveTo`.
+- [`attachments(profile,id,saveDir)`](../commands/webmail/attachments(profile,id,saveDir)): **NEW** command to download 
+  all the attachments associated with an email identified by `id` and save them locally to `saveDir` (directory).
+- code fix for the obscure condition where the attachment file name contains path information.
 
 
 ### [ws commands](../commands/ws)
