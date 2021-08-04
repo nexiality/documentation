@@ -655,6 +655,19 @@ Output:<br/>
 
 -----
 
+
+#### `swapCases()`
+Convert the current TEXT expression by swapping the upper and title case to lower case, and lower case to upper case.
+
+**Example**<br/>
+```[TEXT(Hello World!) => swapCases]```
+
+would yield
+
+```hELLO wORLD!```
+
+-----
+
 #### `text`
 Retrieve the text from this Text Expression.
 
