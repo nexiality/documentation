@@ -656,8 +656,8 @@ Output:<br/>
 -----
 
 
-#### `swapCases()`
-Convert the current TEXT expression by swapping the upper and title case to lower case, and lower case to upper case.
+#### `swapCases`
+Or `swap-cases`. Convert the current TEXT expression by swapping the upper and title case to lower case, and lower case to upper case.
 
 **Example**<br/>
 ```[TEXT(Hello World!) => swapCases]```
