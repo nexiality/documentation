@@ -15,6 +15,7 @@ comments: true
 #### Fixes
 - minor console logging formatting
 - fix error when retrieving profile-based variable set from a macro 
+- updated batch files (nexial-script-update, nexial-artifact-repair & nexial-variable-update) for downloading the nexial-lib-x.x.zip
 
 #### Improvements
 - support Java 16
