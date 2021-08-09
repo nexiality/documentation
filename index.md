@@ -17,35 +17,31 @@ Nexial Automation
 <a href="https://github.com/nexiality/nexial-core/releases"><img src="image/download.png">Download</a> &nbsp;&nbsp;
 <a href="https://github.com/nexiality/nexial-core/"><img src="image/github.jpg">Fork to GitHub</a> &nbsp;&nbsp;
 <a href="https://nexiality.github.io/documentation/userguide/InstallingNexial"><img src="image/install-manual-icon.png">Installation Guide</a> &nbsp;&nbsp;
-<a href="http://nexiality.slack.com/"><img src="image/slack2.png"/>Slack</a>
+<a href="https://nexiality.slack.com/"><img src="image/slack2.png"/>Slack</a>
 </span>
 <br/>
 </h2>
 
-#### Test Automation Platform for _Everyone_! 
+#### Test Automation Platform for _Everyone_! 
 
 <img src="image/logo-x.png" alt="Nexial" style="box-shadow:none"/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="image/nexial-caption.png" alt="Test Automation Platform for Everyone" style="box-shadow:none"/>
 
 The name reflects our desire and intention to perfect the "art" and "science" of Software Testing and the promotion of 
-Quality Artisans.  As professional Quality Advocates, we are all _nexialists_ - we see links in the disconnected, 
-synergy in the seemingly independent, and draw from such new ideas/solutions.
+Quality Artisans. As professional Quality Advocates, we are all _nexialists_ - we see links in the disconnected, 
+synergy in the seemingly unaligned, and draw from such new ideas, new approaches and new solutions.
 
-The main motivation of Nexial is to provide a set of capabilities to automate software testing.  
-Here are some of the core design considerations for this platform:
+The main motivation of Nexial is to provide a set of carefully crafted capabilities to automate software testing. Here 
+are some of the core design considerations for this platform:
 
-- ***Test automation for everyone*** - no coding required (but supported), simple and 
-  relevant to all project participants
+- ***Test automation for everyone*** - no coding required (but supported), simple and relevant to all project participants
 - Hybrid, Keyword-driven and standards-based; simple/familiar spreadsheet (Excel) interface
 - Supports many application architecture and interface - web (browser), desktop, API/REST/SOAP, database, batch, ssh
 - Extensible and flexible test and data management
 - Local and remote (Jenkins, BrowserStack) support
 - Integration to existing collaboration tools such as JIRA and Confluence
 - Supports F.R.I.P. (functional, regression, integration, performance testing)
-
-<br/>
-## **<a href="http://nexiality.slack.com/" style="background-color:transparent !important;vertical-align: middle;"><img src="image/slack2.png" style="box-shadow:none;width:64px;vertical-align:inherit;margin-top:-10px;">Find us on slack!</a>**
 
 ---------------------------------------------
 
@@ -61,7 +57,7 @@ Meetup held on 2019/11/19. For those interested, here is:
 
 ---------------------------------------------
 
-For a better understanding of Nexial, check out the **[Introduction](userguide/IntroductionAndFAQ)** page.
+For a better understanding of Nexial, check out the **[Introduction](userguide/IntroductionAndFAQ)** page.
 
 ---------------------------------------------
 
