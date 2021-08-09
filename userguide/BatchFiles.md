@@ -209,14 +209,13 @@ The following will update all the scripts from given path.<br/>
 This script imports Nexial test cases to provided TMS tool via system variables. Follow [TMS Management](./TmsManagement)
 to configure TMS tool. This command will also update already existing test cases in TMS.
 
-|options           |explanation  |
-|------------------|-------------|
-|**`-plan`**       | This option is for importing plan test cases to TMS tool. This will require full path of plan. <br/>This is required if `-script` is missing.|
-|**`-subplans`**   | This option is for importing specific worksheets(subplan) of plan. This will require only one worksheet This is required if `-plan` is provided.|
-|**`-script`**     | This option is for importing script test cases to TMS tool. This will require full path of script.<br/>This is required if `-plan` is missing.|
-|**`-scenario`**   | This will import specified one or more test scenarios separated by comma.|
-|**`-b`**          | This will follow `BDDKeyword` formatting while importing testcase.|
-|**`-c`**         | This will close previous test runs for this script before importing testcases.|
+|options        |explanation  |
+|---------------|-------------|
+|**`-plan`**    | This option is for importing plan test cases to TMS tool. This will require full path of plan. <br/>This is required if `-script` is missing.|
+|**`-subplans`**| This option is for importing specific worksheets(subplan) of plan. This will require only one worksheet This is required if `-plan` is provided.|
+|**`-script`**  | This option is for importing script test cases to TMS tool. This will require full path of script.<br/>This is required if `-plan` is missing.|
+|**`-b`**       | This will follow `BDDKeyword` formatting while importing testcase.|
+|**`-c`**       | This will close previous test runs for this script before importing testcases.|
 
 <br/>
 

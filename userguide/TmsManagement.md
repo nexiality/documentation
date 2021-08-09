@@ -13,7 +13,7 @@ comments: true
 The TMS integration allows Nexial to import test cases to TMS tool. This means Nexial scripts and plans(One subplan) can be 
 imported as a test suite in tms. Here, test cases in TMS are mapped to scenarios from script file. Currently, 
 TMS tools supported by Nexial are:
-- [Azure](https://azure.microsoft.com/en-in/services/devops/)
+- [Azure DevOps](https://azure.microsoft.com/en-in/services/devops/)
 - [Test Rail](https://www.gurock.com/testrail/)
 
 Additionally, Nexial provides features like:
@@ -33,11 +33,11 @@ for onetime setup for TMS integration using `nexial-setup`.
 - Configure `project.tms.json` file in the `.meta` folder of project whose script to be imported.<br/>
  This json requires `projectId` from the TMS tool where the scripts to be imported. `projectId` can also be project name 
  depending on provided tms tool.<br/>
- For example, `Azure` supports project name while `TestRail` has project id.
+ For example, `Azure DevOps` supports project name while `TestRail` has project id.
 
 ```json
 {
-  "projectId": "Clearstream"
+  "projectId": "<projectId>"
 
 }
 ```
@@ -47,13 +47,13 @@ below. This json is for script file import.<br/>
 
 ```json
 {
-  "projectId": "Clearstream",
+  "projectId": "<projectId>",
   "files": [
     {
-      "path": "/artifact/script/clearstream.xlsx",
+      "path": "/artifact/script/myProject.xlsx",
       "fileType": "script",
       "suiteId": "349",
-      "suiteUrl": "https://dev.azure.com/Tms12/Clearstream/_apis/testplan/Plans/349",
+      "suiteUrl": "https://dev.azure.com/{organization}/{projectId}/_apis/testplan/Plans/349",
       "scenarios": [
         {
           "testCase": "Init",
@@ -66,8 +66,8 @@ below. This json is for script file import.<br/>
           "testCaseId": "352"
         },
         {
-          "testCase": "Codelist",
-          "name": "Codelist",
+          "testCase": "SearchContent",
+          "name": "SearchContent",
           "testCaseId": "353"
         }
       ]
