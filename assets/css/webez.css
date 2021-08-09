@@ -46,7 +46,7 @@ header {
   height:                142px;
   white-space:           nowrap;
   z-index:               1;
-  background:            rgba(70, 70, 70, 0.9) url(/webez/image/nexial-webez.png) no-repeat;
+  background:            rgba(70, 70, 70, 0.9) url(../../image/nexial-webez.png) no-repeat;
   background-size:       95px;
   background-position-y: 8px;
   background-position-x: 45px;
