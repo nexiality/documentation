@@ -16,6 +16,7 @@ comments: true
 - minor console logging formatting
 - fix error when retrieving profile-based variable set from a macro 
 - updated batch files (nexial-script-update, nexial-artifact-repair & nexial-variable-update) for downloading the nexial-lib-x.x.zip
+- address recent issue on *NIX/MAC system where the `/tmp` directory cannot be clean up due to permission
 
 #### Improvements
 - support Java 16
@@ -229,6 +230,8 @@ comments: true
 - additional settings to speed up and stabilize chrome browser during automation, esp. in headless mode.
 - [`assertElementNotPresent(locator,maxWaitMs)`](../commands/web/assertElementNotPresent(locator,maxWaitMs)): added 
   `maxWaitMs` to custom amount of time to wait.
+- slight adjustment for all `waitUntil...` and `waitFor...` commands to improve stability by adjusting between-check
+  wait time from 10 to 25 ms.
 
 
 ### [webmail commands](../commands/webmail)
