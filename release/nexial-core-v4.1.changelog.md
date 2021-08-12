@@ -233,6 +233,7 @@ comments: true
   `maxWaitMs` to custom amount of time to wait.
 - slight adjustment for all `waitUntil...` and `waitFor...` commands to improve stability by adjusting between-check
   wait time from 10 to 25 ms.
+- disable the use of GPU when running Chrome Headless
 
 
 ### [webmail commands](../commands/webmail)
