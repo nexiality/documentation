@@ -58,6 +58,7 @@ If Appium server is configured to start internally within Nexial, one can also t
 
 Click on one of the links below to learn about each command.
 
+- [`assertCount(locator,count)`](assertCount(locator,count))
 - [`assertElementPresent(locator)`](assertElementPresent(locator))
 - [`assertElementsPresent(prefix)`](assertElementsPresent(prefix))
 - [`assertElementVisible(locator)`](assertElementVisible(locator))

@@ -186,6 +186,7 @@ comments: true
 - [`nearby=...`](../commands/mobile/index.html#locators): **NEW** locator type to simplify the task of identifying 
   elements that are adjacent to label or text element.
 - automatically add [`scenarioRef`](../systemvars/index.html#nexial.scenarioRef) for the mobile device used in automation.
+- [`assertCount(locator,count)`](../commands/mobile/assertCount(locator,count)): **NEW** command to assert the occurrence of specified locator.
 
 
 ### [rdbms commands](../commands/rdbms)
