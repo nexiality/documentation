@@ -107,7 +107,7 @@ a code {
   background-size: 16px;
 }
 
-p {margin-top: 20px;}
+p {margin-top: 10px;}
 
 p a { font-weight: 400; }
 
@@ -240,7 +240,7 @@ form {
 h1 {font-size: 32px;}
 
 h2 {
-  margin:      15px auto;
+  margin:      30px auto 0;
   font-size:   22px;
   font-weight: bold;
   color:       #303030;
@@ -278,10 +278,10 @@ blockquote, q {quotes: none;}
 
 blockquote {
   margin-bottom: 20px;
-  border-left:   20px solid #ccc;
+  border-left:   20px solid #bcb;
   font-size:     1.1em;
   color:         #555;
-  background:    rgba(100, 150, 150, 0.10) !important;
+  background:    rgba(120, 150, 100, 0.10) !important;
   padding:       15px;
 }
 
@@ -328,7 +328,7 @@ h1 {
 }
 
 section h2 {
-  color: #647560;
+  color: #5a8540;
 }
 
 h3 {

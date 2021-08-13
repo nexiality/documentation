@@ -38,7 +38,9 @@ So what does this Nexial WebEZ look like? Let's have a look!
 
 ## WebEZ in Action
 
-_Coming soon!_
+<iframe width="820" height="555" src="https://www.youtube-nocookie.com/embed/vI7RcMbF95s?cc_lang_pref=en&cc_load_policy=1"
+frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[View it on Youtube](https://www.youtube.com/watch?v=vI7RcMbF95s&cc_lang_pref=en&cc_load_policy=1)
 
 
 ## Features
@@ -46,16 +48,21 @@ Here are the features that WebEZ currently supports. New functionality will be a
 to <a href="https://github.com/nexiality/nexial-webeasy/issues/new?assignees=&labels=&template=feature_request.md" class="external-link" target="_nexial_link">suggest new features on GitHub!</a>
 
 - **Inspect** either current web page or on a specified URL
-- Inspection includes both **user interaction** and **element assertion**
+- Inspection includes both **user interaction** and **element assertion** (assert and wait-for)
 - Captured inspections are converted into appropriate commands and steps
 - Captured steps can be re-ordered, removed, edited, and duplicated
-- Easy way to copy the derived step to Nexial script 
-- On-Page Locator Inspection, launched via context menu
+- Easy to copy the generated step to a Nexial script 
+- [On-Page Locator Inspection](ShowLocator), can be launched via context menu
 
 
-## Get it!
-To install WebEZ chrome extension, you can get it directly from Chrome Web Store
+## How do I get it?!
+WebEZ chrome extension is <a href="https://chrome.google.com/webstore/search/Nexial%20WebEZ" class="external-link" target="_nexial_link">
+available on Chrome Web Store</a>. Follow the link to download.
 
 
-## Your Feedback, please
+## Your Feedback, please!
+We'd love to hear your feedback. Find us on <a href="https://github.com/nexiality/nexial-webeasy" class="external-link" target="_nexial_link">GitHub</a>.
+While you are there, do give us a star or <a href="https://github.com/nexiality/nexial-webeasy/issues/new/choose" class="external-link" target="_nexial_link">submit an issue</a>.
 
+
+ 
