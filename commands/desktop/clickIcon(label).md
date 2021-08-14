@@ -21,4 +21,4 @@ comments: true
 
 
 ### See Also
-- [`click(locator)`](click(locator))
+- [`clickByLocator(locator)`](clickByLocator(locator))

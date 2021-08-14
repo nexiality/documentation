@@ -99,7 +99,7 @@ comments: true
 - additional support for Infragistics 4 components:
   - support the use of TreeView-based datagrid on the `table`-related commands such as 
     [`assertTableRowContains(row,contains)`](../commands/desktop/assertTableRowContains(row,contains)), 
-    [`saveAllTableRows(var)`](../commands/desktop/saveAllTableRows(var)) and 
+    [`saveAllTableRows(var,csv)`](../commands/desktop/saveAllTableRows(var,csv)) and 
     [`editTableCells(row,nameValues)`](../commands/desktop/editTableCells(row,nameValues)).
   - support various types of Combo via common set of `combo`-related commands:
     - [`selectCombo(name,text)`](../commands/desktop/selectCombo(name,text)): supports "single-select", "multi-select" 
