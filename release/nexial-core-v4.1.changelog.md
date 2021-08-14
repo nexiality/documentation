@@ -1,13 +1,13 @@
 ---
 layout: default
-title: nexial-core 4.1 (2021-07-??)
+title: nexial-core 4.1 (2021-08-14)
 parent: release
 tags: release nexial-core 4.1
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v4.1_????" class="external-link" target="_nexial_link">Release 4.1</a>
-2021-07-??
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v4.1_1282" class="external-link" target="_nexial_link">Release 4.1</a>
+2021-08-14
 
 
 ### General
@@ -29,11 +29,13 @@ comments: true
   - minor fixes applied to ensure successful downloading of support lib zip file.
 
 
+### [Batch Files](../userguide/BatchFiles)
+- [`nexial-project`](../userguide/BatchFiles#nexial-project): support automatic creation of project directory, when a 
+  fully qualified path is specified.
+
+
 ### [Interactive](../interactive)
 - minor adjustment to render activity listing correctly
-
-
-### [System Variables](../systemvars)
 
 
 ### [Expressions](../expressions)
@@ -46,9 +48,6 @@ comments: true
 - implemented special parameter delimiter - ` %% ` - to handle situations where comma (`,`) is used as part of the 
   parameter itself. This special parameter delimiter allows user to use commas freely as part of the parameter value.
 - [TEXT &raquo; `swapCases`](../expressions/TEXTexpression#swapcases): **NEW** operation to swap letter cases.
-
-
-### [base commands](../commands/base)
 
 
 ### [desktop commands](../commands/desktop)
@@ -233,7 +232,9 @@ comments: true
   `maxWaitMs` to custom amount of time to wait.
 - slight adjustment for all `waitUntil...` and `waitFor...` commands to improve stability by adjusting between-check
   wait time from 10 to 25 ms.
-- disable the use of GPU when running Chrome Headless
+- disable the use of GPU when running Chrome Headless.
+- [`nexial.web.useReact`](../systemvars/index.html#nexial.web.useReact): **NEW** System variable for improved support on
+  React applications.
 
 
 ### [webmail commands](../commands/webmail)

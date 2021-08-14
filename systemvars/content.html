@@ -2677,6 +2677,43 @@
     </tr>
     <tr>
         <td class="varname" nowrap="nowrap">
+            <a id="nexial.web.useReact"><code>nexial.web.useReact</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td class="read-write">read/write</td>
+        <td>
+            This System variable indicates whether the AUT is built with <a href="https://reactjs.org/"
+            class="external-link" target="_nexial_link">ReactJs</a> (or just React0. React application often requires a
+            slightly different treatment when it comes to Web automation. By specifying this System variable as
+            <code>true</code>, Nexial can make the necessary adjustments accordingly.<br/>
+            <br/>
+            Specifically, if this System variable is set to <code>true</code>, then
+            <ol>
+                <li>
+                    Any of the "click" commands will be performed without the use of JavaScript. Instead, Nexial will
+                    enforce the use of standard Selenium click action. This is known to be a more stable approach for
+                    React applications. Note that this is equivalent to setting
+                    <a href="#nexial.browser.forceJSClick">nexial.browser.forceJSClick</a> to <code>false</code>.
+                </li>
+                <li>
+                    Any of the "type" commands will ensure that existing value in the target element is cleared by
+                    using <code>BACKSPACE</code> keystroes, instead of the standard Selenium <code>clear</code> command.
+                    This is only applicable to the <code>INPUT</code> and <code>TEXTAREA</code> element. React
+                    applications tend not to react (<i>no puns...</i>) favorably to the Selenium <code>clear</code>
+                    command. By setting this System variable to <code>true</code>, Nexial will enforce the clearing of
+                    existing value with<code>BACkSPACE</code> keystrokes instead. Note that this is equivalent to
+                    setting<a href="#nexial.web.clearWithBackspace"><code>nexial.web.clearWithBackspace</code></a> to
+                    <code>true</code>.
+                </li>
+            </ol>
+            <br/>
+            By default, this System variable is set to <code>false</code>. If you are automating against a React
+            application, set this System variable to <code>true</code>.
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.web.preemptiveAlertCheck"><code>nexial.web.preemptiveAlertCheck</code></a>
         </td>
         <td>boolean</td>
