@@ -10,9 +10,11 @@ redirect_from:
 
 
 ## Releases
+
 ### 4.x
 - [v4.1 (2021-08-14)](nexial-core-v4.1.changelog)
 - [v4.0 (2021-06-12)](nexial-core-v4.0.changelog)
+
 ### 3.x
 - [v3.9 (2021-05-17)](nexial-core-v3.9.changelog)
 - [v3.8 (2021-04-08)](nexial-core-v3.8.changelog)
@@ -24,6 +26,7 @@ redirect_from:
 - [v3.2 (2020-08-04)](nexial-core-v3.2.changelog)
 - [v3.1 (2020-07-06)](nexial-core-v3.1.changelog)
 - [v3.0 (2020-05-29)](nexial-core-v3.0.changelog)
+
 ### 2.x
 - [v2.9 (2019-12-14)](nexial-core-v2.9.changelog)
 - [v2.8 (2019-11-04)](nexial-core-v2.8.changelog)
@@ -35,6 +38,7 @@ redirect_from:
 - [v2.2 (2019-05-08)](nexial-core-v2.2.changelog)
 - [v2.1 (2019-04-13)](nexial-core-v2.1.changelog)
 - [v2.0 (2019-03-06)](nexial-core-v2.0.changelog)
+
 ### 1.x
 - [v1.9 (2019-02-04)](nexial-core-v1.9.changelog)
 - [v1.8 (2019-01-04)](nexial-core-v1.8.changelog)
