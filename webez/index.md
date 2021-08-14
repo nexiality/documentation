@@ -59,6 +59,16 @@ to <a href="https://github.com/nexiality/nexial-webeasy/issues/new?assignees=&la
 WebEZ chrome extension is <a href="https://chrome.google.com/webstore/search/Nexial%20WebEZ" class="external-link" target="_nexial_link">
 available on Chrome Web Store</a>. Follow the link to download.
 
+For the latest (possibly not yet published on Google Web Store) version of Nexial WebEZ, follow these steps:
+1. Download [nexial-webez-v0.9.0.zip](./nexial-webez-v0.9.0.zip) and save it locally.
+2. Unzip the download zip to a local directory, say, `C:\temp\nexial\webez`
+3. Open a new tab on your Chrome browser to `chrome://extensions/`.
+4. Make sure the "Developer mode" (near top-right corner of the Extensions page) is turned on.
+5. Click on the "Load unpacked" button near the top of the Extensions page.
+6. Navigate to the directory where the extension has been unzipped. Click "Select Folder" to select the folder.
+7. The Nexial WebEZ extension is now installed.
+8. Click on the "Details" button to enable "Allow in Incognito".
+
 
 ## Your Feedback, please!
 We'd love to hear your feedback. Find us on <a href="https://github.com/nexiality/nexial-webeasy" class="external-link" target="_nexial_link">GitHub</a>.
