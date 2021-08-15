@@ -56,7 +56,7 @@ comments: true
   - [`assertLocatorPresent(locator)`](../commands/desktop/assertLocatorPresent(locator))
   - [`clickMenuByLocator(locator,menu)`](../commands/desktop/clickMenuByLocator(locator,menu))
 - [autoscanning](../commands/desktop/configureDesktopApplication): code fixes to continue with autoscanning when an 
-  error occurred due to component not bing active or mis-configured.
+  error occurred due to component not being active or mis-configured.
 - remove _over-zealous_ trimming of component text during editing of a textbox/textarea component.
   - [`typeTextBox(name,text1,text2,text3,text4)`](../commands/desktop/typeTextBox(name,text1,text2,text3,text4))
   - [`typeTextArea(name,text1,text2,text3,text4)`](../commands/desktop/typeTextArea(name,text1,text2,text3,text4))
@@ -84,8 +84,8 @@ comments: true
 
 
 ### [mobile commands](../commands/mobile)
-- alpha build for local mobile test automation support. Currently supports only Android, with iOS soon to follow.
-- documentation forthcoming (please be patient).
+- alpha build for local mobile test automation support.
+  - documentation forthcoming (please be patient).
 - current implementation requires user to install android studio, android sdk, platform-tools, AVD manager, any Android 
   emulators, and Appium Desktop *BEFORE* using Nexial's mobile automation feature.
 - additional profile configuration for added:
@@ -94,98 +94,96 @@ comments: true
   - `.server.url`
   - `.server.address`
   - `.server.logging`
-- fix the shutdown sequence of appium server when Nexial is terminating execution
-- support externalizing the Appiums log during execution (`log/appium.log` under the output directory)
-- support both external appium server integration and auto-start appium server during Nexial execution
-- improved Android setup script to install Android SDK and emulators
-  - alpha-ready: Android setup script will now 
-    1. install Android SDK to `~/.nexial/android/sdk`
-    2. install Android system images (user selects)
-    3. install Android emulators with skins (user selects)
-    4. create batch files to start emulators
-  - added support for MacOS shell scripts
-  - added common utility batch files to `${NEXIAL_HOME}/bin/mobile`
-- [`saveCount(var,locator)`](../commands/mobile/saveCount(var,locator)): **NEW** command to save the number of matching 
-  elements to `var`.
-- [`type(locator,text)`](../commands/mobile/type(locator,text)): fix code to allow time for the onscreen keyboard to 
-  render.
-- [`scroll(locator,direction)`](../commands/mobile/scroll(locator,direction)): fix code to properly scroll in all 4 
-  directions.
-- [`waitForElement(locator,waitMs)`](../commands/mobile/waitForElementPresent(locator,waitMs)): wait until the target 
-  element is found before continuing execution.
-- auto-resolves the location of Appium Server startup script (`main.js`)
-- auto-resolves the location of NodeJS executable (`node`)
-- [`hideKeyboard`](../commands/mobile/hideKeyboard()): **NEW** command to key on-screen keyboard
-- add auto-hiding of on-screen keyboard via [`nexial.mobile.hideKeyboard`](../systemvars/index.html#nexial.mobile.hideKeyboard)
-  System variable.
-- correctly sending the correct time unit for `newCommandTimeout` capability.
-- [`assertTextPresent(locator,text)`](../commands/mobile/assertTextPresent(locator,text)): **NEW** command to assert 
-  that an element contains the specified text.
-- [`clickByDisplayText(text)`](../commands/mobile/clickByDisplayText(text)): **NEW** command to click an element based
-  on its text.
-- [`longClick(locator,waitMs)`](../commands/mobile/longClick(locator,waitMs)): **NEW** command to simulate long-click
-  action on a device; generally used to evoke context menu or popup menu.
-- [`doubleClick(locator,xOffset,yOffset)`](../commands/mobile/doubleClick(locator,xOffset,yOffset)): **NEW** command to
-  simulate double-click action on specified locator.
-- [`shake()`](../commands/mobile/shake()): **NEW** command to simulate shaking the current device (iOS only), which could 
-  trigger other event. 
-- [`lock()`](../commands/mobile/lock()): **NEW** command to lock current device.
-- [`unlock()`](../commands/mobile/unlock()): **NEW** command to unlock current device. By default no password is placed 
-  on emulator. For unlocking a device with passcode or pattern, visit 
-  [Appium Desired Capability](https://appium.io/docs/en/writing-running-appium/caps/#appium-desired-capabilities) and
-  search for `unlockType` and `unlockKey`.
-- [`assertLocked()`](../commands/mobile/assertLocked()): **NEW** command to assert that the target device is currently 
-  locked. 
-- [`saveLockStatus(var)`](../commands/mobile/saveLockStatus(var)): **NEW** command to save current device lock status
-  (`LOCKED` or `UNLOCKED`) to `var`.
-- [`sendSms(phone,message)`](../commands/mobile/sendSms(phone,message)): **NEW** command to send SMS `message` to
-  specified `phone` number.
-- [`home()`](../commands/mobile/home()): **NEW** command to navigate to current device's "HOME" screen. 
-- [`back()`](../commands/mobile/back()): **NEW** command to navigate back to previous screen. 
-- [`forward()`](../commands/mobile/forward()): **NEW** command to navigate forward from current screen (after 
-  navigated back to previous screen) 
-- [`recentApps`](../commands/mobile/recentApps()): **NEW** command to show recently opened (and still running) apps on
-  current device.
-- [`closeApp()`](../commands/mobile/closeApp()): implementation change to **ONLY** close the specified application of 
-  current mobile profile.
-- [`shutdown(profile)`](../commands/mobile/shutdown(profile)): **NEW** command to shut down any running emulator and
-  Appium server instance.
-- [`screenshot(file,locator)`](../commands/mobile/screenshot(file,locator)): now support "output-to-cloud" functionality,
-  which is toggled via the [`nexial.outputToCloud`](../systemvars/index.html#nexial.outputToCloud) System variable. 
-- [`type(locator,text)`](../commands/mobile/type(locator,text)): now supports clearing out text (if `text` is `(empty)`).
-- [`type(locator,text)`](../commands/mobile/type(locator,text)): improved stability and performance.
-- [`scroll(locator,direction)`](../commands/mobile/scroll(locator,direction)): added more fine-grained scroll increments
+- Appium support:
+  - fix the shutdown sequence of appium server when Nexial is terminating execution
+  - support externalizing the Appium's log during execution (`log/appium.log` under the output directory)
+  - support both external appium server integration and auto-start appium server during Nexial execution
+  - improved Android setup script to install Android SDK and emulators
+    - alpha-ready: Android setup script will now 
+      1. install Android SDK to `~/.nexial/android/sdk`
+      2. install Android system images (user selects)
+      3. install Android emulators with skins (user selects)
+      4. create batch files to start emulators
+    - added support for MacOS shell scripts
+    - added common utility batch files to `${NEXIAL_HOME}/bin/mobile`
+  - auto-resolves the location of Appium Server startup script (`main.js`)
+  - auto-resolves the location of NodeJS executable (`node`)
+  - correctly sending the correct time unit for `newCommandTimeout` capability.
+- [`assertCount(locator,count)`](../commands/mobile/assertCount(locator,count)): **NEW** command to assert the 
+  occurrence of specified locator.
+- [`assertElementsPresent(prefix)`](../commands/mobile/assertElementsPresent(prefix)): **NEW** command to assert the
+  presence of a series of locators.
 - [`assertElementVisible(locator)`](../commands/mobile/assertElementVisible(locator)): **NEW** command to assert that the
   element referenced by the specified `locator` is both present and visible on current screen.
+- [`assertLocked()`](../commands/mobile/assertLocked()): **NEW** command to assert that the target device is currently
+  locked.
+- [`assertTextPresent(locator,text)`](../commands/mobile/assertTextPresent(locator,text)): **NEW** command to assert
+  that an element contains the specified text.
+  - scan across all matching elements (not just the 1st one) for text content assertion.
+- [`back()`](../commands/mobile/back()): **NEW** command to navigate back to previous screen.
+- [`clickByDisplayText(text)`](../commands/mobile/clickByDisplayText(text)): **NEW** command to click an element based
+  on its text.
+  improved implementation to handle text with single and/or double quotes.
+- [`closeApp()`](../commands/mobile/closeApp()): implementation change to **ONLY** close the specified application of
+  current mobile profile.
+- [`doubleClick(locator,xOffset,yOffset)`](../commands/mobile/doubleClick(locator,xOffset,yOffset)): **NEW** command to
+  simulate double-click action on specified locator.
+- [`forward()`](../commands/mobile/forward()): **NEW** command to navigate forward from current screen (after
+  navigated back to previous screen)
+- [`hideKeyboard`](../commands/mobile/hideKeyboard()): **NEW** command to key on-screen keyboard
+  - add auto-hiding of on-screen keyboard via [`nexial.mobile.hideKeyboard`](../systemvars/index.html#nexial.mobile.hideKeyboard)
+    System variable.
+- [`home()`](../commands/mobile/home()): **NEW** command to navigate to current device's "HOME" screen.
+- [`lock()`](../commands/mobile/lock()): **NEW** command to lock current device.
+- [`longClick(locator,waitMs)`](../commands/mobile/longClick(locator,waitMs)): **NEW** command to simulate long-click
+  action on a device; generally used to evoke context menu or popup menu.
+- [`recentApps`](../commands/mobile/recentApps()): **NEW** command to show recently opened (and still running) apps on
+  current device.
+- [`saveCount(var,locator)`](../commands/mobile/saveCount(var,locator)): **NEW** command to save the number of matching
+  elements to `var`.
+- [`saveLockStatus(var)`](../commands/mobile/saveLockStatus(var)): **NEW** command to save current device lock status
+  (`LOCKED` or `UNLOCKED`) to `var`.
 - [`saveText(var,locator)`](../commands/mobile/saveText(var,locator)): **NEW** command to save the text of the referenced
   element to `var`.
 - [`saveTextArray(var,locator)`](../commands/mobile/saveTextArray(var,locator)): **NEW** command to save the text of
   all matching elements as an array (or list) to `var`.
-- [`assertElementsPresent(prefix)`](../commands/mobile/assertElementsPresent(prefix)): **NEW** command to assert the 
-  presence of a series of locators.
-- [`screenshot9file,locator)`]: improved stability and performance.
-- now supports a variety of locators via unique prefixes:
-  - `id=...`: ID-based locator.
-  - `xpath=...`: XPATH-based locator. Note that the `xpath=` prefix not required since XPATH locators are fairly easy to recognize
-  - `a11y=...`: accessbility id-based locator.
-  - `class=...`: class-based locator.
-  - `res=...`: resource id-based locator, which is an alias to ID-based locator.
-  - `predicate=...`: predicate-based locator. Note that this is for iOS device only.
-  - `cc=...`: class chain-based locator. Note that this is for iOS device only.
-  - `name=...`: name-based locator, which is an alias to ID-based locator. Note that this is for iOS device only.
+- [`screenshot(file,locator)`](../commands/mobile/screenshot(file,locator)): now support "output-to-cloud" functionality,
+  which is toggled via the [`nexial.outputToCloud`](../systemvars/index.html#nexial.outputToCloud) System variable.
+  - improved stability and performance.
+- [`scroll(locator,direction)`](../commands/mobile/scroll(locator,direction)): added more fine-grained scroll increments
+  - fix code to properly scroll in all 4 directions.
 - [`select(locator,item)`](../commands/mobile/select(locator,item)): **NEW** command to select an item from a dropdown.
-- fix code to support both implicit and explicit wait strategy.
-- [`text=...`](../commands/mobile/index.html#locators): **NEW** locator type to simplify automation.
-- [`select(locator,item)`](../commands/mobile/select(locator,item)): code fix to accurately select items that are not 
-  immediately visible on-screen.
-- [`assertTextPresent(locator,text)`](../commands/mobile/assertTextPresent(locator,text)): scan across all matching 
-  elements (not just the 1st one) for text content assertion.
-- [`clickByDisplayText(text)`](../commands/mobile/clickByDisplayText(text)): improved implementation to handle text 
-  with single and/or double quotes.
-- [`nearby=...`](../commands/mobile/index.html#locators): **NEW** locator type to simplify the task of identifying 
-  elements that are adjacent to label or text element.
+  - code fix to accurately select items that are not immediately visible on-screen.
+- [`sendSms(phone,message)`](../commands/mobile/sendSms(phone,message)): **NEW** command to send SMS `message` to
+  specified `phone` number.
+- [`shake()`](../commands/mobile/shake()): **NEW** command to simulate shaking the current device (iOS only), which could
+  trigger other event.
+- [`shutdown(profile)`](../commands/mobile/shutdown(profile)): **NEW** command to shut down any running emulator and
+  Appium server instance.
+- [`type(locator,text)`](../commands/mobile/type(locator,text)): now supports clearing out text (if `text` is `(empty)`).
+  - fix code to allow time for the onscreen keyboard to render.
+  - improved stability and performance.
+- [`waitForElement(locator,waitMs)`](../commands/mobile/waitForElementPresent(locator,waitMs)): wait until the target 
+  element is found before continuing execution.
+- [`unlock()`](../commands/mobile/unlock()): **NEW** command to unlock current device. By default, no password is placed 
+  on emulator. For unlocking a device with passcode or pattern, visit 
+  [Appium Desired Capability](https://appium.io/docs/en/writing-running-appium/caps/#appium-desired-capabilities) and
+  search for `unlockType` and `unlockKey`.
+- Locator support:
+  - now supports a variety of locators via unique prefixes:
+    - `id=...`: ID-based locator.
+    - `xpath=...`: XPATH-based locator. Note that the `xpath=` prefix not required since XPATH locators are fairly easy to recognize
+    - `a11y=...`: accessbility id-based locator.
+    - `class=...`: class-based locator.
+    - `res=...`: resource id-based locator, which is an alias to ID-based locator.
+    - `predicate=...`: predicate-based locator. Note that this is for iOS device only.
+    - `cc=...`: class chain-based locator. Note that this is for iOS device only.
+    - `name=...`: name-based locator, which is an alias to ID-based locator. Note that this is for iOS device only.
+  - fix code to support both implicit and explicit wait strategy.
+  - [`text=...`](../commands/mobile/index.html#locators): **NEW** locator type to simplify automation.
+  - [`nearby=...`](../commands/mobile/index.html#locators): **NEW** locator type to simplify the task of identifying 
+    elements that are adjacent to label or text element.
 - automatically add [`scenarioRef`](../systemvars/index.html#nexial.scenarioRef) for the mobile device used in automation.
-- [`assertCount(locator,count)`](../commands/mobile/assertCount(locator,count)): **NEW** command to assert the occurrence of specified locator.
 
 
 ### [rdbms commands](../commands/rdbms)
