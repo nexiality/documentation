@@ -83,6 +83,7 @@ Click on one of the links below to learn about each command.
 - [`saveTextArray(var,locator)`](saveTextArray(var,locator))
 - [`screenshot(file,locator)`](screenshot(file,locator))
 - [`scroll(locator,direction)`](scroll(locator,direction))
+- [`scrollUntilFound(scrollTarget,direction,searchFor,maxWaitMs)`](scrollUntilFound(scrollTarget,direction,searchFor,maxWaitMs))
 - [`select(locator,item)`](select(locator,item))
 - [`sendSms(phone,message)`](sendSms(phone,message))
 - [`shake()`](shake())

@@ -34,6 +34,8 @@ comments: true
 
 
 ### [mobile commands](../commands/mobile)
+- [`scrollUntilFound(scrollTarget,direction,searchFor,maxWaitMs)`](../commands/mobile/scrollUntilFound(scrollTarget,direction,searchFor,maxWaitMs)):
+  **NEW** command to scroll until a specific element is present
 
 
 ### [rdbms commands](../commands/rdbms)
