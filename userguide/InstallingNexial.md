@@ -6,6 +6,9 @@ tags: installation install nexial userguide
 comments: true
 ---
 
+> **For a quick overview on Installing Nexial Automation, check out 
+> [Installing Nexial Automation The Easy Way](../videos/Install_Update_Nexial.md)**
+
 > Nexial requires Java 1.8.0_151 or above and Excel 2007/2010 or above. If you don't have Java installed on your system, 
 > follow the next section to do so.
 

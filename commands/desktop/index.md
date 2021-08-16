@@ -11,6 +11,9 @@ mouse events. It uses <a href="https://github.com/2gis/Winium" class="external-l
 the underlying automation engine. As such, Nexial currently does not support the automation of Java Swing applications
 or non-Windows applications.
 
+To see a quick demo on Desktop Automation and to see Nexial in Action, check out the 
+[Nexial Desktop Automation on Notepad](../../videos/Nexial_Desktop_Automation) video.
+
 If you are new to desktop automation via Nexial, please first familiarize yourself with the 
 [Basic Concept and Configuration](configureDesktopApplication).
 

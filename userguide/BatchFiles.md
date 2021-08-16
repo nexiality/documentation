@@ -159,7 +159,8 @@ where automation scripts are made available (e.g. via SCM), this is especially i
 ---------------------------------------------
 
 #### **nexial-desktop-xpath-update**
-This script updates the XPath(s) used for desktop automation (i.e. application.json). This script has following options:
+This script updates the XPath(s) used for desktop automation (i.e. application.json). This script has the following 
+options:
 
 |options  |explanation                                                                                      |
 |---------|-------------------------------------------------------------------------------------------------|
@@ -170,7 +171,7 @@ This script updates the XPath(s) used for desktop automation (i.e. application.j
 
 #### **nexial-project**
 This command is used to create new nexial-project. For example, the following will create a new project with the name 
-`projectName`. By default it will be created in `C:\projects\projectName` folder for Windows, or 
+`projectName`. By default, it will be created in `C:\projects\projectName` folder for Windows, or 
 `/Users/<user_id>/projects/projectName` for MacOSX/*NIX:
 
 `nexial-project.cmd projectName`
@@ -185,6 +186,8 @@ Command<br/>
 Project Created<br/>
 ![](image/BatchFiles_09.png)
 
+To see a quick demo on this batch file, check out the 
+[Create/Maintain your Nexial project artifacts](../videos/Nexial_Project) video.
 
 ---------------------------------------------
 

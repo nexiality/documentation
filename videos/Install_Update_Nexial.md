@@ -6,9 +6,11 @@ tags: commands userguide quickstart
 comments: true
 ---
 
-## [Install & Upgrade Nexial Automation The Easy Way!](https://www.youtube.com/watch?v=n_EBXE7sWJ4)
 <iframe width="820" height="555" src="https://www.youtube-nocookie.com/embed/n_EBXE7sWJ4" 
   frameborder="0" style="margin-bottom:20px" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+- [Watch it on Youtube](https://www.youtube.com/watch?v=n_EBXE7sWJ4)
+- The latest Java is version 16 (see below for download links)
+- The latest version of Nexial Installer is [v1.4.5](https://github.com/nexiality/nexial-installer/releases/tag/nexial-installer-v1.4.5)
 
 -----
 
@@ -17,24 +19,23 @@ comments: true
 ### Download Nexial Installer
 - [Nexial Installer](https://github.com/nexiality/nexial-installer#get-installer)
 
+
 ### Download JDK
-- [Oracle Java SE Development Kit 14 Downloads](https://www.oracle.com/java/technologies/javase-jdk14-downloads.html)
-- [JDK 1.4.0.2 General-Availability Release, GNU GPL v2](https://jdk.java.net/14/)
-- [Amazon Corretto 11 (OpenJDK)](https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/downloads-list.html)
-- [AdoptOpenJDK OpenJDK  v14](https://adoptopenjdk.net/?variant=openjdk14&jvmVariant=hotspot)
-
-### Additional Tools for Windows
-- [GNU Wget](https://eternallybored.org/misc/wget/)
-- [unzip](http://stahlworks.com/dev/index.php?tool=zipunzip)
+- [Oracle Java SE Development Kit 16 Downloads](https://www.oracle.com/java/technologies/javase-jdk16-downloads.html)
+- [OpenJava 16 Release, GNU GPL v2](https://jdk.java.net/16/)
+- [Amazon Corretto 16 (OpenJDK)](https://docs.aws.amazon.com/corretto/latest/corretto-16-ug/downloads-list.html)
+- [AdoptOpenJDK OpenJDK 16](https://adoptopenjdk.net/?variant=openjdk16&jvmVariant=hotspot)
 
 
-## Code Sample (suitable for CI/CD toolchain)
+### CI-friendly Code Sample
 
-### Shell script (*NIX/Mac) for installing/upgrading latest version of Nexial Automation
+#### Shell script sample to install/upgrade Nexial Automation
 
 ```
 #!/bin/sh
 
+NEXIAL_INSTALLER_HOME=~/projects/nexial-installer
+NEXIAL_INSTALLER_DISTRO=https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.5/nexial-installer-1.4.5.zip
 
 # download installer
 rm -f "$TMPDIR/nexial-installer.zip"
@@ -45,7 +46,6 @@ if [ ${build_ret} != 0 ]; then
   exit ${build_ret}
 fi
 
-
 # unzip installer
 rm -fR "$NEXIAL_INSTALLER_HOME"
 build_ret=$?
@@ -54,7 +54,6 @@ if [ ${build_ret} != 0 ]; then
   exit ${build_ret}
 fi
 
-
 mkdir -p "$NEXIAL_INSTALLER_HOME"
 unzip "$TMPDIR/nexial-installer.zip" -d "$NEXIAL_INSTALLER_HOME"
 build_ret=$?
@@ -62,7 +61,6 @@ if [ ${build_ret} != 0 ]; then
   echo "FAILED to unzip nexial installer to $NEXIAL_INSTALLER_HOME"
   exit ${build_ret}
 fi
-
 
 # install latest nexial
 cd "$NEXIAL_INSTALLER_HOME/bin" || exit 1
@@ -75,11 +73,17 @@ if [ ${build_ret} != 0 ]; then
 fi
 ```
 
-### Windows batch script for installing/upgrading latest version of Nexial Automation
+#### Additional Tools for Windows
+- [GNU Wget](https://eternallybored.org/misc/wget/)
+- [unzip](http://stahlworks.com/dev/index.php?tool=zipunzip)
+
+#### Windows batch script sample to install/upgrade Nexial Automation
 
 ```batch
 @echo off
 
+set NEXIAL_INSTALLER_HOME=C:\projects\nexial-installer
+set NEXIAL_INSTALLER_DISTRO=https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.5/nexial-installer-1.4.5.zip
 
 :download-installer
 	del /f /q %TEMP%\nexial-installer.zip
@@ -89,7 +93,6 @@ fi
 		echo Exiting...
 		exit /b 1
 	)
-
 
 :unzip-installer
 	rmdir /s /q %NEXIAL_INSTALLER_HOME%
@@ -106,7 +109,6 @@ fi
 		echo Exiting...
 		exit /b 1
 	)
-
 
 :install-latest
 	cd /d %NEXIAL_INSTALLER_HOME%\bin

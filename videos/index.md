@@ -6,10 +6,11 @@ tags: commands userguide quickstart
 comments: true
 ---
 
-## Nexial Automation Platform
-** Watch and Learn **
+## Watch and Learn!
 - [Nexial in Action](Nexial_in_Action)
 - [Installing Nexial Automation The Easy Way](Install_Update_Nexial)
+- [Create/Maintain your Nexial project artifacts](Nexial_Project)
+- [Nexial Desktop Automation](Nexial_Desktop_Automation)
 - [Launch External Program and Tailing](Launch_External_Program_and_Tailing)
 
 -----
