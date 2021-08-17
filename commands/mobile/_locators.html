@@ -149,14 +149,19 @@
             Quick Tip: Text locators are prefixed by <code>text=</code><br/>
             <br/>
             This is a Nexial-only addition to the world of locators. The central idea here is to simplify automation
-            by providing a simple way to reference an element that contains an unique string of text within the current
+            by providing a simple way to reference an element that contains a unique string of text within the current
             application screen. For example,
             <pre>text=Enter your first name here</pre>
             ... references an element that contains an attribute named <code>text</code> with the value of
             <code>Enter your first name here</code>.<br/>
             <br/>
-            In situations where one needs to automate a form on a mobile app, this type of locator might proved to be
-            most useful. It is both easy to use and to decipher.<br/>
+            In situations where one needs to automate a form on a mobile app, this type of locator might prove to be
+            most useful. It is both easy to use and to decipher. This form of locator also supports PolyMatcher, which
+            provides further expressiveness and flexibility. For example,
+            <pre>text=START:Welcome home</pre>
+            For more details on PolyMatcher, visit
+            <a href="assertTextPresent(locator,text)"><code>assertTextPresent(locator,text)</code></a> and click on
+            "PolyMatcher Enabled" link.<br/>
             <br/>
             Note that behind the scene, Nexial convert such locator to a XPATH-based locator.
         </div>
