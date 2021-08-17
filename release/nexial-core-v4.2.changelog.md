@@ -57,6 +57,7 @@ comments: true
 
 
 ### [webmail commands](../commands/webmail)
+- reduce dependency on web command and webdriver
 
 
 ### [ws commands](../commands/ws)
