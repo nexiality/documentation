@@ -48,6 +48,7 @@ comments: true
 
 
 ### [web commands](../commands/web)
+- update to latest geckodriver (firefox)
 
 
 ### [webmail commands](../commands/webmail)
