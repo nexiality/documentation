@@ -18,6 +18,7 @@
         <li><a href="#tab_cc" id="tab_title_cc">Class Chain</a></li>
         <li><a href="#tab_link" id="tab_title_link">Link Text</a></li>
         <li><a href="#tab_partialLinkText" id="tab_title_partialLinkText">Partial Link Text</a></li>
+        <li><a href="#tab_nearby" id="tab_title_nearby">NearBy</a></li>
         <li><a href="#tab_tag" id="tab_title_tag">Tag</a></li>
         <li><a href="#tab_class" id="tab_title_class">Style Class</a></li>
         <li><a href="#tab_css" id="tab_title_css">CSS</a></li>
@@ -240,6 +241,46 @@
             Note
             that this command supports PolyMatcher, a flexible way to qualify the click target via its text. See the
             command for more details.
+        </div>
+
+        <div id="tab_nearby" class="tab">
+            This is a specialized locator (<i>only in Nexial!</i>) aimed to simplify the task of creating a locator.
+            Instead of identifying an element via its attributes such as <code>content-desc</code>, <code>id</code> or
+            <code>accessibility id</code>, the <code>nearby</code> locator allows one to identify an element by its
+            surrounding. While this technique does not yield the same benefit in every scenario, it can be a great
+            time saver.<br/><br/>
+            Let's consider the following example,<br/>
+            <img src="image/locator_06.png"/><br/>
+            To identity the text box, we would need to inspect its attributes (typically via Appium Inspector). With
+            the <code>nearby</code> locator, we can simply specify it as: <code>nearby={below:Cellphone}</code><br/>
+            (reads: <i>Locate the element that is immediately below the element with text <code>Cellphone</code></i>)<br/>
+            <br/>
+            Here's another example,<br/>
+            <img src="image/locator_07.png"><br/>
+            To identify the "Male" radio button, we can specify the locator as <code>nearby={left-of:Male}</code>.<br/>
+            <br/>
+            Since these elements (in the examples above) do not have any visible text, one would need to construct a
+            suitable locator via other attributes via Appium Inspector (or equivalent). With this <code>nearby</code>
+            locator, we can simply use the "visible" surrounding of the element instead. In many cases, not only is such
+            locator much easier to construct, but they are also much more readable and maintainable.<br/>
+            <br/>
+            Here's the syntax of this <code>nearby</code> locator:<br/>
+            <pre>nearby={[relative-to]:[visible-text]},{attribute=value,attribute=value,...}</pre>
+            <ul>
+                <li>
+                    <code>[relative-to]</code>: one of these values: <code>left-of</code>, <code>right-of</code>,
+                    <code>above</code>, <code>below</code>
+                </li>
+                <li>
+                    <code>[visible-text]: the text that is visible, which is used to identify the target element</code>
+                </li>
+                <li>
+                    <code>{attribute=value,attribute=value,...}</code>: OPTIONAL. One can supply additional attributes
+                    of the target element to improve the locator precision. This is generally not needed. At times when
+                    there are many elements nearby the same text element, one may want to consider adding additional
+                    attributes to filter out the conflicting elements.
+                </li>
+            </ul>
         </div>
 
         <div id="tab_tag" class="tab">Not available in mobile automation.</div>

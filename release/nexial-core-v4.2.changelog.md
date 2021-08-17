@@ -35,7 +35,12 @@ comments: true
 
 ### [mobile commands](../commands/mobile)
 - [`scrollUntilFound(scrollTarget,direction,searchFor,maxWaitMs)`](../commands/mobile/scrollUntilFound(scrollTarget,direction,searchFor,maxWaitMs)):
-  **NEW** command to scroll until a specific element is present
+  **NEW** command to scroll until a specific element is present.
+- [`assertElementNotVisible(locator)`](../commands/mobile/assertElementNotVisible(locator)): **NEW** command to assert
+  that an element is either not present or not visible.
+- [`select(locator,item)`](../commands/mobile/select(locator,item)): performance and accuracy improvements.
+- [`text=`]: text locator now supports PolyMatcher (except for REGEX and NUMERIC)
+- [`nearby=`]: nearby locator now supports `above` and `below` as well
 
 
 ### [rdbms commands](../commands/rdbms)

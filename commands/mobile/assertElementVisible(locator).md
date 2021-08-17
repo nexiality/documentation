@@ -26,6 +26,7 @@ Otherwise, it is considered as FAIL.
 
 
 ### See Also
+- [`assertElementNotVisible(locator)`](assertElementNotVisible(locator))
 - [`assertElementPresent(locator)`](assertElementPresent(locator))
 - [`assertElementsPresent(prefix)`](assertElementsPresent(prefix))
 - [`assertTextPresent(locator,text)`](assertTextPresent(locator,text))
