@@ -26,7 +26,7 @@ This command can be useful when one desires to ensure that a certain element is 
 
 
 ### See Also
-- [`assertElementNotPresent(locator)`](assertElementNotPresent(locator))
+- [`assertElementNotPresent(locator,maxWaitMs)`](assertElementNotPresent(locator,maxWaitMs))
 - [`waitForElementPresent(locator)`](waitForElementPresent(locator))
 - [`waitForElementsPresent(locators)`](waitForElementsPresent(locators))
 - [`waitForPopUp(winId,waitMs)`](waitForPopUp(winId,waitMs))

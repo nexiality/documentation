@@ -20,7 +20,7 @@ button should remain disabled. When all the required fields are completed, the '
 
 
 ### See Also
-- [`assertElementEnabled(locator)`](assertElementEnabled(locator))
 - [`assertAttribute(locator,attrName,value)`](assertAttribute(locator,attrName,value))
-- [`assertElementNotPresent(locator)`](assertElementNotPresent(locator))
+- [`assertElementEnabled(locator)`](assertElementEnabled(locator))
+- [`assertElementNotPresent(locator,maxWaitMs)`](assertElementNotPresent(locator,maxWaitMs))
 - [`assertElementPresent(locator)`](assertElementPresent(locator))

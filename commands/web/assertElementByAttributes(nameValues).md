@@ -34,5 +34,5 @@ comments: true
 ### See Also
 
 - [`assertElementPresent(locator)`](assertElementPresent(locator))
-- [`assertElementNotPresent(locator)`](assertElementNotPresent(locator))
+- [`assertElementNotPresent(locator,maxWaitMs)`](assertElementNotPresent(locator,maxWaitMs))
 - [`assertElementCount(locator,count)`](assertElementCount(locator,count))

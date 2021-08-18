@@ -71,12 +71,12 @@ Nexial uses Selenium behind the scene. As such Selenium locators (XPath, id, CSS
 elements. In addition, one could use labels or HTML attributes with certain Nexial commands (Nexial derives the 
 appropriate locators behind the scene). Nexial allows one to reference a web element through many ways like 
 locator, label, attributes, text content, etc. Refer to the following commands for more information:
-- [waitForElementPresent(locator)](../commands/web/waitForElementPresent(locator))
-- [assertElementPresent(locator)](../commands/web/assertElementPresent(locator))
-- [assertElementNotPresent(locator)](../commands/web/assertElementNotPresent(locator))
-- [assertElementByAttributes(nameValues)](../commands/web/assertElementByAttributes(nameValues))
-- [assertLinkByLabel(label)](../commands/web/assertLinkByLabel(label))
-- [assertTextPresent(text)](../commands/web/assertTextPresent(text))
+- [`waitForElementPresent(locator)`](../commands/web/waitForElementPresent(locator))
+- [`assertElementPresent(locator)`](../commands/web/assertElementPresent(locator))
+- [`assertElementNotPresent(locator,maxWaitMs)`](../commands/web/assertElementNotPresent(locator,maxWaitMs))
+- [`assertElementByAttributes(nameValues)`](../commands/web/assertElementByAttributes(nameValues))
+- [`assertLinkByLabel(label)`](../commands/web/assertLinkByLabel(label))
+- [`assertTextPresent(text)`](../commands/web/assertTextPresent(text))
 
 By default, Nexial will query for the specified locator, attribute, label, etc. until the time as specified by 
 [`nexial.pollWaitMs`](../systemvars/index#nexial.pollWaitMs) has passed. The default value for `nexial.pollWaitMs` 

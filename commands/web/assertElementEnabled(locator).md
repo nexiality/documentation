@@ -19,5 +19,5 @@ This command is useful to ensure that a button or form input element is clickabl
 
 ### See Also
 - [`assertAttribute(locator,attrName,value)`](assertAttribute(locator,attrName,value))
-- [`assertElementNotPresent(locator)`](assertElementNotPresent(locator))
+- [`assertElementNotPresent(locator,maxWaitMs)`](assertElementNotPresent(locator,maxWaitMs))
 - [`assertElementPresent(locator)`](assertElementPresent(locator))
