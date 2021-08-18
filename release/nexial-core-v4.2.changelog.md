@@ -15,6 +15,9 @@ comments: true
 #### Fixes
 
 #### Improvements
+- allow priority overrides (specified via `-override`) to take effect prior to loading project artifacts. As such, 
+  these overrides can be specified via the `-override` command line argument. Previous requirement of using 
+  `JAVA_OPT=-D...` is still supported so no script/batch file changes are required.
 
 
 ### [Batch Files](../userguide/BatchFiles)
@@ -72,3 +75,4 @@ comments: true
 
 
 ### [ws commands](../commands/ws)
+- code fix to correctly treat text-based payload as such (instead of as binary stream)

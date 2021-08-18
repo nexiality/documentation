@@ -310,7 +310,7 @@ Here is the list of supported commands separated by their command type:
 - [`assertElementByAttributes(nameValues)`](../commands/web/assertElementByAttributes(nameValues))
 - [`assertElementByText(locator,text)`](../commands/web/assertElementByText(locator,text))
 - [`assertElementCount(locator,count)`](../commands/web/assertElementCount(locator,count))
-- [`assertElementNotPresent(locator)`](../commands/web/assertElementNotPresent(locator))
+- [`assertElementNotPresent(locator,maxWaitMs)`](../commands/web/assertElementNotPresent(locator,maxWaitMs))
 - [`assertElementPresent(locator)`](../commands/web/assertElementPresent(locator))
 - [`assertFocus(locator)`](../commands/web/assertFocus(locator))
 - [`assertFrameCount(count)`](../commands/web/assertFrameCount(count))
