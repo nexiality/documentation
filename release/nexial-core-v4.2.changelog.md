@@ -36,6 +36,7 @@ comments: true
 ### [mobile commands](../commands/mobile)
 - [`scrollUntilFound(scrollTarget,direction,searchFor,maxWaitMs)`](../commands/mobile/scrollUntilFound(scrollTarget,direction,searchFor,maxWaitMs)):
   **NEW** command to scroll until a specific element is present.
+  - fix scrolling issue that cause UI to hang at times.
 - [`assertElementNotVisible(locator)`](../commands/mobile/assertElementNotVisible(locator)): **NEW** command to assert
   that an element is either not present or not visible.
 - [`select(locator,item)`](../commands/mobile/select(locator,item)): performance and accuracy improvements.
@@ -50,6 +51,7 @@ comments: true
   presence and readiness (for interaction) of an element.
 - [`assertElementDisabled(locator)`](../commands/mobile/assertElementDisabled(locator)): **NEW** command to assert that
   an element is disabled for interaction.
+- [`select(locator,item)`](../commands/mobile/select(locator,item)): support PolyMatcher
 
 
 ### [rdbms commands](../commands/rdbms)
