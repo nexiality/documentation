@@ -60,7 +60,7 @@ WebEZ chrome extension is <a href="https://chrome.google.com/webstore/search/Nex
 available on Chrome Web Store</a>. Follow the link to download.
 
 For the latest (possibly not yet published on Google Web Store) version of Nexial WebEZ, follow these steps:
-1. Download [nexial-webez-v0.9.0.zip](./nexial-webez-v0.9.0.zip) and save it locally.
+1. Download [nexial-webez-v0.9.1.zip](./nexial-webez-v0.9.1.zip) and save it locally.
 2. Unzip the download zip to a local directory, say, `C:\temp\nexial\webez`
 3. Open a new tab on your Chrome browser to `chrome://extensions/`.
 4. Make sure the "Developer mode" (near top-right corner of the Extensions page) is turned on.
