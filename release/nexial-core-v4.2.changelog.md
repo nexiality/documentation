@@ -41,6 +41,15 @@ comments: true
 - [`select(locator,item)`](../commands/mobile/select(locator,item)): performance and accuracy improvements.
 - [`text=`]: text locator now supports PolyMatcher (except for REGEX and NUMERIC)
 - [`nearby=`]: nearby locator now supports `above` and `below` as well
+  - support PolyMatcher on attribute values as well as text
+  - support item priority via `{item:#}` where user can specify exactly the occurrence (of multiple matches) to use
+  - support "container" reference via `container:` and `scroll-container`
+- [`assertElementNotPresent(locator)`](../commands/mobile/assertElementNotPresent(locator)): **NEW** command to assert
+  the absence of element(s).
+- [`assertElementEnabled(locator)'](../commands/mobile/assertElementEnabled(locator)): **NEW** command to assert the
+  presence and readiness (for interaction) of an element.
+- [`assertElementDisabled(locator)`](../commands/mobile/assertElementDisabled(locator)): **NEW** command to assert that
+  an element is disabled for interaction.
 
 
 ### [rdbms commands](../commands/rdbms)
