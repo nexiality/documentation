@@ -48,19 +48,19 @@ Finding and interacting with elements</a>.
 
 ### Available Commands
 In almost all cases, one would start with the [`use(profile)`](use(profile)) command to establish connectivity between
-Nexial, Appium server and the target device. Without proper connectivity, none of these commands would run correctly. 
-When finished, use the [`closeApp()`](closeApp()) command to close down the application configured for a `profile`.
-One then can switch to another profile via the same [`use(profile)`](use(profile)) command -- potentially to connect to
-another device or another Appium server.
+Nexial, Appium server and the target device. Without proper connectivity, none of the "mobile" commands would run 
+correctly. When finished, use the [`closeApp()`](closeApp()) command or [`shutdown(profile)`](shutdown(profile)) to 
+close down the application configured for a `profile`. One then can switch to another profile via the 
+[`use(profile)`](use(profile)) command -- potentially to connect to another device or another Appium server.
 
 If Appium server is configured to start internally within Nexial, one can also terminate it via the 
 [`shutdown(profile)`](shutdown(profile)) command.
 
 Click on one of the links below to learn about each command.
-
+- [`assertAlertPresent(text)`](assertAlertPresent(text))
 - [`assertCount(locator,count)`](assertCount(locator,count))
 - [`assertElementDisabled(locator)`](assertElementDisabled(locator))
-- [`assertElementEnabled(locator)'](assertElementEnabled(locator))
+- [`assertElementEnabled(locator)`](assertElementEnabled(locator))
 - [`assertElementNotPresent(locator)`](assertElementNotPresent(locator))
 - [`assertElementNotVisible(locator)`](assertElementNotVisible(locator))
 - [`assertElementPresent(locator)`](assertElementPresent(locator))
@@ -69,6 +69,8 @@ Click on one of the links below to learn about each command.
 - [`assertLocked()`](assertLocked())
 - [`assertTextPresent(locator,text)`](assertTextPresent(locator,text))
 - [`back()`](back())
+- [`clearAlert(option)`](clearAlert(option))
+- [`clearNotification()`](clearNotification())
 - [`click(locator)`](click(locator))
 - [`clickByDisplayText(text)`](clickByDisplayText(text))
 - [`clickUntilNotFound(locator,waitMs,max)`](clickUntilNotFound(locator,waitMs,max))
@@ -81,6 +83,8 @@ Click on one of the links below to learn about each command.
 - [`longClick(locator,waitMs)`](longClick(locator,waitMs))
 - [`orientation(mode)`](orientation(mode))
 - [`recentApps`](recentApps())
+- [`saveAlertText(var)`](saveAlertText(var))
+- [`saveAttributes(var,locator,attribute)`](saveAttributes(var,locator,attribute))
 - [`saveCount(var,locator)`](saveCount(var,locator))
 - [`saveLockStatus(var)`](saveLockStatus(var))
 - [`saveText(var,locator)`](saveText(var,locator))

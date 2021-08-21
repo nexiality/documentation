@@ -54,7 +54,20 @@ comments: true
   presence and readiness (for interaction) of an element.
 - [`assertElementDisabled(locator)`](../commands/mobile/assertElementDisabled(locator)): **NEW** command to assert that
   an element is disabled for interaction.
-- [`select(locator,item)`](../commands/mobile/select(locator,item)): support PolyMatcher
+- [`select(locator,item)`](../commands/mobile/select(locator,item)): support PolyMatcher on `item`.
+- [`saveAttributes(var,locator,attribute)`](../commands/mobile/saveAttributes(var,locator,attribute)): *NEW* command to 
+  collect the attribute values from a list of elements matching `locator`.
+- [`assertAlertPresent(text)`](../commands/mobile/assertAlertPresent(text)): **NEW** command to alert that an alert 
+  dialog is present. iOS only.
+- [`clearAlert(option)`](../commands/mobile/clearAlert(option)): **NEW** command to clear/dismiss existing alert 
+  dialog. iOS only.
+- [`saveAlertText(var)`](../commands/mobile/saveAlertText(var)): **NEW** command to save the text content of an 
+  existing alert dialog. iOS only.
+- [`clearNotification()`](../commands/mobile/clearNotification()): **NEW** command to clear off all push notifications. 
+  Android only.
+- [`type(locator,text)`](../commands/mobile/type(locator,text)): code fix to clear off existing text before typing
+- code fix to handle `text=...` locator for iOS automation (automatically convert to using `label` attribute)
+- fixed path references in `bin/mobile/android-setup.sh`.
 
 
 ### [rdbms commands](../commands/rdbms)
@@ -76,3 +89,5 @@ comments: true
 
 ### [ws commands](../commands/ws)
 - code fix to correctly treat text-based payload as such (instead of as binary stream)
+- [`assertReturnCode(var,returnCode)`](../commands/ws/assertReturnCode(var,returnCode)): allows `returnCode` to be
+  expressed as a list or range.

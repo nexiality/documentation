@@ -1,0 +1,27 @@
+<div style="margin: 0 0 15px 15px; color: #773; background-color: rgba(220,220,220,0.35); padding: 10px;">
+    <h4><b>Regarding Alert Dialog</b></h4>
+    Typically, an alert dialog requires immediate attention. It will block (as a modal component) all user interactions
+    until it is dismissed. Hence, it is critical that we consider such condition as part of the automation. However,
+    it is possible to automatically dismiss (or accept) alert dialog during automation, instead of explicitly checking
+    for its presence and dismissing it. To do so, add the following configuration to the corresponding profile:<br/>
+    <br/>
+    <h5><b>Automatically accept alerts (iOS only)</b></h5>
+    <code>[profile].autoAcceptAlerts=true</code><br/>
+    Accept all iOS alerts automatically if they pop up. This includes privacy access permission alerts (e.g., location,
+    contacts, photos). Default is `false`.
+    <br/>
+    <br/>
+    <h5><b>Automatically dismiss alerts (iOS only)</b></h5>
+    <code>[profile].autoDismissAlerts=true</code><br/>
+    Dismiss all iOS alerts automatically if they pop up. This includes privacy access permission alerts (e.g., location,
+    contacts, photos). Default is `false`.
+    <br/>
+    <br/>
+    <h5><b>Android support</b></h5>
+    Unfortunately, alert dialog support on Android is still lacking due to underlying driver implementation. However,
+    for the alert dialog related to granting application permissions (during app installation), these alerts can be
+    eliminated via the <code>autoGrantPermissions</code> configuration. Note that another configuration -
+    <code>noReset</code> - must NOT be set to `true` in order for this to work. For example,<br/>
+    <code>[profile].autoGrantPermissions=true</code><br/>
+    <code>[profile].noReset=false</code><br/>
+</div>

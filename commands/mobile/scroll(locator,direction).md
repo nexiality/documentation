@@ -17,3 +17,4 @@ comments: true
 
 
 ### See Also
+- [`scrollUntilFound(scrollTarget,direction,searchFor,maxWaitMs)`](scrollUntilFound(scrollTarget,direction,searchFor,maxWaitMs))
