@@ -67,7 +67,9 @@ comments: true
   Android only.
 - [`type(locator,text)`](../commands/mobile/type(locator,text)): code fix to clear off existing text before typing
 - code fix to handle `text=...` locator for iOS automation (automatically convert to using `label` attribute)
-- fixed path references in `bin/mobile/android-setup.sh`.
+- [android setup]:
+  - fixed path references in `bin/mobile/android-setup.sh`.
+  - fixed shell script permission issues
 
 
 ### [rdbms commands](../commands/rdbms)
