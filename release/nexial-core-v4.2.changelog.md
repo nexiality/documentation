@@ -13,7 +13,8 @@ comments: true
 ### General
 
 #### Fixes
-
+- fixed `.commons.sh` for Linux environment where `JAVA_HOME` is not set
+ 
 #### Improvements
 - allow priority overrides (specified via `-override`) to take effect prior to loading project artifacts. As such, 
   these overrides can be specified via the `-override` command line argument. Previous requirement of using 
