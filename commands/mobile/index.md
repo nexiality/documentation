@@ -79,6 +79,7 @@ Click on one of the links below to learn about each command.
 - [`forward()`](forward())
 - [`hideKeyboard()`](hideKeyboard())
 - [`home()`](home())
+- [`launchApp(app)`](launchApp(app))
 - [`lock()`](lock())
 - [`longClick(locator,waitMs)`](longClick(locator,waitMs))
 - [`orientation(mode)`](orientation(mode))

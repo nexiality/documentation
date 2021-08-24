@@ -71,6 +71,7 @@ comments: true
 - [android setup]:
   - fixed path references in `bin/mobile/android-setup.sh`.
   - fixed shell script permission issues
+- [`launchApp(app)`](../commands/mobile/launchApp(app)): **NEW** command to launch (installed) app based on its bundle id.
 
 
 ### [rdbms commands](../commands/rdbms)
