@@ -27,6 +27,7 @@ evaluate if any of these matched element contains the specified `text`. If any o
 
 
 ### See Also
+- [`assertAttribute(locator,attribute,text)`](assertAttribute(locator,attribute,text))
 - [`assertElementPresent(locator)`](assertElementPresent(locator))
 - [`assertElementVisible(locator)`](assertElementVisible(locator))
 - [`assertElementsPresent(prefix)`](assertElementsPresent(prefix))

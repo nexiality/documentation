@@ -14,6 +14,7 @@ comments: true
 
 #### Fixes
 - fixed `.commons.sh` for Linux environment where `JAVA_HOME` is not set
+- better handling of logic to determine Java version and subsequently construct the appropriate `JAVA_OPT`
  
 #### Improvements
 - allow priority overrides (specified via `-override`) to take effect prior to loading project artifacts. As such, 
@@ -72,6 +73,13 @@ comments: true
   - fixed path references in `bin/mobile/android-setup.sh`.
   - fixed shell script permission issues
 - [`launchApp(app)`](../commands/mobile/launchApp(app)): **NEW** command to launch (installed) app based on its bundle id.
+- [`assertAttribute(locator,attribute,text)`](assertAttribute(locator,attribute,text)): **NEW** Command to assert 
+  attribute value for the first element that matched specified `locator`. PolyMatcher enabled.
+- [`clickByDisplayText(text)`](clickByDisplayText(text)): fixed for iOS device.
+- [`recentApps()`](recentApps()): fixed for iOS device.
+- [`launchApp(app)`](launchApp(app)): **NEW** command to launch or focus on an installed app based on `appId` or 
+  `bundleId`.
+
 
 
 ### [rdbms commands](../commands/rdbms)
