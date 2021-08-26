@@ -50,6 +50,7 @@ comments: true
   - support PolyMatcher on attribute values as well as text
   - support item priority via `{item:#}` where user can specify exactly the occurrence (of multiple matches) to use
   - support "container" reference via `container:` and `scroll-container`
+  - optimizing locator generation
 - [`assertElementNotPresent(locator)`](../commands/mobile/assertElementNotPresent(locator)): **NEW** command to assert
   the absence of element(s).
 - [`assertElementEnabled(locator)'](../commands/mobile/assertElementEnabled(locator)): **NEW** command to assert the
@@ -77,9 +78,11 @@ comments: true
   attribute value for the first element that matched specified `locator`. PolyMatcher enabled.
 - [`clickByDisplayText(text)`](clickByDisplayText(text)): fixed for iOS device.
 - [`recentApps()`](recentApps()): fixed for iOS device.
-- [`launchApp(app)`](launchApp(app)): **NEW** command to launch or focus on an installed app based on `appId` or 
-  `bundleId`.
-
+- [`launchApp(app)`](launchApp(app)): **NEW** command to launch or focus on an installed app based on `appId` or `bundleId`.
+- fixed executable reference in shell script:
+  - `restart-adb.sh`
+  - `run-android-emulator.sh`
+  - `show-android-devices.sh`
 
 
 ### [rdbms commands](../commands/rdbms)
@@ -93,6 +96,7 @@ comments: true
 
 ### [web commands](../commands/web)
 - update to latest geckodriver (firefox)
+- [`click(locator)`](../commands/web/click(locator)): ensure target element is visible before performing click
 
 
 ### [webmail commands](../commands/webmail)
