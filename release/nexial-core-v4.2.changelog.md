@@ -44,20 +44,27 @@ comments: true
   - fix scrolling issue that cause UI to hang at times.
 - [`assertElementNotVisible(locator)`](../commands/mobile/assertElementNotVisible(locator)): **NEW** command to assert
   that an element is either not present or not visible.
-- [`select(locator,item)`](../commands/mobile/select(locator,item)): performance and accuracy improvements.
-- [`text=`]: text locator now supports PolyMatcher (except for REGEX and NUMERIC)
+- [`select(locator,item)`](../commands/mobile/select(locator,item)): 
+  - performance and accuracy improvements.
+  - support PolyMatcher on `item`.
+  - supports iOS automation.
+  - support multi-dropdown components, such as Date Picker. Use pipe to separate values. For example, `Aug|26|2021`.
+- [`text=`]: 
+  - text locator now supports PolyMatcher (except for REGEX and NUMERIC)
+  - allows for text to contain leading and trailing spaces
 - [`nearby=`]: nearby locator now supports `above` and `below` as well
   - support PolyMatcher on attribute values as well as text
   - support item priority via `{item:#}` where user can specify exactly the occurrence (of multiple matches) to use
   - support "container" reference via `container:` and `scroll-container`
   - optimizing locator generation
+  - implemented iOS support.
+  - skip automation if the target `item` is already selected (optimization).
 - [`assertElementNotPresent(locator)`](../commands/mobile/assertElementNotPresent(locator)): **NEW** command to assert
   the absence of element(s).
 - [`assertElementEnabled(locator)'](../commands/mobile/assertElementEnabled(locator)): **NEW** command to assert the
   presence and readiness (for interaction) of an element.
 - [`assertElementDisabled(locator)`](../commands/mobile/assertElementDisabled(locator)): **NEW** command to assert that
   an element is disabled for interaction.
-- [`select(locator,item)`](../commands/mobile/select(locator,item)): support PolyMatcher on `item`.
 - [`saveAttributes(var,locator,attribute)`](../commands/mobile/saveAttributes(var,locator,attribute)): *NEW* command to 
   collect the attribute values from a list of elements matching `locator`.
 - [`assertAlertPresent(text)`](../commands/mobile/assertAlertPresent(text)): **NEW** command to alert that an alert 
@@ -68,7 +75,10 @@ comments: true
   existing alert dialog. iOS only.
 - [`clearNotification()`](../commands/mobile/clearNotification()): **NEW** command to clear off all push notifications. 
   Android only.
-- [`type(locator,text)`](../commands/mobile/type(locator,text)): code fix to clear off existing text before typing
+- [`type(locator,text)`](../commands/mobile/type(locator,text)): 
+  - code fix to clear off existing text before typing
+  - clear text via BACKSPACE if the target element contains only spaces, to improve iOS compatibility.
+  - skip automation if target element already contains `text` (optimization).
 - code fix to handle `text=...` locator for iOS automation (automatically convert to using `label` attribute)
 - [android setup]:
   - fixed path references in `bin/mobile/android-setup.sh`.
@@ -83,6 +93,7 @@ comments: true
   - `restart-adb.sh`
   - `run-android-emulator.sh`
   - `show-android-devices.sh`
+- locator support: allows for `text=` locator with leading or trailing spaces.
 
 
 ### [rdbms commands](../commands/rdbms)
