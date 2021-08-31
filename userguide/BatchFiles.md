@@ -215,7 +215,7 @@ to configure TMS tool. This command will also update already existing test cases
 |options        |explanation  |
 |---------------|-------------|
 |**`-plan`**    | This option is for importing plan test cases to TMS tool. This will require full path of plan. <br/>This is required if `-script` is missing.|
-|**`-subplans`**| This option is for importing specific worksheets(subplan) of plan. This will require only one worksheet This is required if `-plan` is provided.|
+|**`-subplans`**| This option is for importing specific worksheets (subplan) of plan. This will require only one worksheet This is required if `-plan` is provided.|
 |**`-script`**  | This option is for importing script test cases to TMS tool. This will require full path of script.<br/>This is required if `-plan` is missing.|
 |**`-b`**       | This will follow `BDDKeyword` formatting while importing testcase.|
 |**`-c`**       | This will close previous test runs for this script before importing testcases.|

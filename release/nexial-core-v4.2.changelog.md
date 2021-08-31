@@ -35,6 +35,26 @@ comments: true
 ### [desktop commands](../commands/desktop)
 
 
+### [javaui commands](../commands/javaui)
+- First draft release of the **NEW** `javaui` commands. These commands are designed to support automation for Java 
+  desktop application - Swing, SWT, RCP for now. Future release aim to support GEF and JavaFX. Underlying automation
+  capability is based on jubula.
+- Currently implemented commands:
+  - [`startLocalAgent(port)`](../commands/javaui/startLocalAgent(port))
+  - [`stopLocalAgent(port)`](../commands/javaui/stopLocalAgent(port))
+  - [`startApp(profile)`](../commands/javaui/startApp(profile))
+  - [`stopApp(profile)`](../commands/javaui/stopApp(profile))
+  - [`clickMenu(menus)`](../commands/javaui/clickMenu(menus))
+  - [`waitForWindowTitle(title)`](../commands/javaui/waitForWindowTitle(title))
+  - [`assertText(name,text)`](../commands/javaui/assertText(name,text))
+  - [`assertEditable(name)`](../commands/javaui/assertEditable(name))
+  - [`assertPresence(name)`](../commands/javaui/assertPresence(name))
+  - [`assertEnabled(name)`](../commands/javaui/assertEnabled(name))
+  - [`assertDisabled(name)`](../commands/javaui/assertDisabled(name))
+  - [`typeText(name,text)`](../commands/javaui/typeText(name,text))
+  - [`clickButton(name)`](../commands/javaui/clickButton(name))
+ 
+
 ### [macro commands](../commands/macro)
 
 
