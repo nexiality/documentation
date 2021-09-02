@@ -32,6 +32,10 @@ comments: true
 ### [Expressions](../expressions)
 
 
+### [external commands](../commands/external)
+- fixed runtime error when running external program without environment variable
+
+
 ### [desktop commands](../commands/desktop)
 
 
@@ -53,6 +57,8 @@ comments: true
   - [`assertDisabled(name)`](../commands/javaui/assertDisabled(name))
   - [`typeText(name,text)`](../commands/javaui/typeText(name,text))
   - [`clickButton(name)`](../commands/javaui/clickButton(name))
+- [`nexial-javaui-mapping`](../userguide/BatchFiles#nexial-javaui-mapping): batch file to start company mapping for 
+  target Java application.
  
 
 ### [macro commands](../commands/macro)
