@@ -8,73 +8,86 @@ comments: true
 
 
 ### Description
-This command instructs Nexial to launch or activate an app on the current device. The `app` parameter would be either
-the `bundleId` for iOS platform or the `appId` for Android platform. The target app should be installed on the device 
-prior to the invocation of this command. If the target app is already running in the background, this command will 
-bring it to the foreground. 
+This command instructs Nexial to launch or activate an app on the current device. Using this command, one can launch 
+both custom apps, common apps and System apps. The `app` parameter would be either the `bundleId` for iOS platform or 
+the `appId` for Android platform. The target app should be installed on the device prior to the invocation of this 
+command. If the target app is already running in the background, this command will bring it to the foreground. 
 
-Using this command, one can launch both custom apps, common apps and System apps. Here are some common ones to try:
+### For Android platform
+To find the `appId` for an Android apps, one may use either Nexial's `nexial-apk-manifest` utility script or Google 
+Play Store.
 
-##### common Android `appId`
+#### Use nexial-apk-manifest.cmd|sh
+{% include_relative _nexial-apk-manifest.html %}
+
+#### Via Google Play Store or Specialized Android app
+Follow the steps documented here:
+<a href="https://www.techmesto.com/find-android-app-package-name/" class="external-link" target="_nexial_link">Find 
+  package name or application ID of an Android app</a> 
+
+#### Common Android `appId`
+Here are some common Android apps to try:
 - Calculator: `com.android.calculator2`
 - Youtube: `com.google.android.youtube`
 
-Wanna find `appId` for other apps? Try 
-<a href="https://www.techmesto.com/find-android-app-package-name/" class="external-link" target="_nexial_link">this</a>
+### For iOS platform
+{% include_relative _ios_bundleid.md %}
 
+As a convenience, here are a list of common iOS apps and their respective `bundleId`:
 
-##### common iOS `bundleId`
-- Home Screen/Application Launcher: `com.apple.springboard`
+| app                               | `bundleId`                                |
+|+---------------------------------+|+-----------------------------------------+|
+| Home Screen/Application Launcher  | `com.apple.springboard`                   |
+| AirPort Utility                   | `com.apple.airport.mobileairportutility`  |
+| App Store                         | `com.apple.AppStore`                      |
+| Apple Maps                        | `com.apple.Maps`                          |
+| Calculator                        | `com.apple.calculator`                    |
+| Calendar                          | `com.apple.mobilecal`                     |
+| Camera                            | `com.apple.camera`                        |
+| Clock                             | `com.apple.mobiletimer`                   |
+| Compass                           | `com.apple.compass`                       |
+| Contacts                          | `com.apple.MobileAddressBook`             |
+| FaceTime                          | `com.apple.facetime`                      |
+| Find Friends                      | `com.apple.mobileme.fmf1`                 |
+| Find iPhone                       | `com.apple.mobileme.fmip1`                |
+| Game Center                       | `com.apple.gamecenter`                    |
+| GarageBand                        | `com.apple.mobilegarageband`              |
+| Health                            | `com.apple.Health`                        |
+| Keynote                           | `com.apple.Keynote`                       |
+| Mail                              | `com.apple.mobilemail`                    |
+| Maps                              | `com.apple.Maps`                          |
+| Messages                          | `com.apple.MobileSMS`                     |
+| Music Memos                       | `com.apple.musicmemos`                    |
+| Music                             | `com.apple.Music`                         |
+| News                              | `com.apple.news`                          |
+| Notes                             | `com.apple.mobilenotes`                   |
+| Passbook                          | `com.apple.Passbook`                      |
+| Phone                             | `com.apple.mobilephone`                   |
+| Photos                            | `com.apple.mobileslideshow`               |
+| Podcasts                          | `com.apple.podcasts`                      |
+| Reminders                         | `com.apple.reminders`                     |
+| Safari                            | `com.apple.mobilesafari`                  |
+| Settings                          | `com.apple.Preferences`                   |
+| Stocks                            | `com.apple.stocks`                        |
+| Tips                              | `com.apple.tips`                          |
+| Videos                            | `com.apple.videos`                        |
+| Voice Memos                       | `com.apple.VoiceMemos`                    |
+| Wallet                            | `com.apple.Passbook`                      |
+| Watch                             | `com.apple.Bridge`                        |
+| Weather                           | `com.apple.weather`                       |
+| iBooks                            | `com.apple.iBooks`                        |
+| iMovie                            | `com.apple.iMovie`                        |
+| iTunes Store                      | `com.apple.MobileStore`                   |
+| iTunes U                          | `com.apple.itunesu`                       |
+|+---------------------------------+|+-----------------------------------------+|
 
-- AirPort Utility: `com.apple.airport.mobileairportutility`
-- App Store: `com.apple.AppStore `
-- Apple Maps:  `com.apple.Maps`
-- Calculator: `com.apple.calculator`
-- Calendar: `com.apple.mobilecal`
-- Camera: `com.apple.camera`
-- Clock: `com.apple.mobiletimer`
-- Compass: `com.apple.compass`
-- Contacts: `com.apple.MobileAddressBook`
-- FaceTime: `com.apple.facetime`
-- Find Friends: `com.apple.mobileme.fmf1`
-- Find iPhone: `com.apple.mobileme.fmip1`
-- Game Center: `com.apple.gamecenter`
-- GarageBand: `com.apple.mobilegarageband`
-- Health: `com.apple.Health`
-- Keynote: `com.apple.Keynote`
-- Mail: `com.apple.mobilemail`
-- Maps: `com.apple.Maps`
-- Messages: `com.apple.MobileSMS`
-- Music Memos: `com.apple.musicmemos`
-- Music: `com.apple.Music`
-- News: `com.apple.news`
-- Notes: `com.apple.mobilenotes`
-- Passbook: `com.apple.Passbook`
-- Phone: `com.apple.mobilephone`
-- Photos: `com.apple.mobileslideshow`
-- Podcasts: `com.apple.podcasts`
-- Reminders: `com.apple.reminders`
-- Safari: `com.apple.mobilesafari`
-- Settings: `com.apple.Preferences`
-- Stocks: `com.apple.stocks`
-- Tips: `com.apple.tips`
-- Videos: `com.apple.videos`
-- Voice Memos: `com.apple.VoiceMemos`
-- Wallet: `com.apple.Passbook`
-- Watch: `com.apple.Bridge`
-- Weather: `com.apple.weather`
-- iBooks: `com.apple.iBooks`
-- iMovie: `com.apple.iMovie`
-- iTunes Store: `com.apple.MobileStore`
-- iTunes U: `com.apple.itunesu`
-
-
+<br/>
 ### Parameters
 - **app** - The `appID` (Android) or `bundleId` (iOS) of the target app.
 
 
 ### Example
-`mobile` | `launchApp(app)` | `com.apple.Preferences`
+![](image/launchApp_05.png)
 
 
 ### See Also

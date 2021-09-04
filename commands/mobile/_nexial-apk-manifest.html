@@ -1,0 +1,29 @@
+<div class="collapsible-teaser" onclick="toggleContent('nexial-apk-manifest')" title="click to read more about nexial-apk-manifest">
+    <code>nexial-apk-manifest.cmd|sh</code>
+</div>
+
+<div class="collapsible-content nexial-apk-manifest">
+    <h4><b>nexial-apk-manifest.cmd|sh</b></h4>
+    <p>
+    Nexial comes with a utility to assist in finding the <code>appId</code> (or <code>appPackage</code>) and
+    <code>appActivity</code> via the corresponding <code>.apk</code> file (Android app). With this utility, one can
+    find the <code>appId</code> for the <a href="launchApp(app)">mobile &raquo; <code>launchApp(app)</code></a>
+    command, as well as the <code>appPackage</code> and <code>appActivity</code> for setting up a
+    <a href="index#profile">mobile profile</a>. Here's how to run the <code>nexial-apk-manifest</code> utility:<br/>
+    <br/>
+    On <b>Windows</b>:
+    <pre>cd %NEXIAL_HOME%
+cd bin\mobile
+nexial-apk-manifest.cmd -a [FULLY_QUALIFIED_PATH_TO_YOUR_APK_FILE]</pre>
+
+    On <b>Linux/MacOS</b>:
+    <pre>cd $NEXIAL_HOME
+cd bin/mobile
+./nexial-apk-manifest.sh -a [FULLY_QUALIFIED_PATH_TO_YOUR_APK_FILE]</pre>
+
+    Here's an example output of this utility:<br/>
+    <img src="image/nexial-apk-manifest_01.png"/><br/>
+
+    Note that usually `appId` is the same as <code>appPackage</code>.
+    </p>
+</div>

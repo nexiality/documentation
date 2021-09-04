@@ -59,7 +59,7 @@ comments: true
   - [`clickButton(name)`](../commands/javaui/clickButton(name))
 - [`nexial-javaui-mapping`](../userguide/BatchFiles#nexial-javaui-mapping): batch file to start company mapping for 
   target Java application.
- 
+
 
 ### [macro commands](../commands/macro)
 
@@ -120,6 +120,8 @@ comments: true
   - `run-android-emulator.sh`
   - `show-android-devices.sh`
 - locator support: allows for `text=` locator with leading or trailing spaces.
+- [`nexial-apk-manifest`](../commands/mobile/mobile_device_profile#approach-1-use-nexials-nexial-apk-manifest-utility-script): 
+  utility script to manifest `appId`, `appPackage` and `appActivity` of an Android app (`apk`).
 
 
 ### [rdbms commands](../commands/rdbms)

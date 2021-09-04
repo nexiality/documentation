@@ -61,7 +61,7 @@ on your system.
   - Note that on Windows, if you choose to install Appium Desktop so that it is available for all users (of the same 
     system), then local admin access is required. As such the installation directory is likely 
     `C:\Program Files\Appium`. If you choose to install Appium Desktop only for yourself, then the installation 
-    directory will likely be `C:\Users\<user_id>\AppData\Local\Programs\Appium`.
+    directory will likely be `C:\Users\<user_id>\AppData\Local\Programs\Appium`.<br/>
     ![](image/install_appium_02.png)
   - On MacOS, it is recommended to install Appium Desktop under `/Applications/Appium.app`.
 - Set up an environment variable **`APPIUM_BINARY_PATH`** based on the installation location of Appium Desktop. The
