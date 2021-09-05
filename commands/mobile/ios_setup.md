@@ -27,15 +27,16 @@ Note that most of the information below derived from other websites, particularl
 ### Pre-requisites 
 - macOS 10.11 or higher (latest recommended)
 - iOS device with iOS 9.3 or higher (latest recommended)
-- Enough storage to install XCode, NodeJS and a series of free software (below). Approximately 
+- Enough storage to install Xcode, NodeJS and a series of free software (below). Approximately 
   <a href="https://georgik.rocks/how-to-install-xcode-12-with-small-available-disk-space/">40 GB</a>.
 
 
 ### Installing Required Software
 
-#### Install Latest XCode
-1. Install the latest XCode from <a href="https://apps.apple.com/us/app/xcode/id497799835?mt=12" class="external-link" target="_nexial_link">Mac App Store</a>
-2. Install XCode command line tools
+#### Install Latest Xcode
+1. Install the latest Xcode from <a href="https://apps.apple.com/us/app/xcode/id497799835?mt=12" class="external-link" target="_nexial_link">Mac App Store</a>
+   - Read about why <a href="https://stackoverflow.com/questions/33942916/does-appium-need-xcode-for-run-automated-testing-on-ios-device"  class="external-link" target="_nexial_link">Xcode is needed to automation iOS devices</a>
+2. Install Xcode command line tools
 ```
 xcode-select --install
 sudo xcode-select -r

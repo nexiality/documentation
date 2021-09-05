@@ -23,7 +23,7 @@ the communication and data transport between your scripts and the target devices
 In order to perform mobile automation, here are the steps to follow:
 1. [Install and Configure Appium](install_appium)
 2. [Install Android SDK and Emulators](android_setup) - if you are targeting Android devices
-3. [Install XCode and iOS Emulators](ios_setup) - if you are targeting iOS devices
+3. [Install Xcode and iOS Emulators](ios_setup) - if you are targeting iOS devices
 4. [Configure Mobile Device Profile](mobile_device_profile)
 5. [Scripting with Emulator](script_with_emulator)
 6. [Run your Mobile Automation on BrowserStack] - if you are planning to run your test via BrowserStack **_COMING SOON!_**

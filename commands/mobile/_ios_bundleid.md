@@ -9,4 +9,4 @@ cd bin/mobile
 Here's an example output:
 ![](image/launchApp_04.png)
 
-Note that since iOS automation is only supported on MacOS (requires XCode), this script will work only on MacOS as well. 
+Note that since iOS automation is only supported on MacOS (requires Xcode), this script will work only on MacOS as well. 
