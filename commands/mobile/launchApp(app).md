@@ -27,8 +27,28 @@ Follow the steps documented here:
 
 #### Common Android `appId`
 Here are some common Android apps to try:
-- Calculator: `com.android.calculator2`
-- Youtube: `com.google.android.youtube`
+| app                               | `appId`                                   |
+|+---------------------------------+|+-----------------------------------------+|
+| Android Live Wallpapers	          | `com.android.wallpaper`                   |
+| Calculator                        | `com.android.calculator2`                 |
+| Calendar	                        | `com.android.calendar`                    |
+| Contacts	                        | `com.android.contacts`                    |
+| Dialer	                          | `com.android.phone`                       |
+| Email	                            | `com.android.email`                       |
+| Gmail	                            | `com.google.android.gm`                   |
+| Google Search	                    | `com.google.android.googlequicksearchbox` |
+| Messaging	                        | `com.android.mms`                         |
+| Music	                            | `com.android.music`                       |
+| Network Location	                | `com.google.android.location`             |
+| News & Weather	                  | `com.google.android.apps.genie.geniewidget`|
+| Settings	                        | `com.android.settings`                    |
+| Speech Recorder	                  | `com.android.speechrecorder`              |
+| Status Bar	                      | `com.android.systemui`                    |
+| Street View	                      | `com.google.android.street`               |
+| Talk	                            | `com.google.android.talk`                 |
+| Task	                            | `com.android.task`                        |
+| Youtube                           | `com.google.android.youtube`              |
+|+---------------------------------+|+-----------------------------------------+|
 
 ### For iOS platform
 {% include_relative _ios_bundleid.md %}

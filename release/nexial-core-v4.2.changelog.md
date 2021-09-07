@@ -122,6 +122,13 @@ comments: true
 - locator support: allows for `text=` locator with leading or trailing spaces.
 - [`nexial-apk-manifest`](../commands/mobile/mobile_device_profile#approach-1-use-nexials-nexial-apk-manifest-utility-script): 
   utility script to manifest `appId`, `appPackage` and `appActivity` of an Android app (`apk`).
+- [`select(locator,item)`](../commands/mobile/select(locator,item)): select a dropdown item based on index; prefix 
+  with `index:`.
+- [`use(profile)`](../commands/mobile/use(profile)): automatically relaunched the app that was previously closed via 
+  the [`closeApp`] command.
+- [`closeApp`](../commands/mobile/closeApp()): for Android platform, this command also reset the app since underlying 
+  driver is not _really_ shutting down the app.
+- minor optimization on the `nearby` locator generation.
 
 
 ### [rdbms commands](../commands/rdbms)
