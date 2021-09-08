@@ -112,6 +112,7 @@ generate actionable visualization:<br/>
 
 ### Available Commands
 - [`assertReturnCode(var,returnCode)`](assertReturnCode(var,returnCode))
+- [`clearHeaders(headers)`](clearHeaders(headers))
 - [`delete(url,body,var)`](delete(url,body,var))
 - [`download(url,queryString,saveTo)`](download(url,queryString,saveTo))
 - [`get(url,queryString,var)`](get(url,queryString,var))
