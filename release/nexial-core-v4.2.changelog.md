@@ -129,7 +129,7 @@ comments: true
 - [`closeApp`](../commands/mobile/closeApp()): for Android platform, this command also reset the app since underlying 
   driver is not _really_ shutting down the app.
 - minor optimization on the `nearby` locator generation.
-
+- [`bin/mobile/run-appium-server`]: helper script to start appium server locally.
 
 ### [rdbms commands](../commands/rdbms)
 
