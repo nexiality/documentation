@@ -55,6 +55,7 @@ redirect_from:
 - [Fixing chromedriver "DevToolsActivePort" error](ChromeDevToolError)
 - [Forcefully update or omit webdriver updates](HOWTOForcefullyUpdateWebDriver)
 - [How to check edge browser version](HOWTOCheckEdgeVersion)
+- [How to validate canvas-based chart data](ValidateChartData)
 
 
 #### External Services
