@@ -8,8 +8,8 @@ comments: true
 
 
 ### Description
-This command is used to clear the http request headers which were set previously. The `headers` value passed to this command
-can be the `ALL`(representing all the headers set so far) or a comma separated list of headers to be cleared.
+This command is used to clear the http request headers which were set previously. The value passed to this command
+can be `ALL`(representing all the headers set so far) or a comma separated list of headers to be cleared.
 
 ### Parameters
 - **headers** - the value can be `ALL` or comma separated list of headers.
