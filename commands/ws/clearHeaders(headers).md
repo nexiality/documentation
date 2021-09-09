@@ -14,7 +14,7 @@ This command is used to clear the HTTP request headers which were set previously
 
 
 ### Parameters
-- **headers** - `ALL` or a list of HTTP headers separated by [`nexial.textDelim`](../../systemvars/index.html#nexial.textDelim.
+- **headers** - `ALL` or a list of HTTP headers separated by [`nexial.textDelim`](../../systemvars/index.html#nexial.textDelim).
 
 
 ### Example
