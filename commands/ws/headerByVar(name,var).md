@@ -25,4 +25,5 @@ This command is used to add the header value to web service request by calling v
 
 
 ### See Also
+- [`clearHeaders(headers)`](clearHeaders(headers))
 - [`header(name,value)`](header(name,value))

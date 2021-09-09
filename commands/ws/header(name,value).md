@@ -27,5 +27,6 @@ For more information about HTTP Headers:
 
 
 ### See Also
+- [`clearHeaders(headers)`](clearHeaders(headers))
 - [`delete(url,body,var)`](delete(url,body,var))
 - [`put(url,body,var)`](put(url,body,var))

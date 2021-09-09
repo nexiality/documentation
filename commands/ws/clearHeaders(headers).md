@@ -8,11 +8,13 @@ comments: true
 
 
 ### Description
-This command is used to clear the http request headers which were set previously. The value passed to this command
-can be `ALL`(representing all the headers set so far) or a comma separated list of headers to be cleared.
+This command is used to clear the HTTP request headers which were set previously. The `headers` parameter can either be 
+`ALL` (meaning [all the HTTP headers set](header(name,value)) so far) or a list of headers (separated by 
+[`nexial.textDelim`](../../systemvars/index.html#nexial.textDelim)) to be cleared.
+
 
 ### Parameters
-- **headers** - the value can be `ALL` or comma separated list of headers.
+- **headers** - `ALL` or a list of HTTP headers separated by [`nexial.textDelim`](../../systemvars/index.html#nexial.textDelim.
 
 
 ### Example
