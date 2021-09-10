@@ -70,6 +70,7 @@ PHONE.appium\:maxInstances=1
 [comment]: <> (# waitForQuiescence)
 [comment]: <> (# enable useNewWDA / ioS ClassChain)
 
+-----
 
 ### Finding UDID
 There are multiple ways to finding UDID of your target devices, emulators or simulators.
@@ -99,6 +100,7 @@ The highlighted portion is the UDID for the connected device/emulator.
 #### For iOS devices
 {% include_relative _ios_udid.md %}
 
+-----
 
 ### Finding `appId`, `appPackage`, `appActivity` or `bundleId` (iOS)
 #### Approach 1: Use Nexial's `nexial-apk-manifest` utility script

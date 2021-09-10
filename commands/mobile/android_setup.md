@@ -21,22 +21,23 @@ with Nexial.
 
 
 ### Usage
+
 1. Open command console or terminal.
-2. Navigate to the `bin/mobile` directory under `$NEXIAL_HOME`
-3. Executing this batch file without any option would render a basic help screen indicating the missing parameters:<br/>
+2. Navigate to the `bin/mobile` directory under `$NEXIAL_HOME`.
+3. Executing this batch file without any option would render a basic help screen indicating the missing parameters.
    ![](image/android-setup-01.png)
-4. Run `android-setup.cmd` (Windows) or `./android-setup.sh` by specifying your target project:
+4. Run `android-setup.cmd` (Windows) or `./android-setup.sh` by specifying your target project.<br/>
 
-	| System  | Example                                         |
-	|+-------+|+------------------------------------------------|
-	| Windows | `android-setup.cmd -v -t C:\projects\MyProject` |
-	| MacOS   | `./android-setup.sh -v -t ~/projects/MyProject` |
-	|+-------+|+------------------------------------------------|
+   | System  | Example                                      |
+   |+-------+|+---------------------------------------------|
+   | Windows | `android-setup.cmd -t C:\projects\MyProject` |
+   | MacOS   | `./android-setup.sh -t ~/projects/MyProject` |
+   |+-------+|+---------------------------------------------|
 
-	<br/>Optionally `-v` for log verbosity, like this:<br/>
-	```
-	android-setup.cmd -v -t C:\projects\MyProject
-	```
+   <br/>Optionally `-v` for log verbosity, like this:<br/>
+   ```
+	 android-setup.cmd -v -t C:\projects\MyProject
+	 ```
 
 Below shows the various stages of the installation process.
 
@@ -101,3 +102,49 @@ Android SDK in a different location, please set up the following environment var
 ANDROID_HOME=<the location of Android SDK>
 ANDROID_SDK_ROOT=<the location of Android SDK>
 ```
+
+
+### Running Emulator
+Based on the installation process (Stage 8, above), you may have 1 or more batch files (or shell scripts) created
+under the `artifact/bin` directory under your project. Each of these batch files are prefixed with 
+`run-android-emulator-`. Simply double-click on one of these batch files, or run it from the console, will start
+the emulator. Note that the initial launch of an emulator might take a little longer.
+
+Example (on Windows):
+```
+cd /d C:\projects\MyProject
+cd artifact\bin
+run-android-emulator-Galaxy_S21.cmd
+```
+
+Example (on MacOS):
+```
+cd ~/projects/MyProject
+cd artifact/bin
+./run-android-emulator-Galaxy_S21.sh
+```
+
+
+### Updating Android SDK
+From time to time, the Android SDK is updated by the Google Android development team. As a result, your Android SDK
+might become outdated after some time. If you see a similar message on your console after launching an emulator:
+
+![](image/sdk_outdate_01.png)
+
+... then, it's time to update your Android SDK.
+
+On **Window**:
+```
+cd %NEXIAL_HOME%\bin\mobile
+update-android-sdk.cmd
+```
+
+On **Linux/MacOS**:
+```
+cd $NEXIAL_HOME/bin/mobile
+./update-android-sdk.sh
+```
+
+This script will update the installed Android SDK, which will in turn update the OS image file for your emulators. Be
+sure that all emulators are terminated before running the `update-android-sdk` script.
+
