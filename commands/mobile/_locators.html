@@ -18,7 +18,7 @@
         <li><a href="#tab_cc" id="tab_title_cc">Class Chain</a></li>
         <li><a href="#tab_link" id="tab_title_link">Link Text</a></li>
         <li><a href="#tab_partialLinkText" id="tab_title_partialLinkText">Partial Link Text</a></li>
-        <li><a href="#tab_nearby" id="tab_title_nearby">NearBy</a></li>
+        <li><a href="#tab_nearby" id="tab_title_nearby">Nearby</a></li>
         <li><a href="#tab_tag" id="tab_title_tag">Tag</a></li>
         <li><a href="#tab_class" id="tab_title_class">Style Class</a></li>
         <li><a href="#tab_css" id="tab_title_css">CSS</a></li>
@@ -249,7 +249,7 @@
         </div>
 
         <div id="tab_nearby" class="tab">
-            This is a specialized locator (<i>only in Nexial!</i>) aimed to simplify the task of creating a locator.
+            This is a specialized locator (<em>only in Nexial!</em>) aimed to simplify the task of creating a locator.
             Instead of identifying an element via its attributes such as <code>content-desc</code>, <code>id</code> or
             <code>accessibility id</code>, the <code>nearby</code> locator allows one to identify an element by its
             surrounding. While this technique does not yield the same benefit in every scenario, it can be a great
@@ -257,35 +257,43 @@
             Let's consider the following example,<br/>
             <img src="image/locator_06.png"/><br/>
             To identity the text box, we would need to inspect its attributes (typically via Appium Inspector). With
-            the <code>nearby</code> locator, we can simply specify it as: <code>nearby={below:Cellphone}</code><br/>
-            (reads: <i>Locate the element that is immediately below the element with text <code>Cellphone</code></i>)<br/>
+            the <code>nearby</code> locator, we can simply specify it as: <code>nearby={below:Cellphone}</code> (reads:
+            <em>Locate the element that is immediately below the element with text <code>Cellphone</code></em>)<br/>
             <br/>
             Here's another example,<br/>
             <img src="image/locator_07.png"><br/>
-            To identify the "Male" radio button, we can specify the locator as <code>nearby={left-of:Male}</code>.<br/>
+            The <code>nearby</code> locator to identify the "Male" radio button would be <code>nearby={left-of:Male}</code>.<br/>
             <br/>
-            Since these elements (in the examples above) do not have any visible text, one would need to construct a
-            suitable locator via other attributes via Appium Inspector (or equivalent). With this <code>nearby</code>
-            locator, we can simply use the "visible" surrounding of the element instead. In many cases, not only is such
-            locator much easier to construct, but they are also much more readable and maintainable.<br/>
+            Since these elements in the examples above do not have any visible text, one would need to construct a
+            suitable locator using other attributes - like with the help of Appium Inspector (or equivalent). With
+            the <code>nearby</code> locator, we can use the "visible" surrounding of the element instead. In many
+            cases, not only is such locator much easier to construct, they are also more readable and maintainable.<br/>
             <br/>
             Here's the syntax of this <code>nearby</code> locator:<br/>
-            <pre>nearby={[relative-to]:[visible-text]},{attribute=value,attribute=value,...}</pre>
-            <ul>
-                <li>
-                    <code>[relative-to]</code>: one of these values: <code>left-of</code>, <code>right-of</code>,
-                    <code>above</code>, <code>below</code>
-                </li>
-                <li>
-                    <code>[visible-text]: the text that is visible, which is used to identify the target element</code>
-                </li>
-                <li>
-                    <code>{attribute=value,attribute=value,...}</code>: OPTIONAL. One can supply additional attributes
-                    of the target element to improve the locator precision. This is generally not needed. At times when
-                    there are many elements nearby the same text element, one may want to consider adding additional
-                    attributes to filter out the conflicting elements.
-                </li>
+            <pre style="margin-bottom:5px;">nearby={[relative-to]:[visible-text]}{item:[index]}{attribute=value,attribute=value,...}</pre>
+            where,<br/>
+            <code>[relative-to]</code> is one of these values:<ul>
+            <li><code>left-of</code> - indicates that the element of interest is to the left of the <code>visible-text</code></li>
+            <li><code>right-of</code> - indicates that the element of interest is to the right of the <code>visible-text</code></li>
+            <li><code>above</code> - indicates that the element of interest is above the <code>visible-text</code></li>
+            <li><code>below</code> - indicates that the element of interest is below the <code>visible-text</code></li>
+            <li><code>container</code> - indicates that the element of interest is the parent/container of the
+                <code>visible-text</code>, and that it is of the "group" type (such as <code>android.view.ViewGroup</code>).</li>
+            <li><code>scroll-container</code> - indicates that the element of interest is the parent/container of the
+                <code>visible-text</code>, and that it is of the "scrollable" type (such as <code>android.widget.ScrollView</code>).</li>
             </ul>
+
+            <code>[visible-text]</code> - the visible text used to identify the target element.<br/>
+            <br/>
+            <code>item</code> - in situation where there are multiple matches, one can specify the element index
+            (as in, the <em>nth</em> element) via the <code>item</code> keyword. The index must be a positive integer
+            (0-based), or the special keyword <code>last</code>. Use <code>item:last</code> to signify the last match
+            item.<br/>
+            <br/>
+            <code>{attribute=value,attribute=value,...}</code> - OPTIONAL. One can supply additional attributes
+            of the target element to improve the locator precision. This is generally not needed. At times when
+            there are many elements nearby the same text element, one may want to consider adding additional
+            attributes to filter out the conflicting elements.
         </div>
 
         <div id="tab_tag" class="tab">Not available in mobile automation.</div>
@@ -297,7 +305,7 @@
         <div id="tab_image" class="tab">
             Quick Tip: Image locators are prefixed by <code>image=</code><br/>
             <br/>
-            <i>Coming soon, stay tuned!!</i>
+            <em>Coming soon, stay tuned!!</em>
         </div>
     </div>
 </div>

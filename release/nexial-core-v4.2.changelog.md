@@ -130,6 +130,13 @@ comments: true
   driver is not _really_ shutting down the app.
 - minor optimization on the `nearby` locator generation.
 - [`bin/mobile/run-appium-server`]: helper script to start appium server locally.
+- [`click(locator)`](../commands/mobile/click(locator)): updated implementation to improve stability.
+- [`bin/module/run-appium-server`]: update utility to display appium server log in local time.
+- [`longClick(locator,waitMs)`](../commands/mobile/longClick(locator,waitMs)): updated implementation to improve stability.
+- [`select(locator,item)`](../commands/mobile/select(locator,item)): updated implementation to improve stability.
+  - implemented retry logic to improve stability
+- [`selectLocalFile(device,folder,filename)`]: *NEW* command to select file from device's local storage.
+
 
 ### [rdbms commands](../commands/rdbms)
 

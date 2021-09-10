@@ -8,7 +8,9 @@ comments: true
 
 
 ### Description
+
 **iOS only**<br/>
+
 This command dismiss the current alert dialog via the specified `option`. The `option` represents the label of the 
 target button to press in order to dismiss an alert dialog. Typical examples are `OK`, `Accept`, `Cancel`.
 
