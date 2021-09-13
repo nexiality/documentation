@@ -112,3 +112,39 @@ The highlighted portion is the UDID for the connected device/emulator.
 #### Approach 3: (iOS only) Use Nexial's `show-ios-bundleid.sh` utility script
 {% include_relative _ios_bundleid.md %}
 
+-----
+
+### Copy files to device
+For the purpose of testing, it is useful to prepare your target device or emulator with the appropriate files. For this
+reason, one can use the follow utility scripts to perform the file copy operation:
+
+#### **Copy to Android using `bin/mobile/copy-to-android.[cmd|sh]**
+```
+cd %NEXIAL_HOME%
+cd bin\mobile
+copy-to-android.cmd C:\projects\MyProject\artifact\data\Test.pdf Downloads
+```
+
+Note that this utility script will copy a file from your computer to the device/emulator's primary external storage. 
+Primary external storage - a.k.a. `/storage/self/primary/` - is the location where the media files, documents, etc. of 
+the current user are stored. Typically, there are multiple subdirectories created under this storage location:
+![](image/mobile_profile_02.png)
+
+Common target directories to receive files are:
+- `DCIM`
+- `Documents`
+- `Download`
+- `Movies`
+- `Music`
+- `Pictures`
+
+
+#### **Copy to iOS using `bin/mobile/copy-to-ios.sh** (on MacOS only)
+```
+cd $NEXIAL_HOME
+cd bin/mobile
+./copy-to-ios.sh ~/Pictures/myPix.png
+```
+
+Since iOS support requires MacOS, this file copy utility script will only work on MacOS. Also, at the time of this 
+writing, only media files are supported, and they will be copied to the Photo library of the connected device. 

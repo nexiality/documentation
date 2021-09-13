@@ -1,13 +1,13 @@
 ---
 layout: default
-title: nexial-core 4.2 (2021-09-??)
+title: nexial-core 4.2 (2021-09-13)
 parent: release
 tags: release nexial-core 4.2
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v4.2_????" class="external-link" target="_nexial_link">Release 4.2</a>
-2021-09-??
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v4.2_1320" class="external-link" target="_nexial_link">Release 4.2</a>
+2021-09-13
 
 
 ### General
@@ -15,7 +15,7 @@ comments: true
 #### Fixes
 - fixed `.commons.sh` for Linux environment where `JAVA_HOME` is not set
 - better handling of logic to determine Java version and subsequently construct the appropriate `JAVA_OPT`
- 
+
 #### Improvements
 - allow priority overrides (specified via `-override`) to take effect prior to loading project artifacts. As such, 
   these overrides can be specified via the `-override` command line argument. Previous requirement of using 
@@ -26,24 +26,15 @@ comments: true
 - [`nexial-project`](../userguide/BatchFiles#nexial-project): fixed minor edge condition during project creation
 
 
-### [Interactive](../interactive)
-
-
-### [Expressions](../expressions)
-
-
 ### [external commands](../commands/external)
 - fixed runtime error when running external program without environment variable
-
-
-### [desktop commands](../commands/desktop)
 
 
 ### [javaui commands](../commands/javaui)
 - First draft release of the **NEW** `javaui` commands. These commands are designed to support automation for Java 
   desktop application - Swing, SWT, RCP for now. Future release aim to support GEF and JavaFX. Underlying automation
   capability is based on jubula.
-- Currently implemented commands:
+- Commands currently implemented:
   - [`startLocalAgent(port)`](../commands/javaui/startLocalAgent(port))
   - [`stopLocalAgent(port)`](../commands/javaui/stopLocalAgent(port))
   - [`startApp(profile)`](../commands/javaui/startApp(profile))
@@ -61,93 +52,85 @@ comments: true
   target Java application.
 
 
-### [macro commands](../commands/macro)
-
-
 ### [mobile commands](../commands/mobile)
-- [`scrollUntilFound(scrollTarget,direction,searchFor,maxWaitMs)`](../commands/mobile/scrollUntilFound(scrollTarget,direction,searchFor,maxWaitMs)):
-  **NEW** command to scroll until a specific element is present.
-  - fix scrolling issue that cause UI to hang at times.
+- [`assertAlertPresent(text)`](../commands/mobile/assertAlertPresent(text)): **NEW** command to alert that an alert
+  dialog is present. iOS only
+- [`clearAlert(option)`](../commands/mobile/clearAlert(option)): **NEW** command to clear/dismiss existing alert
+  dialog. iOS only
+- [`saveAlertText(var)`](../commands/mobile/saveAlertText(var)): **NEW** command to save the text content of an
+  existing alert dialog. iOS only
+- [`clearNotification()`](../commands/mobile/clearNotification()): **NEW** command to clear off all push notifications.
+  Android only
+- [`assertAttribute(locator,attribute,text)`](assertAttribute(locator,attribute,text)): **NEW** Command to assert
+  attribute value for the first element that matched specified `locator`. PolyMatcher enabled
+- [`saveAttributes(var,locator,attribute)`](../commands/mobile/saveAttributes(var,locator,attribute)): *NEW* command to
+  collect the attribute values from a list of elements matching `locator`
+- [`assertElementEnabled(locator)'](../commands/mobile/assertElementEnabled(locator)): **NEW** command to assert the
+  presence and readiness (for interaction) of an element
+- [`assertElementDisabled(locator)`](../commands/mobile/assertElementDisabled(locator)): **NEW** command to assert that
+  an element is disabled for interaction
 - [`assertElementNotVisible(locator)`](../commands/mobile/assertElementNotVisible(locator)): **NEW** command to assert
-  that an element is either not present or not visible.
+  that an element is either not present or not visible
+- [`assertElementNotPresent(locator)`](../commands/mobile/assertElementNotPresent(locator)): **NEW** command to assert
+  the absence of element(s)
+- [`clickByDisplayText(text)`](clickByDisplayText(text)): fixed for iOS device
+- [`click(locator)`](../commands/mobile/click(locator)): updated to improve stability
+- [`longClick(locator,waitMs)`](../commands/mobile/longClick(locator,waitMs)): updated to improve stability
+- [`scrollUntilFound(scrollTarget,direction,searchFor,maxWaitMs)`](../commands/mobile/scrollUntilFound(scrollTarget,direction,searchFor,maxWaitMs)):
+  **NEW** command to scroll until a specific element is present
+  - fix scrolling issue that cause UI to hang at times
 - [`select(locator,item)`](../commands/mobile/select(locator,item)): 
-  - performance and accuracy improvements.
-  - support PolyMatcher on `item`.
-  - supports iOS automation.
-  - support multi-dropdown components, such as Date Picker. Use pipe to separate values. For example, `Aug|26|2021`.
-- [`text=`]: 
-  - text locator now supports PolyMatcher (except for REGEX and NUMERIC)
+  - performance and accuracy improvements
+  - supports PolyMatcher on `item`
+  - supports iOS automation
+  - supports multi-dropdown components, such as Date Picker. Use pipe to separate values. For example, `Aug|26|2021`
+  - implemented retry logic to improve stability
+  - skip automation if the target `item` is already selected (optimization)
+  - selects a dropdown item based on index via prefix `index:`
+- [`copyToLocal(file,folder)`](../commands/mobile/copyToLocal(file,folder)): **NEW** command to copy file from host to 
+  connected device
+- [`selectLocalFile(device,folder,filename)`]: **NEW** command to select file from device's local storage
+- [`type(locator,text)`](../commands/mobile/type(locator,text)):
+  - code fix to clear off existing text before typing
+  - clear text via BACKSPACE if the target element contains only spaces, to improve iOS compatibility
+  - skip automation if target element already contains `text` (optimization)
+- [`recentApps()`](recentApps()): fixed for iOS device
+- [`launchApp(app)`](../commands/mobile/launchApp(app)): **NEW** command to launch or focus on an installed app based 
+  on `appId` or `bundleId`
+- [`use(profile)`](../commands/mobile/use(profile)): automatically relaunched the app that was previously closed via
+  the [`closeApp`] command
+- [`closeApp`](../commands/mobile/closeApp()): for Android platform, this command also reset the app since underlying
+  driver is not _really_ shutting down the app
+- [locator `text=`](../commands/mobile/index#locators): 
+  - text locator now supports PolyMatcher (except for `REGEX:` and `NUMERIC:`)
   - allows for text to contain leading and trailing spaces
-- [`nearby=`]: nearby locator now supports `above` and `below` as well
+  - code fix to handle `text=...` locator for iOS automation (automatically convert to using `label` attribute)
+- [locator `nearby=`](../commands/mobile/index#locators): 
+  - nearby locator now supports `above` and `below` as well
   - support PolyMatcher on attribute values as well as text
   - support item priority via `{item:#}` where user can specify exactly the occurrence (of multiple matches) to use
-  - support "container" reference via `container:` and `scroll-container`
+  - support "container" (or parent) reference via `container:` and `scroll-container:`
+  - implemented iOS support
   - optimizing locator generation
-  - implemented iOS support.
-  - skip automation if the target `item` is already selected (optimization).
-- [`assertElementNotPresent(locator)`](../commands/mobile/assertElementNotPresent(locator)): **NEW** command to assert
-  the absence of element(s).
-- [`assertElementEnabled(locator)'](../commands/mobile/assertElementEnabled(locator)): **NEW** command to assert the
-  presence and readiness (for interaction) of an element.
-- [`assertElementDisabled(locator)`](../commands/mobile/assertElementDisabled(locator)): **NEW** command to assert that
-  an element is disabled for interaction.
-- [`saveAttributes(var,locator,attribute)`](../commands/mobile/saveAttributes(var,locator,attribute)): *NEW* command to 
-  collect the attribute values from a list of elements matching `locator`.
-- [`assertAlertPresent(text)`](../commands/mobile/assertAlertPresent(text)): **NEW** command to alert that an alert 
-  dialog is present. iOS only.
-- [`clearAlert(option)`](../commands/mobile/clearAlert(option)): **NEW** command to clear/dismiss existing alert 
-  dialog. iOS only.
-- [`saveAlertText(var)`](../commands/mobile/saveAlertText(var)): **NEW** command to save the text content of an 
-  existing alert dialog. iOS only.
-- [`clearNotification()`](../commands/mobile/clearNotification()): **NEW** command to clear off all push notifications. 
-  Android only.
-- [`type(locator,text)`](../commands/mobile/type(locator,text)): 
-  - code fix to clear off existing text before typing
-  - clear text via BACKSPACE if the target element contains only spaces, to improve iOS compatibility.
-  - skip automation if target element already contains `text` (optimization).
-- code fix to handle `text=...` locator for iOS automation (automatically convert to using `label` attribute)
+- [`one-of` locator](../commands/mobile/index.html#locators): **NEW** locator as a wrapper for device-specific locators.
 - [android setup]:
-  - fixed path references in `bin/mobile/android-setup.sh`.
+  - fixed path references in `bin/mobile/android-setup.sh`
   - fixed shell script permission issues
-- [`launchApp(app)`](../commands/mobile/launchApp(app)): **NEW** command to launch (installed) app based on its bundle id.
-- [`assertAttribute(locator,attribute,text)`](assertAttribute(locator,attribute,text)): **NEW** Command to assert 
-  attribute value for the first element that matched specified `locator`. PolyMatcher enabled.
-- [`clickByDisplayText(text)`](clickByDisplayText(text)): fixed for iOS device.
-- [`recentApps()`](recentApps()): fixed for iOS device.
-- [`launchApp(app)`](launchApp(app)): **NEW** command to launch or focus on an installed app based on `appId` or `bundleId`.
+  - [`bin/mobile/update-android-sdk`](../commands/mobile/android_setup#updating-android-sdk): utility script to update
+    Android SDK.
 - fixed executable reference in shell script:
   - `restart-adb.sh`
   - `run-android-emulator.sh`
   - `show-android-devices.sh`
-- locator support: allows for `text=` locator with leading or trailing spaces.
-- [`nexial-apk-manifest`](../commands/mobile/mobile_device_profile#approach-1-use-nexials-nexial-apk-manifest-utility-script): 
-  utility script to manifest `appId`, `appPackage` and `appActivity` of an Android app (`apk`).
-- [`select(locator,item)`](../commands/mobile/select(locator,item)): select a dropdown item based on index; prefix 
-  with `index:`.
-- [`use(profile)`](../commands/mobile/use(profile)): automatically relaunched the app that was previously closed via 
-  the [`closeApp`] command.
-- [`closeApp`](../commands/mobile/closeApp()): for Android platform, this command also reset the app since underlying 
-  driver is not _really_ shutting down the app.
-- minor optimization on the `nearby` locator generation.
-- [`bin/mobile/run-appium-server`]: helper script to start appium server locally.
-- [`click(locator)`](../commands/mobile/click(locator)): updated implementation to improve stability.
-- [`bin/module/run-appium-server`]: update utility to display appium server log in local time.
-- [`longClick(locator,waitMs)`](../commands/mobile/longClick(locator,waitMs)): updated implementation to improve stability.
-- [`select(locator,item)`](../commands/mobile/select(locator,item)): updated implementation to improve stability.
-  - implemented retry logic to improve stability
-- [`selectLocalFile(device,folder,filename)`]: **NEW** command to select file from device's local storage.
-- [`bin/mobile/update-android-sdk](../commands/mobile/android_setup#updating-android-sdk): utility script to update 
-  Android SDK.
-- [`one-of` locator](../commands/mobile/index.html#locators): **NEW** locator as a wrapper for device-specific locators.
-
-
-### [rdbms commands](../commands/rdbms)
-
-
-### [localdb commands](../commands/localdb)
-
-
-### [sound commands](../commands/sound)
+- [`bin/mobile/nexial-apk-manifest`](../commands/mobile/mobile_device_profile#approach-1-use-nexials-nexial-apk-manifest-utility-script): 
+  utility script to manifest `appId`, `appPackage` and `appActivity` of an Android app (`apk`)
+- [`bin/mobile/run-appium-server`]: 
+  - helper script to start appium server locally
+  - updated to display appium server log in local time
+- [`bin/mobile/copy-to-android.cmd|sh`](../commands/mobile/mobile_device_profile#copy-files-to-device): **NEW** utility 
+  script to copy file from host to connected Android device
+- [`bin/mobile/copy-to-ios.sh`](../commands/mobile/mobile_device_profile#copy-files-to-device): **NEW** utility script 
+  to copy file from host to connected iOS device
 
 
 ### [web commands](../commands/web)
@@ -163,3 +146,6 @@ comments: true
 - code fix to correctly treat text-based payload as such (instead of as binary stream)
 - [`assertReturnCode(var,returnCode)`](../commands/ws/assertReturnCode(var,returnCode)): allows `returnCode` to be
   expressed as a list or range.
+- [`clearHeaders(headers)`](../commands/ws/clearHeaders(headers)): **NEW** command to clear HTTP request headers 
+  previously set.
+ 

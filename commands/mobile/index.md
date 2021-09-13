@@ -75,6 +75,7 @@ Click on one of the links below to learn about each command.
 - [`clickByDisplayText(text)`](clickByDisplayText(text))
 - [`clickUntilNotFound(locator,waitMs,max)`](clickUntilNotFound(locator,waitMs,max))
 - [`closeApp()`](closeApp())
+- [`copyToLocal(file,folder)`](copyToLocal(file,folder))
 - [`doubleClick(locator,xOffset,yOffset)`](doubleClick(locator,xOffset,yOffset))
 - [`forward()`](forward())
 - [`hideKeyboard()`](hideKeyboard())
