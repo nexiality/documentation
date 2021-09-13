@@ -135,9 +135,10 @@ comments: true
 - [`longClick(locator,waitMs)`](../commands/mobile/longClick(locator,waitMs)): updated implementation to improve stability.
 - [`select(locator,item)`](../commands/mobile/select(locator,item)): updated implementation to improve stability.
   - implemented retry logic to improve stability
-- [`selectLocalFile(device,folder,filename)`]: *NEW* command to select file from device's local storage.
+- [`selectLocalFile(device,folder,filename)`]: **NEW** command to select file from device's local storage.
 - [`bin/mobile/update-android-sdk](../commands/mobile/android_setup#updating-android-sdk): utility script to update 
   Android SDK.
+- [`one-of` locator](../commands/mobile/index.html#locators): **NEW** locator as a wrapper for device-specific locators.
 
 
 ### [rdbms commands](../commands/rdbms)

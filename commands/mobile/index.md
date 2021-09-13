@@ -8,19 +8,19 @@ comments: true
 
 ### Description
 As the name suggests, this is a collection of commands to support mobile automation, with mobile testing as the common 
-form. Generally speaking, there are 3 strategies towards mobile testing:
+form. Generally speaking, there are 3 strategies for mobile testing:
 - via emulators
 - via real devices connected to the automation host
 - via cloud testing provider (such as BrowserStack or CrossBrowserTesting)
 
-Nexial intends to support all 3 types of mobile testing for both iOS and Android devices. However, the availability on 
+Nexial intends to support all 3 types of mobile testing for both iOS and Android devices. However, the availability of 
 these capabilities will be rolled out over time.
 
 Nexial internally uses <a href="https://appium.io/" class="external-link" target="_nexial_link">Appium</a> to perform
 the communication and data transport between your scripts and the target devices. Unless of urgent or critical matter 
 (such as a high priority security patch), Nexial will only ship with the last official stable release of Appium.
 
-In order to perform mobile automation, here are the steps to follow:
+To perform mobile automation, here are the steps to follow:
 1. [Install and Configure Appium](install_appium)
 2. [Install Android SDK and Emulators](android_setup) - if you are targeting Android devices
 3. [Install Xcode and iOS Emulators](ios_setup) - if you are targeting iOS devices
@@ -32,9 +32,9 @@ Click on each of the links above to get started.
 
 
 ### Locators
-Those who are familiar with [Web Automation](../web) knows that there are multiple types of 
-[locators](../web/index#locators) (also known as selectors) to identify Web elements and to interact with them. For 
-mobile automation, the use of locator is equally critical. However, there are some differences between these two types 
+Those who are familiar with [Web Automation](../web) know that there are multiple types of 
+[locators](../web/index#locators) (also known as selectors) to identify Web elements and interact with them. For 
+mobile automation, the use of locators is equally critical. However, there are some differences between these two types 
 of automation. For one, not all the locators are available in mobile automation due to the underlying implementation 
 mismatch (CSS, for example). Mobile automation also brings about a few new/unique locators as well.
 
@@ -48,12 +48,12 @@ Finding and interacting with elements</a>.
 
 ### Available Commands
 In almost all cases, one would start with the [`use(profile)`](use(profile)) command to establish connectivity between
-Nexial, Appium server and the target device. Without proper connectivity, none of the "mobile" commands would run 
+Nexial, Appium server, and the target device. Without proper connectivity, none of the "mobile" commands would run 
 correctly. When finished, use the [`closeApp()`](closeApp()) command or [`shutdown(profile)`](shutdown(profile)) to 
 close down the application configured for a `profile`. One then can switch to another profile via the 
 [`use(profile)`](use(profile)) command -- potentially to connect to another device or another Appium server.
 
-If Appium server is configured to start internally within Nexial, one can also terminate it via the 
+If the Appium server is configured to start internally within Nexial, one can also terminate it via the 
 [`shutdown(profile)`](shutdown(profile)) command.
 
 Click on one of the links below to learn about each command.

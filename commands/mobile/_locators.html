@@ -1,9 +1,21 @@
 <style>
-    .locators.tabs { padding: 5px; }
+  .locators.tabs { padding: 5px; }
 
-    .locators.tabs li { margin-bottom: 0 !important; }
+  .locators.tabs li { margin-bottom: 0 !important; }
 
-    .tab-links code { background-image: none; padding: 2px; }
+  .tab-links code { background-image: none; padding: 2px; }
+
+  #tab_title_tag, #tab_title_class, #tab_title_css {
+    background:  #aaa !important;
+    color:       #555 !important;
+    font-weight: normal !important;
+    padding:     15px 15px 3px 15px !important;
+  }
+
+  .active #tab_title_tag, .active #tab_title_class, .active #tab_title_css {
+    text-shadow: none;
+    box-shadow:  2px 0 5px #888 !important;
+  }
 </style>
 
 <div class="tabs locators">
@@ -13,29 +25,30 @@
         <li><a href="#tab_xpath" id="tab_title_xpath">XPath</a></li>
         <li><a href="#tab_name" id="tab_title_name">Name</a></li>
         <li><a href="#tab_res" id="tab_title_res">Resource ID</a></li>
-        <li><a href="#tab_text" id="tab_title_text">Text</a></li>
         <li><a href="#tab_predicate" id="tab_title_predicate">Predicate</a></li>
         <li><a href="#tab_cc" id="tab_title_cc">Class Chain</a></li>
+        <li><a href="#tab_image" id="tab_title_image">Image</a></li>
         <li><a href="#tab_link" id="tab_title_link">Link Text</a></li>
         <li><a href="#tab_partialLinkText" id="tab_title_partialLinkText">Partial Link Text</a></li>
+        <li><a href="#tab_text" id="tab_title_text">Text</a></li>
         <li><a href="#tab_nearby" id="tab_title_nearby">Nearby</a></li>
+        <li><a href="#tab_oneof" id="tab_title_oneof">"One Of"</a></li>
         <li><a href="#tab_tag" id="tab_title_tag">Tag</a></li>
         <li><a href="#tab_class" id="tab_title_class">Style Class</a></li>
         <li><a href="#tab_css" id="tab_title_css">CSS</a></li>
-        <li><a href="#tab_image" id="tab_title_image">Image</a></li>
     </ul>
     <div class="tab-content">
         <div id="tab_id" class="tab">
             Quick Tip: ID locators are prefixed by <code>id=</code><br/>
             <br/>
             Reference an element by its ID is, by far, the simplest type of locator. Unfortunately, just like its web
-            counterpart, the "ID" in reference isn't always unique as one would hope. For simpler application this
+            counterpart, the "ID" in reference isn't always unique as one would hope. For simpler applications, this
             locator usually works well. For more complex applications where an "ID" might be repeated across multiple
             elements, a different locator strategy (such as XPATH) might be a better way to go.<br/>
             <br/>
-            For Android application, the "resource-id" property is also considered as an "ID". One can use either the
-            <code>id=...</code> or <code>res=...</code> syntax. Here's an example of finding a "ID" of a element via the
-            Appium inspector:<br/>
+            For Android applications, the "resource-id" property is also considered as an "ID". One can use either the
+            <code>id=...</code> or <code>res=...</code> syntax. Here's an example of finding an "ID" of an element via
+            the Appium inspector:<br/>
             <img src="image/locator_01.png"/><br/>
             <br/>
             For the above example, one may express this locator as:
@@ -44,7 +57,7 @@
                 <li><code>res=com.google.android.calculator:id/digit_5</code></li>
             </ul>
             In contrast, iOS automation uses the "name" property as the "ID". Note that there isn't an actual property
-            named as "ID" or "id". However, one may use either <code>id=...</code> or <code>name=...</code> syntax.
+            named "ID" or "id". However, one may use either <code>id=...</code> or <code>name=...</code> syntax.
             Nexial will appropriately resolve it to the correct type of locator.<br/>
             <img src="image/locator_02.png"/><br/>
             <br/>
@@ -59,9 +72,9 @@
             Quick Tip: Accessibility ID locators are prefixed by <code>a11y=</code><br/>
             <br/>
             The design purpose of an accessibility ID is to improve usability for users with visual or hearing
-            impairment. Accessibility tools like screen readers or TTS software utilize these IDs to provide additional
+            impairments. Accessibility tools like screen readers or TTS software utilize these IDs to provide additional
             usability support. From the test automation standpoint, the same accessibility ID can be utilized as the
-            basis of identifying an element. As a convenience, Nexial recognizes a locator by accessibility ID via the
+            basis for identifying an element. As a convenience, Nexial recognizes a locator by accessibility ID via the
             <code>a11y</code> prefix (there are 11 characters between <code>a</code> and <code>y</code> of
             <code>accessibility</code>).<br/>
             <br/>
@@ -92,13 +105,13 @@
             automation. And as it is in the case of other automation uses, XPATH is both powerful and potentially
             troublesome.<br/>
             <br/>
-            With XPATH, one can search for an element via its hierarchy, its attributes and its text. Whereas the power
+            With XPATH, one can search for an element via its hierarchy, its attributes, and its text. Whereas the power
             lies, so is the danger thereof (
             <a href="https://en.wikipedia.org/wiki/With_great_power_comes_great_responsibility" class="external-link"
                target="_nexial_link">Peter Parker principle</a>).<br/>
             <br/>
-            It is often prudent <b>NOT</b> to use the XPATH locator provided by Appium inspector. Instead, one should
-            put some effort to simplifying it. For example,<br/>
+            It is often prudent <b>NOT</b> to use the XPATH locator provided by the Appium inspector. Instead, one
+            should put some effort into simplifying it. For example,<br/>
             <img src="image/locator_05.png"/><br/>
             <br/>
             The provided/suggested XPATH for the "Connected devices" link is as follows (broken into lines for
@@ -125,10 +138,10 @@
             The benefits of optimizing the XPATH are:
             <ol>
                 <li>Easier to read, hence easier to maintain</li>
-                <li>No long dependent on the hierarchy or placements of UI elements</li>
+                <li>No longer dependent on the hierarchy or placements of UI elements</li>
                 <li>Potentially faster than the long-winded version</li>
             </ol>
-            To use XPATH locator in Nexial, simply use the XPATH as is or prefix it with <code>xpath=</code>.
+            To use the XPATH locator in Nexial, simply use the XPATH as is or prefix it with <code>xpath=</code>.
         </div>
 
         <div id="tab_name" class="tab">
@@ -145,41 +158,26 @@
             for more details.
         </div>
 
-        <div id="tab_text" class="tab">
-            Quick Tip: Text locators are prefixed by <code>text=</code><br/>
-            <br/>
-            This is a Nexial-only addition to the world of locators. The central idea here is to simplify automation
-            by providing a simple way to reference an element that contains a unique string of text within the current
-            application screen. For example,
-            <pre>text=Enter your first name here</pre>
-            ... references an element that contains an attribute named <code>text</code> with the value of
-            <code>Enter your first name here</code>.<br/>
-            <br/>
-            In situations where one needs to automate a form on a mobile app, this type of locator might prove to be
-            most useful. It is both easy to use and to decipher. This form of locator also supports PolyMatcher, which
-            provides further expressiveness and flexibility. For example,
-            <pre>text=START:Welcome home</pre>
-            For more details on PolyMatcher, visit
-            <a href="assertTextPresent(locator,text)"><code>assertTextPresent(locator,text)</code></a> and click on
-            "PolyMatcher Enabled" link.<br/>
-            <br/>
-            Note that behind the scene, Nexial convert such locator to a XPATH-based locator.
-        </div>
-
         <div id="tab_predicate" class="tab">
             Quick Tip: Predicate locators are prefixed by <code>predicate=</code><br/>
             <br/>
             <b>Only applicable for iOS automation</b>. Also known as <code>-ios predicate string</code>. This type
             of locator represents a recursive element search using the iOS Predicate (iOS 10.0 and above). The syntax
-            is similar to XPATH query but comes with its own set of logical and comparative operators. While this type
+            is similar to the XPATH query but comes with its own set of logical and comparative operators. While this type
             of locator is powerful, one would essentially be writing another "mini" query language. Consult the
             following links for more details:
             <ul>
-                <li><a href="http://appium.io/docs/en/writing-running-appium/ios/ios-predicate/">http://appium.io/docs/en/writing-running-appium/ios/ios-predicate/</a></li>
-                <li><a href="https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/ios/ios-predicate.md">https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/ios/ios-predicate.md</a></li>
-                <li><a href="https://developer.apple.com/documentation/foundation/nspredicate">https://developer.apple.com/documentation/foundation/nspredicate</a></li>
+                <li>
+                    <a href="https://appium.io/docs/en/writing-running-appium/ios/ios-predicate/">https://appium.io/docs/en/writing-running-appium/ios/ios-predicate/</a>
+                </li>
+                <li>
+                    <a href="https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/ios/ios-predicate.md">https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/ios/ios-predicate.md</a>
+                </li>
+                <li>
+                    <a href="https://developer.apple.com/documentation/foundation/nspredicate">https://developer.apple.com/documentation/foundation/nspredicate</a>
+                </li>
             </ul>
-            Since this only works on iOS and has dependency on the underlying iOS object model, this form of
+            Since this only works on iOS and has a dependency on the underlying iOS object model, this form of
             identifying elements should not be considered as the first choice. Nonetheless, at times the iOS-specific
             technique might be the only viable option.<br/>
             <br/>
@@ -198,19 +196,21 @@
             <pre>//XCUIElementTypeTable[@name="table"]/XCUIElementTypeCell[@visible="true" and .//XCUIElementTypeTextField[@name="input]]</pre>
             ... would be translated into <cod>cc</cod> locator like this:<br/>
             <pre>
-**/XCUIElementTypeTable[`name == "table"`]/XCUIElementTypeCell[`visible == 1`][$type == "XCUIElementTypeTextField" AND name == "input"$]<font color="#aaa">
-\_____________________/\_________________/\__________________/\______________/\________________________________________________________/</font><font color="#ccf">
+**/XCUIElementTypeTable[`name == "table"`]/XCUIElementTypeCell[`visible == 1`][$type == "XCUIElementTypeTextField" AND name == "input"$]<font
+                    color="#aaa">
+\_____________________/\_________________/\__________________/\______________/\________________________________________________________/</font><font
+                    color="#ccf">
 
  find an
- "XCUIElementTypeTable" that has an
- element...             attribute named
-                        "name" with value
-                        equals to "table"  followed by an
-                                           "XCUIElementTypeCell"
-                                           cell...             that is visible  and it <b><u>contains</u></b> under its hierarchy
-                                                                                another element of type "XCUIElementTypeTextField"
-                                                                                which has an attribute called "name" with value equals
-                                                                                to "input".</font></pre>
+ "XCUIElementTypeTable"  that has an
+ element...              attribute named
+                         "name" with value
+                         equals to "table"   followed by an
+                                             "XCUIElementTypeCell"
+                                             cell...            that is visible  and it <b><u>contains</u></b> under its hierarchy
+                                                                                 another element of type "XCUIElementTypeTextField"
+                                                                                 which has an attribute called "name" with value equals
+                                                                                 to "input".</font></pre>
             <br/>
             While not necessarily less verbose than its XPATH counterpart, <code>cc</code> locator promised to be more
             performant without losing much of the flexibility found in XPATH. Here are a few more examples,<br>
@@ -224,11 +224,14 @@
                     has at least ten direct children of type <code>XCUIElementTypeButton</code>.
                 </li>
             </ul>
-            One may use Appium inspector to find a suitable <code>cc</code> locator for a iOS device.<br/>
+            One may use Appium inspector to find a suitable <code>cc</code> locator for an iOS device.<br/>
             <br/>
-            For more details about class chain, please visit:
+            For more details about the class chain queries, please visit:
             <ul>
-                <li><a href="https://github.com/facebookarchive/WebDriverAgent/wiki/Class-Chain-Queries-Construction-Rules" class="external-link" target="_nexial_link">https://github.com/facebookarchive/WebDriverAgent/wiki/Class-Chain-Queries-Construction-Rules</a></li>
+                <li>
+                    <a href="https://github.com/facebookarchive/WebDriverAgent/wiki/Class-Chain-Queries-Construction-Rules"
+                       class="external-link" target="_nexial_link">https://github.com/facebookarchive/WebDriverAgent/wiki/Class-Chain-Queries-Construction-Rules</a>
+                </li>
             </ul>
         </div>
 
@@ -248,52 +251,129 @@
             command for more details.
         </div>
 
+        <div id="tab_text" class="tab">
+            Quick Tip: Text locators are prefixed by <code>text=</code><br/>
+            <br/>
+            This is a Nexial-only addition to the world of locators. The central idea here is to simplify automation
+            by providing a simple way to reference an element that contains a unique string of text within the current
+            application screen. For example,
+            <pre>text=Enter your first name here</pre>
+            ... references an element that contains an attribute named <code>text</code> with the value of
+            <code>Enter your first name here</code>.<br/>
+            <br/>
+            In situations where one needs to automate a form on a mobile app, this type of locator might prove to be
+            most useful. It is both easy to use and to decipher. This form of locator also supports PolyMatcher, which
+            provides further expressiveness and flexibility. For example, to reference a component whose text starts
+            with <code>Welcome home</code>, one can use the following text locator:<br/>
+            <pre>text=START:Welcome home</pre>
+            For more details on PolyMatcher, visit
+            <a href="assertTextPresent(locator,text)"><code>assertTextPresent(locator,text)</code></a> and click on
+            "PolyMatcher Enabled" link.<br/>
+            <br/>
+            Note that behind the scene, Nexial converts such locator to an XPATH-based locator.
+        </div>
+
         <div id="tab_nearby" class="tab">
+            Quick Tip: Nearby locators are prefixed by <code>nearby=</code><br/>
+            <br/>
             This is a specialized locator (<em>only in Nexial!</em>) aimed to simplify the task of creating a locator.
-            Instead of identifying an element via its attributes such as <code>content-desc</code>, <code>id</code> or
+            Instead of identifying an element via its attributes such as <code>content-desc</code>, <code>id</code>, or
             <code>accessibility id</code>, the <code>nearby</code> locator allows one to identify an element by its
-            surrounding. While this technique does not yield the same benefit in every scenario, it can be a great
-            time saver.<br/><br/>
-            Let's consider the following example,<br/>
+            surrounding. Nexial takes care of translating to the appropriate reference during execution time and thus
+            saving time during scripting. While this technique does not yield the same benefit in every scenario, it
+            is often a great time saver and a significant reduction in the cost of maintaining automation artifacts.<br/>
+            <br/>
+            Let's consider the following example:<br/>
             <img src="image/locator_06.png"/><br/>
             To identity the text box, we would need to inspect its attributes (typically via Appium Inspector). With
             the <code>nearby</code> locator, we can simply specify it as: <code>nearby={below:Cellphone}</code> (reads:
-            <em>Locate the element that is immediately below the element with text <code>Cellphone</code></em>)<br/>
+            <em>Locate the element that is immediately below the element with text <code>Cellphone</code></em>). This
+            simplified form is both easy to read and maintain.<br/>
             <br/>
-            Here's another example,<br/>
+            Here's another example:<br/>
             <img src="image/locator_07.png"><br/>
-            The <code>nearby</code> locator to identify the "Male" radio button would be <code>nearby={left-of:Male}</code>.<br/>
+            The <code>nearby</code> locator to identify the "Male" radio button is simply
+            <code>nearby={left-of:Male}</code>.<br/>
             <br/>
-            Since these elements in the examples above do not have any visible text, one would need to construct a
-            suitable locator using other attributes - like with the help of Appium Inspector (or equivalent). With
-            the <code>nearby</code> locator, we can use the "visible" surrounding of the element instead. In many
-            cases, not only is such locator much easier to construct, they are also more readable and maintainable.<br/>
+            In the above example, the radio buttons do not possess any visible text. Typically, one would need to
+            construct suitable locators using these buttons' other attributes - likely with the help of Appium
+            Inspector (or equivalent). With the <code>nearby</code> locator, we can use the "visible" surrounding of
+            the element instead.<br/>
             <br/>
             Here's the syntax of this <code>nearby</code> locator:<br/>
-            <pre style="margin-bottom:5px;">nearby={[relative-to]:[visible-text]}{item:[index]}{attribute=value,attribute=value,...}</pre>
+            <pre style="margin-bottom:5px;">nearby={<span style="color:#0f9;">[relative-to]</span>:<span style="color:#09f;">[visible-text]</span>}{<span style="color:#9f0;">item:[index]</span>}{<span style="color:#f09;">attribute=value,attribute=value,...</span>}</pre>
             where,<br/>
-            <code>[relative-to]</code> is one of these values:<ul>
-            <li><code>left-of</code> - indicates that the element of interest is to the left of the <code>visible-text</code></li>
-            <li><code>right-of</code> - indicates that the element of interest is to the right of the <code>visible-text</code></li>
-            <li><code>above</code> - indicates that the element of interest is above the <code>visible-text</code></li>
-            <li><code>below</code> - indicates that the element of interest is below the <code>visible-text</code></li>
-            <li><code>container</code> - indicates that the element of interest is the parent/container of the
-                <code>visible-text</code>, and that it is of the "group" type (such as <code>android.view.ViewGroup</code>).</li>
-            <li><code>scroll-container</code> - indicates that the element of interest is the parent/container of the
-                <code>visible-text</code>, and that it is of the "scrollable" type (such as <code>android.widget.ScrollView</code>).</li>
-            </ul>
-
-            <code>[visible-text]</code> - the visible text used to identify the target element.<br/>
-            <br/>
-            <code>item</code> - in situation where there are multiple matches, one can specify the element index
-            (as in, the <em>nth</em> element) via the <code>item</code> keyword. The index must be a positive integer
-            (0-based), or the special keyword <code>last</code>. Use <code>item:last</code> to signify the last match
-            item.<br/>
-            <br/>
-            <code>{attribute=value,attribute=value,...}</code> - OPTIONAL. One can supply additional attributes
-            of the target element to improve the locator precision. This is generally not needed. At times when
-            there are many elements nearby the same text element, one may want to consider adding additional
-            attributes to filter out the conflicting elements.
+            <table cellpadding="5" cellspacing="0">
+            <tr>
+                <th style="background-color:#303030;text-align:left">
+                    <code style="color:#0f9;background-color:#303030;border:none">[relative-to]</code>
+                </th>
+                <td>
+                    One of these values:
+                    <ul>
+                        <li>
+                            <code>left-of</code> - indicates that the element of interest is to the left of the
+                            <code>visible-text</code>
+                        </li>
+                        <li>
+                            <code>right-of</code> - indicates that the element of interest is to the right of the
+                            <code>visible-text</code>
+                        </li>
+                        <li>
+                            <code>above</code> - indicates that the element of interest is above the
+                            <code>visible-text</code>
+                        </li>
+                        <li>
+                            <code>below</code> - indicates that the element of interest is below the
+                            <code>visible-text</code>
+                        </li>
+                        <li>
+                            <code>container</code> - indicates that the element of interest is the parent/container of
+                            the <code>visible-text</code>, and that it is of the "group" type (such as
+                            <code>android.view.ViewGroup</code>).
+                        </li>
+                        <li>
+                            <code>scroll-container</code> - indicates that the element of interest is the
+                            parent/container of the <code>visible-text</code>, and that it is of the "scrollable" type
+                            (such as <code>android.widget.ScrollView</code>).
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th style="background-color:#303030;text-align:left">
+                    <code style="color:#09f;background-color:#303030;border:none">[visible-text]</code>
+                </th>
+                <td>The visible text is used to identify the target element.</td>
+            </tr>
+            <tr>
+                <th style="background-color:#303030;text-align:left">
+                    <code style="color:#9f0;background-color:#303030;border:none">item:...</code>
+                </th>
+                <td>
+                    In situations where there are multiple matches, one can specify the element index (as in, the
+                    <em>nth</em> element) via the <code>item</code> keyword. The index must be a positive integer
+                    (0-based), or the special keyword <code>last</code>. Use <code>item:last</code> to signify the last
+                    match item.<br/>
+                    <br/>
+                    Consider the following example:<br/>
+                    <img src="image/locator_08.png"/><br/>
+                    <code>nearby={right-of:UNCHECKED}{index:1}</code> would reference the left-most checkbox and
+                    <code>nearby={right-of:UNCHECKED}{index:last}</code> would reference the last (right-most) checkbox.
+                </td>
+            </tr>
+            <tr>
+                <th style="background-color:#303030;text-align:left">
+                    <code style="color:#f09;background-color:#303030;border:none">attribute=value,...</code>
+                </th>
+                <td>
+                    OPTIONAL. One can supply additional attributes of the target element to improve the locator
+                    precision. This is generally not needed. At times when there are many elements nearby the same
+                    text element, one may want to consider adding additional attributes to filter out the conflicting
+                    elements.
+                </td>
+            </tr>
+            </table>
         </div>
 
         <div id="tab_tag" class="tab">Not available in mobile automation.</div>
@@ -306,6 +386,61 @@
             Quick Tip: Image locators are prefixed by <code>image=</code><br/>
             <br/>
             <em>Coming soon, stay tuned!!</em>
+        </div>
+
+        <div id="tab_oneof" class="tab">
+            Quick Tip: "One Of" locators are prefixed by <code>one-of=</code><br/>
+            <br/>
+            This is yet another Nexial-only, specialized locator aiming at simplifying platform-specific locator
+            management. The main design idea is to allow one to specify multiple locators - some for a specific platform,
+            while some as generalized locators - and allow Nexial to pick the best locator at runtime. With the
+            <code>one-of</code> locator (more like <em>locators</em>), the multiple locators specified are filtered
+            at execution time to the appropriate ones. This allows for cleaner automation scripts and a simpler way to
+            maintain platform-specific or even build-specific locators. Here's an example to demonstrate this type of
+            locator:<br/>
+            <pre>one-of={text=Clear all}{android;id=dismiss_text}{ios;id=clear_all_button}</pre>
+            The above read:
+            <blockquote>
+                First, look for a component whose <b>text is "Clear all"</b>. <br/>
+                If that can't be found and the current device is <b>Android</b>, then look for a component with an
+                <b>ID of "dismiss_text"</b>.<br/>
+                However, if the current device is <b>iOS</b>, then look for a component with an
+                <b>ID of "clear_all_button"</b>.
+            </blockquote>
+            The multiple decision points here are neatly synthesized into a series of <code>{...}{...}</code>. This
+            simplifies the automation effort since we wouldn't need to maintain device-specific scripts or
+            device-specific locators.<br/>
+            <br/>
+            It is noteworthy to state that the order of these "inner" locators is important. Nexial will filter out all
+            the irrelevant ones (<code>android</code> for iOS and <code>ios</code> for Android) and "test" the relevant
+            ones from left to right. It is generally a good idea to order the most likely "inner" locator ahead of the
+            other ones.<br/>
+            <br/>
+            Here's the syntax of this <code>one-of</code> locator:<br/>
+            <pre style="margin-bottom:5px;">one-of={<span style="color:#09f">[android|ios];</span><span style="color:#0f9">[locator]</span>}{<span style="color:#0f9">[locator]</span>}{<span style="color:#0f9">[locator]</span>}...</pre>
+            where,
+            <table cellpadding="5" cellspacing="0">
+            <tr>
+                <th style="background-color:#303030;text-align:left">
+                    <code style="color:#09f;background-color:#303030;border:none">[android|ios];</code>
+                </th>
+                <td>
+                    <code>android</code> or <code>ios</code> - each specified locator may be prefixed with
+                    <code>android</code> or <code>ios</code> to signify its platform/device dependency. During
+                    execution, Nexial will filter out the irrelevant locator(s) based on this. Note that this must be
+                    suffixed with a semi-colon. For example: <code>{android<b>;</b>id=FirstName}</code>
+                </td>
+            </tr>
+                <tr>
+                    <th style="background-color:#303030;text-align:left">
+                        <code style="color:#0f9;background-color:#303030;border:none">[locator]</code>
+                    </th>
+                    <td>
+                        The device-specific or generalized locator. One may choose from any of the supported locators
+                        such as ID, Accessibility ID, Text, etc.
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>
