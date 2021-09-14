@@ -19,7 +19,7 @@ comments: true
 #### Improvements
 - allow priority overrides (specified via `-override`) to take effect prior to loading project artifacts. As such, 
   these overrides can be specified via the `-override` command line argument. Previous requirement of using 
-  `JAVA_OPT=-D...` is still supported so no script/batch file changes are required.
+  `JAVA_OPT=-D...` is still supported so no script/batch file changes are required
 
 
 ### [Batch Files](../userguide/BatchFiles)
@@ -33,7 +33,7 @@ comments: true
 ### [javaui commands](../commands/javaui)
 - First draft release of the **NEW** `javaui` commands. These commands are designed to support automation for Java 
   desktop application - Swing, SWT, RCP for now. Future release aim to support GEF and JavaFX. Underlying automation
-  capability is based on jubula.
+  capability is based on jubula
 - Commands currently implemented:
   - [`startLocalAgent(port)`](../commands/javaui/startLocalAgent(port))
   - [`stopLocalAgent(port)`](../commands/javaui/stopLocalAgent(port))
@@ -49,7 +49,7 @@ comments: true
   - [`typeText(name,text)`](../commands/javaui/typeText(name,text))
   - [`clickButton(name)`](../commands/javaui/clickButton(name))
 - [`nexial-javaui-mapping`](../userguide/BatchFiles#nexial-javaui-mapping): batch file to start company mapping for 
-  target Java application.
+  target Java application
 
 
 ### [mobile commands](../commands/mobile)
@@ -65,7 +65,7 @@ comments: true
   attribute value for the first element that matched specified `locator`. PolyMatcher enabled
 - [`saveAttributes(var,locator,attribute)`](../commands/mobile/saveAttributes(var,locator,attribute)): *NEW* command to
   collect the attribute values from a list of elements matching `locator`
-- [`assertElementEnabled(locator)'](../commands/mobile/assertElementEnabled(locator)): **NEW** command to assert the
+- [`assertElementEnabled(locator)`](../commands/mobile/assertElementEnabled(locator)): **NEW** command to assert the
   presence and readiness (for interaction) of an element
 - [`assertElementDisabled(locator)`](../commands/mobile/assertElementDisabled(locator)): **NEW** command to assert that
   an element is disabled for interaction
@@ -145,7 +145,7 @@ comments: true
 ### [ws commands](../commands/ws)
 - code fix to correctly treat text-based payload as such (instead of as binary stream)
 - [`assertReturnCode(var,returnCode)`](../commands/ws/assertReturnCode(var,returnCode)): allows `returnCode` to be
-  expressed as a list or range.
+  expressed as a list or range
 - [`clearHeaders(headers)`](../commands/ws/clearHeaders(headers)): **NEW** command to clear HTTP request headers 
-  previously set.
+  previously set
  
