@@ -27,8 +27,9 @@ comments: true
 
 
 ### [mobile commands](../commands/mobile)
-- [`selectLocalFile(device,folder,filename)`](../commands/mobile/selectLocalFile(device,folder,filename)): handle 
-  different types of file display (grid vs list) during automation.
+- [`selectLocalFile(device,folder,filename)`](../commands/mobile/selectLocalFile(device,folder,filename)): 
+  - handle different types of file display (grid vs list) during automation.
+  - minor fixes for an edge condition.
 
 
 ### [web commands](../commands/web)
