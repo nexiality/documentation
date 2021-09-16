@@ -34,8 +34,8 @@ comments: true
 
 
 ### [web commands](../commands/web)
-- [`type(locator,text)`](../commands/web/type(locator,value)): performance improvement when clearing out existing text 
-  in React-like text boxes or text areas.
+- [`type(locator,text)`](../commands/web/type(locator,value)): 
+  - performance improvement when clearing out existing text in React-like text boxes or text areas.
 
 
 ### [webmail commands](../commands/webmail)
