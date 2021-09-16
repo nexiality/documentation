@@ -15,6 +15,7 @@ comments: true
 #### Fixes
 
 #### Improvements
+- minor batch and shell script changes to support Java 17.
 
 
 ### [Batch Files](../userguide/BatchFiles)
