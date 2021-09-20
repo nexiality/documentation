@@ -491,7 +491,6 @@ Remove lines from current expression that matches the specified `match`. This op
 
 {% include _polymatcher.md %}
 
------
 
 #### `removeRegex(regex,options)`
 Remove character(s) that matches `regex`.  

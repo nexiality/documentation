@@ -166,6 +166,14 @@ Output:<br/>
 
 -----
 
+#### `findFirst(match)`
+Also known as `find-first(...)`. Find the first item in the current list that matches the specified `match` criteria. 
+This utilizes polymatcher (below) to determine the matching items. The matched item is returned as a 
+[TEXT](TEXTexpression) expression. If no match is found, `null` is returned instead.
+
+{% include _polymatcher.md %}
+
+
 #### `first`
 Retrieve the first item in the list as a [`TEXT`](TEXTexpression).
 
@@ -357,11 +365,16 @@ Output:<br/>
 
 #### `removeMatch(match)`
 Remove one or more items from the list based on specified `match` criteria. This operation utilizes polymatcher (below)
-to determine the matching items. The result is a LIST without any items that match the specified critiera. 
+to determine the matching items. The result is a LIST without any items that match the specified criteria. For example,
+
+```
+[LIST(apple,strawberry,pineapple,banana) => remove(CONTAIN:apple)]
+```
+
+The above would yield: `strawberry,banana`
 
 {% include _polymatcher.md %}
 
------
 
 #### `replace(searchFor,replaceWith)`
 For the portion of all items that matches `searchFor`, replace it with `replaceWith`.
@@ -428,6 +441,20 @@ Output:<br/>
 ![output](image/LISTexpression_56.png)
 
 -----
+
+#### `retain(match)`
+Retain all the items from the list that match the specified `match` criteria. This operation utilizes polymatcher 
+(below) to determine the matching items. The result is a LIST with only items that match the specified criteria. For 
+example,
+
+```
+[LIST(apple,strawberry,pineapple,banana) => retain(CONTAIN:apple)]
+```
+
+The above would yield: `apple,pineapple`
+
+{% include _polymatcher.md %}
+
 
 #### `reverse`
 Reverse the order of the items in the list.

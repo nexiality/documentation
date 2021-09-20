@@ -25,6 +25,10 @@ comments: true
 ### [Expression](../expression)
 - [WEB &rauoq; `check(locator,waitMs)`](../expressions/WEBexpression.md#checklocatorwaitms): support customized time out
 - [WEB &rauoq; `uncheck(locator,waitMs)`](../expressions/WEBexpression.md#unchecklocatorwaitms): support customized time out
+- [LIST &raquo; `findFirst(match)`](../expressions/LISTexpression#findfirstmatch): find first matching item. 
+  PolyMatcher supported
+- [LIST &raquo; `retain(match)`](../expressions/LISTexpression#findfirstmatch): filter current LIST via `match` 
+  criteria. PolyMatcher supported
 
 
 ### [external commands](../commands/external)
