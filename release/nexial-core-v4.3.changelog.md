@@ -13,12 +13,18 @@ comments: true
 ### General
 
 #### Fixes
+- fixed issue with selecting data variables from the same prefix while running macro
 
 #### Improvements
 - minor batch and shell script changes to support Java 17.
 
 
 ### [Batch Files](../userguide/BatchFiles)
+
+
+### [Expression](../expression)
+- [WEB &rauoq; `check(locator,waitMs)`](../expressions/WEBexpression.md#checklocatorwaitms): support customized time out
+- [WEB &rauoq; `uncheck(locator,waitMs)`](../expressions/WEBexpression.md#unchecklocatorwaitms): support customized time out
 
 
 ### [external commands](../commands/external)
@@ -36,6 +42,8 @@ comments: true
 ### [web commands](../commands/web)
 - [`type(locator,text)`](../commands/web/type(locator,value)): 
   - performance improvement when clearing out existing text in React-like text boxes or text areas.
+- [`assertElementsPresent(prefix)`](../commands/web/assertElementsPresent(prefix)): fixed issue with selecting data 
+  variables from the same prefix while running macro
 
 
 ### [webmail commands](../commands/webmail)

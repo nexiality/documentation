@@ -38,7 +38,7 @@ Following is the JSON-like sample of the Web Execution result:
     result=PASS,
     error=null
   }, {
-    operation=click(//*[@id="btnLogi"]),
+    operation=click(//*[@id="btnLogin"]),
     result=FAIL,
     error=No element via locator '//*[@id="btnLogin"]'
   }]
@@ -58,12 +58,16 @@ returns `true` or `false`.
 
 -----
 
-#### `check(locator)`
+#### `check(locator,waitMs)`
 **Only applicable to checkboxes**. This operation ensures that the checkbox represented by the `locator` is checked. 
 If the target checkbox is already checked, this operation performs no action upon it.
 
 If the specified `locator` resolves to multiple checkboxes, then the same applies to all of them.
 
+The `waitMs` parameter is optional. It represents the amount of time Nexial would wait for all the matching checkboxes
+to be checked. If none is specified, then the value of [`nexial.pollWaitMs`](../systemvars/index.html#nexial.pollWaitMs)
+will be used instead. If you are considering only ave a small number of checkboxes, it might be good to set `waitMs` 
+to a small number like `1000`.
 -----
 
 #### `click(locator)`
@@ -243,12 +247,16 @@ Output:<br/>
 
 -----
 
-#### `uncheck(locator)`
+#### `uncheck(locator,waitMs)`
 **Only applicable to checkboxes**. This operation ensures that the checkbox represented by the `locator` is unchecked.
 If the target checkbox is already unchecked, this operation performs no action upon it.
 
 If the specified `locator` resolves to multiple checkboxes, then the same applies to all of them.
 
+The `waitMs` parameter is optional. It represents the amount of time Nexial would wait for all the matching checkboxes
+to be unchecked. If none is specified, then the value of [`nexial.pollWaitMs`](../systemvars/index.html#nexial.pollWaitMs)
+will be used instead. If you are considering only ave a small number of checkboxes, it might be good to set `waitMs`
+to a small number like `1000`.
 -----
 
 #### `wait(waitMs)`
