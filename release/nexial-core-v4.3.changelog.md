@@ -48,6 +48,8 @@ comments: true
   - performance improvement when clearing out existing text in React-like text boxes or text areas.
 - [`assertElementsPresent(prefix)`](../commands/web/assertElementsPresent(prefix)): fixed issue with selecting data 
   variables from the same prefix while running macro
+- [`switchBrowser(profile,config)`](../commands/web/switchBrowser(profile,config)): fixed error when switching back to
+  DEFAULT (without `profile` value).
 
 
 ### [webmail commands](../commands/webmail)
