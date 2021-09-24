@@ -27,8 +27,9 @@ Follow the steps documented here:
 
 #### Common Android `appId`
 Here are some common Android apps to try:
+
 | app                               | `appId`                                   |
-|+---------------------------------+|+-----------------------------------------+|
+|:----------------------------------|:------------------------------------------|
 | Android Live Wallpapers	          | `com.android.wallpaper`                   |
 | Calculator                        | `com.android.calculator2`                 |
 | Calendar	                        | `com.android.calendar`                    |
@@ -50,13 +51,15 @@ Here are some common Android apps to try:
 | Youtube                           | `com.google.android.youtube`              |
 |+---------------------------------+|+-----------------------------------------+|
 
+<br/>
+
 ### For iOS platform
 {% include_relative _ios_bundleid.md %}
 
 As a convenience, here are a list of common iOS apps and their respective `bundleId`:
 
 | app                               | `bundleId`                                |
-|+---------------------------------+|+-----------------------------------------+|
+|:----------------------------------|:------------------------------------------|
 | Home Screen/Application Launcher  | `com.apple.springboard`                   |
 | AirPort Utility                   | `com.apple.airport.mobileairportutility`  |
 | App Store                         | `com.apple.AppStore`                      |
