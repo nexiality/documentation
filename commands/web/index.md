@@ -10,7 +10,7 @@ Nexial supports browser automation via the popular
 <a href="https://www.seleniumhq.org/docs/03_webdriver.jsp" class="external-link" target="_nexial_link">WebDriver</a>
 automation framework. In effect, Nexial translates the commands in the Nexial script (spreadsheet) to Selenium- or 
 WebDriver- specific API calls, along with other automation work such as error handling and browser lifecycle management.
-Similar to [web cookie](../webcookie/) and [JavaScript alert](../webalert) automation, Nexial acts as the translator
+Similar to [web cookie](../webcookie) and [JavaScript alert](../webalert) automation, Nexial acts as the translator
 to mediate between the automation script and the underlying Selenium/WebDriver framework. As part of the overall 
 approach to building an automation platform, the Nexial development team tries to keep up the latest official releases 
 of its third-party libraries. Selenium is no exception. As of July 2018 Nexial uses Selenium 3.1.13 and the latest 

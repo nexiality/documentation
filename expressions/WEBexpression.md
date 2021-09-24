@@ -20,10 +20,10 @@ result into a "wrapper" or "object". This wrapper consists of following fields, 
 notation:
 - **allPass** - `true` means all the executed web operations were successful, or `false` means one or more web 
   operations had failed.
-- **results** - a list of web operation results, in the order of the their execution:
+- **results** - a list of web operation results, in the order of the executions:
   - **operation** - the web operation performed.
   - **result** - the result of the web operation performed which is `PASS` or `FAIL`.
-  - **error** - the error, if any, ocurred to a failed web operation.
+  - **error** - the error, if any, occurred to a failed web operation.
 
 Following is the JSON-like sample of the Web Execution result:
 ```text
@@ -53,8 +53,8 @@ return first operation result as `PASS` or `FAIL`. One can use a different varia
 ### Operations
 
 #### `allPass`
-This returns the last result of all executed web operations. Checks if all operations were successful or not and 
-returns `true` or `false`.
+This returns `true` if all the operations within the same WEB expression executed successful, or `false` is one or more 
+operations had failed.
 
 -----
 
@@ -68,15 +68,18 @@ The `waitMs` parameter is optional. It represents the amount of time Nexial woul
 to be checked. If none is specified, then the value of [`nexial.pollWaitMs`](../systemvars/index.html#nexial.pollWaitMs)
 will be used instead. If you are considering only ave a small number of checkboxes, it might be good to set `waitMs` 
 to a small number like `1000`.
+
 -----
 
 #### `click(locator)`
-This clicks on element specified via locator. If one wants to perform operation `clickByLabel`, provided label as input 
-must be with prefix `text=`. So for example, if locator is `text=LOGIN`, this clicks on the element having label `LOGIN`.
+This clicks on an element specified via its locator. One may perform the `click-by-label` operation (see 
+[web &raquo; `clickByLabel`](../commands/web/clickByLabel(label))) by specifying the `locator` parameter as `text=...`. 
+For example, to click on an element with text `LOGIN`, one may specify the locator as `text=LOGIN`.
 
 **Example**<br/>
 In this example, the first step is to open the URL and then login the site
-[`(https://opensource-demo.orangehrmlive.com/)`](https://opensource-demo.orangehrmlive.com/) using [`type(locator,value)`](#typelocatorvalue)
+[`(https://opensource-demo.orangehrmlive.com/)`](https://opensource-demo.orangehrmlive.com/) 
+using [`type(locator,value)`](#typelocatorvalue)
 and `click` operations.
 
 Script:<br/>
@@ -88,14 +91,13 @@ Output:<br/>
 -----
 
 #### `deselect(locator,options)`
-This automates deselection of one or multiple `OPTION` elements from `select` element identified via locator. If 
+This automates the deselection of one or multiple `OPTION` elements from `select` element identified via locator. If 
 multiple `OPTION` elements specified, it deselects multiple options from the list-box (i.e. `<select multiple ...>`).
 Multiple options specified via `options` must be separated by [`nexial.textDelim`](./../systemvars/index#nexial.textDelim)
 
 **Example**<br/>
 In this example, selection and deselection of values is done from the `sample.html` page using 
-[`select(locator,options)`](#selectlocatoroptions) and then `deselect(locator,options)`
-operation.
+[`select(locator,options)`](#selectlocatoroptions) and then `deselect(locator,options)` operation.
 
 Sample HTML:<br/>
 ```html
@@ -121,15 +123,14 @@ Output:<br/>
 -----
 
 #### `fetchAsCsv(locators)`
-This stores the values of web elements specified via locators separated by [`nexial.textDelim`](../systemvars/index#nexial.textDelim)
-to [CSV](CSVexpression) format with the headers `locator` and `value`.
+This operation captures the values of web elements in CSV format. These web elements are expressed as a series of 
+locators, separated by [`nexial.textDelim`](../systemvars/index#nexial.textDelim).
 
 **Example**<br/>
-In this example, the first step is to open the URL and login the site
-[`(https://opensource-demo.orangehrmlive.com/)`](https://opensource-demo.orangehrmlive.com/) using [`type(locator,value)`](#typelocatorvalue)
-and [`click(locator)`](#clicklocator) operations. If `allPass` is `true` and login is done successfully, then add new user. 
-Details of new user is stored in the `user.csv` file by using `fetchAsCsv(locators)`
-operation.
+In this example, the [`type(locator,value)`](#typelocatorvalue) and [`click(locator)`](#clicklocator) operations are 
+used to log in to [OrangeHRM](https://opensource-demo.orangehrmlive.com/). After a new user is added, the 
+`fetchAsCsv(locators)` is used to reference a series of web element and save the corresponding `value` attribute as 
+[CSV](CSVexpression). Finally the captured CSV data is parsed and saved to `user.csv`.
 
 Script:<br/>
 ![script](image/WEBexpression_05.png)
@@ -144,6 +145,15 @@ Output Excel:<br/>
 ![output](image/WEBexpression_06.png)
 ![output](image/WEBexpression_07.png)
 ![output](image/WEBexpression_08.png)
+
+-----
+
+#### `jsClick(locator)`
+Or `js-click(locator)`. This operation performs the similar function as [`click(locator)`](#clicklocator), except the
+click operation is performed via JavaScript. Using JavaScript to perform click can be useful at times, especially when
+one wishes to "click without wait". The [`click(locator)`](#clicklocator) operation uses WebDriver to perform the click
+action, and as such incur some delay between WebDriver and target browser. However, using JavaScript, such delay is
+eliminated.
 
 -----
 
@@ -211,8 +221,8 @@ Output:<br/>
 This enters the specified `value` into the first element that matches the specified `locator`.
  
 **Example**<br/>
-In this example, `nexial` is typed in the google and the `google search` button is clicked by [`click(locator)`](#clicklocator)
-operation.  
+In this example, `nexial` is typed inti the search box and the `Google Search` button is clicked via the 
+[`click(locator)`](#clicklocator) operation.  
 
 Script:<br/>
 ![script](image/WEBexpression_17.png)
@@ -231,9 +241,9 @@ through [web &raquo; `typeKeys(locator,value)`](../commands/web/typeKeys(locator
  
 **Example**<br/>
 In this example, the first step is to open the URL and login the site
-[`(https://opensource-demo.orangehrmlive.com/)`](https://opensource-demo.orangehrmlive.com/) using [`type(locator,value)`](#typelocatorvalue)
-and [`click(locator)`](#clicklocator) operations. By using, `typeKeys(locator,value)` the Username in the Admin Module is copied 
-and pasted to the Employee Name.
+[`(https://opensource-demo.orangehrmlive.com/)`](https://opensource-demo.orangehrmlive.com/) using 
+[`type(locator,value)`](#typelocatorvalue) and [`click(locator)`](#clicklocator) operations. By using, 
+`typeKeys(locator,value)` the Username in the Admin Module is copied and pasted to the Employee Name.
 
 Script:<br/>
 ![script](image/WEBexpression_20.png)
@@ -260,10 +270,10 @@ to a small number like `1000`.
 -----
 
 #### `wait(waitMs)`
-This waits till the desired time(in milli seconds) passed as input parameter `waitMs`.
+This waits until the specified time (`waitMs`, in milliseconds) passed.
 
 **Example**<br/>
-In this example, `nexial` is typed in the google. The `wait(waitMs)` force browser to wait for `10000ms` to click 
+In this example, `nexial` is typed in the text box. The `wait(waitMs)` force browser to wait for `10000ms` to click 
 `google search` button. 
 
 Script:<br/>
@@ -280,8 +290,6 @@ Output:<br/>
 #### `waitFor(locator)`
 This operation waits for the specified locator to be present in the current page (or frame). The maximum wait time is
 controlled by [`nexial.pollWaitMs`](../systemvars/index#nexial.pollWaitMs).
-
-**Example**<br/>
 
 -----
 

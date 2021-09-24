@@ -29,6 +29,8 @@ comments: true
   PolyMatcher supported
 - [LIST &raquo; `retain(match)`](../expressions/LISTexpression#findfirstmatch): filter current LIST via `match` 
   criteria. PolyMatcher supported
+- [WEB &raquo; `jsClick(locator)`](../expressions/WEBexpression#jsclicklocator): **NEW** operation to forcefully 
+  click via JavaScript instead of WebDriver click.
 
 
 ### [external commands](../commands/external)
@@ -50,6 +52,10 @@ comments: true
   variables from the same prefix while running macro
 - [`switchBrowser(profile,config)`](../commands/web/switchBrowser(profile,config)): fixed error when switching back to
   DEFAULT (without `profile` value).
+- [`text=...` locator](../commands/web/index#locators): **NEW** locator to simplify the referencing of text-centric web 
+  elements.
+- [`layer=...` locator](../commands/web/index#locators): **NEW** locator to optimize the use of existing locators 
+  across multiple DOM layers.
 
 
 ### [webmail commands](../commands/webmail)

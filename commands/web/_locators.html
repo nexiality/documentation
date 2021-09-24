@@ -92,6 +92,8 @@
     <li><a href="#tab_class" id="tab_title_class">Style Class</a></li>
     <li><a href="#tab_css" id="tab_title_css">CSS</a></li>
     <li><a href="#tab_xpath" id="tab_title_xpath">XPath</a></li>
+    <li><a href="#tab_text" id="tab_title_text">Text</a></li>
+    <li><a href="#tab_layer" id="tab_title_layer">Layer</a></li>
   </ul>
   <div class="tab-content">
     <div id="tab_id" class="tab">
@@ -135,18 +137,12 @@
               <code>id=section1</code>.
             </p>
             <p>
-              Typically the ID of a web element is assigned by the web developer. At the discretion of the
-              developer,
-              not every element might be assigned an ID, much less meaningful ones. Hence the success of
-              using this
-              approach is largely dependent on the developer, and to some extent the collaboration between
-              engineers.
-              Another issue is that, while ID should be unique on the same web page, many browsers allow
-              violation of
-              this rule such that an ID-based locator might match more than 1 element. Such anomaly occurs
-              more
-              frequently with generated ID stemmed from JavaScript front-end framework, the likes of
-              React, Angular,
+              Typically the ID of a web element is assigned by the web developer. At the discretion of the developer,
+              not every element might be assigned an ID, much less meaningful ones. Hence the success of using this
+              approach is largely dependent on the developer, and to some extent the collaboration between engineers.
+              Another issue is that, while ID should be unique on the same web page, many browsers allow violation of
+              this rule such that an ID-based locator might match more than 1 element. Such anomaly occurs more
+              frequently with generated ID stemmed from JavaScript front-end framework, the likes of React, Angular,
               Dojo, etc.
             </p>
             <p>
@@ -215,7 +211,7 @@
             To reference the "Log In" button, one could specify <code>name=submit</code>.
             </p>
             <p>
-              Due to how such attribute is used, this strategy is best suitable to reference form elements.
+              Due to how such attribute is used, this strategy is best suited to referencing form elements.
               Some forms are generated dynamically or programmed to behave differently based on user
               interaction. Such might be difficult for the name-based strategy.
             </p>
@@ -242,10 +238,11 @@
         <tbody>
         <tr>
           <td class="syntax" nowrap="nowrap">
-            <b>link=</b><i>link-text</i>
+            <b>link=</b><i>link-text</i> or <b>linkText=<i>link-text</i></b>
             <div class="example">
               link=Click here<br/>
-              link=Sale of the Week
+              link=Sale of the Week<br/>
+              linkText=Login
             </div>
           </td>
           <td class="pros">
@@ -304,7 +301,6 @@
         </tbody>
       </table>
     </div>
-
     <div id="tab_partialLinkText" class="tab">
       <table class="locators" cellspacing="0" cellpadding="3">
         <thead>
@@ -317,7 +313,8 @@
         <tbody>
         <tr>
           <td class="syntax" nowrap="nowrap">
-            <b>partialLinkText=</b><i>partial-link-text</i>
+            <b>partialLinkText=</b><i>partial-link-text</i> or
+            <b>partial=</b><i>partial-link-text</i>
             <div class="example">
               partialLinkText=Forgot My<br/>
               partial=Click here to
@@ -351,7 +348,7 @@
             </p>
             <p>
               This strategy has potentially some advantages and some disadvantages. On one hand, partial match would
-              remove the need for exact match thus simplify the automation work a bit. However partial match could
+              remove the need for exact match thus simplify the automation work a bit. However, partial match could
               result in erroneous automation. Partial match could result in multiple matches and an unintended link
               could be invoked as a result. As with most <a href="#available-commands">web commands</a>, when there
               are multiple matches to the specified partial text match, only the first matched element is considered.
@@ -366,7 +363,6 @@
         </tbody>
       </table>
     </div>
-
     <div id="tab_tag" class="tab">
       <table class="locators" cellspacing="0" cellpadding="3">
         <thead>
@@ -525,7 +521,7 @@
               designed for more specific cases, the CSS locator is designed for general-purpose use. Using
               the appropriate CSS selector, one can pinpoint to the element or elements with precision. A
               CSS Selector is a combination of an element selector and a value which identifies the web
-              element within a web page. They represent HTML tags, attributes, Id and Classes as patterns
+              element within a web page. They represent HTML tags, attributes, ID and Classes as patterns
               that match against elements in their respective hierarchical structure tree.
             </p>
             <p>
@@ -557,11 +553,9 @@
               <li><a href="https://www.w3schools.com/cssref/css_selectors.asp" class="external-link"
                      target="_nexial_link">w3shools - CSS Selector Reference</a></li>
               <li><a href="https://saucelabs.com/resources/articles/selenium-tips-css-selectors"
-                     class="external-link" target="_nexial_link">saucelabs - Selenium Tips: CSS
-                Selectors</a></li>
+                     class="external-link" target="_nexial_link">saucelabs - Selenium Tips: CSS Selectors</a></li>
               <li><a href="https://www.swtestacademy.com/css-selenium/" class="external-link"
-                     target="_nexial_link">swtestacademy - How to Write Effective CSS Selenium
-                Selectors</a></li>
+                     target="_nexial_link">swtestacademy - How to Write Effective CSS Selenium Selectors</a></li>
               <li><a href="https://www.cheatography.com/janesh/cheat-sheets/css-selectors-for-selenium-webdriver/"
                      class="external-link" target="_nexial_link">cheatography - CSS Selectors for Selenium
                 WebDriver Cheat Sheet</a></li>
@@ -569,11 +563,9 @@
                      target="_nexial_link">yuanjiang - Selenium css selector</a></li>
               <li>
                 <a href="https://webkit.org/blog/3615/css-selectors-inside-selectors-discover-matches-not-and-nth-child/"
-                   class="external-link" target="_nexial_link">Complex CSS Selectors Inside
-                  Selectors</a></li>
+                   class="external-link" target="_nexial_link">Complex CSS Selectors Inside Selectors</a></li>
               <li><a href="https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048"
-                     class="external-link" target="_nexial_link">The 30 CSS Selectors You Must
-                Memorize</a></li>
+                     class="external-link" target="_nexial_link">The 30 CSS Selectors You Must Memorize</a></li>
               <li><a href="https://css-tricks.com/attribute-selectors/"
                      class="external-link" target="_nexial_link">The Skinny on CSS Attribute Selectors</a>
               </li>
@@ -658,19 +650,265 @@
                    target="_nexial_target">automatetheplanet - Most Underrated WebDriver Locator - XPath</a></li>
               <li><a href="https://www.automatetheplanet.com/selenium-webdriver-locators-cheat-sheet/" class="external-link"
                    target="_nexial_target">automatetheplanet - Most Exhaustive WebDriver Locators Cheat Sheet</a></li>
-              <li><a href="http://toolsqa.com/selenium-webdriver/choosing-effective-xpath/" class="external-link"
-                   target="_nexial_target">toolsqa - Choosing Effective XPaths</a></li>
+              <li><a href="https://toolsqa.com/selenium-webdriver/write-effective-xpaths/" class="external-link"
+                   target="_nexial_target">toolsqa - Writing Effective XPaths</a></li>
               <li><a href="https://devhints.io/xpath" class="external-link" target="_nexial_target">
                 devhints - XPath cheatsheet</a></li>
-              <li><a href="http://xpath.alephzarro.com/content/cheatsheet.html" class="external-link"
-                   target="_nexial_target">http://xpath.alephzarro.com/content/cheatsheet.html</a></li>
-              <li><a href="http://scraping.pro/res/xpath-cheat/xpath_css_dom_recipes.pdf" class="external-link"
-                   target="_nexial_target">http://scraping.pro/res/xpath-cheat/xpath_css_dom_recipes.pdf</a></li>
-              <li><a href="http://scraping.pro/res/xpath-cheat/xpath_css_dom_ref.pdf" class="external-link"
-                   target="_nexial_target">http://scraping.pro/res/xpath-cheat/xpath_css_dom_ref.pdf</a></li>
               <li><a href="https://www.scientecheasy.com/2019/08/xpath-axes.html/" class="external-link"
                    target="_nexial_target">XPath Axes: Ancestor, Following Sibling, Preceding</a></li>
               </ul>
+            </p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="tab_text" class="tab">
+      <table class="locators" cellspacing="0" cellpadding="3">
+        <thead>
+        <tr>
+          <th>Syntax/Example</th>
+          <th>Pros</th>
+          <th>Cons</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="syntax" nowrap="nowrap">
+            <b>text=</b><i>element-text</i>
+            <div class="example">
+              text=Welcome<br/>
+              text=<b>CONTAIN:</b>order complete<br/>
+              text=<b>START_ANY_CASE:</b>This request is submitted
+            </div>
+          </td>
+          <td class="pros">
+            <ul>
+              <li>Low to zero impact by page structure changes</li>
+              <li>Highly readable, easily to maintain</li>
+              <li>PolyMatcher for added flexibility</li>
+            </ul>
+          </td>
+          <td class="cons">
+            <ul>
+              <li>Not every web element has text</li>
+              <li>Problematic when specified text isn't unique</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="explain" colspan="3">
+            <p>
+              The "text" locator is uniquely crafted within Nexial to provide an efficient and easy-to-maintain
+              strategy for text-centric components. Consider the following example with multiple labels
+              (<span style="background-color: #ff9">highlighted</span>) and how we can reference them via
+              <code>text</code> locators:<br/>
+              <img src="image/locator_text_01.png" style="vertical-align: top"/>&nbsp;&nbsp;
+              <img src="image/locator_text_02.png" style="vertical-align: top"/>
+              <br/>
+              The ability to create locators without examining the underlying DOM structure can be a huge time saver.
+              <br/><br/>
+              In addition, we can also apply PolyMatcher for added flexibility. With PolyMatcher, we can use any of the
+              following partial match strategies:<br/>
+              <table cellspacing="0" cellpadding="5">
+              <tr>
+                <th><code>CONTAIN:</code></th>
+                <td>
+                  Reference a web element that contains the specified text.<br/>
+                  For example,<code>text=CONTAIN:logged in successfully.</code>
+                </td>
+              </tr>
+              <tr>
+                <th><code>CONTAIN_ANY_CASE:</code></th>
+                <td>
+                  Reference a web element that contains the specified text,<b>case-insensitively</b>.<br/>
+                  For example, <code>text=CONTAIN_ANY_CASE:matches found in los angeles</code>
+                </td>
+              </tr>
+              <tr>
+                <th><code>START:</code></th>
+                <td>
+                  Reference a web element that starts with the specified text.<br/>
+                  For example, <code>text=START:Welcome,</code>
+                </td>
+              </tr>
+              <tr>
+                <th><code>START_ANY_CASE:</code></th>
+                <td>
+                  Reference a web element that starts with the specified text, <b>case-insensitively</b>.<br/>
+                  For example, <code>text=START_ANY_CASE:the time now is</code>
+                </td>
+              </tr>
+              <tr>
+                <th><code>LENGTH:</code></th>
+                <td>
+                  Reference a web element that contains text of specified length.<br/>
+                  For example,<code>text=LENGTH:12</code>
+                </td>
+              </tr>
+              <tr>
+                <th><code>EMPTY:true|false</code></th>
+                <td>
+                  Reference a web element (the first matched) that contains text or no text.<br/>
+                  For example,<code>text=EMPTY:true</code> means elements with no text; <code>text=EMPTY:false</code>
+                  means elements containing at least 1 character.<br/>
+                  Usually, this specific PolyMatcher makes more sense when applied within the context of
+                  <code>layer</code> locator.
+                </td>
+              </tr>
+              <tr>
+                <th><code>BLANK:true|false</code></th>
+                <td>
+                  Reference a web element (the first matched) that contains only blanks.<br/>
+                  For example,<code>text=BLANK:true</code> means elements with only blank/space characters;
+                  <code>text=BLANK:false</code> means elements that contain characters other than blank/space.<br/>
+                  Usually this specific PolyMatcher makes more sense when applied within the context of
+                  <code>layer</code> locator.
+                </td>
+              </tr>
+              </table>
+              <br/>
+              While its convenience is undeniable, this locator strategy is not a cure-all. Here are some reasons why
+              you might not want to rely on this locator strategy too much:
+              <ol>
+                <li>When the specified text might reference multiple web elements (test flakiness).</li>
+                <li>When the specified text might be hidden or its visibility is event-bound.</li>
+                <li>
+                  When the specified text is insufficient to pinpoint or to assert the target element. For example,
+                  "<em>find an element with text "Click here to register" <b>and</b> background color is blue.</em>"
+                </li>
+                <li>
+                  When the specified text is too long (as in a paragraph, for example), and using other attributes
+                  might be more efficient.
+                </li>
+              </ol>
+              This strategy is most effective for a simpler DOM structure or simpler page layout. It is similar to
+              <a href="../../commands/web/clickByLabel(label)">web &raquo; clickByLabel(label)</a>, except it can be
+              applied to any web element.
+            </p>
+            <p>
+              In terms of performance, this approach is around the same speed as that of the XPATH-based locators.
+            </p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="tab_layer" class="tab">
+      <table class="locators" cellspacing="0" cellpadding="3">
+        <thead>
+        <tr>
+          <th>Syntax/Example</th>
+          <th>Pros</th>
+          <th>Cons</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="syntax" nowrap="nowrap">
+            <b>layer=</b>{<i>locator</i>}{<i>locator</i>}{<i>...</i>}
+            <div class="example">
+              layer={css=dialog.toast}{text=Transaction Complete}<br/>
+              layer={css=.error}{text=CONTAIN:Invalid}
+            </div>
+          </td>
+          <td class="pros">
+            <ul>
+              <li>Scalable for complex DOM structure</li>
+              <li>Combining best locator strategy per layer</li>
+            </ul>
+          </td>
+          <td class="cons">
+            <ul>
+              <li>Slower than XPATH or CSS</li>
+              <li>Less like to be reused</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="explain" colspan="3">
+            <p>
+              This is another Nexial-only locator. In essence, this approach allows the mix-and-match of any locator per
+              "DOM layer" to reference the target element(s). One can think of a "DOM layer" as the parent-child concept
+              of a web page, where web element capable of containing one or more web (child) elements. At each hierarchy
+              (or <em>layer</em>), a web element can be constructed very differently than its parent or its children
+              elements. As such, there might not be an optimal locator to reference a specific element and its parent
+              elements. Suppose we want to reference the <code>SPAN</code> element with the text "Items" in the
+              following HTML snippet:
+              <pre style="font-size:12px;padding:5px;margin:15px 35px;">
+&lt;nav class="navbar navbar-light bg-light">
+  &lt;i class="fa fa-shopping-cart fa-lg m-2" aria-hidden="true">&lt;/i>
+  &lt;span class="badge badge-pill badge-info m-2" style="width: 50px;">1&lt;/span>
+  &lt;span>Items&lt;/span>
+&lt;/nav></pre>
+
+              XPATH would seem to be the obvious choice since it is the only locator that can reference element text.
+              However, XPATH isn't ideal to reference CSS classes. With <code>layer</code> locator we can reference the
+              same web element. Consider the difference between these locators:
+              <table cellpadding="5" cellspacing="0" style="margin:15px 35px;width:875px;text-align:center">
+                <tr>
+                  <th width="50%">XPATH</th>
+                  <th width="50%">layer</th>
+                </tr>
+                <tr>
+                  <td style="padding:5px;text-align:center;font-family:monospace">//*[contains(@class,'navbar')]/*[text()='Items']</td>
+                  <td style="padding:5px;text-align:center;font-family:monospace">layer={css=.navbar}{text=Items}</td>
+                </tr>
+              </table>
+
+              The <code>layer</code> locator (right) reads
+              <blockquote style="margin:15px 35px">
+                <em>
+                  find a web element that contains a "navbar" CSS class, then under such element, find a child or
+                  descendent element that has text "Item".
+                </em>
+              </blockquote>
+
+              In this case, the end result is the same as that of the XPATH locator. However, the layer locator has this
+              <code>{...}</code> syntax, which represents 1 layer, that allows us to use different locator at each layer.
+              We can select the best locator strategy - in terms of performance, maintainability, etc. - at every layer
+              to create a so-called compound locator. This can lead to productivity gain, performance gain, and improved
+              readability.
+              <br/><br/>
+              Consider a different example below,<br/>
+              <img src="image/locator_layer_01.png"/><br/>
+              Suppose the objective is to find all the computer names that
+              <ul>
+                <li>start with the letter <code>HP</code>, AND</li>
+                <li>do not have an associated "Introduced" value</li>
+              </ul>
+              The image above shows 5 <span style="background-color:#ff9">highlighted</span> computer names that match
+              the above criterion. To achieve this via the layer locator, we would first break things down into 3
+              successive filters:
+              <ol>
+                <li>find the table that contains the data in question, THEN</li>
+                <li>find the rows that do not have a corresponding "Introduced" value (second columns with <code>-</code>), THEN</li>
+                <li>find the cell that contains text that starts with <code>HP</code></li>
+              </ol>
+
+              Here's the layer locator that would satisfy the above requirements:<br/>
+              <code>layer={<b>css=.computers</b>}{<b>.//tr[td[2][text()='-']]</b>}{<b>text=START:HP</b>}</code>
+              <br/><br/>
+              Note that the second layer uses a <b>relative</b> XPATH (a dot in front) because we are filtering within
+              the previous "layer" (the <code>TABLE</code>). The last layer will automatically be converted into a
+              relative locator by Nexial. The <code>START:</code> syntax is part of PolyMatcher. Check out the "Text"
+              locator tab for more details on this.<br/>
+              <br/>
+              Now we can put this layer locator to good use:<br/>
+              <img src="image/locator_layer_02.png"/><br/>
+              <br/>
+              Using the <a href="../../commands/web/saveTextArray(var,locator)">web &raquo; <code>saveTextArray(var,locator)</code></a>
+              command we can capture the text of each referenced web element. Then using the
+              <a href="../../expressions/LISTexpression">LIST expression</a>, we can convert the captured list into a
+              newline-separated text, like this:<br/>
+              <img src="image/locator_layer_03.png"/><br/>
+            </p>
+            <p>
+              One critical thing to note is that the flexibility of the layer locator can easily lead to abuse. One
+              should still hold to all the good practices of writing effective locators.<br/>
+              Using the layer locator, we can circumvent some shortcomings of other locators when dealing with
+              either a complex or inconsistent DOM structure.
             </p>
           </td>
         </tr>
@@ -684,7 +922,7 @@
 <h4>Additional Help on Locators</h4>
 Here are a few tutorials on locators (please feel free to send more links so we can add to this list):
 <ul>
-  <li><a href="http://www.seleniumeasy.com/selenium-tutorials/selenium-locators" class="external-link"
+  <li><a href="https://www.seleniumeasy.com/selenium-tutorials/selenium-locators" class="external-link"
          target="_nexial_target">seleniumeasy - Locators for Selenium</a></li>
   <li><a href="https://www.e-gineering.com/2016/06/07/selenium-webelement-selectors/" class="external-link"
          target="_nexial_target">e-gineering - Simplify Selenium Selectors</a></li>
@@ -695,9 +933,8 @@ Here are a few tutorials on locators (please feel free to send more links so we 
 One might consider converting XPaths to CSS locators since CSS locators are generally faster and more readable. Here's
 an online app to help converting XPath to CSS locator:<br/>
 <div style="margin-left: 25px">
-  <a href="http://cssify.appspot.com/" class="external-link" target="_nexial_target">
-    http://cssify.appspot.com/ <br/>
-    <img src="image/web_02.png" alt="http://cssify.appspot.com/"/>
+  <a href="https://cssify.appspot.com/" class="external-link" target="_nexial_target">https://cssify.appspot.com/ <br/>
+    <img src="image/web_02.png" alt="https://cssify.appspot.com/"/>
   </a>
 </div>
 <br/>
@@ -706,8 +943,7 @@ Google Chrome comes with a sleuth of useful features to perform common tasks suc
 elements, and monitoring DOM events. This is available from the Chrome DevTools (aka Console):<br/>
 <div style="margin-left: 25px">
   <a href="https://developers.google.com/web/tools/chrome-devtools/console/command-line-reference" class="external-link"
-     target="_nexial_target">
-    Command Line API Reference <br/>
+     target="_nexial_target">Command Line API Reference <br/>
     <img src="image/web_05.png" alt="developers.google.com"/>
   </a>
 </div>
