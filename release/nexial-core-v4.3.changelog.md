@@ -14,6 +14,7 @@ comments: true
 
 #### Fixes
 - fixed issue with selecting data variables from the same prefix while running macro
+- fixed runtime error when a condition within a flow control resolved to null
 
 #### Improvements
 - minor batch and shell script changes to support Java 17.
@@ -43,6 +44,8 @@ comments: true
 - [`selectLocalFile(device,folder,filename)`](../commands/mobile/selectLocalFile(device,folder,filename)): 
   - handle different types of file display (grid vs list) during automation.
   - minor fixes for an edge condition.
+- [`type(locator,text)`](../commands/mobile/type(locator,text)): avoid clearing text boxes when it contains no text.
+- [`home()`](../commands/mobile/home()): fixed issue with iOS device
 
 
 ### [web commands](../commands/web)
@@ -56,9 +59,12 @@ comments: true
   elements.
 - [`layer=...` locator](../commands/web/index#locators): **NEW** locator to optimize the use of existing locators 
   across multiple DOM layers.
+  - minor fixes 
 
 
 ### [webmail commands](../commands/webmail)
 
 
 ### [ws commands](../commands/ws)
+- [`oauthProfile(var,profile)`](../commands/ws/oauthProfile(var,profile)): add missing implementation to set auth 
+  token to HTTP header
