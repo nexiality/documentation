@@ -687,6 +687,37 @@ nexial.cmd -plan ...</pre>
         </td>
     </tr>
     <tr>
+        <td class="varname" nowrap="nowrap"><a id="nexial.disableCriticalCommands"><code>nexial.disableCriticalCommands</code></a></td>
+        <td>boolean</td>
+        <td>false</td>
+        <td class="read-write">read/write</td>
+        <td>
+            Determine if Nexial should consider the failure of "critical" commands as a condition for "fail immediate".
+            Critical commands are considered to be of utmost importance that no automation should tolerate such
+            corresponding failure. This means that failure on the execution of one of these critical commands will
+            trigger a "fail immediate" condition and the execution will promptly terminate. In other words, the
+            continuing of the execution after a failure to one of these critical commands is not likely useful or
+            meaningful.<br/>
+            <br/>
+            As this time, here are the list of critical commands:
+            <ol>
+            <li><a href="../commands/web/open(url)">web &raquo; <code>open(url)</code></a></li>
+            <li><a href="../commands/web/openAndWait(url,waitMs)">web &raquo; <code>openAndWait(url,waitMs)</code></a></li>
+            <li><a href="../commands/web/close()">web &raquo; <code>close()</code></a></li>
+            <li><a href="../commands/mobile/use(profile)">web &raquo; <code>use(profile)</code></a></li>
+            </ol>
+            <br/>
+            However, at times it is important (or, more "<em>critical</em>") that we don't terminate execution on
+            account of such failure condition. One such example is the testing or the simulation of network outage or
+            resource failure. In order to support such execution goals, one can use this System variable -
+            <code>nexial.disableCriticalCommands</code> - to temporarily disable to triggering of "fail immediate"
+            condition. Setting this System variable to <code>true</code> will disable such triggering.<br/>
+            <br/>
+            By default, this System variable is set to <code>false</code> (hence the failure of critical commands will
+            trigger "fail immediate" condition.<br/>
+        </td>
+    </tr>
+    <tr>
         <td class="varname" nowrap="nowrap">
             <a id="nexial.maxConsoleDisplay"><code>nexial.maxConsoleDisplay</code></a>
         </td>

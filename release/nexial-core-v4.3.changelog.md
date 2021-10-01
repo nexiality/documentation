@@ -18,6 +18,8 @@ comments: true
 
 #### Improvements
 - minor batch and shell script changes to support Java 17.
+- [`nexial.disableCriticalCommands`](../systemvars/index.html#nexial.disableCriticalCommands): **NEW** System variable
+  to temporarily disable critical command failure check.
 
 
 ### [Batch Files](../userguide/BatchFiles)
