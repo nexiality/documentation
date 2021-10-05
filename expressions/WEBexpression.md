@@ -130,7 +130,7 @@ locators, separated by [`nexial.textDelim`](../systemvars/index#nexial.textDelim
 In this example, the [`type(locator,value)`](#typelocatorvalue) and [`click(locator)`](#clicklocator) operations are 
 used to log in to [OrangeHRM](https://opensource-demo.orangehrmlive.com/). After a new user is added, the 
 `fetchAsCsv(locators)` is used to reference a series of web element and save the corresponding `value` attribute as 
-[CSV](CSVexpression). Finally the captured CSV data is parsed and saved to `user.csv`.
+[CSV](CSVexpression). Finally, the captured CSV data is parsed and saved to `user.csv`.
 
 Script:<br/>
 ![script](image/WEBexpression_05.png)

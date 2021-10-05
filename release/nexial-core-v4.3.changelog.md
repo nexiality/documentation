@@ -20,6 +20,7 @@ comments: true
 - minor batch and shell script changes to support Java 17.
 - [`nexial.disableCriticalCommands`](../systemvars/index.html#nexial.disableCriticalCommands): **NEW** System variable
   to temporarily disable critical command failure check.
+- [`nexial.inspectOnPause`](../systemvars/index.html#nexial.inspectOnPause): now support "end immediate" via `:end`.
 
 
 ### [Batch Files](../userguide/BatchFiles)
@@ -34,6 +35,8 @@ comments: true
   criteria. PolyMatcher supported
 - [WEB &raquo; `jsClick(locator)`](../expressions/WEBexpression#jsclicklocator): **NEW** operation to forcefully 
   click via JavaScript instead of WebDriver click.
+- [`nexial.expression.web.alwaysNew`](../systemvars/index.html#nexial.expression.web.alwaysNew): **NEW** System 
+  variable to ensure each use of WEB expression clear off outcome from the WEB operations from previous use.
 
 
 ### [external commands](../commands/external)

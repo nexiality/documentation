@@ -1856,6 +1856,45 @@ nexial.cmd -plan ...</pre>
                 PLEASE SEE <a href="#nexial.resolveTextAsURL"><code>nexial.resolveTextAsURL</code></a> INSTEAD.</i>
         </td>
     </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.expression.web.alwaysNew"><code>nexial.expression.web.alwaysNew</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td class="read-write">read/write</td>
+        <td>
+            When using <a href="../expressions/WEBexpression">WEB expression</a>, one often starts by defining an
+            expression variable to gather each outcome from the subsequent
+            <a href="../expressions/WEBexpression#operations">WEB operation</a> calls. Towards the end of a WEB
+            expression, a common practice is to use the <a href="../expressions/WEBexpression#allpass">allPass</a>
+            operation to evaluate the final "result" of the invoked WEB operations - <code>true</code> means all the
+            invoked operations were executed successfully. For example,<br/>
+            <img src="image/systemvar_42.png"/><br/>
+            In the above example, the variable <code>result</code> holds the outcome of each of the operations within
+            the same WEB expression. It is possible to query to outcome of each operation via the standard
+            <code>${...}.[property]</code> syntax. See
+            <a href="../expressions/WEBexpression#working-with-execution-result">Working with Execution Result</a>
+            for more details.<br/>
+            <br/>
+            Suppose one would to reuse the same variable (in the above example, <code>result</code>) for another WEB
+            expression. In such case, Nexial will append the outcome of the operations in the subsequent WEB expressions
+            into the same variable, and thus "taint" the same variable with the execution of disparate WEB expressions.
+            At times, this may be intentional. However, quite often this is not the case.<br/>
+            <br/>
+            By default, Nexial will append the outcome of the operations in subsequent WEB expressions to the same
+            variable (if the same variable name is used). To avoid this, one would need to either use a different
+            variable name or to clear out the variable in question prior to the subsequent use of WEB expression.<br/>
+            <br/>
+            With this System variable - <code>nexial.expression.web.alwaysNew</code> - Nexial can now automatically
+            clear off the specified variable in a WEB expression. By setting this System variable as <code>true</code>,
+            each WEB expression will be started off with "clean slate". Therefore, subsequent use of the same variable
+            in WEB expression will not result in the outcome being grouped together across WEB expression.<br/>
+            <br/>
+            By default, this System variable is set to <code>false</code>.
+        </td>
+    </tr>
+
 
     <tr>
         <td class="highlight-section" colspan="5"><span>For iteration-based testing only.</span></td>
