@@ -435,3 +435,41 @@ div.custom-header a, div.custom-footer a {
     color: #444;
     cursor: pointer;
 }
+
+.recording {
+    background-color: rgba(25, 25, 25, 0.85);
+}
+
+.recording .section-title {
+    color:                  #fff;
+    font-weight:            bold;
+    background-color:       rgba(150, 150, 150, 0.5);
+    padding:                7px 0 6px 10px;
+    margin:                 -10px 40px -15px -10px;
+    border-top-left-radius: 10px;
+}
+
+#all-recordings {
+    display:   flex;
+    flex-wrap: wrap;
+    border:    none;
+}
+
+.recording-container {
+    margin:  10px;
+    display: inline-block;
+}
+
+.recording-container video {
+    border:     3px solid rgba(200, 200, 200, 0.85);
+    box-shadow: 0 8px 10px 5px rgb(0 0 0 / 50%);
+    border-top: none;
+}
+
+.recording-caption {
+    display:          block;
+    font-weight:      bold;
+    color:            rgba(35, 35, 35, 0.85);
+    background-color: rgba(200, 200, 200, 0.85);
+    padding:          5px;
+}
