@@ -467,19 +467,38 @@ div.custom-header a, div.custom-footer a {
   /*border-top: none;*/
   /*box-shadow: 0 8px 10px 5px rgb(0 0 0 / 50%);*/
   border:     5px solid rgba(70, 70, 70, 0.85);
-  box-shadow: 0 10px 10px 5px rgb(0 0 0 / 50%);
+  box-shadow: 0 5px 5px 0 rgb(0 0 0 / 50%);
 }
 
 .recording-caption {
-  display:          block;
-  font-weight:      bold;
-  /*color:            rgba(35, 35, 35, 0.85);*/
-  /*background-color: rgba(200, 200, 200, 0.85);*/
-  /*padding:          5px;*/
-
-  color:            rgba(235, 235, 235, 0.85);
-  background-color: rgba(70, 70, 70, 0.85);
   padding:          8px;
   border-radius:    10px 10px 0 0;
-  text-shadow:      0 0 5px #000;
+  background-color: rgba(70, 70, 70, 0.85);
+  /*background-color: rgba(200, 200, 200, 0.85);*/
+}
+
+.recording-caption-title {
+  font-weight: bold;
+  text-shadow: 0 0 5px #000;
+  color:       rgba(235, 235, 235, 0.85);
+  /*color:            rgba(35, 35, 35, 0.85);*/
+}
+
+.recording-caption-meta {
+  padding:   7px 0 0;
+  font-size: 90%;
+}
+
+.meta-title {
+  padding:    2px 3px;
+  background: rgba(70, 70, 70, 0.85);
+  color:      rgba(220, 220, 50, 0.85);
+}
+
+.meta-value {
+  padding:     2px 3px;
+  margin:      0 10px 0 0;
+  font-weight: bold;
+  background:  rgba(220, 220, 50, 0.85);
+  color:       rgba(70, 70, 70, 0.85);
 }
