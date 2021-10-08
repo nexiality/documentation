@@ -1513,6 +1513,39 @@ nexial.cmd -plan ...</pre>
         </td>
     </tr>
     <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.recordingAutostart"><code>nexial.recordingAutostart</code></a>
+        </td>
+        <td>text</td>
+        <td>none</td>
+        <td class="read-write">read/write</td>
+        <td>
+            This System variable instructs Nexial to automatically start desktop recording (on primary monitor) when
+            a specific event occurs. This can be greatly simplify one's automation script by eliminating the explicit
+            invocation of <a href="../commands/base/startRecording()">base &raquo; <code>startRecording</code></a> and
+            <a href="../commands/base/stopRecording()">base &raquo; <code>stopRecording</code></a>.<br/>
+            <br/>
+            Currently the only event supported is <code>execution</code>. By assigning <code>execution</code> to this
+            System variable, Nexial will automatically start the desktop recording at the execution of the first command.
+            <br/>
+            <br/>
+            Future releases of Nexial will support automatic screen recording based on other events such as:<ul>
+            <li>when a script is being executed -- effectively create new recording per script</li>
+            <li>when a scenario is being executed -- effectively create new recording per scenario</li>
+            <li>when a new iteration commenced -- effectively create new recording per iteration</li>
+            </ul>
+            <br/>
+            One can consider using System variable at command line or in a batch file. For example,<br/>
+            <pre>
+                cd $NEXIAL_HOME
+                cd bin
+                nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordingAutostart=execution
+            </pre>
+            <br/>
+            By default, this System variable is assigned the value <code>none</code>.
+        </td>
+    </tr>
+    <tr>
         <td class="varname" nowrap="nowrap"><a id="nexial.screenRecorder"><code>nexial.screenRecorder</code></a></td>
         <td>text</td>
         <td>mp4</td>
