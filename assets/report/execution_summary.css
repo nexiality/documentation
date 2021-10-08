@@ -485,8 +485,9 @@ div.custom-header a, div.custom-footer a {
 }
 
 .recording-caption-meta {
-  padding:   7px 0 0;
-  font-size: 90%;
+  padding:     5px 0 0;
+  font-size:   90%;
+  line-height: 1.65em;
 }
 
 .meta-title {
