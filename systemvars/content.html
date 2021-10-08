@@ -1534,14 +1534,12 @@ nexial.cmd -plan ...</pre>
             <li>when a scenario is being executed -- effectively create new recording per scenario</li>
             <li>when a new iteration commenced -- effectively create new recording per iteration</li>
             </ul>
-            <br/>
             One can consider using System variable at command line or in a batch file. For example,<br/>
             <pre>
 cd $NEXIAL_HOME
 cd bin
 nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordingAutostart=execution
             </pre>
-            <br/>
             By default, this System variable is assigned the value <code>none</code>.
         </td>
     </tr>
