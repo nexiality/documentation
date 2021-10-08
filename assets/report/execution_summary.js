@@ -132,11 +132,14 @@ function toggleExpansion(/*HTMLElement*/icon) {
     }
 }
 
-
 function copyToClipboard(data) {
     var $temp = $("<input>");
     $("body").append($temp);
     $temp.val(data).select();
     document.execCommand("copy");
     $temp.remove();
+}
+
+function scrollToElement(/*String*/selector) {
+    $([document.documentElement, document.body]).animate({ scrollTop: $(selector).offset().top }, 1500);
 }

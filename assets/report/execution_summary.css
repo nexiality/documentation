@@ -490,6 +490,26 @@ div.custom-header a, div.custom-footer a {
   line-height: 1.65em;
 }
 
+.link-to-result {
+  padding:    0 4px;
+  background: transparent;
+}
+
+.link-to-result:hover {
+  color:            inherit;
+  background-color: transparent;
+}
+
+.link-to-result .fa-link {
+  color:       rgba(200, 200, 100, 0.85);
+  text-shadow: 0 0 10px rgb(0 0 0 / 95%);
+}
+
+.link-to-result .fa-link:hover {
+  color:       rgba(0, 0, 0, 0.95);
+  text-shadow: 0 0 5px rgb(255 255 220 / 95%);
+}
+
 .meta-title {
   padding:    2px 3px;
   background: rgba(70, 70, 70, 0.85);
