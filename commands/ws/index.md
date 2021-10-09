@@ -108,7 +108,20 @@ Note that the first line of the log file is the column headers. One can import s
 generate actionable visualization:<br/>
 ![](image/index_09.png)
 
+### Script Generation from Swagger File
+The `nexial-swagger` command is used to generate a script as well as the necessary supporting artifacts to configure the
+variables, which provides the basic rudimentary steps to test the various operations(Restful API calls) defined in
+the swagger file is provided as input to the command. The script and the other artifacts are created inside the Nexial
+project directory which is passed as input to the command.
 
+While the script generated may not cover all the validations as expected by the Automation Engineer,
+the generated script works like a template with most of the ready-made steps and necessary configuration variables
+declared with blank or empty values. The Automation Engineers can configure these variables and adjust the script as per
+their needs.
+
+Here’s a summary of the `nexial-swagger` command (click on tab to view):
+
+{% include_relative _nexial-swagger.html %}
 
 ### Available Commands
 - [`assertReturnCode(var,returnCode)`](assertReturnCode(var,returnCode))

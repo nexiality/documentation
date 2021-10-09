@@ -1,0 +1,348 @@
+<style>
+  .swagger.tabs .tab-content {
+    padding: 10px;
+  }
+
+  table.swagger {
+    width:     100%;
+    border:    2px solid rgba(122, 135, 85, 0.75);
+    font-size: 15px;
+    padding:   1px;
+  }
+
+  table.swagger li {
+    margin-bottom: 5px !important;
+  }
+
+ .swagger h1 {
+  color: #7d9530;
+  margin-bottom: 2px;
+}
+
+
+</style>
+
+<div class="tabs swagger">
+    <ul class="tab-links tabs-collapsed">
+        <li><a href="#tab_parameters" id="tab_title_parameters">Parameters</a></li>
+        <li><a href="#tab_script_file" id="tab_title_script_file">Script File</a></li>
+        <li><a href="#tab_properties_file" id="tab_title_properties_file">Properties file</a></li>
+        <li><a href="#tab_swagger_file" id="tab_title_swagger_file">Swagger file</a></li>
+        <li><a href="#tab_schema_files" id="tab_title_schema_files">Schema Files</a></li>
+        <li><a href="#tab_request_body_template" id="tab_title_request_body_template">Request Body Template</a></li>
+        <li><a href="#tab_batch_file" id="tab_title_batch_file">Batch File</a></li>
+        <li><a href="#tab_content_types_supported" id="tab_title_content_types_supported">Content Types supported</a>
+        </li>
+        <li><a href="#tab_authentication" id="tab_title_authentication">Authentication</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="tab_parameters" class="tab">
+            The script takes the following parameters.<br/><br/>
+            <b> <code>-f</code> or <code>--file</code></b>
+            <blockquote> This is a mandatory parameter that allows the script to specify the location of the Swagger
+                file. The file can be in the <code>yaml</code> or <code>JSON</code> formats. The Swagger file should
+                adhere to the [Open API 3 specifications](https://swagger.io/specification/).
+            </blockquote>
+
+            <b> <code>-d</code> or <code>--dir</code></b>
+            <blockquote>This is a mandatory parameter that specifies the Nexial project directory inside which the
+                script needs to be created. In case the project directory is not available the script creates
+                a new Nexial project directory with all the necessary files and folders inside it.
+            </blockquote>
+
+            <b> <code>-p</code> or <code>--prefix</code></b>
+            <blockquote>This mandatory parameter acts as a prefix to represent the generated script name.
+                The Automation Engineer can generate a new script (and corresponding artifacts)
+                by running the command again with a new prefix.
+            </blockquote>
+
+            The following is an example of the command.<br/><br/>
+            <code>nexial-swagger -f C:\Swagger\users.JSON -d C:\projects\users -p V1</code><br/><br/>
+
+            In the above example we can see that <code>C:\Swagger\users.json</code> is the location of the Swagger file,
+            <code>C:\projects\users</code> is the Nexial directory and <code>V1</code> is the prefix.<br/><br/>
+
+            This script generates the following output:<br/><br/>
+
+            <img src="image/swagger1.png"/><br/>
+        </div>
+
+        <div id="tab_script_file" class="tab">
+            The script file will be created inside the <code>artifact\script</code> folder of the Nexial project i.e.
+            the directory passed using <code>-d</code> parameter. The name of the file will be the same as the
+            prefix passed using the <code>-p</code> parameter.<br/><br/>
+
+            Consider the following example:-<br/>
+            <code>nexial-swagger -f C:\Swagger\users.json -d C:\projects\users -p V1</code><br/><br/>
+
+            The script file will be created inside the <code>C:\projects\users\artifact\script</code>folder with the
+            name <code>V1.xlsx</code>.So the complete path of the script file becomes
+            <code>C:\projects\users\artifact\script\V1.xlsx</code>.
+
+            <h1>Scenarios</h1>
+            Consider the following Swagger example:-<br/>
+
+            <img src="image/swagger2.png"/><br/><br/>
+
+            You can see in the above Swagger file there are 6
+            <a href="https://swagger.io/specification/#paths-object">paths</a>. Each of these become
+            a scenario in the Script file. When the <code>nexial-swagger</code> command is run on top of the above
+            Swagger file, the generated script looks as follows:<br/><br/>
+
+            <img src="image/swagger3.png"/><br/>
+
+            <h2>Scenario Name</h2>
+            Each scenario name generated will have a max of <b>31</b> characters. The scenario name will be in the format of
+            <code>{PATH}-{METHOD}</code>. All the <code>/</code> characters will be replaced with <code>-</code>.
+            The curly braces(<code>{</code>, <code>}</code>) will be removed.
+            All the spaces in the name will be removed. For example, if the path is <code>/users/{username}</code>
+            with the method <code>DELETE</code> the scenario name becomes <code>user-username-DELETE</code>.<br/><br/>
+
+            In case of any paths at root level i.e. <code>/</code> the scenario name will be given the format
+            <code>{TITLE}-{METHOD}</code>. For example, if the title of the Swagger file is <b>Users Rest API</b>.
+            For the path<code>/</code> with the method <code>GET</code> the scenario name becomes
+            <code>UsersRestApi-GET</code>.<br/><br/>
+
+            In certain situations, the pathname generated may be too big i.e. larger than <b>31</b> characters.
+            In such a case the last <b>31</b> characters become the scenario name. Consider the following example where
+            the path for a <code>GET</code> method is <code>/logs/deptId/countryId/regionId/userId</code>.
+            The scenario name will be <code>d-countryId-regionId-userId-GET</code>.<br/><br/>
+
+            <h2> Scenario Description</h2>
+            The description of the scenario as shown in the below diagram will be the same as the description of the
+            path or the Restful API operation.<br/>
+
+            <img src="image/swagger4.png"/><br/><br/>
+
+            <h1>Activity</h1>
+            Each Activity in the scenario will be named <code>{method}.{response}</code>. Consider the above diagram
+            where the <code>DELETE</code> method has two responses viz <code>200</code> and <code>400</code>.
+            Since there are two responses, two Activities are created with the names
+            <b>delete.400</b> and <b>delete.200</b> respectively. You can see the description of the Activity is the
+            same as the description of the response code.
+
+            There are as many activities as the number of responses, but there may be additional Activities by names
+            <b>Set up</b> and <b>tear down</b> along with them in case any Authentication mechanism is specified for the
+            Restful operation.
+
+            <h1> Steps</h1>
+            The steps in the Activities are almost the same. The <code>Set up</code> and <code>tear down</code>
+            activities have the steps to set the header(s) and clear the header(s) respectively.
+
+            The following picture shows the example Steps in a Scenario:
+
+            <img src="image/swagger5.png"/><br/>
+
+            Activity has the following Steps:-
+            <ol>
+                <li>
+                    The Content-Type for the method. This may not be needed for methods like <code>GET</code> and
+                    <code>DELETE</code> where there is no Request body.
+                </li>
+                <li> Method invocation call where the parameters corresponding to the url, request body and the response
+                    are provided.
+                </li>
+                <li> Asserting the <code>return code</code>, returned by the earlier step.</li>
+                <li> Asserting the <code>status text</code>, returned by the earlier step.</li>
+                <li> There is an optional step to assert the correctness of the json response returned, validating
+                    against the Schema.
+                </li>
+                <li> Clean up steps i.e. the steps to clear the headers or response variables at scenario or activity
+                    level.
+                </li>
+            </ol>
+
+            <blockquote><b>Note</b>:- The variables used in these steps are configured in the
+                <code>properties</code> file,<code>JSON</code> files as well as <code>schema</code> files.</blockquote>
+        </div>
+
+        <div id="tab_properties_file" class="tab">
+            The properties file contains the variables that need to be configured for running the script. It has the
+            following configuration variables.<br/><br/>
+
+            <ul>
+                <li>Nexial defaults</li>
+                <li>baseUrl</li>
+                <li>Request Body variables</li>
+                <li>Cookie Variables</li>
+                <li>Path parameter Variables</li>
+                <li>Header variables</li>
+                <li>Query Parameter variables</li>
+                <li>Authentication variables</li>
+                <li>Status text variables</li>
+            </ul>
+
+            Consider the following command.
+            <code>nexial-swagger -f C:\Swagger\users.json -d C:\projects\users -p V1</code>
+
+            When the command runs it creates a properties file with the name as the <code>prefix</code> passed in.
+            In this case, it will be <code>V1</code>. So the name of the properties file generated will be
+            <code>project.V1.properties</code>. This will be created inside the <code>artifact</code> folder.
+
+            <h1>Nexial defaults</h1>
+            The properties will have the following Nexial defaults<br/>
+
+            <code>nexial.delayBetweenStepsMs=0</code><br/>
+
+            <code>nexial.ws.logDetail=true</code><br/>
+
+            <code>nexial.ws.logSummary=true</code><br/>
+
+            <code>nexial.ws.connectionTimeout=30000</code><br/>
+
+            <code>nexial.ws.readTimeout=30000</code><br/>
+
+            <h1>baseUrl</h1>
+            The <code>baseUrl</code> is retrieved from the Swagger file as shown in the below screenshot.<br/><br/>
+
+            <img src="image/swagger6.png"/><br/>
+
+            <h1>Request Body Variables</h1>
+            The Request body variables are the variables used as part of the request body JSON. These variables are used
+            to configure the value of the variables in the Request body. The format of the Request Variables will
+            be <code>{scenarioName}.{response}.{variableName}</code>. Example below.<br/><br/>
+
+            <img src="image/swagger7.png"/><br/><br/>
+
+            The variable values are left empty so that the Automation Engineer can configure them.
+
+            <h1>Cookie Variables</h1>
+            The Cookie variables corresponding to the cookies sent when the request is made.
+            The format is <code>cookie.{scenarioName}.{response}.{variableName}</code>.
+            The variable values are left empty so that the Automation Engineer can configure them.
+            <code>e.g.:- cookie.users-userId-GET.400.expirationTime</code><br/>
+
+            <h1>Path variables</h1>
+            The path variables are variables set in the request URL path. For example in the URL
+            <code>http://xyz.com/users/{userId}</code>,
+            <code>{userId}</code> is the path parameter. Path variables are used to configure these path variable values
+            by the Automation Engineer.
+            The format is <code>path.{scenarioName}.{response}.{variableName}</code>.
+            The variable values are left empty so that the Automation Engineer can configure them.
+            <code>e.g.:- path.users-userId-GET.400.userId</code><br/><br/>
+
+            <h1>Header variables</h1>
+            The header variables are used to configure the headers that are passed in as part of the HTTP request that
+            is made.
+            The format is <code>header.{scenarioName}.{response}.{variableName}</code>.
+            The variable values are left empty so that the Automation Engineer can configure them.
+            <code>e.g.:- header.UsersRestAPI-GET.200.x</code><br/><br/>
+
+            <h1>Query parameter variables</h1>
+            The Query parameter variables are variables appended in the request URL path. For example in the URL
+            <code>http://xyz.com/users?pageSize=10</code>, <code>{pageSize}</code> is the query parameter.
+            Query parameter variables are used to configure the values of the Query parameters by the Automation
+            Engineer.
+
+            The format of is <code>query.{scenarioName}.{response}.{variableName}</code>.
+            The variable values are left empty so that the Automation Engineer can configure them.
+            <code>e.g.:- query.users-GET.200.pageSize</code><br/><br/>
+
+            <h1>Authentication variables</h1>
+            The Authentication variables are the headers that are passed along with the URL request to ensure the
+            authenticity of the user. The format of the Authentication is
+            <code>{AUTHENTICATION_MODE}.{scenarioName}</code>.
+            The query parameter variables values are left empty so that the Automation Engineer can configure them.
+            <code>e.g.:- APIKEY.users-userId-GET</code><br/><br/>
+
+            <h1>Status Text variables</h1>
+            The Status text variables represent the status text retrieved as part of the response to an HTTP request
+            call. For example, when a call to retrieve specific user details may lead to a 400 response with the status
+            text <code>Bad Request</code> while a successful call may yield <code>OK</code>.
+
+            The format is <code>statusText.{scenarioName}.{response}</code>.
+            The variable values are left empty so that the Automation Engineer can configure them.
+            <code>e.g.:- statusText.users-POST.200</code>
+
+        </div>
+
+        <div id="tab_swagger_file" class="tab">
+            Once the <code>nexial-swagger</code> command is run, the Swagger file passed in as part of the command is
+            saved into the <code>{Nexial-project-directory}/artifact/data/Swagger</code> folder. The name of the file
+            will be <code>{prefix}.{swaggerFileName}</code>.<br/><br/>
+
+            For example, if the command is
+            <code>nexial-swagger -f c:\Swagger\users.JSON -d c:\projects\users -p V1</code>, the swagger file created
+            becomes:- <code>C:\projects\users\artifact\data\Swagger\V1.users.json</code>
+        </div>
+
+        <div id="tab_schema_files" class="tab">
+            Consider the following example:- <br/><br/>
+
+            <img src="image/swagger8.png"/><br/><br/>
+
+            In the above example, you can see that there are various schemas declared like <code>User, Pet, Tag,</code> etc.
+            The <code>nexial-swagger</code> command generates Schema files inside the <code>{Nexial Project
+            Directory}/artifact/data/Schema/{prefix}</code>.<br/>
+
+            The following is an example that demonstrates the generation of the Schema files.<br/><br/>
+
+            <img src="image/swagger9.png"/><br/><br/>
+
+            The Schema file contains the JSON Schema. The following is an example of Schema file content.<br/><br/>
+
+            <img src="image/swagger10.png"/>
+        </div>
+
+        <div id="tab_request_body_template" class="tab">
+            The Rest API methods like <code>POST, PUT </code>etc. need JSON body to be passed as part of the request.
+            The Request body template contains the JSON content that needs to be passed as part of the request.
+            The values corresponding to the keys in the JSON will however refer to the configuration variables
+            declared as part of the properties file.<br/><br/>
+
+            The following is an example of Request Body Template:-<br/><br/>
+
+            <img src="image/swagger11.png"/>
+        </div>
+
+        <div id="tab_batch_file" class="tab">
+            This command generates a <code>bin</code> directory inside the <code>artifact</code> folder.
+            This <code>bin</code> directory will contain the following two files<br/>
+
+            <ul>
+                <li>run-{prefix}.cmd</li>
+                <li>run-{prefix}.sh</li>
+            </ul>
+            <br/>
+
+            These files act as an executable to run the script. The <code>.cmd</code> file is used on the
+            Windows machine while the systems with other Operating Systems can use the <code>.sh</code> file.<br/><br/>
+
+            The following is an example of batch files.<br/>
+
+            <img src="image/swagger12.png"/>
+        </div>
+
+        <div id="tab_content_types_supported" class="tab">
+            The current command supports the following Content-Types.<br/>
+            <ul>
+                <li>application/json</li>
+                <li>application/octet-stream</li>
+            </ul>
+            <br/>
+
+            Consider the following example where the method's request body is not having the supported Content-Types.<br/><br/>
+
+            <img src="image/swagger13.png"/><br/><br/>
+
+            In such a case, the activities will be created with the <code>cmd type</code> of <code>step</code> and the
+            command <code>observe</code>. The following is an example:-<br/><br/>
+
+            <img src="image/swagger14.png"/>
+        </div>
+
+        <div id="tab_authentication" class="tab">
+            As of writing the Swagger specification supports the following Authentication.<br/><br/>
+
+            <img src="image/swagger15.png"/><br/><br/>
+
+            However, the <code>nexial-swagger</code> command doesn't support OAuth and OpenId Connect Discovery. In such
+            a case the scenario will create a new activity by the name <code>Warning</code> which contains a step,
+            that has the <code>cmd type</code> of <code>step</code> and the command <code>observe</code>.
+            The following is an example:-<br/><br/>
+
+            <img src="image/swagger16.png"/>
+        </div>
+    </div>
+</div>
+<br/>
