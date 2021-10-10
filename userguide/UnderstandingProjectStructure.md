@@ -203,7 +203,7 @@ uploaded to designated cloud location and removed from local output directory.
    4. `nexial version`: the version of Nexial used for this execution.
    5. `Data File`: the data file (file name only) used for this execution.
    6. `DataSheet(s)`: the data sheets from which test data was retrieved during execution.
-   7. `runtime args`: the command line argument used in this execution. Typically this describes the information 
+   7. `runtime args`: the command line argument used in this execution. Typically, this describes the information 
        entered after `nexial.cmd` or `nexial.sh`.
    8. `JAVA_OPT`: additional runtime System properties (i.e. `-D...`) configured for this execution. Here's a sample 
       output file to illustrate the same:<br/>
@@ -222,12 +222,28 @@ uploaded to designated cloud location and removed from local output directory.
    ![](image/UnderstandingProjectStructure_06.png)<br/>
    Output File:<br/>
    ![](image/UnderstandingProjectStructure_07.png)<br/><br/>
-4. <a name="summary"></a>Nexial also produces another output at the end of execution, one which provides a higher 
-   level of execution output and extrapolation across test plans, test scripts, iterations, scenarios, and 
-   activities:<br/>
+4. <a name="summary"></a>Nexial also produces another output at the end of execution to provide summary level of 
+   execution report and extrapolation across test plans, test scripts, iterations, scenarios, and activities:<br/>
    ![](image/UnderstandingProjectStructure_08.png)<br/><br/>
-   This file is always generated in the output directory as `execution-output.html`. It provides summary data points
-   at multiple levels and links to the execution output file. Some amount of interactivity is available where
+   As of Nexial [v4.3](../release/nexial-core-v4.3.changelog), this execution output also generate video playback for
+   any generated [desktop recordings](../commands/base/startRecording()) and 
+   [web service logs](../systemvars/index.html#nexial.ws.logSummary). For example, below is a snippet of the screen
+   recording generated during execution. One may use the recording for further post-execution analysis.<br/>
+   ![](image/UnderstandingProjectStructure_12.png)<br/>
+
+   Below shows an interactive grid for all the web service calls invoked during an execution. One can sort and filter 
+   this grid to better understand the performance and characteristics of the target application in terms of API calls.
+   Note that [`nexial.ws.logSummary`](../systemvars/index.html#nexial.ws.logSummary) and 
+   [`nexial.ws.logDetail`](../systemvars/index.html#nexial.ws.logDetail) must be turned on (set to `true`) in order for
+   this to work:
+   ![](image/UnderstandingProjectStructure_13.png)<br/>
+
+   Besides the interactive web service summary grid, Nexial also catalog all the web service calls (see below) so that 
+   one can differentiate them and view the request/response detail of each invocation.<br/>
+   ![](image/UnderstandingProjectStructure_14.png)<br/>
+   
+   The Execution Output file is always generated in the output directory as `execution-output.html`. It provides summary 
+   data at multiple levels and links to the execution output file. Some amount of interactivity is available where
    one can toggle the visibility of script, iteration, scenarios and activities data.<br/><br/>
 5. <a name="junit"></a>Along with the above-stated output, Nexial also produces a JUNIT compatible xml file. This
    XML file is always generated in the output directory as `junit.xml`. This file is useful when integrating with
@@ -246,9 +262,9 @@ directory for all your Nexial projects.
 
 For more information, check out [Understanding Nexial Test Artifact](UnderstandingExcelTemplates).
 
-### Adding new test artifact
+#### Adding new test artifact
 Nexial is distributed with a set of empty, ready-to-use templates for your automation. Navigate to 
-`${NEXIAL_HOME}/template` directory and you should see the available templates:<br/>
+`${NEXIAL_HOME}/template` directory, and you should see the available templates:<br/>
 
 ![nexial_home](image/UnderstandingProjectStructure_02.png)
 
@@ -258,16 +274,16 @@ a closer look:
 The `template/` directory contains 4 files:
 - **nexial-data.xlsx**: contains formatting rules to help differentiate between Nexial-specific data element and 
   application-specific / custom data element.  Technically one wouldn't need this template per se.  But it is 
-  recommended to use this template for your new data file for consistency sake.
+  recommended to use this template for your new data file for consistency's sake.
 - **nexial-macro.xlsx**: contains the basic template of a Nexial macro script (reusable steps).  See 
   [base &raquo; `macro(file,sheet,name)`](../commands/base/macro(file,sheet,name)) for more details about macros.
 - **nexial-script.xlsx**: the basic template of a test script.
 - **nexial-testplan.xlsx**: the basic template of a test plan.
 
-Once you copy one of these template to your project directory, remember to (1) place it in the designated location 
-(`script/` for scripts, `data/` for data, etc.), and (2) rename according to [convention](#nexial-project-structure).
+Generally speaking, it is recommended to use the [`nexial-project`](BatchFiles#nexial-project) batch file to add new 
+artifact. This batch file provides a number of fail-safe automation that keep your project more manageable. However,
+if you prefer, you may copy any of these "template" artifacts into your project. If you copy one of these templates to 
+your project directory, remember to (1) place it in the designated location (`script/` for scripts, `data/` for data, 
+etc.), and (2) rename according to [convention](#nexial-project-structure).
 
-Lastly, the templates are shipped with each build.  They already contain the latest set of commands available for
-each build.
-
-<script>jQuery(document).ready(function () { newProjectStructureSelect(); });</script>
+Lastly, the templates are shipped with each build.  They contain the latest set of commands available in each build.

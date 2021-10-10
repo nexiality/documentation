@@ -142,6 +142,8 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
 
 .execValue pre { margin: 0; }
 
+.execLog a { line-height: 1.65em; }
+
 .result { font-family: Tahoma, serif; font-size: 10pt; border: none; background: #fff; }
 
 .result td, .result th { border-bottom: 1px solid #ddd; }

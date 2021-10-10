@@ -24,7 +24,9 @@ comments: true
 - [`nexial.recordingAutostart`](../systemvars/content.html#nexial.recordingAutoStart): **NEW** System variable to 
   automatically start desktop (main screen) recording when execution starts. Future Nexial releases will support 
   automatic screen recording at the start of a script, an iteration or a scenario. _Stay tuned!!_
-- added screen recording as videos in execution report (`execution-output.html`).
+- [`execution-output.html`](../userguide/UnderstandingProjectStructure.html#output):
+  - added screen recording as videos in execution report.
+  - added web service summary and detail logs in execution report for interactive analysis. 
 
 
 ### [Batch Files](../userguide/BatchFiles)

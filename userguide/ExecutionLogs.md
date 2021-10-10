@@ -15,7 +15,7 @@ detailed) data for root cause analysis.
 
 -----
 
-#### Standard Log
+### Standard Log
 When Nexial runs an execution, the execution activities are displayed on the console as well as written to a dedicated 
 log file. Below is an snapshot of the execution logs on the console:<br/>
 ![](image/ExecutionLogs_01.png)
@@ -26,19 +26,33 @@ One will observe that:
    [log time]|[script file]|[scenario]|[activity]|[row number]|[command]|[log message]
    ```
 2. Some log entry are displayed in different colors:
-   <ul>
-   <li><b>PASS</b>ed steps: <span style="background-color: #000; color:#0f0">GREEN</span></li>
-   <li><b></b>FAIL</b>ed steps: <span style="background-color:#000;color:#f00">RED</span></li>
-   <li>Steps with <b>WARN</b>ing message: <span style="background-color:#000;color:#ff0">YELLOW</span></li>
-   <li>Steps that are <b>SKIP</b>ped (such as <a href="../flowcontrols/index#skipifcondition"><code>SkipIf</code></a>): 
-   <span style="background-color:#000;color:#d5d">MAGENTA</span></li>
-   <li>Execution <b>ABORT</b>ed: <span style="background-color:#000;color:#00f">BLUE</span></li>
-   </ul>
+   <table cellspacing="0" cellpadding="5" style="margin-left: 20px">
+   <tr>
+   <td><b>PASS</b>ed steps</td>
+   <td style="background-color: #000;"><span style="color:#0f0;padding:5px">GREEN</span></td>
+   </tr>
+   <tr>
+   <td><b>FAIL</b>ed steps</td>
+   <td style="background-color: #000;"><span style="color:#f00;padding:5px">RED</span></td>
+   </tr>
+   <tr>
+   <td>Steps with <b>WARN</b>ing message</td>
+   <td style="background-color: #000;"><span style="color:#ff0;padding:5px">YELLOW</span></td>
+   </tr>
+   <tr>
+   <td>Steps that are <b>SKIP</b>ped (such as <a href="../flowcontrols/index.html#skipifcondition"><code>SkipIf</code></a>)</td>
+   <td style="background-color: #000;"><span style="color:#d5d;padding:5px">MAGENTA</span></td>
+   </tr>
+   <tr>
+   <td>Execution <b>ABORT</b>ed</td>
+   <td style="background-color: #000;"><span style="color:#55f;padding:5px">BLUE</span></td>
+   </tr>
+   </table>
 3. Some log entries are formatted slightly different in order to highlight their significance.
 4. Some log entries span across multiple lines to improve readability. 
 
-Each execution starts a high-level information about the runtime environment such as user, host, Java runtime and Nexial
-version number:<br/>
+Each execution starts with high-level information about the runtime environment such as user, host, Java runtime and 
+Nexial version number:<br/>
 ![](image/ExecutionLogs_02.png)
 
 Each execution ends with a high-level execution summary information such as:
@@ -66,7 +80,7 @@ and postmortem discovery.
 
 -----
 
-#### Failure Log File
+### Failure Log File
 At times, an execution failure would also result in an additional log file to be generated. This log file contains
 details of the corresponding failure and can be helpful for reporting purpose.
 
@@ -80,7 +94,7 @@ Note that each failure would result in a separate failure log to be generated.
 
 -----
 
-#### ErrorTracker (error-only Log file)
+### ErrorTracker (error-only log file)
 Having individual [failure logs](#failure-log-file) is useful since each failure can be analyzed separately. However for
 a complex or long-running execution, it might be helpful to have another log file that "traps" all the failed steps
 (either **FAIL**ed or resulted in failure). As such, one would only need to reference 1 file to find all the errors that
@@ -212,14 +226,14 @@ When Nexial sends out email notification, it will evaluate `nexial.mailHeader` a
 
 -----
 
-#### Time Tracking
+### Time Tracking
 Time tracking is an optional feature in Nexial to track elapsed time between two or more steps. These between-steps time
 measurement are expressed as [flow controls](../flowcontrols/) and therefore can be placed in any arbitrary steps within
 one of more scripts. For more information, visit the [Time Tracking](../flowcontrols/timeTracking) page.
 
 -----
 
-#### Output-to-Cloud
+### Output-to-Cloud
 Nexial's Output-To-Cloud feature enables the seamless transfer of log files (among other forms of output) to the 
 designated cloud storage. When the necessary [setup](BatchFiles#nexial-setup) to configure cloud storage designation 
 (S3) is complete, and [`nexial.outputToCloud`](../systemvars/index.html#nexial.outputToCloud) is set to `true`, Nexial
