@@ -436,6 +436,9 @@ div.custom-header a, div.custom-footer a {
   cursor:      pointer;
 }
 
+/*-----------------------------------------------------------------------------*/
+/* Screen Recordings */
+/*-----------------------------------------------------------------------------*/
 .recording {
   /*background-color: rgba(25, 25, 25, 0.85);*/
   background-color: #fff;
@@ -447,8 +450,8 @@ div.custom-header a, div.custom-footer a {
   font-weight:            bold;
   background-color:       rgba(150, 150, 150, 0.5);
   padding:                7px 0 6px 10px;
-  margin:                 -10px 40px -15px -10px;
-  border-top-left-radius: 10px;
+  margin:                 -10px 39px -15px -10px;
+  border-top-left-radius: 9px;
 }
 
 #all-recordings {
@@ -462,7 +465,7 @@ div.custom-header a, div.custom-footer a {
   display: inline-block;
 }
 
-.recording-container video {
+.recording .container video {
   /*border:     3px solid rgba(200, 200, 200, 0.85);*/
   /*border-top: none;*/
   /*box-shadow: 0 8px 10px 5px rgb(0 0 0 / 50%);*/
@@ -470,56 +473,317 @@ div.custom-header a, div.custom-footer a {
   box-shadow: 0 5px 5px 0 rgb(0 0 0 / 50%);
 }
 
-.recording-caption {
+.recording .caption {
   padding:          8px;
   border-radius:    10px 10px 0 0;
   background-color: rgba(70, 70, 70, 0.85);
   /*background-color: rgba(200, 200, 200, 0.85);*/
 }
 
-.recording-caption-title {
+.recording .caption-title {
   font-weight: bold;
   text-shadow: 0 0 5px #000;
   color:       rgba(235, 235, 235, 0.85);
   /*color:            rgba(35, 35, 35, 0.85);*/
 }
 
-.recording-caption-meta {
+.recording .caption-meta {
   padding:     5px 0 0;
   font-size:   90%;
   line-height: 1.65em;
 }
 
-.link-to-result {
+.recording .link-to-result {
   padding:    0 4px;
   background: transparent;
 }
 
-.link-to-result:hover {
+.recording .link-to-result:hover {
   color:            inherit;
   background-color: transparent;
 }
 
-.link-to-result .fa-link {
-  color:       rgba(200, 200, 100, 0.85);
+.recording .link-to-result .fa-link {
+  color:       rgba(240, 240, 140, 0.85);
   text-shadow: 0 0 10px rgb(0 0 0 / 95%);
 }
 
-.link-to-result .fa-link:hover {
+.recording .link-to-result .fa-link:hover {
   color:       rgba(0, 0, 0, 0.95);
   text-shadow: 0 0 5px rgb(255 255 220 / 95%);
 }
 
-.meta-title {
-  padding:    2px 3px;
-  background: rgba(70, 70, 70, 0.85);
-  color:      rgba(220, 220, 50, 0.85);
+.recording .meta-title {
+  padding:       2px 3px 2px 6px;
+  background:    rgba(70, 70, 70, 0.85);
+  color:         rgba(220, 220, 50, 0.85);
+  border-radius: 10px 0 0 10px;
 }
 
-.meta-value {
-  padding:     2px 3px;
-  margin:      0 10px 0 0;
-  font-weight: bold;
-  background:  rgba(220, 220, 50, 0.85);
-  color:       rgba(70, 70, 70, 0.85);
+.recording .meta-value {
+  padding:       2px 8px 2px 4px;
+  margin:        0 10px 0 -3px;
+  font-weight:   bold;
+  background:    rgba(220, 220, 50, 0.85);
+  color:         rgba(70, 70, 70, 0.85);
+  border-radius: 0 10px 10px 0;
 }
+
+/*-----------------------------------------------------------------------------*/
+/* Web Service Logs */
+/*-----------------------------------------------------------------------------*/
+.wsLogs {
+  background-color: rgba(240, 240, 250, 0.75);
+}
+
+#all-wsLogs {
+  display:   flex;
+  flex-wrap: wrap;
+  border:    none;
+  padding:   0;
+}
+
+.wsLogs .section-title {
+  color:                  #135;
+  font-weight:            bold;
+  background-color:       rgba(130, 150, 180, 0.75);
+  padding:                7px 0 6px 10px;
+  margin:                 -10px 39px -15px -10px;
+  border-top-left-radius: 9px;
+}
+
+.summary-container {
+  margin: 0 0 10px 0;
+  width:  100%;
+  clear:  both;
+}
+
+.wsLogs .caption {
+  padding:          8px;
+  border-radius:    10px 10px 0 0;
+  background-color: rgba(50, 70, 100, 0.85);
+}
+
+.wsLogs .caption-title {
+  font-weight: bold;
+  text-shadow: 0 0 5px #000;
+  color:       rgba(235, 235, 235, 0.85);
+}
+
+.wsLogs a.caption-title {
+  background: none;
+  padding:    5px;
+}
+
+.caption a.caption-title i.fas {
+  color:   rgba(235, 235, 235, 0.85);
+  padding: 0 5px 0 0;
+}
+
+.wsLogs .caption-meta {
+  padding:     5px 0 0;
+  font-size:   90%;
+  line-height: 1.65em;
+}
+
+.wsLogs .meta-title {
+  padding:       2px 3px 2px 6px;
+  background:    rgba(40, 50, 70, 0.85);
+  color:         rgba(220, 240, 255, 0.65);
+  border-radius: 10px 0 0 10px;
+}
+
+.wsLogs .meta-value {
+  padding:       2px 8px 2px 4px;
+  margin:        0 10px 0 -3px;
+  font-weight:   bold;
+  background:    rgba(220, 240, 255, 0.85);
+  color:         rgba(40, 50, 70, 0.85);
+  border-radius: 0 10px 10px 0;
+}
+
+#wsSummaryTable_wrapper {
+  margin:    5px 0 0 0;
+  font-size: 9pt;
+}
+
+#wsSummaryTable {
+  font-size:   9pt;
+  font-family: monospace;
+  background:  rgba(160, 180, 200, 0.75);
+}
+
+.dataTables_wrapper {
+  font-size: 9pt;
+}
+
+.dataTables_wrapper a {
+  background: none;
+}
+
+.wsDetail {
+  margin: 10px 12px 20px;
+  width:  250px;
+}
+
+.wsDetail .caption {
+  padding:          0;
+  background-color: rgba(50, 70, 100, 0.35);
+}
+
+.wsDetail .caption-title {
+  margin:     0;
+  display:    flex;
+  height:     25px;
+  box-shadow: 0 5px 5px -3px rgb(0 0 0 / 75%);
+}
+
+.wsDetail .method {
+  font-size:              8pt;
+  margin:                 0 -1px 0 0;
+  padding:                7px 2px;
+  width:                  38px;
+  background-color:       rgba(50, 50, 50, 0.5);
+  border-top-left-radius: 10px;
+  text-align:             center;
+}
+
+.wsDetail .url {
+  width:            200px;
+  white-space:      nowrap;
+  text-overflow:    ellipsis;
+  overflow-x:       clip;
+  font-size:        8pt;
+  background-color: rgba(50, 60, 80, 0.85);
+  border:           2px inset rgba(50, 60, 80, 0.85);
+  border-left:      none;
+  border-right:     none;
+  padding:          5px 2px;
+  margin:           0;
+  cursor:           default;
+}
+
+.wsDetail .returnCode {
+  background-color:        rgba(50, 50, 50, 0.75);
+  padding:                 6px 2px;
+  border-top-right-radius: 10px;
+  width:                   38px;
+  font-size:               8pt;
+  text-align:              center;
+}
+
+.wsDetail .caption-meta {
+  padding: 15px 0 5px;
+}
+
+.wsDetail .meta-title {
+  width:         65px;
+  display:       inline-block;
+  text-align:    right;
+  margin:        0 0 8px -1px;
+  padding:       0 4px;
+  border-radius: unset;
+  box-shadow:    0 2px 3px rgb(0 0 0 / 55%);
+}
+
+.wsDetail .meta-value {
+  display:        inline-block;
+  padding:        0 10px 0 4px;
+  width:          160px;
+  vertical-align: middle;
+  background:     linear-gradient(90deg, rgba(250, 250, 255, 0.85) 110px, transparent 170px);
+  border-radius:  unset;
+  margin:         -2px 0 0 -4px;
+  white-space:    nowrap;
+  overflow-x:     clip;
+  text-overflow:  ellipsis;
+}
+
+.wsDetail .meta-value-half {
+  width:   30px !important;
+  padding: 0 4px !important;
+  margin:  -1px 10px 1px -3px !important;
+}
+
+.wsDetail-content {
+  display:          none;
+  position:         fixed;
+  z-index:          99999;
+  top:              7%;
+  left:             7%;
+  width:            85%;
+  height:           85%;
+  border:           15px solid rgba(70, 70, 70, 0.75);
+  border-radius:    15px 15px 15px 15px;
+  box-shadow:       2px 2px 15px 15px rgb(0 0 0 / 50%);
+  font-family:      monospace;
+  font-size:        10pt;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding:          15px;
+}
+
+.wsDetail .link {
+  margin:     5px;
+  background: none;
+  padding:    2px;
+  color:      rgba(40, 60, 100, 0.75);
+}
+
+button#hideLog {
+  display:       none;
+  position:      fixed;
+  right:         10px;
+  top:           10px;
+  font-size:     10pt;
+  color:         rgba(255, 255, 255, 0.85);
+  background:    rgba(120, 120, 80, 0.95);
+  border-radius: 20px;
+  border:        2px solid rgba(220, 220, 150, 0.75);
+  box-shadow:    0 0 10px 0 rgb(70 70 70 / 75%);
+  font-weight:   bold;
+  font-variant:  all-small-caps;
+  padding:       8px 15px;
+  text-shadow:   1px 1px 3px rgb(0 0 0 / 85%);
+  cursor:        pointer;
+}
+
+.method-GET { background-color: rgba(50, 100, 250, 0.85) !important; }
+
+.method-POST { background-color: rgba(200, 200, 50, 0.85) !important; }
+
+.method-PUT { background-color: rgba(100, 0, 100, 0.85) !important; }
+
+.method-PATCH { background-color: rgba(150, 50, 150, 0.85) !important; }
+
+.method-HEAD { background-color: rgba(100, 100, 100, 0.85) !important; }
+
+.method-DELETE { background-color: rgba(0, 0, 0, 0.85) !important; }
+
+.returnCode-200, .returnCode-202, .returnCode-204 { background-color: rgba(0, 150, 0, 0.75) !important; }
+
+.returnCode-201 { background-color: rgba(0, 120, 0, 0.75) !important; }
+
+.returnCode-207 { background-color: rgba(0, 100, 0, 0.75) !important; }
+
+.returnCode-400, .returnCode-402, .returnCode-406, .returnCode-407, .returnCode-408, .returnCode-409,
+.returnCode-410, .returnCode-411 { background-color: rgba(150, 100, 0, 0.75) !important; }
+
+.returnCode-401 { background-color: rgba(120, 100, 0, 0.75) !important; }
+
+.returnCode-403 { background-color: rgba(180, 100, 0, 0.75) !important; }
+
+.returnCode-404 { background-color: rgba(180, 120, 0, 0.75) !important; }
+
+.returnCode-405 { background-color: rgba(180, 150, 0, 0.75) !important; }
+
+.returnCode-500 { background-color: rgba(150, 50, 0, 0.75) !important; }
+
+.returnCode-501 { background-color: rgba(170, 60, 0, 0.75) !important; }
+
+.returnCode-502 { background-color: rgba(180, 70, 0, 0.75) !important; }
+
+.returnCode-503 { background-color: rgba(190, 80, 0, 0.75) !important; }
+
+.returnCode-504 { background-color: rgba(200, 90, 0, 0.75) !important; }
+
+.returnCode-505 { background-color: rgba(210, 100, 0, 0.75) !important; }

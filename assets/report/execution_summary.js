@@ -133,7 +133,7 @@ function toggleExpansion(/*HTMLElement*/icon) {
 }
 
 function copyToClipboard(data) {
-  var $temp = $("<input>");
+  let $temp = $("<input>");
   $("body").append($temp);
   $temp.val(data).select();
   document.execCommand("copy");
@@ -149,5 +149,28 @@ function scrollToElement(/*String*/selector) {
       target.fadeOut(100).fadeIn(scrollTime / 2)
             .fadeOut(100).fadeIn(scrollTime / 2);
     }, scrollTime);
+  }
+}
+
+function viewLog(selector) {
+  let showTime = 800;
+  let hideButton = $('#hideLog');
+  $(selector).show(showTime, function () {
+    hideButton.attr('target', selector);
+    hideButton.show();
+  });
+}
+
+function hideLog() {
+  let hideTime = 800;
+  let hideButton = $('#hideLog');
+  let logId = hideButton.attr('target');
+  if (logId) {
+    $(logId).hide(hideTime, function () {
+      hideButton.attr('target', '');
+      hideButton.hide();
+    });
+  } else {
+    hideButton.hide();
   }
 }
