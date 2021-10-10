@@ -28,7 +28,8 @@ comments: true
 
 
 ### [Batch Files](../userguide/BatchFiles)
-
+- [`nexial-swagger`](../userguide/BatchFiles#nexial-swagger): command that generates an automation script and corresponding
+  artifacts to validate the Restful API operations defined in the Swagger file passed in as input.
 
 ### [Expression](../expression)
 - [WEB &rauoq; `check(locator,waitMs)`](../expressions/WEBexpression.md#checklocatorwaitms): support customized time out

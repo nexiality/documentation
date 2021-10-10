@@ -454,4 +454,39 @@ If you want to run this manually you can run it, you don't need to pass any comm
 
 ---------------------------------------------
 
+#### **nexial-swagger**
+Swagger file written adhering to the Open API specifications in tandem with documentation generation tools can be used
+across the team to share the definitions of the Restful API operations/methods. These are generally written in `json`
+or `yaml` format as per the standards specified.
+
+Once the Swagger file is shared with the QA Automation team, they can start writing the Nexial scripts corresponding
+to the RESTFUL API definitions mentioned in the Swagger file. This process may be tedious particularly when the number of API 
+operations are more in number. Inorder to solve this problem, the `nexial-swagger` script helps you to generate an
+automated script(and supporting artifacts) which contains steps for performing the validation of Restful API operations
+and other artifacts like `properties file`, `data file`, `Schema files` etc. which provides necessary configuration variables
+with blank or empty values.
+
+While the script generated may not cover all the validations as expected by the Automation Engineer,
+the generated script works like a template with most of the ready-made steps and  the necessary configuration variables
+declared with blank or empty values. The Automation Engineers can easily tailor the generated scripts per their need.
+
+Refer for a [detailed explanation](../commands/ws/index#script-generation-from-swagger-file).
+
+This script has the following command line options:<br/>
+
+|options  |explanation                                                                                          |
+|---------|-----------------------------------------------------------------------------------------------------|
+|**`-f`** |**[REQUIRED]** This option is provides the Swagger file location path.       |
+|**`-d`** |**[REQUIRED]** This option is provides the Nexial directory folder inside which the necessary script and other artifacts needs to be created. |
+|**`-p`** |**[REQUIRED]** This prefix which represents the generated script name. |
+
+<br/>
+**Example** <br/>
+The following command takes the Swagger file specified with `-f` parameter and generates the necessary script and the 
+artifacts inside the Nexial project defined in the `-d` folder with a version prefix specified with `-p`.
+
+`nexial-swagger.cmd -f C:\Swagger\accounts.json -d C:\projects\accounts -p V1`
+
+---------------------------------------------
+
 <script>jQuery(document).ready(function () { newBatchFileSelect(); });</script>
