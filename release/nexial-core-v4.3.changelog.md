@@ -71,7 +71,8 @@ comments: true
   elements.
 - [`layer=...` locator](../commands/web/index#locators): **NEW** locator to optimize the use of existing locators 
   across multiple DOM layers.
-  - minor fixes 
+  - minor fixes
+- [`switchBrowser(profile,config)`](../commands/web/switchBrowser(profile,config)): force target browser instance to be focused.
 
 
 ### [webmail commands](../commands/webmail)

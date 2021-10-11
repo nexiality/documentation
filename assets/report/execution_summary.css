@@ -609,6 +609,15 @@ div.custom-header a, div.custom-footer a {
   font-size: 9pt;
 }
 
+#wsSummaryTable tbody tr td:nth-child(2),
+#wsSummaryTable tbody tr td:nth-child(3),
+#wsSummaryTable tbody tr td:nth-child(5) {
+  overflow-wrap: anywhere;
+  white-space: break-spaces;
+  width: 350px;
+  min-width: 50px;
+}
+
 #wsSummaryTable {
   font-size:   9pt;
   font-family: monospace;
@@ -761,31 +770,40 @@ button#hideLog {
 
 .method-DELETE { background-color: rgba(0, 0, 0, 0.85) !important; }
 
-.returnCode-200, .returnCode-202, .returnCode-204 { background-color: rgba(0, 150, 0, 0.75) !important; }
+.returnCode-200, .returnCode-202, .returnCode-204 { background-color: rgba(20, 90, 20, 0.65) !important }
 
-.returnCode-201 { background-color: rgba(0, 120, 0, 0.75) !important; }
+.returnCode-201 { background-color: rgba(40, 100, 40, 0.5) !important }
 
-.returnCode-207 { background-color: rgba(0, 100, 0, 0.75) !important; }
+.returnCode-207 { background-color: rgba(50, 120, 50, 0.5) !important }
 
 .returnCode-400, .returnCode-402, .returnCode-406, .returnCode-407, .returnCode-408, .returnCode-409,
-.returnCode-410, .returnCode-411 { background-color: rgba(150, 100, 0, 0.75) !important; }
+.returnCode-410, .returnCode-411 {
+  background-color: rgba(250, 100, 0, 0.95) !important;
+  box-shadow:       0 0 5px 5px rgb(235 35 35 / 75%);
+  color:            darkred;
+  text-shadow:      0 0 5px white;
+}
 
-.returnCode-401 { background-color: rgba(120, 100, 0, 0.75) !important; }
+.returnCode-401, .returnCode-403, .returnCode-404, .returnCode-405 {
+  box-shadow:  0 0 5px 5px rgb(225 0 0 / 75%);
+  color:       yellow;
+  text-shadow: 0 0 5px darkred;
+}
 
-.returnCode-403 { background-color: rgba(180, 100, 0, 0.75) !important; }
+.returnCode-401 { background-color: rgba(250, 0, 0, 0.95) !important; }
 
-.returnCode-404 { background-color: rgba(180, 120, 0, 0.75) !important; }
+.returnCode-403 { background-color: rgba(220, 0, 0, 0.95) !important; }
 
-.returnCode-405 { background-color: rgba(180, 150, 0, 0.75) !important; }
+.returnCode-404 { background-color: rgba(200, 0, 0, 0.95) !important; }
 
-.returnCode-500 { background-color: rgba(150, 50, 0, 0.75) !important; }
+.returnCode-405 { background-color: rgba(180, 0, 0, 0.95) !important; }
 
-.returnCode-501 { background-color: rgba(170, 60, 0, 0.75) !important; }
-
-.returnCode-502 { background-color: rgba(180, 70, 0, 0.75) !important; }
-
-.returnCode-503 { background-color: rgba(190, 80, 0, 0.75) !important; }
-
-.returnCode-504 { background-color: rgba(200, 90, 0, 0.75) !important; }
-
-.returnCode-505 { background-color: rgba(210, 100, 0, 0.75) !important; }
+.returnCode-500, .returnCode-501, .returnCode-502, .returnCode-503, .returnCode-504, .returnCode-505 {
+  box-shadow:       0 0 5px 8px rgb(240 120 0 / 85%);
+  color:            white;
+  background-color: rgba(0, 0, 0, 0.95) !important;
+  width:            45px !important;
+  height:           20px !important;
+  margin-top:       0;
+  font-size:        16px !important;
+}
