@@ -26,7 +26,8 @@ comments: true
   automatic screen recording at the start of a script, an iteration or a scenario. _Stay tuned!!_
 - [`execution-output.html`](../userguide/UnderstandingProjectStructure.html#output):
   - added screen recording as videos in execution report.
-  - added web service summary and detail logs in execution report for interactive analysis. 
+  - added web service summary and detail logs in execution report for interactive analysis
+  - interactive filters on web service calls
 
 
 ### [Batch Files](../userguide/BatchFiles)

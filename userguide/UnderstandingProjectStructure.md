@@ -225,8 +225,8 @@ uploaded to designated cloud location and removed from local output directory.
 4. <a name="summary"></a>Nexial also produces another output at the end of execution to provide summary level of 
    execution report and extrapolation across test plans, test scripts, iterations, scenarios, and activities:<br/>
    ![](image/UnderstandingProjectStructure_08.png)<br/><br/>
-   As of Nexial [v4.3](../release/nexial-core-v4.3.changelog), this execution output also generate video playback for
-   any generated [desktop recordings](../commands/base/startRecording()) and 
+   As of Nexial [v4.3](../release/nexial-core-v4.3.changelog), this execution summary report also generate video 
+   playback for any generated [desktop recordings](../commands/base/startRecording()) and 
    [web service logs](../systemvars/index.html#nexial.ws.logSummary). For example, below is a snippet of the screen
    recording generated during execution. One may use the recording for further post-execution analysis.<br/>
    ![](image/UnderstandingProjectStructure_12.png)<br/>
@@ -242,9 +242,10 @@ uploaded to designated cloud location and removed from local output directory.
    one can differentiate them and view the request/response detail of each invocation.<br/>
    ![](image/UnderstandingProjectStructure_14.png)<br/>
    
-   The Execution Output file is always generated in the output directory as `execution-output.html`. It provides summary 
+   The Execution Summary file is always generated in the output directory as `execution-output.html`. It provides summary 
    data at multiple levels and links to the execution output file. Some amount of interactivity is available where
-   one can toggle the visibility of script, iteration, scenarios and activities data.<br/><br/>
+   one can toggle the visibility of script, iteration, scenarios and activities data. See 
+   [Improving your execution summary report](ImprovingExecutionReport) for more details.<br/><br/>
 5. <a name="junit"></a>Along with the above-stated output, Nexial also produces a JUNIT compatible xml file. This
    XML file is always generated in the output directory as `junit.xml`. This file is useful when integrating with
    JUNIT-compatible tools and plugins such as:<br/>
