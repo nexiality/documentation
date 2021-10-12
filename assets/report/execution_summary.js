@@ -174,3 +174,26 @@ function hideLog() {
     hideButton.hide();
   }
 }
+
+function toggleWsDisplay(/*HTMLElement*/button) {
+  let elem = $(button);
+  elem.toggleClass('is-active');
+
+  let methodSelector = "";
+  $(".wsDetail-filter-method > .wsDetail-filter-button:not('.is-active')").text(
+    function (index, text) { methodSelector += ',.wsMethod-' + text; }
+  );
+
+  let returnSelector = "";
+  $(".wsDetail-filter-returnCode > .wsDetail-filter-button:not('.is-active')").text(
+    function (index, text) {
+      returnSelector += text.endsWith('xx') ?
+                        ',[class*="returnCode-' + text.substring(0, 1) + '"]' :
+                        ',.returnCode-' + text;
+    }
+  );
+
+  let matches = $(methodSelector.substr(1)).has(returnSelector.substr(1));
+  setTimeout(function () { matches.slideDown(250); }, 50);
+  $('.wsDetail').slideUp(20);
+}

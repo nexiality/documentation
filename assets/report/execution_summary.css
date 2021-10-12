@@ -461,11 +461,11 @@ a.top-link {
 
 a.top-link:hover .fa-chevron-up:hover {
   text-shadow: 0 0 6px rgb(0 50 0);
-  color:       rgba(250, 250, 250, 0.75);
+  color:       #fff
 }
 
 a.top-link .fa-chevron-up {
-  color:       rgba(80, 250, 100, 1);
+  color:       rgba(220, 220, 220, 1);
   text-shadow: 0 2px 6px #000;
   font-size:   14pt;
 }
@@ -664,6 +664,66 @@ a.top-link .fa-chevron-up {
   background: none;
 }
 
+.wsDetail-filter {
+  clear:       both;
+  width:       100%;
+  margin:      5px 0;
+  user-select: none;
+}
+
+.wsDetail-filter-method {
+  margin:       5px 0;
+  border:       1px outset rgba(70, 70, 70, 0.35);
+  padding:      10px 15px;
+  border-left:  none;
+  border-right: none;
+  background:   linear-gradient(180deg, rgba(70, 70, 70, 0.35) 2px, transparent 12px, transparent 25px, rgba(70, 70, 70, 0.35));
+}
+
+.wsDetail-filter-returnCode {
+  margin:       5px 0;
+  border:       1px outset rgba(80, 80, 50, 0.35);
+  padding:      10px 15px;
+  border-left:  none;
+  border-right: none;
+  background:   linear-gradient(180deg, rgba(80, 80, 50, 0.35) 2px, transparent 12px, transparent 25px, rgba(80, 80, 50, 0.35));
+}
+
+.wsDetail-filter-button {
+  background:    none;
+  padding:       5px 8px;
+  border:        1px outset rgba(100, 100, 100, 0.75);
+  font-size:     8pt !important;
+  font-family:   "Trebuchet MS", sans-serif;
+  font-weight:   bold;
+  text-shadow:   0 0 5px #000;
+  color:         rgba(235, 235, 235, 0.85);
+  border-radius: 25px;
+  cursor:        pointer;
+  user-select:   none;
+  display:       inline-block;
+  margin:        0 5px 0 0;
+  width:         40px !important;
+  text-align:    center;
+  box-shadow:    none;
+  height:        auto !important;
+}
+
+.wsDetail-filter .is-active {
+  border:           1px inset rgba(150, 150, 150, 0.75);
+  background-color: rgba(100, 100, 100, 0.35) !important;
+  color:            #ddd;
+  text-shadow:      -1px -1px 2px #555;
+}
+
+.wsDetail-filter-title {
+  font-size:   9pt;
+  display:     inline-block;
+  width:       130px;
+  font-weight: bold;
+  color:       rgba(40, 40, 40, 0.85);
+}
+
 .wsDetail {
   margin: 10px 12px 20px;
   width:  250px;
@@ -807,6 +867,10 @@ button#hideLog {
 .returnCode-201 { background-color: rgba(40, 100, 40, 0.5) !important }
 
 .returnCode-207 { background-color: rgba(50, 120, 50, 0.5) !important }
+
+.returnCode-2xx { background-color: rgba(20, 60, 20, 0.75); }
+
+.returnCode-3xx { background-color: rgba(60, 100, 150, 0.75); }
 
 .returnCode-400, .returnCode-402, .returnCode-406, .returnCode-407, .returnCode-408, .returnCode-409,
 .returnCode-410, .returnCode-411 {
