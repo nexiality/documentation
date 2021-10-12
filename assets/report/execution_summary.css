@@ -142,6 +142,20 @@ table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
 
 .execValue pre { margin: 0; }
 
+a.supplemental-link:hover {
+  background-color: rgba(40, 150, 40, 0.75);
+  color:            rgba(40, 40, 40, 0.75);
+  box-shadow:       0 0 8px 2px rgb(100 150 100 / 75%);
+  text-shadow:      1px 1px 2px rgb(200 255 200 / 75%);
+}
+
+a.supplemental-link {
+  padding:     5px 8px;
+  background:  rgba(100, 100, 100, 0.25) none;
+  font-family: Thonburi, sans-serif;
+  color:       rgba(40, 150, 40, 1);
+}
+
 .execLog a { line-height: 1.65em; }
 
 .result { font-family: Tahoma, serif; font-size: 10pt; border: none; background: #fff; }
@@ -438,6 +452,24 @@ div.custom-header a, div.custom-footer a {
   cursor:      pointer;
 }
 
+/* back-to-top link */
+a.top-link {
+  background: none;
+  padding:    5px 8px;
+  float:      right;
+}
+
+a.top-link:hover .fa-chevron-up:hover {
+  text-shadow: 0 0 6px rgb(0 50 0);
+  color:       rgba(250, 250, 250, 0.75);
+}
+
+a.top-link .fa-chevron-up {
+  color:       rgba(80, 250, 100, 1);
+  text-shadow: 0 2px 6px #000;
+  font-size:   14pt;
+}
+
 /*-----------------------------------------------------------------------------*/
 /* Screen Recordings */
 /*-----------------------------------------------------------------------------*/
@@ -613,9 +645,9 @@ div.custom-header a, div.custom-footer a {
 #wsSummaryTable tbody tr td:nth-child(3),
 #wsSummaryTable tbody tr td:nth-child(5) {
   overflow-wrap: anywhere;
-  white-space: break-spaces;
-  width: 350px;
-  min-width: 50px;
+  white-space:   break-spaces;
+  width:         350px;
+  min-width:     50px;
 }
 
 #wsSummaryTable {
