@@ -848,6 +848,7 @@ button#hideLog {
   padding:       8px 15px;
   text-shadow:   1px 1px 3px rgb(0 0 0 / 85%);
   cursor:        pointer;
+  z-index: 1;
 }
 
 .method-GET { background-color: rgba(50, 100, 250, 0.85) !important; }
