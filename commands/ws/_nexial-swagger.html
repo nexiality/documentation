@@ -15,11 +15,13 @@
   }
 
  .swagger h1 {
-  color: #7d9530;
-  margin-bottom: 2px;
-}
+    color: #7d9530;
+    margin-bottom: 2px;
+ }
 
-
+ .tabs .tab-links li {
+    margin-bottom: 0 !important;
+ }
 </style>
 
 <div class="tabs swagger">
@@ -92,7 +94,8 @@
             <img src="image/swagger3.png"/><br/>
 
             <h2>Scenario Name</h2>
-            Each scenario name generated will have a max of <b>31</b> characters. The scenario name will be in the format of
+            Each scenario name generated will have a max of <b>31</b> characters. The scenario name will be in the
+            format of
             <code>{PATH}-{METHOD}</code>. All the <code>/</code> characters will be replaced with <code>-</code>.
             The curly braces(<code>{</code>, <code>}</code>) will be removed.
             All the spaces in the name will be removed. For example, if the path is <code>/users/{username}</code>
@@ -153,7 +156,8 @@
             </ol>
 
             <blockquote><b>Note</b>:- The variables used in these steps are configured in the
-                <code>properties</code> file,<code>JSON</code> files as well as <code>schema</code> files.</blockquote>
+                <code>properties</code> file,<code>JSON</code> files as well as <code>schema</code> files.
+            </blockquote>
         </div>
 
         <div id="tab_properties_file" class="tab">
@@ -271,7 +275,8 @@
 
             <img src="image/swagger8.png"/><br/><br/>
 
-            In the above example, you can see that there are various schemas declared like <code>User, Pet, Tag,</code> etc.
+            In the above example, you can see that there are various schemas declared like <code>User, Pet, Tag,</code>
+            etc.
             The <code>nexial-swagger</code> command generates Schema files inside the <code>{Nexial Project
             Directory}/artifact/data/Schema/{prefix}</code>.<br/>
 
@@ -321,7 +326,8 @@
             </ul>
             <br/>
 
-            Consider the following example where the method's request body is not having the supported Content-Types.<br/><br/>
+            Consider the following example where the method's request body is not having the supported
+            Content-Types.<br/><br/>
 
             <img src="image/swagger13.png"/><br/><br/>
 
