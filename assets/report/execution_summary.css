@@ -696,8 +696,8 @@ a.top-link .fa-chevron-up {
   font-size:     8pt !important;
   font-family:   "Trebuchet MS", sans-serif;
   font-weight:   bold;
-  text-shadow:   0 0 5px #000;
-  color:         rgba(235, 235, 235, 0.85);
+  text-shadow:   0 0 5px #000 !important;
+  color:         rgba(235, 235, 235, 0.85) !important;
   border-radius: 25px;
   cursor:        pointer;
   user-select:   none;
@@ -705,7 +705,7 @@ a.top-link .fa-chevron-up {
   margin:        0 5px 0 0;
   width:         40px !important;
   text-align:    center;
-  box-shadow:    none;
+  box-shadow:    none !important;
   height:        auto !important;
 }
 
@@ -894,12 +894,15 @@ button#hideLog {
 
 .returnCode-405 { background-color: rgba(180, 0, 0, 0.95) !important; }
 
-.returnCode-500, .returnCode-501, .returnCode-502, .returnCode-503, .returnCode-504, .returnCode-505 {
+.returnCode-5xx, .returnCode-500, .returnCode-501, .returnCode-502, .returnCode-503, .returnCode-504, .returnCode-505 {
   box-shadow:       0 0 5px 8px rgb(240 120 0 / 85%);
   color:            white;
   background-color: rgba(0, 0, 0, 0.95) !important;
-  width:            45px !important;
-  height:           20px !important;
-  margin-top:       0;
-  font-size:        16px !important;
+}
+
+.returnCode-500, .returnCode-501, .returnCode-502, .returnCode-503, .returnCode-504, .returnCode-505 {
+  width:      45px !important;
+  height:     20px !important;
+  margin-top: 0;
+  font-size:  16px !important;
 }
