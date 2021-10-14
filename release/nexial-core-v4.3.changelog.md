@@ -27,7 +27,6 @@ comments: true
 - [`execution-output.html`](../userguide/UnderstandingProjectStructure.html#output):
   - added screen recording as videos in execution report.
   - added web service summary and detail logs in execution report for interactive analysis
-  - interactive filters on web service calls
 
 
 ### [Batch Files](../userguide/BatchFiles)
@@ -82,3 +81,4 @@ comments: true
 ### [ws commands](../commands/ws)
 - [`oauthProfile(var,profile)`](../commands/ws/oauthProfile(var,profile)): add missing implementation to set auth 
   token to HTTP header
+♥
