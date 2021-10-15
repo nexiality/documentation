@@ -81,4 +81,6 @@ comments: true
 ### [ws commands](../commands/ws)
 - [`oauthProfile(var,profile)`](../commands/ws/oauthProfile(var,profile)): add missing implementation to set auth 
   token to HTTP header
-♥
+- [`upload(url,body,fileParams,var)`](../commands/ws/upload(url,body,fileParams,var)): support multiple HTTP methods and
+  toggling of multipart via the [`nexial.ws.upload.method`] and [`nexial.ws.upload.multipart`] System variables 
+  respectively. Note that both of these System variables must be specified as part of the `body` parameter.
