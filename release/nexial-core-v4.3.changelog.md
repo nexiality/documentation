@@ -27,6 +27,7 @@ comments: true
 - [`execution-output.html`](../userguide/UnderstandingProjectStructure.html#output):
   - added screen recording as videos in execution report.
   - added web service summary and detail logs in execution report for interactive analysis
+  - fresh redesign of execution summary for improved dashboard view.
 
 
 ### [Batch Files](../userguide/BatchFiles)
