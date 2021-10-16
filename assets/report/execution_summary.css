@@ -47,6 +47,7 @@ a:hover {
   float:       right;
   user-select: none;
   clear:       both;
+  font-size:   9pt;
 }
 
 .result-controls i {
@@ -129,34 +130,163 @@ div.execMeta {
   clear:     both;
 }
 
-table.execMeta { font-size: 10pt; font-family: Consolas, monospace;}
+table.execMeta { font-size: 10pt; }
 
-.execLabel { width: 145px;color: #555;background-color: rgba(239, 239, 239, 0.75); padding: 5px 3px; }
-
-.execValue { text-align: left; font-weight: bold; background-color: rgba(255, 255, 255, 0.75); color: #333; }
-
-.execValueFail {
-  color:       #d00 !important;
-  text-shadow: 1px 1px 4px #f88;
+.section-header {
+  text-align:     center;
+  vertical-align: middle;
+  padding:        4px;
+  user-select:    none;
 }
 
-.execValue pre { margin: 0; }
+.section-header:hover {
+  background-color: white !important;
+}
 
-a.supplemental-link:hover {
-  background-color: rgba(40, 150, 40, 0.75);
-  color:            rgba(40, 40, 40, 0.75);
-  box-shadow:       0 0 8px 2px rgb(100 150 100 / 75%);
-  text-shadow:      1px 1px 2px rgb(200 255 200 / 75%);
+.section-header .fas {
+  font-size:     25pt;
+  color:         rgba(100, 100, 100, 0.5);
+  background:    rgba(100, 100, 100, 0.1);
+  padding:       20px 15px;
+  border-radius: 5px;
+  cursor:        default;
+}
+
+.section-env { }
+
+.section-time .fas { padding: 20px; }
+
+.section-exec { }
+
+.section-exec .fas { padding: 20px 16px; }
+
+.section-ref { vertical-align: top; }
+
+.section-ref .fas { padding: 20px 24px; }
+
+.section-detail {vertical-align: top;}
+
+.section-detail .execValue:hover {
+  transition-duration:        0.5s;
+  transition-timing-function: linear;
+  box-shadow:                 0 0 15px rgb(0 0 0 / 50%);
+}
+
+.execValue {
+  text-align:     left;
+  font-weight:    bold;
+  color:          #333;
+  vertical-align: middle;
+  width:          fit-content;
+  font-size:      18px;
+  padding:        0 20px;
+  display:        inline-grid;
+  border-radius:  5px;
+  margin:         0 5px 0 0;
+  height:         73px;
+}
+
+.execValue .execLabel {
+  text-align:       left;
+  font-size:        10pt;
+  background-color: transparent;
+  color:            rgba(30, 30, 30, 0.5);
+  font-family:      "Trebuchet MS", sans-serif;
+  font-weight:      normal;
+  font-variant:     all-small-caps;
+  padding:          0;
+  height:           18px;
+  width:            auto;
+  margin-left:      -15px;
+}
+
+.execValue .content {
+  text-align:  center;
+  margin-top:  -15px;
+  font-family: Calibri, sans-serif;
+}
+
+.detail-env .execValue:hover { background-color: rgba(160, 160, 0, 0.15); }
+
+.detail-env .execValue { border: 1px outset rgba(120, 120, 0, 0.75); }
+
+.detail-time .execValue:hover { background-color: rgba(0, 100, 200, 0.15); }
+
+.detail-time .execValue { border: 1px outset rgb(0, 100, 200, 0.75); }
+
+.detail-exec .execValue:hover { background-color: rgba(100, 160, 90, 0.15); }
+
+.detail-exec .execValue {border: 1px outset rgba(0, 160, 0, 0.75);}
+
+.detail-exec .execValue:hover { background-color: rgba(0, 160, 0, 0.15); }
+
+.detail-exec .execValuePass { background-color: rgba(0, 200, 0, 0.25); }
+
+.detail-exec .execValueFail:hover { background-color: rgba(250, 200, 200, 0.75); }
+
+.detail-exec .execValueFail {
+  color:            #d00 !important;
+  text-shadow:      1px 1px 4px #f88;
+  background-color: rgba(220, 0, 0, 0.25);
+  border:           1px outset rgba(200, 0, 0, 0.5);
+}
+
+.execLog {
+  font-size:     14px;
+  display:       inline-table;
+  margin-bottom: 0 !important;
+}
+
+.execArgs {
+  font-size:     14px;
+  font-weight:   normal;
+  display:       inline-table;
+  margin-bottom: 0 !important;
+}
+
+.detail-ref {
+}
+
+.detail-ref .execValue:hover {
+  background-color: rgba(160, 0, 180, 0.15);
+}
+
+.detail-ref .execValue {
+  vertical-align: top;
+  border:         1px outset rgba(160, 0, 180, 0.75);
+  margin:         0 5px 12px 0;
+  padding-bottom: 5px;
+}
+
+.detail-ref a:hover {
+  background-color: transparent;
+  border:           none;
+  color:            rgba(95, 0, 120, 0.95);
+  box-shadow:       none;
+  text-shadow:      0 1px 0px #fff;
+}
+
+.detail-ref a {
+  font-family: Thonburi, sans-serif;
+  line-height: normal;
+  background:  none;
+  color:       rgba(160, 50, 200, 0.75);
+  white-space: nowrap;
+  padding:     0;
 }
 
 a.supplemental-link {
-  padding:     5px 8px;
-  background:  rgba(100, 100, 100, 0.25) none;
-  font-family: Thonburi, sans-serif;
-  color:       rgba(40, 150, 40, 1);
+  padding:    5px 8px;
+  background: rgba(100, 100, 100, 0.25) none;
 }
 
-.execLog a { line-height: 1.65em; }
+.detail-ref .exec-supplemental { }
+
+.detail-ref .exec-supplemental a {
+  padding-right: 15px;
+  font-size:     16px;
+}
+
 
 .result { font-family: Tahoma, serif; font-size: 10pt; border: none; background: #fff; }
 
@@ -417,6 +547,8 @@ a.supplemental-link {
 .spacer2 { border: none !important; }
 
 tr:hover { background-color: rgba(125, 125, 120, 0.12); }
+
+table.execMeta tr:hover {background: inherit;}
 
 td.hasFailure { background: #fdd !important; color: #800; }
 
@@ -848,7 +980,7 @@ button#hideLog {
   padding:       8px 15px;
   text-shadow:   1px 1px 3px rgb(0 0 0 / 85%);
   cursor:        pointer;
-  z-index: 1;
+  z-index:       1;
 }
 
 .method-GET { background-color: rgba(50, 100, 250, 0.85) !important; }
