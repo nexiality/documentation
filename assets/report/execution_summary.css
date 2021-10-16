@@ -130,7 +130,7 @@ div.execMeta {
   clear:     both;
 }
 
-table.execMeta { font-size: 10pt; }
+table.execMeta { font-size: 10pt; font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; }
 
 .section-header {
   text-align:     center;
@@ -179,11 +179,11 @@ table.execMeta { font-size: 10pt; }
   vertical-align: middle;
   width:          fit-content;
   font-size:      18px;
-  padding:        0 20px;
+  padding:        0 25px;
   display:        inline-grid;
   border-radius:  5px;
   margin:         0 5px 0 0;
-  height:         73px;
+  height:         70px;
 }
 
 .execValue .execLabel {
@@ -201,9 +201,8 @@ table.execMeta { font-size: 10pt; }
 }
 
 .execValue .content {
-  text-align:  center;
-  margin-top:  -15px;
-  font-family: Calibri, sans-serif;
+  text-align: center;
+  margin-top: -15px;
 }
 
 .detail-env .execValue:hover { background-color: rgba(160, 160, 0, 0.15); }
@@ -237,15 +236,17 @@ table.execMeta { font-size: 10pt; }
   margin-bottom: 0 !important;
 }
 
+.execLog a { font-family: Consolas, monospace; }
+
 .execArgs {
   font-size:     14px;
+  font-family:   Consolas, monospace;
   font-weight:   normal;
   display:       inline-table;
   margin-bottom: 0 !important;
 }
 
-.detail-ref {
-}
+.detail-ref { }
 
 .detail-ref .execValue:hover {
   background-color: rgba(160, 0, 180, 0.15);
@@ -263,11 +264,10 @@ table.execMeta { font-size: 10pt; }
   border:           none;
   color:            rgba(95, 0, 120, 0.95);
   box-shadow:       none;
-  text-shadow:      0 1px 0px #fff;
+  text-shadow:      0 1px 0 #fff;
 }
 
 .detail-ref a {
-  font-family: Thonburi, sans-serif;
   line-height: normal;
   background:  none;
   color:       rgba(160, 50, 200, 0.75);
@@ -275,18 +275,9 @@ table.execMeta { font-size: 10pt; }
   padding:     0;
 }
 
-a.supplemental-link {
-  padding:    5px 8px;
-  background: rgba(100, 100, 100, 0.25) none;
-}
-
 .detail-ref .exec-supplemental { }
 
-.detail-ref .exec-supplemental a {
-  padding-right: 15px;
-  font-size:     16px;
-}
-
+.detail-ref .exec-supplemental a { padding-right: 15px; }
 
 .result { font-family: Tahoma, serif; font-size: 10pt; border: none; background: #fff; }
 
