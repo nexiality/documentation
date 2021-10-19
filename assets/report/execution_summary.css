@@ -239,12 +239,12 @@ table.execMeta { font-size: 10pt; font-family: "Trebuchet MS", Arial, Helvetica,
 .execLog a { font-family: Consolas, monospace; }
 
 .execArgs {
-  font-size: 14px;
-  font-family: Consolas, monospace;
-  font-weight: normal;
-  display: inline-table;
+  font-size:     14px;
+  font-family:   Consolas, monospace;
+  font-weight:   normal;
+  display:       inline-table;
   margin-bottom: 0 !important;
-  margin-top: 10px !important;
+  margin-top:    10px !important;
 }
 
 .execArgs pre { margin: 0; }
@@ -581,7 +581,7 @@ div.custom-header a, div.custom-footer a {
 /* back-to-top link */
 a.top-link {
   background: none;
-  padding:    5px 8px;
+  margin:     -23px 0;
   float:      right;
 }
 
@@ -625,6 +625,10 @@ a.top-link .fa-chevron-up {
   display: inline-block;
 }
 
+.recording .container {
+  width: 550px;
+}
+
 .recording .container video {
   /*border:     3px solid rgba(200, 200, 200, 0.85);*/
   /*border-top: none;*/
@@ -637,14 +641,18 @@ a.top-link .fa-chevron-up {
   padding:          8px;
   border-radius:    10px 10px 0 0;
   background-color: rgba(70, 70, 70, 0.85);
+  white-space:      nowrap;
   /*background-color: rgba(200, 200, 200, 0.85);*/
 }
 
 .recording .caption-title {
-  font-weight: bold;
-  text-shadow: 0 0 5px #000;
-  color:       rgba(235, 235, 235, 0.85);
+  font-weight:   bold;
+  text-shadow:   0 0 5px #000;
+  color:         rgba(235, 235, 235, 0.85);
   /*color:            rgba(35, 35, 35, 0.85);*/
+  text-overflow: ellipsis;
+  white-space:   nowrap;
+  overflow:      hidden;
 }
 
 .recording .caption-meta {

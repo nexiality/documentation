@@ -74,6 +74,11 @@ comments: true
   across multiple DOM layers.
   - minor fixes
 - [`switchBrowser(profile,config)`](../commands/web/switchBrowser(profile,config)): force target browser instance to be focused.
+- [`nexial.web.useComputedCss`](../systemvars/index.html#nexial.web.useComputedCss): **NEW** System variable to support
+  the discovery of computed CSS value rather than the declared CSS values (default).
+- [`assertCssPresent(locator,property,value)`](../commands/web/assertCssPresent(locator,property,value)): now supports
+  validation of computed CSS rather than just declared values. Also support automatically color value conversion for 
+  more accurate comparison
 
 
 ### [webmail commands](../commands/webmail)
