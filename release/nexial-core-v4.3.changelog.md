@@ -78,7 +78,8 @@ comments: true
   the discovery of computed CSS value rather than the declared CSS values (default).
 - [`assertCssPresent(locator,property,value)`](../commands/web/assertCssPresent(locator,property,value)): now supports
   validation of computed CSS rather than just declared values. Also support automatically color value conversion for 
-  more accurate comparison
+  more accurate comparison.
+  - also handle named color and special color name `transparent`.
 
 
 ### [webmail commands](../commands/webmail)

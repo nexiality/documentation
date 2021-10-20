@@ -2817,6 +2817,27 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
     </tr>
     <tr>
         <td class="varname" nowrap="nowrap">
+            <a id="nexial.web.useComputedCss"><code>nexial.web.useComputedCss</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td class="read-write">read/write</td>
+        <td>
+            When set to <code>true</code>, this System variable instructs Nexial to determine CSS property value via
+            JavaScript - specifically via the `window.getComputedStyle()` function. As such, this technique has the
+            potential to derive at a CSS property value that is more consistent across all browsers.<br/>
+            <br/>
+            The default behavior is to use Selenium/WebDriver <code>getElementValueOfCssProperty</code> command, which
+            can differ slightly amongst driver implementations.<br/>
+            <br/>
+            If the target CSS property contains color property, then setting this System variable to <code>true</code>
+            would likely be a good idea (for consistency's sake).<br/>
+            <br/>
+            By default, this System variable is set to <code>false</code>.
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.web.preemptiveAlertCheck"><code>nexial.web.preemptiveAlertCheck</code></a>
         </td>
         <td>boolean</td>
