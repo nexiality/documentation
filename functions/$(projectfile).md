@@ -44,6 +44,35 @@ only the HTML table. See [ErrorTracker](../userguide/ExecutionLogs#errortracker-
 
 -----
 
+#### `$(projectfile|projectProperty|name)`
+Display the value of a data variable specified in `project.properties`. For environment-specific properties file, such
+as `project.QA.properties`, prepend the data variable `name` with `::{ENV}::`. For example,
+
+- `$(projectfile|projectProperty|username)` reads the `username` data variable defined in `project.properties` 
+- `$(projectfile|projectProperty|::QA::username)` reads the `username` data variable defined in `project.QA.properties` 
+
+Note that this function reads **_specifically_** from the `project.properties` file only.
+
+-----
+
+#### `$(projectfile|projectProperty|name|value)`
+Create or update the value of a data variable in `project.properties`. For environment-specific properties file, such
+as `project.QA.properties`, prepend the data variable `name` with `::{ENV}::`. For example,
+
+- `$(projectfile|projectProperty|username|Admin)` create or update the `username` data variable  defined in 
+  `project.properties` with the value `Admin`.
+- `$(projectfile|projectProperty|::QA::username|Admin)` create or update the `username` data variable defined in 
+  `project.QA.properties` with the value `Admin`.
+
+Note that this function will impact **_specifically_** the `project.properties` file only. If the specified data 
+variable `name` already exists in the target `project.properties` file, the value will be updated in place (same line).
+If the specified data variable `name` is a new one, it will be added to the end of the file.
+
+The original `project.properties` file will be backed up in the output directory. For clarity, the backup file name 
+will contain timestamp.
+
+-----
+
 #### `$(projectfile|macro|file|sheet|name)`
 This specialized built-in function provides macro details such as macro file, sheet and macro name. These details mainly
 needed to be referred to invocation of macro from **[base &raquo; `macroFlex(macro,input,output)`](../commands/base/macroFlex(macro,input,output)))**.
