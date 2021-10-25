@@ -35,4 +35,5 @@ For more information about these utility scripts, check out
 
 
 ### See Also
-- [`copy-to-ios` | `copy-to-android`](mobile_device_profile#copy-files-to-device)
+- [`copy-to-ios`](mobile_device_profile#copy-files-to-device)
+- [`copy-to-android`](mobile_device_profile#copy-files-to-device)

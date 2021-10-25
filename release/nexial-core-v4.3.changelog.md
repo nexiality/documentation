@@ -34,6 +34,7 @@ comments: true
 - [`nexial-swagger`](../userguide/BatchFiles#nexial-swagger): command that generates an automation script and corresponding
   artifacts to validate the Restful API operations defined in the Swagger file passed in as input.
 
+
 ### [Expression](../expression)
 - [WEB &rauoq; `check(locator,waitMs)`](../expressions/WEBexpression.md#checklocatorwaitms): support customized time out
 - [WEB &rauoq; `uncheck(locator,waitMs)`](../expressions/WEBexpression.md#unchecklocatorwaitms): support customized time out
@@ -45,6 +46,22 @@ comments: true
   click via JavaScript instead of WebDriver click.
 - [`nexial.expression.web.alwaysNew`](../systemvars/index.html#nexial.expression.web.alwaysNew): **NEW** System 
   variable to ensure each use of WEB expression clear off outcome from the WEB operations from previous use.
+- [TEXT &raquo; `list(delim)`](../expressions/TEXTexpression#listdelim): support auto-resolving delimiter, if not provided.
+
+
+[Nexial Function](../functions)
+- [`$(projectfile|projectProperty|name)`](../functions/$(projectfile)): *NEW* function to read project property `name` 
+  from `project.properties`
+- [`$(projectfile|projectProperty|name|value)`](../functions/$(projectfile)): *NEW* function to write project property 
+  `name` with `value` into `project.properties`
+
+
+[Nexial Interactive](../interactive)
+- reset screenshot capability when switching scenario to avoid the wrong type of screenshot capturing
+
+
+### [desktop commands](../commands/desktop)
+- [FIXED] avoid capturing screenshot when underlying driver is not available or ready for use
 
 
 ### [external commands](../commands/external)
@@ -59,6 +76,10 @@ comments: true
   - minor fixes for an edge condition.
 - [`type(locator,text)`](../commands/mobile/type(locator,text)): avoid clearing text boxes when it contains no text.
 - [`home()`](../commands/mobile/home()): fixed issue with iOS device
+- [FIXED]: avoid capturing screenshot when underlying driver is not available or ready for use
+- [`click(locator)`](../commands/mobile/click(locator)): deliberately click on or very near the center of the specified 
+  `locator`
+
 
 
 ### [web commands](../commands/web)
@@ -80,6 +101,13 @@ comments: true
   validation of computed CSS rather than just declared values. Also support automatically color value conversion for 
   more accurate comparison.
   - also handle named color and special color name `transparent`.
+- [`assertElementDisabled(locator)`](../commands/web/assertElementDisabled(locator)): circumvent Selenium's limitation 
+  by adding JavaScript check on whether an element is disabled or not.
+- [`waitUntilDisabled(locator,waitMs)`](../commands/web/waitUntilDisabled(locator,waitMs)): circumvent Selenium's 
+  limitation by adding JavaScript check on whether an element is disabled or not.
+- [FIXED] avoid capturing screenshot when underlying driver is not available or ready for use
+- update BrowserStack URL from `http` to `https`
+- update CrossBrowserTesting URL from `http` to `https`
 
 
 ### [webmail commands](../commands/webmail)
