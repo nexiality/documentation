@@ -31,13 +31,13 @@ comments: true
 
 
 ### [Batch Files](../userguide/BatchFiles)
-- [`nexial-swagger`](../userguide/BatchFiles#nexial-swagger): command that generates an automation script and corresponding
-  artifacts to validate the Restful API operations defined in the Swagger file passed in as input.
+- [`nexial-swagger`](../userguide/BatchFiles#nexial-swagger): command that generates an automation script and 
+  corresponding artifacts to validate the Restful API operations defined in the Swagger file passed in as input.
 
 
 ### [Expression](../expression)
-- [WEB &rauoq; `check(locator,waitMs)`](../expressions/WEBexpression.md#checklocatorwaitms): support customized time out
-- [WEB &rauoq; `uncheck(locator,waitMs)`](../expressions/WEBexpression.md#unchecklocatorwaitms): support customized time out
+- [WEB &rauoq; `check(locator,waitMs)`](../expressions/WEBexpression#checklocatorwaitms): support customized time out
+- [WEB &rauoq; `uncheck(locator,waitMs)`](../expressions/WEBexpression#unchecklocatorwaitms): support customized time out
 - [LIST &raquo; `findFirst(match)`](../expressions/LISTexpression#findfirstmatch): find first matching item. 
   PolyMatcher supported
 - [LIST &raquo; `retain(match)`](../expressions/LISTexpression#findfirstmatch): filter current LIST via `match` 
@@ -47,13 +47,15 @@ comments: true
 - [`nexial.expression.web.alwaysNew`](../systemvars/index.html#nexial.expression.web.alwaysNew): **NEW** System 
   variable to ensure each use of WEB expression clear off outcome from the WEB operations from previous use.
 - [TEXT &raquo; `list(delim)`](../expressions/TEXTexpression#listdelim): support auto-resolving delimiter, if not provided.
+- [TEXT &raquo; `list(data)`](../expressions/TEXTexpression#listdelim): convert `null` into empty list for simpler 
+  automation experience.
 
 
 [Nexial Function](../functions)
-- [`$(projectfile|projectProperty|name)`](../functions/$(projectfile)): *NEW* function to read project property `name` 
-  from `project.properties`
-- [`$(projectfile|projectProperty|name|value)`](../functions/$(projectfile)): *NEW* function to write project property 
-  `name` with `value` into `project.properties`
+- [`$(projectfile|projectProperty|name)`](../functions/$(projectfile)#projectfileprojectpropertyname): *NEW* function 
+  to read project property `name` from `project.properties`
+- [`$(projectfile|projectProperty|name|value)`](../functions/$(projectfile)#projectfileprojectpropertynamevalue): *NEW* 
+  function to write project property `name` with `value` into `project.properties`
 
 
 [Nexial Interactive](../interactive)
