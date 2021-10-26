@@ -26,6 +26,15 @@ Alternatively, one may reference the menu item via its position within its corre
 to indicate position-based triggering. For example, to access the 3rd menu item from the context menu, follow by the 2nd
 menu item from the submenu, the `menu` parameter would be `INDEX:3,2`.
 
+As an additional convenience, one may include keystrokes whilst the context menu is in display. Use keystrokes as an
+added support to expedite automation, when appropriate. For example, `{DOWN},INDEX:14,{CTRL}{SPACE},Execute` means:
+1. When the context menu is first shown, press the DOWN key
+2. Then select the 14th menu item
+3. Then type in CONTROL-SPACE key combination
+4. Finally, select the "Execute" menu item.
+
+Consult the [`typeKeys(os,keystrokes)`](typeKeys(os,keystrokes)) page on how to specify keystrokes.
+
 Both the `xOffset` and `yOffset` parameters are optional. One can use these 2 parameters to fine-tune where the
 right-click should be invoked. By leaving both parameters as blank, Nexial will target the center (approximately) of the
 specified element instead.

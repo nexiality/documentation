@@ -25,6 +25,15 @@ to access the "Base64 Encode" item under the "Plugin commands" menu (below), one
 As a convenience, one may use the submenu's position instead of its label. For example, `Menu1,INDEX:4,Menu4` means to
 click on `Menu1`, then click on its fourth submenu, and then click on `Menu4` from the next level of submenu.
 
+As an additional convenience, one may include keystrokes whilst the context menu is in display. Use keystrokes as an
+added support to expedite automation, when appropriate. For example, `{DOWN},INDEX:14,{CTRL}{SPACE},Execute` means:
+1. When the context menu is first shown, press the DOWN key
+2. Then select the 14th menu item
+3. Then type in CONTROL-SPACE key combination
+4. Finally, select the "Execute" menu item.
+
+Consult the [`typeKeys(os,keystrokes)`](typeKeys(os,keystrokes)) page on how to specify keystrokes.
+
 Both the `xOffset` and `yOffset` parameters are optional. One can use these 2 parameters to fine-tune where the 
 right-click should be invoked. By leaving both parameters as blank, Nexial will target the center (approximately) of the
 specified element instead.

@@ -64,6 +64,10 @@ comments: true
 
 ### [desktop commands](../commands/desktop)
 - [FIXED] avoid capturing screenshot when underlying driver is not available or ready for use
+- [`contextMenu(name,menu,xOffset,yOffset)`](../commands/desktop/contextMenu(name,menu,xOffset,yOffset)): support 
+  keystroke between menu selection
+- [`contextMenuByLocator(locator,menu,xOffset,yOffset)`](../commands/desktop/contextMenuByLocator(locator,menu,xOffset,yOffset)): 
+  support keystroke between menu selection
 
 
 ### [external commands](../commands/external)
