@@ -81,7 +81,9 @@ comments: true
 - [FIXED]: avoid capturing screenshot when underlying driver is not available or ready for use
 - [`click(locator)`](../commands/mobile/click(locator)): deliberately click on or very near the center of the specified 
   `locator`
-
+- initial support for BrowserStack integration completed. To enable, set `ios@browserstack` or `android@browserstack` 
+  as `profile`.type. At a minimum, `profile`.browserstack.username and `profile`.browserstack.automatekey are required 
+  to enable BrowserStack integration.  
 
 
 ### [web commands](../commands/web)
