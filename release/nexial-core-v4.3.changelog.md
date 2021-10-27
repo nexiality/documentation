@@ -88,6 +88,7 @@ comments: true
 - initial support for BrowserStack integration completed. To enable, set `ios@browserstack` or `android@browserstack` 
   as `profile`.type. At a minimum, `profile`.browserstack.username and `profile`.browserstack.automatekey are required 
   to enable BrowserStack integration.  
+- [FIXED] for BrowserStack automation, avoid unnecessarily relaunching target application
 
 
 ### [web commands](../commands/web)
@@ -116,6 +117,7 @@ comments: true
 - [FIXED] avoid capturing screenshot when underlying driver is not available or ready for use
 - update BrowserStack URL from `http` to `https`
 - update CrossBrowserTesting URL from `http` to `https`
+- [FIXED] address issue with invalid intermediate locator for the `layer` locator
 
 
 ### [webmail commands](../commands/webmail)
@@ -127,3 +129,4 @@ comments: true
 - [`upload(url,body,fileParams,var)`](../commands/ws/upload(url,body,fileParams,var)): support multiple HTTP methods and
   toggling of multipart via the [`nexial.ws.upload.method`] and [`nexial.ws.upload.multipart`] System variables 
   respectively. Note that both of these System variables must be specified as part of the `body` parameter.
+- [FIXED] detail log missing response return code
