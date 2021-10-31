@@ -103,7 +103,8 @@ comments: true
 - [`layer=...` locator](../commands/web/index#locators): **NEW** locator to optimize the use of existing locators 
   across multiple DOM layers.
   - minor fixes
-- [`switchBrowser(profile,config)`](../commands/web/switchBrowser(profile,config)): force target browser instance to be focused.
+- [`switchBrowser(profile,config)`](../commands/web/switchBrowser(profile,config)): force target browser instance to be 
+  focused
 - [`nexial.web.useComputedCss`](../systemvars/index.html#nexial.web.useComputedCss): **NEW** System variable to support
   the discovery of computed CSS value rather than the declared CSS values (default).
 - [`assertCssPresent(locator,property,value)`](../commands/web/assertCssPresent(locator,property,value)): now supports
@@ -118,6 +119,10 @@ comments: true
 - update BrowserStack URL from `http` to `https`
 - update CrossBrowserTesting URL from `http` to `https`
 - [FIXED] address issue with invalid intermediate locator for the `layer` locator
+- [`clickByLabel(label)`](../commands/web/clickByLabel(label)): click on first matching label without requiring that 
+  there is exactly 1 match
+- [`clickByLabelAndWait(label,waitMs)`](../commands/web/clickByLabelAndWait(label,waitMs)): click on first matching 
+  label without requiring that there is exactly 1 match
 
 
 ### [webmail commands](../commands/webmail)
