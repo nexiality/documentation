@@ -13,8 +13,9 @@ comments: true
 ### General
 
 #### Fixes
-- fixed issue with selecting data variables from the same prefix while running macro
-- fixed runtime error when a condition within a flow control resolved to null
+- [FIXED] issue with selecting data variables from the same prefix while running macro
+- [FIXED] runtime error when a condition within a flow control resolved to null
+- [FIXED] issuing of a `:end` command during Inspect to end repeat-until loop and macro
 
 #### Improvements
 - minor batch and shell script changes to support Java 17.
