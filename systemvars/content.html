@@ -3060,7 +3060,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td class="read-write">read/write</td>
         <td>
             By default, Nexial uses Selenium API (i.e. via <code>WebElement</code>) for click event. This generally
-            works. However with the combination of a certain browser and certain web application, timing sometimes work
+            works. However, with the combination of a certain browser and certain web application, timing sometimes work
             against expectation. Such anomaly is especially noticeable with IE and AJAX-rich web applications (from
             which timing might be less than predictable). To circumvent this issue, one may turn on the feature of
             forcefully issuing click event via JavaScript by setting <code>nexial.browser.forceJSClick</code> to
@@ -4056,6 +4056,41 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             <br/>
             This system variable is marked as <code>read-only</code> because it is only read once during startup.
             Further changes to this system variable during execution would have no impact to the execution.
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.web.secureBrowserStack"><code>nexial.web.secureBrowserStack</code></a>
+        </td>
+        <td>boolean</td>
+        <td>true</td>
+        <td class="read-only">read-only</td>
+        <td>
+            <strong>Applicable only for automating on BrowserStack</strong><br/>
+            By default, connection to BrowserStack is secured via HTTPS connection. There are situations where this 
+            might not be desirable. Nexial can forcefully connect to BrowserStack via non-secured HTTP protocol if this
+            System variable is set to <code>false</code>. Note that the availability and reliability of the BrowserStack
+            connections (secured or otherwise) is not controlled via Nexial. This System variable is only read once
+            at the start of the execution; changing its value during execution will have no impact.<br/>
+            By default, this System variable is set to <code>true</code>.
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.web.secureCrossBrowserTesting"><code>nexial.web.secureCrossBrowserTesting</code></a>
+        </td>
+        <td>boolean</td>
+        <td>true</td>
+        <td class="read-only">read-only</td>
+        <td>
+            <strong>Applicable only for automating on CrossBrowserTesting (CBT)</strong><br/>
+            By default, connection to CrossBrowserTesting is secured via HTTPS connection. There are situations where 
+            this might not be desirable. Nexial can forcefully connect to CrossBrowserTesting via non-secured HTTP 
+            protocol if this System variable is set to <code>false</code>. Note that the availability and reliability 
+            of the CrossBrowserTesting connections (secured or otherwise) is not controlled via Nexial. This System 
+            variable is only read once at the start of the execution; changing its value during execution will have 
+            no impact.<br/>
+            By default, this System variable is set to <code>true</code>.
         </td>
     </tr>
 
