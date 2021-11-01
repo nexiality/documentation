@@ -118,17 +118,21 @@ comments: true
 - [`waitUntilDisabled(locator,waitMs)`](../commands/web/waitUntilDisabled(locator,waitMs)): circumvent Selenium's 
   limitation by adding JavaScript check on whether an element is disabled or not.
 - [FIXED] avoid capturing screenshot when underlying driver is not available or ready for use
-- update BrowserStack URL from `http` to `https`
-- update CrossBrowserTesting URL from `http` to `https`
 - [FIXED] address issue with invalid intermediate locator for the `layer` locator
 - [`clickByLabel(label)`](../commands/web/clickByLabel(label)): click on first matching label without requiring that 
   there is exactly 1 match
 - [`clickByLabelAndWait(label,waitMs)`](../commands/web/clickByLabelAndWait(label,waitMs)): click on first matching 
   label without requiring that there is exactly 1 match
-- [`nexial.web.secureBrowserStack`](../systemvars/index.html#nexial.web.secureBrowserStack): **NEW** System variable to
-  enable/disable SSL connection to BrowserStack (default is enabled).
-- [`nexial.web.secureCrossBrowserTesting`](../systemvars/index.html#nexial.web.secureCrossBrowserTesting): **NEW** 
-  System variable to enable/disable SSL connect to CrossBrowserTesting (default is enabled).
+- BrowserStack:
+  - update BrowserStack URL from `http` to `https`
+  - [`nexial.web.secureBrowserStack`](../systemvars/index.html#nexial.web.secureBrowserStack): **NEW** System variable to
+    enable/disable SSL connection to BrowserStack (default is enabled).
+- CrossBrowserTesting:
+  - update CrossBrowserTesting URL from `http` to `https`
+  - [`nexial.web.secureCrossBrowserTesting`](../systemvars/index.html#nexial.web.secureCrossBrowserTesting): **NEW** 
+    System variable to enable/disable SSL connect to CrossBrowserTesting (default is enabled).
+  - minor logging improvements
+
 
 ### [webmail commands](../commands/webmail)
 
