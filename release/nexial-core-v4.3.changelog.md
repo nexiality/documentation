@@ -16,6 +16,7 @@ comments: true
 - [FIXED] issue with selecting data variables from the same prefix while running macro
 - [FIXED] runtime error when a condition within a flow control resolved to null
 - [FIXED] issuing of a `:end` command during Inspect to end repeat-until loop and macro
+- [FIXED] gracefully handle invalid crypt
 
 #### Improvements
 - minor batch and shell script changes to support Java 17.
