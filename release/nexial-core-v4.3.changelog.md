@@ -125,7 +125,10 @@ comments: true
   there is exactly 1 match
 - [`clickByLabelAndWait(label,waitMs)`](../commands/web/clickByLabelAndWait(label,waitMs)): click on first matching 
   label without requiring that there is exactly 1 match
-
+- [`nexial.web.secureBrowserStack`](../systemvars/index.html#nexial.web.secureBrowserStack): **NEW** System variable to
+  enable/disable SSL connection to BrowserStack (default is enabled).
+- [`nexial.web.secureCrossBrowserTesting`](../systemvars/index.html#nexial.web.secureCrossBrowserTesting): **NEW** 
+  System variable to enable/disable SSL connect to CrossBrowserTesting (default is enabled).
 
 ### [webmail commands](../commands/webmail)
 
