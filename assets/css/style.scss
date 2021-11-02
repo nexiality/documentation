@@ -1,6 +1,5 @@
 ---
 ---
-
 .highlight table td { padding: 5px; }
 
 .highlight table pre {margin: 0;}
@@ -344,6 +343,7 @@ li > ul, li > ol { margin-bottom: 0; }
 //}
 
 dl { margin-bottom: 20px; }
+
 dl dt {color: #303030;}
 
 footer {
@@ -1039,24 +1039,18 @@ pre.explain {
 }
 
 .tabs .tab-links li {
-  margin: -5px 10px !important;
+  margin: -5px 10px 0 8px;
   padding: 0 !important;
   float: left;
   list-style: none;
 }
 
-.tabs .tab-links .active {
-  border-bottom: 5px solid #000;
-  margin-bottom: -5px !important;
-}
-
 .tabs .tab-links a {
   background: rgba(125, 175, 60, 1) !important;
-  //background: rgba(140, 200, 40, 0.55) !important;
   color: #f0f0f0;
   box-shadow: 3px -2px 2px -1px #151;
   display: inline-block;
-  padding: 9px 15px;
+  padding: 9px 13px;
   border-radius: 3px 3px 0 0;
   font-size: 16px;
   font-weight: 600;
@@ -1080,7 +1074,6 @@ pre.explain {
 }
 
 .tabs .tab-links .active {
-  display: block;
   border-bottom: 5px solid #000;
   margin-bottom: -5px;
 }

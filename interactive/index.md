@@ -42,23 +42,25 @@ Currently Nexial Interactive comes with the following capabilities:
   <a href="javascript:void(0);" onclick="scrollToTab('reload_data_tab','options-and-actions')">(re)load data file</a>
 - <a href="javascript:void(0);" onclick="scrollToTab('assign_scenario_tab','options-and-actions')">(re)assign test scenario</a>
 - <a href="javascript:void(0);" onclick="scrollToTab('assign_activity_tab','options-and-actions')">(re)assign activities</a>; 
-  may be out of designed sequence
+  may be out of designated sequence
 - <a href="javascript:void(0);" onclick="scrollToTab('assign_step_tab','options-and-actions')">(re)assign steps</a>; 
-  may be out of designed sequence
+  may be out of designated sequence
 - <a href="javascript:void(0);" onclick="scrollToTab('inspection_tab','actions')">Inspection</a>
 - <a href="javascript:void(0);" onclick="scrollToTab('execute_tab','options-and-actions')">execute</a> the assigned 
   activities or steps
+- <a href="javascript:void(0);" onclick="scrollToTab('recoding_tab','options-and-actions')">record</a> current 
+  Interactive session
 
-Note that the main objective of Nexial Interactive is to execute a subset of the automation script, possibly repeatedly,
-so that we can better understand the target application, the automation objective, or the Nexial capability. For such
-reasons, Nexial Interactive does not support test plan or multiple scenarios. The common pattern is to focus on a block 
+Note that the main objective of Nexial Interactive is to execute a subset of the automation script, perhaps repeatedly,
+so that we can better understand the target application, the automation objective, or the capability of Nexial. As such, 
+Nexial Interactive does not support test plan or multiple scenarios. The common usage pattern is to focus on a block 
 of steps (of one scenario, naturally), work through the __"execute-observe-repeat"__ cycle, and move on to the next 
-block of steps. One can (re)assign the number of steps or scenario between execution. 
+block of steps. One can assign or reassign the number of steps or scenario between execution. 
 
 
 ### Try it yourself
-To activate Nexial Interactive, simply add the `-interactive` flag to your Nexial execution command line argument. One 
-may include `-scenario ...` and `-data ...` command line argument - they are optional.<br/>
+To activate Nexial Interactive, simply add the `-interactive` flag to your Nexial execution command line argument. If 
+needed, one may include `-scenario ...` and `-data ...` command line arguments as well.<br/>
 
 <div class="tabs" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
     <ul class="tab-links tabs-collapsed">
@@ -90,7 +92,8 @@ This represents an active Nexial Interactive session. The top half of the menu s
 assigned script, the assigned scenario and the assigned activities/steps to 
 <a href="javascript:void(0);" onclick="scrollToTab('execute_tab','options-and-actions')">execute</a>. The second half 
 are the available options and actions to control the current Nexial Interactive session - these options and actions are 
-the characters highlighted with white background. Click one of the tabs below to see more details on these options and 
+represented by the characters highlighted with white background. They can be activated by typing the corresponding 
+letter or number at the "`command:`" prompt. Click one of the tabs below to see more details about these options and 
 actions.
 
 
@@ -111,22 +114,20 @@ All option and action keys are **NOT** case-sensitive.
 <div class="tabs interactive">
     <ul class="tab-links tabs-collapsed">
         <li><a href="#tab3" id="assign_script_tab"><code>1</code> assign test script</a></li>
-        <li><a href="#tab4" id="assign_data_tab"><code>2</code> assign data script</a></li>
+        <li><a href="#tab4" id="assign_data_tab"><code>2</code> assign data file</a></li>
         <li><a href="#tab5" id="assign_scenario_tab"><code>3</code> assign scenario</a></li>
         <li><a href="#tab6" id="assign_iteration_tab"><code>4</code> assign iteration</a></li>
         <li><a href="#tab7" id="assign_activity_tab"><code>5</code> assign activities</a></li>
         <li><a href="#tab8" id="assign_step_tab"><code>6</code> assign step(s)</a></li>
-        <li><a href="#tab9" id="reload_script_tab"><code>7</code> reload assigned test script</a></li>
-        <li><a href="#tab10" id="reload_data_tab"><code>8</code> reload assigned data file</a></li>
-        <li><a href="#tab11" id="reload_prop_tab"><code>9</code> reload project.properties</a></li>
-        <li><a href="#tab12" id="reload_data_prop_tab">re<code>L</code>oad script and data file</a></li>
-        <li><a href="#tab13" id="recoding_tab">desktop re<code>C</code>ording</a></li>
-        <li><a href="#tab14" id="reload_tab"><code>R</code>eload menu</a></li>
+        <li><a href="#tab12" id="reload_data_prop_tab">re<code>L</code>oad script and data</a></li>
+        <li><a href="#tab13" id="recoding_tab">re<code>C</code>ord (desktop)</a></li>
+        <li><a href="#tab14" id="reload_tab"><code>R</code>efresh menu</a></li>
         <li><a href="#tab15" id="execute_tab">e<code>X</code>ecute</a></li>
         <li><a href="#tab16" id="inspection_tab"><code>I</code>nspect</a></li>
-        <li><a href="#tab17" id="all_steps_tab"><code>A</code>ll steps</a></li>
+        <li><a href="#tab17" id="clear_temp">clear <code>T</code>emp files</a></li>
         <li><a href="#tab18" id="open_script_tab"><code>S</code>cript open</a></li>
         <li><a href="#tab19" id="open_data_tab"><code>D</code>ata file open</a></li>
+        <li><a href="#tab19a" id="output_path"><code>O</code>utput path</a></li>
         <li><a href="#tab20" id="help_tab"><code>H</code>elp</a></li>
         <li><a href="#tab21" id="quit_tab"><code>Q</code>uit</a></li>
     </ul>
@@ -274,30 +275,6 @@ All option and action keys are **NOT** case-sensitive.
             Note that this option only changes the step or steps to execute. To commence the 
             <a href="javascript:void(0);" onclick="scrollToTab('execute_tab','options-and-actions')">execution, use <code>X</code></a>.
         </div>
-        <div id="tab9" class="tab">
-            Use <code>7</code> to reload the assigned script file in the current Nexial Interactive session.<br/>
-            <br/>
-            This option will reload the assigned script and reset any previously assigned activities or steps. Since 
-            there could be changes to the script, such as removal of steps or activities, reloading such file could 
-            result in invalid step reference. Hence Nexial Interactive resets any previously assigned activities or 
-            steps after script reload.
-        </div>
-        <div id="tab10" class="tab">
-            Use <code>8</code> to reload the assigned data file in the current Nexial Interactive session.<br/>
-            <br/>
-            This option will reload the assigned data file. This will effectively override the value of the 
-            same data variables found in the data file, except those defined in <code>project.properties</code> or 
-            command-line <code>-override</code>. This applies also to those saved or updated via 
-            <a href="javascript:void(0);" onclick="scrollToTab('inspection_tab','options-and-actions')">Inspection</a>.
-        </div>
-        <div id="tab11" class="tab">
-            Use <code>9</code> to reload the project.properties (if exists) of the current project.<br/>
-            <br/>
-            This option will reload the <code>project.properties</code> file, if any. This will effectively override 
-            the value of the same data variables found in the data file or previously updated via 
-            <a href="javascript:void(0);" onclick="scrollToTab('inspection_tab','options-and-actions')">Inspection</a>, 
-            except those defined in command-line <code>-override</code>.
-        </div>
         <div id="tab12" class="tab">
             Use <code>L</code> to reload the assigned test script, data file and the current project's 
             <code>project.properties</code> file.<br/>
@@ -340,13 +317,13 @@ All option and action keys are **NOT** case-sensitive.
             <img src="image/ni_recording_file.png"/><br/>
         </div>
         <div id="tab14" class="tab">
-            Use <code>R</code> to reload Interactive Interactive menu.<br/>
+            Use <code>R</code> to refresh Interactive Interactive menu.<br/>
             <br/>
             After reassigning script, data file, scenario, iteration, activity or step, it's usually a good idea
             to re-render the Nexial Interactive console menu again. In doing so, Nexial Interactive will display the 
-            script, scenario, activity or steps that are designate to 
+            script, scenario, activity or steps that are designated to 
             <a href="javascript:void(0);" onclick="scrollToTab('execution_tab','options-and-actions')">execute</a>. For
-            example, see below and notice the change in Activity between the <code>r</code>eload option being 
+            example, see below and notice the change in Activity between the Refresh menu option being 
             activated:<br/>
             <img src="image/ni_activity_1.png"/><br/>
         </div>
@@ -434,10 +411,12 @@ All option and action keys are **NOT** case-sensitive.
             Nexial Interactive</a>.
         </div>
         <div id="tab17" class="tab">
-            Use <code>A</code> to reset all custom step assignment to assign to all steps.<br/>
+            Use <code>T</code> to purge Nexial-generated temp files that are generated during automation.<br/>
             <br/>
-            This effectively reset any step or activity assignments to the activities, in their designated order, as
-            found in the assigned script.
+            During execution, Nexial generates temp files as the transient execution result. Generally speaking, these 
+            temp files are purged after some time. However, one can use this option purge these temp files immediately 
+            to reclaim needed disk space or if excessive temp files is a performance concern. Note that as a safety
+            precaution, this command will only clear out files that are generated more than an hour ago.
         </div>
         <div id="tab18" class="tab">
             Use <code>S</code> to open the assigned script.<br/>
@@ -450,6 +429,12 @@ All option and action keys are **NOT** case-sensitive.
             <br/>
             This is a convenience to open up the current assigned data file:<br/>
             <img src="image/ni_open_data_file.png"/>
+        </div>
+        <div id="tab19a" class="tab">
+            Use <code>O</code> to open the output directory for the current Interactive session.<br/>
+            <br/>
+            This is a convenience to open up the current output directory using System-dependent file/folder manager 
+            program (e.g. File Explorer for Windows or Finder for MacOS)<br/>
         </div>
         <div id="tab20" class="tab">
             Use <code>H</code> to display help information that contains further information on each of the options 
@@ -468,14 +453,11 @@ All option and action keys are **NOT** case-sensitive.
 <br/>
 Click here to learn more about [Inspecting Desktop Elements in Nexial Interactive](inspect_desktop)
 
-<br/>
-<br/>
-
 
 ### Limitation
-This is the first release of Nexial Interactive. As time permits and if requests should be made, we will enhance 
-Nexial Interactive with more learning goodness. Currently, here are the enhancement candidates that we are considering 
-for Nexial Interactive. No timeline has been committed as of yet.
+As time permits and as requests are made, further enhancements to Nexial Interactive will be implemented. Currently, 
+here are the enhancement candidates that we are considering for future version of Nexial Interactive. No timeline has 
+been committed as yet.
 - Desktop GUI version of Nexial Interactive
 - Switching between interactive and non-interactive (normal execution) mode
 - Switch browser; currently some System variables cannot be adjusted within the same Nexial Interactive session
