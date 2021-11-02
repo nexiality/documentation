@@ -62,6 +62,9 @@ comments: true
 
 [Nexial Interactive](../interactive)
 - reset screenshot capability when switching scenario to avoid the wrong type of screenshot capturing
+- added new functionality to (1) clear out temp files, and (2) open output directory
+- slightly improved menu to reduce visual footprint on console 
+- remove functionality no longer needed
 
 
 ### [desktop commands](../commands/desktop)
