@@ -53,18 +53,19 @@ comments: true
   automation experience.
 
 
-[Nexial Function](../functions)
+### [Nexial Function](../functions)
 - [`$(projectfile|projectProperty|name)`](../functions/$(projectfile)#projectfileprojectpropertyname): *NEW* function 
   to read project property `name` from `project.properties`
 - [`$(projectfile|projectProperty|name|value)`](../functions/$(projectfile)#projectfileprojectpropertynamevalue): *NEW* 
   function to write project property `name` with `value` into `project.properties`
 
 
-[Nexial Interactive](../interactive)
+### [Nexial Interactive](../interactive)
 - reset screenshot capability when switching scenario to avoid the wrong type of screenshot capturing
 - added new functionality to (1) clear out temp files, and (2) open output directory
 - slightly improved menu to reduce visual footprint on console 
 - remove functionality no longer needed
+- [**A**utorun mode]: **NEW** cool mode to automatically run your steps after they are specified via Option 5 or 6.
 
 
 ### [desktop commands](../commands/desktop)
@@ -138,6 +139,8 @@ comments: true
 - [`nexial.browser.forceJSDoubleClick`](../systemvars/index.html#nexial.browser.forceJSDoubleClick): **NEW** System 
   variable to control how a double-click automation should be carried out. Default (`false`) is to use underlying 
   WebDriver, not Javascript.
+- [FIXED] background not being removed after successive highlighting on the same element when 
+  [`nexial.web.highlight`](../systemvars/index.html#nexial.web.highlight) is set to `true`. 
 
 
 ### [webmail commands](../commands/webmail)
