@@ -3059,7 +3059,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td>false</td>
         <td class="read-write">read/write</td>
         <td>
-            By default, Nexial uses Selenium API (i.e. via <code>WebElement</code>) for click event. This generally
+            By default, Nexial uses Selenium API (i.e. via <code>WebDriver</code>) for click event. This generally
             works. However, with the combination of a certain browser and certain web application, timing sometimes work
             against expectation. Such anomaly is especially noticeable with IE and AJAX-rich web applications (from
             which timing might be less than predictable). To circumvent this issue, one may turn on the feature of
@@ -3069,6 +3069,23 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             Consequently, this feature is also effective as a workaround for IE to handle the click event on a target
             inside an iframe, which can be particularly problematic when the click event triggers a 'File Download'
             that in turn triggers a IE-only 'Download Notification' outside of the iframe.
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.browser.forceJSDoubleClick"><code>nexial.browser.forceJSDoubleClick</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td class="read-write">read/write</td>
+        <td>
+            By default, Nexial uses Selenium API (i.e. via <code>WebDriver</code>) for double-click event. This 
+            generally works. However, with the combination of a certain browser, web application and its underlying 
+            UI framework, this fails at times. It's been known that WebDriver-based double-click automation on
+            Electron application and some React-based web application can fall trap to such issue. To circumvent this 
+            issue, one may turn on the feature of forcefully issuing click event via JavaScript by setting 
+            <code>nexial.browser.forceJSDoubleClick</code> to <code>true</code>. By doing so, Nexial will execute
+            JavaScript on the target application to trigger double-click event.<br/>
         </td>
     </tr>
 
