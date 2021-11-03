@@ -135,6 +135,9 @@ comments: true
   - [`nexial.web.secureCrossBrowserTesting`](../systemvars/index.html#nexial.web.secureCrossBrowserTesting): **NEW** 
     System variable to enable/disable SSL connect to CrossBrowserTesting (default is enabled).
   - minor logging improvements
+- [`nexial.browser.forceJSDoubleClick`](../systemvars/index.html#nexial.browser.forceJSDoubleClick): **NEW** System 
+  variable to control how a double-click automation should be carried out. Default (`false`) is to use underlying 
+  WebDriver, not Javascript.
 
 
 ### [webmail commands](../commands/webmail)
