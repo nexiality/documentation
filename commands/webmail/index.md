@@ -59,6 +59,31 @@ The above settings will read emails from the temporary-mail.net **inbox** with t
 <br/>
 <br/>
 
+### Listing the Links and Retrieving a Link by Label Name
+We can extract the various links in the email using the `links` and the `link` attributes. The `links` contain all the
+links in the html file, while the `link` attribute is used to extract the url value corresponding to a specific label.
+
+For example, in the below screenshot you can observe there are five web links.
+- There are two links with labels `Documentation` and`Nexiality`.
+- source code url(with out a label).
+- The git and slack images which link to the Nexial source url and the Nexial slack url respectively.
+
+![](image/webmail_05.png)
+
+- The `${email1}.links` lists all the links(urls) in the html page.
+- The `[LIST(${email1}.links) => item(0)]`and `${email1}.links[2]` represents the first and third links in the list of 
+links in the html page. The urls(links) related to the images(the git and the slack images in the above diagram)
+can be retrieved as `${email1}.links[3]` and `${email1}.links[4]`.
+- The `${email1}.link[Documentation]` and `${email1}.link[Nexiality]` represents the links corresponding to the labels
+`Documentation` and `Nexiality`.
+
+#### Script to extract Links
+![](image/webmail_06.png)
+
+#### Output of the script
+![](image/webmail_07.png)
+<br/>
+
 
 ### Available Commands
 - [webmail &raquo; `search(var,profile,searchCriteria,duration)`](../webmail/search(var,profile,searchCriteria,duration))
