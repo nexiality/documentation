@@ -1,13 +1,13 @@
 ---
 layout: default
-title: nexial-core 4.3 (2021-10-??)
+title: nexial-core 4.3 (2021-11-??)
 parent: release
 tags: release nexial-core 4.3
 comments: true
 ---
 
 ### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v4.3_????" class="external-link" target="_nexial_link">Release 4.3</a>
-2021-10-??
+2021-11-??
 
 
 ### General
@@ -98,49 +98,56 @@ comments: true
 
 
 ### [web commands](../commands/web)
-- [`type(locator,text)`](../commands/web/type(locator,value)): 
-  - performance improvement when clearing out existing text in React-like text boxes or text areas.
-- [`assertElementsPresent(prefix)`](../commands/web/assertElementsPresent(prefix)): fixed issue with selecting data 
-  variables from the same prefix while running macro
-- [`switchBrowser(profile,config)`](../commands/web/switchBrowser(profile,config)): fixed error when switching back to
-  DEFAULT (without `profile` value).
-- [`text=...` locator](../commands/web/index#locators): **NEW** locator to simplify the referencing of text-centric web 
-  elements.
-- [`layer=...` locator](../commands/web/index#locators): **NEW** locator to optimize the use of existing locators 
-  across multiple DOM layers.
-  - minor fixes
-- [`switchBrowser(profile,config)`](../commands/web/switchBrowser(profile,config)): force target browser instance to be 
-  focused
-- [`nexial.web.useComputedCss`](../systemvars/index.html#nexial.web.useComputedCss): **NEW** System variable to support
-  the discovery of computed CSS value rather than the declared CSS values (default).
-- [`assertCssPresent(locator,property,value)`](../commands/web/assertCssPresent(locator,property,value)): now supports
-  validation of computed CSS rather than just declared values. Also support automatically color value conversion for 
-  more accurate comparison.
+- [`assertCssPresent(locator,property,value)`](../commands/web/assertCssPresent(locator,property,value)): 
+  - now supports validation of computed CSS rather than just declared values. Also support automatically color value 
+    conversion for more accurate comparison.
   - also handle named color and special color name `transparent`.
-- [`assertElementDisabled(locator)`](../commands/web/assertElementDisabled(locator)): circumvent Selenium's limitation 
+- [`assertElementDisabled(locator)`](../commands/web/assertElementDisabled(locator)): circumvent Selenium's limitation
   by adding JavaScript check on whether an element is disabled or not.
-- [`waitUntilDisabled(locator,waitMs)`](../commands/web/waitUntilDisabled(locator,waitMs)): circumvent Selenium's 
-  limitation by adding JavaScript check on whether an element is disabled or not.
-- [FIXED] avoid capturing screenshot when underlying driver is not available or ready for use
-- [FIXED] address issue with invalid intermediate locator for the `layer` locator
-- [`clickByLabel(label)`](../commands/web/clickByLabel(label)): click on first matching label without requiring that 
+- [`assertElementsPresent(prefix)`](../commands/web/assertElementsPresent(prefix)): fixed issue with selecting data
+  variables from the same prefix while running macro
+- [`assertElementsVisible(prefix)`](../commands/web/assertElementsVisible(prefix)): **NEW** command to assert that a 
+  series of web elements are visible.
+- [`assertElementsVisible(prefix)`](../commands/web/assertElementsEnabled(prefix)): **NEW** command to assert that a 
+  series of web elements are enabled for interaction. This is mostly applicable to form elements.
+- [`clickByLabel(label)`](../commands/web/clickByLabel(label)): click on first matching label without requiring that
   there is exactly 1 match
-- [`clickByLabelAndWait(label,waitMs)`](../commands/web/clickByLabelAndWait(label,waitMs)): click on first matching 
+- [`clickByLabelAndWait(label,waitMs)`](../commands/web/clickByLabelAndWait(label,waitMs)): click on first matching
   label without requiring that there is exactly 1 match
+- [`switchBrowser(profile,config)`](../commands/web/switchBrowser(profile,config)): 
+  - fixed error when switching back to DEFAULT (without `profile` value).
+  - force target browser instance to be focused
+- [`type(locator,text)`](../commands/web/type(locator,value)):
+  - performance improvement when clearing out existing text in React-like text boxes or text areas.
+- [`waitUntilDisabled(locator,waitMs)`](../commands/web/waitUntilDisabled(locator,waitMs)): circumvent Selenium's
+  limitation by adding JavaScript check on whether an element is disabled or not.
+- LOCATORS
+  - [`text=...` locator](../commands/web/index#locators): **NEW** locator to simplify the referencing of text-centric 
+    web elements
+  - [`layer=...` locator](../commands/web/index#locators): **NEW** locator to optimize the use of existing locators 
+    across multiple DOM layers
+    - minor fixes
+    - [FIXED] address issue with invalid intermediate locator for the `layer` locator
+- SYSTEM VARIABLES
+  - [`nexial.browser.forceJSDoubleClick`](../systemvars/index.html#nexial.browser.forceJSDoubleClick): **NEW** System
+    variable to control how a double-click automation should be carried out. Default (`false`) is to use underlying
+    WebDriver, not Javascript
+  - [`nexial.web.useComputedCss`](../systemvars/index.html#nexial.web.useComputedCss): **NEW** System variable to 
+    support the discovery of computed CSS value rather than the declared CSS values (default)
+  - [`nexial.web.highlight`](../systemvars/index.html#nexial.web.highlight) is set to `true`
+    - [FIXED] background not being removed after successive highlighting on the same element when
+- [FIXED] avoid capturing screenshot when underlying driver is not available or ready for use
 - BrowserStack:
   - update BrowserStack URL from `http` to `https`
-  - [`nexial.web.secureBrowserStack`](../systemvars/index.html#nexial.web.secureBrowserStack): **NEW** System variable to
-    enable/disable SSL connection to BrowserStack (default is enabled).
+  - [`nexial.web.secureBrowserStack`](../systemvars/index.html#nexial.web.secureBrowserStack): **NEW** System variable
+    to enable/disable SSL connection to BrowserStack (default is enabled)
 - CrossBrowserTesting:
   - update CrossBrowserTesting URL from `http` to `https`
   - [`nexial.web.secureCrossBrowserTesting`](../systemvars/index.html#nexial.web.secureCrossBrowserTesting): **NEW** 
-    System variable to enable/disable SSL connect to CrossBrowserTesting (default is enabled).
+    System variable to enable/disable SSL connect to CrossBrowserTesting (default is enabled)
   - minor logging improvements
-- [`nexial.browser.forceJSDoubleClick`](../systemvars/index.html#nexial.browser.forceJSDoubleClick): **NEW** System 
-  variable to control how a double-click automation should be carried out. Default (`false`) is to use underlying 
-  WebDriver, not Javascript.
-- [FIXED] background not being removed after successive highlighting on the same element when 
-  [`nexial.web.highlight`](../systemvars/index.html#nexial.web.highlight) is set to `true`. 
+- [`saveCssValue(var,locator,property)`](../commands/web/saveCssValue(var,locator,property)): **NEW** command to store
+  CSS value of a web element to a data variable.
 
 
 ### [webmail commands](../commands/webmail)

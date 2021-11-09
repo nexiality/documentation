@@ -13,7 +13,7 @@ be specified via the first parameter. Such data variables **must** end with `.lo
 can contain any of the [supported locators](index#locators).
 
 Note that this command will attempt to assert all locators regardless of the presence of each targeted web element. It
-will FAIL if one or more target web elements ia not found. In other words, it will only PASS if all web elements as 
+will FAIL if one or more target web elements is not found. In other words, it will only PASS if all web elements as 
 indicated by the gathered locators are found.
 
 Depending on [`nexial.verbose`](../../systemvars/index#nexial.verbose), a `true` value would cause Nexial to output
@@ -37,4 +37,5 @@ in order to gather all 5 locators.
 
 ### See Also
 - [`assertElementPresent(locator)`](assertElementPresent(locator))
-- [`web`](../web)
+- [`assertElementsVisible(prefix)`](assertElementsVisible(prefix))
+- [`assertElementsEnabled(prefix)`](assertElementsEnabled(prefix))
