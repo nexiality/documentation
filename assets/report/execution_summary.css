@@ -244,6 +244,7 @@ table.execMeta { font-size: 10pt; font-family: "Trebuchet MS", Arial, Helvetica,
   font-weight:   normal;
   margin-bottom: 0 !important;
   display:       block;
+  height:        auto;
 }
 
 .execArgs pre { margin: 0; }
