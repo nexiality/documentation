@@ -151,7 +151,7 @@ comments: true
 
 
 ### [webmail commands](../commands/webmail)
-
+- adding the provision to extract the link(url) in the email body based on the label name.
 
 ### [ws commands](../commands/ws)
 - [`oauthProfile(var,profile)`](../commands/ws/oauthProfile(var,profile)): add missing implementation to set auth 
