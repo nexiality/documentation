@@ -148,6 +148,10 @@ comments: true
   - minor logging improvements
 - [`saveCssValue(var,locator,property)`](../commands/web/saveCssValue(var,locator,property)): **NEW** command to store
   CSS value of a web element to a data variable.
+- [`assertSelectOptionsPresent(locator,options)`](../commands/web/assertSelectOptionsPresent(locator,options)): **NEW** 
+  command to assert that the `SELECT` element denoted by `locator` contains the specified `OPTION` list.
+- [`assertSelectOptionsAbsent(locator,options)`](../commands/web/assertSelectOptionsAbsent(locator,options)): **NEW**
+  command to assert that the `SELECT` element denoted by `locator` DOES NOT contain the specified `OPTION` list.
 
 
 ### [webmail commands](../commands/webmail)
