@@ -9,14 +9,13 @@ comments: true
 > **For a quick overview on Installing Nexial Automation, check out 
 > [Installing Nexial Automation The Easy Way](../videos/Install_Update_Nexial.md)**
 
-> Nexial requires Java 1.8.0_151 or above and Excel 2007/2010 or above. If you don't have Java installed on your system, 
-> follow the next section to do so.
-
+> Nexial requires Java 1.8.0_151 or above and Excel 2007/2010 or above; with both the latest 64 bit version of Java and 
+> Excel > recommended. If you don't have Java installed on your system, > follow the next section to do so.
 
 ### Install Java
 
 Check if Java is installed - **Java 1.8.0_151 or above required, and 64-bit Java is highly recommended**
-**If possible, consider installing the latest version of Java 1.8 or the latest release of Java (v16 recommended).**<br/>
+**If possible, consider installing the latest release of Java (latest as of 2021/11/10 is v17.0.1).**<br/>
 
 <div class="tabs">
    <ul class="tab-links tabs-collapsed">
@@ -37,11 +36,12 @@ Check if Java is installed - **Java 1.8.0_151 or above required, and 64-bit Java
                <img src="image/InstallingNexial_01.png"/>
                <br/>
                If you are not getting the above message, check that the version of Java installed is 1.8.0_151 or 
-               above. For example, here's a snapshot of an <i><b>outdated</b></i> Java installation (1.6.0.45).<br/>
+               above (latest Java recommended). For example, here's a snapshot of an <i><b>outdated</b></i> Java 
+               installation (1.6.0.45).<br/>
                <img src="image/InstallingNexial_02a.png"/>
                <br/>
                While the snapshot below shows Java 1.8, this version of not supported. Please be sure that your Java 
-               installation is <b>Java 1.8.0_151 or above</b>:<br/>
+               installation is <b>Java 1.8.0_151 or above</b> (the latest Java recommended):<br/>
                <img src="image/InstallingNexial_02.png"/>
                <br/>
                If your Java installation is outdated/unsupported, please follow the next step (Step 3) below to 
@@ -50,14 +50,14 @@ Check if Java is installed - **Java 1.8.0_151 or above required, and 64-bit Java
             <li>
                To download Java, visit one of the following links:
                <ul>
-                  <li><a href="https://www.oracle.com/java/technologies/javase-jdk16-downloads.html" class="external-link" target="_nexial_link">Oracle Java 16</a></li>
-                  <li><a href="https://jdk.java.net/16/" class="external-link" target="_nexial_link">OpenJava 16</a></li>
-                  <li><a href="https://docs.aws.amazon.com/corretto/latest/corretto-16-ug/downloads-list.html" class="external-link" target="_nexial_link">Amazon Corretto Java 16</a></li>
-                  <li><a href="https://adoptopenjdk.net/?variant=openjdk16&jvmVariant=hotspot" class="external-link" target="_nexial_link">AdoptOpenJDK Java 16</a></li>
+                  <li><a href="https://www.oracle.com/java/technologies/downloads/" class="external-link" target="_nexial_link">latest version of Oracle Java</a></li>
+                  <li><a href="https://jdk.java.net/17/" class="external-link" target="_nexial_link">OpenJava 17</a></li>
+                  <li><a href="https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/downloads-list.html" class="external-link" target="_nexial_link">Amazon Corretto Java 17</a></li>
+                  <li><a href="https://adoptium.net/?variant=openjdk17" class="external-link" target="_nexial_link">Adoptium OpenJDK Java 17</a></li>
                </ul>
                Nexial is compatible with all these distributions of Java. Note that Oracle's distribution (first link) 
                comes with a commercial license for corporate use. All other distributions can be obtained free of 
-               charge, and are actively in used by many Nexialists.<br/>
+               charge, and are actively used by many Nexialists.<br/>
                When selecting a suitable distribution for your operating system, it is highly recommended to select the 
                <b>64bit version</b>, if possible, for better performance and memory management.
             </li>
@@ -76,11 +76,12 @@ Check if Java is installed - **Java 1.8.0_151 or above required, and 64-bit Java
                <img src="image/InstallingNexial_01.png"/>
                <br/>
                If you are not getting the above message, check that the version of Java installed is 1.8.0_151 or 
-               above. For example, here's a snapshot of an outdated Java installation (1.6.0.45).<br/>
+               above (latest Java recommended). For example, here's a snapshot of an outdated Java installation 
+               (1.6.0.45).<br/>
                <img src="image/InstallingNexial_02a.png"/>
                <br/>
                While the snapshot below shows Java 1.8, this version of not supported. Please be sure that your Java 
-               installation is <b>Java 1.8.0_151 or above</b>:<br/>
+               installation is <b>Java 1.8.0_151 or above</b> (the latest Java recommended):<br/>
                <img src="image/InstallingNexial_02.png"/>
                <br/>
                If your Java installation is outdated/unsupported, please follow the next step (Step 3) below to 
@@ -89,14 +90,14 @@ Check if Java is installed - **Java 1.8.0_151 or above required, and 64-bit Java
             <li>
                To download Java, visit one of the following links:
                <ul>
-                  <li><a href="https://www.oracle.com/java/technologies/javase-jdk16-downloads.html" class="external-link" target="_nexial_link">Oracle Java 16</a></li>
-                  <li><a href="https://jdk.java.net/16/" class="external-link" target="_nexial_link">OpenJava 16</a></li>
-                  <li><a href="https://docs.aws.amazon.com/corretto/latest/corretto-16-ug/downloads-list.html" class="external-link" target="_nexial_link">Amazon Corretto Java 16</a></li>
-                  <li><a href="https://adoptopenjdk.net/?variant=openjdk16&jvmVariant=hotspot" class="external-link" target="_nexial_link">AdoptOpenJDK Java 16</a></li>
+                  <li><a href="https://www.oracle.com/java/technologies/downloads/" class="external-link" target="_nexial_link">latest version of Oracle Java</a></li>
+                  <li><a href="https://jdk.java.net/17/" class="external-link" target="_nexial_link">OpenJava 17</a></li>
+                  <li><a href="https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/downloads-list.html" class="external-link" target="_nexial_link">Amazon Corretto Java 17</a></li>
+                  <li><a href="https://adoptium.net/?variant=openjdk17" class="external-link" target="_nexial_link">Adoptium OpenJDK Java 17</a></li>
                </ul>
                Nexial is compatible with all these distributions of Java. Note that Oracle's distribution (first link) 
                comes with a commercial license for corporate use. All other distributions can be obtained free of 
-               charge, and are actively in used by many Nexialists.<br/>
+               charge, and are actively used by many Nexialists.<br/>
                When selecting a suitable distribution for your operating system, it is highly recommended to select the 
                <b>64bit version</b>, if possible, for better performance and memory management.
             </li>
@@ -109,7 +110,7 @@ Check if Java is installed - **Java 1.8.0_151 or above required, and 64-bit Java
 
 ### Using Nexial Installer
 **Note**: Nexial requires Java 1.8.0_151 or above and Excel 2007/2010 or above. If you don't have Java installed on 
-your system, please follow the section above.
+your system (the latest Java recommended), please follow the section above.
 
 <div class="tabs">
     <ul class="tab-links tabs-collapsed">
@@ -138,8 +139,8 @@ your system, please follow the section above.
                 <li>
                     Unzip the <code>nexial-installer.zip</code> file into the <code>C:\projects\</code> directory that 
                     you just created. <br/>
-                    To do this, right-click on <code>nexial-installer.zip</code>, select 
-                    <code>Extract All</code> and then type in <code>C:\projects</code>:<br/>
+                    To do this, right-click on <code>nexial-installer.zip</code>, select <code>Extract All</code> and 
+                    then type in <code>C:\projects</code>:<br/>
                     <img src="image/Installer_03.gif"/>
                 </li>
                 <li>
@@ -236,13 +237,16 @@ is also an excellent option to read/edit XLSX files.
 ### Checking Browser Availability and Version
 1. **Internet Explorer** - Nexial at this time only supports Internet Explorer 9 or above. In the future we might 
    consider older versions of Internet Explorer. Nexial however will support either 32 or 64 bit.
-2. **Firefox** - as stated on Selenium's website: "..._Support for Firefox is the latest release, the previous 
+2. **Microsoft Edge** - Built on the Chromium project, this is Microsoft's latest offering for Internet browser. 
+   Nexial's support for Edge will be similar to that of Chrome (since both browsers are based on the same browser 
+   architecture).
+3. **Firefox** - as stated on Selenium's website: "..._Support for Firefox is the latest release, the previous 
    release, the latest ESR release and the previous ESR release..._" However there is a high likelihood that older 
    versions of Firefox will work as well. Support from Nexial team is provided on a case-by-case basis.
-3. **Chrome** - latest and almost all recent versions are supported. Older version can be supported via using the 
-   corresponding 
-   <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" class="external-link" target="_nexial_link">older versions of chrome driver</a>.
-4. **Safari** - version 9 or above is supported, with the latest most likely to be most stable in terms of support.
+4. **Chrome** - latest and almost all recent versions are supported. Older version can be supported via using the 
+   corresponding <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" class="external-link" 
+   target="_nexial_link">older versions of chrome driver</a>.
+5. **Safari** - version 9 or above is supported, with the latest most likely to be most stable in terms of support.
 
 
 ### Starting Your First Project
