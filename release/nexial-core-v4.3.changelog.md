@@ -97,6 +97,16 @@ comments: true
 - [FIXED] for BrowserStack automation, avoid unnecessarily relaunching target application
 
 
+### [rdbms commands](../commands/rdbms)
+- improved support for nested query results:
+  - nested result(s) can be access via the `.nested` property, which a list object. For example, 
+    `${query-result}.nested[0].data` will return the data of the first nested query result.
+  - affected the following commands:
+    - [`runSQL(var,db,sql)`](../commands/rdbms/runSQL(var,db,sql))
+    - [`runSQLs(var,db,sqls)`](../commands/rdbms/runSQLs(var,db,sqls))
+    - [`saveResult(db,sql,output)`](../commands/rdbms/saveResult(db,sql,output))
+
+
 ### [web commands](../commands/web)
 - [`assertCssPresent(locator,property,value)`](../commands/web/assertCssPresent(locator,property,value)): 
   - now supports validation of computed CSS rather than just declared values. Also support automatically color value 
