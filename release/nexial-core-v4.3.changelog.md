@@ -30,6 +30,7 @@ comments: true
   - added screen recording as videos in execution report.
   - added web service summary and detail logs in execution report for interactive analysis
   - fresh redesign of execution summary for improved dashboard view.
+- reduce log severity from ERROR to WARN for side-effect or triggered down errors. 
 
 
 ### [Batch Files](../userguide/BatchFiles)
