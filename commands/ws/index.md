@@ -6,20 +6,20 @@ comments: true
 ---
 
 
-`ws` is short for Web Service. For Nexial, this refers to any form of HTTP-based web services (REST, SOAP, etc.). The 
-`ws` set of commands provides a set of web service related interactions and validations. The specific of each commands 
-are documented in the designated pages (below). However there are a few common things to note:
+`ws` is short for Web Service. For Nexial, this refers to any form of HTTP-based web services (REST, SOAP, etc.). The 
+`ws` set of commands provides a set of web service related interactions and validations. The specific of each command 
+are documented in the designated pages (below). However, there are a few common things to note:
 
 
 ### [ws &nbsp; `header(name,value)`](header(name,value))
-This command affects all subsequent `ws` commands. The main purpose of this command is to set up HTTP headers for the 
+This command affects all subsequent `ws` commands. The main purpose of this command is to set up HTTP headers for the 
 subsequent web service invocations within the same Nexial execution. One can create a series of HTTP headers, and
 modify or enhance them between web service invocations. For example:<br/>
 ![](./image/index_01.png)
 
 
 ### HTTP Response
-When a HTTP request is made, the corresponding server responds with a set of information generally known as 
+When an HTTP request is made, the corresponding server responds with a set of information generally known as 
 <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html" class="external-link" target="_nexial_external">HTTP Response</a>.
 The response at the network transport layer looks something like this:<br/>
 ![response](image/index_02.png)
@@ -101,7 +101,7 @@ web service calls made. To enable summarized logging, set the System variable `n
 summarized log will be linked in the `#summary` worksheet of the output file:<br/>
 ![](image/index_07.png)
 
-Here's an sample of such summarized log file (CSV format):<br/>
+Here's a sample of such summarized log file (CSV format):<br/>
 ![](image/index_08.png)
 
 Note that the first line of the log file is the column headers. One can import such CSV file to Excel (or similar) to
@@ -120,7 +120,6 @@ declared with blank or empty values. The Automation Engineers can configure thes
 their needs.
 
 Here’s a summary of the `nexial-swagger` command (click on tab to view):
-
 {% include_relative _nexial-swagger.html %}
 
 ### Available Commands
@@ -129,6 +128,7 @@ Here’s a summary of the `nexial-swagger` command (click on tab to view):
 - [`delete(url,body,var)`](delete(url,body,var))
 - [`download(url,queryString,saveTo)`](download(url,queryString,saveTo))
 - [`get(url,queryString,var)`](get(url,queryString,var))
+- [`graphql(url,body,var)`](graphql(url,body,var))
 - [`head(url,var)`](head(url,var))
 - [`header(name,value)`](header(name,value))
 - [`headerByVar(name,var)`](headerByVar(name,var))
