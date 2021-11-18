@@ -163,6 +163,7 @@ comments: true
   command to assert that the `SELECT` element denoted by `locator` contains the specified `OPTION` list.
 - [`assertSelectOptionsAbsent(locator,options)`](../commands/web/assertSelectOptionsAbsent(locator,options)): **NEW**
   command to assert that the `SELECT` element denoted by `locator` DOES NOT contain the specified `OPTION` list.
+- [FIXED] reduce scrolling by checking if the target element is already visible within current page boundary
 
 
 ### [webmail commands](../commands/webmail)
@@ -175,3 +176,4 @@ comments: true
   toggling of multipart via the [`nexial.ws.upload.method`] and [`nexial.ws.upload.multipart`] System variables 
   respectively. Note that both of these System variables must be specified as part of the `body` parameter.
 - [FIXED] detail log missing response return code
+- [FIXED] Issue #15 fixed by removing double treatment of GraphQL payload.
