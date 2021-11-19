@@ -75,6 +75,11 @@ comments: true
   keystroke between menu selection
 - [`contextMenuByLocator(locator,menu,xOffset,yOffset)`](../commands/desktop/contextMenuByLocator(locator,menu,xOffset,yOffset)): 
   support keystroke between menu selection
+- extend custom data grid formatting:
+  - [`assertTableColumnContains(column,contains)`](../commands/desktop/assertTableColumnContains(column,contains))
+  - [`assertTableContains(contains)`](../commands/desktop/assertTableContains(contains))
+  - [`saveAllTableRows(var,csv)`](../commands/desktop/saveAllTableRows(var,csv))
+  - [`saveTableRows(var,contains,csv)`](../commands/desktop/saveTableRows(var,contains,csv))
 
 
 ### [external commands](../commands/external)
