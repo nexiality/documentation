@@ -26,6 +26,9 @@ command.
 
 ### See Also
 - [`click(locator)`](click(locator))
+- [`clickAll(locator)`](clickAll(locator))
+- [`clickAndWait(locator,waitMs)`](clickAndWait(locator,waitMs))
 - [`clickByLabelAndWait(label,waitMs)`](clickByLabelAndWait(label,waitMs))
-- [`doubleClickByLabel(label)`](doubleClickByLabel(label))
-- [`doubleClickByLabelAndWait(label,waitMs)`](doubleClickByLabelAndWait(label,waitMs))
+- [`clickIfPresent(locator)`](clickIfPresent(locator))
+- [`clickOffset(locator,x,y)`](clickOffset(locator,x,y))
+- [`clickWithKeys(locator,keys)`](clickWithKeys(locator,keys))

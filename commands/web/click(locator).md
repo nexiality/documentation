@@ -27,7 +27,7 @@ mark the "screenshot" column with `x`.
 
 
 ### Parameters
-- **locator** - this parameter is the xpath of the element on which action need to be performed.
+- **locator** - the locator of the target element to be clicked.
 
 
 ### Example
@@ -38,6 +38,10 @@ mark the "screenshot" column with `x`.
 
 
 ### See Also
+- [`clickAll(locator)`](clickAll(locator))
 - [`clickAndWait(locator,waitMs)`](clickAndWait(locator,waitMs))
-- [`clickByLabelAndWait(label,waitMs)`](clickByLabelAndWait(label,waitMs))
 - [`clickByLabel(label)`](clickByLabel(label))
+- [`clickByLabelAndWait(label,waitMs)`](clickByLabelAndWait(label,waitMs))
+- [`clickIfPresent(locator)`](clickIfPresent(locator))
+- [`clickOffset(locator,x,y)`](clickOffset(locator,x,y))
+- [`clickWithKeys(locator,keys)`](clickWithKeys(locator,keys))

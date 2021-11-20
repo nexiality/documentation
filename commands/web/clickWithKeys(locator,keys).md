@@ -50,3 +50,9 @@ key.
 
 ### See Also
 - [`click(locator)`](click(locator))
+- [`clickAll(locator)`](clickAll(locator))
+- [`clickAndWait(locator,waitMs)`](clickAndWait(locator,waitMs))
+- [`clickByLabel(label)`](clickByLabel(label))
+- [`clickByLabelAndWait(label,waitMs)`](clickByLabelAndWait(label,waitMs))
+- [`clickIfPresent(locator)`](clickIfPresent(locator))
+- [`clickOffset(locator,x,y)`](clickOffset(locator,x,y))

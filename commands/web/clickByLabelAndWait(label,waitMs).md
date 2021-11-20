@@ -23,8 +23,14 @@ specified `label`,  only the first matching element will be considered by this c
 **Output**:<br/>
 ![](image/clickByLabelAndWait_02.png)
 
+
 ### See Also
 - [`click(locator)`](click(locator))
+- [`clickAll(locator)`](clickAll(locator))
+- [`clickAndWait(locator,waitMs)`](clickAndWait(locator,waitMs))
 - [`clickByLabel(label)`](clickByLabel(label))
+- [`clickIfPresent(locator)`](clickIfPresent(locator))
+- [`clickOffset(locator,x,y)`](clickOffset(locator,x,y))
+- [`clickWithKeys(locator,keys)`](clickWithKeys(locator,keys))
 - [`doubleClickByLabel(label)`](doubleClickByLabel(label))
 - [`doubleClickByLabelAndWait(label,waitMs)`](doubleClickByLabelAndWait(label,waitMs))

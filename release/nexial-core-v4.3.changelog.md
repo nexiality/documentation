@@ -40,7 +40,11 @@ comments: true
 
 ### [Expression](../expression)
 - [WEB &rauoq; `check(locator,waitMs)`](../expressions/WEBexpression#checklocatorwaitms): support customized time out
+- [WEB &rauoq; `check(locator,waitMs)`](../expressions/WEBexpression#checklocatorwaitms): default time out to 2 sec 
+  instead of [`nexial.pollWaitMs`](../systemvars/index.html#nexial.pollWaitMs)
 - [WEB &rauoq; `uncheck(locator,waitMs)`](../expressions/WEBexpression#unchecklocatorwaitms): support customized time out
+- [WEB &rauoq; `uncheck(locator,waitMs)`](../expressions/WEBexpression#unchecklocatorwaitms): default time out to 2 sec 
+  instead of [`nexial.pollWaitMs`](../systemvars/index.html#nexial.pollWaitMs)
 - [LIST &raquo; `findFirst(match)`](../expressions/LISTexpression#findfirstmatch): find first matching item. 
   PolyMatcher supported
 - [LIST &raquo; `retain(match)`](../expressions/LISTexpression#findfirstmatch): filter current LIST via `match` 
@@ -169,6 +173,8 @@ comments: true
 - [`assertSelectOptionsAbsent(locator,options)`](../commands/web/assertSelectOptionsAbsent(locator,options)): **NEW**
   command to assert that the `SELECT` element denoted by `locator` DOES NOT contain the specified `OPTION` list.
 - [FIXED] reduce scrolling by checking if the target element is already visible within current page boundary
+- [`clickIfPresent(locator)`](../commands/web/clickIfPresent(locator)): **NEW** command that clicks on an element only 
+  if it can be found.
 
 
 ### [webmail commands](../commands/webmail)

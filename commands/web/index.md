@@ -126,6 +126,7 @@ available commands.
 - [`clickAndWait(locator,waitMs)`](clickAndWait(locator,waitMs)) 
 - [`clickByLabel(label)`](clickByLabel(label)) 
 - [`clickByLabelAndWait(label,waitMs)`](clickByLabelAndWait(label,waitMs)) 
+- [`clickIfPresent(locator)`](clickIfPresent(locator))
 - [`clickOffset(locator,x,y)`](clickOffset(locator,x,y))
 - [`clickWithKeys(locator,keys)`](clickWithKeys(locator,keys)) 
 - [`close()`](close())
