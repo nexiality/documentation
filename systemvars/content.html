@@ -232,6 +232,35 @@ nexial.cmd -plan ...</pre>
         </td>
     </tr>
     <tr>
+        <td class="varname" nowrap="nowrap"><a id="nexial.projectPropertiesDups">
+            <code>nexial.projectPropertiesDups</code></a>
+        </td>
+        <td>text</td>
+        <td>error</td>
+        <td class="read-write">read</td>
+        <td>
+            <b>MUST BE SET FROM COMMAND LINE VIA <code>-override</code> or <code>set JAVA_OPT=-D...</code></b><br/>
+            <br/>
+            This System variable instructs Nexial how to handle the situation when duplicate data variable is found in 
+            <code>project.properties</code>. Here are the options:
+            <ol>
+                <li>
+                    <code>error</code> - This is the default. This option instructs Nexial will report the 
+                    "dupicate data variable found in project.properties" event as an error and promptly exit thereafter.
+                </li>
+                <li>
+                    <code>first</code> - This option instructs Nexial <b>NOT</b> to allow for override. Duplicate 
+                    instance will not override the initial definition of the same data variable.
+                </li>
+                <li>
+                    <code>last</code> - This option instructs Nexial to override the current value of a data variable 
+                    with the newly-found, duplicate data variable.
+                </li>
+            </ol>
+        </td>
+    </tr>
+
+    <tr>
         <td class="varname" nowrap="nowrap"><a id="nexial.verbose"><code>nexial.verbose</code></a></td>
         <td>boolean</td>
         <td>false</td>
