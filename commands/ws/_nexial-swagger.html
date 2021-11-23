@@ -28,10 +28,10 @@
     <ul class="tab-links tabs-collapsed">
         <li><a href="#tab_parameters" id="tab_title_parameters">Parameters</a></li>
         <li><a href="#tab_script_file" id="tab_title_script_file">Script File</a></li>
-        <li><a href="#tab_properties_file" id="tab_title_properties_file">Properties file</a></li>
+        <li><a href="#tab_properties_file" id="tab_title_properties_file">Properties and Data files</a></li>
         <li><a href="#tab_swagger_file" id="tab_title_swagger_file">Swagger file</a></li>
         <li><a href="#tab_schema_files" id="tab_title_schema_files">Schema Files</a></li>
-        <li><a href="#tab_request_body_template" id="tab_title_request_body_template">Request Body Template</a></li>
+        <li><a href="#tab_request_body_payload" id="tab_title_request_body_payload">Request Body Payload</a></li>
         <li><a href="#tab_batch_file" id="tab_title_batch_file">Batch File</a></li>
         <li><a href="#tab_content_types_supported" id="tab_title_content_types_supported">Content Types supported</a>
         </li>
@@ -42,7 +42,7 @@
             The script takes the following parameters.<br/><br/>
             <b> <code>-f</code> or <code>--file</code></b>
             <blockquote> This is a mandatory parameter that allows the script to specify the location of the Swagger
-                file. The file can be in the <code>yaml</code> or <code>JSON</code> formats. The Swagger file should
+                file. The file can be in the <code>YAML</code> or <code>JSON</code> formats. The Swagger file should
                 adhere to the [Open API 3 specifications](https://swagger.io/specification/).
             </blockquote>
 
@@ -112,8 +112,7 @@
             The scenario name will be <code>d-countryId-regionId-userId-GET</code>.<br/><br/>
 
             <h2> Scenario Description</h2>
-            The description of the scenario as shown in the below diagram will be the same as the description of the
-            path or the Restful API operation.<br/>
+            The description of the scenario as shown in the below diagram will be the same as the description of the path or the Restful API operation.<br/>
 
             <img src="image/swagger4.png"/><br/><br/>
 
@@ -121,8 +120,7 @@
             Each Activity in the scenario will be named <code>{method}.{response}</code>. Consider the above diagram
             where the <code>DELETE</code> method has two responses viz <code>200</code> and <code>400</code>.
             Since there are two responses, two Activities are created with the names
-            <b>delete.400</b> and <b>delete.200</b> respectively. You can see the description of the Activity is the
-            same as the description of the response code.
+            <b>DELETE.400</b> and <b>DELETE.200</b> respectively. You can see the description of the Activity is the same as the description of the response code.
 
             There are as many activities as the number of responses, but there may be additional Activities by names
             <b>Set up</b> and <b>tear down</b> along with them in case any Authentication mechanism is specified for the
@@ -156,25 +154,14 @@
             </ol>
 
             <blockquote><b>Note</b>:- The variables used in these steps are configured in the
-                <code>properties</code> file,<code>JSON</code> files as well as <code>schema</code> files.
+                <code>properties</code> file,<code>Schema</code> files, <code>data </code> file as well as the
+                <code>payload</code> files.
             </blockquote>
         </div>
 
         <div id="tab_properties_file" class="tab">
-            The properties file contains the variables that need to be configured for running the script. It has the
-            following configuration variables.<br/><br/>
-
-            <ul>
-                <li>Nexial defaults</li>
-                <li>baseUrl</li>
-                <li>Request Body variables</li>
-                <li>Cookie Variables</li>
-                <li>Path parameter Variables</li>
-                <li>Header variables</li>
-                <li>Query Parameter variables</li>
-                <li>Authentication variables</li>
-                <li>Status text variables</li>
-            </ul>
+            <h1>Properties file</h1>
+            The properties file contains the variables that need to be configured for running the script.
 
             Consider the following command.
             <code>nexial-swagger -f C:\Swagger\users.json -d C:\projects\users -p V1</code>
@@ -183,7 +170,17 @@
             In this case, it will be <code>V1</code>. So the name of the properties file generated will be
             <code>project.V1.properties</code>. This will be created inside the <code>artifact</code> folder.
 
-            <h1>Nexial defaults</h1>
+            It has the following configuration variables.<br/><br/>
+
+            <ul>
+                <li>Nexial defaults</li>
+                <li>baseUrl</li>
+                <li>payloadBase</li>
+                <li>schemaBase</li>
+                <li>Authentication variables</li>
+            </ul>
+
+            <h2>Nexial defaults</h2>
             The properties will have the following Nexial defaults<br/>
 
             <code>nexial.delayBetweenStepsMs=0</code><br/>
@@ -195,79 +192,101 @@
             <code>nexial.ws.connectionTimeout=30000</code><br/>
 
             <code>nexial.ws.readTimeout=30000</code><br/>
+            <br/>
 
-            <h1>baseUrl</h1>
+            <h2>baseUrl</h2>
             The <code>baseUrl</code> is retrieved from the Swagger file as shown in the below screenshot.<br/><br/>
 
             <img src="image/swagger6.png"/><br/>
 
-            <h1>Request Body Variables</h1>
-            The Request body variables are the variables used as part of the request body JSON. These variables are used
-            to configure the value of the variables in the Request body. The format of the Request Variables will
-            be <code>{scenarioName}.{response}.{variableName}</code>. Example below.<br/><br/>
+            <h2>payloadBase</h2>
+            The <code>payloadBase</code> is the base path where the payload files are available. These files are used
+            to configure the request body payload.<br/><br/>
 
-            <img src="image/swagger7.png"/><br/><br/>
+            <h2>schemaBase</h2>
+            The <code>schemaBase</code> is the base path where the schema files are available. These files provide the schema corresponding to the response generated after making a request.<br/><br/>
 
-            The variable values are left empty so that the Automation Engineer can configure them.
+            The following is an example of the payloadBase and schemaBase generated.<br/>
+            <code>
+                payloadBase=$(syspath|data|fullpath)/V1/payload<br/>
+                schemaBase=$(syspath|data|fullpath)/V1/Schema
+            </code>
+            <br/><br/>
 
-            <h1>Cookie Variables</h1>
-            The Cookie variables corresponding to the cookies sent when the request is made.
-            The format is <code>cookie.{scenarioName}.{response}.{variableName}</code>.
-            The variable values are left empty so that the Automation Engineer can configure them.
-            <code>e.g.:- cookie.users-userId-GET.400.expirationTime</code><br/>
+            <h2>Authentication variables</h2>
+            The Authentication variables are the headers that are passed along with the URL request to ensure the authenticity of the user. The format of the Authentication is
+            <code>{AUTHENTICATION_MODE}.{scenarioName}</code>.
+            The query parameter variables values are left empty so that the Automation Engineer can configure them.
+            <code>e.g.:- APIKEY.users-userId-GET</code><br/>
 
-            <h1>Path variables</h1>
+            <h1>Data file</h1>
+            The data file contains the rest of the configuration variables related to URL, cookies, path, header,
+            query parameters, and status text variables. The following is an example of the data file content.
+
+            <img src="image/swagger7.png"/><br/>
+
+            Consider the following command.
+            <code>nexial-swagger -f C:\Swagger\users.json -d C:\projects\users -p V1</code><br/>
+
+            When the command runs it creates a data file with the name as the <code>prefix</code> passed in.
+            In this case, it will be <code>V1</code>. So the name of the data file generated will be
+            <code>V1.data.xlsx</code>. This will be created inside the <code>data</code> folder.<br/>
+
+            <h2>url</h2>
+            The rest api url corresponding to the rest api. The following is an example as shown in the above screenshot
+            where the url value for retrieving 400 response is configured in the following variable with the key as
+            <code>DELETE.400.url</code>. The value corresponding to this will be:-
+            <code>${baseUrl}/users/${DELETE.400.path.userId}</code>.<br/><br/>
+
+            <h2>Path variables</h2>
             The path variables are variables set in the request URL path. For example in the URL
-            <code>http://xyz.com/users/{userId}</code>,
-            <code>{userId}</code> is the path parameter. Path variables are used to configure these path variable values
-            by the Automation Engineer.
-            The format is <code>path.{scenarioName}.{response}.{variableName}</code>.
+            <code>http://xyz.com/users/{userId}</code>, <code>{userId}</code> is the path parameter.
+            Path variables are used to configure these path variable values by the Automation Engineer.
+            The format of is <code>METHOD.{response}.path.{variableName}</code>.
             The variable values are left empty so that the Automation Engineer can configure them.
-            <code>e.g.:- path.users-userId-GET.400.userId</code><br/><br/>
+            <code>e.g.:- DELETE.400.path.userId</code><br/><br/>
 
-            <h1>Header variables</h1>
+            <h2>Header variables</h2>
             The header variables are used to configure the headers that are passed in as part of the HTTP request that
             is made.
-            The format is <code>header.{scenarioName}.{response}.{variableName}</code>.
+            The format is <code>METHOD.{response}.header.{variableName}</code>.
             The variable values are left empty so that the Automation Engineer can configure them.
-            <code>e.g.:- header.UsersRestAPI-GET.200.x</code><br/><br/>
+            <code>e.g.:- DELETE.400.header.token</code><br/><br/>
 
-            <h1>Query parameter variables</h1>
+            <h2>Query parameter variables</h2>
             The Query parameter variables are variables appended in the request URL path. For example in the URL
             <code>http://xyz.com/users?pageSize=10</code>, <code>{pageSize}</code> is the query parameter.
             Query parameter variables are used to configure the values of the Query parameters by the Automation
             Engineer.
 
-            The format of is <code>query.{scenarioName}.{response}.{variableName}</code>.
+            The format of is <code>METHOD.{response}.query.{variableName}</code>.
             The variable values are left empty so that the Automation Engineer can configure them.
-            <code>e.g.:- query.users-GET.200.pageSize</code><br/><br/>
+            <code>e.g.:- GET.200.query.pageSize</code><br/><br/>
 
-            <h1>Authentication variables</h1>
-            The Authentication variables are the headers that are passed along with the URL request to ensure the
-            authenticity of the user. The format of the Authentication is
-            <code>{AUTHENTICATION_MODE}.{scenarioName}</code>.
-            The query parameter variables values are left empty so that the Automation Engineer can configure them.
-            <code>e.g.:- APIKEY.users-userId-GET</code><br/><br/>
-
-            <h1>Status Text variables</h1>
-            The Status text variables represent the status text retrieved as part of the response to an HTTP request
-            call. For example, when a call to retrieve specific user details may lead to a 400 response with the status
+            <h2>Status Text variables</h2>
+            The Status text variables represent the status text retrieved as part of the response to an HTTP request call. For example, when a call to retrieve specific user details may lead to a 400 response with the status
             text <code>Bad Request</code> while a successful call may yield <code>OK</code>.
 
-            The format is <code>statusText.{scenarioName}.{response}</code>.
+            The format is <code>METHOD.{response}.statusText</code>.
             The variable values are left empty so that the Automation Engineer can configure them.
-            <code>e.g.:- statusText.users-POST.200</code>
+            <code>e.g.:- POST.200.statusText</code><br/><br/>
+
+            <h2>Cookie Variables</h2>
+            The Cookie variables correspond to the cookies sent when the request is made.
+            The format is <code>METHOD.{response}.cookie.{variableName}</code>.
+            The variable values are left empty so that the Automation Engineer can configure them.
+            <code>e.g.:- GET.200.cookie.x-auth-token</code><br/>
 
         </div>
 
         <div id="tab_swagger_file" class="tab">
             Once the <code>nexial-swagger</code> command is run, the Swagger file passed in as part of the command is
-            saved into the <code>{Nexial-project-directory}/artifact/data/Swagger</code> folder. The name of the file
-            will be <code>{prefix}.{swaggerFileName}</code>.<br/><br/>
+            saved into the <code>{Nexial-project-directory}/artifact/data/{prefix}</code> folder with the name
+            <code>swagger.json</code> or <code>swagger.yaml</code>.<br/><br/>
 
             For example, if the command is
-            <code>nexial-swagger -f c:\Swagger\users.JSON -d c:\projects\users -p V1</code>, the swagger file created
-            becomes:- <code>C:\projects\users\artifact\data\Swagger\V1.users.json</code>
+            <code>nexial-swagger -f c:\Swagger\users.json -d c:\projects\users -p V1</code>, the swagger file created
+            becomes:- <code>C:\projects\users\artifact\data\V1\swagger.json</code>
         </div>
 
         <div id="tab_schema_files" class="tab">
@@ -278,7 +297,7 @@
             In the above example, you can see that there are various schemas declared like <code>User, Pet, Tag,</code>
             etc.
             The <code>nexial-swagger</code> command generates Schema files inside the <code>{Nexial Project
-            Directory}/artifact/data/Schema/{prefix}</code>.<br/>
+            Directory}/artifact/data/{prefix}/Schema</code>.<br/>
 
             The following is an example that demonstrates the generation of the Schema files.<br/><br/>
 
@@ -289,11 +308,11 @@
             <img src="image/swagger10.png"/>
         </div>
 
-        <div id="tab_request_body_template" class="tab">
+        <div id="tab_request_body_payload" class="tab">
             The Rest API methods like <code>POST, PUT </code>etc. need JSON body to be passed as part of the request.
-            The Request body template contains the JSON content that needs to be passed as part of the request.
-            The values corresponding to the keys in the JSON will however refer to the configuration variables
-            declared as part of the properties file.<br/><br/>
+            This JSON body can be configured inside the payload files which are created under  <code>{Nexial Project
+            Directory}/artifact/data/{prefix}/payload</code>. The payload file has all the values set
+            to default values i.e. "" for string, 0 for numeric, false for boolean, [] for arrays etc.
 
             The following is an example of Request Body Template:-<br/><br/>
 
