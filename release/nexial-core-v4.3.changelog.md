@@ -154,6 +154,7 @@ comments: true
   - [`nexial.browser.forceJSDoubleClick`](../systemvars/index.html#nexial.browser.forceJSDoubleClick): **NEW** System
     variable to control how a double-click automation should be carried out. Default (`false`) is to use underlying
     WebDriver, not Javascript
+    - [FIXED] removed misinterpretation of the return of a JS double click
   - [`nexial.web.useComputedCss`](../systemvars/index.html#nexial.web.useComputedCss): **NEW** System variable to 
     support the discovery of computed CSS value rather than the declared CSS values (default)
   - [`nexial.web.highlight`](../systemvars/index.html#nexial.web.highlight) is set to `true`
