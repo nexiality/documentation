@@ -1,13 +1,13 @@
 ---
 layout: default
-title: nexial-core 4.3 (2021-11-??)
+title: nexial-core 4.3 (2021-12-05)
 parent: release
 tags: release nexial-core 4.3
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v4.3_????" class="external-link" target="_nexial_link">Release 4.3</a>
-2021-11-??
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v4.3_1405" class="external-link" target="_nexial_link">Release 4.3</a>
+2021-12-05
 
 
 ### General
