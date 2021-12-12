@@ -13,6 +13,7 @@ comments: true
 ### General
 
 #### Fixes
+- [FIXED] patched [log4j zero-day vulnerability CVE-2021-44228](https://unit42.paloaltonetworks.com/apache-log4j-vulnerability-cve-2021-44228/).
 
 #### Improvements
 
@@ -21,6 +22,8 @@ comments: true
 
 
 ### [Expression](../expression)
+- [TEXT &raquo; json(text)](../expressions/TEXTexpression#json): now also sanitize data so that the resulting JSON is 
+  properly converted and OWASP-safe.
 
 
 ### [Nexial Function](../functions)
@@ -32,10 +35,9 @@ comments: true
 ### [desktop commands](../commands/desktop)
 
 
-### [external commands](../commands/external)
-
-
-### [javaui commands](../commands/javaui)
+### [json commands](../commands/json)
+- [`sanitize(var,json)`](../commands/json/sanitize(var,json)): sanitize data so that the resulting JSON is properly 
+  converted and OWASP-safe.
 
 
 ### [mobile commands](../commands/mobile)

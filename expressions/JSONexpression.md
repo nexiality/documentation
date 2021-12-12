@@ -647,7 +647,6 @@ Resulting json:<br/>
 Save current JSON content to `path`. If `path` resolves to an existing file, `append` set as `true` will append 
 current JSON content to the said file. `append` is optional and defaults to `false`.
 
-
 **Example**
 Suppose, we have the following json document, named `desserts.json`.
 ```json

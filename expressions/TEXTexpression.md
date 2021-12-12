@@ -275,7 +275,8 @@ Output:<br/>
 Transform existing text into a [JSON expression](JSONexpression). If 
 [`nexial.expression.resolveURL`](../systemvars/index#nexial.expression.resolveURL) is set to `true` and the current 
 text content is a URL, Nexial will automatically download from such URL and transform the download content as 
-[JSON expression](JSONexpression). 
+[JSON expression](JSONexpression). Internally, Nexial will also apply 
+[content sanitization](../commands/json/sanitize(var,json)) to improve the likelihood of deriving an usable JSON document. 
 
 **Example**<br/>
 In this example, the text is converted to json format, to perform json operations on it.<br/>
