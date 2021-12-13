@@ -16,6 +16,7 @@ comments: true
 - [FIXED] patched [log4j zero-day vulnerability CVE-2021-44228](https://unit42.paloaltonetworks.com/apache-log4j-vulnerability-cve-2021-44228/).
 
 #### Improvements
+- added Nexial version to initial banner at the start of a Nexial execution
 
 
 ### [Batch Files](../userguide/BatchFiles)
