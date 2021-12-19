@@ -14,8 +14,8 @@ comments: true
 
 #### Fixes
 - [FIXED] patched [log4j zero-day vulnerability CVE-2021-44228](https://unit42.paloaltonetworks.com/apache-log4j-vulnerability-cve-2021-44228/).
-- [FIXED] typos in error messages.
 - [FIXED] patched [log4j vulnerability CVE-2021-45046](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45046)
+- [FIXED] typos in error messages.
 
 #### Improvements
 - added Nexial version to initial banner at the start of a Nexial execution
