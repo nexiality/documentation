@@ -1,13 +1,13 @@
 ---
 layout: default
-title: nexial-core 4.3 (2021-11-??)
+title: nexial-core 4.3 (2021-12-05)
 parent: release
 tags: release nexial-core 4.3
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v4.3_????" class="external-link" target="_nexial_link">Release 4.3</a>
-2021-11-??
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v4.3_1405" class="external-link" target="_nexial_link">Release 4.3</a>
+2021-12-05
 
 
 ### General
@@ -31,6 +31,8 @@ comments: true
   - added web service summary and detail logs in execution report for interactive analysis
   - fresh redesign of execution summary for improved dashboard view.
 - reduce log severity from ERROR to WARN for side-effect or triggered down errors. 
+- enforce `project.properties` to contain unique data variables; thus reduce misconfiguration or inconsistent behaviors
+  - use [`nexial.projectPropertiesDups`](../systemvars/index.md#nexial.projectPropertiesDups) to fine-tune this control. 
 
 
 ### [Batch Files](../userguide/BatchFiles)
@@ -152,6 +154,7 @@ comments: true
   - [`nexial.browser.forceJSDoubleClick`](../systemvars/index.html#nexial.browser.forceJSDoubleClick): **NEW** System
     variable to control how a double-click automation should be carried out. Default (`false`) is to use underlying
     WebDriver, not Javascript
+    - [FIXED] removed misinterpretation of the return of a JS double click
   - [`nexial.web.useComputedCss`](../systemvars/index.html#nexial.web.useComputedCss): **NEW** System variable to 
     support the discovery of computed CSS value rather than the declared CSS values (default)
   - [`nexial.web.highlight`](../systemvars/index.html#nexial.web.highlight) is set to `true`
