@@ -60,6 +60,7 @@
             <option value="{{'/tipsandtricks' | prepend:site.baseurl }}" {% if page.url contains '/tipsandtricks/' %}selected="true"{% endif %}>Tips and Tricks</option>
             <option value="{{'/release'       | prepend:site.baseurl }}" {% if page.url contains '/release/' %}selected="true"{% endif %}>Release Notes</option>
             <option value="{{'/webez'         | prepend:site.baseurl }}" {% if page.url contains '/webez/' %}selected="true"{% endif %}>Nexial WebEZ</option>
+            <option value="{{'/devguide'      | prepend:site.baseurl }}" {% if page.url contains '/devguide/' %}selected="true"{% endif %}>Developer Guide</option>
         </select>
 
         {% if page.level and page.level == 1 %}
@@ -133,6 +134,7 @@
             <a class="quick_link" href="{{ '/tipsandtricks' | prepend:site.baseurl }}">Tips and Tricks</a>
             <a class="quick_link" href="{{ '/release' | prepend:site.baseurl }}">Release Notes</a>
             <a class="quick_link" href="{{ '/webez' | prepend:site.baseurl }}">Nexial Web-EZ</a>
+            <a class="quick_link" href="{{ '/devguide' | prepend:site.baseurl }}">Developer Guide</a>
         </div>
 
         <hr/>
