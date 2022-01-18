@@ -52,7 +52,8 @@ comments: true
 
 
 ### [web commands](../commands/web)
-
+- [web &raquo; typeKeys(locator,value)](../commands/web/typeKeys(locator,value)): add support for `{ESC}` 
+  (same as `{ESCAPE}`).
 
 ### [webmail commands](../commands/webmail)
 
