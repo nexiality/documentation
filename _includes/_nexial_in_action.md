@@ -1,10 +1,10 @@
 ## Nexial in Action
 To see Nexial in action, watch this short demo showcasing how Nexial 
-1. performs a few Google searches ([browser automation](/commands/web/)), 
-2. uses one of the search results to invoke a few REST API calls ([API automation](/commands/ws/)),
-3. bulk generates a series of SQL INSERT statements (text manipulation via [Nexial expression](/expressions/)),
-4. stores API responses and Google search stats into database ([database automation](/commands/rdbms), with sqlite),
-5. finally, performs a few simple data analytical queries and reports ([database automation](/commands/rdbms), [Nexial expression](/expressions)). 
+1. performs a few Google searches ([browser automation](commands/web/)), 
+2. uses one of the search results to invoke a few REST API calls ([API automation](commands/ws/)),
+3. bulk generates a series of SQL INSERT statements (text manipulation via [Nexial expression](expressions/)),
+4. stores API responses and Google search stats into database ([database automation](commands/rdbms), with sqlite),
+5. finally, performs a few simple data analytical queries and reports ([database automation](commands/rdbms), [Nexial expression](expressions)). 
 
 [Nexial in Action](https://www.youtube.com/watch?v=b372XikN1YU&cc_lang_pref=en&cc_load_policy=1)
 <iframe width="820" height="555" src="https://www.youtube-nocookie.com/embed/b372XikN1YU?cc_lang_pref=en&cc_load_policy=1" 
