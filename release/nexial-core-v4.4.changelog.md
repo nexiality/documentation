@@ -29,6 +29,8 @@ comments: true
 ### [Expression](../expression)
 - [TEXT &raquo; json(text)](../expressions/TEXTexpression#json): now also sanitize data so that the resulting JSON is 
   properly converted and OWASP-safe.
+- [CONFIG](../expressions/CONFIGexpression): now supports keys with spaces and tabs; as well as using both equal sign 
+  (`=`) and colon (`:`) as key-value separator.
 
 
 ### [Nexial Function](../functions)
