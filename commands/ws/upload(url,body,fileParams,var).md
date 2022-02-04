@@ -46,6 +46,12 @@ In the above example, `file` in the `body` parameter represents the target file 
 In this way, one has the option to specify the appropriate HTTP method (`POST` - default, `PUT` or `PATCH`) and toggle
 for multipart (`true` by default).
 
+Note that as of [Nexial v4.4](../../release/nexial-core-v4.4.changelog), one can also use the 
+[`nexial.ws.requestPayloadAsRaw`](../../systemvars/index.html#nexial.ws.requestPayloadAsRaw) System variable to further
+control the behavior of this command. Setting this System variable as `false` (default) means that variable substitution 
+should be performed on the specified file(s) prior to upload. Conversely, one can set this System variable as `true` to
+prevent any variable substitution to be performed as part of the execution of this command.
+
 
 ### Parameters
 - **url** - the target URL

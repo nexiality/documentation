@@ -68,3 +68,6 @@ comments: true
   `Content-Type` for the target file(s) other than the default `application/octet-stream`. One should use the 
   [ws &raquo; header(name,value)](../commands/ws/header(name,value)) command to specify the `Content-Type` value 
   **PRIOR** to invoking the target API.
+- [ws &raquo; upload(url,body,fileParams,var)](../commands/ws/upload(url,body,fileParams,var)): support variable
+  substitution in uploaded file. Use `nexial.ws.requestPayloadAsRaw` to control this behavior (`false` means activate 
+  variable substitution).
