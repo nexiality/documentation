@@ -23,6 +23,7 @@ comments: true
 - added Nexial version to initial banner at the start of a Nexial execution
 - now recognize "executing under AzureDevOps" condition
 
+
 ### [Batch Files](../userguide/BatchFiles)
 
 
@@ -61,3 +62,9 @@ comments: true
 
 
 ### [ws commands](../commands/ws)
+- [ws &raquo; upload(url,body,fileParams,var)](../commands/ws/upload(url,body,fileParams,var)): enforces that multi-file 
+  upload request **MUST** be a multipart request.
+- [ws &raquo; upload(url,body,fileParams,var)](../commands/ws/upload(url,body,fileParams,var)): support setting 
+  `Content-Type` for the target file(s) other than the default `application/octet-stream`. One should use the 
+  [ws &raquo; header(name,value)](../commands/ws/header(name,value)) command to specify the `Content-Type` value 
+  **PRIOR** to invoking the target API.

@@ -32,7 +32,8 @@ is assigned the value `response`. If all goes well, `${response}.responseCode` s
 By default, Nexial will use an HTTP POST with multipart to perform the upload operation. This might not always suit the
 target URL. One can alter the default behavior by specify in the `body` parameter:
 - `nexial.ws.upload.method` for the desired HTTP method for this operation.
-- `nexial.ws.upload.multiplart` to indicate if this request should be constructed as a multipart request or not.
+- `nexial.ws.upload.multipart` to indicate if this request should be constructed as a multipart request or not (default 
+  is yes).
 
 For example,
 ![](image/upload_02.png)
