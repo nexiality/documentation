@@ -52,24 +52,24 @@ Assuming that the response is stored in a data variable named `var`, one can ...
 All HTTP response header information can be retrieved via the `${var}.headers.[HEADER_NAME]` syntax (assuming response
 is stored to the `var` data variable). For example, to retrieve response content type, we can specify
 `${var}.headers.[Content-Type]`. HTTP response headers inherently also include cookie information. But to simplify
-your scripting, Nexial provides a more direct access in the form of `${var}.cookies[COOKIE_NAME].value`.
+your scripting, Nexial provides a more direct access in the form of `${var}.cookies.[COOKIE_NAME].value`.
 
 Each cookie contains the following property:
-- **name**: The name of a cookie. Syntax: `${var}.cookies[COOKIE_NAME].name`
-- **value**: The value of a cookie. Syntax: `${var}.cookies[COOKIE_NAME].value`
+- **name**: The name of a cookie. Syntax: `${var}.cookies.[COOKIE_NAME].name`
+- **value**: The value of a cookie. Syntax: `${var}.cookies.[COOKIE_NAME].value`
 - **domain**: The domain for which a cookie is considered valid and accessible. Syntax: 
-  `${var}.cookies[COOKIE_NAME].domain`
+  `${var}.cookies.[COOKIE_NAME].domain`
 - **expiryDate**: The date of when a cookie would be expired and removed from its attached browser. Date format is
-	 `Wdy, DD mmm yyyy HH:mm:ss GMT`. Syntax: `${var}.cookies[COOKIE_NAME].expiryDate`
+	 `Wdy, DD mmm yyyy HH:mm:ss GMT`. Syntax: `${var}.cookies.[COOKIE_NAME].expiryDate`
 - **path**: The URL subset of the origin server to which a cookie was issue. Similar to the domain option, this is 
   another way to control access. The path indicates a URL path that must exist in the requested resource before 
-  sending the Cookie header. Syntax: `${var}.cookies[COOKIE_NAME].path`
+  sending the Cookie header. Syntax: `${var}.cookies.[COOKIE_NAME].path`
 - **persistent**: `true` or `false` to indicate if a cookie is a session cookie (expires when browser is restarted) or 
-  not (cookie is preserves between browser restarts). Syntax: `${var}.cookies[COOKIE_NAME].persistent`
+  not (cookie is preserves between browser restarts). Syntax: `${var}.cookies.[COOKIE_NAME].persistent`
 - **secure**: `true` or `false` to indicate if a cookie requires a secure (HTTPS) connection for access. A secure 
   cookie will only be sent to the server when a request is made using SSL and the HTTPS protocol. The idea that the 
   contents of the cookie are of high value and could be potentially damaging to transmit as clear text. Syntax: 
-  `${var}.cookies[COOKIE_NAME].secure`
+  `${var}.cookies.[COOKIE_NAME].secure`
 
 
 ### Logging
