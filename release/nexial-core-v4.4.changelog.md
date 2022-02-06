@@ -22,6 +22,7 @@ comments: true
 #### Improvements
 - added Nexial version to initial banner at the start of a Nexial execution
 - now recognize "executing under AzureDevOps" condition
+- improved usage description of Nexial via commandline
 
 
 ### [Batch Files](../userguide/BatchFiles)
