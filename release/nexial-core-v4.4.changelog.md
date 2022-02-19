@@ -23,6 +23,8 @@ comments: true
 - added Nexial version to initial banner at the start of a Nexial execution
 - now recognize "executing under AzureDevOps" condition
 - improved usage description of Nexial via commandline
+- refactor batch files and shell scripts in `$NEXIAL_HOME/bin` with better naming convention and consistencies
+- added keygen capability for nexial-specific SSL certificate (for upcoming features).
 
 
 ### [Batch Files](../userguide/BatchFiles)
@@ -58,6 +60,7 @@ comments: true
 ### [web commands](../commands/web)
 - [web &raquo; typeKeys(locator,value)](../commands/web/typeKeys(locator,value)): add support for `{ESC}` 
   (same as `{ESCAPE}`).
+- better support for CORS security bypass via automated chrome browser options
 
 ### [webmail commands](../commands/webmail)
 
