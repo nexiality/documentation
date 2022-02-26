@@ -25,6 +25,8 @@ comments: true
 - improved usage description of Nexial via commandline
 - refactor batch files and shell scripts in `$NEXIAL_HOME/bin` with better naming convention and consistencies
 - added keygen capability for nexial-specific SSL certificate (for upcoming features).
+- better "temp" directory creation strategy to reduce collisions over time.
+- code refactoring to reduce duplication.
 
 
 ### [Batch Files](../userguide/BatchFiles)
@@ -61,6 +63,12 @@ comments: true
 - [web &raquo; typeKeys(locator,value)](../commands/web/typeKeys(locator,value)): add support for `{ESC}` 
   (same as `{ESCAPE}`).
 - better support for CORS security bypass via automated chrome browser options
+- added additional configurations on chromedriver (for chrome browser) to ease security restriction for testing:
+  - allow to run "insecure" (http) content locally
+  - allow access to local files
+  - allow for auth prompt when crossing site origin
+  - enable input event handling by the window manager
+
 
 ### [webmail commands](../commands/webmail)
 
