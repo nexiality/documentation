@@ -1,1074 +1,1067 @@
 body {
-    font-family:      "Trebuchet MS", sans-serif;
-    font-size:        10pt;
-    margin:           0;
-    background-color: transparent;
-    padding:          25px;
-  }
-
-  a {
-    color:           rgba(50, 100, 60, 1);
-    font-weight:     bold;
-    text-decoration: none;
-    background:      rgba(50, 100, 60, 0.1) url(https://nexiality.github.io/documentation/image/link.png) no-repeat 2px 2px;
-    padding:         2px 5px 3px 22px;
-    border-radius:   5px;
-  }
-
-  a:visited {
-    color: rgba(50, 100, 60, 1);
-  }
-
-  a:hover {
-    color:            rgba(50, 245, 60, 1);
-    background-color: rgba(50, 50, 50, 0.7);
-  }
-
-  .parent {
-    display: inline-flex;
-    width: 100%;
-  }
-  .parent .meta {
-    width: 30%;
-  }
-  .parent .chart {
-    width: 70%;
-  }
-  .reset-buttons {
-    padding: 10px;
-    margin: 10px;
-  }
-  .reset-buttons button {
-    border-radius: 5px;
-    color: #e8e3e3;
-    padding: 5px;
-    background: #9ba5b0;
-  }
-  .reset-buttons div {
-    margin: 0 0 0 auto;
-    display: block;
-    width: 30%;
-  }
-
-  table tbody tr:hover {
-    background: none;
-  }
-
-  .title {
-    font-size:        14pt;
-    font-family:      Tahoma, serif;
-    font-weight:      bold;
-    background-color: rgba(228, 227, 201, 1);
-    color:            rgba(64, 62, 13, 1);
-    box-shadow:       0 0 10px rgba(88, 77, 61, 0.75);
-    border:           2px solid rgba(37, 114, 71, 1);
-    vertical-align:   middle;
-    padding:          15px;
-  }
-
-  .title span {
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
-  }
-
-  .result-controls {
-    margin:      3px 0 15px 0;
-    padding:     5px 0 10px 10px;
-    color:       rgba(100, 100, 100, 1);
-    float:       right;
-    user-select: none;
-    clear:       both;
-    font-size:   9pt;
-  }
-
-  .result-controls i {
-    cursor:       pointer;
-    margin-right: 5px;
-    padding:      5px;
-  }
-
-  .result-controls i span {
-    padding-left: 3px;
-    font-family:  Thonburi, sans-serif;
-  }
-
-  .result-controls i.off {
-    color:         rgba(100, 100, 100, 0.75);
-    border-bottom: 2px solid rgba(100, 100, 100, 0.75);
-  }
-
-  .result-controls i.on {
-    color:         rgba(40, 150, 40, 1);
-    border-bottom: 2px solid rgba(50, 180, 50, 1);
-  }
-
-  .result-controls i:hover {
-    text-shadow:      1px 1px 4px #fff;
-    background-color: rgba(40, 40, 40, 0.1);
-    box-shadow:       0 -1px 4px rgba(40, 40, 40, 0.5);
-  }
-
-  .result-controls i.fa-exclamation-circle.off {
-    color:         rgba(100, 100, 100, 0.75);
-    border-bottom: 2px solid rgba(100, 100, 100, 0.75);
-  }
-
-  .result-controls i.fa-exclamation-circle.on {
-    color:         rgba(150, 40, 40, 1);
-    border-bottom: 2px solid rgba(150, 40, 40, 1);
-  }
-
-  .result-controls i.fa-expand {
-    color:         rgba(80, 80, 80, 1);
-    border-bottom: 2px solid rgba(80, 80, 80, 1);
-  }
-
-  .result-controls i.fa-compress {
-    color:         rgba(100, 100, 100, 0.75);
-    border-bottom: 2px solid rgba(100, 100, 100, 0.75);
-  }
-
-  .showhide {
-    position:                   relative;
-    font-size:                  15px;
-    float:                      right;
-    top:                        -10px;
-    right:                      -10px;
-    padding:                    4px 3px;
-    border-top-right-radius:    10px;
-    border-bottom-right-radius: 10px;
-    background-color:           rgba(150, 160, 171, 0.75);
-    box-shadow:                 0 0 1px #333;
-  }
-
-  .showhide i {
-    padding: 3px;
-    cursor:  pointer;
-  }
-
-  .showhide i:hover { text-shadow: 0 0 15px rgba(255, 255, 255, 1); }
-
-  .canHide {
-    padding:       10px 10px 10px 0px;
-    margin:        25px 0 15px 0;
-    min-height:    8px;
-    border:        1px solid rgba(50, 50, 50, 0.35);
-    border-radius: 10px;
-  }
-
-  div.execMeta {
-    font-size: 10pt;
-    clear:     both;
-  }
-
-  table.execMeta { font-size: 10pt; font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; table-layout: fixed;}
-
-  .section-header {
-    text-align:     center;
-    vertical-align: top;
-    padding:        4px;
-    user-select:    none;
-  }
-
-  .section-header:hover {
-    background-color: white !important;
-  }
-
-  .section-header .fas {
-    font-size:     15pt;
-    color:         rgba(100, 100, 100, 0.5);
-    background:    rgba(100, 100, 100, 0.1);
-    padding:       10px 10px;
-    border-radius: 5px;
-    cursor:        default;
-  }
-
-  .section-env { }
-
-  .section-time .fas { padding: 10px; }
-
-  .section-exec { }
-
-  .section-exec .fas { padding: 10px 10px; }
-
-  .section-ref { vertical-align: top; }
-
-  .section-ref .fas { padding: 10px 10px; }
-
-  .section-detail {vertical-align: top;}
-
-  .section-detail .execValue:hover {
-    transition-duration:        0.5s;
-    transition-timing-function: linear;
-    box-shadow:                 0 0 15px rgb(0 0 0 / 50%);
-  }
-
-  .execValue {
-    text-align:     left;
-    font-weight:    bold;
-    color:          #333;
-    vertical-align: middle;
-    width:          fit-content;
-    font-size:      18px;
-    padding:        0 18px;
-    display:        inline-grid;
-    border-radius:  5px;
-    margin:         5px 5px;
-    height:         60px;
-  }
-
-  .execValue .execLabel {
-    text-align:       left;
-    font-size:        10pt;
-    background-color: transparent;
-    color:            rgba(30, 30, 30, 0.5);
-    font-family:      "Trebuchet MS", sans-serif;
-    font-weight:      normal;
-    font-variant:     all-small-caps;
-    padding:          0;
-    height:           18px;
-    width:            auto;
-    margin-left:      -15px;
-  }
-
-  .execValue .content {
-    text-align: center;
-    margin-top: -15px;
-  }
-
-  .detail-env .execValue:hover { background-color: rgba(160, 160, 0, 0.15); }
-
-  .detail-env .execValue { border: 1px outset rgba(120, 120, 0, 0.75); }
-
-  .detail-time .execValue:hover { background-color: rgba(0, 100, 200, 0.15); }
-
-  .detail-time .execValue { border: 1px outset rgb(0, 100, 200, 0.75); }
-
-  .detail-exec .execValue:hover { background-color: rgba(100, 160, 90, 0.15); }
-
-  .detail-exec .execValue {border: 1px outset rgba(0, 160, 0, 0.75);}
-
-  .detail-exec .execValue:hover { background-color: rgba(0, 160, 0, 0.15); }
-
-  .detail-exec .execValuePass { background-color: rgba(0, 200, 0, 0.25); }
-
-  .detail-exec .execValueFail:hover { background-color: rgba(250, 200, 200, 0.75); }
-
-  .detail-exec .execValueFail {
-    color:            #d00 !important;
-    text-shadow:      1px 1px 4px #f88;
-    background-color: rgba(220, 0, 0, 0.25);
-    border:           1px outset rgba(200, 0, 0, 0.5);
-  }
-
-  .execLog {
-    font-size:     14px;
-    display:       inline-table;
-    margin-bottom: 0 !important;
-  }
-
-  .execLog a { font-family: Consolas, monospace; }
-
-  .execArgs {
-    font-size:     14px;
-    font-family:   Consolas, monospace;
-    font-weight:   normal;
-    margin-bottom: 0 !important;
-    display:       block;
-    height:        auto;
-  }
-
-  .execArgs pre { margin: 0; }
-
-  .detail-ref { }
-
-  .detail-ref .execValue:hover {
-    background-color: rgba(160, 0, 180, 0.15);
-  }
-
-  .detail-ref .execValue {
-    vertical-align: top;
-    border:         1px outset rgba(160, 0, 180, 0.75);
-    /* margin:         0 5px 12px 0; */
-    margin: 5px;
-    padding-bottom: 5px;
-  }
-
-  .detail-ref a:hover {
-    background-color: transparent;
-    border:           none;
-    color:            rgba(95, 0, 120, 0.95);
-    box-shadow:       none;
-    text-shadow:      0 1px 0 #fff;
-  }
-
-  .detail-ref a {
-    line-height: normal;
-    background:  none;
-    color:       rgba(160, 50, 200, 0.75);
-    white-space: nowrap;
-    padding:     0;
-  }
-
-  .detail-ref .exec-supplemental { }
-
-  .detail-ref .exec-supplemental a { padding-right: 15px; }
-
-  .result { font-family: Tahoma, serif; font-size: 10pt; border: none; background: #fff; }
-
-  .result td, .result th { border-bottom: 1px solid #ddd; }
-
-  .footer {
-    font-size:        8pt; color: #555;
-    font-family:      Consolas, monospace;
-    background-color: #d0e0e0;
-    padding:          5px;
-    text-align:       right;
-    border-top:       2px solid #c0c0c0;
-    border-bottom:    2px solid #c0c0c0;
-    letter-spacing:   0.125em;
-  }
-
-  .errorSection {
-    font-size:        12pt;
-    font-family:      Tahoma, serif;
-    color:            #faa;
-    background-color: #800;
-    padding:          5px;
-    border-top:       2px solid #f00;
-    border-bottom:    2px solid #f00;
-    margin:           4px 0;
-  }
-
-  .errorPrompt { color: #ccc; font-size: 10pt; }
-
-  .errorStackTrace {
-    background:  #fdd;
-    padding:     5px;
-    margin:      8px;
-    line-height: 12pt;
-    font-family: Consolas, monospace;
-    font-size:   9pt;
-    color:       #800;
-  }
-
-  .reportFooter { background: #ddd }
-
-  .exec-summary-header {
-    clear:                      both;
-    width:                      max-content;
-    min-width:                  100%;
-    margin-right:               5px;
-    background-color:           rgba(150, 160, 171, 0.75);
-    border-top-left-radius:     10px;
-    border-top-right-radius:    10px;
-    border-bottom-right-radius: 10px;
-  }
-
-  .exec-summary-header .label {
-    font-weight:    normal;
-    font-size:      9pt;
-    text-transform: uppercase;
-
-    padding:        14px 5px 0 5px;
-
-    float:          left;
-    text-align:     left;
-    vertical-align: middle;
-
-    height:         23px;
-  }
-
-  .exec-summary-header .label-small { width: auto; }
-
-  .exec-summary-header table th:last-child { padding-right: 54px; }
-
-  .exec-summary {
-    clear:     both;
-    width:     max-content;
-    min-width: 100%;
-  }
-
-  .exec-summary .planStep {
-    padding:                   0 !important;
-    margin:                    0 5px 0 0;
-    border-top-left-radius:    0;
-    border-bottom-left-radius: 0;
-  }
-
-  .exec-summary .value-plan {
-    padding-top:    20px;
-    padding-bottom: 10px;
-    font-size:      15px;
-  }
-
-  .planStep .showhide {
-    top:     0;
-    right:   0;
-    z-index: 99;
-  }
-
-  .plan-step-summary { display: table; }
-
-  .plan-step-summary .value {
-    font-weight:      bold;
-    font-size:        10pt;
-    text-overflow:    ellipsis;
-    overflow:         hidden;
-
-    background-color: rgba(255, 255, 255, 0.25);
-    padding:          8px 5px 1px 5px;
-    border-bottom:    1px solid rgba(100, 100, 100, 0.15);
-
-    float:            left;
-    text-align:       left;
-    vertical-align:   middle;
-
-    height:           23px;
-  }
-
-  .plan-step-summary .value-small {
-    width:   auto;
-    padding: 8px 15px 2px 5px !important;
-  }
-
-  .plan-step-summary .value {
-    /*padding-top: 10px;*/
-  }
-
-  .plan-step-summary .noFailure {
-    background-color: rgba(221, 255, 221, 0.5);
-  }
-
-  .plan-step-summary .hasFailure {
-    background-color: rgba(255, 150, 150, 1) !important;
-  }
-
-  .plan-step-summary .hasFailure a {
-    background-color: rgba(255, 100, 100, 0.5) !important;
-    color:            rgba(120, 0, 0, 1);
-  }
-
-  .label-script, .value-script { width: 250px; }
-
-  .label-data, .value-data { width: 280px; }
-
-  .iteration {
-    padding:       0 !important;
-    clear:         both;
-    margin:        5px 0 15px 20px;
-    border-radius: 0;
-    border:        none;
-  }
-
-  .iteration table th:last-child { padding-right: 10px; }
-
-  .iteration .label {
-    font-weight:      normal;
-    font-size:        9pt;
-    text-transform:   uppercase;
-    white-space:      nowrap;
-    text-wrap:        none;
-
-    background-color: rgba(220, 220, 220, 0.5);
-    border-bottom:    1px solid rgba(100, 100, 100, 0.5);
-    padding:          5px;
-
-    text-align:       left;
-    vertical-align:   middle;
-
-    height:           25px;
-  }
-
-  .iteration tr.iter.hasFailure {
-    background-color: rgba(255, 210, 210, 0.5);
-  }
-
-  .iteration tr.iter.noFailure {
-    background-color: rgba(211, 255, 221, 0.5);
-  }
-
-  .exec-summary .planStep .iteration .value {
-    font-weight:      normal;
-    font-size:        10pt;
-    background-color: rgba(255, 255, 255, 0.25);
-    border-bottom:    1px solid rgba(100, 100, 100, 0.25);
-    height:           auto;
-    text-align:       left;
-    vertical-align:   bottom;
-    text-overflow:    ellipsis;
-    overflow:         hidden;
-  }
-
-  .label-scenarioPassed, .value-scenarioPassed { width: 97px; text-align: center !important; }
-
-  .label-datetime, .value-datetime { width: 135px; white-space: nowrap; }
-
-  .label-time, .value-time { width: 58px; white-space: nowrap; }
-
-  .label-datetime, .label-time, .value-datetime, .value-time { text-align: center !important; }
-
-  .label-num, .value-num, .label-percent, .value-percent { text-align: right !important; }
-
-  .label-num, .value-num { width: 38px; white-space: nowrap; }
-
-  .label-percent, .value-percent { width: 58px; white-space: nowrap; }
-
-  .label-title, .value-title { text-wrap: none !important; width: 200px; word-break: break-word; }
-
-  .value-title { font-weight: bold; }
-
-  .plan-step-summary .value-title, .exec-summary-header .label-title { width: 280px; }
-
-  .label-iteration, .value-iteration { width: 60px; text-align: center !important; }
-
-  .value-scriptRef, .value-scenarioRef {
-    font-weight:      normal;
-    vertical-align:   text-top;
-    color:            rgba(64, 62, 13, 1);
-    background-color: rgba(228, 227, 201, 0.5);
-    padding:          5px;
-    margin:           5px 0 0 0;
-    white-space:      nowrap;
-    /*width:            240px;*/
-    font-family:      monospace;
-    font-size:        9pt;
-  }
-
-  .label-ref {
-    color:          rgba(64, 62, 13, 0.5);
-    text-overflow:  ellipsis;
-    overflow:       hidden;
-    vertical-align: text-top;
-    min-width:      71px;
-  }
-
-  .value-ref {
-    text-overflow: ellipsis;
-    overflow:      hidden;
-    padding:       0 0 0 5px;
-  }
-
-  .info {
-    float:         right;
-    position:      relative;
-    right:         -6px;
-    top:           -6px;
-    color:         rgba(64, 62, 53, 0.75);
-    z-index:       99;
-    display:       inline;
-    margin-bottom: -15px;
-  }
-
-  .value-tally {
-    font-weight:             bold !important;
-    text-decoration-line:    underline;
-    text-underline-position: under;
-    text-decoration-color:   rgba(80, 80, 80, 0.75);
-    text-decoration-style:   double;
-  }
-
-  .spacer, .spacer2 { flex-grow: 100; }
-
-  .spacer2 { border: none !important; }
-
-  tr:hover { background-color: rgba(125, 125, 120, 0.12); }
-
-  table.execMeta tr:hover {background: inherit;}
-
-  td.hasFailure { background: #fdd !important; color: #800; }
-
-  td.allPass { background: #dfd !important; color: #080; }
-
-  div.custom-header, div.custom-footer {
-    margin:        60px 50px 0 50px;
-    padding:       10px 30px;
-    border-radius: 35px;
-    border-bottom: groove;
-    border-top:    groove;
-    box-shadow:    0 5px 10px -5px rgba(100, 100, 100, 0.75);
-    border-color:  rgba(250, 255, 250, 0.85) rgba(0, 0, 0, 0.1) rgba(100, 100, 100, 0.5);
-    color:         #555;
-    font-size:     11pt;
-    line-height:   1.35em;
-  }
-
-  div.custom-footer {
-    margin: 30px 50px -30px 50px;
-  }
-
-  div.custom-header a, div.custom-footer a {
-    background:    none;
-    color:         #00f;
-    border-radius: initial;
-    padding:       initial;
-  }
-
-  .fa, .fas {
-    font-weight: 900;
-    color:       #444;
-    cursor:      pointer;
-  }
-
-  /* back-to-top link */
-  a.top-link {
-    background: none;
-    margin:     -23px 0;
-    float:      right;
-  }
-
-  a.top-link:hover .fa-chevron-up:hover {
-    text-shadow: 0 0 6px rgb(0 50 0);
-    color:       #fff
-  }
-
-  a.top-link .fa-chevron-up {
-    color:       rgba(220, 220, 220, 1);
-    text-shadow: 0 2px 6px #000;
-    font-size:   14pt;
-  }
-
-  /*-----------------------------------------------------------------------------*/
-  /* Screen Recordings */
-  /*-----------------------------------------------------------------------------*/
-  .recording {
-    /*background-color: rgba(25, 25, 25, 0.85);*/
-    background-color: #fff;
-  }
-
-  .recording .section-title {
-    /*color:                  #fff;*/
-    color:                  #000;
-    font-weight:            bold;
-    background-color:       rgba(150, 150, 150, 0.5);
-    padding:                7px 0 6px 10px;
-    margin:                 -10px 39px -15px -10px;
-    border-top-left-radius: 9px;
-  }
-
-  #all-recordings {
-    display:   flex;
-    flex-wrap: wrap;
-    border:    none;
-  }
-
-  .recording-container {
-    margin:  10px;
-    display: inline-block;
-  }
-
-  .recording .container {
-    width: 550px;
-  }
-
-  .recording .container video {
-    /*border:     3px solid rgba(200, 200, 200, 0.85);*/
-    /*border-top: none;*/
-    /*box-shadow: 0 8px 10px 5px rgb(0 0 0 / 50%);*/
-    border:     5px solid rgba(70, 70, 70, 0.85);
-    box-shadow: 0 5px 5px 0 rgb(0 0 0 / 50%);
-  }
-
-  .recording .caption {
-    padding:          8px;
-    border-radius:    10px 10px 0 0;
-    background-color: rgba(70, 70, 70, 0.85);
-    white-space:      nowrap;
-    /*background-color: rgba(200, 200, 200, 0.85);*/
-  }
-
-  .recording .caption-title {
-    font-weight:   bold;
-    text-shadow:   0 0 5px #000;
-    color:         rgba(235, 235, 235, 0.85);
-    /*color:            rgba(35, 35, 35, 0.85);*/
-    text-overflow: ellipsis;
-    white-space:   nowrap;
-    overflow:      hidden;
-  }
-
-  .recording .caption-meta {
-    padding:     5px 0 0;
-    font-size:   90%;
-    line-height: 1.65em;
-  }
-
-  .recording .link-to-result {
-    padding:    0 4px;
-    background: transparent;
-  }
-
-  .recording .link-to-result:hover {
-    color:            inherit;
-    background-color: transparent;
-  }
-
-  .recording .link-to-result .fa-link {
-    color:       rgba(240, 240, 140, 0.85);
-    text-shadow: 0 0 10px rgb(0 0 0 / 95%);
-  }
-
-  .recording .link-to-result .fa-link:hover {
-    color:       rgba(0, 0, 0, 0.95);
-    text-shadow: 0 0 5px rgb(255 255 220 / 95%);
-  }
-
-  .recording .meta-title {
-    padding:       2px 3px 2px 6px;
-    background:    rgba(70, 70, 70, 0.85);
-    color:         rgba(220, 220, 50, 0.85);
-    border-radius: 10px 0 0 10px;
-  }
-
-  .recording .meta-value {
-    padding:       2px 8px 2px 4px;
-    margin:        0 10px 0 -3px;
-    font-weight:   bold;
-    background:    rgba(220, 220, 50, 0.85);
-    color:         rgba(70, 70, 70, 0.85);
-    border-radius: 0 10px 10px 0;
-  }
-
-  /*-----------------------------------------------------------------------------*/
-  /* Web Service Logs */
-  /*-----------------------------------------------------------------------------*/
-  .wsLogs {
-    background-color: rgba(240, 240, 250, 0.75);
-  }
-
-  #all-wsLogs {
-    display:   flex;
-    flex-wrap: wrap;
-    border:    none;
-    padding:   0;
-  }
-
-  .wsLogs .section-title {
-    color:                  #135;
-    font-weight:            bold;
-    background-color:       rgba(130, 150, 180, 0.75);
-    padding:                7px 0 6px 10px;
-    margin:                 -10px 39px -15px -10px;
-    border-top-left-radius: 9px;
-  }
-
-  .summary-container {
-    margin: 0 0 10px 0;
-    width:  100%;
-    clear:  both;
-  }
-
-  .wsLogs .caption {
-    padding:          8px;
-    border-radius:    10px 10px 0 0;
-    background-color: rgba(50, 70, 100, 0.85);
-  }
-
-  .wsLogs .caption-title {
-    font-weight: bold;
-    text-shadow: 0 0 5px #000;
-    color:       rgba(235, 235, 235, 0.85);
-  }
-
-  .wsLogs a.caption-title {
-    background: none;
-    padding:    5px;
-  }
-
-  .caption a.caption-title i.fas {
-    color:   rgba(235, 235, 235, 0.85);
-    padding: 0 5px 0 0;
-  }
-
-  .wsLogs .caption-meta {
-    padding:     5px 0 0;
-    font-size:   90%;
-    line-height: 1.65em;
-  }
-
-  .wsLogs .meta-title {
-    padding:       2px 3px 2px 6px;
-    background:    rgba(40, 50, 70, 0.85);
-    color:         rgba(220, 240, 255, 0.65);
-    border-radius: 10px 0 0 10px;
-  }
-
-  .wsLogs .meta-value {
-    padding:       2px 8px 2px 4px;
-    margin:        0 10px 0 -3px;
-    font-weight:   bold;
-    background:    rgba(220, 240, 255, 0.85);
-    color:         rgba(40, 50, 70, 0.85);
-    border-radius: 0 10px 10px 0;
-  }
-
-  #wsSummaryTable_wrapper {
-    margin:    5px 0 0 0;
-    font-size: 9pt;
-  }
-
-  #wsSummaryTable tbody tr td:nth-child(2),
-  #wsSummaryTable tbody tr td:nth-child(3),
-  #wsSummaryTable tbody tr td:nth-child(5) {
-    overflow-wrap: anywhere;
-    white-space:   break-spaces;
-    width:         350px;
-    min-width:     50px;
-  }
-
-  #wsSummaryTable {
-    font-size:   9pt;
-    font-family: monospace;
-    background:  rgba(160, 180, 200, 0.75);
-  }
-
-  .dataTables_wrapper {
-    font-size: 9pt;
-  }
-
-  .dataTables_wrapper a {
-    background: none;
-  }
-
-  .wsDetail-filter {
-    clear:       both;
-    width:       100%;
-    margin:      5px 0;
-    user-select: none;
-  }
-
-  .wsDetail-filter-method {
-    margin:       5px 0;
-    border:       1px outset rgba(70, 70, 70, 0.35);
-    padding:      10px 15px;
-    border-left:  none;
-    border-right: none;
-    background:   linear-gradient(180deg, rgba(70, 70, 70, 0.35) 2px, transparent 12px, transparent 25px, rgba(70, 70, 70, 0.35));
-  }
-
-  .wsDetail-filter-returnCode {
-    margin:       5px 0;
-    border:       1px outset rgba(80, 80, 50, 0.35);
-    padding:      10px 15px;
-    border-left:  none;
-    border-right: none;
-    background:   linear-gradient(180deg, rgba(80, 80, 50, 0.35) 2px, transparent 12px, transparent 25px, rgba(80, 80, 50, 0.35));
-  }
-
-  .wsDetail-filter-button {
-    background:    none;
-    padding:       5px 8px;
-    border:        1px outset rgba(100, 100, 100, 0.75);
-    font-size:     8pt !important;
-    font-family:   "Trebuchet MS", sans-serif;
-    font-weight:   bold;
-    text-shadow:   0 0 5px #000 !important;
-    color:         rgba(235, 235, 235, 0.85) !important;
-    border-radius: 25px;
-    cursor:        pointer;
-    user-select:   none;
-    display:       inline-block;
-    margin:        0 5px 0 0;
-    width:         40px !important;
-    text-align:    center;
-    box-shadow:    none !important;
-    height:        auto !important;
-  }
-
-  .wsDetail-filter .is-active {
-    border:           1px inset rgba(150, 150, 150, 0.75);
-    background-color: rgba(100, 100, 100, 0.35) !important;
-    color:            #ddd;
-    text-shadow:      -1px -1px 2px #555;
-  }
-
-  .wsDetail-filter-title {
-    font-size:   9pt;
-    display:     inline-block;
-    width:       130px;
-    font-weight: bold;
-    color:       rgba(40, 40, 40, 0.85);
-  }
-
-  .wsDetail {
-    margin: 10px 12px 20px;
-    width:  250px;
-  }
-
-  .wsDetail .caption {
-    padding:          0;
-    background-color: rgba(50, 70, 100, 0.35);
-  }
-
-  .wsDetail .caption-title {
-    margin:     0;
-    display:    flex;
-    height:     25px;
-    box-shadow: 0 5px 5px -3px rgb(0 0 0 / 75%);
-  }
-
-  .wsDetail .method {
-    font-size:              8pt;
-    margin:                 0 -1px 0 0;
-    padding:                7px 2px;
-    width:                  38px;
-    background-color:       rgba(50, 50, 50, 0.5);
-    border-top-left-radius: 10px;
-    text-align:             center;
-  }
-
-  .wsDetail .url {
-    width:            200px;
-    white-space:      nowrap;
-    text-overflow:    ellipsis;
-    overflow-x:       clip;
-    font-size:        8pt;
-    background-color: rgba(50, 60, 80, 0.85);
-    border:           2px inset rgba(50, 60, 80, 0.85);
-    border-left:      none;
-    border-right:     none;
-    padding:          5px 2px;
-    margin:           0;
-    cursor:           default;
-  }
-
-  .wsDetail .returnCode {
-    background-color:        rgba(50, 50, 50, 0.75);
-    padding:                 6px 2px;
-    border-top-right-radius: 10px;
-    width:                   38px;
-    font-size:               8pt;
-    text-align:              center;
-  }
-
-  .wsDetail .caption-meta {
-    padding: 15px 0 5px;
-  }
-
-  .wsDetail .meta-title {
-    width:         65px;
-    display:       inline-block;
-    text-align:    right;
-    margin:        0 0 8px -1px;
-    padding:       0 4px;
-    border-radius: unset;
-    box-shadow:    0 2px 3px rgb(0 0 0 / 55%);
-  }
-
-  .wsDetail .meta-value {
-    display:        inline-block;
-    padding:        0 10px 0 4px;
-    width:          160px;
-    vertical-align: middle;
-    background:     linear-gradient(90deg, rgba(250, 250, 255, 0.85) 110px, transparent 170px);
-    border-radius:  unset;
-    margin:         -2px 0 0 -4px;
-    white-space:    nowrap;
-    overflow-x:     clip;
-    text-overflow:  ellipsis;
-  }
-
-  .wsDetail .meta-value-half {
-    width:   30px !important;
-    padding: 0 4px !important;
-    margin:  -1px 10px 1px -3px !important;
-  }
-
-  .wsDetail-content {
-    display:          none;
-    position:         fixed;
-    z-index:          99999;
-    top:              7%;
-    left:             7%;
-    width:            85%;
-    height:           85%;
-    border:           15px solid rgba(70, 70, 70, 0.75);
-    border-radius:    15px 15px 15px 15px;
-    box-shadow:       2px 2px 15px 15px rgb(0 0 0 / 50%);
-    font-family:      monospace;
-    font-size:        10pt;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding:          15px;
-  }
-
-  .wsDetail .link {
-    margin:     5px;
-    background: none;
-    padding:    2px;
-    color:      rgba(40, 60, 100, 0.75);
-  }
-
-  button#hideLog {
-    display:       none;
-    position:      fixed;
-    right:         10px;
-    top:           10px;
-    font-size:     10pt;
-    color:         rgba(255, 255, 255, 0.85);
-    background:    rgba(120, 120, 80, 0.95);
-    border-radius: 20px;
-    border:        2px solid rgba(220, 220, 150, 0.75);
-    box-shadow:    0 0 10px 0 rgb(70 70 70 / 75%);
-    font-weight:   bold;
-    font-variant:  all-small-caps;
-    padding:       8px 15px;
-    text-shadow:   1px 1px 3px rgb(0 0 0 / 85%);
-    cursor:        pointer;
-    z-index:       1;
-  }
-
-  .method-GET { background-color: rgba(50, 100, 250, 0.85) !important; }
-
-  .method-POST { background-color: rgba(200, 200, 50, 0.85) !important; }
-
-  .method-PUT { background-color: rgba(100, 0, 100, 0.85) !important; }
-
-  .method-PATCH { background-color: rgba(150, 50, 150, 0.85) !important; }
-
-  .method-HEAD { background-color: rgba(100, 100, 100, 0.85) !important; }
-
-  .method-DELETE { background-color: rgba(0, 0, 0, 0.85) !important; }
-
-  .returnCode-200, .returnCode-202, .returnCode-204 { background-color: rgba(20, 90, 20, 0.65) !important }
-
-  .returnCode-201 { background-color: rgba(40, 100, 40, 0.5) !important }
-
-  .returnCode-207 { background-color: rgba(50, 120, 50, 0.5) !important }
-
-  .returnCode-2xx { background-color: rgba(20, 60, 20, 0.75); }
-
-  .returnCode-3xx { background-color: rgba(60, 100, 150, 0.75); }
-
-  .returnCode-400, .returnCode-402, .returnCode-406, .returnCode-407, .returnCode-408, .returnCode-409,
-  .returnCode-410, .returnCode-411 {
-    background-color: rgba(250, 100, 0, 0.95) !important;
-    box-shadow:       0 0 5px 5px rgb(235 35 35 / 75%);
-    color:            darkred;
-    text-shadow:      0 0 5px white;
-  }
-
-  .returnCode-401, .returnCode-403, .returnCode-404, .returnCode-405 {
-    box-shadow:  0 0 5px 5px rgb(225 0 0 / 75%);
-    color:       yellow;
-    text-shadow: 0 0 5px darkred;
-  }
-
-  .returnCode-401 { background-color: rgba(250, 0, 0, 0.95) !important; }
-
-  .returnCode-403 { background-color: rgba(220, 0, 0, 0.95) !important; }
-
-  .returnCode-404 { background-color: rgba(200, 0, 0, 0.95) !important; }
-
-  .returnCode-405 { background-color: rgba(180, 0, 0, 0.95) !important; }
-
-  .returnCode-5xx, .returnCode-500, .returnCode-501, .returnCode-502, .returnCode-503, .returnCode-504, .returnCode-505 {
-    box-shadow:       0 0 5px 8px rgb(240 120 0 / 85%);
-    color:            white;
-    background-color: rgba(0, 0, 0, 0.95) !important;
-  }
-
-  .returnCode-500, .returnCode-501, .returnCode-502, .returnCode-503, .returnCode-504, .returnCode-505 {
-    width:      45px !important;
-    height:     20px !important;
-    margin-top: 0;
-    font-size:  16px !important;
-  }
+  font-family:      "Trebuchet MS", sans-serif;
+  font-size:        10pt;
+  margin:           0;
+  background-color: transparent;
+  padding:          25px;
+}
+
+a {
+  color:           rgba(50, 100, 60, 1);
+  font-weight:     bold;
+  text-decoration: none;
+  background:      rgba(50, 100, 60, 0.1) url(https://nexiality.github.io/documentation/image/link.png) no-repeat 2px 2px;
+  padding:         2px 5px 3px 22px;
+  border-radius:   5px;
+}
+
+a:visited {
+  color: rgba(50, 100, 60, 1);
+}
+
+a:hover {
+  color:            rgba(50, 245, 60, 1);
+  background-color: rgba(50, 50, 50, 0.7);
+}
+
+.title {
+  font-size:        14pt;
+  font-family:      Tahoma, serif;
+  font-weight:      bold;
+  background-color: rgba(228, 227, 201, 1);
+  color:            rgba(64, 62, 13, 1);
+  box-shadow:       0 0 10px rgba(88, 77, 61, 0.75);
+  border:           2px solid rgba(37, 114, 71, 1);
+  vertical-align:   middle;
+  padding:          15px;
+}
+
+.title span {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.result-controls {
+  margin:      3px 0 15px 0;
+  padding:     5px 0 10px 10px;
+  color:       rgba(100, 100, 100, 1);
+  float:       right;
+  user-select: none;
+  clear:       both;
+  font-size:   9pt;
+}
+
+.result-controls i {
+  cursor:       pointer;
+  margin-right: 5px;
+  padding:      5px;
+}
+
+.result-controls i span {
+  padding-left: 3px;
+  font-family:  Thonburi, sans-serif;
+}
+
+.result-controls i.off {
+  color:         rgba(100, 100, 100, 0.75);
+  border-bottom: 2px solid rgba(100, 100, 100, 0.75);
+}
+
+.result-controls i.on {
+  color:         rgba(40, 150, 40, 1);
+  border-bottom: 2px solid rgba(50, 180, 50, 1);
+}
+
+.result-controls i:hover {
+  text-shadow:      1px 1px 4px #fff;
+  background-color: rgba(40, 40, 40, 0.1);
+  box-shadow:       0 -1px 4px rgba(40, 40, 40, 0.5);
+}
+
+.result-controls i.fa-exclamation-circle.off {
+  color:         rgba(100, 100, 100, 0.75);
+  border-bottom: 2px solid rgba(100, 100, 100, 0.75);
+}
+
+.result-controls i.fa-exclamation-circle.on {
+  color:         rgba(150, 40, 40, 1);
+  border-bottom: 2px solid rgba(150, 40, 40, 1);
+}
+
+.result-controls i.fa-expand {
+  color:         rgba(80, 80, 80, 1);
+  border-bottom: 2px solid rgba(80, 80, 80, 1);
+}
+
+.result-controls i.fa-compress {
+  color:         rgba(100, 100, 100, 0.75);
+  border-bottom: 2px solid rgba(100, 100, 100, 0.75);
+}
+
+.showhide {
+  position:                   relative;
+  font-size:                  15px;
+  float:                      right;
+  top:                        -10px;
+  right:                      -10px;
+  padding:                    4px 3px;
+  border-top-right-radius:    10px;
+  border-bottom-right-radius: 10px;
+  background-color:           rgba(150, 160, 171, 0.75);
+  box-shadow:                 0 0 1px #333;
+}
+
+.showhide i {
+  padding: 3px;
+  cursor:  pointer;
+}
+
+.showhide i:hover { text-shadow: 0 0 15px rgba(255, 255, 255, 1); }
+
+.canHide {
+  padding:       10px;
+  margin:        25px 0 15px 0;
+  min-height:    8px;
+  border:        1px solid rgba(50, 50, 50, 0.35);
+  border-radius: 10px;
+}
+
+div.execMeta {
+  font-size:   10pt;
+  clear:       both;
+  caret-color: transparent;
+}
+
+table.execMeta {
+  font-size:    10pt; font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  table-layout: fixed;
+}
+
+.section-header {
+  text-align:     center;
+  vertical-align: top;
+  padding:        4px;
+  user-select:    none;
+}
+
+.section-header:hover {
+  background-color: white !important;
+}
+
+.section-header .fas {
+  font-size:     15pt;
+  color:         rgba(100, 100, 100, 0.5);
+  background:    rgba(100, 100, 100, 0.1);
+  padding:       10px;
+  border-radius: 5px;
+  cursor:        default;
+}
+
+.section-env .fas {padding: 22px 12px;}
+
+.section-time .fas {padding: 22px 15px;}
+
+.section-exec .fas {padding: 22px 13px;}
+
+.section-ref .fas {padding: 24px 16px;}
+
+.section-detail {vertical-align: top;}
+
+.section-detail .execValue:hover {
+  transition-duration:        0.5s;
+  transition-timing-function: linear;
+  box-shadow:                 0 0 15px rgb(0 0 0 / 50%);
+}
+
+.execValue {
+  text-align:     left;
+  font-weight:    bold;
+  color:          #333;
+  vertical-align: middle;
+  width:          fit-content;
+  font-size:      18px;
+  padding:        0px 18px;
+  display:        inline-grid;
+  border-radius:  5px;
+  margin:         5px;
+  height:         60px;
+}
+
+.execValue .execLabel {
+  text-align:       left;
+  font-size:        10pt;
+  background-color: transparent;
+  color:            rgba(30, 30, 30, 0.5);
+  font-family:      "Trebuchet MS", sans-serif;
+  font-weight:      normal;
+  font-variant:     all-small-caps;
+  padding:          0;
+  height:           18px;
+  width:            auto;
+  margin-left:      -15px;
+}
+
+.execValue .content {
+  text-align: center;
+  margin-top: -15px;
+}
+
+.detail-env .execValue:hover { background-color: rgba(160, 160, 0, 0.15); }
+
+.detail-env .execValue { border: 1px outset rgba(120, 120, 0, 0.75); }
+
+.detail-time .execValue:hover { background-color: rgba(0, 100, 200, 0.15); }
+
+.detail-time .execValue { border: 1px outset rgb(0, 100, 200, 0.75); }
+
+.detail-exec .execValue:hover { background-color: rgba(100, 160, 90, 0.15); }
+
+.detail-exec .execValue {border: 1px outset rgba(0, 160, 0, 0.75);}
+
+.detail-exec .execValue:hover { background-color: rgba(0, 160, 0, 0.15); }
+
+.detail-exec .execValuePass { background-color: rgba(0, 200, 0, 0.25); }
+
+.detail-exec .execValueFail:hover { background-color: rgba(250, 200, 200, 0.75); }
+
+.detail-exec .execValueFail {
+  color:            #d00 !important;
+  text-shadow:      1px 1px 4px #f88;
+  background-color: rgba(220, 0, 0, 0.25);
+  border:           1px outset rgba(200, 0, 0, 0.5);
+}
+
+.execLog {
+  font-size: 14px;
+  display:   inline-table;
+}
+
+.execLog a { font-family: Consolas, monospace; }
+
+.execArgs {
+  font-size:     14px;
+  font-family:   Consolas, monospace;
+  font-weight:   normal;
+  margin-bottom: 0 !important;
+  display:       block;
+  height:        auto;
+}
+
+.execArgs pre { margin: 0; }
+
+.detail-ref { }
+
+.detail-ref .execValue:hover {
+  background-color: rgba(160, 0, 180, 0.15);
+}
+
+.detail-ref .execValue {
+  vertical-align: top;
+  border:         1px outset rgba(160, 0, 180, 0.75);
+  margin:         5px;
+  padding-bottom: 5px;
+}
+
+.detail-ref a:hover {
+  background-color: transparent;
+  border:           none;
+  color:            rgba(95, 0, 120, 0.95);
+  box-shadow:       none;
+  text-shadow:      0 1px 0 #fff;
+}
+
+.detail-ref a {
+  line-height: normal;
+  background:  none;
+  color:       rgba(160, 50, 200, 0.75);
+  white-space: nowrap;
+  padding:     0;
+}
+
+.detail-ref .exec-supplemental a { padding-right: 15px; }
+
+.result {
+  font:   10pt Tahoma, serif;
+  border: none; background: #fff;
+}
+
+.result td, .result th { border-bottom: 1px solid #ddd; }
+
+.footer {
+  font-size:        8pt; color: #555;
+  font-family:      Consolas, monospace;
+  background-color: #d0e0e0;
+  padding:          5px;
+  text-align:       right;
+  border-top:       2px solid #c0c0c0;
+  border-bottom:    2px solid #c0c0c0;
+  letter-spacing:   0.125em;
+}
+
+.errorSection {
+  font-size:        12pt;
+  font-family:      Tahoma, serif;
+  color:            #faa;
+  background-color: #800;
+  padding:          5px;
+  border-top:       2px solid #f00;
+  border-bottom:    2px solid #f00;
+  margin:           4px 0;
+}
+
+.errorPrompt { color: #ccc; font-size: 10pt; }
+
+.errorStackTrace {
+  background:  #fdd;
+  padding:     5px;
+  margin:      8px;
+  line-height: 12pt;
+  font-family: Consolas, monospace;
+  font-size:   9pt;
+  color:       #800;
+}
+
+.reportFooter { background: #ddd }
+
+.exec-summary-header {
+  clear:                      both;
+  width:                      max-content;
+  min-width:                  100%;
+  margin-right:               5px;
+  background-color:           rgba(150, 160, 171, 0.75);
+  border-top-left-radius:     10px;
+  border-top-right-radius:    10px;
+  border-bottom-right-radius: 10px;
+}
+
+.exec-summary-header .label {
+  font-weight:    normal;
+  font-size:      9pt;
+  text-transform: uppercase;
+
+  padding:        14px 5px 0 5px;
+
+  float:          left;
+  text-align:     left;
+  vertical-align: middle;
+
+  height:         23px;
+}
+
+.exec-summary-header .label-small { width: auto; }
+
+.exec-summary-header table th:last-child { padding-right: 54px; }
+
+.exec-summary {
+  clear:     both;
+  width:     max-content;
+  min-width: 100%;
+}
+
+.exec-summary .planStep {
+  padding:                   0 !important;
+  margin:                    0 5px 0 0;
+  border-top-left-radius:    0;
+  border-bottom-left-radius: 0;
+}
+
+.exec-summary .value-plan {
+  padding-top:    20px;
+  padding-bottom: 10px;
+  font-size:      15px;
+}
+
+.planStep .showhide {
+  top:     0;
+  right:   0;
+  z-index: 99;
+}
+
+.plan-step-summary { display: table; }
+
+.plan-step-summary .value {
+  font-weight:      bold;
+  font-size:        10pt;
+  text-overflow:    ellipsis;
+  overflow:         hidden;
+
+  background-color: rgba(255, 255, 255, 0.25);
+  padding:          8px 5px 1px 5px;
+  border-bottom:    1px solid rgba(100, 100, 100, 0.15);
+
+  float:            left;
+  text-align:       left;
+  vertical-align:   middle;
+
+  height:           23px;
+}
+
+.plan-step-summary .value-small {
+  width:   auto;
+  padding: 8px 15px 2px 5px !important;
+}
+
+.plan-step-summary .value { }
+
+.plan-step-summary .noFailure {
+  background-color: rgba(221, 255, 221, 0.5);
+}
+
+.plan-step-summary .hasFailure {
+  background-color: rgba(255, 150, 150, 1) !important;
+}
+
+.plan-step-summary .hasFailure a {
+  background-color: rgba(255, 100, 100, 0.5) !important;
+  color:            rgba(120, 0, 0, 1);
+}
+
+.label-script, .value-script { width: 250px; }
+
+.label-data, .value-data { width: 280px; }
+
+.iteration {
+  padding:       0 !important;
+  clear:         both;
+  margin:        5px 0 15px 20px;
+  border-radius: 0;
+  border:        none;
+}
+
+.iteration table th:last-child { padding-right: 10px; }
+
+.iteration .label {
+  font-weight:      normal;
+  font-size:        9pt;
+  text-transform:   uppercase;
+  white-space:      nowrap;
+  text-wrap:        none;
+
+  background-color: rgba(220, 220, 220, 0.5);
+  border-bottom:    1px solid rgba(100, 100, 100, 0.5);
+  padding:          5px;
+
+  text-align:       left;
+  vertical-align:   middle;
+
+  height:           25px;
+}
+
+.iteration tr.iter.hasFailure {
+  background-color: rgba(255, 210, 210, 0.5);
+}
+
+.iteration tr.iter.noFailure {
+  background-color: rgba(211, 255, 221, 0.5);
+}
+
+.exec-summary .planStep .iteration .value {
+  font-weight:      normal;
+  font-size:        10pt;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-bottom:    1px solid rgba(100, 100, 100, 0.25);
+  height:           auto;
+  text-align:       left;
+  vertical-align:   bottom;
+  text-overflow:    ellipsis;
+  overflow:         hidden;
+}
+
+.label-scenarioPassed, .value-scenarioPassed { width: 97px; text-align: center !important; }
+
+.label-datetime, .value-datetime { width: 135px; white-space: nowrap; }
+
+.label-time, .value-time { width: 58px; white-space: nowrap; }
+
+.label-datetime, .label-time, .value-datetime, .value-time { text-align: center !important; }
+
+.label-num, .value-num, .label-percent, .value-percent { text-align: right !important; }
+
+.label-num, .value-num { width: 38px; white-space: nowrap; }
+
+.label-percent, .value-percent { width: 58px; white-space: nowrap; }
+
+.label-title, .value-title { text-wrap: none !important; width: 200px; word-break: break-word; }
+
+.value-title { font-weight: bold; }
+
+.plan-step-summary .value-title, .exec-summary-header .label-title { width: 280px; }
+
+.label-iteration, .value-iteration { width: 60px; text-align: center !important; }
+
+.value-scriptRef, .value-scenarioRef {
+  font-weight:      normal;
+  vertical-align:   text-top;
+  color:            rgba(64, 62, 13, 1);
+  background-color: rgba(228, 227, 201, 0.5);
+  padding:          5px;
+  margin:           5px 0 0 0;
+  white-space:      nowrap;
+  font-family:      monospace;
+  font-size:        9pt;
+}
+
+.label-ref {
+  color:          rgba(64, 62, 13, 0.5);
+  text-overflow:  ellipsis;
+  overflow:       hidden;
+  vertical-align: text-top;
+  min-width:      71px;
+}
+
+.value-ref {
+  text-overflow: ellipsis;
+  overflow:      hidden;
+  padding:       0 0 0 5px;
+}
+
+.info {
+  float:         right;
+  position:      relative;
+  right:         -6px;
+  top:           -6px;
+  color:         rgba(64, 62, 53, 0.75);
+  z-index:       99;
+  display:       inline;
+  margin-bottom: -15px;
+}
+
+.value-tally {
+  font-weight:             bold !important;
+  text-decoration-line:    underline;
+  text-underline-position: under;
+  text-decoration-color:   rgba(80, 80, 80, 0.75);
+  text-decoration-style:   double;
+}
+
+.spacer, .spacer2 { flex-grow: 100; }
+
+.spacer2 { border: none !important; }
+
+tr:hover { background-color: rgba(125, 125, 120, 0.12); }
+
+table.execMeta tr:hover {background: inherit;}
+
+td.hasFailure { background: #fdd !important; color: #800; }
+
+td.allPass { background: #dfd !important; color: #080; }
+
+div.custom-header, div.custom-footer {
+  margin:        60px 50px 0 50px;
+  padding:       10px 30px;
+  border-radius: 35px;
+  border-bottom: groove;
+  border-top:    groove;
+  box-shadow:    0 5px 10px -5px rgba(100, 100, 100, 0.75);
+  border-color:  rgba(250, 255, 250, 0.85) rgba(0, 0, 0, 0.1) rgba(100, 100, 100, 0.5);
+  color:         #555;
+  font-size:     11pt;
+  line-height:   1.35em;
+}
+
+div.custom-footer {
+  margin: 30px 50px -30px 50px;
+}
+
+div.custom-header a, div.custom-footer a {
+  background:    none;
+  color:         #00f;
+  border-radius: initial;
+  padding:       initial;
+}
+
+.fa, .fas {
+  font-weight: 900;
+  color:       #444;
+  cursor:      pointer;
+}
+
+/* back-to-top link */
+a.top-link {
+  background: none;
+  margin:     -23px 0;
+  float:      right;
+}
+
+a.top-link:hover .fa-chevron-up:hover {
+  text-shadow: 0 0 6px rgb(0 50 0);
+  color:       #fff
+}
+
+a.top-link .fa-chevron-up {
+  color:       rgba(220, 220, 220, 1);
+  text-shadow: 0 2px 6px #000;
+  font-size:   14pt;
+}
+
+/*-----------------------------------------------------------------------------*/
+/* Screen Recordings */
+/*-----------------------------------------------------------------------------*/
+.recording {
+  background-color: #fff;
+}
+
+.recording .section-title {
+  color:                  #000;
+  font-weight:            bold;
+  background-color:       rgba(150, 150, 150, 0.5);
+  padding:                7px 0 6px 10px;
+  margin:                 -10px 39px -15px -10px;
+  border-top-left-radius: 9px;
+}
+
+#all-recordings {
+  display:   flex;
+  flex-wrap: wrap;
+  border:    none;
+}
+
+.recording-container {
+  margin:  10px;
+  display: inline-block;
+}
+
+.recording .container {
+  width: 550px;
+}
+
+.recording .container video {
+  border:     5px solid rgba(70, 70, 70, 0.85);
+  box-shadow: 0 5px 5px 0 rgb(0 0 0 / 50%);
+}
+
+.recording .caption {
+  padding:          8px;
+  border-radius:    10px 10px 0 0;
+  background-color: rgba(70, 70, 70, 0.85);
+  white-space:      nowrap;
+}
+
+.recording .caption-title {
+  font-weight:   bold;
+  text-shadow:   0 0 5px #000;
+  color:         rgba(235, 235, 235, 0.85);
+  text-overflow: ellipsis;
+  white-space:   nowrap;
+  overflow:      hidden;
+}
+
+.recording .caption-meta {
+  padding:     5px 0 0;
+  font-size:   90%;
+  line-height: 1.65em;
+}
+
+.recording .link-to-result {
+  padding:    0 4px;
+  background: transparent;
+}
+
+.recording .link-to-result:hover {
+  color:            inherit;
+  background-color: transparent;
+}
+
+.recording .link-to-result .fa-link {
+  color:       rgba(240, 240, 140, 0.85);
+  text-shadow: 0 0 10px rgb(0 0 0 / 95%);
+}
+
+.recording .link-to-result .fa-link:hover {
+  color:       rgba(0, 0, 0, 0.95);
+  text-shadow: 0 0 5px rgb(255 255 220 / 95%);
+}
+
+.recording .meta-title {
+  padding:       2px 3px 2px 6px;
+  background:    rgba(70, 70, 70, 0.85);
+  color:         rgba(220, 220, 50, 0.85);
+  border-radius: 10px 0 0 10px;
+}
+
+.recording .meta-value {
+  padding:       2px 8px 2px 4px;
+  margin:        0 10px 0 -3px;
+  font-weight:   bold;
+  background:    rgba(220, 220, 50, 0.85);
+  color:         rgba(70, 70, 70, 0.85);
+  border-radius: 0 10px 10px 0;
+}
+
+/*-----------------------------------------------------------------------------*/
+/* Web Service Logs */
+/*-----------------------------------------------------------------------------*/
+.wsLogs {
+  background-color: rgba(240, 240, 250, 0.75);
+}
+
+#all-wsLogs {
+  display:   flex;
+  flex-wrap: wrap;
+  border:    none;
+  padding:   0;
+}
+
+.wsLogs .section-title {
+  color:                  #135;
+  font-weight:            bold;
+  background-color:       rgba(130, 150, 180, 0.75);
+  padding:                7px 0 6px 10px;
+  margin:                 -10px 39px -15px -10px;
+  border-top-left-radius: 9px;
+}
+
+.summary-container {
+  margin: 0 0 10px 0;
+  width:  100%;
+  clear:  both;
+}
+
+.wsLogs .caption {
+  padding:          8px;
+  border-radius:    10px 10px 0 0;
+  background-color: rgba(50, 70, 100, 0.85);
+}
+
+.wsLogs .caption-title {
+  font-weight: bold;
+  text-shadow: 0 0 5px #000;
+  color:       rgba(235, 235, 235, 0.85);
+}
+
+.wsLogs a.caption-title {
+  background: none;
+  padding:    5px;
+}
+
+.caption a.caption-title i.fas {
+  color:   rgba(235, 235, 235, 0.85);
+  padding: 0 5px 0 0;
+}
+
+.wsLogs .caption-meta {
+  padding:     5px 0 0;
+  font-size:   90%;
+  line-height: 1.65em;
+}
+
+.wsLogs .meta-title {
+  padding:       2px 3px 2px 6px;
+  background:    rgba(40, 50, 70, 0.85);
+  color:         rgba(220, 240, 255, 0.65);
+  border-radius: 10px 0 0 10px;
+}
+
+.wsLogs .meta-value {
+  padding:       2px 8px 2px 4px;
+  margin:        0 10px 0 -3px;
+  font-weight:   bold;
+  background:    rgba(220, 240, 255, 0.85);
+  color:         rgba(40, 50, 70, 0.85);
+  border-radius: 0 10px 10px 0;
+}
+
+#wsSummaryTable_wrapper {
+  margin:    5px 0 0 0;
+  font-size: 9pt;
+}
+
+#wsSummaryTable tbody tr td:nth-child(2),
+#wsSummaryTable tbody tr td:nth-child(3),
+#wsSummaryTable tbody tr td:nth-child(5) {
+  overflow-wrap: anywhere;
+  white-space:   break-spaces;
+  width:         350px;
+  min-width:     50px;
+}
+
+#wsSummaryTable {
+  font-size:   9pt;
+  font-family: monospace;
+  background:  rgba(160, 180, 200, 0.75);
+}
+
+.dataTables_wrapper {
+  font-size: 9pt;
+}
+
+.dataTables_wrapper a {
+  background: none;
+}
+
+.wsDetail-filter {
+  clear:       both;
+  width:       100%;
+  margin:      5px 0;
+  user-select: none;
+}
+
+.wsDetail-filter-method {
+  margin:       5px 0;
+  border:       1px outset rgba(70, 70, 70, 0.35);
+  padding:      10px 15px;
+  border-left:  none;
+  border-right: none;
+  background:   linear-gradient(180deg, rgba(70, 70, 70, 0.35) 2px, transparent 12px, transparent 25px, rgba(70, 70, 70, 0.35));
+}
+
+.wsDetail-filter-returnCode {
+  margin:       5px 0;
+  border:       1px outset rgba(80, 80, 50, 0.35);
+  padding:      10px 15px;
+  border-left:  none;
+  border-right: none;
+  background:   linear-gradient(180deg, rgba(80, 80, 50, 0.35) 2px, transparent 12px, transparent 25px, rgba(80, 80, 50, 0.35));
+}
+
+.wsDetail-filter-button {
+  background:    none;
+  padding:       5px 8px;
+  border:        1px outset rgba(100, 100, 100, 0.75);
+  font-size:     8pt !important;
+  font-family:   "Trebuchet MS", sans-serif;
+  font-weight:   bold;
+  text-shadow:   0 0 5px #000 !important;
+  color:         rgba(235, 235, 235, 0.85) !important;
+  border-radius: 25px;
+  cursor:        pointer;
+  user-select:   none;
+  display:       inline-block;
+  margin:        0 5px 0 0;
+  width:         40px !important;
+  text-align:    center;
+  box-shadow:    none !important;
+  height:        auto !important;
+}
+
+.wsDetail-filter .is-active {
+  border:           1px inset rgba(150, 150, 150, 0.75);
+  background-color: rgba(100, 100, 100, 0.35) !important;
+  color:            #ddd;
+  text-shadow:      -1px -1px 2px #555;
+}
+
+.wsDetail-filter-title {
+  font-size:   9pt;
+  display:     inline-block;
+  width:       130px;
+  font-weight: bold;
+  color:       rgba(40, 40, 40, 0.85);
+}
+
+.wsDetail {
+  margin: 10px 12px 20px;
+  width:  250px;
+}
+
+.wsDetail .caption {
+  padding:          0;
+  background-color: rgba(50, 70, 100, 0.35);
+}
+
+.wsDetail .caption-title {
+  margin:     0;
+  display:    flex;
+  height:     25px;
+  box-shadow: 0 5px 5px -3px rgb(0 0 0 / 75%);
+}
+
+.wsDetail .method {
+  font-size:              8pt;
+  margin:                 0 -1px 0 0;
+  padding:                7px 2px;
+  width:                  38px;
+  background-color:       rgba(50, 50, 50, 0.5);
+  border-top-left-radius: 10px;
+  text-align:             center;
+}
+
+.wsDetail .url {
+  width:            200px;
+  white-space:      nowrap;
+  text-overflow:    ellipsis;
+  overflow-x:       clip;
+  font-size:        8pt;
+  background-color: rgba(50, 60, 80, 0.85);
+  border:           2px inset rgba(50, 60, 80, 0.85);
+  border-left:      none;
+  border-right:     none;
+  padding:          5px 2px;
+  margin:           0;
+  cursor:           default;
+}
+
+.wsDetail .returnCode {
+  background-color:        rgba(50, 50, 50, 0.75);
+  padding:                 6px 2px;
+  border-top-right-radius: 10px;
+  width:                   38px;
+  font-size:               8pt;
+  text-align:              center;
+}
+
+.wsDetail .caption-meta {
+  padding: 15px 0 5px;
+}
+
+.wsDetail .meta-title {
+  width:         65px;
+  display:       inline-block;
+  text-align:    right;
+  margin:        0 0 8px -1px;
+  padding:       0 4px;
+  border-radius: unset;
+  box-shadow:    0 2px 3px rgb(0 0 0 / 55%);
+}
+
+.wsDetail .meta-value {
+  display:        inline-block;
+  padding:        0 10px 0 4px;
+  width:          160px;
+  vertical-align: middle;
+  background:     linear-gradient(90deg, rgba(250, 250, 255, 0.85) 110px, transparent 170px);
+  border-radius:  unset;
+  margin:         -2px 0 0 -4px;
+  white-space:    nowrap;
+  overflow-x:     clip;
+  text-overflow:  ellipsis;
+}
+
+.wsDetail .meta-value-half {
+  width:   30px !important;
+  padding: 0 4px !important;
+  margin:  -1px 10px 1px -3px !important;
+}
+
+.wsDetail-content {
+  display:          none;
+  position:         fixed;
+  z-index:          99999;
+  top:              7%;
+  left:             7%;
+  width:            85%;
+  height:           85%;
+  border:           15px solid rgba(70, 70, 70, 0.75);
+  border-radius:    15px 15px 15px 15px;
+  box-shadow:       2px 2px 15px 15px rgb(0 0 0 / 50%);
+  font-family:      monospace;
+  font-size:        10pt;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding:          15px;
+}
+
+.wsDetail .link {
+  margin:     5px;
+  background: none;
+  padding:    2px;
+  color:      rgba(40, 60, 100, 0.75);
+}
+
+button#hideLog {
+  display:       none;
+  position:      fixed;
+  right:         10px;
+  top:           10px;
+  font-size:     10pt;
+  color:         rgba(255, 255, 255, 0.85);
+  background:    rgba(120, 120, 80, 0.95);
+  border-radius: 20px;
+  border:        2px solid rgba(220, 220, 150, 0.75);
+  box-shadow:    0 0 10px 0 rgb(70 70 70 / 75%);
+  font-weight:   bold;
+  font-variant:  all-small-caps;
+  padding:       8px 15px;
+  text-shadow:   1px 1px 3px rgb(0 0 0 / 85%);
+  cursor:        pointer;
+  z-index:       1;
+}
+
+.method-GET { background-color: rgba(50, 100, 250, 0.85) !important; }
+
+.method-POST { background-color: rgba(200, 200, 50, 0.85) !important; }
+
+.method-PUT { background-color: rgba(100, 0, 100, 0.85) !important; }
+
+.method-PATCH { background-color: rgba(150, 50, 150, 0.85) !important; }
+
+.method-HEAD { background-color: rgba(100, 100, 100, 0.85) !important; }
+
+.method-DELETE { background-color: rgba(0, 0, 0, 0.85) !important; }
+
+.returnCode-200, .returnCode-202, .returnCode-204 { background-color: rgba(20, 90, 20, 0.65) !important }
+
+.returnCode-201 { background-color: rgba(40, 100, 40, 0.5) !important }
+
+.returnCode-207 { background-color: rgba(50, 120, 50, 0.5) !important }
+
+.returnCode-2xx { background-color: rgba(20, 60, 20, 0.75); }
+
+.returnCode-3xx { background-color: rgba(60, 100, 150, 0.75); }
+
+.returnCode-400, .returnCode-402, .returnCode-406, .returnCode-407, .returnCode-408, .returnCode-409,
+.returnCode-410, .returnCode-411 {
+  background-color: rgba(250, 100, 0, 0.95) !important;
+  box-shadow:       0 0 5px 5px rgb(235 35 35 / 75%);
+  color:            darkred;
+  text-shadow:      0 0 5px white;
+}
+
+.returnCode-401, .returnCode-403, .returnCode-404, .returnCode-405 {
+  box-shadow:  0 0 5px 5px rgb(225 0 0 / 75%);
+  color:       yellow;
+  text-shadow: 0 0 5px darkred;
+}
+
+.returnCode-401 { background-color: rgba(250, 0, 0, 0.95) !important; }
+
+.returnCode-403 { background-color: rgba(220, 0, 0, 0.95) !important; }
+
+.returnCode-404 { background-color: rgba(200, 0, 0, 0.95) !important; }
+
+.returnCode-405 { background-color: rgba(180, 0, 0, 0.95) !important; }
+
+.returnCode-5xx, .returnCode-500, .returnCode-501, .returnCode-502, .returnCode-503, .returnCode-504, .returnCode-505 {
+  box-shadow:       0 0 5px 8px rgb(240 120 0 / 85%);
+  color:            white;
+  background-color: rgba(0, 0, 0, 0.95) !important;
+}
+
+.returnCode-500, .returnCode-501, .returnCode-502, .returnCode-503, .returnCode-504, .returnCode-505 {
+  width:      45px !important;
+  height:     20px !important;
+  margin-top: 0;
+  font-size:  16px !important;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* execution visualization */
+/* -------------------------------------------------------------------------------- */
+.execMeta .parent {
+  display: inline-flex;
+  width:   100%;
+}
+
+.execMeta .parent .meta {
+  width: 30%;
+}
+
+.execMeta .parent .chart {
+  width:   70%;
+  padding: 5px 15px;
+}
+
+.reset-buttons {
+  float:  right;
+  margin: 0 55px 0 0;
+}
+
+.reset-buttons button {
+  border-radius: 5px;
+  padding:       5px;
+  color:         #e8e3e3;
+  background:    #9ba5b0;
+}
+
+/* don't need? */
+#execMeta table tbody tr:hover {
+  background: none;
+}

@@ -27,6 +27,7 @@ comments: true
 - added keygen capability for nexial-specific SSL certificate (for upcoming features).
 - better "temp" directory creation strategy to reduce collisions over time.
 - code refactoring to reduce duplication.
+- Execution Summary now enhanced with charts to aid in post-execution visualization.
 
 
 ### [Batch Files](../userguide/BatchFiles)
