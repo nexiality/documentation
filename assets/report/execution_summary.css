@@ -34,10 +34,10 @@ body {
   .parent .chart {
     width: 70%;
   }
-.reset-buttons {
-  padding: 10px;
+  .reset-buttons {
+    padding: 10px;
     margin: 10px;
-}
+  }
   .reset-buttons button {
     border-radius: 5px;
     color: #e8e3e3;
@@ -51,8 +51,9 @@ body {
   }
 
   table tbody tr:hover {
-background: none;
+    background: none;
   }
+
   .title {
     font-size:        14pt;
     font-family:      Tahoma, serif;
