@@ -40,7 +40,10 @@ Chart.defaults.plugins.tooltip.boxPadding = 5;
 
 
 let ExecutionChart = function (summary) {
-  const DEFAULT_LABEL = 'EXECUTION';
+  const defaultLabel = 'EXECUTION';
+  const levelExecution = 'EXECUTION';
+  const levelScript = 'SCRIPT';
+  const levelScenario = 'SCENARIO';
   const dataSetJSON = {
     'passPercentage': {
       'label':           'pass %',
@@ -101,14 +104,12 @@ let ExecutionChart = function (summary) {
   let trace = [];
   let current = summary;
   let heading = summary.name;
-  let chartDetails = getChartDetails(DEFAULT_LABEL);
-  let executionLevel = DEFAULT_LABEL;
+  let chartDetails = getChartDetails(defaultLabel);
+  let executionLevel = levelExecution;
 
   this.initializeChart = function () {
-    document.getElementById('rollUpResultsChart').style.visibility = 'hidden';
-    document.getElementById('resetResultsChart').style.visibility = 'hidden';
+    hideNavigationButtons();
     document.getElementById('resultsChart').onclick = drillDown;
-
     document.getElementById('resetResultsChart').onclick = resetChart;
     document.getElementById('rollUpResultsChart').onclick = rollUp;
   };
@@ -141,23 +142,21 @@ let ExecutionChart = function (summary) {
   function drillDown(click) {
     let points = chartDetails.getElementsAtEventForMode(click, 'nearest', {intersect: true}, true);
     if (points.length) {
-      if (current.executionLevel === 'SCENARIO') { return; }
+      if (current.executionLevel === levelScenario) { return; }
 
-      let currentIndex = 0;
-      if (executionLevel !== DEFAULT_LABEL) {
-        currentIndex = points[0].index;
+      if (executionLevel !== levelExecution) {
+        let currentIndex = points[0].index;
         current = current.nestedExecutions[currentIndex];
         executionLevel = current.executionLevel;
         trace.push(currentIndex);
-      } else if (executionLevel === DEFAULT_LABEL) {
-        executionLevel = 'SCRIPT';
+      } else {
+        executionLevel = levelScript;
       }
 
       heading = getHeading(trace);
       updateChart();
 
-      document.getElementById('resetResultsChart').style.visibility = 'visible';
-      document.getElementById('rollUpResultsChart').style.visibility = 'visible';
+      showNavigationButtons();
     }
   }
 
@@ -219,16 +218,27 @@ let ExecutionChart = function (summary) {
     return summary.name;
   }
 
+  function hideNavigationButtons() {
+    document.getElementById('chartInstruction').style.display = 'initial';
+    document.getElementById('rollUpResultsChart').style.display = 'none';
+    document.getElementById('resetResultsChart').style.display = 'none';
+  }
+
+  function showNavigationButtons() {
+    document.getElementById('chartInstruction').style.display = 'none';
+    document.getElementById('resetResultsChart').style.display = 'initial';
+    document.getElementById('rollUpResultsChart').style.display = 'initial';
+  }
+
   function resetChart() {
-    executionLevel = DEFAULT_LABEL;
+    executionLevel = levelExecution;
     heading = summary.name;
     current = summary;
-    chartDetails.data = getChartData(current, [DEFAULT_LABEL]);
+    chartDetails.data = getChartData(current, [defaultLabel]);
     chartDetails.options = getOptions(current);
     chartDetails.update();
     trace = [];
-    document.getElementById('rollUpResultsChart').style.visibility = 'hidden';
-    document.getElementById('resetResultsChart').style.visibility = 'hidden';
+    hideNavigationButtons();
   }
 
   function rollUp() {
@@ -238,7 +248,7 @@ let ExecutionChart = function (summary) {
     }
 
     if (trace.length < 1) {
-      executionLevel = DEFAULT_LABEL;
+      executionLevel = levelExecution;
       resetChart();
       return;
     }
@@ -252,9 +262,7 @@ let ExecutionChart = function (summary) {
     trace.pop();
     heading = getHeading(trace);
     updateChart();
-
-    document.getElementById('resetResultsChart').style.visibility = 'visible';
-    document.getElementById('rollUpResultsChart').style.visibility = 'visible';
+    showNavigationButtons();
   }
 
   function getOptions(obj) {

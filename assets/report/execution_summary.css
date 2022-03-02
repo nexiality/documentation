@@ -1036,8 +1036,9 @@ button#hideLog {
 /* execution visualization */
 /* -------------------------------------------------------------------------------- */
 .execMeta .parent {
-  display: inline-flex;
-  width:   100%;
+  display:        inline-flex;
+  width:          100%;
+  padding-bottom: 25px;
 }
 
 .execMeta .parent .meta {
@@ -1046,7 +1047,7 @@ button#hideLog {
 
 .execMeta .parent .chart {
   width:   70%;
-  padding: 5px 15px;
+  padding: 5px 25px;
 }
 
 .reset-buttons {
@@ -1061,7 +1062,21 @@ button#hideLog {
   background:    #9ba5b0;
 }
 
-/* don't need? */
 #execMeta table tbody tr:hover {
   background: none;
+}
+
+#resetResultsChart {
+  display: none;
+}
+
+#rollUpResultsChart {
+  display: none;
+}
+
+#chartInstruction {
+  display:    none;
+  font:       11pt normal;
+  color:      rgba(80, 80, 80, 0.75);
+  font-style: italic;
 }

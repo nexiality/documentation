@@ -28,6 +28,7 @@ comments: true
 - better "temp" directory creation strategy to reduce collisions over time.
 - code refactoring to reduce duplication.
 - Execution Summary now enhanced with charts to aid in post-execution visualization.
+  - added minor UI improvements.
 
 
 ### [Batch Files](../userguide/BatchFiles)
