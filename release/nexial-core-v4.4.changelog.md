@@ -29,7 +29,6 @@ comments: true
 - code refactoring to reduce duplication.
 - Execution Summary now enhanced with charts to aid in post-execution visualization.
   - added minor UI improvements.
-♥
 
 
 ### [Batch Files](../userguide/BatchFiles)
@@ -49,6 +48,10 @@ comments: true
 
 
 ### [desktop commands](../commands/desktop)
+- [`saveLocatorCount(var,locator)`](../commands/desktop/saveLocatorCount(var,locator)): Previously using a hardcoded 
+  2.5 second, now this command uses [`nexial.pollWaitMs`](../systemvars/index.html#nexial.pollWaitMs) as time out 
+  value when waiting for target `locator` to appear. This is now consistent with another similar command 
+  [`saveElementCount(var,name)`](../commands/desktop/saveElementCount(var,name)) in terms of waiting.
 
 
 ### [json commands](../commands/json)
