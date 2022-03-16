@@ -223,9 +223,43 @@ uploaded to designated cloud location and removed from local output directory.
    Output File:<br/>
    ![](image/UnderstandingProjectStructure_07.png)<br/><br/>
 4. <a name="summary"></a>Nexial also produces another output at the end of execution to provide summary level of 
-   execution report and extrapolation across test plans, test scripts, iterations, scenarios, and activities:<br/>
+   execution report, a drill-down chart as well as extrapolation across test plans, 
+   test scripts, iterations, scenarios, and activities:<br/>
    ![](image/UnderstandingProjectStructure_08.png)<br/><br/>
-   As of Nexial [v4.3](../release/nexial-core-v4.3.changelog), this execution summary report also generate video 
+   ![](image/UnderstandingProjectStructure_08_1.png)<br/><br/>
+
+   The drill-down chart by default provides the results at the **Execution level**. The graph displays various contents
+   as follows:-
+   <ul>
+      <li>Failed steps Count</li>
+      <li>Passed steps Count</li>
+      <li>Total steps Count</li>
+      <li>Skipped steps Count</li>
+      <li>Pass percentage of the steps</li>
+      <li>Duration it took to execute steps at a specific level. This is calculated in terms of minutes.</li>
+   </ul>
+   <br/>
+
+   Consider the following graph which shows the results at the **Execution Level**:<br/>
+   ![](image/UnderstandingProjectStructure_drilldown_1.png)<br/><br/>
+
+   User can drill down further by clicking on the **bar** or the **points** in the chart. For example user can click the
+   bar corresponding to the **total steps** or the point corresponding to **duration** to drill down further to the 
+   next level.
+  
+   User can drill down to the lower levels in the order **Script** -> **Iteration** -> **Scenario** ->
+   **Activity** as shown in the below 
+   screenshots: <br/>
+
+   ![](image/UnderstandingProjectStructure_drilldown_2.png)<br/>
+   ![](image/UnderstandingProjectStructure_drilldown_3.png)<br/>
+   ![](image/UnderstandingProjectStructure_drilldown_4.png)<br/>
+   ![](image/UnderstandingProjectStructure_drilldown_5.png)<br/>
+
+   User can use the **back** button to go to the upper level and similarly use **Execution** button to go to 
+   the Execution level.
+   
+5. As of Nexial [v4.3](../release/nexial-core-v4.3.changelog), this execution summary report also generate video 
    playback for any generated [desktop recordings](../commands/base/startRecording()) and 
    [web service logs](../systemvars/index.html#nexial.ws.logSummary). For example, below is a snippet of the screen
    recording generated during execution. One may use the recording for further post-execution analysis.<br/>
@@ -246,7 +280,7 @@ uploaded to designated cloud location and removed from local output directory.
    data at multiple levels and links to the execution output file. Some amount of interactivity is available where
    one can toggle the visibility of script, iteration, scenarios and activities data. See 
    [Improving your execution summary report](ImprovingExecutionReport) for more details.<br/><br/>
-5. <a name="junit"></a>Along with the above-stated output, Nexial also produces a JUNIT compatible xml file. This
+6. <a name="junit"></a>Along with the above-stated output, Nexial also produces a JUNIT compatible xml file. This
    XML file is always generated in the output directory as `junit.xml`. This file is useful when integrating with
    JUNIT-compatible tools and plugins such as:<br/>
    ![](image/UnderstandingProjectStructure_09.png)<br/>

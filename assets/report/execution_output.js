@@ -77,9 +77,9 @@ let ExecutionChart = function (summary) {
     },
     'total':          {
       'label':           'total',
-      'borderColor':     'rgba(120,120,120,0.8)',
-      'backgroundColor': 'rgba(0,0,0,0.80)',
-      'borderWidth':     2,
+      'borderColor':     'rgba(0,0,0,0.8)',
+      'backgroundColor': 'rgba(128,128,0)',
+      'borderWidth':     1,
       'tension':         0.3,
       'fill':            false,
       'yAxisID':         'y-axis-1',
@@ -98,6 +98,15 @@ let ExecutionChart = function (summary) {
       'fill':             false,
       'yAxisID':          'y-axis-2',
       'type':             'line',
+    },
+    'skipped': {
+       'label':           'skipped',
+       'borderColor':     'rgba(0,0,0,0.5)',
+       'backgroundColor': 'rgba(230,230,230)',
+       'borderWidth':     1,
+       'tension':         0.3,
+       'fill':            true,
+       'yAxisID':         'y-axis-1',
     },
   };
 
@@ -131,6 +140,7 @@ let ExecutionChart = function (summary) {
         {...dataSetJSON.pass, data: [obj.passCount]},
         {...dataSetJSON.total, data: [obj.totalSteps]},
         {...dataSetJSON.duration, data: [getDuration(obj.endTime, obj.startTime)]},
+        {...dataSetJSON.skipped, data: [obj.skippedCount]}
       ],
     };
   }
@@ -170,6 +180,7 @@ let ExecutionChart = function (summary) {
     let totalData = [];
     let percentageData = [];
     let durationData = [];
+    let skippedCountData = [];
 
     for (let execution in current.nestedExecutions) {
       let currentExecution = current.nestedExecutions[execution];
@@ -179,6 +190,7 @@ let ExecutionChart = function (summary) {
       failCountData.push(currentExecution.failCount);
       passCountData.push(currentExecution.passCount);
       totalData.push(currentExecution.totalSteps);
+      skippedCountData.push(currentExecution.skippedCount);
       durationData.push(getDuration(currentExecution.endTime, currentExecution.startTime));
     }
 
@@ -186,6 +198,7 @@ let ExecutionChart = function (summary) {
     datasets.push({...dataSetJSON.fail, data: failCountData});
     datasets.push({...dataSetJSON.pass, data: passCountData});
     datasets.push({...dataSetJSON.total, data: totalData});
+    datasets.push({...dataSetJSON.skipped, data: skippedCountData});
     datasets.push({...dataSetJSON.duration, data: durationData});
 
     chartData.labels = labels;
