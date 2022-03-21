@@ -222,7 +222,7 @@ uploaded to designated cloud location and removed from local output directory.
    ![](image/UnderstandingProjectStructure_06.png)<br/>
    Output File:<br/>
    ![](image/UnderstandingProjectStructure_07.png)<br/><br/>
-4. <a name="summary"></a>Nexial also produces another output at the end of execution to provide summary level of 
+4. Nexial also produces another output at the end of execution to provide summary level of 
    execution report, a drill-down chart as well as extrapolation across test plans, 
    test scripts, iterations, scenarios, and activities:<br/>
    ![](image/UnderstandingProjectStructure_08.png)<br/><br/>
