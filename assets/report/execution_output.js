@@ -112,9 +112,9 @@ let ExecutionChart = function (summary) {
 
   let trace = [];
   let current = summary;
-  let heading = summary.name;
-  let chartDetails = getChartDetails(defaultLabel);
   let executionLevel = levelExecution;
+  let heading = [summary.name, executionLevel];
+  let chartDetails = getChartDetails(defaultLabel);
 
   this.initializeChart = function () {
     hideNavigationButtons();
@@ -163,7 +163,7 @@ let ExecutionChart = function (summary) {
         executionLevel = levelScript;
       }
 
-      heading = getHeading(trace);
+      heading = getHeading(trace, executionLevel);
       updateChart();
 
       showNavigationButtons();
@@ -217,7 +217,7 @@ let ExecutionChart = function (summary) {
     chartDetails.update();
   }
 
-  function getHeading(trace) {
+  function getHeading(trace, executionLevel) {
     if (trace.length > 0) {
       let headings = [summary.name];
       let executionElements = summary;
@@ -226,9 +226,9 @@ let ExecutionChart = function (summary) {
         executionElements = executionElements.nestedExecutions[trace[i]];
         headings.push(executionElements.name);
       }
-      return headings.join(' - ');
+      return [headings.join(' - '), executionLevel];
     }
-    return summary.name;
+    return [summary.name, 'PLAN'];
   }
 
   function hideNavigationButtons() {
@@ -245,7 +245,7 @@ let ExecutionChart = function (summary) {
 
   function resetChart() {
     executionLevel = levelExecution;
-    heading = summary.name;
+    heading = [summary.name, executionLevel];
     current = summary;
     chartDetails.data = getChartData(current, [defaultLabel]);
     chartDetails.options = getOptions(current);
@@ -273,7 +273,7 @@ let ExecutionChart = function (summary) {
     }
 
     trace.pop();
-    heading = getHeading(trace);
+    heading = getHeading(trace, executionLevel);
     updateChart();
     showNavigationButtons();
   }
@@ -330,7 +330,7 @@ let ExecutionChart = function (summary) {
             font:        {
               size: 12,
             },
-            color:       'rgba(80,80,80,0.65)',
+            color: 'rgba(80,80,80,0.65)',
           },
           grid:     {
             drawOnChartArea: false,
