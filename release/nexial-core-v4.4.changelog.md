@@ -19,6 +19,7 @@ comments: true
 - [FIXED] patched log4j vulnerability CVE-2022-23305, CVE-2022-23302, CVE-2022-23221, CVE-2021-42550, CVE-2021-4104, CVE-2019-17571
 - [FIXED] typos in error messages.
 - [FIXED] fixed erroneous library file found.
+- [FIXED] Windows batch (`.cmd`) files to properly handle `USER_HOME` that contains space.
 
 #### Improvements
 - added Nexial version to initial banner at the start of a Nexial execution
