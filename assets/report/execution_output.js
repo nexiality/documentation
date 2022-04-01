@@ -40,7 +40,7 @@ Chart.defaults.plugins.tooltip.boxPadding = 5;
 
 
 let ExecutionChart = function (summary) {
-  const defaultLabel = 'EXECUTION';
+  const defaultLabel = '';
   const levelExecution = 'EXECUTION';
   const levelScript = 'SCRIPT';
   const levelScenario = 'SCENARIO';
@@ -113,7 +113,8 @@ let ExecutionChart = function (summary) {
   let trace = [];
   let current = summary;
   let executionLevel = levelExecution;
-  let heading = [summary.name, executionLevel];
+  let heading = summary.name;
+  let subTitle = executionLevel;
   let chartDetails = getChartDetails(defaultLabel);
 
   this.initializeChart = function () {
@@ -163,9 +164,8 @@ let ExecutionChart = function (summary) {
         executionLevel = levelScript;
       }
 
-      heading = getHeading(trace, executionLevel);
+      heading = getHeading(trace);
       updateChart();
-
       showNavigationButtons();
     }
   }
@@ -217,7 +217,7 @@ let ExecutionChart = function (summary) {
     chartDetails.update();
   }
 
-  function getHeading(trace, executionLevel) {
+  function getHeading(trace) {
     if (trace.length > 0) {
       let headings = [summary.name];
       let executionElements = summary;
@@ -226,9 +226,10 @@ let ExecutionChart = function (summary) {
         executionElements = executionElements.nestedExecutions[trace[i]];
         headings.push(executionElements.name);
       }
-      return [headings.join(' - '), executionLevel];
+      return headings.join(' - ');
     }
-    return [summary.name, 'PLAN'];
+    executionLevel = 'PLAN';
+    return summary.name;
   }
 
   function hideNavigationButtons() {
@@ -245,7 +246,7 @@ let ExecutionChart = function (summary) {
 
   function resetChart() {
     executionLevel = levelExecution;
-    heading = [summary.name, executionLevel];
+    heading = summary.name;
     current = summary;
     chartDetails.data = getChartData(current, [defaultLabel]);
     chartDetails.options = getOptions(current);
@@ -273,7 +274,7 @@ let ExecutionChart = function (summary) {
     }
 
     trace.pop();
-    heading = getHeading(trace, executionLevel);
+    heading = getHeading(trace);
     updateChart();
     showNavigationButtons();
   }
@@ -353,7 +354,18 @@ let ExecutionChart = function (summary) {
             size:   18,
             weight: 'bold',
             color:  'rgba(50,50,50,0.95)',
-          },
+          }
+        },
+        subtitle: {
+          display: true,
+          text: executionLevel,
+          position: 'bottom',
+          align: 'center',
+          font: {
+            size:   20,
+            weight: 'bold',
+            color:  'rgba(50,50,50,0.95)',
+          }
         },
         legend:  {
           display:  true,
