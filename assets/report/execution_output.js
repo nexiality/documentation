@@ -158,7 +158,7 @@ let ExecutionChart = function (summary) {
       if (executionLevel !== levelExecution) {
         let currentIndex = points[0].index;
         current = current.nestedExecutions[currentIndex];
-        executionLevel = current.executionLevel;
+        executionLevel = current.nestedExecutions[0].executionLevel;
         trace.push(currentIndex);
       } else {
         executionLevel = levelScript;
@@ -228,7 +228,7 @@ let ExecutionChart = function (summary) {
       }
       return headings.join(' - ');
     }
-    executionLevel = 'PLAN';
+    executionLevel = 'SCRIPT';
     return summary.name;
   }
 
@@ -270,7 +270,7 @@ let ExecutionChart = function (summary) {
     current = summary;
     for (let i = 0; i < trace.length - 1; i++) {
       current = current.nestedExecutions[trace[i]];
-      executionLevel = current.executionLevel;
+      executionLevel = current.nestedExecutions[0].executionLevel;
     }
 
     trace.pop();
