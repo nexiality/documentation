@@ -230,6 +230,13 @@ table.execMeta {
   border:           1px outset rgba(200, 0, 0, 0.5);
 }
 
+.detail-exec .execValueSkipped {
+  color:            #d00 !important;
+  text-shadow:      1px 1px 4px #f88;
+  background-color: rgba(210, 210, 210, 0.25);
+  border:           1px outset rgba(230, 230, 230, 0.5);
+}
+
 .execLog {
   font-size: 14px;
   display:   inline-table;
