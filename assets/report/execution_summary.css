@@ -235,7 +235,7 @@ table.execMeta {
 .detail-exec .execValueSkipped {
   color:            rgb(80 80 80 / 75%) !important;
   background-color: rgb(141 134 134 / 50%);
-  border:           1px outset rgba(230, 230, 230, 0.5);
+  border:           1px outset rgba(0, 160, 0, 0.75);
 }
 
 .execLog {
