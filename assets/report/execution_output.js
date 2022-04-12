@@ -115,7 +115,7 @@ let ExecutionChart = function (summary) {
   let executionLevel = levelExecution;
   let heading = summary.name;
   let subTitle = executionLevel;
-  let chartDetails = getChartDetails(defaultLabel);
+  let chartDetails = getChartDetails();
 
   this.initializeChart = function () {
     hideNavigationButtons();
@@ -124,10 +124,10 @@ let ExecutionChart = function (summary) {
     document.getElementById('rollUpResultsChart').onclick = rollUp;
   };
 
-  function getChartDetails(label) {
+  function getChartDetails() {
     return new Chart(document.getElementById('resultsChart'), {
       type:    'bar',
-      data:    getChartData(summary, [label]),
+      data:    getChartData(summary, ['']),
       options: getOptions(summary),
     });
   }
@@ -228,7 +228,7 @@ let ExecutionChart = function (summary) {
       }
       return headings.join(' - ');
     }
-    executionLevel = 'SCRIPT';
+    executionLevel = levelScript;
     return summary.name;
   }
 
@@ -248,7 +248,7 @@ let ExecutionChart = function (summary) {
     executionLevel = levelExecution;
     heading = summary.name;
     current = summary;
-    chartDetails.data = getChartData(current, [defaultLabel]);
+    chartDetails.data = getChartData(current, ['']);
     chartDetails.options = getOptions(current);
     chartDetails.update();
     trace = [];
