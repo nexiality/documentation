@@ -31,6 +31,9 @@ comments: true
 - code refactoring to reduce duplication.
 - Execution Summary now enhanced with charts to aid in post-execution visualization.
   - added minor UI improvements.
+  - added drill down chart. 
+  - added Skip Count
+- Fixed step counting in dealing with skipped steps.
 
 
 ### [Batch Files](../userguide/BatchFiles)

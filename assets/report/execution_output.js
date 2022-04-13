@@ -40,7 +40,6 @@ Chart.defaults.plugins.tooltip.boxPadding = 5;
 
 
 let ExecutionChart = function (summary) {
-  const defaultLabel = '';
   const levelExecution = 'EXECUTION';
   const levelScript = 'SCRIPT';
   const levelScenario = 'SCENARIO';
