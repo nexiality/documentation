@@ -40,7 +40,7 @@ Chart.defaults.plugins.tooltip.boxPadding = 5;
 
 
 let ExecutionChart = function (summary) {
-  const defaultLabel = 'EXECUTION';
+  const defaultLabel = '';
   const levelExecution = 'EXECUTION';
   const levelScript = 'SCRIPT';
   const levelScenario = 'SCENARIO';
@@ -77,9 +77,9 @@ let ExecutionChart = function (summary) {
     },
     'total':          {
       'label':           'total',
-      'borderColor':     'rgba(120,120,120,0.8)',
-      'backgroundColor': 'rgba(0,0,0,0.80)',
-      'borderWidth':     2,
+      'borderColor':     'rgba(0,0,0,0.8)',
+      'backgroundColor': 'rgba(128,128,0)',
+      'borderWidth':     1,
       'tension':         0.3,
       'fill':            false,
       'yAxisID':         'y-axis-1',
@@ -99,13 +99,23 @@ let ExecutionChart = function (summary) {
       'yAxisID':          'y-axis-2',
       'type':             'line',
     },
+    'skipped': {
+       'label':           'skipped',
+       'borderColor':     'rgba(0,0,0,0.5)',
+       'backgroundColor': 'rgba(230,230,230)',
+       'borderWidth':     1,
+       'tension':         0.3,
+       'fill':            true,
+       'yAxisID':         'y-axis-1',
+    },
   };
 
   let trace = [];
   let current = summary;
-  let heading = summary.name;
-  let chartDetails = getChartDetails(defaultLabel);
   let executionLevel = levelExecution;
+  let heading = summary.name;
+  let subTitle = executionLevel;
+  let chartDetails = getChartDetails();
 
   this.initializeChart = function () {
     hideNavigationButtons();
@@ -114,10 +124,10 @@ let ExecutionChart = function (summary) {
     document.getElementById('rollUpResultsChart').onclick = rollUp;
   };
 
-  function getChartDetails(label) {
+  function getChartDetails() {
     return new Chart(document.getElementById('resultsChart'), {
       type:    'bar',
-      data:    getChartData(summary, [label]),
+      data:    getChartData(summary, ['']),
       options: getOptions(summary),
     });
   }
@@ -131,6 +141,7 @@ let ExecutionChart = function (summary) {
         {...dataSetJSON.pass, data: [obj.passCount]},
         {...dataSetJSON.total, data: [obj.totalSteps]},
         {...dataSetJSON.duration, data: [getDuration(obj.endTime, obj.startTime)]},
+        {...dataSetJSON.skipped, data: [obj.skippedCount]}
       ],
     };
   }
@@ -147,7 +158,7 @@ let ExecutionChart = function (summary) {
       if (executionLevel !== levelExecution) {
         let currentIndex = points[0].index;
         current = current.nestedExecutions[currentIndex];
-        executionLevel = current.executionLevel;
+        executionLevel = current.nestedExecutions[0].executionLevel;
         trace.push(currentIndex);
       } else {
         executionLevel = levelScript;
@@ -155,7 +166,6 @@ let ExecutionChart = function (summary) {
 
       heading = getHeading(trace);
       updateChart();
-
       showNavigationButtons();
     }
   }
@@ -170,6 +180,7 @@ let ExecutionChart = function (summary) {
     let totalData = [];
     let percentageData = [];
     let durationData = [];
+    let skippedCountData = [];
 
     for (let execution in current.nestedExecutions) {
       let currentExecution = current.nestedExecutions[execution];
@@ -179,6 +190,7 @@ let ExecutionChart = function (summary) {
       failCountData.push(currentExecution.failCount);
       passCountData.push(currentExecution.passCount);
       totalData.push(currentExecution.totalSteps);
+      skippedCountData.push(currentExecution.skippedCount);
       durationData.push(getDuration(currentExecution.endTime, currentExecution.startTime));
     }
 
@@ -186,6 +198,7 @@ let ExecutionChart = function (summary) {
     datasets.push({...dataSetJSON.fail, data: failCountData});
     datasets.push({...dataSetJSON.pass, data: passCountData});
     datasets.push({...dataSetJSON.total, data: totalData});
+    datasets.push({...dataSetJSON.skipped, data: skippedCountData});
     datasets.push({...dataSetJSON.duration, data: durationData});
 
     chartData.labels = labels;
@@ -215,6 +228,7 @@ let ExecutionChart = function (summary) {
       }
       return headings.join(' - ');
     }
+    executionLevel = levelScript;
     return summary.name;
   }
 
@@ -234,7 +248,7 @@ let ExecutionChart = function (summary) {
     executionLevel = levelExecution;
     heading = summary.name;
     current = summary;
-    chartDetails.data = getChartData(current, [defaultLabel]);
+    chartDetails.data = getChartData(current, ['']);
     chartDetails.options = getOptions(current);
     chartDetails.update();
     trace = [];
@@ -256,7 +270,7 @@ let ExecutionChart = function (summary) {
     current = summary;
     for (let i = 0; i < trace.length - 1; i++) {
       current = current.nestedExecutions[trace[i]];
-      executionLevel = current.executionLevel;
+      executionLevel = current.nestedExecutions[0].executionLevel;
     }
 
     trace.pop();
@@ -317,7 +331,7 @@ let ExecutionChart = function (summary) {
             font:        {
               size: 12,
             },
-            color:       'rgba(80,80,80,0.65)',
+            color: 'rgba(80,80,80,0.65)',
           },
           grid:     {
             drawOnChartArea: false,
@@ -340,7 +354,18 @@ let ExecutionChart = function (summary) {
             size:   18,
             weight: 'bold',
             color:  'rgba(50,50,50,0.95)',
-          },
+          }
+        },
+        subtitle: {
+          display: true,
+          text: executionLevel,
+          position: 'bottom',
+          align: 'center',
+          font: {
+            size:   20,
+            weight: 'bold',
+            color:  'rgba(50,50,50,0.95)',
+          }
         },
         legend:  {
           display:  true,

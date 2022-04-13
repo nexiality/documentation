@@ -223,11 +223,19 @@ table.execMeta {
 
 .detail-exec .execValueFail:hover { background-color: rgba(250, 200, 200, 0.75); }
 
+.detail-exec .execValueSkipped:hover { background-color: rgba(191, 191, 191, 0.4); }
+
 .detail-exec .execValueFail {
   color:            #d00 !important;
   text-shadow:      1px 1px 4px #f88;
   background-color: rgba(220, 0, 0, 0.25);
   border:           1px outset rgba(200, 0, 0, 0.5);
+}
+
+.detail-exec .execValueSkipped {
+  color:            rgb(80 80 80 / 75%) !important;
+  background-color: rgb(141 134 134 / 50%);
+  border:           1px outset rgba(0, 160, 0, 0.75);
 }
 
 .execLog {
