@@ -247,8 +247,8 @@ uploaded to designated cloud location and removed from local output directory.
    bar corresponding to the **total steps** or the point corresponding to **duration** to drill down further to the 
    next level.
   
-   User can drill down to the lower levels in the order **Execution** -> **Script** -> **Iteration** ->
-   **Scenario** -> **Activity** as shown in the below 
+   User can drill down to the lower levels in the order **Execution** > **Script** > **Iteration** >
+   **Scenario** > **Activity** as shown in the below 
    screenshots: <br/>
 
    ![](image/UnderstandingProjectStructure_drilldown_2.png)<br/>
