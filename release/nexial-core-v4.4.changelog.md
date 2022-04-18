@@ -79,7 +79,7 @@ comments: true
   - allow access to local files
   - allow for auth prompt when crossing site origin
   - enable input event handling by the window manager
-♥
+
 
 ### [webmail commands](../commands/webmail)
 
