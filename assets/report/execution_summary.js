@@ -197,3 +197,73 @@ function toggleWsDisplay(/*HTMLElement*/button) {
   setTimeout(function () { matches.slideDown(250); }, 50);
   $('.wsDetail').slideUp(20);
 }
+
+function dimHighlightIcon(ref, classToHighlight, classToDim){
+  const isShowing = $(ref).attr('nex-showing');
+  if(isShowing && isShowing == "true"){
+    $(ref).removeClass(classToHighlight);
+    $(ref).addClass(classToDim);
+    $(ref).attr('nex-showing', "false");
+  } else {
+    $(ref).removeClass(classToDim);
+    $(ref).addClass(classToHighlight);
+    $(ref).attr('nex-showing', "true");
+  }
+}
+
+function toggleStepErrors(ref){
+  const isShowing = $(ref).attr('nex-showing');
+  dimHighlightIcon(ref, "execution-error-icon-highlight", "execution-error-icon");
+  const target = $(ref.parentNode.parentNode.parentNode.parentNode).next();
+  const error = target.find("td > table > tbody > tr[is-step-error]");
+  for(let i = 0; i < error.length; i++) {
+    const isError = $(error[i]).attr('is-step-error')
+    if (isError && isError == "true") {
+      if(isShowing && isShowing == "true") {
+        $(error[i]).attr("showingError","false");
+      } else {
+         $(error[i]).attr("showingError","true");
+      }
+    }
+  }
+  refreshList(target);
+}
+
+function toggleStepFiles(ref){
+  const isShowing = $(ref).attr('nex-showing');
+  dimHighlightIcon(ref, "execution-screenshot-icon-highlight", "execution-error-icon");
+  const target = $(ref.parentNode.parentNode.parentNode.parentNode).next();
+  const links = target.find("td > table > tbody > tr > td > a")
+  if(isShowing && isShowing == "true"){
+  for(let i = 0; i < links.length; i++){
+    const row = $(links[i].parentNode.parentNode);
+      $(row).attr("showingFile","false");
+    }
+  } else {
+    for(let i = 0; i < links.length; i++){
+      const row = $(links[i].parentNode.parentNode);
+        $(row).attr("showingFile","true");
+    }
+  }
+  refreshList(target);
+}
+
+function refreshList(target){
+  const rows = target.find("td > table > tbody > tr");
+  let isAnyVisible = false;
+  for(let i = 0; i < rows.length; i++){
+    const isShowingFile = $(rows[i]).attr("showingFile");
+    const isShowingError = $(rows[i]).attr("showingError");
+    if( (isShowingFile && isShowingFile == "true") || (isShowingError && isShowingError == "true" ) ) {
+      $(rows[i]).show(250);
+      isAnyVisible = true;
+    } else {
+        $(rows[i]).hide(250);
+    }
+  }
+  if(isAnyVisible == true){
+    target.show(250);
+  } else {
+    target.hide(250);
+  }
+}

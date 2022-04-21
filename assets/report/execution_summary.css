@@ -1088,3 +1088,100 @@ button#hideLog {
   color:      rgba(80, 80, 80, 0.75);
   font-style: italic;
 }
+
+.fileLink {
+  text-decoration: underline !important;
+  color: rgb(16, 56, 147) !important;
+}
+
+a.fileLink:hover {
+  background-color:           rgba(50, 50, 50, 0.2) !important;
+  transition-duration:        0.5s;
+  transition-timing-function: linear;
+  box-shadow:                 0 0 15px rgb(10 10 10 / 75%);
+}
+
+.step-icon-grid {
+  display: grid;
+  grid-template-columns: 7fr 0.5fr 0.5fr;
+}
+
+.step-detail-row {
+  display:none;
+  padding:0px !important;
+}
+
+.step-detail-tr td {
+  vertical-align: top !important;
+  word-break: break-word;
+}
+
+.step-detail-tr a {
+  background: none !important;
+  padding: 0px 0px 0px 0px !important;
+}
+
+.step-detail-tr i {
+  font-size: large;
+}
+
+.step-table-col-width-5 {
+  width: 5%;
+}
+
+.step-table-col-width-45 {
+  width: 45%;
+}
+
+.execution-error-icon::before {
+  content: "\f119";
+  float: right;
+  color: grey;
+}
+
+.execution-screenshot-icon::before {
+  content: "\f030";
+  float: right;
+  color: grey;
+}
+
+
+.execution-error-icon-highlight::before {
+  content: "\f119";
+  float: right;
+  color: red;
+}
+
+.execution-screenshot-icon-highlight::before {
+  content: "\f030";
+  float: right;
+  color: blue;
+}
+
+.file-text-icon::before {
+  content: "\f15c";
+}
+
+.file-image-icon::before {
+  content: "\f1c5";
+}
+
+.file-csv-icon::before {
+  content: "\f6dd"
+}
+
+.file-pdf-icon::before {
+  content: "\f1c1"
+}
+
+.file-video-icon::before {
+  content: "\f1c8"
+}
+
+.file-excel-icon::before {
+  content: "\f1c3"
+}
+
+.file-alt-icon::before {
+  content: "\f15c"
+}
