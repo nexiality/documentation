@@ -33,6 +33,9 @@ comments: true
   - added minor UI improvements.
   - added drill down chart. 
   - added Skip Count
+  - improved visibility of test artifact links
+  - added screenshots generated for test steps during execution
+  - added errors with description for failed test steps
 - Fixed step counting in dealing with skipped steps.
 
 
