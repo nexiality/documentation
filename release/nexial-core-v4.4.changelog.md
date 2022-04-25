@@ -37,7 +37,7 @@ comments: true
   - added screenshots generated for test steps during execution
   - added errors with description for failed test steps
 - Fixed step counting in dealing with skipped steps.
-
+- Changed default behaviour to generate summary json files every execution by `nexial.generateReport=true` 
 
 ### [Batch Files](../userguide/BatchFiles)
 
@@ -97,3 +97,6 @@ comments: true
 - [ws &raquo; upload(url,body,fileParams,var)](../commands/ws/upload(url,body,fileParams,var)): support variable
   substitution in uploaded file. Use `nexial.ws.requestPayloadAsRaw` to control this behavior (`false` means activate 
   variable substitution).
+- [ws &raquo; post(url,body,var)](../commands/ws/post(url,body,var).md): support `(IGNORE)` content type 
+  while uploading files using multipart.
+- 
