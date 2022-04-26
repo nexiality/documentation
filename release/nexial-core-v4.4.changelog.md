@@ -37,9 +37,11 @@ comments: true
   - added screenshots generated for test steps during execution
   - added errors with description for failed test steps
 - Fixed step counting in dealing with skipped steps.
-- Changed default behaviour to generate summary json files every execution by `nexial.generateReport=true` 
 
-### [Batch Files](../userguide/BatchFiles)
+
+### [System Variables](../systemvars)
+- [`nexial.generateReport`](../systemvars/index.md#nexial.generateReport) - Changed default to true, meaning the 
+  JSON-based report will be generated (by default) after each execution.
 
 
 ### [Expression](../expression)

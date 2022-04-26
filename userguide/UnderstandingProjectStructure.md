@@ -150,7 +150,7 @@ the environment-specific `project.properties` file, such as `project.QA.properti
 `JAVA_OPT=-Dnexial.env=...` or `-override nexial.env=...` technique on command line to specific a different 
 `project.properties` via the following naming convention:
 
-`nexial.${nexial.env}.properties`
+`project.${nexial.env}.properties`
 
 For example,
 
