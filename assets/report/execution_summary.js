@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 function showSection(/*HTMLElement*/icon) {
   let sectionId = $(icon.parentNode).attr('target');
@@ -133,10 +133,10 @@ function toggleExpansion(/*HTMLElement*/icon) {
 }
 
 function copyToClipboard(data) {
-  let $temp = $("<input>");
-  $("body").append($temp);
+  let $temp = $('<input>');
+  $('body').append($temp);
   $temp.val(data).select();
-  document.execCommand("copy");
+  document.execCommand('copy');
   $temp.remove();
 }
 
@@ -179,18 +179,18 @@ function toggleWsDisplay(/*HTMLElement*/button) {
   let elem = $(button);
   elem.toggleClass('is-active');
 
-  let methodSelector = "";
-  $(".wsDetail-filter-method > .wsDetail-filter-button:not('.is-active')").text(
-    function (index, text) { methodSelector += ',.wsMethod-' + text; }
+  let methodSelector = '';
+  $('.wsDetail-filter-method > .wsDetail-filter-button:not(".is-active")').text(
+    function (index, text) { methodSelector += ',.wsMethod-' + text; },
   );
 
-  let returnSelector = "";
-  $(".wsDetail-filter-returnCode > .wsDetail-filter-button:not('.is-active')").text(
+  let returnSelector = '';
+  $('.wsDetail-filter-returnCode > .wsDetail-filter-button:not(".is-active")').text(
     function (index, text) {
       returnSelector += text.endsWith('xx') ?
                         ',[class*="returnCode-' + text.substring(0, 1) + '"]' :
                         ',.returnCode-' + text;
-    }
+    },
   );
 
   let matches = $(methodSelector.substr(1)).has(returnSelector.substr(1));
@@ -198,70 +198,75 @@ function toggleWsDisplay(/*HTMLElement*/button) {
   $('.wsDetail').slideUp(20);
 }
 
-function dimHighlightIcon(ref, classToHighlight, classToDim){
+function isNexShowing(ref) {
   const isShowing = $(ref).attr('nex-showing');
-  if(isShowing && isShowing == "true"){
-    $(ref).removeClass(classToHighlight);
-    $(ref).addClass(classToDim);
-    $(ref).attr('nex-showing', "false");
-  } else {
-    $(ref).removeClass(classToDim);
-    $(ref).addClass(classToHighlight);
-    $(ref).attr('nex-showing', "true");
-  }
+  return isShowing && isShowing == 'true';
 }
 
-function toggleStepErrors(ref){
-  const isShowing = $(ref).attr('nex-showing');
-  dimHighlightIcon(ref, "execution-error-icon-highlight", "execution-error-icon");
+function setNexShowing(elem, show) { elem.attr('nex-showing', show ? 'true' : 'false'); }
+
+function setShowError(elem, show) { elem.attr('showingError', show ? 'true' : 'false'); }
+
+function dimHighlightIcon(ref, classToHighlight, classToDim) {
+  const isShowing = isNexShowing(ref);
+  let elem = $(ref);
+  if (isShowing) {
+    elem.removeClass(classToHighlight);
+    elem.addClass(classToDim);
+  } else {
+    elem.removeClass(classToDim);
+    elem.addClass(classToHighlight);
+  }
+  setNexShowing(elem, !isShowing);
+}
+
+function toggleStepErrors(ref) {
+  const isShowing = isNexShowing(ref);
+  dimHighlightIcon(ref, 'execution-error-icon-highlight', 'execution-error-icon');
   const target = $(ref.parentNode.parentNode.parentNode.parentNode).next();
-  const error = target.find("td > table > tbody > tr[is-step-error]");
-  for(let i = 0; i < error.length; i++) {
-    const isError = $(error[i]).attr('is-step-error')
-    if (isError && isError == "true") {
-      if(isShowing && isShowing == "true") {
-        $(error[i]).attr("showingError","false");
-      } else {
-         $(error[i]).attr("showingError","true");
-      }
-    }
+  const error = target.find('td > table > tbody > tr[is-step-error]');
+  for (let i = 0; i < error.length; i++) {
+    let elem = $(error[i]);
+    const isError = (elem.attr('is-step-error') || 'false') === 'true';
+    setShowError(elem, !isError);
   }
   refreshList(target);
 }
 
-function toggleStepFiles(ref){
-  const isShowing = $(ref).attr('nex-showing');
-  dimHighlightIcon(ref, "execution-screenshot-icon-highlight", "execution-error-icon");
+function toggleStepFiles(ref) {
+  const isShowing = isNexShowing(ref);
+  dimHighlightIcon(ref, 'execution-screenshot-icon-highlight', 'execution-error-icon');
   const target = $(ref.parentNode.parentNode.parentNode.parentNode).next();
-  const links = target.find("td > table > tbody > tr > td > a")
-  if(isShowing && isShowing == "true"){
-  for(let i = 0; i < links.length; i++){
-    const row = $(links[i].parentNode.parentNode);
-      $(row).attr("showingFile","false");
-    }
-  } else {
-    for(let i = 0; i < links.length; i++){
+  const links = target.find('td > table > tbody > tr > td > a');
+  if (isShowing) {
+    for (let i = 0; i < links.length; i++) {
       const row = $(links[i].parentNode.parentNode);
-        $(row).attr("showingFile","true");
+      $(row).attr('showingFile', 'false');
+    }
+  } else {
+    for (let i = 0; i < links.length; i++) {
+      const row = $(links[i].parentNode.parentNode);
+      $(row).attr('showingFile', 'true');
     }
   }
   refreshList(target);
 }
 
-function refreshList(target){
-  const rows = target.find("td > table > tbody > tr");
+function refreshList(target) {
+  const rows = target.find('td > table > tbody > tr');
   let isAnyVisible = false;
-  for(let i = 0; i < rows.length; i++){
-    const isShowingFile = $(rows[i]).attr("showingFile");
-    const isShowingError = $(rows[i]).attr("showingError");
-    if( (isShowingFile && isShowingFile == "true") || (isShowingError && isShowingError == "true" ) ) {
+  for (let i = 0; i < rows.length; i++) {
+    const isShowingFile = $(rows[i]).attr('showingFile');
+    const isShowingError = $(rows[i]).attr('showingError');
+    if ((isShowingFile && isShowingFile == 'true') || (isShowingError && isShowingError == 'true')) {
       $(rows[i]).show(250);
       isAnyVisible = true;
     } else {
-        $(rows[i]).hide(250);
+      $(rows[i]).hide(250);
     }
   }
-  if(isAnyVisible == true){
+
+  if (isAnyVisible == true) {
     target.show(250);
   } else {
     target.hide(250);

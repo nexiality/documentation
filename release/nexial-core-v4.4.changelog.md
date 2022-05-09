@@ -37,7 +37,8 @@ comments: true
   - added screenshots generated for test steps during execution
   - added errors with description for failed test steps
 - Fixed step counting in dealing with skipped steps.
-
+- support Java 18
+- support newer version of gecko driver (firefox)
 
 ### [System Variables](../systemvars)
 - [`nexial.generateReport`](../systemvars/index.md#nexial.generateReport) - Changed default to true, meaning the 
@@ -87,6 +88,8 @@ comments: true
 
 
 ### [webmail commands](../commands/webmail)
+- [`search(var,profile,searchCriteria,duration)`](../commands/webmail/search(var,profile,searchCriteria,duration)): 
+  supports the initialization of a "temporary-mail" inbox when `duration` is set to `0`.
 
 
 ### [ws commands](../commands/ws)
