@@ -21,10 +21,7 @@ comments: true
 
 
 ### Download JDK
-- [Oracle Java SE Development Kit 16 Downloads](https://www.oracle.com/java/technologies/javase-jdk16-downloads.html)
-- [OpenJava 16 Release, GNU GPL v2](https://jdk.java.net/16/)
-- [Amazon Corretto 16 (OpenJDK)](https://docs.aws.amazon.com/corretto/latest/corretto-16-ug/downloads-list.html)
-- [AdoptOpenJDK OpenJDK 16](https://adoptopenjdk.net/?variant=openjdk16&jvmVariant=hotspot)
+{% include download_jdk.html %}
 
 
 ### CI-friendly Code Sample

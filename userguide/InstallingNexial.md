@@ -47,12 +47,7 @@ Check if Java is installed - **Java 1.8.0_151 or above required, and 64-bit Java
             </li>
             <li>
                To download Java, visit one of the following links:
-               <ul>
-                  <li><a href="https://www.oracle.com/java/technologies/downloads/" class="external-link" target="_nexial_link">latest version of Oracle Java</a></li>
-                  <li><a href="https://jdk.java.net/18/" class="external-link" target="_nexial_link">OpenJava 18</a></li>
-                  <li><a href="https://docs.aws.amazon.com/corretto/latest/corretto-18-ug/downloads-list.html" class="external-link" target="_nexial_link">Amazon Corretto Java 18</a></li>
-                  <li><a href="https://adoptium.net/temurin/releases" class="external-link" target="_nexial_link">Adoptium OpenJDK Java (latest)</a></li>
-               </ul>
+               {% include download_jdk.html %}
                Nexial is compatible with all these distributions of Java. Note that Oracle's distribution (first link) 
                comes with a commercial license for corporate use. All other distributions can be obtained free of 
                charge, and are actively used by many Nexialists.<br/>
@@ -87,12 +82,7 @@ Check if Java is installed - **Java 1.8.0_151 or above required, and 64-bit Java
             </li>
             <li>
                To download Java, visit one of the following links:
-               <ul>
-                  <li><a href="https://www.oracle.com/java/technologies/downloads/" class="external-link" target="_nexial_link">latest version of Oracle Java</a></li>
-                  <li><a href="https://jdk.java.net/18/" class="external-link" target="_nexial_link">OpenJava 18</a></li>
-                  <li><a href="https://docs.aws.amazon.com/corretto/latest/corretto-18-ug/downloads-list.html" class="external-link" target="_nexial_link">Amazon Corretto Java 18</a></li>
-                  <li><a href="https://adoptium.net/temurin/releases" class="external-link" target="_nexial_link">Adoptium OpenJDK Java (latest)</a></li>
-               </ul>
+               {% include download_jdk.html %}
                Nexial is compatible with all these distributions of Java. Note that Oracle's distribution (first link) 
                comes with a commercial license for corporate use. All other distributions can be obtained free of 
                charge, and are actively used by many Nexialists.<br/>
