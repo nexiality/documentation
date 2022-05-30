@@ -74,6 +74,7 @@ comments: true
 
 
 ### [rdbms commands](../commands/rdbms)
+- clear off cache RDBMS metadata and connections between script execution to avoid incorrect DB authentication.
 
 
 ### [web commands](../commands/web)
