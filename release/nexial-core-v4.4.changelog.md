@@ -91,6 +91,8 @@ comments: true
 - [`search(var,profile,searchCriteria,duration)`](../commands/webmail/search(var,profile,searchCriteria,duration)): 
   supports the initialization of a "temporary-mail" inbox when `duration` is set to `0`.
 - improved email content parsing logic for Mailinator emails.
+- avoid closing browser, and thus the underlying driver, after scanning for incoming emails.
+
 
 ### [ws commands](../commands/ws)
 - [ws &raquo; upload(url,body,fileParams,var)](../commands/ws/upload(url,body,fileParams,var)): enforces that multi-file 
