@@ -30,7 +30,7 @@ function turnOff(/*HTMLElement*/icon, /*String?*/classes) {
   return $(icon);
 }
 
-let toggleOptions = {duration: 100, easing: 'linear'};
+let toggleOptions = { duration: 100, easing: 'linear' };
 
 function toggleShowHide(icon, selectors) {
   if (!icon || !selectors) { return; }
@@ -144,10 +144,10 @@ function scrollToElement(/*String*/selector) {
   let scrollTime = 800;
   let target = $(selector);
   if (target) {
-    $([document.documentElement, document.body]).animate({scrollTop: target.offset().top}, scrollTime);
+    $([document.documentElement, document.body]).animate({ scrollTop: target.offset().top }, scrollTime);
     setTimeout(function () {
       target.fadeOut(100).fadeIn(scrollTime / 2)
-            .fadeOut(100).fadeIn(scrollTime / 2);
+        .fadeOut(100).fadeIn(scrollTime / 2);
     }, scrollTime);
   }
 }
@@ -175,25 +175,137 @@ function hideLog() {
   }
 }
 
-function toggleWsDisplay(/*HTMLElement*/button) {
+function toggleReturnCodeGroup(/*HTMLElement*/button) {
   let elem = $(button);
   elem.toggleClass('is-active');
-
-  let methodSelector = "";
-  $(".wsDetail-filter-method > .wsDetail-filter-button:not('.is-active')").text(
-    function (index, text) { methodSelector += ',.wsMethod-' + text; }
-  );
-
-  let returnSelector = "";
-  $(".wsDetail-filter-returnCode > .wsDetail-filter-button:not('.is-active')").text(
+  let isElementActive = (elem[0].classList.value.toLowerCase().indexOf('is-active') > -1);
+  let elementList = $('.' + elem[0].textContent.toLowerCase());
+  elementList.text(
     function (index, text) {
-      returnSelector += text.endsWith('xx') ?
-                        ',[class*="returnCode-' + text.substring(0, 1) + '"]' :
-                        ',.returnCode-' + text;
+      if (isElementActive) {
+        $(elementList[index]).addClass('is-active');
+        document.getElementById("selected-" + elem[0].textContent.toLowerCase()).value = "";
+      }
+      else {
+        $(elementList[index]).removeClass('is-active');
+        document.getElementById("selected-" + elem[0].textContent.toLowerCase()).value = "All";
+      }
     }
   );
+  const method = methodSelector();
+  const returnValue = returnSelector();
+  matches(method.selector, returnValue.selector);
+}
 
-  let matches = $(methodSelector.substr(1)).has(returnSelector.substr(1));
+function methodSelector() {
+  let method = { selector: '', value: '' };
+  $(".wsDetail-filter-method > .wsDetail-filter-button:not('.is-active')").text(
+    function (index, text) {
+      method.selector += ',.wsMethod-' + text;
+      method.value += text + ',';
+    }
+  );
+  return method;
+}
+
+function returnSelector() {
+  let returnValue = { selector: '', value: '' };
+  $(".wsDetail-filter-returnCode > .wsDetail-filter-button:not('.is-active')").text(
+    function (index, text) {
+      returnValue.selector += text.endsWith('xx') ?
+        ',[class*="returnCode-' + text.substring(0, 1) + '"]' :
+        ',.returnCode-' + text;
+      returnValue.value += text + ',';
+    }
+  );
+  return returnValue;
+}
+
+function matches(method, returnValue) {
+  let matches = $(method.substr(1)).has(returnValue.substr(1));
   setTimeout(function () { matches.slideDown(250); }, 50);
   $('.wsDetail').slideUp(20);
+}
+
+function selectAll(/*HTMLElement*/button) {
+  let elem = $(button)
+  let methodSelector = "";
+  let returnSelector = "";
+  $(".wsDetail-filter-method > .wsDetail-filter-button").text(function (index, text) { methodSelector += ',.wsMethod-' + text; });
+  $(".wsDetail-filter-returnCode > .wsDetail-filter-button").text(
+    function (index, text) {
+      returnSelector += text.endsWith('xx') ?
+        ',[class*="returnCode-' + text.substring(0, 1) + '"]' :
+        ',.returnCode-' + text;
+    });
+  matches(methodSelector, returnSelector);
+  let dropDownButtons = document.getElementsByClassName('dropbtn');
+  for (let dropDownButton = 0; dropDownButton < dropDownButtons.length; dropDownButton++) {
+    if (dropDownButtons[dropDownButton].classList.value) {
+      dropDownButtons[dropDownButton].classList.remove('is-active');
+      let filterButtons = document.getElementsByClassName('wsDetail-filter-button')
+      for (let filterButton = 0; filterButton < filterButtons.length; filterButton++) {
+        filterButtons[filterButton].classList.remove('is-active');
+      }
+    }
+  }
+  document.getElementById("methodName").value = "All";
+  document.getElementById("selected-2xx").value = "All";
+  document.getElementById("selected-3xx").value = "All";
+  document.getElementById("selected-4xx").value = "All";
+  document.getElementById("selected-5xx").value = "All";
+}
+
+function clearAll() {
+  let methodSelector = "";
+  let returnSelector = "";
+  let dropDownButtons = document.getElementsByClassName('dropbtn');
+  for (let dropDownButton = 0; dropDownButton < dropDownButtons.length; dropDownButton++) {
+    if (dropDownButtons[dropDownButton].classList.value) {
+      dropDownButtons[dropDownButton].classList.add('is-active');
+      let filterButtons = document.getElementsByClassName('wsDetail-filter-button')
+      for (let filterButton = 0; filterButton < filterButtons.length; filterButton++) {
+        filterButtons[filterButton].classList.add('is-active');
+      }
+    }
+  }
+  matches(methodSelector, returnSelector);
+  document.getElementById("methodName").value = '';
+  document.getElementById("selected-2xx").value = "";
+  document.getElementById("selected-3xx").value = "";
+  document.getElementById("selected-4xx").value = "";
+  document.getElementById("selected-5xx").value = "";
+}
+
+function toggleWsDisplay(/*HTMLElement*/button) {
+  let arr = [];
+  let elem = $(button);
+  elem.toggleClass('is-active');
+  const method = methodSelector();
+  const returnValue = returnSelector();
+  matches(method.selector, returnValue.selector);
+  let value = '';
+  for (let i = 0; i < elem[0].classList.length; i++) {
+    if (elem[0].classList[i].indexOf('xx') > -1) {
+      value = elem[0].classList[i];
+      if (elem[0].classList.value.toLowerCase().indexOf('is-active') > -1) {
+        document.getElementsByClassName('dropbtn-' + elem[0].classList[i])[0].classList.add('is-active');
+      }
+    }
+    if (elem[0].classList[i] == 'method-' + elem[0].innerText) {
+      value = 'method-dropBTN';
+    }
+  }
+  let dropLength = document.getElementsByClassName(value).length
+  for (let i = 0; i < dropLength; i++) {
+    if (document.getElementsByClassName(value)[i].classList.value.toLowerCase().indexOf('is-active') <= -1)
+      arr.push(document.getElementsByClassName(value)[i].innerText);
+  }
+  if (value.indexOf('method') <= 0 && dropLength == arr.length ) {
+    document.getElementById("methodName").value = "All";
+  }
+  else if (value.indexOf('method') <= 0) {
+    document.getElementById("methodName").value = arr.toString();
+  }
+ 
 }
