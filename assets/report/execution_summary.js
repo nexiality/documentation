@@ -301,11 +301,24 @@ function toggleWsDisplay(/*HTMLElement*/button) {
     if (document.getElementsByClassName(value)[i].classList.value.toLowerCase().indexOf('is-active') <= -1)
       arr.push(document.getElementsByClassName(value)[i].innerText);
   }
-  if (value.indexOf('method') <= 0 && dropLength == arr.length ) {
-    document.getElementById("methodName").value = "All";
+  if (value.indexOf('method') < 0 && dropLength == arr.length && document.getElementsByClassName('dropbtn-' + value).length == 1) {
+    document.getElementsByClassName('dropbtn-' + value)[0].classList.remove('is-active');
+    document.getElementById("selected-" + value).value = "All";
   }
-  else if (value.indexOf('method') <= 0) {
-    document.getElementById("methodName").value = arr.toString();
+  else if (value.indexOf('method') < 0) {
+    document.getElementById("selected-" + value).value = arr.toString();
   }
- 
+  else {
+    for (let j = 0; j < 5; j++) {
+      if (document.getElementsByClassName('method')[j].classList.value.toLowerCase().indexOf('is-active') <= -1)
+        arr.push(document.getElementsByClassName('method')[j].innerText);
+    }
+    if (arr.length == document.getElementsByClassName('method').length) {
+      document.getElementById("methodName").value = "All";
+    }
+    else {
+      document.getElementById("methodName").value = arr.toString();
+    }
+  }
+
 }
