@@ -10,7 +10,7 @@ comments: true
   frameborder="0" style="margin-bottom:20px" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 - [Watch it on Youtube](https://www.youtube.com/watch?v=n_EBXE7sWJ4)
 - The latest Java is version 16 (see below for download links)
-- The latest version of Nexial Installer is [v1.4.5](https://github.com/nexiality/nexial-installer/releases/tag/nexial-installer-v1.4.5)
+- The latest version of Nexial Installer is [v1.4.6](https://github.com/nexiality/nexial-installer/releases/tag/nexial-installer-v1.4.6)
 
 -----
 
@@ -32,7 +32,7 @@ comments: true
 #!/bin/sh
 
 NEXIAL_INSTALLER_HOME=~/projects/nexial-installer
-NEXIAL_INSTALLER_DISTRO=https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.5/nexial-installer-1.4.5.zip
+NEXIAL_INSTALLER_DISTRO=https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.6/nexial-installer-1.4.6.zip
 
 # download installer
 rm -f "$TMPDIR/nexial-installer.zip"
@@ -80,7 +80,7 @@ fi
 @echo off
 
 set NEXIAL_INSTALLER_HOME=C:\projects\nexial-installer
-set NEXIAL_INSTALLER_DISTRO=https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.5/nexial-installer-1.4.5.zip
+set NEXIAL_INSTALLER_DISTRO=https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.6/nexial-installer-1.4.6.zip
 
 :download-installer
 	del /f /q %TEMP%\nexial-installer.zip
