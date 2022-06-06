@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 function showSection(/*HTMLElement*/icon) {
   let sectionId = $(icon.parentNode).attr('target');
@@ -133,10 +133,10 @@ function toggleExpansion(/*HTMLElement*/icon) {
 }
 
 function copyToClipboard(data) {
-  let $temp = $("<input>");
-  $("body").append($temp);
+  let $temp = $('<input>');
+  $('body').append($temp);
   $temp.val(data).select();
-  document.execCommand("copy");
+  document.execCommand('copy');
   $temp.remove();
 }
 
@@ -321,4 +321,78 @@ function toggleWsDisplay(/*HTMLElement*/button) {
     }
   }
 
+}
+function isNexShowing(ref) {
+  const isShowing = $(ref).attr('nex-showing');
+  return isShowing && isShowing == 'true';
+}
+
+function setNexShowing(elem, show) { elem.attr('nex-showing', show ? 'true' : 'false'); }
+
+function setShowError(elem, show) { elem.attr('showingError', show ? 'true' : 'false'); }
+
+function dimHighlightIcon(ref, classToHighlight, classToDim) {
+  const isShowing = isNexShowing(ref);
+  let elem = $(ref);
+  if (isShowing) {
+    elem.removeClass(classToHighlight);
+    elem.addClass(classToDim);
+  } else {
+    elem.removeClass(classToDim);
+    elem.addClass(classToHighlight);
+  }
+  setNexShowing(elem, !isShowing);
+}
+
+function toggleStepErrors(ref) {
+  const isShowing = isNexShowing(ref);
+  dimHighlightIcon(ref, 'execution-error-icon-highlight', 'execution-error-icon');
+  const target = $(ref.parentNode.parentNode.parentNode.parentNode).next();
+  const error = target.find('td > table > tbody > tr[is-step-error]');
+  for (let i = 0; i < error.length; i++) {
+    let elem = $(error[i]);
+    const isError = (elem.attr('is-step-error') || 'false') === 'true';
+    setShowError(elem, !isError);
+  }
+  refreshList(target);
+}
+
+function toggleStepFiles(ref) {
+  const isShowing = isNexShowing(ref);
+  dimHighlightIcon(ref, 'execution-screenshot-icon-highlight', 'execution-error-icon');
+  const target = $(ref.parentNode.parentNode.parentNode.parentNode).next();
+  const links = target.find('td > table > tbody > tr > td > a');
+  if (isShowing) {
+    for (let i = 0; i < links.length; i++) {
+      const row = $(links[i].parentNode.parentNode);
+      $(row).attr('showingFile', 'false');
+    }
+  } else {
+    for (let i = 0; i < links.length; i++) {
+      const row = $(links[i].parentNode.parentNode);
+      $(row).attr('showingFile', 'true');
+    }
+  }
+  refreshList(target);
+}
+
+function refreshList(target) {
+  const rows = target.find('td > table > tbody > tr');
+  let isAnyVisible = false;
+  for (let i = 0; i < rows.length; i++) {
+    const isShowingFile = $(rows[i]).attr('showingFile');
+    const isShowingError = $(rows[i]).attr('showingError');
+    if ((isShowingFile && isShowingFile == 'true') || (isShowingError && isShowingError == 'true')) {
+      $(rows[i]).show(250);
+      isAnyVisible = true;
+    } else {
+      $(rows[i]).hide(250);
+    }
+  }
+
+  if (isAnyVisible == true) {
+    target.show(250);
+  } else {
+    target.hide(250);
+  }
 }
