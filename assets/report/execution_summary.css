@@ -1,49 +1,84 @@
+:root {
+  /* work in progress, a lot more to refactor still... */
+  --body-font:                     10pt "Trebuchet MS", sans-serif;
+
+  --link-color:                    rgba(50, 100, 60, 1);
+  --link-background:               rgba(50, 100, 60, 0.1) url(https://nexiality.github.io/documentation/image/link.png) no-repeat 2px 2px;
+  --link-padding:                  2px 5px 3px 22px;
+  --link-border-radious:           5px;
+  --link-hover-color:              rgba(50, 245, 60, 1);
+  --link-hover-background:         rgba(50, 50, 50, 0.7);
+
+  --title-font:                    bold 14pt "Tahoma", serif;
+  --title-background:              rgba(228, 227, 201, 1);
+  --title-color:                   rgba(64, 62, 13, 1);
+  --title-shadow:                  0 0 10px rgba(88, 77, 61, 0.75);
+  --title-border:                  2px solid rgba(37, 114, 71, 1);
+  --title-text-shadow:             2px 2px 5px rgba(0, 0, 0, 0.25);
+
+  --control-base-color:            rgba(100, 100, 100, 1);
+  --control-font:                  Thonburi, sans-serif;
+  --control-off-color:             rgba(100, 100, 100, 0.75);
+  --control-on-color:              rgba(40, 150, 40, 1);
+  --control-on-border-color:       rgba(50, 180, 50, 1);
+  --control-hover-background:      rgba(40, 40, 40, 0.1);
+  --control-hover-shadow:          rgba(40, 40, 40, 0.5);
+  --control-hover-text-shadow:     #fff;
+  --control-failure-on-color:      rgba(150, 40, 40, 1);
+  --control-expand-all:            rgba(80, 80, 80, 1);
+  --control-showhide-hover-shadow: 0 0 3px rgb(225 225 225);
+
+  --summary-header-background:     rgba(150, 160, 171, 0.75);
+
+  --section-border:                1px solid rgba(50, 50, 50, 0.35);
+  --section-icon-background:       rgba(100, 100, 100, 0.1);
+  --section-icon-color:            rgba(100, 100, 100, 0.5);
+
+}
+
 body {
-  font-family:      "Trebuchet MS", sans-serif;
-  font-size:        10pt;
+  font:             var(--body-font);
   margin:           0;
   background-color: transparent;
   padding:          25px;
 }
 
 a {
-  color:           rgba(50, 100, 60, 1);
+  color:           var(--link-color);
   font-weight:     bold;
   text-decoration: none;
-  background:      rgba(50, 100, 60, 0.1) url(https://nexiality.github.io/documentation/image/link.png) no-repeat 2px 2px;
-  padding:         2px 5px 3px 22px;
-  border-radius:   5px;
+  background:      var(--link-background);
+  padding:         var(--link-padding);
+  border-radius:   var(--link-border-radious);
 }
 
 a:visited {
-  color: rgba(50, 100, 60, 1);
+  color: var(--link-color);
 }
 
 a:hover {
-  color:            rgba(50, 245, 60, 1);
-  background-color: rgba(50, 50, 50, 0.7);
+  color:            var(--link-hover-color);
+  background-color: var(--link-hover-background);
 }
 
 .title {
-  font-size:        14pt;
-  font-family:      Tahoma, serif;
-  font-weight:      bold;
-  background-color: rgba(228, 227, 201, 1);
-  color:            rgba(64, 62, 13, 1);
-  box-shadow:       0 0 10px rgba(88, 77, 61, 0.75);
-  border:           2px solid rgba(37, 114, 71, 1);
+  font:             var(--title-font);
+  background-color: var(--title-background);
+  color:            var(--title-color);
+  box-shadow:       var(--title-shadow);
+  border:           var(--title-border);
   vertical-align:   middle;
   padding:          15px;
 }
 
 .title span {
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+  text-shadow: var(--title-text-shadow);
 }
 
 .result-controls {
   margin:      3px 0 15px 0;
   padding:     5px 0 10px 10px;
-  color:       rgba(100, 100, 100, 1);
+  color:       var(--control-base-color);
   float:       right;
   user-select: none;
   clear:       both;
@@ -58,43 +93,43 @@ a:hover {
 
 .result-controls i span {
   padding-left: 3px;
-  font-family:  Thonburi, sans-serif;
+  font-family:  var(--control-font);
 }
 
 .result-controls i.off {
-  color:         rgba(100, 100, 100, 0.75);
-  border-bottom: 2px solid rgba(100, 100, 100, 0.75);
+  color:         var(--control-off-color);
+  border-bottom: 2px solid var(--control-off-color);
 }
 
 .result-controls i.on {
-  color:         rgba(40, 150, 40, 1);
-  border-bottom: 2px solid rgba(50, 180, 50, 1);
+  color:         var(--control-on-color);
+  border-bottom: 2px solid var(--control-on-border-color);
 }
 
 .result-controls i:hover {
-  text-shadow:      1px 1px 4px #fff;
-  background-color: rgba(40, 40, 40, 0.1);
-  box-shadow:       0 -1px 4px rgba(40, 40, 40, 0.5);
+  text-shadow:      1px 1px 4px var(--control-hover-text-shadow);
+  background-color: var(--control-hover-background);
+  box-shadow:       0 -1px 4px var(--control-hover-shadow);
 }
 
 .result-controls i.fa-exclamation-circle.off {
-  color:         rgba(100, 100, 100, 0.75);
-  border-bottom: 2px solid rgba(100, 100, 100, 0.75);
+  color:         var(--control-off-color);
+  border-bottom: 2px solid var(--control-off-color);
 }
 
 .result-controls i.fa-exclamation-circle.on {
-  color:         rgba(150, 40, 40, 1);
-  border-bottom: 2px solid rgba(150, 40, 40, 1);
+  color:         var(--control-failure-on-color);
+  border-bottom: 2px solid var(--control-failure-on-color);
 }
 
 .result-controls i.fa-expand {
-  color:         rgba(80, 80, 80, 1);
-  border-bottom: 2px solid rgba(80, 80, 80, 1);
+  color:         var(--control-expand-all);
+  border-bottom: 2px solid var(--control-expand-all);
 }
 
 .result-controls i.fa-compress {
-  color:         rgba(100, 100, 100, 0.75);
-  border-bottom: 2px solid rgba(100, 100, 100, 0.75);
+  color:         var(--control-off-color);
+  border-bottom: 2px solid var(--control-off-color);
 }
 
 .showhide {
@@ -106,7 +141,7 @@ a:hover {
   padding:                    4px 3px;
   border-top-right-radius:    10px;
   border-bottom-right-radius: 10px;
-  background-color:           rgba(150, 160, 171, 0.75);
+  background-color:           var(--summary-header-background);
   box-shadow:                 0 0 1px #333;
 }
 
@@ -115,13 +150,13 @@ a:hover {
   cursor:  pointer;
 }
 
-.showhide i:hover { text-shadow: 0 0 15px rgba(255, 255, 255, 1); }
+.showhide i:hover {text-shadow: var(--control-showhide-hover-shadow); }
 
 .canHide {
   padding:       10px;
   margin:        25px 0 15px 0;
   min-height:    8px;
-  border:        1px solid rgba(50, 50, 50, 0.35);
+  border:        var(--section-border);
   border-radius: 10px;
 }
 
@@ -132,7 +167,7 @@ div.execMeta {
 }
 
 table.execMeta {
-  font-size:    10pt; font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  /* font:    10pt "Trebuchet MS", Arial, Helvetica, sans-serif; */
   table-layout: fixed;
 }
 
@@ -149,8 +184,8 @@ table.execMeta {
 
 .section-header .fas {
   font-size:     15pt;
-  color:         rgba(100, 100, 100, 0.5);
-  background:    rgba(100, 100, 100, 0.1);
+  color:         var(--section-icon-color);
+  background:    var(--section-icon-background);
   padding:       10px;
   border-radius: 5px;
   cursor:        default;
@@ -334,8 +369,8 @@ table.execMeta {
   clear:                      both;
   width:                      max-content;
   min-width:                  100%;
-  margin-right:               5px;
-  background-color:           rgba(150, 160, 171, 0.75);
+  /* margin-right: 10px; */
+  background-color:           var(--summary-header-background);
   border-top-left-radius:     10px;
   border-top-right-radius:    10px;
   border-bottom-right-radius: 10px;
@@ -367,7 +402,7 @@ table.execMeta {
 
 .exec-summary .planStep {
   padding:                   0 !important;
-  margin:                    0 5px 0 0;
+  margin:                    0;
   border-top-left-radius:    0;
   border-bottom-left-radius: 0;
 }
@@ -760,13 +795,13 @@ a.top-link .fa-chevron-up {
 }
 
 .wsLogs .meta-value {
-  padding: 2px 8px 2px 4px;
-  margin: 0 10px 0 -3px;
-  font-weight: bold;
-  background: rgba(220, 240, 255, 0.85);
-  color: rgba(40, 50, 70, 0.85);
+  padding:       2px 8px 2px 4px;
+  margin:        0 10px 0 -3px;
+  font-weight:   bold;
+  background:    rgba(220, 240, 255, 0.85);
+  color:         rgba(40, 50, 70, 0.85);
   border-radius: 0 10px 10px 0;
-  width: 150px;
+  width:         150px;
 }
 
 #wsSummaryTable_wrapper {
@@ -805,10 +840,10 @@ a.top-link .fa-chevron-up {
 }
 
 .wsDetail-filter-method {
-  border: 1px outset rgba(70, 70, 70, 0.35);
-  border-left: none;
+  border:       1px outset rgba(70, 70, 70, 0.35);
+  border-left:  none;
   border-right: none;
-  background: linear-gradient(180deg, rgba(70, 70, 70, 0.35) 2px, transparent 12px, transparent 25px, rgba(70, 70, 70, 0.35));
+  background:   linear-gradient(180deg, rgba(70, 70, 70, 0.35) 2px, transparent 12px, transparent 25px, rgba(70, 70, 70, 0.35));
 }
 
 .wsDetail-filter-returnCode {
@@ -817,20 +852,20 @@ a.top-link .fa-chevron-up {
 }
 
 .wsDetail-filter-button {
-  background: none;
-  padding: 5px 8px;
-  border: 1px outset rgba(100, 100, 100, 0.75);
-  font-size: 8pt !important;
+  background:  none;
+  padding:     5px 8px;
+  border:      1px outset rgba(100, 100, 100, 0.75);
+  font-size:   8pt !important;
   font-family: "Trebuchet MS", sans-serif;
   font-weight: bold;
-  color: rgba(235, 235, 235, 0.85) !important;
-  cursor: pointer;
+  color:       rgba(235, 235, 235, 0.85) !important;
+  cursor:      pointer;
   user-select: none;
-  display: inline-block;
-  text-align: center;
-  box-shadow: none !important;
-  height: auto !important;
-  width: 82px;
+  display:     inline-block;
+  text-align:  center;
+  box-shadow:  none !important;
+  height:      auto !important;
+  width:       82px;
 }
 
 .wsDetail-filter .is-active {
@@ -1034,47 +1069,47 @@ button#hideLog {
 }
 
 .dropbtn {
-  width: 95px;
-  color: white;
-  padding: 5px;
-  font-size: 12px;
-  text-align: center;
-  box-shadow: none !important;
-  height: auto !important;
-  font-weight: bold;
-  text-shadow: 0 0 5px #000 !important;
+  width:         95px;
+  color:         white;
+  padding:       5px;
+  font-size:     12px;
+  text-align:    center;
+  box-shadow:    none !important;
+  height:        auto !important;
+  font-weight:   bold;
+  text-shadow:   0 0 5px #000 !important;
   border-radius: 25px;
-  cursor: pointer;
-  user-select: none;
-  display: inline-block;
-  margin: 0 5px 0 0;
-  background: none;
-  border: 1px outset rgba(100, 100, 100, 0.75);
+  cursor:        pointer;
+  user-select:   none;
+  display:       inline-block;
+  margin:        0 5px 0 0;
+  background:    none;
+  border:        1px outset rgba(100, 100, 100, 0.75);
 }
 
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
+  background-color: #2980b9;
 }
 
 .dropdown {
   position: relative;
-  display: inline-block;
+  display:  inline-block;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
+  display:          none;
+  position:         absolute;
   background-color: #f1f1f1;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  overflow:         auto;
+  box-shadow:       0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index:          1;
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
+  color:           black;
+  padding:         12px 16px;
   text-decoration: none;
-  display: block;
+  display:         block;
 }
 
 .dropdown:hover .dropdown-content {
@@ -1111,7 +1146,7 @@ button#hideLog {
 }
 
 .dropbtn-method {
-  background-color: #2980B9 !important;
+  background-color: #2980b9 !important;
 }
 
 .selectAll {
@@ -1123,7 +1158,7 @@ button#hideLog {
 }
 
 .filter-selected {
-  padding: 10px;
+  padding:     10px;
   font-family: monospace;
 }
 
@@ -1182,7 +1217,7 @@ button#hideLog {
 
 .fileLink {
   text-decoration: underline !important;
-  color: rgb(16, 56, 147) !important;
+  color:           rgb(16, 56, 147) !important;
 }
 
 a.fileLink:hover {
@@ -1193,23 +1228,23 @@ a.fileLink:hover {
 }
 
 .step-icon-grid {
-  display: grid;
+  display:               grid;
   grid-template-columns: 7fr 0.5fr 0.5fr;
 }
 
 .step-detail-row {
-  display:none;
-  padding:0px !important;
+  display: none;
+  padding: 0 !important;
 }
 
 .step-detail-tr td {
   vertical-align: top !important;
-  word-break: break-word;
+  word-break:     break-word;
 }
 
 .step-detail-tr a {
   background: none !important;
-  padding: 0px 0px 0px 0px !important;
+  padding:    0 !important;
 }
 
 .step-detail-tr i {
@@ -1226,27 +1261,27 @@ a.fileLink:hover {
 
 .execution-error-icon::before {
   content: "\f119";
-  float: right;
-  color: grey;
+  float:   right;
+  color:   grey;
 }
 
 .execution-screenshot-icon::before {
   content: "\f030";
-  float: right;
-  color: grey;
+  float:   right;
+  color:   grey;
 }
 
 
 .execution-error-icon-highlight::before {
   content: "\f119";
-  float: right;
-  color: red;
+  float:   right;
+  color:   #c44;
 }
 
 .execution-screenshot-icon-highlight::before {
   content: "\f030";
-  float: right;
-  color: blue;
+  float:   right;
+  color:   #45b;
 }
 
 .file-text-icon::before {
@@ -1258,21 +1293,21 @@ a.fileLink:hover {
 }
 
 .file-csv-icon::before {
-  content: "\f6dd"
+  content: "\f6dd";
 }
 
 .file-pdf-icon::before {
-  content: "\f1c1"
+  content: "\f1c1";
 }
 
 .file-video-icon::before {
-  content: "\f1c8"
+  content: "\f1c8";
 }
 
 .file-excel-icon::before {
-  content: "\f1c3"
+  content: "\f1c3";
 }
 
 .file-alt-icon::before {
-  content: "\f15c"
+  content: "\f15c";
 }

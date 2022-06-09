@@ -18,6 +18,17 @@ will retrieve the available email of the configured inbox based on 2 criterion:
 For all the emails matching the above two criterion, their corresponding "email id" will be added to `var`. One can 
 subsequently [retrieve the email content](read(var,profile,id)) or [delete it](delete(profile,id)) via such "email id".
 
+#### Special Usage for `Temporary-Mail`
+For those using [temporary-mail](index.html#temporary-mail) as the WebMail provider, note that new temporary-mail 
+inbox needs to be "initialized" before it can receive emails. To perform such initialization, simply invoke this command 
+with the `duration` parameter set to `0`. Nexial will initialize the target inbox so that it is ready to receiving 
+incoming emails. Below is the recommended sequence of automation when using temporary-mail as the WebMail provider:
+
+1. invoke `webmail` &raquo; `search(var,profile,searchCriteria,duration)`, setting `duration` to 0.
+2. proceed with the activities that would result in email(s) being sent to the intended email address.
+3. invoke `webmail` &raquo; `search(var,profile,searchCriteria,duration)`, setting `duration` to a number larger than 0.
+4. continues on...
+
 
 ### Parameters
 - **var** - the data variable to track a list of "email id" of the matching emails.

@@ -33,9 +33,19 @@ comments: true
 - code refactoring to reduce duplication.
 - Execution Summary now enhanced with charts to aid in post-execution visualization.
   - added minor UI improvements.
+  - added drill down chart. 
+  - added Skip Count
+  - improved visibility of test artifact links
+  - added screenshots generated for test steps during execution
+  - added errors with description for failed test steps
+- Fixed step counting in dealing with skipped steps.
+- support Java 18
+- support newer version of gecko driver (firefox)
 
 
-### [Batch Files](../userguide/BatchFiles)
+### [System Variables](../systemvars)
+- [`nexial.generateReport`](../systemvars/index.md#nexial.generateReport) - Changed default to true, meaning the 
+  JSON-based report will be generated (by default) after each execution.
 
 
 ### [Expression](../expression)
@@ -67,6 +77,7 @@ comments: true
 
 
 ### [rdbms commands](../commands/rdbms)
+- clear off cache RDBMS metadata and connections between script execution to avoid incorrect DB authentication.
 
 
 ### [web commands](../commands/web)
@@ -81,6 +92,10 @@ comments: true
 
 
 ### [webmail commands](../commands/webmail)
+- [`search(var,profile,searchCriteria,duration)`](../commands/webmail/search(var,profile,searchCriteria,duration)): 
+  supports the initialization of a "temporary-mail" inbox when `duration` is set to `0`.
+- improved email content parsing logic for Mailinator emails.
+- avoid closing browser, and thus the underlying driver, after scanning for incoming emails.
 
 
 ### [ws commands](../commands/ws)
@@ -93,3 +108,6 @@ comments: true
 - [ws &raquo; upload(url,body,fileParams,var)](../commands/ws/upload(url,body,fileParams,var)): support variable
   substitution in uploaded file. Use `nexial.ws.requestPayloadAsRaw` to control this behavior (`false` means activate 
   variable substitution).
+- [ws &raquo; post(url,body,var)](../commands/ws/post(url,body,var).md): support `(IGNORE)` content type 
+  while uploading files using multipart.
+

@@ -30,7 +30,7 @@ Amy checks out a _different_ project locally, also as `C:\projects\MyProject`.<b
 
 ![](image/UnderstandingProjectStructure_00.png)<br/>
 
-By default Nexial derives the project ID based on the directory name. So as shown above, in John's case, the project 
+By default, Nexial derives the project ID based on the directory name. So as shown above, in John's case, the project 
 name would be `ProjectA` while both Sam's and Amy's would be `MyProject`. Whilst John and Sam are working on the 
 same project and Amy on a different one, it would appear as if Sam and Amy are on the same project and John on 
 another one. Such inconsistency can be further exasperated when one attempts to integrate these projects into a
@@ -82,7 +82,7 @@ It is recommended that the [macro files](../commands/base/macro(file,sheet,name)
 
 
 ### `artifact/data/`
-The `artifact/data` directory stores your test data. By default the data file is expected to be named in 
+The `artifact/data` directory stores your test data. By default, the data file is expected to be named in 
 correspondent to the test script: `<TEST SCRIPT NAME>.data.xlsx`. But this convention can be overridden during 
 execution via the `-data` flag to [`nexial.[cmd|sh]` script](BatchFiles#nexial). Similar to test scripts, each 
 data file would contain one or many data sheets (worksheets) that correspond to the test scenarios. Again, this 
@@ -150,7 +150,7 @@ the environment-specific `project.properties` file, such as `project.QA.properti
 `JAVA_OPT=-Dnexial.env=...` or `-override nexial.env=...` technique on command line to specific a different 
 `project.properties` via the following naming convention:
 
-`nexial.${nexial.env}.properties`
+`project.${nexial.env}.properties`
 
 For example,
 
@@ -174,19 +174,19 @@ nexial.sh -script $PROJECT_HOME/artifact/script/... ... -override nexial.env=STA
 
 The above instructs Nexial to load `artifact/project.properties` and then **`artifact/project.STAGING.properties`**.
 
-Note that if the specified `nexial.env` cannot resolve to a readable file, Nexial will fallback to the default 
+Note that if the specified `nexial.env` cannot resolve to a readable file, Nexial will fall back to the default 
 `project.properties` instead.
 
-Using this `nexial.env` System variable, one can device 
-[an effective strategy towards data management](./TargetedData-ProjectProperties) where environment-specific data 
+Using this `nexial.env` System variable, one can apply an 
+[effective strategy towards data management](./TargetedData-ProjectProperties) where environment-specific data 
 variables can be separately managed while common, project-wide data variables remain centrally organized. 
 
 
 ### `output/`
 The `output` directory contains the output of each test execution named as a `run id`, which is simply the timestamp 
-of the start of an execution. The `captures` sub-directory stores all the screenshots and capture 
-videos (if any). The `logs` directory stores all the log files, with the main log file named as 
-`nexial-[START DATE/TIME].log`. The execution output file is named similarly to the corresponding test script:
+of the start of an execution. The `captures` subdirectory stores all the screenshots and capture videos (if any). The 
+`logs` directory stores all the log files, with the main log file named as `nexial-[START DATE/TIME].log`. The 
+execution output file is named similarly to the corresponding test script:
 `[TEST SCRIPT NAME].[START DATE/TIME].[ITERATION].xlsx`. It is generally a good idea to keep output separated by 
 its execution. Hence the timestamp-based approach allows each execution its dedicated output directory. One can 
 consider using the same output location to store any output files generated as part of the execution. See 
@@ -222,10 +222,38 @@ uploaded to designated cloud location and removed from local output directory.
    ![](image/UnderstandingProjectStructure_06.png)<br/>
    Output File:<br/>
    ![](image/UnderstandingProjectStructure_07.png)<br/><br/>
-4. <a name="summary"></a>Nexial also produces another output at the end of execution to provide summary level of 
-   execution report and extrapolation across test plans, test scripts, iterations, scenarios, and activities:<br/>
+4. Nexial also produces an HTML output at the end of execution to provide summary-level execution report, interactive 
+   graph and result extrapolation across test plans, test scripts, iterations, scenarios, and activities:<br/>
    ![](image/UnderstandingProjectStructure_08.png)<br/><br/>
-   As of Nexial [v4.3](../release/nexial-core-v4.3.changelog), this execution summary report also generate video 
+   ![](image/UnderstandingProjectStructure_08_1.png)<br/><br/>
+   This interactive graph displays various execution data points, which can change to reflect different level of the 
+   execution data: 
+   <ul>
+      <li>Number of steps that failed</li>
+      <li>Number of steps that passed</li>
+      <li>Number of steps skipped</li>
+      <li>Total number of steps (as designed)</li>
+      <li>Pass percentage (of all executed steps)</li>
+      <li>Duration, in minutes, to execute the steps included in a specific execution level</li>
+   </ul>
+   <br/>
+   The graph displays the execution result initially at the level of the overall execution:<br/>
+
+   ![](image/UnderstandingProjectStructure_drilldown_1.png)<br/><br/>
+
+   One can drill down to the next level of execution detail by clicking on the corresponding bar in the chart. The 
+   top-down levels of execution detail are: **Execution** > **Script** > **Iteration** > **Scenario** > **Activity**.
+   Below are the examples of each of these levels:<br/>
+
+   ![](image/UnderstandingProjectStructure_drilldown_2.png)<br/>
+   ![](image/UnderstandingProjectStructure_drilldown_3.png)<br/>
+   ![](image/UnderstandingProjectStructure_drilldown_4.png)<br/>
+   ![](image/UnderstandingProjectStructure_drilldown_5.png)<br/>
+
+   User can use the **back** button to return to previous level, or click on the **Execution** button to return to 
+   the Execution (top) level.
+   
+5. As of Nexial [v4.3](../release/nexial-core-v4.3.changelog), this execution summary report also generate video 
    playback for any generated [desktop recordings](../commands/base/startRecording()) and 
    [web service logs](../systemvars/index.html#nexial.ws.logSummary). For example, below is a snippet of the screen
    recording generated during execution. One may use the recording for further post-execution analysis.<br/>
@@ -246,7 +274,7 @@ uploaded to designated cloud location and removed from local output directory.
    data at multiple levels and links to the execution output file. Some amount of interactivity is available where
    one can toggle the visibility of script, iteration, scenarios and activities data. See 
    [Improving your execution summary report](ImprovingExecutionReport) for more details.<br/><br/>
-5. <a name="junit"></a>Along with the above-stated output, Nexial also produces a JUNIT compatible xml file. This
+6. <a name="junit"></a>Along with the above-stated output, Nexial also produces a JUNIT compatible xml file. This
    XML file is always generated in the output directory as `junit.xml`. This file is useful when integrating with
    JUNIT-compatible tools and plugins such as:<br/>
    ![](image/UnderstandingProjectStructure_09.png)<br/>

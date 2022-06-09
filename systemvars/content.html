@@ -1424,6 +1424,23 @@ nexial.cmd -plan ...</pre>
     </tr>
     <tr>
         <td class="varname" nowrap="nowrap">
+            <a id="nexial.generateReport"><code>nexial.generateReport</code></a>
+        </td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>read/write</td>
+        <td>
+            This System variable instructs Nexial whether to generate the JSON-based report or not. The JSON reports 
+            (2 JSON files, to be exact) are useful towards the execution summary report and TMS integration (Test 
+            Management Systems, like JIRA or TestRail). One could set this System variable to <code>false</code> to omit
+            the JSON file generation if neither execution summary nor TMS integration is of interest.<br/>
+            <br/>
+            This System variable is set true by default, meaning that the JSON reports will be generated at the end of 
+            each execution.
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.step.response"><code>nexial.step.response</code></a>
         </td>
         <td>text</td>
