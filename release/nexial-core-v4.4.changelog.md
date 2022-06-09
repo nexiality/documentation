@@ -20,6 +20,8 @@ comments: true
 - [FIXED] typos in error messages.
 - [FIXED] fixed erroneous library file found.
 - [FIXED] Windows batch (`.cmd`) files to properly handle `USER_HOME` that contains space.
+- [FIXED] excel Report cell tainted value for the original value
+- [FIXED] issue while opening Execution Report for WPS using `nexial.openResult=true`
 
 #### Improvements
 - added Nexial version to initial banner at the start of a Nexial execution
