@@ -38,6 +38,7 @@ comments: true
   - improved visibility of test artifact links
   - added screenshots generated for test steps during execution
   - added errors with description for failed test steps
+  - improved the Web Filters functionality where user can search API results based on the methods or return codes
 - Fixed step counting in dealing with skipped steps.
 - support Java 18
 - support newer version of gecko driver (firefox)

@@ -316,12 +316,36 @@ function toggleWsDisplay(/*HTMLElement*/button) {
 				arr.push(document.getElementsByClassName('method')[j].innerText);
 			}
 		}
-		if (arr.length == document.getElementsByClassName('method').length) {
+		let methodFilter = document.getElementsByClassName('dropbtn-method');
+		if (getSelectedMethodList().length == 0) {
+		    methodFilter[0].classList.remove('is-active');
 			document.getElementById('methodName').value = 'All';
 		} else {
-			document.getElementById('methodName').value = arr.toString();
+		    methodFilter[0].classList.add('is-active');
+		  	document.getElementById('methodName').value = getUnselectedMethodList().toString();
 		}
+
 	}
+}
+
+function getSelectedMethodList() {
+  var selectedMethodArr = [];
+  $('.wsDetail-filter-method > .method-dropBTN.is-active').text(
+  		function(index, text) {
+  		  selectedMethodArr.push(text);
+  		},
+  	);
+  	return selectedMethodArr;
+}
+
+function getUnselectedMethodList() {
+  var unselectedMethodArr = [];
+  $('.wsDetail-filter-method > .method-dropBTN:not(\'.is-active\')').text(
+  		function(index, text) {
+  		  unselectedMethodArr.push(text);
+  		},
+  	);
+  	return unselectedMethodArr;
 }
 
 function isNexShowing(ref) {

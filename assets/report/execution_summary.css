@@ -1166,6 +1166,17 @@ button#hideLog {
   margin-left: 10px;
 }
 
+.filter-display{
+  padding: 2px 8px 2px 4px;
+  margin: 0 10px 0 -3px;
+  font-weight: bold;
+  width: 125px;
+  border: none;
+}
+
+.filter-display-width{
+  width : 225px !important;
+}
 /* -------------------------------------------------------------------------------- */
 /* execution visualization */
 /* -------------------------------------------------------------------------------- */
