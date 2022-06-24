@@ -150,7 +150,7 @@ a:hover {
   cursor:  pointer;
 }
 
-.showhide i:hover {text-shadow: var(--control-showhide-hover-shadow); }
+.showhide i:hover { text-shadow: var(--control-showhide-hover-shadow); }
 
 .canHide {
   padding:       10px;
@@ -214,7 +214,7 @@ table.execMeta {
   vertical-align: middle;
   width:          fit-content;
   font-size:      18px;
-  padding:        0px 18px;
+  padding:        0 18px;
   display:        inline-grid;
   border-radius:  5px;
   margin:         5px;
@@ -363,13 +363,12 @@ table.execMeta {
   color:       #800;
 }
 
-.reportFooter { background: #ddd }
+.reportFooter { background: #ddd; }
 
 .exec-summary-header {
   clear:                      both;
   width:                      max-content;
   min-width:                  100%;
-  /* margin-right: 10px; */
   background-color:           var(--summary-header-background);
   border-top-left-radius:     10px;
   border-top-right-radius:    10px;
@@ -627,7 +626,7 @@ a.top-link {
 
 a.top-link:hover .fa-chevron-up:hover {
   text-shadow: 0 0 6px rgb(0 50 0);
-  color:       #fff
+  color:       #fff;
 }
 
 a.top-link .fa-chevron-up {
@@ -1022,11 +1021,11 @@ button#hideLog {
 
 .method-DELETE { background-color: rgba(0, 0, 0, 0.85) !important; }
 
-.returnCode-200, .returnCode-202, .returnCode-204 { background-color: rgba(20, 90, 20, 0.65) !important }
+.returnCode-200, .returnCode-202, .returnCode-204 { background-color: rgba(20, 90, 20, 0.65) !important; }
 
-.returnCode-201 { background-color: rgba(40, 100, 40, 0.5) !important }
+.returnCode-201 { background-color: rgba(40, 100, 40, 0.5) !important; }
 
-.returnCode-207 { background-color: rgba(50, 120, 50, 0.5) !important }
+.returnCode-207 { background-color: rgba(50, 120, 50, 0.5) !important; }
 
 .returnCode-2xx { background-color: rgba(20, 60, 20, 0.75); }
 
@@ -1065,7 +1064,7 @@ button#hideLog {
 }
 
 .returnCode-300, .returnCode-301, .returnCode-302, .returnCode-303, .returnCode-304, .returnCode-305, .returnCode-306, .returnCode-307 {
-  background-color: rgba(50, 50, 50, 0.75)
+  background-color: rgba(50, 50, 50, 0.75);
 }
 
 .dropbtn {
@@ -1101,7 +1100,7 @@ button#hideLog {
   position:         absolute;
   background-color: #f1f1f1;
   overflow:         auto;
-  box-shadow:       0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow:       0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index:          1;
 }
 
@@ -1166,17 +1165,18 @@ button#hideLog {
   margin-left: 10px;
 }
 
-.filter-display{
-  padding: 2px 8px 2px 4px;
-  margin: 0 10px 0 -3px;
+.filter-display {
+  padding:     2px 8px 2px 4px;
+  margin:      0 10px 0 -3px;
   font-weight: bold;
-  width: 125px;
-  border: none;
+  width:       125px;
+  border:      none;
 }
 
-.filter-display-width{
-  width : 225px !important;
+.filter-display-width {
+  width: 225px !important;
 }
+
 /* -------------------------------------------------------------------------------- */
 /* execution visualization */
 /* -------------------------------------------------------------------------------- */

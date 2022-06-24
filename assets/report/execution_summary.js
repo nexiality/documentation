@@ -146,8 +146,7 @@ function scrollToElement(/*String*/selector) {
 	if (target) {
 		$([document.documentElement, document.body]).animate({ scrollTop: target.offset().top }, scrollTime);
 		setTimeout(function() {
-			target.fadeOut(100).fadeIn(scrollTime / 2)
-						.fadeOut(100).fadeIn(scrollTime / 2);
+			target.fadeOut(100).fadeIn(scrollTime / 2).fadeOut(100).fadeIn(scrollTime / 2);
 		}, scrollTime);
 	}
 }
@@ -318,34 +317,25 @@ function toggleWsDisplay(/*HTMLElement*/button) {
 		}
 		let methodFilter = document.getElementsByClassName('dropbtn-method');
 		if (getSelectedMethodList().length == 0) {
-		    methodFilter[0].classList.remove('is-active');
+			methodFilter[0].classList.remove('is-active');
 			document.getElementById('methodName').value = 'All';
 		} else {
-		    methodFilter[0].classList.add('is-active');
-		  	document.getElementById('methodName').value = getUnselectedMethodList().toString();
+			methodFilter[0].classList.add('is-active');
+			document.getElementById('methodName').value = getUnselectedMethodList().toString();
 		}
-
 	}
 }
 
 function getSelectedMethodList() {
-  var selectedMethodArr = [];
-  $('.wsDetail-filter-method > .method-dropBTN.is-active').text(
-  		function(index, text) {
-  		  selectedMethodArr.push(text);
-  		},
-  	);
-  	return selectedMethodArr;
+	let selectedMethodArr = [];
+	$('.wsDetail-filter-method > .method-dropBTN.is-active').text(function(index, text) { selectedMethodArr.push(text); });
+	return selectedMethodArr;
 }
 
 function getUnselectedMethodList() {
-  var unselectedMethodArr = [];
-  $('.wsDetail-filter-method > .method-dropBTN:not(\'.is-active\')').text(
-  		function(index, text) {
-  		  unselectedMethodArr.push(text);
-  		},
-  	);
-  	return unselectedMethodArr;
+	let unselectedMethodArr = [];
+	$('.wsDetail-filter-method > .method-dropBTN:not(\'.is-active\')').text(function(index, text) { unselectedMethodArr.push(text); });
+	return unselectedMethodArr;
 }
 
 function isNexShowing(ref) {
@@ -378,7 +368,7 @@ function toggleStepErrors(ref) {
 	for (let i = 0; i < error.length; i++) {
 		let elem = $(error[i]);
 		const isError = (elem.attr('is-step-error') || 'false') === 'true';
-		if(isError) setShowError(elem, !isShowing);
+		if (isError) { setShowError(elem, !isShowing); }
 	}
 	refreshList(target);
 }
