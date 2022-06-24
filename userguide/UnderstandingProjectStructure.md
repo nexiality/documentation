@@ -278,20 +278,20 @@ uploaded to designated cloud location and removed from local output directory.
    Next to the section **Web Service/API** there is a feature to filter the API tiles based on the API Methods and Return codes, these
    are called as **WebAPI filters**. Below shows the interactive filters where one can filter the API tiles based on the
    criteria.<br/><br/>
-   ![](image/WebAPIFilters_1.PNG)<br/><br/>
+   ![](image/WebAPIFilters_1.png)<br/><br/>
    There are two ways to filter the API tiles, below given is filtering by method, where one can select the method(s)
    from the list of dropdown on hovering the **Method** button. <br/><br/>
-   ![](image/WebAPIFilters_2.PNG)<br/><br/>
+   ![](image/WebAPIFilters_2.png)<br/><br/>
    Similarly one can also filter by using the **Return codes**, the return codes are subdivided based on their Http Status codes. 
    Below given is an example where one can filter the return code 402. User can hover the group button 4xx where he/she can find the return
    code 402. On clicking it he/she can **select / deselect** the option. <br/><br/>
-   ![](image/WebAPIFilters_3.PNG)<br/><br/>
+   ![](image/WebAPIFilters_3.png)<br/><br/>
    If one needs to **Select / Deselect** a group of return codes, user can click on the button with suffix "xx" to Select / 
    Deselect the particular group of return codes, for instance if one needs to **Select / Deselect** the group "4xx" then he/she
    should click on the particular group button **4xx** as shown in the below image. <br/><br/>
-   ![](image/WebAPIFilters_4.PNG)<br/><br/>
+   ![](image/WebAPIFilters_4.png)<br/><br/>
    Users can also **Select all or Delselect all** filters by using these below given buttons. <br/><br/>
-   ![](image/WebAPIFilters_5.PNG)<br/><br/>
+   ![](image/WebAPIFilters_5.png)<br/><br/>
 7. <a name="junit"></a>Along with the above-stated output, Nexial also produces a JUNIT compatible xml file. This
    XML file is always generated in the output directory as `junit.xml`. This file is useful when integrating with
    JUNIT-compatible tools and plugins such as:<br/>
