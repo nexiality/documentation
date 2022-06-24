@@ -378,7 +378,7 @@ function toggleStepErrors(ref) {
 	for (let i = 0; i < error.length; i++) {
 		let elem = $(error[i]);
 		const isError = (elem.attr('is-step-error') || 'false') === 'true';
-		setShowError(elem, !isError);
+		if(isError) setShowError(elem, !isShowing);
 	}
 	refreshList(target);
 }
