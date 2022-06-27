@@ -42,6 +42,7 @@ comments: true
 - Fixed step counting in dealing with skipped steps.
 - support Java 18
 - support newer version of gecko driver (firefox)
+- update nexial-lib to [1.3](https://github.com/nexiality/fixes/releases/download/nexial-lib-1.3/nexial-lib-1.3.zip)
 
 
 ### [System Variables](../systemvars)
@@ -78,6 +79,7 @@ comments: true
 
 
 ### [rdbms commands](../commands/rdbms)
+- update Mongodb JDBC support to wisecoder's `mongojdbc4.1`
 
 
 ### [web commands](../commands/web)
