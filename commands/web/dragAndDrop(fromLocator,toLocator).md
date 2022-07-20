@@ -1,8 +1,8 @@
 ---
 layout: default
 title: dragAndDrop(fromLocator,toLocator)
-parent: web drag-and-drop DnD
-tags: command web
+parent: web
+tags: command web drag-and-drop DnD
 comments: true
 ---
 
