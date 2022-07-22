@@ -5129,7 +5129,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
     </tr>
     <tr>
         <td class="highlight-section" colspan="5">
-            <span>For <a href="../userguide/TmsManagement"><code>TMS integration</code></a> only.</span>
+            <span>For <a href="../userguide/TMSManage"><code>TMS integration</code></a> only.</span>
         </td>
     </tr>
     <tr>
@@ -5145,6 +5145,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             <ul>
                 <li><b>azure</b> - For <a href="https://azure.microsoft.com/en-in/services/devops/"><code>Azure
                     DevOps</code></a></li>
+                <li><b>jira</b> - For <a href="https://www.atlassian.com/software/jira"><code>JIRA</code></a></li>
                 <li><b>testrail</b> - For <a href="https://www.gurock.com/testrail/"><code>Test Rail</code></a></li>
             </ul>
             To setup TMS integration, please go through <a href="../userguide/ServiceIntegration"><code>service
@@ -5164,6 +5165,9 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
                 <li>For <b>azure</b>- <code><b>https://dev.azure.com/{organization}/</b></code> where
                     <code>organization</code> is Azure DevOps organization
                 </li>
+                <li>For <b>jira</b>- <code><b>https://{organization}.atlassian.net/</b></code> where
+                    <code>organization</code> is jira organization
+                </li>
                 <li>For <b>testrail</b>- <code><b>https://{organization}.testrail.io/</b></code> where <code>organization</code>
                     is TestRail organization
                 </li>
@@ -5181,7 +5185,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td class="read-write">read/write</td>
         <td>
             Specify username required to access TMS tool api provided by <a href="#nexial.tms.source"><code>nexial.tms.source</code></a>
-            This can be empty text for some of the tools which provides access tokens to access apis.<br/>
+            This can be empty text for some tools which provides access tokens to access apis.<br/>
             To setup TMS integration, please go through <a href="../userguide/ServiceIntegration"><code>service
             integration</code></a>
         </td>
@@ -5197,6 +5201,36 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             Specify password required to access TMS tool api provided by <a href="#nexial.tms.source"><code>nexial.tms.source</code></a>
             This can be password or access token to access apis. For example, Azure requires <code>PAT(Personal Access
             Token)</code><br/>
+            To setup TMS integration, please go through <a href="../userguide/ServiceIntegration"><code>service
+            integration</code></a>
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.tms.suiteIssueType"><code>nexial.tms.suiteIssueType</code></a>
+        </td>
+        <td>text</td>
+        <td></td>
+        <td class="read-write">read/write</td>
+        <td>
+            <b>For JIRA Only</b>, specify issue type to be created for suite. It is applicable for JIRA only.
+            Test suite should be higher in hierarchy in issue type than <a href="#nexial.tms.caseIssueType"><code>nexial.tms.caseIssueType</code></a>.
+            By default, jira issue type for Test Suite is <b>story</b>.
+            To setup TMS integration, please go through <a href="../userguide/ServiceIntegration"><code>service
+            integration</code></a>
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.tms.caseIssueType"><code>nexial.tms.caseIssueType</code></a>
+        </td>
+        <td>text</td>
+        <td></td>
+        <td class="read-write">read/write</td>
+        <td>
+            <b>For JIRA Only</b>, specify issue type to be created for test case.
+            Test case issue type should be lower in hierarchy than <a href="#nexial.tms.suiteIssueType"><code>nexial.tms.suiteIssueType</code></a>.
+            By default, jira issue type for test case is <b>subtask</b>.
             To setup TMS integration, please go through <a href="../userguide/ServiceIntegration"><code>service
             integration</code></a>
         </td>
