@@ -14,7 +14,9 @@ exploratory testing. Please go through [**Azure DevOps Services**](https://docs.
 to learn more.
 
 Nexial supports Test management using `Azure DevOps Test Plan` Service in which user can import testcases created by
-Nexial user as a part of script and subplan.
+Nexial user as a part of script and subplan. Also, user can upload execution results to Azure Test Run.<br/>
+Nexial also supports Azure pipelines to execute script and create test run result for the pipeline build.
+Please go through following section to check import of testcase and their result and creating test run through azure pipeline.
 
 ### HOW to import test cases in Azure DevOps
 Follow below steps to import test cases:
@@ -27,7 +29,7 @@ Follow below steps to import test cases:
 User need to have proper subscription plan and provide proper permissions to user to access Azure DevOps using APIs.
 - Firstly, Azure DevOps needs to have **Basic + Test Plan** subscription to utilize `Test Plan` service in general.<br/>
 ![](image/AzureDevOpsSetup_01.png)<br/>
-- User must have **Basic + Test Plan** level access to utilize `Test Plan` completely.<br/>
+- User must have **Basic + Test Plan** level access to utilize `Test Plan`.<br/>
 ![](image/AzureDevOpsSetup_02.png)<br/>
 ![](image/AzureDevOpsSetup_03.png)<br/>
 - Generate PAT(Personal Access Token) to access Azure DevOps. Please go through docs to see
@@ -38,14 +40,14 @@ User need to have proper subscription plan and provide proper permissions to use
 **Configure Using Data Variables**:-<br/>
 - [nexial.tms.source](../systemvars/index#nexial.tms.source):- User must specify tms source tool to import testcases. For AzureDevOps, it must be **azure**.
 - [nexial.tms.url](../systemvars/index#nexial.tms.url):- URL of the Azure DevOps server. e.g. `https://dev.azure.com/<organization name>/`.
+- [nexial.tms.accessToken](../systemvars/index#nexial.tms.accessToken):- Generated PAT(Personal Access Token) to access Azure DevOps.
 - Azure DevOps doesn't require any username to access Azure devOps.
-- [nexial.tms.password](../systemvars/index#nexial.tms.password):- Generated PAT(Personal Access Token) to access Azure DevOps. 
 
 ~~~
 # values are for azure devops for reference except source name
 nexial.tms.source=azure
 nexial.tms.url=https://dev.azure.com/AzureOrganization
-nexial.tms.password=4hsg6n5bb5n56ahixmdu7suoah65kk6bro3yu3rokcqhee5u5
+nexial.tms.accessToken=4hsg6n5bb5n56ahixmdu7suoah65kk6bro3yu3rokcqhee5u5
 ~~~
 
 User needs to provide above configurations to access Azure DevOps through Nexial variables using one-time setup, you can
@@ -54,19 +56,41 @@ provide Azure integration configuration details once and build `setup.jar` using
 {% include _configure_project_meta.md %}
 **Note : `projectId` is the name of project in the Azure DevOps.**
 
-### HOW to upload Testcase Execution Results
+### HOW to upload Execution Results
 1. **(Mandatory)** Make sure testcases are already imported to Azure DevOps before uploading result as explained above.
-2. Test result is uploaded as Test Runs with cumulative results for testcases from `execution-detail.json` from output folder.
-3. Upload results for imported script or plan Test suite using batch file [`nexial-tms-result-uploader.cmd|.sh`](BatchFiles#nexial-tms-result-uploader)
+2. Test result is uploaded as Test Runs with cumulative results for testcases from `execution-detail.json`. Make sure
+   during script execution in Nexial, [`nexial.generateReport`](../systemvars/index#nexial.generateReport) is set to `true`.
+3. Upload results for imported test case using batch file [`nexial-tms-result-uploader.cmd|.sh`](BatchFiles#nexial-tms-result-uploader)
 
-### HOW to upload Testcase Execution Results using Azure Pipelines
+**Steps while uploading Execution Result(FYI):-**
+1. Nexial will create new Test Run for first execution for Test Suite.
+2. User will get option to close test run or not at the end after uploading the result.
+3. If test run for imported test suite is active(not closed), then next time execution test result will be uploaded to
+   the same test run.
+4. If test run is not active(closed), new test run will be created.
+
+Sample screenshots after uploading test result:<br/>
+- Test Run created for sample execution with attachment output excel and html report<br/>
+![](image/AzureDevOpsSetup_08.png)
+- All test result for the test run with outcome<br/>
+![](image/AzureDevOpsSetup_09.png)
+- Test result for individual test case with execution stats added as comment<br/>
+![](image/AzureDevOpsSetup_10.png)
+
+
+### HOW to upload execution results through Azure Pipelines
 1. Create azure pipeline. Please walk through [Azure Pipelines](https://docs.microsoft.com/en-in/azure/devops/pipelines/?view=azure-devops).
-2. Execute script of the azure repo using Nexial through script. Sample step scripts to execute Nexial will look like,<br/>
+to get to know how to create pipeline and task for the same.
+2. Create Task to run the Nexial script and to publish test result afterwards in yml file as mentioned below.
+3. Execute scripts from the azure repo using Nexial through `step script task`. Sample step scripts from 
+`azure-pipelines.yml` to execute Nexial will look something like this,<br/>
 ![](./image/AzureDevOpsSetup_06.png)
-3. Setup task `publish test result` for `VSTest` test result format in pipeline `azure-pipelines.yml`.<br/>
+4. Setup task `publish test result` for `vstest` test result format in pipeline `azure-pipelines.yml`.<br/>
 ![](./image/AzureDevOpsSetup_07.png)
+5. Set `nexial.generateTrxReport=true` to generate `vstest` report which will be used by pipeline to create test run.
+6. Run the pipeline and new test run will be created with result.
 
 ### See Also
-- [TestRail Setup](TestRailSetup)
-- [Jira Setup](JiraSetup)
+- [TestRail](TestRailSetup)
+- [Jira](JiraSetup)
 - [Tms Management](TmsManagement)

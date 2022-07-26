@@ -209,8 +209,10 @@ The following will update all the scripts from given path.<br/>
 ---------------------------------------------
 
 #### **nexial-tms-importer**
-This script imports Nexial test cases to provided TMS tool via system variables. Follow [TMS Management](./TmsManagement)
-to configure TMS tool. This command will also update already existing test cases in TMS.
+This script imports Nexial test cases to provided TMS tool via system variables. Follow [TMS Management](TmsManagement)
+to configure TMS tool. This command will also update already existing test cases in TMS.<br/>
+To format test cases written in BDD format, user can import test case by providing option `-b`. Please go detailed
+description of [BDD Keywords](TmsManagement#bdd-keywords-support) here.
 
 |options        |explanation  |
 |---------------|-------------|
@@ -274,7 +276,7 @@ to configure TMS tool.
 
 #### **nexial-tms-closeRun**
 This script will close all the active test runs available for imported test suite. This will change state of test runs from 
-`InProgress` to `Completed` in some tms tool. Follow [TMS Management](./TmsManagement) to configure TMS tool.
+`InProgress` to `Completed` in some tms tool. Follow [TMS Management](TmsManagement) to configure TMS tool.
 
 |options       | explanation                                                                                                                                                 |
 |--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|

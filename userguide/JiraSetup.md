@@ -31,8 +31,8 @@ Importing testcases to Jira includes following steps:-
 **Configure Using Data Variables**:-<br/>
 - [`nexial.tms.source`](../systemvars/index#nexial.tms.source): User should specify tms source tool to import testcases. In this case, it must be **jira**.
 - [`nexial.tms.url`](../systemvars/index#nexial.tms.url): URL which consists of organization name in it. e.g. `https://<organization>.atlassian.net/`.
-- [`nexial.tms.username`](../systemvars/index#nexial.tms.username): Username/Email Id used to log in to jira account.
-- [`nexial.tms.password`](../systemvars/index#nexial.tms.password): Api token to access Jira. Generate Jira API token [here](https://id.atlassian.com/login?application=manage-profile)
+- [`nexial.tms.username`](../systemvars/index#nexial.tms.username): Email id used to log in to jira account.
+- [`nexial.tms.accessToken`](../systemvars/index#nexial.tms.accessToken): Api token to access Jira. Click here to [Generate Jira API token.](https://id.atlassian.com/login?application=manage-profile)
 - [`nexial.tms.suiteIssueType`](../systemvars/index#nexial.tms.suiteIssueType): Suite type depending on hierarchy supported. You can have any issue type of higher hierarchy. By default, it's `Story`.
 - [`nexial.tms.caseIssueType`](../systemvars/index#nexial.tms.caseIssueType): Testcase type depending on hierarchy supported. It must be lower in hierarchy than suite type. By default, it's `subtask`.
 
@@ -41,7 +41,7 @@ Importing testcases to Jira includes following steps:-
 nexial.tms.source=jira
 nexial.tms.url=https://demotms1.atlassian.net/
 nexial.tms.username=xyz@gmail.com
-nexial.tms.password=uhKFR9OaK5cZpvXPrRlF9AD612
+nexial.tms.accessToken=uhKFR9OaK5cZpvXPrRlF9AD612
 nexial.tms.suiteIssueType=Epic
 nexial.tms.caseIssueType=Story
 ~~~
@@ -55,10 +55,15 @@ Jira integration configuration details once and build `setup.jar` using [`nexial
 
 ### HOW to upload Testcase Execution Results in Jira
 1. **(Mandatory)** Make sure testcases are already imported to Jira before uploading result as explained above.
-2. Upload results for imported script or plan Test suite using batch file [`nexial-tms-result-uploader.cmd|.sh`](BatchFiles#nexial-tms-result-uploader)
-3. For Jira, results will be added as a comment for imported testcases as issue.
+2. Make sure during script execution in Nexial, [`nexial.generateReport`](../systemvars/index#nexial.generateReport) must be set to `true`.
+3. Upload results for imported script or plan Test suite using batch file [`nexial-tms-result-uploader.cmd|.sh`](BatchFiles#nexial-tms-result-uploader)
+4. For Jira, results will be added as a comment for imported testcases as issue. For suite, sample test result will be 
+like below,<br/>
+![](image/JiraSetup_03.png) <br/> 
+For Test case, sample test result is like below,<br/>
+ ![](image/JiraSetup_04.png)
 
 ### See Also
-- [Azure DevOps Setup](AzureDevOpsSetup)
-- [TestRail Setup](TestRailSetup)
+- [Azure DevOps](AzureDevOpsSetup)
+- [TestRail](TestRailSetup)
 - [Tms Management](TmsManagement)

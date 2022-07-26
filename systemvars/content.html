@@ -1441,6 +1441,21 @@ nexial.cmd -plan ...</pre>
     </tr>
     <tr>
         <td class="varname" nowrap="nowrap">
+            <a id="nexial.generateTrxReport"><code>nexial.generateTrxReport</code></a>
+        </td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>read/write</td>
+        <td>
+            This System variable instructs Nexial whether to generate the xml-based VSTest report or not. The VsTest
+            report are useful towards uploading test result while executing Nexial through the Azure DevOps pipeline.
+            One could set this System variable to <code>true</code> to create test run for each execution.
+            For more details, walk through <a href="../userguide/AzureDevOpsSetup"><code>Azure DevOps</code></a><br/>
+            This System variable is set false by default.
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.step.response"><code>nexial.step.response</code></a>
         </td>
         <td>text</td>
@@ -5192,15 +5207,29 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
     </tr>
     <tr>
         <td class="varname" nowrap="nowrap">
-            <a id="nexial.tms.password"><code>nexial.tms.password</code></a>
+            <a id="nexial.tms.accessToken"><code>nexial.tms.accessToken</code></a>
         </td>
         <td>text</td>
         <td></td>
         <td class="read-write">read/write</td>
         <td>
-            Specify password required to access TMS tool api provided by <a href="#nexial.tms.source"><code>nexial.tms.source</code></a>
-            This can be password or access token to access apis. For example, Azure requires <code>PAT(Personal Access
-            Token)</code><br/>
+            Specify access token required to access TMS provided by <a href="#nexial.tms.source"><code>nexial.tms.source</code></a>
+            This can be access token or api key to access apis. For example, Azure requires <code>PAT(Personal Access
+            Token)</code> while jira has api token. This will get precedence over <a href="#nexial.tms.password"><code>nexial.tms.password</code></a><br/>
+            To setup TMS integration, please go through <a href="../userguide/ServiceIntegration"><code>service integration</code></a>
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.tms."><code>nexial.tms.password</code></a>
+        </td>
+        <td>text</td>
+        <td></td>
+        <td class="read-write">read/write</td>
+        <td>
+            Specify password required to access TMS api provided by <a href="#nexial.tms.source"><code>nexial.tms.source</code></a>
+            This can be password to access apis. For example, TestRail requires password.<br/>
+            <a href="#nexial.tms.accessToken"><code>nexial.tms.accessToken</code></a> will get precedence over this variable.<br/>
             To setup TMS integration, please go through <a href="../userguide/ServiceIntegration"><code>service
             integration</code></a>
         </td>
