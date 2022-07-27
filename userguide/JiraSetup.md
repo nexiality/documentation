@@ -53,6 +53,17 @@ Jira integration configuration details once and build `setup.jar` using [`nexial
 **Note : `projectId` must be project key in the Jira which can be seen in respective project settings.**
 ![](./image/JiraSetup_02.png)
 
+**Import Test cases**:-
+- User can import testcase using Nexial batch file [nexial-tms-importer.](BatchFiles#nexial-tms-importer)
+- If there are any changes made to testcases for example adding new test case, deleted or updated,
+  user need to update testcases using the same batch file command [nexial-tms-importer.](BatchFiles#nexial-tms-importer)
+
+Sample screenshots after importing test result:<br/>
+- Test Suite screenshot
+  ![](image/JiraSetup_05.png)
+- Individual Test Case screenshot
+  ![](image/JiraSetup_06.png)
+
 ### HOW to upload Testcase Execution Results in Jira
 1. **(Mandatory)** Make sure testcases are already imported to Jira before uploading result as explained above.
 2. Make sure during script execution in Nexial, [`nexial.generateReport`](../systemvars/index#nexial.generateReport) must be set to `true`.

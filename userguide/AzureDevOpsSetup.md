@@ -56,6 +56,17 @@ provide Azure integration configuration details once and build `setup.jar` using
 {% include _configure_project_meta.md %}
 **Note : `projectId` is the name of project in the Azure DevOps.**
 
+**Import Test cases**:-
+- User can import testcase using Nexial batch file [nexial-tms-importer.](BatchFiles#nexial-tms-importer)
+- If there are any changes made to testcases for example adding new test case, deleted or updated,
+  user need to update testcases using the same batch file command [nexial-tms-importer.](BatchFiles#nexial-tms-importer)
+
+Sample screenshots after importing test result:<br/>
+- Test Suite screenshot
+  ![](image/AzureDevOpsSetup_11.png)
+- Individual Test Case screenshot
+  ![](image/AzureDevOpsSetup_12.png)
+
 ### HOW to upload Execution Results
 1. **(Mandatory)** Make sure testcases are already imported to Azure DevOps before uploading result as explained above.
 2. Test result is uploaded as Test Runs with cumulative results for testcases from `execution-detail.json`. Make sure
@@ -87,7 +98,8 @@ to get to know how to create pipeline and task for the same.
 ![](./image/AzureDevOpsSetup_06.png)
 4. Setup task `publish test result` for `vstest` test result format in pipeline `azure-pipelines.yml`.<br/>
 ![](./image/AzureDevOpsSetup_07.png)
-5. Set `nexial.generateTrxReport=true` to generate `vstest` report which will be used by pipeline to create test run.
+5. Set [`nexial.generateTrxReport`](../systemvars/index#nexial.generateTrxReport) to `True` to generate `vstest` 
+report which will be used by pipeline to create test run.
 6. Run the pipeline and new test run will be created with result.
 
 ### See Also

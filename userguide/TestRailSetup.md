@@ -47,6 +47,17 @@ or [`nexial-setup.sh`](BatchFiles#nexial-setup).
 {% include _configure_project_meta.md %}
 **Note : `projectId` must be project id in the TestRail which can be seen in the URL once you open the TestRail project.**
 
+**Import Test cases**:-
+- User can import testcase using Nexial batch file [nexial-tms-importer.](BatchFiles#nexial-tms-importer)
+- If there are any changes made to testcases for example adding new test case, deleted or updated,
+user need to update testcases using the same batch file command [nexial-tms-importer.](BatchFiles#nexial-tms-importer)
+
+Sample screenshots after importing test result:<br/>
+- Test Suite screenshot 
+![](image/TestRailSetup_08.png)
+- Individual Test Case screenshot
+![](image/TestRailSetup_09.png)
+
 ### HOW to upload Execution Results
 1. **(Mandatory)** Make sure testcases are already imported to Test Rail before uploading result as explained above.
 2. Test result is uploaded as Test Runs with cumulative results for testcases from `execution-detail.json`. Make sure 
@@ -59,6 +70,13 @@ during script execution in Nexial, [`nexial.generateReport`](../systemvars/index
 3. If Test Run for imported Test Suite is active(not closed), then next time execution test result will be uploaded to
 the same test run.
 4. If Test Run is not active(Closed), new test run will be created.
+
+Sample screenshots after uploading test result:<br/>
+- Test Run created for sample execution with attachment output excel and html report<br/>
+![](image/TestRailSetup_06.png)
+- Multiple test result uploaded without closing test run<br/>
+![](image/TestRailSetup_07.png)
+
 
 #### Create custom fields
 For TestRail, if user wants to add execution results for imported test cases, user needs to create custom field for 
