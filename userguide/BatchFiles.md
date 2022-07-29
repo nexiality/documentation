@@ -225,14 +225,14 @@ description of [BDD Keywords](TmsManagement#bdd-keywords-support) here.
 <br/>
 
 ##### Example
-- Import a Nexial script to TMS with BDD keywords formatting:<br/>
+- Import a Nexial script to TMS without BDD keywords formatting:<br/>
   ```
-  nexial-tms-importer.cmd -script c:\projects\myProject\artifact\script\myProject.xlsx -b
+  nexial-tms-importer.cmd -script c:\projects\myProject\artifact\script\myProject.xlsx
   ```
 
-- Import one or more specific scenario(i.e. worksheet) of script:<br/>
+- Import a Nexial script to TMS with BDD keywords formatting and closing previous test run if any:<br/>
   ```
-  nexial-tms-importer.cmd -script c:\projects\myProject\artifact\script\myProject.xlsx -scenario test1,test2
+  nexial-tms-importer.cmd -script c:\projects\myProject\artifact\script\myProject.xlsx -b -c
   ```
 
 - Import specific subplan of Nexial plan to TMS<br/>
