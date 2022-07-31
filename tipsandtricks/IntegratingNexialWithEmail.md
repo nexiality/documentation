@@ -81,12 +81,19 @@ export JAVA_OPT=-Dnexial.mailTo=<email_3,email_4>
 ./nexial.sh -script ... ...
 ```
 
-Only the `nexial.mailTo` System variable is needed here.  The rest of the mail settings can remained in data sheets or
+Only the `nexial.mailTo` System variable is needed here.  The rest of the mail settings can remain in data sheets or
 `project.properties`.  Hence one would only add the "changed" setting in System properties as and when needed.
 
 
 ### Email Notification via Gmail
-Since Gmail is a very popular email solution, it's worth the effort to provide Gmail-specific settings here.
+> **(!!! IMPORTANT !!!) Note that as of May 30th, 2022, Google has
+> <a href="https://support.google.com/accounts/answer/6010255?hl=en" class="external-link" target="_nexial_link">announced</a>
+> that it will no longer support SMTP protocol issued via a third-party application (such as Nexial).*
+
+However, if you are using a Gmail account provisioned through a paid Google Workspace or Google Cloud account, sending 
+email via Gmail (SMTP) is still possible with a few initial steps.
+
+Here are the required Gmail-specific settings (System variables):
 
 ```properties
 nexial.enableEmail=true

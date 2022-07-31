@@ -15,9 +15,9 @@ mail server connectivity would be configured.
 
 The `mail` commands represent a series of automation regarding emails (SMTP). As of now, the main focus is on sending 
 email. Future version of Nexial could potentially support the reading email as well. If this is of interest or
-importance to you, please let us know via the 
-[GitHub Feature request form](https://github.com/nexiality/nexial-core/issues/new?template=feature_request.md). It'll
-help us prioritize future Nexial features. 
+importance to you, please let us know via the
+<a href="https://github.com/nexiality/nexial-core/issues/new?template=feature_request.md" class="external-link" 
+target="_nexial_link">GitHub Feature request form</a>. It'll help us prioritize future Nexial features.
 
 Using the `mail` commands, one can configure the configuration of an outgoing email dynamically, including: 
 - The TO recipient(s) (via [`composeMail(var,action,value)`](composeMail(var,action,value)))
@@ -70,7 +70,12 @@ Here are the various settings available to configure the appropriate mail server
 
 
 #### Gmail
-Sending email via Gmail is possible, albeit a few things to take care initially.
+> **(!!! IMPORTANT !!!) Note that as of May 30th, 2022, Google has 
+> <a href="https://support.google.com/accounts/answer/6010255?hl=en" class="external-link" target="_nexial_link">announced</a> 
+> that it will no longer support SMTP protocol issued via a third-party application (such as Nexial).*
+
+However, if you are using a Gmail account provisioned through a paid Google Workspace or Google Cloud account, sending
+email via Gmail (SMTP) is still possible with a few initial steps.
 
 Here's the settings for targeting Gmail as the mail host:<br/>
 ![](image/mail_01.png)
