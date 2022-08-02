@@ -82,7 +82,7 @@ export JAVA_OPT=-Dnexial.mailTo=<email_3,email_4>
 ```
 
 Only the `nexial.mailTo` System variable is needed here.  The rest of the mail settings can remain in data sheets or
-`project.properties`.  Hence one would only add the "changed" setting in System properties as and when needed.
+`project.properties`.  Hence, one would only add the "changed" setting in System properties as and when needed.
 
 
 ### Email Notification via Gmail
@@ -98,6 +98,7 @@ Here are the required Gmail-specific settings (System variables):
 ```properties
 nexial.enableEmail=true
 nexial.mailTo=<recipients>
+
 nexial.mail.smtp.host=smtp.gmail.com
 nexial.mail.smtp.port=587
 nexial.mail.smtp.from=nexial-noreply@gmail.com
@@ -111,3 +112,22 @@ Note that `nexial.mail.smtp.starttls.enable` is **REQUIRED** to be `true` for Gm
 and the target email and password for authentication.
 
 {% include _gmail_less_secure.md %}
+
+
+### Email Notification via Office365
+Sending SMTP email via Microsoft Office 365 is similar to that of other SMTP services. Here are the required System 
+variables:
+
+```properties
+nexial.enableEmail=true
+nexial.mailTo=<recipients>
+
+nexial.mail.smtp.host=smtp.office365.com
+nexial.mail.smtp.port=587
+nexial.mail.smtp.from=<sender's email address>
+nexial.mail.smtp.starttls.enable=true
+nexial.mail.smtp.auth=true
+nexial.mail.smtp.username=<username>
+nexial.mail.smtp.password=<password>
+```
+
