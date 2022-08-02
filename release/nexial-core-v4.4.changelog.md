@@ -43,6 +43,8 @@ comments: true
 - support Java 18
 - support newer version of gecko driver (firefox)
 - update nexial-lib to [1.3](https://github.com/nexiality/fixes/releases/download/nexial-lib-1.3/nexial-lib-1.3.zip)
+- enforce Java 17 as the minimum required Java version; helps to improve runtime stability and performance, and enable
+  future enhancements
 
 
 ### [System Variables](../systemvars)
