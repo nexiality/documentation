@@ -93,6 +93,10 @@ comments: true
   - allow access to local files
   - allow for auth prompt when crossing site origin
   - enable input event handling by the window manager
+- restore `chrome.embedded` support (unintended missed in previous build)
+- disable `nexial.browser.windowsSize` and `nexial.browser.windowPosition` for embedded Chrome, Electron and mobile
+  browser automation (since they don't make sense in those scenario).
+- disable automatic checking of webdriver updates for `chrome.embedded`, since embedded driver rarely updates.
 
 
 ### [webmail commands](../commands/webmail)
