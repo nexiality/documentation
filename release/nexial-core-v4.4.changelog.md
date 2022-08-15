@@ -44,7 +44,8 @@ comments: true
 - support newer version of gecko driver (firefox)
 - update nexial-lib to [1.3](https://github.com/nexiality/fixes/releases/download/nexial-lib-1.3/nexial-lib-1.3.zip)
 - enforce Java 17 as the minimum required Java version; helps to improve runtime stability and performance, and enable
-  future enhancements
+  future enhancements.
+- fix output message formatting on *NIX/MacOs shell scripts.
 
 
 ### [System Variables](../systemvars)
@@ -63,6 +64,12 @@ comments: true
 
 
 ### [Nexial Interactive](../interactive)
+- slightly improved console menu display
+- default to "AutoRun"
+
+
+### [JSONPath](../jsonpath)
+- fix special character substitution when dealing with RegEx.
 
 
 ### [desktop commands](../commands/desktop)
@@ -97,6 +104,8 @@ comments: true
 - disable `nexial.browser.windowsSize` and `nexial.browser.windowPosition` for embedded Chrome, Electron and mobile
   browser automation (since they don't make sense in those scenario).
 - disable automatic checking of webdriver updates for `chrome.embedded`, since embedded driver rarely updates.
+- silenced "session exception" when terminating webdriver instance.
+- fix webdriver auto-download logic; now with consideration with Apple M1 architecture
 
 
 ### [webmail commands](../commands/webmail)
@@ -118,4 +127,3 @@ comments: true
   variable substitution).
 - [ws &raquo; post(url,body,var)](../commands/ws/post(url,body,var).md): support `(IGNORE)` content type 
   while uploading files using multipart.
-
