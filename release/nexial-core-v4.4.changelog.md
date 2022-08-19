@@ -106,6 +106,10 @@ comments: true
 - disable automatic checking of webdriver updates for `chrome.embedded`, since embedded driver rarely updates.
 - silenced "session exception" when terminating webdriver instance.
 - fix webdriver auto-download logic; now with consideration with Apple M1 architecture
+- [web &raquo; saveTableAsCsv(locator,nextPageLocator,file)](../commands/web/saveTableAsCsv(locator,nextPageLocator,file)):
+  fixed error when target TABLE element becomes stale or invalid after paging.
+- [web &raquo; saveTableAsCsv(locator,nextPageLocator,file)](../commands/web/saveTableAsCsv(locator,nextPageLocator,file)):
+  fixed error when target "Next Page" element becomes stale or invalid after clicking.
 
 
 ### [webmail commands](../commands/webmail)
