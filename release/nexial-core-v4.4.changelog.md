@@ -110,6 +110,10 @@ comments: true
   fixed error when target TABLE element becomes stale or invalid after paging.
 - [web &raquo; saveTableAsCsv(locator,nextPageLocator,file)](../commands/web/saveTableAsCsv(locator,nextPageLocator,file)):
   fixed error when target "Next Page" element becomes stale or invalid after clicking.
+- [web &raquo; select(locator,text)](../commands/web/select(locator,text).html#supporting-index-based-selection):
+  support selecting by index (instead of text) via prefix `INDEX:`. The specified index is 0-based. For example, 
+  - `INDEX:1` would select the second `OPTION` element.
+  - `INDEX:last` would select the last `OPTION` element.
 
 
 ### [webmail commands](../commands/webmail)

@@ -13,7 +13,7 @@ element:
 
 ![](image/select_03.png)
 
-To select "American flamingo", one would specify `text` as `American flamingo`. However one can also specify `text` as
+To select "American flamingo", one would specify `text` as `American flamingo`. However, one can also specify `text` as
 `REGEX:American.+` (reads: _starts with "American"_).  Similarly, to select "Lesser flamingo", one can specify `text`
 as `REGEX:Lesser.+`.
 
@@ -25,6 +25,14 @@ To select both "Andean flamingo" and "Chilean flamingo", one would specify `text
 (reads: _contains "ean "_).
 
 {% include _polymatcher.md %}
+
+#### Supporting index-based selection
+As of [v4.4](../../release/nexial-core-v4.4.changelog), Nexial supports the selection of a `OPTION` element using its 
+index. To do so, specify the `text` parameter in the form of `INDEX:[number]`. Note that the specified index is assumed 
+to be 0-based. A special case of `INDEX:last` is also supported to select the last `OPTION` element. For example, 
+`INDEX:1` would select the second `OPTION` element belonging to the target `SELECT` element, while `INDEX:last` would 
+select the last `OPTION` element instead.
+
 
 #### Note
 - If multiple matches are found through regex-based identification but the target `SELECT` element only support single 
