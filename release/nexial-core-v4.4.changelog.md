@@ -117,6 +117,7 @@ comments: true
   supports the initialization of a "temporary-mail" inbox when `duration` is set to `0`.
 - improved email content parsing logic for Mailinator emails.
 - avoid closing browser, and thus the underlying driver, after scanning for incoming emails.
+- fixed the logic to harvest link and link labels for Mailinator mails.
 
 
 ### [ws commands](../commands/ws)
