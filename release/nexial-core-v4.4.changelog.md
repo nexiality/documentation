@@ -114,6 +114,11 @@ comments: true
   support selecting by index (instead of text) via prefix `INDEX:`. The specified index is 0-based. For example, 
   - `INDEX:1` would select the second `OPTION` element.
   - `INDEX:last` would select the last `OPTION` element.
+- fix visibility assertion for radio and checkbox elements, which will have impact to the following commands:
+  - [assertElementsVisible(prefix)](../commands/web/assertElementsVisible(prefix))
+  - [assertNotVisible(locator)](../commands/web/assertNotVisible(locator))
+  - [assertVisible(locator)](../commands/web/assertVisible(locator))
+  - [waitUntilVisible(locator,waitMs)](../commands/web/waitUntilVisible(locator,waitMs))
 
 
 ### [webmail commands](../commands/webmail)
