@@ -119,6 +119,8 @@ comments: true
   - [assertNotVisible(locator)](../commands/web/assertNotVisible(locator))
   - [assertVisible(locator)](../commands/web/assertVisible(locator))
   - [waitUntilVisible(locator,waitMs)](../commands/web/waitUntilVisible(locator,waitMs))
+- [saveDivsAsCsv(headers,rows,cells,nextPage,file)](../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)): 
+  added highlighting (if enabled) during data collection; added implicit wait during pagination to reduce flaky tests.
 
 
 ### [webmail commands](../commands/webmail)
