@@ -49,8 +49,14 @@ comments: true
 
 
 ### [System Variables](../systemvars)
-- [`nexial.generateReport`](../systemvars/index.md#nexial.generateReport) - Changed default to true, meaning the 
+- [`nexial.generateReport`](../systemvars/index.html#nexial.generateReport) - Changed default to true, meaning the 
   JSON-based report will be generated (by default) after each execution.
+- [`nexial.web.toastDescription`](../systemvars/index.html#nexial.web.toastDescription) - Allow the description of the 
+  current test step to be exposed as a toast notification on the current browser window.
+- [`nexial.web.toastDescriptionWaitMs`](../systemvars/index.html#nexial.web.toastDescriptionWaitMs) - Allow the 
+  description of the current test step to be exposed as a toast notification on the current browser window.
+- [`nexial.web.toastDescriptionDarkMode`](../systemvars/index.html#nexial.web.toastDescriptionDarkMode) - Allow the 
+  description of the current test step to be exposed as a toast notification on the current browser window.
 
 
 ### [Expression](../expression)
@@ -61,6 +67,7 @@ comments: true
 
 
 ### [Nexial Function](../functions)
+- [`${random|number|from|to)`](../functions/$(random).#randomnumericfromto): code fix to extend the `to` value as inclusive.
 
 
 ### [Nexial Interactive](../interactive)
@@ -92,7 +99,7 @@ comments: true
 
 
 ### [web commands](../commands/web)
-- [web &raquo; typeKeys(locator,value)](../commands/web/typeKeys(locator,value)): add support for `{ESC}` 
+- [`typeKeys(locator,value)`](../commands/web/typeKeys(locator,value)): add support for `{ESC}` 
   (same as `{ESCAPE}`).
 - better support for CORS security bypass via automated chrome browser options
 - added additional configurations on chromedriver (for chrome browser) to ease security restriction for testing:
@@ -106,21 +113,26 @@ comments: true
 - disable automatic checking of webdriver updates for `chrome.embedded`, since embedded driver rarely updates.
 - silenced "session exception" when terminating webdriver instance.
 - fix webdriver auto-download logic; now with consideration with Apple M1 architecture
-- [web &raquo; saveTableAsCsv(locator,nextPageLocator,file)](../commands/web/saveTableAsCsv(locator,nextPageLocator,file)):
+- [`saveTableAsCsv(locator,nextPageLocator,file)`](../commands/web/saveTableAsCsv(locator,nextPageLocator,file)):
   fixed error when target TABLE element becomes stale or invalid after paging.
-- [web &raquo; saveTableAsCsv(locator,nextPageLocator,file)](../commands/web/saveTableAsCsv(locator,nextPageLocator,file)):
+- [`saveTableAsCsv(locator,nextPageLocator,file)`](../commands/web/saveTableAsCsv(locator,nextPageLocator,file)):
   fixed error when target "Next Page" element becomes stale or invalid after clicking.
-- [web &raquo; select(locator,text)](../commands/web/select(locator,text).html#supporting-index-based-selection):
+- [`select(locator,text)`](../commands/web/select(locator,text).html#supporting-index-based-selection):
   support selecting by index (instead of text) via prefix `INDEX:`. The specified index is 0-based. For example, 
   - `INDEX:1` would select the second `OPTION` element.
   - `INDEX:last` would select the last `OPTION` element.
 - fix visibility assertion for radio and checkbox elements, which will have impact to the following commands:
-  - [assertElementsVisible(prefix)](../commands/web/assertElementsVisible(prefix))
-  - [assertNotVisible(locator)](../commands/web/assertNotVisible(locator))
-  - [assertVisible(locator)](../commands/web/assertVisible(locator))
-  - [waitUntilVisible(locator,waitMs)](../commands/web/waitUntilVisible(locator,waitMs))
-- [saveDivsAsCsv(headers,rows,cells,nextPage,file)](../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)): 
+  - [`assertElementsVisible(prefix)`](../commands/web/assertElementsVisible(prefix))
+  - [`assertNotVisible(locator)`](../commands/web/assertNotVisible(locator))
+  - [`assertVisible(locator)`](../commands/web/assertVisible(locator))
+  - [`waitUntilVisible(locator,waitMs)`](../commands/web/waitUntilVisible(locator,waitMs))
+- [`saveDivsAsCsv(headers,rows,cells,nextPage,file)`](../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)): 
   added highlighting (if enabled) during data collection; added implicit wait during pagination to reduce flaky tests.
+- [`open(url)`](../commands/web/open(url)): added additional wait to further ensure page stability when
+  [`nexial.enforcePageSourceStability`](../systemvars/index.html#nexial.enforcePageSourceStability) is set as `false`.
+  Similar impact to [`openAndWait(url,waitMs)`](../commands/web/openAndWait(url,waitMs)) command as well.
+- [`toast(message,duration,darkMode)`](../commands/web/toast(message,duration,darkMode)): **NEW** command to create a
+  toast notification on the current browser window.
 
 
 ### [webmail commands](../commands/webmail)
@@ -132,14 +144,14 @@ comments: true
 
 
 ### [ws commands](../commands/ws)
-- [ws &raquo; upload(url,body,fileParams,var)](../commands/ws/upload(url,body,fileParams,var)): enforces that multi-file 
+- [`upload(url,body,fileParams,var)`](../commands/ws/upload(url,body,fileParams,var)): enforces that multi-file 
   upload request **MUST** be a multipart request.
-- [ws &raquo; upload(url,body,fileParams,var)](../commands/ws/upload(url,body,fileParams,var)): support setting 
+- [`upload(url,body,fileParams,var)`](../commands/ws/upload(url,body,fileParams,var)): support setting 
   `Content-Type` for the target file(s) other than the default `application/octet-stream`. One should use the 
-  [ws &raquo; header(name,value)](../commands/ws/header(name,value)) command to specify the `Content-Type` value 
+  [`header(name,value)`](../commands/ws/header(name,value)) command to specify the `Content-Type` value 
   **PRIOR** to invoking the target API.
-- [ws &raquo; upload(url,body,fileParams,var)](../commands/ws/upload(url,body,fileParams,var)): support variable
+- [`upload(url,body,fileParams,var)`](../commands/ws/upload(url,body,fileParams,var)): support variable
   substitution in uploaded file. Use `nexial.ws.requestPayloadAsRaw` to control this behavior (`false` means activate 
   variable substitution).
-- [ws &raquo; post(url,body,var)](../commands/ws/post(url,body,var).md): support `(IGNORE)` content type 
+- [`post(url,body,var)`](../commands/ws/post(url,body,var).html): support `(IGNORE)` content type 
   while uploading files using multipart.

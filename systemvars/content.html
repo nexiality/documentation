@@ -3280,6 +3280,81 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             <a href="#nexial.web.highlight"><code>nexial.web.highlight</code></a> is set to <code>true</code>.
         </td>
     </tr>
+
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.web.toastDescription"><code>nexial.web.toastDescription</code></a>
+        </td>
+        <td>boolean</td>
+        <td><code>false</code></td>
+        <td class="read-write">read/write</td>
+        <td>
+            <b>ONLY APPLICABLE TO WEB AUTOMATION, OR AN EXECUTION WHERE THE WEB BROWSER IS ACTIVELY IN USE</b>
+            <br/>
+            This System variable specifies if Nexial should use the description of the current test step as "toast
+            notification" on the current browser window. See <a href="./commands/web/toast(message,duration,darkMode)">
+            <code>web &raquo; toast(message,duration,darkMode)</code></a> for more details. If set to <code>true</code>,
+            then Nexial will attempt to collect the description (Column B) of the current test step to create a toast
+            notification. If no description can be collected, or if there is no browser utilized within current
+            execution, then no toast notification will be generated. One may consider this turnkey feature as an easy
+            way to create on-the-fly narration on the browser whilst the target application is being automated or
+            tested. By default, this System variable is set to <code>false</code>.<br/>
+            <br/>
+            For further fine-tuning, see <a href="#nexial.web.toastDescriptionWaitMs">
+            <code>nexial.web.toastDescriptionWaitMs</code></a> and <a href="#nexial.web.toastDescriptionDarkMode">
+            <code>nexial.web.toastDescriptionDarkMode</code></a> System variables.
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.web.toastDescriptionWaitMs"><code>nexial.web.toastDescriptionWaitMs</code></a>
+        </td>
+        <td>number</td>
+        <td><code>1500</code></td>
+        <td class="read-write">read/write</td>
+        <td>
+            <b>ONLY APPLICABLE TO WEB AUTOMATION, OR AN EXECUTION WHERE THE WEB BROWSER IS ACTIVELY IN USE</b>
+            <br/>
+            This System variable specifies that, if a toast notification should be displayed (see
+            <a href="#nexial.web.toastDescription"><code>nexial.web.toastDescription</code></a>), how long would such
+            notification be displayed. This System Variable specifies such time in milliseconds. By default, it is set
+            to <code>1500</code> (i.e. 1.5 second).
+            <br/>
+            See <a href="./commands/web/toast(message,duration,darkMode)">
+            <code>web &raquo; toast(message,duration,darkMode)</code></a> for more details.
+            <br/>
+            For further fine-tuning, see <a href="#nexial.web.toastDescription">
+            <code>nexial.web.toastDescription</code></a> and <a href="#nexial.web.toastDescriptionDarkMode">
+            <code>nexial.web.toastDescriptionDarkMode</code></a> System variables.
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.web.toastDescriptionDarkMode"><code>nexial.web.toastDescriptionDarkMode</code></a>
+        </td>
+        <td>boolean</td>
+        <td><code>true</code></td>
+        <td class="read-write">read/write</td>
+        <td>
+            <b>ONLY APPLICABLE TO WEB AUTOMATION, OR AN EXECUTION WHERE THE WEB BROWSER IS ACTIVELY IN USE</b>
+            <br/>
+            This System variable specifies that, if a toast notification should be displayed (see
+            <a href="#nexial.web.toastDescription"><code>nexial.web.toastDescription</code></a>), if it should be
+            displayed in "dark" mode or "light" mode. Since different websites look differently, one may want to use
+            this System variable to adjust the toast notification to improve the overal UX. By default, it is set
+            to <code>true</code> (i.e. "dark" mode).
+            <br/>
+            See <a href="./commands/web/toast(message,duration,darkMode)">
+            <code>web &raquo; toast(message,duration,darkMode)</code></a> for more details.
+            <br/>
+            For further fine-tuning, see <a href="#nexial.web.toastDescription">
+            <code>nexial.web.toastDescription</code></a> and <a href="#nexial.web.toastDescriptionDarkMode">
+            <code>nexial.web.toastDescriptionDarkMode</code></a> System variables.
+        </td>
+    </tr>
+
+
+
     <tr>
         <td class="varname" nowrap="nowrap">
             <a id="nexial.web.scrollIntoView"><code>nexial.web.scrollIntoView</code></a>
