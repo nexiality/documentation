@@ -32,7 +32,7 @@ comments: true
   - fresh redesign of execution summary for improved dashboard view.
 - reduce log severity from ERROR to WARN for side-effect or triggered down errors. 
 - enforce `project.properties` to contain unique data variables; thus reduce misconfiguration or inconsistent behaviors
-  - use [`nexial.projectPropertiesDups`](../systemvars/index.md#nexial.projectPropertiesDups) to fine-tune this control. 
+  - use [`nexial.projectPropertiesDups`](../systemvars/index.html#nexial.projectPropertiesDups) to fine-tune this control. 
 
 
 ### [Batch Files](../userguide/BatchFiles)

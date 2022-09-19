@@ -90,7 +90,7 @@ comments: true
     currently unchecked.
   - [`uncheck(name)`](../commands/desktop/uncheck(name)): *NEW* command to uncheck a Checkbox component only if it is 
     currently checked.
-  - [`checkByLocator(locator)`](../commands/desktop/checkByLocator(locator).md): *NEW* command to check a Checkbox 
+  - [`checkByLocator(locator)`](../commands/desktop/checkByLocator(locator)): *NEW* command to check a Checkbox 
     component only if it is currently unchecked.
   - [`uncheckByLocator(locator)`](../commands/desktop/uncheckByLocator(locator)): *NEW* command to uncheck a Checkbox 
     component only if it is currently checked.
