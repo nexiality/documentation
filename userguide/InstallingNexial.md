@@ -116,7 +116,7 @@ your system (the latest Java recommended), please follow the section above.
                 </li>
                 <li>
                     Click the following link to begin downloading the Nexial installer:
-                    <a href="https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.6/nexial-installer-1.4.6.zip" 
+                    <a href="https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.7/nexial-installer-1.4.7.zip" 
                     class="external-link" target="_nexial_link">Nexial Installer</a>.
                 </li>
                 <li>
@@ -165,7 +165,7 @@ your system (the latest Java recommended), please follow the section above.
                 </li>
                 <li>
                     Click the following link to begin downloading the Nexial installer:
-                    <a href="https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.6/nexial-installer-1.4.6.zip" 
+                    <a href="https://github.com/nexiality/nexial-installer/releases/download/nexial-installer-v1.4.7/nexial-installer-1.4.7.zip" 
                     class="external-link" target="_nexial_link">Nexial Installer</a><br/>
                     <br/>
                     By default, it will be downloaded to the <code>Downloads</code> directory. Move this file to the 
@@ -174,7 +174,7 @@ your system (the latest Java recommended), please follow the section above.
                 </li>
                 <li>
                     Rename the Nexial Installer zip by removing its version number from the zip file. That way, it will
-                    unzip to a directory named as <code>nexial-installer</code> (instead of <code>nexial-installer-1.4.6</code>):<br/>
+                    unzip to a directory named as <code>nexial-installer</code> (instead of <code>nexial-installer-1.4.7</code>):<br/>
                     <img src="image/InstallingNexial_05.mac.png"/><br/>
                     <img src="image/InstallingNexial_06.mac.png"/><br/>
                 </li>
