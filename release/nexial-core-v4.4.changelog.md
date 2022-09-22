@@ -73,6 +73,8 @@ comments: true
 ### [Nexial Interactive](../interactive)
 - slightly improved console menu display
 - default to "AutoRun"
+- allow iteration to be specified either via iteration index (1-based, numeric) or via column letter (as found on 
+  corresponding datasheet).
 
 
 ### [JSONPath](../jsonpath)
@@ -133,6 +135,9 @@ comments: true
   Similar impact to [`openAndWait(url,waitMs)`](../commands/web/openAndWait(url,waitMs)) command as well.
 - [`toast(message,duration,darkMode)`](../commands/web/toast(message,duration,darkMode)): **NEW** command to create a
   toast notification on the current browser window.
+- suppress the display of toast notification on browser when no browser is yet in used during execution.
+- suppress the certification selection dialog that pops up when accessing certain URL on Chrome (esp. when automation 
+  is performed on an enterprise-managed compute resource). 
 
 
 ### [webmail commands](../commands/webmail)
