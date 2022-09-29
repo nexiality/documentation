@@ -57,6 +57,11 @@ comments: true
   description of the current test step to be exposed as a toast notification on the current browser window.
 - [`nexial.web.toastDescriptionDarkMode`](../systemvars/index.html#nexial.web.toastDescriptionDarkMode) - Allow the 
   description of the current test step to be exposed as a toast notification on the current browser window.
+- [`nexial.targetDisplay`](../systemvars/index.html#nexial.targetDisplay): Support display pinning so that the browser 
+  used during automation will be opened to a display (monitor) of your choice. Expected 0-based value for display, or 
+  use `CURRENT` for currently active monitor. For example, `nexial.targetDisplay=CURRENT|0|1|...`
+- [`nexial.browser.windowSize`](../systemvars/content.html#nexial.browser.windowSize): now supports specialized 
+ keyword (one of `maximized`, `maximize`, `fullscreen`, `full`) to maximize browser window when it initially opens.
 
 
 ### [Expression](../expression)
@@ -138,6 +143,7 @@ comments: true
 - suppress the display of toast notification on browser when no browser is yet in used during execution.
 - suppress the certification selection dialog that pops up when accessing certain URL on Chrome (esp. when automation 
   is performed on an enterprise-managed compute resource). 
+- prevent the changing of window position on headless browsers.
 
 
 ### [webmail commands](../commands/webmail)

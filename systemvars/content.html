@@ -78,7 +78,7 @@
     <code>set NEXIAL_MAX_MEM=4096m</code><br/>
     <br/>
 
-    On Linux/MacOS, before running <code>nexial.sh</code>:<br/>
+    On Linux/Mac OS, before running <code>nexial.sh</code>:<br/>
     <code>export NEXIAL_MAX_MEM=4096m</code><br/>
     <br/>
 
@@ -110,7 +110,7 @@
 </p>
 
 <p>
-    Below are a list of configurable system variables. During the test execution, Nexial may generates one or more
+    Below are a list of configurable system variables. During the test execution, Nexial may generate one or more
     variables which maybe incorporated as part of your test script.
 </p>
 
@@ -246,7 +246,7 @@ nexial.cmd -plan ...</pre>
             <ol>
                 <li>
                     <code>error</code> - This is the default. This option instructs Nexial will report the 
-                    "dupicate data variable found in project.properties" event as an error and promptly exit thereafter.
+                    "duplicate data variable found in project.properties" event as an error and promptly exit thereafter.
                 </li>
                 <li>
                     <code>first</code> - This option instructs Nexial <b>NOT</b> to allow for override. Duplicate 
@@ -309,9 +309,8 @@ nexial.cmd -plan ...</pre>
                 <li><a href="../commands/base/section(steps)">base &raquo; <code>section(steps)</code></a></li>
             </ul>
             These composite commands would likely violate the specified SLA on the account of the enclosed commands.
-            Hence it
-            is more meaningful (and accurate) to uphold the SLA on the enclosed commands instead of the composite
-            commands.<br/>
+            Hence, it is more meaningful (and accurate) to uphold the SLA on the enclosed commands instead of the
+            composite commands.<br/>
             <br/>
             Similarly, all the <code>wait...</code> commands will be exempt from this SLA check since such command would
             likely contain its own SLA (aka timeout) enforcement.
@@ -426,10 +425,10 @@ nexial.cmd -plan ...</pre>
         <td class="read-write">read/write</td>
         <td>
             By default Nexial searches for data variables in the form of <code>${...}</code> and substitutes them with
-            the corresponding value. This is an useful feature to create dynamic data substitution and generation.<br/>
+            the corresponding value. This is a useful feature to create dynamic data substitution and generation.<br/>
             <br/>
             However at times it is important that some data variables are left as it is. It might be a case of multi-
-            stage text processing where Nexial is used to process some of the data variables and another program for
+            stage text processing where Nexial is used to process some data variables and another program for
             additional data variables (which should be left alone). It might be a case of time-triggered processing
             where some data variables become available/meaningful at a later time (and thus should be ignored
             presently). Whatever the case may be, one can use this System variable to define a list of data variables
@@ -509,7 +508,7 @@ nexial.cmd -plan ...</pre>
         <td>&nbsp;</td>
         <td class="read-write">read/write</td>
         <td>
-            This configuration does not modify the behavior or outcome of a test execution. Instead it is used to
+            This configuration does not modify the behavior or outcome of a test execution. Instead, it is used to
             create reference information, which may change over iteration, to improve the readability of the execution
             output. For example,<br/>
             <img alt="nexial.scriptRef example" src="image/systemvar_07.png"/><br/>
@@ -573,14 +572,14 @@ nexial.cmd -plan ...</pre>
         <td class="read-write">read/write</td>
         <td>
             During script development, it is often advantageous to "step through" the execution so that improvements
-            and correction can be made upon runtime observation. However for a very large execution run, it might be
-            rather time consuming to re-run the execution from the beginning each time. Having a way to course correct
+            and correction can be made upon runtime observation. However, for a very large execution run, it might be
+            rather time-consuming to re-run the execution from the beginning each time. Having a way to course correct
             when a FAIL condition is encountered during execution could be very helpful.<br/><br/>
 
             This is the premise of this System variable. When set to <code>true</code>, Nexial will pause the execution
             when a FAIL condition is encountered. This gives automation engineer an opportunity to observe and trace
             through both the AUT and the script in action. When use in combination with
-            <a href="#nexial.inspectOnPause"><code>nexial.inspectOnPause</code></a>, this can be a even more powerful
+            <a href="#nexial.inspectOnPause"><code>nexial.inspectOnPause</code></a>, this can be an even more powerful
             tool to work through the FAIL condition as and when error occurs.<br/><br/>
 
             By default, this System variable is set to <code>false</code>.
@@ -596,7 +595,7 @@ nexial.cmd -plan ...</pre>
             <a href="../userguide/RealtimeInspectionOfDataVariables#on-demand-inspection">On-Demand Inspection (ODI)</a>.
             <br/>
             <br/>
-            Turning off ODI has the benefit of slightly faster execution. However its benefits often outweighs the cost
+            Turning off ODI has the benefit of slightly faster execution. However, its benefits often outweighs the cost
             thereof. During active script development or troubleshooting, it is usually recommend to leave this
             feature enabled.<br/>
             <br/>
@@ -698,7 +697,7 @@ nexial.cmd -plan ...</pre>
                 <tr>
                     <td nowrap="nowrap"><strong>set <code>nexial.failImmediate</code> to true</strong></td>
                     <td>
-                        Now that we've gone passed the "less confident" portion of the test, we want insist that the
+                        Now that we've gone passed the "less confident" portion of the test, we want to insist that the
                         test execution from this point onward must be 100% successfully. This will be effective beyond
                         current iteration and script.
                     </td>
@@ -755,16 +754,13 @@ nexial.cmd -plan ...</pre>
         <td class="read-write">read/write</td>
         <td>
             In cases where a data variable might hold a large amount of text, it might not always be the best idea to
-            display
-            its entirety on the console. Long running console output might make the rest of the execution log more
-            difficult to read, as well as slowing down the execution a bit.<br/>
+            display its entirety on the console. Lengthy console output might make the rest of the execution log
+            more difficult to read, as well as slowing down the execution a bit.<br/>
             For these reasons, this System variable is designed to cut down the display of the data variable with large
-            amount
-            of data. By defailt, this System variable is set to 500. This means that only the first 500 characters (up
-            to)
-            will be displayed on the console. One may choose to modify this System variable to fit one's need. To
-            disable
-            limiting the number of characters to display, set this System variable to <code>-1</code>.<br/>
+            amount of data. By default, this System variable is set to 500. This means that only the first 500
+            characters (up to) will be displayed on the console. One may choose to modify this System variable to fit
+            one's need. To disable limiting the number of characters to display, set this System variable to
+            <code>-1</code>.<br/>
             <br/>
             This System variable currently impacts only the following commands (but will be expanded to more soon):
             <ul>
@@ -827,6 +823,34 @@ nexial.cmd -plan ...</pre>
 
     <tr>
         <td class="varname" nowrap="nowrap">
+            <a id="nexial.targetDisplay"><code>nexial.targetDisplay</code></a>
+        </td>
+        <td>integer</td>
+        <td>0</td>
+        <td class="read-write">read/write</td>
+        <td>
+            Set this System variable to the corresponding target display (i.e. computer monitor) where the AUT should be
+            rendered. Note that this is a <b>0-based</b> System variable, and by default is set to <code>0</code>.
+            <br/>
+            Setting this System variable to, say, <code>1</code>, instructs Nexial to render the AUT (most likely
+            the web browser) in the 2nd monitor. Please consult with the display setting of the compute resource that is
+            executing Nexial Automation. This System variable is useful when one intends to display the automation in
+            action on a specific display output (such as during triage, demo, joint sessions).
+            <br/>
+            One can use a special keyword - <code>CURRENT</code> - to instruct Nexial to open the AUT in the display
+            currently in focus. Hence, from the same display (monitor) where Nexial is executed, the AUT will be displayed
+            on the same display as well.
+            <br/>
+            Note that changing this System variable will also have implication to the following:
+            <ul>
+                <li>screenshot functionality, when <code>nexial.screenshotAsDesktop</code> to set to <code>true</code></li>
+                <li><a href="../commands/desktop/clickScreen(button,modifiers,x,y)">web &raquo; <code>clickScreen(button,modifiers,x,y)</code></a></li>
+                <li><a href="../commands/desktop/mouseWheel(amount,modifiers,x,y)">web &raquo; <code>mouseWheel(amount,modifiers,x,y)</code></a></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
             <a id="nexial.screenshotEnabled"><code>nexial.screenshotEnabled</code></a>
         </td>
         <td>boolean</td>
@@ -870,7 +894,7 @@ nexial.cmd -plan ...</pre>
         <td class="read-write">read/write</td>
         <td>
             When running <a href="../commands/web"><code>web</code> commands</a>, the norm has been using the underlying
-            WebDriver's screen capturing capability. However in some situation, it might be beneficial or perhaps
+            WebDriver's screen capturing capability. However, in some situation, it might be beneficial or perhaps
             necessary to screen capture the entire "desktop" instead. For one, WebDriver's screen capture will not be
             able to capture any native desktop rendering, such as a "file chooser" dialog often seen during a file
             upload process:<br/>
@@ -890,7 +914,7 @@ nexial.cmd -plan ...</pre>
         <td class="read-write">read/write</td>
         <td>
             When running <a href="../commands/web"><code>web</code> commands</a>, the norm has been using the underlying
-            WebDriver's screen capturing capability. However in some situation, it might be beneficial or perhaps
+            WebDriver's screen capturing capability. However, in some situation, it might be beneficial or perhaps
             necessary to screen capture the entire web page instead. <br/>
 
             By setting this System variable as <code>true</code> (default is <code>false</code>), Nexial will capture
@@ -906,7 +930,7 @@ nexial.cmd -plan ...</pre>
         <td class="read-write">read/write</td>
         <td>
             When running <a href="../commands/web"><code>web</code> commands</a>, the norm has been using the underlying
-            WebDriver's screen capturing capability. However in some situation, it might be beneficial or perhaps
+            WebDriver's screen capturing capability. However, in some situation, it might be beneficial or perhaps
             necessary to screen capture the entire web page instead. So, while capturing full screenshot, the timeout
             needed to
             load image before scrolling to next screen is specified via this variable. Default value is
@@ -936,7 +960,7 @@ nexial.cmd -plan ...</pre>
             <img src="image/systemvar_39.png"/><br/>
             <img src="image/systemvar_40.png"/><br/>
             <br/>
-            These two images are practically identical, excep the second one has additional caption at its bottom-right
+            These two images are practically identical, except the second one has additional caption at its bottom-right
             corner. As such, the second image provides its viewer information that may be helpful towards understanding
             its context or troubleshoot an underlying defect.<br/>
             <br/>
@@ -1134,9 +1158,9 @@ nexial.cmd -plan ...</pre>
             </ul>
 
             When executing one of these commands, Nexial also captures the output generated by the commands as a link
-            on the execution output (Excel). This same link - which may be a local file path or an URL (when
+            on the execution output (Excel). This same link - which may be a local file path or a URL (when
             <a href="#nexial.outputToCloud"><code>${nexial.outputToCloud}</code></a> is set to <code>true</code>) -
-            will be made available via this System variable as well. This may further enhances one's automation
+            will be made available via this System variable as well. This may further enhance one's automation
             experience since one could utilize the same output link as part of the execution.
         </td>
     </tr>
@@ -1172,12 +1196,11 @@ nexial.cmd -plan ...</pre>
             </ul>
 
             When executing one of these commands, Nexial also captures the output generated by the commands as a link
-            on the execution output (Excel). The location of this link - which may be a local file path or an URL (when
+            on the execution output (Excel). The location of this link - which may be a local file path or a URL (when
             <a href="#nexial.outputToCloud"><code>${nexial.outputToCloud}</code></a> is set to <code>true</code>) -
             will be made available via this System variable as well. This System variable has the same value as
             <a href="#nexial.lastOutputLink"><code>nexial.lastOutputLink</code></a> - BUT WITHOUT THE FILE NAME. This
-            may
-            further enhances one's automation experience since one could utilize the same output path as part of the
+            may further enhance one's automation experience since one could utilize the same output path as part of the
             execution.
         </td>
     </tr>
@@ -1194,8 +1217,8 @@ nexial.cmd -plan ...</pre>
             <code>nexial.failFast</code> (when set to <code>true</code>) provides a way to terminate execution on the
             first occurrence of a FAIL condition (of a command) - hence "fail-fast". In contrast, the
             <code>nexial.failAfter</code> System variable "slows down" the execution termination by allowing for FAIL
-            conditions to occur. By specifying a integer value to <code>nexial.failAfter</code>, one can apply the idea
-            of "error tolerance" to prolong an execution that contains failures. <i>A sort of a failure-grace, as it
+            conditions to occur. By specifying an integer value to <code>nexial.failAfter</code>, one can apply the idea
+            of "error tolerance" to prolong an execution that contains failures. <i>A sort of failure-grace, as it
             were.</i>
             <br/><br/>
             Note that this System variable supersedes <code>nexial.failFast</code>, and FAIL count is not reset across
@@ -1418,7 +1441,7 @@ nexial.cmd -plan ...</pre>
             For example,<br/>
             <img alt="nexial.spreadsheet.program example" src="image/systemvar_05.png"/><br/>
             Alternatively, one can simply specify <code>wps</code>, which will enable Nexial to automatically resolve
-            the correct location of WPS (latest version preferred). For example,<br/>
+            the correct location of WPS (the latest version preferred). For example,<br/>
             <img alt="nexial.spreadsheet.program example" src="image/systemvar_06.png" style="width:360px"/>
         </td>
     </tr>
@@ -1669,9 +1692,9 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td>false</td>
         <td class="read-write">read/write</td>
         <td>
-            Enable email notification at the end of an execution. By default this is not enabled as using email to
+            Enable email notification at the end of an execution. By default, this is not enabled as using email to
             communicate execution status carries a variety of possible side issues. Nonetheless, email notification is
-            supported in Nexial. Such email provides summary information for a given execution and it looks like the
+            supported in Nexial. Such email provides summary information for a given execution, and it looks like the
             following:<br/>
             <img src="image/systemvar_post_exec_default.png"/><br/>
             <br/>
@@ -1745,7 +1768,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
 
             Customized/optional mail subject instead of the default one. The inclusion of data variable,
             <a href="../expressions">Nexial Expression</a> and <a href="../functions">built-in function</a> is possible
-            to achieve a highly dynamic and expressive email subject. However this might not resolve to the desired
+            to achieve a highly dynamic and expressive email subject. However, this might not resolve to the desired
             value since this System variable is resolved in the beginning of the execution, not the end.<br/>
             <br/>
 
@@ -1761,7 +1784,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
     <tr>
         <td class="varname" nowrap="nowrap"><a id="nexial.mailSubject.withSynopsis"><code>nexial.mailSubject.withSynopsis</code></a>
         </td>
-        <td>booelan</td>
+        <td>boolean</td>
         <td>true</td>
         <td class="read-write">read/write</td>
         <td>
@@ -1774,7 +1797,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             subject:
             <ul>
                 <li><code>ALL PASS</code> - to represent that the corresponding execution has no failed step.</li>
-                <li><code>FAIL (...% success)</code> - to present that some of the steps in the corresponding execution
+                <li><code>FAIL (...% success)</code> - to present that some steps in the corresponding execution
                     failed.
                 </li>
             </ul>
@@ -1793,7 +1816,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
 
             Customized/optional "header" message to be included in Nexial's post-execution email notification. The
             inclusion of data variable, <a href="../expressions">Nexial Expression</a> and
-            <a href="../functions">built-in function</a> is possible - as well as the use of HTML. However this might
+            <a href="../functions">built-in function</a> is possible - as well as the use of HTML. However, this might
             not always resolve to the desired value since this System variable is resolved in the beginning of the
             execution, not the end.
             <br/><br/>
@@ -1816,7 +1839,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
 
             Customized/optional "footer" message to be included in Nexial's post-execution email notification. The
             inclusion of data variable, <a href="../expressions">Nexial Expression</a> and
-            <a href="../functions">built-in function</a> is possible - as well as the use of HTML. However this might
+            <a href="../functions">built-in function</a> is possible - as well as the use of HTML. However, this might
             not always resolve to the desired value since this System variable is resolved in the beginning of the
             execution, not the end.
             <br/><br/>
@@ -1983,7 +2006,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td>1</td>
         <td class="read-only">read-only</td>
         <td>
-            Specify the iteration or iteration range to execute. This can expressed as number (each represent the
+            Specify the iteration or iteration range to execute. This can be expressed as number (each represent the
             iteration index) or a number range. For example,<br/>
             <table>
                 <thead>
@@ -2131,7 +2154,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             before start of each iteration. If no value is found to be assigned to the specified variable(s), Nexial
             will force user input to assign missing value for these variables via console prompt.
             <br/>
-            At times one might intent to assign one or more data variables at runtime (such as date or realtime data).
+            At times one might intend to assign one or more data variables at runtime (such as date or realtime data).
             One can use this System variable to enforce user input accordingly.
             <br/>
             <br/>
@@ -2268,7 +2291,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td>false</td>
         <td class="read-write">read/write</td>
         <td>
-            If <code>true</code>, content comparison will produce a HTML comparison report at the end. The report is
+            If <code>true</code>, content comparison will produce an HTML comparison report at the end. The report is
             stored in the output directory (along with other test output) or in the cloud (if
             <code>nexial.outputToCloud</code> is true) and will be downloadable ia the execution output:<br/>
             <img alt="nexial.compare.jsonReport example" src="image/systemvar_19.jpg"/>
@@ -2554,7 +2577,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             disable such default and generate the comparison result as HTML instead.<br/>
             <br/>
             Note that the generated HTML is a basic HTML table where such table is assigned a style class named
-            <code>compare-result-table</code>. One may choose to decorate this table by add CSS stylsheets to
+            <code>compare-result-table</code>. One may choose to decorate this table by adding CSS to
             <code>table.compare-result-table</code>. See <a href="../commands/json/assertEqual(expected,actual)">json
             &raquo;<code>assertEqual(expectedJson,actualJson)</code></a> for examples.<br/>
             <br/>
@@ -2612,7 +2635,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             This system variable specifies the location from where an external process would start. In some cases, it is
             important to specify the working directory (or some time it is referred to as the "starting directory") so
             that
-            the program can run from its "home" location. Some program would uses its working directory as the location
+            the program can run from its "home" location. Some program would use its working directory as the location
             to
             generate/reference temporal files.
         </td>
@@ -2636,7 +2659,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             file.
             Depending on the size of the target Excel and the number of formulae it contains, setting this System
             variable
-            to <code>true</code> could potentially slow down the file saving process. By default this System variable is
+            to <code>true</code> could potentially slow down the file saving process. By default, this System variable is
             set to <code>false</code>.
             <br/>
             Note that for <a href="../expressions/EXCELexpression">[<code>EXCEL</code>]</a> expression, the target Excel
@@ -2817,7 +2840,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td>
             Instruct Nexial to forcefully clear a textbox or textarea input via <code>BACKSPACE</code> key.<br/>
             <br/>
-            This is not usually needed. However some web application contains fairly persistent and intrusive event
+            This is not usually needed. However, some web application contains fairly persistent and intrusive event
             handler (or listener) that could circumvent the act of clearing out the corresponding input via the
             conventional way (i.e. Selenium's <code>WebElement.clear()</code>). Nexial can simulate user behavior by
             issuing the <code>BACKSPACE</code> keystroke against any existing character found in the target INPUT
@@ -2847,7 +2870,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
                 </li>
                 <li>
                     Any of the "type" commands will ensure that existing value in the target element is cleared by
-                    using <code>BACKSPACE</code> keystroes, instead of the standard Selenium <code>clear</code> command.
+                    using <code>BACKSPACE</code> keystrokes, instead of the standard Selenium <code>clear</code> command.
                     This is only applicable to the <code>INPUT</code> and <code>TEXTAREA</code> element. React
                     applications tend not to react (<i>no puns...</i>) favorably to the Selenium <code>clear</code>
                     command. By setting this System variable to <code>true</code>, Nexial will enforce the clearing of
@@ -2925,7 +2948,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
 
             When set to <code>true</code>, Nexial will enable explicit wait during Web automation with a poll of 10 ms
             until the corresponding condition is reached or the value of
-            <a href="#nexial.pollWaitMs"><code>nexial.pollWaitMs</code></a> is reached.. This technique can help reduce
+            <a href="#nexial.pollWaitMs"><code>nexial.pollWaitMs</code></a> is reached. This technique can help reduce
             the use of implicit wait, which can be unreliable.<br/>
             <br/>
             The default is <code>false</code>.
@@ -2999,7 +3022,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td class="read-only">read-only</td>
         <td>
             Determine if the target browser should be initialized by Nexial in incognito/private mode. The common
-            practice is to <u>ALWAYS</u> run browser in such mode to avoid residual side-effects to the browser between
+            practice is to <u>ALWAYS</u> run browser in such mode to avoid residual side effects to the browser between
             tests. The default is <strong><code>true</code></strong>.<br/>
             <br/>
             <strong>
@@ -3041,6 +3064,14 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
                 <li>Neither height nor width can be set to a value less than 100.</li>
             </ul>
             <img alt="nexial.browser.windowSize example" src="image/systemvar_20.png"/>
+            <br/>
+            As of v4.5, Nexial now supports the use of one of these keyword to open the browser maximized:
+            <ul>
+                <li><code>maximized</code></li>
+                <li><code>maximize</code></li>
+                <li><code>full</code></li>
+                <li><code>fullscreen</code></li>
+            </ul>
         </td>
     </tr>
     <tr>
@@ -3053,10 +3084,11 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td>
             <b>IMPORTANT: This System variable is ignored for embedded Chrome, Electron or mobile browser automation</b>
             <br/>
-            Specify the initial browser window position, in pixel, in relation to the primary monitor. The position
+            Specify the initial browser window position, in pixel, in relation to currently display (see
+            <a href="#nexial.targetDisplay"><code>nexial.targetDisplay</code></a> for more details). The position
             information is expected in the form of:<br/>
             <pre>x value in pixel,y value in pixel</pre>
-            The default value is <code>0,0</code>, which means top-left corner of the primary monitor. Specifying
+            The default value is <code>0,0</code>, which means top-left corner of the assigned monitor. Specifying
             <code>640,1</code> on a screen resolution of 1280x960 would put the browser window on the right side of the
             screen.
         </td>
@@ -3075,7 +3107,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             location is set to the output directory of the corresponding execution.<br/>
 
             This System variable is read during browser initialization. Any changes to this System variable after
-            browser initialization will have not effect until the execution is restarted.
+            browser initialization will be ineffective until the execution is restarted.
             <br/>
         </td>
     </tr>
@@ -3096,7 +3128,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             <a href="../commands/pdf"><code>pdf</code></a> commands for additional automation.<br/>
 
             Note that when this System variable is set to <code>false</code>, PDF documents will open on the current
-            browser. By default Nexial will download PDF documents to
+            browser. By default, Nexial will download PDF documents to
             <a href="#nexial.browser.downloadTo"><code>nexial.browser.downloadTo</code></a>, which, by default, is set
             to <a href="../functions/$(syspath)#syspathout"><code>$(syspath|out|fullpath)</code></a>.
         </td>
@@ -3147,8 +3179,8 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td>false</td>
         <td class="read-write">read/write</td>
         <td>
-            Specify <code>true</code> to enable geo-location support on the target browser. This would enable
-            geo-location detection, which could possibly alter the behavior of the web application under test.<br/>
+            Specify <code>true</code> to enable geolocation support on the target browser. This would enable
+            geolocation detection, which could possibly alter the behavior of the web application under test.<br/>
             <br/>
             Currently only the Chrome and Firefox browsers are support for this feature.
         </td>
@@ -3341,7 +3373,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             This System variable specifies that, if a toast notification should be displayed (see
             <a href="#nexial.web.toastDescription"><code>nexial.web.toastDescription</code></a>), if it should be
             displayed in "dark" mode or "light" mode. Since different websites look differently, one may want to use
-            this System variable to adjust the toast notification to improve the overal UX. By default, it is set
+            this System variable to adjust the toast notification to improve the overall UX. By default, it is set
             to <code>true</code> (i.e. "dark" mode).
             <br/>
             See <a href="./commands/web/toast(message,duration,darkMode)">
@@ -3369,7 +3401,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
 
             When this System variable is set to <code>true</code> (which is the default), Nexial will attempt to adjust
             the position of target web element (like scrolling the page) such that it would be visible prior to carrying
-            out the automation. However in some cases this preemptive "scrolling" might work against intended use as
+            out the automation. However, in some cases this preemptive "scrolling" might work against intended use as
             some web elements might be too big to fit the available view area. In addition, the additional scrolling
             could be considered unnecessary when automating via headless browser.
 
@@ -3406,7 +3438,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td class="varname" nowrap="nowrap">
             <a id="nexial.web.dragNative"><code>nexial.web.dragNative</code></a>
         </td>
-        <td>bolean</td>
+        <td>boolean</td>
         <td>false</td>
         <td class="read-write">read/write</td>
         <td>
@@ -3495,10 +3527,8 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td>
             <b>
                 ONLY APPLICABLE TO THE FOLLOWING COMMANDS:
-                <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a>
-                </li>
-                <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a>
-                </li>
+                <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a></li>
+                <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a></li>
             </b>
 
             When Nexial is capturing data grid into a CSV file (via one of the commands above), it does so by scanning
@@ -3509,7 +3539,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             <br/>
             By setting this System variable to <code>true</code> (default is <code>false</code>), Nexial will activate
             additional scanning of these non-text web elements and capture the corresponding metadata into CSV.
-            Precisely which metadata to capture will be determine by the additional System variables:
+            Precisely which metadata to capture will be determined by the additional System variables:
             <ul>
                 <li><code>nexial.web.saveGrid.header.input</code></li>
                 <li><code>nexial.web.saveGrid.header.image</code></li>
@@ -3520,7 +3550,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             Note that activating "deep scan" will have performance implication. Depending on size and the variety of
             web element found in the target data grid, one could experience a 10% - 45% performance degradation. The
             larger the data grid (multiple paginated pages or 20+ columns, for example), the more significant
-            the performance differences will be. However it should be noted that the impact is localized to the commands
+            the performance differences will be. However, it should be noted that the impact is localized to the commands
             that capture data grid to CSV file.
         </td>
     </tr>
@@ -3534,20 +3564,16 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td>
             <b>
                 ONLY APPLICABLE TO THE FOLLOWING COMMANDS:
-                <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a>
-                </li>
-                <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a>
-                </li>
+                <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a></li>
+                <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a></li>
             </b>
             <br/>
-
             <b>
                 Note that <code>nexial.web.saveGrid.deepScan</code> must be set to <code>true</code> in order for System
                 variable to take effect.
             </b>
             <br/>
             <br/>
-
             When "deep scan" is activated (see <a href="#nexial.web.saveGrid.deepScan">nexial.web.saveGrid.deepScan</a>),
             one can determine what Nexial should capture when it encounters HTML form element such as:
             <ul>
@@ -3558,12 +3584,10 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
                 <li>button</li>
                 <li>dropdown list (a.k.a. pick list)</li>
             </ul>
-
             Depends on the value assigned to this System variable, Nexial will capture the corresponding metadata as its
             CSV value when executing the web &raquo; <code>save...AsCsv()</code> commands. The default value for this
             System variable is <code>name</code>.<br/>
             <br/>
-
             Possible choices are:
             <table>
                 <thead>
@@ -3646,10 +3670,8 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td>
             <b>
                 ONLY APPLICABLE TO THE FOLLOWING COMMANDS:
-                <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a>
-                </li>
-                <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a>
-                </li>
+                <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a></li>
+                <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a></li>
             </b>
             <br/>
 
@@ -3726,19 +3748,15 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td>
             <b>
                 ONLY APPLICABLE TO THE FOLLOWING COMMANDS:
-                <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a>
-                </li>
-                <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a>
-                </li>
+                <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a></li>
+                <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a></li>
             </b>
             <br/>
-
             <b>
                 Note that <code>nexial.web.saveGrid.deepScan</code> must be set to <code>true</code> in order for System
                 variable to take effect.
             </b>
             <br/>
-
             Possible choices are:
             <table>
                 <thead>
@@ -3761,7 +3779,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
                 <tr>
                     <td>type</td>
                     <td>
-                        Capture the type of web element in question. For HTML form input:
+                        Csapture the type of web element in question. For HTML form input:
                         <li>check box - <code>checkbox</code></li>
                         <li>radio button - <code>radio</code></li>
                         <li>text box - <code>text</code></li>
@@ -3821,10 +3839,8 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td>
             <b>
                 ONLY APPLICABLE TO THE FOLLOWING COMMANDS:
-                <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a>
-                </li>
-                <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a>
-                </li>
+                <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a></li>
+                <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a></li>
             </b>
             <br/>
 
@@ -3898,13 +3914,10 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td>
             <b>
                 ONLY APPLICABLE TO THE FOLLOWING COMMANDS:
-                <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a>
-                </li>
-                <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a>
-                </li>
+                <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a></li>
+                <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a></li>
             </b>
             <br/>
-
             Determine if the captured data should be trimmed before saving to CSV file. Default is <code>true</code>.
         </td>
     </tr>
@@ -3918,10 +3931,8 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td>
             <b>
                 ONLY APPLICABLE TO THE FOLLOWING COMMANDS:
-                <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a>
-                </li>
-                <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a>
-                </li>
+                <li><a href="../commands/web/saveTableAsCsv(locator,nextPageLocator,file)">web &raquo; <code>saveTableAsCsv(locator,nextPageLocator,file)</code></a></li>
+                <li><a href="../commands/web/saveDivsAsCsv(headers,rows,cells,nextPage,file)">web &raquo; <code>saveDivsAsCsv(headers,rows,cells,nextPage,file)</code></a></li>
             </b>
             <br/>
 
@@ -3964,10 +3975,10 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
 
             For electron application, it is possible to forcefully terminating the application (AUT) when
             <li><a href="../commands/web/closeAll()">web &raquo; <code>closeAll()</code></a></li>
-            is invoked or when the
-            underlying `chromedriver` is shutting down.. Depending on the target application, it may be necessary to do
-            so in order to ensure all previously in-use resources are released for future use. To forcefully terminate
-            the target application, set the System variable to <code>true</code> (default is <code>false</code>).
+            is invoked or when the underlying `chromedriver` is shutting down. Depending on the target application, it
+            may be necessary to do so in order to ensure all previously in-use resources are released for future use.
+            To forcefully terminate the target application, set the System variable to <code>true</code> (default is
+            <code>false</code>).
         </td>
     </tr>
     <tr>
@@ -4107,9 +4118,8 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
                 <li>Specify IE browser window focus before performing any user interaction operations (mouse or keyboard
                     events).
                 </li>
-                <li>This capability is false by default, but delivers much more accurate native events interactions.
-                </li>
-                <li>But for any user Interaction testing (mouse hovering etc), it is recommended to set this variable to
+                <li>This capability is false by default, but delivers much more accurate native events interactions.</li>
+                <li>But for any user Interaction testing (mouse hovering, etc.), it is recommended to set this variable to
                     <code>true</code> using working with IE Browser.
                 </li>
             </ul>
@@ -4126,7 +4136,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             The location of the IE driver binary (ie IEDriverServer). By default, Nexial will determine the appropriate
             version of IEDriverServer to use, from one of the ones distributed as part of Nexial distribution. However,
             if for some reason you see the need to use a different <code>IEDriverServer.exe</code>, then use this
-            system variable to force the use of a out-of-distribution IEDriverServer.<br/>
+            system variable to force the use of an out-of-distribution IEDriverServer.<br/>
             <br/>
             For more detail, see <a class="external-link"
                                     href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver"
@@ -4142,7 +4152,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             <a id="webdriver.ie.driver.loglevel"><code>webdriver.ie.driver.loglevel</code></a>
         </td>
         <td>text</td>
-        <td><codd>FATAL</codd></td>
+        <td><code>FATAL</code></td>
         <td class="read-only">read-only</td>
         <td>
             <strong>Applicable only for automating Internet Explorer.</strong><br/>
@@ -4438,7 +4448,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             path. Nexial has the capability to use such file content in binary form such as the case for images or PDF,
             or as UTF-8 text form such as JSON, XML or plain text. By default, Nexial will determine the file content
             type based on preceding HTTP header (set via <a href="../commands/ws/head(url,var)">ws &raquo;
-            <code>header(naem,value)</code></a> command). One may override this default behavior to enforce a specific
+            <code>header(name,value)</code></a> command). One may override this default behavior to enforce a specific
             file type treatment via this System variable. Setting it to <code>true</code> means that Nexial should set
             up request payload content as binary (meaning charset or character encoding).<br/>
             <br/>
@@ -4446,7 +4456,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             <ol>
                 <li>Not perform any data variable substitution</li>
                 <li>Ignore the value of
-                    <a href="#nexial.ws.requestPayloadCompact"></a><code>nexial.ws.requestPayloadCompact</code></a>
+                    <a href="#nexial.ws.requestPayloadCompact"><code>nexial.ws.requestPayloadCompact</code></a>
                 </li>
             </ol>
         </td>
@@ -4499,7 +4509,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td rowspan="4">
             Authenticate HTTP interaction via the digest authentication scheme as defined in RFC 2617. All but
             <code>nexial.ws.digest.nonce</code> are required configuration parameters to activate such authentication.
-            Any required configuration missing would not triggered such authentication.
+            Any required configuration missing would not trigger such authentication.
         </td>
     </tr>
     <tr>
@@ -4559,10 +4569,10 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             When performing a file upload operation on an API call, sometimes it is beneficial (even necessary) to
             fine-tune the underlying HTTP construct in order to yield the desired effect. The file upload operation
             has undergone various specification changes over the year. The latest specification is RFC 6532.
-            Subsequently Nexial is using this RFC 6532 as the default "mode" for file upload operation for API testing.
+            Subsequently, Nexial is using this RFC 6532 as the default "mode" for file upload operation for API testing.
             <br/>
             <br/>
-            These "modes" essentially controls how Nexial constructs the HTTP request, particularly with regards to the
+            These "modes" essentially controls how Nexial constructs the HTTP request, particularly the
             HTTP headers for each of the multipart content.<br/>
 
             <table border="1" cellspacing="0" cellpadding="5">
@@ -4584,7 +4594,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             <tr>
                 <td><code>browser</code></td>
                 <td>This is also known as the "lax" mode. It is meant to provide compatibility with older browser
-                    (IE 5 or earlier). Only <code>Content-Disposition</code> and content charset will be consider for
+                    (IE 5 or earlier). Only <code>Content-Disposition</code> and content charset will be considered for
                     the corresponding multipart header.
                 </td>
             </tr>
@@ -4626,7 +4636,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td>
             When set to <code>true</code> (default is <code>false</code>), Nexial will record the request and response
             detail for each API call made via <a href="../commands/ws">ws</a> commands. See the
-            <a href="../commands/ws/index.md#logging"><code>ws</code> Logging</a> section for more details.
+            <a href="../commands/ws/index#logging"><code>ws</code> Logging</a> section for more details.
         </td>
     </tr>
     <tr>
@@ -4784,7 +4794,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
                     </code></a>, or <a href="../commands/desktop/waitForLocator(locator,maxWaitMs)">desktop &raquo;
                     <code>waitForLocator(locator,maxWaitMs)</code></a> commands. Nexial will orchestrate the
                     wait-and-retry routine, until tha specified max wait time is reached, thus simplify the scripting
-                    process with less steps.
+                    process with fewer steps.
                 </li>
             </ol>
             <!--
@@ -4891,7 +4901,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             focus to the target row or cell prior to commencing the editing. This is the default behavior for Nexial
             when executing <a href="../commands/desktop/editTableCells(row,nameValues)">desktop &raquo;
             <code>editTableCells(row,nameValues)</code></a>, Nexial will, by default, click on the target table row -
-            thus bringing such row to focus - and then proceed to enter specified data to target cells. However there
+            thus bringing such row to focus - and then proceed to enter specified data to target cells. However, there
             might be situation where this initial click is not necessary or desirable. In such situation, one can
             turn off the default behavior:<br/>
             <br/>
@@ -5105,7 +5115,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             Specify in the scenario where a single row is returned as a result of executing a SQL statement, whether
             Nexial should pack the result set (i.e.the single row) by removing all <code>NULL</code> columns.<br/>
             <br/>
-            This system variable is automatically disabled when there are more than 1 row found in the resultset.
+            This System variable is automatically disabled when multiple rows are returned.
         </td>
     </tr>
 
@@ -5128,7 +5138,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             <a href="../commands/mobile/type(locator,text)">typing</a>.<br/>
             <br/>
             Adjust this System variable to provide a more stable automation, especially for the less performant mobile
-            apps. However any value less than 250 would be ignored as such low value will likely make any impact during
+            apps. However, any value less than 250 would be ignored as such low value will likely make any impact during
             the execution. The default value of <code>0</code> means that Nexial will not artificially inject any
             "pause" between actions.
         </td>
@@ -5143,7 +5153,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td>
             Specify the maximum amount of time, in millisecond, to wait a specified locator to be resolved. Commonly
             known as explicit wait, this System variable specifies the maximum amount of time to wait for the target
-            element is be available for interruption.<br/>
+            element to be available for interruption.<br/>
             <br/>
             If both <code>nexial.mobile.explicitWaitMs</code> and <code>nexial.mobile.implictWaitMs</code> are specified,
             the former would take precedence as it is usually prefer explicit wait over implicit wait.
@@ -5288,7 +5298,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
 
 <h3 id="standard-system-properties">Standard System Properties</h3>
 <p>
-    As a Java application, Nexial supports a set of standard System properties that are common across operation systems.
+    As a Java application, Nexial supports a set of standard System properties that are common across operating systems.
     These properties are managed and exposed by the Java runtime, which might increase in number over time. Nexial, in
     turn, expose these properties so that they may be used as part of automation.
 </p>
@@ -5301,7 +5311,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
 <p>This will print out the user ID that executed the script.</p>
 
 <p>
-    One can considered these System properties as reflection of the current test harness (where Nexial runs). Below is
+    One can consider these System properties as reflection of the current test harness (where Nexial runs). Below is
     the list of available System properties:
 </p>
 
@@ -5398,7 +5408,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
     </tr>
     <tr>
         <td class="varname" nowrap="nowrap"><a id="user.timezone"><code>user.timezone</code></a></td>
-        <td>The timezone of the operation system that executed Nexial</td>
+        <td>The timezone of the operating system that executed Nexial</td>
         <td><code>America/Los_Angeles</code></td>
     </tr>
     <tr>
@@ -5658,7 +5668,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td class="read-write">read/write</td>
         <td>
             <b>[REQUIRED]</b> This is the username found in
-            <a class="external-link" href="https://app.crossbrowsertesting.com/selenium/run" link="_nexial_link">
+            <a class="external-link" href="https://app.crossbrowsertesting.com/selenium/run" target="_nexial_link">
                 Automation: Getting Started</a> (login required).
         </td>
     </tr>
@@ -5669,7 +5679,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td class="read-write">read/write</td>
         <td>
             <b>[REQUIRED]</b> This is the Auth Key found in
-            <a class="external-link" href="https://app.crossbrowsertesting.com/selenium/run" link="_nexial_link">
+            <a class="external-link" href="https://app.crossbrowsertesting.com/selenium/run" target="_nexial_link">
                 Automation: Getting Started</a> (login required).
         </td>
     </tr>
