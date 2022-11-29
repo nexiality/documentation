@@ -56,6 +56,7 @@ redirect_from:
 - [Forcefully update or omit webdriver updates](HOWTOForcefullyUpdateWebDriver)
 - [How to check edge browser version](HOWTOCheckEdgeVersion)
 - [How to validate canvas-based chart data](ValidateChartData)
+- [How to automate website in different languages side-by-side](DiffLangSideBySide)
 
 
 #### External Services

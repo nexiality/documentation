@@ -10,7 +10,7 @@ comments: true
 This command instructs Nexial to suspend the automation on the current browser (if any) and switch the automation to 
 another browser instance. 
 
-At times, it is critical to automate with multiple independent browser to browser to sufficiently validate the intended 
+At times, it is critical to automate with multiple independent browsers to sufficiently validate the intended 
 functionality of the target application. In the context of automation, "independent browsers" means browsers that are 
 sequestered from each other in terms of processes and session management. As such, one can toggle automation between
 multiple personae and their respective browsing experience. It is then possible to observe and validate the intended
@@ -18,10 +18,10 @@ consequences of these personae independently interacting with the application. F
 simulate 2 users bidding (online) on the same product, or to simulate 2 (or more) users chatting online via the same
 channel.
 
-This command takes 2 parameters: `profile` is an user-defined _identifier_ to reference a specific browser instance. 
+This command takes 2 parameters: `profile` is a user-defined _identifier_ to reference a specific browser instance. 
 One can toggle between multiple browser instances using the `profile` parameter. The `config` parameter is a set of
-name-value configurations to determine the construct of a browser instance. Each name-value pair would take up a line, 
-or separated by comma. For example,<br/>
+name-value configurations to determine the construct of a browser instance. Each name-value pair would take up a line. 
+For example,<br/>
 ![](image/switchBrowser_01.png)
 
 This means to switch the automation to another browser, referenced as `adminBrowser`, which :
@@ -31,8 +31,8 @@ This means to switch the automation to another browser, referenced as `adminBrow
    the automation script,
 4. shall use "light red" background color as the highlight
 
-Just about any [System variables](../../systemvars/) prefixed by `nexial.browser` or `nexial.web` can be included in 
-the `config` parameter. If no special configuration is needed, simply use `(empty)` or `(blank)` instead.
+Just about any [System variables](../../systemvars/) that is prefixed by `nexial.browser` or `nexial.web` can be 
+included in the `config` parameter. If no special configuration is needed, simply use `(empty)` or `(blank)` instead.
 
 After this command is executed, any subsequent [web] commands will take effect on the newly switched-to browser. To 
 switch to another browser instance, simply issue this command again with another `profile` name. To switch to the 

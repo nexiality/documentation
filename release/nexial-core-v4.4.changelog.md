@@ -60,8 +60,10 @@ comments: true
 - [`nexial.targetDisplay`](../systemvars/index.html#nexial.targetDisplay): Support display pinning so that the browser 
   used during automation will be opened to a display (monitor) of your choice. Expected 0-based value for display, or 
   use `CURRENT` for currently active monitor. For example, `nexial.targetDisplay=CURRENT|0|1|...`
-- [`nexial.browser.windowSize`](../systemvars/content.html#nexial.browser.windowSize): now supports specialized 
+- [`nexial.browser.windowSize`](../systemvars/index.html#nexial.browser.windowSize): now supports specialized 
  keyword (one of `maximized`, `maximize`, `fullscreen`, `full`) to maximize browser window when it initially opens.
+- [`nexial.browser.lang`](../systemvars/index.html#nexial.browser.lang): now supports changing browser language to aid 
+  the testing of language-aware websites.
 
 
 ### [Expression](../expression)
@@ -144,6 +146,8 @@ comments: true
 - suppress the certification selection dialog that pops up when accessing certain URL on Chrome (esp. when automation 
   is performed on an enterprise-managed compute resource). 
 - prevent the changing of window position on headless browsers.
+- [`switchBrowser(profile,config)`](../commands/web/switchBrowser(profile,config)): fix issue with rendering multiple 
+  independent browsers.
 
 
 ### [webmail commands](../commands/webmail)

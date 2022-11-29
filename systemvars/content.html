@@ -3223,7 +3223,6 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
             Currently only the Chrome and Firefox browsers are support for this feature.
         </td>
     </tr>
-
     <tr>
         <td class="varname" nowrap="nowrap">
             <a id="nexial.browser.meta"><code>nexial.browser.meta</code></a>
@@ -3234,6 +3233,29 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
         <td>
             Metadata for the browser for the current execution. For more information, visit
             <a href="../commands/web/index#browser-metadata">Browser Metadata</a>.
+        </td>
+    </tr>
+    <tr>
+        <td class="varname" nowrap="nowrap">
+            <a id="nexial.browser.lang"><code>nexial.browser.lang</code></a>
+        </td>
+        <td>string</td>
+        <td></td>
+        <td class="read-write">read/write</td>
+        <td>
+            <b>NOTE: THIS SYSTEM VARIABLE IS EFFECTIVE ON CHROME BROWSER ONLY. FUTURE VERSION OF NEXIAL WILL LIKELY SUPPORT OTHER BROWSERS.</b>
+            <br/>
+            Use this System variable to change the browser's language setting. By default, the browser is launched using
+            the language setting of its underlying operating system. For the purpose of testing, it is sometimes useful
+            to change the browser's language setting in order to evaluate its impact on the target web application.<br/>
+            <br/>
+            For example, by setting <code>nexial.browser.lang</code> to <code>zh-TW</code>, Google Search is rendered
+            in Chinese:<br/>
+            <img src="image/nexial.browser.lang_01.png"/><br/>
+            <br/>
+            For more ideas and technical details, visit the <a href='../tipsandtricks/DiffLangSideBySide.html'>How to
+            automate website in different languages side-by-side</a>
+            <br/>
         </td>
     </tr>
     <tr>
@@ -4069,7 +4091,7 @@ nexial.cmd -script C:\projects\X\artifact\script\Y.xlsx -override nexial.recordi
                 <li>user profile directory is platform-specified</li>
                 <li>user profile directory is not applicable for IE, Edge or Safari browser</li>
                 <li>when specified, this System variable will override the <a href="#nexial.browser.incognito">
-                    <code>nexial.browser.incognito</code></a> System variable (default is <code>false</code>).
+                    <code>nexial.browser.incognito</code></a> System variable (default is <code>true</code>).
                 </li>
             </ol>
         </td>
