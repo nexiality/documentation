@@ -108,9 +108,9 @@ implicitly for each element. Here are the steps to enable this "*wait*" strategy
 ### Example
 <table class="data">
 <tr>
-<th><a href="../userguide/UnderstandingProjectStructure.md#artifactprojectproperties"><code>project.properties</code></a></th>
+<th><a href="../userguide/UnderstandingProjectStructure.html#artifactprojectproperties"><code>project.properties</code></a></th>
 <th>&nbsp;OR&nbsp;</th>
-<th><a href="../userguide/UnderstandingProjectStructure.md#artifactdata"><code>data file</code></a></th>
+<th><a href="../userguide/UnderstandingProjectStructure.html#artifactdata"><code>data file</code></a></th>
 </tr>
 <tr>
 <td>

@@ -13,7 +13,7 @@ This command is used to assert the expected response code from the service respo
 For more information about HTTP status codes, refer to 
 <a href="https://httpstatuses.com/" class="external-link" target="_nexial_external">https://httpstatuses.com/</a>.  
 
-As of [v4.2](../../release/nexial-core-v4.2.changelog.md), Nexial supports `returnCode` expressed as multiple values
+As of [v4.2](../../release/nexial-core-v4.2.changelog), Nexial supports `returnCode` expressed as multiple values
 (separated by comma) or range (separated by dash). For example, specifying `returnCode` as `200-204,301,302,304` means
 that the return code (from the response) should be one of the values in `200,201,202,203,204,301,302,304`.
 

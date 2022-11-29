@@ -18,8 +18,8 @@ comments: true
 
 
 ### [System Variable](../systemvars)
-- deprecated [`nexial.desktopNotifyWaitMs`](../systemvars/content.html#nexial.desktopNotifyWaitMs) in favor of
-  [`nexial.desktop.notifyWaitMs`](../systemvars/content.html#nexial.desktop.notifyWaitMs) for consistency.
+- deprecated [`nexial.desktopNotifyWaitMs`](../systemvars/index.html#nexial.desktopNotifyWaitMs) in favor of
+  [`nexial.desktop.notifyWaitMs`](../systemvars/index.html#nexial.desktop.notifyWaitMs) for consistency.
 
 
 ### [Nexial Interactive](../interactive)

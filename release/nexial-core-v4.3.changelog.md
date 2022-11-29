@@ -23,7 +23,7 @@ comments: true
 - [`nexial.disableCriticalCommands`](../systemvars/index.html#nexial.disableCriticalCommands): **NEW** System variable
   to temporarily disable critical command failure check.
 - [`nexial.inspectOnPause`](../systemvars/index.html#nexial.inspectOnPause): now support "end immediate" via `:end`.
-- [`nexial.recordingAutostart`](../systemvars/content.html#nexial.recordingAutoStart): **NEW** System variable to 
+- [`nexial.recordingAutostart`](../systemvars/index.html#nexial.recordingAutoStart): **NEW** System variable to 
   automatically start desktop (main screen) recording when execution starts. Future Nexial releases will support 
   automatic screen recording at the start of a script, an iteration or a scenario. _Stay tuned!!_
 - [`execution-output.html`](../userguide/UnderstandingProjectStructure.html#output):

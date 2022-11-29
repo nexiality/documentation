@@ -50,6 +50,6 @@ See above
 
 
 ### See Also
-- [`nexial.web.toastDescriptionDarkMode`](../../systemvars/content.html#nexial.web.toastDescriptionDarkMode)
-- [`nexial.web.toastDescriptionWaitMs`](../../systemvars/content.html#nexial.web.toastDescriptionWaitMs)
-- [`nexial.web.toastDescription`](../../systemvars/content.html#nexial.web.toastDescription)
+- [`nexial.web.toastDescriptionDarkMode`](../../systemvars/index.html#nexial.web.toastDescriptionDarkMode)
+- [`nexial.web.toastDescriptionWaitMs`](../../systemvars/index.html#nexial.web.toastDescriptionWaitMs)
+- [`nexial.web.toastDescription`](../../systemvars/index.html#nexial.web.toastDescription)

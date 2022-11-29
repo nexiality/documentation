@@ -42,8 +42,8 @@ can do to further maximize its usability and usefulness.
    ![](image/UnderstandingProjectStructure_12.png)
 3. Web Service Analysis
    If one is performing any Web Service or API automation, it is recommended to enable the following 2 System variables:
-   - [`nexial.ws.logSummary`](../systemvars/content.html#nexial.ws.logSummary) -- assign this System variable to `true
-   - [`nexial.ws.logDetail`](../systemvars/content.html#nexial.ws.logDetail) -- assign this System variable to `true
+   - [`nexial.ws.logSummary`](../systemvars/index.html#nexial.ws.logSummary) -- assign this System variable to `true
+   - [`nexial.ws.logDetail`](../systemvars/index.html#nexial.ws.logDetail) -- assign this System variable to `true
    By doing so, Nexial will parse through all the generated Web Service log files (request, response, timing, etc.), and 
    generate an interactive analytic panel for the Web Service/API invocations performed during the execution.
    ![](image/UnderstandingProjectStructure_13.png)<br/>
