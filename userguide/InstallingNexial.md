@@ -8,11 +8,11 @@ comments: true
 
 > **For a quick overview on Installing Nexial Automation, check out [Installing Nexial Automation The Easy Way](../videos/Install_Update_Nexial.html)**
 
-> Nexial requires Java 1.8.0_151 or above and Excel 2007/2010 or above; with the latest 64 bit version of Java and Excel recommended. If you don't have Java installed on your system, follow the next section to do so.
+> Nexial requires Java 17 or above and Excel 2007/2010 or above; with the latest 64 bit version of Java and Excel recommended. If you don't have Java installed on your system, follow the next section to do so.
 
 ### Install Java
 
-Check if Java is installed - **Java 1.8.0_151 or above required, and 64-bit Java is highly recommended**
+Check if Java is installed - **Java 17 or above required, and 64-bit Java is highly recommended**
 **If possible, consider installing the latest release of Java (latest as of 2022/04/04 is v18).**<br/>
 
 <div class="tabs">
@@ -34,12 +34,12 @@ Check if Java is installed - **Java 1.8.0_151 or above required, and 64-bit Java
                <img src="image/InstallingNexial_01.png"/>
                <br/>
                <b>Example 2</b>: If you are not getting the above message, check that the version of Java installed is 
-               1.8.0_151 or above (<b>latest Java recommended</b>). For example, here's a snapshot of an 
+               17 or above (<b>latest Java recommended</b>). For example, here's a snapshot of an 
                <i><b>outdated</b></i> Java installation (1.6.0.45).<br/>
                <img src="image/InstallingNexial_02a.png"/>
                <br/>
-               <b>Example 3</b>: While the snapshot below shows Java 1.8, this version of not supported. Please be 
-               sure that your Java installation is <b>Java 1.8.0_151 or above</b> (the latest Java recommended):<br/>
+               <b>Example 3</b>: As of Nexial v4.4, the minimum required version of Java is <b>17</b>. Please be 
+               sure that your Java installation is <b>Java 17 or above</b> (the latest Java recommended):<br/>
                <img src="image/InstallingNexial_02.png"/>
                <br/>
                If your Java installation is outdated/unsupported, please follow the next step (Step 3) below to 
@@ -69,12 +69,12 @@ Check if Java is installed - **Java 1.8.0_151 or above required, and 64-bit Java
                <img src="image/InstallingNexial_01.png"/>
                <br/>
                <b>Example 2</b>: If you are not getting the above message, check that the version of Java installed is 
-               1.8.0_151 or above (<b>latest Java recommended</b>). For example, here's a snapshot of an outdated Java 
+               17 or above (<b>latest Java recommended</b>). For example, here's a snapshot of an outdated Java 
                installation (1.6.0.45).<br/>
                <img src="image/InstallingNexial_02a.png"/>
                <br/>
-               <b>Example 3</b>: While the snapshot below shows Java 1.8, this version of not supported. Please be sure 
-               that your Java installation is <b>Java 1.8.0_151 or above</b> (<b>the latest Java recommended</b>):<br/>
+               <b>Example 3</b>: As of Nexial v4.4, the minimum required version of Java is <b>17</b>. Please be sure 
+               that your Java installation is <b>Java 17 or above</b> (<b>the latest Java recommended</b>):<br/>
                <img src="image/InstallingNexial_02.png"/>
                <br/>
                If your Java installation is outdated/unsupported, please follow the next step (Step 3) below to 
@@ -97,7 +97,7 @@ Check if Java is installed - **Java 1.8.0_151 or above required, and 64-bit Java
 
 
 ### Using Nexial Installer
-**Note**: Nexial requires Java 1.8.0_151 or above and Excel 2007/2010 or above. If you don't have Java installed on 
+**Note**: Nexial requires Java 17 or above and Excel 2007/2010 or above. If you don't have Java installed on 
 your system (the latest Java recommended), please follow the section above.
 
 <div class="tabs">

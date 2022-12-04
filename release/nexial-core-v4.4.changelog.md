@@ -47,6 +47,7 @@ comments: true
 - enforce Java 17 as the minimum required Java version; helps to improve runtime stability and performance, and enable
   future enhancements.
 - fix output message formatting on *NIX/MacOs shell scripts.
+- updated `nexial` scripts to enforce and install (when needed) Java 17 or above runtime.
 
 
 ### [System Variables](../systemvars)

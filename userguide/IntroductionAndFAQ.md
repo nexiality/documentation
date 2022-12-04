@@ -84,7 +84,7 @@ Step 3 through 7 can be a part of a larger CI/CD orchestration.
 ### What do I need to get started?
 In a nutshell, one would need:
 1.  A computer (PC, Mac, and *NIX)
-2.  JDK 1.8+ (latest recommended!)
+2.  JDK 17+ (latest recommended!)
 3.  Nexial distribution
 
 For more details and step-by-step instruction, check out the [Install Nexial](InstallingNexial) page.

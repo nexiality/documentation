@@ -15,11 +15,10 @@ comments: true
 
 **Fix:**
 1. Use the latest Nexial version.
-2. Check whether Java is installed and its version. It must be **JDK 1.8**. See the highlighted text in image.<br/>
+2. Check whether Java is installed and its version. It must be **JDK 17** or above. See the highlighted text in image.<br/>
 		 1. Open command prompt.<br/>
 		 2. Run the **`java -version`**<br/>
-		 ![java](image/WiniumStartingError_01.png)<br/>
-		 3. If it is not installed, download <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" class="external-link" target="_nexial_external">here</a>.
+		 3. If it is not installed, download <a href="https://www.oracle.com/java/technologies/downloads/" class="external-link" target="_nexial_external">here</a>.
 3. Check whether .net framework is installed and its version on the test machine. It must be **greater than 3.0**. See 
 	 the highlighted text in image.<br/>
 		 1. Open the command prompt.<br/>
