@@ -12,7 +12,7 @@ redirect_from:
 ## Releases
 
 ### 4.x
-- [v4.4 (2022-12-45)](nexial-core-v4.4.changelog) - Java 17 (or above) required
+- [v4.4 (2022-12-04)](nexial-core-v4.4.changelog) - Java 17 (or above) required
 - [v4.3 (2021-12-05)](nexial-core-v4.3.changelog)
 - [v4.2 (2021-09-13)](nexial-core-v4.2.changelog)
 - [v4.1 (2021-08-14)](nexial-core-v4.1.changelog)
