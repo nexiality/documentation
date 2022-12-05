@@ -1,13 +1,13 @@
 ---
 layout: default
-title: nexial-core 4.4 (2022-01-??)
+title: nexial-core 4.4 (2022-12-04)
 parent: release
 tags: release nexial-core 4.4
 comments: true
 ---
 
-### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v4.4_????" class="external-link" target="_nexial_link">Release 4.4</a>
-2022-01-??
+### <a href="https://github.com/nexiality/nexial-core/releases/tag/nexial-core-v4.4_1525" class="external-link" target="_nexial_link">Release 4.4</a>
+2022-12-04
 
 
 ### General
@@ -100,9 +100,6 @@ comments: true
 ### [json commands](../commands/json)
 - [`sanitize(var,json)`](../commands/json/sanitize(var,json)): sanitize data so that the resulting JSON is properly 
   converted and OWASP-safe.
-
-
-### [mobile commands](../commands/mobile)
 
 
 ### [rdbms commands](../commands/rdbms)
