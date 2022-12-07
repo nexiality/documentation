@@ -76,7 +76,7 @@ comments: true
 
 
 ### [Nexial Function](../functions)
-- [`${random|number|from|to)`](../functions/$(random).#randomnumericfromto): code fix to extend the `to` value as inclusive.
+- [`$(random|number|from|to)`](../functions/$(random).#randomnumericfromto): code fix to extend the `to` value as inclusive.
 
 
 ### [Nexial Interactive](../interactive)
