@@ -15,6 +15,8 @@ comments: true
 #### Fixes
 - minor fixes to Windows batch files; mostly for code consistency
 - fixed error when running in Nexial Interactive
+- fixed Excel cell value retrieval logic during the output generation process
+- fixed data loading inconsistencies when changing iteration within Nexial Interactive
 
 #### Improvements
 
