@@ -52,3 +52,4 @@ comments: true
 
 
 ### [ws commands](../commands/ws)
+- properly handle HTTP 204 condition where response payload is to be expected
