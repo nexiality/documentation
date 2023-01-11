@@ -16,7 +16,6 @@ comments: true
 - minor fixes to Windows batch files; mostly for code consistency
 - fixed error when running in Nexial Interactive
 - fixed Excel cell value retrieval logic during the output generation process
-- fixed data loading inconsistencies when changing iteration within Nexial Interactive
 
 #### Improvements
 
@@ -31,6 +30,8 @@ comments: true
 
 
 ### [Nexial Interactive](../interactive)
+- fixed data loading inconsistencies when changing iteration within Nexial Interactive
+- reduce abrupt termination due to errors or failure to (re)load project artifacts
 
 
 ### [JSONPath](../jsonpath)
