@@ -40,7 +40,9 @@ comments: true
 ### [desktop commands](../commands/desktop)
 
 
-### [json commands](../commands/json)
+### [io commands](../commands/io)
+- [assertFileContent(file,match,asLines)](../commands/io/assertFileContent(file,match,asLines)): **NEW** command to
+  automate the assertion of file content.
 
 
 ### [rdbms commands](../commands/rdbms)
