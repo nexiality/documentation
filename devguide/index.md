@@ -45,4 +45,17 @@ git clone https://github.com/nexiality/nexial-core.git
   and fill the required details like below.
   ![Nexial-core Run configuration](./images/nexial-core-run-configuration-gen.png)
 
-Note: The file paths and/or project locations may be different in your case. Please provide your local file paths.
+  Note: The file paths and/or project locations may be different in your case. Please provide your local file paths.
+
+  **Since the Nexial is now moved to Java 17, it's recommended to add below options into the IDE's VM Options of the run config. Without this, Nexial may not work as expected.**
+
+    ```
+    -ea -Dnexial.home=build
+    --add-opens java.base/java.lang=ALL-UNNAMED
+    --add-opens java.base/java.lang.reflect=ALL-UNNAMED
+    --add-opens java.base/java.lang=ALL-UNNAMED
+    --add-opens java.base/java.io=ALL-UNNAMED
+    --add-opens java.base/java.util=ALL-UNNAMED
+    --add-opens java.base/java.text=ALL-UNNAMED
+    --add-opens java.desktop/java.awt.font=ALL-UNNAMED
+    ```
