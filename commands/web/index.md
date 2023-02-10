@@ -104,6 +104,8 @@ available commands.
 - [`assertScrollbarHPresent(locator)`](assertScrollbarHPresent(locator))
 - [`assertScrollbarVNotPresent(locator)`](assertScrollbarVNotPresent(locator)) 
 - [`assertScrollbarVPresent(locator)`](assertScrollbarVPresent(locator))
+- [`assertSelectOptionsAbsent(locator,options)`](assertSelectOptionsAbsent(locator,options))
+- [`assertSelectOptionsPresent(locator,options)`](assertSelectOptionsPresent(locator,options))
 - [`assertSingleSelect(locator)`](assertSingleSelect(locator))
 - [`assertTable(locator,row,column,text)`](assertTable(locator,row,column,text))
 - [`assertText(locator,text)`](assertText(locator,text))
