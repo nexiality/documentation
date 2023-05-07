@@ -34,7 +34,7 @@ If you are new to desktop automation via Nexial, please first familiarize yourse
 - [`assertModalDialogNotPresent()`](assertModalDialogNotPresent())
 - [`assertModalDialogPresent()`](assertModalDialogPresent())
 - [`assertModalDialogTitle(title)`](assertModalDialogTitle(title))
-- [`assertModalDialogTitleByLocator(locator,title)`](assertModalDialogTitleByLocator(locator,title))
+- ~~[`assertModalDialogTitleByLocator(locator,title)`](assertModalDialogTitleByLocator(locator,title))~~
 - [`assertNotChecked(name)`](assertNotChecked(name))
 - [`assertSelected(name,text)`](assertSelected(name,text))
 - [`assertTableCell(row,column,contains)`](assertTableCell(row,column,contains))

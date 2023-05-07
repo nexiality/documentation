@@ -26,7 +26,7 @@ The cell/value is separate by `=`, and each pair is separated by either a newlin
 - `[CLICK]` – to click on the specific cell. In some rare situations, clicking on a cell updates its value (by the
   application)
 - `[<Function Key>]` - to send the function key in the table to the specific column. For example, 
-  `Column 1=[F5]`,`Column2`=[TAB]`
+  `Column 1=[F5]`,`Column2=[TAB]`
 
 Function Keys and literal value cannot be combined and sent as a column value with single command.
 
