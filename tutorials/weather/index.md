@@ -8,6 +8,7 @@ comments: true
 ---
 
 ##### Created by: Canaan Matsunaga
+<br/>
 
 ## Introduction
 The Weather Data project is designed to collect weather data on a list of cities and output into readable, organized 
