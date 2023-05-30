@@ -221,6 +221,21 @@ table.execMeta {
   height:         60px;
 }
 
+.execValue_JENKINS {
+  background:      rgba(230, 230, 230, 0.35) url(https://nexiality.github.io/documentation/assets/images/jenkins.png) no-repeat -10px 19px;
+  background-size: 22%;
+  background-blend-mode: color-dodge;
+}
+
+.execValue_JENKINS .content A {
+  background-image: none;
+  text-align: right;
+  padding: 3px;
+  background-color: transparent;
+  margin-left: 15px;
+  color: rgba(0,30,150,0.75);
+}
+
 .execValue .execLabel {
   text-align:       left;
   font-size:        10pt;
@@ -268,8 +283,8 @@ table.execMeta {
 }
 
 .detail-exec .execValueSkipped {
-  color:            rgb(80 80 80 / 75%) !important;
-  background-color: rgb(141 134 134 / 50%);
+  color:            rgb(80 80 80 / 30%) !important;
+  background-color: rgb(141 134 134 / 30%);
   border:           1px outset rgba(0, 160, 0, 0.75);
 }
 
