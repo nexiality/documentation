@@ -222,9 +222,9 @@ table.execMeta {
 }
 
 .execValue_JENKINS {
-  background:      rgba(230, 230, 230, 0.35) url(https://nexiality.github.io/documentation/assets/images/jenkins.png) no-repeat -10px 19px;
+  background:      rgba(230, 230, 230, 0.35) url(https://nexiality.github.io/documentation/assets/images/jenkins.png) no-repeat -11px 17px;
   background-size: 22%;
-  background-blend-mode: color-dodge;
+  background-blend-mode: lighten;
 }
 
 .execValue_JENKINS .content A {
